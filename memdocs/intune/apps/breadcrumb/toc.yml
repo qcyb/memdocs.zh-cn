@@ -1,0 +1,22 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: 企业移动性 + 安全性
+      tocHref: /enterprise-mobility-security/
+      topicHref: /enterprise-mobility-security/
+      items:
+        - name: Microsoft Endpoint Manager
+          tocHref: /mem/
+          topicHref: /mem/
+          items:
+            - name: Intune
+              tocHref: /mem/intune/
+              topicHref: /mem/intune/
+              items:
+                - name: 应用
+                  tocHref: /mem/intune/fundamentals/
+                  topicHref: /mem/intune/apps/
+                - name: 应用
+                  tocHref: /mem/intune/protect/
+                  topicHref: /mem/intune/apps/
