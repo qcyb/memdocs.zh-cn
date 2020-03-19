@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d364c77266e51b3dcbc19c237e93f17e6f8d1aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
+ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352158"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79437099"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Windows 10（及更高版本）设置，用于保护使用 Intune 的设备
 
@@ -54,19 +54,19 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
    应用程序防护 CSP：[Settings/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)  
 
   选择允许在本地电脑和应用程序防护虚拟浏览器之间执行的复制和粘贴操作。  
-  - 未配置  
+  - 未配置   
   - **仅允许从电脑复制和粘贴到浏览器**  
   - **仅允许从浏览器复制和粘贴到电脑**  
   - **允许在电脑和浏览器之间进行复制和粘贴**  
   - **阻止在电脑和浏览器之间进行复制和粘贴**  
 
 - **剪贴板内容**  
-  只有将“剪贴板行为”设置为“允许”设置之一时，此设置才可用。  
+  只有将“剪贴板行为”设置为“允许”设置之一时，此设置才可用   。  
   **默认值**：未配置  
   应用程序防护 CSP：[Settings/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   选择允许的剪贴板内容。  
-  - 未配置  
+  - 未配置   
   - **Text**  
   - **图像**  
   - **文本和图像**  
@@ -85,7 +85,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **允许** - 允许从虚拟浏览器打印选定内容。  
   - **未配置** - 禁用所有打印功能。  
 
-  当“允许”打印时，可以配置以下设置：
+  当“允许”打印时，可以配置以下设置  ：
   - **打印类型** 选择以下一个或多个选项：  
     - PDF  
     - XPS  
@@ -134,7 +134,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **未配置** - 防火墙会筛选监控状态的 FTP 以允许辅助连接。  
 
 - **删除前的安全关联空闲时间**  
-  **默认值**：未配置  
+  **默认值**：未配置   
    防火墙 CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)  
 
    指定删除安全关联之前的空闲秒数。   
@@ -179,7 +179,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   防火墙 CSP：[MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)  
 
   指定如何针对 IPsec 隧道网关方案为加密接收和明文转发启用接收端上的软件缩放。 此设置可确保数据包顺序得到保留。 选项包括：  
-  - 未配置  
+  - 未配置   
   - **禁用所有数据包排队**  
   - **仅对入站加密数据包进行排队**  
   - **仅出于转发目的在执行解密后对数据包进行排队**  
@@ -204,33 +204,33 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 - **隐藏模式**  
   **默认值**：未配置  
   防火墙 CSP：[DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)  
-  - 未配置  
-  - **阻止** - 阻止防火墙在隐藏模式下运行。 阻止隐藏模式还可以阻止“IPsec 安全数据包免除”。  
+  - 未配置   
+  - **阻止** - 阻止防火墙在隐藏模式下运行。 阻止隐藏模式还可以阻止“IPsec 安全数据包免除”  。  
   - **允许** - 防火墙在隐藏模式下运行，有助于阻止对探测请求的响应。  
 
 - **IPsec 保护的数据包免除与隐形模式**  
   **默认值**：未配置  
   防火墙 CSP：[DisableStealthModeIpsecSecuredPacketExemption](https://go.microsoft.com/fwlink/?linkid=872560)  
 
-  如果“隐藏模式”设置为“阻止”，则忽略此选项。  
+  如果“隐藏模式”设置为“阻止”，则忽略此选项   。  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 受 IPSec 保护的数据包不会收到免除。  
   - **允许** - 启用免除。 防火墙的隐藏模式一定不得阻止主计算机响应由 IPsec 保护的未经请求的网络流量。  
 
 - **受防护**  
   **默认值**：未配置  
   防火墙 CSP：[受防护](https://go.microsoft.com/fwlink/?linkid=872561)  
-    - 未配置  
-    - **阻止** - 当 Microsoft Defender 防火墙开启并且此设置设为“阻止”时，无论其他策略设置如何，都将阻止所有传入流量。 
-    - **允许** - 当设置为“允许”时，此设置将关闭，并且根据其他策略设置允许传入流量。
+    - 未配置   
+    - **阻止** - 当 Microsoft Defender 防火墙开启并且此设置设为“阻止”时，无论其他策略设置如何，都将阻止所有传入流量  。 
+    - **允许** - 当设置为“允许”时，此设置将关闭，并且根据其他策略设置允许传入流量  。
 
 - **针对多播广播的单播响应**  
   **默认值**：未配置  
   防火墙 CSP：[DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)  
   
   通常，你不希望接收针对多播或广播消息的单播响应。 这些响应可能表示拒绝服务 (DOS) 攻击，或攻击者尝试探测已知的实时计算机。  
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止针对多播广播的单播响应。  
   - **允许** - 允许针对多播广播的单播响应。  
 
@@ -238,7 +238,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   防火墙 CSP：[DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=8725630)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 在阻止应用侦听某个端口时隐藏对用户的通知。  
   - **允许** - 启用此设置，且可能会在阻止应用侦听某个端口时向用户显示一条通知。  
 
@@ -248,7 +248,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   
   配置防火墙针对出站连接执行的默认操作。 此设置将应用于 Windows 1809 及更高版本。  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 除非明确指定不阻止，否则默认防火墙操作不会在出站流量上运行。  
   - **允许** - 默认防火墙操作在出站连接上运行。  
 
@@ -256,7 +256,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   防火墙 CSP：[DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)  
  
-  - 未配置  
+  - 未配置   
   - **阻止** - 不会在入站连接上运行默认的防火墙操作。  
   - **允许** - 默认防火墙操作在入站连接上运行。  
 
@@ -266,16 +266,16 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   防火墙 CSP：[AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 忽略且不会强制执行本地存储中已授权的应用程序防火墙规则。  
   - **允许**-
-   选择“启用”可应用本地存储中的防火墙规则，以便识别和强制执行它们****。  
+   选择“启用”可应用本地存储中的防火墙规则，以便识别和强制执行它们 **** 。  
 
 - **来自本地存储的全局端口 Microsoft Defender 防火墙规则**  
   **默认值**：未配置  
   防火墙 CSP：[GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 忽略而不强制执行本地存储中的全局端口防火墙规则。  
   - **允许** - 应用本地存储中要识别和强制执行的全局端口防火墙规则。  
 
@@ -283,7 +283,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   防火墙 CSP：[AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 忽略而不强制执行本地存储的防火墙规则。
   - **允许** - 应用本地存储中要识别和强制执行的防火墙规则。  
 
@@ -291,13 +291,13 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   防火墙 CSP：[AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** -  忽略且不会强制执行本地存储中的连接安全规则，而不考虑架构版本和连接安全规则版本。  
   - **允许** - 应用本地存储中的连接安全规则，而不考虑架构或连接安全规则版本。  
 
 ### <a name="firewall-rules"></a>防火墙规则  
 
-可以“添加”一个或多个自定义防火墙规则。 有关详细信息，请参阅[为 Windows 10 设备添加自定义防火墙规则](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices)。  
+可以“添加”一个或多个自定义防火墙规则  。 有关详细信息，请参阅[为 Windows 10 设备添加自定义防火墙规则](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices)。  
 
 自定义防火墙规则支持以下选项：  
 
@@ -317,19 +317,19 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   防火墙 CSP：[FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
   
-  指定此规则应用于“入站”还是“出站”流量。 当设置为“未配置”时，规则自动应用于出站流量。  
+  指定此规则应用于“入站”还是“出站”流量   。 当设置为“未配置”时，规则自动应用于出站流量  。  
 
 - **操作**  
   **默认值**：未配置  
   防火墙 CSP：[FirewallRules/*FirewallRuleName*/Action](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action) 和 [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
 
-  选择“允许”或“阻止”。 当设置为“未配置”时，规则默认为允许流量。  
+  选择“允许”或“阻止”   。 当设置为“未配置”时，规则默认为允许流量  。  
 
 - **网络类型**  
   **默认值**：未选择任何项  
   防火墙 CSP：[FirewallRules/*FirewallRuleName*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
 
-  最多选择此规则所属的三种网络类型。 选项包括“域”、“专用”和“公共”。  如果未选择网络类型，则该规则对于这三种网络类型都适用。  
+  最多选择此规则所属的三种网络类型。 选项包括“域”、“专用”和“公共”    。  如果未选择网络类型，则该规则对于这三种网络类型都适用。  
 
 #### <a name="application-settings"></a>应用程序设置  
 
@@ -337,16 +337,16 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：All  
 
   控制应用或程序的连接。 选择以下选项之一，然后完成其他配置：  
-  - **包系列名称** - 指定包系列名称。 若要查找包系列名称，请使用 PowerShell 命令“Get-AppxPackage”。   
+  - **包系列名称** - 指定包系列名称。 若要查找包系列名称，请使用 PowerShell 命令“Get-AppxPackage”  。   
     防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
   - **文件路径** - 必须指定客户端设备上应用的文件路径，该路径可以是绝对路径，也可以是相对路径。 例如：C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.  
     防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
 
-  - **Windows 服务** - 如果是服务而不是发送或接收流量的应用程序，请指定 Windows 服务简称。 若要查找服务的短名称，请使用 PowerShell 命令“Get-Service”。  
+  - **Windows 服务** - 如果是服务而不是发送或接收流量的应用程序，请指定 Windows 服务简称。 若要查找服务的短名称，请使用 PowerShell 命令“Get-Service”  。  
     防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
 
-  - **所有** - 没有可用的附加配置。  
+  - **所有** - 没有可用的附加配置  。  
 
 #### <a name="ip-address-settings"></a>IP 地址设置  
 
@@ -356,10 +356,10 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：任何地址  
   防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
 
-  选择“任何地址”或“指定的地址”。  
+  选择“任何地址”或“指定的地址”   。  
 
-  使用“指定的地址”时，可以将一个或多个地址添加为该规则所涵盖的本地地址的逗号分隔列表。 有效的令牌包括：  
-  - 对“任何”本地地址使用星号“*”。 如果使用星号，则它必须是所使用的唯一令牌。  
+  使用“指定的地址”时，可以将一个或多个地址添加为该规则所涵盖的本地地址的逗号分隔列表  。 有效的令牌包括：  
+  - 对任何本地地址使用星号“*”  。 如果使用星号，则它必须是所使用的唯一令牌。  
   - 若要指定子网，请使用子网掩码或网络前缀表示法。 如果未指定子网掩码或网络前缀，则子网掩码默认为 255.255.255.255。  
   - 有效 IPv6 地址。  
   - IPv4 地址范围，格式为“起始地址 - 结束地址”，不包含空格。  
@@ -369,10 +369,10 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：任何地址  
   防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
  
-  选择“任何地址”或“指定的地址”。  
+  选择“任何地址”或“指定的地址”   。  
 
-  使用“指定的地址”时，可以将一个或多个地址添加为该规则所涵盖的远程地址的逗号分隔列表。 令牌不区分大小写。 有效的令牌包括：  
-  - 对“任何”远程地址使用星号“*”。 如果使用星号，则它必须是所使用的唯一令牌。  
+  使用“指定的地址”时，可以将一个或多个地址添加为该规则所涵盖的远程地址的逗号分隔列表  。 令牌不区分大小写。 有效的令牌包括：  
+  - 对任何远程地址使用星号“*”  。 如果使用星号，则它必须是所使用的唯一令牌。  
   - "Defaultgateway"  
   - "DHCP"  
   - "DNS"  
@@ -401,7 +401,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **UDP** - 配置本地端口和远程端口。 两个选项都支持所有端口或指定端口。 使用逗号分隔的列表输入指定端口。  
     - **本地端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
     - **远程端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
-  - **自定义** - 指定从 0 到 255 的自定义“协议”编号。  
+  - **自定义** - 指定从 0 到 255 的自定义“协议”编号  。  
 
 #### <a name="advanced-configuration"></a>高级配置  
 - **接口类型**  
@@ -414,7 +414,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **局域网**  
 
 - **只允许来自下列用户的连接**  
-  **默认值**：所有用户（未指定列表时默认为所有使用）  
+  **默认值**：所有用户（未指定列表时默认为所有使用）   
   防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalUserAuthorizationList](https://aka.ms/intunefirewallauthorizedusers)  
 
   指定此规则的授权本地用户列表。 如果此规则适用于 Windows 服务，则无法指定授权用户列表。  
@@ -449,7 +449,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **需要** - 提示用户启用设备加密。 根据不同的 Windows 版本和系统配置，用户可能需要执行不同的操作：  
     - 确认未启用来自其他提供程序的加密功能。  
     - 需要关闭 BitLocker 驱动器加密，然后重新开启 BitLocker。  
-  - 未配置  
+  - 未配置   
   
   如果 Windows 加密开启时另一种加密方法处于活动状态，设备可能会变得不稳定。  
 
@@ -458,7 +458,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   BitLocker CSP：[RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
 
-  - 选择“需要”可对设备使用的任何可移动存储卡进行加密。  
+  - 选择“需要”可对设备使用的任何可移动存储卡进行加密  。  
   - **未配置** - 不需要存储卡加密，也不会提示用户开启它。  
 
 ### <a name="bitlocker-base-settings"></a>BitLocker 基本设置  
@@ -473,12 +473,12 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **未配置** - 允许显示针对其他磁盘加密的警告。  
 
   > [!TIP]  
-  > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，必须将此设置设为“阻止”。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
+  > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，必须将此设置设为“阻止”  。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
 
-  设置为“阻止”时，可以配置以下设置：  
+  设置为“阻止”时，可以配置以下设置：   
 
   - **允许标准用户在 Azure AD 加入期间启用加密**  
-    此设置仅适用于加入 Azure Active Directory (Azure ADJ) 的设备，并取决于以前的设置 `Warning for other disk encryption`。  
+    此设置仅适用于加入 Azure Active Directory (Azure ADJ) 的设备，并取决于以前的设置 `Warning for other disk encryption`  。  
     **默认值**：未配置  
     BitLocker CSP：[AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
@@ -486,7 +486,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
      - **未配置**：仅允许管理员在设备上启用 BitLocker 加密。  
 
   > [!TIP]  
-  > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，必须将此设置设为“允许”。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
+  > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，必须将此设置设为“允许”  。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
 
 - **配置加密方法**  
   **默认值**：未配置  
@@ -495,7 +495,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **启用** - 配置操作系统、数据和可移动驱动器的加密算法。  
   - **未配置** - BitLocker 将 XTS-AES 128 位用作默认加密方法，或使用任何安装脚本指定的加密方法。  
 
-  设置为“启用”时，可以配置以下设置：  
+  设置为“启用”时，可以配置以下设置：   
 
   - **操作系统驱动器加密**  
     **默认值**：XTS-AES 128 位  
@@ -535,7 +535,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **需要** - 配置计算机启动时的身份验证要求，包括使用受信任的平台模块 (TPM)。  
   - **未配置**仅 - 在具有 TPM 的设备上配置基本选项。  
 
-  设置为“需要”时，可以配置以下设置：  
+  设置为“需要”时，可以配置以下设置：   
 
   - **包含非兼容 TPM 芯片的 BitLocker**  
     **默认值**：未配置  
@@ -562,7 +562,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     - **要求对 TPM 使用启动 PIN**
 
     > [!TIP]
-    > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，请勿将此设置设为“要求对 TPM 使用启动 PIN”。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
+    > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，请勿将此设置设为“要求对 TPM 使用启动 PIN”  。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
 
   - **兼容的 TPM 启动密钥**  
     **默认值**：允许对 TPM 使用启动密钥  
@@ -574,7 +574,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     - **要求对 TPM 使用启动密钥**  
 
     > [!TIP]
-    > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，请勿将此设置设为“要求对 TPM 使用启动密钥”。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
+    > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，请勿将此设置设为“要求对 TPM 使用启动密钥”  。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
 
   - **兼容的 TPM 启动密钥和 PIN**  
     **默认值**：允许对 TPM 使用启动密钥和启动 PIN  
@@ -585,7 +585,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     - **要求对 TPM 使用启动密钥和启动 PIN**   
 
     > [!TIP]  
-    > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，请勿将此设置设为“要求对 TPM 使用启动密钥和启动 PIN”。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
+    > 若要在已加入 Azure AD 并运行 Windows 1809 或更高版本的设备上自动无提示安装 BitLocker，请勿将此设置设为“要求对 TPM 使用启动密钥和启动 PIN”  。 有关详细信息，请参阅[以无提示的方式在设备上启用 BitLocker](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices)。
 
 - **最小 PIN 长度**  
     **默认值**：未配置  
@@ -594,12 +594,12 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     - **启用** 配置 TPM 启动 PIN 的最小长度。  
     - **未配置** - 用户可以配置 6 到 20 位之间任何长度的启动 PIN。  
 
-  设置为“启用”时，可以配置以下设置：  
+  设置为“启用”时，可以配置以下设置：   
 
   - **最少字符数**  
     **默认值**：*未配置* BitLocker CSP：[SystemDrivesMinimumPINLength](https://go.microsoft.com/fwlink/?linkid=872528)  
 
-    输入启动 PIN 所需的字符数（介于 4-20）。  
+    输入启动 PIN 所需的字符数（介于 4-20）   。  
 
 - **OS 驱动器恢复**  
   **默认值**：未配置   
@@ -608,7 +608,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **启用** - 控制在所需启动信息不可用时如何恢复受 BitLocker 保护的操作系统驱动器。  
   - **未配置** - BitLocker 恢复支持默认的恢复选项。 默认情况下允许使用 DRA，由用户选择恢复选项（包括恢复密码和恢复密钥），并且不会将恢复信息备份至 AD DS。  
 
-  设置为“启用”时，可以配置以下设置：  
+  设置为“启用”时，可以配置以下设置：   
 
   - **基于证书的数据恢复代理**  
     **默认值**：未配置  
@@ -648,10 +648,10 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     **默认值**：备份恢复密码和密钥包  
 
     配置将 BitLocker 恢复信息的哪些部分存储到 Azure AD 中。 选择：  
-    - “备份恢复密码和密钥包”  
-    - “仅备份恢复密码”  
+    - “备份恢复密码和密钥包”   
+    - “仅备份恢复密码”   
 
-  - 客户端驱动的恢复密码轮转  
+  - 客户端驱动的恢复密码轮转   
     **默认值**：已为已加入 Azure AD 的设备启用密钥轮换  
     BitLocker CSP：[ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -677,15 +677,15 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **启用** - 配置在预启动密钥恢复屏幕上显示的消息和 URL。  
   - **未配置** - 禁用此功能。  
   
-  设置为“启用”时，可以配置以下设置：  
+  设置为“启用”时，可以配置以下设置：   
   - **预启动恢复消息**  
     **默认值**：使用默认恢复消息和 URL   
  
     配置如何向用户显示预启动恢复消息。 选择：  
-    - “使用默认恢复消息和 URL”  
-    - “使用空的恢复消息和 URL”  
-    - “使用自定义恢复消息”  
-    - “使用自定义恢复 URL”  
+    - “使用默认恢复消息和 URL”   
+    - “使用空的恢复消息和 URL”   
+    - “使用自定义恢复消息”   
+    - “使用自定义恢复 URL”   
 
 ### <a name="bitlocker-fixed-data-drive-settings"></a>BitLocker 固定数据驱动器设置  
 
@@ -705,7 +705,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **启用** - 控制在所需启动信息不可用时如何恢复受 BitLocker 保护的固定驱动器。  
   - **未配置** - 禁用此功能。  
 
-  设置为“启用”时，可以配置以下设置：  
+  设置为“启用”时，可以配置以下设置：   
 
   - **数据恢复代理**  
     **默认值**：未配置  
@@ -745,10 +745,10 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     **默认值**：备份恢复密码和密钥包  
 
     配置将 BitLocker 恢复信息的哪些部分存储到 Azure AD 中。 选择：  
-    - “备份恢复密码和密钥包”  
-    - “仅备份恢复密码”  
+    - “备份恢复密码和密钥包”   
+    - “仅备份恢复密码”   
 
-  - 客户端驱动的恢复密码轮转  
+  - 客户端驱动的恢复密码轮转   
     **默认值**：已为已加入 Azure AD 的设备启用密钥轮换  
     BitLocker CSP：[ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -778,7 +778,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **阻止** - 对不受 BitLocker 保护的数据驱动器授予只读访问权限。  
   - **未配置** - 默认情况下，授予对未加密的数据驱动器的读取和写入访问权限。  
 
-  设置为“启用”时，可以配置以下设置：  
+  设置为“启用”时，可以配置以下设置：   
 
   - **对其他组织中配置的设备的写权限**  
     **默认值**：未配置  
@@ -802,7 +802,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
   帮助防止操作和应用（通常被寻找漏洞的恶意软件所利用）感染计算机。  
 
-  - 未配置  
+  - 未配置   
   - **启用** - 标记从 Windows 本地安全机构子系统 (lsass.exe) 窃取的凭据。  
   - **仅审核**  
 
@@ -810,7 +810,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止 Adobe Reader 创建子进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
-  - 未配置  
+  - 未配置   
   - **启用** - 阻止从 Adobe Reader 创建的子进程。  
   - **仅审核**  
 
@@ -822,7 +822,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止 Office 应用程序将代码注入其他进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止 Office 应用注入其他进程。  
   - **仅审核**  
 
@@ -830,7 +830,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止 Office 应用程序创建可执行内容](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止 Office 应用和宏创建可执行内容。  
   - **仅审核**  
 
@@ -838,7 +838,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止所有 Office 应用程序创建子进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止 Office 应用启动子进程。  
   - **仅审核**  
   
@@ -846,7 +846,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止来自 Office 宏的 Win32 API 调用](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止 Win32 从 Office 的宏代码中导入。  
   - **仅审核**  
   
@@ -854,7 +854,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止 Office 通信应用程序创建子进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
-  - 未配置  
+  - 未配置   
   - **启用** - 阻止通过 Office 通信应用创建子进程。  
   - **仅审核**  
 
@@ -866,7 +866,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止执行可能经过模糊处理的脚本](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止任何不确定的 js/vbs/ps/宏代码。  
   - **仅审核**  
 
@@ -874,7 +874,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止 JavaScript 或 VBScript 启动下载的可执行内容](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止 js/vbs 执行从 Internet 下载的有效负载。  
   - **仅审核**  
 
@@ -882,7 +882,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止来自 PSExec 和 WMI 命令的进程创建](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止来自 PSExec 和 WMI 命令的进程创建。  
   
   - **仅审核**  
@@ -891,7 +891,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止从 USB 运行不受信任和未签名的进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止从 USB 运行的不受信任和未签名的进程。  
   - **仅审核**  
   
@@ -899,7 +899,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止运行可执行文件，除非它们符合传播、年龄或受信任列表条件](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止可执行文件的运行，除非这些文件符合普及程度、年龄或信任列表条件。  
   - **仅审核**  
 
@@ -911,7 +911,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   **默认值**：未配置  
   规则：[阻止来自电子邮件客户端和 Web 邮件的可执行内容](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - 阻止执行从电子邮件（webmail/邮件客户端）中删除的可执行内容（exe、dll、ps、js、vbs 等）。  
   - **仅审核**  
 
@@ -921,7 +921,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   默认：未配置  
   规则：[启用针对勒索软件的高级防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
-  - 未配置  
+  - 未配置   
   - **启用** - 使用激进的勒索软件防护。  
   - **仅审核**  
 
@@ -930,18 +930,18 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 - **要从攻击面减少规则中排除的文件和文件夹**  
   Defender CSP：[AttackSurfaceReductionOnlyExclusions](https://go.microsoft.com/fwlink/?linkid=872981)  
 
-  - “导入”.csv 文件，该文件包含要从攻击面减少规则中排除的文件和文件夹。  
-  - 手动“添加”本地文件或文件夹。  
+  - “导入”.csv 文件，该文件包含要从攻击面减少规则中排除的文件和文件夹  。  
+  - 手动“添加”本地文件或文件夹  。  
 
 > [!IMPORTANT]  
 > 为了能够正确安装和执行 LOB Win32 应用，反恶意软件设置应不扫描以下目录：  
 > **在 X64 客户端计算机上**：  
-> C:\Program Files (x86)\Microsoft Intune Management Extension\Content  
-> C:\windows\IMECache  
+> C:\Program Files (x86)\Microsoft Intune Management Extension\Content   
+> C:\windows\IMECache   
 >  
 > **在 X86 客户端计算机上**：  
-> C:\Program Files\Microsoft Intune Management Extension\Content  
-> C:\windows\IMECache  
+> C:\Program Files\Microsoft Intune Management Extension\Content   
+> C:\windows\IMECache   
 
 ### <a name="controlled-folder-access"></a>受控文件夹访问权限  
 
@@ -953,24 +953,24 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
   阻止不友好应用对文件和文件夹进行未经授权的更改。  
 
-  - 未配置  
+  - 未配置   
   - **启用**  
   - **仅审核**  
   - **阻止磁盘修改**  
   - **审核磁盘修改**  
 
-  选择“未配置”以外的配置时，可以配置以下项：  
+  选择“未配置”以外的配置时，可以配置以下项  ：  
   - **有权访问受保护文件夹的应用的列表**  
     Defender CSP：[ControlledFolderAccessAllowedApplications](https://go.microsoft.com/fwlink/?linkid=872616)  
 
-    - “导入”包含应用程序列表的 .csv 文件。  
-    - 手动向此列表“添加”应用。  
+    - “导入”包含应用程序列表的 .csv 文件  。  
+    - 手动向此列表“添加”应用  。  
 
   - **需保护的其他文件夹的列表**  
     Defender CSP：[ControlledFolderAccessProtectedFolders](https://go.microsoft.com/fwlink/?linkid=872617)  
 
-    - “导入”包含文件夹列表的 .csv 文件。  
-    - 将文件夹手动“添加”到此列表。  
+    - “导入”包含文件夹列表的 .csv 文件  。  
+    - 将文件夹手动“添加”到此列表  。  
 
 ### <a name="network-filtering"></a>网络筛选  
 
@@ -989,13 +989,13 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 ### <a name="exploit-protection"></a>Exploit Protection  
 
 - **上传 XML**  
-  **默认值**：未配置  
+  **默认值**：未配置   
 
   若要使用 Exploit Protection 来[保护设备免受攻击](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)，请创建包括所需系统和应用程序缓解措施设置的 XML 文件。 可以通过两种方法来创建 XML 文件：  
 
-  - *PowerShell* - 使用一个或多个 Get-ProcessMitigation、Set-ProcessMitigation 和 ConvertTo-ProcessMitigationPolicy PowerShell cmdlet。 这些 cmdlet 配置缓解设置并导出它们的 XML 表示形式。  
+  - *PowerShell* - 使用一个或多个 Get-ProcessMitigation、Set-ProcessMitigation 和 ConvertTo-ProcessMitigationPolicy PowerShell cmdlet    。 这些 cmdlet 配置缓解设置并导出它们的 XML 表示形式。  
 
-  - Microsoft Defender 安全中心 UI - 在 Microsoft Defender 安全中心，单击“应用和浏览器”控件，然后向下滚动到所看到的屏幕底部，找到 Exploit Protection。 首先，使用“系统”设置和“程序”设置选项卡来配置缓解措施设置。 然后，找到屏幕底部的“导出”设置链接，导出其 XML 表示形式。  
+  - Microsoft Defender 安全中心 UI  - 在 Microsoft Defender 安全中心，单击“应用和浏览器”控件，然后向下滚动到所看到的屏幕底部，找到 Exploit Protection。 首先，使用“系统”设置和“程序”设置选项卡来配置缓解措施设置。 然后，找到屏幕底部的“导出”设置链接，导出其 XML 表示形式。  
 
 - **攻击防护界面的用户编辑**  
   **默认值**：未配置  
@@ -1016,7 +1016,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
   - **强制** - 为用户的设备选择应用程序控制代码完整性策略。  
   
-    在设备上启用“应用程序控制”后，只能通过将模式从“强制实施”更改为“仅审核”来禁用。 如果将模式从“强制实施”更改为“不配置”，则会继续在分配的设备上强制执行“应用程序控制”。  
+    在设备上启用“应用程序控制”后，只能通过将模式从“强制实施”  更改为“仅审核”  来禁用。 如果将模式从“强制实施”  更改为“不配置”  ，则会继续在分配的设备上强制执行“应用程序控制”。  
 
   - **未配置** - 不向设备添加应用程序控制。 但是，先前添加的设置将继续在已分配的设备上强制执行。 
  
@@ -1030,16 +1030,16 @@ Microsoft Defender Credential Guard 可防止凭据盗窃攻击。 它可隔离�
   **默认值**：禁用  
   [DeviceGuard CSP](https://go.microsoft.com/fwlink/?linkid=872424)  
 
-  - **禁用** - 远程关闭 Credential Guard（如果之前已使用“无 UEFI 锁启用”选项启用）。  
+  - **禁用** - 远程关闭 Credential Guard（如果之前已使用“无 UEFI 锁启用”选项启用）  。  
 
   - **使用 UEFI 锁启用** - 无法使用注册表项或组策略远程禁用 Credential Guard。  
 
     > [!NOTE]
-    > 如果使用此设置，并且稍后想要禁用 Credential Guard，必须将组策略设置为“禁用”。 并且，从每台计算机以物理方式清除 UEFI 配置信息。 只要 UEFI 配置仍然存在，Credential Guard 就会保持启用状态。  
+    > 如果使用此设置，并且稍后想要禁用 Credential Guard，必须将组策略设置为“禁用”。  并且，从每台计算机以物理方式清除 UEFI 配置信息。 只要 UEFI 配置仍然存在，Credential Guard 就会保持启用状态。  
 
   - **无 UEFI 锁启用** - 允许使用组策略远程禁用 Credential Guard。 使用此设置的设备必须运行 Windows 10 1511 及更新的版本。  
 
-  启用 Credential Guard 时，还会启用以下必需的功能：  
+  启用 Credential Guard 时，还会启用以下必需的功能  ：  
   
   - **基于虚拟化的安全** (VBS)  
     下次重新启动期间启用。 基于虚拟化的安全性使用 Windows 虚拟机监控程序提供对安全服务的支持。  
@@ -1060,7 +1060,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“病毒和威胁防护”区域。 隐藏此部分还将阻止与病毒和威胁防护相关的所有通知。  
 
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **勒索软件防护**  
@@ -1069,7 +1069,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“勒索软件防护”区域。 隐藏此部分还会阻止与勒索软件防护相关的所有通知。  
 
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **帐户保护**  
@@ -1078,7 +1078,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“帐户保护”区域。 隐藏此部分还将阻止与帐户保护相关的所有通知。  
 
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **防火墙和网络保护**  
@@ -1087,7 +1087,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“防火墙和网络保护”区域。 隐藏此部分还将阻止与防火墙和网络保护相关的所有通知。  
 
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **应用和浏览器控制**  
@@ -1096,7 +1096,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“应用和浏览器控制”区域。 隐藏此部分还将阻止与应用和浏览器控制相关的所有通知。  
 
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **硬件保护**  
@@ -1105,7 +1105,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“硬件保护”区域。 隐藏此部分还会阻止与硬件保护相关的所有通知。  
 
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **设备性能和运行状况**  
@@ -1114,7 +1114,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“设备性能和运行状况”区域。 隐藏此部分还将阻止与设备性能和运行状况相关的所有通知。  
   
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **产品系列选项**  
@@ -1123,7 +1123,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置最终用户是否可以在 Microsoft Defender 安全中心查看“家庭选项”区域。 隐藏此部分还将阻止与家庭选项相关的所有通知。  
   
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **应用的显示区域中的通知**  
@@ -1132,7 +1132,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   选择要向最终用户显示的通知。 非关键通知包括 Microsoft Defender 防病毒活动摘要（包括扫描完成时的通知）。 所有其他通知被视为是关键通知。  
 
-  - 未配置  
+  - 未配置   
   - **阻止非重要通知**  
   - **阻止所有通知**  
 
@@ -1141,7 +1141,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置通知区域控件的显示。 用户需要注销再重新登录或者重启计算机才能使此设置生效。  
   
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **“清除 TPM”按钮**  
@@ -1149,7 +1149,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置“清除 TPM”按钮的显示。  
   
-  - 未配置  
+  - 未配置   
   - **禁用**  
 
 - **TPM 固件更新警告**  
@@ -1157,7 +1157,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   
   配置在检测到存在漏洞的固件时是否显示“更新 TPM 固件”。  
 
-  - 未配置  
+  - 未配置   
   - **隐藏**  
 
 - **篡改防护**  
@@ -1172,7 +1172,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
 提供要在 Microsoft Defender 安全中心应用和应用通知中显示的 IT 联系信息。  
 
-可以选择“在应用和通知中显示”、“仅在应用中显示”、“仅在通知中显示”或“不显示”。 输入“IT 组织名称”和至少以下一项联系选项：  
+可以选择“在应用和通知中显示”、“仅在应用中显示”、“仅在通知中显示”或“不显示”     。 输入“IT 组织名称”和至少以下一项联系选项  ：  
 
 
 - **IT 联系信息**  
@@ -1189,19 +1189,19 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   配置为“显示”时，可以配置以下设置：  
 
   - **IT 组织名称**  
-    **默认值**：未配置  
+    **默认值**：未配置   
     WindowsDefenderSecurityCenter CSP：[CompanyName](https://go.microsoft.com/fwlink/?linkid=873677)  
 
   - **IT 部门的电话号码或 Skype ID**  
-    **默认值**：未配置  
+    **默认值**：未配置   
     WindowsDefenderSecurityCenter CSP：[电话](https://go.microsoft.com/fwlink/?linkid=873678) 
 
   - **IT 部门的电子邮件地址**  
-    **默认值**：未配置  
+    **默认值**：未配置   
     WindowsDefenderSecurityCenter CSP：[Email](https://go.microsoft.com/fwlink/?linkid=873679)  
 
   - **IT 支持网站 URL**  
-    **默认值**：未配置  
+    **默认值**：未配置   
     WindowsDefenderSecurityCenter CSP：[URL](https://go.microsoft.com/fwlink/?linkid=873680)  
  
 ## <a name="local-device-security-options"></a>本地设备安全选项  
@@ -1234,14 +1234,14 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
 
   - **阻止** 阻止使用本地管理员帐户。  
-  - 未配置  
+  - 未配置   
 
 - **重命名管理员帐户**  
-  **默认值**：未配置  
+  **默认值**：未配置   
   LocalPoliciesSecurityOptions CSP：[Accounts_RenameAdministratorAccount](https://go.microsoft.com/fwlink/?linkid=867917)  
  
 
-  定义与“管理员”帐户的安全标识符 (SID) 关联的其他帐户名称。  
+  定义与“Administrator”帐户的安全标识符 (SID) 关联的其他帐户名称。  
 
  #### <a name="guest"></a>来宾  
 
@@ -1250,13 +1250,13 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   LocalPoliciesSecurityOptions CSP：[LocalPoliciesSecurityOptions](https://go.microsoft.com/fwlink/?linkid=867853)  
 
   - **阻止** - 阻止使用来宾帐户。  
-  - 未配置  
+  - 未配置   
 
 - **重命名来宾帐户**  
-  **默认值**：未配置  
+  **默认值**：未配置   
   LocalPoliciesSecurityOptions CSP：[Accounts_RenameGuestAccount](https://go.microsoft.com/fwlink/?linkid=867918)  
   
-  定义与“来宾”帐户的安全标识符 (SID) 关联的其他帐户名称。  
+  定义与“Guest”帐户的安全标识符 (SID) 关联的其他帐户名称。  
 
 ### <a name="devices"></a>设备  
 
@@ -1290,7 +1290,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
  
 
   定义可以格式化和弹出可移动 NTFS 媒体的用户：  
-  - 未配置  
+  - 未配置   
   - **管理员**  
   - **管理员和超级用户**  
   - **管理员和交互式用户**  
@@ -1298,7 +1298,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 ### <a name="interactive-logon"></a>交互式登录  
 
 - **激活屏幕保护程序前锁屏界面保持不活动状态的分钟数**  
-  **默认值**：未配置  
+  **默认值**：未配置   
   LocalPoliciesSecurityOptions CSP：[InteractiveLogon_MachineInactivityLimit](https://go.microsoft.com/fwlink/?linkid=867891)  
 
 
@@ -1331,7 +1331,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   配置会话锁定时显示的用户信息。 如果未配置，则显示用户显示名称、域和用户名。  
 
-  - 未配置  
+  - 未配置   
   - **用户显示名称、域和用户名**  
   - **仅限用户显示名称**  
   - **不显示用户信息**  
@@ -1345,7 +1345,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   - **未配置** - 显示上一个用户名。  
 
 - “在登录时隐藏用户名”
-  “默认”：未配置  
+  “默认”   ：未配置  
   LocalPoliciesSecurityOptions CSP：[InteractiveLogon_DoNotDisplayUsernameAtSignIn](https://go.microsoft.com/fwlink/?linkid=867959)  
 
   
@@ -1353,13 +1353,13 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   - **未配置** - 显示上一个用户名。  
 
 - **登录消息标题**  
-  **默认值**：未配置  
+  **默认值**：未配置   
   LocalPoliciesSecurityOptions CSP：[InteractiveLogon_MessageTitleForUsersAttemptingToLogOn](https://go.microsoft.com/fwlink/?linkid=867964)  
 
   设置登录用户的消息标题。  
 
 - **登录消息正文**  
-  **默认值**：未配置  
+  **默认值**：未配置   
   LocalPoliciesSecurityOptions CSP：[InteractiveLogon_MessageTextForUsersAttemptingToLogOn](https://go.microsoft.com/fwlink/?linkid=867962)  
 
   设置登录用户的消息正文。  
@@ -1407,10 +1407,10 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   LocalPoliciesSecurityOptions CSP：[NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](https://go.microsoft.com/fwlink/?linkid=867893)  
   
   - **未配置** - 使用默认的安全描述符，它允许用户和组对 SAM 进行远程 RPC 调用。
-  - **允许** - 拒绝用户和组对存储用户帐户和密码的安全帐户管理器 (SAM) 进行远程 RPC 调用。 选择“允许”，还可更改默认安全描述符定义语言 (SDDL) 字符串，以显式允许或拒绝用户和组进行这些远程调用。  
+  - **允许** - 拒绝用户和组对存储用户帐户和密码的安全帐户管理器 (SAM) 进行远程 RPC 调用。 选择“允许”  ，还可更改默认安全描述符定义语言 (SDDL) 字符串，以显式允许或拒绝用户和组进行这些远程调用。  
 
     - **安全描述符**  
-      **默认值**：未配置  
+      **默认值**：未配置   
     
 - **基于 NTLM SSP 的客户端的最低会话安全性**  
   **默认值**：无  
@@ -1452,7 +1452,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   如果启用此设置，则 SMB 客户端将拒绝不安全的来宾登录。  
 
-  - 未配置  
+  - 未配置   
   - **阻止** - SMB 客户端拒绝不安全的来宾登录。  
 
 ### <a name="recovery-console-and-shutdown"></a>恢复控制台和关闭  
@@ -1504,11 +1504,11 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   在管理员批准模式下定义管理员的提升提示行为。  
 
-  - 未配置  
-  - 不提示，直接提升  
-  - 在安全桌面上提示凭据  
-  - 提示凭据  
-  - 同意提示  
+  - 未配置   
+  -  不提示，直接提升  
+  -  在安全桌面上提示凭据  
+  -  提示凭据  
+  -  同意提示  
   - **非 Windows 二进制文件的同意提示**  
 
 
@@ -1518,10 +1518,10 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
   定义标准用户的提升提示行为。  
 
-  - 未配置  
-  - 自动拒绝提升请求  
-  - 在安全桌面上提示凭据  
-  - 提示凭据  
+  - 未配置   
+  -  自动拒绝提升请求  
+  -  在安全桌面上提示凭据  
+  -  提示凭据  
 
 - **将提升权限提示路由到用户的交互式桌面**  
   **默认值**：未配置  
@@ -1612,7 +1612,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
    
   此设置决定是“启用”还是“禁用” Xbox 游戏保存任务。  
   - **Enabled**
-  - 未配置
+  - 未配置 
 
 - **Xbox 附件管理服务**  
   **默认值**：手动  
@@ -1649,240 +1649,6 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   - **手动**
   - **自动**
   - **禁用**
-
-## <a name="user-rights"></a>用户权限
-
-- **作为受信任呼叫方的访问凭据管理器**  
-  **默认值**：未配置  
-  CSP：[UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  凭据管理器在备份和还原操作期间使用此用户权限。 如果将此权限授予其他实体，则用户保存的凭据可能会受到损害。
-  - 未配置
-  - **允许**
-
-- **允许本地登录**  
-  **默认值**：未配置  
-  CSP：[UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  此用户权限确定哪些用户可以登录到计算机。
-  - 未配置
-  - **允许**
-
-- **允许从网络进行访问**  
-  **默认值**：未配置  
-  CSP：[UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  此用户权限确定哪些用户和组可以通过网络连接到计算机。
-  - 未配置
-  - **允许**
-
-- **充当操作系统的一部分**  
-  **默认值**：未配置  
-  CSP：[UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  充当操作系统的一部分
-  - 未配置
-  - **允许**  
-
-- **备份文件和目录**  
-  **默认值**：未配置  
-  CSP：[UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  此用户权限决定在备份文件和目录时，哪些用户可以跳过文件、目录、注册表和其他持久性对象权限。
-  - 未配置
-  - **允许**
-
-- **更改系统时间**  
-  **默认值**：未配置  
-  CSP：[UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  此用户权限确定哪些用户和组可以更改计算机内部时钟的时间和日期。
-  - 未配置
-  - **允许**
-
-- **创建全局对象**  
-  **默认值**：未配置  
-  CSP：[UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  此安全设置确定用户是否可以创建可用于所有会话的全局对象。 可以创建全局对象的用户可能会影响在其他用户会话下运行的进程，这可能导致应用程序故障或数据损坏。
-  - 未配置
-  - **允许**
-
-- **创建页面文件**  
-  **默认值**：未配置  
-  CSP：[UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  此用户权限确定哪些用户和组可通过调用内部 API 来创建页面文件和更改页面文件的大小。
-  - 未配置
-  - **允许**
-
-- **创建永久共享对象**  
-  **默认值**：未配置  
-  CSP：[UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  此用户权限决定进程可以使用哪些帐户通过对象管理器创建目录对象。
-  - 未配置
-  - **允许**
-
-- **创建符号链接**  
-  **默认值**：未配置  
-  CSP：[UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  此用户权限决定用户是否可以从其登录到的计算机创建符号链接。
-  - 未配置
-  - **允许**
-
-- **创建令牌**  
-  **默认值**：未配置  
-  CSP：[UserRights/CreateToken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  此用户权限决定在进程使用内部 API 创建访问令牌时，进程可以使用哪些用户/组来创建随后可用于获取任意本地资源访问权限的令牌。
-  - 未配置
-  - **允许**
-
-- **调试程序**  
-  **默认值**：未配置  
-    CSP：[UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  此用户权限决定哪些用户可以将调试程序附加到任意进程或内核。
-  - 未配置
-  - **允许**
-
-- **拒绝从网络访问**  
-  **默认值**：未配置  
-  CSP：[UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  此用户权限决定阻止哪些用户通过网络访问计算机。
-  - 未配置
-  - **允许**
-
-- **拒绝以服务登录**  
-  **默认值**：未配置  
-  CSP：[UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  此安全设置确定阻止哪些服务帐户将某个进程注册为服务。
-  - 未配置
-  - **允许**
-
-- **拒绝通过远程桌面服务登录**  
-  **默认值**：未配置  
-  CSP：[UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  此用户权限确定禁止哪些用户和组作为远程桌面服务客户端登录。
-  - 未配置
-  - **允许**
-
-- **启用委派**  
-  **默认值**：未配置  
-  CSP：[UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- 此用户权限决定哪些用户可以在用户或计算机对象上设置“信任委托”设置。
-  - 未配置
-  - **允许**
-
-- **生成安全审核**  
-  **默认值**：未配置  
-  CSP：[UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  此用户权限决定进程可以使用哪些帐户向安全日志添加条目。 安全日志用于跟踪未经授权的系统访问。
-  - 未配置
-  - **允许**
-
-- **模拟客户端**  
-  **默认值**：未配置  
-  CSP：[UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  将此用户权限分配给用户将允许代表该用户运行的程序模拟客户端。 要求具有此用户权限才能进行此类型的模拟，可阻止未经授权的用户设法让客户端连接到其创建的服务然后模拟该客户端（这可能将该未经授权的用户的权限提升到管理级别或系统级别）。
-  - 未配置
-  - **允许**
-
-- **提高日程安排的优先级**  
-  **默认值**：未配置  
-  CSP：[UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
-
-  此用户权限确定哪些帐户可以使用对其他进程具有“写入属性”访问权限的进程来提高分配给该“其他”进程的执行优先级。
-  - 未配置
-  - **允许**
-
-- **加载和卸载设备驱动程序**  
-  **默认值**：未配置  
-  CSP：[UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  此用户权限决定哪些用户可以将设备驱动程序或其他代码动态加载到内核模式及从中卸载。
-  - 未配置
-  - **允许**
-
-- **锁定内存页**  
-  **默认值**：未配置  
-  CSP：[UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  此用户权限将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。
-  - 未配置
-  - **允许**
-
-- **管理审核和安全日志**  
-  **默认值**：未配置  
-  CSP：[UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  此用户权限确定哪些用户可以为单个资源（如文件、Active Directory 对象和注册表项）指定对象访问审核选项。
-  - 未配置
-  - **允许**
-
-- **执行卷维护任务**  
-  **默认值**：未配置  
-  CSP：[UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  此用户权限决定哪些用户和组可以在卷上运行维护任务，如远程碎片整理。
-  - 未配置
-  - **允许**
-
-- **修改固件环境值**  
-  **默认值**：未配置  
-  CSP：[UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  此用户权限决定谁可以修改固件环境值。
-  - 未配置
-  - **允许**
-
-- **修改对象标签**  
-  **默认值**：未配置  
-  CSP：[UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  此用户权限确定哪些用户帐户可以修改对象（如文件、注册表项或其他用户拥有的进程）的完整性标签。
-  - 未配置
-  - **允许**
-
-- **配置单一进程**  
-  **默认值**：未配置  
-  CSP：[UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  此用户权限确定哪些用户可使用性能监视工具监视系统进程的性能。
-  - 未配置
-  - **允许**
-
-- **远程关机**  
-  **默认值**：未配置  
-  CSP：[UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  此用户权限确定允许哪些用户从网络上的远程位置关闭计算机。 误用此用户权限可能导致拒绝服务。
-  - 未配置
-  - **允许**
-  
-- **还原文件和目录**  
-  **默认值**：未配置  
-  CSP：[UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  此用户权限决定在还原备份的文件和目录时，哪些用户可以跳过文件、目录、注册表和其他持久性对象权限，并决定哪些用户可以将任意有效的安全主体设置为对象的所有者。
-  - 未配置
-  - **允许**
-  
-- **获得文件或对象的所有权**  
-  **默认值**：未配置  
-  CSP：[UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  此用户权限确定哪些用户可以获得系统中 Active Directory 对象、文件和文件夹、打印机、注册表项、进程和线程等任何安全对象的所有权。
-  - 未配置
-  - **允许**
 
 ## <a name="next-steps"></a>后续步骤
 
