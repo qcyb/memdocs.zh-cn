@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Microsoft Edge 基线设置
               href: security-baseline-settings-edge.md
+        - name: 防病毒策略设置
+          items:
+            - name: macOS Defender 防病毒设置
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender 防病毒设置
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Windows 更新设置
           href: windows-update-settings.md
         - name: 合规性策略设置 - Android

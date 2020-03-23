@@ -81,6 +81,8 @@
           href: android-enroll-device-administrator.md
         - name: 管理 Android Enterprise 工作配置文件设备
           href: android-enterprise-overview.md
+        - name: 将设备管理员的设备移动到工作配置文件管理
+          href: android-move-device-admin-work-profile.md
         - name: Samsung Knox 移动注册
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
