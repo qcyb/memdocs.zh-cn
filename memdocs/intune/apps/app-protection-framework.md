@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342291"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083556"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用应用保护策略的数据保护框架 
 
@@ -55,7 +55,7 @@ Microsoft 建议对 APP 数据保护框架采用以下部署圈方法：
 
 测试对 APP 进行的更改时，请注意[交付时间](app-protection-policy-delivery.md)。 可以监视针对给定用户的 APP 交付状态。 有关详细信息，请参阅[如何监视应用保护策略](app-protection-policies-monitor.md)。
 
-可以使用 Edge 和 URL about:Intunehelp  ，在设备上验证每个应用的单独 APP 设置。 有关详细信息，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)和[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs)。
+可以使用 Edge 和 URL about:Intunehelp  ，在设备上验证每个应用的单独 APP 设置。 有关详细信息，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)和[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。
 
 ## <a name="app-data-protection-framework-settings"></a>APP 数据保护框架设置
 

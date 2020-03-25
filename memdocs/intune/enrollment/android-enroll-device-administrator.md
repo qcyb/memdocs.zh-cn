@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebe011c5549762c865eacdc2719e5ec28fdbed8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4c22da8e3c4fdbcf40c3292476e734dd50f9543a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339704"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086216"
 ---
 # <a name="android-device-administrator-enrollment"></a>Android 设备管理员注册
 
@@ -51,7 +51,7 @@ Android 设备管理员（有时称为“旧版”Android 管理，随 Android 2
 
 有关其他用户任务的信息，请参阅以下文章：
 - [有关 Microsoft Intune 最终用户体验的资源](../fundamentals/end-user-educate.md)
-- [通过 Intune 使用 Android 设备](https://docs.microsoft.com/user-help/using-your-android-device-with-intune)
+- [通过 Intune 使用 Android 设备](https://docs.microsoft.com/mem/intune/user-help/why-enroll-android-device)
 
 
 ## <a name="block-device-administrator-enrollment"></a>阻止设备管理员注册

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58069b074db2d885ad63f03c4ba5877458bc7bc1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364066"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086800"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>用于在 Intune 中配置 VPN 的 Android Enterprise 设备设置
 
@@ -35,7 +35,7 @@ Intune 管理员可以创建 VPN 设置，并将它们分配到 Android Enterpri
 
 ## <a name="before-you-begin"></a>在开始之前
 
-[创建设备配置文件](vpn-settings-configure.md#create-a-device-profile)，并选择“Android Enterprise”  。
+[创建设备配置文件](vpn-settings-configure.md)，并选择“Android Enterprise”  。
 
 ## <a name="device-owner-only"></a>仅设备所有者
 

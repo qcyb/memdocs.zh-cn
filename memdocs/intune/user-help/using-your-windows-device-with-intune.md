@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 89fdcaefebc7329959cc1e5d77a97034d038d5c2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79346906"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084178"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>通过 Windows 公司门户使用 iOS 设备
 
@@ -33,7 +33,7 @@ ms.locfileid: "79346906"
 ## <a name="how-to-get-company-portal"></a>如何获取公司门户
 公司门户提供网站版本，也可以作为应用下载。 若要[访问公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)，请使用工作单位或学校凭据登录。  
 
-有关详细步骤和屏幕截图，请参阅[登录到公司门户](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal)。
+有关详细步骤和屏幕截图，请参阅[登录到公司门户](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal)。
 
 ## <a name="supported-versions"></a>支持的版本
 

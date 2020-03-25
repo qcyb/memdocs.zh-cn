@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e72993141de963d78d6aeaf512af0165d747c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcd6a49c0960bc38215123536e520bc89bcaeca1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341212"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083462"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>使用 Microsoft Intune 将 Office 365 应用添加到 Windows 10 设备
 
@@ -234,4 +234,4 @@ Intune 使用 [Office 部署工具](https://docs.microsoft.com/DeployOffice/over
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要将应用套件分配给其他组，请参阅[将应用分配给组](/intune-azure/manage-apps/deploy-apps)。
+- 若要将应用套件分配给其他组，请参阅[将应用分配给组](/mem/intune/apps/apps-deploy)。

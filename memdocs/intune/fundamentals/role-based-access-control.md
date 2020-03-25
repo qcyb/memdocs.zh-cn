@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b01f9444cf70c447c916d3d0a550a8cf46efc28a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79356422"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220160"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>使用 Microsoft Intune 的基于角色的访问控制 (RBAC)
 
@@ -72,10 +72,6 @@ ms.locfileid: "79356422"
 
 > [!TIP]
 > Intune 还显示三个 Azure AD 扩展：“用户”  、“组”  和“条件访问”  （使用 Azure AD RBAC 进行控制）。 此外，**用户帐户管理员**仅执行 AAD 用户/组活动，而不具备在 Intune 中执行所有活动的完全权限。 有关详细信息，请参阅 [RBAC 与 Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)。
-### <a name="roles-created-in-the-intune-classic-portal"></a>在 Intune 经典门户中创建的角色
-只有拥有“完全”权限的 Intune 服务管理员  ，才能从 Intune 经典门户迁移到 Azure 门户中 Intune。 必须在 Azure 门户中向拥有“只读”或“支持人员”访问权限的 Intune 服务管理员  用户重新分配 Intune 角色，并将他们从经典门户中删除。
-> [!IMPORTANT]
-> 如果管理员仍需要有权使用 Intune 管理电脑，你可能需要保留经典门户中的 Intune 服务管理员访问权限。
 
 ## <a name="role-assignments"></a>角色分配
 角色分配定义：

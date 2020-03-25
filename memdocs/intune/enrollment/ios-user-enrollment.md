@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359230"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086102"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>设置 iOS/iPadOS 和 iPadOS 用户注册（预览版）
 
@@ -59,7 +59,7 @@ ms.locfileid: "79359230"
 
     - **设备注册**：此配置文件中的所有用户都将使用设备注册。
     - **用户注册**：此配置文件中的所有用户都将使用用户注册。
-    - **基于用户选择进行确定**：将为此组中的所有用户提供要使用的注册类型。 当用户注册其设备时，他们可以在“我拥有此设备”  和“(公司)拥有此设备”  之间看到一个可选择的选项。 如果他们选择了前者，设备将使用设备注册进行注册。 如果用户选择“我拥有此设备”  ，则他们还可以选择保护整个设备或仅保护与工作相关的应用程序和数据。 最终用户选择是否拥有设备确定在其设备上实现哪些注册类型。 此用户选项反映在 Intune 中的“设备所有权”属性中。 若要了解有关用户体验的详细信息，请参阅[设置 iOS/iPadOS 设备对公司资源的访问](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios)。
+    - **基于用户选择进行确定**：将为此组中的所有用户提供要使用的注册类型。 当用户注册其设备时，他们可以在“我拥有此设备”  和“(公司)拥有此设备”  之间看到一个可选择的选项。 如果他们选择了前者，设备将使用设备注册进行注册。 如果用户选择“我拥有此设备”  ，则他们还可以选择保护整个设备或仅保护与工作相关的应用程序和数据。 最终用户选择是否拥有设备确定在其设备上实现哪些注册类型。 此用户选项反映在 Intune 中的“设备所有权”属性中。 若要了解有关用户体验的详细信息，请参阅[设置 iOS/iPadOS 设备对公司资源的访问](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。
     
 5. 选择“下一步”  。
 

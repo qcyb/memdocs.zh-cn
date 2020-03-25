@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338235"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220245"
 ---
 # <a name="send-custom-notifications-in-intune"></a>使用 Intune 发送自定义通知
 
@@ -73,7 +73,6 @@ ms.locfileid: "79338235"
 - 若要创建消息，请使用分配有 Intune 角色（包括前面“权限”部分所述的正确权限）的帐户  。 若要为用户分配权限，请参阅[角色分配](../fundamentals/role-based-access-control.md#role-assignments)。
 - 自定义通知的标题最多允许 50 个字符，其消息最多允许 500 个字符。  
 - Intune 不会保存以前发送的自定义通知中的文本。 若要重新发送消息，必须重新创建该消息。  
-- 每小时最多只能向组发送 25 条消息。 此限制仅针对租户级别。 此限制不适用于向单个设备发送通知。
 - 每小时最多只能向组发送 25 条消息。 此限制仅针对租户级别。 此限制不适用于向单个设备发送通知。
 - 向单个设备发送消息时，每小时最多只可以向同一台设备发送 10 条消息。
 - 可以向组内用户发送通知。 向组内用户发送通知时，每个通知都可以直接面向最多 25 个组。 嵌套组不计入此总数。 向单个组发送通知时，消息仅以该组中的用户为目标，并发送到用户已注册的每个 iOS/iPadOS 或 Android 设备。 如果以通知为目标，则将忽略该组中的设备。

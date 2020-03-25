@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc5cd2926f85ebf2f81d681646be7973e6ba444
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354472"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085783"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Intune 经典门户中的新增功能 - 前几个月
 
@@ -320,7 +320,7 @@ Intune 将所有新设备都标记为个人所有，除非 IT 管理员将设备
 ### <a name="notices"></a>通知
 
 __注册移动到 Azure 门户时的多重身份验证__ <!--VSO 750545-->
-以前，管理员会进入 Intune 控制台或 Configuration Manager（2016 年 10 月之前的版本）控制台，以设置 MFA 用于 Intune 注册。 通过此更新的功能，现在可使用 Intune凭据登录 [Microsoft Azure 门户](https://manage.windowsazure.com)，并通过 Azure AD 配置 MFA 设置。 在[此处](https://aka.ms/mfa_ad)了解详细信息。
+以前，管理员会进入 Intune 控制台或 Configuration Manager（2016 年 10 月之前的版本）控制台，以设置 MFA 用于 Intune 注册。 通过此更新的功能，现在可使用 Intune凭据登录 [Microsoft Azure 门户](https://manage.windowsazure.com)，并通过 Azure AD 配置 MFA 设置。 在[此处](/azure/active-directory/authentication/howto-mfa-mfasettings)了解详细信息。
 
 __适用于 Android 的公司门户应用现已在中国推出__ <!--VSO 658093-->
 我们将发布 Android 版公司门户应用，以供中国地区下载。 由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用市场获取应用。 可在以下应用商店下载用于 Android 的公司门户应用：

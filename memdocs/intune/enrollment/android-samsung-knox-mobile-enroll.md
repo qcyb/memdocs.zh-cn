@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d7ec41361571647cc417dc34ad29522d50477eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339561"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233595"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>使用 Samsung 的 Knox 移动注册自动注册 Android 设备
 
@@ -61,7 +61,7 @@ ms.locfileid: "79339561"
 - 若要创建 Android MDM 配置文件，请在 Knox 门户中选择“设备管理”作为配置文件类型  。 
 - 若要创建 Android Enterprise MDM 配置文件，请在 Knox 门户中选择“设备所有者”作为配置文件类型  。  
 
-### <a name="for-android"></a>适用于 Android
+### <a name="for-android-enterprise"></a>对于 Android Enterprise
 
 | MDM 配置文件字段| 是否必需？ | 值 | 
 |-------------------|-----------|-------| 
@@ -78,7 +78,7 @@ ms.locfileid: "79339561"
 
 \*在 Knox 门户中完成概要文件创建不需要此字段。 但是，Intune 确实要求填写此字段，以便配置文件可以在 Intune 中成功注册设备。
 
-### <a name="for-android-enterprise"></a>对于 Android Enterprise
+### <a name="for-android"></a>适用于 Android
 
 有关分步指南，请参阅 [Samsung 的“创建配置文件”](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm)说明。
 

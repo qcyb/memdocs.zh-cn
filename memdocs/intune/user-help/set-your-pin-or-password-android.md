@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ec617d76ec2fe4d59de7715daec76351798bd460
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336168"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233438"
 ---
 # <a name="set-your-pin-or-password"></a>设置你的 PIN 或密码
 
@@ -36,6 +36,6 @@ ms.locfileid: "79336168"
 
 2. 选择并确认新密码。
 
-对于某些设备，除了设置屏幕密码以外，还需设置启动 PIN。 你可以尝试通过在设置应用中查找位置启用此选项来解决此问题。 例如，在 Samsung Galaxy S7 上，通过转到“设置”   > “锁定屏幕和安全性”   > “安全启动”  启用“安全启动”。 请单击[此处](/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android)，查看详细信息。 
+对于某些设备，除了设置屏幕密码以外，还需设置启动 PIN。 你可以尝试通过在设置应用中查找位置启用此选项来解决此问题。 例如，在 Samsung Galaxy S7 上，通过转到“设置”   > “锁定屏幕和安全性”   > “安全启动”  启用“安全启动”。 请单击[此处](your-device-appears-encrypted-but-cp-says-otherwise-android.md)，查看详细信息。 
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

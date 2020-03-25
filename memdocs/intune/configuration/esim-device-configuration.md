@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343487"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086990"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>在公开预览版的 Intune 中配置 eSIM 手机网络配置文件
 
 eSIM 是一种嵌入式 SIM 芯片，可让你通过支持 eSIM 的设备（如 [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro)）上的手机网络数据连接连接到 Internet。 如果使用 eSIM 卡，则无需从移动运营商处获取 SIM 卡。 如需跨国旅行，还可在不同移动运营商和数据套餐之间进行切换，并始终保持连接状态。
 
 例如，你有一个用于工作的手机网络流量套餐，还有另外一个私人使用的流量套餐，但由另一个移动运营商提供。 当你在旅行时，可以通过查找在该区域提供流量套餐的移动运营商来获取 Internet 访问权限。
+
+此功能适用于：
+
+- Windows 10 及更高版本
 
 在 Intune 中，可以导入移动运营商提供的一次性使用的激活码。 要在 eSIM 模块上配置手机网络流量套餐，请将这些激活码部署到支持 eSIM 的设备。 当 Intune 安装激活码时，eSIM 硬件模块会使用激活码中的数据联系移动运营商。 完成后，eSIM 配置文件将下载到设备上，并配置为激活手机网络。
 

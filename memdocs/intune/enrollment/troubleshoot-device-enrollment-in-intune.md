@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a38664640b448d6770d4728a9a9918e251c37e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344696"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085862"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune 设备注册疑难解答
 
@@ -47,8 +47,8 @@ ms.locfileid: "79344696"
 
 托管的设备用户可收集注册和诊断日志以供你查看。 以下提供了有关收集日志的用户说明：
 
-- [将 Android 注册错误发送给 IT 管理员](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
-- [将 iOS/iPadOS 错误发送给 IT 管理员](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
+- [将 Android 注册错误发送给 IT 管理员](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
+- [将 iOS/iPadOS 错误发送给 IT 管理员](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>常规注册问题

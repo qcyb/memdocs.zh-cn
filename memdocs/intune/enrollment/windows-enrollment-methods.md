@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: eac0eff9167e46d73dffe1c74ce073ffa68c7070
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363195"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085691"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>适用于 Windows 设备的 Intune 注册方法
 
@@ -36,7 +36,7 @@ ms.locfileid: "79363195"
 
 用户可以使用以下任何方法自助注册其 Windows 设备：
 
-- [自带设备办公 (BYOD)](https://docs.microsoft.com/user-help/enroll-windows-10-device)：用户通过选择从设备的“设置”连接“工作和学校”帐户来注册其个人拥有的设备   。 过程如下：
+- [自带设备办公 (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device)：用户通过选择从设备的“设置”连接“工作和学校”帐户来注册其个人拥有的设备   。 过程如下：
   - 使用 Azure Active Directory 注册设备以访问企业资源（如电子邮件）。
   - 将设备作为个人拥有的设备 (BYOD) 注册到 Intune 中。
 如果管理员已配置自动注册（Azure AD 高级订阅可用），则用户只需输入一次凭据。 否则，他们必须通过仅限 MDM 注册单独注册并重新输入其凭据。  

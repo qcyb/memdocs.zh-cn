@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1066e2d86a2c3be4ad4d55a0fd2bbbac03066cc6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363481"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086079"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>在 Intune 中设置 macOS 设备注册
 
@@ -51,7 +51,7 @@ Intune 可以管理 macOS 设备以允许用户访问公司电子邮件和应用
 - 转到[公司门户网站](https://portal.manage.microsoft.com)或
 - 在 [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) 下载 Mac 公司门户应用。
 
-你还可以向用户发送联机注册步骤的链接：[在 Intune 中注册 macOS 设备](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos)。
+你还可以向用户发送联机注册步骤的链接：[在 Intune 中注册 macOS 设备](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。
 
 有关其他最终用户任务的信息，请参阅以下文章：
 

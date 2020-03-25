@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ccd264257ee31db1a60400e9054b5219c52a5200
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337156"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084684"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>设置 iOS 设备对公司资源的访问  
 
@@ -54,7 +54,7 @@ ms.locfileid: "79337156"
 ### <a name="setting-notifications"></a>设置通知  
 如果注册后组织强制使用新的安全要求（如多重身份验证），公司门户应用将对此作出通知。 可调整设置，以便可以继续通过该设备开展工作。  
 
-要了解有关注册的详细信息，请参阅[安装公司门户应用并注册设备后会发生什么情况？](https://docs.microsoft.com//user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)。  
+要了解有关注册的详细信息，请参阅[安装公司门户应用并注册设备后会发生什么情况？](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)。  
 
 ## <a name="enroll-your-ios-device"></a>注册 iOS 设备  
 

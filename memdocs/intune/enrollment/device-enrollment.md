@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359399"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086176"
 ---
 # <a name="what-is-device-enrollment"></a>什么是设备注册？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |:---:|:---:|:---:|:---:|:---:|
 | | 设备在注册过程中被擦除。 | 将每个设备与用户关联。| 如果“是”，则用户无法取消注册设备。 | |
 |**[BYOD](#bring-your-own-device)** | 否| 是 | 否 | [详细信息](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| 否 |否 |否 | [详细信息](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| 否 |否 |否 | [详细信息](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| 是 | 可选 | 可选|[详细信息](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| 是 | 可选 | 否| [详细信息](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| 否 | 否 | 否|[详细信息](apple-configurator-enroll-ios.md)|
@@ -67,7 +67,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 
 | 个人  | **注册方法** | **需要重置** | **用户关联** | **锁定** | **详细信息**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android 设备管理**|**用户通过公司门户启动** | 否 | 是 | 否 | [详细信息](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Android 设备管理**|**用户通过公司门户启动** | 否 | 是 | 否 | [详细信息](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Android Enterprise 工作配置文件**|**用户通过公司门户启动**| 否 | 是 | 否 | [详细信息](android-work-profile-enroll.md)|
 
 
