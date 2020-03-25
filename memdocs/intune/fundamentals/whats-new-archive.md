@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17fa979f9563eb0735a68d2cc0ed82d800f8816f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354732"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085832"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 中前几个月的新增功能
 
@@ -294,7 +294,7 @@ Intune 现在支持通过托管的 Google Play iframe 直接在 Intune 控制台
 - 添加了对自定义推送通知的显示，将应用与适用于 iOS 和 Android 的公司门户应用中最近新增的支持保持一致。 有关详细信息，请参阅[使用 Intune 发送自定义通知](../remote-actions/custom-notifications.md)。
 ""
 #### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal---4394993---"></a>对于 iOS 设备，自定义公司门户的“注册过程隐私”屏幕<!-- 4394993 -->
-使用 Markdown，可以自定义最终用户在 iOS 注册期间看到的公司门户的隐私屏幕。 具体来说，将能够自定义组织无法在设备上查看或执行的操作列表。 有关详细信息，请参阅[如何配置 Intune 公司门户应用](../apps/company-portal-app.md#privacy-statement-customization)。
+使用 Markdown，可以自定义最终用户在 iOS 注册期间看到的公司门户的隐私屏幕。 具体来说，将能够自定义组织无法在设备上查看或执行的操作列表。 有关详细信息，请参阅[如何配置 Intune 公司门户应用](../apps/company-portal-app.md#configuration)。
 
 
 
@@ -1098,7 +1098,7 @@ Autopilot 重置现在适用于所有 Windows 设备，甚至包括那些未配�
 * 打开“设置”应用以在其设备上安装管理配置文件。
 * 返回公司门户应用以完成注册。  
 
-要了解更新的注册步骤和屏幕，请参阅[在 Intune 中注册 iOS 设备](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios)。
+要了解更新的注册步骤和屏幕，请参阅[在 Intune 中注册 iOS 设备](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios)。
 
 #### <a name="openssl-encryption-for-android-app-protection-policies---3747362---"></a>Android 应用保护策略的 OpenSSL 加密<!-- 3747362 -->
 Android 设备上的 Intune 应用保护策略 (APP) 现在使用符合 FIPS 140-2 标准的 OpenSSL 加密库。 有关详细信息，请参阅 [Microsoft Intune 中的 Android 应用保护策略设置](../apps/app-protection-policy-settings-android.md)的[加密](../apps/app-protection-policy-settings-android.md#encryption)部分。
@@ -1395,7 +1395,7 @@ Intune macOS 公司门户现在支持 macOS 的深色模式。 在 macOS 10.14+ 
 在 Intune 中，选择“客户端应用” > “应用”>“应用名称”>“设备安装状态”    。 “状态详细信息”列中将提供新的错误消息  。
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>适用于 Windows 10 的公司门户应用中的全新应用类别屏幕<!-- 3834780  -->
-添加了名为“应用类别”的新屏幕，以改善适用于 Windows 10 的公司门户中的应用浏览和选择体验  。 用户现在可以看到他们的应用按照“特别推荐”、“教育”和“工作效率”等类别进行排序    。 此更改将出现在公司门户 10.3.3451.0 版及更高版本中。 要查看新屏幕，请参阅[应用 UI 中的新增功能](whats-new-app-ui.md)。 有关公司门户中应用的详细信息，请参阅[在设备上安装和共享应用](https://docs.microsoft.com/user-help/install-apps-cpapp-windows)。  
+添加了名为“应用类别”的新屏幕，以改善适用于 Windows 10 的公司门户中的应用浏览和选择体验  。 用户现在可以看到他们的应用按照“特别推荐”、“教育”和“工作效率”等类别进行排序    。 此更改将出现在公司门户 10.3.3451.0 版及更高版本中。 要查看新屏幕，请参阅[应用 UI 中的新增功能](whats-new-app-ui.md)。 有关公司门户中应用的详细信息，请参阅[在设备上安装和共享应用](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows)。  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Power BI 合规性应用<!-- 1455231 doc-work-item -->
 使用 [Intune 合规性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用访问 Power BI Online 中的 Intune 数据仓库。 使用此 Power BI 应用，可立即访问和共享预创建的报表，无需任何设置，也无需离开 Web 浏览器。 有关详细信息，请参阅[更改日志 - Power BI 合规性应用](../developer/reports-changelog.md#power-bi-compliance-app)。
@@ -2120,7 +2120,7 @@ Intune 在最终用户计算机上安装 Office 时，最终用户将自动获�
 
 对于参与部署的客户，此新体验取代了一组静态预选选项的当前“帮助和支持”体验，这些选项基于打开“帮助和支持”时所在控制台的区域。  
 
- 我们正在向部分租户（不是所有租户）推出此新的“帮助和支持”体验，你可在“设备管理”门户中进行找到。此新体验的参与者是在可用的 Intune 租户中随机选择的。在我们扩大推出时，将添加新租户。  
+*我们正在向部分租户（不是所有租户）推出此新的“帮助和支持”体验，你可在“设备管理”门户中进行找到。此新体验的参与者是在可用的 Intune 租户中随机选择的。在我们扩大推出时，将添加新租户。  
 
 有关详细信息，请参阅“如何获取对 Microsoft Intune 的支持”中的[“帮助和支持”体验](get-support.md#help-and-support-experience)。  
 
@@ -2292,7 +2292,7 @@ Intune 现支持将 macOS 设备注册到 Apple 设备注册计划 (DEP) 中。 
 - 改善了大型应用目录的性能
 - 为所有用户增加了辅助功能  
 
-已更新 [Intune 公司门户网站文档](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website)以体现这些更改。 若要查看应用增强功能的示例，请参阅[Intune 最终用户应用的 UI 更新](whats-new-app-ui.md)。  
+已更新 [Intune 公司门户网站文档](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website)以体现这些更改。 若要查看应用增强功能的示例，请参阅[Intune 最终用户应用的 UI 更新](whats-new-app-ui.md)。  
 
 ### <a name="monitor-and-troubleshoot"></a>监视和故障排除
 
