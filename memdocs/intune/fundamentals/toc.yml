@@ -283,4 +283,4 @@
             - name: 终结点保护常见错误
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
     - name: Intune 最终用户文档
-      href: /user-help/use-managed-devices-to-get-work-done
+      href: ../user-help/use-managed-devices-to-get-work-done.md
