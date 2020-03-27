@@ -5,7 +5,7 @@
   items:
     - name: 设备注册概述
       href: device-enrollment.md
-      displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+      displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
     - name: 已注册设备管理功能
       href: device-management-capabilities.md
     - name: 注册选项
@@ -20,7 +20,7 @@
   items:
     - name: 使用 Autopilot 注册 Windows 设备
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: 使用 DEP 注册 iOS/iPadOS 设备
+    - name: 使用 ADE 注册 iOS/iPadOS 设备
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: 概念
   items:

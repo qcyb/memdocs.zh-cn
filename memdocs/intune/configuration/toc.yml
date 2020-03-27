@@ -15,36 +15,20 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: 操作指南
   items:
-    - name: 创建配置文件
+    - name: 概述
       href: device-profile-create.md
-    - name: Windows 上的管理模板
-      items:
-        - name: Windows 上的管理模板
-          href: administrative-templates-windows.md
-        - name: 使用管理模板更新 Office
-          href: administrative-templates-update-office.md
-      displayName: 'ADMX, GPO, group policy'
-    - name: iOS/iPadOS 和 macOS 上的设备功能
-      href: device-features-configure.md
+    - name: 自定义设备设置
+      href: custom-settings-configure.md
+      displayName: oma-uri
     - name: 限制设备设置和功能
       href: device-restrictions-configure.md
-      displayName: Device restrictions
-    - name: 更新 Windows
-      href: delivery-optimization-windows.md
-      displayName: delivery optimization; updates
-    - name: Windows 上的 BIOS 设置
-      href: device-firmware-configuration-interface-windows.md
-      displayName: 'DFCI, firmware'
-    - name: Windows 上的域加入
-      href: domain-join-configure.md
-    - name: 升级 Windows 和 S 模式
-      href: edition-upgrade-configure-windows-10.md
+      displayName: device restrictions
     - name: 电子邮件
-      href: email-settings-configure.md
-    - name: 网亭和专用设备
-      href: kiosk-settings.md
-    - name: 共享的多用户设备
-      href: shared-user-device-settings.md
+      items:
+        - name: 配置电子邮件
+          href: email-settings-configure.md
+        - name: 问题和解决方法
+          href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: VPN
       href: vpn-settings-configure.md
       items:
@@ -54,46 +38,82 @@
           href: vpn-setting-configure-per-app.md
     - name: Wi-Fi 网络
       href: wi-fi-settings-configure.md
-      displayName: wifi
+      displayName: 'wifi, wireless'
       items:
         - name: 具有预共享密钥的 Wi-Fi
           href: wi-fi-profile-shared-key.md
+          displayName: 'psk, oma-uri, eap'
         - name: Wi-Fi 疑难解答
           href: troubleshoot-wi-fi-profiles.md
+    - name: Windows 上的管理模板
+      displayName: 'admx, gpo, group policy'
+      items:
+        - name: 管理模板
+          href: administrative-templates-windows.md
+        - name: 使用管理模板更新 Office
+          href: administrative-templates-update-office.md
+    - name: Windows 上的 BIOS 设置
+      href: device-firmware-configuration-interface-windows.md
+      displayName: 'dfci, firmware'
+    - name: Windows 上的域加入
+      href: domain-join-configure.md
+      displayName: 'enrollment, active directory, azure ad joined, join domain'
+    - name: 更新 Windows
+      href: delivery-optimization-windows.md
+      displayName: 'delivery optimization, windows updates'
+    - name: 升级 Windows 和 S 模式
+      href: edition-upgrade-configure-windows-10.md
+    - name: iOS/iPadOS 和 macOS 上的设备功能
+      href: device-features-configure.md
+      displayName: 'airprint, home screen, lock screen, sso, single sign-on'
     - name: macOS 上的扩展
       href: kernel-extensions-overview-macos.md
-    - name: 教育参加测验应用
-      href: education-settings-configure.md
+      displayName: 'kernel extensions, system extensions'
+    - name: macOS 上的首选项文件
+      href: preference-file-settings-macos.md
+      displayName: 'property list files, plist'
     - name: Zebra 设备上的移动性扩展
-      href: android-zebra-mx-overview.md
-      displayName: mx
+      displayName: 'mx, android, stagenow'
+      items:
+        - name: MX on Android 设备管理员
+          href: android-zebra-mx-overview.md
+        - name: StageNow 日志及常见问题
+          href: android-zebra-mx-logs-troubleshoot.md
     - name: Android Enterprise 上的 OEMConfig
       href: android-oem-configuration-overview.md
+      displayName: 'original equipment manufacturers, schema'
+    - name: 网亭和专用设备
+      href: kiosk-settings.md
+      displayName: 'single app, multi app'
+    - name: 共享的多用户设备
+      href: shared-user-device-settings.md
+      displayName: 'shared pc, education'
+    - name: 教育参加测验应用
+      href: education-settings-configure.md
     - name: Windows 上的 eSIM 手机网络
       href: esim-device-configuration.md
+      displayName: embedded sim
     - name: Android、iOS/iPadOS 上的电信费用
       href: telecom-expenses-monitor.md
-    - name: 自定义设备设置
-      href: custom-settings-configure.md
-    - name: 分配配置文件
-      href: device-profile-assign.md
-    - name: 监视配置文件
-      href: device-profile-monitor.md
+      displayName: saaswedo datalert
+    - name: 部署和监视
+      items:
+        - name: 分配配置文件
+          href: device-profile-assign.md
+          displayName: 'deploy, push'
+        - name: 监视配置文件
+          href: device-profile-monitor.md
     - name: 故障排除
       items:
         - name: 策略和配置文件疑难解答
           href: troubleshoot-policies-in-microsoft-intune.md
-        - name: 电子邮件配置文件问题和解决方法
-          href: troubleshoot-email-profiles-in-microsoft-intune.md
-        - name: StageNow 日志及常见问题
-          href: android-zebra-mx-logs-troubleshoot.md
         - name: 常见问题和解答
           href: device-profile-troubleshoot.md
 - name: 参考
   items:
     - name: 配置文件设置
       items:
-        - name: Android
+        - name: Android 设备管理员
           items:
             - name: 设备限制
               href: device-restrictions-android.md
@@ -146,8 +166,6 @@
               href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: 扩展
               href: kernel-extensions-settings-macos.md
-            - name: 首选项文件
-              href: preference-file-settings-macos.md
             - name: VPN
               href: vpn-settings-macos.md
             - name: Wi-Fi
