@@ -12,17 +12,17 @@ ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
-ms.reviewer: karanda
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 105a25e33e0f8f0a76934199d24060328d50c05f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360361"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086447"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>使用自定义设备配置文件，在 Intune 中创建具有预共享密钥的 Wi-Fi 配置文件
 
@@ -52,7 +52,7 @@ ms.locfileid: "79360361"
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 3. 输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，良好的策略名称是“适用于 Android 设备的自定义 OMA-URI Wi-fi 配置文件设置”  。
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，良好的策略名称是“适用于 Android 设备管理员设备的自定义 OMA-URI Wi-Fi 配置文件设置”  。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
     - **平台**：选择平台。
     - **配置文件类型**：选择“自定义”  。
@@ -139,6 +139,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ### <a name="eap-based-wi-fi-profile-example"></a>基于 EAP 的 Wi-Fi 配置文件示例
+
 下面的示例包含针对基于 EAP 的 Wi-Fi 配置文件的 XML 代码：该示例用于展示正确的格式并提供更多信息。 但它只是一个示例，并非推荐的环境配置。
 
 

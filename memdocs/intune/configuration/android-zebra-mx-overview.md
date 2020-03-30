@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaaa9095becbcac7840d5babc2a099e7ec84af03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362012"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084008"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>通过 Microsoft Intune 中的 Zebra Mobility Extensions 来使用和管理 Zebra 设备
-
-
 
 Intune 提供丰富的功能，包括管理应用和配置设备设置。 这些内置功能和设置管理 Zebra Technologies 公司制造的 Android 设备，这些设备也称为“Zebra 设备”。
 
@@ -36,7 +34,9 @@ Intune 提供丰富的功能，包括管理应用和配置设备设置。 这些
 
 此功能适用于：
 
-- Android
+- Android 设备管理员
+
+对于 Android Enterprise 设备，使用 [OEMConfig](android-oem-configuration-overview.md)。
 
 公司可能会将 Zebra 设备用于零售、工厂车间等。 假设你是一名零售商，你的环境中有销售人员使用的数千种 Zebra 移动设备。 Intune 可以帮助管理这些设备，这是移动设备管理 (MDM) 解决方案的一部分。
 
@@ -139,7 +139,7 @@ Intune 提供丰富的功能，包括管理应用和配置设备设置。 这些
 
     - **名称**：输入新配置文件的描述性名称。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **平台**：选择“Android”  。
+    - **平台**：选择“Android 设备管理员”  。
     - **配置文件类型**：选择“MX 配置文件”（仅限 Zebra）  。
 
 4. 在“格式为 .xml 的 MX 配置文件”中  ，添加[从 StageNow 导出](#step-4-create-a-device-management-profile-in-stagenow)的 XML 配置文件（本文有介绍）。

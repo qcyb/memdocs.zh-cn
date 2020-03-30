@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98eba2cd2905a70157cfb50299bb9b11a6319fcc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342330"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083737"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什么是 Microsoft Intune 应用管理？
 
@@ -120,7 +120,7 @@ iOS 应用包含一个预配配置文件和一个证书签名的代码。 证书
 - **Windows 旁加载密钥**：添加 Windows 旁加载密钥，可用于将应用直接安装到设备，而无需从 Windows 应用商店发布和下载应用。 有关详细信息，请参阅[旁加载 Windows 应用](app-sideload-windows.md)。
 - Apple VPP 令牌  ：应用并查看 iOS/iPadOS 批量采购计划 (VPP) 许可证。 有关详细信息，请参阅[批量购买的 iOS/iPadOS 应用](vpp-apps-ios.md)。
 - 托管的 Google Play  ：托管 Google Play 是 Google 的企业应用商店，并且是适用于 Android Enterprise 的应用程序的唯一供应商。 有关详细信息，请参阅[使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备](apps-add-android-for-work.md)。
-- 品牌和自定义  ：自定义公司门户，向其提供公司品牌。 有关详细信息，请参阅[公司门户配置](company-portal-app.md)。
+- **自定义**：自定义公司门户，向其提供公司品牌。 有关详细信息，请参阅[公司门户配置](company-portal-app.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

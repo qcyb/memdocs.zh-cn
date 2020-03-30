@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe62fa8082923b960773ce3ca45654a541132ca6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338950"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084788"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>快速入门：将通知发送到不符合的设备
 
@@ -66,9 +66,9 @@ ms.locfileid: "79338950"
 
 有关设置公司名称、公司联系人信息和公司徽标的详细信息，请参阅以下文章：
 
-- [公司信息和隐私声明](../apps/company-portal-app.md#company-information-and-privacy-statement)
+- [公司信息和隐私声明](../apps/company-portal-app.md#configuration)
 - [支持信息](../apps/company-portal-app.md#support-information)
-- [公司标识品牌自定义](../apps/company-portal-app.md#company-identity-branding-customization)。
+- [自定义用户体验](../apps/company-portal-app.md#customizing-the-user-experience)。
 
 ## <a name="add-a-noncompliance-policy"></a>添加不符合性策略
 

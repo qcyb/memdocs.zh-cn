@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/23/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936634a26dee315c7ad452ac408f9cc0eac00dfe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220213"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教程：通过云使用 ADMX 模板和 Microsoft Intune 为 Windows 10 相关设备配置组策略
 
@@ -101,7 +101,7 @@ ADMX 模板可用于以下服务：
 ## <a name="open-the-endpoint-manager-admin-center"></a>打开终结点管理器管理中心
 
 1. 打开 chromium web 浏览器，例如 Microsoft Edge 77 版及更高版本。
-2. 转到 [Microsoft终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com) 。 使用以下帐户登录：
+2. 转到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 使用以下帐户登录：
 
     **用户**：输入 Microsoft 365 租户订阅的管理员帐户。  
     **密码**：输入其密码。
@@ -146,7 +146,7 @@ ADMX 模板可用于以下服务：
     - **组类型**：选择“安全性”  。
     - **组名称**：输入“所有 Windows 设备”  。
     - **成员身份类型**：选择“动态设备”  。
-    - **动态设备成员**：配置查询：
+    - **动态设备成员**：选择“添加动态查询”  并配置查询：
 
         - **属性**：选择“deviceOSType”  。
         - **运算符**：选择“等于”  。
@@ -166,7 +166,7 @@ ADMX 模板可用于以下服务：
     - **组类型**：选择“安全性”  。
     - **组名称**：输入“所有教师”  。
     - **成员身份类型**：选择“动态用户”  。
-    - **动态用户成员**：配置查询：
+    - **动态用户成员**：选择“添加动态查询”  并配置查询：
 
       - **属性**：选择“部门”  。
       - **运算符**：选择“等于”  。
@@ -225,12 +225,17 @@ ADMX 模板可用于以下服务：
 1. 在终结点管理器管理中心，选择“设备” > “配置文件” > “创建配置文件”    。
 2. 输入以下属性：
 
+    - **平台**：选择“Windows 10 及更高版本”  。
+    - **配置文件**：选择“管理模板”  。
+
+3. 选择“创建”。 
+4. 在“基本信息”  中，输入以下属性：
+
     - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，输入 **“管理模板 - Windows 10 学生设备”** 。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **平台**：选择“Windows 10 及更高版本”  。
-    - **配置文件类型**：选择“管理模板”  。
 
-3. 选择“创建”。  在“选择类别”下拉列表中，选择“所有产品”   。 会显示所有设置。 在这些设置中，请注意以下属性：
+5. 选择“下一步”  。
+6. 在“配置设置”的下拉列表中，选择“所有产品”   。 会显示所有设置。 在这些设置中，请注意以下属性：
 
     - 策略路径  与组策略管理或 GPEdit 相同。
     - 设置适用于用户或设备。
@@ -263,7 +268,7 @@ ADMX 模板可用于以下服务：
     > [!div class="mx-imgBorder"]
     > ![请参阅组策略中的“计算机配置设置”选项](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. 在设备管理管理中心，转到“管理模板 - Windows 10 学生设备”模板  。
+5. 在终结点管理器管理中心，转到“管理模板 - Windows 10 学生设备”模板  。
 6. 从下拉列表中选择“所有产品”，然后搜索“个性化”   ：
 
     > [!div class="mx-imgBorder"]
@@ -290,7 +295,7 @@ ADMX 模板可用于以下服务：
 
 #### <a name="compare-an-edge-policy"></a>比较 Edge 策略
 
-1. 在设备管理管理中心，转到“管理模板 - Windows 10 学生设备”模板  。
+1. 在终结点管理器管理中心，转到“管理模板 - Windows 10 学生设备”模板  。
 2. 从下拉列表中选择 Edge 77 版及更高版本  。
 3. 搜索“启动”  。 请注意可用的设置。
 4. 在“组策略管理编辑器”中，查找以下设置：
@@ -338,17 +343,16 @@ ADMX 模板可用于以下服务：
 
 ### <a name="assign-your-template"></a>分配模板
 
-1. 在模板中，选择“分配”  。 可能需要关闭模板，然后从“设备 - 配置文件”列表中选择模板  ：
+1. 在模板中，选择“分配” > “选择要包含的组”   ：
 
     > [!div class="mx-imgBorder"]
     > ![从 Microsoft Intune 中的设备配置文件列表中选择管理模板配置文件](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. 选择“选择要包含的组”  。 随即显示现有用户和组的列表。
-3. 选择之前创建的“所有 Windows 10 学生设备”组，然后选择“选择”   。
+2. 随即显示现有用户和组的列表。 选择之前创建的“所有 Windows 10 学生设备”组，然后选择“选择”   。
 
     如果你在生产环境中使用本教程，请考虑添加空的组。 目的是练习分配模板。
 
-4. 单击“保存”以保存更改  。
+3. 选择“下一步”  ，以转到“查看 + 创建”选项卡  。选择“创建”以保存更改  。
 
 保存配置文件后，配置文件将在设备通过 Intune 签入时立即应用到设备。 如果设备已连接到 Internet，则可能会立即发生。 有关策略刷新时间的详细信息，请参阅[分配设备后多长时间才能获得策略、配置文件或应用](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)。
 
@@ -366,14 +370,17 @@ ADMX 模板可用于以下服务：
 
 2. 输入以下属性：
 
-    - **名称**：输入“管理模板 - 适用于所有 Windows 10 用户的 OneDrive 策略”  。
-    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
     - **平台**：选择“Windows 10 及更高版本”  。
-    - **配置文件类型**：选择“管理模板”  。
+    - **配置文件**：选择“管理模板”  。
 
 3. 选择“创建”。 
-4. 从下拉列表中选择“Office”  。
-5. 启用以下设置  。 确保选择“确定”，以保存所做更改  。
+4. 在“基本信息”  中，输入以下属性：
+
+    - **名称**：输入“管理模板 - 适用于所有 Windows 10 用户的 OneDrive 策略”  。
+    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
+
+5. 选择“下一步”  。
+6. 在“配置设置”中，从下拉列表选择“Office”   。 启用以下设置  。 确保选择“确定”，以保存所做更改  。
 
     - **用户使用其 Windows 凭据以无提示的方式登录到 OneDrive 同步客户端**
     - **按需使用 OneDrive 文件**
@@ -388,13 +395,12 @@ ADMX 模板可用于以下服务：
 
 ### <a name="assign-your-template"></a>分配模板
 
-1. 在模板中，选择“分配”  。
-2. 选择“选择要包含的组”  。 随即显示现有用户和组的列表。
-3. 选择之前创建的“所有 Windows 设备”组，然后选择“选择”   。
+1. 在模板中，选择“分配” > “选择要包含的组”  
+2. 随即显示现有用户和组的列表。 选择之前创建的“所有 Windows 设备”组，然后选择“选择”   。
 
     如果你在生产环境中使用本教程，请考虑添加空的组。 目的是练习分配模板。
 
-4. 单击“保存”以保存更改  。
+3. 选择“下一步”  ，以转到“查看 + 创建”选项卡  。选择“创建”以保存更改  。
 
 此时，你创建了一些管理模板，并将其分配给了创建的组。 下一步是使用 Windows PowerShell 和适用于 Intune 的 Microsoft Graph API 创建管理模板。
 

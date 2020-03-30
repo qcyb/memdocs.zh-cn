@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ab825416226ef0b395862ae26a934013136ca61b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352262"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084877"
 ---
 # <a name="use-device-encryption-with-intune"></a>使用 Intune 设备加密
 
@@ -97,7 +97,7 @@ FileVault 是 macOS 附带的整盘加密程序。 可以使用 Intune 在运行
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>从 MEM 加密的 macOS 设备检索个人恢复密钥
 
-借助 iOS 公司门户应用，最终用户可以检索其个人恢复密钥（FileVault 密钥）。 拥有个人恢复密钥的设备必须已注册 Intune，并且通过 Intune 使用 FileVault 加密。 借助 iOS 公司门户应用，最终用户可以打开包含 FileVault 个人恢复密钥的网页。 此外，还可以通过选择“设备” > “已加密和已注册的 macOS 设备” > “获取恢复密钥”，来从 Intune 检索恢复密钥。    
+最终用户可以使用 iOS 公司门户应用、Android 公司门户应用或通过 Android Intune 应用检索其个人恢复密钥（FileVault 密钥）。 拥有个人恢复密钥的设备必须已注册 Intune，并且通过 Intune 使用 FileVault 加密。 使用 iOS 公司门户应用、Android 公司门户应用、Android Intune 应用或公司门户网站，最终用户可以看到访问其 Mac 设备所需的 FileVault  恢复密钥。 最终用户可以选择“设备”   > “加密并注册的 macOS 设备”   > “获取恢复密钥”  。 浏览器将显示 Web 公司门户并显示恢复密钥。 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>适用于 Windows 10 的 BitLocker 加密
 

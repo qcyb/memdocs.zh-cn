@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342421"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233450"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>为受管理的 iOS/iPadOS 设备添加应用配置策略
 
@@ -106,7 +106,7 @@ Microsoft Intune 提供对应用而言唯一的配置设置。 可对已注册�
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>仅允许在多身份应用中配置组织帐户 
 
-对于 iOS/iPadOS 设备，请使用以下键/值对：
+作为 Microsoft Intune 管理员，你可以控制将哪些用户帐户添加到托管设备上的 Microsoft 应用中。 可以将访问权限限制为仅允许的组织用户帐户，并阻止已注册设备上的个人帐户。 对于 iOS/iPadOS 设备，请使用以下键/值对：
 
 | **Key** | **值** |
 |----|----|
@@ -114,7 +114,10 @@ Microsoft Intune 提供对应用而言唯一的配置设置。 可对已注册�
 | IntuneMAMUPN | <ul><li>允许登录到应用中的帐户的 UPN。</li><li> 对于已注册 Intune 的设备，<code>{{userprincipalname}}</code> 令牌可用于表示已注册的用户帐户。</li></ul>  |
 
    > [!NOTE]
-   > 当仅允许多身份配置的组织帐户时，必须使用 OneDrive for iOS 10.34 或更高版本、Outlook for iOS 2.99.0 或更高版本或者 Edge for iOS 44.8.7 或更高版本，且应用必须以 [Intune 应用保护策略](app-protection-policy.md)为目标。
+   > 以下应用处理上述应用配置，并且仅允许组织帐户：
+   > - iOS 版 Edge（44.8.7 和更高版本）
+   > - iOS 版 OneDrive（10.34 和更高版本）
+   > - iOS 版 Outlook（2.99.0 或更高版本）
 
 ## <a name="enter-xml-data"></a>输入 XML 数据
 

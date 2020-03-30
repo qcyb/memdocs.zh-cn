@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363767"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086335"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
 
@@ -297,7 +297,7 @@ SDK 放置的 `BuildTool` 文件夹中提供了命令行生成工具。 它执�
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ SDK 放置的 `BuildTool` 文件夹中提供了命令行生成工具。 它执�
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -596,7 +596,7 @@ SaveLocation service, String username);
 
 `username` 应该是与要保存的云服务关联的 UPN/用户名/电子邮件（并非一定要与拥有保存的文档的用户相同）  。 如果 AAD UPN 与云服务用户名之间的映射不存在或用户名未知，请使用 NULL。 `SaveLocation.LOCAL` 不是云服务，因此应始终与 `null` 用户名参数一起使用。
 
-之前确定用户策略是否允许用户将数据保存到不同位置的方法是同一个 **AppPolicy** 类中的 `getIsSaveToPersonalAllowed()`。 现在**不推荐使用**也不应使用此功能，以下调用等效于 `getIsSaveToPersonalAllowed()`：
+之前确定用户策略是否允许用户将数据保存到不同位置的方法是同一个 AppPolicy  类中的 `getIsSaveToPersonalAllowed()`。 现在**不推荐使用**也不应使用此功能，以下调用等效于 `getIsSaveToPersonalAllowed()`：
 
 ```java
 MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(SaveLocation.LOCAL, null);
@@ -1029,7 +1029,7 @@ public interface MAMComplianceManager {
 
 调用`remediateCompliance()` 方法来尝试将应用置于管理之下，从而满足 AAD 授予所请求令牌的条件。  前 4 个参数可从 ADAL `AuthenticationCallback.onError()` 方法接收的异常中提取（请参阅以下代码示例）。  最后一个参数是布尔值，它控制了在符合性尝试期间是否显示 UX。  这是一个简单的阻止进程样式界面，用作在此操作期间无需显示自定义 UX 的应用的默认设置。  它将仅在符合性修正过程中进行阻止且不显示最终结果。  应用应注册通知接收器以处理符合性修正尝试的结果（成功或失败），详见下文。
 
-`remediateCompliance()` 方法可在符合性建立期间执行 MAM 注册。  如果应用已为注册通知注册了通知接收器，则它可能会收到注册通知。  应用注册的 `MAMServiceAuthenticationCallback` 将调用其 `acquireToken()` 方法来获取 MAM 注册的令牌。 在应用获得自己的令牌之前将调用 `acquireToken()`，因此应用在成功获取令牌后执行的任何簿记或帐户创建任务都可能尚未完成。  回叫必须能够在此情况下获取令牌。  如果无法从 `acquireToken()` 返回令牌，则符合性修正尝试将失败。  如果稍后使用所请求资源的有效令牌来调用 `updateToken()`，则将立即使用给定的令牌重新尝试修正符合性。
+`remediateCompliance()` 方法可在符合性建立期间执行 MAM 注册。  如果应用已为注册通知注册了通知接收器，则它可能会收到注册通知。  应用的注册 `MAMServiceAuthenticationCallback` 将调用其 `acquireToken()` 方法来获取 MAM 注册的令牌。 在应用获得自己的令牌之前将调用 `acquireToken()`，因此应用在成功获取令牌后执行的任何簿记或帐户创建任务都可能尚未完成。  回叫必须能够在此情况下获取令牌。  如果无法从 `acquireToken()` 返回令牌，则符合性修正尝试将失败。  如果稍后使用所请求资源的有效令牌来调用 `updateToken()`，则将立即使用给定的令牌重新尝试修正符合性。
 
 > [!NOTE]
 > 仍可在 `acquireToken()` 中无提示地获取令牌，因为在收到 `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED` 错误之前，系统已指导用户安装中转站和注册设备。  这导致中转站在其缓存中具有有效的刷新令牌，允许无提示地成功获取所请求的令牌。
@@ -1079,7 +1079,7 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 | PENDING | 符合性修正尝试失败，因为超过时间限制时尚未从服务收到状态响应。 应用应稍后再次尝试其令牌获取。 |
 | COMPANY_PORTAL_REQUIRED | 必须在设备上安装公司门户，才能成功修正符合性。  如果设备上已安装公司门户，则需要重启应用。  在这种情况下，系统将显示一个对话框，要求用户重启应用。 |
 
-如果符合性状态是 `MAMCAComplianceStatus.COMPLIANT`，则应用应重启其原始令牌获取操作（适用于自己的资源）。 如果符合性修正尝试失败，`getComplianceErrorTitle()` 和 `getComplianceErrorMessage()` 方法将返回应用可在最终用户选中时显示的本地化的字符串。  大多数错误情况都无法由应用修正，因此通常最好是使帐户创建或登录失败，并允许用户稍后再试。  如果故障仍然存在，则可借助 MAM 日志来确定原因。  最终用户可以使用[此处](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "通过电子邮件将日志发送给公司支持人员")提供的说明提交日志。
+如果符合性状态是 `MAMCAComplianceStatus.COMPLIANT`，则应用应重启其原始令牌获取操作（适用于自己的资源）。 如果符合性修正尝试失败，`getComplianceErrorTitle()` 和 `getComplianceErrorMessage()` 方法将返回应用可在最终用户选中时显示的本地化的字符串。  大多数错误情况都无法由应用修正，因此通常最好是使帐户创建或登录失败，并允许用户稍后再试。  如果故障仍然存在，则可借助 MAM 日志来确定原因。  最终用户可以使用[此处](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "通过电子邮件将日志发送给公司支持人员")提供的说明提交日志。
 
 由于 `MAMComplianceNotification` 扩展了 `MAMUserNotification`，因此还会提供尝试进行修正的用户的标识。
 
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ Intune SDK 会维护 Android API 提供的协定，但可能会由于策略实�
 Intune App SDK for Android 不会控制应用中的数据集合。 公司门户应用程序会默认记录系统生成的数据。 会将此数据发送到 Microsoft Intune。 根据 Microsoft 策略，我们不会收集任何个人数据。
 
 > [!NOTE]
-> 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android)。 
+> 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android)。 
 
 ## <a name="recommended-android-best-practices"></a>建议使用的 Android 最佳做法
 

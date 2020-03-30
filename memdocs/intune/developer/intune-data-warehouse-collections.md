@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3fbfa5ebd8e9ba54d5725cd650cba9c31b3537
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360283"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086242"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 数据仓库收集
 
@@ -222,6 +222,7 @@ DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册�
 | DeviceRegistrationState    | 此设备的客户端注册状态属性的键。                                                                                                                      |
 | OwnerTypeKey               | 此设备的所有者类型属性的键：企业、个人或未知。                                                                                                    |
 | EnrolledDateTime           | 设备注册的日期和时间。                                                                                                                                         |
+| EthernetMacAddress           | 此设备的唯一网络标识符。                                                                                                                                        |
 | LastSyncDateTime           | 使用 Intune 签入的上一已知设备。                                                                                                                                              |
 | ManagementAgentKey         | 与此设备关联的管理代理键。                                                                                                                             |
 | ManagementStateKey         | 与此设备关联的管理状态键，表明远程操作的最新状态或设备是否越狱/获取了 root 权限。                                                |
@@ -243,13 +244,16 @@ DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册�
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | 设备受监督的状态                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | 可用存储（以字节为单位）。                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | 总存储（以字节为单位）。                                                                                                                                                                |
+| TotalStorageSpaceInBytes   | 总存储容量（以字节为单位）。                                                                                                                                                                |
 | EncryptionState            | 设备的加密状态。                                                                                                                                                      |
 | SubscriberCarrier          | 设备的订阅者运营商                                                                                                                                                       |
 | PhoneNumber                | 设备的电话号码                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | 设备的移动电话技术                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| 型号                      | 设备型号。                                                                                                                                                                      |
+| Office365Version           | 设备上安装的 Office 365 版本。                                                                                                                             |
+| PhysicalMemoryInBytes      | 物理内存（以字节为单位）。                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec804aa200e35391c5b283d6e26ba87002e271f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359022"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085813"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>使用疑难解答门户帮助公司的用户
 
@@ -65,7 +65,7 @@ ms.locfileid: "79359022"
 | ---  | ---  | ---         |
 | 1.   | 帐户状态  | 显示当前 Intune 租户状态为“活动”或“非活动”   。       |
 | 2.   | 用户选择  | 当前所选用户的名称。 单击“更改用户”可选择新用户  。       |
-| 3.   | 用户状态  | 显示用户的 Intune 许可证状态、设备数目、每个设备的符合性、应用数目以及应用的符合性。       |
+| 3.   | 用户状态  | 显示用户的 Intune 许可证状态、设备数目、每个设备的合规性。       |
 | 4.   | 用户信息  | 使用该列表在窗格中选择要查看的详细信息。 <br>可选内容如下： <ul><li>客户端应用<li>相容性策略<li> 配置策略<li>应用保护策略 <li>注册限制</ul>      |
 | 5.   | 组成员身份  | 显示所选用户所属的当前组。       |
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364248"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087028"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune 中用于配置电子邮件、身份验证和同步的 Android Enterprise 设备设置
-
-
 
 本文列出并介绍了可以在 Android Enterprise 设备上控制的各种电子邮件设置。 在移动设备管理 (MDM) 解决方案中，使用这些设置可配置电子邮件服务器、使用 SSL 加密电子邮件等。
 
@@ -35,16 +33,16 @@ Intune 管理员可以为工作配置文件中的 Android Enterprise 设备创�
 
 ## <a name="before-you-begin"></a>在开始之前
 
-创建[设备配置文件](email-settings-configure.md#create-a-device-profile)（选择工作配置文件），或创建[应用配置策略](../apps/app-configuration-policies-use-android.md)。
+创建[设备配置文件](email-settings-configure.md)（选择工作配置文件），或创建[应用配置策略](../apps/app-configuration-policies-use-android.md)。
 
 ## <a name="android-enterprise"></a>Android Enterprise
 
-- **电子邮件应用**：选择“Gmail”  或“Nine Work” 
-- **电子邮件服务器**：Exchange 服务器的主机名。 例如，输入 `outlook.office365.com`。
+- **电子邮件应用**：选择“Gmail”  或“Nine Work”  。
+- **电子邮件服务器**：输入 Exchange 服务器的主机名。 例如，输入 `outlook.office365.com`。
 - **AAD 中的用户名属性**：此名称是 Intune 从 Azure Active Directory (Azure AD) 获取的属性。 Intune 将动态生成此配置文件使用的用户名。 选项包括：
 
-  - **用户主体名称**：获取名称，如 `user1` 或 `user1@contoso.com`
-  - **用户名**：仅获取名称，如 `user1`
+  - **用户主体名称**：获取名称，如 `user1` 或 `user1@contoso.com`。
+  - **用户名**：仅获取名称，如 `user1`。
 
 - **AAD 中的电子邮件地址属性**：此名称是 Intune 从 Azure AD 获取的电子邮件属性。 Intune 动态生成此配置文件使用的电子邮件地址。 选项包括：
   - **用户主体名称**：使用完整的主体名称（如 `user1@contoso.com` 或 `user1`）作为电子邮件地址。

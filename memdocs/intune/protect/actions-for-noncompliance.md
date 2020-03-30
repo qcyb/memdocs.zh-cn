@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a3a3b38b28eda0e4bde9c353482d0234fa3329
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354316"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085211"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>为 Intune 中不符合要求的设备自动发送电子邮件和添加操作
 
@@ -40,7 +40,16 @@ ms.locfileid: "79354316"
 
 - **将设备标记为不符合**：创建在设备被标记为不符合之后要执行的计划时间（天数）。 可配置立即采取的措施，也可给予用户宽限期以符合要求。
 
-本文介绍如何：
+- **停用不符合要求的设备**：此操作将从设备中删除所有公司数据并从 Intune 管理中删除设备。 为防止意外擦除设备，此操作支持的最短计划时间为 30 天。 以下平台支持此操作：
+  - Android
+  - iOS
+  - macOS
+  - Windows 10 移动版
+  - Windows Phone 8.1 及更高版本
+
+  了解有关[停用设备](../remote-actions/devices-wipe.md#retire)的详细信息。
+  
+  本文介绍如何：
 
 - 创建消息通知模板
 - 针对非符合性创建操作（例如发送电子邮件或远程锁定设备）
@@ -76,7 +85,7 @@ ms.locfileid: "79354316"
    - **电子邮件页脚 – 包括公司名称**
    - **电子邮件页脚 – 包括联系人信息**
 
-   作为公司门户品牌的一部分上传的徽标可用于电子邮件模板。 有关公司门户品牌的详细信息，请参阅[公司标识品牌自定义](../apps/company-portal-app.md#company-identity-branding-customization)。
+   作为公司门户品牌的一部分上传的徽标可用于电子邮件模板。 有关公司门户品牌的详细信息，请参阅[公司标识品牌自定义](../apps/company-portal-app.md#customizing-the-user-experience)。
 
    ![Intune 中符合性通知邮件的示例](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -112,11 +121,13 @@ ms.locfileid: "79354316"
 
    - **远程锁定不符合要求的设备**：当设备不符合要求时，锁定设备。 该操作会强制用户输入 PIN 或密码来解锁设备。
 
-5. 配置计划  :输入非符合性状态触发用户设备操作之后的宽限天数（0 到 365 天）。 在此宽限期后，可以强制执行[条件访问](conditional-access-intune-common-ways-use.md)策略。 如果输入“0”（零）天，则条件访问将立即生效   。 例如，如果设备不合规，请使用条件访问来立即阻止对电子邮件、SharePoint 和其他组织资源的访问。
+   - **停用不符合要求的设备**：当设备不符合要求时，从设备中删除所有公司数据并从 Intune 管理中删除设备。 为防止意外擦除设备，此操作支持的最短计划时间为 30 天  。
+
+5. 配置计划  :输入非符合性状态触发用户设备操作之后的宽限天数（0 到 365 天）。 （停用不合规的设备  支持的最短时间为 30 天。）在此宽限期后，可以强制执行[条件访问](conditional-access-intune-common-ways-use.md)策略。 如果输入“0”（零）天，则条件访问将立即生效   。 例如，如果设备不合规，请使用条件访问来立即阻止对电子邮件、SharePoint 和其他组织资源的访问。
 
    在你创建合规性策略时，“标记不合规设备”  操作会自动创建，并自动设置为“0”  天（即立即执行）。 通过此操作，当设备签入时，系统会立即将设备评估为不合规。 如果还使用条件访问，条件访问会立即生效。 若要给予宽限期，请更改“标记不合规设备”  操作中的“计划”  。
 
-   在合规性策略中，假设还想要通知用户。 可以添加“向最终用户发送电子邮件”  操作。 在此“发送电子邮件”  操作中，将“计划”  设置为“2”天。 如果设备或最终用户在第 2 天仍被评估为不合规，系统就会在第 2 天发送电子邮件。 若要在被评估为不合规的第 5 天再次向用户发送电子邮件，请添加另一个操作，并将“计划”  设置为“5”天。
+  在合规性策略中，假设还想要通知用户。 可以添加“向最终用户发送电子邮件”  操作。 在此“发送电子邮件”  操作中，将“计划”  设置为“2”天。 如果设备或最终用户在第 2 天仍被评估为不合规，系统就会在第 2 天发送电子邮件。 若要在被评估为不合规的第 5 天再次向用户发送电子邮件，请添加另一个操作，并将“计划”  设置为“5”天。
 
    若要详细了解合规性和内置操作，请参阅[合规性概述](device-compliance-get-started.md)。
 

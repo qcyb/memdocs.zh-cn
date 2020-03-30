@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361869"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087096"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中使用设备配置文件的设备应用功能和设置
 
-Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置和功能。 这些设置和功能将添加到“配置文件”。 你可以为不同的设备和不同的平台创建配置文件，包括 iOS/iPadOS、Android 和 Windows。 然后，使用 Intune 应用配置文件或将其“分配”给设备。
+Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置和功能。 这些设置和功能将添加到“配置文件”。 可以为不同的设备和不同的平台（包括 iOS/iPadOS、Android 设备管理员、Android Enterprise 和 Windows）创建配置文件。 然后，使用 Intune 应用配置文件或将其“分配”给设备。
 
 作为移动设备管理 (MDM) 解决方案的一部分，使用这些配置文件来完成不同的任务。 一些配置文件示例如下：
 
@@ -55,7 +55,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 此功能支持： 
 
-- Android
+- Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 此功能支持：
 
-- Android
+- Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 此功能支持：
 
-- Android
+- Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 此功能支持： 
 
-- Android
+- Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -241,7 +241,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 此功能支持： 
 
-- Android
+- Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 此功能支持： 
 
-- Android
+- Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 此功能支持：
 
-- Android（移动性扩展）
+- Android 设备管理员（移动性扩展）
 
 ## <a name="manage-and-troubleshoot"></a>管理和故障排除
 

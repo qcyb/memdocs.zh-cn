@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caeeb332f4a7c8c124e40537041b8aef8d219240
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 94e170e01a1ede01a94b2ca3f09d8530f97335a3
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372613"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085006"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用 PKCS 证书
 
@@ -175,27 +175,42 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
-
-   ![导航到 Intune 并为受信任的证书创建新的配置文件](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+2. 选择并转到“设备”   > “配置文件”   > “创建配置文件”  。
 
 3. 输入以下属性：
+   - **平台**：选择将接收此配置文件的设备的平台。
+   - **配置文件**：选择“受信任的证书” 
+  
+4. 选择“创建”。 
 
-    - 配置文件的名称 
-    - （可选）设置描述
-    - 将配置文件部署到的平台 
-    - 将配置文件类型  设置为“受信任的证书” 
+5. 在“基本信息”  中，输入以下属性：
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的受信任证书配置文件”  。
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-4. 选择“设置”  并指定之前导出的 .cer 文件根 CA 证书。
+6. 选择“下一步”  。
+
+7. 在“配置设置”  中，指定之前导出的 .cer 文件根 CA 证书。
 
    > [!NOTE]
-   > 能否为证书选择“目标存储区”取决于步骤 2 中所选的平台   。
+   > 能否为证书选择“目标存储区”  取决于步骤三中所选的平台  。
 
    ![创建配置文件并上传受信任的证书](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-5. 选择“确定”   > “创建”  以保存配置文件。
+8. 选择“下一步”  。
 
-6. 若要将新配置文件分配给一个或多个设备，请参阅[分配 Microsoft Intune 设备配置文件](../configuration/device-profile-assign.md)。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+   选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. （仅适用于 Windows 10  ）在“适用性规则”  中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
+
+  有关详细信息，请参阅“在 Microsoft Intune 中创建设备配置文件”中的[适用性规则](../configuration/device-profile-create.md#applicability-rules)  。
+
+12. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="create-a-pkcs-certificate-profile"></a>创建 PKCS 证书配置文件
 
@@ -204,13 +219,25 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 2. 选择并转到“设备”   > “配置文件”   > “创建配置文件”  。
 
 3. 输入以下属性：
+   - **平台**：选择设备平台。 选项包括：
+     - Android 设备管理员
+     - Android Enterprise > 仅设备所有者
+     - Android Enterprise > 仅工作配置文件
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 及更高版本
+   - **配置文件**：选择“PKCS 证书” 
 
-    - 配置文件的名称 
-    - （可选）设置描述
-    - 将配置文件部署到的平台 
-    - 将“配置文件类型”设置为“PKCS 证书”  
+   > [!NOTE]
+   > 在应用了 Android Enterprise 配置文件的设备上，使用 PKCS 证书配置文件安装的证书在设备上不可见。 若要确认证书部署是否成功，请检查 Intune 控制台中配置文件的状态。
+4. 选择“创建”。 
 
-4. 选择“设置”  ，并配置适用于所选平台的属性：
+5. 在“基本信息”  中，输入以下属性：
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 PKCS 配置文件”  。
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
+
+6. 选择“下一步”  。
+7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台进行详细设置：-Android 设备管理员 -Android Enterprise -iOS/iPadOS -Windows 10
    
    |设置     | 平台     | 详细信息   |
    |------------|------------|------------|
@@ -227,12 +254,18 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
    |**允许所有应用访问私钥** |<ul><li>macOS  |请将其设置为“启用”，以使为关联的 Mac 设备配置的应用可以访问 PKCS 证书私钥  。 <br><br> 有关此设置的详细信息，请参阅 Apple 开发人员文档中[配置文件参考](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)中的 AllowAllAppsAccess 证书有效负载部分  。 |
    |**根证书**             |<ul><li>Android 设备管理员 </li><li>Android Enterprise（设备所有者  、工作配置文件  ） |选择以前分配的根 CA 证书配置文件。 |
 
-5. 选择“确定”   > “创建”  以保存配置文件。
+8. 选择“下一步”  。
 
-6. 若要将新配置文件分配给一个或多个设备，请参阅[分配 Microsoft Intune 设备配置文件](../configuration/device-profile-assign.md)。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-   > [!NOTE]
-   > 在应用了 Android Enterprise 配置文件的设备上，使用 PKCS 证书配置文件安装的证书在设备上不可见。 若要确认证书部署是否成功，请检查 Intune 控制台中配置文件的状态。
+   选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
+
 
 ### <a name="subject-name-format"></a>使用者名称格式
 

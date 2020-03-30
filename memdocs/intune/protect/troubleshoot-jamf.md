@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350611"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084640"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>对 Jamf Pro 与 Microsoft Intune 的集成进行故障排除
 
@@ -89,8 +89,8 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 例如，在打开 Microsoft Teams 时，会出现一个提示，其中包含类似于以下示例的文本：
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **原因**：这些提示由 Jamf Pro 为需要 Azure AD 注册的每个适用应用生成。 
@@ -156,7 +156,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 **解决方法**  
 若要将注册源从 Intune 更改为 Jamf：
-1. [从 Intune 取消注册 macOS 设备](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos)。 若要避免未从 Intune 中完全删除的设备造成更多麻烦，请参阅此原因列表中的[原因 6](#cause-6)  。  
+1. [从 Intune 取消注册 macOS 设备](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 若要避免未从 Intune 中完全删除的设备造成更多麻烦，请参阅此原因列表中的[原因 6](#cause-6)  。  
 
 2. 在设备上，使用 Jamf 自助服务打开公司门户应用，然后使用 Intune 注册设备。 此任务要求你[使用 Jamf 来部署适用于 macOS 的公司门户应用](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)，并[在 Jamf Pro 中创建了一个使用 Azure AD 注册用户设备的策略](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)。  
 
@@ -242,9 +242,9 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 注册期间，macOS 设备的用户将收到以下提示，以允许 JamfAAD 从其密钥链访问密钥： 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **解决方法**  
@@ -274,7 +274,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>合规性策略无法评估设备  
 
-**原因**：Jamf 与 Intune 的集成不支持针对设备组的符合性策略。 
+**原因**：Jamf 与 Intune 的集成不支持针对设备组的合规性策略。 
 
 **解决方法**  
 修改要分配给用户组的 macOS 设备的合规性策略。 

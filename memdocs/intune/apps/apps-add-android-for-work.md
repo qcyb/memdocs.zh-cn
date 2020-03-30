@@ -1,12 +1,12 @@
 ---
-title: 将托管 Google Play 应用分配到 Android Enterprise 设备
+title: 将托管 Google Play 应用添加并分配到 Android Enterprise 设备
 titleSuffix: Microsoft Intune
 description: 了解如何从托管的 Google Play 商店同步应用，以及将应用分配到 Android Enterprise 设备。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341446"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117296"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备
 
@@ -33,7 +33,7 @@ Intune 将自动向 Intune 管理控制台添加四个常见的与 Android Enter
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - 用于 Android Enterprise 完全托管方案。 此应用在设备注册过程中自动安装到完全托管的设备。
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - 帮助你使用双因素身份验证登录帐户。 此应用在设备注册过程中自动安装到完全托管的设备。
-- **[Intune 公司门户](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - 用于应用保护策略 (APP) 和 Android Enterprise 工作配置文件方案。
+- **[Intune 公司门户](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - 用于应用保护策略 (APP) 和 Android Enterprise 工作配置文件方案。 此应用在设备注册过程中自动安装到完全托管的设备。
 - **[托管的主屏幕](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - 用于 Android Enterprise 专用多应用展台方案。 IT 管理员应创建分配，以便在将用于多应用展台方案的专用设备上安装此应用。
 
 >[!NOTE]
@@ -183,7 +183,7 @@ Web 链接将使用 Microsoft Edge 或你选择部署的任何其他浏览器应
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>将托管 Google Play 应用分配到 Android Enterprise 工作配置文件设备
 
-如果应用显示在“应用”  工作负荷窗格的“应用许可证”  节点中，可以将应用分配到用户组，从而[分配应用，就像分配其他任何应用一样](/intune-azure/manage-apps/deploy-apps)。
+如果应用显示在“应用”  工作负荷窗格的“应用许可证”  节点中，可以将应用分配到用户组，从而[分配应用，就像分配其他任何应用一样](/mem/intune/apps/apps-deploy)。
 
 分配应用之后，它会安装（或可安装）在用户的目标设备上。 不会要求设备的用户批准此安装。 有关 Android Enterprise 工作配置文件设备的详细信息，请参阅[设置 Android Enterprise 工作配置文件设备的注册](../enrollment/android-work-profile-enroll.md)。 
 
@@ -197,7 +197,7 @@ Web 链接将使用 Microsoft Edge 或你选择部署的任何其他浏览器应
 默认情况下，Android Enterprise 完全托管设备不允许员工安装组织未批准的任何应用。 此外，员工将无法根据策略删除任何已安装的应用。 如果希望允许用户访问完整的 Google Play 商店来安装应用，而不只是有权访问托管 Google Play 商店中已批准的应用，则可以将“允许访问 Google Play 商店中的所有应用”设置为“允许”   。 使用此设置，用户可以使用其公司帐户访问 Google Play 商店中的所有应用，但购买可能会受到限制。 你可以通过允许用户将新帐户添加到设备来删除有限的购买限制。 这样一来，最终用户就可以使用个人帐户从 Google Play 商店中购买应用，还可以进行应用内购买。 有关详细信息，请参阅[便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置](../configuration/device-restrictions-android-for-work.md)。 
 
 > [!NOTE]
-> 在载入过程中，Microsoft Intune 应用和 Microsoft Authenticator 应用将作为必需的应用安装到所有完全托管的设备上。 自动安装这些应用会提供条件访问支持，Microsoft Intune 应用用户可以查看和解决符合性问题。 
+> 在载入过程中，Microsoft Intune 应用、Microsoft Authenticator 应用和公司门户应用将作为必需的应用安装到所有完全托管的设备上。 自动安装这些应用会提供条件访问支持，Microsoft Intune 应用用户可以查看和解决符合性问题。 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>管理 Android Enterprise 应用权限
 Android Enterprise 需要用户先在托管的 Google Play Web 控制台中批准应用，然后才能将应用与 Intune 同步并分配给用户。 由于 Android Enterprise 允许以无提示方式将这些应用自动推送到用户的设备，因此必须代表所有用户接受应用权限。 用户安装应用时将不会看到任何应用权限，因此请务必了解这些权限。

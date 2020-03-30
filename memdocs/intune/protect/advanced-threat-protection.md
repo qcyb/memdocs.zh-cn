@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354264"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085199"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>使用 Intune 中的条件访问强制执行 Microsoft Defender ATP 的符合性
 
@@ -136,14 +136,17 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
 合规性策略确定设备可接受的风险级别。
 
-### <a name="create-the-compliance-policy"></a>创建符合性策略
+如果对创建合规性策略不熟悉，请参考*在 Microsoft Intune 中创建合规性策略*一文中的[创建策略](../protect/create-compliance-policy.md#create-the-policy)过程。 以下信息具体介绍如何将 Defender ATP 配置为合规性策略的一部分。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “符合性策略”   > “创建策略”  。
-3. 输入“名称”  和“描述”  。
-4. 在“平台”  中，选择“Windows 10 及更高版本”  。
-5. 在“设置”下，选择“Microsoft Defender ATP”   。
-6. 将“要求设备不高于计算机风险评分”设置为首选级别  。
+
+2. 选择“设备”   > “符合性策略”   > “策略”   >   “创建策略”。
+
+3. 对于“平台”  ，选择“Windows 10 和更高版本”  ，然后选择“创建”  以打开“创建策略”  配置窗口。
+
+4. 在“基本”  选项卡上，指定可稍后可帮助你识别它的“名称”  。 还可以选择指定“说明”  。
+  
+5. 在“合规性设置”  选项卡上，展开“Microsoft Defender ATP”  组并将“要求设备不高于计算机风险评分”  设置为首选级别。
 
    威胁级别分类[由 Microsoft Defender ATP 确定](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue)。
 
@@ -152,8 +155,7 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
    - **中**：如果有低级别或中等级别威胁，设备符合策略。 如果检测到高级别威胁，则设备会被确定为不合规。
    - **高**：此级别最不安全，允许所有威胁级别。 因此，存在高、中等或低级别威胁的设备被视为符合策略。
 
-7. 选择“确定”  和“创建”  以保存更改（并创建策略）。
-8. [将设备合规性策略分配](create-compliance-policy.md#assign-the-policy)给适用的组。
+6. 完成策略的配置，包括将策略分配给适用的组。
 
 ## <a name="create-a-conditional-access-policy"></a>创建条件访问策略
 

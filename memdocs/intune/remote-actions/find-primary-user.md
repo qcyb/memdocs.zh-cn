@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c30cc122931588149120efa10710627826c50e2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337962"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219820"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>查找 Intune 设备的主要用户
 
@@ -43,8 +43,11 @@ ms.locfileid: "79337962"
 3. 选择新用户，然后选择“选择”  。
 
 更新主要用户之后，它也会在 Intune 和 Azure AD 设备边栏选项卡中更新。
-
-无法在共同托管的 Windows 10 设备上更改主要用户。
+>[!NOTE]
+>1. 对跨终结点管理器和 Azure AD 的主要用户的更新最多可能需要 10 分钟才能反映出来。
+>2. 目前无法在共同托管的 Windows 10 设备上更改主要用户。 
+>3. 更改设备的主要用户不会对本地组成员资格进行任何更改，例如在“管理员”本地组中添加或删除用户
+>4. 更改主要用户不会更改“注册者”用户。 
 
 
 ## <a name="what-is-the-primary-user"></a>什么是主要用户？

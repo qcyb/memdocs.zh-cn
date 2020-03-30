@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350572"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526455"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中用于 SCEP 证书配置文件的设备到 NDES 服务器的通信进行故障排除
 
@@ -198,7 +198,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ![HTTP 错误 503。 此服务不可用](../protect/media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png)
 
-此问题通常是因为 IIS 中的 SCEP  应用程序池未启动。 在 NDES 服务器上，打开“IIS 管理器”  ，然后转到“应用程序池”  。 找到“SCEP”  应用程序池并确认它已启动。
+此问题通常是因为 IIS 中的 SCEP  应用程序池未启动所致。 在 NDES 服务器上，打开“IIS 管理器”  ，然后转到“应用程序池”  。 找到“SCEP”  应用程序池并确认它已启动。
 
 如果未启动 SCEP 应用程序池，请检查服务器上的应用程序事件日志：
 
@@ -242,6 +242,19 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
   **解决方法**：启用“匿名身份验证”  并禁用“Windows 身份验证”  ，然后重启 NDES 服务器。
 
   ![IIS 权限](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
+
+- **原因 4**：NDESPolicy 模块证书已过期。
+
+  CAPI2 日志（请参阅原因 2 的解决方案）将显示“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint”引用的证书在超过证书有效期后发生的相关错误。
+
+  **解决方法**：使用有效证书的指纹更新引用。
+  1. 标识替代证书：
+     - 续订现有证书
+     - 选择具有类似属性（主题、EKU、密钥类型和长度等）的其他证书
+     - 注册新证书
+  2. 导出 `NDESPolicy` 注册表项以备份当前值。
+  3. 将 `NDESCertThumbprint` 注册表值的数据替换为新证书的指纹，同时删除所有空格并将文本转换为小写。
+  4. 重启 NDES IIS 应用池，或从提升的命令提示符中执行 `iisreset`。
 
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
@@ -289,7 +302,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
   **解决方法**：在应用程序代理配置中，为 SCEP 外部 URL 使用默认域 yourtenant.msappproxy.net  。
 
-#### <a name="internal-server-error"></a>500 - 内部服务器错误
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - 内部服务器错误
 
 浏览到 SCEP 服务器 URL 时，会收到以下错误：
 

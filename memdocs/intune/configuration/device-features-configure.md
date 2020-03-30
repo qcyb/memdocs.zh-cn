@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350130"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084097"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>使用 Intune 添加 iOS、iPadOS 或 macOS 设备功能设置
 
@@ -149,16 +149,16 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 ## <a name="single-sign-on-app-extension"></a>单一登录应用扩展
 
-这些设置将配置可为 iOS、iPadOS 和 macOS 设备启用单一登录 (SSO) 的应用扩展。 大多数业务线 (LOB) 应用和组织网站需要某种级别的安全的用户身份验证。 在许多情况下，此类身份验证要求用户重复输入相同凭据。 借助 SSO，用户输入一次凭据后，即可访问应用和网站。 登录后，用户自动可以访问应用和网站，或者可以使用 Face ID、Touch ID 或 Apple 密码获取访问权限。
+这些设置将配置可为 iOS、iPadOS 和 macOS 设备启用单一登录 (SSO) 的应用扩展。 大多数业务线 (LOB) 应用和组织网站需要某种级别的安全的用户身份验证。 在许多情况下，此类身份验证要求用户重复输入相同凭据。 借助 SSO，用户输入一次凭据后，即可访问应用和网站。 SSO 还为用户提供了更好的身份验证体验，并减少了重复提示输入凭据的次数。
 
-在 Intune 中，使用这些设置配置由组织、标识提供者或 Apple 创建的 SSO ap 扩展。 SSO 应用扩展将处理对用户的身份验证。 这些设置可配置重定向类型和凭据类型 SSO 应用扩展。
+在 Intune 中，使用这些设置配置由组织、标识提供者、Microsoft 或 Apple 创建的 SSO 应用扩展。 SSO 应用扩展将处理对用户的身份验证。 这些设置可配置重定向类型和凭据类型 SSO 应用扩展。
 
-- 重定向类型适用于 OAuth 和 SAML2 等新式身份验证协议。
-- 凭据类型适用于质询与响应身份验证流。 可以选择 Apple 提供的特定于 Kerberos 的凭据扩展，或通用凭据扩展。
+- 重定向类型适用于诸如 OAuth 和 SAML2 等新式身份验证协议。 Microsoft 具有一个 iOS/iPadOS Azure AD 重定向类型 SSO 应用扩展，可以通过单一登录应用扩展设置启用该扩展。
+- 凭据类型适用于质询与响应身份验证流。 可以选择 Apple 提供的 Kerberos 特定凭据扩展，或选择通用凭据扩展。
 
 有关可以在 Intune 中配置的设置列表信息，请参阅 [iOS/iPadOS SSO 应用扩展](ios-device-features-settings.md#single-sign-on-app-extension)和 [macOS SSO 应用扩展](macos-device-features-settings.md#single-sign-on-app-extension)。
 
-有关开发 SSO 应用扩展的详细信息，请观看 Apple 网站上的[可扩展的企业 SSO](https://developer.apple.com/videos/play/tech-talks/301)。 若要阅读 Apple 的功能说明，请访问[“单点登录扩展”有效负载设置](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web)。 
+有关开发 SSO 应用扩展的详细信息，请观看 Apple 网站上的[可扩展的企业 SSO](https://developer.apple.com/videos/play/tech-talks/301)。 若要阅读 Apple 的功能说明，请访问[“单一登录扩展”有效负载设置](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web)。 
 
 > [!NOTE]
 > 单一登录应用扩展功能不同于单一登录功能：  
@@ -167,7 +167,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 >
 > - “单一登录应用扩展”设置定义了供标识提供者或组织使用的扩展，以提供无缝的企业登录体验  。 “单一登录”设置定义了有关用户访问服务器或应用时的 Kerberos 帐户信息  。
 >
-> - 单一登录应用扩展使用 Apple 操作系统进行身份验证。  因此，它可能会提供比单一登录更棒的最终用户体验  。
+> - 单一登录应用扩展使用 Apple 操作系统进行身份验证。  因此，它可能会提供比单一登录  更棒的最终用户体验。
 >
 > - 从开发角度而言，使用单一登录应用扩展，你可以使用任意类型的重定向 SSO 或凭据 SSO 身份验证  。 使用单一登录时，只可以使用 Kerberos SSO 身份验证。 
 >
@@ -194,7 +194,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 ## <a name="web-content-filter"></a>Web 内容筛选器
 
-这些设置可以使用 Apple 的内置自动筛选算法评估网页，并阻止成人内容和成人语言。 还可以创建允许的 Web 链接和限制的 Web 链接列表。 例如，可以仅允许 `contoso` 网站打开。
+这些设置使用 Apple 的内置自动筛选算法评估网页，并阻止成人内容和成人语言。 还可以创建允许的 Web 链接和限制的 Web 链接列表。 例如，可以仅允许 `contoso` 网站打开。
 
 有关可以在 Intune 中配置的设置列表信息，请参阅 [iOS/iPadOS 上的 Web 内容筛选器](ios-device-features-settings.md#web-content-filter)。
 

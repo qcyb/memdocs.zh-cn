@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8586e5c25ec3db4a736d84381e691ecebe6fae32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361674"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220092"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Windows 10（及更高版本）设备设置
 
@@ -315,7 +315,7 @@ ms.locfileid: "79361674"
 - **开始使用 Microsoft Edge**：选择 Microsoft Edge 启动时打开的页面。 选项包括：
   - **自定义起始页**：输入起始页，例如 `http://www.contoso.com`。 Microsoft Edge 加载所输入的起始页。
   - **“新建选项卡”页**：Microsoft Edge 加载“新建选项卡 URL”设置中输入的任何内容  。
-  - **上一次会话的页面**：Microsoft Edge 加载上一次会话的页面。
+  - **上次会话的页面**：Microsoft Edge 加载上一次会话的页面。
   - **本地应用设置中的起始页**：启动 Microsoft Edge 后将显示由 OS 定义的默认起始页。
 
 - **允许用户更改起始页**：选择“是”（默认）可使用户更改起始页  。 管理员可以使用 `EdgeHomepageUrls` 输入在打开 Microsoft Edge 时用户默认看到的起始页。 选择“否”  可阻止用户更改起始页。
@@ -376,8 +376,8 @@ ms.locfileid: "79361674"
 - **保存浏览历史记录**：选择“是”（默认）可允许在 Microsoft Edge 中保存浏览历史记录  。 选择“否”可阻止保存浏览历史记录  。
 - **退出时清除浏览数据（仅限桌面版）** ：选择“是”  可在用户退出 Microsoft Edge 时清除历史记录和浏览数据。 选择“否”（默认）  可使用 OS 默认值，这可能会缓存浏览数据。
 - **同步用户设备之间的浏览器设置**：选择要在设备之间同步浏览器设置的方式。 选项包括：
-  - **允许**：允许同步用户的设备之间的 Microsoft Edge 浏览器设置
-  - **阻止和启用的用户替代**：阻止同步用户设备之间的 Microsoft Edge 浏览器设置。 用户可以覆盖此设置。
+  - **允许**：允许在用户设备之间同步 Microsoft Edge 浏览器设置
+  - **阻止和启用的用户替代**：阻止在用户设备之间同步 Microsoft Edge 浏览器设置。 用户可以覆盖此设置。
   - **阻止**：阻止同步用户设备之间的 Microsoft Edge 浏览器设置。 用户无法覆盖此设置。
 
 当选择“阻止并启用用户覆盖”时，用户可以覆盖管理员指定内容。
@@ -474,7 +474,7 @@ ms.locfileid: "79361674"
 
 ## <a name="per-app-privacy-exceptions"></a>每应用隐私异常
 
-可以添加隐私行为不同于“默认隐私”中所定义设置的应用。
+可以添加应具有与“默认隐私”中的定义不同的隐私行为的应用。
 
 - **包名称**：应用包系列名称。
 - **应用名称**：应用的名称。
@@ -898,6 +898,11 @@ ms.locfileid: "79361674"
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender 防病毒排除项
+
+可以通过修改排除列表从 Microsoft Defender 防病毒扫描中排除某些文件。 **通常，不需要应用排除规则**。 Microsoft Defender 防病毒软件基于已知的操作系统行为和典型管理文件（例如在企业管理、数据库管理以及其他企业方案和情况中使用的文件）包括许多自动排除规则。
+
+> [!WARNING]
+> **定义排除规则会降低 Microsoft Defender 防病毒提供的保护**。 始终评估与实施排除规则相关的风险。 仅排除你知道不包含恶意的文件。
 
 - **要从扫描和实时保护中排除的文件和文件夹**：向排除列表添加一个或多个文件和文件夹（如 **C:\Path** 或 **%ProgramFiles%\Path\filename.exe**）。 这些文件和文件夹不包括在任何实时或计划的扫描中。
 - **要从扫描和实时保护中排除的文件扩展**：向排除列表添加一个或多个文件扩展名（如 **jpg** 或 **txt**）。 不会在任何实时或计划的扫描中包括具有这些扩展名的任何文件。

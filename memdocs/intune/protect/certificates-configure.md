@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353731"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085042"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用证书进行身份验证
 
@@ -93,7 +93,7 @@ ms.locfileid: "79353731"
 
 若要使用 PKCS、SCEP 和 PKCS 导入的证书，设备必须信任根证书颁发机构。 若要建立信任，请将受信任的根 CA 证书以及任何中间证书或证书发证机构证书导出为公共证书 (.cer)。 可从颁发 CA 或信任颁发 CA 的任何设备获取这些证书。
 
-若要导出证书，请参阅关于证书颁发机构的文档。 需要将公共证书导出为“.cer”文件。  请勿导出私钥（.pfx 文件）。
+若要导出证书，请参阅关于证书颁发机构的文档。 需要将公共证书导出为 .cer 文件。  请勿导出私钥（.pfx 文件）。
 
 [创建受信任的证书配置文件](#create-trusted-certificate-profiles)以将该证书部署到设备时，将使用此 .cer 文件。
 
@@ -107,31 +107,47 @@ ms.locfileid: "79353731"
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择并转到“设备”   > “配置文件”   > “创建配置文件”  。
 
-   ![导航到 Intune 并为受信任的证书创建新的配置文件](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![导航到 Intune 并为受信任的证书创建新的配置文件](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. 输入以下属性：
+   - **平台**：选择将接收此配置文件的设备的平台。
+   - **配置文件**：选择“受信任的证书” 
+  
+4. 选择“创建”。 
 
-   - 配置文件的名称 
-   - （可选）设置“描述” 
-   - 将配置文件部署到的平台 
-   - 将配置文件类型  设置为“受信任的证书” 
+5. 在“基本信息”  中，输入以下属性：
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的受信任证书配置文件”  。
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-4. 选择“设置”  ，然后浏览到受信任的根 CA 证书 .cer 文件（为与此证书配置文件一起使用而导出的文件），然后选择“确定”  。
+6. 选择“下一步”  。
 
-5. 从以下位置选择受信任证书的**目标存储区**（仅适用于 Windows 8.1 和 Windows 10 设备）：
+7. 在“配置设置”  中，指定之前导出的受信任根 CA 证书的 .cer 文件。 
+
+   从以下位置选择受信任证书的**目标存储区**（仅适用于 Windows 8.1 和 Windows 10 设备）：
 
    - **计算机证书存储区 - 根**
    - **计算机证书存储区 - 中间**
    - **用户证书存储区 - 中间**
 
-6. 完成后，选择“确定”，返回“创建配置文件”窗格，然后选择“创建”    。
+   ![创建配置文件并上传受信任的证书](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-该配置文件将出现在“设备 - 配置文件”  窗口中的配置文件列表中，其中配置文件类型为“受信任的证书”  。 请确保将此配置文件分配到将使用 SCEP 或 PKCS 证书的设备。 要向组分配此配置文件，请参阅[分配设备配置文件](../configuration/device-profile-assign.md)。
+8. 选择“下一步”  。
 
-> [!NOTE]
-> Android 设备可能会显示第三方已安装受信任的证书的消息。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+   选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. （仅适用于 Windows 10  ）在“适用性规则”  中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
+
+  有关详细信息，请参阅“在 Microsoft Intune 中创建设备配置文件”中的[适用性规则](../configuration/device-profile-create.md#applicability-rules)  。
+
+12. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="additional-resources"></a>其他资源
 

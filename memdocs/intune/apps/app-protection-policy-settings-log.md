@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe508dac691f922ec638709e04d6d4dd9f47f078
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341693"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083570"
 ---
 # <a name="review-client-app-protection-logs"></a>查看客户端应用保护日志
 
 了解可在应用保护日志中查看的设置。 启用移动客户端上的 Intune 诊断来访问这些日志。 
 
 启用和收集日志的过程因平台而异：
-- **iOS/iPadOS 设备** - 使用适用于 iOS/iPadOS 的 Microsoft Edge 收集日志。 有关详细信息，请参阅[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs)。 
+- **iOS/iPadOS 设备** - 使用适用于 iOS/iPadOS 的 Microsoft Edge 收集日志。 有关详细信息，请参阅[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
 - **Windows 10 设备** - 使用“MDMDiag”和事件日志  。 请参阅 Windows 客户端管理内容中的[诊断 Windows 10 中的 MDM 故障](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)和博客 [Windows 10 Intune 策略故障排除](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)。
-- **Android 设备** - 在 Android 设备上没有针对应用保护策略 (APP) 的诊断数据。
+- **Android 设备** - 使用 Android 版 Microsoft Edge 来收集日志。 有关详细信息，请参阅[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
 
 下表列出了在日志中记录的应用保护策略设置名称和受支持的值。 此外，每个设置都标识在 Microsoft 终结点管理器门户中找到的策略设置。 有关每个设置的详细信息，请参阅 [iOS/iPadOS 应用保护策略设置](app-protection-policy-settings-ios.md)。
 

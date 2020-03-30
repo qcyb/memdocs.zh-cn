@@ -1,11 +1,11 @@
 ---
 title: 在 Microsoft Intune 中配置 iOS/iPadOS 设备的 VPN 设置 - Azure | Microsoft Docs
-description: 在 Microsoft Intune 中，使用虚拟专用网络 (VPN) 配置设置为运行 iOS/iPadOS 的设备添加或创建 VPN 配置配置文件，包括基本设置中的连接详细信息、身份验证方法和拆分隧道；具有标识符的自定义 VPN 设置和键值对；包括 Safari URL 的每应用 VPN 设置和具有 SSID 或 DNS 搜索域的按需 VPN；以及代理设置，包括配置脚本、IP 或 FQDN 地址和 TCP 端口。
+description: 在 iOS/iPadOS 设备上使用虚拟专用网 (VPN) 配置设置添加或创建 VPN 配置文件。 在 Microsoft Intune 中配置连接详细信息、身份验证方法和拆分隧道；具有标识符的自定义 VPN 设置、键值对；包括 Safari URL 的每应用 VPN 设置，和具有 SSID 或 DNS 搜索域的按需 VPN；以及代理设置，包括配置脚本、IP 或 FQDN 地址和 TCP 端口。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360452"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086538"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 iOS 和 iPadOS 设备添加 VPN 设置
 
@@ -82,10 +82,10 @@ Microsoft Intune 包含许多可以部署到 iOS/iPadOS 设备的 VPN 设置。 
 
 - **启用网络访问控制 (NAC)** （Cisco AnyConnect、Citrix SSO 和 F5 Access）：选择“我同意”后，此设备 ID 将包含在 VPN 配置文件中  。 此 ID 可用于对 VPN 进行身份验证以允许或阻止网络访问。
 
-    **将 Cisco AnyConnect 与 ISE 一起使用时**，请务必：
+  **将 Cisco AnyConnect 与 ISE 一起使用时**，请务必：
 
-    - 如果尚未执行此操作，请按照《[Cisco 标识服务引擎管理员指南](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)》中的“将 Microsoft Intune 配置为 MDM 服务器”中所述将 ISE 与 Intune for NAC 集成  。
-    - 在 VPN 配置文件中启用 NAC。
+  - 如果尚未执行此操作，请按照《[Cisco 标识服务引擎管理员指南](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)》中的“将 Microsoft Intune 配置为 MDM 服务器”中所述将 ISE 与 Intune for NAC 集成  。
+  - 在 VPN 配置文件中启用 NAC。
 
   将 Citrix SSO 与 Gateway 配合使用时  ，请务必：
 
@@ -107,6 +107,34 @@ Microsoft Intune 包含许多可以部署到 iOS/iPadOS 设备的 VPN 设置。 
 ## <a name="ikev2-settings"></a>IKEv2 设置
 
 选择“连接类型”   > “IKEv2”  时，将应用这些设置。
+
+- **始终可用 VPN**：如果设置为“启用”，会将 VPN 客户端设置为自动连接并重新连接到 VPN  。 始终可用 VPN 连接一直保持连接状态，或在用户解锁设备、设备重启或无线网络更改时立即连接。 如果设置为“禁用”  （默认值），则会禁用所有 VPN 客户端的 Always On VPN。 启用后，还需配置：
+
+  - **网络接口**：所有 IKEv2 设置仅适用于所选的网络接口。 选项包括：
+    - **Wi-Fi 和手机网络**（默认值）：IKEv2 设置适用于设备上的 Wi-Fi 和手机网络接口。
+    - **手机网络**：IKEv2 设置仅适用于设备上的手机网络接口。 如果要部署到禁用或删除了 Wi-Fi 接口的设备，请选择此选项。
+    - **Wi-Fi**：IKEv2 设置仅适用于设备上的 Wi-Fi 接口。
+  - **要禁用 VPN 配置的用户**：  如果设置为“启用”，则允许用户禁用 Always On VPN。  如果设置为“禁用”（默认值），则阻止用户禁用它。 此设置的默认值是最安全的选项。
+  - **语音邮件**：如果启用了 Always On VPN，请选择语音邮件流量的相应操作。 选项包括：
+    - **强制网络流量流过 VPN**（默认选项）：此设置是最安全的选项。
+    - **允许网络流量传递到 VPN 外部**
+    - **放弃网络流量**
+  - **AirPrint**：如果启用了 Always On VPN，请选择 AirPrint 流量的相应操作。 选项包括：
+    - **强制网络流量流过 VPN**（默认选项）：此设置是最安全的选项。
+    - **允许网络流量传递到 VPN 外部**
+    - **放弃网络流量**
+  - **手机网络服务**：对于 iOS 13.0 以上版本，如果启用了 Always On VPN，请选择手机网络流量的相应操作。 选项包括：
+    - **强制网络流量流过 VPN**（默认选项）：此设置是最安全的选项。
+    - **允许网络流量传递到 VPN 外部**
+    - **放弃网络流量**
+  - **允许来自非本机强制网络应用的流量传递到 VPN 外部**：强制网络指的是通常位于餐厅和酒店中的 Wi-Fi 热点。 选项包括：
+    - **否**：强制所有强制网络 (CN) 应用流量通过 VPN 隧道。
+    - **是，所有应用**：允许所有 CN 应用流量绕过 VPN。
+    - **是，特定应用**：添加  其流量可以绕过 VPN 的 CN 应用列表。 输入 CN 应用的捆绑标识符。 例如，输入 `com.contoso.app.id.package`。
+
+  - **从 Captive Websheet 应用传递到 VPN 外部的流量**：Captive Websheet 是用于处理强制登录的内置 Web 浏览器。 如果设置为“启用”，  则允许浏览器应用流量绕过 VPN。 如果设置为“禁用”  （默认值），将强制 WebSheet 流量使用 Always On VPN。 此默认值是最安全的选项。
+  - **网络地址转换(NAT)保持连接间隔(秒)** ：为了保持与 VPN 的连接，设备将发送网络数据包以保持活动状态。 输入 20-1440 的秒数值表示发送这些数据包的频率。 例如，输入值 `60` 表示每 60 秒向 VPN 发送一次网络数据包。 默认情况下，此值设为 `110` 秒。
+  - **设备处于睡眠状态时，将 NAT 保持连接卸载到硬件**：如果设置为“启用”  （默认值），则在设备进入睡眠状态时，NAT 会持续发送保持连接的数据包，使设备保持与 VPN 的连接。 设置为“禁用”  可以禁用此功能。
 
 - **远程标识符**：输入 IKEv2 服务器的网络 IP 地址、FQDN、UserFQDN 或 ASN1DN。 例如，输入 `10.0.0.3` 或 `vpn.contoso.com`。 通常情况下，输入与[连接名称  ](#base-vpn-settings)相同的值（仅限本文示例）。 但是，这确实取决于你的 IKEv2 服务器设置。
 
@@ -194,7 +222,7 @@ Microsoft Intune 包含许多可以部署到 iOS/iPadOS 设备的 VPN 设置。 
   - **URL 字符串探测**：可选。 输入规则用作测试的 URL。 如果设备在不重定向的情况下访问此 URL，则会启动 VPN 连接。 并且，设备会连接到目标 URL。 用户看不到该 URL 字符串探测站点。
 
     例如，URL 字符串探测是一个审核 Web 服务器 URL，用于在连接 VPN 前检查设备的符合性。 或者，URL 在通过 VPN 将设备连接到目标 URL 前，测试 VPN 连接至站点的能力。
-。
+
   - **域操作**：选择以下项之一：
     - 需要时连接
     - 从不连接

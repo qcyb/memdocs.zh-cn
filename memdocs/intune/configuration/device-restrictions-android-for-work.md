@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0546b280f6a04b6bc396b39a9a04031ee9800172
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220109"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置
 
@@ -78,7 +78,7 @@ ms.locfileid: "79361882"
 
 ### <a name="system-security-settings"></a>系统安全设置
 
-- **对应用进行威胁扫描**：选择“需要”（默认）可启用 Google Play Protect 在应用安装前后对其进行扫描  。 如果它检测到威胁，可能会警告用户从设备中删除该应用。 如果选择“未配置”，则不会启用或运行 Google Play Protect 来扫描应用  。
+- **对应用进行威胁扫描**：选择“需要”（默认）可启用 Google Play 保护机制在应用安装前后对其进行扫描  。 如果它检测到威胁，可能会警告用户从设备中删除该应用。 如果选择“未配置”，则不会启用或运行 Google Play Protect 来扫描应用  。
 
 ### <a name="dedicated-device-settings"></a>专用设备设置
 
@@ -316,7 +316,7 @@ ms.locfileid: "79361882"
 - **最短密码长度**：输入用户密码必须包含的最少字符数 (4 - 16   )。
 - **工作配置文件锁定前的最大非活动分钟数**：选择工作配置文件锁定前的时间。 然后，用户必须输入凭据才能重获访问权限。
 - **擦除设备前的登录失败次数**：输入擦除设备上的工作配置文件之前允许输入错误密码的次数。
-- **密码过期(天)** ：输入必须更改最终用户的密码前的天数 (1-255   )。
+- **密码过期(天)** ：输入必须更改最终用户的密码前的天数 (1-365   )。
 - **所需的密码类型**：选择在设备上必须设置的密码类型。 选择：
   - 设备默认值 
   - **低安全性生物识别**
@@ -337,7 +337,7 @@ ms.locfileid: "79361882"
 - **最短密码长度**：输入用户密码必须包含的最少字符数 (4 - 14   )。
 - **屏幕锁定前的最大非活动分钟数**：选择非活动设备自动锁定前的时间
 - **擦除设备前的登录失败次数**：输入擦除设备上的工作配置文件之前允许输入错误密码的次数。
-- **密码过期(天)** ：输入必须更改最终用户的密码前的天数 (1-255   )
+- **密码过期(天)** ：输入必须更改最终用户的密码前的天数 (1-365   )
 - **所需的密码类型**：选择在设备上必须设置的密码类型。 选择：
   - 设备默认值 
   - **低安全性生物识别**

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352886"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084953"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>通过 Intune 使用条件访问的常见方式有哪些？
 
@@ -83,7 +83,7 @@ Intune 与移动威胁防护供应商合作提供安全性解决方案，以检�
 
 #### <a name="corporate-owned"></a>公司拥有的设备
 
-- **本地 AD 域加入：** 此选项通常适用于已经非常习惯通过 AD 组策略或 Configuration Manager 管理 PC 的组织。
+- **已联接混合 Azure AD：** 此选项通常适用于已经非常习惯通过 AD 组策略或 Configuration Manager 管理 PC 的组织。
 
 - **Azure AD 域加入和 Intune 管理：** 此方案适用于希望云优先（即主要使用云服务，以减少使用本地基础结构）或仅使用云（无本地基础结构）的组织。 Azure AD 联接非常适用于混合环境，可以借助它访问云和本地应用及资源。 设备要加入 Azure AD 并在 Intune 中注册，可以将此用作访问公司资源的条件访问条件。
 

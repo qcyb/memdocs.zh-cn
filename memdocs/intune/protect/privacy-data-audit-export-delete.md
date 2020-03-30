@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3146bbaae3362e97c8c076823b58dbcd57c4af
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339067"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084811"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>在 Intune 中审核、导出或删除个人数据
 
@@ -47,7 +47,7 @@ Intune 管理员可使用审核日志跟踪与个人数据有关的活动。 管
 
 管理员可以导出最终用户个人数据，包括帐户、服务数据和关联日志，以遵从“数据主体权限”请求。 是否向数据主体提供个人数据副本取决于你和你的组织，或者取决于你是否有不提供该副本的正当业务理由。 如果决定提供，可以提供实际文档的副本、经过适当修订的版本或你认为适合共享的部分的屏幕截图。
 
-要导出用户的个人数据，可使用： 
+要导出用户的个人数据，你可以使用： 
 - “Intune MDM 设备”边栏选项卡导出设备列表。 还可以直接复制设备数据。
 - [Export-IntuneData.ps1 脚本](https://aka.ms/intunedataexport)。
 
@@ -66,7 +66,7 @@ Intune 管理员可使用审核日志跟踪与个人数据有关的活动。 管
 重置为出厂设置会将所有公司和个人数据及设置还原到原始出厂设置。 这样即可将设备提供给下一位员工。 用户文件、用户安装的应用程序和非默认设置都将删除，并且此数据将在删除操作后的 30 天内从 Intune 服务中删除。
 
 ### <a name="user-self-removal-from-intune-management"></a>用户从 Intune 管理中自行删除
-用户可从 Intune 管理中删除其 [Android、Apple 或 Windows](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android) 个人设备，无需管理员的协助。   
+用户可从 Intune 管理中删除其 [Android、Apple 或 Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) 个人设备，无需管理员的协助。   
 
 ### <a name="retire"></a>停用
 “停用”操作将删除 Intune 预配的数据，例如公司应用程序、Intune 当前管理的应用的相关数据、策略设置和通过 Intune 预配的电子邮件配置文件  。 此操作会将用户个人数据保留在设备上。

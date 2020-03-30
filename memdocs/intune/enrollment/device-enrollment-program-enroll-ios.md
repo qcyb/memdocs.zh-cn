@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339379"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220194"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>通过 Apple 设备注册计划自动注册 iOS/iPadOS 设备
 
@@ -195,6 +195,9 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 
 11. 选择是否要让使用此配置文件的设备能够“与计算机同步”  。 如果选择“通过证书允许 Apple Configurator”  ，则必须在“Apple Configurator 证书”  下选择证书。
 
+     > [!NOTE]
+     > 如果将“与计算机同步”设置为“全部拒绝”   ，则 iOS 和 iPadOS 设备上的端口将受到限制。 该端口只能用于充电，不能用于其他操作。 将阻止端口使用 iTunes 或 Apple 配置器。
+
 12. 如果在上一步中选择了“通过证书允许 Apple Configurator”，则选择要导入的“Apple Configurator 证书”。 
 
 13. 可以为设备指定命名格式，此格式在设备注册时和每次连续签入时自动应用。 若要创建命名模板，请在“应用设备名称模板”  下选择“是”  。 然后，在“设备名称模板”  框中，输入要用于使用此配置文件的设备的名称模板。 可以指定包含设备类型和序列号的模板格式。 
@@ -278,6 +281,10 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 请参阅[通过设备注册计划在 Intune 中注册 iOS/iPadOS 设备](../user-help/enroll-your-device-dep-ios.md)。
 
 ## <a name="renew-a-dep-token"></a>续订 DEP 令牌  
+
+> [!NOTE]
+> 除了每年更新 DEP 令牌外，当在 Apple Business Manager 中设置令牌的用户的托管 Apple ID 密码更改或该用户退出 Apple Business Manager 组织时，你还需要在 Intune 和 Apple Business Manager 中续订注册计划令牌。
+
 1. 转到 deploy.apple.com。  
 2. 在“管理服务器”下，选择与想要续订的令牌文件相关的 MDM 服务器  。
 3. 选择“生成新令牌”  。

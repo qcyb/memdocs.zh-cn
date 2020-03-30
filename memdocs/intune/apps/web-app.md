@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fc6b9fc427ab6e0dc0488061378e78060527676
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361973"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084128"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>将 Web 应用添加到 Microsoft Intune
 
@@ -37,9 +37,10 @@ Intune 在用户的设备上创建一个转至 Web 应用的快捷方式。 对�
 
 > [!Note]
 > 若要启动 Web 应用，必须在用户的设备上安装浏览器。 
-
-> [!Note]
-> 对于 Android Enterprise 设备，请参阅[托管的 Google Play Web 链接](apps-add-android-for-work.md#managed-google-play-web-links)
+> 
+> 对于 Android Enterprise 设备，请参阅[托管的 Google Play Web 链接](apps-add-android-for-work.md#managed-google-play-web-links)。
+> 
+> 对于 iOS 设备，需要在受保护的浏览器中打开新 Web 剪辑（固定的 Web 应用）时，将在 Microsoft Edge（而不是在 Intune Managed Browser 中）打开它们。 对于较旧的 iOS Web 剪辑，必须重定向这些 Web 剪辑，以确保它们在 Microsoft Edge 而不是 Managed Browser 中打开。
 
 ## <a name="add-a-web-app-to-intune"></a>将 Web 应用添加到 Intune
 若要在 Intune 中将应用添加为 Web 应用的快捷方式，请执行以下步骤：

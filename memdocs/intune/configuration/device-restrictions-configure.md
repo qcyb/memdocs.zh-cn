@@ -1,11 +1,11 @@
 ---
 title: 在 Microsoft Intune 中使用策略限制设备功能 - Azure | Microsoft Docs
-description: 在 Microsoft Intune 中添加设备配置文件以限制 Android、macOS、iOS、iPadOS、Windows Phone 和 Windows 10 设备上的功能
+description: 在 Microsoft Intune 中添加设备配置文件以限制 Android 设备管理员、Android Enterprise、macOS、iOS、iPadOS、Windows Phone 和 Windows 10 设备上的功能。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361817"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087083"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>在 Microsoft Intune 中配置设备限制设置
-
-
 
 Intune 包含设备限制策略，有助于管理员控制 Android、iOS/iPadOS、macOS 和 Windows 设备。 这些限制允许控制各种设置和功能，以保护组织的资源。 例如，管理员可以：
 
@@ -48,7 +46,7 @@ Intune 包含设备限制策略，有助于管理员控制 Android、iOS/iPadOS�
     - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
     - **平台**：选择设备平台。 选项包括：  
 
-        - **Android**
+        - **Android 设备管理员**
         - **Android 企业**
         - **iOS/iPadOS**
         - **macOS**
@@ -62,7 +60,7 @@ Intune 包含设备限制策略，有助于管理员控制 Android、iOS/iPadOS�
 
 4. 根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
-    - [Android 设置](device-restrictions-android.md)
+    - [Android 设备管理员设置](device-restrictions-android.md)
     - [Android Enterprise 设置](device-restrictions-android-for-work.md)
     - [iOS/iPadOS 设置](device-restrictions-ios.md)
     - [macOS 设置](device-restrictions-macos.md)

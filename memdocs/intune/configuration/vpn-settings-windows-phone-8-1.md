@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcaa3d4dc27f1791db77b70513968eeda51c668d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363897"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086479"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 Windows Phone 8.1 设备添加 VPN 设置
-
-
 
 本文介绍可用于在运行 Windows Phone 8.1 的设备上配置 VPN 连接的 Intune 设置。 
 
@@ -32,6 +30,10 @@ ms.locfileid: "79363897"
 
 >[!IMPORTANT]
 >Windows Phone 8.1 VPN 配置文件也适用于 Windows 10 设备。
+
+## <a name="before-you-begin"></a>在开始之前
+
+[创建VPN 设备配置文件](vpn-settings-configure.md)。
 
 ## <a name="base-vpn-settings"></a>基础 VPN 设置
 
@@ -51,7 +53,7 @@ ms.locfileid: "79363897"
 - **不在公司 Wi-Fi 网络上使用 VPN**：启用此选项以指定当设备连接到公司 Wi-Fi 网络时不使用 VPN 连接。
 - **不在家庭 Wi-Fi 网络上使用 VPN**：启用此选项以指定当设备连接到家庭 Wi-Fi 网络时不使用 VPN 连接。
 
-- **连接类型**：从以下供应商列表中选择 VPN 连接类型：
+- **连接类型**：选择 VPN 连接类型。 选项包括：
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -91,7 +93,7 @@ ms.locfileid: "79363897"
 
   有关编写自定义 XML 的详细信息，请参阅制造商的 VPN 文档。
 
-- **拆分隧道**：“启用”或“禁用”此选项，让设备根据流量确定使用哪个连接   。 例如，旅馆中的用户使用 VPN 连接来访问工作文件，但使用旅馆的标准网络进行常规的 Web 浏览。
+- **拆分隧道**：“启用”此设置，让设备根据流量确定使用哪个连接  。 例如，旅馆中的用户使用 VPN 连接来访问工作文件，但使用旅馆的标准网络进行常规的 Web 浏览。 如果想要让所有流量在 VPN 连接处于活动状态时使用 VPN 隧道，则设置为“禁用”  。
 
 ## <a name="proxy-settings"></a>代理设置
 

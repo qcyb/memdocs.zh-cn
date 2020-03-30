@@ -1,32 +1,31 @@
 ---
 title: 在 Microsoft Intune 中向设备添加 VPN 设置 - Azure | Microsoft Docs
-description: 对于 Android、Android Enterprise、iOS、iPadOS、macOS 和 Windows 设备，请使用内置设置在 Microsoft Intune 中创建虚拟专用网络 (VPN) 连接。
+description: 对于 Android 设备管理员、Android Enterprise、iOS、iPadOS、macOS 和 Windows 设备，请使用内置设置在 Microsoft Intune 中创建虚拟专用网络 (VPN) 连接。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 453ce45c40370641f37527501a577876c9867acd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364105"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086561"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>在 Intune 中创建 VPN 配置文件以连接到 VPN 服务器
 
-
-
-虚拟专用网络 (VPN) 可让你的用户安全远程访问你的组织网络。 设备使用 VPN 连接配置文件来启动与 VPN 服务器的连接。 Microsoft Intune 中的“VPN 配置文件”  将 VPN 设置分配到你组织中的用户和设备，从而可以方便且安全地连接到组织网络。
+虚拟专用网络 (VPN) 可让用户安全远程访问你的组织网络。 设备使用 VPN 连接配置文件来启动与 VPN 服务器的连接。 Microsoft Intune 中的“VPN 配置文件”  将 VPN 设置分配到你组织中的用户和设备，从而可以方便且安全地连接到组织网络。
 
 例如，你希望用连接到组织网络上的文件共享所需的设置来配置所有 iOS/iPadOS 设备。 创建包含这些设置的 VPN 配置文件。 然后，将此配置文件分配到拥有 iOS/iPadOS 设备的所有用户。 用户能在可用网络的列表中看到 VPN 连接，并可以轻松连接。
 
@@ -44,62 +43,136 @@ ms.locfileid: "79364105"
 
 可以使用以下连接类型创建 VPN 配置文件：
 
-|连接类型|平台|
-|-|-|
-|自动|Windows 10|
-|Check Point Capsule VPN|- Android<br/>- Android Enterprise 工作配置文件<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|Cisco AnyConnect|- Android<br/>- Android Enterprise 工作配置文件<br/>- Android Enterprise 设备所有者（完全托管）<br/>- iOS/iPadOS<br/>- macOS|
-|Cisco (IPSec)|iOS/iPadOS|
-|Citrix SSO|- Android<br/>- Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)<br/>- Android Enterprise 设备所有者（完全托管）：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
-|自定义 VPN|- iOS/iPadOS<br/>- macOS|
-|F5 Access|- Android<br/>- Android Enterprise 工作配置文件<br/>- Android Enterprise 设备所有者（完全托管）<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|IKEv2| - iOS/iPadOS<br/>- Windows 10|
-|L2TP|Windows 10|
-|帕洛阿尔托网络全局保护|- Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS<br/>- Windows 10|
-|PPTP|Windows 10|
-|脉冲安全|- Android<br/>- Android Enterprise 工作配置文件<br/>- Android Enterprise 设备所有者（完全托管）<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|SonicWall Mobile Connect|- Android<br/>- Android Enterprise 工作配置文件<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
-|Zscaler|- Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)<br/>- iOS/iPadOS|
+- 自动
+  - Windows 10
+
+- Check Point Capsule VPN
+  - Android 设备管理员
+  - Android 企业工作配置文件
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- Cisco AnyConnect
+  - Android 设备管理员
+  - Android 企业工作配置文件
+  - Android Enterprise 设备所有者（完全托管）
+  - iOS/iPadOS
+  - macOS
+
+- Cisco (IPSec)
+  - iOS/iPadOS
+
+- Citrix SSO
+  - Android 设备管理员
+  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise 设备所有者（完全托管）：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
+  - iOS/iPadOS
+  - Windows 10
+
+- 自定义 VPN
+  - iOS/iPadOS
+  - macOS
+
+  要使用 URI 设置创建自定义 VPN 配置文件，请参阅[创建具有自定义设置的配置文件](custom-settings-configure.md)。
+
+- F5 Access
+  - Android 设备管理员
+  - Android 企业工作配置文件
+  - Android Enterprise 设备所有者（完全托管）
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- IKEv2
+  - iOS/iPadOS
+  - Windows 10
+
+- L2TP
+  - Windows 10
+
+- 帕洛阿尔托网络全局保护
+  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
+  - iOS/iPadOS
+  - Windows 10
+
+- PPTP
+  - Windows 10
+
+- 脉冲安全
+  - Android 设备管理员
+  - Android 企业工作配置文件
+  - Android Enterprise 设备所有者（完全托管）
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- SonicWall Mobile Connect
+  - Android 设备管理员
+  - Android 企业工作配置文件
+  - iOS/iPadOS
+  - macOS
+  - Windows 10
+  - Windows 8.1
+  - Windows Phone 8.1
+
+- Zscaler
+  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
+  - iOS/iPadOS
 
 > [!IMPORTANT]
-> 在你能够使用已分配到设备的 VPN 配置文件之前，必须安装适用于该配置文件的 VPN 应用。 [什么是 Microsoft Intune 中的应用管理？](../apps/app-management.md)一文中的信息可帮助使用 Intune 分配应用。  
+> 在你能够使用已分配到设备的 VPN 配置文件之前，必须安装适用于该配置文件的 VPN 应用。 若要使用 Intune 分配应用，请参阅[什么是 Microsoft Intune 中的应用管理？](../apps/app-management.md)。  
 
-关于如何使用 URI 设置创建自定义 VPN 配置文件，请参阅[创建具有自定义设置的配置文件](custom-settings-configure.md)。
-
-## <a name="create-a-device-profile"></a>创建设备配置文件
+## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 3. 输入以下属性：
 
-    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 VPN 配置文件”  。
-    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
     - **平台**：选择设备平台。 选项包括：
-
-      - **Android**
+      - **Android 设备管理员**
       - “Android Enterprise”   > “仅设备所有者” 
       - “Android Enterprise”   > “仅工作配置文件” 
       - **iOS/iPadOS**
       - **macOS**
-      - **Windows Phone 8.1**
-      - **Windows 8.1 及更高版本**
       - **Windows 10 及更高版本**
+      - **Windows 8.1 及更高版本**
+      - **Windows Phone 8.1**
+    - **配置文件**：选择“VPN”  。
 
-    - **配置文件类型**：选择“VPN”  。
+4. 选择“创建”。 
+5. 在“基本信息”  中，输入以下属性：
 
-4. 根据所选择的平台，可配置的设置有所不同。 有关每个平台的详细设置，请参阅以下文章：
+    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 VPN 配置文件”  。
+    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-    - [Android 设置](vpn-settings-android.md)
-    - [Android Enterprise 设置](vpn-settings-android-enterprise.md)
-    - [iOS/iPadOS 设置](vpn-settings-ios.md)
-    - [macOS 设置](vpn-settings-macos.md)
-    - [Windows Phone 8.1 设置](vpn-settings-windows-phone-8-1.md)
-    - [Windows 8.1 设置](vpn-settings-windows-8-1.md)
-    - [Windows 10 设置](vpn-settings-windows-10.md)（包括 Windows Holographic for Business）
+6. 选择“下一步”  。
+7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，进行详细设置：
 
-5. 完成后，选择“确定”   > “创建”  以保存所做的更改。
+    - [Android 设备管理员](vpn-settings-android.md)
+    - [Android Enterprise](vpn-settings-android-enterprise.md)
+    - [iOS/iPadOS](vpn-settings-ios.md)
+    - [macOS](vpn-settings-macos.md)
+    - [Windows 10](vpn-settings-windows-10.md)（包括 Windows Holographic for Business）
+    - [Windows 8.1](vpn-settings-windows-8-1.md)
+    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
-配置文件随即创建并显示在配置文件列表中。 要向组分配此配置文件，请参阅[分配设备配置文件](device-profile-assign.md)。
+8. 选择“下一步”  。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+    选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
 
 ## <a name="secure-your-vpn-profiles"></a>保护 VPN 配置文件
 
@@ -117,6 +190,6 @@ VPN 配置文件可以使用来自不同制造商的多种不同的连接类型�
 
 ## <a name="next-steps"></a>后续步骤
 
-配置文件已创建，但它尚未起到任何作用。 下一步是[将配置文件分配](device-profile-assign.md)到一些设备。
+配置文件已创建，但它尚未起到任何作用。 下一步，向某些设备[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
-你也可以在 [Android](android-pulse-secure-per-app-vpn.md) 和 [iOS/iPadOS](vpn-setting-configure-per-app.md) 设备上创建并使用每应用 VPN。
+也可以在 [Android 设备管理员/Android Enterprise](android-pulse-secure-per-app-vpn.md) 和 [iOS/iPadOS](vpn-setting-configure-per-app.md) 设备上创建并使用每应用 VPN。

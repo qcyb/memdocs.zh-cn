@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune 中的 iOS/iPadOS 设备功能设置 - Azure | Microsoft Docs
-description: 查看 Microsoft Intune 中所有用于为 iOS 和 iPadOS 设备配置 AirPrint、主屏幕布局、应用通知、共享设备、单一登录和 Web 内容筛选器的设置。 在设备配置文件中使用这些设置，将 iOS 和 iPadOS 设备配置为在组织中使用 Apple 的这些功能。
+description: 查看 Microsoft Intune 中所有用于为 iOS 和 iPadOS 设备配置 AirPrint、主屏幕布局、应用通知、共享设备、单一登录和 Web 内容筛选器设置的设置。 在设备配置文件中使用这些设置，将 iOS 和 iPadOS 设备配置为在组织中使用 Apple 的这些功能。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361076"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086966"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
-Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备上使用各种 Apple 功能。 例如，管理员可以控制 iOS/iPadOS 用户如何使用 AirPrint 打印机、如何向主屏幕上的程序坞和页面添加应用和文件夹、如何显示应用通知、如何在锁定屏幕上显示资产标记详细信息、如何使用单一登录身份验证，以及如何使用证书验证用户身份。
+Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备上使用各种 Apple 功能。 例如，你可以控制 AirPrint 打印机、将应用和文件夹添加到程序坞和主屏幕页面、显示应用通知、在锁定屏幕上显示资产标记详细信息、使用单一登录身份验证，以及使用证书身份验证。
 
 使用这些功能可以控制 iOS/iPadOS 设备，作为移动设备管理 (MDM) 解决方案的一部分。
 
@@ -48,7 +48,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 - **IP 地址**：输入打印机的 IPv4 或 IPv6 地址。 如果使用主机名标识打印机，可以通过在“终端”中对打印机执行 ping 操作来获取 IP 地址。 （本文中的）获取 IP 地址和路径提供了更多详细信息。
 - **路径**：网络中打印机的路径通常是 `ipp/print`。 （本文中的）获取 IP 地址和路径提供了更多详细信息。
 - **端口**：输入 AirPrint 目标的侦听端口。 如果将此属性留空，AirPrint 使用默认端口。 适用于 iOS 11.0 以上版本和 iPadOS 13.0 以上版本。
-- **TLS**：选择“启用”  可使用传输层安全性 (TLS) 确保 AirPrint 连接安全。 适用于 iOS 11.0 以上版本和 iPadOS 13.0 以上版本。
+- **TLS**：“启用”则可使用传输层安全性 (TLS) 确保 AirPrint 连接安全  。 适用于 iOS 11.0 以上版本和 iPadOS 13.0 以上版本。
 
 若要添加 AirPrint 服务器，可以执行以下操作：
 
@@ -81,7 +81,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 ### <a name="dock"></a>程序坞
 
-使用“程序坞”  设置最多可以向 iOS/iPadOS 屏幕的程序坞添加六个项或文件夹。 许多设备支持添加的项数更少。 例如，iPhone 设备最多支持添加四个项。 在此示例中，设备上仅显示你添加的前四个项。
+使用“程序坞”  设置最多可以向屏幕的程序坞添加六个项或文件夹。 许多设备支持添加的项数更少。 例如，iPhone 设备最多支持添加四个项。 在此示例中，设备上仅显示你添加的前四个项。
 
 最多可以对设备程序坞添加六个  项（应用和文件夹加起来）。
 
@@ -283,8 +283,32 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 - **SSO 应用扩展类型**：选择 SSO 应用扩展的类型。 选项包括：
 
   - **未配置**：不使用应用扩展。 若要禁用应用扩展，可将 SSO 应用扩展类型切换为“未配置”  。
-  - **重定向**：使用通用的可自定义重定向应用扩展，通过新式身份验证流执行 SSO。 确保你知道组织应用扩展的扩展 ID。
-  - **凭据**：使用通用的可自定义凭据应用扩展，通过质询和响应身份验证流来执行 SSO。 确保你知道组织应用扩展的扩展 ID。
+  - **重定向**：使用通用的可自定义重定向应用扩展，通过新式身份验证流使用 SSO。 确保你知道组织应用扩展的扩展 ID。
+
+    在 iOS/iPadOS 13.0 以上的设备上，可以使用此重定向 SSO 应用扩展类型配置 Microsoft Azure AD SSO 应用扩展  。 借助 Microsoft Azure AD 扩展，可以在使用 Azure AD 进行身份验证的 Microsoft 应用和组织应用之间进行单一登录。 Azure AD 扩展充当高级身份验证代理，可改进安全性和最终用户体验。 此前使用 Microsoft Authenticator 应用进行中转身份验证的所有应用都将继续获取具有 SSO 扩展的 SSO。 Azure AD SSO 扩展尚不支持浏览器 SSO。 有关 SSO 和 iOS/iPadOS 身份验证代理的更多信息，请参阅[在 macOS 和 iOS/iPadOS 上配置 SSO](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)。  
+
+    **要配置 iOS Microsoft Azure AD 扩展：**
+
+    1. 将“SSO 应用扩展类型”  设置为“重定向”  。
+    2. 将“扩展 ID”  设置为 `com.microsoft.azureauthenticator.ssoextension`。
+    3. 将“团队 ID”  设置为 `SGGM6D27TK`。
+    4. 在“URL”  设置中，输入以下 URL：
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > 要通过 iOS/iPadOS Microsoft Azure AD 扩展实现 SSO，请首先在设备上安装 iOS/iPadOS Microsoft Authenticator 应用。 Authenticator 将 Azure AD 扩展传递到设备，MDM SSO 应用扩展设置激活 Azure AD 扩展。 在设备上安装了 Authenticator 和 SSO 应用扩展配置文件后，用户必须输入其凭据才能登录和建立会话。 然后，该会话可在不同的应用程序中使用，而无需用户再次进行身份验证。
+
+  - **凭据**：使用通用的可自定义凭据应用扩展，通过质询和响应身份验证流来使用 SSO。 确保你知道组织应用扩展的扩展 ID。
   - **Kerberos**：使用 Apple 的内置 Kerberos 扩展，该扩展包含在 iOS 13.0 以上版本和 iPadOS 13.0 以上版本中。 此选项是“凭据”  应用扩展的 Kerberos 特定版本。
 
   > [!TIP]
@@ -303,7 +327,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
   - 单一登录应用扩展 Intune 配置文件中的所有域都必须是唯一的。 即使使用的是不同类型的 SSO 应用扩展，也不能在任何登录应用扩展配置文件中使用重复的域。
   - 这些域不区分大小写。
 
-- **URL**（仅用于“重定向”）：输入标识提供者的 URL 前缀，重定向应用扩展将代表它们执行 SSO。 当用户重定向到这些 URL 时，SSO 应用扩展将介入并提示 SSO。
+- **URL**（仅用于“重定向”）：输入标识提供者的 URL 前缀，重定向应用扩展将代表它们使用 SSO。 当用户重定向到这些 URL 时，SSO 应用扩展会介入并提示 SSO。
 
   - Intune 单一登录应用扩展配置文件中的所有 URL 都必须是唯一的。 即使使用的是不同类型的 SSO 应用扩展，也不能在任何 SSO 应用扩展配置文件中使用重复的域。
   - URL 必须以 http:// 或 https:// 开头。

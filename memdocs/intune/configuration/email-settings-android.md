@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31310accbaded1e048cb3c5b574557ffcef0335c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364222"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087012"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune 中用于配置电子邮件、身份验证和同步的 Android 设备设置
 
@@ -32,25 +32,23 @@ ms.locfileid: "79364222"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-[创建设备配置配置文件](email-settings-configure.md#create-a-device-profile)。
+[创建设备配置配置文件](email-settings-configure.md)。
 
 ## <a name="android-samsung-knox"></a>Android (Samsung KNOX)
 
 - **电子邮件服务器**：输入 Exchange 服务器的主机名。 例如，输入 `outlook.office365.com`。
 - **帐户名**：输入电子邮件帐户的显示名称。 该名称将显示在用户的设备上。
 - **AAD 中的用户名属性**：此名称是 Intune 从 Azure Active Directory (Azure AD) 获取的属性。 Intune 将动态生成此配置文件使用的用户名。 选项包括：
-  - **用户主体名称**：获取名称，如 `user1` 或 `user1@contoso.com`
-  - **用户名**：仅获取名称，如 `user1`
-  - **SAM 帐户名**：需要域，如 `domain\user1`。 sAM 帐户名仅用于 Android 设备。
-
-    此外请输入：  
+  - **用户主体名称**：获取名称，如 `user1` 或 `user1@contoso.com`。
+  - **用户名**：仅获取名称，如 `user1`。
+  - **SAM 帐户名**：需要域，如 `domain\user1`。 sAM 帐户名仅用于 Android 设备。 此外请输入：  
     - **用户域名源**：选择“AAD”  (Azure Active Directory) 或“自定义”  。
 
       选择从 AAD 获取属性时，请输入  ：
-      - **AAD 中的用户域名属性**：选择获取用户的“完整域名”  或“NetBIOS 名称”  属性
+      - **AAD 中的用户域名属性**：选择获取用户的“完整域名”  或“NetBIOS 名称”  属性。
 
       选择使用自定义属性时，请输入  ：
-      - **要使用的自定义域名**：输入 Intune 用于域名的值，如 `contoso.com` 或 `contoso`
+      - **要使用的自定义域名**：输入 Intune 用于域名的值，如 `contoso.com` 或 `contoso`。
 
 - **AAD 中的电子邮件地址属性**：此名称是 Intune 从 Azure AD 获取的电子邮件属性。 Intune 动态生成此配置文件使用的电子邮件地址。 选项包括：
   - **用户主体名称**：使用完整的主体名称（如 `user1@contoso.com` 或 `user1`）作为电子邮件地址。

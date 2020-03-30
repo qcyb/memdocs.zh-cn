@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8189a23c2f07ebce03716ecf111c0130942b8b68
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 709824c91173edd0b322e1477c3204db34db7a9f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343019"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086296"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Microsoft Intune App SDK 入门
 
@@ -108,7 +108,7 @@ Microsoft Intune 收集应用的使用情况统计数据。
 
 * **Intune App SDK for Android**：Intune App SDK for Android 不会控制应用中的数据集合。 默认情况下，公司门户应用会记录遥测数据。 会将此数据发送到 Microsoft Intune。 根据 Microsoft 策略，我们不会收集任何个人身份信息 (PII)。 
 
-  * 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android)。 
+  * 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android)。 
 
 ## <a name="line-of-business-app-version-numbers"></a>业务线应用版本号
 
@@ -179,7 +179,7 @@ Intune|iOS|Android|说明|
 3. 单击“+ 添加权限”  。
 4. 单击“我的组织使用的 API”  。 
 5. 在搜索框中，输入“Microsoft 移动应用程序管理”  。
-6. 在“委托的权限”  下，选择“DeviceManagementManagedApps.ReadWrite:读取和写入用户的应用管理数据”  复选框。
+6. 在“委托的权限”  下，选择“DeviceManagementManagedApps.ReadWrite:读取和写入用户的应用管理数据”  * 复选框。
 7. 单击“添加权限”  。
 
 > [!NOTE]

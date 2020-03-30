@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344605"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526268"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 中的 Windows 设备注册问题疑难解答
 
@@ -321,6 +321,8 @@ Registering your device for mobile management (Previous step failed)
 当设备在“初始登录”屏幕中超时时，在混合 Azure AD Autopilot 方案中重启设备之前通常会发生此问题。 这意味着由于连接问题，无法找到或无法成功访问域控制器。 或者该设备进入了无法加入域的状态。
 
  原因：最常见的原因是正在使用混合 Azure AD 联接，并且在 Autopilot 配置文件中配置了“分配用户”功能。 使用“分配用户”功能可在初始登录屏幕期间在设备上执行 Azure AD 联接，从而使设备处于无法加入本地域的状态。 因此，只应在标准 Azure AD 联接 Autopilot 方案中使用“分配用户”功能。  不应在混合 Azure AD 联接方案中使用该功能。
+
+导致此错误的另一个可能原因是，已删除 Autopilot 对象的关联 AzureAD 设备。 要解决此问题，请删除 Autopilot 对象，然后重新导入哈希以生成一个新对象。
 
 #### <a name="resolution"></a>解决方法
 

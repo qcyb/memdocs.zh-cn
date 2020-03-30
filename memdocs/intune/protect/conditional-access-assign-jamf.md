@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219837"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>在使用 Jamf Pro 管理的 Mac 上强制实现符合性
 
@@ -41,7 +41,10 @@ ms.locfileid: "79353146"
 
 2. 选择“设备” > “符合性策略”   。 如果使用以前创建的策略，请在控制台中选择该策略，然后转到此过程的下一步。 若要创建新策略，请选择“创建策略”，然后使用 macOS 的平台指定策略的详细信息    。 配置“设置”和“对不合规项的操作”以满足组织要求，然后选择“创建”以保存策略    。
 
-3. 在策略的“概述”窗格上，选择“分配”   。 使用可用选项配置哪些 Azure Active Directory (Azure AD) 用户和安全组接收此策略。 Jamf 与 Intune 的集成不支持针对设备组的符合性策略。
+3. 在策略的“概述”窗格上，选择“分配”   。 使用可用选项配置哪些 Azure Active Directory (Azure AD) 用户和安全组接收此策略。 **Jamf 与 Intune 的集成不支持针对设备组的合规性策略。**
+
+> [!NOTE]
+> Jamf 与 Intune 的集成仅支持 AAD 用户组。 针对设备组的设备合规性策略将不适用。
 
 4. 选择“保存”  后，策略将部署到用户。  
 

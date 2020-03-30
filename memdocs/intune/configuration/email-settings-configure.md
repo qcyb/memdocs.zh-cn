@@ -1,12 +1,12 @@
 ---
 title: 在 Microsoft Intune 中配置电子邮件设置 - Azure | Microsoft Docs
 titleSuffix: ''
-description: 在 Microsoft Intune 中创建电子邮件配置文件，并将此配置文件部署到 Android Enterprise、iOS、iPadOS 和 Windows 设备。 使用电子邮件配置文件以配置常见的电子邮件设置，包括电子邮件服务器和身份验证方法，以便在管理的设备上连接到公司电子邮件。
+description: 在 Microsoft Intune 中创建电子邮件配置文件，并将此配置文件部署到 Android 设备管理员、Android Enterprise、iOS、iPadOS 和 Windows 设备。 使用电子邮件配置文件以配置常见的电子邮件设置，包括电子邮件服务器和身份验证方法，以便在管理的设备上连接到公司电子邮件。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364235"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086982"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 向设备添加电子邮件设置
 
@@ -30,7 +30,7 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 可以使用电子邮件配置文件为以下设备配置内置电子邮件设置：
 
-- Android Samsung Knox Standard 4.0 及更高版本
+- Samsung Knox Standard 4.0 和更高版本上的 Android 设备管理员
 - Android Enterprise
 - iOS 8.0 及更高版本
 - iPadOS 13.0 及更高版本
@@ -39,35 +39,48 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 本文介绍如何在 Microsoft Intune 中创建电子邮件配置文件。 此外，还包括指向不同平台的链接，以获得更具体的设置。
 
-## <a name="create-a-device-profile"></a>创建设备配置文件
+## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 3. 输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，“所有 Windows 设备的电子邮件设置”  就是较好的策略名称。
-    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **平台**：选择设备平台。 选项包括：
+    - **平台**：选择设备平台。 选项包括：  
 
-        - **Android**（仅 Samsung Android Knox Standard）
-        - **Android 企业**
+        - **Android 设备管理员**（仅限 Samsung Android Knox Standard）
+        - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 及更高版本**
+        - **Windows Phone 8.1**
 
-    - **配置文件类型**：选择“电子邮件”  。
+    - **配置文件**：选择“电子邮件”  。
 
-4. 根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+4. 选择“创建”。 
+5. 在“基本信息”  中，输入以下属性：
 
-    - [Android Samsung Knox Standard 设置](email-settings-android.md)
-    - [Android Enterprise 设置](email-settings-android-enterprise.md)
-    - [iOS/iPadOS 设置](email-settings-ios.md)
-    - [Windows Phone 8.1 设置](email-settings-windows-phone-8-1.md)
-    - [Windows 10 设置](email-settings-windows-10.md)
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，将策略名称命名为“Windows 10:  适用于所有 Windows 10 设备的电子邮件设置。
+    - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-5. 完成后，选择“确定”   > “创建”  以保存所做的更改。
+6. 选择“下一步”  。
 
-输入设置并创建配置文件后，配置文件将显示在配置文件列表中。 下一步，[将此配置文件分配给某些组](device-profile-assign.md)。
+7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+
+    - [Android 设备管理员 (Samsung Knox Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. 选择“下一步”  。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+    选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
 
 ## <a name="remove-an-email-profile"></a>删除电子邮件配置文件
 
@@ -105,4 +118,4 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 ## <a name="next-steps"></a>后续步骤
 
-配置文件已创建，但它尚未起到任何作用。 下一步需要[分配配置文件](device-profile-assign.md)。
+配置文件已创建，但它尚未起到任何作用。 下一步，[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。

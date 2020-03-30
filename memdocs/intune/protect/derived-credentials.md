@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352340"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084892"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>在 Microsoft Intune 中使用派生凭据
 
@@ -98,7 +98,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 - 向用户应用要求提供派生凭据的策略时，才会通知用户必须注册派生凭据。
 
-- 可以通过公司门户的应用通知和/或电子邮件进行通知。 如果选择使用电子邮件通知并启用了条件访问，则设备不合规的用户可能不会接收到电子邮件通知。
+- 可以通过公司门户的应用通知和/或电子邮件进行通知。 如果选择使用电子邮件通知并使用已启用的条件访问，则设备不合规的用户可能不会接收到电子邮件通知。
 
 ### <a name="2-review-the-end-user-workflow-for-your-chosen-issuer"></a>2) 查看所选颁发者的最终用户工作流
 
@@ -106,7 +106,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-查看 [DISA Purebred 的用户工作流](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred)。 此工作流的关键要求包括以下内容：
+查看 [DISA Purebred 的用户工作流](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred)。 此工作流的关键要求包括以下内容：
 
 - 用户需要访问可在其中使用智能卡向颁发者进行身份验证的计算机或网亭。
 
@@ -122,7 +122,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-查看 [Entrust Datacard 的用户工作流](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard)。 此工作流的关键要求包括以下内容：
+查看 [Entrust Datacard 的用户工作流](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard)。 此工作流的关键要求包括以下内容：
 
 - 用户需要访问可在其中使用智能卡向颁发者进行身份验证的计算机或网亭。
 
@@ -132,7 +132,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 #### <a name="intercede"></a>Intercede
 
-查看 [Intercede 的用户工作流](https://docs.microsoft.com/user-help/enroll-ios-device-intercede)。 此工作流的关键要求包括以下内容：
+查看 [Intercede 的用户工作流](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede)。 此工作流的关键要求包括以下内容：
 
 - 用户需要访问可在其中使用智能卡向颁发者进行身份验证的计算机或网亭。
 
@@ -221,17 +221,34 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 使用派生凭据在网站和应用程序中进行基于凭据的身份验证。 提供派生凭据进行应用身份验证：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
-3. 输入以下设置：
 
-    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，可以为配置文件命名为“适用于 iOS/iPadOS 设备配置文件的派生凭据”  。
-    - **描述**：输入包含设置概述以及其他所有重要详细信息的说明。
-    - **平台**：选择“iOS/iPadOS”  。
-    - **配置文件类型**：选择“派生凭据”  。
+3. 输入以下属性：
+   - **平台**：选择将接收此配置文件的设备的平台。
+   - **配置文件**：选择“派生凭据” 
 
-4. 选择“确定”，保存所做更改  。
-5. 完成后，选择“确定”   > “创建”  ，以创建 Intune 配置文件。 完成后，配置文件将显示在“设备 - 配置文件”  列表中。
-6. 依次选择新配置文件和“分配”  。 选择应接收策略的组。
+4. 选择“创建”。 
+
+5. 在“基本信息”  中，输入以下属性：
+
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，可以为配置文件命名为“适用于 iOS/iPadOS 设备配置文件的派生凭据”  。
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
+
+6. 选择“下一步”  。
+
+7. 在“配置设置”  中，将“使用派生的凭据进行应用身份验证”  设置为“是”  ，然后选择“下一步”  。
+
+8. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+   选择“下一步”  。
+
+9. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+    选择“下一步”  。
+
+10. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
+
  
 根据你在设置派生凭据颁发者时指定的设置，用户将收到应用或电子邮件通知。 该通知告知用户启动公司门户，以便能够处理派生凭据策略。
 

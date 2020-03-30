@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364079"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086506"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>使用 Intune 添加 VPN 连接的 Windows 10 和 Windows Holographic 设备
-
-
 
 可以使用 Microsoft Intune 为设备添加和配置 VPN 连接。 本文列出和介绍了创建虚拟专用网络 (VPN) 时常用的设置和功能。 这些 VPN 设置和功能可在推送或部署到设备的 Intune 中的设备配置文件中使用。
 
@@ -46,11 +44,11 @@ ms.locfileid: "79364079"
 
 - **连接名称**：为此连接输入名称。 最终用户在浏览其设备的可用 VPN 连接列表时将看到此名称。
 - **服务器**：添加设备连接到的一个或多个 VPN 服务器。 添加服务器时，输入以下信息：
-  - **描述**：为服务器输入一个描述性名称，例如“Contoso VPN 服务器” 
-  - **IP 地址或 FQDN**：输入设备连接到的 VPN 服务器的 IP 地址或完全限定的域名 (FQDN)，例如“192.168.1.1”或“vpn.contoso.com”  
+  - **描述**：为服务器输入一个描述性名称，例如“Contoso VPN 服务器”  。
+  - **IP 地址或 FQDN**：输入设备连接到的 VPN 服务器的 IP 地址或完全限定的域名 (FQDN)，例如“192.168.1.1”或“vpn.contoso.com”   。
   - **默认服务器**：启用此服务器作为设备建立连接时使用的默认服务器。 只将一台服务器设置为默认服务器。
   - **导入**：浏览到以逗号分隔的文件，该文件包含采用以下格式的服务器列表：描述、IP 地址或 FQDN、默认服务器。 选择“确定”，将这些服务器导入到“服务器”列表   。
-  - **导出**：将服务器列表导出到逗号分隔值 (csv) 文件
+  - **导出**：将服务器列表导出到逗号分隔值 (csv) 文件。
 
 - **使用内部 DNS 注册 IP 地址**：选择“启用”后，可将 Windows 10 VPN 配置文件配置为使用内部 DNS 动态注册分配给 VPN 接口的 IP 地址  。 选择“禁用”以免动态注册 IP 地址  。
 
@@ -68,10 +66,10 @@ ms.locfileid: "79364079"
   - **PPTP**
 
   选择 VPN 连接类型时，还可能要求你进行以下设置：  
-  - **Always On**：选择“启用”后，可在发生下列情况时自动连接到 VPN 连接：  
+  - **Always On**：选择“启用”后，可在发生下列情况时自动连接到 VPN 连接： 
     - 用户登录其设备
     - 设备上的网络发生更改
-    - 设备屏幕在关闭后重新打开 
+    - 设备屏幕在关闭后重新打开
 
   - **身份验证方法**：选择希望用户如何向 VPN 服务器进行身份验证。 使用证书可提供增强的功能，如“零接触”体验、按需 VPN 和按应用 VPN  。
   - **每次登录时记住凭据**：选择缓存身份验证凭据。

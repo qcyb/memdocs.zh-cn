@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353614"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084967"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中创建和分配 SCEP 证书配置文件
 
@@ -35,28 +35,31 @@ ms.locfileid: "79353614"
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择并转到“设备”   > “配置文件”   > “创建配置文件”  。
 
 3. 输入以下属性：
+   - **平台**：选择设备平台。
+   - **配置文件**：选择“SCEP 证书” 
 
-4. 为 SCEP 证书配置文件输入“名称”和“说明”   。
+     对于 Android Enterprise 平台，配置文件类型分为以下两类   ：“仅限设备所有者”  和“仅限工作配置文件”  。 确保为所管理的设备选择正确的 SCEP 证书配置文件。  
 
-5. 从“平台”  下拉列表中，为此 SCEP 证书选择[支持的设备平台](certificates-configure.md#supported-platforms-and-certificate-profiles)。
+     “仅限设备所有者”  配置文件的 SCEP 证书配置文件具有以下限制：
 
-6. 从“配置文件类型”下拉列表中，选择“SCEP 证书”   。  
+      1. 在“监视”下，证书报表不可用于设备所有者 SCEP 证书配置文件。
 
-   对于 Android Enterprise 平台，配置文件类型分为以下两类   ：“仅限设备所有者”  和“仅限工作配置文件”  。 确保为所管理的设备选择正确的 SCEP 证书配置文件。  
+      2. 不能使用 Intune 撤销由 SCEP 证书配置文件为设备所有者预配的证书。 可以通过外部进程或直接通过证书颁发机构来实现撤销。
 
-   “仅限设备所有者”  配置文件的 SCEP 证书配置文件具有以下限制：
+      3. 对于 Android 企业专用设备，SCEP 证书配置文件仅支持 Wi-Fi 网络配置和身份验证。  Android 企业专用设备上的 SCEP 证书配置文件不支持 VPN 或应用身份验证。
 
-   1. 在“监视”下，证书报表不可用于设备所有者 SCEP 证书配置文件。
+4. 选择“创建”。 
 
-   2. 不能使用 Intune 撤销由 SCEP 证书配置文件为设备所有者预配的证书。 可以通过外部进程或直接通过证书颁发机构来实现撤销。 
+5. 在“基本信息”  中，输入以下属性：
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 SCEP 配置文件”  。
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-   4. 对于 Android 企业专用设备，SCEP 证书配置文件仅支持 Wi-Fi 网络配置和身份验证。  Android 企业专用设备上的 SCEP 证书配置文件不支持 VPN 或应用身份验证。   
+6. 选择“下一步”  。
 
-   
-7. 选择“设置”，然后完成以下配置  ：
+7. 在“配置设置”中，然后完成以下配置  ：
 
    - **证书类型**：
 
@@ -209,7 +212,7 @@ ms.locfileid: "79353614"
 
    - **根证书**：
 
-     选择受信任的证书配置文件，该配置文件是之前被配置并分配给此 SCEP 证书配置文件的适用用户和设备  。 受信任的证书配置文件用于预配具有受信任的根 CA 证书的用户和设备。 有关受信任证书配置文件的信息，请参阅“在 Intune 中使用证书进行身份验证”中的[导出受信任的 CA 证书](certificates-configure.md#export-the-trusted-root-ca-certificate)和[创建受信任的证书配置文件](certificates-configure.md#create-trusted-certificate-profiles)  。 如果具有根证书颁发机构和证书发证机构，请选择与证书发证机构关联的受信任的根证书配置文件。
+     选择受信任的证书配置文件，该配置文件是之前被配置并分配给此 SCEP 证书配置文件的适用用户和设备  。 受信任的证书配置文件用于预配具有受信任的根 CA 证书的用户和设备。 有关受信任证书配置文件的信息，请参阅“在 Intune 中使用证书进行身份验证”中的[导出受信任的 CA 证书](certificates-configure.md#export-the-trusted-root-ca-certificate)和[创建受信任的证书配置文件](certificates-configure.md#create-trusted-certificate-profiles)  。 如果具有根证书颁发机构和证书发证机构，请选择验证证书发证机构的受信任的根证书配置文件。
 
    - **扩展密钥用法**：
 
@@ -223,7 +226,21 @@ ms.locfileid: "79353614"
 
      为通过 SCEP 颁发证书的 NDES 服务器输入 1 个或多个 URL。 例如，输入类似于 https://ndes.contoso.com/certsrv/mscep/mscep.dll 的内容  。 可根据需要添加其他用于负载均衡的 SCEP URL，因为 URL 会被随机推送到具有配置文件的设备。 如果某台 SCEP 服务器不可用，则 SCEP 请求将会失败，并且在稍后的设备签入中，可能针对这台已关闭的服务器发出证书请求。
 
-8. 选择“确定”，然后选择“创建”   。 该配置文件已创建并显示在“设备配置 - 配置文件”  列表中。
+8. 选择“下一步”  。
+
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+   选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. （仅适用于 Windows 10  ）在“适用性规则”  中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
+
+   有关详细信息，请参阅“在 Microsoft Intune 中创建设备配置文件”中的[适用性规则](../configuration/device-profile-create.md#applicability-rules)  。
+
+12. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>避免证书签名请求中包含转义的特殊字符
 

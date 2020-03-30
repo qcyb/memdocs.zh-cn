@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341654"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083810"
 ---
 # <a name="app-protection-policies-overview"></a>应用保护策略概述
 
@@ -206,6 +206,9 @@ Office 需要一个托管位置（即 OneDrive）。 Intune 会将应用中的�
 例如工作或“公司”环境的情况：用户使用其工作帐户启动 OneDrive 应用。 在工作环境中，他们无法将文件移动到私人存储位置。 之后当用户通过其个人帐户使用 OneDrive 时，可无限制地从个人 OneDrive 复制和移动数据。
 
 Outlook 提供“个人”和“公司”电子邮件的电子邮件组合视图。 在这种情况下，Outlook 应用会在启动时提示输入 Intune PIN。
+
+  >[!NOTE]
+  > 尽管 Edge 在“公司”上下文中，但用户可以有意将 OneDrive“公司”上下文文件移动到未知的个人云存储位置。 若要避免这种情况，请参阅[为 Microsoft Edge 指定允许或阻止的网站列表](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge)，并为 Edge 配置允许/阻止的网站列表。
 
 有关 Intune 中的多身份的详细信息，请参阅 [MAM 和多身份](apps-supported-intune-apps.md)。
 

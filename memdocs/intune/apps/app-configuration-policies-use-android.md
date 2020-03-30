@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f49d1e419eb7199d2a7cf20f03959689a5f5fa44
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342486"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233476"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>为托管的 Android Enterprise 设备添加应用配置策略
 
@@ -103,15 +103,18 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>仅允许在多身份应用中配置组织帐户 
 
-对于 Android 设备，请使用以下键/值对：
+作为 Microsoft Intune 管理员，你可以控制将哪些用户帐户添加到托管设备上的 Microsoft 应用中。 可以将访问权限限制为仅允许的组织用户帐户，并阻止已注册设备上的个人帐户。 对于 Android 设备，请使用以下键/值对：
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **值** | <ul><li>一个或多个 <code>;</code> 分隔的 UPN。</li><li>仅允许此键定义的托管用户帐户。</li><li> 对于已注册 Intune 的设备，<code>{{userprincipalname}}</code> 令牌可用于表示已注册的用户帐户。</li></ul> |
 
    > [!NOTE]
-   > 当仅允许多身份配置的组织帐户时，必须使用 Outlook for Android 2.2.222 及更高版本、Word、Excel、PowerPoint for Android 16.0.9327.1000 及更高版本或 OneDrive for Android 5.28 及更高版本。<p></p>
-   > 作为 Microsoft Intune 管理员，可控制将哪些用户帐户添加到托管设备上的 Microsoft Office 应用程序。 可以将访问权限限制为仅允许的组织用户帐户，并阻止已注册设备上的个人帐户。 支持性应用程序将处理应用配置并删除和阻止未经批准的帐户。<p></p>
+   > 以下应用处理上述应用配置，并且仅允许组织帐户：
+   > - Android 版 Edge（42.0.4.4048 及更高版本）
+   > - Office、Word、Excel、PowerPoint for Android（16.0.9327.1000 及更高版本）
+   > - Android 版 OneDrive（5.28 及更高版本）
+   > - Android 版 Outlook（2.2.222 及更高版本）
 
 ## <a name="enter-json-data"></a>输入 JSON 数据
 

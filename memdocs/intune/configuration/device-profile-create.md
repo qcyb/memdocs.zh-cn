@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339951"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084062"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>在 Microsoft Intune 中创建设备配置文件
 
@@ -52,7 +52,7 @@ ms.locfileid: "79339951"
    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
    - **平台**：选择设备平台。 选项包括：  
 
-       - **Android**
+       - **Android 设备管理员**
        - **Android 企业**
        - **iOS/iPadOS**
        - **macOS**
@@ -68,12 +68,14 @@ ms.locfileid: "79339951"
        - [传递优化](delivery-optimization-windows.md)
        - [设备功能](device-features-configure.md)
        - [设备限制](device-restrictions-configure.md)
+       - [域加入](domain-join-configure.md)
        - [版本升级和模式切换](edition-upgrade-configure-windows-10.md)
        - [教育](education-settings-configure.md)
        - [Email](email-settings-configure.md)
        - [Endpoint protection](../protect/endpoint-protection-configure.md)
        - [标识保护](../protect/identity-protection-configure.md)  
        - [展台](kiosk-settings.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [PKCS 证书](../protect/certficates-pfx-configure.md)
        - [PKCS 导入的证书](../protect/certificates-imported-pfx-configure.md)
        - [首选项文件](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ ms.locfileid: "79339951"
        - [更新策略](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Windows 信息保护](../protect/windows-information-protection-configure.md)
 
      例如，如果选择“iOS/iPadOS”作为平台，配置文件类型选项外观将类似如下配置文件所示  ：
 
-     ![使用 Intune 创建 iOS/iPadOS 配置文件](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![在 Intune 中创建 iOS/iPadOS 配置文件](./media/device-profile-create/create-device-profile.png)
 
 4. 完成后，选择“确定” > “创建”，保存所做更改   。 此时，配置文件创建完成，并出现在列表中。
 
@@ -138,7 +140,8 @@ ms.locfileid: "79339951"
 
 1. 选择“适用性规则”  。 可以选择“规则”、“属性”和“OS 版本”    ：
 
-    ![在 Microsoft Intune 中向设备配置文件添加适用性规则](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![在 Microsoft Intune 中向设备配置文件添加适用性规则](./media/device-profile-create/applicability-rules.png)
 
 2. 在“规则”  中，选择是否要包括或排除用户或组。 选项包括：
 
@@ -184,7 +187,8 @@ Intune 使用不同的刷新周期来检查配置文件的更新。 如果设备
 
   下图显示了可应用于用户和/或应用于设备的设置示例：
 
-  ![适用于用户和设备的 Intune 管理模板](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![适用于用户和设备的 Intune 管理模板](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - 每次创建限制性策略时，请将此更改传达给用户。 例如，如果要将密码要求从 4 个字符更改为 6 个字符，请在分配策略之前告知用户。
 

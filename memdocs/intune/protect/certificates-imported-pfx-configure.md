@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353666"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084971"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用导入的 PKCS 证书
 
@@ -45,8 +45,8 @@ Intune 支持为以下平台导入 PFX 证书：
 - Android - 设备管理员
 - Android Enterprise - 完全托管
 - Android Enterprise - 工作配置文件
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>要求
@@ -213,29 +213,54 @@ PowerShell 模块提供了使用 Windows 加密创建密钥的方法。 你也�
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择并转到“设备”   > “配置文件”   > “创建配置文件”  。
 
 3. 输入以下属性：
+   - **平台**：选择设备平台。
+   - **配置文件**：选择“PKCS 导入的证书” 
 
-   - 配置文件的名称 
-   - （可选）设置描述
-   - 将配置文件部署到的平台 
-   - 将“配置文件类型”设置为“PKCS 导入的证书”  
+4. 选择“创建”。 
 
-4. 选择“设置”  ，输入以下属性：
+5. 在“基本信息”  中，输入以下属性：
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 PKCS 导入的证书配置文件”  。
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
+
+6. 选择“下一步”  。
+
+7. 在“配置设置”  中，输入以下属性：
 
    - **预期目的**：指定为此配置文件导入的证书的预期目的。 管理员可以导入具有不同预期目的（如 S/MIME 签名或 S/MIME 加密）的证书。 证书配置文件中选择的预期目的将证书配置文件与正确的导入证书相匹配。 “预期目的”是一种将导入的证书分组在一起的标记，并不保证使用该标记导入的证书能满足预期目的。  
-   - **证书有效期**：除非证书模板中的有效期发生了更改，否则此选项默认为一年。
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **密钥存储提供程序 (KSP)** ：对于 Windows，请选择在设备上存储密钥的位置。
 
-5. 选择“确定”   > “创建”  以保存配置文件。
+8. 选择“下一步”  。
+
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+   选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. （仅适用于 Windows 10  ）在“适用性规则”  中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
+
+    有关详细信息，请参阅“在 Microsoft Intune 中创建设备配置文件”中的[适用性规则](../configuration/device-profile-create.md#applicability-rules)  。
+
+    选择“下一步”  。
+
+12. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="support-for-third-party-partners"></a>支持第三方合作伙伴
 
 以下合作伙伴提供了可用于将 PFX 证书导入到 Intune 的受支持的方法或工具。
 
 ### <a name="digicert"></a>DigiCert
-如果使用 DigiCert PKI 平台服务，则可以使用适用于 Intune S/MIME 证书的 DigiCert 导入工具，将 PFX 证书导入到 Intune  。 使用此工具时，需要按照本文前面所述[将 PFX 证书导入到 Intune](#import-pfx-certificates-to-intune) 部分中的说明进行操作。
+
+如果使用 DigiCert PKI 平台服务，则可以使用适用于 Intune S/MIME 证书的 DigiCert 导入工具，将 PFX 证书导入到 Intune  。 使用此工具，则无需按照本文前面所述[将 PFX 证书导入到 Intune](#import-pfx-certificates-to-intune) 部分中的说明进行操作。
 
 若要详细了解 DigiCert 导入工具，以及如何获取该工具，请参阅 DigiCert 知识库中的 https://knowledge.digicert.com/tutorials/microsoft-intune.html 。
 

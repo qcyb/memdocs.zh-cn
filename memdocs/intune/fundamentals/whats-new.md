@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d7b57e0c4a667e4023dc6ce0e089572fd5b00e0
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372596"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220177"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -55,6 +55,211 @@ ms.locfileid: "79372596"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-16-2020-2003-service-release"></a>2020 年 3 月 16 日当周（2003 服务版本）
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>应用管理
+
+#### <a name="macos-and-ios-company-portal-updates---5779439-5780234----"></a>macOS 和 iOS 公司门户更新<!-- 5779439, 5780234  -->
+已更新 macOS 和 iOS 公司门户的“配置文件”窗格，使其包含注销按钮。 此外，还对 macOS 公司门户中“配置文件”窗格进行了 UI 改进。 有关公司门户的详细信息，请参阅[如何配置 Microsoft Intune 公司门户应用](../apps/company-portal-app.md)。
+
+#### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276-----"></a>在 iOS 设备上将 Web 剪辑重定向到 Microsoft Edge<!-- 5455276   -->
+在需要在受保护的浏览器中打开的 iOS 设备上，新部署的 Web 剪辑（固定的 Web 应用）将在 Microsoft Edge（而不是在 Intune Managed Browser 中）打开。 必须重定向现有 Web 剪辑，以确保它们在 Microsoft Edge 而不是 Managed Browser 中打开。 有关详细信息，请参阅[结合使用 Microsoft Edge 和 Microsoft Intune 管理 Web 访问](../apps/manage-microsoft-edge.md)和[向 Microsoft Intune 添加 Web 应用](../apps/web-app.md)。
+
+#### <a name="use-the-intune-diagnostic-tool-with-microsoft-edge-for-android---4735244----"></a>在适用于 Android 的 Microsoft Edge 中使用 Intune 诊断工具<!-- 4735244  -->
+适用于 Android 的 Microsoft Edge 现已与 Intune 诊断工具集成。 与适用于 iOS 的 Microsoft Edge 上的体验类似，在设备上的 Microsoft Edge 的 URL 栏（地址框）中输入“about:intunehelp”将启动 Intune 诊断工具。 此工具将提供详细日志。 可以指导用户收集这些日志并将其发送给 IT 部门，或查看特定应用的 MAM 日志。
+
+#### <a name="updates-to-intune-branding-and-customization---5236032----"></a>Intune 品牌和自定义更新<!-- 5236032  -->
+我们更新了名为“品牌和自定义”的 Intune 窗格，改进内容包括：
+
+- 将该窗格重命名为“自定义”  。
+- 改进设置的组织和设计。
+- 改进设置文本和工具提示。
+
+若要在 Intune 中查找这些设置，请导航到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“租户管理”   > “自定义”  。 有关现有自定义的信息，请参阅[如何配置 Microsoft Intune 公司门户应用](../apps/company-portal-app.md)。
+
+#### <a name="users-personal-encrypted-recovery-key---6273943----"></a>用户的个人加密恢复密钥<!-- 6273943  -->
+这提供了新的 Intune 功能，使用户能够通过 Android 公司门户应用程序或 Android Intune 应用程序检索其个人加密 FileVault  恢复密钥。 公司门户应用程序和 Intune 应用程序中都会提供一个链接，该链接将打开 Chrome 浏览器并转到 Web 公司门户，用户可以在其中查看访问其 Mac 设备所需的 FileVault  恢复密钥。 有关加密的详细信息，请参阅 [使用 Intune 设备加密](../protect/encrypt-devices.md)。
+
+#### <a name="optimized-dedicated-device-enrollment----6114580-wnready---"></a>优化专用设备注册 <!-- 6114580 wnready -->
+我们正在优化 Android Enterprise 专用设备的注册，并使与 Wi-Fi 关联的 SCEP 证书更轻松地应用于 2019 年 11 月 22 日之前注册的专用设备。 对于新注册，Intune 应用将继续安装，但最终用户将不再需要在注册期间执行“启用 Intune 代理”  步骤。 将在后台自动进行安装，并且可以部署和设置与 Wi-Fi 关联的 SCEP 证书，而无需最终用户交互。  
+
+随着 Intune 服务后端部署的展开，这些更改将于三月分阶段推出。 在三月份结束时，所有租户都将具有这一新行为。 相关信息请参阅[支持 Android Enterprise 专用设备中的 SCEP 证书](https://techcommunity.microsoft.com/t5/intune-customer-success/support-for-scep-certificates-in-android-enterprise-dedicated/ba-p/928147)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>设备配置
+
+#### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>在 Windows 设备上创建管理模板时的新用户体验<!--5096036 -->
+根据客户反馈，以及我们迁移到新的 Azure 全屏体验，我们使用文件夹视图重新构建了“管理模板”配置文件体验。 我们尚未对任何设置或现有配置文件进行更改。 因此，现有配置文件将保持不变，并将在新视图中可用。 仍可以通过选择“所有设置”  并使用搜索来导航所有设置选项。 树视图根据“计算机”和“用户”配置进行拆分。 你会在其相关文件夹中找到 Windows、Office 和 Edge 设置。  
+
+适用于：
+- Windows 10 及更高版本
+
+#### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices---1947932-----"></a>具有 IKEv2 VPN 连接的 VPN 配置文件可将“始终可用”用于 iOS/iPadOS 设备<!-- 1947932   -->
+在 iOS/iPadOS 设备上，可创建使用 IKEv2 连接的 VPN 配置文件（“设备”   > “配置文件”   > 创建配置文件   > “iOS/iPadOS”  (针对平台) >选择“VPN”  (针对配置文件类型)）。 现在，可为 IKEv2 配置“始终可用”。 配置后，IKEv2 VPN 配置文件会自动连接并保持连接（或快速重新连接）到 VPN。 即使切换网络或重启设备，它仍会保持连接。
+
+在 iOS/iPadOS 上，始终可用 VPN 仅限于 IKEv2 配置文件。
+
+要查看可配置的 IKEv2 设置，请转到[在 iOS 设备上的 Microsoft Intune 中添加 VPN 设置](../configuration/vpn-settings-ios.md#ikev2-settings)。
+
+适用于：
+- iOS/iPadOS
+
+#### <a name="delete-bundles-and-bundle-arrays-in-oemconfig-device-configuration-profiles-on-android-enterprise-devices---5550355-----"></a>在 Android Enterprise 设备上删除 OEMConfig 设备配置文件中的捆绑包和捆绑包系列<!-- 5550355   -->
+在 Android Enterprise 设备上，创建和更新 OEMConfig 配置文件（“设备”   > “配置文件”   > “创建配置文件”   > “Android Enterprise”  (针对平台) >“OEMConfig”  (针对配置文件类型)）。 用户现在可以使用 Intune 中的“配置设计器”  删除捆绑包和捆绑包系列。
+
+若要详细了解 OEMConfig 配置文件，请参阅[通过 Microsoft Intune 中的 OEMConfig 使用和管理 Android Enterprise 设备](../configuration/android-oem-configuration-overview.md)。
+
+适用于：
+- Android Enterprise
+
+#### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----"></a>配置 iOS/iPadOS Microsoft Azure AD SSO 应用扩展<!-- 5672534   -->
+Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让 iOS/iPadOS 13.0 以上的用户能够通过一次登录获取对 Microsoft 应用和网站的访问权限。 此前通过 Microsoft Authenticator 应用进行中转身份验证的所有应用都将继续获取具有新 SSO 扩展的 SSO。 在 Azure AD SSO 应用扩展版本中，可以配置包含重定向 SSO 应用扩展类型的 SSO 扩展（“设备”   > “配置文件”   > “创建配置文件”   > “iOS/iPadOS”  (针对平台) >“设备功能”  (针对配置文件类型) >“单一登录应用扩展”  ）。
+
+适用于：
+- iOS 13.0 及更高版本
+- iPadOS 13.0 及更高版本
+
+有关 iOS SSO 应用扩展的详细信息，请参阅[单一登录应用扩展](../configuration/device-features-configure.md#single-sign-on-app-extension)。
+
+#### <a name="enterprise-app-trust-settings-modification-setting-is-removed-from-iosipados-device-restriction-profiles---6225131-----"></a>已从 iOS/iPadOS 设备限制配置文件中删除了“修改企业应用信任设置”设置<!-- 6225131   -->
+在 iOS/iPadOS 设备上，创建设备限制配置文件（“设备”   > “配置文件”   > “创建配置文件”   > “iOS/iPadOS”  > 选择“设备限制”作为配置文件类型  ）。 Apple 删除了“修改企业应用信任设置”  设置，因此 Intune 中也删除了它。 如果当前在配置文件中使用此设置，则不会产生任何影响，并将从现有配置文件中将其删除。 还将从 Intune 的任何报表中删除此设置。
+
+适用于：
+- iOS/iPadOS
+
+要查看可以限制的设置，请转到[允许或限制功能的 iOS 和 iPadOS 设备设置](../configuration/device-restrictions-ios.md)。
+
+#### <a name="troubleshooting-pending-mam-policy-notification-changed-to-informational-icon--6348954---"></a>故障排除：挂起 MAM 策略通知更改为信息图标<!--6348954 -->
+“疑难解答”边栏选项卡上的挂起 MAM 策略的通知图标已更改为信息图标。
+
+####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>配置合规性策略时的 UI 更新<!-- 3961639    -->
+我们更新了在 Microsoft 终结点管理器中[创建合规性策略](../protect/create-compliance-policy.md#create-the-policy)时的 UI（“设备”   > “合规性策略”   > “策略”   > “创建策略”  ）。 我们提供了新的用户体验，它包含与以前使用过的相同的设置和详细信息。 新体验遵循类似向导的过程来创建合规性策略，并包含用于为策略添加“分配”  的页面，以及用于在创建策略前检查配置的“审查 + 创建”  页面。
+
+#### <a name="retire-noncompliant-devices---1827291---------"></a>停用不合规的设备<!-- 1827291       -->
+我们为可添加到任何策略中的不合规设备添加了新的操作，以便[停用不合规的设备](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance)。  “停用不符合要求的设备”  这一新操作会导致从设备中删除所有公司数据，并且还会将设备从 Intune 管理中删除。  当达到配置的值（以天为单位），此操作将运行，此时设备将变为可停用状态。 最小值为 30 天。  需要明确的 IT 管理员批准，才能使用“停用不合规的设备”  部分（管理员可在其中停用所有符合条件的设备）停用设备。
+
+#### <a name="support-for-wpa-and-wpa2-in-ios-enterprise-wi-fi-profiles--6215273-----"></a>iOS 企业 Wi-Fi 配置文件中对 WPA 和 WPA2 的支持<!--6215273   -->
+[适用于 iOS 的企业 Wi-Fi 配置文件](../configuration/wi-fi-settings-ios.md#enterprise-profiles)现支持安全类型  字段。 对于安全类型  ，你可以选择“WPA 企业”  或“WPA/WPA2 企业”  ，然后为“EAP 类型”  指定选择。  （“设备”   > “配置文件”   > “创建配置文件”  ，并选择“iOS/iPadOS”  作为“平台”  ，然后选择“Wi-Fi”  作为“配置文件”  ）。 
+
+新的企业选项类似于为适用于 iOS 的基本 Wi-Fi 配置文件提供的选项。
+
+#### <a name="new-user-experience-for-certificate-email-vpn-and-wi-fi-vpn-profiles---5615208-----"></a>证书、电子邮件、VPN 和 Wi-Fi、VPN 配置文件的新用户体验<!-- 5615208   -->
+我们更新了在“终结点管理”管理中心创建和修改以下配置文件类型的[用户体验](../configuration/device-profile-create.md)（“设备”   > “配置文件”   > “创建配置文件”  ）。 新体验显示与以前相同的设置，但使用类似向导的体验，减少了需要进行的水平滚动。 新体验推出后，无需修改现有配置。
+
+- 派生凭据
+- 电子邮件
+- PKCS 证书
+- PKCS 导入的证书
+- SCEP 证书
+- 受信任的证书
+- VPN
+- Wi-Fi
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>设备注册
+
+#### <a name="configure-if-enrollment-is-available-in-company-portal-for-android-and-ios---4260128----"></a>配置可否在适用于 Android 和 iOS 的公司门户中注册<!-- 4260128  -->
+可以配置 Android 和 iOS 设备上的公司门户中的设备注册可以在有提示、无提示的情况下进行，还是不允许用户注册。 若要在 Intune 中查找这些设置，请导航到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)并选择“租户管理”   > “自定义”   >   “编辑” >   “设备注册”。  
+
+支持设备注册设置要求最终用户具有以下公司门户版本：
+-    iOS 上的公司门户：版本 4.4 或更高版本
+-    Android 上的公司门户：版本 5.0.4715.0 或更高版本
+
+有关现有公司门户自定义的详细信息，请参阅[如何配置 Microsoft Intune 公司门户应用](../apps/company-portal-app.md)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>设备管理
+
+#### <a name="new-android-report-on-android-devices-overview-page---5435435-----"></a>“Android 设备概述”页面上新增 Android 报告<!-- 5435435   -->
+我们已向“Android 设备概述”页面中的 Microsoft 终结点管理器管理控制台添加报告，显示每个设备管理解决方案中已注册的 Android 设备数。 此图表（像 Azure 控制台中已经存在的相同图表一样）显示工作配置文件、完全托管、专用和设备管理员注册的设备计数。 若要查看报告，请选择“设备”   >   “Android” >   “概述”。
+
+#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-idready-wnready-wnstaged--"></a>指导用户从 Android 设备管理员管理转到工作配置文件管理<!--5857738 idready wnready wnstaged-->
+我们将发布 Android 设备管理员平台的新合规性性设置。 通过此设置，你可以将通过设备管理员管理的设备设为不合规。
+
+在这些不合规的设备上，用户将在“更新设备设置”页上看到“转到新设备管理设置”消息。   如果用户点击“解决”  按钮，则会被引导完成以下操作：
+
+1. 从设备管理员管理取消注册
+2. 在工作配置文件管理中注册
+3. 解决合规性问题 
+ 
+Google 将在新的 Android 版本中减少设备管理员支持，以便通过 Android Enterprise 实现更现代化、更丰富、更安全的设备管理。  Intune 将只能在 2020 年第二季度之前为运行 Android 10 及更高版本的设备管理员管理的 Android 设备提供完全支持。 在此之后，无法再对运行 Android 10 或更高版本的设备管理员管理的设备进行全面管理（Samsung 设备除外）。 特别是，受影响的设备将不会收到新的密码要求。 有关详细信息，请参阅此[通知](#decreasing-support-for-android-device-administrator)。
+
+有关此设置的详细信息，请参阅[将 Android 设备从设备管理员移动到工作配置文件管理](../enrollment/android-move-device-admin-work-profile.md)。 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>监视和故障排除
+
+#### <a name="the-data-warehouse-now-provides-the-mac-address---6123680----"></a>数据仓库现提供 MAC 地址<!-- 6123680  -->
+Intune 数据仓库将 MAC 地址作为 `device` 实体中的新属性 (`EthernetMacAddress`) 提供，以允许管理员在用户和主机 MAC 地址之间建立关联。 此属性可帮助访问特定用户，并对网络上发生的事件进行故障排除。 管理员还可以在 [Power BI 报表](../developer/reports-proc-get-a-link-powerbi.md)中使用此属性来生成更丰富的报表。 有关详细信息，请参阅 Intune 数据仓库[设备](../developer/intune-data-warehouse-collections.md#devices)实体。
+
+#### <a name="additional-data-warehouse-device-inventory-properties---6125732----"></a>额外的数据仓库设备清单属性<!-- 6125732  -->
+可以使用 Intune 数据仓库提供额外的设备清单属性。 现在可以通过[设备](../developer/intune-data-warehouse-collections.md#devices)收集公开以下属性：
+- “Model”- 设备型号。
+- “Office365Version”- 设备上安装的 Office 365 版本。
+- “PhysicalMemoryInBytes”- 物理内存（以字节为单位）。
+- `TotalStorageSpaceInBytes` - 总存储容量（以字节为单位）。
+
+有关详细信息，请参阅 [Microsoft Intune 数据仓库 API](../developer/reports-nav-intune-data-warehouse.md) 和 Intune 数据仓库[设备](../developer/intune-data-warehouse-collections.md#devices)实体。
+
+#### <a name="help-and-support-workflow-update-to-support-additional-services---5654170-----"></a>帮助和支持工作流更新以支持其他服务<!-- 5654170   -->
+我们已在 Microsoft 终结点管理器管理中心更新了“帮助和支持”页，现在可以从中[选择你使用的管理类型](../fundamentals/get-support.md#options-to-access-help-and-support)。 此次更改后，你可以从以下管理类型中进行选择：
+
+- Configuration Manager（包括桌面分析）
+- Intune
+- 共同管理
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="security"></a>安全
+
+#### <a name="use-a-preview-of-security-administrator-focused-policies-as-part-of-endpoint-security--6131401----"></a>使用以安全管理员为中心的策略预览作为终结点安全性的一部分<!--6131401  -->
+作为公共预览版，我们已在 Microsoft“终结点管理”管理中心的“终结点安全性”节点下添加了几个新策略组。 作为安全管理员，你可以使用这些新策略来关注设备安全性的特定方面，以管理不同的相关设置组，而无需承担较大的设备配置策略主体的开销。
+
+除了新的适用于 Microsoft Defender 防病毒的防病毒策略  （见下文）外，这些新预览策略和配置文件中每项新设置都是当下你可能通过[设备配置文件](../configuration/device-profile-create.md)配置的相同设置。
+
+以下是所有以预览形式提供的新策略类型及其可用的配置文件类型：
+
+- **防病毒(预览)** ：
+  - macOS：
+    - **防病毒** - 管理 macOS 的[防病毒策略设置](../protect/antivirus-microsoft-defender-settings-macos.md)以管理[适用于 Mac 的 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)。
+
+  - Windows 10 及更高版本：
+    - **Microsoft Defender 防病毒** - 管理云保护、防病毒排除项、修正、扫描选项等的[防病毒策略设置](../protect/antivirus-microsoft-defender-settings-windows.md)。
+
+      Microsoft Defender 防病毒  的防病毒配置文件是一个例外，它引入了作为设备限制配置文件的一部分提供的新设置实例。 新防病毒设置如下：
+
+        - 与在设备限制中找到的设置相同，但支持在配置为设备限制时不可用的第三个配置选项。
+        - 当 Endpoint Protection 的[共同管理工作负载滑块](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)设置为 Intune 时，适用于通过 Configuration Manager 共同管理的设备。
+
+     计划使用新的“防病毒”   > “Microsoft Defender 防病毒”  配置文件，而不是通过设备限制配置文件进行配置。
+
+  - **Windows 安全体验** - 管理最终用户可在 Microsoft Defender 安全中心查看的 Windows 安全设置以及他们收到的通知。 这些设置与设备配置的 Endpoint Protection 配置文件中提供的设置相同。
+
+- **磁盘加密(预览)** ：
+  - macOS：
+    - **FileVault**
+  - Windows 10 及更高版本：
+    - **BitLocker**
+- **防火墙(预览)** ：
+  - macOS：
+    - **macOS 防火墙**
+  - Windows 10 及更高版本：
+    - **Microsoft Defender 防火墙**
+- **终结点检测和响应(预览)** ：
+  - Windows 10 及更高版本：-**Windows 10 Intune**
+- **攻击面减少(预览)** ：
+  - Windows 10 及更高版本：
+    - **应用和浏览器隔离**
+    - **Web 保护**
+    - **应用程序控制**
+    - **攻击面减少规则**
+    - **设备控制**
+    - **Exploit protection**
+- **帐户保护(预览)** ：
+  - Windows 10 及更高版本：
+    - **帐户保护**
+
+<!-- ########################## -->
 ## <a name="week-of-march-9-2020"></a>2020 年 3 月 9 日当周
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -67,7 +272,7 @@ ms.locfileid: "79372596"
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>设备管理
 
-#### <a name="change-primary-user-for-windows-devices---3794742-idready-wnready---"></a>更改 Windows 设备的主要用户<!-- 3794742 idready wnready -->
+#### <a name="change-primary-user-for-windows-devices---3794742-----"></a>更改 Windows 设备的主要用户<!-- 3794742   -->
 你可以更改 Windows 混合设备和 Azure AD 联接设备的主要用户。 为此，请转到“Intune”   > “设备”   > “所有设备”  > 选择设备 >“属性”   > “主要用户”  。 有关详细信息，请参阅[更改设备的主要用户](../remote-actions/find-primary-user.md#change-a-devices-primary-user)。
 
 还为此任务创建了一个新 RBAC 权限（托管设备/设置主要用户）。 该权限已添加到内置角色，包括帮助台操作员、学校管理员和终结点安全管理器。
@@ -99,7 +304,7 @@ Microsoft 终结点管理器将 Configuration Manager 和 Intune 组合为单个
 ### <a name="app-management"></a>应用管理
 
 #### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>macOS 公司门户用户体验改进<!-- 5568987 -->
-我们正在改进 macOS 设备注册体验和适用于 Mac 的公司门户应用。 你将看到以下内容：
+我们正在改进 macOS 设备注册体验和适用于 Mac 的公司门户应用。 你将看到以下改进：
 - 注册期间获得更好的 Microsoft AutoUpdate  体验，这可确保用户拥有最新版本的公司门户。
 - 注册期间增强的符合性检查步骤。
 - 支持复制的事件 ID，使用户可更快地将错误从其设备发送到公司支持团队。
@@ -149,7 +354,7 @@ Apple MDM Push 证书页当前显示序列号。 如果对创建该证书的 App
 ### <a name="device-management"></a>设备管理
 
 #### <a name="new-update-schedule-options-for-pushing-os-updates-to-enrolled-iosipados-devices--5879689----"></a>用于将 OS 更新推送到已注册 iOS/iPadOS 设备的新更新计划选项<!--5879689  -->
-在为 iOS/iPadOS 设备计划操作系统更新时，可从以下选项中进行选择。 这适用于使用 Apple Business Manager 或 Apple School Manager 注册类型的设备。
+在为 iOS/iPadOS 设备计划操作系统更新时，可从以下选项中进行选择。 这些选项适用于使用 Apple Business Manager 或 Apple School Manager 注册类型的设备。
 - 下次签入时更新
 - 在计划时间内更新
 - 在计划时间外更新
@@ -169,7 +374,7 @@ Apple MDM Push 证书页当前显示序列号。 如果对创建该证书的 App
 #### <a name="improved-intune-reporting-experience---3791418-----"></a>改进了 Intune 报表体验<!-- 3791418   -->
 Intune 现在提供了改进的报表体验，包括新的报表类型、更好的报表组织、更集中的视图、改进的报表功能以及更一致和更及时的数据。 报告体验将从公共预览版迁移到 GA 版（正式版）。 此外，GA 版本还将提供本地化支持、bug 修复、设计改进，并在 [Microsoft终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的磁贴上聚合设备符合性数据。
 
-新的报表类型侧重于以下内容：
+新的报表类型侧重于以下信息：
 
 - **操作** - 提供具有负面运行状况的全新记录。 
 - **组织** - 提供总体状态的更广泛汇总。
@@ -181,7 +386,7 @@ Intune 现在提供了改进的报表体验，包括新的报表类型、更好�
 #### <a name="consolidated-the-location-of-security-baselines-in-the-ui---6177074-----"></a>合并了 UI 中安全基线的位置<!-- 6177074   -->
 我们合并了路径，以便在 Microsoft 终结点管理器管理中心查找[安全基线](../protect/security-baselines.md)，方法是从多个 UI 位置删除“安全基线”  。 若要查找安全基线，现在请使用以下路径：“终结点安全” > “安全基线”   。
 
-#### <a name="expanded-support-for-imported-pkcs-certificates---6044197-wnready---"></a>对导入的 PKCS 证书的扩展支持<!-- 6044197 WNReady -->
+#### <a name="expanded-support-for-imported-pkcs-certificates---6044197----"></a>对导入的 PKCS 证书的扩展支持<!-- 6044197  -->
 我们已扩展了对使用[导入的 PKCS 证书](../protect/certificates-imported-pfx-configure.md#supported-platforms)的支持以支持“Android 企业完全托管的设备”  。 通常，导入 PFX 证书的操作适用于 S/MIME 加密方案，在这些方案中，用户的加密证书在其所有设备上都是必需的，以便能够进行电子邮件解密。
 
 以下平台支持导入 PFX 证书：
@@ -282,7 +487,7 @@ Microsoft Intune 现在支持适用于 Windows 10 的 Microsoft Edge（版本 77
 ### <a name="device-enrollment"></a>设备注册
 
 #### <a name="block-android-enrollments-by-device-manufacturer--5197392----"></a>阻止设备制造商进行 Android 注册<!--5197392  -->
-可以阻止设备按设备制造商进行注册。 这适用于 Android 设备管理员和 Android Enterprise 工作配置文件设备。 若要查看注册限制，请转到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)“设备” >   “注册限制” > “设备限制”  。
+可以阻止设备按设备制造商进行注册。 此功能适用于 Android 设备管理员和 Android Enterprise 工作配置文件设备。 若要查看注册限制，请转到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)“设备” >   “注册限制” > “设备限制”  。
 
 #### <a name="improvements-to-the-iosipados-create-enrollment-type-profile-ui---6055005---"></a>对 iOS/iPadOS 创建注册类型配置文件 UI 的改进<!-- 6055005 -->
 对于 iOS/iPadOS 用户注册，已简化“创建注册类型配置文件设置”页，   改进“注册类型”  选项进程，同时保持功能不变。 若要查看新 UI，请转到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备”   > “iOS”   > “iOS 注册”   > “注册类型”   > “创建配置文件”   > “设置”页  。 有关详细信息，请参阅[在 Intune 中创建用户注册配置文件](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune)。
@@ -390,7 +595,7 @@ Intune 支持提供 S/MIME 签名和加密证书，适用于 iOS 设备上的 Ou
 选择“Microsoft Edge”时，最终用户将看到条件访问消息，该消息通知他们托管浏览方案需要 Microsoft Edge  。 如果尚未下载，系统将提示他们下载 Microsoft Edge 并使用其 AAD 帐户登录 Microsoft Edge。  这等同于将目标设置为应用配置设置 `com.microsoft.intune.useEdge` 设为 True 的启用了 MAM 的应用  。 使用“策略托管浏览器”设置的现有应用保护策略现已选中“Intune Managed Browser”，你将看不到任何行为更改   。 这意味着，如果你将 useEdge 应用配置设置设为 True，则用户将看到一条要求使用 Microsoft Edge 的消息   。 我们鼓励所有使用托管浏览方案的客户通过“限制使用其他应用传输 Web 内容”来更新其应用保护策略，以确保用户无论从哪个应用启动链接，都可以看到过渡到 Microsoft Edge 的合适指南  。 
 
 #### <a name="configure-app-notification-content-for-organization-accounts---2576686----"></a>配置组织帐户的应用通知内容<!-- 2576686  -->
-借助 Android 和 iOS 设备上的 Intune 应用保护策略 (APP)，可以控制组织帐户的应用通知内容。 可以选择一个选项（“允许”、“组织组织数据”、或“阻止”），以指定如何为选定的应用显示组织帐户的通知。此功能需要应用程序的支持，可能并非在所有启用 APP 的应用程序中可用。 Outlook for iOS 版本 4.15.0（或更高版本）和 Outlook for Android 4.83.0（或更高版本）将支持此设置。 可从控制台获取此设置，但此功能将从 2019 年 12 月 16 日之后开始生效。 有关 APP 的详细信息，请参阅[什么是应用保护策略？](../apps/app-protection-policy.md)。
+借助 Android 和 iOS 设备上的 Intune 应用保护策略 (APP)，可以控制组织帐户的应用通知内容。 可以选择选项（“允许”、“阻止组织数据”或“阻止”）来指定为所选应用显示组织帐户通知的方式。 此功能需要应用程序的支持，可能不适用于所有启用了 APP 的应用程序。 Outlook for iOS 版本 4.15.0（或更高版本）和 Outlook for Android 4.83.0（或更高版本）将支持此设置。 可从控制台获取此设置，但此功能将从 2019 年 12 月 16 日之后开始生效。 有关 APP 的详细信息，请参阅[什么是应用保护策略？](../apps/app-protection-policy.md)。
 
 #### <a name="microsoft-app-icons-update--4677605----"></a>Microsoft 应用图标更新<!--4677605  -->
 应用保护策略和应用配置策略的应用目标窗格中用于 Microsoft 应用的图标已更新。
@@ -447,7 +652,7 @@ Intune 添加了更多适用于 iOS、iPadOS 和 macOS 设备的单一登录 (SS
 ### <a name="device-security"></a>设备安全性
 
 #### <a name="improved-experience-on-a-shared-device-when-device-based-conditional-access-policies-are-enabled---1734096----"></a>改进了启用基于设备的条件访问策略时共享设备中的体验<!-- 1734096  -->
-通过在执行策略时选中针对用户的最新符合性评估具有多个用户（针对基于设备的条件访问策略）的共享设备中的体验。 有关详细信息，请参阅下列概述文章：
+通过在执行策略时选中针对用户的最新符合性评估，改进了具有多个用户（针对基于设备的条件访问策略）的共享设备中的体验。 有关详细信息，请参阅下列概述文章：
 - [Azure 条件访问概述](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
 - [Intune 设备符合性概述](../protect/device-compliance-get-started.md)
 
@@ -503,7 +708,7 @@ Intune 添加了更多适用于 iOS、iPadOS 和 macOS 设备的单一登录 (SS
 ### <a name="device-configuration"></a>设备配置
 
 #### <a name="target-macos-user-groups-to-require-jamf-management---4061739----"></a>需要 Jamf 管理的目标 macOS 用户组<!-- 4061739  --> 
-可以面向特定的用户组，这些用户将获得[由 Jamf 管理的 macOS 设备](../protect/conditional-access-integrate-jamf.md)。 这使你可以将 Jamf 符合性集成应用于 macOS 设备的子集，而其他设备由 Intune 管理。 如果已在使用 Jamf 集成，则默认情况下，所有用户都将作为集成目标。
+可以面向特定的用户组，这些用户将获得[由 Jamf 管理的 macOS 设备](../protect/conditional-access-integrate-jamf.md)。 此目标定向使你可以将 Jamf 符合性集成应用于 macOS 设备的子集，而其他设备由 Intune 管理。 如果已在使用 Jamf 集成，则默认情况下，所有用户都将作为集成目标。
 
 #### <a name="new-exchange-activesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824-----"></a>在 iOS 设备上创建电子邮件设备配置文件时的新 Exchange ActiveSync 设置<!-- 4892824   --> 
 在 iOS/iPadOS 设备上，可以在设备配置文件中创建电子邮件连接（“设备配置”   > “配置文件”   > “创建配置文件”   > “iOS/iPadOS”  (针对平台) >“电子邮件”  (针对配置文件类型)）。 
@@ -512,7 +717,7 @@ Intune 添加了更多适用于 iOS、iPadOS 和 macOS 设备的单一登录 (SS
 - **要同步的 Exchange 数据**：为日历、联系人、提醒、备注和电子邮件选择要同步（或阻止同步）的 Exchange 服务。
 - **允许用户更改同步设置**：允许（或阻止）用户在其设备上更改这些服务的同步设置。  
 
-有关这些设置的详细信息，请参阅 [Intune 中适用于 iOS 设备的 电子邮件配置文件设置](../configuration/email-settings-ios.md)。 
+有关这些设置的详细信息，请参阅 [Intune 中适用于 iOS 设备的电子邮件配置文件设置](../configuration/email-settings-ios.md)。 
 
 适用于：
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359282"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086117"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中注册 iOS/iPadOS 设备
 
@@ -46,7 +46,7 @@ Intune 管理员可以为 iOS/iPadOS 和 iPadOS 设备设置注册，以访问�
 - 设备注册被视为典型的 BYOD 注册。 它为管理员提供各种管理选项。
 - 用户注册是一种更简单的注册过程，它为管理员提供部分设备管理选项。 此功能目前处于预览状态。 
 
-完成先决条件并分配用户许可证后，用户便可从 App Store 下载 Intune 公司门户应用，然后按照应用中的注册说明进行操作。 可以按照[隐私声明自定义](../apps/company-portal-app.md#privacy-statement-customization)中所述在 iOS/iPadOS 设备上自定义公司门户隐私声明。
+完成先决条件并分配用户许可证后，用户便可从 App Store 下载 Intune 公司门户应用，然后按照应用中的注册说明进行操作。 可以按照[如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用](../apps/company-portal-app.md#configuration)中的说明自定义 iOS/iPadOS 设备上的公司门户隐私声明。
 
 ## <a name="company-owned-iosipados-devices"></a>公司拥有的 iOS/iPadOS 设备
 

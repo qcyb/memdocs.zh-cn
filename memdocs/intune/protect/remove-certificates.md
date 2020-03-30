@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338924"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084762"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>在 Microsoft Intune 中删除 SCEP 和 PKCS 证书
 
@@ -91,7 +91,6 @@ ms.locfileid: "79338924"
 - 管理员从 Azure AD 中删除用户或组。
 - 管理员更改或更新 PKCS 配置文件。
 - 证书配置文件从组分配中删除。
-
 
 ## <a name="ios-devices"></a>iOS 设备
 
@@ -190,8 +189,8 @@ ms.locfileid: "79338924"
 - 管理员运行[停用](../remote-actions/devices-wipe.md#retire)操作。
 
 出现以下情况时，PKCS 证书将保留在设备上（证书不会被吊销，也不会被删除）  ：
-- 用户丢失 Intune 许可证。
 
+- 用户丢失 Intune 许可证。
 - 管理员撤销 Intune 许可证。
 - 管理员从 Azure AD 中删除用户或组。
 - 管理员更改或更新 PKCS 配置文件。
@@ -228,7 +227,23 @@ ms.locfileid: "79338924"
 
 ### <a name="pkcs-certificates"></a>PKCS 证书
 
-macOS 上不支持 PKCS 证书。
+出现以下情况时，将吊销并删除 PKCS 证书  ：
+
+- 用户取消注册。
+- 管理员运行[停用](../remote-actions/devices-wipe.md#retire)操作。
+
+出现以下情况时，将删除根证书：
+
+- 用户取消注册。
+- 管理员运行[停用](../remote-actions/devices-wipe.md#retire)操作。
+
+出现以下情况时，PKCS 证书将保留在设备上（证书不会被吊销，也不会被删除）：
+
+- 用户丢失 Intune 许可证。
+- 管理员撤销 Intune 许可证。
+- 证书配置文件从组分配中删除。 （删除配置文件。）
+- 管理员从 Azure AD 中删除用户或组。
+- 管理员更改或更新 PKCS 配置文件。
 
 ## <a name="next-steps"></a>后续步骤
 

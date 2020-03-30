@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 767d3671d796299d802fe950d443a152d8e2d645
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354563"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087144"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 最终用户应用的 UI 更新
 
@@ -32,10 +32,19 @@ ms.locfileid: "79354563"
 * 提醒学生和员工有关应用和注册方面的更改。
 * 更新组织的文档或帮助台程序。  
 
-如果你是员工或学生，请务必查看屏幕截图和公司门户帮助文档的链接。 有关如何使用公司门户应用的详细信息，请参阅[公司门户用户帮助文档](https://docs.microsoft.com/user-help/)。  
+如果你是员工或学生，请务必查看屏幕截图和公司门户帮助文档的链接。 有关如何使用公司门户应用的详细信息，请参阅[公司门户用户帮助文档](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)。  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日当周   
+### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改进了适用于 Android 的公司门户中的登录体验   
+我们即将更新适用于 Android 的公司门户应用中多个登录屏幕的布局，让用户体验更现代化、更简洁。 要查看所有适用于 Android 的公司门户注册说明，请转到[注册 Android 设备](../user-help/enroll-device-android-company-portal.md)或[使用 Android 工作配置文件注册](../user-help/enroll-device-android-work-profile.md)。   
+
+
+|已更新|上一个|   
+|---|---|   
+|![新的公司门户登录屏幕（包含“登录”按钮）的示例图片。](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![以前的公司门户登录页面的示例图片，显示一个更加繁忙的设计。](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![新的登录进度屏幕的示例图片，显示一个进度栏。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![以前的登录进度屏幕的示例图片，显示一个更加繁忙的设计。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## <a name="week-of-february-3-2020"></a>2020 年 2 月 3 日当周
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>从公司门户的 Android 工作配置文件注册中删除了屏幕 <!--6103987 -->
@@ -142,7 +151,7 @@ ms.locfileid: "79354563"
 * 打开“设置”应用以在其设备上安装管理配置文件。  
 * 返回公司门户应用以完成注册。  
 
-要了解更新的注册步骤和屏幕，请参阅[在 Intune 中注册 iOS 设备](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios)。  
+要了解更新的注册步骤和屏幕，请参阅[在 Intune 中注册 iOS 设备](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios)。  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>iOS 版公司门户应用的用户体验更新 <!-- 2536024 -->
 适用于 iOS 设备的公司门户应用的主页已经过重新设计。 经此更改后，主页将更好地遵循 iOS UI 模式，更易于查找应用和电子书。  
@@ -166,7 +175,7 @@ Microsoft Intune 管理员可以上传自定义品牌图像，该图像将在 iO
 ## <a name="week-of-august-27-2018"></a>2018 年 8 月 27 日当周  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>公司门户网站的新用户体验更新 <!--2000968 -->  
-我们已根据客户反馈向公司门户网站添加新功能。 可从设备上体验到现有功能和可用性的重大改进。 该网站的各个区域（如设备详细信息、反馈与支持以及设备概述）都采用了全新的现代化快速响应设计。 已更新 [Intune 公司门户网站文档](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website)以体现这些更改。   
+我们已根据客户反馈向公司门户网站添加新功能。 可从设备上体验到现有功能和可用性的重大改进。 该网站的各个区域（如设备详细信息、反馈与支持以及设备概述）都采用了全新的现代化快速响应设计。 已更新 [Intune 公司门户网站文档](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website)以体现这些更改。   
 
 将看到以下更新：  
 
