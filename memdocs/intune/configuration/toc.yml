@@ -15,9 +15,9 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: 操作指南
   items:
-    - name: 概述
+    - name: 配置文件概述
       href: device-profile-create.md
-    - name: 自定义设备设置
+    - name: 自定义设置
       href: custom-settings-configure.md
       displayName: oma-uri
     - name: 限制设备设置和功能
@@ -30,16 +30,18 @@
         - name: 问题和解决方法
           href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: VPN
-      href: vpn-settings-configure.md
       items:
+        - name: 配置 VPN
+          href: vpn-settings-configure.md
         - name: 面向 Android 的每应用 VPN
           href: android-pulse-secure-per-app-vpn.md
         - name: 面向 iOS/iPadOS 的每应用 VPN
           href: vpn-setting-configure-per-app.md
-    - name: Wi-Fi 网络
-      href: wi-fi-settings-configure.md
-      displayName: 'wifi, wireless'
+    - name: Wi-Fi
       items:
+        - name: 配置 Wi-Fi
+          href: wi-fi-settings-configure.md
+          displayName: 'wifi, wireless'
         - name: 具有预共享密钥的 Wi-Fi
           href: wi-fi-profile-shared-key.md
           displayName: 'psk, oma-uri, eap'
@@ -48,7 +50,7 @@
     - name: Windows 上的管理模板
       displayName: 'admx, gpo, group policy'
       items:
-        - name: 管理模板
+        - name: 创建管理模板
           href: administrative-templates-windows.md
         - name: 使用管理模板更新 Office
           href: administrative-templates-update-office.md
@@ -75,7 +77,7 @@
     - name: Zebra 设备上的移动性扩展
       displayName: 'mx, android, stagenow'
       items:
-        - name: MX on Android 设备管理员
+        - name: 配置 MX on Android 设备管理员
           href: android-zebra-mx-overview.md
         - name: StageNow 日志及常见问题
           href: android-zebra-mx-logs-troubleshoot.md
@@ -115,6 +117,12 @@
       items:
         - name: Android 设备管理员
           items:
+            - name: 自定义
+              items:
+                - name: 自定义设置
+                  href: custom-settings-android.md
+                - name: 允许/禁止对 Samsung Knox Standard 使用应用
+                  href: samsung-knox-apps-allow-block.md
             - name: 设备限制
               href: device-restrictions-android.md
             - name: 电子邮件
@@ -123,13 +131,10 @@
               href: vpn-settings-android.md
             - name: Wi-Fi
               href: wi-fi-settings-android.md
-            - name: 自定义
-              href: custom-settings-android.md
-              items:
-                - name: 允许/禁止对 Samsung Knox Standard 使用应用
-                  href: samsung-knox-apps-allow-block.md
         - name: Android Enterprise
           items:
+            - name: 自定义
+              href: custom-settings-android-for-work.md
             - name: 设备限制
               href: device-restrictions-android-for-work.md
             - name: 电子邮件
@@ -138,10 +143,10 @@
               href: vpn-settings-android-enterprise.md
             - name: Wi-Fi
               href: wi-fi-settings-android-enterprise.md
-            - name: 自定义
-              href: custom-settings-android-for-work.md
         - name: iOS/iPadOS
           items:
+            - name: 自定义
+              href: custom-settings-ios.md
             - name: 设备功能
               href: ios-device-features-settings.md
             - name: 设备限制
@@ -152,12 +157,12 @@
               href: vpn-settings-ios.md
             - name: Wi-Fi
               href: wi-fi-settings-ios.md
-            - name: 自定义
-              href: custom-settings-ios.md
             - name: 内置应用的捆绑 ID
               href: bundle-ids-built-in-ios-apps.md
         - name: macOS
           items:
+            - name: 自定义
+              href: custom-settings-macos.md
             - name: 设备功能
               href: macos-device-features-settings.md
             - name: 设备限制
@@ -170,10 +175,10 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
-            - name: 自定义
-              href: custom-settings-macos.md
         - name: Windows 10 及更高版本
           items:
+            - name: 自定义
+              href: custom-settings-windows-10.md
             - name: 传递优化
               href: delivery-optimization-settings.md
             - name: 设备限制
@@ -190,28 +195,26 @@
               href: ../protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: Kiosk
               href: kiosk-settings-windows.md
-            - name: VPN
-              href: vpn-settings-windows-10.md
-            - name: Wi-Fi
-              href: wi-fi-settings-windows.md
             - name: 安全评估
               href: education-settings-windows.md
             - name: 共享的多用户设备
               href: shared-user-device-settings-windows.md
-            - name: 自定义
-              href: custom-settings-windows-10.md
+            - name: VPN
+              href: vpn-settings-windows-10.md
+            - name: Wi-Fi
+              href: wi-fi-settings-windows.md
         - name: Windows Holographic for Business
           items:
+            - name: 自定义
+              href: custom-settings-windows-holographic.md
             - name: 设备限制
               href: device-restrictions-windows-holographic.md
-            - name: 共享的多用户设备
-              href: shared-user-device-settings-windows-holographic.md
             - name: 版本升级和模式切换
               href: holographic-upgrade.md
             - name: Kiosk
               href: kiosk-settings-holographic.md
-            - name: 自定义
-              href: custom-settings-windows-holographic.md
+            - name: 共享的多用户设备
+              href: shared-user-device-settings-windows-holographic.md
         - name: Windows 8.1
           items:
             - name: 设备限制
@@ -222,11 +225,11 @@
               href: wi-fi-settings-import-windows-8-1.md
         - name: Windows Phone 8.1
           items:
+            - name: 自定义
+              href: custom-settings-windows-phone-8-1.md
             - name: 设备限制
               href: device-restrictions-windows-phone-8-1.md
             - name: 电子邮件
               href: email-settings-windows-phone-8-1.md
             - name: VPN
               href: vpn-settings-windows-phone-8-1.md
-            - name: 自定义
-              href: custom-settings-windows-phone-8-1.md
