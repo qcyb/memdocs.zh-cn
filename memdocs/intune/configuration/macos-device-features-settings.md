@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8efa125b78e1265861f55b258cd264d7640154b2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360790"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526285"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 中的 macOS 设备功能设置
 
@@ -55,7 +55,7 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
 
 必须有打印机的 IP 地址、资源路径和端口，才能添加 AirPrinter 服务器。 下面逐步介绍了如何获取此类信息。
 
-1. 在作为 AirPrint 打印机连接到同一本地网络（子网）的 Mac 上，打开“终端”  （路径为“/Applications/Utilities”  ）。
+1. 在作为 AirPrint 打印机连接到同一本地网络（子网）的 Mac 上，打开“终端”（路径为“/Applications/Utilities”   ）。
 2. 在“终端”应用中，键入“`ippfind`”，再按 Enter。
 
     记下打印机信息。 例如，可能会返回类似于 `ipp://myprinter.local.:631/ipp/port1` 的内容。 第一部分是打印机名称。 最后一部分 (`ipp/port1`) 是资源路径。
