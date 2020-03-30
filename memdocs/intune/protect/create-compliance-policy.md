@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7275963f521955c9e89c4b417c11f752e2f06ce1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f84df30204f866e5498e97b8d64ed3fc6fd4ba28
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352600"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084907"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中创建符合性策略
 
@@ -63,80 +63,70 @@ ms.locfileid: "79352600"
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “符合性策略”   > “创建策略”  。
+2. 选择“设备”   > “符合性策略”   > “策略”   >   “创建策略”。
 
-3. 指定以下属性：
+3. 从以下选项中选择此策略的“平台”  ：
+   - *Android 设备管理员*
+   - *Android Enterprise*
+   - *iOS/iPadOS*
+   - *macOS*
+   - *Windows Phone 8.1*
+   - *Windows 8.1 及更高版本*
+   - *Windows 10 及更高版本*
 
-   - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好为“将已越狱的 iOS/iPadOS 设备标记为不合规策略”  。
+    对于“Android Enterprise”，还可以选择一种“策略类型”   ：
+     - Android 设备所有者合规性策略 
+     - Android 工作配置文件合规性策略 
 
-   - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
+    然后，选择“创建”  以打开“创建策略”  配置窗口。
 
-   - **平台**：选择设备平台。 选项包括：
-     - **Android 设备管理员**
-     - **Android Enterprise**
-     - **iOS/iPadOS**
-     - **macOS**
-     - **Windows Phone 8.1**
-     - **Windows 8.1 及更高版本**
-     - **Windows 10 及更高版本**
+4. 在“基本信息”  选项卡上，指定“名称”  ，以便稍后识别它们。 例如，策略名称最好为“将已越狱的 iOS/iPadOS 设备标记为不合规策略”  。
 
-     对于 Android Enterprise，必须选择“配置文件类型”   ：
-     - **设备所有者**
-     - **工作配置文件**
+   还可以选择指定“说明”  。
+  
+5. 在“合规性设置”  选项卡上，展开可用类别，并为策略配置设置。  下面的文章介绍了每个平台的设置：
+   - [Android 设备管理员](compliance-policy-create-android.md)
+   - [Android Enterprise](compliance-policy-create-android-for-work.md)
+   - [iOS/iPadOS](compliance-policy-create-ios.md)
+   - [macOS](compliance-policy-create-mac-os.md)
+   - [Windows Phone 8.1、Windows 8.1 及更高版本](compliance-policy-create-windows-8-1.md)
+   - [Windows 10 及更高版本](compliance-policy-create-windows.md)  
 
-   - **设置**：下面的文章列出并介绍了每个平台的设置：
-     - [Android 设备管理员](compliance-policy-create-android.md)
-     - [Android Enterprise](compliance-policy-create-android-for-work.md)
-     - [iOS/iPadOS](compliance-policy-create-ios.md)
-     - [macOS](compliance-policy-create-mac-os.md)
-     - [Windows Phone 8.1、Windows 8.1 及更高版本](compliance-policy-create-windows-8-1.md)
-     - [Windows 10 及更高版本](compliance-policy-create-windows.md)  
+6. 在“位置”  选项卡上，可以根据设备位置强制实施合规性。 从现有位置进行选择。 如果尚无可用位置，请参阅[使用位置（网络围墙）](use-network-locations.md)提供的指南。
+   > [!TIP]
+   > 位置  仅适用于 Android 设备管理员  平台。
 
-   - 位置（Android 设备管理员）   ：在策略中，可根据设备位置强制执行符合性。 从现有位置进行选择。 尚无位置？ 在 Intune 中[使用的位置（网络围墙）](use-network-locations.md)提供一些指导。  
+7. 在“对不合规项的操作”  选项卡上，指定一系列操作，以自动应用于不符合此合规性策略的设备。
 
-   - **对不合规设备的操作**：对于不满足符合性策略要求的设备，可添加要自动应用的一系列操作。 可以在设备被标记为不符合时（例如，一天后）更改计划。 此外，还可以配置第二个操作，即在设备不符合时向用户发送电子邮件。
+   可以添加多个操作，并为某些操作配置计划和其他详细信息。 例如，可以将默认操作“标记不合规设备”  的计划更改为一天后执行。 然后，可以添加一个操作，以便在设备不合规时向用户发送电子邮件，向他们通知此状态。 还可以添加操作以锁定或停用仍然不合规的设备。
 
-     [为不符合要求的设备添加操作](actions-for-noncompliance.md)提供了详细信息，包括为用户创建通知电子邮件。
+   有关可以配置的操作的信息，请参阅[添加针对不合规设备的操作](actions-for-noncompliance.md)，包括了解如何创建通知电子邮件并发送给用户。
 
-     例如，使用“位置”功能，并在符合性策略中添加位置。 选择至少一个位置时，将应用针对不符合的默认操作。 如果设备未连接到所选位置，则会被立即视为不符合要求。 可以为用户提供宽限期（例如，一天）。
+   另一个示例涉及位置的使用，可以至少向合规性策略添加一个位置。 在这种情况下，选择至少一个位置时，将应用针对不合规项的默认操作。 如果设备未连接到所选的任何位置，则被视为不合规。 可以配置计划，为用户提供宽限期（例如，一天）。
 
-   - **作用域（标记）** ：作用域标记非常适合用于将策略筛选到特定组（例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 添加设置后，还可以向符合性策略添加作用域标记。 [使用作用域标记筛选策略](../fundamentals/scope-tags.md)是不错的资源。
+8. 在“范围标记”  选项卡上，选择标记以帮助筛选特定组的策略，如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 添加设置后，还可以向符合性策略添加作用域标记。 
 
-4. 完成后，选择“确定” > “创建”，保存所做更改   。 此时，策略创建完成，并出现在列表中。 接下来，向组分配策略。
+   有关使用范围标记的信息，请参阅[使用范围标记筛选策略](../fundamentals/scope-tags.md)。
 
-## <a name="assign-the-policy"></a>分配策略
+9. 在“分配”  选项卡上，向组分配策略。  
 
-创建策略后，下一步是向组分配策略：
+   选择“+ 选择要包括的组”  ，然后将策略分配给一个或多个组。 在下一步后保存策略时，策略将应用于这些组。 
 
-1. 选择已创建的策略。 现有策略位于“设备” > “符合性策略” > “策略”中    。
+10. 在“查看 + 创建”选项卡中，查看设置，然后在准备好保存合规性策略时选择“创建”   。  
 
-2. 选择策略  > “分配”   。 可以包括或排除 Azure Active Directory (AD) 安全组。
+    当策略所面向的用户或设备使用 Intune 签入时，会对其进行评估以确定是否满足合规性要求。
 
-3. 选择“所选组”  查看 Azure AD 安全组。 先选择要应用此策略的组，再选择“保存”，以部署此策略  。
+<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
 
-当策略所面向的用户或设备使用 Intune 签入时，会对其进行评估以确定是否满足符合性要求。
+### Evaluate how many users are targeted
 
-### <a name="evaluate-how-many-users-are-targeted"></a>评估所面向的用户数
+When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
 
-分配策略后，还可以评估  受影响的用户数。 此功能计算用户数，不计算设备数。
+1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
 
-1. 在 Intune 中，选择“设备”   > “符合性策略”   > “策略”  。
+2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
 
-2. 选择策略  > “分配” > “评估”    。 随即出现一条消息，显示此策略所面向的用户数。
-
-如果“评估”按钮呈灰显状态，请确保策略已分配到一个或多个组  。
-
-<!-- ## Actions for noncompliance
-
-For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
-
-[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
-
-For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
-
-## Scope tags
-
-Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
 -->
 
 ## <a name="refresh-cycle-times"></a>刷新周期时间
@@ -147,7 +137,7 @@ Intune 使用不同的刷新周期来检查符合性策略的更新。 如果设
 
 ### <a name="assign-an-ingraceperiod-status"></a>分配 InGracePeriod 状态
 
-符合性策略的 InGracePeriod 状态是一个值。 该值由设备的宽限期和设备针对该符合性策略的实际状态共同确定。
+符合性策略的 InGracePeriod 状态是一个值。 该值由设备的宽限期和设备针对该合规性策略的实际状态共同确定。
 
 具体而言，如果设备的已分配符合性策略为“不符合”状态，且：
 

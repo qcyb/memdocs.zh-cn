@@ -146,7 +146,7 @@ ms.locfileid: "79526268"
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>更正 MDM 使用条款 URL
   1. 登录到 [Azure 门户](https://portal.azure.com/)，然后选择“Azure Active Directory”  。    
   2. 选择“移动性(MDM 和 MAM)”  ，然后单击“Microsoft Intune”  。    
-  3. 选择“还原默认 MDM URL”  ，确认“MDM 使用条款 URL”  设置为“https://portal.manage.microsoft.com/TermsofUse.aspx”  。    
+  3. 选择“还原默认 MDM URL”  ，确认“MDM 使用条款 URL”  设置为 https://portal.manage.microsoft.com/TermsofUse.aspx  。    
   4. 选择 **“保存”** 。    
 
 
