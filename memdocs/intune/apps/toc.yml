@@ -96,6 +96,8 @@
               href: apps-advanced-threat-protection-macos.md
         - name: PowerShell 脚本
           href: intune-management-extension.md
+        - name: macOS shell 脚本
+          href: macos-shell-scripts.md
     - name: 分配应用
       items:
         - name: 将应用分配给组
