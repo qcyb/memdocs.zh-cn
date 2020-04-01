@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357111"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326706"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>使用策略集对管理对象集合进行分组
 
@@ -63,7 +63,7 @@ ms.locfileid: "79357111"
     - **策略集名称** - 提供此策略集的名称。
     - **说明** -（可选）提供策略集的说明。
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. 单击“下一步:  应用程序管理”。<br>
    在“应用程序管理”页面，可以选择[添加应用](../apps/apps-add.md)、[应用配置策略](../apps/app-configuration-policies-overview.md)和[应用保护策略](../apps/app-protection-policy.md)到策略集  。 有关应用管理的信息，请参阅[什么是 Microsoft Intune 应用管理？](../apps/app-management.md)。

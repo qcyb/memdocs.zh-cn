@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3765794048de337100be0384b325f5288063121
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 27a37642891693f59c8dc38aa9bb047b251084ca
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086371"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327355"
 ---
 # <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 iOS 和 iPadOS 设备添加 Wi-Fi 设置
 
@@ -33,7 +33,7 @@ ms.locfileid: "80086371"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-[创建设备配置文件](device-profile-create.md)。
+[创建设备配置文件](wi-fi-settings-configure.md)。
 
 > [!NOTE]
 > 这些设置适用于所有注册类型。 有关注册类型的详细信息，请参阅 [iOS/iPadOS 注册](../enrollment/ios-enroll.md)。

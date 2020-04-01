@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5011e24064c4c546107f950925d12489ed9113c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340601"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324581"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>在 Microsoft Intune 中包括和排除应用分配
 
@@ -90,7 +90,7 @@ ms.locfileid: "79340601"
 
 要编辑分配，请在应用的“分配”列表中，选择包含想要更改的特定分配的行即可编辑分配  。 还可以选择行尾的省略号 (…) 并选择“删除”即可删除分配   。 要更改“分配”列表的视图，请按“分配类型”或按“包括/排除”分组    。
 
-![Intune 应用分配 - 完成](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Intune 应用分配 - 完成](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed8acbcbe550ffd0a3a3f94e07d5752489ae8be6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340926"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324828"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>使用 Intune 配置适用于 Android 设备的 Google Chrome 
 
@@ -40,7 +40,7 @@ ms.locfileid: "79340926"
 2. 选择“应用”   > “所有应用”   > “添加”  ，然后添加“托管的 Google Play”  应用。
 3. 转到“托管的 Google Play”，搜索并批准 Google Chrome。 
 
-    ![搜索并批准 Google Chrome](/media/apps-configure-chrome-android/search.png)
+    ![搜索并批准 Google Chrome](./media/apps-configure-chrome-android/search.png)
 
 4. 将 Google Chrome 作为必需的应用类型分配给用户组。 在 Intune 中注册设备时，将自动部署 Google Chrome。
 
@@ -55,15 +55,15 @@ ms.locfileid: "79340926"
     - **设备注册类型** - 此设置设为“托管设备”。 
     - **平台** - 选择 Android  。
 
-    ![添加 Google Chrome 配置策略](/media/apps-configure-chrome-android/add-policy.png)
+    ![添加 Google Chrome 配置策略](./media/apps-configure-chrome-android/add-policy.png)
 
 3. 单击“关联应用”，以显示“关联应用”窗格。   找到并选择“Google Chrome”。  此列表包含[已批准并与 Intune 同步的托管 Google Play 应用](apps-add-android-for-work.md)。
 
-    ![从“关联应用”下选择“Google Chrome”](/media/apps-configure-chrome-android/associated-app.png)
+    ![从“关联应用”下选择“Google Chrome”](./media/apps-configure-chrome-android/associated-app.png)
 
 4. 单击“配置设置”，选择“使用配置设计器”，然后单击“添加”，以选择配置键。   
 
-    ![添加“使用配置设计器”](/media/apps-configure-chrome-android/configuration.png)
+    ![添加“使用配置设计器”](./media/apps-configure-chrome-android/configuration.png)
 
     下面是通用设置的示例：
     - **阻止访问 URL 列表**：`["*"]`
@@ -73,7 +73,7 @@ ms.locfileid: "79340926"
 
     使用配置设计器添加配置设置后，会在表中列出这些设置。 
 
-    ![通用设置](/media/apps-configure-chrome-android/common-settings.png)
+    ![通用设置](./media/apps-configure-chrome-android/common-settings.png)
 
     上述设置将创建书签，并阻止访问除 `baidu.com``yahoo.com``chromium.org` 和 `chrome://` 之外的所有 URL。
 
@@ -84,31 +84,31 @@ ms.locfileid: "79340926"
 
 在 Android Enterprise 中注册 Android 设备后，将自动部署托管的 Google Chrome 应用以及项目组合图标。
 
-   <img alt="Managed Google Chrome with the portfolio icon" src="/media/apps-configure-chrome-android/chrome-icon.png" width="350">
+   <img alt="Managed Google Chrome with the portfolio icon" src="./media/apps-configure-chrome-android/chrome-icon.png" width="350">
 
 启动 Google Chrome，设置将生效。
 
    书签：<br>
-   <img alt="Bookmarks" src="/media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    阻止的 URL：<br>
-   <img alt="Blocked URL" src="/media/apps-configure-chrome-android/blocked-url.png" width="350">
+   <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">
 
    允许 URL：<br>
-   <img alt="Allow URL" src="/media/apps-configure-chrome-android/allowed-url.png" width="350">
+   <img alt="Allow URL" src="./media/apps-configure-chrome-android/allowed-url.png" width="350">
 
    隐身选项卡：<br>
-   <img alt="Incognito tab" src="/media/apps-configure-chrome-android/incognito-tab.png" width="350">
+   <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
 ## <a name="troubleshooting"></a>疑难解答
 
 1. 查看 Intune 门户，以监视策略部署状态。
 
-    ![监视策略部署状态](/media/apps-configure-chrome-android/monitor-status.png)
+    ![监视策略部署状态](./media/apps-configure-chrome-android/monitor-status.png)
 
 2. 启动 Google Chrome，访问 chrome://policy。  可以确认设置是否已成功应用。
 
-    ![确认设置已成功应用](/media/apps-configure-chrome-android/confirm.png)
+    ![确认设置已成功应用](./media/apps-configure-chrome-android/confirm.png)
 
 ## <a name="additional-information"></a>其他信息
 

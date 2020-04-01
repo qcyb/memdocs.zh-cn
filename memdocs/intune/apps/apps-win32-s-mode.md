@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c52261051000e7af1580f8213e5d348857a128c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340224"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324375"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>在 S 模式设备上启用 Win32 应用
 
-[Windows 10 S 模式](https://docs.microsoft.com/windows/deployment/s-mode)是仅运行应用商店应用的锁定操作系统。 默认情况下，Windows S 模式设备不允许安装和执行 Win32 应用。 这些设备包括单个 Win 10S 基准策略，该策略会锁定 S 模式设备，阻止运行该设备上的任何 Win32 应用  。 但是，通过在 Intune 中创建和使用 S 模式补充策略，你可以在 Windows 10 S 模式托管设备上安装和运行 Win32 应用  。 通过使用 [Microsoft Defender 应用程序控制 (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) PowerShell 工具，你可以为 Windows S 模式创建一个或多个补充策略。 必须使用[设备保护签名服务 (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) 或 [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool) 对补充策略进行签名，然后通过 Intune 上传和分发策略。 或者，可以使用组织中的代码签名证书对补充策略进行签名，但首选方法是使用 DGSS。 在使用组织中的代码签名证书的实例中，代码签名证书链接到的根证书必须存在于设备上。
+[Windows 10 S 模式](https://docs.microsoft.com/windows/deployment/s-mode)是仅运行应用商店应用的锁定操作系统。 默认情况下，Windows S 模式设备不允许安装和执行 Win32 应用。 这些设备包括单个 Win 10S 基准策略，该策略会锁定 S 模式设备，阻止运行该设备上的任何 Win32 应用  。 但是，通过在 Intune 中创建和使用 S 模式补充策略，你可以在 Windows 10 S 模式托管设备上安装和运行 Win32 应用  。 通过使用 [Microsoft Defender 应用程序控制 (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) PowerShell 工具，你可以为 Windows S 模式创建一个或多个补充策略。 必须使用[设备保护签名服务 (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) 或 [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) 对补充策略进行签名，然后通过 Intune 上传和分发策略。 或者，可以使用组织中的代码签名证书对补充策略进行签名，但首选方法是使用 DGSS。 在使用组织中的代码签名证书的实例中，代码签名证书链接到的根证书必须存在于设备上。
 
 通过在 Intune 中分配 S 模式补充策略，可以使设备对设备的现有 S 模式策略引发例外，这允许已上传且已相应签名的应用目录。 此策略设置可在 S 模式设备上使用的应用的允许列表（应用目录）。
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084097"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359472"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>使用 Intune 添加 iOS、iPadOS 或 macOS 设备功能设置
 
@@ -203,30 +203,45 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 - iOS 7.0 及更高版本
 - iPadOS 13.0 及更高版本
 
-## <a name="create-a-device-profile"></a>创建设备配置文件
+## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 3. 输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”  。
-    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
     - **平台**：选择设备平台。 选项包括：  
+
         - **iOS/iPadOS**
         - **macOS**
-    - **配置文件类型**：选择“设备功能”  。
 
-4. 根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+    - **配置文件**：选择“设备功能”  。
+
+4. 选择“创建”。 
+5. 在“基本信息”  中，输入以下属性：
+
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”  。
+    - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
+
+6. 选择“下一步”  。
+
+7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-5. 完成后，选择“确定”   > “创建”  以保存所做的更改。
+8. 选择“下一步”  。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-此时，配置文件创建完成，并出现在配置文件列表中。 请务必[分配配置文件](device-profile-assign.md)，并[监视配置文件状态](device-profile-monitor.md)。
+    选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
 
 ## <a name="next-steps"></a>后续步骤
 
-创建配置文件后，即可进行分配。 下一步，[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
+此时，配置文件创建完成，但它可能尚未执行任何操作。 下一步，[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
 查看所有适用于 [iOS/iPadOS](ios-device-features-settings.md) 和 [macOS](macos-device-features-settings.md) 设备的设备功能设置。

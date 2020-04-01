@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343981"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401491"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>快速入门：免费试用 Microsoft Intune
 
@@ -64,7 +64,7 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 
 如果尚未登录到门户，请完成以下步骤：
 
-1. 打开新的浏览器窗口，在地址栏中输入 https://devicemanagement.microsoft.com  。 
+1. 打开新的浏览器窗口，在地址栏中输入 https://endpoint.microsoft.com  。 
 2. 使用上述步骤中提供的用户 ID 登录 (yourID@yourdomain  .onmicrosoft.com)。
 
     ![门户登录页的图像](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 ## <a name="admin-experiences"></a>管理员体验
 
 两个最常使用的门户：
-- Microsoft 终结点管理器管理中心 ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) 可用于浏览 [Intune 功能](what-is-intune.md)。 这是管理员使用 Intune 的位置。
+- Microsoft 终结点管理器管理中心 ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) 可用于浏览 [Intune 功能](what-is-intune.md)。 这是管理员使用 Intune 的位置。
 - 如果没有使用 Azure Active Directory 来添加和管理用户，可以在 Microsoft 365 管理中心 ([https://admin.microsoft.com](https://admin.microsoft.com)) 执行此类操作。 还可以管理帐户的帐单和支持等其他方面。
 
 ## <a name="next-steps"></a>后续步骤

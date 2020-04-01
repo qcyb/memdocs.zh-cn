@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3cf008c708ce42611a842ff7f8720d48d57ac91
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341615"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323437"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>使用 iOS 应用预配配置文件防止应用过期
 
@@ -53,7 +53,7 @@ ms.locfileid: "79341615"
 
    将用你在上面添加的 Apple 移动配置文件中的值填充“过期日期”  。<br>
 
-   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="./media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. 单击“**下一步:** 作用域标记”。<br>
    在“作用域标记”页上，你可以选择配置作用域标记，以确定谁可以在 Intune 中查看 iOS/iPadOS 应用预置描述文件  。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。

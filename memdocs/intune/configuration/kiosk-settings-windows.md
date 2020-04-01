@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1750ff93f0896e620af243d96914caa428e37a4a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 69432082c199152b18b2afa95fd8351917d9bba9
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360803"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359237"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>使用 Intune 将 Windows 10 及更高版本设备作为展台运行的设置
 
@@ -196,6 +196,6 @@ ms.locfileid: "79360803"
 
 [分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
-还可以为 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) 和 [Windows Holographic for Business](kiosk-settings-holographic.md) 设备创建展台配置文件。
+还可以为 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 和 [Windows Holographic for Business](kiosk-settings-holographic.md) 设备创建展台配置文件。
 
 另请参阅 Windows 指南中的[设置单应用展台](https://docs.microsoft.com/windows/configuration/kiosk-single-app)或[设置多应用展台](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)。
