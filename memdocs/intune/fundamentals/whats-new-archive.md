@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085832"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401479"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 中前几个月的新增功能
 
@@ -229,7 +229,7 @@ Intune 支持以下派生凭据提供商：
 ### <a name="microsoft-365-device-management"></a>Microsoft 365 设备管理
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>改进了 Microsoft 365 设备管理中的管理体验<!-- 5551239 -->
-已刷新并简化的管理体验现已在 [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com) 上的 Microsoft 365 设备管理专家工作区中公开发布，其中包括：
+已刷新并简化的管理体验现已在 [https://endpoint.microsoft.com](https://endpoint.microsoft.com) 上的 Microsoft 365 设备管理专家工作区中公开发布，其中包括：
 
 - **更新的导航**：你会发现简化的第一级导航（可对功能进行逻辑分组）。
 - **新平台筛选器**：可以在“设备和应用”页上选择单一平台，该平台仅显示所选平台的策略和应用。
@@ -238,7 +238,7 @@ Intune 支持以下派生凭据提供商：
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Microsoft 365 设备管理中的终结点安全节点简介<!-- 5630102 -->
 
-终结点安全节点现已在 https://devicemanagement.microsoft.com 上的 Microsoft 365 设备管理专家工作区中公开发布，可将这些功能组合在一起以保护终结点，例如  ：
+终结点安全节点现已在 https://endpoint.microsoft.com 上的 Microsoft 365 设备管理专家工作区中公开发布，可将这些功能组合在一起以保护终结点，例如  ：
 
 - 安全基线：预配置的设置组，这些设置可帮助你应用 Microsoft 推荐的已知设置组和默认值。
 - 安全任务：利用 Microsoft Defender ATP 威胁和漏洞管理 (TVM)，并使用 Intune 修正终结点漏洞。
@@ -527,7 +527,7 @@ Intune 现在支持管理 iPadOS 和 iOS 13.1 设备。 有关详细信息，请
 - “专用设备”   > “多应用”  ：“媒体音量控制”  允许用户使用滑块控制设备的媒体音量。 
 - “专用设备”   > “多应用”  ：允许用户启用屏幕保护程序  ，上传自定义图像，并控制屏幕保护程序的显示时间。
 
-要查看当前设置，请转到[便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)。
+要查看当前设置，请转到[便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-devices)。
 
 适用于：
 
@@ -1467,7 +1467,7 @@ macOS
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>在 Android Enterprise 设备上，“展台”设备现在称为“专用设备”<!-- 3598402   -->
 为了与 Android 术语保持一致，“展台”将更改为适用于 Android Enterprise 设备的“专用设备”（依次选择“设备配置” > “配置文件” > “创建配置文件”> 针对平台选择“Android Enterprise”>“仅限设备所有者” > “设备限制” > “专用设备”）         。
 
-要查看可用设置，请转到[允许或限制功能的设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)。
+要查看可用设置，请转到[允许或限制功能的设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-devices)。
 
 适用于：  
 Android Enterprise
@@ -2114,7 +2114,7 @@ Intune 在最终用户计算机上安装 Office 时，最终用户将自动获�
 ### <a name="monitor-and-troubleshoot"></a>监视和故障排除
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Microsoft 365 设备管理门户中的新 Intune 支持体验<!-- 3076965 -->
-我们正在 [Microsoft 365 设备管理门户]( https://devicemanagement.microsoft.com)中推出适用于 Intune 的新的“帮助和支持”体验。 通过新体验，可以用自己的语言描述问题，并获得故障排除见解和基于 Web 的修复内容。 这些解决方案通过基于规则的机器学习算法提供并依赖于用户查询。  
+我们正在 [Microsoft 365 设备管理门户]( https://endpoint.microsoft.com)中推出适用于 Intune 的新的“帮助和支持”体验。 通过新体验，可以用自己的语言描述问题，并获得故障排除见解和基于 Web 的修复内容。 这些解决方案通过基于规则的机器学习算法提供并依赖于用户查询。  
 
 除特定于问题的指南之外，还可以使用新的案例创建工作流通过电子邮件或电话打开支持案例。  
 
@@ -2156,7 +2156,7 @@ Intune 注册、公司门户和托管浏览器现在仅支持运行 iOS 10 及�
 ### <a name="device-management"></a>设备管理
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Microsoft 365 设备管理管理中心<!-- 3078424 -->
-Microsoft 365 的承诺之一是简化管理，多年来我们整合了后端 Microsoft 365 服务，以提供端到端方案（如 Intune 和 Azure AD 条件访问）。 新 [Microsoft 365 管理中心](https://devicemanagement.microsoft.com)整合、简化并集成了管理员体验。 借助设备管理的专家工作区，可轻松访问组织所需的所有设备和应用管理信息和任务。 我们希望这能成为企业最终用户计算团队的主要云工作区。
+Microsoft 365 的承诺之一是简化管理，多年来我们整合了后端 Microsoft 365 服务，以提供端到端方案（如 Intune 和 Azure AD 条件访问）。 新 [Microsoft 365 管理中心](https://endpoint.microsoft.com)整合、简化并集成了管理员体验。 借助设备管理的专家工作区，可轻松访问组织所需的所有设备和应用管理信息和任务。 我们希望这能成为企业最终用户计算团队的主要云工作区。
 
 
 <!-- ########################## -->
