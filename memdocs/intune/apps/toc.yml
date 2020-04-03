@@ -26,6 +26,8 @@
     - name: 应用保护策略和工作配置文件 (Android)
       href: android-deployment-scenarios-app-protection-work-profiles.md
       displayName: app-we; without; without enrollment
+    - name: 在不使用 GMS 的情况下使用 Intune
+      href: manage-without-gms.md
     - name: MAM 常见问题
       href: mam-faq.md
 - name: 操作指南
