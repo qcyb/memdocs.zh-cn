@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220177"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438804"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
-了解 Microsoft Intune 每周新增功能。 还可以找到[重要通知](#notices)、[过去版本](whats-new-archive.md)，以及有关[如何发布 Intune 服务更新](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)的信息。 
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)了解 Microsoft Intune 每周新增功能。 还可以找到[重要通知](#notices)、[过去版本](whats-new-archive.md)，以及有关[如何发布 Intune 服务更新](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)的信息。 
 
 > [!Note]
 > 每个[每月更新](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)可能需要长达三天才能推出，顺序如下：
@@ -55,6 +55,59 @@ ms.locfileid: "80220177"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-30-2020"></a>2020 年 3 月 30 日当周
+
+### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Microsoft Endpoint Manager 管理中心的新 URL<!-- 3704810 -->
+为了与去年在 Ignite 发布的 Microsoft Endpoint Manager 公告保持一致，我们已将 Microsoft Endpoint Manager 管理中心（以前为 Microsoft 365 设备管理）的 URL 更改为 [https://endpoint.microsoft.com](https://endpoint.microsoft.com)。 旧的管理中心 URL ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) 将仍然有效，但我们建议你开始使用新 URL 访问 Microsoft Endpoint Manager 管理中心。
+
+有关详细信息，请参阅[使用 Microsoft Endpoint Manager 管理中心简化 IT 任务](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)。
+
+### <a name="app-management"></a>应用管理
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>对 macOS 设备的脚本支持（公共预览版）<!-- 4280361 wnready -->
+你将能够向 macOS 设备添加和部署脚本。 此支持扩展了你配置 macOS 设备的能力，让你不再限于使用 macOS 设备上的本机 MDM 功能进行配置。 有关详细信息，请参阅[在 Intune 中的 macOS 设备上使用 Shell 脚本](../apps/macos-shell-scripts.md)。
+
+<!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>2020 年 3 月 24 日当周
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>改进了在 Android 和 Android Enterprise 设备上创建设备限制配置文件时的用户界面体验<!-- 5841361 -->
+
+为 Android 或 Android Enterprise 设备创建配置文件时，将更新 Endpoint Management 管理中心中的体验。 此更改会影响以下设备配置文件（“设备”   >   “配置文件” >   “创建配置文件” >    选择“Android 设备管理员”或“Android Enterprise”平台）：
+
+- 设备限制：Android 设备管理员
+- 设备限制：Android Enterprise 设备所有者
+- 设备限制：Android Enterprise 工作配置文件
+
+有关可配置设备限制的详细信息，请参阅 [Android 设备管理员](../configuration/device-restrictions-android.md)和 [Android Enterprise ](../configuration/device-restrictions-android-for-work.md)。
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>改善了在 iOS/iPadOS 和 macOS 设备上创建配置文件时的用户界面体验<!-- 5569002 5568997 -->
+
+为 iOS 或 macOS 设备创建配置文件时，将更新 Endpoint Management 管理中心中的体验。 此更改会影响以下设备配置文件（“设备” > “配置文件” > “创建配置文件” >  选择“iOS/iPadOS”或“macOS”作为平台      ）：
+
+- 自定义：iOS/iPadOS、macOS
+- 设备功能：iOS/iPadOS、macOS
+- 设备限制：iOS/iPadOS、macOS
+- 终结点保护：macOS
+- 扩展：macOS
+- 首选项文件：macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>macOS 设备上设备功能中的“不在用户配置中显示”设置<!-- 6524869 -->
+
+在 macOS 设备上创建设备功能配置文件时，有一个新的“不在用户配置中显示”设置（“设备” > “配置文件” > “创建配置文件” > “适用于平台的 macOS”>“适用于配置文件的设备功能”>“登录项”）        。
+
+此功能在 macOS 设备上的“用户和组”登录项应用列表中设置应用的隐藏复选标记  。 现有配置文件将列表中的此设置显示为未配置。 若要配置此设置，管理员可以更新现有配置文件。
+
+当设置为“隐藏”时，将选中应用的隐藏复选框，并且用户无法更改它  。 用户登录到其设备后，它还会向用户隐藏应用。
+
+> [!div class="mx-imgBorder"]
+> ![用户在 Microsoft Intune 和 Endpoint Manager 中登录设备后，在 macOS 设备上隐藏应用](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+有关可以配置的设置的详细信息，请参阅 [macOS 设备功能设置](../configuration/macos-device-features-settings.md)。
+
+此功能适用于：
+
+- macOS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>2020 年 3 月 16 日当周（2003 服务版本）
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -183,7 +236,7 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 2. 在工作配置文件管理中注册
 3. 解决合规性问题 
  
-Google 将在新的 Android 版本中减少设备管理员支持，以便通过 Android Enterprise 实现更现代化、更丰富、更安全的设备管理。  Intune 将只能在 2020 年第二季度之前为运行 Android 10 及更高版本的设备管理员管理的 Android 设备提供完全支持。 在此之后，无法再对运行 Android 10 或更高版本的设备管理员管理的设备进行全面管理（Samsung 设备除外）。 特别是，受影响的设备将不会收到新的密码要求。 有关详细信息，请参阅此[通知](#decreasing-support-for-android-device-administrator)。
+Google 将在新的 Android 版本中减少设备管理员支持，以便通过 Android Enterprise 实现更现代化、更丰富、更安全的设备管理。  Intune 将只能在 2020 年第二季度之前为运行 Android 10 及更高版本的设备管理员管理的 Android 设备提供完全支持。 在此之后，无法再对运行 Android 10 或更高版本的设备管理员管理的设备进行全面管理（Samsung 设备除外）。 特别是，受影响的设备将不会收到新的密码要求。
 
 有关此设置的详细信息，请参阅[将 Android 设备从设备管理员移动到工作配置文件管理](../enrollment/android-move-device-admin-work-profile.md)。 
 
@@ -295,7 +348,11 @@ Microsoft 终结点管理器将 Configuration Manager 和 Intune 组合为单个
 你现在可以为以下远程操作发出批量命令：重启、重命名、Autopilot 重置、擦除和删除。 若要查看新的批量操作，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “所有设备” > “批量操作”    。
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>“所有设备”列改进了搜索、排序和筛选<!--6179023-->
-已改进“所有设备”列以获得更好的性能、搜索、排序和筛选功能。 有关详细信息，请参阅[此支持提示](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946)。
+已改进“所有设备”列以获得更好的性能、搜索、排序和筛选功能。 有关详细信息，请参阅[此支持提示](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946)。  
+
+### <a name="app-management"></a>应用管理  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改进了适用于 Android 的公司门户中的登录体验    
+我们即将更新适用于 Android 的公司门户应用中多个登录屏幕的布局，让用户体验更现代化、更简洁。 若要查看改进，请参阅[应用 UI 中的新增功能](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui)。
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>2020 年 2 月 24 日当周
@@ -405,7 +462,7 @@ Intune 现在提供了改进的报表体验，包括新的报表类型、更好�
 ### <a name="role-based-access-control"></a>基于角色的访问控制
 
 #### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>即将更改“Intune 角色”用户界面<!--5801612   -->
-[Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的用户界面  > “租户管理” > “角色”已改进为更易用的直观设计   。 此体验提供的设置和详细信息与你现在使用的相同，但是新体验采用类似于向导的过程。
+[Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的用户界面  > “租户管理” > “角色”已改进为更易用的直观设计   。 此体验提供的设置和详细信息与你现在使用的相同，但是新体验采用类似于向导的过程。
 
 <!-- ########################## -->
 ## <a name="week-of-february-17-2020"></a>2020 年 2 月 17 日当周
@@ -487,10 +544,10 @@ Microsoft Intune 现在支持适用于 Windows 10 的 Microsoft Edge（版本 77
 ### <a name="device-enrollment"></a>设备注册
 
 #### <a name="block-android-enrollments-by-device-manufacturer--5197392----"></a>阻止设备制造商进行 Android 注册<!--5197392  -->
-可以阻止设备按设备制造商进行注册。 此功能适用于 Android 设备管理员和 Android Enterprise 工作配置文件设备。 若要查看注册限制，请转到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)“设备” >   “注册限制” > “设备限制”  。
+可以阻止设备按设备制造商进行注册。 此功能适用于 Android 设备管理员和 Android Enterprise 工作配置文件设备。 若要查看注册限制，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)“设备” > “注册限制” > “设备限制”   。
 
 #### <a name="improvements-to-the-iosipados-create-enrollment-type-profile-ui---6055005---"></a>对 iOS/iPadOS 创建注册类型配置文件 UI 的改进<!-- 6055005 -->
-对于 iOS/iPadOS 用户注册，已简化“创建注册类型配置文件设置”页，   改进“注册类型”  选项进程，同时保持功能不变。 若要查看新 UI，请转到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备”   > “iOS”   > “iOS 注册”   > “注册类型”   > “创建配置文件”   > “设置”页  。 有关详细信息，请参阅[在 Intune 中创建用户注册配置文件](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune)。
+对于 iOS/iPadOS 用户注册，已简化“创建注册类型配置文件设置”页，   改进“注册类型”  选项进程，同时保持功能不变。 若要查看新 UI，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “iOS” > “iOS 注册” > “注册类型” > “创建配置文件” > “设置”页       。 有关详细信息，请参阅[在 Intune 中创建用户注册配置文件](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune)。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>设备管理

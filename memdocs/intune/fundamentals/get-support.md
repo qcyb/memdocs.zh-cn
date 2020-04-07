@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086027"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326945"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>如何获取对 Microsoft Intune 的支持
 
@@ -38,7 +38,7 @@ Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为
 
 ## <a name="help-and-support-experience"></a>帮助和支持体验
 
-可从 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)以及 Azure 门户中 Intune 下的所有边栏选项卡（或页面）获得 Intune 的帮助和支持体验。
+可从 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)以及 Azure 门户中 Intune 下的所有边栏选项卡（或页面）获得 Intune 的帮助和支持体验。
 
 “帮助和支持”体验与 [Microsoft 365 管理中心](https://admin.microsoft.com/)中显示的体验类似，并取代了之前的“帮助 + 支持”，对于 Azure 的其他服务它保持不变。  
 
@@ -64,9 +64,9 @@ Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为
   > [!NOTE]  
   > 若 Intune 的实例托管在政府的私有云（又称为主权云，如 Azure 政府）上，请参阅本文后续部分中的[政府私有云的 Intune 支持](#intune-support-for-private-cloud-for-government)。 直至明年才可在政府私有云上使用 Intune 帮助和支持体验  。
 
-- **从 Microsoft 终结点管理器管理中心**
+- **从 Microsoft Endpoint Manager 管理中心**
 
-  - 从“Microsoft 终结点管理器管理中心”的任何节点，选择“?”  图标，然后使用下拉列表选择想要获得相关帮助的管理类型。 “Microsoft 终结点管理器管理中心”支持以下管理类型，必须选择需要获得相关帮助的特定管理类型，如 Intune：
+  - 从 Microsoft Endpoint Manager 管理中心的任何节点，选择“?”  图标，然后使用下拉列表选择想要获得相关帮助的管理类型。 Microsoft Endpoint Manager 管理中心支持以下管理类型，必须选择需要获得相关帮助的特定管理类型，如 Intune：
 
     - Configuration Manager（包括桌面分析）
     - Intune

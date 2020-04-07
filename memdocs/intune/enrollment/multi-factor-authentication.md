@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec03d186b0b5d64b5b867cf413f477d9ded79e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2b645b41a721063ddfea6019d726a3c232c8dd78
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345099"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327013"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>对 Intune 设备注册要求多重身份验证
 
@@ -50,7 +50,7 @@ iOS/iPadOS、Android、Windows 8.1 或更高版本、Windows Phone 8.1、Windows
 >[!Important]
 >请勿为 Microsoft Intune 注册配置基于设备的访问规则  。
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “条件访问”   。 从 Intune 访问的条件访问节点与从 Azure AD 访问的节点相同   。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “条件访问”   。 从 Intune 访问的条件访问节点与从 Azure AD 访问的节点相同   。
 2. 选择“新策略”  。
 3. 在“新建”策略中，为策略键入描述性名称  。
 4. 在“分配”部分中，选择“用户和组”   。 

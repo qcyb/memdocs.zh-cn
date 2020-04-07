@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cec45dae7e0596428b2d7ab5c925889c183d465
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364586"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359410"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中使用适用于 iOS 和 iPadOS 设备的自定义设置
 
@@ -38,7 +38,7 @@ ms.locfileid: "79364586"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-[创建配置文件](device-profile-create.md)。
+[创建配置文件](custom-settings-configure.md)。
 
 ## <a name="what-you-need-to-know"></a>须知内容
 
@@ -57,14 +57,12 @@ ms.locfileid: "79364586"
 ## <a name="custom-configuration-profile-settings"></a>自定义配置文件设置
 
 - **自定义配置文件名称**：输入策略的名称。 此名称将在设备上和 Intune 状态中显示。
-- **配置的配置文件**：浏览到使用 Apple Configurator 或 Apple 配置文件管理器创建的配置文件。 文件的最大大小为 1000000 字节（不到 1 MB）。 已导入的文件显示在“文件内容”区域中  。
+- **配置的配置文件**：浏览到使用 Apple Configurator 或 Apple 配置文件管理器创建的配置文件。 文件的最大大小为 `1000000` 字节（不到 1 MB）。 已导入的文件显示在“文件内容”区域中  。
 
   还可以将设备令牌添加到自定义配置文件中。 设备令牌用于添加特定于设备的信息。 例如，若要显示序列号，请输入 `{{serialnumber}}`。 在设备上，显示的文本类似于每个设备的唯一 `123456789ABC`。 输入变量时，请务必使用大括号 `{{ }}`。 [应用配置令牌](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)包含可用变量的列表。 还可以使用 `deviceid` 或任何其他特定于设备的值。
 
   > [!NOTE]
   > 变量不在 UI 中进行验证，且区分大小写。 因此，可能会看到使用不正确输入保存的配置文件。 例如，如果输入 `{{DeviceID}}` 而不是 `{{deviceid}}`，则显示文本字符串而不是设备的唯一 ID。 请确保输入正确的信息。
-
-选择“确定”   > “创建”  以保存所做的更改。 此时，配置文件创建完成，并出现在配置文件列表中。
 
 ## <a name="next-steps"></a>后续步骤
 

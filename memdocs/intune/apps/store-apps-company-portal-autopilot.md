@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec131df32e06c1c43b8904dde732b4e6a17a91aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334192"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438757"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>为 Autopilot 预配的设备添加和分配 Windows 10 公司门户应用
 
@@ -52,9 +52,9 @@ ms.locfileid: "79334192"
 ## <a name="assign-the-company-portal-app"></a>分配公司门户应用
 
 1.  使用管理员帐户登录到  [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 
-2. 在右窗格中选择“应用” 选项卡 **** 。
-3. 在“按平台”下，选择“Windows” ****  。
-4. 选择“公司门户(脱机)” **** 。
+2. 在右窗格中选择“应用”选项卡  。
+3. 在“按平台”下，选择“Windows”   。
+4. 选择“公司门户(脱机)”  。
 5. 必须等待同步计划完成，或者从 Microsoft 终结点管理器管理中心执行手动同步。
 6. 将公司门户应用作为所需应用分配到你所选的 Autopilot 设备组。
 

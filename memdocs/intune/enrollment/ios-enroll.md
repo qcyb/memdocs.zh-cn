@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086117"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256447"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中注册 iOS/iPadOS 设备
 
@@ -52,23 +52,23 @@ Intune 管理员可以为 iOS/iPadOS 和 iPadOS 设备设置注册，以访问�
 
 对于为用户购买设备的组织，Intune 还支持以下公司拥有的 iOS/iPadOS 设备注册方法：
 
-- Apple 设备注册计划 (DEP)
+- Apple 的自动设备注册 (ADE)
 - Apple School Manager
 - Apple Configurator 设置助理注册
 - Apple Configurator 直接注册
 
 还可使用[设备注册管理器](device-enrollment-manager-enroll.md)帐户注册公司拥有的 iOS/iPadOS 设备。
 
-## <a name="device-enrollment-program"></a>设备注册程序
+## <a name="automated-device-enrollment"></a>自动设备注册
 
-组织可以通过 Apple 的设备注册计划 (DEP) 购买 iOS/iPadOS 设备。 DEP 允许用户通过“无线方式”部署注册配置文件以对设备进行管理。 有关详细信息，请参阅[设备注册计划](device-enrollment-program-enroll-ios.md)。
+组织可以通过 Apple 的自动设备注册 (ADE) 购买 iOS/iPadOS 设备。 ADE 允许用户通过“无线方式”部署注册配置文件以对设备进行管理。 有关详细信息，请参阅[设备注册计划](device-enrollment-program-enroll-ios.md)。
 
 ## <a name="user-enrollment"></a>用户注册
 与其他注册方法相比，用户注册为管理员提供部分管理选项。 有关详细信息，请参阅[用户注册支持的操作、密码和其他选项](ios-user-enrollment-supported-actions.md)和[设置 iOS/iPadOS 和 iPadOS 用户注册](ios-user-enrollment.md)。
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager 是适用于学校的设备购买和注册计划。 与 DEP 一样，用户可以部署一个配置文件以注册设备进行管理。 详细了解 [Apple School Manager](apple-school-manager-set-up-ios.md)。
+Apple School Manager 是适用于学校的设备购买和注册计划。 与 ADE 一样，用户可以部署一个配置文件以注册设备进行管理。 详细了解 [Apple School Manager](apple-school-manager-set-up-ios.md)。
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Apple School Manager 是适用于学校的设备购买和注册计划。 与 DEP
 
 详细了解 [Apple Configurator 注册](apple-configurator-enroll-ios.md)。
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>在注册了 DEP 或 Apple 配置器的设备上使用公司门户
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>在注册了 ADE 或 Apple Configurator 的设备上使用公司门户
 
 配置了用户关联的设备可以安装和运行公司门户应用，以下载应用和管理设备。 用户收到设备后，必须完成一些其他步骤，以便完成设置助理并安装公司门户应用。
 

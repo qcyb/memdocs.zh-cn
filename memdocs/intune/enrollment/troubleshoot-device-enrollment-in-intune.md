@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085862"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326999"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune 设备注册疑难解答
 
@@ -63,9 +63,9 @@ ms.locfileid: "80085862"
 
 通过下述步骤，检查确保向用户分配的设备数未超过上限：
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “注册限制” > “设备限制”    。 记下“设备限制”列中的值  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “注册限制” > “设备限制”    。 记下“设备限制”列中的值  。
 
-2. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“用户”   > “所有用户”  > 选择用户 >“设备”  。 记下设备的数量。
+2. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“用户” > “所有用户”> 选择用户 >“设备”    。 记下设备的数量。
 
 3. 如果用户注册的设备数已达到其设备限制，则在执行下述操作前无法再注册设备：
     - [删除现有设备](../remote-actions/devices-wipe.md)，或者
@@ -287,9 +287,9 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 注册后，设备将恢复到正常状态，并重新获得对公司资源的访问权限。
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>确认已启用 WS-Trust 1.3
-**问题** 无法注册设备注册计划 (DEP) iOS/iPadOS 设备
+**问题** 无法注册自动设备注册 (ADE) iOS/iPadOS 设备
 
-注册具有用户关联的 DEP 设备要求启用 WS-Trust 1.3 用户名/混合终结点以请求用户令牌。 默认情况下，Active Directory 启用此终结点。 若要获取已启用的终结点列表，请使用 Get-AdfsEndpoint PowerShell cmdlet 查找 trust/13/UsernameMixed 终结点。 例如：
+注册具有用户关联的 ADE 设备要求启用 WS-Trust 1.3 用户名/混合终结点以请求用户令牌。 默认情况下，Active Directory 启用此终结点。 若要获取已启用的终结点列表，请使用 Get-AdfsEndpoint PowerShell cmdlet 查找 trust/13/UsernameMixed 终结点。 例如：
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
@@ -340,7 +340,7 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 4. 告知用户重启注册过程。
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>确定 VPP 令牌是否存在问题
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌”>“令牌名称”>“配置文件”>“配置文件名称”>“管理” > “属性”        。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌”>“令牌名称”>“配置文件”>“配置文件名称”>“管理” > “属性”        。
 2. 查看属性，了解是否出现与以下情况类似的错误：
     - 此令牌已过期。
     - 此令牌超出公司门户许可范围。
@@ -350,13 +350,13 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 3. 修复此令牌的问题。
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>确定 VPP 令牌阻止了哪些设备
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS”>“iOS 注册” > “注册计划令牌”>“令牌名称”>“设备”      。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS”>“iOS 注册” > “注册计划令牌”>“令牌名称”>“设备”      。
 2. 按照“已阻止”筛选“配置文件状态”列   。
 3. 记下“已阻止”的所有设备的序列号  。
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>远程擦除已阻止设备
 修复 VPP 令牌的问题后，必须擦除已阻止的设备。
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “所有设备” > “列” > “序列号” > “应用”      。 
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “所有设备” > “列” > “序列号” > “应用”      。 
 2. 对于每个已阻止设备，请在“所有设备”列表中选择该设备，然后依次选择“擦除” > “确认”    。
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>告知用户重启注册过程
@@ -380,7 +380,7 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 - 如果组织启用了阻止个人 macOS 设备的注册限制，则必须手动[添加个人设备的序列号](corporate-identifiers-add.md#manually-enter-corporate-identifiers)到 Intune。  
 - 如果设备仍分配给 Intune 中的其他用户，则其前所有者未使用公司门户应用来删除或重置它。 从 Intune 清除陈旧的设备记录：  
 
-    1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，使用管理凭据登录。
+    1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，使用管理凭据登录。
     2. 选择“设备” > “所有设备”   。  
     3. 查找存在注册问题的设备。 按设备名称或 MAC/HW 地址搜索以缩小结果范围。
     4. 选择“设备”>“删除”  。 删除与设备关联的所有其他条目。  

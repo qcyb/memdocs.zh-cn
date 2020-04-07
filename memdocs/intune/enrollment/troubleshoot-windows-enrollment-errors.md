@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526268"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326870"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 中的 Windows 设备注册问题疑难解答
 
@@ -41,7 +41,7 @@ ms.locfileid: "79526268"
 - 有多少用户受到影响？ 是所有用户都受影响还是仅仅一部分用户受影响？
 - 有多少设备受到影响？ 是所有设备都受影响还是仅仅一部分设备受影响？
 - 什么是 MDM 机构？
-- 如何执行注册？ 是“自带设备”(BYOD) 还是带有注册配置文件的 Apple 设备注册计划 (DEP)？
+- 如何执行注册？ 是“自带设备”(BYOD) 还是带有注册配置文件的 Apple 自动设备注册划 (ADE)？
 
 ## <a name="error-messages"></a>错误消息
 
@@ -75,7 +75,7 @@ ms.locfileid: "79526268"
  
 
 ##### <a name="check-device-type-restrictions"></a>查看设备类型限制
-1. 使用全局管理员帐户登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 使用全局管理员帐户登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 转到“设备”   > “注册限制”  ，然后在“设备类型限制”  下选择“默认”  限制。    
 3. 选择“平台”  ，然后针对“Windows (MDM)”选择“允许”   。
 
@@ -141,7 +141,7 @@ ms.locfileid: "79526268"
 若要解决此问题，请使用下列方法之一： 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>向用户分配有效的许可证
-转到 [Microsoft 365 管理中心](https://portal.office.com/adminportal/home)，然后向用户分配 Intune 或 Office 365 许可证。
+转到 [Microsoft 365 管理中心](https://admin.microsoft.com)，然后向用户分配 Intune 或 Office 365 许可证。
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>更正 MDM 使用条款 URL
   1. 登录到 [Azure 门户](https://portal.azure.com/)，然后选择“Azure Active Directory”  。    
@@ -201,7 +201,7 @@ ms.locfileid: "79526268"
 #### <a name="resolution"></a>解决方法
 若要在独立 Intune 环境中解决此问题，请执行以下步骤： 
  
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “注册限制”  ，然后选择设备类型限制。    
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “注册限制”  ，然后选择设备类型限制。    
 2. 选择“属性”   > “编辑”  （在“平台设置”  旁边），针对“Windows (MDM)”选择“允许”   。    
 3. 单击“查看 + 保存”  。    
 
@@ -326,7 +326,7 @@ Registering your device for mobile management (Previous step failed)
 
 #### <a name="resolution"></a>解决方法
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 设备”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 设备”    。
 2. 选择遇到问题的设备，然后单击最右侧的省略号 (…)。
 3. 选择“取消分配用户”  并等待该过程完成。
 4. 重新尝试 OOBE 之前，请确保已分配混合 Azure AD Autopilot 配置文件。

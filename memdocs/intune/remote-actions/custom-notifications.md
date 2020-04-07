@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220245"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325316"
 ---
 # <a name="send-custom-notifications-in-intune"></a>使用 Intune 发送自定义通知
 
@@ -89,7 +89,7 @@ ms.locfileid: "80220245"
 
 ## <a name="send-a-custom-notification-to-groups"></a>向组发送自定义通知
 
-1. 使用有权创建和发送通知的帐户登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后转至“租户管理” > “自定义通知”   。  
+1. 使用有权创建和发送通知的帐户登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后转至“租户管理” > “自定义通知”   。  
 
 2. 在“基本信息”选项卡上，指定以下各项，然后选择“下一步”以继续  。  
    - **标题** - 指定此通知的标题。 标题最多允许 50 个字符。  
@@ -109,7 +109,7 @@ Intune 不会跟踪你发送的自定义通知，并且设备不会在设备的�
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>向单个设备发送自定义通知
 
-1. 使用可以创建和发送通知的帐户登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后转至“设备”   > “所有设备”  。
+1. 使用可以创建和发送通知的帐户登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后转至“设备” > “所有设备”   。
 
 2. 双击要向其发送通知的受管理设备的名称，以打开该设备的“概述”  页。
 

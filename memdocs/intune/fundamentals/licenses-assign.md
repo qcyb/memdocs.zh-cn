@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03f3e89b8fe1872b323459e3c0da34f3029a7e9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358788"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326777"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>向用户分配许可证，以便他们能够在 Intune 中注册设备
 
@@ -30,11 +30,11 @@ ms.locfileid: "79358788"
 > [!NOTE]
 > 如果已向用户分配 Intune 应用保护策略但他们未将其设备注册到 Microsoft Intune，他们也需要获得 Intune 许可证以接收策略。
 
-## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>在 Microsoft 终结点管理器管理中心中分配 Intune 许可证
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>在 Microsoft Endpoint Manager 管理中心中分配 Intune 许可证
 
-可以使用 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)手动添加基于云的用户并将许可证分配给基于云的用户帐户和从本地 Active Directory 同步到 Azure AD 的帐户。
+可以使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)手动添加基于云的用户并将许可证分配给基于云的用户帐户和从本地 Active Directory 同步到 Azure AD 的帐户。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“用户”   > “所有用户”> 选择用户 >“许可证”    > “分配”。 
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“用户” > “所有用户”> 选择用户 >“许可证” > “分配”     。
 
 2. 依次选择“Intune”框   > “保存”。 
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2883add5a3dbba274201bfeebb7960a312e33da
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354225"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323191"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>使用 Intune 设置基于应用的条件访问策略
 
@@ -38,11 +38,11 @@ ms.locfileid: "79354225"
 
 条件访问是一项 Azure Active Directory (Azure AD) 技术。 从 Intune  访问的条件访问节点与从 Azure AD  访问的节点相同。 因为节点相同，无需在 Intune 和 Azure AD 之间切换即可配置策略。
 
-你必须具有 Azure AD Premium 许可证，然后才能从 Microsoft 终结点管理器管理中心创建条件访问策略。
+你必须具有 Azure AD Premium 许可证，然后才能从 Microsoft Endpoint Manager 管理中心创建条件访问策略。
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>创建基于应用的条件访问策略
 
-1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. 选择“终结点安全”   > “条件访问”   > “新策略”  。
 

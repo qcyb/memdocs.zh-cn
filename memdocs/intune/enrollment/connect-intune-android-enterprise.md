@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f062f27dfd19f8bde58c86d8bd782aae91dded3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339470"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327169"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>将 Intune 帐户连接到托管的 Google Play 帐户
 
@@ -42,7 +42,7 @@ Intune 将自动向 Intune 管理控制台添加四个常见的与 Android Enter
 > 因为 Google 和 Microsoft 域之间的交互，此步骤可能需要你调整浏览器设置。  请确保“portal.azure.com”和“play.google.com”在浏览器中位于同一安全区域。
 
 1. 如果你尚未准备就绪，请将[移动设备管理机构设置](../fundamentals/mdm-authority-set.md)为“Microsoft Intune”  。
-2. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备”   > “Android”   > “Android 注册”   > “托管的 Google Play”  。  如果使用的是自定义 Intune 管理员角色，则访问此角色需要组织读取和更新权限。
+2. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “Android” > “Android 注册” > “托管的 Google Play”     。  如果使用的是自定义 Intune 管理员角色，则访问此角色需要组织读取和更新权限。
    
    ![Android 企业注册屏幕](./media/connect-intune-android-enterprise/android-work-bind.png)
 
@@ -63,7 +63,7 @@ Intune 将自动向 Intune 管理控制台添加四个常见的与 Android Enter
 
 可以关闭 Android Enterprise 注册和管理。 为此，必须先停用所有已注册的 Android Enterprise 设备，包括工作配置文件设备、专用设备和完全托管的设备。 然后，在 Intune 管理控制台中选择“断开连接”，从注册中删除所有已注册的 Android Enterprise 工作配置文件设备、专用设备和完全托管的设备  。 此操作还会删除托管的 Google Play 帐户与 Intune 之间的关系。
 
-1. 以 Intune 管理员身份登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 以 Intune 管理员身份登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备” > “Android” > “Android 注册” > “托管的 Google Play” > “断开连接”      。
 3. 选择“是”可从 Intune 断开连接并取消注册所有 Android 企业设备  。
 

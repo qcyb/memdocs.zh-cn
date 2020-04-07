@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d9b147a9a2c201cde798abcee30a212176cf268
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338040"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325086"
 ---
 # <a name="turn-on-iosipados-supervised-mode"></a>开启 iOS/iPadOS 监督模式
 
@@ -37,7 +37,7 @@ Apple iOS/iPadOS 监督模式为管理员提供更多用于管理 Apple 设备�
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>在注册过程中启用监督模式
 
-在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，如果已[在 DEP 中创建 Apple 注册配置文件](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)，则可为设备启用监督模式。 在“设备管理设置”下  ，勾选“监督”  框。
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，如果已[在 DEP 中创建 Apple 注册配置文件](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)，则可为设备启用监督模式。 在“设备管理设置”下  ，勾选“监督”  框。
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>在注册后启用监督模式
 

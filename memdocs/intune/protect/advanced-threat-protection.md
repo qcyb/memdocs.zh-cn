@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085199"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323292"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>使用 Intune 中的条件访问强制执行 Microsoft Defender ATP 的符合性
 
@@ -86,7 +86,7 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
     3. 选择“保存首选项”  。
 
-4. 返回到 Microsoft 终结点管理器管理中心的“Microsoft Defender ATP”  。 在“MDM 符合性策略设置”  下，将“Windows 设备版本 10.0.15063 及更高版本连接到 Microsoft Defender ATP”  设置为“启用”  。
+4. 返回到 Microsoft Endpoint Manager 管理中心的“Microsoft Defender ATP”  。 在“MDM 符合性策略设置”  下，将“Windows 设备版本 10.0.15063 及更高版本连接到 Microsoft Defender ATP”  设置为“启用”  。
 
 5. 选择“保存”  。
 
@@ -162,7 +162,7 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 条件访问策略阻止设备访问超过合规性策略中设置的威胁级别的资源。 可以阻止设备访问公司资源，如 SharePoint 或 Exchange Online。
 
 > [!TIP]
-> 条件访问是一项 Azure Active Directory (Azure AD) 技术。 从 Microsoft 终结点管理器管理中心访问的条件访问节点与从 Azure AD  访问的节点相同。
+> 条件访问是一项 Azure Active Directory (Azure AD) 技术。 从 Microsoft Endpoint Manager 管理中心访问的条件访问节点与从 Azure AD 访问的节点相同  。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d391bf08d963e26dd91607d7dad0347e77d130ed
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 52d69b851b67d0a230e71d8aaa6b60b5cb7b2b8d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361934"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325691"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理通过 Apple Volume Purchase Program 购买的 iOS 和 macOS 应用
 
@@ -88,7 +88,7 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 2. 在继续前，请确保组织内的所有 VPP 购买者都已完成步骤 1。
 3. 验证所有购买的应用和许可证是否均已迁移到 Apple Business Manager 或 Apple School Manager 中的应用和书籍。
 4. 转到“Apple Business（或 School）Manager”   > “设置”   > “应用和书籍”   > “我的服务器令牌”  下载新位置令牌。
-5. 若要在 Microsoft 终结点管理器管理中心更新位置令牌，请转到“租户管理”   > “连接器和令牌”   > “Apple VPP 令牌”  并同步令牌。
+5. 若要在 Microsoft Endpoint Manager 管理中心更新位置令牌，请转到“租户管理” > “连接器和令牌” > “Apple VPP 令牌”并同步令牌    。
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>上传 Apple VPP 或位置令牌
 

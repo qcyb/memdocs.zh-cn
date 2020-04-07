@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086966"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359392"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
@@ -33,7 +33,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 ## <a name="before-you-begin"></a>在开始之前
 
-[创建 iOS/iPadOS 设备配置文件](device-features-configure.md)。
+[创建 iOS/iPadOS 设备功能配置文件](device-features-configure.md)。
 
 > [!NOTE]
 > 这些设置适用于不同的注册类型，其中一些设置应用于所有注册选项。 有关不同注册类型的详细信息，请参阅 [iOS/iPadOS 注册](../enrollment/ios-enroll.md)。
@@ -113,11 +113,13 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 在下面的示例中，程序坞屏幕仅显示“Safari”、“邮件”和“股市”应用。 “邮件”应用被选为显示自己的属性：
 
-![示例 iOS/iPadOS 程序坞设置](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![示例 iOS/iPadOS 程序坞设置](./media/ios-device-features-settings/FfFiUcP.png)
 
 在你向 iPhone 分配策略后，程序坞如下图所示：
 
-![iPhone 上的示例 iOS/iPadOS 程序坞布局](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![iPhone 上的示例 iOS/iPadOS 程序坞布局](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### <a name="pages"></a>页面
 
@@ -158,11 +160,13 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 在下面的示例中，添加了名为“Contoso”  的新页面。 此页面显示“查找朋友”和“设置”应用。 “设置”应用被选为显示自己的属性：
 
-![Intune 中的 iOS/iPadOS 主屏幕设置示例](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![Intune 中的 iOS/iPadOS 主屏幕设置示例](./media/ios-device-features-settings/Jc2OxyX.png)
 
 在你向 iPhone 分配策略后，页面如下图所示：
 
-![Intune 中已修改主屏幕的 iOS/iPadOS 设备](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![Intune 中已修改主屏幕的 iOS/iPadOS 设备](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>应用通知
 
@@ -170,15 +174,16 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 - **添加**：添加应用通知：
 
-    ![在 Intune 中的 iOS/iPadOS 配置文件内添加应用通知](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![在 Intune 中的 iOS/iPadOS 配置文件内添加应用通知](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **应用捆绑 ID**：输入要添加的应用的“应用捆绑 ID”  。 有关示例，请参阅[内置 iOS/iPadOS 应用的捆绑 ID](bundle-ids-built-in-ios-apps.md)。
-  - **应用名称**：输入要添加的应用的名称。 此名称用于在 Microsoft 终结点管理器管理中心内的引用。 它不  会显示在设备上。
-  - **发布者**：输入要添加的应用的发布者。 此名称用于在 Microsoft 终结点管理器管理中心内的引用。 它不  会显示在设备上。
-  - **通知**：选择“启用”  或“禁用”  可启用或禁用应用向设备发送通知。
+  - **应用名称**：输入要添加的应用的名称。 此名称用于在 Microsoft 终结点管理器管理中心内的引用。 它不会显示在设备上  。
+  - **发布者**：输入要添加的应用的发布者。 此名称用于在 Microsoft 终结点管理器管理中心内的引用。 它不会显示在设备上  。
+  - **通知**：选择“启用”或“禁用”可启用或禁用应用向设备发送通知   。
     - **在通知中心内显示**：选择“启用”  可允许应用在设备通知中心内显示通知。 选择“禁用”  可阻止应用在设备通知中心内显示通知。
-    - **在锁定屏幕中显示**：选择“启用”  可允许应用在设备锁定屏幕中显示通知。 选择“禁用”  可阻止应用在锁定屏幕中显示通知。
-    - **警报类型**：选择在设备解锁后的通知显示方式。 选项包括：
+    - **在锁定屏幕中显示**：选择“启用”可在设备锁定屏幕上显示应用通知  。 选择“禁用”  可阻止应用在锁定屏幕中显示通知。
+    - **警报类型**：解锁设备后，选择通知的显示方式。 选项包括：
       - **无**：不显示通知。
       - **横幅**：短暂显示包含通知的横幅。
       - **模式**：显示通知，并且用户必须先手动关闭通知，然后才能继续使用设备。
@@ -213,11 +218,12 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
   - **用户主体名称**：UPN 分析方式如下：
 
-    ![Intune 中的 iOS/iPadOS 用户名 SSO 属性](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![Intune 中的 iOS/iPadOS 用户名 SSO 属性](./media/ios-device-features-settings/User-name-attribute.png)
 
     还可以使用在“领域”文本框中键入的文本覆盖该领域  。
 
-    例如，Contoso 有多个区域，包括欧洲、亚洲和北美。 Contoso 希望亚洲用户使用 SSO，且应用要求采用 `username@asia.contoso.com` 格式的 UPN。 在你选择“用户主体名称”  后，系统从 Azure AD 中获取每个用户的领域，即 `contoso.com`。 因此，对于亚洲用户，选择“用户主体名称”  ，再输入“`asia.contoso.com`”。 最终用户的 UPN 变成 `username@asia.contoso.com`，而不是 `username@contoso.com`。
+    例如，Contoso 有多个区域，包括欧洲、亚洲和北美。 Contoso 希望亚洲用户使用 SSO，且应用要求采用 `username@asia.contoso.com` 格式的 UPN。 在你选择“用户主体名称”  后，系统从 Azure AD 中获取每个用户的领域，即 `contoso.com`。 因此，对于亚洲用户，选择“用户主体名称”  ，再输入“`asia.contoso.com`”。 用户的 UPN 变成 `username@asia.contoso.com`，而不是 `username@contoso.com`。
 
   - **Intune 设备 ID**：Intune 自动选择 Intune 设备 ID。
 
@@ -240,7 +246,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
   `http://.com` 和 `https://.com` 模式分别匹配所有 HTTP 和 HTTPS URL。
 
-- **使用单一登录的应用**：在最终用户的设备上添加  可使用单一登录的应用。
+- **使用单一登录的应用**：在用户设备上添加可使用单一登录的应用  。
 
   `AppIdentifierMatches` 数组必须包含与应用捆绑 ID 匹配的字符串。 这些字符串可以是完全匹配项（如 `com.contoso.myapp`），也可以使用 \* 通配符输入捆绑 ID 的前缀匹配项。 通配符必须位于句点字符 (.) 后面，并只能在字符串末尾出现一次（如 `com.contoso.*`）。 如果包括通配符，则程序包 ID 以前缀开头的任何应用都将被授予对帐户的访问权限。
 
@@ -263,13 +269,13 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
     - **屏蔽的 URL**：添加  要阻止打开的 URL，无论 Apple Web 筛选器设置如何。
 
-  - **仅特定网站**（仅适用于 Safari Web 浏览器）：这些 URL 会添加到 Safari 浏览器的书签中。 用户只能  访问这些网站；无法打开其他任何网站。 仅在知道用户可以访问的 URL 的确切列表时使用此选项。
+  - **仅特定网站**（仅适用于 Safari Web 浏览器）：这些 URL 会添加到 Safari 浏览器的书签中。 用户只能访问这些网站；无法打开其他任何网站  。 仅在知道用户可以访问的 URL 的确切列表时使用此选项。
 
     - **URL**：输入要允许的网站的 URL。 例如，输入 `https://www.contoso.com`。
     - **书签路径**：Apple 更改了此设置。 所有书签都将进入“已批准的站点”  文件夹。 书签不会进入你输入的书签路径。
     - **标题**：输入书签的描述性标题。
 
-    如果未输入任何 URL，最终用户无法访问任何网站（`microsoft.com`、`microsoft.net` 和 `apple.com` 除外）。 Intune 自动允许这些 URL。
+    如果未输入任何 URL，则用户无法访问任何网站（`microsoft.com`、`microsoft.net` 和 `apple.com` 除外）。 Intune 自动允许这些 URL。
 
 ## <a name="single-sign-on-app-extension"></a>单一登录应用扩展
 
@@ -282,10 +288,10 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 - **SSO 应用扩展类型**：选择 SSO 应用扩展的类型。 选项包括：
 
-  - **未配置**：不使用应用扩展。 若要禁用应用扩展，可将 SSO 应用扩展类型切换为“未配置”  。
+  - **未配置**：Intune 不会更改或更新此设置。 默认情况下，OS 可能不使用应用扩展。 若要禁用应用扩展，可将 SSO 应用扩展类型切换为“未配置”  。
   - **重定向**：使用通用的可自定义重定向应用扩展，通过新式身份验证流使用 SSO。 确保你知道组织应用扩展的扩展 ID。
 
-    在 iOS/iPadOS 13.0 以上的设备上，可以使用此重定向 SSO 应用扩展类型配置 Microsoft Azure AD SSO 应用扩展  。 借助 Microsoft Azure AD 扩展，可以在使用 Azure AD 进行身份验证的 Microsoft 应用和组织应用之间进行单一登录。 Azure AD 扩展充当高级身份验证代理，可改进安全性和最终用户体验。 此前使用 Microsoft Authenticator 应用进行中转身份验证的所有应用都将继续获取具有 SSO 扩展的 SSO。 Azure AD SSO 扩展尚不支持浏览器 SSO。 有关 SSO 和 iOS/iPadOS 身份验证代理的更多信息，请参阅[在 macOS 和 iOS/iPadOS 上配置 SSO](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)。  
+    在 iOS/iPadOS 13.0 以上的设备上，可以使用此重定向 SSO 应用扩展类型配置 Microsoft Azure AD SSO 应用扩展  。 借助 Microsoft Azure AD 扩展，可以在使用 Azure AD 进行身份验证的 Microsoft 应用和组织应用之间进行单一登录。 Azure AD 扩展充当高级身份验证代理，可改进安全性和用户体验。 此前使用 Microsoft Authenticator 应用进行中转身份验证的所有应用都将继续获取具有 SSO 扩展的 SSO。 Azure AD SSO 扩展尚不支持浏览器 SSO。 有关 SSO 和 iOS/iPadOS 身份验证代理的更多信息，请参阅[在 macOS 和 iOS/iPadOS 上配置 SSO](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)。  
 
     **要配置 iOS Microsoft Azure AD 扩展：**
 
@@ -344,9 +350,9 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
   - **添加**：选择此项可添加配置密钥。
 
-- **密钥链用法**（仅用于“Kerberos”）：选择“阻止”，防止密码被保存和存储在密钥链中  。 如果被阻止，系统不会提示用户保存其密码，并且用户在 Kerberos 票证过期时需要重新输入密码。 如果选择“未配置”  （默认设置），则允许保存密码并将其存储在密钥链中。 票证过期时，系统不会提示用户重新输入其密码。
-- **Face ID、Touch ID 或密码**（仅用于“Kerberos”）：如果选择“需要”，则强制用户在需要凭据以刷新 Kerberos 票证时输入其 Face ID、Touch ID 或设备密码  。 “未配置”（默认）不需要用户使用生物特征或设备密码来刷新 Kerberos 票证  。 如果“密钥链用法”被阻止，则此设置不适用  。
-- **默认领域**（仅用于“Kerberos”）：选择“启用”可将输入的“领域”值设置为默认领域   。 如果选择“未配置”  （默认设置），则不设置默认领域。
+- **密钥链用法**（仅用于“Kerberos”）：设置为“阻止”可阻止在密钥链中保存和存储密码  。 如果被阻止，系统不会提示用户保存其密码，并且用户在 Kerberos 票证过期时需要重新输入密码。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许保存密码并将其存储在密钥链中。 票证过期时，系统不会提示用户重新输入其密码。
+- **Face ID、Touch ID 或密码**（仅用于“Kerberos”）：如果选择“需要”，则强制用户在需要凭据以刷新 Kerberos 票证时输入其 Face ID、Touch ID 或设备密码  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能不需要用户使用生物特征或设备密码来刷新 Kerberos 票证。 如果“密钥链用法”被阻止，则此设置不适用  。
+- **默认领域**（仅用于“Kerberos”）：选择“启用”可将入的“领域”值设置为默认领域   。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能未设置默认领域。
 
   > [!TIP]
   > - 如果要在组织中配置多个 Kerberos SSO 应用扩展，请“启用”  此设置。
@@ -372,7 +378,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>设置适用范围：自动设备注册（监督）
 
 - **壁纸显示位置**：选择要在设备上显示图像的位置。 选项包括：
-  - **未配置**：自定义图像不会添加到设备。 设备使用操作系统默认图像。
+  - **未配置**：Intune 不会更改或更新此设置。 自定义图像不会添加到设备。 默认情况下，OS 可能会设置自己的映像。
   - **锁定屏幕**：向锁定屏幕添加图像。
   - **主屏幕**：向主屏幕添加图像。
   - **锁定屏幕和主屏幕**：在锁定屏幕和主屏幕上使用相同的图像。

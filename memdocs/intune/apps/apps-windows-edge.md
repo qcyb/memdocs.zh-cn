@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1ef0c2c4b7fdd7bb25fcb0237eb68485f1be701
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340172"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401340"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>将 Microsoft Edge for Windows 10 添加到 Microsoft Intune
 
@@ -38,7 +38,7 @@ ms.locfileid: "79340172"
 
 ## <a name="prerequisites"></a>必备条件
 
-- 需要 Windows 10 RS2 及更高版本。
+- Windows 10 版本 1703 或更高版本。
 - 用户上下文中适用于所有通道的任何预安装的 Microsoft Edge 版本 77 及更高版本都将被系统上下文中安装的 Edge 覆盖  。
 
 ## <a name="configure-the-app-in-intune"></a>在 Intune 中配置应用

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0ffd06d86106b07224edc40aefc7407673a0391
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526251"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326683"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>对分布式 IT 使用基于角色的访问控制 (RBAC) 和范围标记
 
@@ -43,14 +43,14 @@ ms.locfileid: "79526251"
 
 ## <a name="to-create-a-scope-tag"></a>创建作用域标记
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “作用域(标记)” > “创建”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “作用域(标记)” > “创建”     。
 2. 在“基本信息”页上，提供“名称”和可选“说明”    。 选择“下一步”  。
 3. 在“分配”页面上，选择包含要分配此作用域标记的设备的组  。 选择“下一步”  。
 4. 在“查看 + 创建”页上，选择“创建”   。
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>向角色分配作用域标记
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色”> 选择角色 >“分配” > “分配”      。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色”> 选择角色 >“分配” > “分配”      。
 2. 在“基本信息”页上，提供分配名称和说明    。 选择“下一步”  。
 3. 在“管理组”页面上，选择“选择要包含的组”，然后选择要作为此分配一部分的组   。 此组中的用户将具有管理作用域（组）中的用户/设备的权限。 选择“下一步”  。
 
@@ -70,7 +70,7 @@ ms.locfileid: "79526251"
 
 对于支持作用域标记的对象，作用域标记通常出现在“属性”下  。 例如，若要将作用域标记分配给配置配置文件，请执行以下步骤：
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “配置文件”>“选择配置文件”   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “配置文件”> 选择配置文件   。
 
 2. 选择“属性” > “范围(标记)” > “编辑” > “选择作用域标记”> 选择要添加到配置文件的标记     。 最多可以为对象分配 100 个范围标记。
 4. 选择“选择” > “查看 + 保存”   。

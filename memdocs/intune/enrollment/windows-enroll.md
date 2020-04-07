@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220143"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326913"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>设置 Windows 设备的注册
 
@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com 是用于注册的首选 FQDN，但�
 不支持使用 CNAME 配置以外的方法。 例如，不支持使用代理服务器将 enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc 重定向到 enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc 或 manage.microsoft.com/EnrollmentServer/Discovery.svc。
 
 **步骤 2：验证 CNAME**（可选）<br>
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “CNAME 验证”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “CNAME 验证”     。
 2. 在“域”框中，输入公司网站，然后选择“测试”   。
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>告知用户如何注册 Windows 设备

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9921fb9e22b17a47c588dfcbfbf502e00ef2aadd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 200bde56a4a1e77ce78678eddd35537c04dfa514
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349870"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325496"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>教程：保护托管设备上的 Exchange Online 电子邮件
 
@@ -49,7 +49,7 @@ ms.locfileid: "79349870"
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 
-以[全局管理员](../fundamentals/users-add.md#types-of-administrators)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
+以[全局管理员](../fundamentals/users-add.md#types-of-administrators)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
 
 ## <a name="create-the-ios-device-compliance-policy"></a>创建 iOS 设备符合性策略
 

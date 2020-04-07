@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 651ab8488503594a9e6cf82af1731ca31c8035ed
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362181"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326769"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>设置移动设备管理机构
 
@@ -44,7 +44,7 @@ ms.locfileid: "79362181"
 
 如果尚未设置 MDM 权限，请执行以下步骤。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择橙色横幅，打开“移动设备管理机构”  设置。 如果尚未设置 MDM 机构，则仅显示橙色横幅。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择橙色横幅，打开“移动设备管理机构”设置  。 如果尚未设置 MDM 机构，则仅显示橙色横幅。
 2. 在“移动设备管理机构”下，从以下选项中选择你的 MDM 机构  ：
    - Intune MDM 机构 
    - **无**

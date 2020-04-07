@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220213"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488184"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教程：通过云使用 ADMX 模板和 Microsoft Intune 为 Windows 10 相关设备配置组策略
 
@@ -39,7 +39,7 @@ ADMX 模板可用于以下服务：
 
 有关 ADMX 策略的详细信息，请参阅[了解支持 ADMX 的策略](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)。
 
-在 Microsoft Intune 中，这些模板内置于 Intune 服务中，可用作管理模板配置文件  。 在此配置文件中，你可以配置要包含的设置，然后将此配置文件“分配”给相关设备。
+这些模板内置于 Microsoft Intune 中，可用作管理模板配置文件  。 在此配置文件中，你可以配置要包含的设置，然后将此配置文件“分配”给相关设备。
 
 在本教程中，你将：
 
@@ -68,7 +68,7 @@ ADMX 模板可用于以下服务：
 
 - 在本地 Active Directory 域控制器 (DC) 上：
 
-  1. 将以下 Office 和 Microsoft Edge 模板复制到[中央存储（SYSVOL 文件夹）](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra)：
+  1. 将以下 Office 和 Microsoft Edge 模板复制到[中央存储（sysvol 文件夹）](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra)：
 
       - [Office 管理模板](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Microsoft Edge 管理模板 > 策略文件](https://www.microsoftedgeinsider.com/en-us/enterprise)
@@ -78,7 +78,9 @@ ADMX 模板可用于以下服务：
       - 使用这些模板创建的组策略称为 **OfficeandEdge**。 你将在映像中看到此名称。
       - 我们使用的 Windows 10 Enterprise 管理员计算机称为**管理员计算机**。
 
-      在某些组织中，域管理员有两个帐户：一个典型的域工作帐户和一个仅用于域管理员任务（例如组策略）的其他域管理员帐户。
+      在某些组织中，域管理员有两个帐户：  
+        - 典型的域工作帐户
+        - 仅用于域管理员任务（如组策略）的其他域管理员帐户
 
       此管理员计算机用于让管理员使用其域管理员帐户登录，并使用专为管理组策略而设计的工具  。
 
@@ -123,7 +125,7 @@ ADMX 模板可用于以下服务：
 
 在 Intune 中，策略将应用于你创建的用户和组。 不存在层次结构。 如果两个策略更新相同的设置，则该设置将显示为冲突。 如果两个合规性策略发生冲突，则应用其中较严格的策略。 如果两个配置文件发生冲突，则不会应用此设置。 有关详细信息，请参阅[设备策略和配置文件的常见疑问、问题和解决方案](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied)。
 
-在接下来的这些步骤中，你将创建安全组，并将用户添加到该组。 可以将一名用户添加到多个组。 例如，一名用户拥有多台设备（例如用于工作的 Surface Pro 和用于个人的 Android 移动设备）是正常的。 而且，通常人们可以从这些多台设备访问组织资源。
+接下来的这些步骤将创建安全组，并将用户添加到这些组。 可以将一名用户添加到多个组。 例如，一名用户拥有多台设备（例如用于工作的 Surface Pro 和用于个人的 Android 移动设备）是正常的。 而且，通常人们可以从这些多台设备访问组织资源。
 
 1. 在终结点管理器管理中心，选择“组” > “新建组”   。
 
@@ -235,10 +237,20 @@ ADMX 模板可用于以下服务：
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
 5. 选择“下一步”  。
-6. 在“配置设置”的下拉列表中，选择“所有产品”   。 会显示所有设置。 在这些设置中，请注意以下属性：
+6. 在“配置设置”中，适用于设备（“计算机配置”）的设置和适用于用户（“用户配置”）的设置    ：
 
-    - 策略路径  与组策略管理或 GPEdit 相同。
-    - 设置适用于用户或设备。
+    > [!div class="mx-imgBorder"]
+    > ![将 ADMX 模板设置应用于 Microsoft Intune 终结点管理器中的用户和设备](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. 展开“计算机配置” > “Microsoft 边缘”>选择“SmartScreen 设置”    。 请注意策略的路径和所有可用设置：
+
+    > [!div class="mx-imgBorder"]
+    > ![请查看 Microsoft Intune 中 ADMX 模板中的 Microsoft Edge SmartScreen 策略设置](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. 在“搜索”中，输入“下载”  。 请注意，已筛选策略设置：
+
+    > [!div class="mx-imgBorder"]
+    > ![筛选 Microsoft Intune ADMX 模板中的 Microsoft Edge SmartScreen 策略设置](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>打开组策略管理
 
@@ -251,10 +263,10 @@ ADMX 模板可用于以下服务：
     此应用将与“RSAT:  组策略管理工具”一起安装，你可以选择在 Windows 上安装该工具。 （本文中的）[先决条件](#prerequisites)列出了安装此功能的步骤。
 
 2. 展开“域”> 选择你的域  。 例如，选择“contoso.net”  。
-3. 右键单击“OfficeandEdge”策略 >“编辑”   。 这将打开组策略管理编辑器应用。
+3. 右键单击“OfficeandEdge”策略 >“编辑”   。 将打开组策略管理编辑器应用。
 
     > [!div class="mx-imgBorder"]
-    > ![右键单击 Office 和 Edge ADMX 组策略，然后选择“编辑”](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![右键单击 Office 和 Microsoft Edge ADMX 组策略，然后选择“编辑”](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     OfficeandEdge 是包含 Office 和 Microsoft Edge ADMX 模板的组策略  。 （本文中的）[先决条件](#prerequisites)介绍了此策略。
 
@@ -269,18 +281,18 @@ ADMX 模板可用于以下服务：
     > ![请参阅组策略中的“计算机配置设置”选项](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. 在终结点管理器管理中心，转到“管理模板 - Windows 10 学生设备”模板  。
-6. 从下拉列表中选择“所有产品”，然后搜索“个性化”   ：
+6. 选择“计算机配置” > “控制面板” > “个性化”    。 请注意可用的设置：
 
     > [!div class="mx-imgBorder"]
-    > ![在 Microsoft Intune 的管理模板中搜索个性化](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![Microsoft Intune 中的个性化策略设置路径](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    请注意可用的设置。
-
-    设置类型为“设备”，路径为 \Control Panel\Personalization   。 此路径与你在组策略管理编辑器中看到的路径类似。 如果打开设置，则会在组策略管理编辑器中看到相同的“未配置”、“已启用”和“已禁用”选项    。
+    设置类型为“设备”，路径为 /Control Panel/Personalization   。 此路径与你在组策略管理编辑器中看到的路径类似。 如果打开“阻止启用锁屏相机”设置，则会在组策略管理编辑器中看到相同的“未配置”、“已启用”和“已禁用”选项     。
 
 #### <a name="compare-a-user-policy"></a>比较用户策略
 
-1. 在管理模板中，搜索“Inprivate 浏览”  。 请注意路径，并且此设置适用于所有用户和设备。
+1. 在管理模板中，选择“计算机配置” > “所有设置”，然后搜索“InPrivate 浏览”    。 请注意该路径。
+
+    对“用户配置”执行同样的操作  。 选择“所有设置”，然后搜索“InPrivate 浏览”   。
 
 2. 在“组策略管理编辑器”中，查找匹配的用户和设备设置  ：
 
@@ -296,9 +308,11 @@ ADMX 模板可用于以下服务：
 #### <a name="compare-an-edge-policy"></a>比较 Edge 策略
 
 1. 在终结点管理器管理中心，转到“管理模板 - Windows 10 学生设备”模板  。
-2. 从下拉列表中选择 Edge 77 版及更高版本  。
-3. 搜索“启动”  。 请注意可用的设置。
-4. 在“组策略管理编辑器”中，查找以下设置：
+2. 展开“计算机配置” > “Microsoft Edge” > “启动”、“主页”和“新建”选项卡页    。 请注意可用的设置。
+
+    对“用户配置”执行同样的操作  。
+
+3. 在“组策略管理编辑器”中，查找以下设置：
 
     - 设备：展开“计算机配置”   > “策略”   > “管理模板”   > “Microsoft Edge”   >   “启动”、“主页”和“新建”选项卡页。
     - 用户：展开“用户配置”   > “策略”   > “管理模板”   > “Microsoft Edge”   >   “启动”、“主页”和“新建”选项卡页
@@ -311,12 +325,12 @@ ADMX 模板可用于以下服务：
 
 在此模板中，我们将配置一些 Internet Explorer 设置，以锁定由多名学生共享的设备。
 
-1. 在“管理模板 - Windows 10 学生设备”中，搜索“关闭 InPrivate 浏览”，并选择设备策略   ：
+1. 在“管理模板 - Windows 10 学生设备”中，展开“计算机配置”，选择“所有设置”并搜索“关闭 InPrivate 浏览”     ：
 
     > [!div class="mx-imgBorder"]
     > ![在 Microsoft Intune 的管理模板中关闭 InPrivate 浏览设备策略](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. 在此窗口中，请注意可以设置的描述和值。 这些选项与你在组策略中看到的选项类似。
+2. 选择“关闭 InPrivate 浏览”设置  。 在此窗口中，请注意可以设置的描述和值。 这些选项与你在组策略中看到的选项类似。
 3. 选择“已启用” > “确定”，保存所做更改   。
 4. 同时配置以下 Internet Explorer 设置。 确保选择“确定”，以保存所做更改  。
 
@@ -343,7 +357,7 @@ ADMX 模板可用于以下服务：
 
 ### <a name="assign-your-template"></a>分配模板
 
-1. 在模板中，选择“分配” > “选择要包含的组”   ：
+1. 在模板中，选择“下一步”直到找到“分配”   。 选择“选择要包含的组”  ：
 
     > [!div class="mx-imgBorder"]
     > ![从 Microsoft Intune 中的设备配置文件列表中选择管理模板配置文件](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
@@ -352,7 +366,7 @@ ADMX 模板可用于以下服务：
 
     如果你在生产环境中使用本教程，请考虑添加空的组。 目的是练习分配模板。
 
-3. 选择“下一步”  ，以转到“查看 + 创建”选项卡  。选择“创建”以保存更改  。
+3. 选择“下一步”  。 在“查看 + 创建”中，选择“创建”以保存更改   。
 
 保存配置文件后，配置文件将在设备通过 Intune 签入时立即应用到设备。 如果设备已连接到 Internet，则可能会立即发生。 有关策略刷新时间的详细信息，请参阅[分配设备后多长时间才能获得策略、配置文件或应用](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)。
 
@@ -380,11 +394,20 @@ ADMX 模板可用于以下服务：
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
 5. 选择“下一步”  。
-6. 在“配置设置”中，从下拉列表选择“Office”   。 启用以下设置  。 确保选择“确定”，以保存所做更改  。
+6. 在“配置设置”中，配置以下设置  。 确保选择“确定”，以保存所做更改  ：
 
-    - **用户使用其 Windows 凭据以无提示的方式登录到 OneDrive 同步客户端**
-    - **按需使用 OneDrive 文件**
-    - **阻止用户同步个人 OneDrive 帐户**
+    - “计算机配置” > “所有设置”   ：
+      - **用户使用其 Windows 凭据以无提示的方式登录到 OneDrive 同步客户端**
+        - **类型**：设备
+        - **值**：Enabled
+      - **按需使用 OneDrive 文件**
+        - **类型**：设备
+        - **值**：Enabled
+
+    - “用户配置” > “所有设置”   ：
+      - **阻止用户同步个人 OneDrive 帐户**
+        - **类型**：用户
+        - **值**：Enabled
 
 设置如下所示：
 
@@ -395,12 +418,12 @@ ADMX 模板可用于以下服务：
 
 ### <a name="assign-your-template"></a>分配模板
 
-1. 在模板中，选择“分配” > “选择要包含的组”  
+1. 在模板中，选择“下一步”直到找到“分配”   。 选择“选择要包含的组”  ：
 2. 随即显示现有用户和组的列表。 选择之前创建的“所有 Windows 设备”组，然后选择“选择”   。
 
     如果你在生产环境中使用本教程，请考虑添加空的组。 目的是练习分配模板。
 
-3. 选择“下一步”  ，以转到“查看 + 创建”选项卡  。选择“创建”以保存更改  。
+3. 选择“下一步”  。 在“查看 + 创建”中，选择“创建”以保存更改   。
 
 此时，你创建了一些管理模板，并将其分配给了创建的组。 下一步是使用 Windows PowerShell 和适用于 Intune 的 Microsoft Graph API 创建管理模板。
 

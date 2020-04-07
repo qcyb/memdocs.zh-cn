@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352067"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359468"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Intune 中的 MacOS 终结点保护设置  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Intune 中的 macOS 终结点保护设置  
 
 本文介绍可为运行 macOS 的设备配置的终结点保护设置。 在 Intune 中使用 [Endpoint Protection](endpoint-protection-configure.md) 的 macOS 设备配置文件配置这些设置。  
+
+## <a name="before-you-begin"></a>在开始之前
+
+[创建 macOS Endpoint Protection 配置文件](endpoint-protection-configure.md)。
 
 ## <a name="gatekeeper"></a>网关守卫  
 
@@ -97,7 +101,7 @@ ms.locfileid: "79352067"
     为设备创建个人恢复密钥  。 为个人密钥配置以下设置。  
 
     - **个人恢复密钥的位置** - 向用户指定一条简短消息，说明他们如何以及在何处检索个人恢复密钥。 如果忘记了密码，则在系统提示你输入个人恢复密钥时，请将此文本插入用户在其登录屏幕上看到的消息。  
-      
+
     - **个人恢复密钥轮替** - 指定设备的个人恢复密钥轮替的频率。 可以选择默认的“未配置”，或选择 1 到 12 个月其中一个值    。  
 
   - **禁止在注销时提示**  
@@ -118,3 +122,8 @@ ms.locfileid: "79352067"
 
 有关 Intune 的 FileVault 的详细信息，请参阅 [FileVault 恢复密钥](encryption-monitor.md#filevault-recovery-keys)。
 
+## <a name="next-steps"></a>后续步骤
+
+[分配配置文件](../configuration/device-profile-assign.md)并[监视其状态](../configuration/device-profile-monitor.md)。
+
+还可以在 [Windows 10 和更高版本设备](endpoint-protection-windows-10.md)上配置 Endpoint Protection。

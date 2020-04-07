@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220092"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407839"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Windows 10（及更高版本）设备设置
 
@@ -208,7 +208,9 @@ ms.locfileid: "80220092"
   如果计算机已加入 Azure AD 并启用自动注册，此策略设置不适用。
 
 - **手动安装根证书**（仅限移动版）：选择“阻止”可阻止最终用户手动安装根证书和中间 CAP 证书  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。
-- **照相机**：选择“阻止”可阻止最终用户使用设备上的相机  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。
+- **照相机**：选择“阻止”可阻止最终用户使用设备上的相机  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许访问设备的照相机。
+
+  Intune 只管理对设备照相机的访问。 它无法访问图片或视频。
 
   [照相机 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086079"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327040"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>在 Intune 中设置 macOS 设备注册
 
@@ -60,7 +60,7 @@ Intune 可以管理 macOS 设备以允许用户访问公司电子邮件和应用
 
 ## <a name="company-owned-macos-devices"></a>公司拥有的 macOS 设备
 对于为用户购买设备的组织，Intune 还支持以下公司自有的 macOS 设备注册方法：
-- [Apple 设备注册计划 (DEP)](device-enrollment-program-enroll-macos.md)：组织可以通过 Apple 设备注册计划 (DEP) 购买 macOS 设备。 DEP 允许用户通过“无线方式”部署注册配置文件以对设备进行管理。
+- [Apple 的自动设备注册 (ADE)](device-enrollment-program-enroll-macos.md)：组织可以通过 ADE 购买 macOS 设备。 ADE 允许用户通过“无线方式”部署注册配置文件以对设备进行管理。
 - [设备注册管理员 (DEM)](device-enrollment-manager-enroll.md)：最多可以使用 DEM 帐户注册 1,000 台设备。
 
 ## <a name="block-macos-enrollment"></a>阻止 macOS 注册

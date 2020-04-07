@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4ea84b0b378030a02c73da20b4a59d0b65ca288
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363143"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326818"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>向 Intune 用户分配角色
 
@@ -32,7 +32,7 @@ ms.locfileid: "79363143"
 - **全局管理员**
 - **Intune 服务管理员**
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理”   > “角色”   > “所有角色”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色”    。
 
 2. 在“Intune 角色 - 所有角色”边栏选项卡上，选择要分配的内置角色 >“分配” > “分配”    。
 

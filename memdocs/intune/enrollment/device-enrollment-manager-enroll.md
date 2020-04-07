@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14bc0be97a2e74c4666603feb2a4832c6a1e2011
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339457"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327137"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用设备注册管理员帐户在 Intune 中注册设备
 
@@ -37,7 +37,7 @@ ms.locfileid: "79339457"
 - 无法通过公司门户进行擦除。 可以从 Azure 门户中的 Intune 擦除通过 DEM 用户帐户注册的设备。
 - 公司门户应用或网站中仅显示本地设备。
 - 由于应用管理的每用户 Apple ID 要求，DEM 用户帐户无法将 Apple Volume Purchase Program (VPP) 应用与 Apple VPP 用户许可证一起使用。
-- 通过 Apple 设备注册计划（DEP）注册设备时，不能使用 DEM 帐户。
+- 通过 Apple 自动设备注册 (ADE) 注册设备时，不能使用 DEM 帐户。
 - 如果设备具有 Apple VPP 许可证，则可以安装 VPP 应用。
 - 设备出于条件访问而被阻止，Windows 10 1803+ 除外
 - 向 DEM 帐户注册的每台设备都需要获得适当许可才能由 Intune 托管。 许可证可以是 Intune 用户许可证，也可以是 Intune 设备许可证。
@@ -46,7 +46,7 @@ ms.locfileid: "79339457"
 
 ## <a name="add-a-device-enrollment-manager"></a>添加一个设备注册管理器
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
 
 2. 选择“添加”  。
 
@@ -67,6 +67,6 @@ ms.locfileid: "79339457"
 
 **删除设备注册管理器**
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
 2. 在“设备注册管理员”边栏选项卡上，选择 DEM 用户，然后选择“删除”   。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff94f0b628fb20c063ef77ccb061f33eb0199195
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363676"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327108"
 ---
 # <a name="categorize-devices-into-groups"></a>将设备分类到组中
 
@@ -45,7 +45,7 @@ ms.locfileid: "79363676"
 ## <a name="how-to-configure-device-categories"></a>如何配置设备类别
 
 ### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>步骤 1：在 Azure 门户的“Intune”边栏选项卡中创建设备类别
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “设备类别”   。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “设备类别”   。
 2. 在“设备类别”页上，选择“创建”以添加新类别   。
 3. 在“创建设备类别”边栏选项卡中，输入新类别的“名称”和可选“说明”    。
 4. 完成后，选择“创建”  。 可以在类别列表中看到新类别。
@@ -63,7 +63,7 @@ ms.locfileid: "79363676"
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>查看所管理设备的类别
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “所有设备”   。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “所有设备”   。
 
 2. 在设备列表中，查看“设备类别”列  。
 
@@ -71,7 +71,7 @@ ms.locfileid: "79363676"
 
 ### <a name="change-the-category-of-a-device"></a>更改设备的类别
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “所有设备”> 选择所需设备 >“属性”    。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “所有设备”> 选择所需设备 >“属性”    。
 2. 在下一个边栏选项卡上，可以将所选设备的“设备类别”  更改为之前配置的任一类别名称。
 
 ## <a name="after-you-configure-device-groups"></a>配置设备组之后

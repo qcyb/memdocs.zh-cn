@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343422"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359282"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>用于在 Intune 中配置和使用内核扩展的 macOS 设备设置
-
-
 
 本文列出并介绍了可以在 macOS 设备上控制的各种内核扩展设置。 作为移动设备管理 (MDM) 解决方案的一部分，使用这些设置可在设备上添加和管理内核扩展。
 
@@ -44,7 +43,7 @@ ms.locfileid: "79343422"
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>设置适用范围：用户批准、自动化的设备注册
 
-- 允许用户覆盖  ：“允许”  使用户可以批准配置文件中未包含的内核扩展。 “未配置”  （默认值）会阻止用户允许使用未包含在配置文件中的扩展。 即，只允许使用配置文件中包含的扩展。
+- 允许用户覆盖  ：“允许”  使用户可以批准配置文件中未包含的内核扩展。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能会阻止用户允许未包含在配置文件中的扩展。 即，只允许使用配置文件中包含的扩展。
 
   有关此功能的详细信息，请参阅[用户批准的内核扩展加载](https://developer.apple.com/library/archive/technotes/tn2459/_index.html)（打开 Apple 网站）。
 

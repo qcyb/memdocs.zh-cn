@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de27a5b9f6862bac024af83f748debb8eea6e962
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349662"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325298"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>使用 Intune 中的位置（网络围墙）
 
@@ -50,7 +50,7 @@ ms.locfileid: "79349662"
 
 ## <a name="create-a-location"></a>创建位置
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > 符合性策略” > “位置” > “创建”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “位置” > “创建”     。
 
 2. 输入以下属性：  
 

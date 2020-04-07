@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 427907b3b24556be15958707bf55f4dc9b190d94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1070c7b396ac3c19c340a69b6e2eb8db9d6707b6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363819"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327184"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>使用 Apple Business Manager 或 Apple School Manager 自动注册 macOS 设备
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> 最近，Apple 从使用 Apple 设备注册计划 (DEP) 改为了使用 Apple 自动设备注册 (ADE)。 Intune 正在更新 Intune 用户界面以反映此情况。 在此类更改完成之前，Intune 门户中将继续显示设备注册计划  。 无论在何处显示，它现在使用的都是自动设备注册。
 
 可以为通过 Apple 的 [Apple Business Manager](https://business.apple.com/) 或 [Apple School Manager](https://school.apple.com/) 购买的 macOS 设备设置 Intune 注册。 可在不触碰设备的情况下为大量设备使用这些注册。 可以将 macOS 设备直接交付给用户。 用户打开设备时，“设置助理”将运行预先配置的设置，且设备将注册到 Intune 管理。
 
@@ -50,9 +51,9 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 - [MDM 机构](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push Certificate](../enrollment/apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>获取 Apple DEP 令牌
+## <a name="get-an-apple-ade-token"></a>获取 Apple ADE 令牌
 
-必须先从 Apple 获得 DEP 令牌 (.p7m) 文件，然后才能通过 DEP 或 Apple School Manager 注册 macOS 设备。 此令牌允许 Intune 同步有关组织所拥有的设备的信息。 它还允许 Intune 将注册配置文件上传到 Apple 并将这些配置文件上传到设备。
+必须先从 Apple 获得令牌 (.p7m) 文件，然后才能通过 ADE 或 Apple School Manager 注册 macOS 设备。 此令牌允许 Intune 同步有关组织所拥有的设备的信息。 它还允许 Intune 将注册配置文件上传到 Apple 并将这些配置文件上传到设备。
 
 可以使用 Apple 门户创建令牌。 还可以使用 Apple 门户将设备分配到 Intune 进行管理。
 
@@ -61,7 +62,7 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>步骤 1。 下载创建令牌所需的 Intune 公钥证书
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌” > “添加”      。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌” > “添加”      。
 
     ![获取注册计划令牌。](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -92,7 +93,7 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>步骤 3. 保存用于创建此令牌的 Apple ID
 
-在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，提供 Apple ID 供将来参考。
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，提供 Apple ID 供将来参考。
 
 ![指定用来创建注册计划令牌的 Apple ID 并浏览到注册计划令牌的屏幕截图。](./media/device-enrollment-program-enroll-macos/image03.png)
 
@@ -103,7 +104,7 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 
 现在，已经安装了令牌，可以为设备创建注册配置文件。 设备注册配置文件定义注册时应用于设备组的设置。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌”     。
 2. 选择令牌，选择“配置文件”，然后选择“创建配置文件”   。
 
     ![“创建配置文件”的屏幕截图。](./media/device-enrollment-program-enroll-macos/image04.png)
@@ -115,7 +116,7 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 4. 对于“平台”  ，选择“macOS”  。
 
 5. 对于“用户关联”  ，选择具有此配置文件的设备是否必须通过已分配的用户进行注册。
-    - 通过用户关联进行注册  - 为属于用户且想要使用公司门户应用获取服务（如安装应用）的设备选择此选项。 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)多重身份验证不支持使用用户关联的 macOS DEP 设备。
+    - 通过用户关联进行注册  - 为属于用户且想要使用公司门户应用获取服务（如安装应用）的设备选择此选项。 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。使用用户关联的 macOS ADE 设备不支持多重身份验证。
 
     - 不通过用户关联进行注册 - 为不属于单个用户的设备选择此选项  。 为无需访问本地用户数据即可执行任务的设备使用此选项。 公司门户等应用将无法运行。
 
@@ -165,17 +166,17 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 
 Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步，以在 Azure 门户的 Intune 中查看托管设备。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”  >“macOS”  >“macOS 注册”  >“注册程序令牌”  > 在列表中选择令牌 >“设备”  >“同步”  。![选中“注册计划设备”节点和选中“同步”链接的屏幕截图。](./media/device-enrollment-program-enroll-macos/image06.png)
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”>“macOS”>“macOS 注册”>“注册程序令牌”> 在列表中选择令牌 >“设备”>“同步”       。![选中“注册计划设备”节点和选中“同步”链接的屏幕截图。](./media/device-enrollment-program-enroll-macos/image06.png)
 
    为了遵从 Apple 的有关可接受的注册计划流量的条款，Intune 规定了以下限制：
-   - 每七天只能运行一次完全同步。 完全同步时，Intune 会提取分配给连接到 Intune 的 Apple MDM 服务器的完整更新序列号列表。 如果已从 Intune 门户删除注册计划设备但未从 DEP 门户的 Apple MDM 服务器取消分配，则该设备不会重新导入到 Intune，除非运行完全同步。   
+   - 每七天只能运行一次完全同步。 完全同步时，Intune 会提取分配给连接到 Intune 的 Apple MDM 服务器的完整更新序列号列表。 如果已从 Intune 门户删除注册计划设备但未从 Apple 门户的 Apple MDM 服务器取消分配，则该设备不会重新导入到 Intune，除非运行完全同步。   
    - 每 24 小时自动运行一次同步。 用户也可以单击“同步”按钮（不能超过 15 分钟一次）运行同步  。 所有同步请求都在 15 分钟内完成。 在同步完成前，“同步”按钮处于禁用状态  。 此同步将刷新现有设备状态并导入分配到 Apple MDM 服务器的新设备。
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>将注册配置文件分配到设备
 
 必须先向设备分配注册计划配置文件才能注册他们。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌”> 在列表中选择一个令牌     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌”> 在列表中选择一个令牌     。
 2. 选择“设备”> 在列表中选择设备 >“分配配置文件”。  
 3. 在“分配配置文件”下，为设备选择配置文件，然后选择“分配”   。
 
@@ -183,14 +184,14 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 
 可以选择一个默认 macOS 和 iOS/iPadOS 配置文件，以将其应用于所有使用特定令牌注册的设备。 
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌”> 在列表中选择一个令牌     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌”> 在列表中选择一个令牌     。
 2. 选择“设置默认配置文件”，在下拉列表中选择配置文件，然后选择“保存”。   此配置文件将应用于所有使用此令牌注册的设备。
 
 ## <a name="distribute-devices"></a>分发设备
 
 已启用 Apple 和 Intune 之间的管理和同步，并分配了配置文件以允许设备注册。 现在可以将设备分配给用户。 具有用户关联的设备需要每个用户都分配有 Intune 许可证。 没有用户关联的设备需要设备许可证。 已激活设备只有擦除后才能应用注册配置文件。
 
-## <a name="renew-a-dep-token"></a>续订 DEP 令牌
+## <a name="renew-an-ade-token"></a>续订 ADE 令牌
 
 1. 转到 deploy.apple.com。  
 2. 在“管理服务器”下，选择与想要续订的令牌文件相关的 MDM 服务器  。
@@ -199,7 +200,7 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
     ![生成新令牌的屏幕截图。](./media/device-enrollment-program-enroll-macos/generatenewtoken.png)
 
 4. 选择“服务器令牌”  。  
-5. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备注册”   > “Apple 注册”   > “注册程序令牌”  > 选择令牌。
+5. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备注册” > “Apple 注册” > “注册程序令牌”> 选择令牌    。
     ![注册程序令牌屏幕截图](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
 
 6. 选择“续订令牌”，然后输入用于创建原始令牌的 Apple ID  。  

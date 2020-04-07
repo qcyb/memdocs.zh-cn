@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0005136193048bac7d9d24311646bf3406a6c800
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354654"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326651"
 ---
 # <a name="device-management-overview"></a>设备管理概述
 
@@ -84,7 +84,7 @@ Intune 包含在 Microsoft Azure、Microsoft 365 中，并与 Azure Active Direc
 
 ## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>使用“设备管理”管理中心简化 IT 任务
 
-[Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)是一站式服务，可管理和完成移动设备的任务。 此工作区包括用于设备管理（包括 Intune 和 Azure Active Directory）和客户端应用管理的服务。
+[Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)是一站式服务，可管理和完成移动设备的任务。 此工作区包括用于设备管理（包括 Intune 和 Azure Active Directory）和客户端应用管理的服务。
 
 在设备管理管理中心可以执行以下操作：
 

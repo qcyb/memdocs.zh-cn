@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349987"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488067"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>使用安全基线在 Intune 中配置 Windows 10 设备
 
@@ -76,7 +76,7 @@ ms.locfileid: "79349987"
 
 - **Microsoft Defender ATP 基线**
    *（若要使用此基线，环境必须满足使用 [Microsoft Defender 高级威胁防护](advanced-threat-protection.md#prerequisites)的先决条件）* 。
-  - [Microsoft Defender ATP 基线](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP 基线版本 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > Microsoft Defender ATP 安全基线已针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。  有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
@@ -174,7 +174,7 @@ ms.locfileid: "79349987"
 
    ![选择版本](./media/security-baselines/select-instance.png)
 
-5. 选择“查看更新”  ，下载显示配置文件当前实例版本与所选新版本之间的差异的 CSV 文件。 审阅此文件，以了解哪些设置是新的或已删除的，以及这些设置在更新后的配置文件中的默认值是什么。
+5. 选择“查看更新”，下载显示配置文件当前实例版本与所选新版本之间的差异的 CSV 文件  。 审阅此文件，以了解哪些设置是新的或已删除的，以及这些设置在更新后的配置文件中的默认值是什么。
 
    准备就绪后，继续执行下一步骤。
 
@@ -186,7 +186,7 @@ ms.locfileid: "79349987"
 
 ### <a name="remove-a-security-baseline-assignment"></a>删除安全基线分配
 
-当安全基线设置不再适用于设备，或基线中的设置设为“未配置”  时，设备上的这些设置不会恢复为管理前的配置。 相反，设备上之前管理的设置仍保留其从基线收到的最近一次配置，直到某个其他进程更新设备上的这些设置。
+当安全基线设置不再适用于设备，或基线中的设置设为“未配置”时，设备上的这些设置不会恢复为管理前的配置  。 相反，设备上之前管理的设置仍保留其从基线收到的最近一次配置，直到某个其他进程更新设备上的这些设置。
 
 可在稍后更改设备设置的其他进程包括其他或新的安全基线、设备配置文件、组策略配置或设备设置的手动编辑。
 

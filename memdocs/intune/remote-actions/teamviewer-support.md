@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b63dbf983872dbbb1c792e1f5d00bb136da973a1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f9dc309cb373d9f06fd68810531d5634eb4c0b7d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348843"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325044"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>使用 TeamViewer 远程管理 Intune 设备
 
@@ -57,7 +57,7 @@ ms.locfileid: "79348843"
 
 配置连接器后，即可远程管理设备。 请使用以下步骤： 
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中。
 2. 依次选择“设备”和“所有设备”   。
 3. 从列表中，选择想要远程管理的设备>“…” > “新远程协助会话”   。
 4. 将 Intune 连接到 TeamViewer 服务后，将看到设备的一些相关信息。 选择“连接”  可开始远程会话。

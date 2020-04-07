@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086885"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359156"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>使用 Intune 将 Windows 10 和 Windows Holographic for Business 设备作为专用展台运行的设置
 
 在 Windows 10 设备上，使用 Intune 将设备作为展台（有时也称为专用设备）运行。 展台模式下的设备可以运行一个应用，也可以运行多个应用。 可以显示和自定义开始菜单、添加不同的应用（包括 Win32 应用）、向 Web 浏览器添加特定主页等。 
 
-此功能适用于运行以下程序的设备：
+此功能适用于：
 
 - Windows 10 及更高版本
 - Windows Holographic for Business
+
+若要为其他平台创建展台配置文件，请参阅 [Android 设备管理员](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 和 [iOS/iPadOS](device-restrictions-ios.md#kiosk)。
 
 Intune 支持每台设备一个展台配置文件。 如果在单台设备上需要多个展台配置文件，可以使用[自定义 OMA-URI](custom-settings-windows-10.md)。
 
@@ -69,7 +71,8 @@ Intune 使用“配置文件”创建和自定义这些设置，从而满足组�
 [分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
 可以为运行下列平台的设备创建展台配置文件：
+
 - [Android 设备管理员](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 及更高版本](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

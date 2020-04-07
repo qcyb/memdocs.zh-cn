@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f3ec6871784a019ffcf117d17b863b05354848
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526302"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327148"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>将设备标识为“公司自有”
 
@@ -54,7 +54,7 @@ ms.locfileid: "79526302"
 | 设备管理员托管的 Android OS v10 | 不支持 | 不支持 |
 | 其他 Android | 不支持 | 支持 |
 
-<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
 [了解如何查找 Apple 设备序列号](https://support.apple.com/HT204308)。<br>
 [了解如何查找 Android 设备序列号](https://support.google.com/store/answer/3333000)。
@@ -85,7 +85,7 @@ ms.locfileid: "79526302"
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>上传企业标识符 .csv 列表
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “企业设备标识符” > “添加” > “上传 CSV 文件”      。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “企业设备标识符” > “添加” > “上传 CSV 文件”      。
 
 2. 在“添加标识符”  边栏选项卡中，指定标识符类型：“IMEI”  或“序列号”  。
 
@@ -95,7 +95,7 @@ ms.locfileid: "79526302"
 
 ## <a name="manually-enter-corporate-identifiers"></a>手动输入企业标识符
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “企业设备标识符” > “添加” > “手动输入”      。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “企业设备标识符” > “添加” > “手动输入”      。
 
 2. 在“添加标识符”  边栏选项卡中，指定标识符类型：“IMEI”  或“序列号”  。
 
@@ -109,7 +109,7 @@ ms.locfileid: "79526302"
 
 ## <a name="delete-corporate-identifiers"></a>删除企业标识符
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “企业设备标识符”    。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “企业设备标识符”    。
 2. 选择要删除的设备标识符，然后选择“删除”  。
 3. 确认删除。
 
@@ -123,7 +123,7 @@ ms.locfileid: "79526302"
 设备属性显示 Intune 中每个设备记录的“所有权”  。 作为管理员，你可将设备所有权指定为“个人”  或“公司”  。 当设备的所有权类型从“公司”更改为“个人”时，Intune 会在 7 天内删除以前从该设备收集的所有应用信息。 如果适用，Intune 还将删除记录的电话号码。 
 
 **更改设备所有权：**
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “所有设备”> 选择该设备   。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “所有设备”> 选择该设备   。
 2. 选择“属性”  。
 3. 将“设备所有权”  指定为“个人”  或“公司”  。
 

@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f102daeab975bbbf0a618d1a5d642c84f52edba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344488"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488075"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 设备的批量注册
 
@@ -61,11 +61,13 @@ Azure AD 用户是这些设备上的标准用户并接收分配的 Intune 策略
 7. 提供你的 Azure AD 凭据，以获取批量令牌。
    ![Windows 配置设计器应用的登录屏幕截图](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. 成功提取“批量令牌”  后，单击“下一步”  。
+8. 在“在此设备上的所有位置使用此帐户”页上，选择“仅限此应用”   。
 
-9. （可选）可以“添加应用程序”  和“添加证书”  。 将在此设备上配置应用和证书。
+9. 成功提取“批量令牌”  后，单击“下一步”  。
 
-10. （可选）还可以使用密码保护你的配置包。  单击 **“创建”** 。
+10. （可选）可以“添加应用程序”  和“添加证书”  。 将在此设备上配置应用和证书。
+
+11. （可选）还可以使用密码保护你的配置包。  单击 **“创建”** 。
     ![Windows 配置设计器应用中的包保护屏幕截图](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>配置设备

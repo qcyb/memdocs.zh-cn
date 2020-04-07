@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 216cf1a4d84adf717ebf914732eab3d6a169508f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350416"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326611"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>排查在 Microsoft Intune 中向设备部署 SCEP 证书配置文件的问题
 
@@ -36,7 +36,7 @@ ms.locfileid: "79350416"
 
 ### <a name="validate-that-the-android-device-was-sent-the-policy"></a>验证是否已向 Android 设备发送策略
 
-若要验证配置文件是否已发送到所需设备，请在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)转到“故障排除 + 支持”   > “故障排除”  。  在“故障排除”  窗口，将“分配”  设置为“配置文件”  ，然后验证以下配置：
+若要验证配置文件是否已发送到所需设备，请在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“故障排除 + 支持” > “故障排除”   。  在“故障排除”  窗口，将“分配”  设置为“配置文件”  ，然后验证以下配置：
 
 1. 指定应接收 SCEP 证书配置文件的用户。
 
@@ -63,7 +63,7 @@ Time    VERB    Event     com.microsoft.omadm.syncml.SyncmlSession     9595     
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>验证是否已向 iOS/iPadOS 设备发送策略
 
-若要验证配置文件是否已发送到所需设备，请在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)转到“故障排除 + 支持”   > “故障排除”  。  在“故障排除”  窗口，将“分配”  设置为“配置文件”  ，然后验证以下配置：
+若要验证配置文件是否已发送到所需设备，请在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“故障排除 + 支持” > “故障排除”   。  在“故障排除”  窗口，将“分配”  设置为“配置文件”  ，然后验证以下配置：
 
 1. 指定应接收 SCEP 证书配置文件的用户。
 
@@ -90,7 +90,7 @@ debug    18:30:54.638009 -0500    profiled    Adding dependent ModelName=AC_51ba
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>验证是否已向 Windows 设备发送策略
 
-若要验证配置文件是否已发送到所需设备，请在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“故障排除 + 支持”   > “故障排除”  。  在“故障排除”  窗口，将“分配”  设置为“配置文件”  ，然后验证以下配置：
+若要验证配置文件是否已发送到所需设备，请在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“故障排除 + 支持” > “故障排除”   。  在“故障排除”  窗口，将“分配”  设置为“配置文件”  ，然后验证以下配置：
 
 1. 指定应接收 SCEP 证书配置文件的用户。
 

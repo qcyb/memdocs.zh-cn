@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f68278e936a85ab21407e55c8d5c18529457938a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359295"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327088"
 ---
 # <a name="set-enrollment-restrictions"></a>设置注册限制
 
@@ -59,7 +59,7 @@ ms.locfileid: "79359295"
 
 ## <a name="create-a-device-type-restriction"></a>创建设备类型限制
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制” > “设备类型限制”     。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制” > “设备类型限制”     。
 2. 在“基本信息”页上，为限制提供名称和可选说明    。
 3. 选择“下一步”，转到“平台设置”页。  
 4. 在“平台”中，对想要此限制允许的平台选择“允许”。  
@@ -93,7 +93,7 @@ ms.locfileid: "79359295"
 
 ## <a name="create-a-device-limit-restriction"></a>创建设备限制
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制” > “设备限制”     。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制” > “设备限制”     。
 2. 在“基本信息”页上，为限制提供名称和可选说明    。
 3. 选择“下一步”，转到“设备限制”页。  
 4. 对于“设备限制”，选择用户可以注册的最大设备数量  。
@@ -126,7 +126,7 @@ ms.locfileid: "79359295"
 
 通过执行以下步骤可更改注册限制的设置。 这些限制不会影响已注册的设备。 无法使用此功能阻止注册了 [Intune PC 代理](../fundamentals/manage-windows-pcs-with-microsoft-intune.md)的设备。
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > 选择要更改的限制 >“属性”    。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > 选择要更改的限制 >“属性”    。
 2. 选择要更改的设置旁边的“编辑”。 
 3. 在“编辑”页上，根据需要进行更改，继续转到“查看 + 保存”页，然后选择“保存”。   
 

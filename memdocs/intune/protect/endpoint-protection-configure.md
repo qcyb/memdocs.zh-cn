@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 64a11cf9dca110a4a802ddff3e9176ec1ce88345
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352171"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359250"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>在 Intune 中添加终结点保护设置
 
@@ -45,23 +45,38 @@ ms.locfileid: "79352171"
 
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 
-3. 输入终结点保护配置文件的“名称”和“描述”   。
+3. 输入以下属性：
 
-4. 从“平台”  下拉列表中，选择要应用自定义设置的设备平台。 目前，可以为设备限制设置选择以下平台之一：
+    - **平台**：选择设备平台。 选项包括：
 
-   - **macOS**
-   - **Windows 10 及更高版本**
+        - **macOS**
+        - **Windows 10 及更高版本**
 
-5. 在“配置文件类型”  下拉列表中，选择“Endpoint Protection”  。
+    - **配置文件**：选择“Endpoint Protection”  。
 
-6. 根据所选择的平台，可配置的设置有所不同。 请参阅：
+4. 选择“创建”。 
+5. 在“基本信息”  中，输入以下属性：
+
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”**为所有 macOS 设备配置防火墙的 Endpoint Protection 配置文件**。
+    - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
+
+6. 选择“下一步”  。
+
+7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
    - [macOS 设置](endpoint-protection-macos.md)
    - [Windows 10 设置](endpoint-protection-windows-10.md)
 
-7. 配置适用的设置后，选择“创建配置文件”页上的“创建”   。
+8. 选择“下一步”  。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-   配置文件随即创建并显示在“配置文件列表”页中。 要向组分配此配置文件，请参阅[分配设备配置文件](../configuration/device-profile-assign.md)。
+    选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>为 Windows 10 设备添加自定义防火墙规则
 
@@ -75,7 +90,7 @@ ms.locfileid: "79352171"
 
 - 如果某个规则无法使用，则配置文件中的所有规则都将报告为无法使用。 Intune 无法识别哪个单独的规则无法使用。  
 
-Windows [防火墙配置服务提供程序]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP) 中详细介绍了 Intune 可以管理的防火墙规则。 若要查看 Intune 支持的 Windows 10 设备自定义防火墙设置列表，请参阅[自定义防火墙规则](endpoint-protection-windows-10.md#firewall-rules)。
+Windows [防火墙配置服务提供程序](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP) 中详细介绍了 Intune 可以管理的防火墙规则。 若要查看 Intune 支持的 Windows 10 设备自定义防火墙设置列表，请参阅[自定义防火墙规则](endpoint-protection-windows-10.md#firewall-rules)。
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>向 Endpoint Protection 配置文件添加自定义防火墙规则
 
@@ -83,20 +98,22 @@ Windows [防火墙配置服务提供程序]( https://docs.microsoft.com/windows/
 
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 
-3. 对于“平台”，请依次选择“Windows 10 及更高版本”、“配置文件类型”、“Endpoint Protection”     。
+3. 对于“平台”，选择“Windows 10 及更高版本”，对于“配置文件”，选择“Endpoint Protection”     。
 
-4. 选择“Microsoft Defender 防火墙”以打开配置页，对于“防火墙规则”，选择“添加”以打开“创建规则”页     。
+    选择“创建”。 
 
-5. 指定“防火墙规则”的设置，然后选择“确定”以保存该设置  。 若要查看文档中可用的自定义防火墙规则选项，请参阅[自定义防火墙规则](endpoint-protection-windows-10.md#firewall-rules)。
+4. 输入配置文件的“名称”>“下一步”   。
+5. 在“配置设置”中，选择“Microsoft Defender 防火墙”   。 对于“防火墙规则”，选择“添加”以打开“创建规则”页面    。
 
-6. 保存规则后，它将显示在规则列表中的“Microsoft Defender 防火墙”页上  。
+6. 指定“防火墙规则”的设置，然后选择“确定”以保存该设置  。 若要查看文档中可用的自定义防火墙规则选项，请参阅[自定义防火墙规则](endpoint-protection-windows-10.md#firewall-rules)。
 
-7. 若要修改规则，请从列表中选择规则，以打开“编辑规则”页  。
+    1. 规则将显示在规则列表中的“Microsoft Defender 防火墙”页上  。
+    2. 若要修改规则，请从列表中选择规则，以打开“编辑规则”页  。
+    3. 若要从配置文件中删除规则，请选择规则的省略号“(…)”，然后选择“删除”  。
+    4. 若要更改规则的显示顺序，请选择规则列表顶部的向上箭头、向下箭头图标  。
 
-8. 若要从配置文件中删除规则，请选择规则的省略号“(…)”，然后选择“删除”  。
-
-9. 若要更改规则的显示顺序，请选择规则列表顶部的向上箭头、向下箭头图标  。
+7. 选择“下一步”，直到看到“查看 + 创建”   。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
 
 ## <a name="next-steps"></a>后续步骤
 
-要向组分配配置文件，请参阅[分配设备配置文件](../configuration/device-profile-assign.md)。
+此时，配置文件创建完成，但它可能尚未执行任何操作。 下一步，[分配配置文件](../configuration/device-profile-assign.md)并[监视其状态](../configuration/device-profile-monitor.md)。

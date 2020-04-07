@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219837"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323093"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>在使用 Jamf Pro 管理的 Mac 上强制实现符合性
 
@@ -114,7 +114,7 @@ ms.locfileid: "80219837"
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>从 Intune 删除 Jamf 托管设备
 
-若要删除 Jamf 管理的设备，请打开 Microsoft 终结点管理器管理中心，选择“设备” > “所有设备”，选择相应设备，然后选择“删除”    。  通过选择多个设备并单击“删除”，可启用批量设备删除  。
+若要删除 Jamf 管理的设备，请打开 Microsoft Endpoint Manager 管理中心，选择“设备” > “所有设备”，选择相应设备，然后选择“删除”    。  通过选择多个设备并单击“删除”，可启用批量设备删除  。
 
 获取有关如何[在 Jamf Pro 文档中删除 Jamf 托管设备](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information)的信息。还可通过 [Jamf 支持](https://www.jamf.com/support/)提交支持票证，获取更多帮助。 
 

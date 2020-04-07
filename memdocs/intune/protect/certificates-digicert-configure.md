@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 958acb7c8e5342d4c85c94a8e6f99cd9f1fee7e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353757"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322667"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>设置 DigiCert PKI 平台的 Intune 证书连接器
 
@@ -321,7 +321,7 @@ Intune 证书连接器服务日志在 NDES 连接器计算机上的 %ProgramFile
 
 | 问题/错误消息 | 解决方法步骤 |
 | --- | --- |
-| 无法使用 Intune 租户管理员帐户登录到 NDES 连接器 UI。 | Microsoft 终结点管理器管理中心未启用本地证书连接器时，可能会发生这种情况。 要解决此问题： <br><br> 1.登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 <br> 2.选择“租户管理”   > “连接器和令牌”   > “证书连接器”  。 <br> 3.找到证书连接器并确保它已启用。 <br><br> 完成前述步骤之后，尝试使用相同的 Intune 租户管理员帐户登录到 NDES 连接器 UI。 |
+| 无法使用 Intune 租户管理员帐户登录到 NDES 连接器 UI。 | Microsoft Endpoint Manager 管理中心未启用本地证书连接器时，可能会发生这种情况。 要解决此问题： <br><br> 1.登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 <br> 2.选择“租户管理”   > “连接器和令牌”   > “证书连接器”  。 <br> 3.找到证书连接器并确保它已启用。 <br><br> 完成前述步骤之后，尝试使用相同的 Intune 租户管理员帐户登录到 NDES 连接器 UI。 |
 | 找不到 NDES 连接器证书。 <br><br> System.ArgumentNullException:值不能为 null。 | 如果 Intune 租户管理员帐户从未登录到 NDES 连接器 UI，则 Intune 证书连接器会显示此错误。 <br><br> 如果此错误仍然存在，请重新启动 Intune 服务连接器。 <br><br> 1.打开“services.msc”  。 <br> 2.选择“Intune 连接器服务”  。 <br> 3.单击右键并选择“重新启动”  。|
 | NDES 连接器 - IssuePfx - 常规异常： <br> System.NullReferenceException：对象引用未设置为某个对象的实例。 | 此错误是暂时的。 重新启动 Intune 服务连接器。 <br><br> 1.打开“services.msc”  。 <br> 2.选择“Intune 连接器服务”  。 <br> 3.单击右键并选择“重新启动”  。 |
 | DigiCert 提供程序 - 无法获取 DigiCert 策略。 <br><br>“操作已超时。” | Intune 证书连接器在与 DigiCert CA 通信时收到“操作已超时”错误。 如果此错误继续出现，请增加连接超时值并重试。 <br><br> 若要增加连接超时值，请执行以下操作： <br> 1.转到 NDES 连接器计算机。 <br>2.在记事本中打开 %ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config  文件。 <br> 3.增加以下参数的超时值： <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4.重新启动 Intune 证书连接器服务。 <br><br> 如果问题仍然存在，请联系 DigiCert 客户支持部门。 |

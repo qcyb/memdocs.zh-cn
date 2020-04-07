@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086723"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327277"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>将 Android 设备从设备管理员转到工作配置文件管理
 
@@ -40,12 +40,12 @@ ms.locfileid: "80086723"
 - 通过[将 Intune 租户帐户连接到 Android Enterprise 帐户](connect-intune-android-enterprise.md)设置 Android 工作配置文件管理。
 - 为要转到 Android 工作配置文件的一组用户[设置 Android Enterprise 工作配置文件注册](android-work-profile-enroll.md)。
 - 考虑增加用户设备限制。 从设备管理员管理中取消注册设备时，可能不会立即删除设备记录。 若要在此期间提供缓冲，可能需要增加设备限制容量，以便用户可以注册工作配置文件管理。
-  - 将 [Azure Active Directory 设备设置](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)配置为每个用户的最大设备数量。
+  - 将 [Azure Active Directory 设备设置](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)配置为每个用户的最大设备数量。
   - 通过设置设备限制调整 [Intune 设备限制](enrollment-restrictions-set.md#create-a-device-limit-restriction)。 
 
 ## <a name="create-device-compliance-policy"></a>创建设备符合性策略
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “策略” > “创建策略”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “策略” > “创建策略”     。
 
     ![创建策略](./media/android-move-device-admin-work-profile/create-policy.png)
 
@@ -71,6 +71,7 @@ ms.locfileid: "80086723"
     > [!NOTE]
     > - 当然，在与用户通信时，可以使用用户友好的超文本链接。 不过，请不要使用 URL 缩短器，这样很可能导致链接失效。
     > - 如果 Android 公司门户在后台处于打开状态，当用户点击该链接时，他们可能会转到上次打开的页面。
+    > - 用户必须在 Android 设备上点击此链接。 如果他们将其粘贴到浏览器中，则不会启动 Android 公司门户。 
 
     选择“下一步”  。
 
@@ -80,7 +81,7 @@ ms.locfileid: "80086723"
 
 ## <a name="troubleshooting"></a>疑难解答
 
-[转到新的设备管理设置的最终用户流程](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)可指导用户从设备管理员管理取消注册，并设置工作配置文件管理。 用户的[已注册 Android 设备管理员的设备](android-enroll-device-administrator.md)必须安装有 Android 公司门户版本 5.0.4720.0 或更高版本。
+[转到新的设备管理设置的最终用户流程](../user-help/move-to-new-device-management-setup.md)可指导用户从设备管理员管理取消注册，并设置工作配置文件管理。 用户的[已注册 Android 设备管理员的设备](android-enroll-device-administrator.md)必须安装有 Android 公司门户版本 5.0.4720.0 或更高版本。
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>用户在点击“解决”后看到错误
 如果用户在点击“解决”  按钮后出现错误，可能是由于以下原因之一导致的：
@@ -103,8 +104,5 @@ ms.locfileid: "80086723"
 - Android 设备使用的是 Android 6 或更低版本。 
 
 ## <a name="next-steps"></a>后续步骤
-[查看最终用户流程](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
-
-[使用 Intune 管理 Android 工作配置文件](android-enterprise-overview.md)
-
-
+[请参阅最终用户流](../user-help/move-to-new-device-management-setup.md)
+[使用 Intune 管理 Android 工作配置文件设备](android-enterprise-overview.md)

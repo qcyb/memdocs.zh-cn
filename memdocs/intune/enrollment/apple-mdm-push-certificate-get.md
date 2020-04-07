@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5e64996a1d586d332a3732ca68076c654a56c1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359672"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327211"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>获取 Apple MDM Push Certificate
 
@@ -41,7 +41,7 @@ ms.locfileid: "79359672"
 
 
 ## <a name="steps-to-get-your-certificate"></a>获取证书的步骤
-登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “Apple 注册” > “Apple MDM Push Certificate”，然后按照以下步骤操作     。
+登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “Apple 注册” > “Apple MDM Push Certificate”，然后按照以下步骤操作     。
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>步骤 1。 授权 Microsoft 向 Apple 发送用户和设备信息
 选择“我同意”  授予 Microsoft 向 Apple 发送数据的权限。
@@ -68,7 +68,7 @@ Apple MDM Push Certificate 有效期为一年，且必须手动续订才能维�
 
 证书与用于创建它的 Apple ID 相关联。 使用创建证书所用的相同 Apple ID 续订 MDM Push Certificate。
 
-1. 登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “Apple 注册” > “Apple MDM Push Certificate”     。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “Apple 注册” > “Apple MDM Push Certificate”     。
 2. 选择“下载 CSR”，将请求文件下载到本地并保存  。 此文件用于从 Apple Push Certificate 门户请求信任关系证书。
 3. 选择“创建 MDM Push Certificate”  ，转到 Apple Push Certificate 门户。 找到要续订的证书并选择“续订”  。
 4. 在“续订 Push Certificate”屏幕上，提供备注以便在将来识别证书，选择“选择文件”浏览到下载的新请求文件，然后选择“上传”    。

@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6f57bd12713135244b2096f9eda4d8a802f32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361128"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359358"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>在 Microsoft Intune 中使用适用于 macOS 设备的自定义设置
 
@@ -38,7 +39,7 @@ ms.locfileid: "79361128"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-[创建配置文件](device-profile-create.md)。
+[创建配置文件](custom-settings-configure.md)。
 
 ## <a name="what-you-need-to-know"></a>须知内容
 
@@ -64,10 +65,8 @@ ms.locfileid: "79361128"
   > [!NOTE]
   > 变量不在 UI 中进行验证，且区分大小写。 因此，可能会看到使用不正确输入保存的配置文件。 例如，如果输入 `{{DeviceID}}` 而不是 `{{deviceid}}`，则显示文本字符串而不是设备的唯一 ID。 请确保输入正确的信息。
 
-选择“确定”   > “创建”  以保存所做的更改。 此时，配置文件创建完成，并出现在配置文件列表中。
-
 ## <a name="next-steps"></a>后续步骤
 
-配置文件已创建，但它尚未起到任何作用。 下一步需要[分配配置文件](device-profile-assign.md)。
+此时，配置文件创建完成，但它可能尚未执行任何操作。 下一步，[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
-请参阅如何[在 iOS/iPadOS 设备上创建配置文件](custom-settings-ios.md)。
+[在 iOS/iPadOS 设备上创建自定义配置文件](custom-settings-ios.md)。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084221"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407751"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -45,18 +45,18 @@ ms.locfileid: "80084221"
 | **在标题中显示** | 选择最终用户体验中的标题是应显示“公司徽标和名称”、“仅公司徽标”还是显示“仅公司名称”    。 下面的预览框将只显示徽标，而不显示名称。  |
 | **上传徽标供主题颜色背景使用** | 上传要在所选主题颜色上显示的徽标。 为获得最佳外观，请上传带透明背景的徽标。 可以在设置下方的预览框中看到其外观。<p>最大图像大小：400 x 400 像素<br>最大文件大小： 750 KB<br>文件类型：PNG、JPG 或 JPEG |
 | **上传徽标供白色或浅色背景使用** | 上传要在白色或浅色背景上显示的徽标。 为获得最佳外观，请上传带透明背景的徽标。 可以在设置下方的预览框中看到其在白色背景上的外观。<p>最大图像大小：400 x 400 像素<br>最大文件大小：750 KB<br>文件类型：PNG、JPG 或 JPEG |
-| **上传品牌形象** | 上传反映组织品牌的形像。<p><ul><li>建议图像宽度：1125 像素以上（要求至少为 650 像素）</li><li>最大图像大小：1.3 MB</li><li>文件类型：PNG、JPG 或 JPEG</li><li>它显示在以下位置：</li><ul><li>iOS/iPadOS 公司门户：用户个人资料页面上的背景图像。</li><li>公司门户网站： 用户个人资料页面上的背景图像。</li><li>Android Intune 应用：在抽屉中，并作为用户个人资料页面上的背景图像。</li></ul></ul> |
+| **上传品牌形象** | 上传体现组织品牌的形像。<p><ul><li>建议图像宽度：1125 像素以上（要求至少为 650 像素）</li><li>最大图像大小：1.3 MB</li><li>文件类型：PNG、JPG 或 JPEG</li><li>它显示在以下位置：</li><ul><li>iOS/iPadOS 公司门户：用户个人资料页面上的背景图像。</li><li>公司门户网站： 用户个人资料页面上的背景图像。</li><li>Android Intune 应用：在抽屉中，并作为用户个人资料页面上的背景图像。</li></ul></ul> |
 
 > [!NOTE]
 > 用户从公司门户安装 iOS/iPadOS 应用程序时，将收到提示。 iOS/iPadOS 应用链接到应用商店、批量采购计划 (VPP) 或业务线 (LOB) 应用时，将发生此操作。 用户可通过此提示接受操作，或允许管理应用。 此提示将显示公司名称，公司名称不可用时，将显示公司门户。 
 
 ### <a name="brand-image-best-practices"></a>品牌形象最佳做法
 
-合适的品牌形象可以展现组织品牌的强烈意识，从而增强用户对组织的信任。 建议考虑以下用于获取、选择和优化显示位置图像的一些提示。
+合适的品牌形象可以表现出组织品牌的强烈意识，从而增强用户对组织的信任。 建议考虑以下用于获取、选择和优化显示位置图像的一些提示。
 
 - 联系市场部或文艺部。 他们可能已经拥有一组被认可的品牌图像。 他们也可以根据需要帮助你优化图像。
 - 请同时考虑横向和纵向的构图。 图像背景应足以围绕焦点。 可以基于设备大小、方向和平台对图像进行不同的剪裁。
-- 避免使用通用的图库图像。 此图像应反映组织的品牌，并使用户感到熟悉。 如果你没有，那么最好不要使用，这也比使用对用户没有任何意义的通用图像要好。
+- 避免使用通用的图库图像。 此图像应体现组织的品牌，并使用户感到熟悉。 如果你没有，那么最好不要使用，这也比使用对用户没有任何意义的通用图像要好。
 - 删除不需要的元数据。 图像文件可以附带元数据，例如相机配置文件、地理位置、标题、字幕等。 使用图像优化工具去除此信息，以确保高质量并同时满足文件大小限制。
 
 ### <a name="brand-image-examples"></a>品牌图像示例
@@ -193,4 +193,4 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 
 ## <a name="next-steps"></a>后续步骤
 
-- [使用 Microsoft Intune 手动添加 Windows 10 公司门户应用](company-portal-app.md)
+- [添加应用](apps-add.md)

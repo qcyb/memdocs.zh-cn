@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087096"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359311"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中使用设备配置文件的设备应用功能和设置
 
@@ -53,7 +53,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 [证书](../protect/certificates-configure.md)配置分配到设备的受信任、SCEP 和 PKCS 证书。 这些证书会对 WiFi、VPN 和电子邮件配置文件进行身份验证。
 
-此功能支持： 
+此功能支持：
 
 - Android 设备管理员
 - Android Enterprise
@@ -84,6 +84,15 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 此功能支持：
 
 - Windows 10 及更高版本
+
+## <a name="derived-credential"></a>派生凭据
+
+[派生凭据](../protect/derived-credentials.md)是智能卡上的证书，可用于身份验证、签名和加密。 在 Intune 中，你可以创建具有这些凭据的配置文件，以便用于应用、电子邮件配置文件、连接到 VPN、S/MIME 和 Wi-Fi。
+
+此功能支持：
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## <a name="device-features"></a>设备功能
 
@@ -133,7 +142,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="education"></a>教育水平
 
-[教育设置 - Windows 10](education-settings-configure.md) 配置针对 [Windows 参加测验应用](https://education.microsoft.com/gettrained/win10takeatest)的选项。 在配置这些选项时，直到测试完成才可以在设备上运行其他应用。
+[教育设置 - Windows 10](education-settings-configure.md) 配置针对 [Windows 参加测验应用](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)的选项。 在配置这些选项时，直到测试完成才可以在设备上运行其他应用。
 
 [教育设置 - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) 使用 iOS/iPadOS Classroom 应用来指导学习，并控制课堂中的学生设备。 可以将 iPad 设备配置为多名学生可以共享一台设备。
 
@@ -141,7 +150,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 [电子邮件设置](email-settings-configure.md)创建、分配和监视设备上的 Exchange ActiveSync 电子邮件设置。 邮件配置文件可帮助确保一致性、减少支持呼叫，并让最终用户能够在不进行任何所需设置的情况下在其个人设备上访问公司电子邮件。 
 
-此功能支持： 
+此功能支持：
 
 - Android 设备管理员
 - Android Enterprise
@@ -151,12 +160,13 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-[适用于 Windows 10 的终结点保护设置](../protect/endpoint-protection-windows-10.md)配置了适用于 Windows 10 设备的 BitLocker 和 Microsoft Defender 设置。
+[Endpoint Protection](../protect/endpoint-protection-configure.md) 可配置适用于 Windows 10 设备的 BitLocker 和 Microsoft Defender 设置。 还可在 macOS 设备上配置防火墙、网关和其他资源。
 
 若要使用 Microsoft Intune 载入 Microsoft Defender 高级威胁防护 (WDATP)，请参阅[使用移动设备管理 (MDM) 工具配置终结点](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm)。
 
 此功能支持：
 
+- macOS
 - Windows 10 及更高版本
 
 ## <a name="esim-cellular---public-preview"></a>eSIM 手机网络 - 公共预览版
@@ -192,7 +202,15 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 - Windows 10 及更高版本
 
-展台设置也可用作适用于 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) 和 [iOS/iPadOS](device-restrictions-ios.md#kiosk) 的设备限制。
+展台设置也可用作适用于 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 和 [iOS/iPadOS](device-restrictions-ios.md#kiosk) 的设备限制。
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender 高级威胁防护 (ATP)](../protect/advanced-threat-protection.md) 与 Intune 集成以监视和保护设备。 设置风险级别，并确定设备超过该级别时会发生的情况。 与条件访问结合使用时，可帮助防止组织中的恶意活动。
+
+此功能支持：
+
+- Windows 10 及更高版本
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -206,11 +224,18 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 [Windows 10 设备的 PowerShell 脚本](../apps/intune-management-extension.md)使用 Intune 管理扩展从 Intune 上传 PowerShell 脚本，然后在设备上运行这些脚本。 另请参阅使用此扩展所需的条件、如何将它们添加到 Intune，以及其他重要信息。
 
-
 此功能支持：
 
 - Windows 10 及更高版本
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>首选项文件
+
+macOS 设备上的[首选项文件](preference-file-settings-macos.md)包括有关应用的信息。 例如，可使用首选项文件来控制 Web 浏览器设置、自定义应用等。
+
+此功能支持：
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>共享的多用户设备
 
@@ -260,14 +285,6 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 - iOS/iPadOS
 - macOS
 - Windows 8.1 （仅限导入）
-- Windows 10 及更高版本
-
-## <a name="windows-information-protection-profile"></a>Windows 信息保护配置文件
-
-[Windows 信息保护](../protect/windows-information-protection-configure.md)有助于防范数据泄露，而不会干扰员工体验。 它还有助于防范企业应用和数据在企业自有设备和员工工作使用的个人设备上发生意外数据泄露。 使用 Windows 信息保护不需要对你的环境或其他应用进行更改。
-
-此功能支持：
-
 - Windows 10 及更高版本
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra 移动性扩展 (MX)

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349207"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488064"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>在 Intune 中管理 Windows 10 软件更新
 
@@ -209,7 +209,7 @@ Intune 管理员可以使用“卸载”  来卸载（回滚）活动更新通�
 
 要在 Intune 中使用 Windows 10 功能更新，必须满足以下先决条件。
 
-- 设备必须在 Intune MDM 中注册，并加入 Azure AD 或注册 Azure AD。
+- 设备必须在 Intune MDM 中注册，并且加入混合 AD、Azure AD，或注册 Azure AD。
 - 若要将功能更新策略与 Intune 配合使用，设备必须打开遥测，同时最小设置为[基本  ](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry)。 作为[设备限制策略](../configuration/device-restrictions-configure.md)的一部分，在“报告遥测”  下配置遥测。
   
   如果设备接收功能更新策略，并将遥测设置为“未配置”（这意味着它处于关闭状态），则可能会安装比功能更新策略中定义的版本更新的 Windows  。 需要遥测的先决条件正在审查中，因为此功能将正式发布。

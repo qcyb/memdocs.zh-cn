@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c07fc8102504a9ca3ee5694e8cb9b1d5f8b568bc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352236"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322442"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>使用 Intune 监视设备加密
 
 Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密状态的详细信息，并查找设备恢复密钥的管理选项。 可用的恢复密钥选项取决于要查看的设备类型。
 
-要查找报告，请登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 选择“设备” > “监视器”，然后在“配置”下选择“加密报告”     。
+要查找报告，请登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 选择“设备” > “监视器”，然后在“配置”下选择“加密报告”     。
 
 ## <a name="view-encryption-details"></a>查看加密详细信息
 

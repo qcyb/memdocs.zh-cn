@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086176"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256634"
 ---
 # <a name="what-is-device-enrollment"></a>什么是设备注册？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,7 +40,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 | | 设备在注册过程中被擦除。 | 将每个设备与用户关联。| 如果“是”，则用户无法取消注册设备。 | |
 |**[BYOD](#bring-your-own-device)** | 否| 是 | 否 | [详细信息](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| 否 |否 |否 | [详细信息](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| 是 | 可选 | 可选|[详细信息](device-enrollment-program-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| 是 | 可选 | 可选|[详细信息](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| 是 | 可选 | 否| [详细信息](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| 否 | 否 | 否|[详细信息](apple-configurator-enroll-ios.md)|
 
@@ -49,7 +49,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | 否| 是 | 否 | [详细信息](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| 否 |否 |否  | [详细信息](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| 是 | 可选 | 可选|[详细信息](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| 是 | 可选 | 可选|[详细信息](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Windows 注册方法
 
@@ -84,15 +84,15 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 自带设备办公 (BYOD) 指代的设备包括个人拥有的电话、平板电脑和电脑。 用户安装并运行公司门户应用，以注册 BYOD。 此程序可让用户访问电子邮件等公司资源。
 
 ## <a name="corporate-owned-device"></a>公司拥有的设备
-[公司拥有的设备 (COD)](corporate-identifiers-add.md) 包括组织拥有并分发给员工的电话、平板电脑和电脑。 COD 注册支持多种方案，例如自动注册、共享设备或预授权注册需求。 管理员或经理注册 COD 的常用方法是使用设备注册管理器 (DEM)。 可直接通过 Apple 提供的设备注册计划 (DEP) 工具注册 iOS/iPadOS 设备。 也可识别具有 IMEI 号码的设备并将其标记为“公司拥有”。
+[公司拥有的设备 (COD)](corporate-identifiers-add.md) 包括组织拥有并分发给员工的电话、平板电脑和电脑。 COD 注册支持多种方案，例如自动注册、共享设备或预授权注册需求。 管理员或经理注册 COD 的常用方法是使用设备注册管理器 (DEM)。 可以直接通过 Apple 提供的 ADE 工具注册 iOS/iPadOS 设备。 也可识别具有 IMEI 号码的设备并将其标记为“公司拥有”。
 
 ### <a name="device-enrollment-manager"></a>设备注册管理器
 设备注册管理员 (DEM) 是一个特殊的用户帐户，用于注册和管理多个企业拥有的设备。 此管理器可以安装公司门户和注册多个无用户设备。 这些类型的设备非常适用于销售点或实用工具应用，但是不适用于需要访问电子邮件或公司资源的用户。 详细了解 [DEM](device-enrollment-manager-enroll.md)。
 
-### <a name="apple-device-enrollment-program"></a>Apple 设备注册计划
-通过 Apple 设备注册计划 (DEP) 管理，可“无线”创建策略并将其部署到通过 DEP 购买和管理的 iOS/iPadOS 和 macOS 设备。 用户第一次开启设备并运行设置助理时，将注册设备。 此方法支持 iOS/iPadOS 受监督模式，该模式允许设备配置特定功能。
+### <a name="apple-automated-device-enrollment"></a>Apple 自动设备注册
+通过 Apple 自动设备注册 (ADE) 管理，可无线创建策略并将其部署到通过 ADE 购买和管理的 iOS/iPadOS 和 macOS 设备。 用户第一次开启设备并运行设置助理时，将注册设备。 此方法支持 iOS/iPadOS 受监督模式，该模式允许设备配置特定功能。
 
-了解有关 iOS/iPadOS DEP 注册的详细信息：
+了解有关 iOS/iPadOS ADE 注册的详细信息：
 
 - [选择 iOS/iPadOS 设备的注册方式](ios-enroll.md)
 - [使用设备注册计划注册 iOS/iPadOS 设备](device-enrollment-program-enroll-ios.md)

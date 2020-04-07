@@ -1,12 +1,12 @@
 ---
 title: Windows 信息保护 (WIP) 应用保护策略
 titleSuffix: Microsoft Intune
-description: 通过 Microsoft Intune 创建和部署 Windows 信息保护 (WIP) 应用保护策略
+description: 通过 Microsoft Intune 创建和部署 Windows 信息保护 (WIP) 策略
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345684"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326099"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>通过 Intune 创建和部署 Windows 信息保护 (WIP) 应用保护策略
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>通过 Intune 创建和部署 Windows 信息保护 (WIP) 策略
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-可将应用保护策略用于 Windows 10 应用，在未注册设备的情况下保护应用。
+可将 Windows 信息保护 (WIP) 用于 Windows 10 应用，以在未注册设备的情况下保护应用。
 
 ## <a name="before-you-begin"></a>在开始之前
 
@@ -49,10 +49,10 @@ ms.locfileid: "79345684"
 
 ## <a name="prerequisites"></a>必备条件
 
-必须先配置 MAM 提供程序，然后才可以创建 WIP 应用保护策略。 详细了解[如何通过 Intune 配置 MAM 提供程序](app-protection-policies-configure-windows-10.md)。  
+必须先配置 MAM 提供程序，然后才可以创建 WIP 策略。 详细了解[如何通过 Intune 配置 MAM 提供程序](app-protection-policies-configure-windows-10.md)。  
 
 > [!IMPORTANT]
-> WIP 不支持多标识，一次只能存在一个托管标识。
+> WIP 不支持多标识，一次只能存在一个托管标识。 有关 WIP 功能和限制的详细信息，请参阅[使用 Windows 信息保护 (WIP) 保护企业数据](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)。
 
 此外，还需要具有以下许可证和更新：
 
@@ -63,7 +63,7 @@ ms.locfileid: "79345684"
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>添加 WIP 应用保护策略
+## <a name="to-add-a-wip-policy"></a>添加 WIP 策略
 
 设置组织中的 Intune 后，可以创建特定于 WIP 的策略。
 
@@ -76,7 +76,7 @@ ms.locfileid: "79345684"
 3. 添加下列值：
     - **名称：** 键入新策略的名称（必填）。
     - **描述：** （可选）键入说明。
-    - **平台：** 选择“Windows 10”作为应用保护策略的支持平台  。
+    - **平台：** 选择“Windows 10”作为 WIP 策略的支持平台  。
     - **注册状态：** 选择“无需注册”作为策略的注册状态  。
 4. 选择“创建”  。 创建策略并在“应用保护策略”窗格的表中显示该策略  。
 

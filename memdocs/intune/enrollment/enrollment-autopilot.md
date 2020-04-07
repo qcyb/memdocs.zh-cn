@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f566361eab24ee93e8b332eeb3e005c8555ece0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363741"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327124"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>使用 Windows Autopilot 在 Intune 中注册 Windows 设备  
 Windows Autopilot 简化了 Intune 中的设备注册。 生成和维护自定义操作系统映像的过程非常耗时。 可能还要先花时间将自定义操作系统映像应用到新设备，让其可供使用，然后再提供给最终用户。 使用 Microsoft Intune 和 Autopilot 就可向最终用户提供全新设备，而无需生成、维护自定义操作系统映像以及将其应用到设备。 使用 Intune 管理 Autopilot 设备时，可以在注册设备后管理策略、配置文件和应用等。 有关优势、方案和先决条件的概述，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。
@@ -51,7 +51,7 @@ Windows Autopilot 简化了 Intune 中的设备注册。 生成和维护自定�
 
 可以通过导入具有 Windows Autopilot 设备信息的 CSV 文件来添加这些设备。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备”   > “Windows”   > “Windows 注册”   > “设备”  （在“Windows Autopilot 部署计划”   > “导入”  下）。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “Windows” > “Windows 注册” > “设备”（在“Windows Autopilot 部署计划” > “导入”下）       。
 
     ![Windows Autopilot 设备的屏幕截图](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -73,7 +73,7 @@ Windows Autopilot 简化了 Intune 中的设备注册。 生成和维护自定�
 
 ## <a name="create-an-autopilot-device-group"></a>创建 Autopilot 设备组
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“组”   > “新组”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“组”   > “新建组”  。
 2. 在“组”边栏选项卡中  ：
     1. 对于“组类型”  ，选择“安全”  。
     2. 在“组名称”  和“组说明”  中，输入名称和说明。
@@ -90,7 +90,7 @@ Windows Autopilot 简化了 Intune 中的设备注册。 生成和维护自定�
 
 ## <a name="create-an-autopilot-deployment-profile"></a>创建 Autopilot 部署配置文件
 Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多可创建 350 个配置文件。
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “部署配置文件”   > “创建配置文件”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “部署配置文件”   > “创建配置文件”  。
 2. 在“基本信息”页上，键入名称和可选说明    。
 
     ![“基本信息”页的屏幕截图](./media/enrollment-autopilot/create-profile-basics.png)
@@ -139,7 +139,7 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
 ## <a name="edit-an-autopilot-deployment-profile"></a>编辑 Autopilot 部署配置文件
 在成功创建 Autopilot 部署配置文件后，可对该部署配置文件的某些部分进行编辑。   
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “部署配置文件”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “部署配置文件”     。
 2. 选择要编辑的配置文件。
 3. 选择左侧的“属性”  以更改该部署配置文件的名称或说明。 更改后请单击“保存”  。
 5. 单击“设置”以对 OOBE 设置进行更改  。 更改后请单击“保存”  。
@@ -150,7 +150,7 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
 ## <a name="edit-autopilot-device-attributes"></a>编辑 Autopilot 设备属性
 上传 Autopilot 设备后，可以编辑设备的某些属性。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “设备”  （位于“Windows Autopilot Deployment 计划”  下）。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “设备”（位于“Windows Autopilot Deployment 计划”下）      。
 2. 选择要编辑的设备。
 3. 在屏幕右侧的窗格中，可以编辑设备名称、组标记或用户易记名称（如果已分配用户）。
 4. 选择“保存”  。
@@ -162,11 +162,11 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
 
 警报将显示没有 Autopilot 部署配置文件的 Autopilot 程序设备数。 使用警报中的信息可创建配置文件，并将其分配到未分配的设备。 单击警报时，可看到 Windows Autopilot 设备的完整列表，以及与之相关的详细信息。
 
-若要查看未分配设备的警报，请在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“设备”   > “概述”   > “注册警报”   > “未分配的设备”  。  
+若要查看未分配设备的警报，请在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“设备” > “概述” > “注册警报” > “未分配的设备”     。  
 
 ## <a name="autopilot-deployments-report"></a>Autopilot 部署报告
 可以查看通过 Windows Autopilot 部署的每个设备的详细信息。
-若要查看报表，请转到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备”   > “监视”   > “Autopilot 部署”  。
+若要查看报表，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “监视” > “Autopilot 部署”    。
 数据在部署后的 30 天内可用。
 
 此报表处于预览状态。 设备部署记录当前仅由新的 Intune 注册事件触发。 这意味着此报表不会选择任何不触发新的 Intune 注册的部署。 这包括维持注册的任何类型的重置以及 Autopilot White Glove 的用户部分。
@@ -180,7 +180,7 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
 > [!NOTE]
 > 如果使用的是 ADFS，则将用户分配到特定 Autopilot 设备不起作用。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “设备”  （位于“Windows Autopilot Deployment 计划”  下）> 选择设备 >“分配用户”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “设备”（位于“Windows Autopilot Deployment 计划”下）> 选择设备 >“分配用户”       。
 
     ![分配用户的屏幕截图](./media/enrollment-autopilot/assign-user.png)
 
@@ -223,9 +223,9 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
 通过 Configuration Manager [使用 Autopilot 为现有设备注册](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)时，可以按交换码 ID 对 Windows 设备进行分组。 交换码 ID 是 Autopilot 配置文件的参数。 [Azure AD 设备属性 enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) 将自动设置为“OfflineAutopilotprofile - \< correlator ID\>”。 如此，即可使用 enrollmentprofileName 属性基于交换码 ID 创建任意 Azure AD 动态组。
 
 >[!WARNING] 
-> 由于在 Intune 中未预先列出交换码 ID，因此设备可能会报告所需的任何交换码 ID。 如果用户创建与 Autopilot 或 Apple DEP 配置文件名称匹配的交换码 ID，设备将基于 enrollmentProfileName 属性添加到任何动态 Azure AD 设备组。 避免此冲突的方法：
+> 由于在 Intune 中未预先列出交换码 ID，因此设备可能会报告所需的任何交换码 ID。 如果用户创建与 Autopilot 或 Apple ADE 配置文件名称匹配的交换码 ID，设备将基于 enrollmentProfileName 属性添加到任何动态 Azure AD 设备组。 避免此冲突的方法：
 > - 始终创建根据整个  enrollmentProfileName 值进行匹配的动态组规则
-> - 从不以“OfflineAutopilotprofile-”开头命名 Autopilot 或 Apple DEP 配置文件。
+> - 从不以“OfflineAutopilotprofile-”开头命名 Autopilot 或 Apple ADE 配置文件。
 
 ## <a name="next-steps"></a>后续步骤
 在为已注册的 Windows 10 设备配置 Windows Autopilot 后，了解如何管理这些设备。 有关详细信息，请参阅[什么是 Microsoft Intune 设备管理？](../remote-actions/device-management.md)

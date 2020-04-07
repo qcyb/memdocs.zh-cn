@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 48ec5bf332d951fc19cb4d6ef1dee242b87d02ee
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084788"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325480"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>快速入门：将通知发送到不符合的设备
 
@@ -41,7 +41,7 @@ ms.locfileid: "80084788"
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 
-以[全局管理员](../fundamentals/users-add.md#types-of-administrators)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
+以[全局管理员](../fundamentals/users-add.md#types-of-administrators)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
 
 ## <a name="create-a-notification-message-template"></a>创建通知邮件模板
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084062"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327438"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>在 Microsoft Intune 中创建设备配置文件
 
@@ -37,73 +37,64 @@ ms.locfileid: "80084062"
 
 ## <a name="create-the-profile"></a>创建配置文件
 
-1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)创建配置文件。 在此管理中心中，选择“设备”  。 有下列选项：
 
-2. 选择“设备”   > “配置文件”  。 有下列选项：
+- **概述**：列出配置文件的状态，并提供有关分配给用户和设备的配置文件的其他详细信息。
+- **监视**：检查配置文件的状态（成功或失败），并查看配置文件中的日志。
+- 按平台  ：创建并查看按平台列出的策略和配置文件。 此视图还可能会显示特定于平台的功能。 例如，选择“Windows”  。 你将看到特定于 Windows 的功能，如 Windows 10 更新通道和 PowerShell 脚本   。
+- **策略**：创建设备配置文件，并上传自定义 [PowerShell 脚本](../apps/intune-management-extension.md)以在设备上运行，然后使用 [eSIM](esim-device-configuration.md) 向设备添加数据计划。
 
-    - **概述**：列出配置文件的状态，并提供有关分配给用户和设备的配置文件的其他详细信息。
-    - **管理**：创建设备配置文件，并上传自定义 [PowerShell 脚本](../apps/intune-management-extension.md)以在配置文件中运行，并使用 [eSIM](esim-device-configuration.md) 向设备添加数据计划。
-    - **监视**：检查配置文件的状态（成功或失败），并查看配置文件中的日志。
-    - **设置**：在配置文件中添加 SCEP 或 PFX 证书颁发机构，或启用[电信费用管理](telecom-expenses-monitor.md)。
+创建配置文件（“配置文件” > “创建配置文件”   ）时，请选择平台：
 
-3. 选择“创建配置文件”  。 输入以下属性：
+- **Android 设备管理员**
+- **Android Enterprise**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 及更高版本**
+- **Windows 8.1 及更高版本**
+- **Windows Phone 8.1**
 
-   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 WP 电子邮件配置文件”  。
-   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-   - **平台**：选择设备平台。 选项包括：  
+然后选择配置文件类型。 根据所选择的平台，可配置的设置有所不同。 以下文章介绍了不同配置文件类型的设置：
 
-       - **Android 设备管理员**
-       - **Android 企业**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 及更高版本**
-       - **Windows 10 及更高版本**
+- [管理模板 (Windows)](administrative-templates-windows.md)
+- [自定义](custom-settings-configure.md)
+- [传递优化 (Windows)](delivery-optimization-windows.md)
+- [派生凭据（Android Enterprise、iOS、iPadOS）](../protect/derived-credentials.md)
+- [设备功能（macOS、iOS、iPadOS）](device-features-configure.md)
+- [设备固件 (Windows)](device-firmware-configuration-interface-windows.md)
+- [设备限制](device-restrictions-configure.md)
+- [域加入 (Windows)](domain-join-configure.md)
+- [版本升级和模式切换 (Windows)](edition-upgrade-configure-windows-10.md)
+- [教育（iOS、iPadOS）](../fundamentals/education-settings-configure-ios.md)
+- [Email](email-settings-configure.md)
+- [Endpoint Protection（macOS、Windows）](../protect/endpoint-protection-configure.md)
+- [扩展 (macOS)](kernel-extensions-overview-macos.md)
+- [标识保护 (Windows)](../protect/identity-protection-configure.md)
+- [展台](kiosk-settings.md)
+- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [移动扩展 (MX) 配置文件（Android 设备管理员）](android-zebra-mx-overview.md)
+- [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
+- [PKCS 证书](../protect/certficates-pfx-configure.md)
+- [PKCS 导入的证书](../protect/certificates-imported-pfx-configure.md)
+- [首选项文件 (macOS)](preference-file-settings-macos.md)
+- [SCEP 证书](../protect/certificates-scep-configure.md)
+- [安全评估（教育）(Windows)](education-settings-configure.md)
+- [共享的多用户设备 (Windows)](shared-user-device-settings.md)
+- [电信费用（Android 设备管理员、iOS、iPadOS）](telecom-expenses-monitor.md)
+- [受信任的证书](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **配置文件类型**：选择要创建的设置类型。 显示的列表取决于所选择的平台  。
-   - **设置**：以下文章介绍了每种配置文件类型的设置：
+例如，如果选择“iOS/iPadOS”作为平台，配置文件类型选项外观将类似如下配置文件所示  ：
 
-       - [管理模板](administrative-templates-windows.md)
-       - [自定义](custom-settings-configure.md)
-       - [传递优化](delivery-optimization-windows.md)
-       - [设备功能](device-features-configure.md)
-       - [设备限制](device-restrictions-configure.md)
-       - [域加入](domain-join-configure.md)
-       - [版本升级和模式切换](edition-upgrade-configure-windows-10.md)
-       - [教育](education-settings-configure.md)
-       - [Email](email-settings-configure.md)
-       - [Endpoint protection](../protect/endpoint-protection-configure.md)
-       - [标识保护](../protect/identity-protection-configure.md)  
-       - [展台](kiosk-settings.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [PKCS 证书](../protect/certficates-pfx-configure.md)
-       - [PKCS 导入的证书](../protect/certificates-imported-pfx-configure.md)
-       - [首选项文件](preference-file-settings-macos.md)
-       - [SCEP 证书](../protect/certificates-scep-configure.md)
-       - [受信任的证书](../protect/certificates-configure.md)
-       - [更新策略](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows 信息保护](../protect/windows-information-protection-configure.md)
-
-     例如，如果选择“iOS/iPadOS”作为平台，配置文件类型选项外观将类似如下配置文件所示  ：
-
-     > [!div class="mx-imgBorder"]
-     > ![在 Intune 中创建 iOS/iPadOS 配置文件](./media/device-profile-create/create-device-profile.png)
-
-4. 完成后，选择“确定” > “创建”，保存所做更改   。 此时，配置文件创建完成，并出现在列表中。
+> [!div class="mx-imgBorder"]
+> ![在 Intune 中创建 iOS/iPadOS 配置文件](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>作用域标记
 
-添加设置后，还可以向配置文件添加作用域标记。 “作用域标记”将配置文件筛选到特定 IT 组（例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。
+添加设置后，还可以向配置文件添加作用域标记。 “作用域标记”将配置文件筛选到特定 IT 组（例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 并且用于分布式 IT。
 
 若要详细了解作用域标记以及可以执行的操作，请参阅[将 RBAC 和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。
-
-### <a name="add-a-scope-tag"></a>添加作用域标记
-
-1. 选择“作用域(标记)”  。
-2. 选择“添加”  以创建新的作用域标记。 或者，从列表中选择现有作用域标记。
-3. 选择“确定”，保存所做更改  。
 
 ## <a name="applicability-rules"></a>适用性规则
 

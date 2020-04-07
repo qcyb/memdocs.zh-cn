@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084877"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322478"
 ---
 # <a name="use-device-encryption-with-intune"></a>使用 Intune 设备加密
 
@@ -43,7 +43,7 @@ Intune 还提供内置的[加密报表](encryption-monitor.md)，其中提供了
 
 FileVault 是 macOS 附带的整盘加密程序。 可以使用 Intune 在运行 macOS 10.13 或更高版本的设备上配置 FileVault  。
 
-若要配置 FileVault，请为 macOS 平台创建用于 Endpoint Protection 的[设备配置配置文件](../configuration/device-profile-create.md)。 FileVault 设置是 macOS Endpoint Protection 的可用设置类别之一。
+若要配置 FileVault，请为 macOS 平台创建用于 Endpoint Protection 的[设备配置配置文件](endpoint-protection-configure.md)。 FileVault 设置是 macOS Endpoint Protection 的可用设置类别之一。
 
 创建使用 FileVault 加密设备的策略后，策略将分两个阶段应用于设备。 首先，准备好设备，以启用 Intune 检索和备份恢复密钥。 此操作称为“托管”。 托管密钥后，磁盘加密便可启动。
 
@@ -105,7 +105,7 @@ FileVault 是 macOS 附带的整盘加密程序。 可以使用 Intune 在运行
 
 BitLocker 适用于运行 Windows 10 或更高版本的设备  。
 
-为 Windows 10 或更高版本的平台创建用于 Endpoint Protection 的[设备配置配置文件](../configuration/device-profile-create.md)时，请配置 BitLocker。 BitLocker 设置属于 Windows 10 Endpoint Protection 的 Windows 加密设置类别。
+为 Windows 10 或更高版本的平台创建用于 Endpoint Protection 的[设备配置配置文件](endpoint-protection-configure.md)时，请配置 BitLocker。 BitLocker 设置属于 Windows 10 Endpoint Protection 的 Windows 加密设置类别。
 
 ![BitLocker 设置](./media/encrypt-devices/bitlocker-settings.png)
 

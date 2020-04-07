@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354407"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326623"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>通过 Intune 管理和使用 Windows Holographic 和 HoloLens 设备上的不同设备管理功能
 
@@ -58,7 +58,7 @@ Intune 提供了公司门户应用，用户可使用该应用访问公司数据�
 
 **[创建设备符合性策略](../protect/compliance-policy-create-windows.md)**
 
-符合性策略即设备为符合要求必须满足的规则和设置。 可以将这些策略与条件访问结合使用，阻止不符合要求的设备访问公司资源。 在 Intune 中可以为运行 Windows Holographic for Business 的设备创建符合性策略，从而允许或阻止其访问权限。 例如，可以创建一个要求启用 Bitlocker 的策略。
+符合性策略即设备为符合要求必须满足的规则和设置。 可以将这些策略与条件访问结合使用，阻止不符合要求的设备访问公司资源。 在 Intune 中可以为运行 Windows Holographic for Business 的设备创建符合性策略，从而允许或阻止其访问权限。 例如，可以创建一个要求启用 BitLocker 的策略。
 
 另请参阅[设备符合性策略入门](../protect/device-compliance-get-started.md)  。
 
@@ -107,7 +107,7 @@ Intune 具有一些内置操作，允许 IT 管理员在本地设备上执行不
 
 ## <a name="device-configuration-profiles"></a>设备配置文件
 
-**[开始使用配置文件](../configuration/device-profiles.md)并[创建自己的配置文件](../configuration/device-profile-create.md)**
+[开始使用配置文件](../configuration/device-profiles.md)和[配置文件概述](../configuration/device-profile-create.md) 
 
 Intune 提供可在组织内的不同设备上启用或禁用的设置和功能。 这些设置和功能通过配置文件进行管理。 例如，可以在运行 Windows Holographic for Business 的设备上创建一个启用 Cortana 或使用 Microsoft Defender Smart Screen 的配置文件。
 

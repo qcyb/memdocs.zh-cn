@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d14943a37cf29a224c94364317d899b65ffef0
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526320"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326962"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>使用 Intune 和 Windows Autopilot 部署加入混合 Azure AD 的设备
 可以使用 Intune 和 Windows Autopilot 设置加入混合 Azure Active Directory (Azure AD) 的设备。 为此，请执行本文中的步骤。
@@ -109,7 +109,7 @@ ms.locfileid: "79526320"
 
 用于 Active Directory 的 Intune 连接器必须安装在运行 Windows Server 2016 或更高版本的计算机上。 计算机还必须能够访问 Internet 和 Active Directory。 要增加扩展性和可用性或要支持多个 Active Directory 域，可以在环境中安装多个连接器。 建议在未运行任何其他 Intune 连接器的服务器上安装连接器。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “适用于 Active Directory 的 Intune 连接器”   > “添加”  。 
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “适用于 Active Directory 的 Intune 连接器”   > “添加”  。 
 2. 按照说明下载连接器。
 3. 打开下载的连接器安装文件 ODJConnectorBootstrapper.exe，安装连接器  。
 4. 设置结束时，选择“配置”  。
@@ -119,7 +119,7 @@ ms.locfileid: "79526320"
 7. 转到“设备” > “Windows” > “Windows 注册” > “适用于 Active Directory 的 Intune 连接器”，然后确认连接状态为“活动”      。
 
 > [!NOTE]
-> 登录到连接器之后，可能需要几分钟才能显示在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) 中。 它只有在能够成功与 Intune 服务通信时才会显示。
+> 登录到连接器之后，可能需要几分钟才能显示在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中。 它只有在能够成功与 Intune 服务通信时才会显示。
 
 ### <a name="turn-off-ie-enhanced-security-configuration"></a>关闭 IE 增强的安全配置
 默认情况下，Windows Server 已打开 Internet Explorer 增强的安全配置。 如果无法登录到用于 Active Directory 的 Intune 连接器，则为管理员关闭 IE 增强的安全配置。 [如何关闭 Internet Explorer 增强的安全配置](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
@@ -130,7 +130,7 @@ ms.locfileid: "79526320"
 
 
 ## <a name="create-a-device-group"></a>创建设备组
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“组”   > “新组”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“组”   > “新建组”  。
 
 1. 在“组”窗格中，执行以下操作： 
 
@@ -185,7 +185,7 @@ Autopilot 设备已注册后，其设备名称成为设备的主机名。 默认
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>创建并分配 AutoPilot 部署配置文件
 Autopilot 部署配置文件用于配置 Autopilot 设备。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “部署配置文件”   > “创建配置文件”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “部署配置文件”   > “创建配置文件”  。
 2. 在“基本信息”页上，键入名称和可选说明    。
 3. 如果希望已分配组中的所有设备自动转换为 Autopilot，请把“将所有目标设备转换为 Autopilot”设置为“是”   。 已分配组中的所有公司拥有的非 Autopilot 设备都将注册 Autopilot 部署服务。 个人拥有的设备不会转换为 Autopilot。 等待 48 小时来处理注册。 取消注册设备并重置后，Autopilot 将对其进行注册。 以这种方式注册设备后，禁用此选项或删除配置文件分配将不会从 Autopilot 部署服务中删除该设备。 必须改为[直接删除该设备](enrollment-autopilot.md#delete-autopilot-devices)。
 4. 选择“下一步”  。
@@ -202,7 +202,7 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>（可选）打开注册状态页
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “注册状态页”  。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “注册状态页”  。
 1. 在“注册状态页”窗格中，选择“默认” > “设置”    。
 1. 在“显示应用和配置文件安装进度”中，选择“确定”   。
 1. 根据需要配置其他选项。
@@ -210,7 +210,7 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>创建并分配域加入配置文件
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “配置文件” > “创建配置文件”    。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “配置文件” > “创建配置文件”    。
 2. 输入以下属性：
    - **名称**：输入新配置文件的描述性名称。
    - **描述**：输入配置文件的说明。

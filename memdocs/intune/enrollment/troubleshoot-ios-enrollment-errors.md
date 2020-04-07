@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363260"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326936"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 中的 iOS/iPadOS 设备注册问题疑难解答
 
@@ -41,7 +41,7 @@ ms.locfileid: "79363260"
 - 有多少用户受到影响？ 是所有用户都受影响还是仅仅一部分用户受影响？
 - 有多少设备受到影响？ 是所有设备都受影响还是仅仅一部分设备受影响？
 - 什么是 MDM 机构？
-- 如何执行注册？ 是“自带设备”(BYOD) 还是带有注册配置文件的 Apple 设备注册计划 (DEP)？
+- 如何执行注册？ 是“自带设备”(BYOD) 还是带有注册配置文件的 Apple 自动设备注册划 (ADE)？
 
 ## <a name="error-messages"></a>错误消息
 
@@ -106,7 +106,7 @@ ms.locfileid: "79363260"
  原因：尝试注册该设备的用户没有 Microsoft Intune 许可证。
 
 #### <a name="resolution"></a>解决方法
-1. 转到 [Office 365 管理中心](https://portal.office.com/adminportal/home#/homepage)，然后选择“用户”>“活动用户”  。
+1. 转到 [Office 365 管理中心](https://admin.microsoft.com)，然后选择“用户”>“活动用户”  。
 2. 选择想要为其分配 Intune 用户许可证的用户帐户，然后选择“产品许可证”>“编辑”  。
 3. 将需要分配给该用户的许可证切换到“打开”  位置，然后选择“保存”  。
 4. 重新注册设备。
@@ -136,10 +136,10 @@ ms.locfileid: "79363260"
  原因：用户尝试注册的设备数超过设备注册限制。
 
 #### <a name="resolution"></a>解决方法
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “所有设备”  ，并检查用户已注册的设备数。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “所有设备”  ，并检查用户已注册的设备数。
     > [!NOTE]
     > 还应让受影响的用户登录到 [Intune 用户门户](https://portal.manage.microsoft.com/)并检查这些用户已注册的设备。 [Intune 用户门户](https://portal.manage.microsoft.com/)中可能显示一些设备，但 [Intune 管理门户](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)中没有显示，此类设备也会计入设备注册限制。
-2. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “注册限制”  ，然后查看设备注册限制。 默认情况下，将此限制设置为 15 个。 
+2. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “注册限制”  ，然后查看设备注册限制。 默认情况下，将此限制设置为 15 个。 
 3. 如果已注册的设备数已达到限制，请删除不必要的设备，或者增加设备注册限制。 由于每个已注册的设备都使用 Intune 许可证，因此建议首先删除不必要的设备。
 4. 重新注册设备。
 
@@ -157,7 +157,7 @@ ms.locfileid: "79363260"
  原因：尝试注册该设备的用户没有有效的 Intune 许可证。
 
 #### <a name="resolution"></a>解决方法
-1. 转到 [Microsoft 365 管理中心](https://portal.office.com/adminportal/home#/homepage)，然后选择“用户”   > “活动用户”  。
+1. 转到 [Microsoft 365 管理中心](https://admin.microsoft.com)，然后选择“用户”   > “活动用户”  。
 2. 选择受影响的用户帐户 >“产品许可证”   > “编辑”  。
 3. 验证是否为此用户分配了有效的 Intune 许可证。
 4. 重新注册设备。
@@ -166,7 +166,7 @@ ms.locfileid: "79363260"
 
  原因：尝试注册该设备的用户没有有效的 Intune 许可证。
 
-1. 转到 [Microsoft 365 管理中心](https://portal.office.com/adminportal/home#/homepage)，然后选择“用户”   > “活动用户”  。
+1. 转到 [Microsoft 365 管理中心](https://admin.microsoft.com)，然后选择“用户”   > “活动用户”  。
 2. 选择受影响的用户帐户，然后选择“产品许可证”   > “编辑”  。
 3. 验证是否为此用户分配了有效的 Intune 许可证。
 4. 重新注册设备。
@@ -203,7 +203,7 @@ ms.locfileid: "79363260"
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR 连接无效
 
-当你打开一台分配有注册配置文件的受 DEP 管理的设备时，注册将会失败，并且你会收到以下错误消息：
+当你打开一台分配有注册配置文件且受 ADE 管理的设备时，注册将会失败，并且你会收到以下错误消息：
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
- 原因：设备与 Apple DEP 服务之间存在连接问题。
+ 原因：设备与 Apple ADE 服务之间存在连接问题。
 
 #### <a name="resolution"></a>解决方法
 解决连接问题，或使用其他网络连接来注册设备。 如果问题仍然存在，可能还需要联系 Apple。
@@ -221,20 +221,20 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 
 ## <a name="other-issues"></a>其他问题
 
-### <a name="dep-enrollment-doesnt-start"></a>DEP 注册不启动
-当你打开分配了注册配置文件的受 DEP 管理的设备时，Intune 注册过程未启动。
+### <a name="ade-enrollment-doesnt-start"></a>ADE 注册不启动
+打开分配有注册配置文件且受 ADE 管理的设备时，Intune 注册过程未启动。
 
- 原因：在将 DEP 令牌上传到 Intune 之前创建了注册配置文件。
+ 原因：在将 ADE 令牌上传到 Intune 之前创建了注册配置文件。
 
 #### <a name="resolution"></a>解决方法
 
 1. 编辑注册配置文件。 可以对配置文件进行任何更改。 目的是更新配置文件的修改时间。
-2. 同步 DEP 管理的设备：在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌”>“选择令牌”>“立即同步”      。 会向 Apple 发送同步请求。
+2. 同步 ADE 管理的设备：在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌”> 选择令牌 >“立即同步”      。 会向 Apple 发送同步请求。
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>在用户登录时，DEP 注册停滞
-打开分配有注册配置文件的受 DEP 管理的设备并输入凭据后，初始设置会停滞。
+### <a name="ade-enrollment-stuck-at-user-login"></a>在用户登录时，ADE 注册停滞
+打开分配有注册配置文件且受 ADE 管理的设备并输入凭据后，初始设置会停滞。
 
- 原因：启用了多重身份验证 (MFA)。 在 DEP 设备上注册期间，当前 MFA 不起作用。
+ 原因：启用了多重身份验证 (MFA)。 在 ADE 设备上注册期间，当前 MFA 不起作用。
 
 #### <a name="resolution"></a>解决方法
 禁用 MFA，然后重新注册设备。

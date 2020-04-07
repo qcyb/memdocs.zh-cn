@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e51e969abcc4e8ab1b37796df72381fa3bdbe335
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351092"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322617"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中监视安全基线和配置文件
 
@@ -35,7 +35,7 @@ Intune 提供了用于监视安全基线的多个选项。 可以监视应用到
 
 监视基线时，你根据 Microsoft 的建议深入了解设备的安全状态。 可以在 Intune 控制台的安全基线的“概述”窗格中查看这些见解。  首次分配基线后，最多 24 小时后会显示数据。 之后进行的更改最多六个小时后会显示。
 
-若要查看基线和设备的监视数据，请登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 接下来，选择“终结点安全性”   > “安全基线”  ，然后选择一个基线并查看“概述”  窗格。
+若要查看基线和设备的监视数据，请登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 接下来，选择“终结点安全性”   > “安全基线”  ，然后选择一个基线并查看“概述”  窗格。
 
 “概述”窗格提供两种监视状态的方法  ：
 
@@ -110,7 +110,7 @@ Intune 提供了用于监视安全基线的多个选项。 可以监视应用到
 
 查看有关适用于单个设备的安全配置详细信息，这有助于隔离配置错误的设置。
 
-1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 转到“设备” > 所有设备”，然后选择要查看的设备   。
 

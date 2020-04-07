@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81246598fce3c03c95d9fd052e058749932bff4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342772"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80358703"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>配置适用于 Android Enterprise 的 Microsoft 托管主屏幕应用
 
@@ -34,9 +34,9 @@ ms.locfileid: "79342772"
 通常，如果通过设备配置提供了设置，请在此处配置这些设置。 这样可以节省时间，在最大程度上减少错误，并且将获得更佳的 Intune 支持体验。 但是，一些托管主屏幕设置目前仅通过 Intune 控制台中的“应用配置策略”窗格提供  。 使用本文档来了解如何使用配置设计器或 JSON 脚本对不同的设置进行配置。 
 
 > [!NOTE]
-> 目前，通过“应用”和“设备配置”来设置已列入允许列表的应用程序和固定的 Web 链接是可行的，也是可取的   。 有关“设备配置”中提供的可影响托管主屏幕的设置的完整列表，请参阅[专用设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)  。  
+> 目前，通过“应用”和“设备配置”来设置已列入允许列表的应用程序和固定的 Web 链接是可行的，也是可取的   。 有关“设备配置”中提供的可影响托管主屏幕的设置的完整列表，请参阅[专用设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-devices)  。  
 
-首先，导航到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后选择“应用”   > “应用配置策略”  。 为运行“Android”的“托管设备”添加配置策略，并选择“托管主屏幕”作为关联应用   。 单击“配置设置”以配置不同的可用托管主屏幕设置  。 
+首先，导航到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后选择“应用”   > “应用配置策略”  。 为运行“Android”的“托管设备”添加配置策略，并选择“托管主屏幕”作为关联应用   。 单击“配置设置”以配置不同的可用托管主屏幕设置  。 
 
 ## <a name="choosing-a-configuration-settings-format"></a>选择配置设置格式
 
@@ -136,7 +136,7 @@ ms.locfileid: "79342772"
                     "managedProperty": [
                         {
                             "key": "package",
-                            "valueString": “app package name here”
+                            "valueString": "app package name here"
                         }
                     ]
                 }
@@ -149,11 +149,11 @@ ms.locfileid: "79342772"
                     "managedProperty": [
                         {
                             "key": "link",
-                            "valueString": “link here”
+                            "valueString": "link here"
                         },
                         {
                             "key": "label",
-                            "valueString": “weblink label here”
+                            "valueString": "weblink label here"
                         }
                     ]
                 }
@@ -335,7 +335,7 @@ ms.locfileid: "79342772"
 托管主屏幕应用现在可以访问 Google 的 Android 设备策略应用。 托管主屏幕应用是一种自定义启动器，用于使用多应用展台模式在 Intune 中注册为 Android Enterprise (AE) 专用设备的设备。 你可以访问 Android 设备策略应用，或引导用户访问 Android 设备策略应用，以获取支持和进行调试。 此启动功能在设备注册并锁定到托管主屏幕时可用。 无需其他安装项，即可使用此功能。
 
 ## <a name="managed-home-screen-debug-screen"></a>托管的主屏幕调试屏幕
-可以通过单击“后退”按钮访问托管的主屏幕的调试屏幕，直到显示调试屏幕（单击“后退”按钮 15 次或更多次）   。 在此调试屏幕中，可以启动 Android 设备策略应用程序、查看和上传日志，或临时暂停展台模式以更新设备。 有关暂停展台模式的详细信息，请参阅 Android Enterprise [专用设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)中的“退出展台模式”  项。
+可以通过单击“后退”按钮访问托管的主屏幕的调试屏幕，直到显示调试屏幕（单击“后退”按钮 15 次或更多次）   。 在此调试屏幕中，可以启动 Android 设备策略应用程序、查看和上传日志，或临时暂停展台模式以更新设备。 有关暂停展台模式的详细信息，请参阅 Android Enterprise [专用设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-devices)中的“退出展台模式”  项。
 
 ## <a name="next-steps"></a>后续步骤
 

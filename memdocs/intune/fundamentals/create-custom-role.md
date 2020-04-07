@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54cb4028001f2e6b64cba639cb27c58b31db172f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344150"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326800"
 ---
 # <a name="create-a-custom-role-in-intune"></a>在 Intune 中创建自定义角色
 
@@ -34,7 +34,7 @@ ms.locfileid: "79344150"
 
 ## <a name="to-create-a-custom-role"></a>若要创建自定义角色
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色” > “创建”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色” > “创建”     。
 
 2. 在“基本信息”页上，输入新角色的名称和说明，然后选择“下一步”   。
 
@@ -48,7 +48,7 @@ ms.locfileid: "79344150"
 
 还可以复制现有角色。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色”> 选择列表中的一个角色 >“复制”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色”> 选择列表中的一个角色 >“复制”     。
 
 2. 在“基本信息”页上，输入名称  。 确保使用唯一的名称。
 

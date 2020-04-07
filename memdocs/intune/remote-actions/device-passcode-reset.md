@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc482163ea82f5e329b7486d1522e3536b75555d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349051"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326456"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>在 Intune 中重置或删除设备密码
 
@@ -57,7 +57,7 @@ ms.locfileid: "79349051"
 ## <a name="reset-a-passcode"></a>重置密码
 
 
-1. 使用以下任何角色登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)：Azure Active Directory 全局管理员、Azure Active Directory Intune 服务管理员、支持人员或角色管理员。
+1. 使用以下任何角色登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)：Azure Active Directory 全局管理员、Azure Active Directory Intune 服务管理员、支持人员或角色管理员。
 2. 依次选择“设备”和“所有设备”   。
 3. 从你管理的设备列表中，选择一个设备，然后选择“删除密码”  。
 
