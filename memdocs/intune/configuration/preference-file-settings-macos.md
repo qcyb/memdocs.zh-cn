@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d226888c3d710a7b80357ebb92130b34ab2fef94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360751"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359321"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 将属性列表文件添加到 macOS 设备
 
@@ -29,17 +29,13 @@ ms.locfileid: "79360751"
 
 此功能适用于：
 
-- 运行 10.7 及更高版本的 macOS 设备
+- macOS 10.7 及更高版本
 
-属性列表文件通常包含有关 macOS 应用程序的信息。 有关详细信息，请参阅[关于信息属性列表文件](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)（Apple 网站）和[自定义有效负载设置](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1)。
+属性列表文件包含有关 macOS 应用程序的信息。 有关详细信息，请参阅[关于信息属性列表文件](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)（Apple 网站）和[自定义有效负载设置](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1)。
 
-本文列出并介绍了可以添加到 macOS 设备的不同属性列表文件设置。 作为移动设备管理 (MDM) 解决方案的一部分，请使用这些设置添加应用程序包 ID (`com.company.application`) 及其 .plist 文件。
+本文列出并介绍了可以添加到 macOS 设备的不同属性列表文件设置。 作为移动设备管理 (MDM) 解决方案的一部分，请使用这些设置添加应用程序包 ID (`com.company.application`) 及应用的 .plist 文件。
 
 我们将这些设置添加到 Intune 中的设备配置配置文件中，然后分配或部署到 macOS 设备。
-
-## <a name="before-you-begin"></a>在开始之前
-
-[创建配置文件](device-profile-create.md)。
 
 ## <a name="what-you-need-to-know"></a>须知内容
 
@@ -48,23 +44,49 @@ ms.locfileid: "79360751"
 - 只有某些应用使用托管首选项，并且可能不允许管理所有设置。
 - 请确保上传的属性列表文件的目标是设备通道设置，而非用户通道设置。 属性列表文件以整个设备为目标。
 
-## <a name="preference-file"></a>首选项文件
+## <a name="create-the-profile"></a>创建配置文件
 
-- **首选项域名**：属性列表文件通常用于 Web 浏览器 (Microsoft Edge)、[Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)和自定义应用。 创建首选项域时，还会创建一个程序包 ID。 输入该程序包 ID，例如 `com.company.application`。 例如，输入 `com.Contoso.applicationName`、`com.Microsoft.Edge` 或 `com.microsoft.wdav`。
-- **属性列表文件**：选择与应用关联的属性列表文件。 请确保它是 `.plist` 或 `.xml` 文件。 例如上传 `YourApp-Manifest.plist` 或 `YourApp-Manifest.xml` 文件。
-- **文件内容**：显示属性列表文件中的密钥信息。 如果需要更改密钥信息，请在另一个编辑器中打开列表文件，然后在 Intune 中重新上传文件。
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+3. 输入以下属性：
 
-请确保文件的格式正确。 文件应仅具有键值对，并且不应包装在 `<dict>``<plist>` 或 `<xml>` 标记中。 例如，属性列表文件应类似于以下文件：
+    - **平台**：选择“macOS” 
+    - **配置文件**：选择“首选项文件”  。
 
-```xml
-<key>SomeKey</key>
-<string>someString</string>
-<key>AnotherKey</key>
-<false/>
-...
-```
+4. 选择“创建”。 
+5. 在“基本信息”  中，输入以下属性：
 
-选择“确定”   > “创建”  以保存所做的更改。 此时，配置文件创建完成，并出现在配置文件列表中。
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”**添加在设备上配置 Microsoft Defender ATP 的首选项文件**。
+    - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
+
+6. 选择“下一步”  。
+
+7. 在“配置设置”中，配置以下设置  ：
+
+    - **首选项域名**：属性列表文件通常用于 Web 浏览器 (Microsoft Edge)、[Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)和自定义应用。 创建首选项域时，还会创建一个程序包 ID。 输入该程序包 ID，例如 `com.company.application`。 例如，输入 `com.Contoso.applicationName`、`com.Microsoft.Edge` 或 `com.microsoft.wdav`。
+    - **属性列表文件**：选择与应用关联的属性列表文件。 请确保它是 `.plist` 或 `.xml` 文件。 例如上传 `YourApp-Manifest.plist` 或 `YourApp-Manifest.xml` 文件。
+    - **文件内容**：显示属性列表文件中的密钥信息。 如果需要更改密钥信息，请在另一个编辑器中打开列表文件，然后在 Intune 中重新上传文件。
+
+    请确保文件的格式正确。 文件应仅具有键值对，并且不应包装在 `<dict>``<plist>` 或 `<xml>` 标记中。 例如，属性列表文件应类似于以下文件：
+
+    ```xml
+    <key>SomeKey</key>
+    <string>someString</string>
+    <key>AnotherKey</key>
+    <false/>
+    ...
+    ```
+
+8. 选择“下一步”  。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+    选择“下一步”  。
+
+10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    选择“下一步”  。
+
+11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
 
 ## <a name="next-steps"></a>后续步骤
 
