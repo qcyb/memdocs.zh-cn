@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55cee62704660a3cf51fea88c2b8b877aa9ce6ef
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 172d76b8d6f196a40fc66eeaba91b7bb32228ccc
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345619"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620512"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>用于 iOS 的 Microsoft Intune App SDK 开发人员指南
 
 > [!NOTE]
 > 建议阅读 [Intune App SDK 入门指南](app-sdk-get-started.md)一文，该文章介绍了如何在每个受支持的平台准备集成。
+>
+> 若要下载 SDK，请参阅[下载 SDK 文件](../developer/app-sdk-get-started.md#download-the-sdk-files)。
 
 通过 Microsoft Intune App SDK for iOS，可将 Intune 应用保护策略（也称为 APP 或 MAM 策略）合并到本机 iOS 应用中。 启用了 MAM 的应用程序是指与 Intune App SDK 集成的应用程序。 在 Intune 主动管理移动应用时，IT 管理员可将应用保护策略部署到该应用。
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322617"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551668"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中监视安全基线和配置文件
 
@@ -153,4 +153,8 @@ Windows 10 设备上内置有 MDM 诊断信息报告。 此报告包含默认值
 
 ## <a name="next-steps"></a>后续步骤
 
-[监视设备配置文件](../configuration/device-profile-monitor.md)和[查看一些常见问题和解决方法](../configuration/device-profile-troubleshoot.md)。
+- [了解安全基线](security-baselines.md)
+- [避免冲突](security-baselines.md#avoid-conflicts)
+- [监视设备配置文件](../configuration/device-profile-monitor.md) 
+- [常见问题和解决方法](../configuration/device-profile-troubleshoot.md)。
+- [在 Intune 中对策略和配置文件进行故障排除](../configuration/troubleshoot-policies-in-microsoft-intune.md)

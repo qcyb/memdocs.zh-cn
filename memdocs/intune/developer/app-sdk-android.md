@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086335"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620561"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
 
 > [!NOTE]
 > 建议先阅读 [Intune App SDK 概述](app-sdk.md)，该文档涵盖 SDK 的当前功能并介绍了如何在每个受支持的平台上准备集成。
+>
+> 若要下载 SDK，请参阅[下载 SDK 文件](../developer/app-sdk-get-started.md#download-the-sdk-files)。
 
 通过 Microsoft Intune App SDK for Android，可将 Intune 应用保护策略（也称为 **APP** 或 MAM 策略）合并到本机 Android 应用中。 Intune 托管的应用程序是指与 Intune App SDK 集成的应用程序。 当 Intune 主动托管应用时，Intune 管理员可将应用保护策略轻松部署到该应用。
 

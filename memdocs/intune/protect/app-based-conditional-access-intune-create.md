@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323191"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696443"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>使用 Intune 设置基于应用的条件访问策略
 
@@ -32,7 +32,7 @@ ms.locfileid: "80323191"
 可以使用基于应用的条件访问策略前，需要将 [Intune 应用保护策略](../apps/app-protection-policies.md)应用于应用。
 
 > [!IMPORTANT]
-> 本文介绍了添加基于应用的条件访问策略的步骤。 从批准的应用列表添加应用（如 SharePoint Online、Microsoft Teams 和 Microsoft Exchange Online）时，可使用相同步骤。
+> 本文逐步介绍了如何添加基于应用的简单条件访问策略。 可以对其他云应用执行相同的步骤。 有关详细信息，请参阅[计划条件访问部署](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)
 
 ## <a name="create-app-based-conditional-access-policies"></a>创建基于应用的条件访问策略
 
@@ -48,7 +48,7 @@ ms.locfileid: "80323191"
 
 3. 输入策略“名称”  ，然后在“分配”  下，选择“用户和组”  。 使用“包括”或“排除”选项来添加策略的组，然后选择“完成”  。
 
-4. 选择“云应用或操作”  ，然后选择要保护的应用。 例如，选取“选择应用”  ，然后选择“Office 365 SharePoint Online”  和“Office 365 Exchange Online”  。
+4. 选择“云应用或操作”  ，然后选择要保护的应用。 例如，依次选择“选择应用”  和“Office 365(预览版)”  。
 
    选择“完成”  ，保存所做的更改。
 
@@ -56,7 +56,7 @@ ms.locfileid: "80323191"
 
    选择“完成”  ，保存所做的更改。
 
-6. 在“访问控制”  下，选择“授予”  以应用基于设备符合性的条件访问。 例如，选择“授予访问权限”   > “要求设备标记为符合策略”  。
+6. 在“访问控制”  下，选择“授予”  以应用基于设备符合性的条件访问。 例如，依次选择“授予访问权限”   > “需要核准的客户端应用”  和“需要应用保护策略(预览版)”  ，然后选择“需要某一已选控件” 
 
    选取“选择”  ，保存所做的更改。
 

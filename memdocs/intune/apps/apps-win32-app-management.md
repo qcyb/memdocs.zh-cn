@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407807"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620618"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune 独立版 - Win32 应用管理
 
@@ -33,7 +33,7 @@ ms.locfileid: "80407807"
 > 此应用管理功能支持适用于 Windows 应用程序的 32 位和 64 位操作系统体系结构。
 
 > [!IMPORTANT]
-> 部署 Win32 应用时，请考虑仅使用 [Intune 管理扩展](../apps/intune-management-extension.md)，特别是在具有多文件 Win32 应用安装程序时。 如果在 AutoPilot 注册期间混合安装 Win32 应用和业务线应用，则应用安装可能会失败。  
+> 部署 Win32 应用时，请考虑只使用 [Intune 管理扩展](../apps/intune-management-extension.md)方法，特别是在有多文件 Win32 应用安装程序时。 如果在 AutoPilot 注册期间混合安装 Win32 应用和业务线应用，则应用安装可能会失败。 如果 PowerShell 脚本或 Win32 应用分配给用户或设备，Intune 管理扩展就会自动安装。
 
 ## <a name="prerequisites"></a>必备条件
 

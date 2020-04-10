@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 470ca47aa92b30acacc8a251c6d7d1741513bdf1
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359218"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551421"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>在 Microsoft Intune 中配置设备限制设置
 
@@ -35,6 +35,9 @@ Intune 包含设备限制策略，有助于管理员控制 Android、iOS/iPadOS�
 这些功能在 Intune 中可用，并可供管理员进行配置。 Intune 使用“配置文件”创建和自定义这些设置，从而满足组织需求。 在配置文件中添加这些功能后，就可以将配置文件推送或部署到组织中的设备上。
 
 本文介绍了如何创建设备限制配置文件。 还可以查看所有适用于不同平台的可用设置。
+
+> [!NOTE]
+> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
 
 ## <a name="create-the-profile"></a>创建配置文件
 

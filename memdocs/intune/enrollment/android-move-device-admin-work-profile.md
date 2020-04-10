@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327277"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624916"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>将 Android 设备从设备管理员转到工作配置文件管理
 
@@ -65,8 +65,8 @@ ms.locfileid: "80327277"
 
 
     在电子邮件中，可以在发送给用户的消息中添加以下 URL。 此 URL 将启动 Android 公司门户的“更新设备设置”  页。 可以在此页上开始执行转到工作配置文件管理的步骤。
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx)。
-    - 对于美国政府版，可以改用以下链接：[https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx)。
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`。
+    - 对于美国政府版，可以改用以下链接：`https://portal.manage.microsoft.us/UpdateSettings.aspx`。
   
     > [!NOTE]
     > - 当然，在与用户通信时，可以使用用户友好的超文本链接。 不过，请不要使用 URL 缩短器，这样很可能导致链接失效。

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233476"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808085"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>为托管的 Android Enterprise 设备添加应用配置策略
 
@@ -47,7 +47,7 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 8. 单击“添加”  以显示“添加权限”  窗格。
 9. 选择要覆盖的权限。 授予的权限将覆盖所选应用的“默认应用权限”策略。
 10. 为每个权限设置“权限状态”  。 可以选择“提示”  、“自动授予”  或“自动拒绝”  。 有关权限的详细信息，请参阅[使用 Intune 将设备标记为符合或不符合的 Android Enterprise 设置](../protect/compliance-policy-create-android-for-work.md)。
-11. 在下拉框中，选择“配置设置格式”  。 选择下列方法之一来添加配置信息：
+11. 如果托管应用支持配置设置，请选择下拉框中的“配置设置格式”  。 选择下列方法之一来添加配置信息：
     - **使用配置设计器**
     - **输入 JSON 数据**<br><br>
     有关使用配置设计器的详细信息，请参阅[使用配置设计器](#use-the-configuration-designer)。 有关输入 XML 数据的详细信息，请参阅[输入 JSON 数据](#enter-json-data)。

@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322518"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696286"
 ---
 # <a name="see-device-details-in-intune"></a>在 Intune 中查看设备详细信息
 
@@ -48,13 +48,19 @@ ms.locfileid: "80322518"
       - [Autopilot 重置](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)（仅限 Windows）
       - [快速扫描](../configuration/device-restrictions-windows-10.md)（仅限 Windows 10）
       - [完全扫描](../configuration/device-restrictions-windows-10.md)（仅限 Windows 10）
-       - [重命名设备](device-rename.md)
-      - 开始远程协助会话
+      - 更新 Windows Defender 安全智能
+      - [BitLocker 密钥轮换](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [重命名设备](device-rename.md)
+      - [新远程协助会话](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - 使用“属性”可以将设备分配到[你创建的设备类别](../enrollment/device-group-mapping.md)，并将设备的所有权更改为个人设备或公司设备  。
    - “硬件”包括有关设备的详细信息，例如设备 ID、操作系统和版本、存储空间等详细信息  。
    - “发现的应用”列出 Intune 发现的安装在设备上的所有应用以及应用版本  。 有关详细信息，请参阅 [Intune 发现的应用](../apps/app-discovered-apps.md)。
    - “设备符合性”列出分配到的所有符合性策略，以及设备是否符合要求  。
    - “设备配置”显示分配给该设备的所有设备配置策略，以及该策略成功还是失败  。
+   - **应用配置** 
+   - **终结点安全配置**
+   - “恢复密钥”  显示找到了设备的可用 BitLocker 密钥
+   - “托管应用”  列出了 Intune 配置并部署到设备的所有托管应用。 
 
 ## <a name="hardware-device-details"></a>硬件设备详细信息
 根据设备使用的运营商，可能并不会收集所有详细信息

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359436"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551365"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>使用 Intune 中的自定义设置创建配置文件
 
@@ -31,6 +31,9 @@ Microsoft Intune 含有许多内置设置，用于控制设备上的不同功能
 有关配置文件的详细信息，请参阅[什么是 Microsoft Intune 设备配置文件？](device-profiles.md)。
 
 本文介绍如何为 Android 设备管理员、Android Enterprise、iOS/iPadOS、macOS 和 Windows 创建自定义配置文件。 还可以查看所有适用于不同平台的可用设置。
+
+> [!NOTE]
+> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
 
 ## <a name="create-the-profile"></a>创建配置文件
 

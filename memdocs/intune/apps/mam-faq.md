@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59ec9f899991e63b9a652e55e3253a07dee0cc15
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361206"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611727"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>有关 MAM 和应用保护的常见问题
 
@@ -76,7 +76,7 @@ Intune MAM 支持两种配置：
 
 **如果我想要启用具有 Intune 应用保护的应用，但未使用受支持的应用开发平台，该怎么办？**
 
-Intune SDK 开发团队主动测试和维护对使用本机 Android、iOS/iPadOS (Obj-C, Swift)、Xamarin、Xamarin.Forms 和 Cordova 平台生成的应用的支持。 虽然某些客户已成功将 Intune SDK 与 React Native 和 NativeScript 等其他平台集成，但我们不会使用受支持平台之外的任何方式为应用开发人员提供明确的指导或插件。
+Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS/iPadOS（Obj-C、Swift）、Xamarin、Xamarin.Forms 平台生成的应用的支持。 虽然某些客户已成功将 Intune SDK 与 React Native 和 NativeScript 等其他平台集成，但我们不会使用受支持平台之外的任何方式为应用开发人员提供明确的指导或插件。
 
 **Intune APP SDK 是否支持 Microsoft 身份验证库 (MSAL) 或社交帐户？**<br></br>
 Intune APP SDK 使用一些适用于 SDK 的第一方和第三方版本的高级 ADAL 功能。 因此，MSAL 不适用于我们的许多核心方案，例如向 Intune 应用保护服务进行身份验证和条件启动。 鉴于来自 Microsoft 标识团队的全面指导是切换到适用于所有 Microsoft Office 应用的 MSAL，因此 Intune SDK 最终需要支持它，但目前没有计划。

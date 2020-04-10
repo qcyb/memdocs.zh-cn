@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 623752d0eaf2742e21a78c688d58cd062f87ed52
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6108fc56b978c57bfc70b2bce9911f7901a01a3e
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351209"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551739"
 ---
 # <a name="microsoft-edge-baseline-settings-for-intune"></a>适用于 Intune 的 Microsoft Edge 基线设置
 
@@ -147,4 +147,6 @@ ms.locfileid: "79351209"
 
 ## <a name="next-steps"></a>后续步骤
 
-[在 Intune 中使用安全基线](security-baselines.md)
+- [了解安全基线](security-baselines.md)
+- [避免冲突](security-baselines.md#avoid-conflicts)
+- [在 Intune 中对策略和配置文件进行故障排除](../configuration/troubleshoot-policies-in-microsoft-intune.md)

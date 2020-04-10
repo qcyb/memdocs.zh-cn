@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359372"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551423"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>使用 Intune 添加 macOS 内核扩展
 
@@ -68,6 +68,9 @@ Intune 使用“配置文件”创建和自定义这些设置，从而满足组�
 >
 > - [分发前对应用进行公证](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution)（打开 Apple 网站） 
 > - [为 macOS High Sierra 中内核扩展的更改做好准备](https://support.apple.com/en-us/HT208019)（打开 Apple 网站）
+
+> [!NOTE]
+> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
 
 ## <a name="create-the-profile"></a>创建配置文件
 

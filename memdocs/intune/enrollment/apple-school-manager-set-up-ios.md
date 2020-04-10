@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327238"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696557"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>通过 Apple School Manager 设置 iOS/iPadOS 设备注册
 
@@ -38,7 +38,6 @@ Apple School Manager 注册不能与 [Apple 的设备注册计划](device-enroll
 **必备条件**
 - [Apple 移动设备管理 (MDM) 推送证书](apple-mdm-push-certificate-get.md)
 - [MDM 机构](../fundamentals/mdm-authority-set.md)
-- [Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
 - 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
 - 从 [Apple School Management](http://school.apple.com) 计划购买的设备
 
@@ -120,7 +119,7 @@ Apple School Manager 注册不能与 [Apple 的设备注册计划](device-enroll
 
 8. 可以允许多个用户使用托管 Apple ID 登录到已注册的 iPad。 为此，请在“共享的 iPad”  下选择“是”  （此选项需要“不使用用户关联注册”  并将“已监管”模式  设置为“是”  。）在 Apple School Manager 门户中创建托管的 Apple ID。 详细了解[共享 iPad](../fundamentals/education-settings-configure-ios-shared.md) 和 [Apple 的共享 iPad 要求](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56)。
 
-9. 选择是否要让使用此配置文件的设备能够“与计算机同步”  。 如果选择“通过证书允许 Apple Configurator”  ，则必须在“Apple Configurator 证书”  下选择证书。
+9. 选择是否要让使用此配置文件的设备能够“与计算机同步”  。 “全部拒绝”  表示所有使用此配置文件的设备将无法与任何计算机上的任何数据同步。 如果选择“通过证书允许 Apple Configurator”  ，则必须在“Apple Configurator 证书”  下选择证书。
 
 10. 如果在上一步中选择了“通过证书允许 Apple Configurator”，则选择要导入的“Apple Configurator 证书”。 
 

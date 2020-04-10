@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488067"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551691"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>使用安全基线在 Intune 中配置 Windows 10 设备
 
@@ -62,11 +62,20 @@ ms.locfileid: "80488067"
 
 可以选择[更改给定配置文件使用的基线版本](#change-the-baseline-version-for-a-profile)。 这意味着当新版本推出时，无需创建新的基线配置文件即可充分利用它。 相反，当一切就绪后，可以选择基线配置文件，然后使用内置选项将相应配置文件的实例版本更改为新实例版本。
 
+## <a name="avoid-conflicts"></a>避免冲突
+
+可以同时在 Intune 环境中使用一个或多个可用基线。 还可以使用包含不同自定义项的相同安全基线的多个实例。
+
+使用多个安全基线时，请审阅每个安全基线的设置，以确定不同的基线配置何时会为相同的设置引入冲突值。 由于可以部署用于不同意图的安全基线，并部署包含自定义设置的相同基线的多个实例，因此可能会为设备创建必须调查并解决的配置冲突。
+
+此外，安全基线通常会管理你可能使用[设备配置文件](../configuration/device-profiles.md)或其他类型策略设置的相同设置。 因此，在寻求避免或解决冲突时，请注意并考虑用于设置的其他策略和配置文件。
+
+请参考以下链接中的信息，它们有助于发现和解决冲突：
+
+- [在 Intune 中对策略和配置文件进行故障排除](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [监视安全基线](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>可用的安全基线
-
- 可以同时在 Intune 环境中使用一个或多个可用基线。 还可以使用包含不同自定义项的相同安全基线的多个实例。
-
-使用多个安全基线时，请审阅每个安全基线的设置，以确定不同的基线何时引入相同设置的冲突值。 由于可以部署用于不同意图的安全基线，并部署包含自定义设置的相同基线的多个实例，因此可能会为设备创建[必须调查并解决的配置冲突](security-baselines-monitor.md#troubleshoot-using-per-setting-status)。  另请注意[设备配置文件](../configuration/device-profiles.md)，这些配置文件可以配置多个与安全基线相同的设置。
 
 以下安全基线实例可与 Intune 一起使用。 使用链接可以查看每个基线的最新实例的设置。
 

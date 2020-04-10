@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359250"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551576"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>在 Intune 中添加终结点保护设置
 
@@ -38,6 +38,9 @@ ms.locfileid: "80359250"
 
 - [macOS 设置](endpoint-protection-macos.md)
 - [Windows 10 设置](endpoint-protection-windows-10.md)
+
+> [!NOTE]
+> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>创建包含终结点保护设置的设备配置文件
 

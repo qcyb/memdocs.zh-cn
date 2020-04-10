@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322994"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551386"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中创建符合性策略
 
@@ -58,6 +58,9 @@ ms.locfileid: "80322994"
 - 在 Intune 中注册设备（用于查看符合性状态）
 
 - 向一个用户设备注册，或在没有主要用户的情况下注册。 不支持向多个用户注册设备。
+
+> [!NOTE]
+> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
 
 ## <a name="create-the-policy"></a>创建策略
 

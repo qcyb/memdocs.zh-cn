@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 7c5528e5de99e599c968f0c006aa98545b2004e2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323292"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551545"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>使用 Intune 中的条件访问强制执行 Microsoft Defender ATP 的符合性
 
@@ -35,6 +35,9 @@ ms.locfileid: "80323292"
 -  使用条件访问策略阻止用户从不合规的设备访问公司资源。
 
 将 Intune 与 Microsoft Defender ATP 集成时，可以充分利用 ATP 威胁和漏洞管理 (TVM) 并[使用 Intune 修正由 TVM 标识的终结点漏洞](atp-manage-vulnerabilities.md)。
+
+> [!NOTE]
+> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>将 Microsoft Defender ATP 和 Intune 结合使用的示例
 

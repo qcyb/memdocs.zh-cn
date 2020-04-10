@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401779"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808054"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>在 Intune 中的 macOS 设备上使用 Shell 脚本（公共预览版）
 
@@ -55,6 +55,9 @@ ms.locfileid: "80401779"
 4. 在“脚本设置”中，输入以下属性并选择“下一步”   ：
    - **上传脚本**：浏览 Shell 脚本。 脚本文件大小必须小于 200 KB。
    - **以登录用户的身份运行脚本**：选择“是”，可以使用设备上的用户凭据运行脚本  。 选择“否”（默认值），作为根用户运行该脚本  。 
+   - 在设备上隐藏脚本通知：  默认情况下，脚本通知对运行的每个脚本都会显示。 最终用户会在 macOS 设备上看到 Intune 发送的通知“IT 人员正在配置你的计算机”  。
+   - 脚本运行频率：  选择脚本运行频率。 选择“未配置”  （默认）表示只运行一次脚本。
+   - 脚本失败后重试的最大次数：  选择在脚本返回非零退出代码（零表示成功）后应运行多少次脚本。 选择“未配置”  （默认）表示在脚本失败时不重试。
 5. 在“作用域标签”中，可以为脚本添加作用域标签，然后选择“下一个”   。 可以使用作用域标记来确定可在 Intune 中查看脚本的人员。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。
 6. 选择“分配” >  选择要包含的组   。 随即显示 Azure AD 组的现有列表。 选择一个或多个设备组，其中的用户的 macOS 设备会接收该脚本。 选择“选择”  。 所选组将显示在列表中，并将收到脚本策略。
    > [!NOTE]
@@ -103,9 +106,17 @@ ms.locfileid: "80401779"
  - 代理在签入之前使用 Intune 服务静默进行身份验证，以接收 macOS 设备的已分配的 Shell 脚本。
  - 代理接收分配的 Shell 脚本，并根据配置的计划、重试尝试、通知设置以及管理员设置的其他设置运行脚本。
  - 代理通常每 8 小时使用 Intune 服务检查新的脚本或更新的脚本。 此签入过程与 MDM 签入无关。 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>我如何从 Mac 手动启动代理签入？
+在已安装代理的托管 Mac 上，打开“终端”  ，运行 `sudo killall IntuneMdmAgent` 命令，以终止 `IntuneMdmAgent` 进程。 `IntuneMdmAgent` 进程会立即重启，这会通过 Intune 启动签入。
 
- >[!NOTE]
- > 公司门户中的“检查设置”操作仅强制 MDM 签入  。 代理签入没有手动操作。
+也可以执行以下操作：
+1. 依次打开“活动监视器”   > “视图”   >  选择“所有进程” ** 。 
+2. 搜索名为“`IntuneMdmAgent`”的进程。 
+3. 退出为根  用户运行的进程。 
+
+> [!NOTE]
+> 公司门户中的“检查设置”  操作和 Microsoft Endpoint Manager 管理控制台中用于设备的“同步”  操作会启动 MDM 签入，但不会强制执行代理签入。
 
  ### <a name="when-is-the-agent-removed"></a>何时删除代理？
  有几个条件可能导致从设备中删除代理，例如：

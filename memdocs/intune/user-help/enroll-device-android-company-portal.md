@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0f6efa6d026879a3231c21662e799bf8ba7ada09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337741"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551652"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>通过公司门户注册设备  
 注册个人或公司拥有的 Android 设备，以安全访问公司电子邮件、应用和数据。 公司门户支持 Android 设备，包括运行 Android 4.4 及更高版本的 Samsung Knox。  
@@ -35,7 +35,7 @@ ms.locfileid: "79337741"
 > Samsung Knox 是一种安全解决方案，一些 Samsung 设备用它来提供本机 Android 无法提供的额外保护。 若要检查是否是 Samsung Knox 设备，请依次转到“设置” > “关于设备”   。 如果其中没有列出“Knox 版本”，表明使用的是本机 Android 设备  。
 
 ## <a name="enroll-device"></a>注册设备  
-请确保[从 Google Play 安装免费的 Intune 公司门户应用](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)。 
+请务必[从 Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) 安装 Intune 公司门户应用。 有关在中国大陆提供应用的商店列表，请参阅[在中国大陆安装公司门户应用](install-company-portal-android-china.md)。    
 
 注册过程中，系统可能会要求你选择最能说明如何使用设备的类别。 公司支持人员使用你的答案来检查可以访问的应用。  
 

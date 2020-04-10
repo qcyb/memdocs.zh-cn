@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af0d79f42f1c8861fe60cb2f4f9b618cb54009d1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6a26e32d0a719df7c3982591042991ae760d9281
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360296"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611702"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>准备业务线应用以使用应用保护策略
 
@@ -76,7 +76,7 @@ App SDK 主要面向在 Apple App Store 或 Google Play 商店中安装了应用
 
 ## <a name="not-using-an-app-development-platform-listed-above"></a>不使用上面列出的应用开发平台？
 
-Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS（Obj-C、Swift）、Xamarin、Xamarin.Forms 和 Cordova 平台生成的应用的支持。 虽然某些客户已成功将 Intune SDK 与 React Native 和 NativeScript 等其他平台集成，但我们不会使用受支持平台之外的任何方式为应用开发人员提供明确的指导或插件。 
+Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS（Obj-C、Swift）、Xamarin、Xamarin.Forms 平台生成的应用的支持。 虽然某些客户已成功将 Intune SDK 与 React Native 和 NativeScript 等其他平台集成，但我们不会使用受支持平台之外的任何方式为应用开发人员提供明确的指导或插件。 
 
 ## <a name="feature-comparison"></a>功能比较
 

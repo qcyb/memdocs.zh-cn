@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327316"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808077"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>设置 Android Enterprise 完全托管设备的 Intune 注册 
 
@@ -65,7 +65,7 @@ Intune 可帮助将应用和设置部署到 Android Enterprise 完全托管设�
 如果此设置设置为“是”，将提供 Intune 租户的注册令牌（随机字符串）和 QR 码  。 此单个注册令牌对所有用户有效，并且不会过期。 根据设备的 Android OS 和版本，可使用令牌或 QR 码注册设备。
 
 ## <a name="enroll-the-fully-managed-devices"></a>注册完全托管的设备
-现在可以[注册完全托管的设备](android-dedicated-devices-fully-managed-enroll.md)。
+现在，可以[注册完全托管设备](android-dedicated-devices-fully-managed-enroll.md)（但在使用 DEM 帐户时则不能）。
 
 ## <a name="next-steps"></a>后续步骤
 - [添加 Android Enterprise 完全托管设备配置策略](../configuration/device-restrictions-android-for-work.md#device-owner-only)

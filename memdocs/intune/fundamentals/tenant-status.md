@@ -6,31 +6,32 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355889"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696447"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>使用 Intune 租户状态页面
 Microsoft Intune“租户状态”页是一个集中式中心，可在其中查看有关租户的当前信息和重要详细信息。 详细信息包括许可证可用性及其使用、连接器状态以及有关 Intune 服务的重要通信。  
 
-若要查看仪表板，请登录到 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)，然后选择“租户状态”  。  “帮助和支持”下显示“租户状态”   。  
+若要查看仪表板，请登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理”  ，然后选择“租户状态”  。
 
 该页分为三个选项卡：
 
 ## <a name="tenant-details"></a>租户详细信息
-租户详细信息区域清晰明了地提供了有关租户的信息。 查看租户名称和位置、MDM 机构和租户服务发行版号等详细信息。 服务版本号是一个链接，可用于打开 Microsoft Docs 的“Intune 中的新增功能”一文  。在“新增功能”中，可阅读有关 Intune 服务的最新功能和更新  。  
+租户详细信息区域清晰明了地提供了有关租户的信息。 查看租户名称和位置、MDM 机构和租户服务发行版号等详细信息。 服务版本号是一个链接，可打开 Microsoft Docs 中的“Intune 的新变化”  一文。在“新增功能”中，可阅读有关 Intune 服务的最新功能和更新  。  
 
 在此选项卡上，还可以找到有关可用许可证和分配给用户的许可证数量的基本信息。 未显示设备许可证。
 

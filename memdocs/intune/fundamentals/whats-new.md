@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438804"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808211"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -55,14 +55,29 @@ ms.locfileid: "80438804"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>2020 年 4 月 6 日当周
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>新增了适用于 macOS 设备的 Shell 脚本设置<!-- 6884363 -->
+现在，在配置适用于 macOS 设备的 Shell 脚本时，可以配置以下新设置： 
+- 在设备上隐藏脚本通知
+- 脚本运行频率
+- 脚本失败后重试的最大次数
+
+有关详细信息，请参阅[在 Intune 中的 macOS 设备上使用 Shell 脚本](../apps/macos-shell-scripts.md)。
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>2020 年 3 月 30 日当周
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Microsoft Endpoint Manager 管理中心的新 URL<!-- 3704810 -->
 为了与去年在 Ignite 发布的 Microsoft Endpoint Manager 公告保持一致，我们已将 Microsoft Endpoint Manager 管理中心（以前为 Microsoft 365 设备管理）的 URL 更改为 [https://endpoint.microsoft.com](https://endpoint.microsoft.com)。 旧的管理中心 URL ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) 将仍然有效，但我们建议你开始使用新 URL 访问 Microsoft Endpoint Manager 管理中心。
 
-有关详细信息，请参阅[使用 Microsoft Endpoint Manager 管理中心简化 IT 任务](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)。
+有关详细信息，请参阅[使用 Microsoft Endpoint Manager 管理中心简化 IT 任务](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)。  
 
-### <a name="app-management"></a>应用管理
+
+### <a name="app-management"></a>应用管理  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>面向 iOS 的公司门户支持横向模式<!--6048329 wnready -->   
+现在，用户可以使用自己选择的屏幕方向来注册设备、查找应用和获得 IT 支持。 应用会自动检测并调整屏幕以适应纵向或横向模式，除非你将屏幕锁定为纵向模式。  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>对 macOS 设备的脚本支持（公共预览版）<!-- 4280361 wnready -->
 你将能够向 macOS 设备添加和部署脚本。 此支持扩展了你配置 macOS 设备的能力，让你不再限于使用 macOS 设备上的本机 MDM 功能进行配置。 有关详细信息，请参阅[在 Intune 中的 macOS 设备上使用 Shell 脚本](../apps/macos-shell-scripts.md)。
@@ -71,6 +86,9 @@ ms.locfileid: "80438804"
 ## <a name="week-of-march-24-2020"></a>2020 年 3 月 24 日当周
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>改进了在 Android 和 Android Enterprise 设备上创建设备限制配置文件时的用户界面体验<!-- 5841361 -->
+
+> [!NOTE] 
+> Intune 用户界面正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑设置时的工作流将略有不同。
 
 为 Android 或 Android Enterprise 设备创建配置文件时，将更新 Endpoint Management 管理中心中的体验。 此更改会影响以下设备配置文件（“设备”   >   “配置文件” >   “创建配置文件” >    选择“Android 设备管理员”或“Android Enterprise”平台）：
 
@@ -82,6 +100,9 @@ ms.locfileid: "80438804"
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>改善了在 iOS/iPadOS 和 macOS 设备上创建配置文件时的用户界面体验<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> Intune 用户界面正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑设置时的工作流将略有不同。
+
 为 iOS 或 macOS 设备创建配置文件时，将更新 Endpoint Management 管理中心中的体验。 此更改会影响以下设备配置文件（“设备” > “配置文件” > “创建配置文件” >  选择“iOS/iPadOS”或“macOS”作为平台      ）：
 
 - 自定义：iOS/iPadOS、macOS
@@ -92,6 +113,9 @@ ms.locfileid: "80438804"
 - 首选项文件：macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>macOS 设备上设备功能中的“不在用户配置中显示”设置<!-- 6524869 -->
+
+> [!NOTE]
+> 此更改将在未来几周内向所有客户推出。
 
 在 macOS 设备上创建设备功能配置文件时，有一个新的“不在用户配置中显示”设置（“设备” > “配置文件” > “创建配置文件” > “适用于平台的 macOS”>“适用于配置文件的设备功能”>“登录项”）        。
 
@@ -187,6 +211,10 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 “疑难解答”边栏选项卡上的挂起 MAM 策略的通知图标已更改为信息图标。
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>配置合规性策略时的 UI 更新<!-- 3961639    -->
+
+> [!NOTE]
+> Intune 用户界面正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑设置时的工作流将略有不同。
+
 我们更新了在 Microsoft 终结点管理器中[创建合规性策略](../protect/create-compliance-policy.md#create-the-policy)时的 UI（“设备”   > “合规性策略”   > “策略”   > “创建策略”  ）。 我们提供了新的用户体验，它包含与以前使用过的相同的设置和详细信息。 新体验遵循类似向导的过程来创建合规性策略，并包含用于为策略添加“分配”  的页面，以及用于在创建策略前检查配置的“审查 + 创建”  页面。
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>停用不合规的设备<!-- 1827291       -->

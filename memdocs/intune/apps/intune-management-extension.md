@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324232"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808101"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 中的 Windows 10 设备上使用 PowerShell 脚本
 
@@ -31,6 +31,9 @@ ms.locfileid: "80324232"
 此功能适用于：
 
 - Windows 10 及更高版本
+
+> [!NOTE]
+> 只要满足 Intune 管理扩展先决条件，如果 PowerShell 脚本或 Win32 应用分配给用户或设备，Intune 管理扩展就会自动安装。 有关详细信息，请参阅 Intune 管理扩展[先决条件](../apps/intune-management-extension.md#prerequisites)。
 
 ## <a name="move-to-modern-management"></a>迁移到新式管理
 
@@ -121,7 +124,34 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
 - 最终用户无需登录设备即可执行 PowerShell 脚本。
 
-- Intune 管理扩展客户端每隔一小时都会检查一次 Intune，并且每次重启后都会对任何新脚本或所做更改进行检查。 将策略分配给 Azure AD 组后，PowerShell 脚本将运行，还将报告运行结果。 脚本执行后，除非脚本或策略发生更改，否则不会再次执行。
+- Intune 管理扩展代理每小时且每次重启后都会与 Intune 核对一次，以确定是否有任何新脚本或更改。 将策略分配给 Azure AD 组后，PowerShell 脚本将运行，还将报告运行结果。 脚本执行后，除非脚本或策略发生更改，否则不会再次执行。 如果脚本失败，Intune 管理扩展代理会尝试在接下来的连续 3 次 Intune 管理扩展代理签入中重试脚本三次。
+
+### <a name="failure-to-run-script-example"></a>无法运行脚本示例
+上午 8 点
+  -  签入
+  -  运行脚本 ConfigScript01 
+  -  脚本失败
+
+上午 9 点
+  -  签入
+  -  运行脚本 ConfigScript01 
+  -  脚本失败（重试次数 = 1）
+
+上午 10 点
+  -  签入
+  -  运行脚本 ConfigScript01 
+  -  脚本失败（重试次数 = 2）
+  
+上午 11 点
+  -  签入
+  -  运行脚本 ConfigScript01 
+  -  脚本失败（重试次数 = 3）
+
+中午 12 点
+  -  签入
+  - 没有额外尝试运行 ConfigScript01  脚本。
+  - 接下来，如果没有对脚本进行其他任何更改，则不会额外尝试运行脚本。
+
 
 ## <a name="monitor-run-status"></a>监视运行状态
 

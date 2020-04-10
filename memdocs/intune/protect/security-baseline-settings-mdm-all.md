@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 388630712b398ef82e78e55efa63418e95187681
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351183"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696496"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>适用于 Intune 的 Windows MDM 安全基线设置
 
@@ -1583,6 +1583,9 @@ ms.locfileid: "79351183"
 ::: zone pivot="mdm-may-2019"
 
 - **Adobe Reader 在子进程中启动**：  
+此规则通过阻止 Adobe Reader 创建其他进程来防止攻击。 通过社会工程或攻击，恶意软件可以下载并启动其他有效负载并中断 Adobe Reader。 通过阻止由 Adobe Reader 生成子进程，可以防止传播试图将它用作途径的恶意软件。
+[了解详细信息](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
   **默认值**：启用
 
 ::: zone-end
@@ -2162,3 +2165,9 @@ ms.locfileid: "79351183"
 - **要求 PIN 中含有大写字母**
 
 ::: zone-end
+
+## <a name="next-steps"></a>后续步骤
+
+- [了解安全基线](security-baselines.md)
+- [避免冲突](security-baselines.md#avoid-conflicts)
+- [在 Intune 中对策略和配置文件进行故障排除](../configuration/troubleshoot-policies-in-microsoft-intune.md)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326651"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696472"
 ---
 # <a name="device-management-overview"></a>设备管理概述
 
@@ -76,7 +76,7 @@ Intune 包含在 Microsoft Azure、Microsoft 365 中，并与 Azure Active Direc
 
 有几种方法可以实现设备管理。 首先，可以使用 Intune 中内置的功能来管理设备的不同方面。 这种方法称为移动设备管理 (MDM)  。 用户“登记”他们的设备，并使用证书与 Intune 通信。 作为 IT 管理员，你可以在设备上推送应用、将设备限制到特定的操作系统、阻止个人设备等。 如果设备丢失或被盗，还可以从设备中删除所有数据。
 
-在第二种方法中，可以在设备上管理应用。 这种方法称为移动应用程序管理 (MAM)  。 用户可以使用其个人设备访问组织资源。 打开应用（如电子邮件或 SharePoint）时，系统会提示用户进行其他身份验证。 如果设备丢失或被盗，可以从设备中删除所有组织数据。
+在第二种方法中，可以在设备上管理应用。 这种方法称为移动应用程序管理 (MAM)  。 用户可以使用其个人设备访问组织资源。 打开应用（如电子邮件或 SharePoint）时，系统会提示用户进行其他身份验证。 如果设备丢失或被盗，可以从 Intune 托管应用中删除所有组织数据。
 
 此外，还可以结合使用 [MDM 和 MAM](byod-technology-decisions.md)。
 

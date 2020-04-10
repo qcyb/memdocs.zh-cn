@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327137"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808137"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用设备注册管理员帐户在 Intune 中注册设备
 
@@ -42,7 +42,7 @@ ms.locfileid: "80327137"
 - 设备出于条件访问而被阻止，Windows 10 1803+ 除外
 - 向 DEM 帐户注册的每台设备都需要获得适当许可才能由 Intune 托管。 许可证可以是 Intune 用户许可证，也可以是 Intune 设备许可证。
 - 如果使用 DEM 帐户[注册 Android Enterprise 工作配置文件设备](android-work-profile-enroll.md)，则每个帐户最多可注册 10 台设备。
-
+- 不支持使用 DEM 帐户[注册 Android Enterprise 完全托管设备](android-fully-managed-enroll.md)。
 
 ## <a name="add-a-device-enrollment-manager"></a>添加一个设备注册管理器
 
