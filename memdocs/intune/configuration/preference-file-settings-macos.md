@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359321"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551493"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 将属性列表文件添加到 macOS 设备
 
@@ -43,6 +43,9 @@ ms.locfileid: "80359321"
 - 如果不确定如何输入应用密钥，请在应用中更改设置。 然后，使用 [Xcode](https://developer.apple.com/xcode/) 查看应用的首选项文件，了解设置的配置方式。 Apple 建议在导入文件前使用 Xcode 删除不可管理的设置。
 - 只有某些应用使用托管首选项，并且可能不允许管理所有设置。
 - 请确保上传的属性列表文件的目标是设备通道设置，而非用户通道设置。 属性列表文件以整个设备为目标。
+
+> [!NOTE]
+> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
 
 ## <a name="create-the-profile"></a>创建配置文件
 

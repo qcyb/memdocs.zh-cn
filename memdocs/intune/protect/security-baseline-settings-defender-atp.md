@@ -5,7 +5,7 @@ description: Intune 支持用于管理 Microsoft Defender 高级威胁防护的�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488027"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551753"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 的 Microsoft Defender 高级威胁防护基线设置
 
@@ -133,7 +133,7 @@ ms.locfileid: "80488027"
     - 是 - Windows 将不允许向不受 BitLocker 保护的固定驱动器写入任何数据  。 如果未对固定驱动器进行加密，则在授予写入权限之前，用户将需要完成驱动器的 BitLocker 安装向导。
 
   - **配置固定数据驱动器的加密方法**  
-    CSP：[EncryptionMethodByDriveType](h https://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP：[EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
     此设置在“BitLocker 固定驱动器策略”设置为“配置”时可用   。
 
     配置固定数据驱动器磁盘的加密方法和密码长度。 XTS-AES 128 位是 Windows 默认加密方法和建议的值  。
@@ -215,7 +215,7 @@ ms.locfileid: "80488027"
 ## <a name="device-installation"></a>设备安装
 
 - **按设备标识符安装硬件设备**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](h https://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
   
   使用此策略设置可以指定禁止 Windows 安装的设备的即插即用硬件 ID 和兼容 ID 的列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。  如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。
 
@@ -603,7 +603,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   配置项在被删除前保留在隔离文件夹中的天数。 默认值为零 (0)，这会导致隔离的文件永远不会被删除  。
 
 - **Defender 系统扫描计划**  
-  CSP：Defender/ScheduleScanDay[](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP：[Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   计划 Defender 扫描设备的日期。 默认情况下，该扫描为“用户定义”，但可以设置为“每日”、一周中的某一天或“没有计划的扫描”    。
 
@@ -613,7 +613,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   Defender 防病毒会自动阻止可疑文件 10 秒钟，使其可以扫描云中的文件以确保安全性。 使用此设置，最多可以将此超时值增加 50 秒。  默认情况下，超时时间设置为零 (0)  。
 
 - **在完全扫描期间扫描映射的网络驱动器**  
-  CSP：Defender/AllowFullScanOnMappedNetworkDrives[](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP：[Defender/AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
 
   - **是**（默认）- 在完全扫描期间，包含映射的网络驱动器  。
   - **未配置** - 客户端将返回到其默认设置，这将禁止对映射的网络驱动器进行扫描。
@@ -706,7 +706,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   - **未配置** - 设置返回到客户端默认设置，即扫描可移动驱动器，但用户可以禁用此扫描。
   
 - **扫描网络文件**  
-  CSP：Defender/AllowScanningNetworkFiles[](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP：[Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
 
   - **是**（默认）- Microsoft Defender 扫描网络文件  。
   - **未配置** - 客户端将返回到其默认设置，这将禁止对网络文件进行扫描。
@@ -863,3 +863,9 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     - **不允许**
     - **必需**
     - **允许**（默认） 
+
+## <a name="next-steps"></a>后续步骤
+
+- [了解安全基线](security-baselines.md)
+- [避免冲突](security-baselines.md#avoid-conflicts)
+- [在 Intune 中对策略和配置文件进行故障排除](../configuration/troubleshoot-policies-in-microsoft-intune.md)
