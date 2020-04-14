@@ -189,7 +189,7 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 <sup>(5)</sup>“擦除”在用户注册的 iOS/iPadOS 设备上不可用  。<br>
 <sup>(6)</sup> 一些 Android 和 Android Enterprise 配置不支持“密码重置”  。 有关详细信息，请参阅[在 Intune 中重置或删除设备密码](../remote-actions/device-passcode-reset.md)。<br>
 <sup>(7)</sup>“停用”和“擦除”在 Android Enterprise 设备所有者场景（COPE、COBO、COSU）中不可用   。<br> 
-<sup>(8)</sup> 用户注册的 iOS/iPadOS 设备不支持“重置密码” **** 。
+<sup>(8) </sup> 用户注册的 iOS/iPadOS 设备不支持“重置密码” **** 。
 
 ## <a name="next-steps"></a>后续步骤
 
