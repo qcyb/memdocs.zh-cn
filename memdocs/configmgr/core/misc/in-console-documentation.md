@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2bf2ceae88ed775ff53324f007567a4677832805
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 39331a7ab4a512e449770179af4b04f4c52bec73
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80658121"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81668234"
 ---
 <!-- 
 - Feature 1357546
@@ -113,4 +113,4 @@ ms.locfileid: "80658121"
 - [KB 4552181 内容分发在 Configuration Manager Current Branch 版本 1910 中暂停](https://support.microsoft.com/help/4552181)
 - [KB 4550023 Configuration Manager 就地升级任务序列未在 Windows 10 就地升级回滚后继续](https://support.microsoft.com/help/4550023)
 
-要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 Microsoft Endpoint Configuration Manager  。
+要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 Microsoft Endpoint Configuration Manager  。  

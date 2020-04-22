@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326999"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397758"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune 设备注册疑难解答
 
@@ -238,7 +238,7 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 
 以下步骤只描述了用于验证是否正确安装证书的许多方法和工具中的一种。
 
-1. 转到[免费的 Digicert 工具](ttps://www.digicert.com/help/)。
+1. 转到[免费的 Digicert 工具](https://www.digicert.com/help/)。
 2. 输入 AD FS 服务器的完全限定域名（例如 sts.contoso.com），再选择“检查服务器”  。
 
 如果已正确安装服务器证书，则会在结果中看见所有复选标记。 如果存在上述问题，则会在报告的“证书名称匹配”和“已正确安装 SSL 证书”部分看见红色的 X。

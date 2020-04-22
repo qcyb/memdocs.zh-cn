@@ -17,10 +17,10 @@ ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086506"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>使用 Intune 添加 VPN 连接的 Windows 10 和 Windows Holographic 设备
@@ -155,7 +155,7 @@ ms.locfileid: "80086506"
 
 ## <a name="proxy-settings"></a>代理设置
 
-- **自动配置脚本**：使用文件配置代理服务器。 输入包含配置文件的代理服务器 URL，例如 `http://proxy.contoso.com`  。
+- **自动配置脚本**：使用文件配置代理服务器。 输入包含配置文件的代理服务器 URL，例如 `http://proxy.contoso.com` 。
 - **地址**：输入代理服务器地址，例如 IP 地址或 `vpn.contoso.com`
 - **端口号**：输入代理服务器使用的 TCP 端口号
 - **绕过本地地址的代理**：如果你不想为本地地址使用代理服务器，请选择“启用”。 如果 VPN 服务器需要代理服务器进行连接，则此设置适用。

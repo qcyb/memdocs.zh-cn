@@ -18,10 +18,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326600"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>教程：保护非托管设备上的 Exchange Online 电子邮件

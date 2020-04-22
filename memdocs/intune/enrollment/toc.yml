@@ -89,7 +89,7 @@
     - name: 设置 iOS/iPadOS 注册
       href: ios-enroll.md
       items:
-        - name: 设备注册程序
+        - name: 自动设备注册
           href: device-enrollment-program-enroll-ios.md
         - name: 设置 iOS/iPadOS 和 iPadOS 用户注册
           href: ios-user-enrollment.md

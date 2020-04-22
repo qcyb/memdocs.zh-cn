@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 69432082c199152b18b2afa95fd8351917d9bba9
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359237"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>使用 Intune 将 Windows 10 及更高版本设备作为展台运行的设置

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327049"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>快速入门：注册 Windows 10 设备

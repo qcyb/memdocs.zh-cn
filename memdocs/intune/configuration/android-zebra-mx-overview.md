@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084008"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>通过 Microsoft Intune 中的 Zebra Mobility Extensions 来使用和管理 Zebra 设备
@@ -91,8 +91,8 @@ Intune 提供丰富的功能，包括管理应用和配置设备设置。 这些
 1. 在 StageNow 中，创建一个配置文件，然后选择“Xpert 模式”  。
 2. 将“DevAdmin 管理员”添加到配置文件  。
 3. 将“设备管理操作”设置为“以设备管理员身份打开”   。
-4. 将“设备管理员包名称”设置为 `com.microsoft.windowsintune.companyportal`  。
-5. 将“设备管理员类名”设置为 `com.microsoft.omadm.client.PolicyManagerReceiver`  。
+4. 将“设备管理员包名称”设置为 `com.microsoft.windowsintune.companyportal` 。
+5. 将“设备管理员类名”设置为 `com.microsoft.omadm.client.PolicyManagerReceiver` 。
 
 继续发布配置文件，并在设备上的 StageNow 应用中使用该文件。 对公司门户应用授予设备管理员角色。
 

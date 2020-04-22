@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80219871"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>使用“更新频道”和“目标版本”设置，通过 Microsoft Intune 管理模板更新 Office 365

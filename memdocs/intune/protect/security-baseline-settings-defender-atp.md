@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551753"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397503"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 的 Microsoft Defender 高级威胁防护基线设置
 
@@ -133,7 +133,7 @@ ms.locfileid: "80551753"
     - 是 - Windows 将不允许向不受 BitLocker 保护的固定驱动器写入任何数据  。 如果未对固定驱动器进行加密，则在授予写入权限之前，用户将需要完成驱动器的 BitLocker 安装向导。
 
   - **配置固定数据驱动器的加密方法**  
-    CSP：[EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP：[EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     此设置在“BitLocker 固定驱动器策略”设置为“配置”时可用   。
 
     配置固定数据驱动器磁盘的加密方法和密码长度。 XTS-AES 128 位是 Windows 默认加密方法和建议的值  。
@@ -215,7 +215,7 @@ ms.locfileid: "80551753"
 ## <a name="device-installation"></a>设备安装
 
 - **按设备标识符安装硬件设备**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   使用此策略设置可以指定禁止 Windows 安装的设备的即插即用硬件 ID 和兼容 ID 的列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。  如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。
 

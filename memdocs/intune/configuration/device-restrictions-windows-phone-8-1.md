@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407645"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Microsoft Intune Windows Phone 8.1 设备限制设置
@@ -49,7 +49,7 @@ ms.locfileid: "80407645"
     - **字母数字**：密码必须是数字和字母的混合。
     - **数字**：密码必须仅为数字。
   - **最短密码长度**：输入所需的最小字符数，范围为 4-16 个。 例如，输入 `6` 可要求密码长度至少为六个字符。
-  - **简单密码**：设置为“阻止”可阻止用户创建简单密码，如 `1234` 或 `1111`  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。
+  - **简单密码**：设置为“阻止”可阻止用户创建简单密码，如 `1234` 或 `1111` 。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。
   - **擦除设备前的登录失败次数**：输入设备擦除前允许的错误密码数。
   - **屏幕锁定前的最大非活动分钟数**：输入设备在屏幕自动锁定前必须处于空闲状态的时间长度。 例如，输入 `5` 可在空闲 5 分钟后锁定设备。 设置为“未配置”或保留为空时，Intune 不会更改或更新此设置  。
   - **密码过期(天)** ：输入在用户必须更改设备密码之前密码保持有效的天数（介于 1-255 天之间）。 例如，要使密码在 90 天后过期，请输入 `90`。 如果该值为空，Intune 不会更改或更新此设置。

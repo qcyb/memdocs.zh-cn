@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80620561"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
@@ -917,7 +917,7 @@ Result getRegisteredAccountStatus(String upn);
 3. 若要从 Intune 管理中取消注册帐户，应用应调用 `unregisterAccountForMAM()`。 如果该帐户已成功注册并托管，SDK 将取消注册该帐户并擦除其数据。 将会停止定期注册重试。 SDK 经通知异步提供取消注册请求的状态。
 
 ### <a name="sovereign-cloud-registration"></a>主权云注册
-[主权云感知](https://www.microsoft.com/trustcenter/cloudservices/nationalcloud)的应用程序必须将 `authority` 提供给 `registerAccountForMAM()`  。  这可通过在 ADAL 的 [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters 中提供 `instance_aware=true`，然后对 AuthenticationCallback AuthenticationResult 调用 `getAuthority()` 来实现。
+[主权云感知](https://www.microsoft.com/trustcenter/cloudservices/nationalcloud)的应用程序必须将 `authority` 提供给 `registerAccountForMAM()` 。  这可通过在 ADAL 的 [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters 中提供 `instance_aware=true`，然后对 AuthenticationCallback AuthenticationResult 调用 `getAuthority()` 来实现。
 
 ```java
 mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBehavior.FORCE_PROMPT, "instance_aware=true",
@@ -1113,14 +1113,14 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 ### <a name="implementation-notes"></a>实现说明
 > [!NOTE]
 > **重要更改！**  <br>
-> 应用的 `MAMServiceAuthenticationCallback.acquireToken()` 方法应将新的 `forceRefresh` 标志的 false 传递到 `acquireTokenSilentSync()`  。
+> 应用的 `MAMServiceAuthenticationCallback.acquireToken()` 方法应将新的 `forceRefresh` 标志的 false 传递到 `acquireTokenSilentSync()` 。
 > 以前，我们建议传递 true 来解决从中转站刷新令牌的问题，但发现在某些情况下，如果此标志为 true，ADAL 可能会阻止获取令牌   。
 ```java
 AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ false);
 ```
 
 > [!NOTE]
-> 如果要在修正尝试期间显示自定义的阻止 UX，则应将 showUX 参数的 false 状态传递给 `remediateCompliance()`  。 必须确保在调用 `remediateCompliance()` 之前先显示 UX 并注册通知侦听器。  这将防止在 `remediateCompliance()` 迅速失败的情况下，出现导致通知缺失的争用条件。  例如，Activity 子类的 `onCreate()` 或 `onMAMCreate()` 方法是注册通知侦听器再调用 `remediateCompliance()` 的理想之选。  `remediateCompliance()` 的参数可作为额外意向传递给 UX。  收到符合性状态通知后，可显示结果，也可仅完成活动。
+> 如果要在修正尝试期间显示自定义的阻止 UX，则应将 showUX 参数的 false 状态传递给 `remediateCompliance()` 。 必须确保在调用 `remediateCompliance()` 之前先显示 UX 并注册通知侦听器。  这将防止在 `remediateCompliance()` 迅速失败的情况下，出现导致通知缺失的争用条件。  例如，Activity 子类的 `onCreate()` 或 `onMAMCreate()` 方法是注册通知侦听器再调用 `remediateCompliance()` 的理想之选。  `remediateCompliance()` 的参数可作为额外意向传递给 UX。  收到符合性状态通知后，可显示结果，也可仅完成活动。
 
 > [!NOTE]
 > `remediateCompliance()` 将注册帐户并尝试注册。  获取主令牌后，无需调用 `registerAccountForMAM()`，但即使调用也没有任何不利影响。 另一方面，如果应用无法获取其令牌且希望删除用户帐户，则必须调用 `unregisterAccountForMAM()` 来删除帐户并防止后台重试注册。
@@ -1400,7 +1400,7 @@ public static void setUIPolicyIdentity(final Context context, final String ident
 
   * 如果服务在主线程上运行，则**必须**同步调用 `reportIdentitySwitchResult` 或挂起 UI 线程。
 
-  * 若要创建 `Activity`，将在 `onMAMCreate` 之前调用 `onMAMIdentitySwitchRequired`  。 如果应用必须显示 UI 来确定是否允许切换标识，则必须使用*另一*活动显示该 UI。
+  * 若要创建 `Activity`，将在 `onMAMCreate` 之前调用 `onMAMIdentitySwitchRequired` 。 如果应用必须显示 UI 来确定是否允许切换标识，则必须使用*另一*活动显示该 UI。
 
   * 在 `Activity` 中，请求切换到空标识且其原因为 `RESUME_CANCELLED` 时，则该应用必须修改已恢复的活动来显示与该标识切换相一致的数据  。  如果无法做到这一点，则该应用应拒绝切换，且将会再次要求用户遵循恢复标识的策略（例如，在应用 PIN 输入屏幕上显示）。
 

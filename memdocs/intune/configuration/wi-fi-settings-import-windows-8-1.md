@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ef2c4593ad9809614b7e0d497745065fef12df69
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086385"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>在 Intune 中导入适用于 Windows 设备的 Wi-Fi 设置
@@ -54,7 +54,7 @@ ms.locfileid: "80086385"
 4. 运行 `netsh wlan export profile name="ProfileName" folder=c:\Wifi` 命令。 此命令会在目标文件夹中创建一个名为“Wi-Fi-WiFiName.xml”  的 Wi-Fi 配置文件。
 
 > [!IMPORTANT]
-> - 如果要导出的 Wi-Fi 配置文件中包含预共享密钥，则必须在命令中添加 `key=clear`  。 例如，输入 `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+> - 如果要导出的 Wi-Fi 配置文件中包含预共享密钥，则必须在命令中添加 `key=clear` 。 例如，输入 `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
 > - 在 Windows 10 中使用预共享的密钥会导致 Intune 中出现修正错误。 出现这种情况时，Wi-Fi 配置文件已正确分配给设备，并且该配置文件可以正常工作。
 > - 如果导出的 Wi-Fi 配置文件含有预共享密钥，请务必保管好该文件。 密钥为纯文本格式，你需负责保管好该密钥。
 
