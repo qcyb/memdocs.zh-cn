@@ -1,0 +1,123 @@
+---
+title: 桌面分析中的新增功能
+titleSuffix: Configuration Manager
+description: 桌面分析云服务最近每月发布的新功能摘要。
+ms.date: 03/12/2020
+ms.prod: configuration-manager
+ms.technology: configmgr-analytics
+ms.topic: conceptual
+ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: be314aee43e93b5e3d264c70626e2f0b85e8e7f3
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81706375"
+---
+# <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
+
+了解桌面分析的每月新增功能。
+
+> [!TIP]
+> 每月更新最多可能需要三天才能推出。 某些功能可能会在数周内推出，第一周内可能不能供所有客户使用。
+
+若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
+<!-- a locale is required for the RSS search string -->
+
+## <a name="march-2020"></a>2020 年 3 月
+
+### <a name="support-for-multiple-hierarchies"></a>支持多个层次结构
+
+<!-- 4814075, 6079184 -->
+
+你现可使用桌面分析的单个商业 ID 将多个 Configuration Manager 层次结构连接到一个 Azure Active Directory 租户。 该门户对来自不同层次结构的设备进行分类，改进了全局试点和部署计划的体验。
+
+- 配置全局试点时，如果纳入的集合中的注册设备数超过注册设备总数的 20%，则该门户会显示一则警告。
+- 创建部署计划时，如果选择对多个层次结构使用集合，该门户也会显示一则警告。
+
+> [!NOTE]
+> 必须有 Configuration Manager 版本 1910 或更高版本，才能支持多个层次结构。
+
+有关详细信息，请参阅下列文章：
+
+- [全局试点](deploy-pilot.md#bkmk_GlobalPilot)
+- [如何创建部署计划](create-deployment-plans.md)
+
+### <a name="identify-compatibility-safeguards"></a>确定兼容性防护
+
+<!-- 5746559 -->
+
+Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分类，这可能导致 Windows 10 的更新失败或回滚  。 而现在，桌面分析可帮助你提前确定这些防护措施，让你能够在部署更新之前对资产进行修正。 有关详细信息，请参阅[兼容性评估 - 防护](compat-assessment.md#safeguards)。
+
+## <a name="january-2020"></a>2020 年 1 月
+
+### <a name="additional-app-usage-detail"></a>其他应用使用情况详细信息
+
+<!-- 5533890 -->
+
+选择应用以查看详细信息时，“详细信息”窗格现在包含其他使用情况信息。 你可以使用此数据来帮助了解应用的安装范围，以及用户经常使用应用的设备。 有关详细信息，请参阅[关于资产 - 应用使用情况](about-assets.md#usage)。
+
+### <a name="provide-feedback-on-desktop-analytics"></a>提供有关桌面分析的反馈
+
+<!-- 5451636 -->
+
+选择门户右上角的“发送笑脸”图标，可分享你对于桌面分析的反馈。  有关详细信息，请参阅[分享产品反馈](get-support.md#bkmk_feedback)。
+
+## <a name="october-2019"></a>2019 年 10 月
+
+### <a name="improvements-to-compatibility-recommendations"></a>兼容性建议的改进
+
+<!-- 3594545 -->
+
+当检测到 Windows 升级将完全或部分删除应用程序或驱动程序时，桌面分析现在会提供更多详细信息。 有关详细信息，请参阅[兼容性评估](compat-assessment.md#asset-is-removed-during-upgrade)。
+
+### <a name="migrate-from-windows-analytics-to-existing-tenant"></a>从 Windows Analytics 迁移到现有租户
+
+<!-- 5202803 -->
+
+你现在可以在加入桌面分析后从现有 Windows Analytics 工作区迁移输入。
+
+## <a name="september-2019"></a>2019 年 9 月
+
+### <a name="migrate-inputs-from-windows-analytics"></a>从 Windows Analytics 迁移输入
+
+<!-- 4252663 -->
+
+在加入期间，你现在可以从现有的 Windows Analytics 工作区迁移输入。
+
+### <a name="offboard-from-desktop-analytics"></a>从桌面分析登出
+
+<!-- 4972396 -->
+
+如果在环境中设置了桌面分析，但想要停止使用该服务，现在可以关闭你的帐户。 如果在 90 天内改变主意，则可以重新激活该帐户。 有关详细信息，请参阅[如何关闭帐户](account-close.md)。
+
+## <a name="august-2019"></a>2019 年 8 月
+
+### <a name="reset-your-account"></a>重置你的帐户
+
+<!-- 3733897 -->
+
+如果你在环境中设置了桌面分析，但想要通过加入和注册来重新开始，现在就可以重置。 有关该过程的详细信息，请参阅[重置帐户](account-reset.md)。
+
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a>系统和应用商店应用的自动升级决策
+
+<!-- 3587232 -->
+
+为了帮助减少批注值得注意的应用的工作量，某些类型的应用会被自动标记为“不重要”  。 这些应用的部署计划升级决策也会被标记为“就绪”  。 以下应用是兼容的，并且应在升级 Windows 后继续工作：
+
+- Microsoft 发布的系统应用和组件
+
+- 从 Microsoft Store 管理和更新的应用
+
+有关详细信息，请参阅[系统和应用商店应用的自动升级决策](about-assets.md#bkmk_plan-autoapp)。
+
+## <a name="whats-new-in-configuration-manager"></a>Configuration Manager 中的新增功能
+
+桌面分析文档始终指的是最新版 Configuration Manager current branch 中的功能。 有关 Configuration Manager 中最新更改的详细信息，请参阅以下文章：
+
+<!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
+
+- [版本 1906 中的新增功能](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)

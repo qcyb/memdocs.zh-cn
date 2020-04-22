@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
-ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
+ms.openlocfilehash: fe58f7baf20903ade462430f4944d0f4555223af
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80525208"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725973"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>将 Pradeo Mobile Threat Defense 与 Intune 集成
 
@@ -32,7 +32,7 @@ ms.locfileid: "80525208"
 ## <a name="before-you-begin"></a>在开始之前
 
 > [!NOTE]
-> 以下步骤在 [Pradeo Security 控制台](https://www.apps-security.com)中完成。
+> 以下步骤在 [Pradeo Security 控制台](https://pradeo-security.com/)中完成。
 
 开始将 Pradeo 与 Intune 集成之前，请确保具有以下各项：
 
