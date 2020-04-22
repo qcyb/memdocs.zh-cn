@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7adb23f4709bf3ead07a01cb00d1b38fcb23c40
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79356903"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>快速入门：创建组以管理用户
@@ -41,7 +41,7 @@ ms.locfileid: "79356903"
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>在 Microsoft 终结点管理器中登录到 Intune
 
-以[全局管理员或 Intune 服务管理员](users-add.md#types-of-administrators)身份登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
+以[全局管理员或 Intune 服务管理员](https://go.microsoft.com/fwlink/?linkid=2109431)身份登录 [Microsoft 终结点管理器管理中心](users-add.md#types-of-administrators)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
 
 ## <a name="create-a-group"></a>创建组
 
@@ -56,7 +56,7 @@ ms.locfileid: "79356903"
 
     ![在 Microsoft Intune 中创建组的屏幕截图](./media/quickstart-create-group/quickstart-use-groups-01.png)
 
-7. 单击“选择” > “创建”   。
+7. 单击“选择” **“创建”**  >   。
 
 已成功创建组后，该组将显示在“所有组”列表中  。 
 
@@ -67,4 +67,4 @@ ms.locfileid: "79356903"
 要完成这一系列的 Intune 快速入门，请继续学习下一篇快速入门。
 
 > [!div class="nextstepaction"]
-> [快速入门：设置适用于 Windows 10 设备的自动注册](../enrollment/quickstart-setup-auto-enrollment.md)
+> [快速入门 - 设置 Windows 10 设备的自动注册](../enrollment/quickstart-setup-auto-enrollment.md)

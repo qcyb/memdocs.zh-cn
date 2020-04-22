@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 6b5fe7c97b42c4863fbad8e7341b64fa847b8563
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335401"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>从 Intune 删除 iOS 设备
@@ -38,7 +38,7 @@ ms.locfileid: "79335401"
 
 1. 在公司门户应用中，点击“设备”  。 并选择要取消注册的设备。 如果只有一个设备，点击“设备”后将直接转到设备详细信息屏幕  。
 
-2. 点击“重命名”旁边的省略号按钮，然后点击“删除设备” > “删除”    。  
+2. 点击“重命名”旁边的省略号按钮，然后点击“删除设备” **“删除”**   >   。  
 
     |![公司门户应用“设备”屏幕的屏幕截图，其中显示了用户单击“删除”后出现的选项。 显示了“删除设备”按钮、“出厂重置”按钮和“取消”按钮。](./media/cp_ios_unenroll_after_1804_001.png)|
 
@@ -71,9 +71,9 @@ ms.locfileid: "79335401"
 
 - **信息日志**：Microsoft 收集的标准应用活动数据，例如应用打开时长或应用是否崩溃。从公司门户删除设备时，系统会自动清除此数据。
 
-- **Apple 分析**：Apple 收集的标准应用崩溃活动数据。 仅当将设备重置为出厂设置时系统才会删除此信息。 此操作会清除设备上的所有个人信息。 若要执行此操作，请打开“设置” > “常规” > “重置” > “清除所有内容和设置”     。
+- **Apple 分析**：Apple 收集的标准应用崩溃活动数据。 仅当将设备重置为出厂设置时系统才会删除此信息。 此操作会清除设备上的所有个人信息。 若要执行此操作，请打开“设置” **“常规”** “重置” > “清除所有内容和设置”   >    >   。
 
-- **Keychain**：设备将用于登录的密码和其他信息存储在 Keychain 中。 设备上安装的任何 Microsoft 开发的应用都可以共享登录信息，包括 Microsoft Outlook 和 Microsoft Authenticator。 与 Apple 分析一样，仅当将设备重置为出厂设置时系统才会删除此信息。 此操作会清除设备上的所有个人信息。 若要执行此操作，请打开“设置” > “常规” > “重置” > “清除所有内容和设置”     。
+- **Keychain**：设备将用于登录的密码和其他信息存储在 Keychain 中。 设备上安装的任何 Microsoft 开发的应用都可以共享登录信息，包括 Microsoft Outlook 和 Microsoft Authenticator。 与 Apple 分析一样，仅当将设备重置为出厂设置时系统才会删除此信息。 此操作会清除设备上的所有个人信息。 若要执行此操作，请打开“设置” **“常规”** “重置” > “清除所有内容和设置”   >    >   。
 
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

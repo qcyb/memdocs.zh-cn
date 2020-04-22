@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086558"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>用于在 Intune 中配置 VPN 的 Android 设备设置
@@ -36,13 +36,13 @@ ms.locfileid: "80086558"
 
 ## <a name="base-vpn"></a>基础 VPN
 
-- **连接名称**：为此连接输入名称。 最终用户在浏览其设备的可用 VPN 连接时将看到此名称。 例如，输入 `Contoso VPN`。
+- **连接名称**：输入此连接的名称。 最终用户在浏览其设备的可用 VPN 连接时将看到此名称。 例如，输入 `Contoso VPN`。
 - **IP 地址或 FQDN**：输入设备连接到的 VPN 服务器的 IP 地址或完全限定的域名 (FQDN)。 例如，输入 192.168.1.1 或 contoso.com   。
 
   - **身份验证方法**：选择设备向 VPN 服务器进行身份验证的方法。 选项包括：
 
-    - **证书**：选择现有 SCEP 或 PKCS 证书配置文件，以对连接进行身份验证。 [配置证书](../protect/certificates-configure.md)列出了创建证书配置文件的步骤。
-    - **用户名和密码**：登录 VPN 服务器时，最终用户会看到输入用户名和密码的提示。
+    - **证书**：选择现有 SCEP 或 PKCS 证书配置文件以对连接进行身份验证。 [配置证书](../protect/certificates-configure.md)列出了创建证书配置文件的步骤。
+    - **用户名和密码**：登录 VPN 服务器时，系统会提示最终用户输入其用户名和密码。
 
 - **连接类型**：选择 VPN 连接类型。 选项包括：
 
@@ -53,7 +53,7 @@ ms.locfileid: "80086558"
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **指纹**（仅限 Check Point Capsule VPN）：输入字符串（如“Contoso 指纹代码”  ），以验证能否信任 VPN 服务器。 指纹被发送到客户端，因此客户端知道信任任何提供相同指纹的服务器。 如果设备没有指纹，则会提示用户信任 VPN 服务器，并显示指纹。 用户手动验证指纹，并选择“信任”进行连接。
+- **指纹**（仅限 Check Point Capsule VPN）：输入字符串（例如“Contoso Fingerprint Code”），验证 VPN 服务器是否可以信任  。 指纹被发送到客户端，因此客户端知道信任任何提供相同指纹的服务器。 如果设备没有指纹，则会提示用户信任 VPN 服务器，并显示指纹。 用户手动验证指纹，并选择“信任”进行连接。
 - **输入 Citrix VPN 属性的键值对**（仅限 Citrix）：输入由 Citrix 提供的键值对。 这些值配置 VPN 连接的属性。 
 
   还可以导入  包含键和值对的逗号分隔值文件 (.csv)。 请务必查看“我的数据包含标题”  和“键”  属性。

@@ -16,13 +16,13 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1bcfab31d6efc2ff43451b3193848060c6f178a8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79344969"
 ---
-# <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>快速入门：设置适用于 Windows 10 设备的自动注册
+# <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>快速入门 - 设置 Windows 10 设备的自动注册
 
 在本快速入门中，将 Microsoft Intune 设置为在特定用户登录到 Windows 10 设备时自动注册设备。
 
@@ -70,7 +70,7 @@ ms.locfileid: "79344969"
 
     ![选择要注册的组](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
 
-7. 选择“选择组” > “Contoso 测试人员” > “选择”作为已分配的组    。 
+7. 选择“选择组” **“Contoso 测试人员”** “选择”作为已分配的组 >    >   。 
 8. 对于剩余的配置，可以使用默认值。
 9. 选择 **“保存”** 。
 

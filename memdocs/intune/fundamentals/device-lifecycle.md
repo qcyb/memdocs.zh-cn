@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c65235caa7e53dbe8dee4605803a6e58d6ab31a0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79344111"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune 移动设备管理 (MDM) 生命周期概述
@@ -32,7 +32,7 @@ ms.locfileid: "79344111"
 
 当今的移动设备管理 (MDM) 策略适用于各种手机、平板电脑和电脑（iOS/iPadOS、Android、Windows 和 Mac OS X）。 如果你需要能够管理设备（这对公司拥有的设备来说很常见），第一步便是[设置设备注册](../enrollment/device-enrollment.md)。 你还可以通过向 Intune (MDM) 注册设备或[安装 Intune 客户端软件](manage-windows-pcs-with-microsoft-intune.md)来管理 Windows 电脑。
 
-## <a name="configure"></a>用户密码重置策略
+## <a name="configure"></a>配置
 
 将你的设备注册只是第一步。 若要充分利用所有这些 Intune 功能并确保你的设备安全且符合公司标准，你可以从各种策略中选择。 这些策略让你能够几乎配置受管理设备运作方式的方方面面。 例如，对于含有公司数据的设备，用户是否应该有密码？ 你可以要求获得密码。 你有公司 Wi-Fi 吗？ 你可以自动配置它。 以下是可用的配置选项类型：
 

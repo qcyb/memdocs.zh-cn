@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084082"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>可以在 Intune 中使用的内置 iOS 和 iPadOS 应用的程序包 ID
@@ -60,7 +60,7 @@ ms.locfileid: "80084082"
 | com.apple.MobileSMS         | 消息     | Apple     |
 | com.apple.Music             | 音乐        | Apple     |
 | com.apple.news              | 新闻         | Apple     |
-| com.apple.mobilenotes       | 注意        | Apple     |
+| com.apple.mobilenotes       | 注释        | Apple     |
 | com.apple.Numbers           | 数字      | Apple     |
 | com.apple.Pages             | 页面        | Apple     |
 | com.apple.mobilephone       | 电话        | Apple     |

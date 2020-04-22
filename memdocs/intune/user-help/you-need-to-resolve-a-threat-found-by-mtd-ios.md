@@ -18,15 +18,15 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 905378b764fe3e8beee7eb90570cb9f871d9fa47
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346204"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>解决移动威胁防御应用发现的威胁
 
-Mobile Threat Defense 应用可检测到设备上的潜在威胁并发出警报。 某些组织将 Mobile Threat Defense 服务与 MDM 提供程序（如 Intune）进行集成。 集成后，Mobile Threat Defense 服务将报告威胁（如可疑应用、网络和 OS 漏洞），并在公司门户应用中提供通知。 然后，可在 Mobile Threat Defense 应用中找到有关威胁和修正步骤的详细信息。  
+移动威胁防御应用可检测到设备上的潜在威胁并发出警报。 某些组织将 Mobile Threat Defense 服务与 MDM 提供程序（如 Intune）进行集成。 集成后，Mobile Threat Defense 服务将报告威胁（如可疑应用、网络和 OS 漏洞），并在公司门户应用中提供通知。 然后，可在 Mobile Threat Defense 应用中找到有关威胁和修正步骤的详细信息。  
 
 威胁在公司门户中显示为未解决的非符合性问题。 如果威胁类别为极具危险，公司将撤销你对其公司资源的访问权限。 只要设备上存在这些威胁，就可能无法：  
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bf01b680bce047ec3db64c6d9d59a0e6e44918b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345398"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Intune 数据仓库仅应用程序身份验证
@@ -94,7 +94,7 @@ Azure Active Directory (Azure AD) 使用 OAuth 2.0 使你能够在你的  Azure 
 3. 选择“控制台应用(.NET Framework)”，添加应用名称，然后单击“确定”，以创建应用   。
 4. 在“解决方案资源管理器”中，选择“Program.cs”，以显示代码   。
 5. 在解决方案资源管理器中，添加对 `System.Configuration` 程序集的引用。
-6. 在弹出菜单中，选择“添加” > “新建项”   。 随即将显示“添加新项”对话框  。
+6. 在弹出菜单中，选择“添加” **“新建项”**  >   。 随即将显示“添加新项”对话框  。
 7. 在左侧的“Visual C#”下，选择“代码”。  
 8. 选择“类”，将类的名称更改为“IntuneDataWarehouseClass.cs”，然后单击“添加”。   
 9. 将下列代码添加到 <code>Main</code> 方法中：

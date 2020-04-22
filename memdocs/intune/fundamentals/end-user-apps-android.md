@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79372545"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Android 用户如何获取其应用  
@@ -37,8 +37,8 @@ ms.locfileid: "79372545"
 
 最终用户需要允许来自未知源的安装才能安装 [LOB 应用](../apps/lob-apps-android.md)。 此设置通常位于两个位置：
 
-* **Android 7.1.2 及更低版本**：“设置” > “安全性” > “未知源”   
-* **Android 8.0 及更高版本**：“设置” > “应用和通知” > “特殊应用访问” > “安装未知应用” > “公司门户” > “允许来自此源”      
+* Android 7.1.2 及更低版本：“设置” **“安全性”** “未知源”   >    >  
+* Android 8.0 及更高版本：“设置” **“应用和通知”** “特殊应用访问” **“安装未知应用”** “公司门户” > “允许来自此源”   >    >    >    >  
 
 在这种情况下，公司门户应用将通知最终用户，并将最终用户直接引导至相应设置。 
 

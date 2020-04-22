@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: c4871e8b9130c32cddfe6d7329b16f142ab0ebf7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346425"
 ---
 # <a name="turn-on-your-windows-defender-firewall"></a>开启 Windows Defender 防火墙
@@ -31,7 +31,7 @@ ms.locfileid: "79346425"
 你的单位或学校希望确保访问其资源的设备受到保护。 要确保设备设置为可访问这些资源，方法之一是开启 Windows Defender 防火墙。 防火墙的开启方法如下：
 
 1. 转到“开始”并打开“控制面板”   。
-2. 打开“系统和安全” > “Windows Defender 防火墙”   。
-3. 为域、专用网络和公用网络选择“自定义设置” > “打开或关闭 Windows 防火墙”   。
+2. 打开“系统和安全” **“Windows Defender 防火墙”**  >   。
+3. 为域、专用网络和公用网络选择“自定义设置” **“打开或关闭 Windows 防火墙”**  >   。
 
 仍需帮助？ 请与公司支持人员联系。 有关他们的联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

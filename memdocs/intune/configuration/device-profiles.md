@@ -18,15 +18,15 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359311"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中使用设备配置文件的设备应用功能和设置
 
-Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置和功能。 这些设置和功能将添加到“配置文件”。 可以为不同的设备和不同的平台（包括 iOS/iPadOS、Android 设备管理员、Android Enterprise 和 Windows）创建配置文件。 然后，使用 Intune 应用配置文件或将其“分配”给设备。
+Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置和功能。 这些设置和功能将添加“配置文件”。 可以为不同的设备和不同的平台（包括 iOS/iPadOS、Android 设备管理员、Android Enterprise 和 Windows）创建配置文件。 然后，使用 Intune 应用配置文件或将其“分配”给设备。
 
 作为移动设备管理 (MDM) 解决方案的一部分，使用这些配置文件来完成不同的任务。 一些配置文件示例如下：
 
@@ -59,8 +59,8 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
-- Windows 8.1
+- Windows Phone 8。1
+- Windows 8。1
 - Windows 10 及更高版本
 
 ## <a name="custom-profile"></a>自定义配置文件
@@ -73,7 +73,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
+- Windows Phone 8。1
 
 ## <a name="delivery-optimization"></a>传递优化
 
@@ -140,13 +140,13 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 - Windows 10 及更高版本
 
-## <a name="education"></a>教育水平
+## <a name="education"></a>教育
 
 [教育设置 - Windows 10](education-settings-configure.md) 配置针对 [Windows 参加测验应用](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)的选项。 在配置这些选项时，直到测试完成才可以在设备上运行其他应用。
 
 [教育设置 - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) 使用 iOS/iPadOS Classroom 应用来指导学习，并控制课堂中的学生设备。 可以将 iPad 设备配置为多名学生可以共享一台设备。
 
-## <a name="email"></a>电子邮件
+## <a name="email"></a>Email
 
 [电子邮件设置](email-settings-configure.md)创建、分配和监视设备上的 Exchange ActiveSync 电子邮件设置。 邮件配置文件可帮助确保一致性、减少支持呼叫，并让最终用户能够在不进行任何所需设置的情况下在其个人设备上访问公司电子邮件。 
 
@@ -155,7 +155,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 - Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8.1
+- Windows Phone 8。1
 - Windows 10 及更高版本
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
@@ -270,8 +270,8 @@ macOS 设备上的[首选项文件](preference-file-settings-macos.md)包括有�
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
-- Windows 8.1
+- Windows Phone 8。1
+- Windows 8。1
 - Windows 10 及更高版本
 
 ## <a name="wi-fi"></a>Wi-Fi

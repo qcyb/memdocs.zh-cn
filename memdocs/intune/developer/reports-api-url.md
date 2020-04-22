@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360231"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune 数据仓库 API 终结点
@@ -49,7 +49,7 @@ Intune 的 URL 使用以下格式：
 
 该 URL 包含以下元素：
 
-| 元素 | 示例 | 说明 |
+| 元素 | 示例 | Description |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | 位置 | msua06 | 可通过查看 Azure 门户中的数据仓库 API 边栏选项卡获取基 URL。 |
 | 实体集合 | devicePropertyHistories | OData 实体集合的名称。 有关数据模型中集合和实体的详细信息，请参阅[数据模型](reports-ref-data-model.md)。 |
@@ -60,7 +60,7 @@ Intune 的 URL 使用以下格式：
 
 现在可以通过设置查询参数  `api-version=v1.0` 来使用 v1.0 版的 Intune 数据仓库。 数据仓库中集合的更新本质上是附加更新，不会破坏现有方案。
 
-可通过使用 beta 版本，试用数据仓库的最新功能。 若要使用 beta 版本，URL 中必须包含查询参数  `api-version=beta`。 Beta 版本会提供尚未正式作为支持服务推出的功能。 随着 Intune 不断添加新功能，beta 版本可能会更改行为和数据协定。 任何依赖于 beta 版本的自定义代码或报告工具都可能会因不断推出的更新而临时中断运行。
+可通过使用 beta 版本，试用数据仓库的最新功能。 若要使用 beta 版本，URL 中必须包含查询参数  `api-version=beta`。 Beta 版本会提供尚未正式作为支持服务推出的功能。 随着 Intune 不断添加新功能，beta 版本可能会更改行为和数据协定。 任何依赖于 beta 版本的自定义代码或报告工具都可能会中断正在进行的更新。
 
 ## <a name="odata-query-options"></a>OData 查询选项
 
@@ -68,9 +68,9 @@ Intune 的 URL 使用以下格式：
 
 ## <a name="datekey-range-filters"></a>DateKey 范围筛选器
 
-`DateKey` 范围筛选器可用于限制键属性为 `dateKey` 的某些集合可下载的数据量。 通过提供以下 `$filter` 查询参数，`DateKey` 筛选器可用于优化服务性能：
+`DateKey` 范围筛选器可用于限制键属性为 `dateKey` 的某些集合可下载的数据量。 通过提供以下 `DateKey` 查询参数，`$filter` 筛选器可用于优化服务性能：
 
-1. `$filter` 中的 `DateKey` 可单独支持 `lt/le/eq/ge/gt` 运算符并可与逻辑运算符 `and` 结合使用，将它们映射到开始日期和/或结束日期。
+1. `DateKey` 中的 `$filter` 可单独支持 `lt/le/eq/ge/gt` 运算符并可与逻辑运算符 `and` 结合使用，将它们映射到开始日期和/或结束日期。
 2. `maxhistorydays` 作为自定义查询选项提供。<br>
 
 ## <a name="filter-examples"></a>筛选器示例
@@ -78,7 +78,7 @@ Intune 的 URL 使用以下格式：
 > [!NOTE]
 > 筛选器示例假定现在是 2019/2/21。
 
-|                             筛选器                             |           性能优化           |                                          说明                                          |
+|                             Filter                             |           性能优化           |                                          Description                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    完整                                      |    返回 `DateKey` 介于 20180214 至 20180221 的数据。                                     |
 |    `$filter=DateKey eq 20180214`                                 |    完整                                      |    返回 `DateKey` 等于 20180214 的数据。                                                    |

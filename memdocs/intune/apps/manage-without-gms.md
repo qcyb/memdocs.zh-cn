@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ce61f7af7c11fb579e34890700231ca2e59fb5cd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576849"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81267677"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>如何在无法访问 Google 移动服务的环境中使用 Intune
 
@@ -33,7 +33,7 @@ Microsoft Intune 在管理 Android 设备时使用 Google 移动服务 (GMS) 与
 
 ### <a name="for-users-outside-of-mainland-china"></a>对于中国大陆以外的用户 
 
-如果无法访问 Google Play，Android 设备可以下载并旁加载 [面向 Android 的 Microsoft Intune 公司门户](../user-help/install-the-company-portal-app-android.md)应用。 以这种方式进行安装，应用不会自动接收更新或修复程序。 请务必定期手动更新和修补应用。 
+如果无法访问 Google Play，Android 设备可以下载并旁加载 [面向 Android 的 Microsoft Intune 公司门户](https://www.microsoft.com/en-us/download/details.aspx?id=49140)应用。 以这种方式进行安装，应用不会自动接收更新或修复程序。 请务必定期手动更新和修补应用。 
 
 ### <a name="for-users-in-mainland-china"></a>对于中国大陆用户 
 
@@ -62,7 +62,7 @@ Microsoft Intune 在管理 Android 设备时使用 Google 移动服务 (GMS) 与
 
 Intune 控制台  ：
 - 完全擦除
-- 选择性擦除
+- “选择性擦除”
 - 新的或更新的应用部署
 - 远程锁定
 - 密码重置

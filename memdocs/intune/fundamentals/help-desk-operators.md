@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085813"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>使用疑难解答门户帮助公司的用户
@@ -53,7 +53,7 @@ ms.locfileid: "80085813"
 5. 通过键入名称或电子邮件地址选择用户。 单击“选择”  。 有关用户的疑难解答信息将显示在“疑难解答”窗格中。 下表介绍了相关信息。
 
 > [!Note]  
-> 还可通过浏览器前往 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 来访问“疑难解答”窗格  。
+> 还可通过浏览器前往  [ 来访问“疑难解答”窗格 https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)。
 
 ## <a name="areas-of-troubleshooting-dashboard"></a>疑难解答仪表板区域
 
@@ -61,12 +61,12 @@ ms.locfileid: "80085813"
 
 ![疑难解答仪表板，其中包含下表所述的编号区域](./media/help-desk-operators/troubleshooting-dash.png)
 
-| 领域 | 名称 | 说明 |
+| 区域 | Name | Description |
 | ---  | ---  | ---         |
 | 1.   | 帐户状态  | 显示当前 Intune 租户状态为“活动”或“非活动”   。       |
 | 2.   | 用户选择  | 当前所选用户的名称。 单击“更改用户”可选择新用户  。       |
 | 3.   | 用户状态  | 显示用户的 Intune 许可证状态、设备数目、每个设备的合规性。       |
-| 4.   | 用户信息  | 使用该列表在窗格中选择要查看的详细信息。 <br>可选内容如下： <ul><li>客户端应用<li>相容性策略<li> 配置策略<li>应用保护策略 <li>注册限制</ul>      |
+| 4.   | 用户信息  | 使用该列表在窗格中选择要查看的详细信息。 <br>可选内容如下： <ul><li>客户端应用<li>Compliance “策略”<li> 配置策略<li>应用保护策略 <li>注册限制</ul>      |
 | 5.   | 组成员身份  | 显示所选用户所属的当前组。       |
 
 <!-- this section needs to be updated
@@ -248,18 +248,18 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 注册失败表列出了失败的注册尝试。 下表中列出的设备可能随后会在另一次尝试中成功注册。 部分失败的尝试可能没有列出。 并非所有失败的操作都有缓解信息。
 
-| 表列 | 说明 |
+| 表列 | Description |
 |-------------|----------|
 | 注册开始 | 用户首次注册的开始时间。 |
 | 操作系统 | 设备的操作系统。 |
-| OS 版本 | 设备的操作系统版本。 |
+| 操作系统版本 | 设备的操作系统版本。 |
 | 失败 | 失败原因。 |
 
 ### <a name="failure-details"></a>失败详细信息
 
 选择失败行时，可以获取更多详细信息。
 
-| 部分 | 说明 |
+| 部分 | Description |
 |-------------|----------|
 | 失败详细信息 | 对失败更详细的说明。 |
 | 可能有效的修正措施 | 解决该错误的推荐步骤。 部分失败可能没有对应的修正措施。 |

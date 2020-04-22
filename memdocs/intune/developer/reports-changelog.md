@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360205"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune 数据仓库 API 的更改日志
@@ -43,7 +43,7 @@ ms.locfileid: "79360205"
 |    mobileAppDeviceUserInstallStatus    |    已删除    |    请改用 [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts)。                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    已删除    |    请改用 [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes)。                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    已删除    |    请改用 [complianceStates](intune-data-warehouse-collections.md#compliancestates)。                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    已删除    |    请改用 [devices](intune-data-warehouse-collections.md#devices) 和 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 集合中的 `azureAdRegistered` 属性。                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    已删除    |    请改用 `azureAdRegistered`devices[ 和 ](intune-data-warehouse-collections.md#devices)devicePropertyHistories[ 集合中的 ](intune-data-warehouse-collections.md#devicepropertyhistories) 属性。                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    已删除    |    请改用 [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates)。                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    已删除    |    请改用 [users](intune-data-warehouse-collections.md#users) 集合。                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    已删除    |    许多属性都是冗余的，或者现在可在 [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) 或 [devices](intune-data-warehouse-collections.md#devices) 集合中找到。 这两个集合中未列出的所有 mdmDeviceInventoryHistories 属性都不再可用  。 请查看下面的详细信息。    |
@@ -54,7 +54,7 @@ ms.locfileid: "79360205"
 |--------------------------------|---------------------------------------------------------------------------------|
 |    cellularTechnology          |    devices 集合中的 cellularTechnology                                     |
 |    deviceClientId              |    devices 集合中的 deviceId                                               |
-|    deviceManufacturer          |    devices 集合中的制造商                                           |
+|    deviceManufacturer          |    devices 集合中的 manufacturer                                           |
 |    deviceModel                 |    devices 集合中的模型                                                  |
 |    deviceName                  |    devices 集合中的 deviceName                                             |
 |    deviceOsPlatform            |    devices 集合中的 deviceTypeKey                                          |
@@ -73,7 +73,7 @@ ms.locfileid: "79360205"
 |    platformType                |    devices 集合中的模型                                                  |
 |    product                     |    devices 集合中的 deviceTypeKey                                          |
 |    productVersion              |    devicePropertyHistories 集合中的 osVersion                              |
-|    serialNumber                |    设备集合中的 serialNumber                                           |
+|    serialNumber                |    devices 集合中的 serialNumber                                           |
 |    storageFree                 |    devices 集合中的 freeStorageSpaceInBytes 属性                   |
 |    storageTotal                |    devices 集合中的 totalStorageSpaceInBytes 属性                |
 |    subscriberCarrierNetwork    |    devices 集合中的 subscriberCarrier 属性                         |
@@ -239,8 +239,8 @@ _2018 年 12 月发布_
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>数据仓库数据模型中的新实体 <!-- 2077804 -->
 
-- 已添加实体 [MobileAppDeviceuserInstallStatus](reports-ref-application.md)  。 MobileAppDeviceUserInstallStatus  表示给定设备和用户的移动应用安装状态。
-- 已添加实体 [MobileAppInstallStates](reports-ref-application.md#mobileappinstallstates)  。 MobileAppInstallState 实体表示已分配到包含设备和/或用户的组的移动应用程序的安装状态  。 
+- 已添加实体 [MobileAppDeviceuserInstallStatus  ](reports-ref-application.md)。 MobileAppDeviceUserInstallStatus  表示给定设备和用户的移动应用安装状态。
+- 已添加实体 [MobileAppInstallStates  ](reports-ref-application.md#mobileappinstallstates)。 MobileAppInstallState 实体表示已分配到包含设备和/或用户的组的移动应用程序的安装状态  。 
 
 ## <a name="1710"></a>1710
 发布于 2017 年 11 月 
@@ -260,8 +260,8 @@ User  实体集合包含企业中分配有许可证的所有 Azure Active Direct
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>数据仓库数据模型中的新实体 <!-- 1479526 --><!-- -->
 
-- 添加了实体 [UserDeviceAssociation](reports-ref-user-device.md)  。 UserDeviceAssociation 包含组织中的用户设备关联  。 现在可使用用户设备关联信息（该信息将用户和设备实体集合相关联）生成报表和数据可视化效果。  
-- 添加了 [IntuneManagementExtension](reports-ref-intunemanagementextension.md) 实体  。 IntuneManagementExtension 包含移动设备的实体，可用于跟踪版本和安装状态等信息  。
+- 添加了实体 [UserDeviceAssociation  ](reports-ref-user-device.md)。 UserDeviceAssociation 包含组织中的用户设备关联  。 现在可使用用户设备关联信息（该信息将用户和设备实体集合相关联）生成报表和数据可视化效果。  
+- 添加了 [IntuneManagementExtension **实体**](reports-ref-intunemanagementextension.md)。 IntuneManagementExtension 包含移动设备的实体，可用于跟踪版本和安装状态等信息  。
 
 ## <a name="next-steps"></a>后续步骤
 - 了解 [Intune 每周新增功能](../fundamentals/whats-new.md)。 另外，还可找到即将发生的更改、有关服务的重要说明，以及有关过去版本的信息。

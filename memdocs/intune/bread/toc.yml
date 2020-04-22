@@ -12,8 +12,8 @@
           items:
             - name: Intune 用户帮助
               tocHref: /intune/user-help/
-              topicHref: /intune/user-help/
-            - name: 应用
+              topicHref: /intune/user-help/use-managed-devices-to-get-work-done
+            - name: “应用”
               tocHref: /intune/apps/
               topicHref: /intune/apps/
             - name: 基础知识

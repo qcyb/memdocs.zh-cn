@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325625"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Microsoft Intune 中 BitLocker 策略的故障排除
@@ -68,7 +68,7 @@ BitLocker 驱动器加密是 Microsoft Windows 操作系统提供的一项服务
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备” > “配置文件”，然后选择包含 BitLocker 设置的配置文件   。
+2. 选择“设备” **“配置文件”，然后选择包含 BitLocker 设置的配置文件** >   。
 
 3. 选择要查看的配置文件后，选择“设备状态”  。 列出分配给配置文件的设备，“设备状态”列指示设备是否成功部署了配置文件  。
 
@@ -76,7 +76,7 @@ BitLocker 驱动器加密是 Microsoft Windows 操作系统提供的一项服务
 
 ### <a name="use-control-panel-on-the-client"></a>在客户端上使用控制面板  
 
-在启用了 BitLocker 并对驱动器进行加密的设备上，你可以从设备的控制面板查看 BitLocker 状态。 在设备上，打开“控制面板” > “系统和安全” > “BitLocker 驱动器加密”    。 显示确认，如下图所示。  
+在启用了 BitLocker 并对驱动器进行加密的设备上，你可以从设备的控制面板查看 BitLocker 状态。 在设备上，打开“控制面板” **“系统和安全”** “BitLocker 驱动器加密” >    >   。 显示确认，如下图所示。  
 
 ![BitLocker 已在“控制面板”中打开](./media/troubleshooting-bitlocker-policies/control-panel.png)
 
@@ -105,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>查看设备注册表项配置
 
-BitLocker 策略成功部署到设备后，在设备上查看以下注册表项，可以在其中查看 BitLocker 设置的配置：*HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*。 下面是一个示例：
+BitLocker 策略成功部署到设备后，在设备上查看以下注册表项，可以在其中查看 BitLocker 设置的配置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker  。 下面是一个示例：
 
 ![BitLocker 注册表项](./media/troubleshooting-bitlocker-policies/registry.png)
 
@@ -194,7 +194,7 @@ EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 
 - 由于 BitLocker 依赖于 TPM，因此你可以得出的结论是，BitLocker 出现故障并非由于 Intune 或策略问题，而是由于设备本身没有 TPM 芯片或在 BIOS 中禁用了 TPM。
 
-  此外温馨提示，可在“应用程序和服务日志” > “Microsoft” > “Windows” > “BitLocker API”下的 Windows 事件查看器中确认相同结论     。 在“BitLocker API”事件日志中，可以找到事件 ID 853，表示 TPM 不可用  ：
+  此外温馨提示，可在“应用程序和服务日志” **“Microsoft”** “Windows” > “BitLocker API”下的 Windows 事件查看器中确认相同结论   >    >   。 在“BitLocker API”事件日志中，可以找到事件 ID 853，表示 TPM 不可用  ：
 
   ![事件 ID 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

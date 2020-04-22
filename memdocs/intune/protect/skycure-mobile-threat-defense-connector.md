@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275078"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile 连接器
@@ -94,7 +94,7 @@ Intune 支持与 SEP Mobile 集成的两种模式：
 
 ![检测到恶意应用后，在修正后授予访问权限的示意图](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限
+### <a name="control-access-based-on-threat-to-network"></a>基于对网络的威胁来控制访问
 
 检测**中间人**等网络威胁，并基于设备风险保护对 WiFi 网络的访问。
 

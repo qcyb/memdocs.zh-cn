@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357553"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>规划 Intune 部署的其他资源
@@ -35,7 +35,7 @@ ms.locfileid: "79357553"
 |部署规划  |设计与实现   |测试与验证 |
 |-----|----- |------|
 | 部署目标 |当前环境|功能验证测试|
-| 部署宗旨 |设备|IT 管理员场景验证测试|
+| 部署目的 |设备|IT 管理员场景验证测试|
 | 部署难题 |条款和条件|最终用户场景验证测试|
 | 用例场景 |配置策略| |
 | 用例场景要求 |证书配置文件| |

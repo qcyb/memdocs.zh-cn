@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 210ec5ea6acc2d0ce91a93c83991b630a6fdbb4d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353237"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 macOS 设置
@@ -59,7 +59,7 @@ ms.locfileid: "79353237"
 
 ## <a name="system-security-settings"></a>系统安全设置
 
-### <a name="password"></a>Password
+### <a name="password"></a>密码
 
 - **需要密码才可解锁移动设备**：  
   - **未配置**（默认） 
@@ -72,7 +72,7 @@ ms.locfileid: "79353237"
 - **最短密码长度**：  
   输入密码必须包含的最小位数或最小字符数。
 
-- **密码类型**：选择密码是应仅包含数值字符，还是应混合使用数字和其他字符（字母数字）   。
+-  密码类型：  选择密码是应仅包含数值字符，还是应混合使用数字和其他字符（字母数字）  。
 
 - **密码中的非字母数字字符数**：  
   输入密码中必须包含的最小特殊字符（如 `&`、`#`、`%`、`!` 等）数。
@@ -90,7 +90,7 @@ ms.locfileid: "79353237"
 > [!IMPORTANT]
 > 当 macOS 设备上的密码要求发生更改时，直到用户下次更改密码时此更改才会生效。 例如，如果将密码长度限制设置为 8 位数，而 macOS 设备当前使用的是 6 位数密码，则在用户下次更新设备上的密码前，该设备将仍保持符合状态。
 
-### <a name="encryption"></a>加密
+### <a name="encryption"></a>Encryption
 
 - **加密设备上的数据存储**：  
   - **未配置**（默认） 
@@ -116,7 +116,7 @@ ms.locfileid: "79353237"
 
 有关详细信息，请参阅 [macOS 上的网关守卫](https://support.apple.com/HT202491)（打开 Apple 的网站）。
 
-允许从以下位置下载应用  ：允许在不同位置的设备上安装支持的应用程序。 位置选项包括：
+**允许从这些位置下载应用**：允许在不同位置的设备上安装支持的应用程序。 位置选项包括：
 
 - 未配置  （默认值  ）- 网关守卫选项对于合规性或不合规性无影响。  
 - **Mac App Store** - 仅安装 Mac App Store 的应用。 不能从第三方或由未确认的开发人员安装应用。 如果用户选择网关守卫来安装 Mac App Store 外部的应用，则该设备将被视为不符合。

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 533c0117b73883776e3dbdd4628fda7630a3a15a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347452"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>将日志发送给 Android 设备的“公司门户”开发人员
@@ -37,7 +37,7 @@ ms.locfileid: "79347452"
 
 1. 打开公司门户应用。
 
-2. 点击“菜单” > “帮助” > “电子邮件支持”    。
+2. 点击“菜单” **“帮助”** “电子邮件支持” >    >   。
 
     > [!NOTE]
     > “菜单”  可以是软件按钮也可以是硬件按钮，具体取决于拥有的 Android 设备。

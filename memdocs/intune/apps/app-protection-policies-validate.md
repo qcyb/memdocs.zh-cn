@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488011"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>如何在 Microsoft Intune 中验证应用保护策略设置
@@ -44,7 +44,7 @@ ms.locfileid: "80488011"
 
 ### <a name="user-app-protection-status"></a>用户应用保护状态
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“应用” > “监视” >  “应用保护状态”，然后选择“分配的用户”磁贴     。 
+3. 选择“应用” **“监视”** “应用保护状态”，然后选择“分配的用户”磁贴 >    >     。 
 4. 在  “应用报告”页上，选择  “选择用户”以显示用户和组的列表。 
 5. 从列表中搜索并选择一个用户，然后选择“选择用户”  。 在“应用报告”窗格顶部，可以看到用户是否已获得应用保护授权  。 还可以看到该用户是否已获得 O365 授权，以及该用户所有设备的应用状态。
 

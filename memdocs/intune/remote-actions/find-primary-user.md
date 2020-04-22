@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326183"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>查找 Intune 设备的主要用户
@@ -79,13 +79,13 @@ Intune 会在注册过程中或不久后自动将主要用户添加到设备。 
 | Windows | 仅注册 MDM | 注册用户 | 在注册过程中 | 
 | Windows | 混合 AADJ + 自动注册 GPO | 登录到 Windows 的第一个用户 | 当第一个用户登录到 Windows 时| 
 | Windows | 共同管理 | 登录到 Windows 的第一个用户 | 当第一个用户登录到 Windows 时 | 
-| Windows | Azure AD 联接（批量注册令牌） | 无 | “不适用” | 
-| Windows | Azure AD 联接（Autopilot 自部署模式） | 无 | “不适用” | 
+| Windows | Azure AD 联接（批量注册令牌） | 无 | Not applicable | 
+| Windows | Azure AD 联接（Autopilot 自部署模式） | 无 | Not applicable | 
 | 跨平台 | 使用公司门户应用进行用户驱动的注册 | 注册用户 | 在注册过程中 |
 | 跨平台 | 设备注册管理员 (DEM) | 注册 DEM 用户 | 在注册过程中 |
 | iOS/iPadOS、macOS | Apple 自动设备注册（具有用户关联的 DEP） | 注册用户 | 在注册过程中 |
-| iOS/iPadOS、macOS | Apple 自动设备注册（没有用户关联的 DEP） | 无 | “不适用” |
-| Android | Android 公司拥有的专用设备 | 无 | “不适用” |
+| iOS/iPadOS、macOS | Apple 自动设备注册（没有用户关联的 DEP） | 无 | Not applicable |
+| Android | Android 公司拥有的专用设备 | 无 | Not applicable |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>主要用户和 Azure AD 设备所有者
 在某些情况下，Intune 主要用户可能与 Azure AD 设备的“所有者”  属性（可在“设备”   > “Azure AD 设备”  下查看）不同。 在将设备注册到 Azure Active Directory 过程中会添加Azure AD 设备所有者。

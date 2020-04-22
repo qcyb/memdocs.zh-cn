@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360010"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>使用 Power BI 从 OData 源创建 Intune 报表
@@ -47,7 +47,7 @@ ms.locfileid: "79360010"
 
 ## <a name="install-power-bi-desktop"></a>安装 Power BI Desktop
 
-安装最新版本的 Power BI Desktop。 可从以下地址下载 Power BI Desktop：[PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+安装最新版本的 Power BI Desktop。 可从 [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop) 下载 Power BI Desktop
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>连接到租户的 Intune 数据仓库的 OData 数据源
 
@@ -58,7 +58,7 @@ ms.locfileid: "79360010"
 2. 选择“Microsoft Intune - 概述”  边栏选项卡右侧“其他任务”  下的数据仓库链接，打开“Intune 数据仓库”  窗格。
 3. 复制自定义源 URL。 例如：`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. 打开 Power BI Desktop。
-5. 从菜单栏中，选择“文件” > “获取数据” > “Odata 源”    。
+5. 从菜单栏中，选择“文件” **“获取数据”** “Odata 源” >    >   。
 6. 在“OData 数据源”窗口中，将从之前步骤中复制的自定义源 URL 粘贴到 URL 框  。
 7. 选择“基本”  。
 
@@ -93,7 +93,7 @@ ms.locfileid: "79360010"
 ![Power BI 树状图可视化效果](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. 在“可视化效果”窗格中，查找并选择“树状图”   。 “树状图”图表将被添加到报表画布  。
-2. 在“字段”窗格中，找到 `devices` 表  。
+2. 在“字段”窗格中，找到  **表**`devices`。
 3. 展开 `devices` 表，然后选择 `manufacturer` 数据字段。
 4. 将 `manufacturer` 数据字段拖到报表画布，并将其放在“树状图”图表中  。
 5. 将 `deviceKey` 数据字段从 `devices` 表拖到“可视化效果”窗格中，并将其拖到复选框“在此处添加数据字段”中的“值”部分下    。  
@@ -106,8 +106,8 @@ ms.locfileid: "79360010"
 
 可以向树状图添加筛选器，以便使用应用解答其他问题。
 
-1. 要添加筛选器，请选择报表画布，然后选择“可视化效果”  下的切片器图标  （带数据模型和支持的关系的树状图![](./media/reports-proc-create-with-odata/reports-create-slicer.png)）。 空的“切片器”可视化效果将显示在画布上  。
-2. 在“字段”窗格中，找到 `ownerTypes` 表  。
+1. 要添加筛选器，请选择报表画布，然后选择“可视化效果”  下的切片器图标![](./media/reports-proc-create-with-odata/reports-create-slicer.png)（带数据模型和支持的关系的树状图  ）。 空的“切片器”可视化效果将显示在画布上  。
+2. 在“字段”窗格中，找到  **表**`ownerTypes`。
 3. 展开 `ownerTypes` 表，然后选择 `ownerTypeName` 数据字段。
 4. 将 `onwerTypeName` 数据字段从 `ownerTypes` 表拖到“筛选器”窗格中，并将其放在复选框“在此处添加数据字段”中的“此页上的筛选器”部分下    。  
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326556"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>注销 Intune 管理的 iOS/iPadOS 设备上的当前用户
@@ -42,7 +42,7 @@ ms.locfileid: "80326556"
 ## <a name="how-to-log-out-the-current-user"></a>如何注销当前用户
 
 1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备”   > “所有设备”  。
-2. 选择 iOS/iPadOS 设备 >“…” > “注销当前用户”   。
+2. 选择 iOS/iPadOS 设备 >“…” **“注销当前用户”**  >   。
 
 ## <a name="next-steps"></a>后续步骤
 

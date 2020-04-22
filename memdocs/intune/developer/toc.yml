@@ -1,6 +1,6 @@
 - name: 开发人员指南
   href: index.yml
-- name: 操作指南
+- name: 操作方式指南
   expanded: true
   items:
     - name: 使用 Intune App SDK 保护应用

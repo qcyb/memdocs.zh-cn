@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345151"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>如何使用 Azure AD 访问 Microsoft Graph Intune API
@@ -68,7 +68,7 @@ ms.locfileid: "79345151"
     - 租户管理员帐户。
     - 启用了**用户可以注册应用程序**设置的租户用户帐户。
 
-2. 从菜单中依次选择“Azure Active Directory”&gt;“应用注册”   。
+2. 从菜单中依次选择“Azure Active Directory” **“应用注册”** &gt;  。
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
@@ -90,15 +90,15 @@ ms.locfileid: "79345151"
 
     1. 注意“应用程序 ID”  值。
 
-    2. 依次选择“设置”&gt;“API 访问权限”&gt;“所需权限”    。
+    2. 依次选择“设置” **“API 访问权限”** “所需权限”&gt;  &gt;  。
 
     <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6. 从“所需权限”边栏选项卡中，依次选择“添加”&gt;“添加 API 访问权限”&gt;“选择 API”     。
+6. 从“所需权限”边栏选项卡中，依次选择“添加” **“添加 API 访问权限”** “选择 API”  &gt;  &gt;  。
 
     <img src="../media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7. 从“选择 API”边栏选项卡中，依次选择“Microsoft Graph”&gt;“选择”    。  打开“启用访问权限”  边栏选项卡，并列出你的应用程序可用的权限范围。
+7. 从“选择 API”边栏选项卡中，依次选择“Microsoft Graph” **“选择”**  &gt;  。  打开“启用访问权限”  边栏选项卡，并列出你的应用程序可用的权限范围。
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -160,7 +160,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
 
 此时，所有 Intune 权限范围都需要管理员访问权限。  这意味着，你需要相应的凭据才能运行访问 Intune API 资源的应用或脚本。
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
 - **启用访问权限**设置：__读取 Microsoft Intune 应用__
 
@@ -170,7 +170,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 应用保护策略
   - 应用配置
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
 - **启用访问权限**设置：__读取和写入 Microsoft Intune 应用__
 
@@ -183,7 +183,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 应用保护策略
   - 应用配置
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - **启用访问权限**设置：__读取 Microsoft Intune 设备配置和策略__
 
@@ -192,7 +192,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 设备符合性策略
   - 通知消息
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
 - **启用访问权限**设置：__读取和写入 Microsoft Intune 设备配置和策略__
 
@@ -203,9 +203,9 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 设备符合性策略
   - 通知消息
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- **启用访问权限**设置：__在 Microsoft Intune 设备上执行影响用户的远程操作__
+- **启用访问权限**设置：__对 Microsoft Intune 设备执行影响用户的远程操作__
 
 - 允许对受管理设备执行下列远程操作：
   - 停用
@@ -217,7 +217,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 重新启动
   - 从共享设备删除用户
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - **启用访问权限**设置：__读取 Microsoft Intune 设备__
 
@@ -228,7 +228,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 远程操作
   - 恶意软件信息
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
 - **启用访问权限**设置：__读取和写入 Microsoft Intune 设备__
 
@@ -243,7 +243,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 禁用激活锁
   - 请求远程协助
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - **启用访问权限**设置：__读取 Microsoft Intune RBAC 设置__
 
@@ -252,7 +252,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 角色定义
   - 资源操作
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
 - **启用访问权限**设置：__读取和写入 Microsoft Intune RBAC 设置__
 
@@ -262,7 +262,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 角色分配
   - 角色定义
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - **启用访问权限**设置：__读取 Microsoft Intune 配置__
 
@@ -278,7 +278,7 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   - 品牌打造
   - 移动威胁防御
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
 - **启用访问权限**设置：__读取和写入 Microsoft Intune 配置__
 

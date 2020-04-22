@@ -16,10 +16,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326746"
 ---
 # <a name="intune-reports"></a>Intune 报表
@@ -103,7 +103,7 @@ ms.locfileid: "80326746"
     ![Intune 趋势报表](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Azure Monitor 集成报表（专业）
-你可以自定义自己的报表以获取所需数据。 可使用 [Log Analytics](reports.md#log-analytics) 和 [Azure Monitor 工作簿](reports.md#workbooks)通过 [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) 获取报表中的数据。 通过这些解决方案，可以创建自定义查询、配置警报，并使仪表板以所需方式显示设备符合性数据。 此外，你还可以将活动日志保留在你的 Azure 存储帐户中，使用[安全信息和事件管理 (SIEM) 工具](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)将活动日志与报表集成，并将报表关联到 Azure AD 活动日志。 除了导入仪表板以满足自定义报表需求外，还可以使用 Azure Monitor 工作簿。
+你可以自定义自己的报表以获取所需数据。 可使用 [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/overview) 和 [Azure Monitor 工作簿](reports.md#log-analytics)通过 [Azure Monitor](reports.md#workbooks) 获取报表中的数据。 通过这些解决方案，可以创建自定义查询、配置警报，并使仪表板以所需方式显示设备符合性数据。 此外，你还可以将活动日志保留在你的 Azure 存储帐户中，使用[安全信息和事件管理 (SIEM) 工具](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)将活动日志与报表集成，并将报表关联到 Azure AD 活动日志。 除了导入仪表板以满足自定义报表需求外，还可以使用 Azure Monitor 工作簿。
 
 > [!NOTE]
 > 复杂的报表功能需要 Azure 订阅。

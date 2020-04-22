@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325812"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>排查应用安装问题
@@ -53,7 +53,7 @@ Intune 根据特定用户设备上安装的应用，提供应用疑难解答详�
 应用安装错误详细信息指出问题所在。 根据这些详细信息，可以确定解决问题的最佳措施。 有关排查应用安装问题的详细信息，请参阅 [Android 应用安装错误](app-install-error-codes.md#android-app-installation-errors)和 [iOS 应用安装错误](app-install-error-codes.md#ios-and-ipados-app-installation-errors)。
 
 > [!Note]  
-> 还可通过浏览器前往 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 来访问“疑难解答”窗格  。
+> 还可通过浏览器前往  [ 来访问“疑难解答”窗格 https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)。
 
 ## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>面向用户组的应用安装无法访问设备
 如果安装应用程序时遇到问题，请考虑下列操作：

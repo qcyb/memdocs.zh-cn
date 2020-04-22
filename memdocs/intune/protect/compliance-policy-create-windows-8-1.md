@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353198"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 Windows 8.1 设置
@@ -28,7 +28,7 @@ ms.locfileid: "79353198"
 
 此功能适用于：
 
-- Windows Phone 8.1
+- Windows Phone 8。1
 - Windows 8.1 及更高版本
 
 作为 Intune 管理员，请使用这些符合性设置来帮助保护组织资源。 若要详细了解符合性策略及其作用，请参阅[设备符合性入门](device-compliance-get-started.md)。
@@ -59,7 +59,7 @@ Windows 8.1 PC 返回版本 **3**。 对于 Windows，如果操作系统版本�
 
 ## <a name="system-security"></a>系统安全
 
-### <a name="password"></a>Password
+### <a name="password"></a>密码
 
 - **需要密码才可解锁移动设备**：  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -104,7 +104,7 @@ Windows 8.1 PC 返回版本 **3**。 对于 Windows，如果操作系统版本�
 - **阻止重用的曾用密码数**：  
   输入之前使用但无法使用的密码的数量。
 
-### <a name="encryption"></a>加密
+### <a name="encryption"></a>Encryption
 
 - **加密设备上的数据存储**：  
   - **未配置**（默认） 

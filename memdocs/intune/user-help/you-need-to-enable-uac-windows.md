@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3ff737d99a5d57e8e4a1f090e65e787f9b57c5e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334894"
 ---
 # <a name="how-to-enable-user-access-control"></a>如何启用用户访问控制
@@ -33,7 +33,7 @@ ms.locfileid: "79334894"
 下面介绍了如何更改用户访问控制的设置：
 
 1. 转到“开始”并打开“控制面板”   。
-2. 打开“安全和维护” > “更改用户帐户控制设置”   。
+2. 打开“安全和维护” **“更改用户帐户控制设置”**  >   。
 3. 在“选择何时通知你有关计算机更改的消息”页中，将滑块移动至最接近“始终通知”的头两个上凹口之一   。
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

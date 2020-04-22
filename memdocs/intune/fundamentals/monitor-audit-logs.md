@@ -15,10 +15,10 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5b271c05f71cdd166533d837e46c1396bf66c06c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326732"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>使用审核日志跟踪和监视 Microsoft Intune 中的事件
@@ -41,7 +41,7 @@ ms.locfileid: "80326732"
 可以查看每个 Intune 工作负载的监视组中的审核日志：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“租户管理” > “审核日志”   。
+2. 选择“租户管理” **“审核日志”**  >   。
 3. 若要筛选结果，选择“筛选”并使用以下选项优化结果  。
     - 类别  ：如“合规性”、“设备”和“角色”    。
     - 活动  ：此处列出的选项受“类别”下选择的选项限制  。

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2bb18415cbebcef98ba6a7015872467c13eb231
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339873"
 ---
 # <a name="reference-for-user-entity"></a>用户实体引用
@@ -35,7 +35,7 @@ Users  类别包含定义数据模型中用户属性的 user  实体。
 
 用户  实体集合包含用户数据。 这些记录包含数据收集期间的用户状态（即使用户已被删除）。 例如，在上个月期间，可能将某个用户添加到 Intune 然后又将其删除。 尽管在提交报告时该用户已不存在，但在上个月的数据中仍然会显示该用户及其状态。 可以创建一个报告，该报告将显示用户的历史记录在你的数据中存在的持续时间。
 
-|          属性          |                                                                                                           说明                                                                                                          |                示例               |
+|          属性          |                                                                                                           Description                                                                                                          |                示例               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | userKey                    | 数据仓库中用户的唯一标识符 - 代理键。                                                                                                                                                         | 123                                  |
 | userId                     | 用户的唯一标识符 - 类似于 UserKey，但该标识符是自然键。                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a1a5b291135f5c6d42a47377d14d6d3d4f13411
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362324"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>在 Microsoft Intune 中利用软件更新使 Windows 电脑保持最新版本
@@ -49,7 +49,7 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
 ### <a name="to-configure-update-policy-settings"></a>配置更新策略设置
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“策略”&gt;“概述”&gt;“添加策略”    。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“策略” **“概述”** “添加策略”&gt;  &gt;  。
 
 2. 为更新设置配置和部署 **Microsoft Intune 代理设置** 策略。 你可以使用建议的设置，或对设置进行自定义。 如果你需要有关如何创建和部署策略的详细信息，请参阅[使用 Microsoft Intune 计算机客户端的常见 Windows 电脑管理任务](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)。
 
@@ -57,15 +57,15 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
   |策略设置|详细信息|
     |------------------|--------------------|
-    |**更新和应用程序检测频率（小时）** |指定 Intune 检查更新和新应用程序的频率（间隔 8-22 小时）。<br /><br />建议的值：8 小时  。|
-    |**自动安装或提示安装更新和应用程序** |指定是否自动安装更新，或者是否在安装之前提示用户。 此外，这些设置可让你计划更新和应用程序的安装。<br /><br />“按计划自动安装更新和应用程序”  会使用指定的计划安装更新和应用程序。<br /><br />作为相关的策略设置，“为 Windows 计算机使用自动维护”   指定在 Windows 自动维护时限内安装更新和应用程序。<br /><br />“提示用户进行安装”  会在更新准备好时提示用户进行安装。<br /><br />建议的值：<br /><br />选择“按计划自动安装更新和应用程序” <br /><br />计划日期：  每天<br /><br />计划时间：  凌晨 3 点<br /><br />选择“为 Windows 计算机使用自动维护” |
-    |**允许立即安装不会中断 Windows 的更新** |如果为“允许”  ，则在下载更新后立即安装更新（将中断或重启 Windows 的更新除外）。 那些更新会按照“自动安装或提示安装的更新”  设置的配置进行安装。<br /><br />如果为“不允许”  ，则按照“自动安装或提示安装的更新”  设置的配置来安装更新。<br /><br />建议的值：**允许** |
-    |**安装计划更新和应用程序后延迟重新启动 Windows (分钟)** |指定在安装计划的更新和应用程序后等待重启 Windows 的时间（1-30 分钟）。<br /><br />建议的值：15 分钟  |
-    |**Windows 重新启动后开始安装错过的已计划更新和应用程序的延迟时间（分钟）** |指定在错过计划的更新后，在重启 Windows 多长时间后开始安装更新和应用程序（1-60 分钟）。<br /><br />建议的值：5 分钟 |
+    |**更新和应用程序检测频率（小时）** |指定 Intune 检查更新和新应用程序的频率（间隔 8-22 小时）。<br /><br />建议的值：“8”  小时。|
+    |**自动安装或提示安装更新和应用程序** |指定是否自动安装更新，或者是否在安装之前提示用户。 此外，这些设置可让你计划更新和应用程序的安装。<br /><br />“按计划自动安装更新和应用程序”  会使用指定的计划安装更新和应用程序。<br /><br />作为相关的策略设置，“为 Windows 计算机使用自动维护”   指定在 Windows 自动维护时限内安装更新和应用程序。<br /><br />“提示用户进行安装”  会在更新准备好时提示用户进行安装。<br /><br />建议的值：<br /><br />选择“按计划自动安装更新和应用程序” <br /><br />**计划日期：每天**<br /><br />**计划时间：上午 3:00**<br /><br />选择“为 Windows 计算机使用自动维护” |
+    |**允许立即安装不会中断 Windows 的更新** |如果为“允许”  ，则在下载更新后立即安装更新（将中断或重启 Windows 的更新除外）。 那些更新会按照“自动安装或提示安装的更新”  设置的配置进行安装。<br /><br />如果为“不允许”  ，则按照“自动安装或提示安装的更新”  设置的配置来安装更新。<br /><br />建议的值：**Allow** |
+    |**安装计划更新和应用程序后延迟重新启动 Windows (分钟)** |指定在安装计划的更新和应用程序后等待重启 Windows 的时间（1-30 分钟）。<br /><br />建议的值： **15 分钟** |
+    |**Windows 重新启动后开始安装错过的已计划更新和应用程序的延迟时间（分钟）** |指定在错过计划的更新后，在重启 Windows 多长时间后开始安装更新和应用程序（1-60 分钟）。<br /><br />建议的值：**5 分钟**|
     |**在计划的更新和应用程序安装后允许登录的用户控制 Windows 重启** |指定登录的用户是否能延迟重启 Windows（如果设置为“是”  ），或者在 Windows 自动重启时收到通知（如果设置为“否”  ）。 如果在计划的更新和应用程序安装完成时没有用户登录，则 Windows 将在需要时自动重启。 如果设置为“否”  ，默认情况下，Windows 重启之前的时间设置为 5 分钟。<br /><br />建议的值：**是**|
     |**提示用户在执行 Intune 客户端代理强制更新过程中重启 Windows** |指定在 Intune 客户端强制更新要求重启 Windows 时是否提示登录的用户重启 Windows。<br /><br />建议的值：**是**|
     |**Microsoft Intune 客户端代理必备更新安装计划** |计划何时安装客户端更新。<br /><br />建议值：未配置|
-    |**在安装计划的更新和应用程序后重启 Windows 的两次提示之间的延迟时间（分钟）** |指定在以下情况下提示用户重启 Windows 的频率（1-1440 分钟）：安装了需要重启 Windows 的计划更新或应用程序，并且用户延迟了重启。<br /><br />建议的值：30 分钟  |
+    |**在安装计划的更新和应用程序后重启 Windows 的两次提示之间的延迟时间（分钟）** |指定在以下情况下提示用户重启 Windows 的频率（1-1440 分钟）：安装了需要重启 Windows 的计划更新或应用程序，并且用户延迟了重启。<br /><br />建议的值：**30 分钟** |
 
 ## <a name="update-software-made-by-microsoft"></a>更新 Microsoft 开发的软件
 在更新 Microsoft 软件时，你需要完成的工作很少。 但是，在开始之前，你应配置下列两项：
@@ -78,9 +78,9 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
 ### <a name="configure-the-product-categories-and-update-classifications-you-want-to-make-available-to-managed-computers"></a>配置要提供给被管理的计算机的产品类别和更新分类
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“管理”&gt;“更新”   。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“管理” **“更新”** &gt;  。
 
-2. 在“服务设置:  更新”页的“产品类别”列表中，选择要向计算机提供的更新类别  。 请注意，默认情况下会选择最常用的更新。
+2. 在“服务设置: 更新”  页上的“产品类别”  列表中，选择要提供给计算机的更新类别。 请注意，默认情况下会选择最常用的更新。
 
     > [!IMPORTANT]
     > 为确保计算机接收到管理员批准的更新，请勿将 Windows Server Update Services (WSUS) 组策略设置“指定 Intranet Microsoft 更新服务位置”  应用到已注册 Intune 的计算机。
@@ -91,9 +91,9 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
 ### <a name="to-configure-automatic-approval-rules-for-software-updates"></a>配置软件更新的自动批准规则
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“管理”&gt;“更新”   。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“管理” **“更新”** &gt;  。
 
-2. 在“服务器设置: 更新”页的“自动批准规则”部分中，   选择“新建”  。
+2. 在“服务器设置：更新”  页的“自动批准规则”  部分，单击“新建”  。
 
 3. 在创建自动批准规则向导的“常规”  页中，指定规则的名称和可选描述。
 
@@ -114,7 +114,7 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
 7. 在“摘要”  页上，查看新规则的设置，然后单击“完成”  。
 
-新规则会显示在“服务设置: 更新”   页的“自动批准规则”部分中。
+新规则会显示在“服务设置: 更新”  页的“自动批准规则”  部分中。
 
 > [!NOTE]
 > 创建自动批准规则后，它只会批准未来的更新，而不会自动批准之前已存在于 Intune 中的现有更新。 若要批准这些更新，你需要运行自动批准规则。
@@ -122,7 +122,7 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
 ### <a name="to-edit-run-or-delete-an-automatically-approved-update-rule"></a>编辑、运行或删除自动批准的更新规则
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“管理”&gt;“更新”   。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“管理” **“更新”** &gt;  。
 
 2. 在“自动批准规则”  部分选择一条规则，然后执行下列操作之一：
 
@@ -140,7 +140,7 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
 ### <a name="to-upload-and-configure-a-third-party-update"></a>上载和配置第三方更新
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“更新”&gt;“概述”&gt;“上传”    。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“更新” **“概述”** “上传”&gt;  &gt;  。
 
 2. 在“更新文件”  页上，单击“浏览”  以选择安装更新包所需的安装程序文件。 文件可以是 Windows Installer (.msi) 文件、Windows Installer 修补程序 (.msp) 文件或 .exe 程序文件。 你也可以包括与安装程序文件处于同一文件夹中的任何其他文件或文件夹。
 
@@ -216,9 +216,9 @@ Microsoft Intune 可通过多种方式帮助保护托管计算机，其中包括
 
 ### <a name="to-approve-updates"></a>批准更新
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“更新”&gt;“概述”&gt;“要批准的新更新”    。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“更新” **“概述”** “要批准的新更新”&gt;  &gt;  。
 
-    在“更新”工作区中，选择“概述”&gt;“要批准的新更新”    。
+    在“更新”工作区中，选择“概述” **“要批准的新更新”**  &gt;  。
 
     > [!NOTE]
     > “要批准的新更新”  链接在仅当有至少一个需要批准更新的托管计算机时才会显示在“更新状态”  区域中。

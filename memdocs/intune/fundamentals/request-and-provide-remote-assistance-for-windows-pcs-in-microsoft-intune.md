@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 901064b4902ad9a0de490596d10f99a7507fa5e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79356552"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>请求并提供 Windows 电脑的远程协助
@@ -63,7 +63,7 @@ Intune 可使用 [TeamViewer](https://www.teamviewer.com) 软件（单独购买�
 
 ## <a name="respond-to-a-remote-assistance-request"></a>响应远程协助请求
 
-1. 当用户提交远程协助请求时，你可在**监视** > **远程协助**下的**警报**工作区中查看。 例如：
+1. 当用户提交远程协助请求时，你可在**监视**  远程协助 > 下的**警报**工作区中查看。 例如：
    > ![远程协助请求屏幕截图](./media/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune/team-viewer.png)
 
 <br>如果请求超过 4 小时未获得应答，则会被删除。
@@ -80,9 +80,9 @@ Intune 可使用 [TeamViewer](https://www.teamviewer.com) 软件（单独购买�
 ## <a name="remotely-restart-a-windows-pc"></a>远程重启 Windows 电脑
 帮助用户解决问题时，可能需要不时远程重启其电脑。 请按照以下步骤远程重启 Windows 电脑。
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“组”&gt;“所有设备”（或包含要重启的电脑的另一个组）   。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“组” **“所有设备”（或包含要重启的电脑的另一个组）** &gt;  。
 
-2. 选择一台或多台电脑，然后选择“远程任务”&gt;“重启计算机”   。
+2. 选择一台或多台电脑，然后选择“远程任务” **“重启计算机”** &gt;  。
 
 3. 若要查看任务状态，请选择页面右下角的“远程任务”  。
 

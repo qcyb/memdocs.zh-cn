@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401491"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>快速入门：免费试用 Microsoft Intune
@@ -64,8 +64,8 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 
 如果尚未登录到门户，请完成以下步骤：
 
-1. 打开新的浏览器窗口，在地址栏中输入 https://endpoint.microsoft.com  。 
-2. 使用上述步骤中提供的用户 ID 登录 (yourID@yourdomain  .onmicrosoft.com)。
+1. 打开新的浏览器窗口，在地址栏中输入 **https://endpoint.microsoft.com** 。 
+2. 使用上述步骤中提供的用户 ID 登录 ( *yourID@yourdomain* .onmicrosoft.com)。
 
     ![门户登录页的图像](./media/free-trial-sign-up/azure-portal-signin.png)
 
@@ -86,8 +86,8 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 
 ### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>要将 MDM 机构设置为 Intune，请执行以下步骤：
 
-1. 打开新的浏览器窗口，在地址栏中输入 https://portal.azure.com  。 
-2. 选择“所有服务” > “Microsoft Intune”   。
+1. 打开新的浏览器窗口，在地址栏中输入 **https://portal.azure.com** 。 
+2. 选择“所有服务” **“Microsoft Intune”**  >   。
 3. 选择表示尚未启用设备管理的横幅，或者如果没有立即看到横幅，请选择“设备注册”  。 如果尚未启用设备管理，将显示“选择 MDM 机构”边栏选项卡  。
 
     > [!NOTE]
@@ -108,7 +108,7 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 
 1. 转到 [Microsoft 365 管理中心](https://admin.microsoft.com)并使用管理员帐户登录。
 
-2. 在导航窗格中，选择“设置” > “域” > “添加域”    。
+2. 在导航窗格中，选择“设置” **“域”** “添加域” >    >   。
 
 3. 输入自定义域名。 然后选择“下一步”  。
 
@@ -136,4 +136,4 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 要完成这一系列的 Intune 快速入门，请继续学习下一篇快速入门。
 
 > [!div class="nextstepaction"]
-> [快速入门：创建用户并向用户分配许可证](quickstart-create-user.md)
+> [快速入门：创建用户并为其分配许可证](quickstart-create-user.md)

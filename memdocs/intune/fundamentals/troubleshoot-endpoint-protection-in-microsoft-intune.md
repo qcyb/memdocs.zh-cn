@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355694"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Microsoft Intune 中的 Endpoint Protection 问题和可能的解决方案
@@ -62,7 +62,7 @@ ms.locfileid: "79355694"
 
 - [添加 Endpoint Protection 设置](../protect/endpoint-protection-configure.md)
 - [Microsoft Defender 防病毒](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
-- [最终用户：打开实时保护以访问公司资源](../user-help/turn-on-defender-windows.md)
+- [最终用户：打开访问公司资源的实时保护](../user-help/turn-on-defender-windows.md)
 
 ### <a name="malware-definitions-out-of-date"></a>恶意软件定义过期
 
@@ -74,7 +74,7 @@ ms.locfileid: "79355694"
 
 14 天内尚未完成完全扫描或快速扫描。 如果设备在完全扫描期间重新启动，就会发生这种情况。
 
-**可能的解决方案**：如果扫描逾期，可运行一次扫描或计划定期扫描。 请参阅 [Microsoft Defender 防病毒](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)。
+**可能的原因**：如果扫描逾期，可运行一次扫描或计划定期扫描。 请参阅 [Microsoft Defender 防病毒](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)。
 
 ### <a name="another-endpoint-protection-application-running"></a>正在运行的另一个端点防护应用程序
 

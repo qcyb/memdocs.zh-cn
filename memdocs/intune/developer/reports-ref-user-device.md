@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6127b365a04ad48a9cbaa98bdef821c4d1334181
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339886"
 ---
 # <a name="reference-for-user-device-association-entity"></a>用户设备关联实体参考
@@ -32,7 +32,7 @@ userDeviceAssociation  实体包含组织中的用户设备关联。
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 
 
-|        名称        |                                           说明                                            |        示例         |
+|        Name        |                                           Description                                            |        示例         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
 |      userKey       |              数据仓库中用户的唯一标识符。 （代理键）。               |          123           |
 |     deviceKey      |                      数据仓库中设备的唯一标识符。                      |          123           |

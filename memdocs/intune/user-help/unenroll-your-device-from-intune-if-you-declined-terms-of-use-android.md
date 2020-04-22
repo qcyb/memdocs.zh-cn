@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1c3b448726d52a838299e7be7a68611f460c4929
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335453"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>拒绝“使用条款”后删除对设备的管理
@@ -38,7 +38,7 @@ ms.locfileid: "79335453"
 
 若要从 Intune 删除设备并卸载公司门户应用，请执行以下操作：
 
-1. 转到“设置”&gt;“安全”&amp;“屏幕锁定”&gt;“设备管理员”    。
+1. 转到“设置” **“安全”** “屏幕锁定”&gt;“设备管理员” **&amp;** &gt;  。
 
     完成此步骤将立即取消注册你的设备。
 

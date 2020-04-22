@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80438782"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Microsoft Intune 的美国政府终结点
@@ -68,7 +68,7 @@ ms.locfileid: "80438782"
 
 |**用途**|**主机名（IP 地址/子网）**|**协议**|**端口**|
 |------------|-----------|------------|-----------|
-|检索并显示 Apple 服务器的内容|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
+|检索并显示 Apple 服务器的内容|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|客户端使用|80|
 |与 APNS 服务器通信|#-courier.push.apple.com<br>“#”是 0 到 50 范围内的一个随机数字。|TCP|5223 和 443|
 |各种功能，包括访问 Internet、iTunes 商店、macOS 应用商店、iCloud、消息等。|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 或 443|
 

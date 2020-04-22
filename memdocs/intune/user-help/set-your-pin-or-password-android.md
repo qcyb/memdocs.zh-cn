@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233438"
 ---
 # <a name="set-your-pin-or-password"></a>设置你的 PIN 或密码
@@ -32,7 +32,7 @@ ms.locfileid: "80233438"
 
 可以使用以下步骤设置 PIN 或密码。
 
-1. 点击“设置”   > “安全”   > “屏幕锁定”   > “密码”  。
+1. 点击**设置** > **安全** > **屏幕锁定** > **密码**。
 
 2. 选择并确认新密码。
 

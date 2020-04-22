@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353887"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>使用 SCEP 在 Intune 中添加合作伙伴证书颁发机构
@@ -41,7 +41,7 @@ Microsoft 创建了与 Intune 集成的 API。 通过该 API，可验证证书�
 
 本文从管理员角度概述了此功能，包括创建 Azure AD 应用程序。
 
-## <a name="overview"></a>概述
+## <a name="overview"></a>“概述”
 
 以下步骤概述了如何在 Intune 中使用 SCEP 证书：
 
@@ -74,7 +74,7 @@ Microsoft 创建了与 Intune 集成的 API。 通过该 API，可验证证书�
 
 #### <a name="create-an-application-in-azure-active-directory"></a>在 Azure Active Directory 中创建应用程序  
 
-1. 在 [Azure 门户](https://portal.azure.com)中转到“Azure Active Directory” > “应用注册”，然后选择“新建注册”    。  
+1. 在 [Azure 门户](https://portal.azure.com)中转到“Azure Active Directory” **“应用注册”，然后选择“新建注册”**  >    。  
 
 2. 在“注册应用程序”  页上，指定以下详细信息：  
    - 在“名称”  部分中，输入一个有意义的应用程序名称。  

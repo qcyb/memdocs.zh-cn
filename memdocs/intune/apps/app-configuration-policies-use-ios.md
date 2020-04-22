@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233450"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>为受管理的 iOS/iPadOS 设备添加应用配置策略
@@ -110,7 +110,7 @@ Microsoft Intune 提供对应用而言唯一的配置设置。 可对已注册�
 
 | **Key** | **值** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**启用**：唯一允许的帐户是由 [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) 键定义的托管用户帐户。</li><li>**禁用**（或任何不是与“启用”  值大小写严格匹配的值）：允许任何帐户。</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**启用**：唯一允许的帐户是由 [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) 键定义的托管用户帐户。</li><li>**禁用**（或任何不是与“启用”值大小写严格匹配的值，）：允许任何帐户  。</li></ul> |
 | IntuneMAMUPN | <ul><li>允许登录到应用中的帐户的 UPN。</li><li> 对于已注册 Intune 的设备，<code>{{userprincipalname}}</code> 令牌可用于表示已注册的用户帐户。</li></ul>  |
 
    > [!NOTE]
@@ -173,9 +173,9 @@ Intune 支持属性列表中的以下数据类型：
 
 ### <a name="tokens-used-in-the-property-list"></a>属性列表中使用的令牌
 
-此外，Intune 支持属性列表中的以下令牌类型：
-- \{\{userprincipalname\}\}—例如，John\@contoso.com 
-- \{\{mail\}\}—例如，John\@contoso.com 
+此外，Intune 还支持属性列表中的以下令牌类型：
+- \{\{userprincipalname\}\}—例如，John**contoso.com\@**
+- \{\{mail\}\}—例如，John**contoso.com\@**
 - \{\{partialupn\}\} - 例如 John 
 - \{\{accountid\}\} - 例如 fc0dc142-71d8-4b12-bbea-bae2a8514c81 
 - \{\{deviceid\}\} - 例如 b9841cd9-9843-405f-be28-b2265c59ef97 
@@ -209,7 +209,7 @@ DEP（Apple 的设备注册计划）注册与 App Store 版公司门户应用不
 4. 告诉最终用户在自动安装公司门户应用后登录到该应用。
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>监视每个设备的 iOS/iPadOS 应用配置状态 
-分配配置策略后，可监视每个受管理设备的 iOS/iPadOS 应用配置状态。    从 Azure 门户的“Microsoft Intune”中，选择“设备” > “所有设备”。 从受管理设备列表中选择特定设备，以显示该设备的窗格。 在该设备的窗格上，选择“应用配置”  。  
+分配配置策略后，可监视每个受管理设备的 iOS/iPadOS 应用配置状态。    > **从 Azure 门户的“Microsoft Intune”中，选择“设备”** “所有设备”。 从受管理设备列表中选择特定设备，以显示该设备的窗格。 在该设备的窗格上，选择“应用配置”  。  
 
 ## <a name="additional-information"></a>其他信息
 

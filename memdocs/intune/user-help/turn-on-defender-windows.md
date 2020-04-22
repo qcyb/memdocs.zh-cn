@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 46ad7a5d34e6d006794b13cd5eae9c533e047ec3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335609"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>打开 Windows Defender 以访问公司资源
@@ -35,8 +35,8 @@ ms.locfileid: "79335609"
 ## <a name="turn-on-windows-defender"></a>打开 Windows Defender
 
 1. 在“开始”中，打开“控制面板”   。
-2. 打开“管理工具” > “编辑组策略”   。 这将在一个新窗口中打开“本地组策略编辑器”  。
-3. 打开“计算机配置” > “管理模板” > “Windows 组件” > “Windows Defender 防病毒”     。 “关闭 Windows Defender 防病毒”设置位于其他设置文件夹下方  。 
+2. 打开“管理工具” **“编辑组策略”**  >   。 这将在一个新窗口中打开“本地组策略编辑器”  。
+3. 打开“计算机配置” **“管理模板”** “Windows 组件” > “Windows Defender 防病毒”   >    >   。 “关闭 Windows Defender 防病毒”设置位于其他设置文件夹下方  。 
 4. 打开“关闭 Windows Defender 防病毒”，并确保将其设置为“禁用”或“未配置”    。
 
 ## <a name="turn-on-real-time-protection"></a>启用实时保护
@@ -44,8 +44,8 @@ ms.locfileid: "79335609"
 要确保实时保护已开启，请转到“开始”并搜索“Windows Defender 安全中心”以进行检查   。 选择“病毒和威胁防护设置”，并确认“实时保护”和“云提供的保护”都已切换到“开”     。 如果未显示这些选项，请执行以下操作启用它们：
 
 1. 在“开始”中，打开“控制面板”   。
-2. 打开“管理工具” > “编辑组策略”   。 这将在一个新窗口中打开“本地组策略编辑器”  。
-3. 打开“计算机配置” > “管理模板” > “Windows 组件” > “Windows Defender 安全中心” > “病毒和威胁防护”      。
+2. 打开“管理工具” **“编辑组策略”**  >   。 这将在一个新窗口中打开“本地组策略编辑器”  。
+3. 打开“计算机配置” **“管理模板”** “Windows 组件” > “Windows Defender 安全中心” **“病毒和威胁防护”**  >    >    >   。
 4. 打开“病毒和威胁防护区域”设置，并将其设置为“禁用”   。
 
 ## <a name="update-your-antivirus-definitions"></a>更新防病毒定义

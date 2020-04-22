@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357722"
 ---
 # <a name="create-a-design"></a>创建设计
@@ -176,7 +176,7 @@ Intune 设计基于收集的信息以及完成[本指南其他部分](planning-g
 
 深入研究设备的以下方面，了解如何正确管理设备。
 
-- 受支持的设备平台
+- 支持的设备平台
 
 - 设备
 
@@ -209,7 +209,7 @@ Intune 管理移动设备以保护公司数据的安全，并允许最终用户�
 
 Intune 支持公司拥有的设备和个人设备。 如果设备由设备注册管理器或设备注册计划注册，则该设备被视为公司拥有。 例如，设备可通过 Apple 设备注册计划 (DEP) 注册，被标记为“公司”并置于接收目标公司策略和应用的设备组中。
 
-请参阅[第 3 部分：确定用例方案要求](planning-guide-requirements.md)，详细了解公司和 BYOD 用例。
+请参阅[第 3 部分：确定用例场景要求](planning-guide-requirements.md)，了解有关公司和 BYOD 用例的详细信息。
 
 ### <a name="bulk-enrollment"></a>批量注册
 
@@ -225,7 +225,7 @@ Intune 支持公司拥有的设备和个人设备。 如果设备由设备注册
 
 - 资源配置文件
 
-- 应用
+- “应用”
 
 - 合规性策略
 
@@ -255,10 +255,10 @@ Intune 支持公司拥有的设备和个人设备。 如果设备由设备注册
 
 | **策略名称** | **设备平台** | **设置** | **目标组** |   
 |:---:|:---:|:---:|:---:|
-| 公司 - iOS | iOS | PIN 是必需的，长度为：6，限制云备份 | 公司设备 |                                                           
-| 公司 - Android | Android | PIN 是必需的，长度为：6，限制云备份 | 公司设备 |                                                           
-| BYOD - iOS  | iOS | PIN 是必需的，长度为：4 | BYOD 设备 |
-| BYOD - Android  | Android | PIN 是必需的，长度为：4 | BYOD 设备 |
+| 公司 - iOS | iOS | PIN 必需，长度为 6，限制云备份 | 公司设备 |                                                           
+| 公司 - Android | Android | PIN 必需，长度为 6，限制云备份 | 公司设备 |                                                           
+| BYOD - iOS  | iOS | PIN 必需，长度为 4 | BYOD 设备 |
+| BYOD - Android  | Android | PIN 必需，长度为 4 | BYOD 设备 |
 
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定配置策略需求。
@@ -340,7 +340,7 @@ VPN 配置文件让用户可以安全地从远程位置访问网络。 Intune �
 | 电子邮件配置文件 | Android Knox 电子邮件配置文件 | Android Knox | BYOD |
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定电子邮件配置文件需求。
-### <a name="apps"></a>应用
+### <a name="apps"></a>“应用”
 
 可使用 Intune 通过多种方式将应用提供给用户或设备。 应用程序的类型包括软件安装程序应用、来自公共应用商店的应用、来自外部链接的应用或托管 iOS 应用。 除单个应用部署外，还可通过适用于 iOS 和 Windows 的批量采购计划来管理和部署批量采购的应用。 了解详细信息：
 
@@ -378,7 +378,7 @@ VPN 配置文件让用户可以安全地从远程位置访问网络。 Intune �
 
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定应用配置策略需求。
-#### <a name="compliance-policies"></a>相容性策略
+#### <a name="compliance-policies"></a>Compliance “策略”
 
 合规性策略确定设备是否满足某些要求。 Intune 使用符合性策略确定设备是否被视为符合。 然后，可使用符合性状态限制或允许对公司资源的访问。 如果需要条件访问，建议设计[设备符合性策略](../protect/device-compliance-get-started.md)。
 

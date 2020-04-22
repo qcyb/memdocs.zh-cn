@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323572"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理通过批量购买计划购买的 iOS/iPadOS 电子书
@@ -64,7 +64,7 @@ Microsoft Intune 可帮助你同步、管理和分配通过此计划购买的书
     - **VPP 令牌文件** - 确保你已注册 Volume Purchase Program 企业版或 Volume Purchase Program 教育版。 然后，为你的帐户下载 Apple VPP 令牌，并在此处选择它。
     - **Apple ID** - 输入与批量购买计划关联的帐户的 Apple ID。
     - **VPP 帐户类型** - 从“企业版”  或“教育版”  中进行选择。
-5. 完成后，单击“创建”  。
+5. 完成后单击“创建  ”。
 
 该令牌显示在“令牌列表”窗格中。
 
@@ -75,7 +75,7 @@ Microsoft Intune 可帮助你同步、管理和分配通过此计划购买的书
 
 1. 选择“应用”   > “电子书”   > “所有电子书”  。
 2. 在书籍列表窗格中，选择要分配的书籍，然后依次选择“...”和“分配组”   。
-3. 在“<书籍名称> - 已分配的组”窗格中，选择“管理” > “已分配的组”     。
+3. 在“<书籍名称> - 已分配的组”窗格中，选择“管理” *“已分配的组”*    >   。
 4. 选择“分配组”，然后在“选择组”窗格中，选择要将书籍分配到的 Azure AD 用户组   。 目前不支持设备组。
 选择一个“可用”或“必需”的分配操作   。 
 5. 完成后，选择“保存”  。

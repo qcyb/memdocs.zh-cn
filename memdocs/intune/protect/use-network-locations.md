@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325298"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>使用 Intune 中的位置（网络围墙）
@@ -50,12 +50,12 @@ ms.locfileid: "80325298"
 
 ## <a name="create-a-location"></a>创建位置
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “位置” > “创建”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“符合性策略”** “位置” > “创建”   >    >   。
 
 2. 输入以下属性：  
 
    - 必需。 输入该位置的“名称”，例如“生产车间”或“第 44 号安全大楼”    。
-   - 可选。 使用 CIDR（无类别域际路由）表示法输入“IPv4 范围”，例如 `aaa.bbb.ccc.ddd/n`  。
+   - 可选。 使用 CIDR（无类别域际路由）表示法输入“IPv4 范围”，例如  `aaa.bbb.ccc.ddd/n`。
    - 可选。 输入“IPv4 网关”地址，例如  `aaa.bbb.ccc.ddd`。
    - 可选。 输入“IPv4 DHCP 服务器”地址，例如  `aaa.bbb.ccc.ddd`。
    - 可选。 输入“IPv4 DNS 服务器”地址列表  。 此设置使用子集匹配  。 如果设备上的 IPv4 DNS 服务器是已定义值的子集，则该设备会被视为“进入”围墙。 请务必在每行上输入一个地址，例如：  

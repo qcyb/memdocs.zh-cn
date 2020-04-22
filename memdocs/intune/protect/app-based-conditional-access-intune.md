@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04a8cd4ce64b566bf2d90ef301c1be44589a53e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79354186"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>基于应用的 Intune 条件访问
@@ -45,7 +45,7 @@ ms.locfileid: "79354186"
 
 有关详细信息，请参阅[企业移动性定价](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing)或 [Azure Active Directory 定价](https://azure.microsoft.com/pricing/details/active-directory/)。
 
-## <a name="supported-apps"></a>受支持的应用
+## <a name="supported-apps"></a>支持的应用
 
 可以在 [Azure Active Directory 条件访问技术参考文档](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)中找到支持基于应用的条件访问的应用列表。
 

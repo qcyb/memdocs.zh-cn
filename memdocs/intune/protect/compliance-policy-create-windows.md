@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084933"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 Windows 10 及更高版本设置
@@ -44,7 +44,7 @@ ms.locfileid: "80084933"
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Windows 运行状况证明服务评估规则
 
 - **需要 BitLocker**：  
-   Windows BitLocker 驱动器加密可以加密所有存储在 Windows 操作系统卷上的数据。 BitLocker 使用受信任的平台模块 (TPM) 来帮助保护 Windows 操作系统和用户数据。 此外，它还有助于确认计算机不被篡改，即使它处于无人参与、丢失或被盗状态，也不例外。 如果计算机装有兼容的 TPM，BitLocker 将使用该 TPM 锁定用于保护数据的加密密钥。 因此，仅当 TPM 验证计算机状态后，才能访问密钥。  
+   Windows BitLocker 驱动器加密可以加密所有存储在 Windows 操作系统卷上的数据。 BitLocker 使用受信任的平台模块 (TPM) 来帮助保护 Windows 操作系统和用户数据。 此外，它还有助于确认计算机不被篡改，即使它处于无人参与、丢失或被盗状态，也不例外。 如果计算机装有兼容的 TPM，BitLocker 将使用 TPM 来锁定保护数据的加密密钥。 因此，仅当 TPM 验证计算机状态后，才能访问密钥。  
 
    - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
    - **必需** - 当系统关闭或休眠时，设备能够保护存储在驱动器上的数据免受未经授权的访问。  
@@ -83,7 +83,7 @@ ms.locfileid: "80084933"
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
-  当设备使用的操作系统版本高于输入的版本时，将阻止对组织资源的访问。 系统会要求最终用户联系其 IT 管理员。 除非将规则更改为允许该操作系统版本，否则设备无法访问组织资源。
+  当设备使用的操作系统版本高于输入的版本时，将阻止对组织资源的访问。 系统会要求最终用户联系其 IT 管理员。 除非将规则更改为允许操作系统版本，否则设备无法访问组织资源。
 
 - **移动设备所需的最低 OS**：  
   以 major.minor.build 数字格式输入最低允许版本。
@@ -93,7 +93,7 @@ ms.locfileid: "80084933"
 - **移动设备所需的最高 OS**：  
   以 major.minor.build 数字格式输入最高允许版本。
 
-  当设备使用的操作系统版本高于输入的版本时，将阻止对组织资源的访问。 系统会要求最终用户联系其 IT 管理员。 除非将规则更改为允许该操作系统版本，否则设备无法访问组织资源。
+  当设备使用的操作系统版本高于输入的版本时，将阻止对组织资源的访问。 系统会要求最终用户联系其 IT 管理员。 除非将规则更改为允许操作系统版本，否则设备无法访问组织资源。
 
 - **有效的操作系统内部版本**：  
   输入可接受的操作系统版本范围，包括最低版本和最高版本。 还可以导出  这些可接受的 OS 生成号的逗号分隔值 (CSV) 文件列表。
@@ -110,7 +110,7 @@ ms.locfileid: "80084933"
 
 ## <a name="system-security"></a>系统安全
 
-### <a name="password"></a>Password
+### <a name="password"></a>密码
 
 - **需要密码才可解锁移动设备**：  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -158,7 +158,7 @@ ms.locfileid: "80084933"
   > [!IMPORTANT]
   > 当 Windows 桌面的密码要求更改时，用户下次登录时会受到影响，因为此时设备从空闲状态变为活动状态。 密码满足要求的用户仍然会被提示更改密码。
 
-### <a name="encryption"></a>加密
+### <a name="encryption"></a>Encryption
 
 - **加密设备上的数据存储**：  
   此设置适用于设备上的所有驱动器。
@@ -229,7 +229,7 @@ ms.locfileid: "80084933"
   使用此设置，可以将防御威胁服务中的风险评估视为符合性条件。 选择允许的最大威胁级别：
   - **未配置**（默认）   
   - **清除** - 此选项是最安全的，因为设备不能具有任何威胁。 如果设备被检测到具有任一等级的威胁，就会被评估为不符合要求。
-  - **低** - 若设备上仅存在低级威胁，则将其评为合规。 高于此级别的威胁均会使设备处于不合规状态。
+  - **低** - 若设备上仅存在低级威胁，则将其评为合规。 低级以上的任意威胁都将使设备不合规。
   - **中** - 如果设备上存在的威胁为低级或中级，设备也将被评估为符合策略。 如果检测到设备存在高级威胁，则确定其不符合要求。
   - **高** - 此选项是最不安全的，允许所有威胁级别。 如果将此解决方案仅用作报告目的，则可能有用。
   

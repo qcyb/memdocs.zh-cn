@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357891"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune 网络配置要求和带宽
@@ -68,7 +68,7 @@ ms.locfileid: "79357891"
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         缓存大小         |             5 GB 到 30 GB             | 该值因网络中客户端计算机的数量和你使用的配置而异。 为了防止文件被过早删除，请针对你的环境调整缓存的大小。 |
 | 单个缓存文件大小 |                950 MB                 |                                                                     此设置可能不会在所有缓存代理服务器中可用。                                                                     |
-|   要缓存的对象类型    | HTTP<br /><br />HTTPS<br /><br />BITS |                                               Intune 包是通过 HTTP 执行的后台智能传输服务 (BITS) 下载检索的 CAB 文件。                                               |
+|   要缓存的对象类型    | 客户端使用<br /><br />和<br /><br />BITS |                                               Intune 包是通过 HTTP 执行的后台智能传输服务 (BITS) 下载检索的 CAB 文件。                                               |
 > [!NOTE]
 > 如果使用代理服务器来缓存内容请求，则仅会对客户端和代理之间以及从代理到 Intune 的通信进行加密。 将不会对从客户端到 Intune 的连接进行端到端加密。
 
@@ -95,9 +95,9 @@ ms.locfileid: "79357891"
 
 Intune 客户端可以使用 BranchCache 来减少广域网 (WAN) 流量。 以下操作系统支持 BranchCache：
 
-- Windows 7
+- Silverlight
 - Windows 8.0
-- Windows 8.1
+- Windows 8。1
 - Windows 10
 
 要使用 BranchCache，客户端计算机必须已启用 BranchCache，然后针对“分布式缓存模式”  进行配置。

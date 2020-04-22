@@ -19,18 +19,18 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 428ee1ce93b4f6fe21c4b0180a9df222f3e23e09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359750"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>移动应用管理 (MAM) 实体引用
 
 “移动应用管理”类别包含移动应用的实体，例如  ：
 
-- 应用
-- Instances
+- “应用”
+- 实例
 - 签入状态
 - 运行状况状态
 - 策略状态
@@ -41,7 +41,7 @@ ms.locfileid: "79359750"
 
 mamApplication 实体列出了未在企业中注册便通过移动应用程序管理 (MAM) 托管的业务线 (LOB) 应用  。
 
-| 属性 | 说明 | 示例 |
+| 属性 | Description | 示例 |
 |---------|------------|--------|
 | mamApplicationKey |MAM 应用程序的唯一标识符。 | 432 |
 | mamApplicationName |MAM 应用程序的名称。 |MAM 应用程序示例名称 |
@@ -57,7 +57,7 @@ mamApplication 实体列出了未在企业中注册便通过移动应用程序�
 mamApplicationInstance 实体将托管移动应用程序管理 (MAM) 应用列为单个实例（按每设备每用户）  。 实体中列出的所有用户和设备都受保护，因为向它们分配了至少一个 MAM 策略。
 
 
-|          属性          |                                                                                                  说明                                                                                                  |               示例                |
+|          属性          |                                                                                                  Description                                                                                                  |               示例                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   applicationInstanceKey   |                                                               数据仓库中 MAM 应用实例的唯一标识符 - 代理键。                                                                |                 123                  |
 |           userId           |                                                                              已安装此 MAM 应用的用户的用户 ID。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
@@ -84,7 +84,7 @@ mamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 
 > [!Note]  
 > 若某个应用实例在一天中签入多次，数据仓库会将其存储为签入一次。
 
-| 属性 | 说明 | 示例 |
+| 属性 | Description | 示例 |
 |---------|------------|--------|
 | dateKey |日期键，表明在数据仓库中记录 MAM 应用签入的时间。 | 20160703 |
 | applicationInstanceKey |与此 MAM 应用签入关联的应用实例的键。 | 123 |
@@ -100,7 +100,7 @@ mamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 
 
 mamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（即使是越狱设备）  。
 
-| 属性 | 说明 | 示例 |
+| 属性 | Description | 示例 |
 |---------|------------|--------|
 | deviceHealthKey |数据仓库中设备及其相关运行状况的唯一标识符 - 代理键。 |123 |
 | deviceHealth |设备及其相关运行状况的的唯一标识符 - 类似于 DeviceHealthKey，但该标识符是自然键。 |b66bc706-ffff-7777-0340-032819502773 |
@@ -111,7 +111,7 @@ mamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（
 
 mamEffectivePolicy 实体列出了组织中应用的所有移动应用管理 (MAM) 有效策略  。 有效应用的策略通过合并与特定应用和用户相关的所有策略生成。
 
-| 属性 | 说明 | 示例 |
+| 属性 | Description | 示例 |
 |---------|------------|--------|
 | effectivePolicyKey |数据仓库中 MAM 有效策略的唯一标识符。 |2 |
 | realPolicyKey |由 IT 专业人员创作的 MAM 策略的唯一标识符。 |1 |
@@ -122,7 +122,7 @@ mamEffectivePolicy 实体列出了组织中应用的所有移动应用管理 (MA
 mamPlatform 实体列出了安装有移动应用程序管理 (MAM) 应用的平台的名称和类型  。
 
 
-|          属性          |                                    说明                                    |                         示例                         |
+|          属性          |                                    Description                                    |                         示例                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        platformKey         |     数据仓库中平台的唯一标识符 - 代理键。      |                           123                           |
 |          平台          | 平台的唯一标识符 - 类似于 PlatformKey，但该标识符是自然键。 |                           123                           |

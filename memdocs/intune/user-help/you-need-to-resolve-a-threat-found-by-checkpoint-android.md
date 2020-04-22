@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: bad48ac27aac60e91076ae1fef737f597154f3fc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334855"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>解决 SandBlast Mobile Protect 发现的威胁
@@ -43,7 +43,7 @@ SandBlast Mobile Protect 是一项移动威胁防御服务，可识别 Android �
 
 但是，SandBlast Mobile Protect 还将提示你采取操作以重新获得失去的访问权限。 选择威胁，并按照应用中的说明解决威胁。
 
-由于应用与公司的 MDM 提供程序集成，因此还可在公司门户应用中看到访问权限受限的相关警告。 警告将指示打开 Sandblast Mobile Protect 以解决病毒或安全威胁。
+由于应用与公司的 MDM 提供程序集成，因此也可在公司门户应用中看到访问权限受限的相关警告。 警告将指示打开 Sandblast Mobile Protect 以解决病毒或安全威胁。
 
   ![公司门户设备页的示例屏幕截图，其中显示 SandBlast Mobile Protect 警告。](./media/CP-lookout-virus-banner-1808.png)  
 

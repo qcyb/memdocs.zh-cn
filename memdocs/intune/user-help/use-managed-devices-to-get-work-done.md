@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233422"
 ---
 # <a name="what-is-device-enrollment"></a>什么是设备注册？
@@ -63,8 +63,8 @@ Microsoft Intune 应用适用于公司拥有的 Android 设备，没有网站。
 - Windows 设备
   - Windows 10 移动版
   - Windows 10 桌面版
-  - Windows Phone 8.1
-  - Windows 8.1
+  - Windows Phone 8。1
+  - Windows 8。1
 - Apple 设备
     - iOS
     - macOS

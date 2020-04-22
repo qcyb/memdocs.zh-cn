@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325033"
 ---
 # <a name="rename-a-device-in-intune"></a>在 Intune 中重命名设备
@@ -37,7 +37,7 @@ ms.locfileid: "80325033"
 ## <a name="rename-a-device"></a>重命名设备
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“设备” > “所有设备”> 选择设备 >“…” > “重命名设备”     。
+3. 选择“设备” **“所有设备”> 选择设备 >“…”** “重命名设备” >     >   。
 4. 在“重命名设备”  边栏选项卡的文本框中键入新名称。 可以使用字母、数字及连字符。 名称必须至少包含一个字母或连字符。
 5. 如果要在重命名设备后重新启动该设备，请选择“重命名后重新启动”旁边的“是”   。
 6. 选择“重命名”  。
@@ -46,7 +46,7 @@ ms.locfileid: "80325033"
 重命名 Windows 设备时，新名称必须遵循以下规则：
 - 小于或等于 15 个字符（必须小于或等于 63 个字节，不包括尾随 NULL）
 - 非 Null 或空字符串
-- 允许的 ASCII：字母（a-z、A-Z），数字 (0-9) 和连字符
+- 允许的 ASCII：字母（a-z、A-Z）、数字 (0-9) 和连字符
 - 允许的 Unicode：0x80 及以后的字符，必须是有效的 UTF8，必须是可映射到 IDN（即 RtlIdnToNameprepUnicode 成功；请参阅 RFC 3492）
 - 名称不得只包含数字
 - 名称中不能包含空格

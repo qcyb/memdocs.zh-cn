@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9e2d5e3f1e5839040c3ffd2229c34f3063a3ce87
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79354693"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>查看 Windows 电脑的硬件和软件清单
@@ -42,7 +42,7 @@ Intune 收集使用 Intune 软件客户端作为电脑管理的桌面硬件和�
 
 ## <a name="to-display-information-about-pcs-you-manage"></a>显示所管理的电脑的信息
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“报表”&gt;“计算机清单报表”   。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“报表” **“计算机清单报表”** &gt;  。
 
 2. 在“创建新报表”  页上，接受默认值或对其进行自定义以筛选报表将返回的结果。 例如，可选择只在报表中显示运行 Windows 8.1 的电脑。
 
@@ -52,7 +52,7 @@ Intune 收集使用 Intune 软件客户端作为电脑管理的桌面硬件和�
 
 ## <a name="to-display-software-installed-on-pcs-you-manage"></a>显示所管理的电脑上安装的软件
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“报表”&gt;“检测到的软件报表”   。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“报表” **“检测到的软件报表”** &gt;  。
 
 2. 在“创建新报表”  页上，接受默认值或对其进行自定义以筛选报表将返回的结果。 例如，你可以选择只在报表中显示 Microsoft 发布的软件。
 
@@ -62,11 +62,11 @@ Intune 收集使用 Intune 软件客户端作为电脑管理的桌面硬件和�
 
 ## <a name="to-refresh-computer-inventory-to-ensure-it-is-current"></a>刷新计算机清单以确保其为最新
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“组”&gt;“所有设备”（或包含需刷新清单的电脑的另一个组）   。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“组” **“所有设备”（或包含需刷新清单的电脑的另一个组）** &gt;  。
 
 2. 选择一台电脑，或按住 **Ctrl** 选择多台电脑。
 
-3. 在任务栏上，选择“远程任务”&gt;“刷新清单”   。
+3. 在任务栏上，选择“远程任务” **“刷新清单”** &gt;  。
 
 4. 若要查看任务状态，请选择页面右下角的“远程任务”  。
 

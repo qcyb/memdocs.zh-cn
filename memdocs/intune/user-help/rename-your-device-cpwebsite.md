@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: dfa2c9d9f2535bf336e28a7fe4cf591451d3bf94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347673"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>从公司门户网站重命名设备
@@ -36,7 +36,7 @@ ms.locfileid: "79347673"
 
     ![“设备”页面的屏幕截图，其中 2 个磁贴用于显示无法识别的、以一般方式命名的设备。 灰色横幅位于设备的正下方，提示用户识别他们正在使用的设备或添加新的设备。](./media/rename-reset-device-step2-1808.png)   
 
-3. 选择“重命名”  。 如果页面顶部未显示重命名选项，请选择“更多(…)” > “重命名”   。   
+3. 选择“重命名”  。 如果页面顶部未显示重命名选项，请选择“更多(…)” **“重命名”**  >   。   
 
    ![公司门户网站上已选设备的设备详细信息页，其顶部具有显示“重命名”、“删除”、“重置设备”、“重置密码”和“远程锁定”的链接列表。 ](./media/rename-reset-device-1808.png)   
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: adbc96dade5b6da134fa8a22f2cb613fc0baa923
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326325"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>使用 Intune 远程重启设备
@@ -45,9 +45,9 @@ ms.locfileid: "80326325"
 ## <a name="restart-a-device"></a>重启设备
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“设备” > “所有设备”   。
-4. 在所管理设备的列表中，选择一个设备，然后选择“重启” > “是”   。
+3. 选择“设备” **“所有设备”**  >   。
+4. 在所管理设备的列表中，选择一个设备，然后选择“重启” **“是”**  >   。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要查看“重新启动”设备操作的状态，请选择“设备” > “设备操作”    。
+- 若要查看“重新启动”设备操作的状态，请选择“设备” **“设备操作”**   >   。

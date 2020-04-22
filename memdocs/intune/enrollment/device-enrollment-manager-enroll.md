@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80808137"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用设备注册管理员帐户在 Intune 中注册设备
@@ -46,7 +46,7 @@ ms.locfileid: "80808137"
 
 ## <a name="add-a-device-enrollment-manager"></a>添加一个设备注册管理器
 
-1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” **“注册设备”** “设备注册管理器” >    >   。
 
 2. 选择“添加”  。
 
@@ -67,6 +67,6 @@ ms.locfileid: "80808137"
 
 **删除设备注册管理器**
 
-1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” **“注册设备”** “设备注册管理器” >    >   。
 2. 在“设备注册管理员”边栏选项卡上，选择 DEM 用户，然后选择“删除”   。
 

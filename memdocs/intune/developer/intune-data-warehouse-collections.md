@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086242"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 数据仓库收集
@@ -32,7 +32,7 @@ ms.locfileid: "80086242"
 ## <a name="apprevisions"></a>appRevisions
 appRevision  实体列出了应用的所有版本。
 
-|          属性          |                                      说明                                      |                示例               |
+|          属性          |                                      Description                                      |                示例               |
 |:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
 | AppKey                     | 应用的唯一标识符。                                                         | 123                                  |
 | ApplicationId              | 应用的唯一标识符 - 类似于 AppKey，但该标识符是自然键。        | b66bc706-ffff-7437-0340-032819502773 |
@@ -53,7 +53,7 @@ appRevision  实体列出了应用的所有版本。
 ## <a name="apptypes"></a>appTypes
 appType  实体列出了应用的安装源。
 
-|   属性  |        说明        |
+|   属性  |        Description        |
 |:-----------:|:-------------------------:|
 | AppTypeID   | 类型的 ID           |
 | AppTypeKey  | 密钥的代理键 |
@@ -61,7 +61,7 @@ appType  实体列出了应用的安装源。
 
 ### <a name="example"></a>示例
 
-| AppTypeID |                名称               |                     说明                     |
+| AppTypeID |                Name               |                     Description                     |
 |:---------:|:---------------------------------:|:---------------------------------------------------:|
 | 0         | Android 应用商店应用               | Android 应用商店应用。                             |
 | 1         | Android LOB 应用                 | Android 业务线应用。                  |
@@ -80,12 +80,12 @@ appType  实体列出了应用的安装源。
 ## <a name="compliancepolicystatusdeviceactivities"></a>compliancePolicyStatusDeviceActivities
 下表总结了分配给设备的符合性策略的分配状态。 它列出每种符合性状态的设备的计数。
 
-|    属性   |                                                                                      说明                                                                                     |  示例 |
+|    属性   |                                                                                      Description                                                                                     |  示例 |
 |:-------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
 | DateKey       | 为符合性策略创建了摘要时的日期键。                                                                                                                   | 20161204 |
 | Unknown       | 由于其他原因脱机或无法与 Intune 或 Azure AD 通信的设备数量。                                                                           | 5        |
 | 不适用 | 对于管理员指定的设备符合性策略不适用的设备数。                                                                                     | 201      |
-| 合规     | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 4083     |
+| 符合     | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 4083     |
 | InGracePeriod | 不符合要求但处于管理员定义的宽限期内的设备数。                                                                                  | 57       |
 | 不符合  | 为后列情况的设备数：未能应用由管理员指定的一个或多个设备符合性策略，或其用户未遵守管理员指定的策略。 | 43       |
 |    错误      |    无法与 Intune 或 Azure AD 通信，以及返回了错误信息的设备数量。                                                                          |    3     |
@@ -93,20 +93,20 @@ appType  实体列出了应用的安装源。
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 下表按策略以及策略类型总结了分配给设备的符合性策略的分配状态。 它针对每个已分配的符合性策略，列出每种符合性状态的设备的计数。
 
-|      属性     |                                                                                      说明                                                                                     |  示例 |
+|      属性     |                                                                                      Description                                                                                     |  示例 |
 |:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
 | DateKey           | 为符合性策略创建了摘要时的日期键。                                                                                                                   | 20161219 |
 | PolicyKey         | 创建了摘要的符合性策略的键。                                                                                                                   | 10178    |
 | PolicyPlatformKey | 创建了相应摘要的符合性策略的键。                                                                                            | 5        |
 | Unknown           | 由于其他原因脱机或无法与 Intune 或 Azure AD 通信的设备数量。                                                                           | 13       |
 | 不适用     | 对于管理员指定的设备符合性策略不适用的设备数。                                                                                     | 3        |
-| 合规         | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 45       |
+| 符合         | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 45       |
 | InGracePeriod     | 不符合要求但处于管理员定义的宽限期内的设备数。                                                                                  | 3        |
 | 不符合      | 为后列情况的设备数：未能应用由管理员指定的一个或多个设备符合性策略，或其用户未遵守管理员指定的策略。 | 7        |
 | 错误             | 无法与 Intune 或 Azure AD 通信，以及返回了错误信息的设备数量。                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
-|      属性      |                       说明                      |
+|      属性      |                       Description                      |
 |:------------------:|:------------------------------------------------------:|
 | complianceStatus   | 使用 mdmStatusKey 的设备符合性状态       |
 | complianceStateKey | 匹配设备和符合性状态的符合性密钥 |
@@ -114,10 +114,10 @@ appType  实体列出了应用的安装源。
 
 ### <a name="example"></a>示例
 
-|  complianceStatus  |                       说明                      |
+|  complianceStatus  |                       Description                      |
 |:------------------:|:------------------------------------------------------:|
 |    Unknown         |    未知。                                                                        |
-|    合规       |    是否满足条件。                                                                      |
+|    符合       |    是否满足条件。                                                                      |
 |    不相容    |       设备不相容，被公司资源阻止。             |
 |    冲突        |    与其他规则冲突。                                                      |
 |    错误           |       错误。                                                                       |
@@ -127,7 +127,7 @@ appType  实体列出了应用的安装源。
 ## <a name="dates"></a>日期
 日期  实体表示跨多个数据仓库实体引用的日期。
 
-|     属性    |                       说明                      |    示例    |
+|     属性    |                       Description                      |    示例    |
 |:---------------:|:------------------------------------------------------:|:-------------:|
 | DateKey         | 数据仓库中此日期的唯一标识符。 | 20160703      |
 | FullDate        | 此日期以完整日期/时间格式表示。        | 2016/7/3 0:00 |
@@ -150,7 +150,7 @@ appType  实体列出了应用的安装源。
 
 ## <a name="devicecategories"></a>deviceCategories
 
-|      属性      |                                    说明                                   |                示例               |
+|      属性      |                                    Description                                   |                示例               |
 |:------------------:|:--------------------------------------------------------------------------------:|:------------------------------------:|
 | deviceCategoryID   | 设备类别的唯一标识符。                                       | fb415ba2-7c08-41f6-a5e5-685b50da2c4c |
 | deviceCategoryKey  | 数据仓库中设备类别的唯一标识符 - 代理键 | 1                                    |
@@ -159,7 +159,7 @@ appType  实体列出了应用的安装源。
 ## <a name="deviceconfigurationprofiledeviceactivities"></a>deviceConfigurationProfileDeviceActivities
 DeviceConfigurationProfileDeviceActivity 实体列出每天处于成功、挂起、失败或错误状态的设备数  。 该数字反映了分配给该实体的设备配置文件。 例如，如果对于分配给某设备的所有策略，该设备均为成功状态，则当天的成功计数增加一。 如果向设备分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则实体会增加成功计数，同时让设备处于错误状态。 实体列出了过去 30 天中给定某天中处于各状态的设备数。
 
-|  属性 |                                          说明                                          |  示例 |
+|  属性 |                                          Description                                          |  示例 |
 |:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
 | DateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703 |
 | Pending   | 处于挂起状态的唯一设备数。                                                    | 123      |
@@ -170,7 +170,7 @@ DeviceConfigurationProfileDeviceActivity 实体列出每天处于成功、挂起
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 DeviceConfigurationProfileUserActivity 实体列出每天处于成功、挂起、失败或错误状态的用户数  。 该数字反映了分配给该实体的设备配置文件。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 DeviceConfigurationProfileUserActivity 实体列出了过去 30 天内给定某天中处于各状态的用户数  。 
 
-| 属性  | 说明  | 示例  |
+| 属性  | Description  | 示例  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
 | DateKey  | 日期键，表明在数据仓库中记录设备配置文件签入的时间。  | 20160703  |
 | Pending  | 处于挂起状态的唯一用户数。  | 123  |
@@ -180,7 +180,7 @@ DeviceConfigurationProfileUserActivity 实体列出每天处于成功、挂起�
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
-|          属性          |                                                                                      说明                                                                                     |
+|          属性          |                                                                                      Description                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DateKey                    | 引用日期表格，该表格表明当日日期。                                                                                                                                          |
 | DeviceKey                  | 数据仓库中设备的唯一标识符 - 代理键。 这是对包含 Intune 设备 ID 的设备表格的引用。                               |
@@ -196,7 +196,7 @@ DeviceConfigurationProfileUserActivity 实体列出每天处于成功、挂起�
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册类型。 
 
-|           属性          |                                     说明                                     |
+|           属性          |                                     Description                                     |
 |:---------------------------:|:-----------------------------------------------------------------------------------:|
 | deviceRegistrationStateID   | 注册状态的唯一标识符                                            |
 | deviceRegistrationStateKey  | 数据仓库中注册状态的唯一标识符 - 代理键 |
@@ -213,7 +213,7 @@ DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册�
 ## <a name="devices"></a>设备
 设备  实体列出受管理的所有已注册设备及相应属性。
 
-|          属性          |                                                                                       说明                                                                                      |
+|          属性          |                                                                                       Description                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DeviceKey                  | 数据仓库中设备的唯一标识符 - 代理键。                                                                                                               |
 | DeviceId                   | 设备的唯一标识符。                                                                                                                                                     |
@@ -259,7 +259,7 @@ DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册�
 ## <a name="devicetypes"></a>deviceTypes
 deviceType  实体表示由其他数据仓库实体引用的设备类型。 设备类型通常描述设备型号、制造商或同时包含这两项内容。
 
-|    属性    |                                  说明                                 |
+|    属性    |                                  Description                                 |
 |:--------------:|:----------------------------------------------------------------------------:|
 | DeviceTypeID   | 设备类型的唯一标识符                                       |
 | DeviceTypeKey  | 数据仓库中设备类型的唯一标识符 - 代理键 |
@@ -267,7 +267,7 @@ deviceType  实体表示由其他数据仓库实体引用的设备类型。 设�
 
 ### <a name="example"></a>示例
 
-| deviceTypeID |        名称       |                      说明                      |
+| deviceTypeID |        Name       |                      Description                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | 不可用   | 设备类型不可用。                     |
 | 0            | “桌面”           | Windows 桌面设备                              |
@@ -296,7 +296,7 @@ deviceType  实体表示由其他数据仓库实体引用的设备类型。 设�
 ## <a name="deviceenrollmenttypes"></a>deviceEnrollmentTypes
 deviceEnrollmentType  实体表明设备的注册方式。 注册类型会捕获注册方式。 示例列出了不同的注册类型及其含义。
 
-|         属性         |                                    说明                                    |
+|         属性         |                                    Description                                    |
 |:------------------------:|:---------------------------------------------------------------------------------:|
 | deviceEnrollmentTypeID   | 注册类型的唯一标识符。                                       |
 | deviceEnrollmentTypeKey  | 数据仓库中注册类型的唯一标识符 - 代理键。 |
@@ -304,7 +304,7 @@ deviceEnrollmentType  实体表明设备的注册方式。 注册类型会捕获
 
 ### <a name="example"></a>示例
 
-| enrollmentTypeID |                名称                |                                        说明                                       |
+| enrollmentTypeID |                Name                |                                        Description                                       |
 |:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
 | 0                | Unknown                            | 未收集注册类型                                                      |
 | 1                | UserEnrollment                     | 用户驱动的注册（通过 BYOD 通道）。                                           |
@@ -321,7 +321,7 @@ deviceEnrollmentType  实体表明设备的注册方式。 注册类型会捕获
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 EnrollmentActivity 实体表示设备注册活动  。
 
-| 属性                      | 说明                                                               |
+| 属性                      | Description                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | 记录此注册活动时的日期键。               |
 | deviceEnrollmentTypeKey       | 注册类型的键。                                        |
@@ -335,14 +335,14 @@ EnrollmentActivity 实体表示设备注册活动  。
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
 EnrollmentEventStatus 实体表示设备注册结果  。
 
-| 属性                   | 说明                                                                       |
+| 属性                   | Description                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | 数据仓库中注册状态的唯一标识符（代理键）  |
 | enrollmentEventStatusName  | 注册状态的名称。 请参阅以下示例。                            |
 
 ### <a name="example"></a>示例
 
-| enrollmentEventStatusName  | 说明                            |
+| enrollmentEventStatusName  | Description                            |
 |----------------------------|----------------------------------------|
 | 成功                    | 成功的设备注册         |
 | Failed                     | 失败的设备注册             |
@@ -351,14 +351,14 @@ EnrollmentEventStatus 实体表示设备注册结果  。
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
 EnrollmentFailureCategory 实体指示设备注册失败的原因  。 
 
-| 属性                       | 说明                                                                                 |
+| 属性                       | Description                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | 数据仓库中注册失败类别的唯一标识符（代理键）  |
 | enrollmentFailureCategoryName  | 注册失败类别的名称。 请参阅以下示例。                            |
 
 ### <a name="example"></a>示例
 
-| enrollmentFailureCategoryName   | 说明                                                                                                   |
+| enrollmentFailureCategoryName   | Description                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | 不适用                  | 注册失败类别不适用。                                                            |
 | 不可用                   | 注册失败类别不可用。                                                             |
@@ -378,14 +378,14 @@ EnrollmentFailureCategory 实体指示设备注册失败的原因  。
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的详细原因  。  
 
-| 属性                     | 说明                                                                               |
+| 属性                     | Description                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
 | enrollmentFailureReasonKey   | 数据仓库中注册失败原因的唯一标识符（代理键）  |
 | enrollmentFailureReasonName  | 注册失败原因的名称。 请参阅以下示例。                            |
 
 ### <a name="example"></a>示例
 
-| enrollmentFailureReasonName      | 说明                                                                                                                                                                                            |
+| enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 不适用                   | 注册失败原因不适用。                                                                                                                                                       |
 | 不可用                    | 注册失败原因不可用。                                                                                                                                                        |
@@ -408,7 +408,7 @@ EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的�
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 intuneManagementExtension  列出每日在每台 Windows 10 设备上的 intuneManagementExtension  运行状况。 将保留过去 60 天内的数据。
 
-|       属性      |                          说明                          | 示例 |
+|       属性      |                          Description                          | 示例 |
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
 | DateKey             | 日期的唯一标识符。                                | 123     |
 | TenantKey           | 租户的唯一标识符。                              | 456     |
@@ -419,7 +419,7 @@ intuneManagementExtension  列出每日在每台 Windows 10 设备上的 intuneM
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 IntuneManagementExtensionHealthState  列出 IntuneManagementExtension  的所有可能运行状况状态。
 
-|      属性     |                   说明                  | 示例 |
+|      属性     |                   Description                  | 示例 |
 |:-----------------:|:----------------------------------------------:|:-------:|
 | ExtensionStateKey | 运行状况状态的唯一标识符。           | 2       |
 | ExtensionState    | IntuneManagementExtension 的运行状况状态。 | Healthy |
@@ -427,7 +427,7 @@ IntuneManagementExtensionHealthState  列出 IntuneManagementExtension  的所�
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 IntuneManagementExtensionVersion  实体列出 IntuneManagementExtension  使用的所有版本。
 
-|       属性      |                          说明                          | 示例 |
+|       属性      |                          Description                          | 示例 |
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
 | ExtensionVersionKey | IntuneManagementExtension 版本的唯一标识符。 | 1       |
 | ExtensionVersion    | 4 位版本号。                                   | 1.0.2.0 |
@@ -436,7 +436,7 @@ IntuneManagementExtensionVersion  实体列出 IntuneManagementExtension  使用
 
 MamApplication 实体列出了未在企业中注册便通过移动应用程序管理 (MAM) 托管的业务线 (LOB) 应用  。
 
-| 属性 | 说明 | 示例 |
+| 属性 | Description | 示例 |
 |---------|------------|--------|
 | mamApplicationKey |MAM 应用程序的唯一标识符。 | 432 |
 | mamApplicationName |MAM 应用程序的名称。 |MAM 应用程序示例名称 |
@@ -452,7 +452,7 @@ MamApplication 实体列出了未在企业中注册便通过移动应用程序�
 MamApplicationInstance 实体将托管移动应用程序管理 (MAM) 应用列为单个实例（按每设备每用户）  。 实体中列出的所有用户和设备都受保护，因为向它们分配了至少一个 MAM 策略。
 
 
-|          属性          |                                                                                                  说明                                                                                                  |               示例                |
+|          属性          |                                                                                                  Description                                                                                                  |               示例                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   ApplicationInstanceKey   |                                                               数据仓库中 MAM 应用实例的唯一标识符 - 代理键。                                                                |                 123                  |
 |           UserId           |                                                                              已安装此 MAM 应用的用户的用户 ID。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
@@ -478,7 +478,7 @@ MamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 
 > [!Note]  
 > 若某个应用实例在一天中签入多次，数据仓库会将其存储为签入一次。
 
-| 属性 | 说明 | 示例 |
+| 属性 | Description | 示例 |
 |---------|------------|--------|
 | DateKey |日期键，表明在数据仓库中记录 MAM 应用签入的时间。 | 20160703 |
 | ApplicationInstanceKey |与此 MAM 应用签入关联的应用实例的键。 | 123 |
@@ -492,7 +492,7 @@ MamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 
 
 MamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（即使是越狱设备）  。
 
-| 属性 | 说明 | 示例 |
+| 属性 | Description | 示例 |
 |---------|------------|--------|
 | DeviceHealthKey |数据仓库中设备及其相关运行状况的唯一标识符 - 代理键。 |123 |
 | DeviceHealth |设备及其相关运行状况的的唯一标识符 - 类似于 DeviceHealthKey，但该标识符是自然键。 |b66bc706-ffff-7777-0340-032819502773 |
@@ -504,7 +504,7 @@ MamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（
 MamPlatform 实体列出了安装有移动应用程序管理 (MAM) 应用的平台的名称和类型  。
 
 
-|          属性          |                                    说明                                    |                         示例                         |
+|          属性          |                                    Description                                    |                         示例                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     数据仓库中平台的唯一标识符 - 代理键。      |                           123                           |
 |          平台          | 平台的唯一标识符 - 类似于 PlatformKey，但该标识符是自然键。 |                           123                           |
@@ -514,7 +514,7 @@ MamPlatform 实体列出了安装有移动应用程序管理 (MAM) 应用的平�
 ## <a name="managementagenttypes"></a>managementAgentTypes
 managementAgentType  实体表示用于管理设备的代理。
 
-|         属性        |                                       说明                                       |
+|         属性        |                                       Description                                       |
 |:-----------------------:|:---------------------------------------------------------------------------------------:|
 | ManagementAgentTypeID   | 管理代理类型的唯一标识符。                                         |
 | ManagementAgentTypeKey  | 数据仓库中管理代理类型的唯一标识符 - 代理键。 |
@@ -522,7 +522,7 @@ managementAgentType  实体表示用于管理设备的代理。
 
 ### <a name="example"></a>示例
 
-| ManagementAgentTypeID |                名称               |                                  说明                                 |
+| ManagementAgentTypeID |                Name               |                                  Description                                 |
 |:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
 | 1                     | EAS                               | 设备通过 Exchange Active Sync 管理                         |
 | 2                     | MDM                               | 设备由 MDM 代理管理                                   |
@@ -539,7 +539,7 @@ managementAgentType  实体表示用于管理设备的代理。
 ## <a name="managementstates"></a>managementStates
 ManagementState  实体提供有关设备状态的详细信息。 详细信息适用于应用远程操作、设备越狱或进行 root 的情况。
 
-|       属性      |                                     说明                                    |
+|       属性      |                                     Description                                    |
 |:-------------------:|:----------------------------------------------------------------------------------:|
 | managementStateID   | 管理状态的唯一标识符。                                       |
 | managementStateKey  | 数据仓库中管理状态的唯一标识符 - 代理键。 |
@@ -547,7 +547,7 @@ ManagementState  实体提供有关设备状态的详细信息。 详细信息�
 
 ### <a name="example"></a>示例
 
-| managementStateID |      名称      |                                                   说明                                                   |
+| managementStateID |      Name      |                                                   Description                                                   |
 |:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
 | 0                 | 托管        | 托管时不存在挂起的远程操作。                                                                       |
 | 1                 | RetirePending  | 存在一个针对设备的挂起的停用命令。                                                             |
@@ -565,7 +565,7 @@ ManagementState  实体提供有关设备状态的详细信息。 详细信息�
 ## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 MobileAppInstallState 实体表示已分配到包含设备和/或用户的组的移动应用程序的安装状态。
 
-|       属性      |                        说明                       |
+|       属性      |                        Description                       |
 |:-------------------:|:--------------------------------------------------------:|
 | AppInstallStateKey  | 帐户的应用安装状态的唯一 ID。 |
 | AppInstallState     | 应用安装状态的枚举值。                     |
@@ -574,23 +574,23 @@ MobileAppInstallState 实体表示已分配到包含设备和/或用户的组的
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 表示通过 Microsoft Intune 使用移动应用程序管理的给定目标设备类型的移动应用安装状态。
 
-|      属性      |                                                          说明                                                          |
+|      属性      |                                                          Description                                                          |
 |:------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
 | DateKey            | 记录应用安装状态的当天日期的键。                                                                     |
 | AppKey             | 用于标识 AppRevision 实例的移动应用键。                                                          |
 | DeviceTypeKey      | 与移动应用程序关联的设备类型的键。                                                              |
 | AppInstallStateKey | 用于标识 MobileAppInstallState 实例的应用安装状态键。                                         |
-| 错误代码          | 应用安装程序、移动平台或与应用安装相关的服务返回的错误代码。 |
+| ErrorCode          | 应用安装程序、移动平台或与应用安装相关的服务返回的错误代码。 |
 | 计数              | 总计数。                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 
-|    属性   |                                                                                     说明                                                                                    |           示例          |
+|    属性   |                                                                                     Description                                                                                    |           示例          |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | 所有者类型的唯一标识符。                                                                                                                                               |                            |
 | ownerTypeKey  | 数据仓库中所有者类型的唯一标识符 - 代理键。                                                                                                       |                            |
-| ownerTypeName | 表示设备的所有者类型：公司 - 设备为企业所有。  个人 - 设备为个人所有 (BYOD)。   未知 - 此设备上无此信息。 | 公司/个人未知 |
+| ownerTypeName | 表示设备的所有者类型：企业 - 设备为企业所有。  个人 - 设备为个人所有 (BYOD)。   未知 - 此设备上无此信息。 | 公司/个人未知 |
 
 > [!Note]  
 > 对于在为设备创建动态组时 Azure AD 中的 `ownerTypeName` 筛选器，需要将值 `deviceOwnership` 设置为 `Company`。 有关详细信息，请参阅[设备规则](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。 
@@ -598,7 +598,7 @@ ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 ## <a name="policies"></a>策略
 “策略”实体列出了设备配置文件、应用配置文件和符合性策略  。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。
 
-|          属性          |                                                                       说明                                                                      |                示例               |
+|          属性          |                                                                       Description                                                                      |                示例               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | PolicyKey                  | 表示数据仓库中策略的唯一键。                                                                                              | 123                                  |
 | PolicyId                   | 数据仓库中策略的唯一标识符。                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
@@ -612,7 +612,7 @@ ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 下表列出了每天处于成功、挂起、失败或错误状态的设备数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某设备的所有策略，该设备均为成功状态，则当天的成功计数增加一。 如果向设备分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则实体会增加成功计数，同时让设备处于错误状态。 policyDeviceActivity  实体列出了过去 30 天中给定某天中处于各状态的设备数。
 
-|  属性 |                                           说明                                           |        示例        |
+|  属性 |                                           Description                                           |        示例        |
 |:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
 | DateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703              |
 | Pending   | 处于挂起状态的唯一设备数。                                                    | 123                   |
@@ -623,7 +623,7 @@ ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
-|        属性        |                      说明                      |     示例    |
+|        属性        |                      Description                      |     示例    |
 |:----------------------:|:-----------------------------------------------------:|:--------------:|
 | PolicyPlatformTypeKey  | 策略平台类型的唯一键。        | 20170519       |
 | PolicyPlatformTypeId   | 策略平台类型的唯一标识符。 | 1              |
@@ -632,7 +632,7 @@ ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 ## <a name="policytypeactivities"></a>policyTypeActivities
 PolicyTypeActivity 列出了处于成功、挂起、失败或错误状态的总设备数  。 它列出了每天与设备配置文件、应用配置文件或符合性策略相关的这些状态。
 
-|    属性   |                                          说明                                          |           示例           |
+|    属性   |                                          Description                                          |           示例           |
 |:-------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
 | DateKey       | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703                    |
 | PolicyKey     | 策略键，可将其与策略相联接以获取 policyName。                                | Windows 10 基线         |
@@ -645,7 +645,7 @@ PolicyTypeActivity 列出了处于成功、挂起、失败或错误状态的总�
 ## <a name="policytypes"></a>policyTypes
 PolicyType 实体列出了设备配置文件、应用配置文件和符合性策略的类型  。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。
 
-|    属性    |                       说明                      |            示例            |
+|    属性    |                       Description                      |            示例            |
 |:--------------:|:------------------------------------------------------:|:-----------------------------:|
 | PolicyTypeId   | 源系统中的策略的唯一标识符。  | 123                           |
 | PolicyTypeKey  | 数据仓库中策略的唯一标识符。 | 1                             |
@@ -654,7 +654,7 @@ PolicyType 实体列出了设备配置文件、应用配置文件和符合性策
 ## <a name="policyuseractivities"></a>policyUserActivities
 下表列出了每天处于成功、挂起、失败或错误状态的用户数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 PolicyUserActivity  实体列出了过去 30 天中给定某天中处于各状态的用户数。
 
-|  属性 |                                          说明                                          |       示例       |
+|  属性 |                                          Description                                          |       示例       |
 |:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
 | DateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703            |
 | Pending   | 处于挂起状态的唯一设备数。                                                    | 123                 |
@@ -665,7 +665,7 @@ PolicyType 实体列出了设备配置文件、应用配置文件和符合性策
 ## <a name="termsandconditions"></a>termsAndConditions
 termsAndConditions  实体表示给定条款和条件(T&C) 策略的元数据和内容。 当用户第一次尝试注册 Intune 并随后对管理员要求重新接受的位置进行编辑时，将向其显示 T&C 策略的内容。 它们使管理员能够就用户必须同意的规定进行通信，以使设备注册到 Intune。
 
-|    属性        |    说明    |    示例        |
+|    属性        |    Description    |    示例        |
 |----------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 |    termsAndConditionsKey    |    对应于“userTermsAndConditionsAcceptances”集合中的项的键    |    123    |
 |    termsAndCondidionsId    |    此 termsAndConditions 项的 ID    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
@@ -682,7 +682,7 @@ termsAndConditions  实体表示给定条款和条件(T&C) 策略的元数据和
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 UserDeviceAssociation 实体包含组织中的用户设备关联  。
 
-|        名称        |                                             说明                                            |     示例     |
+|        Name        |                                             Description                                            |     示例     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | 数据仓库中用户的唯一标识符。   （代理键）。                            | 123             |
 | DeviceKey          | 数据仓库中设备的唯一标识符。                                             | 123             |
@@ -695,7 +695,7 @@ UserDeviceAssociation 实体包含组织中的用户设备关联  。
 
 用户  实体集合包含用户数据。 这些记录包含数据收集期间的用户状态（即使用户已被删除）。 例如，在上个月期间，可能将某个用户添加到 Intune 然后又将其删除。 尽管在提交报告时该用户已不存在，但在上个月的数据中仍然会显示该用户及其状态。 可以创建一个报告，该报告将显示用户的历史记录在你的数据中存在的持续时间。
 
-|          属性          |                                                                                                           说明                                                                                                          |                示例               |
+|          属性          |                                                                                                           Description                                                                                                          |                示例               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | UserKey                    | 数据仓库中用户的唯一标识符 - 代理键。                                                                                                                                                         | 123                                  |
 | UserId                     | 用户的唯一标识符 - 类似于 UserKey，但该标识符是自然键。                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
@@ -709,7 +709,7 @@ UserDeviceAssociation 实体包含组织中的用户设备关联  。
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 userTermsAndConditionsAcceptance  实体表示给定用户给定的条款和条件 (T&C) 策略的接受状态。 用户必须接受最新版本的条款才能继续访问公司门户。
 
-|    属性    |    说明    |    示例    |
+|    属性    |    Description    |    示例    |
 |-------------------------------|--------------------------------------------------------------------------------|----------------------------|
 |    dateKey    |    对应于“日期”集合中的日期值的键。     |    20180823    |
 |    userKey    |    映射到“用户”集合中的用户的用户键。     |    20000    |
@@ -720,7 +720,7 @@ userTermsAndConditionsAcceptance  实体表示给定用户给定的条款和条�
 ## <a name="vppprogramtypes"></a>vppProgramTypes 
 vppProgramType  实体列出了应用的可能 VPP 计划类型。
 
-|      属性      |          说明         |
+|      属性      |          Description         |
 |:------------------:|:----------------------------:|
 | VppProgramTypeID   | 类型 ID。           |
 | VppProgramTypeKey  | 密钥的代理键。 |
@@ -728,7 +728,7 @@ vppProgramType  实体列出了应用的可能 VPP 计划类型。
 
 ### <a name="example"></a>示例
 
-|             VppProgramID             |         名称        | 说明                |
+|             VppProgramID             |         Name        | Description                |
 |:------------------------------------:|:-------------------:|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Microsoft 的 VPP 计划。 |
 | 00000000-0000-0000-0000-000000000000 | 尚未提供 | 默认值，无 VPP。   |

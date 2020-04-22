@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357215"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Intune 部署规划、设计和实施指南
@@ -33,21 +33,21 @@ ms.locfileid: "79357215"
 
 本指南包含用于引导用户完成整个 Intune 部署过程的各个部分。 从第 1 部分开始，明确你的目标、宗旨和难题。 然后，以最符合你需求的顺序转至部分 2 – 7。 无需按顺序完成这些部分；你可以同时完成这些部分。
 
-- [第 1 部分：确定部署目标、宗旨和挑战](planning-guide-deployment-goals.md)
+- [第 1 部分：确定部署目标、宗旨和难题](planning-guide-deployment-goals.md)
 
-- [第 2 部分：确定用例场景](planning-guide-scenarios.md)
+- [第 2 部分：确定用例方案](planning-guide-scenarios.md)
 
-- [第 3 部分：确定用例要求](planning-guide-requirements.md)
+- [第 3 部分：确定用例方案要求](planning-guide-requirements.md)
 
 - [第 4 部分：制定推出计划](planning-guide-rollout-plan.md)
 
-- [第 5 部分：制定推出通信计划](planning-guide-communication-plan.md)
+- [第 5 部分：制定推出计划](planning-guide-communication-plan.md)
 
 - [第 6 部分：制定支持计划](planning-guide-support-plan.md)
 
 - [第 7 部分：创建 Intune 设计](planning-guide-design.md)
 
-- [第 8 部分：Intune 实现过程](planning-guide-onboarding.md)
+- [第 8 部分：实施 Intune](planning-guide-onboarding.md)
 
 - [第 9 部分：测试和验证](planning-guide-test-validation.md)
 
@@ -63,4 +63,4 @@ ms.locfileid: "79357215"
 
 ## <a name="next-steps"></a>后续步骤
 
-让我们开始进入第 1 部分：[确定部署目标、宗旨和挑战](planning-guide-deployment-goals.md)。
+让我们开始第一部分：[确定部署目标、宗旨和难题](planning-guide-deployment-goals.md)。

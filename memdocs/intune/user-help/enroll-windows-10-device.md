@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79348440"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>使用 Intune 公司门户注册 Windows 10 设备
@@ -62,7 +62,7 @@ ms.locfileid: "79348440"
 
 7. 在“设置完成!”  上 屏幕，请选择“完成”  。 你的设备现已注册。  
 
-8. 要再次检查连接，请返回到“设置” > “帐户” > “使用工作或学校帐户”    。  现在应列出你的帐户。  
+8. 要再次检查连接，请返回到“设置” **“帐户”** “使用工作或学校帐户” >    >   。  现在应列出你的帐户。  
 
 
     ![验证已正确设置了连接](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
@@ -76,7 +76,7 @@ ms.locfileid: "79348440"
 
 2. 打开“设置”应用  。 如果应用列表中没有随时可用的应用，请转到搜索栏，然后键入“settings”。
 
-3. 选择“帐户” > “你的帐户”   。  
+3. 选择“帐户” **“你的帐户”**  >   。  
 
 
     ![选择“你的帐户”](./media/W10-enroll-2-accounts-your-account.png)  

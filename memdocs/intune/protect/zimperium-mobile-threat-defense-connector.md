@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed623abeb602e599866af7b7249756edd87d5a29
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349194"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium 移动威胁防御连接器与 Intune
@@ -85,7 +85,7 @@ ms.locfileid: "79349194"
 > [!div class="mx-imgBorder"]
 > ![在威胁解除后授予访问权限的概念图](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限
+### <a name="control-access-based-on-threat-to-network"></a>基于对网络的威胁来控制访问
 
 检测**中间人**等网络威胁，并基于设备风险保护对 WiFi 网络的访问。
 

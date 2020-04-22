@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02f90fc0cd249062f878b5a18481f6a6a73228af
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323387"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理从适用于企业的 Microsoft Store 批量采购的应用
@@ -64,7 +64,7 @@ ms.locfileid: "80323387"
 3. 如果没有专门将 Microsoft Intune  用作移动设备管理工具，请选择“添加管理工具”  来添加“Microsoft Intune”  。 如果尚未将 Microsoft Intune  激活为移动设备管理工具，请单击“Microsoft Intune”  旁边的“激活”  。 请注意，应激活“Microsoft Intune”  ，而不是“Microsoft Intune 注册”  。
 
 > [!NOTE]
-> 以前只能将一个用于分配应用的管理工具关联到适用于企业的 Microsoft 应用商店。 现在可以将多个管理工具与应用商店相关联，例如 Intune 和 Configuration Manager。
+> 以前只能将一个用于分配应用的管理工具关联到适用于企业的 Microsoft 应用商店。 现在可将多种管理工具与该应用商店关联，例如 Intune 和 Configuration Manager。
 
 现在可以继续，并在 Intune 控制台中设置同步。
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084178"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>通过 Windows 公司门户使用 iOS 设备
@@ -42,13 +42,13 @@ ms.locfileid: "80084178"
 * Windows 10（家庭版、专业版、教育版、S 模式和企业版）
 * Windows Phone 8.1 及更高版本
 * Windows 8.1 RT
-* Windows 8.1
+* Windows 8。1
 
 公司门户中也支持其他版本的 Windows，例如 [Windows 10 全息版](https://www.microsoft.com/hololens)。 但是，本文不介绍这些版本，因为它们用于非常特定的用途。
 
 ## <a name="set-up-your-device-in-the-company-portal"></a>在公司门户中设置设备
 - [将我的 Windows 设备托管在公司门户中](windows-enrollment-company-portal.md)  
-- [对设备进行管托管意味着什么？](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) 
+- [对设备进行管托管意味着什么？  ](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 - [公司可以在我的设备上看到哪些信息？](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [对设备进行加密](encrypt-your-device-windows.md)
 - [设置或更改设备密码](set-or-change-your-password-windows.md)

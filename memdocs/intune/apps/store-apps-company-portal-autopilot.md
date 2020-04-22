@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80438757"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>为 Autopilot 预配的设备添加和分配 Windows 10 公司门户应用
@@ -51,7 +51,7 @@ ms.locfileid: "80438757"
 
 ## <a name="assign-the-company-portal-app"></a>分配公司门户应用
 
-1.  使用管理员帐户登录到  [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 
+1.  [使用管理员帐户登录到 ](https://go.microsoft.com/fwlink/?linkid=2109431)Microsoft 终结点管理器管理中心 。 
 2. 在右窗格中选择“应用”选项卡  。
 3. 在“按平台”下，选择“Windows”   。
 4. 选择“公司门户(脱机)”  。

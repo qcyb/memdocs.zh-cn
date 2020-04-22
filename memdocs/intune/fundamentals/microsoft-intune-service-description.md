@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358632"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune 服务说明
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>语言支持
-Intune 在 Azure 门户中运行，后者支持下列语言：简体中文、中文(繁体)、捷克语、荷兰语、英语、德语、匈牙利语、意大利语、日语、葡萄牙语(巴西)、葡萄牙语(葡萄牙)、俄语、西班牙语、英语、法语、韩语、波兰语、瑞典语和土耳其语。
+Intune 在 Azure 门户中运行，支持后列语言：中文（简体）、中文（繁体）、捷克语、荷兰语、英语、德语、匈牙利语、意大利语、日语、葡萄牙语（巴西）、葡萄牙语（葡萄牙）、俄语、西班牙语、英语、法语、朝鲜语、波兰语、瑞典语和土耳其语。
 
 Intune 管理控制台和面向用户的移动体验除了 Azure 门户中支持的所有语言外，还支持丹麦语、希腊语、芬兰语、挪威语和罗马尼亚语。
 

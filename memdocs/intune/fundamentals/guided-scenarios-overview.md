@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401445"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune 引导式方案概述 
@@ -46,7 +46,7 @@ ms.locfileid: "80401445"
 
 ### <a name="launching"></a>启动  
 
-可从“[设备管理门户](https://endpoint.microsoft.com)” > “疑难解答 + 支持” > “引导式方案”访问所有引导式方案    。 
+可从“**设备管理门户[”](https://endpoint.microsoft.com)“疑难解答 + 支持”** “引导式方案”访问所有引导式方案 >    >   。 
 
 引导式方案将首先介绍方案的目的和完成设置所需的任何先决条件。 此时，将检查你的管理权限，以验证你是否具有完成此方案所需的所有权限。  
 
@@ -64,7 +64,7 @@ ms.locfileid: "80401445"
 
 引导式方案不能用于编辑现有资源。 创建之后，必须使用现有的工作负荷编辑所有资源、组和分配。
 
-### <a name="monitoring"></a>监视 
+### <a name="monitoring"></a>monitoring 
 
 引导式方案不能用于监视初始创建过程之外的现有资源。 创建之后，必须使用现有的工作负荷监视所有资源、组和分配。 
 

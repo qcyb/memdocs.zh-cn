@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355109"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>在 Azure 中我的 Intune 功能处于哪个位置？
@@ -52,7 +52,7 @@ Azure 门户中 Intune 使用 [Azure Active Directory (AD)](https://docs.microso
 
 ![经典移动设备注册规则的图像](./media/ui-changes/01-classic-rules.png)
 
-这些规则适用于你的 Intune 帐户中没有异常的所有用户。 在 Azure 门户中，这些规则现在以两种不同的策略类型显示：设备类型限制和设备限制限制。
+这些规则适用于你的 Intune 帐户中没有异常的所有用户。 在 Azure 门户中，这些规则现在表现为两种不同的策略类型：设备类型限制和设备限制。
 
 ![Azure 移动设备注册限制的图像](./media/ui-changes/02-azure-enroll-restrictions.png)
 

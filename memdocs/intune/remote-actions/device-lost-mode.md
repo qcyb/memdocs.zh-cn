@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326533"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>使用 Intune 启用 iOS/iPadOS 设备上的丢失模式
@@ -48,7 +48,7 @@ ms.locfileid: "80326533"
 5. 在“丢失模式”下，选择“启用”   。
 6. 在“要在锁屏界面上显示的消息”  中，键入要在设备的锁屏界面上显示的消息。
 7. （可选）在“要显示的电话号码”框中输入电话号码  。
-6. 选择“确定”，保存所做更改  。
+6. 选择“确定”以保存所做更改  。
 
 启用丢失模式后，将阻止对该设备的所有使用。 最终用户无法访问设备，直到你禁用丢失模式。 尽管丢失模式已启用，但仍可使用[定位设备](device-locate.md)操作找到设备。
 

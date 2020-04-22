@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80624916"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>将 Android 设备从设备管理员转到工作配置文件管理
@@ -45,12 +45,12 @@ ms.locfileid: "80624916"
 
 ## <a name="create-device-compliance-policy"></a>创建设备符合性策略
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “策略” > “创建策略”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“符合性策略”** “策略” > “创建策略”   >    >   。
 
     ![创建策略](./media/android-move-device-admin-work-profile/create-policy.png)
 
 2. 在“创建策略”  页上，将“平台”  设置为“Android 设备管理员”   > “创建”  。
-3. 在“基本信息”页上，键入“名称”和“说明” > “下一步”     。
+3. 在“基本信息”页上，键入“名称”和“说明” **“下一步”**    >   。
 
     ![“基本信息”页](./media/android-move-device-admin-work-profile/basics.png)
     
@@ -73,13 +73,13 @@ ms.locfileid: "80624916"
     > - 如果 Android 公司门户在后台处于打开状态，当用户点击该链接时，他们可能会转到上次打开的页面。
     > - 用户必须在 Android 设备上点击此链接。 如果他们将其粘贴到浏览器中，则不会启动 Android 公司门户。 
 
-    选择“下一步”  。
+    选择**下一步**。
 
 7. 在“范围标记”  页上，选择要包括的任何范围标记。
 8. 在“分配”  页上，将策略分配到其中的设备已注册设备管理员管理的组，然后单击“下一步”  。
 9. 在“查看 + 创建”  页上，确认所有设置，然后选择“创建”  。
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
 
 [转到新的设备管理设置的最终用户流程](../user-help/move-to-new-device-management-setup.md)可指导用户从设备管理员管理取消注册，并设置工作配置文件管理。 用户的[已注册 Android 设备管理员的设备](android-enroll-device-administrator.md)必须安装有 Android 公司门户版本 5.0.4720.0 或更高版本。
 

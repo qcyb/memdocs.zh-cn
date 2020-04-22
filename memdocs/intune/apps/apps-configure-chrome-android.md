@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324828"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>使用 Intune 配置适用于 Android 设备的 Google Chrome 
@@ -100,7 +100,7 @@ ms.locfileid: "80324828"
    隐身选项卡：<br>
    <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
 
 1. 查看 Intune 门户，以监视策略部署状态。
 

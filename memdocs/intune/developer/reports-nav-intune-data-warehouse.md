@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 576080bca172b25292954c7bfac592273cacb660
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360114"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>Microsoft Intune 数据仓库 API
@@ -42,7 +42,7 @@ OData (Open Data Protocol) 是结构化信息标准促进组织 (OASIS) 的一�
 本参考部分概述了 Intune 数据仓库数据模型的终结点、支持的 HTTP 方法、返回负载格式和文档。
 
 > [!Important]  
-> 可使用 beta 版本，试用数据仓库的最新功能。 若要使用 beta 版本，URL 中必须包含查询参数 `api-version=beta`。 Beta 版本会提供尚未正式推出为支持服务的功能。 随着 Intune 不断添加新功能，beta 版本可能会更改行为和数据协定。 任何依赖于 beta 版本的自定义代码或报告工具都可能会因不断推出的更新而临时中断运行。 <!--If you experience problems with the beta service, follow [link to feedback process]() to report the issue or provide feedback.-->
+> 可通过使用 beta 版本，试用数据仓库的最新功能。 若要使用 beta 版本，URL 中必须包含查询参数 `api-version=beta`。 Beta 版本会提供尚未正式推出为支持服务的功能。 随着 Intune 不断添加新功能，beta 版本可能会更改行为和数据协定。 任何依赖于 beta 版本的自定义代码或报告工具都可能会中断正在进行的更新。 <!--If you experience problems with the beta service, follow [link to feedback process]() to report the issue or provide feedback.-->
 
 ## <a name="odata-custom-client"></a>OData 自定义客户端
 

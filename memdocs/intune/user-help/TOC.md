@@ -17,6 +17,9 @@
 #### [注册 Android 设备](enroll-device-android-company-portal.md)  
 #### [使用 Android 工作配置文件注册](enroll-device-android-work-profile.md)
 #### [使用 Microsoft Intune 应用注册](enroll-device-android-microsoft-intune-app.md)
+#### 使用派生的凭据注册
+##### [注册 Entrust Datacard](enroll-android-device-entrust-datacard.md)
+##### [注册 Intercede](enroll-android-device-intercede.md)
 ### [移动到新的设备管理设置](move-to-new-device-management-setup.md)
 ### [在设备上使用托管应用](use-managed-apps-on-your-device-android.md)
 ### [加密设备](encrypt-your-device-android.md)

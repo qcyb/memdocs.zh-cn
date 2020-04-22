@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dad1ecb2ed86158e510b0f554e3fd7e12e21a814
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360218"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>使用 Microsoft Intune 数据仓库
@@ -47,7 +47,7 @@ ms.locfileid: "79360218"
 
 > [!Important]  
 > 现在可以通过设置查询参数  `api-version=v1.0` 来使用 v1.0 版的 Intune 数据仓库。 数据仓库中集合的更新本质上是附加更新，不会破坏现有方案。<br><br>
-> 可通过使用 beta 版本，试用数据仓库的最新功能。 若要使用 beta 版本，URL 中必须包含查询参数  `api-version=beta`。 Beta 版本会提供尚未正式作为支持服务推出的功能。 随着 Intune 不断添加新功能，beta 版本可能会更改行为和数据协定。 任何依赖于 beta 版本的自定义代码或报告工具都可能会因不断推出的更新而临时中断运行。
+> 可通过使用 beta 版本，试用数据仓库的最新功能。 若要使用 beta 版本，URL 中必须包含查询参数  `api-version=beta`。 Beta 版本会提供尚未正式作为支持服务推出的功能。 随着 Intune 不断添加新功能，beta 版本可能会更改行为和数据协定。 任何依赖于 beta 版本的自定义代码或报告工具都可能会中断正在进行的更新。
 
 ## <a name="next-steps"></a>后续步骤
 

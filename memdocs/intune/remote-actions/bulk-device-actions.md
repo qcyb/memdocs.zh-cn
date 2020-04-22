@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5f33198e71fd4250ee93207e571bc535abd1c95f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325370"
 ---
 # <a name="use-bulk-device-actions"></a>使用批量设备操作
@@ -38,9 +38,9 @@ ms.locfileid: "80325370"
 ## <a name="use-a-bulk-device-action"></a>使用批量设备操作
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备” > “所有设备” > “批量设备操作”    。
+2. 选择“设备” **“所有设备”** “批量设备操作” >    >   。
 ![批量设备操作](./media/bulk-device-actions/bulk-device-actions.png)
-3. 在“批量设备操作”页上，选择“OS”和“设备操作”    。 某些设备操作有其他选项或其他填充字段。 选择“下一步”  。
+3. 在“批量设备操作”页上，选择“OS”和“设备操作”    。 某些设备操作有其他选项或其他填充字段。 选择**下一步**。
 4. 在“设备”页上，选择“1 到 100 个设备”>“下一步”   。
 5. 在“查看 + 创建”页上，选择“创建”   。
 

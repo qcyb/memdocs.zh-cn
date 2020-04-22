@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79350663"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件访问疑难解答
@@ -42,7 +42,7 @@ ms.locfileid: "79350663"
 
 - 用户和设备都必须符合分配的 Intune 符合性策略。
 
-- 默认情况下，必须为用户分配设备符合性策略。 这可能取决于“标记未分配符合性策略的设备”设置的配置，该设置可在 Intune 管理门户中的“设备符合性” > “符合性策略设置”下进行配置    。
+- 默认情况下，必须为用户分配设备符合性策略。 这可能取决于“标记未分配符合性策略的设备”设置的配置，该设置可在 Intune 管理门户中的“设备符合性” **“符合性策略设置”下进行配置**   >   。
 
 - 如果用户使用的是设备的本机邮件客户端而不是 Outlook，则必须在设备上激活 Exchange ActiveSync。 此操作在 iOS/iPadOS、Windows Phone 和 Android Knox 设备上自动进行。
 
@@ -80,7 +80,7 @@ ms.locfileid: "79350663"
   1. 打开公司门户应用。
   2. 通过三个点 (…) 或硬件菜单按钮转到“设置”页面。
   3. 选择“启用浏览器访问”  按钮。
-  4. 在 Chrome 浏览器中，从 Office 365 中注销并重启 Chrome。  
+  4. 在 Chrome 浏览器中注销 Office 365 并重新启动 Chrome。  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>设备受阻止且未收到隔离电子邮件

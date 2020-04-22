@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b751b3f52c1a0cd0f0a1f259e79e6917a0438d9b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347101"
 ---
 # <a name="you-need-to-update-your-android-device-to-install-the-outlook-app"></a>需要更新 Android 设备以安装 Outlook 应用
@@ -32,7 +32,7 @@ ms.locfileid: "79347101"
 Outlook 应用帮助数百万用户在 [Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook) 设备的一个便利位置连接他们的所有的电子邮件帐户、日历和文件。
 
 >[!NOTE]
-> 正在寻找适用于 Android 设备的说明？ [了解详细信息](update-device-outlook-ios.md)。
+> 正在寻找适用于 Android 设备的说明？ [了解详情](update-device-outlook-ios.md)。
 
 安装应用有时可能会失败，尤其是当设备不是最新版本时。 如果看到类似这样的消息，则需要更新 Android 设备，然后重试。
 

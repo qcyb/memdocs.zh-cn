@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347114"
 ---
 # <a name="remove-your-windows-device-from-management"></a>删除 Intune 对 Windows 设备的管理
@@ -85,7 +85,7 @@ ms.locfileid: "79347114"
 ## <a name="remove-your-windows-81-phone"></a>删除 Windows 8.1 手机
 完成以下步骤，从 Intune 删除 Windows 8.1 手机。
 
-1. 转到“设置”   > “工作区”  。
+1. 转到**设置** > **工作区**。
 2. 点击要取消注册的工作区帐户。
 3. 点击屏幕底部的“删除”  。
 4. 在“删除帐户”  对话框中，点击“删除”  。  
@@ -94,12 +94,12 @@ ms.locfileid: "79347114"
 公司门户在 Windows 设备上存储的数据分为两种：
 
 - **诊断日志**：Microsoft 收集的标准应用活动数据。 卸载公司门户应用时，它会自动清除。 例如，应用活动数据是有关应用打开了多长时间或应用是否已损坏的数据。
-- **应用程序缓存**：应用正常工作所需的支持文件，例如图标和设置。
+- 应用程序缓存  ：应用正常工作所需的支持文件，例如图标和设置。
 
 要删除存储的日志和缓存，请完成以下任一步骤：
 
 * [卸载公司门户应用](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) 
 
-* 重置公司门户应用。 打开“设置”应用并选择 >“应用” > “公司门户” > “高级选项” > “重置”      。 
+* 重置公司门户应用。 打开“设置”应用并选择 >“应用” **“公司门户”** “高级选项” **“重置”**  >    >    >   。 
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

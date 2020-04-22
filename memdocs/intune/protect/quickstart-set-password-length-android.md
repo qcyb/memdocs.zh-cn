@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325457"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>快速入门：创建适用于 Android 设备的密码符合性策略
@@ -38,7 +38,7 @@ Intune 设备符合性策略指定设备为实现符合性而必须满足的规�
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 
-以[全局管理员](../fundamentals/users-add.md#types-of-administrators)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+以[全局管理员](https://go.microsoft.com/fwlink/?linkid=2109431)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft Endpoint Manager 管理中心](../fundamentals/users-add.md#types-of-administrators)。
 
 ## <a name="create-a-device-compliance-policy"></a>创建设备合规性策略
 
@@ -77,4 +77,4 @@ Intune 设备符合性策略指定设备为实现符合性而必须满足的规�
 要完成这一系列的 Intune 快速入门，请继续学习下一篇快速入门。
 
 > [!div class="nextstepaction"]
-> [快速入门：将通知发送到不相容设备](quickstart-send-notification.md)
+> [快速入门：向不符合要求的设备发送通知](quickstart-send-notification.md)

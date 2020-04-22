@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79335102"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Intune 公司门户中的 Windows 设备注册  
@@ -62,18 +62,18 @@ ms.locfileid: "79335102"
 
 4. 如果版本为  
 
-    * __1607 或更高版本__：通过[“设置” > “帐户” > “使用工作或学校帐户”路由](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)注册设备    。   
-    * __1511 或更早版本__：通过[“设置” > “帐户” > “你的帐户”路由](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)注册设备    。  
+    * __1607 或更高版本__：通过[“设置” **“帐户”** “使用工作或学校帐户”路由 > 注册设备   >   ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)。   
+    * __1511 或更早版本__：通过[“设置” **“帐户”** “你的帐户”路由 > 注册设备   >   ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)。  
 
 ### <a name="windows-10-mobile-devices"></a>Windows 10 移动设备
 
 1. 转到“所有应用”，然后选择“设置”应用   。
-2. 选择“系统” > “关于”   。
+2. 选择“系统” __“关于”__  >   。
 3. 在“设备信息”下，找到“版本”   。  
 4. 如果版本为  
 
-    * __1607 或更高版本__：使用[“设置” > “使用工作或学校帐户”路由](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)注册设备   。   
-    * __1511 或更早版本__：使用[“设置” > “帐户路由”](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)注册设备   。  
+    * __1607 或更高版本__：使用[“设置” **“使用工作或学校帐户”路由**注册设备 >   ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)。   
+    * __1511 或更早版本__：使用[“设置” **“帐户路由”** 注册设备 >   ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)。  
 
 ## <a name="enroll-non-windows-10-devices"></a>注册非 Windows 10 设备  
 可参阅以下文章，通过公司门户网站注册其他受支持的 Windows 设备：   

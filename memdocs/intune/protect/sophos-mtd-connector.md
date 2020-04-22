@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526438"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>通过 Intune 启用 Sophos Mobile Threat Defense 连接器
@@ -67,7 +67,7 @@ Intune 设备符合性策略包括基于 Sophos Mobile 风险评估的 Sophos Mo
 *威胁解除后授予访问权限*：  
 ![在威胁解除后授予访问权限的概念图](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限
+### <a name="control-access-based-on-threat-to-network"></a>基于对网络的威胁来控制访问
 
 检测中间人攻击等网络威胁，并基于设备风险保护对 Wi-Fi 网络的访问。  
 

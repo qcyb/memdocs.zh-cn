@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b7bf08775a6cccac3dd96268765d6e1a2e453c51
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345359"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>移动 Intune 数据仓库帐户数据 
@@ -48,7 +48,7 @@ ms.locfileid: "79345359"
 3. 将报表保存在本地。
  
 ### <a name="app-protection-reports"></a>应用保护报表  
-1. 在 Azure 门户中，导航到“Microsoft Intune” -> “客户端应用” -> “应用保护状态”    。
+1. 在 Azure 门户中，导航到“Microsoft Intune” **“客户端应用”** “应用保护状态” ->    ->   。
 2. 单击下载图标 ( ⤓ ) 可保存每个报表。
 
 ### <a name="device-configuration-charts"></a>设备配置图表 

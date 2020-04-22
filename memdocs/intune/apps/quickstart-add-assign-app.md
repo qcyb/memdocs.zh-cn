@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334270"
 ---
-# <a name="quickstart-add-and-assign-a-client-app"></a>快速入门：添加并分配客户端应用
+# <a name="quickstart-add-and-assign-a-client-app"></a>快速入门：添加和分配客户端应用
 
 本快速入门将使用 Intune 来添加客户端应用并将其分配给公司的员工。 管理员的首要任务之一是，确保最终用户能够访问他们在执行工作时所需的应用。
 
@@ -37,7 +37,7 @@ ms.locfileid: "79334270"
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 
-以[全局管理员或 Intune 服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Intune](https://aka.ms/intuneportal)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
+以[全局管理员或 Intune 服务管理员](https://aka.ms/intuneportal)身份登录 [Intune](../fundamentals/users-add.md#types-of-administrators)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
 
 ## <a name="add-the-client-app-to-intune"></a>将客户端应用添加到 Intune
 
@@ -70,10 +70,10 @@ ms.locfileid: "79334270"
 
 1. 在 [Intune](https://aka.ms/intuneportal) 中，选择“应用”   > “所有应用”  。 
 2. 选择要分配给组的应用。
-3. 单击“分配” > “添加组”，显示“添加组”窗格    。
+3. 单击“分配” **“添加组”，显示“添加组”窗格** >    。
 4. 在“分配类型”下拉框中，选择“适用于已注册设备”   。 
-5. 单击“包括的组” >  选择要包括的组  > “Contoso 测试人员”    。
-6. 单击“选择” > “确定” > “确定” > “保存”即可分配组     。
+5. 单击“包括的组”**选择要包括的组**“Contoso 测试人员” >    >   。
+6. 单击“选择” **“确定”** “确定” > “保存”即可分配组   >    >   。
 
 现已将应用分配给“Contoso 测试人员”组  。
 
@@ -93,7 +93,7 @@ ms.locfileid: "79334270"
     > [!NOTE]
     > 如果未成功将任何应用分配给 Intune 用户，你将看到以下消息：IT 管理员未向你提供任何应用。 
 
-5. 单击“安装”  。
+5. 单击“**安装**”。
 
 如果业务需求需要将公司门户应用分配给员工，则可直接从 Intune 手动分配 Windows 10 公司门户应用。 有关详细信息，请参阅[使用 Microsoft Intune 手动添加 Windows 10 公司门户应用](company-portal-app.md)。
 
@@ -104,4 +104,4 @@ ms.locfileid: "79334270"
 要完成这一系列的 Intune 快速入门，请继续学习下一篇快速入门。
 
 > [!div class="nextstepaction"]
-> [快速入门：创建并分配应用保护策略](quickstart-create-assign-app-policy.md)
+> [快速入门：创建和分配应用保护策略](quickstart-create-assign-app-policy.md)

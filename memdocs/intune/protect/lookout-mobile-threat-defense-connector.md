@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526574"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout 移动终结点安全连接器与 Intune
@@ -88,7 +88,7 @@ ms.locfileid: "79526574"
 > [!div class="mx-imgBorder"]
 > ![显示在修正后授予访问权限的概念图](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限
+### <a name="control-access-based-on-threat-to-network"></a>基于对网络的威胁来控制访问
 
 检测中间人攻击等网络威胁，并基于设备风险保护对 WiFi 网络的访问。
 
@@ -104,7 +104,7 @@ ms.locfileid: "79526574"
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根据网络威胁控制对 SharePoint Online 的访问
 
-检测到中间人攻击等网络威胁时，根据设备风险阻止对公司文件进行同步。
+基于设备风险检测对网络的威胁，如中间人攻击和阻止同步企业文件。
 
 *检测到网络威胁时阻止 SharePoint Online：*
 

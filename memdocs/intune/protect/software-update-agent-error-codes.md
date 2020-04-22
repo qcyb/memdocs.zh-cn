@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e762106a13bb42be11771276f38a37e46ae24662
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338898"
 ---
 # <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Microsoft Intune 中的软件更新代理错误代码和说明
@@ -224,7 +224,7 @@ ms.locfileid: "79338898"
 |**0x80cfA005**|OM_E_AU_NO_REGISTERED_SERVICE|未向自动更新注册非托管服务。|
 |**0x80cfA006**|OM_E_AU_DETECT_SVCID_MISMATCH|向自动更新注册的默认服务在搜索过程中发生了更改。|
 |**0x80cfA007**|OM_E_AU_ALREADY_PROMPTING_FOR_REBOOT|自动更新已提示用户重新启动。|
-|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|发生了另一个 **OM_E_AU \*** 代码未涵盖的自动更新错误。|
+|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|发生了另一个 **OM_E_AU *** 代码未涵盖的自动更新错误。|
 |**0x80cfE001**|OM_E_EE_UNKNOWN_EXPRESSION|表达式计算器运算无法完成，因为未识别表达式。|
 |**0x80cfE002**|OM_E_EE_INVALID_EXPRESSION|表达式计算器运算无法完成，因为表达式无效。|
 |**0x80cfE003**|OM_E_EE_MISSING_METADATA|表达式计算器运算无法完成，因为表达式包含的元数据节点的数目不正确。|

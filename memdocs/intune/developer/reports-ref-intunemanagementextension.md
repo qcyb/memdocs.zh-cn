@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8152eb12779376e1885d0a2b2898cd602aa825d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359763"
 ---
 # <a name="reference-for-intune-management-extensions"></a>Intune 管理扩展参考
@@ -36,7 +36,7 @@ intuneManagementExtensions 类别包含移动设备的实体，可用于跟踪�
 
 intuneManagementExtensionVersion  实体列出 intuneManagementExtensions 使用的所有版本。
 
-| 属性  | 说明 | 示例 |
+| 属性  | Description | 示例 |
 |---------|------------|--------|
 | extensionVersionKey |intuneManagementExtensions 版本的唯一标识符。 | 1 |
 | extensionVersion |4 位版本号。 |1.0.2.0 |
@@ -45,7 +45,7 @@ intuneManagementExtensionVersion  实体列出 intuneManagementExtensions 使用
 
 intuneManagementExtensionHealthState  列出 intuneManagementExtensions 的所有可能运行状况状态。
 
-| 属性  | 说明 | 示例 |
+| 属性  | Description | 示例 |
 |---------|------------|--------|
 | extensionStateKey |运行状况状态的唯一标识符。 | 2 |
 | extensionState |IntuneManagementExtension 的运行状况状态。 | Healthy |
@@ -56,7 +56,7 @@ intuneManagementExtension  列出每日在每台 Windows 10 设备上的 IntuneM
 将保留过去 60 天内的数据。 
 
 
-|      属性       |                         说明                         | 示例 |
+|      属性       |                         Description                         | 示例 |
 |---------------------|-------------------------------------------------------------|---------|
 |       dateKey       |               日期的唯一标识符。                |   123   |
 |      tenantKey      |              租户的唯一标识符。               |   456   |

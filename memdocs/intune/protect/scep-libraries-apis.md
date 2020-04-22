@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79351235"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>使用 API 将 SCEP 的第三方 CA 添加到 Intune
@@ -115,7 +115,7 @@ IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-描述:
+描述：
 
 实例化和配置 `IntuneScepServiceClient` 对象。
 
@@ -157,7 +157,7 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-描述:
+描述：
 
 验证 SCEP 证书请求。
 
@@ -194,7 +194,7 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-描述:
+描述：
 
 通知 Intune 在处理 SCEP 请求时创建了一个证书。
 
@@ -233,7 +233,7 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-描述:
+描述：
 
 通知 Intune 在处理 SCEP 请求时出现错误。 不应对此类的方法引发的异常调用此方法。
 
@@ -267,7 +267,7 @@ void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-描述:
+描述：
 
 使用此方法通知客户端，在与 Intune 通信时必须使用指定的（而非默认的）SSL 套接字工厂。
 

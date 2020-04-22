@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322320"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>在 Intune 中排除设备操作故障问题
@@ -54,7 +54,7 @@ Microsoft Intune 提供了许多可帮助管理设备的操作。 本文提供�
 ## <a name="remove-devices-action"></a>删除设备操作
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>我如何知道谁开始了停用/擦除？
-在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理” > “审核日志”> 选中“启动者”列    。
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理” **“审核日志”> 选中“启动者”列** >    。
 如果你看不到某个条目，则最有可能发起该操作的人是此设备的用户。 他们可能使用了“公司门户”应用或 portal.manage.microsoft.com。
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>为什么停用我的应用程序后未将其卸载？
@@ -69,7 +69,7 @@ Microsoft Intune 提供了许多可帮助管理设备的操作。 本文提供�
 因为停用设备不会撤销访问令牌。 可以使用条件访问策略来缓解这种情况。
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>发出停用/擦除操作后，我如何对其进行监视？
-在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理” > “审核日志”   。
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理” **“审核日志”**  >   。
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>为什么擦除有时会无限期地显示为挂起？
 在重置开始之前，设备不会始终将其状态报告回 Intune 服务。 因此，操作显示为挂起。 如果已确认操作成功，请从服务中删除该设备。
@@ -97,12 +97,12 @@ Microsoft Intune 提供了许多可帮助管理设备的操作。 本文提供�
 ## <a name="wipe-action"></a>擦除操作
 
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>使用擦除操作后，无法重新启动 Windows 10 设备
-如果你选择“擦除设备，即使设备断电也继续擦除”，则可能会导致这种情况。  如果选择此选项，请注意它可能会阻止某些 Windows 10 设备重新启动。 。
+如果在 Windows 10 设备上选择“擦除设备，即使设备断电也继续擦除。如果选择此选项，请注意它可能会阻止某些 Windows 10 设备重新启动。”，可能会发生这种情况  。
 
 当 Windows 的安装存在严重损坏，使操作系统无法重新安装时，可能会导致这种情况。 在这种情况下，该过程会失败，使系统处于 [Windows 恢复环境]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)中。
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>使用擦除操作后，无法重新启动 BitLocker 加密设备
-如果你选择“擦除设备，即使设备断电也继续擦除”，则可能会导致这种情况。  如果选择此选项，请注意它可能会阻止某些 Windows 10 设备重新启动。 。
+如果在 Windows 10 设备上选择“擦除设备，即使设备断电也继续擦除。如果选择此选项，请注意它可能会阻止某些 Windows 10 设备重新启动。”，可能会发生这种情况  。
 
 若要解决此问题，请使用可启动媒体在设备上重新安装 Windows 10。
 

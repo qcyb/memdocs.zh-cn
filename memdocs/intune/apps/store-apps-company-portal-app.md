@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c658176046fca5dfc8cda1a3c655e32150a7d9c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343838"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>使用 Microsoft Intune 添加 Windows 10 公司门户应用
@@ -95,7 +95,7 @@ ms.locfileid: "79343838"
 3. 若要签名 Windows 10 公司门户应用，请使用脚本标头中详细说明的输入参数运行脚本，如下表所示。  
     不需要将依赖项传入该脚本。 只有将应用上传到 Intune 管理控制台时才需要依赖项。
 
-| 参数 |  说明  |
+| 参数 |  Description  |
 |---|---|
 | InputWin10AppxBundle  |  源 appxbundle 文件的路径。 |
 | OutputWin10AppxBundle | 已签名的 appxbundle 文件 Win81Appx 的输出路径。 

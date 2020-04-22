@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 784a0f40fd07d53f7bc32d00ab3f3a9d76d4dcaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79337728"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>在管理中注册组织提供的 macOS 设备
@@ -76,6 +76,6 @@ ms.locfileid: "79337728"
 4. 出现提示时，打开 .pkg 文件并完成安装步骤。
 5. 打开公司门户应用并使用工作或学校帐户登录。
 6. 找到设备，然后单击“注册”  。
-7. 单击“继续” > “完成”   。 你的设备现在应作为公司兼容设备出现在公司门户应用中。
+7. 单击“继续” **“完成”**  >   。 你的设备现在应作为公司兼容设备出现在公司门户应用中。
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

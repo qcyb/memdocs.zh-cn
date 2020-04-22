@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 5c1ebf73dde1423f618d58d06cddc96162f725be
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347491"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>将托管 macOS 设备的错误提交给适当人员
@@ -38,7 +38,7 @@ ms.locfileid: "79347491"
 
 - 单击  “帮助”菜单>“保存诊断报告”  。 选择保存文件的位置。 然后通过电子邮件发送此文件或将其上传到贵公司的支持人员。
 
-- 如果已配置电子邮件应用，还可通过转到“帮助” > “发送诊断报告”来发送诊断报告   。 上传日志后，单击“电子邮件详细信息”  。
+- 如果已配置电子邮件应用，还可通过转到“帮助” **“发送诊断报告”来发送诊断报告** >   。 上传日志后，单击“电子邮件详细信息”  。
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>将错误发送给 macOS 设备的公司门户开发人员
 

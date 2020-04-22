@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325139"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>使用 Intune 远程锁定设备
@@ -50,10 +50,10 @@ ms.locfileid: "80325139"
 ## <a name="remote-lock-a-device"></a>远程锁定设备
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“设备” > “所有设备”   。
+3. 选择“设备” **“所有设备”**  >   。
 4. 在设备列表中选择一个设备，然后选择“远程锁定”操作  。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要查看此操作的状态，请选择“Microsoft Intune” > “设备” > “设备操作”    。 
+- 若要查看此操作的状态，请选择“Microsoft Intune” **“设备”** “设备操作” >    >   。 
 - 有关有助于管理设备的其他操作，请参阅[可用操作](device-management.md)。

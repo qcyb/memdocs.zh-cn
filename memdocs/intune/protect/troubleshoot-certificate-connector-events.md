@@ -18,15 +18,15 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7b75faa501fa91dc82bfec83b8c418e28b39fcec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79350676"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Intune 证书连接器事件和诊断代码
 
-从版本 6.1806.x.x 开始，Intune 连接器服务会在“事件查看器”（“应用程序和服务日志” > “Microsoft Intune 连接器”）中记录事件    。 使用这些事件可帮助解决 Intune 连接器配置中的潜在问题。 这些事件记录操作的成功和失败，并且还包含带有消息的诊断代码，以帮助 IT 管理员进行故障排除。
+从版本 6.1806.x.x 开始，Intune 连接器服务会在“事件查看器”（“应用程序和服务日志” **“Microsoft Intune 连接器”）中记录事件**   >   。 使用这些事件可帮助解决 Intune 连接器配置中的潜在问题。 这些事件记录操作的成功和失败，并且还包含带有消息的诊断代码，以帮助 IT 管理员进行故障排除。
 
 > [!TIP]  
 > 若要解决问题并验证 Intune 连接器设置，请参阅[证书颁发机构脚本示例](https://aka.ms/intuneconnectorverificationscript)。

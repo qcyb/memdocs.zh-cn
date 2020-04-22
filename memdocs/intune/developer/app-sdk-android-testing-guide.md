@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343071"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Microsoft Intune App SDK for Android 测试指南
@@ -38,7 +38,7 @@ ms.locfileid: "79343071"
 
 
 ## <a name="azure-portal-policy-configuration"></a>Azure 门户策略配置
-在 [Azure 门户的 Intune 边栏选项卡](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview)中，[创建和分配应用保护策略](../apps/app-protection-policies.md)。 也可以在 Intune 边栏选项卡中创建和分配[应用配置策略](../apps/app-configuration-policies-overview.md)。
+在 [Azure 门户的 Intune 边栏选项卡](../apps/app-protection-policies.md)中，[创建和分配应用保护策略](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview)。 也可以在 Intune 边栏选项卡中创建和分配[应用配置策略](../apps/app-configuration-policies-overview.md)。
 
 > [!NOTE]
 > 如果在 Azure 门户中未列出应用，则可以使用策略解决该问题，方法是选择“更多应用”选项并在文本框中提供包名称  。

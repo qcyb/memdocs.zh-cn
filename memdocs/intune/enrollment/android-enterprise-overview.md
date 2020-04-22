@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339600"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>使用 Intune 管理 Android 工作配置文件设备
@@ -65,7 +65,7 @@ Android 企业不提供默认电子邮件应用或如 iOS/iPadOS 提供的本机
 
 工作配置文件和个人配置文件完全支持所应用的应用保护策略。 可在 Android 应用发布控制台中发布业务线应用，地址为 https://play.google.com/apps/publish 。 此控制台包含让应用专用于组织的选项。 有关详细信息，请参阅[在 Intune 中添加适用于 Android 企业工作配置文件设备的设备合规性策略](../protect/compliance-policy-create-android-for-work.md)。 有关应用保护策略的一般信息，请参阅[什么是应用保护策略？](../apps/app-protection-policy.md)
 
-## <a name="vpn-profiles"></a>VPN 配置文件
+## <a name="vpn-profiles"></a>中的“VPN 配置文件”
 
 VPN 支持类似于 Android VPN 配置文件。 可使用相同的 VPN 提供商和基本配置选项管理 Android 企业，只有两点差别：
 

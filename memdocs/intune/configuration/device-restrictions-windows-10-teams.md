@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361648"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Microsoft Intune Windows 10 协同版设备限制设置
@@ -33,7 +33,7 @@ ms.locfileid: "79361648"
 - 显示在欢迎屏幕上的会议信息 - 启用此选项以选择显示在“欢迎”屏幕上的“会议”磁贴下的信息  。 你可以：
   - **仅显示组织者和时间**
   - “显示组织者、时间和主题(私人会议隐藏主题)” 
-- **欢迎屏幕背景图像 URL** - 启用此设置以在 Windows 10 协同版设备上的“欢迎”  屏幕上显示来自指定 URL 的自定义背景。<br>图片必须为 PNG 格式，并且 URL 必须以 **https://** 开头。
+- **欢迎屏幕背景图像 URL** - 启用此设置以在 Windows 10 协同版设备上的“欢迎”  屏幕上显示来自指定 URL 的自定义背景。<br>图片必须为 PNG 格式，并且 URL 必须以“https://”  开头。
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 

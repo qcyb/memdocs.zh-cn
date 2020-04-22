@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2dea6d5af4356526c2df1b23d47fb468c6213e0c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359451"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Microsoft Intune 已注册设备管理功能
@@ -66,7 +66,7 @@ ms.locfileid: "79359451"
 |证书配置文件|创建和部署受信任的证书配置文件和简单证书注册协议 (SCEP) 证书，这些文件和证书可对 Wi-Fi、VPN 和电子邮件配置文件进行保护和身份验证。|[使用 Microsoft Intune 中的证书配置文件确保资源访问的安全性](../protect/certificates-configure.md)|
 |Wi-Fi 配置文件|将无线网络设置部署到你的用户。 通过部署这些设置，你可最小化用户连接到公司网络时所需的工作。|[Microsoft Intune 中的 Wi-Fi 连接](../configuration/wi-fi-settings-configure.md)|
 |电子邮件配置文件|创建并将电子邮件设置部署到设备上，以便用户可以在个人设备上访问公司电子邮件，而无需进行任何特殊设置。|[使用 Microsoft Intune 的电子邮件配置文件配置对公司电子邮件的访问](../configuration/email-settings-configure.md)|
-|VPN 配置文件|将 VPN 设置部署到用户和你的组织中的设备。 通过部署这些设置，你可以最大限度减少用户连接到公司网络资源需要进行的工作。|[Microsoft Intune 中的 VPN 连接](../configuration/device-profiles.md#vpn)|
+|中的“VPN 配置文件”|将 VPN 设置部署到用户和你的组织中的设备。 通过部署这些设置，你可以最大限度减少用户连接到公司网络资源需要进行的工作。|[Microsoft Intune 中的 VPN 连接](../configuration/device-profiles.md#vpn)|
 |条件访问策略|管理从非 Intune 托管设备对 Microsoft Exchange 电子邮件和 SharePoint Online 进行的访问。|[使用 Microsoft Intune 限制对电子邮件和 SharePoint 的访问](../protect/app-based-conditional-access-intune.md)|
 
 ## <a name="next-steps"></a>后续步骤

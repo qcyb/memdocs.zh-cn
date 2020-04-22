@@ -1,11 +1,11 @@
 - name: 远程操作
   href: index.yml
-- name: 概述
+- name: “概述”
   expanded: true
   items:
     - name: 设备管理概述
       href: device-management.md
-- name: 操作指南
+- name: 操作方式指南
   items:
     - name: 锁和密码
       items:
@@ -59,7 +59,7 @@
           href: device-inventory.md
     - name: 批量设备操作
       href: bulk-device-actions.md
-    - name: 疑难解答
+    - name: 故障排除
       items:
         - name: 排除设备操作故障
           href: troubleshoot-device-actions.md

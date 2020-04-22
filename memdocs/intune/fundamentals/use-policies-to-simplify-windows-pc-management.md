@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 275939c4c97b25f7e9b2ab179a7491d47801e48e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355057"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>使用策略简化 Windows 电脑管理
@@ -48,12 +48,12 @@ Microsoft Intune Center 安装在所有被管理的计算机上。 可以在 Int
 
 |策略设置|详细信息|
 |------------------|--------------------|
-|**Name**|负责管理计算机的管理员的名称。<br />最大长度：40 个字符|
+|**名称**|负责管理计算机的管理员的名称。<br />最大长度：40 个字符|
 |**电话号码**|负责管理计算机的管理员的电话号码。<br />最大长度：20 个字符|
 |**电子邮件地址**|负责管理计算机的管理员的电子邮件地址。<br />最大长度：40 个字符|
-|**网站名称**|用户的支持网站的名称。<br />> 最大长度：40 个字符|
+|**网站名称**|用户的支持网站的名称。<br />>最大长度：40 个字符|
 |**网站 URL**|支持网站的 URL。<br />最大长度：150 个字符|
-|说明 |向用户显示的注释。<br />最大长度：120 个字符|
+|**说明**|向用户显示的注释。<br />最大长度：120 个字符|
 
 有关可对 Windows 电脑配置的策略和设置的相关信息，请参阅以下资源：
 

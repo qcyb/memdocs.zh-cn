@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 76539ff04a391daf02555a309b3b374298e7e39c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346477"
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>在 iOS 设备上安装移动威胁防御应用
@@ -39,7 +39,7 @@ ms.locfileid: "79346477"
 
 移动威胁防御帮助公司保证设备安全，避免有可能尝试窃取公司信息的应用。 要添加此保护，需要向公司使用的移动威胁防御报告设备中应用的额外信息。 公司无法查看个人应用中的数据。 在使用移动威胁防御服务时，设备中的所有应用都将被添加至[公司可以查看的内容](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)。 公司可以查看的部分应用内容如下所示：
 
-* 应用名称
+* 应用程序名称
 * 应用 ID：在应用商店中标识应用的唯一名称
 * 应用版本和短版本号：应用的特定版本号
 * 应用程序包和动态大小：应用在设备中使用的空间大小

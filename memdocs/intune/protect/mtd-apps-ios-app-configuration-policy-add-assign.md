@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084847"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>使用 Intune 添加和分配移动威胁防御 (MTD) 应用
@@ -64,7 +64,7 @@ ms.locfileid: "80084847"
 
 ### <a name="configure-lookout-for-work-apps"></a>配置 Lookout for Work 应用
 
-- **Android**
+- **Outlook Web Access (OWA)**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [Lookout for Work Google 应用商店 URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise) 用于“应用商店 URL”。 
 
 - **iOS**
@@ -84,7 +84,7 @@ ms.locfileid: "80084847"
 
     4. 添加其他重定向 URI： **&lt;companyportal://code/>** ，后跟原始重定向 URI 的 URL 编码形式版本。
 
-    5. 将**委托的权限**添加到应用。
+    5. 向应用添加**委派权限**。
 
     > [!NOTE]
     > 有关详细信息，请参阅[使用 Azure AD 配置本机客户端应用程序](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application)。
@@ -95,7 +95,7 @@ ms.locfileid: "80084847"
 
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>配置 Symantec Endpoint Protection Mobile 应用
 
-- **Android**
+- **Outlook Web Access (OWA)**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [SEP Mobile 应用商店 URL](https://play.google.com/store/apps/details?id=com.skycure.skycure) 用于“应用商店 URL”。   对于  “最低操作系统”，请选择“Android 4.0 (Ice Cream Sandwich)”  。
 
 - **iOS**
@@ -103,7 +103,7 @@ ms.locfileid: "80084847"
 
 ### <a name="configure-check-point-sandblast-mobile-apps"></a>配置 Check Point SandBlast Mobile 应用
 
-- **Android**  
+- **Outlook Web Access (OWA)**  
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [Check Point SandBlast Mobile 应用商店 URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) 用于“应用商店 URL”  。
 
 - **iOS**
@@ -111,7 +111,7 @@ ms.locfileid: "80084847"
 
 ### <a name="configure-zimperium-apps"></a>配置 Zimperium 应用
 
-- **Android**
+- **Outlook Web Access (OWA)**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [Zimperium 应用商店 URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) 用于“应用商店 URL”。 
 
 - **iOS**
@@ -119,7 +119,7 @@ ms.locfileid: "80084847"
  
 ### <a name="configure-pradeo-apps"></a>配置 Pradeo 应用
 
-- **Android**
+- **Outlook Web Access (OWA)**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [Pradeo 应用商店 URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) 用于“应用商店 URL”。 
 
 - **iOS**
@@ -127,7 +127,7 @@ ms.locfileid: "80084847"
 
 ### <a name="configure-better-mobile-apps"></a>配置 Better Mobile 应用
 
-- **Android**
+- **Outlook Web Access (OWA)**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [Active Shield 应用商店 URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) 用于“应用商店 URL”。 
 
 - **iOS**
@@ -135,7 +135,7 @@ ms.locfileid: "80084847"
 
 ### <a name="configure-sophos-apps"></a>配置 Sophos 应用
 
-- **Android**
+- **Outlook Web Access (OWA)**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [Sophos 应用商店 URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) 用于“应用商店 URL”。 
 
 - **iOS**
@@ -143,7 +143,7 @@ ms.locfileid: "80084847"
 
 ### <a name="configure-wandera-apps"></a>配置 Wandera 应用
 
-- **Android**
+- **Outlook Web Access (OWA)**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 将此 [Wandera Mobile 应用商店 URL](https://play.google.com/store/apps/details?id=com.wandera.android) 用于“应用商店 URL”  。 对于  “最低操作系统”，请选择“Android 5.0”  。
 
 - **iOS**

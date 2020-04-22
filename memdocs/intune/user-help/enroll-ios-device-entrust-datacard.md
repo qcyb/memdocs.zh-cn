@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 763d67c393eede1920f356e54d6ab422bc75a480
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e1f1c04bed91de3ac193ea3b6a07bde4e8658ba
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348492"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638246"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>通过公司门户和 Entrust Datacard 设置 iOS 或 iPadOS 设备
 

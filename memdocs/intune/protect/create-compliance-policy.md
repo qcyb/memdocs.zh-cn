@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551386"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中创建符合性策略
@@ -52,8 +52,8 @@ ms.locfileid: "80551386"
   - iOS
   - macOS
   - Windows 10
-  - Windows 8.1
-  - Windows Phone 8.1
+  - Windows 8。1
+  - Windows Phone 8。1
 
 - 在 Intune 中注册设备（用于查看符合性状态）
 
@@ -166,7 +166,7 @@ Intune 使用不同的刷新周期来检查符合性策略的更新。 如果设
 |---------|---------|
 |Unknown     |1|
 |不适用     |2|
-|合规|3|
+|符合|3|
 |InGracePeriod|4|
 |不符合|5|
 |错误|6|

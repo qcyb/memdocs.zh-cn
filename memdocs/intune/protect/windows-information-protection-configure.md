@@ -18,17 +18,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 18f353a6888ee30af2371ebb5a7f705ac0c060f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349337"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>如何在 Microsoft Intune 中配置 Windows 信息保护
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-随着企业中员工拥有的设备的增加，通过应用和服务（例如电子邮件、社交媒体和公有云，但这是不受企业的控制的）产生意外的数据泄漏的风险也不断增加。 例如，某位员工从个人电子邮件帐户发送最新的工程图片、将产品信息复制并粘贴到推文，或将正在进行的销售报表保存到公有云存储。
+随着企业中员工拥有的设备的增加，通过应用和服务（如电子邮件、社交媒体和公共云）发生的意外数据泄露的风险也在增加，这是不受企业控制的。 例如，某位员工从个人电子邮件帐户发送最新的工程图片、将产品信息复制并粘贴到推文，或将正在进行的销售报表保存到公有云存储。
 
 “Windows 信息保护”  有助于防范这种潜在的数据泄露，而不会干扰员工体验。 它还有助于防范企业应用和数据在企业自有设备和员工带到工作中的个人设备上的意外数据泄露，而无需对你的环境或其他应用进行更改。
 

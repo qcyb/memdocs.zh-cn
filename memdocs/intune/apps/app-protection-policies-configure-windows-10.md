@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323695"
 ---
 # <a name="get-ready-for-windows-information-protection-in-windows-10"></a>为 Windows 10 中的 Windows 信息保护做准备 
@@ -41,7 +41,7 @@ ms.locfileid: "80323695"
 6. 配置“配置”  窗格上的“还原默认 MAM URL”  组中的设置。
 
    **MAM 用户范围**  
-   使用 MAM 自动注册来管理员工的 Windows 设备上的企业数据。 将 MAM 自动注册配置为使用用户自己的设备方案。<ul><li>**无**<br>选择是否所有用户均不可在 MAM 中注册。</li><li>**部分**<br>选择包含将要在 MAM 中进行注册的用户的 Azure AD 组。</li><li>**所有**<br>选择是否所有用户均可在 MAM 中注册。</li></ul>
+   使用 MAM 自动注册来管理员工的 Windows 设备上的企业数据。 将 MAM 自动注册配置为使用用户自己的设备方案。<ul><li>**无**<br>选择是否所有用户均不可在 MAM 中注册。</li><li>**部分**<br>选择包含将要在 MAM 中进行注册的用户的 Azure AD 组。</li><li>**全部**<br>选择是否所有用户均可在 MAM 中注册。</li></ul>
 
    **MAM 使用条款 URL**  
    Microsoft Intune 不支持 MAM 使用条款 URL。 必须将此输入框留空，以便应用保护策略。

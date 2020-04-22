@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d9da6870caed61917d8093e2dd25882cec72d987
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353250"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 iOS/iPadOS 设置
@@ -39,7 +39,7 @@ ms.locfileid: "79353250"
 
 [创建合规性策略](create-compliance-policy.md#create-the-policy)。 对于“平台”  ，请选择“iOS/iPadOS”  。
 
-## <a name="email"></a>电子邮件
+## <a name="email"></a>Email
 
 - **要求移动设备具有托管的电子邮件配置文件**：  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -61,7 +61,7 @@ ms.locfileid: "79353250"
   使用此设置将风险评估视为合规性的条件。 选择允许的威胁级别：  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
   - **安全** - 此选项是最安全的，意味着设备不能具有任何威胁。 如果检测到设备具有任一级别的威胁，则会评估为不符合要求。
-  - **低** - 若设备上仅存在低级威胁，则将其评为合规。 高于此级别的威胁均会使设备处于不合规状态。
+  - **低** - 若设备上仅存在低级威胁，则将其评为合规。 低级以上的任意威胁都将使设备不合规。
   - **中** - 若设备上存在的威胁为低级或中级，则将其评为合规。 如果检测到设备存在高级威胁，则确定其不符合要求。
   - **高** - 此选项是最不安全的，因为它允许所有威胁级别。 如果将此解决方案仅用作报告目的，则可能有用。
 
@@ -83,7 +83,7 @@ ms.locfileid: "79353250"
 
 ## <a name="system-security"></a>系统安全
 
-### <a name="password"></a>Password
+### <a name="password"></a>密码
 
 > [!NOTE]
 > 符合性或配置策略应用到 iOS/iPadOS 设备后，系统会每 15 分钟提示用户一次，要求设置密码。 系统会持续提示用户，直到用户设置密码。 为 iOS/iPadOS 设备设置密码时，加密过程将自动启动。 在密码被禁用前，设备将一直保持为加密状态。
