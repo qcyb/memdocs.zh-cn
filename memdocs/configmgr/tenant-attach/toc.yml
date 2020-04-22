@@ -1,0 +1,8 @@
+- name: 租户附加文档
+  href: index.yml
+- name: 部署和使用
+  items:
+    - name: 启用租户附加
+      href: device-sync-actions.md
+    - name: 排除设备操作故障
+      href: technical-reference.md

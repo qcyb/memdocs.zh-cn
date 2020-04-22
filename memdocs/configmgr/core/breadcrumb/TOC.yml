@@ -1,0 +1,7 @@
+- name: 配置管理器
+  tocHref: /azure/azure-monitor/
+  topicHref: /sccm/index
+  items:
+    - name: 核心基础结构
+      tocHref: /azure/azure-monitor/platform/
+      topicHref: /sccm/core/understand/introduction

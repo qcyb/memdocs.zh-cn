@@ -1,0 +1,48 @@
+- name: MDM 文档
+  href: index.yml
+- name: 本地 MDM
+  items:
+    - name: 什么是本地 MDM
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: 规划本地 MDM
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Setup
+      items:
+        - name: 安装本地角色
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: 设置证书
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: 设置进行注册
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: 注册设备
+      items:
+        - name: 注册概述
+          href: deploy-use/enroll-devices-on-premises-mdm.md
+        - name: 用户注册
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: 批量注册
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: 管理设备并保护数据
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: 管理应用程序
+      href: deploy-use/management-tasks-applications.md
+    - name: 管理配置设置
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: 管理资源访问
+      items:
+        - name: 创建 PFX 证书配置文件
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: 导入 PFX 证书配置文件
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: Wi-Fi 配置文件
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+        - name: VPN 配置文件
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+- name: Exchange Server 连接器
+  items:
+    - name: 使用 Exchange 管理设备
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: 安装 Exchange Connector
+      href: deploy-use/install-configure-exchange-connector.md
+- name: 混合 MDM 发生了什么情况？
+  href: understand/what-happened-to-hybrid.md

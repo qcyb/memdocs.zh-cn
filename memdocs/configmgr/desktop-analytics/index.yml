@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: 桌面分析文档
+summary: 桌面分析是一项云服务，可与 Configuration Manager 集成。 它提供的见解有助于更新 Windows 客户端。
+metadata:
+  title: 桌面分析文档
+  titleSuffix: Configuration Manager
+  description: 桌面分析是一项云服务，可与 Configuration Manager 集成。 它提供的见解有助于更新 Windows 客户端。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741402"
+landingContent:
+- title: 关于桌面分析
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什么是桌面分析？
+      url: overview.md
+    - text: 新增功能
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: Windows 10 试点
+      url: tutorial-windows10.md
+- title: 入门
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 设置桌面分析
+      url: set-up.md
+    - text: 连接 Configuration Manager
+      url: connect-configmgr.md
+    - text: 注册设备
+      url: enroll-devices.md
+- title: 资源
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 桌面分析常见问题解答
+      url: faq.md
+    - text: 启用数据共享
+      url: enable-data-sharing.md
+    - text: 监视器连接运行状况
+      url: monitor-connection-health.md
+    - text: 桌面分析故障排除
+      url: troubleshooting.md

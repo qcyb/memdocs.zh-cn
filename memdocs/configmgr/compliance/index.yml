@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: 设备合规性文档
+summary: Configuration Manager 提供了管理组织中设备的配置和合规性所需的工具与资源。
+metadata:
+  title: 设备合规性文档
+  titleSuffix: Configuration Manager
+  description: Configuration Manager 提供了管理组织中设备的配置和合规性所需的工具与资源。
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+  ms.openlocfilehash: 7b66409e8f4082927225246bb5144efb8b65d567
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741096"
+landingContent:
+- title: 关于设备合规性
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 设备合规性简介
+      url: understand/ensure-device-compliance.md
+    - text: 符合性设置入门
+      url: get-started/get-started-with-compliance-settings.md
+  - linkListType: architecture
+    links:
+    - text: 规划和配置符合性设置
+      url: plan-design/plan-for-and-configure-compliance-settings.md
+- title: 入门
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 管理符合性的常见任务
+      url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - text: 创建 Windows 10 设备的配置项目
+      url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+    - text: 创建配置基线
+      url: deploy-use/create-configuration-baselines.md
+  - linkListType: deploy
+    links:
+    - text: 部署配置基线
+      url: deploy-use/deploy-configuration-baselines.md
+  - linkListType: how-to-guide
+    links:
+    - text: 监视符合性设置
+      url: deploy-use/monitor-compliance-settings.md
+- title: 主要任务
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 创建自定义配置项目
+      url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - text: 创建远程连接配置文件
+      url: deploy-use/create-remote-connection-profiles.md
+    - text: 创建用户数据和配置文件配置项目
+      url: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - linkListType: concept
+    links:
+    - text: OneDrive for Business 配置文件
+      url: deploy-use/onedrive-profile.md
+    - text: 管理配置数据
+      url: deploy-use/management-tasks-for-configuration-data.md

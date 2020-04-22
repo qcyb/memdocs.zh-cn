@@ -1,0 +1,16 @@
+- name: 管理服务文档
+  href: index.yml
+- name: 什么是管理服务？
+  href: overview.md
+- name: 操作指南
+  items:
+    - name: 如何设置
+      href: set-up.md
+    - name: 如何使用
+      href: usage.md
+- name: 参考
+  items:
+    - name: 常见问题解答
+      href: faq.md
+    - name: 发行说明
+      href: release-notes.md

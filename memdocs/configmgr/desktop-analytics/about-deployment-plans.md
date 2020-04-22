@@ -1,0 +1,138 @@
+---
+title: 桌面分析中的部署计划
+titleSuffix: Configuration Manager
+description: 了解桌面分析中的部署计划。
+ms.date: 01/14/2020
+ms.prod: configuration-manager
+ms.technology: configmgr-analytics
+ms.topic: conceptual
+ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c14eb9127b096f7fc4e4680735867913ea877f54
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81706625"
+---
+# <a name="about-deployment-plans-in-desktop-analytics"></a>关于桌面分析中的部署计划
+
+桌面分析收集并分析组织中的设备、应用程序和驱动程序数据。 根据此分析和你的输入，你可以使用该服务创建适用于 Windows 10 的部署计划。 部署计划具有以下功能：  
+
+- 自动建议在试点中包含哪些设备  
+
+- 确定兼容性问题和建议缓解措施  
+
+- 在更新前、更新期间和更新后评估部署的运行状况  
+
+- 跟踪部署的进度  
+
+作为部署计划的一部分，你可以执行以下操作：  
+
+- 定义要部署的 Windows 10 版本  
+
+- 选择要部署到的设备组  
+
+- 为部署创建就绪规则  
+
+- 定义应用的重要性  
+
+- 根据自动建议选择试点设备  
+
+- 根据桌面分析中的建议确定如何解决应用的问题  
+
+默认情况下，桌面分析每日刷新部署计划数据。 在部署计划中所做的任何更改（例如，将重要性分配给应用或选择要在试点中包含的设备）需要多达 24 小时才能完成处理。 若要加快此过程，可请求按需进行数据刷新。 有关详细信息，请参阅[桌面分析常见问题](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。  
+
+将桌面分析连接到 Configuration Manager 后，在部署计划中选择集合。 此集成使你能够根据桌面分析数据将 Windows 部署到集合。
+
+
+
+## <a name="readiness-rules"></a>就绪规则
+
+部署计划中提供了以下就绪规则：
+
+- 设备是否自动从 Windows 更新接收驱动程序。 如果设备从 Windows 更新接收驱动程序更新，则在就绪评估过程中确定的任何驱动程序问题都将自动标记为“就绪”  。  
+
+- Windows 应用的低安装计数阈值。 如果应用安装在超过此阈值的计算机上，则部署计划会将应用标记为“值得注意”  。 此标记表示你可以决定在试点阶段测试应用的重要性。  
+
+
+## <a name="plan-assets"></a>计划资产
+
+<!-- 4670224 -->
+
+虽然[资产](about-assets.md)区域还显示了设备和应用，但特定部署计划下的“计划资产”  区域包含附加信息。
+
+### <a name="devices"></a>设备
+
+请参阅部署计划中每个设备的“Windows 升级决策”  。
+
+由于以下原因之一，Windows 升级决定替换设备  ：
+
+- 它未通过 Windows 10 要求的处理器检查。 有关详细信息，请参阅[最低硬件要求](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)。
+- 它包含 BIOS 块
+- 它没有足够的内存
+- 系统上的启动关键组件中有驱动程序被阻止
+- 特定品牌和型号无法升级
+- 有一个显示类组件，其中包含具有以下所有属性的驱动程序块：
+    - 不会被替代
+    - 新的 OS 版本中不存在驱动程序
+    - 它尚未处于 Windows 更新中
+- 系统上有另一个阻止升级的即插即用组件
+- 存在使用 XP 模拟驱动程序的无线组件
+- 具有活动连接的网络组件将丢失其驱动程序。 换句话说，升级后可能会失去网络连接。
+
+Windows 升级决定“重新安装”表明升级将需要重新安装，而不是就地升级  。 
+
+Windows 升级决策受阻可能由以下原因引起  ：
+
+- 将一个或多个资产的升级决策设置为“不能”  。
+
+- 该设备的清单数据不完整，桌面分析无法进行完全兼容性评估。
+
+### <a name="apps"></a>应用
+
+在此部署计划中，为此应用设置“升级决策”  和“重要性”  。 有关详细信息，请参阅[如何创建部署计划](create-deployment-plans.md)。
+
+在应用的详细信息中，还可以看到以下信息：建议、兼容性风险因素和 Microsoft 已知问题。 使用此信息来帮助设置升级决策  。 有关详细信息，请参阅[兼容性评估](compat-assessment.md)。
+
+桌面分析中显示为“值得注意”  的应用基于部署计划就绪规则的低安装计数阈值。 有关详细信息，请参阅[就绪规则](create-deployment-plans.md#readiness-rules)。
+
+   > [!Tip]
+   > 有关“不重要”应用类别的详细信息，请参阅[系统和应用商店应用的自动升级决策](about-assets.md#bkmk_plan-autoapp)。 <!-- 3587232 -->
+
+
+### <a name="drivers"></a>驱动程序
+
+请参阅此部署计划中附带的驱动程序列表。 设置“升级决策”  ，查看 Microsoft 的建议，并查看兼容性风险因素。
+
+
+## <a name="importance"></a>重要性
+
+作为部署计划的一部分，设置应用的重要性  。 桌面分析检测到目标设备上已安装这些应用。 此设置可帮助桌面分析确定它在部署的试点阶段中包含的设备。
+
+如果应用安装在 2% 以下的目标设备上，则会将其标记“低安装计数”  。 2% 是默认值。 可以在就绪设置中将阈值从 0% 调整到 10%。 桌面分析会自动将这些应用标记为“升级准备就绪”  。  
+
+对于应用，为其重要性选择“关键”  、“重要”  或“不重要”  。 如果将一个应用标记为“关键”或“重要”，则桌面分析会在试点部署中包括一些具有该应用的设备。 此服务在试点中包含关键应用程序的更多实例。 如果将某个应用标记为“不重要”，则桌面分析会自动将其设置为“升级准备就绪”  。
+
+
+
+## <a name="pilot-devices"></a>试点设备
+
+桌面分析将重要性信息与全局试点设置结合起来。 然后，它将创建一个关于试点部署中应包含哪些设备的建议。 建议的试点部署包括具有不同硬件配置的设备以及一个或多个所有关键和重要应用程序的实例。 如果将某个应用标记为“关键”，则服务会在试点中建议使用更多具有该应用的设备。
+
+
+
+## <a name="deployment-plans-in-configuration-manager"></a>Configuration Manager 中的部署计划
+
+创建部署计划后，使用 Configuration Manager 部署产品。 部署开始后，桌面分析会根据计划中的设置来监视部署。
+
+
+## <a name="next-steps"></a>后续步骤
+
+- [了解桌面分析资产](about-assets.md)：设备、驱动程序和应用程序  
+
+- [了解安全和功能更新](about-updates.md)  
+
+- [创建部署计划](create-deployment-plans.md)  

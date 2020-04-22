@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: OS 部署文档
+summary: 使用 Configuration Manager 通过不同的方法部署 Windows，并自动执行任务。
+metadata:
+  title: OS 部署文档
+  titleSuffix: Configuration Manager
+  description: 使用 Configuration Manager 通过不同的方法部署 Windows，并自动执行任务。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741946"
+landingContent:
+- title: 关于 OS 部署
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: OS 部署简介
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: 基础结构要求
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: 准备进行 OS 部署
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: OS 部署方案
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: OS 部署方法
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: 入门
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 管理任务序列
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: 创建 OS 升级任务序列
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: 创建分阶段部署
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: 部署任务序列
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: 调试任务序列
+      url: deploy-use/debug-task-sequence.md
+- title: 技术参考
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 使用任务序列编辑器
+      url: understand/task-sequence-editor.md
+    - text: 关于任务序列步骤
+      url: understand/task-sequence-steps.md
+    - text: 如何使用任务序列变量
+      url: understand/using-task-sequence-variables.md
+    - text: 任务序列变量引用
+      url: understand/task-sequence-variables.md

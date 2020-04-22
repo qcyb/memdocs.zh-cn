@@ -1,0 +1,144 @@
+- name: 保护数据和基础结构文档
+  href: index.yml
+- name: 了解和探索
+  items:
+    - name: 概述
+      href: understand\protect-data-and-site-infrastructure.md
+- name: 规划和设计
+  items:
+    - name: 规划 Endpoint Protection
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: 规划 BitLocker 管理
+      href: plan-design/bitlocker-management.md
+    - name: 规划证书配置文件
+      items:
+        - name: 证书配置文件先决条件
+          href: plan-design/prerequisites-for-certificate-profiles.md
+        - name: 证书配置文件的证书模板权限
+          href: plan-design/planning-for-certificate-template-permissions.md
+    - name: Wi-Fi 和 VPN 配置文件先决条件
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: 安全和隐私
+      items:
+        - name: Wi-Fi 和 VPN 配置文件
+          href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+        - name: 证书配置文件
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: 部署和使用
+  items:
+    - name: Endpoint Protection
+      items:
+        - name: Endpoint Protection 概述
+          href: deploy-use/endpoint-protection.md
+        - name: 配置 Endpoint Protection
+          items:
+            - name: 如何配置 Endpoint Protection
+              href: deploy-use/endpoint-protection-configure.md
+            - name: 站点系统角色
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: 警报
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: 定义更新
+              items:
+                - name: 定义更新概述
+                  href: deploy-use/endpoint-definition-updates.md
+                - name: ConfigMgr 更新
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: WSUS 更新
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Microsoft 更新
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: 恶意软件防护中心
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: 网络共享更新
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: 部署策略
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: 配置客户端
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Windows 防火墙策略
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Microsoft Defender 高级威胁防护
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: 创建和部署攻击防护策略
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: 创建和部署应用程序防护策略
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Windows Defender 应用程序控制设置
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+        - name: 反恶意软件和防火墙任务
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Endpoint Protection 方案
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Endpoint Protection 客户端帮助
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: 客户端问题疑难解答
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Windows Defender 常见问题解答
+          href: deploy-use/endpoint-protection-client-faq.md
+    - name: BitLocker 管理
+      items:
+        - name: 加密恢复数据
+          href: deploy-use/bitlocker/encrypt-recovery-data.md
+        - name: 部署 BitLocker 管理
+          href: deploy-use/bitlocker/deploy-management-agent.md
+        - name: 设置 BitLocker 门户
+          href: deploy-use/bitlocker/setup-websites.md
+        - name: 自定义自助服务门户
+          href: deploy-use/bitlocker/customize-self-service-portal.md
+        - name: 查看 BitLocker 报表
+          href: deploy-use/bitlocker/view-reports.md
+        - name: Administration and monitoring 网站
+          href: deploy-use/bitlocker/helpdesk-portal.md
+        - name: 自助服务门户
+          href: deploy-use/bitlocker/self-service-portal.md
+    - name: Windows Hello 企业版设置
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: 证书配置文件
+      items:
+        - name: 证书配置文件简介
+          href: deploy-use/introduction-to-certificate-profiles.md
+        - name: 创建证书配置文件
+          href: deploy-use/create-certificate-profiles.md
+        - name: 配置证书基础结构
+          href: deploy-use/certificate-infrastructure.md
+    - name: Wi-Fi 配置文件
+      items:
+        - name: 创建 Wi-Fi 配置文件
+          href: deploy-use/create-wifi-profiles.md
+    - name: VPN 配置文件
+      items:
+        - name: VPN 配置文件
+          href: deploy-use/vpn-profiles.md
+        - name: 创建 VPN 配置文件
+          href: deploy-use/create-vpn-profiles.md
+        - name: 查找每应用 VPN 的包系列名称 (PFN)
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: 部署 Wi-fi、VPN、电子邮件和证书配置文件
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: 条款和条件设置
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    - name: 监视器保护
+      items:
+        - name: 监视 Wi-Fi、电子邮件和 VPN 配置文件
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: 监视证书配置文件
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: 监视 Endpoint Protection
+          href: deploy-use/monitor-endpoint-protection.md
+- name: 技术参考
+  items:
+    - name: BitLocker 管理
+      items:
+        - name: 设置参考
+          href: tech-ref/bitlocker/settings.md
+        - name: BitLocker 疑难解答
+          href: tech-ref/bitlocker/troubleshoot.md
+        - name: BitLocker 事件日志
+          href: tech-ref/bitlocker/about-event-logs.md
+        - name: 客户端事件日志
+          href: tech-ref/bitlocker/client-event-logs.md
+        - name: 服务器事件日志
+          href: tech-ref/bitlocker/server-event-logs.md
+        - name: 不符合性代码
+          href: tech-ref/bitlocker/non-compliance-codes.md

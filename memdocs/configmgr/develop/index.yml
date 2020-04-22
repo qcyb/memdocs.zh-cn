@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Configuration Manager SDK 文档
+summary: Configuration Manager SDK 包含特定文档和示例，这些文档和示例对开发可访问和修改 Configuration Manager 数据的应用程序很有用。
+metadata:
+  title: SDK 文档
+  titleSuffix: Configuration Manager
+  description: Configuration Manager SDK 包含特定文档和示例，这些文档和示例对开发可访问和修改 Configuration Manager 数据的应用程序很有用。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: 94ad699d6de55ffbbc77722b2e9e4063844f78a3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741708"
+landingContent:
+- title: 关于 Configuration Manager SDK
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SDK 概述
+      url: core/misc/system-center-configuration-manager-sdk.md
+    - text: 新增功能
+      url: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+    - text: SDK 要求
+      url: core/reqs/about-configuration-manager-sdk-requirements.md
+  - linkListType: reference
+    links:
+    - text: Configuration Manager API 参考
+      url: reference/configuration-manager-reference.md
+    - text: 管理服务 REST API
+      url: adminservice/index.yml
+- title: 入门
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Configuration Manager 编程入门
+      url: core/understand/getting-started-with-configuration-manager-programming.md
+    - text: 体系结构概述
+      url: core/understand/architectural-overview.md
+    - text: PowerShell 入门
+      url: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+  - linkListType: reference
+    links:
+    - text: Configuration Manager PowerShell cmdlet
+      url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+- title: 主要任务
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: WBEMTEST 简介
+      url: core/understand/introduction-to-wbemtest.md
+  - linkListType: reference
+    links:
+    - text: Configuration Manager 架构 SQL 视图
+      url: core/understand/configuration-manager-schema-sql-views.md
+    - text: SMS_R_System 服务器 WMI 类
+      url: reference/core/clients/manage/sms_r_system-server-wmi-class.md
