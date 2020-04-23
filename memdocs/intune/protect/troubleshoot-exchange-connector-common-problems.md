@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79350624"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>解决 Intune Exchange Connector 的常见问题
@@ -84,7 +84,7 @@ ms.locfileid: "79350624"
 
    1. 确定 EWS URL。 Exchange 的默认 EWS URL 是 `https://<mailServerFQDN>/ews/exchange.asmx`，但你的 URL 可能不同。 请与 Exchange 管理员联系，以验证你的环境 URL 是否正确。
 
-   2. 编辑 *OnPremisesExchangeConnectorServiceConfiguration.xml* 文件。 默认情况下，该文件位于运行 Exchange Connector 的计算机上的 %ProgramData%\Microsoft\Windows Intune Exchange Connector 中  。 在文本编辑器中打开文件，然后更改以下行，以反映环境的 EWS URL： `<ExchangeWebServiceURL> https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. 编辑 *OnPremisesExchangeConnectorServiceConfiguration.xml* 文件。 默认情况下，该文件位于运行 Exchange Connector 的计算机上的 %ProgramData%\Microsoft\Windows Intune Exchange Connector 中  。 在文本编辑器中打开文件，然后更改以下行，以反映环境的 EWS URL： `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. 保存文件，然后重启计算机或 Microsoft Intune Exchange Connector 服务。
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 709824c91173edd0b322e1477c3204db34db7a9f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086296"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Microsoft Intune App SDK 入门
@@ -179,7 +179,7 @@ Intune|iOS|Android|说明|
 3. 单击“+ 添加权限”  。
 4. 单击“我的组织使用的 API”  。 
 5. 在搜索框中，输入“Microsoft 移动应用程序管理”  。
-6. 在“委托的权限”  下，选择“DeviceManagementManagedApps.ReadWrite:读取和写入用户的应用管理数据”  * 复选框。
+6. 在“委托的权限”  下，选择“DeviceManagementManagedApps.ReadWrite:  读取和写入用户的应用管理数据”* 复选框。
 7. 单击“添加权限”  。
 
 > [!NOTE]

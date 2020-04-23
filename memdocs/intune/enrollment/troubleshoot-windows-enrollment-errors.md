@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326870"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 中的 Windows 设备注册问题疑难解答
@@ -224,7 +224,7 @@ ms.locfileid: "80326870"
 ### <a name="auto-mdm-enroll-failed"></a>自动注册 MDM：Failed 
 
 尝试使用组策略自动注册 Windows 10 设备时，遇到以下问题： 
-- 在任务计划程序的“Microsoft” > “Windows” > “EnterpriseMgmt”下，“由注册客户端创建的用于从 AAD 自动注册 MDM 的计划”任务的最后运行结果如下所示     ：事件 76 自动注册 MDM:  失败(未知 Win32 错误代码: 0x8018002b)       
+- 在任务计划程序的“Microsoft” > “Windows” > “EnterpriseMgmt”下，“由注册客户端创建的用于从 AAD 自动注册 MDM 的计划”任务的最后运行结果如下所示     ：事件 76 自动注册 MDM: 失败(未知 Win32 错误代码: 0x8018002b)       
 - 在事件查看器中，在“Applications and Services Logs/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/Admin”  下记录以下事件：   
     ```asciidoc
     Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
