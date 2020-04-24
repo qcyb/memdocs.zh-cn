@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: 在 Microsoft Intune 中注册设备
-summary: 可通过几种方法来注册员工的设备。 每种方法取决于设备的所有权（个人或公司）、设备类型（iOS、Windows、Android）和管理需求（重置、关联、锁定）。
+summary: 有多种方法可注册工作场所的设备。 每种方法取决于设备的所有权（个人或公司）、设备类型（iOS、Windows、Android）和管理需求（重置、关联、锁定）。
 metadata:
   title: 在 Microsoft Intune 中注册
   description: 用于在 Microsoft Intune 中注册的登陆页
@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333934"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077948"
 landingContent:
 - title: 了解注册
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: 设置 iOS/iPadOS 注册
       url: ios-enroll.md
-    - text: 通过 Apple 设备注册计划自动注册 iOS/iPadOS 设备
+    - text: 通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备
       url: device-enrollment-program-enroll-ios.md
     - text: 设置 iOS/iPadOS 和 iPadOS 用户注册
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: 设置 macOS 注册
       url: macos-enroll.md
-    - text: 使用“设备注册计划”或 Apple School Manager 自动注册 macOS 设备
+    - text: 使用“自动设备注册”或 Apple School Manager 自动注册 macOS 设备
       url: device-enrollment-program-enroll-macos.md
     - text: 通过 Apple Configurator 设置 iOS/iPadOS 设备注册
       url: apple-configurator-enroll-ios.md
