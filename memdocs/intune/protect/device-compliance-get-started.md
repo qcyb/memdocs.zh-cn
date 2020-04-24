@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/13/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ccc5c93d72c026c38616c8fdcfea6f81f153aa0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fd126e59b8162a66815e89d0e80850fe2fe9c2d4
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771069"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>在设备上设置规则以允许使用 Intune 访问组织中的资源
 
@@ -82,7 +82,7 @@ Intune 使用 Azure Active Directory (AD) [条件访问](https://docs.microsoft.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>部署设备符合性策略的方法
 
-可向用户组中的用户或设备组中的设备部署符合性策略。 将符合性策略部署到用户后，会对所有用户设备检查符合性。 在 Windows 10 版本 1803 和更高版本的设备上，  如果主要用户未注册设备，则建议部署到设备组。 在此方案中使用设备组有助于生成符合性报告。
+可向用户组中的用户或设备组中的设备部署符合性策略。 将符合性策略部署到用户后，会对所有用户设备检查符合性。 在此方案中使用设备组有助于生成符合性报告。
 
 Intune 还包括一组内置的符合性策略设置。 以下内置策略在已注册到 Intune 的所有设备上进行评估：
 

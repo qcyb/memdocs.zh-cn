@@ -16,17 +16,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54271edb7f9c4de240992ca2ca620866c9ca469c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2e1f4512441212d308e97122fe71369eaadd1226
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326242"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077812"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>将设备与 Intune 同步以获取最新的策略和操作
 
 
- “同步”设备操作会强制所选设备立即通过 Intune 签入。 当设备签入时，该设备会立即收到已分配给自己的任何挂起的操作或策略。 此功能可帮助立即验证和对已分配的策略进行故障排除，而无需等待下一个安排的签入。
+ “同步”设备操作会强制所选设备立即通过 Intune 签入。 当设备签入时，该设备会立即收到已分配给自己的任何挂起的操作或策略。 此功能可帮助用户立即验证已分配的策略并对其进行故障排除，而无需等待下一次计划的签入。
 
 ## <a name="supported-platforms"></a>受支持的平台
 
