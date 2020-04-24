@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a82ff8135fac84c866c819bb78d080111bd1bffa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702595"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073936"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager 版本 1702 中的新增功能
 
@@ -92,7 +92,7 @@ Configuration Manager Current Branch 的更新 1702 作为控制台内更新提�
   可选择下载并安装其他可用更新，即使它们不是最新版本。 如果下载了较旧的版本，你将收到此更新已由较新更新替换的警告。 若要下载可下载  的更新，在控制台中选择更新，然后单击“下载”  。
 
 - **针对较旧更新的清理功能得到改进**   
-  已添加自动清理功能，可从站点服务器上的“EasySetupPayload”文件夹中删除不需要的下载文件。 因为这是在版本 1702 中引入的，所以在安装后续更新后（如更新汇总或未来的更新版本）开始清理工作。  
+  新增了自动清理功能，用于从站点服务器上的“EasySetupPayload”文件夹中删除不需要的下载内容。 因为这是在版本 1702 中引入的，所以在安装后续更新后（如更新汇总或未来的更新版本）开始清理工作。  
 
 
 ### <a name="data-warehouse-service-point"></a>数据仓库服务点
@@ -185,7 +185,7 @@ Configuration Manager Current Branch 的更新 1702 作为控制台内更新提�
 现在，运行任务序列出现故障时，可以返回到上一页面。 在此版本之前，出现故障时必须重启任务序列。 例如，可在以下应用场景中使用“上一页”  按钮：
 
 - 当计算机在 Windows PE 中启动时，任务序列可用之前可能会先显示任务序列启动对话框。 在此应用场景中单击“下一步”时，会显示任务序列的最后一页，同时显示一条消息告知无可用的任务序列。 现在，可单击“上一页”  以再次搜索可用任务序列。 在出现可用任务序列之前，可重复此过程。
-- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 现在，用户可以分发缺失的内容（如果尚未分发），或等待分发点上出现可用内容，然后单击“上一页”  使任务序列再次搜索内容。
+- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 现在，你可以分发缺少的内容（如果它尚未分发的话），或等待分发点上的内容可用，然后单击“上一页”  让任务序列再次搜索内容。
 
 ### <a name="pre-cache-content-for-available-deployments-and-task-sequences"></a>为可用部署和任务序列预先缓存内容
 从版本 1702 开始，对于可用的部署和任务序列，可以选择使用预先缓存内容。 借助预先缓存内容，用户可选择允许客户端在收到部署后立即下载适用的内容。 因此，当用户在软件中心中单击“安装”  时，内容便已就绪，并且安装可以快速启动，因为内容位于本地硬盘上。 有关详细信息，请参阅[配置预先缓存内容](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content)。

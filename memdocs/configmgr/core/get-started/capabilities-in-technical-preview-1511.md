@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 475cb4e9a4c6c3b90582210b0ebf4a7f69e9f643
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694285"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076333"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager Technical Preview 1511 中的功能
 
@@ -40,7 +40,7 @@ ms.locfileid: "81694285"
  尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
 
 1.  禁用 Windows 更新代理，以便它不会针对 WSUS 进行扫描（如果以前已启用）。   
-    可以设置注册表项 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** ，以指示是否针对 WSUS 或 Windows 更新扫描计算机。  值是 2 时，它不会针对 WSUS 进行扫描。  
+    可以设置注册表项 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** ，以指示是否针对 WSUS 或 Windows 更新扫描计算机。  如果值是 2，不会针对 WSUS 进行扫描。  
 
 2.  记下新属性“UseWUServer”  （Configuration Manager 资源浏览器中“Windows 更新”  节点下）。  
 
@@ -48,7 +48,7 @@ ms.locfileid: "81694285"
 
 4.  创建客户端代理设置以禁用软件更新工作流，并将该设置部署到直接连接到 WUfB 的计算机的集合。  
 
-5.  通过 WUfB 进行管理的计算机会在符合性状态中显示 **未知** ，不会计入总体符合性百分比中。  
+5.  通过 WUfB 管理的计算机会在符合性状态中显示“未知”  ，且不会计入总体符合性百分比中。  
 
 ##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a>通过 Configuration Manager 管理 Office 365 专业增强版客户端更新  
  Configuration Manager 现在能够使用 Configuration Manager 软件更新管理工作流来管理 Office 365 客户端更新。    

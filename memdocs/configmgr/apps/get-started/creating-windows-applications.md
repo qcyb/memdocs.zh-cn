@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6b7ce4fd1ab09607f167696df35f3b5f19469b0d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688985"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075721"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 Windows 应用程序
 
@@ -124,7 +124,7 @@ Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.m
 
 - 为应用任务序列定义其他元数据，包括本地化信息
 
-只能在应用上添加非 OS 部署任务序列作为部署类型。 不支持影响较大的 OS 部署或 OS 升级任务序列。 面向用户的部署仍在本地系统帐户的用户上下文中运行。
+只能在应用上添加非 OS 部署任务序列作为部署类型。 不支持影响较大的 OS 部署或 OS 升级任务序列。 <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 将此部署类型添加到应用时，请在“任务序列”页面上配置其属性  。 有关详细信息，请参阅[部署类型“任务序列”选项](../deploy-use/create-applications.md#bkmk_dt-ts)  。
 
