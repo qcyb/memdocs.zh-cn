@@ -2,7 +2,7 @@
 title: 在无 Internet 连接的情况下同步 Office 365 更新
 titleSuffix: Configuration Manager
 description: 在断开 Internet 连接的顶层软件更新点上同步 Office 365 更新。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 78b97be755659fa06466dd1bb1f6920e2a7be330
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699465"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110349"
 ---
 # <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> 从断开连接的软件更新点同步 Office 365 更新
 
 适用范围：  Configuration Manager (Current Branch)
 <!--4065163-->
 从 Configuration Manager 版本 2002 开始，可使用工具将 Office 365 更新从连接了 Internet 的 WSUS 服务器导入到已断开连接的 Configuration Manager 环境中。 以前，当你导出和导入在已断开连接的环境中更新的软件的元数据时，无法部署 Office 365 更新。 Office 365 更新需要从 Office API 和 Office CDN 下载的其他元数据，这对于已断开连接的环境是不可能的。
+
+> [!Note]
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 ## <a name="prerequisites"></a>必备条件
 

@@ -10,12 +10,12 @@ ms.assetid: 4a877bed-f6c4-4048-9421-507dc848af5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7dc4753a94dccf8a6a15751a436cecf8374e399
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0ca37a4e15f5da63ed743b541eeabc43708b0be1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691225"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075313"
 ---
 # <a name="remote-actions-with-co-management"></a>启用共同管理的远程操作
 
@@ -51,7 +51,7 @@ ms.locfileid: "81691225"
 > 拥有 Intune 功能即可在计算机上远程重置 Windows。   对于已丢失或被盗的计算机（在员工移动办公率较高的情况下更常见），此功能对我们非常重要。
 > 这是我们必须在自定义 ConfigMgr 包中构建和维护的功能。
 
-若要详细了解如何使用这些远程操作，请参阅[可用的设备操作](https://docs.microsoft.com/intune/device-management#available-device-actions)。
+若要详细了解如何使用这些远程操作，请参阅[可用的设备操作](../../intune/remote-actions/device-management.md#available-device-actions)。
 
 
 ## <a name="value-proposition"></a>价值主张
@@ -74,25 +74,25 @@ ms.locfileid: "81691225"
 
 - **删除**：如果要在 Azure 门户上从 Intune 中删除设备，请从特定设备窗格中将其删除。 设备下次签入时，会删除其中存储的任何组织数据。  
 
-有关详细信息，请参阅[使用“擦除”或“停用”操作删除设备，或手动取消注册设备](https://docs.microsoft.com/intune/devices-wipe)。
+有关详细信息，请参阅[使用“擦除”或“停用”操作删除设备，或手动取消注册设备](../../intune/remote-actions/devices-wipe.md)。
 
 #### <a name="selective-wipe"></a>选择性擦除
 <!--SCCMDocs issue 973-->
 当你选择“应用选择性擦除”  时，会删除公司应用数据，但不会删除个人数据。 当设备报告为丢失或被盗时，使用此操作。 
 
-有关详细信息，请参阅[如何仅擦除 Intune 托管应用中的企业数据](https://docs.microsoft.com/intune/apps-selective-wipe)。
+有关详细信息，请参阅[如何仅擦除 Intune 托管应用中的企业数据](../../intune/apps/apps-selective-wipe.md)。
 
 #### <a name="sync"></a>同步
  “同步”设备操作会强制所选设备立即通过 Intune 签入。 当设备签入时，该设备会立即收到用户已向其分配的任何挂起的操作或策略。
 
 此功能可帮助用户立即验证已分配的策略并对其进行故障排除，而无需等待下一次计划的签入。
 
-有关详细信息，请参阅[通过 Intune 同步设备以获取最新策略和操作](https://docs.microsoft.com/intune/device-sync)。
+有关详细信息，请参阅[通过 Intune 同步设备以获取最新策略和操作](../../intune/remote-actions/device-sync.md)。
 
 #### <a name="restart"></a>重启
  “重启”设备操作将重启你选择的设备。 当重新启动挂起，但用户没有可行的方法时，此操作非常有用。
 
-有关详细信息，请参阅[使用 Intune 远程重启设备](https://docs.microsoft.com/intune/device-restart)。
+有关详细信息，请参阅[使用 Intune 远程重启设备](../../intune/remote-actions/device-restart.md)。
 
 #### <a name="fresh-start"></a>全新启动
  “全新启动”设备操作将删除在运行 Windows 10 版本 1703 或更高版本的设备上安装的所有应用。 “全新启动”有助于删除新设备通常安装的预安装 (OEM) 应用。
@@ -101,12 +101,12 @@ ms.locfileid: "81691225"
 
 如果你已预先确定有关哪些应用应存在于设备上的标准，则此操作将筛选掉不满足条件的应用。
 
-有关详细信息，请参阅[通过 Intune 使用“全新启动”重置 Windows 10 设备](https://docs.microsoft.com/intune/device-fresh-start)。 
+有关详细信息，请参阅[通过 Intune 使用“全新启动”重置 Windows 10 设备](../../intune/remote-actions/device-fresh-start.md)。 
 
 #### <a name="remote-control"></a>远程控制
 可使用 [TeamViewer](https://www.teamviewer.com/) 远程管理 Intune 托管的设备。 TeamViewer 是第三方程序，需另行购买。
 
-有关详细信息，请参阅[使用 TeamViewer 远程管理 Intune 设备](https://docs.microsoft.com/intune/device-profile-android-teamviewer)。 
+有关详细信息，请参阅[使用 TeamViewer 远程管理 Intune 设备](../../intune/remote-actions/teamviewer-support.md)。
 
 
 
@@ -114,5 +114,4 @@ ms.locfileid: "81691225"
 
 与通过 TeamViewer 进行远程控制不同，若要在 Intune 中开始使用这些远程设备操作，在[启用共同管理](how-to-enable.md)后无需进行其他设置。
 
-有关使用 TeamViewer 进行远程控制的详细信息，请参阅[使用 TeamViewer 远程管理 Intune 设备](https://docs.microsoft.com/intune/device-profile-android-teamviewer)。 
-
+有关使用 TeamViewer 进行远程控制的详细信息，请参阅[使用 TeamViewer 远程管理 Intune 设备](../../intune/remote-actions/teamviewer-support.md)。

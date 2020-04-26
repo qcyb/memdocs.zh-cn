@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3a60134e33449f2de181dd2dd39f4783383a889d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73e3e19df4ce545e4cbb36109da2710e848f1159
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705635"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076214"
 ---
 # <a name="capabilities-in-technical-preview-1603-for-configuration-manager"></a>Configuration Manager Technical Preview 1603 中的功能
 
@@ -47,7 +47,7 @@ ms.locfileid: "81705635"
 
  启用时，共享远程会话的最终用户必须先向该会话的查看者授予权限，然后查看者才能通过共享剪贴板将文件从会话传输到其本地计算机。  
 
- 这会如同以前一样为最终用户添加一层保护，如果向查看者授予了最终用户计算机的完全控制，则他们能够采用对最终用户完全透明的方式，使用共享剪贴板将文件从会话传输到其本地计算机。  
+ 这会如同以前一样为最终用户添加一层保护。如果向查看者授予了完全控制最终用户计算机的权限，则他们能够采用对最终用户完全透明的方式，使用共享剪贴板将文件从会话传输到其本地计算机。  
 
 ##  <a name="customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> 在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小  
  在 1603 Technical Preview 中，可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。   

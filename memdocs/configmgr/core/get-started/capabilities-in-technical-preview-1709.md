@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3cefbbb9824266fd5fa057a7625332e85ec0ab32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705115"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078764"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Configuration Manager Technical Preview 1709 中的功能
 
@@ -152,7 +152,7 @@ ms.locfileid: "81705115"
 #### <a name="command-line-to-install-configuration-manager-client"></a>安装 Configuration Manager 客户端的命令行
 在适用于 Windows 10 设备（还不是 Configuration Manager 客户端）的 Intune 中创建应用。 在下一节中创建应用时，请使用以下命令行：
 
-ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ CCMHOSTNAME=<云管理网关相互身份验证终结点 URL> SMSSiteCode=<站点代码> SMSMP=https://<MP 的 FQDN> AADTENANTID=<AAD 租户 ID> AADTENANTNAME=<租户名> AADCLIENTAPPID=<AAD 集成的 Server AppID> AADRESOURCEURI=https://<资源 ID>”        
+ccmsetup.msi CCMSETUPCMD="/mp:&#60;云管理网关相互身份验证终结点 UR&#62;/ CCMHOSTNAME=&#60;云管理网关相互身份验证终结点 URL&#62; SMSSiteCode=&#60;站点代码&#62; SMSMP=https:&#47;/&#60;MP 的 FQDN&#62; AADTENANTID=&#60;AAD 租户 ID&#62; AADTENANTNAME=&#60;租户名&#62; AADCLIENTAPPID=&#60;AAD 集成的 Server AppID&#62; AADRESOURCEURI=https:&#47;/&#60;资源 ID&#62;"        
 
 例如，如果具有以下值：
 
@@ -173,7 +173,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ 
 
 将使用以下命令行：
 
-ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https://sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https://ConfigMgrServer”
+ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer"
 
 > [!Tip]
 >可通过使用以下步骤查找站点的命令行参数：     

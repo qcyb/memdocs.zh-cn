@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ef37b5f99cda8022166972cdc015a3c60d0458a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1785880af8c7d0d106abfe3eea8ecd390f6ce6b1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705625"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074446"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-configuration-manager"></a>Configuration Manager Technical Preview 1604 中的功能
 
@@ -39,7 +39,7 @@ ms.locfileid: "81705625"
 
 ##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>方案 1：设置适用于企业的 Windows 应用商店同步  
 
-1.  在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具。 这会为你提供以后将需要的客户端 ID。  
+1.  在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用和/或 Web API”管理工具。 这会为你提供以后将需要的客户端 ID。  
 
     1.  在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 Active Directory 节点中，选择“Azure Active Directory”，然后单击“应用程序” > “添加”    。  
 

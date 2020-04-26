@@ -5,17 +5,17 @@ description: Configuration Manager 控制台提供警报和状态以监视更新
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 278f859d58c4feda6fa13522b476ec2beb60f514
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa17e58f2687a48895502d1062a22d0c8630aea3
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709485"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110366"
 ---
 # <a name="monitor-software-updates-in-configuration-manager"></a>在 Configuration Manager 中监视软件更新
 
@@ -33,7 +33,7 @@ Configuration Manager 提供了许多方式来帮助你监视软件更新对象�
 <!--4224414-->
 （从版本 1906 中引入） 
 
-可深入查看符合性统计信息，了解哪些设备需要特定 Office 365 软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 向下钻取设备列表：
+可深入查看符合性统计信息，了解哪些设备需要特定 Microsoft 365 应用版软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 向下钻取设备列表：
 
 1. 转到“软件库” > “软件更新” > “所有软件更新”    。
 1. 选择至少一台设备所需的任何更新。

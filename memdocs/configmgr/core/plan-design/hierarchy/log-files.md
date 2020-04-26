@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f203861e2f82aa7eb0942a22a7b16cf5dd49616c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6cd64d49abf7392c949a76ef198dabfc543dce7c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706525"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110162"
 ---
 # <a name="log-file-reference"></a>日志文件引用
 
@@ -828,7 +828,7 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
-|AlternateHandler.log|在客户端调用 Office 即点即用 COM 接口以下载和安装 Office 365 客户端更新时记录详细信息。 它类似于在调用 Windows 更新代理 API 以下载和安装 Windows 更新时使用 WuaHandler。<!-- SCCMDocs#888 -->|客户端|
+|AlternateHandler.log|在客户端调用 Office 即点即用 COM 接口以下载和安装 Microsoft 365 企业应用版客户端更新时，会记录详细信息。 它类似于在调用 Windows 更新代理 API 以下载和安装 Windows 更新时使用 WuaHandler。<!-- SCCMDocs#888 -->|客户端|
 |Ccmperf.log|记录与数据维护和捕获（与客户端性能计数器相关）关联的活动。|客户端|
 |DeltaDownload.log|记录有关使用传递优化下载的快速更新和更新的相关下载信息。|客户端|  
 |PatchDownloader.log|记录有关从更新源将软件更新下载到站点服务器上的下载目的地的过程的详细信息。|手动下载更新时，此日志文件将位于运行控制台的计算机上运行控制台的用户的 %temp% 目录中。 对于自动部署规则，如果在站点服务器上安装了 ConfigMgr 客户端，则此日志文件将位于 %windir%\CCM\Logs 中的站点服务器上。|  

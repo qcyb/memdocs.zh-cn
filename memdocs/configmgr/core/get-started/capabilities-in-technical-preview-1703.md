@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cbdcc7a4774c9b57ab4a836719ebfc408a2d771d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705275"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076146"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager Technical Preview 1703 中的功能
 
@@ -58,7 +58,7 @@ Softwarecenter:SoftwareId= 应用程序标识符
 
 1. 在 Configuration Manager 控制台中，单击“软件库”  。
 2. 在“软件库”工作区中，展开“应用程序管理”  ，然后单击“应用程序”  。
-3. 在“应用程序”  视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”  。 此时列表中将显示每个应用程序的唯一 ID。
+3. 在“应用程序”  视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”  。 此时，列表中会显示每个应用程序的唯一 ID。
 4. 请注意要提供链接的应用程序的“CI 唯一 ID”，例如  ：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5. 然后，删除应用程序 GUID 后的所有文本，在本例中为 **/2**。 剩下的即为应用程序标识符。
 6. 最后，若要完成构造链接，请在标识符前附加 **Softwarecenter:SoftwareID=** 。 使用上面的示例，最终链接将显示为：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。

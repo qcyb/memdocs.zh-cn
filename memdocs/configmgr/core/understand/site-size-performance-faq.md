@@ -7,12 +7,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 5cd23667eadc7e1caae90a135bc96be89563f883
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3e7b9f6bc861ef5a60e4c0857dc253e3c806a851
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706795"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073256"
 ---
 # <a name="configuration-manager-site-sizing-and-performance-faq"></a>Configuration Manager 站点规模和性能常见问题解答
 
@@ -178,7 +178,7 @@ SQL Server 内存分配应该四舍五入到整数 GB。 此外，随着 RAM 大
 
 ### <a name="should-i-enable-sql-compression-on-my-database"></a>应该在数据库上启用 SQL 压缩吗？
 
-不建议 Configuration Manager 数据库使用 SQL 压缩。 虽然在 Configuration Manager 数据库上启用压缩不会出现任何功能问题，但测试结果没有显示出较大的大小节省，与此相比，还可能对系统产生相当大的性能影响。
+不建议 Configuration Manager 数据库使用 SQL 压缩。 虽然在 Configuration Manager 数据库上启用压缩不会出现任何功能问题，但测试结果没有显示出大小明显缩小，与此相比，还可能对系统产生相当大的性能影响。
 
 ### <a name="should-i-enable-sql-encryption-on-my-database"></a>应该在数据库上启用 SQL 加密吗？
 
@@ -214,7 +214,7 @@ SQL Express 对辅助站点没有任何重大的性能影响，它对于大多�
 
 许多 Configuration Manager 管理员都遵循 [SQL Server 中“最大并行度”配置选项的建议和指南](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-confi)中的指导。 对于大多数新式大型硬件，根据此指导，建议的最大设置为 8。 但是，如果与处理器数量相比，运行的小型查询较多，则将其设置为更高的数量可能会有所帮助。 如果有更多内核可用，则对于较大站点而言，将最大值设置为 8 并不一定是最佳设置。 
 
-对于具有超过 8 个内核的 SQL Server，首先设置为 0，之后仅当出现性能问题或过度锁定时才进行更改。 如果在设置为 0 的情况下出现性能问题而需要更改 MaxDOP，那么可以从一个至少大于或等于用于该站点 SQL Server 大小调整的最小推荐内核数量的新值开始设置。 如果低于这个值，则几乎总是会对性能产生负面影响。 例如，用于 100,000 个客户端站点的远程 SQL Server 至少需要 12 个内核。 如果 SQL Server 有 16 个内核，请先使用值 12 测试 MaxDOP 设置。
+对于具有超过 8 个内核的 SQL Server，首先设置为 0，之后仅当出现性能问题或过度锁定时才进行更改。 如果在设置为 0 的情况下出现性能问题而需要更改 MaxDOP，那么可先使用这样一个新值，它至少大于等于推荐用于该站点 SQL Server 大小调整的最小内核数量。 如果低于这个值，则几乎总是会对性能产生负面影响。 例如，用于 100,000 个客户端站点的远程 SQL Server 至少需要 12 个内核。 如果 SQL Server 有 16 个内核，请先使用值 12 测试 MaxDOP 设置。
 
 ## <a name="other-common-performance-related-questions"></a>其他与性能相关的常见问题
 

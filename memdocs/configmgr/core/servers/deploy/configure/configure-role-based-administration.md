@@ -9,12 +9,12 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f85f55e3bf982a75b27f65cd52c846f6a02f03f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 14258c3e7e2cfe5423b97064a26fdf5616d6b0a4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704685"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078611"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>为 Configuration Manager 配置基于角色的管理
 
@@ -120,7 +120,7 @@ ms.locfileid: "81704685"
     > [!IMPORTANT]  
     > - 安装 Configuration Manager 版本 1906 时，  现有安全角色将自动获得“文件夹类”权限。 将需要为任何新安全  角色添加“文件夹类”权限，并验证现有角色是否具有适用于你的环境的适当权限。
     > 
-    > - 如果用户与创建对象者共享安全范围，则可在此用户的安全范围之外的文件夹中搜索项目。 <!--5602690-->
+    > - 如果用户与对象的创建者共享安全范围，则可在此用户的安全范围之外的文件夹中搜索项目。 <!--5602690-->
 
 ## <a name="configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a> 配置集合来管理安全性
 

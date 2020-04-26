@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8e3f375fb515808c1df39d1fdd786abb8f89a0a2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691365"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078679"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
@@ -178,7 +178,7 @@ Configuration Manager 测试并支持 Windows Server Datacenter 版本，但没�
 
 ## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> 扩展的安全更新和 Configuration Manager
 
-如果客户需要运行某些已停止支持的 Microsoft 旧产品，[扩展的安全更新 (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) 计划则是他们的终极选项。 例如，Windows 7。 它包括关键和/或重要安全更新（根据 [Microsoft 安全响应中心 (MSRC)](https://www.microsoft.com/msrc) 的定义），并且在超出产品的外延支持结束日期后最多可保存三年。
+如果客户需要运行某些已停止支持的 Microsoft 旧产品，[扩展的安全更新 (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) 计划则是他们的终极选项。 例如，Windows 7。 它包括关键和/或重要安全更新（相关定义请参见 [Microsoft 安全响应中心 (MSRC)](https://www.microsoft.com/msrc)），且在超出产品的外延支持结束日期后最多可保存三年。
 
 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 它包括 ESU 计划包含的所有产品。 通过 ESU 计划发布的安全更新将发布到 Windows Server Update Services (WSUS)。 这些更新将在 Configuration Manager 控制台中显示。 尽管不再支持将 ESU 计划包含的产品与 Configuration Manager 一起使用，但仍可使用 [Configuration Manager 当前分支的最新版本](../../servers/manage/updates.md#version-details)部署并安装通过此计划发布的 Windows 安全更新。 最新发行版还可用于将 Windows 10 部署到运行 Windows 7 的设备。
 

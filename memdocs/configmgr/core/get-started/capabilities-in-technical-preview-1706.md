@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e986827cee4911ac2204a8e2f50923dcdd71fed0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705145"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078781"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager Technical Preview 1706 中的功能
 
@@ -38,7 +38,7 @@ ms.locfileid: "81705145"
   - **在设备上阻止进行 USB 调试**
   - **阻止来自未知源的应用**
 
-    例如，如果管理员将“在设备上阻止进行 USB 调试”  设置为“true”  ，则所有未启用 USB 调试的设备均会被标记为不符合。
+    例如，如果管理员将“在设备上阻止进行 USB 调试”设置为“true”，则所有未启用 USB 调试的设备均会被标记为不符合   。
 
 **以下是此版本可以试用的新功能。**  
 
@@ -176,7 +176,7 @@ ms.locfileid: "81705145"
 
 “内容库”  选项卡：
 - 查看从主动站点服务器同步到被动模式站点服务器的内容的“状态”  。
-- 你可以选择状态为“失败”  的内容，然后从功能区选择“同步所选项”  。 此操作将尝试重新将内容从内容源同步到被动模式站点服务器。 在恢复期间，状态将显示为“正在进行”  ，并在同步后显示为“成功”  。
+- 你可以选择状态为“失败”  的内容，然后从功能区选择“同步所选项”  。 此操作会尝试重新将内容从内容源同步到被动模式站点服务器。 在恢复期间，状态将显示为“正在进行”  ，并在同步后显示为“成功”  。
 
 ### <a name="try-it-out"></a>试试看！
 请尝试完成以下任务，然后从功能区的“主页”  选项卡向我们发送“反馈”  ，让我们了解它的工作状况：
@@ -186,7 +186,7 @@ ms.locfileid: "81705145"
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>在 Device Guard 策略中包括对特定文件和文件夹的信任
 <!-- 1324676 -->
-在此版本中，我们已向 [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md) 策略管理添加了更多功能
+在此版本中，我们向 [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md) 策略管理添加了更多功能
 
 现在可以选择在 Device Guard 策略中添加对特定文件或文件夹的信任。 此操作可让你：
 
@@ -289,7 +289,7 @@ ms.locfileid: "81705145"
 ## <a name="new-client-settings-for-cloud-services"></a>云服务的新客户端设置
 <!-- 1319883 -->
 
-在此版本中，我们向 Configuration Manager 添加了两个新的客户端设置。 这两个新设置将可以在“云服务”  部分找到。  这些设置为你提供了以下功能：
+在此版本中，我们向 Configuration Manager 添加了两个新的客户端设置。 你可在“云服务”部分找到它们  。  这些设置为你提供了以下功能：
 
 - 控制哪些 Configuration Manager 客户端可以访问已配置的云管理网关。
 - 在 Azure Active Directory 中自动注册已加入域的 Windows 10 Configuration Manger 客户端。
@@ -333,7 +333,7 @@ ms.locfileid: "81705145"
 
 有关 Configuration Manager 安全角色的详细信息，请参阅[基于角色的管理基础](../understand/fundamentals-of-role-based-administration.md)。
 
-默认情况下，用户不能批准他们创建的脚本。 由于这些脚本功能非常强大、用途多样，并且可以部署到多个设备，因此，我们引入了一种新的概念，用于将脚本创建者和脚本批准者之间的角色相互分开。 这样做可以额外提升安全级别，避免在没有监督的情况下运行脚本。 你可以关闭此辅助批准策略，以方便测试，尤其是在Technical Preview 中。
+默认情况下，用户不能批准他们创建的脚本。 这些脚本功能非常强大、用途多样，而且可部署到多台设备，因此我们引入了一种新的概念，用于将脚本创建者和脚本批准者之间的角色相互分开。 这样做可以额外提升安全级别，避免在没有监督的情况下运行脚本。 你可以关闭此辅助批准策略，以方便测试，尤其是在Technical Preview 中。
 
 若允许用户批准他们自己的脚本：
 

@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1b9afc8c9cde94488908e4cd9737a58547326f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703665"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110179"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -41,7 +41,7 @@ ms.locfileid: "81703665"
 
 对等源必须属于对等缓存客户端的当前边界组。 管理点不会将相邻边界组中的对等缓存源包含在提供给客户端的内容源列表中。 它仅包含相邻边界组中的分发点。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](../../servers/deploy/configure/boundary-groups.md)。<!--SCCMDocs issue 685-->  
 
-Configuration Manager 客户端使用对等缓存将缓存中每种类型的内容提供给其他客户端。 此内容包括 Office 365 文件和快速安装文件。<!--SMS.500850-->  
+Configuration Manager 客户端使用对等缓存将缓存中每种类型的内容提供给其他客户端。 此内容包含 Microsoft 365 企业应用版文件和快速安装文件。<!--SMS.500850-->  
 
 对等缓存不会取代 Windows BranchCache 或交付优化等其他解决方案的使用。 对等缓存可与其他解决方案结合使用。 这些技术为扩展传统内容部署解决方案提供了更多选项，例如分发点。 对等缓存属于自定义解决方案，独立于 BranchCache。 即使未启用或使用 BranchCache，对等缓存仍能正常运行。  
 

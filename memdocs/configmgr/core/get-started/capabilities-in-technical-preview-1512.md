@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 03a6e7cd49bbb5a65a4364be398961c048d2a1b9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705675"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074497"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Configuration Manager 技术预览版 1512 中的功能
 
@@ -67,9 +67,9 @@ ms.locfileid: "81705675"
 
     -   此设置可以提供更高的粒度，让管理员能够在按计划完全扫描的过程中允许按需扫描网络文件，从而规避始终扫描映射的网络驱动器的风险。  
 
-    -   必须先启用“扫描网络文件”  设置（“是”），才可对此设置进行配置。  
+    -   必须先启用“扫描网络文件”设置（即设为“是”），才可对此设置进行配置  。  
 
-    -   默认情况下，此设置为“否”，表示完全扫描将不访问映射的网络驱动器。  
+    -   默认情况下，此设置为“否”，表示完全扫描将不访问已映射的网络驱动器。  
 
 -   自动示例文件提交配置：  
 
@@ -83,7 +83,7 @@ ms.locfileid: "81705675"
 
          ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
-    此外，Endpoint Protection 反恶意软件政策的“排除设置”部分中的现有“排除文件和文件夹”  设置已改进为允许设备排除。 例如，你现在可以将以下内容指定为排除项： **\device\mvfs** （适用于 Multiversion 文件系统）。 策略不会验证设备路径；将 Endpoint Protection 策略提供给客户端上必须能够解释设备字符串的反恶意软件引擎。  
+    此外，改进了 Endpoint Protection 反恶意软件策略的“排除设置”部分中的现有“排除文件和文件夹”设置。它现在允许设备排除  。 例如，你现在可以将以下内容指定为排除项： **\device\mvfs**（适用于 Multiversion 文件系统）。 策略不会验证设备路径；将 Endpoint Protection 策略提供给客户端上必须能够解释设备字符串的反恶意软件引擎。  
 
 **使用 Endpoint Protection 策略的先决条件：**  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6c01abda978cec0b971ae41a977b6e016d68ec12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704425"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078713"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Configuration Manager 版本 1602 中的新增功能
 
@@ -62,7 +62,7 @@ Configuration Manager 的更新 1602 作为控制台内部更新提供，用于�
 
 -   可用的 Windows 10 升级现在仅显示在 Configuration Manager 控制台的“Windows 10 维护服务”   \ “所有 Windows 10 更新”  节点中。 这些更新不再显示在控制台的“软件更新”   \ “所有软件更新”  节点中。  
 
--   维护服务计划被视为高风险部署，“选择集合”  窗口将仅显示满足在站点属性中配置的部署验证设置的自定义集合。 有关详细信息，请参阅[用于管理 Configuration Manager 的高风险部署的设置](../../servers/manage/settings-to-manage-high-risk-deployments.md)。  
+-   维护服务计划被视为高风险部署，“选择集合”窗口将仅显示满足在站点属性中配置的部署验证设置的自定义集合  。 有关详细信息，请参阅[用于管理 Configuration Manager 的高风险部署的设置](../../servers/manage/settings-to-manage-high-risk-deployments.md)。  
 
 -   现在 Windows 10 升级包的用户将收到一条消息，告知他们正在升级操作系统。  
 
@@ -181,7 +181,7 @@ Configuration Manager 的更新 1602 作为控制台内部更新提供，用于�
 
     -   高级：允许用户修改自动示例文件提交设置。  
 
-    此外，在 Endpoint Protection 反恶意软件政策的“排除设置”部分中，现有“排除文件和文件夹”  设置现在允许设备排除。  
+    此外，在 Endpoint Protection 反恶意软件策略的“排除设置”部分中，现有“排除文件和文件夹”设置现在允许设备排除  。  
 
 有关详细信息，请参阅[如何为 Endpoint Protection 创建和部署反恶意软件策略](../../../protect/deploy-use/endpoint-antimalware-policies.md)。  
 

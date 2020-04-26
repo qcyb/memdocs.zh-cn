@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5871ac29f8b5d4adb9866e091042300df1d64832
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690525"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078475"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>管理任务序列来自动执行任务
 
@@ -299,7 +299,7 @@ ms.locfileid: "81690525"
 
 - 当计算机在 Windows PE 中启动时，任务序列可用之前可能会先显示任务序列启动对话框。 在此应用场景中选择“下一步”时，会显示任务序列的最后一页，同时显示一条消息，指示无可用的任务序列。 现在，可选择“上一页”  以再次搜索可用任务序列。 在出现可用任务序列之前，可重复此过程。  
 
-- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 如果缺少的内容未尚未分发，请立即将其分发。 或等待分发点提供该内容。 然后选择“上一页”，让任务序列再次搜索该内容  。
+- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 如果缺少的内容尚未分发，请立即将其分发。 或等待分发点提供该内容。 然后选择“上一页”，让任务序列再次搜索该内容  。
 
 ## <a name="collection-and-device-variables"></a><a name="BKMK_CreateTSVariables"></a> 集合和设备变量
 

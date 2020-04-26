@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8af805b7183445cadbaeafa4ab21b40382f81dbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699905"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075653"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>了解客户端如何查找 Configuration Manager 的站点资源和服务
 
@@ -172,7 +172,7 @@ Intranet 上的客户端可将 DNS 用于服务定位。 这要求层次结构�
 
 **DNS 服务器支持自动更新时**，可以配置 Configuration Manager 以将 Intranet 上的管理点自动发布到 DNS，或者可以将这些记录手动发布到 DNS。 将管理点发布到 DNS 时，会在服务定位 (SRV) 记录中发布其 Intranet FQDN 和端口号。 可在站点的“管理点组件属性”中配置站点的 DNS 发布。 有关详细信息，请参阅 [Configuration Manager 的站点组件](../../../core/servers/deploy/configure/site-components.md)。  
 
-**将 DNS 区域设置为“仅安全”以进行动态更新时**，仅第一个发布到 DNS 的管理点可以使用默认权限成功进行操作。
+针对动态更新将 DNS 区域设置为“仅安全”时，只有第一个发布到 DNS 的管理点可使用默认权限成功进行操作  。
 
 如果只有一个管理点可成功发布和更改其 DNS 记录，且该管理点服务器运行良好，那么客户端就可从该管理点获取完整 MP 列表，然后查找其首选管理点。
 

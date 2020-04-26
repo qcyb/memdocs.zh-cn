@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7ae14b4d05665c6524b7bd1706c1391f8116516
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705235"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078798"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager Technical Preview 1705 中的功能
 
@@ -154,8 +154,8 @@ ms.locfileid: "81705235"
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>配置和部署 Windows Defender 应用程序防护策略
 
-[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。
-此功能将在 64 位版本的 Windows 10 创意者更新中发布预览版。 现在，若要测试此功能，必须使用此更新的预览版本。
+[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此技术预览版中，我们新增支持使用在配置后部署到集合的 Configuration Manager 符合性设置来配置此功能。
+此功能将发布预览版，适用于 64 位版本的 Windows 10 创意者更新。 现在，若要测试此功能，必须使用此更新的预览版本。
 
 
 ### <a name="before-you-start"></a>开始之前

@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3a4dee8af68fec8c08cc58b02520f53e13adfbb3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f36da59c6924f6d2f71d882f601c6dd563840d73
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704885"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022528"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -273,3 +273,5 @@ ms.locfileid: "81704885"
 4. Configuration Manager 客户端请求 Azure AD 用户令牌。 客户端使用 Azure AD 客户端应用的应用程序 ID 发出声明，且将服务器应用作为受众。 有关详细信息，请参阅 [Azure AD 安全令牌中的声明](/azure/active-directory/develop/authentication-scenarios#security-tokens)。  
 
 5. 客户端通过向云管理网关和本地启用了 HTTPS 的管理点提供 Azure AD 令牌向站点进行身份验证。  
+
+有关更多详细信息，请参阅 [Azure AD 身份验证工作流](../../../clients/manage/azure-ccmsetup.md)。

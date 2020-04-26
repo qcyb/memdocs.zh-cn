@@ -10,18 +10,18 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0edf83c736c2737f4af2f040159a71bb0348aee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6b519d60be094bb7c39f738d04322009b36a409f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689305"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075857"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>详细了解 PowerShell 脚本安全性
 
 适用范围：  Configuration Manager (Current Branch)
 
-管理员有责任在其环境中验证建议的 PowerShell 和 PowerShell 参数使用情况。 以下是一些有用的资源，可以帮助管理员了解 PowerShell 的功能和潜在风险面。 这是为了帮助缓解潜在风险面，并允许使用安全脚本。
+管理员有责任在其环境中验证建议的 PowerShell 和 PowerShell 参数的使用情况。 以下是一些有用的资源，可以帮助管理员了解 PowerShell 的功能和潜在风险面。 这是为了帮助缓解潜在风险面，并允许使用安全脚本。
 
 ## <a name="powershell-script-security"></a>PowerShell 脚本安全性
 运行脚本中内置了一项功能，可以直观地查看并批准请求在环境中运行的脚本。 管理员应注意 PowerShell 脚本可能具有经过模糊处理的脚本：恶意而且难以在脚本审批过程中通过视觉对象检查来检测。 最佳做法是，除了直观地查看 PowerShell 脚本之外，使用某些检查工具将有助于检测可疑脚本问题。 这些工具并不总是能确定 PowerShell 作者的意图，因此它可能引起对可疑脚本的注意。 但是，这些工具将要求管理员判断它是恶意的还是故意的脚本语法。
@@ -29,7 +29,7 @@ ms.locfileid: "81689305"
 ## <a name="recommendations"></a>建议
 - 使用下面引用的各种链接熟悉 PowerShell 安全最佳做法。
 - **对脚本进行签名**：另一种确保脚本安全的方法是，在导入脚本供使用之前，先对它们进行检查，然后签名。
-- 不要在 PowerShell 脚本中存储机密（如密码），并了解有关如何处理机密的详细信息。
+- 不要在 PowerShell 脚本中存储机密（如密码），同时要详细了解如何处理机密。
 
 
 ## <a name="general-information-about-powershell-security-best-practices"></a>有关 PowerShell 安全最佳做法的常规信息
@@ -58,11 +58,11 @@ ms.locfileid: "81689305"
 - 只允许使用预定义参数。
 - 使用正则表达式功能来验证允许的参数。
     - 例如：如果只允许特定范围的值，则仅使用正则表达式检查可以位于该范围内的字符或值。
-    - 验证参数可以帮助防止用户尝试使用某些可以转义的字符，如引号。 请注意，可能存在多种引号，因此使用正则表达式来验证哪些已决定的字符是允许的通常比尝试定义所有不允许的输入更容易。
+    - 验证参数可以帮助防止用户尝试使用某些可以转义的字符，如引号。 请注意，可能存在多种引号，因此与尝试定义不被允许的所有数据相比，使用正则表达式来验证你决定的哪些字符是允许字符则通常更加容易。
 - 在 PowerShell 库中利用 PowerShell 模块[“注入搜寻”](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0)。
     - 可能是误报，当某些内容被标记为可疑时会查找意向，以确定它是否是一个真正的问题。 
 - Microsoft Visual Studio 提供脚本分析器，可以帮助检查 PowerShell 语法。
-- 本视频的标题为：“DEF CON 25 - Lee Holmes - Get $pwnd：Attacking Battle Hardened Windows Server”，概述了可以避免的问题类型（尤其是 12:20 到 17:50 部分）：    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- 本视频的标题为：“DEF CON 25 - Lee Holmes - Get $pwnd:Attacking Battle Hardened Windows Server”，它概述了可避免的问题类型（尤其是 12:20 到 17:50 部分）：    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>环境建议
 PowerShell 管理员的一般建议。

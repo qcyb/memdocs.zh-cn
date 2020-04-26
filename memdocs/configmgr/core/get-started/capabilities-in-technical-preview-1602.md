@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 65c8feb6381c59cc1fef3fb07a3ad8c33fc67e65
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 64d01598f3d5feb162898761645ac84b1c73b175
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705685"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074463"
 ---
 # <a name="capabilities-in-technical-preview-1602-for-configuration-manager"></a>Configuration Manager Technical Preview 1602 中的功能
 
@@ -42,7 +42,7 @@ ms.locfileid: "81705685"
 ##  <a name="improvements-to-software-center-in-version-1602"></a><a name="BKMK_SC1601"></a>版本 1602 中对软件中心的改进  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>从软件中心刷新 PC 计算机和用户策略  
- 已将新选项“同步策略”  添加到软件中心的“选项”   > “计算机维护”  页面，该操作可让电脑刷新其 Configuration Manager 计算机和用户策略。  
+ 已将名为“同步策略”的新选项添加到软件中心的“选项” > “计算机维护”页面，该操作会使电脑刷新其 Configuration Manager 计算机和用户策略    。  
 
 ##  <a name="improvements-to-windows-10-servicing"></a><a name="BKMK_Win10Servicing"></a>对 Windows 10 维护服务的改进  
  在 1602 Technical Preview 中，我们为 Windows 10 维护服务添加了以下改进：  

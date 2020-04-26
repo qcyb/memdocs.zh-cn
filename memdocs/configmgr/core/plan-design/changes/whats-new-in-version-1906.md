@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 94ad19c2b405af75c7432bb4601098f980c1e821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702325"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078696"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -371,6 +371,10 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 - 任务序列设置了新的只读变量“_SMSTSLastContentDownloadLocation”  。 此变量包含下载任务序列或尝试下载内容的最后位置。 检查此变量，而不是分析客户端日志。<!-- 2840337 -->
 
 - 当你创建任务序列媒体时，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 如果情况需要，仍然可以包括该文件。<!-- 4090666 -->
+
+### <a name="improvements-to-pxe"></a>对 PXE 的改进
+
+没有 WDS 的 PXE 响应程序现支持在 PXE DHCP 握手期间使用选项 82。 WDS 不支持选项 82。
 
 
 ## <a name="software-center"></a><a name="bkmk_userxp"></a>软件中心

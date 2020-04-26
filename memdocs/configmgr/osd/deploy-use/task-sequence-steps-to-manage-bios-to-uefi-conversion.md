@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 09f844fc99d1cd5ea3c612f4747ce6a216f235ca
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9183efd622cb425027500d3fe51ed7b86d3a94e4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703385"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079359"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>管理 BIOS 转换为 UEFI 所采用的任务序列步骤
 Windows 10 提供了许多需要启用 UEFI 的设备的新安全功能。 你可能拥有支持 UEFI 的新式 Windows 电脑，但正在使用旧版 BIOS。 将设备转换为 UEFI 需要你转到每台电脑、对硬盘重新分区并重新配置固件。 通过在 Configuration Manager 中使用任务序列，你可以准备用于 BIOS 到 UEFI 转换的硬盘，作为就地升级过程的一部分从 BIOS 转换为 UEFI，并收集 UEFI 信息作为硬件清单的一部分。
@@ -46,8 +46,8 @@ Windows 10 提供了许多需要启用 UEFI 的设备的新安全功能。 你�
    3. 创建 NTFS 分区，任务序列引擎使用此分区保存其状态和存储日志文件。
 7. 添加“重启计算机”  任务序列步骤。 在“指定重启后要运行的内容”  中，选择“已选择分配给此任务序列的启动映像”  以在 Windows PE 中启动计算机。  
 
-## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换到 UEFI
-Windows 10 创意者更新引入了一个简单的转换工具，可自动执行对用于启用 UEFI 的硬件的硬盘重新分区的过程，并将该转换工具集成到 Windows 7 到 Windows 10 的就地升级过程中。 将此工具与你的操作系统升级任务序列和将固件从 BIOS 转换到 UEFI 的 OCM 工具组合使用时，可以在 Windows 10 创意者更新的就地升级过程中将你的计算机从 BIOS 转换到 UEFI。
+## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换为 UEFI
+Windows 10 创意者更新引入了一个简单的转换工具，可自动执行对用于启用 UEFI 的硬件的硬盘重新分区的过程，并将该转换工具集成到 Windows 7 到 Windows 10 的就地升级过程中。 将此工具与操作系统升级任务序列和将固件从 BIOS 转换为 UEFI 的 OEM 工具组合时，可以在就地升级到 Windows 10 创意者更新的过程中将计算机从 BIOS 转换为 UEFI。
 
 **要求**：
 - Windows 10 创意者更新

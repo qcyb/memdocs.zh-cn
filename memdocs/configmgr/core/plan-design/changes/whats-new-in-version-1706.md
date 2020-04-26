@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9b70850a8ef52c97c4fb7d78537fbc559701210d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702575"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073698"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager 1706 版中的新增功能
 
@@ -243,7 +243,7 @@ Windows Analytics 是一组解决方案，可便于深入了解环境的当前�
 
 ### <a name="updates-to-android-for-work-sharing-configuration"></a>Android for Work 共享配置更新
 <!-- 1338403 -->
-在此版本中，更新了“工作配置文件”  设置组中的“允许工作和个人配置文件间的数据共享”  设置的值。 还添加了自定义设置，用于阻止在工作个个人配置文件之间进行复制粘贴。
+在此版本中，更新了“工作配置文件”  设置组中的“允许工作和个人配置文件间的数据共享”  设置的值。 还添加了自定义设置，用于阻止在工作和个人配置文件之间进行复制粘贴。
 
 
 ### <a name="android-and-ios-enrollment-restrictions"></a>Android 和 iOS 注册限制
@@ -254,7 +254,7 @@ Windows Analytics 是一组解决方案，可便于深入了解环境的当前�
 
 ### <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>在 Device Guard 策略中包括对特定文件和文件夹的信任
 <!--1324676-->
-在此版本中，我们已向 Device Guard 策略管理添加了更多功能。
+在此版本中，我们向 Device Guard 策略管理添加了更多功能。
 
 现在可以选择在 Device Guard 策略中添加对特定文件或文件夹的信任。 此操作可让你：
 

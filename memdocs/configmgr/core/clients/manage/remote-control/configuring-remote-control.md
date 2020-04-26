@@ -10,12 +10,12 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1362f44c510fd34aebc6af77efc63e881c27688c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78f74a9659a011defd50e6ab0e9e1cfe85eec16b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696465"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076724"
 ---
 # <a name="configuring-remote-control-in-configuration-manager"></a>在 Configuration Manager 中配置远程控制
 
@@ -41,7 +41,7 @@ ms.locfileid: "81696465"
 
 #### <a name="enable-keyboard-translation"></a>启用键盘转换
 
-默认情况下，Configuration Manager 会将键位置从查看者的位置传输到共享者的位置。 当查看者和共享者的键盘配置不同时会导致出现问题。 例如，使用英语键盘的查看者键入“A”，但使用法语键盘的共享者则是“Q”。 现在可以选择配置远程控制，以便字符本身从查看者的键盘传输给共享者，且查看者希望键入的字符会传达给共享者。
+默认情况下，Configuration Manager 会将键位置从查看者的位置传输到共享者的位置。 当查看者和共享者的键盘配置不同时会导致出现问题。 例如，使用英语键盘的查看者键入“A”，但使用法语键盘的共享者则是“Q”。 你现可选择配置远程控制，以便字符本身从查看者的键盘传输给共享者，且查看者希望键入的字符会传达给共享者。
 
 若要开启键盘转换，请在“Configuration Manager 远程控制”  中，选择“操作”  ，然后选择“启用键盘转换”  来传输键位置。
 

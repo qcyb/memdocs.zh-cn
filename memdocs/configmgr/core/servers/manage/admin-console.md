@@ -2,7 +2,7 @@
 title: Configuration Manager 控制台
 titleSuffix: Configuration Manager
 description: 了解如何导航 Configuration Manager 控制台。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6bcd0bc06721fbd6ea3ce1226867db522bb2560
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700335"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110026"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>如何使用 Configuration Manager 控制台
 
@@ -428,6 +428,8 @@ Configuration Manager 控制台提供下列命令行选项：
 1. 选择饼图旁的“查看所需更新”超链接以深入查看设备列表  。
 1. 此操作将转到“设备”下的临时节点，可以在其中查看需要更新的设备  。 还可对节点执行操作，例如从列表创建新集合。
 
+> [!NOTE]
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 #### <a name="maximize-the-browse-registry-window"></a>将浏览注册表窗口最大化
 

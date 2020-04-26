@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 516d14e40edd582223bae1e3e1dd4bf8d3cf936d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695985"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074055"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -183,7 +183,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 另外，还有一个新的全局条件，即 Office 365 应用程序是否由 Intune 在设备上进行托管  。 默认情况下将此条件作为一项要求添加到新的 Office 365 应用程序。 当转移此工作负荷时，共同托管客户端不满足应用程序的要求，因此不安装通过 Configuration Manager 部署的 Office 365。
 
 ### <a name="known-issue"></a>已知问题
-- 转移此工作负荷当前仅适用于 Office 365 部署。 Configuration Manager 继续管理 Office 365 更新。<!--510876--> 有关将可能解决方法包括进来的详细信息，请参阅 Configuration Manager 版本 1802 发行说明[更改 Office 365 客户端设置不适用](../servers/deploy/install/release-notes.md)。
+- 转移此工作负荷当前仅适用于 Office 365 部署。 Configuration Manager 继续管理 Office 365 更新。<!--510876--> 要详细了解如何将可能解决方法包含在内，请参阅 Configuration Manager 版本 1802 的发行说明：[更改 Office 365 客户端设置不适用](../servers/deploy/install/release-notes.md)。
 
 
 

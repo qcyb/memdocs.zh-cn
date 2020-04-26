@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: ab5ad2af9b1cad051346eca28c186e7223e8253a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fd668760a6b5d1a16cfbb8549063da4f7e8a8b7d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705495"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074174"
 ---
 # <a name="capabilities-in-technical-preview-1608-for-configuration-manager"></a>Configuration Manager Technical Preview 1608 中的功能
 
@@ -55,7 +55,7 @@ ms.locfileid: "81705495"
 ## <a name="remote-control-keyboard-translation"></a>远程控制键盘转换
 以前，Configuration Manager 会将键位置从查看者的位置传输到共享者的位置。 当查看者和共享者的键盘配置不同时会出现问题。 例如，使用英语键盘的查看者键入“A”，但使用法语键盘的共享者则是“Q”。 我们正在更改这种默认行为，以便字符本身从查看者的键盘传输给共享者，且查看者希望键入的字符会传达给共享者。
 
-如果他们希望根据共享者的键盘布局来键入内容，则查看者可以用关闭此行为。 若要更改此行为，请在“Configuration Manager 远程控制”  中，选择“操作”  ，然后选择“启用键盘转换”  来传输键位置。
+如果查看者希望根据共享者的键盘布局来键入内容，他们可用关闭此行为。 若要更改此行为，请在“Configuration Manager 远程控制”  中，选择“操作”  ，然后选择“启用键盘转换”  来传输键位置。
 
 > [!NOTE]
 >

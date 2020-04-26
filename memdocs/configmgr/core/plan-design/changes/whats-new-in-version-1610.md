@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6589b2bd1308f214cce53ac65c806ad7edd51e5f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701925"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073953"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Configuration Manager 1610 版中的新增功能
 
@@ -200,7 +200,7 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 
 
 ## <a name="lookout-integration-for-hybrid-implementations-to-protect-ios-and-android-devices"></a>集成了 Lookout，以获得保护 iOS 和 Android 设备的混合实现
-Microsoft 与 Lookout 的移动威胁防护解决方案集成，通过检测设备上的恶意软件和风险应用等，来保护 iOS 和 Android 移动设备。 Lookout 的解决方案可帮助确定威胁级别，它是可配置的。 可以在 Configuration Manager 中创建合规性策略规则，以根据 Lookout 的风险评估确定设备合规性。 使用条件访问策略，可以根据设备合规性状态允许或阻止对公司资源的访问。
+Microsoft 与 Lookout 的移动威胁防护解决方案集成，通过检测设备上的恶意软件和风险应用等来保护 iOS 和 Android 移动设备。 Lookout 的解决方案可帮助确定威胁级别（该级别是可配置的）。 可以在 Configuration Manager 中创建合规性策略规则，以根据 Lookout 的风险评估确定设备合规性。 使用条件访问策略，可以根据设备合规性状态允许或阻止对公司资源的访问。
 
 系统将提示不合规 iOS 设备的用户进行注册。 将要求这些用户在自己的设备上安装 Lookout for Work 应用、激活应用并修正 Lookout for Work 应用程序中报告的威胁，以获取对公司数据的访问权限。
 

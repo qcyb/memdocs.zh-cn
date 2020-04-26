@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fe34768de48f52dd4872a63ccf353fda1c691a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705795"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074990"
 ---
 # <a name="configure-certificate-infrastructure"></a>配置证书基础结构
 
@@ -157,7 +157,7 @@ ms.locfileid: "81705795"
 
     -   在站点系统服务器上，使用 <ConfigMgr Installation Path\>  \Logs\crpsetup.log 文件和 <ConfigMgr Installation Path\>  \Logs\crpmsi.log 文件。 成功的安装将返回退出代码 0。  
 
-    -   通过使用浏览器验证是否可连接到证书注册点的 URL，例如 https://server1.contoso.com/CMCertificateRegistration 。 你应会看到应用程序名称的“服务器错误”  页，包含 HTTP 404 描述。  
+    -   使用浏览器验证是否可连接到证书注册点的 URL（例如 https://server1.contoso.com/CMCertificateRegistration ）。 你应会看到应用程序名称的“服务器错误”  页，包含 HTTP 404 描述。  
 
 11. 找到证书注册点在主站点服务器计算机上的下列文件夹中自动创建的根 CA 的已导出证书文件：<ConfigMgr Installation Path\>  \inboxes\certmgr.box。 将此文件保存到你稍后在运行网络设备注册服务的服务器上安装 Configuration Manager 策略模块时可安全访问的安全位置。  
 

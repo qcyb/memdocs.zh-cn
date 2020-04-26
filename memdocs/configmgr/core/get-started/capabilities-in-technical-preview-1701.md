@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7b2afaf1090b1e7c9c53d403f70c17d3e171cdbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705335"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076197"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Configuration Manager Technical Preview 1701 中的功能
 
@@ -44,12 +44,12 @@ ms.locfileid: "81705335"
 
 下面介绍了此 Technical Preview 中软件更新点的行为：  
 
-- **新客户端使用边界组选择软件更新点，** 安装版本 1701 后所安装的客户端从那些与客户端边界组关联的软件更新点中选取一个。
+- 新的客户端会使用边界组来选择软件更新点，而安装版本 1701 后所安装的客户端会从与客户端边界组关联的软件更新点中进行选择  。
 
   这将替代以前的行为，即客户端从共享客户端林的软件更新点列表中随机选取一个。   
 
 - **以前安装的客户端继续使用当前的软件更新点，直到它们回退找到新的软件更新点。**
-  回退前，以前安装的客户端以及已具有软件更新点的客户端将继续使用该软件更新点。 这包括未与客户端当前边界组关联的软件更新点。 它们不会直接尝试从当前边界组查找和使用软件更新点。
+  回退前，以前安装的客户端以及已具有软件更新点的客户端将继续使用该软件更新点。 这包括未与客户端的当前边界组关联的软件更新点。 它们不会直接尝试从当前边界组查找和使用软件更新点。
 
   仅在客户端无法获取其当前软件更新点和启动回退时，已具有软件更新点的客户端才会开始使用这个新边界组行为。
   切换到新行为时发生这种延迟是故意为之的。 原因在于软件更新点的更改可导致网络带宽的大量使用，因为客户端会与新软件更新点同步数据。 过渡中的延迟有助于在所有客户端同时切换到新软件更新点时避免网络饱和。
@@ -109,7 +109,7 @@ ms.locfileid: "81705335"
 
    **编辑：**
 
-   将设置名称 FairFaxArmResourceID  的值更改为等于“<https://management.usgovcloudapi.net/”>
+   更改设置名称 FairFaxArmResourceID 的值，使其等于 <https://management.usgovcloudapi.net/"> 
 
    - **原始：** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
      &lt;value>&lt;/value>   

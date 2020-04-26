@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 269da848bbf92adcdd1ba37c63f30f3a541a48c3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703055"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078730"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Configuration Manager Technical Preview 1804 中的功能
 
@@ -287,7 +287,7 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
 > 请记住，有 32 位 (x86) 应用程序和组件在 64 位 (x64) 系统上运行。 除非确定不需要 x86，否则在选择 x64 时也请启用它。  
 
 ### <a name="known-issues"></a>已知问题
-在添加体系结构条件后，自动部署规则属性页将在搜索条件中显示“Title”  。 自动部署规则仍会按预期运行，并选择正确的软件更新。 但是，此时不能同时包括“Architecture”  和“Title”  条件。 <!--512634,512632-->
+在添加体系结构条件后，自动部署规则属性页将在搜索条件中显示“标题”  。 自动部署规则仍会按预期运行，并选择正确的软件更新。 但是，此时不能同时包括“体系结构”和“标题”条件   。 <!--512634,512632-->
 
 
 

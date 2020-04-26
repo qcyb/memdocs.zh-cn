@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c541c257d885ee5cba9e174a86a6859b078c8594
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 15735b015796d2cccfa9b0a24afc8f6eb0573df1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702405"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073613"
 ---
 # <a name="what39s-new-in-version-1710-of-configuration-manager"></a>Configuration Manager 版本 1710 中的新增功能
 
@@ -150,7 +150,7 @@ Version 1710 drops support for the following products:
 ### <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>改进了 Configuration Manager 控制台中的 VPN 配置文件体验 
 <!-- 1318232 -->
 
-在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示选定平台相应的设置：
+在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示所选平台相对应的设置：
 
 
 - 每个平台均有其自己的工作流，这意味着新的 VPN 配置文件仅包含平台支持的设置。
@@ -189,7 +189,7 @@ Configuration Manager 提供一定程度的加密支持：下一代 (CNG) 证书
 下面是三个与设备防护策略相关的更改：
 
 - 设备防护策略已被重命名为 Windows Defender 应用程序控制策略。 因此，举例来说，“创建设备防护策略”向导  现命名为“创建 Windows Defender 应用程序控制策略”向导  。
-- 使用 Windows 版本 1709 Fall Creators Update 的设备无需重启就能应用 Windows Defender 应用程序控制策略。 重新启动仍是默认设置，但你可以[关闭重启](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)。
+- 使用 Windows 10 Fall Creators Update 版本 1709 的设备无需重启就能应用 Windows Defender 应用程序控制策略。 重新启动仍是默认设置，但你可以[关闭重启](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)。
 - 可以[将设备设置为自动运行](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md)受 Intelligent Security Graph 信任的软件。
 
 

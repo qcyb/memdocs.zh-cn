@@ -2,7 +2,7 @@
 title: 兼容性评估
 titleSuffix: Configuration Manager
 description: 了解桌面分析中 Windows 应用和驱动程序的兼容性评估。
-ms.date: 03/03/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0d5397dca3c8abff056b7944bde7d27794c45401
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707815"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109992"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>桌面分析中的兼容性评估
 
@@ -218,4 +218,4 @@ Windows 10 上支持 .NET 2.0 和 3.5 框架。 你可能需要启用此 Windows
 
 ## <a name="see-also"></a>另请参阅
 
-适用于 Windows 10 的 FastTrack 中心权益提供**桌面应用保证**的访问权限。 此权益是一项旨在解决 Windows 10 和 Office 365 ProPlus 应用兼容性问题的新服务。 有关详细信息，请参阅[桌面应用保证](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure)。
+适用于 Windows 10 的 FastTrack 中心权益提供**桌面应用保证**的访问权限。 此权益是一项旨在解决 Windows 10 和 Microsoft 365 企业应用版兼容性问题的新服务。 有关详细信息，请参阅[桌面应用保证](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure)。

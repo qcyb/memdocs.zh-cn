@@ -2,7 +2,7 @@
 title: 创建分阶段部署
 titleSuffix: Configuration Manager
 description: 使用分阶段部署自动将软件推出到多个集合。
-ms.date: 04/16/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 75868250b1f35654e01065e7ff610beb293de727
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5af0b7c90225a1f42d55767a0296d7e2263f956f
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690725"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110451"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>使用 Configuration Manager 创建分阶段部署
 
@@ -117,14 +117,12 @@ Include a timeline diagram
 
 4. 在“设置”页上，为每个计划设置选择一个选项  。 有关详细信息，请参阅[阶段设置](#bkmk_settings)。 完成后单击“下一步”  。  
 
-5. 在“阶段”页上，查看向导为指定集合创建的两个阶段  。 选择“下一步”  。   
-
-    > [!Note]  
-    > 本部分介绍自动创建默认两阶段部署的过程。 向导允许为分阶段部署添加、删除、重新排序、编辑或查看阶段。 有关这些其他操作的详细信息，请参阅[使用手动配置的阶段创建分阶段部署](#bkmk_manual)。  
+5. 在“阶段”页上，查看向导为指定集合创建的两个阶段  。 选择“下一步”  。 这些说明涵盖了自动创建默认两阶段部署的过程。 向导允许为分阶段部署添加、删除、重新排序、编辑或查看阶段。 有关这些其他操作的详细信息，请参阅[使用手动配置的阶段创建分阶段部署](#bkmk_manual)。  
 
 6. 在“摘要”选项卡上确认选择，然后选择“下一步”完成向导   。  
 
-
+> [!NOTE]
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 产品和文档中使用的是旧名称。  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>使用手动配置的阶段创建分阶段部署
 <!--1358148--> 

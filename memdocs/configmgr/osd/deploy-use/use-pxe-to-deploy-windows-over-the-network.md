@@ -1,7 +1,7 @@
 ---
 title: 通过网络将 PXE 用于 OSD
 titleSuffix: Configuration Manager
-description: 使用启动了 PXE 的 OS 部署来刷新计算机的操作系统或在一台新的计算机上安装新版本的 Windows。
+description: 使用启动了 PXE 的操作系统部署来刷新计算机的操作系统或在新计算机上安装新版本的 Windows。
 ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cff249bf5289ebcf354851258b5c9d598314ce3b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709055"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079342"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>使用 PXE 和 Configuration Manager 通过网络部署 Windows
 
@@ -105,6 +105,9 @@ ms.locfileid: "81709055"
 - 仅媒体和 PXE
 
 - 仅媒体和 PXE（隐藏）
+
+## <a name="option-82-during-pxe-dhcp-handshake"></a>在 PXE DHCP 握手期间使用选项 82
+自版本 1906 起，没有 WDS 的 PXE 响应程序支持在 PXE DHCP 握手期间使用选项 82。 如需使用选项 82，请务必使用没有 WDS 的 PXE 响应程序。 WDS 不支持选项 82。
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> 部署任务序列
 

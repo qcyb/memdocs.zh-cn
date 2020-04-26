@@ -10,12 +10,12 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb2d1cc85488decf61bce7a3f18aa73bc17bce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: abe6b05d24955959e1d08defc2c5054c4499d756
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692665"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075585"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Configuration Manager 的数据仓库服务点
 
@@ -84,7 +84,7 @@ ms.locfileid: "81692665"
 
 若要安装该角色，请使用“添加站点系统角色向导”  或“创建站点系统服务器向导”  。 有关详细信息，请参阅[安装站点系统角色](../deploy/configure/install-site-system-roles.md)。 在向导的“系统角色选择”页上，选择“数据仓库服务点”角色   。 
 
-安装角色时，Configuration Manager 在指定的 SQL Server 实例上创建数据仓库数据库。 如果指定现有数据库的名称，Configuration Manager 将不会创建新数据库。 而会使用你指定的数据库。 此过程与[将数据仓库数据库移动到新 SQL Server](#move-the-database) 时的过程相同。
+安装角色时，Configuration Manager 在指定的 SQL Server 实例上创建数据仓库数据库。 如果指定现有数据库的名称，Configuration Manager 将不会创建新的数据库。 而会使用你指定的数据库。 此过程与[将数据仓库数据库移动到新 SQL Server](#move-the-database) 时的过程相同。
 
 
 ### <a name="configure-properties"></a>配置属性

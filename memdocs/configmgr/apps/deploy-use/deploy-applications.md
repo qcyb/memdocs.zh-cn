@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec8292256a55b7fc7d99e07b27ee9dee366cb9a3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7bbf395a5de98459043609986e51647362e7a0b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689505"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075330"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>使用 Configuration Manager 部署应用程序
 
@@ -102,7 +102,7 @@ ms.locfileid: "81689505"
 
 - **允许最终用户尝试修复此应用程序**：从版本 1810 开始，如果使用修复命令行创建应用程序，则启用此选项。 用户会在软件中心内看到一个用于修复  应用程序的选项。<!--1357866-->  
 
-- **将软件预部署到用户的主要设备**：如果部署针对于用户，请选择此选项以将应用部署到用户的主要设备。 在该部署运行之前，此设置不需要用户登录。 如果用户必须与安装进行交互，请勿选择此选项。 只有当部署是“必需”时，此选项才可用  。  
+- **将软件预部署到用户的主要设备**：如果部署针对的是用户，则请选择此选项，将应用程序部署到该用户的主要设备。 在该部署运行之前，此设置不需要用户登录。 如果用户必须与安装进行交互，请勿选择此选项。 只有当部署是“必需”时，此选项才可用  。  
 
 - **发送唤醒数据包**：如果部署为“必需”，则 Configuration Manager 在客户端运行部署前，会将唤醒数据包发送到计算机  。 此包可在安装截止时将计算机从休眠中唤醒。 使用此选项前，必须针对“LAN 唤醒”配置计算机和网络。 有关详细信息，请参阅[计划如何唤醒客户端](../../core/clients/deploy/plan/plan-wake-up-clients.md)。  
 
@@ -265,7 +265,7 @@ ms.locfileid: "81689505"
 
     - 计划客户端设置的“计算机代理”组中的这些对话  。 有关详细信息，请参阅[计算机代理](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
 
-    - 如果不希望最终用户看到这些消息，请选择部署属性的“用户体验”选项卡上的“在软件中心和所有通知中隐藏”选项   。 有关详细信息，请参阅[部署用户体验设置](#bkmk_deploy-ux)。  
+    - 如果不希望该用户看到这些消息，请选择部署属性的“用户体验”选项卡上的“在软件中心和所有通知中隐藏”选项   。 有关详细信息，请参阅[部署用户体验设置](#bkmk_deploy-ux)。  
 
 - 如果应用程序已部署为“必需”，且未指定“自动关闭在‘部署类型属性’对话框中的‘安装行为’选项卡中指定的任何正在运行的可执行文件”，如果正在运行一个或多个指定的应用程序，则应用安装失败   。  
 

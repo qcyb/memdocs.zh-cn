@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ced7d5347e4b8b9fbf0a3006063f507578a7b887
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701225"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078492"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 
@@ -88,7 +88,7 @@ ms.locfileid: "81701225"
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>可否提供有关 Azure 虚拟机的详细信息？应使用何种大小的虚拟机？
 一般情况下，计算能力（CPU 和内存）需满足[用于 Configuration Manager 的推荐硬件](../plan-design/configs/recommended-hardware.md)。 但常规计算机硬件与 Azure VM 之间有些区别，尤其涉及到这些虚拟机使用的磁盘时。  使用的虚拟机的大小取决于环境的规模，这里有一些建议：
-- 对于任何大规模的生产部署，建议使用“S”  级 Azure VM。 这是因为这些 VM 可利用高级存储磁盘。  非“S”级 VM 使用 Blob 存储，通常不符合可接受的生产体验所需的性能要求。
+- 对于任何大规模的生产部署，建议使用“S”级 Azure VM  。 这是因为这些 VM 可利用高级存储磁盘。  非“S”级 VM 使用 Blob 存储，通常不符合可接受的生产体验所需的性能要求。
 - 对于较大的规模，应使用多个高级存储磁盘，并在 Windows 磁盘管理控制台中将其进行分区以获得最大 IOPS。  
 - 建议在初始站点部署期间使用较好的或多个高级磁盘（如使用 P30 而不是 P20，在带区卷中使用 2 个 P30 而不是 1 个 P30）。 之后，如果站点因额外负荷需要增加 VM 的大小，则可利用较大 VM 提供的额外 CPU 和内存空间。 此外，已配置好的磁盘也可充分利用较大 VM 所允许的额外 IOPS 吞吐量。
 
@@ -119,7 +119,7 @@ ms.locfileid: "81701225"
 
 ## <a name="user-experience"></a>用户体验
 ### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>为什么说用户体验是非常重要的一个方面？
-所做的有关网络、可用性、性能和放置 Configuration Manager 站点服务器的位置的决策会直接影响用户。 我们认为转移到 Azure 这一操作对用户应是透明的，由此确保其与 Configuration Manager 的日常交互不会发生变化。
+所做的有关网络、可用性、性能和放置 Configuration Manager 站点服务器的位置的决策会直接影响用户。 我们认为用户应该会清晰了解转移到 Azure 的操作对，从而确保他们与 Configuration Manager 的日常交互不发生变化。
 
 ### <a name="ok-i-get-it-i-plan-to-install-a-single-stand-alone-primary-site-on-an-azure-virtual-machine-and-i-want-to-make-sure-my-costs-are-low-should-i-place-remote-site-systems-like-management-points-distribution-points-and-software-update-points-on-azure-virtual-machines-as-well-or-on-premises"></a>好的，明白了。 我计划在 Azure 虚拟机上安装单个独立主站点，并且想要确保成本较低。 是否也应将（远程）站点系统（例如，管理点、分发点和软件更新点）放置在 Azure 虚拟机上，还是应将其放置在本地？
 除了站点服务器与分发点之间的通信之外，站点中的这些服务器对服务器通信随时都可能发生，并且不使用任何机制来控制网络带宽的使用。 由于无法控制站点系统之间的通信，应考虑与这些通信相关的所有成本。

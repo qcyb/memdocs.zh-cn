@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ea003aef949f5624591d87dd6105d3a1cff3b691
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705725"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076299"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager Technical Preview 1601 中的功能
 
@@ -79,9 +79,9 @@ ms.locfileid: "81705725"
 
     要使用该选项，你必须在 Configuration Manager 中创建具有以下所述特定规则的合规性策略，并在 Intune 控制台中设置条件访问策略。  此外，为确保仅允许合规的电脑访问，必须将 Windows 电脑要求设置为“设备必须合规”  选项。 下面是适用于 Configuration Manager 管理的电脑的合规性策略规则。  
 
-    -   **需要在 Azure ActiveDirectory 中注册：** 此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   **需要在 Azure ActiveDirectory 中注册：** 此规则会检查用户的设备是否已加入 Azure AD；如果未加入，则它会在 Azure AD 中自动注册。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
-    -   **在晚于特定天数的截止日期之前安装所有必需的更新：** 此规则检查用户的设备是否在截止日期及你指定的宽限期内具有所需的所有更新（在所需的自动更新规则中指定），并自动安装任何挂起的所需更新  。  
+    -   **在晚于特定天数的截止日期之前安装所有必需的更新：** 此规则会检查用户的设备是否在截止日期及你指定的宽限期内具有所有必备更新（参见“所需的自动更新”规则），并自动安装所有挂起的必备更新  。  
 
     -   **需要使用 BitLocker 驱动器加密功能：** 此规则检查设备的主驱动器（例如 C:\\）是否使用 BitLocker 进行了加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
 
@@ -126,7 +126,7 @@ ms.locfileid: "81705725"
 ##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a>客户端联机状态  
 从技术预览 1601 版开始，可以在 Configuration Manager 控制台上一眼识别客户端是联机还是脱机。 通过控制台设备列表中已更新的图标和列，你可以评估你的环境中客户端的状态，由此识别问题区域及其他需要你注意的问题。  
 
-如果客户端当前连接到 Configuration Manager 管理点站点系统角色，则处于联机状态。 只要管理点接收到来自客户端的类似于 ping 的消息，客户端就处于联机状态。 如果管理点有 5 分钟左右未接收到一条消息，则客户端的状态更改为脱机。  
+如果客户端当前连接到 Configuration Manager 管理点站点系统角色，则处于联机状态。 只要管理点接收到来自客户端的类似于 ping 的消息，客户端就处于联机状态。 如果管理点有 5 分钟左右未收到消息，则客户端的状态更改为脱机。  
 
 ### <a name="icons-for-client-status"></a>客户端状态图标  
 
@@ -180,7 +180,7 @@ ms.locfileid: "81705725"
 -   你必须部署支持应用程序配置的 iOS 应用程序。  
 
 #### <a name="try-it-out"></a>试试看！  
- 满足上述先决条件后，必须创建使用 iOS 部署类型的 Configuration Manager 应用程序。 你使用的应用程序必须支持应用程序配置。 请参阅应用程序的供应商文档了解你可以配置哪些特定项目（名称/值对）。  
+ 满足上述先决条件后，必须创建使用 iOS 部署类型的 Configuration Manager 应用程序。 你使用的应用程序必须支持应用程序配置。 请参阅应用程序的供应商文档，了解你可配置哪些特定项目（名称/值对）。  
 
  然后，在应用程序部署过程中将应用程序配置策略与 iOS 部署类型相关联。 还可以为现有应用程序和集合部署“应用程序配置策略”  节点的策略。  
 

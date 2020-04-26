@@ -10,12 +10,12 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32083deb30d3d7345ccad8d31541d3c641eb10c0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cf8714aff7235736628d44238561eea82b896698
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707265"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073307"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Configuration Manager 的高可用性选项
 
@@ -221,7 +221,7 @@ Configuration Manager 客户端自主性包括以下行为：
 
 ### <a name="central-management-of-client-data-and-client-identity"></a>客户端数据和客户端标识的集中管理
 
-站点数据库（而不是单个客户端）保留有关每个客户端的标识的重要信息，并将该数据与特定计算机或用户关联。  
+站点数据库（而不是单个客户端）保留了有关每个客户端的标识的重要信息，并将该数据与特定计算机或用户关联。  
 
 - 可以卸载和重新安装计算机上的客户端源文件，而不会影响安装客户端的计算机的历史记录。  
 

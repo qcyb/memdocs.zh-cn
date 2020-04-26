@@ -10,12 +10,12 @@ ms.assetid: 8d878443-90e7-46e4-9cd3-99e2a19b2ad0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebadb47ca67f331ac88f8947b396438893e12386
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5ca960ddd6a4057da10341063f0b14a7f1d104d1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690865"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075806"
 ---
 # <a name="cloud-connecting-with-co-management"></a>连接共同管理的云
 

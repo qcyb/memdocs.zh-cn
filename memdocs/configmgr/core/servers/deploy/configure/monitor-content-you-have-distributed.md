@@ -10,12 +10,12 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31edf096c57b726c3723d261db7a3103fcc311f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fafcbffe3231af78ae3a079061accc9f112a181c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701125"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110009"
 ---
 # <a name="monitor-content-you-distribute-with-configuration-manager"></a>使用 Configuration Manager 监视分发的内容
 
@@ -157,7 +157,7 @@ ms.locfileid: "81701125"
 - [BranchCache](../../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 - [对等缓存](../../../plan-design/hierarchy/client-peer-cache.md)
 - [传递优化](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)（从版本 1906 开始）<sup>[注释 1](#bkmk_note1)</sup>
-- Microsoft 更新：Configuration Manager 客户端从 Microsoft 云服务下载软件更新时，设备会报告此源。 这些服务包括 Microsoft 更新和 Office 365。
+- Microsoft 更新：Configuration Manager 客户端从 Microsoft 云服务下载软件更新时，设备会报告此源。 这些服务包括 Microsoft 更新和 Microsoft 365 企业应用版。
 
 ![仪表板上的客户端内容源磁贴](media/3555759-do-source.png)
 

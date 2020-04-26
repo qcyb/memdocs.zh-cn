@@ -2,7 +2,7 @@
 title: Internet 访问要求
 titleSuffix: Configuration Manager
 description: 了解允许使用 Configuration Manager 功能的完整功能的 Internet 终结点。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2edcff868a684d5e108626b7372241dd1ec47d1c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701525"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110128"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -171,13 +171,16 @@ ms.locfileid: "81701525"
 
 ## <a name="manage-office-365"></a>管理 Office 365
 
-如果使用 Configuration Manager 部署和更新 Office 365，请允许以下终结点：
+> [!NOTE]
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+
+如果使用 Configuration Manager 部署和更新 Microsoft 365 企业应用版，请允许以下终结点：
 
 <!-- SCCMDocs#929 -->
 
-- `officecdn.microsoft.com` - 同步 Office 365 客户端更新的软件更新点
+- `officecdn.microsoft.com`，用于为企业客户端更新同步 Microsoft 365 企业应用版的软件更新点
 
-- `config.office.com` - 为 Office 365 部署创建自定义配置
+- `config.office.com`，用于为企业部署创建 Microsoft 365 企业应用版的自定义配置
 
 ## <a name="configuration-manager-console"></a>Configuration Manager 控制台
 

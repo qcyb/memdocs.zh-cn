@@ -10,12 +10,12 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32944157759e537c5b01061ab8648f242cfdac57
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab2270435ac13585cb0b7d3271f1faa02cc728d3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693565"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075738"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端分配给站点
 
@@ -122,7 +122,7 @@ Configuration Manager 还会检查是否已将 Configuration Manager (Current Br
 ##  <a name="locating-management-points"></a>定位管理点  
  将客户端成功分配给站点之后，它将定位站点中的管理点。  
 
- 客户端计算机会下载一个管理点列表，其可在站点中连接到这些管理点。 会发生此过程的情况：客户端重启；每隔 25 小时；客户端检测到网络更改，如计算机在网络上先断开然后重连；收到新 IP 地址。 此列表包含 Intranet 上的管理点，并指明管理点是通过 HTTP 还是 HTTPS 接受客户端连接。 当客户端计算机在 Internet 上并且客户端仍没有管理点列表时，它会连接到指定的基于 Internet 的管理点以获取管理点的列表。 当客户端具有其分配的站点的管理点列表时，它会选择一个要连接到的管理点：  
+ 客户端计算机会下载一个管理点列表，其可在站点中连接到这些管理点。 会发生此过程的情况：客户端重启；每隔 25 小时；客户端检测到网络更改，如计算机在网络上先断开然后重连；收到新 IP 地址。 此列表包含 Intranet 上的管理点，并指明管理点是通过 HTTP 还是 HTTPS 接受客户端连接。 当客户端计算机使用 Internet，并且客户端仍没有管理点列表时，它会连接到指定的基于 Internet 的管理点以获取管理点的列表。 当客户端具有其分配的站点的管理点列表时，它会选择一个要连接到的管理点：  
 
 -   当客户端在 Intranet 并且具有可以使用的有效 PKI 证书时，客户端会在选择 HTTP 管理点之前优先选择 HTTPS 管理点。 然后基于管理点的林成员身份查找最近的管理点。  
 
