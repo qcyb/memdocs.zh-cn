@@ -87,10 +87,14 @@
           href: app-based-conditional-access-intune-create.md
         - name: ADAL 和 Intune
           href: app-modern-authentication-block.md
-        - name: 将 Jamf Pro 与 Intune 集成以实现合规
-          href: conditional-access-integrate-jamf.md
-        - name: 在使用 Jamf Pro 管理的 Mac 上强制实现符合性
-          href: conditional-access-assign-jamf.md
+        - name: 适用于 macOS 的 Jamf Pro
+          items:
+            - name: 使用 Jamf 云连接器
+              href: conditional-access-jamf-cloud-connector.md
+            - name: 手动将 Jamf 与 Intune 集成
+              href: conditional-access-integrate-jamf.md
+            - name: 在使用 Jamf Pro 管理的 Mac 上强制实现符合性
+              href: conditional-access-assign-jamf.md
     - name: 威胁防护
       items:
         - name: 移动威胁防御
@@ -253,26 +257,15 @@
           href: troubleshoot-jamf.md
 - name: 参考
   items:
+    - name: 防病毒策略设置
+      items:
+        - name: macOS Defender 防病毒设置
+          href: antivirus-microsoft-defender-settings-macos.md
+        - name: Windows 10 Microsoft Defender 防病毒设置
+          href: antivirus-microsoft-defender-settings-windows.md
     - name: 用于添加第三方证书颁发机构的 API
-      href: scep-libraries-apis.md
     - name: 合规性策略设置
       items:
-        - name: 安全基线
-          items:
-            - name: Windows 10 MDM 基线设置
-              href: security-baseline-settings-mdm-all.md
-            - name: Microsoft Defender ATP 基准设置
-              href: security-baseline-settings-defender-atp.md
-            - name: Microsoft Edge 基线设置
-              href: security-baseline-settings-edge.md
-        - name: 防病毒策略设置
-          items:
-            - name: macOS Defender 防病毒设置
-              href: antivirus-microsoft-defender-settings-macos.md
-            - name: Windows 10 Microsoft Defender 防病毒设置
-              href: antivirus-microsoft-defender-settings-windows.md
-        - name: Windows 更新设置
-          href: windows-update-settings.md
         - name: 合规性策略设置 - Android
           href: compliance-policy-create-android.md
         - name: 合规性策略设置 - Android Enterprise
@@ -287,6 +280,17 @@
           href: compliance-policy-create-windows-8-1.md
         - name: 合规性策略设置 - Windows Phone 8.1
           href: compliance-policy-create-windows-8-1.md
+      href: scep-libraries-apis.md
+    - name: 安全基线设置
+      items:
+        - name: Windows 10 MDM 基线设置
+          href: security-baseline-settings-mdm-all.md
+        - name: Microsoft Defender ATP 基准设置
+          href: security-baseline-settings-defender-atp.md
+        - name: Microsoft Edge 基线设置
+          href: security-baseline-settings-edge.md
+    - name: Windows 更新设置
+      href: windows-update-settings.md
     - name: 错误代码和描述
       items:
         - name: 软件更新错误

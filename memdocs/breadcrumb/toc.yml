@@ -1,0 +1,77 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: 企业移动性 + 安全性
+      tocHref: /enterprise-mobility-security/
+      topicHref: /enterprise-mobility-security/
+      items:
+        - name: Microsoft Endpoint Manager
+          tocHref: /mem/
+          topicHref: /mem/
+          items:
+            - name: Intune
+              tocHref: /mem/intune/
+              topicHref: /mem/intune/
+              items:
+                - name: Intune 用户帮助
+                  tocHref: /mem/intune/user-help/
+                  topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done
+                - name: 应用
+                  tocHref: /mem/intune/apps/
+                  topicHref: /mem/intune/apps/
+                - name: 基础知识
+                  tocHref: /mem/intune/fundamentals/
+                  topicHref: /mem/intune/fundamentals/
+                - name: 注册
+                  tocHref: /mem/intune/enrollment/
+                  topicHref: /mem/intune/enrollment/
+                - name: 远程操作
+                  tocHref: /mem/intune/remote-actions/
+                  topicHref: /mem/intune/remote-actions/
+                - name: 配置
+                  tocHref: /mem/intune/configuration/
+                  topicHref: /mem/intune/configuration/
+                - name: 保护
+                  tocHref: /mem/intune/protect/
+                  topicHref: /mem/intune/protect/
+                - name: 开发人员
+                  tocHref: /mem/intune/developer/
+                  topicHref: /mem/intune/developer/
+            - name: 配置管理器
+              tocHref: /mem/configmgr/
+              topicHref: /mem/configmgr/
+              items:
+                - name: 应用程序管理指南
+                  tocHref: /mem/configmgr/apps/
+                  topicHref: /mem/configmgr/apps/
+                - name: 共同管理
+                  tocHref: /mem/configmgr/comanage/
+                  topicHref: /mem/configmgr/comanage/
+                - name: 设备符合性
+                  tocHref: /mem/configmgr/compliance/
+                  topicHref: /mem/configmgr/compliance/
+                - name: 核心基础结构指南
+                  tocHref: /mem/configmgr/core/
+                  topicHref: /mem/configmgr/core/
+                - name: 桌面分析
+                  tocHref: /mem/configmgr/desktop-analytics/
+                  topicHref: /mem/configmgr/desktop-analytics/
+                - name: 开发人员
+                  tocHref: /mem/configmgr/develop/
+                  topicHref: /mem/configmgr/develop/
+                - name: 移动设备管理
+                  tocHref: /mem/configmgr/mdm/
+                  topicHref: /mem/configmgr/mdm/
+                - name: 操作系统部署
+                  tocHref: /mem/configmgr/osd/
+                  topicHref: /mem/configmgr/osd/
+                - name: 保护
+                  tocHref: /mem/configmgr/protect/
+                  topicHref: /mem/configmgr/protect/
+                - name: 软件更新
+                  tocHref: /mem/configmgr/sum/
+                  topicHref: /mem/configmgr/sum/
+                - name: 租户附加
+                  tocHref: /mem/configmgr/tenant-attach/
+                  topicHref: /mem/configmgr/tenant-attach/
