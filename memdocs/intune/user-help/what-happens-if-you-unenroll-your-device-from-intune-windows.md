@@ -1,5 +1,5 @@
 ---
-title: 取消注册 Windows 设备会造成什么结果？ |Microsoft Docs
+title: 取消注册 Windows 设备会造成什么结果？ | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346867"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076792"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>从 Intune 取消注册 Windows 设备会发生什么情况？
 
@@ -48,9 +48,9 @@ ms.locfileid: "79346867"
 
 此外，对于 Windows 8.1：
 
-- 你不再能使用设备上的公司应用和公司数据。
+- 你不再能够使用设备上的公司应用和公司数据。
 
-- 某些邮件应用（例如 Windows 邮件）无法再访问设备上所存储的公司电子邮件。
+- 某些电子邮件应用（例如 Windows 邮件）无法再访问设备上存储的公司电子邮件。
 
 - 可能无法再使用 Wi-Fi 或虚拟专用网连接到公司网络。
 
@@ -58,9 +58,9 @@ ms.locfileid: "79346867"
 
 ## <a name="windows-10-mobile-and-windows-phone-81"></a>Windows 10 移动版和 Windows Phone 8.1
 
-- 从设备中卸载公司门户应用。 这意味着设备不再显示在公司门户中，且不能从公司门户应用或公司门户网站安装应用。
+- 从设备中卸载公司门户应用。 这意味着设备不再显示在公司门户中，并且不能从公司门户应用或公司门户网站安装应用。
 
-- 你不再能使用设备上的公司应用和公司数据。
+- 你不再能够使用设备上的公司应用和公司数据。
 
 - 将不再应用当添加设备时在设备上更改的任何设置（例如禁用相机，或需要一定的密码长度）。
 
@@ -69,9 +69,9 @@ ms.locfileid: "79346867"
 
 ## <a name="windows-rt-running-windows-81"></a>运行 Windows 8.1 的 Windows RT
 
-- 从设备中卸载公司门户应用。 这意味着设备不再显示于公司门户中，且不能从公司门户安装应用。
+- 从设备中卸载公司门户应用。 这意味着设备不再显示在公司门户中，并且不能从公司门户安装应用。
 
-- 你不再能使用设备上的公司应用和公司数据。
+- 你不再能够使用设备上的公司应用和公司数据。
 
 - 将不再应用当添加设备时在设备上更改的任何设置（例如禁用相机，或需要一定的密码长度）。
 
@@ -79,13 +79,13 @@ ms.locfileid: "79346867"
 
 - 可能无法再访问设备上的某些公司资源（例如文件共享或内部网站）。
 
-- 某些邮件应用（例如 Windows 邮件）无法再访问设备上所存储的公司电子邮件。
+- 某些电子邮件应用（例如 Windows 邮件）无法再访问设备上存储的公司电子邮件。
 
 在删除 Windows RT 设备时，将发生下列情况：
 
-- 从设备中卸载公司门户应用。 这意味着设备不再显示在公司门户中，并且你不能再从公司门户安装应用。
+- 从设备中卸载公司门户应用。 这意味着设备不再显示在公司门户中，并且不能从公司门户安装应用。
 
-- 你不再能使用设备上的公司应用和公司数据。
+- 你不再能够使用设备上的公司应用和公司数据。
 
 - 将不再应用当添加设备时在设备上更改的任何设置（例如禁用相机，或需要一定的密码长度）。
 
