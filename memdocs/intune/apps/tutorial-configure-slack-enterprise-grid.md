@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325680"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074769"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>教程：配置 Slack 以将 Intune 用于 EMM 和应用配置
 
@@ -136,7 +136,7 @@ Slack 是一款可与 Microsoft Intune 结合使用的协作应用。
 12. 单击 **“保存”** 。
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>（可选）创建 Android 设备符合性策略
-设置 Intune 设备符合性策略以设置设备必须满足才能被视为符合的条件。 在本教程中，我们将为 Android 设备创建设备符合性策略。 合规性策略都是特定于平台的策略，因此需要为 iOS/iPadOS 设备的 Slack 用户创建单独的策略。
+设置 Intune 设备符合性策略以设置设备必须满足才能被视为符合的条件。 在本教程中，我们将为 Android 设备创建设备合规性策略。 合规性策略都是特定于平台的策略，因此需要为 iOS/iPadOS 设备的 Slack 用户创建单独的策略。
 1. 在 Intune 中，选择“设备符合性”   > “策略”   > “创建策略”  。
 2. 在“名称”中，输入“Android 符合性策略测试”。
 3. 在“描述”中，输入“Android 符合性策略测试”。

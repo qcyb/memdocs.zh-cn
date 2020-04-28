@@ -19,21 +19,21 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0a5d9c378e42b56c8d13f42877cca889726b7579
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 417932e046517f17481e2d6c5e91f24cb7ac2d7a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346451"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080039"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>使用公司门户应用时遇到错误
 
-如果在 iOS 设备上使用公司门户应用时遇到错误，可以发送该错误的相关信息以帮助公司支持人员解决问题。 可以使用多种不同的方式发送错误信息：
+如果在 iOS 设备上使用公司门户应用时遇到错误，可以发送该错误的相关信息以协助公司支持人员解决问题。 可以使用多种不同的方式发送错误信息：
 
 - 在错误警报消息中，点击“报告”  。
 
 - 在公司门户应用的“关于”  屏幕上，点击“发送诊断报告”  。
 
-- 在公司门户应用中时摇动设备，然后在诊断警报出现时点击“电子邮件”  。 如果摇动设备时未出现该警报，请打开“设置”   > “公司门户”  ，确保“摇一摇”  选项已打开。
+- 在公司门户应用中摇动设备，然后在诊断警报出现时点击“电子邮件”  。 如果摇动设备时未出现该警报，请打开“设置”   > “公司门户”  ，确保“摇一摇”  选项已打开。
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

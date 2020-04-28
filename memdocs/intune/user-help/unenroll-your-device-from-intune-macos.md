@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5b22902d4cc0aa28903cf5a159355c92befb8e6b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c0c2e76157ee09d5094e81856a27e655b5932d1f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335414"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077404"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>从公司门户取消注册 macOS 设备
 
@@ -48,7 +48,7 @@ ms.locfileid: "79335414"
 
 - 你可能不再能够访问设备上的某些公司资源（例如文件共享或内部网站）。
 
-- 你不再能使用设备上的公司应用和公司数据。
+- 你不再能够使用设备上的公司应用和公司数据。
 
 - 你可能不再能够使用 Wi-Fi 或虚拟专用网 (VPN) 连接到公司网络。
 

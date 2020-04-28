@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 70f6e3d3fcd0a5f65866e43198b499b321aab836
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326600"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079036"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>教程：保护非托管设备上的 Exchange Online 电子邮件
 
@@ -38,7 +38,7 @@ ms.locfileid: "80326600"
 
 - Azure Active Directory Premium（[免费试用版](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)）
 - Intune 订阅（[免费试用](../fundamentals/free-trial-sign-up.md)）
-- Office 365 商业版订阅，包括 Exchange（[免费试用版](https://go.microsoft.com/fwlink/p/?LinkID=510938)）
+- Microsoft 365 商业应用版订阅，包括 Exchange（[免费试用版](https://go.microsoft.com/fwlink/p/?LinkID=510938)）
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 
@@ -206,7 +206,7 @@ ms.locfileid: "80326600"
 
 ## <a name="try-it-out"></a>试试看
 
-使用已创建的策略后，设备将需要在 Intune 中注册并使用 Outlook 移动应用才能访问 Office 365 电子邮件。 若要在 iOS 设备上测试此方案，请尝试使用测试租户中用户的凭据登录到 Exchange Online。
+使用已创建的策略后，设备将需要在 Intune 中注册并使用 Outlook 移动应用访问 Office 365 电子邮件。 若要在 iOS 设备上测试此方案，请尝试使用测试租户中用户的凭据登录到 Exchange Online。
 
 1. 若要在 iPhone 上测试，请转到“设置”   > “密码和帐户”   > “添加帐户”   > “Exchange”  。
 

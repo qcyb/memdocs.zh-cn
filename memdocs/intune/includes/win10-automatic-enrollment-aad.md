@@ -7,7 +7,7 @@
 - Azure Active Directory Premium 订阅（[试用订阅](https://go.microsoft.com/fwlink/?LinkID=816845)）
 - Microsoft Intune 订阅
 
-### <a name="configure-automatic-mdm-enrollment"></a>配置自动 MDM 注册
+### <a name="configure-automatic-mdm-enrollment"></a>配置自动进行 MDM 注册
 
 1. 登录 [Azure 门户](https://portal.azure.com)，然后选择“Azure Active Directory”  。
 

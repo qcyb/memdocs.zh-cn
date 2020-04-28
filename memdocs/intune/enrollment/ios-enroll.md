@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2c05a5518ff180bcfd3f00f6f59097815e9eed9d
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696528"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126181"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中注册 iOS/iPadOS 设备
 
@@ -35,7 +35,7 @@ Intune 管理员可以为 iOS/iPadOS 和 iPadOS 设备设置注册，以访问�
 
 在启用 iOS/iPadOS 设备之前，请完成以下步骤：
 
-- [确保设备符合 Apple 设备注册的条件](https://support.apple.com/en-us/HT204142#eligibility)。
+- [确保设备受支持](../fundamentals/supported-devices-browsers.md)。
 - [设置 Intune](../fundamentals/setup-steps.md) - 这些步骤用于设置 Intune 基础结构。 具体而言，设备注册需要用户[设置 MDM 机构](../fundamentals/mdm-authority-set.md)。
 - [获取 Apple MDM Push Certificate](apple-mdm-push-certificate-get.md) - Apple 需要证书，才能启用对 iOS/iPadOS 和 macOS 设备的管理。
 

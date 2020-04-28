@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084684"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137960"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>设置 iOS 设备对公司资源的访问  
 
@@ -170,13 +170,13 @@ ms.locfileid: "80084684"
 
 8. 在“登录”屏幕上，请输入托管 Apple ID 的密码  。 在大多数情况下，除非你的组织为你提供了一组不同的凭据，否则这些凭据将与用于登录工作帐户或学校帐户的凭据相同。 
 9. 点击“登录”  。  
-10. 安装配置文件后，屏幕上将短暂地显示一条成功消息。 若要验证配置文件是否已安装，请转到“配置文件和设备管理”设置 ****  。 应该会在“移动设备管理”下看到此配置文件 **** 。  
+10. 安装配置文件后，屏幕上将短暂地显示一条成功消息。 若要确认配置文件已安装，请转到“配置文件和设备管理”设置  。 应该会看到在“移动设备管理”下列出的配置文件  。  
 
     ![Settings 应用的示例屏幕截图，“配置文件和设备管理”设置，其中显示管理配置文件。](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. 返回到 Company Portal 应用。 Company Portal 将开始同步和设置你的设备。 Company Portal 可能会提示更新其他设备设置。 如果是这样，请点击“继续”  。    
 
-12. 当列表中的所有项都显示绿色复选标记时，表明设置已完成。 点击“完成” **** 。  
+12. 当列表中的所有项都显示绿色复选标记时，表明设置已完成。 点击“完成”  。  
 
 ## <a name="it-administrator-support"></a>IT 管理员支持  
 如果你是 IT 管理员且在注册设备时遇到问题，请参阅 [Troubleshooting iOS device enrollment problems in Microsoft Intune](https://support.microsoft.com/en-us/help/4039809)（Microsoft Intune 中的 iOS 设备注册问题疑难解答）。 本文列出了常见错误、错误原因及其解决方法步骤。  

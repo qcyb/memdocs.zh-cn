@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348440"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080073"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>使用 Intune 公司门户注册 Windows 10 设备
 
@@ -56,13 +56,13 @@ ms.locfileid: "79348440"
 
     ![添加工作或学校帐户](./media/w10-enroll-rs1-enter-your-credentials.png)  
 
-    你最后会看到一条显示你的公司或学校正在注册你的设备的消息。
+    你最后会看到一条消息，显示你的公司或学校正在注册你的设备。
 
 6. 如果组织要求为 Windows Hello 设置 PIN，系统将提示输入验证码。 输入代码并继续完成屏幕上的步骤以创建 PIN。  
 
-7. 在“设置完成!”  上 屏幕，请选择“完成”  。 你的设备现已注册。  
+7. 在“设置完成!”  屏幕，请选择“完成”  。 你的设备现已注册。  
 
-8. 要再次检查连接，请返回到“设置” **“帐户”** “使用工作或学校帐户” >    >   。  现在应列出你的帐户。  
+8. 要再次检查连接，请返回到“设置” > “帐户” > “使用工作或学校帐户”    。  现在应列出你的帐户。  
 
 
     ![验证已正确设置了连接](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
@@ -76,7 +76,7 @@ ms.locfileid: "79348440"
 
 2. 打开“设置”应用  。 如果应用列表中没有随时可用的应用，请转到搜索栏，然后键入“settings”。
 
-3. 选择“帐户” **“你的帐户”**  >   。  
+3. 选择“帐户” > “你的帐户”   。  
 
 
     ![选择“你的帐户”](./media/W10-enroll-2-accounts-your-account.png)  

@@ -19,12 +19,12 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef7951217b0b6df21a86ca29a8637385aa65715
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a069a70077a2b6b1b484bb8a88960c314488cc70
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79337013"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075908"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>使用公司门户应用注册 macOS 设备  
 
@@ -43,7 +43,7 @@ ms.locfileid: "79337013"
 
 如果注册后组织实施了新的安全要求（如多重身份验证），公司门户将对此进行通知。 可调整设置，以便可以继续通过该设备开展工作。  
 
-若要了解有关注册的详细信息，请参阅[安装公司门户应用并注册设备后会发生什么情况？](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md)。  
+要了解有关注册的详细信息，请参阅[安装公司门户应用并注册设备后会发生什么情况？](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md)。  
 
 ## <a name="get-your-macos-device-managed"></a>托管 macOS 设备  
 使用以下步骤在组织中注册 macOS 设备。 设备必须正在运行 MacOS 10.12 或更高版本。   
@@ -74,7 +74,7 @@ ms.locfileid: "79337013"
 5. 在“确认设备管理”屏幕上，选择“打开系统首选项”   。  
 
     ![“确认设备管理”屏幕的示例屏幕截图，突出显示“打开系统首选项”按钮。](./media/confirm-device-management-macos-1912.PNG)  
-6. 设备的系统首选项随即打开。 从设备配置文件列表中选择“管理配置文件”，然后选择“批准” **“批准”**   >   。  
+6. 设备的系统首选项随即打开。 从设备配置文件列表中选择“管理配置文件”，然后选择“批准” > “批准”    。  
     ![“系统首选项”中“管理配置文件”屏幕的示例屏幕截图，突出显示“批准”按钮。](./media/management-profile-approve-macos-1912.PNG)   
 1. 返回到公司门户并选择“继续”  。    
 2. 组织可能会要求你更新设备设置。 更新设置完成后，选择“检查设置”  。  
@@ -85,12 +85,12 @@ ms.locfileid: "79337013"
 
  ## <a name="troubleshooting-and-feedback"></a>故障排除和反馈   
 
-如果在注册过程中遇到问题，请转到“帮助” **“发送诊断报告”，向 Microsoft 应用开发人员报告问题** >   。 此信息用于帮助改进应用。 如果 IT 支持人员向他们寻求帮助，他们还将使用这些信息来帮助解决问题。  
+如果在注册过程中遇到问题，请转到“帮助” > “发送诊断报告”，向 Microsoft 应用开发人员报告问题   。 此信息用于帮助改进应用。 如果 IT 支持人员向他们寻求帮助，他们还将使用这些信息来帮助解决问题。  
 
 向 Microsoft 报告问题之后，你可以将所遇到问题的详细信息发送给 IT 支持人员。 选择“电子邮件详细信息”  。 在电子邮件正文中键入所遇到的问题。 若要查找支持人员的电子邮件地址，请转到公司门户应用 >“联系人”  。 或查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
  
 
-此外，Microsoft Intune 公司门户团队很乐意听取你的反馈。 请转到“帮助” **“发送反馈”，分享你的想法和观点** >   。  
+此外，Microsoft Intune 公司门户团队很乐意听取你的反馈。 请转到“帮助” > “发送反馈”，分享你的想法和观点   。  
 
 ## <a name="unverified-profiles"></a>未验证的配置文件  
 在“系统首选项”   > “配置文件”  中查看已安装的移动设备管理 (MDM) 配置文件时，某些配置文件可能会显示为“未验证”状态。 只要“管理配置文件”显示为“已验证”状态，便无需担心。  

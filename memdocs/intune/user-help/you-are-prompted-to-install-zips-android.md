@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d862f29866ecaaa758983f847d0a1a598e2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346464"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079614"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>在 Android 设备上安装 Zimperium zIPS
 
@@ -52,7 +52,7 @@ ms.locfileid: "79346464"
 
    * 如果未找到任何威胁，则所有三个威胁类型将显示为绿色。
 
-11. 公司门户中的“设备详细信息”  屏幕将显示你当前符合你公司的安全要求。
+11. 公司门户中的“设备详细信息”  屏幕将显示你当前符合公司的安全要求。
 
     ![你的设备当前符合策略](./media/mtd-device-now-compliant-android.png)
 

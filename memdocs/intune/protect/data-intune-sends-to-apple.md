@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da9ab5fe5a8716e3af0ae02122f51d06e6e55e6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352496"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079733"
 ---
 # <a name="data-intune-sends-to-apple"></a>Intune 向 Apple 发送的数据
 
@@ -49,7 +49,7 @@ ms.locfileid: "79352496"
 | ASM/DEP | admin_id | 生成当前正在使用的令牌的用户的 Apple ID。 |
 | ASM/DEP | org_name | 组织的名称。 |
 | ASM/DEP | org_email | 组织的电子邮件地址。 |
-| ASM/DEP | org_phone | 组织的电话。 |
+| ASM/DEP | org_phone | 组织的电话号码。 |
 | ASM/DEP | org_address | 组织的地址。 |
 | ASM/DEP | org_id | DEP 客户 ID。 此密钥仅在协议版本 3 及更高版本中可用。 |
 | ASM/DEP | serial_number | 设备的序列号（字符串）。 |

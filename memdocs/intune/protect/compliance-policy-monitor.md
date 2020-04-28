@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353029"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079835"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>监视 Intune 设备符合性策略
 
@@ -101,7 +101,7 @@ ms.locfileid: "79353029"
 该操作将打开“设备符合性”  窗口，并在“设备状态”  图表中显示设备。 此图表可显示处于该状态的设备的详细信息，包括操作系统平台、上次签入日期等。
 ![仪表板图像显示了处于该特定状态下的设备的更多详细信息](./media/compliance-policy-monitor/drill-down-details.png)
 
-如果想要查看某一特定用户拥有的所有设备，还可以通过键入该用户的电子邮件来筛选图表报告。
+如果要查看某一特定用户拥有的所有设备，还可以通过键入该用户的电子邮件来筛选图表报告。
 
 #### <a name="filter-and-columns"></a>筛选器和列
 
@@ -179,7 +179,7 @@ Intune 将提供有关应用于该设备的设备符合性策略设置的详细�
     - **已成功**：策略已应用
     - **错误**：无法应用策略。 此消息通常与链接到错误说明的错误代码一起显示。
     - **冲突**：两个设置应用于同一设备，Intune 无法解决冲突。 管理员应进行审核。
-    - **挂起**：设备尚未使用 Intune 签入，无法接收策略。
+    - **挂起**：设备尚未使用 Intune 签入，尚无法接收策略。
     - **不适用**：设备无法接收策略。 例如，策略更新了 iOS 11.1 的特定设置，但设备使用的是 iOS 10。
 
 3. 若要查看使用此策略的设备的详细信息，请选择其中一种状态。 例如，选择“已成功”  。 在下一个窗口中，将列出特定设备的详细信息，包括设备名称和部署状态。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 953dbf7883377b95647a1cd1f253306cf41f0fd6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 275bb43552b0dda3409dcd11ef14311334f13fa9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351300"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079497"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Intune 中的隐私和个人数据
 
@@ -35,7 +35,7 @@ Microsoft Intune 不会将提供服务期间收集到的任何个人数据用于
 
 ## <a name="your-company-terms-and-conditions"></a>公司条款和条件
 
-可[将隐私声明纳入公司面向最终用户的条款和条件中](../apps/company-portal-app.md)。 此类隐私声明可包含最终用户个人数据的使用情况和隐私情况的相关信息。
+可以[将隐私声明纳入公司面向最终用户的条款和条件中](../apps/company-portal-app.md)。 此类隐私声明可包含最终用户个人数据的使用情况和隐私情况的相关信息。
 
 可在 Intune 公司门户应用中显示公司的条款和条件。 这样一来，用户便可在注册 Intune 和访问公司资产及数据之前查看条款和条件（包括隐私声明）。
 

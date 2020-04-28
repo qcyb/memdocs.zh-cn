@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04a8cd4ce64b566bf2d90ef301c1be44589a53e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79354186"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080141"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>基于应用的 Intune 条件访问
 
@@ -45,7 +45,7 @@ ms.locfileid: "79354186"
 
 有关详细信息，请参阅[企业移动性定价](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing)或 [Azure Active Directory 定价](https://azure.microsoft.com/pricing/details/active-directory/)。
 
-## <a name="supported-apps"></a>支持的应用
+## <a name="supported-apps"></a>受支持的应用
 
 可以在 [Azure Active Directory 条件访问技术参考文档](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)中找到支持基于应用的条件访问的应用列表。
 
@@ -64,15 +64,15 @@ ms.locfileid: "79354186"
 
 2. 首次尝试身份验证时，用户将被重定向到应用商店来安装代理应用。 代理应用可以是适用于 iOS 的 Microsoft Authenticator，也可以是适用于 Android 设备的 Microsoft 公司门户。
 
-   如果用户尝试使用本机电子邮件应用，则将被重定向到应用商店，然后安装 Outlook 应用。
+   如果用户尝试使用本机电子邮件应用，则会被重定向到应用商店，然后安装 Outlook 应用。
 
 3. 在设备上安装代理应用。
 
 4. 代理应用将启动 Azure AD 注册进程，在 Azure AD 中创建一个设备记录。 这与移动设备管理 (MDM) 注册过程不同，但此记录是必需的，用于在设备上强制执行条件访问策略。
 
-5. 代理应用将验证应用程序的身份。 有一个安全层，以便代理应用可验证该应用是否授权用户使用。
+5. 代理应用将验证应用程序的身份。 有一个安全层，使代理应用可以验证该应用是否授权用户使用。
 
-6. 代理应用将应用客户端 ID 作为用户身份验证过程的一部分发送到 Azure AD，以查看其是否存在于策略批准列表中。
+6. 在用户身份验证过程中，代理应用将应用客户端 ID 发送到 Azure AD，以查看它是否存在于策略批准列表中。
 
 7. Azure AD 允许用户根据策略批准列表验证并使用应用。 如果列表中没有此应用，Azure AD 将拒绝对其进行访问。
 

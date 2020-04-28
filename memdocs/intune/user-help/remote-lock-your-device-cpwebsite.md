@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1ac77e4c539c8d5614001f9a326b32536ee07629
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 79bcfc1fabab3b14a9a2560b692c5f2ca459aee4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336480"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079410"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>从公司门户网站远程锁定设备
 
@@ -45,7 +45,7 @@ ms.locfileid: "79336480"
 
     ![“设备”页面的屏幕截图，其中 2 个磁贴用于显示无法识别的、以一般方式命名的设备。 灰色横幅位于设备的正下方，提示用户识别他们正在使用的设备或添加新的设备。](./media/rename-reset-device-step2-1808.png) 
 
-3. 选择“远程锁定”  。 如果页面顶部未显示锁定选项，请选择“更多(…)” **“远程锁定”**  >   。  
+3. 选择“远程锁定”  。 如果页面顶部未显示锁定选项，请选择“更多(…)” > “远程锁定”   。  
 
    ![公司门户网站上已选设备的设备详细信息页，其顶部具有显示“重命名”、“删除”、“重置设备”、“重置密码”和“远程锁定”的链接列表。 ](./media/rename-reset-device-1808.png) 
 

@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: cb88ddf489fbcf588d3abbaffae545dc46d91b7d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e6537eec4e897afa183c51f67f32704c75985e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326582"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079019"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>将 Windows Hello 企业版与 Microsoft Intune 集成  
 
@@ -42,7 +42,7 @@ Intune 与 Hello for Business 集成的两种方式：
 > [!IMPORTANT]
 > 在周年更新前的 Windows 10 桌面版和移动版中，可以设置两种不同的 PIN，用于对资源进行身份验证：
 > - **设备 PIN** 用于解锁设备并连接到云资源。
-> - **工作 PIN** 用于访问用户个人设备 (BYOD) 上的 Azure AD 资源。
+> - 工作 PIN  用于访问用户个人设备 (BYOD) 上的 Azure AD 资源。
 > 
 > 在周年更新中，这两个 PIN 合并为一个设备 PIN。
 > 设置用于控制设备 PIN 的任何 Intune 配置策略，以及所配置的任何 Windows Hello 企业版策略，现在都会设置这一新的 PIN 值。

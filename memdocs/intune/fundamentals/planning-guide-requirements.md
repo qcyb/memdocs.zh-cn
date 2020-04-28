@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357644"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080124"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>确定用例场景要求
 
@@ -33,7 +33,7 @@ ms.locfileid: "79357644"
 
 你可能还会有用于公司用例场景的组织组，这些组也有几套不同的要求（例如 PIN 设置、Wi-Fi 或 VPN 配置文件、已部署的应用）。 要求还可以根据移动设备平台的功能（如指纹读取器、电子邮件配置文件）来确定。
 
-下面是一个组织用例场景要求的几个示例，显示了针对每个用例和子用例场景、组织组以及移动设备平台的几套不同的要求。 此外，还可使用下表输入组织的用例要求：
+下面是一个组织用例场景要求的几个示例，显示了针对每个用例和子用例场景、组织组以及移动设备平台的几套不同的要求。 另外，还可以使用下表输入组织的用例要求：
 
 | **用例** | **子用例** | **组** | **设备平台** | **惠?** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -43,7 +43,7 @@ ms.locfileid: "79357644"
 | BYOD | 信息工作者 | 营销、销售 | iOS/iPadOS | 安全电子邮件、设备设置、配置文件、应用 |                                                         
 | BYOD | 高级管理人员 | 营销、销售 | iOS/iPadOS | 安全电子邮件、设备设置、配置文件、应用 |
 
-你可以[下载上表的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来输入组织的用例和子用例要求。
+可以[下载上表的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来输入组织的用例和子用例要求。
 
 
 ## <a name="examples-of-requirements"></a>要求示例

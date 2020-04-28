@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323130"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739901"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>配置 Intune 的 Exchange 本地访问权限
 
@@ -35,7 +35,7 @@ ms.locfileid: "80323130"
 
 在可配置条件访问之前，请先验证以下配置是否存在：
 
-- Exchange 版本为 Exchange 2010 SP1 或更高版本  。 支持 Exchange Server 客户端访问服务器 (CAS) 阵列。
+- Exchange 版本为 Exchange 2010 SP3 或更高版本  。 支持 Exchange Server 客户端访问服务器 (CAS) 阵列。
 
 - 已安装并使用 [Exchange ActiveSync 本地 Exchange 连接器](exchange-connector-install.md)（用于将 Intune 连接到 Exchange）。
 
@@ -124,7 +124,7 @@ Windows 8.1 和更高版本上的本机邮件  应用程序（使用 Intune 向 
    > [!div class="mx-imgBorder"]
    > ![“编辑组织”工作流的“通知”示例屏幕截图](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
-   如果用户的设备不符合要求并且他们希望访问本地 Exchange，则修改发送给用户的默认电子邮件。 消息模板使用的是标记语言。 键入时还可看到消息的预览显示情况
+   如果用户的设备不符合要求并且他们需要访问本地 Exchange，则修改发送给用户的默认电子邮件。 消息模板使用的是标记语言。 键入时还可看到消息的预览显示情况
 
    选择“查看并保存”，然后选择“保存”   ，保存编辑内容以完成 Exchange 本地访问的配置。
 

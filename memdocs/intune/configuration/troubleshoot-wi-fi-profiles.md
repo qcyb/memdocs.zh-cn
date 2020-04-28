@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ca59c9eea6ba7dd489f5c958ef6976095f27c9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360621"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078203"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune 中的 Wi-Fi 设备配置文件疑难解答
 
@@ -246,7 +246,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
     > [!div class="mx-imgBorder"]
     > ![CMTrace 日志输出示例显示了已成功在设备上应用了 WiFi Intune 配置文件](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
 
-    如果日志中出现错误，请复制错误的时间戳并取消筛选日志。 然后，将“查找”选项与时间戳结合使用，查看错误发生之前所发生的情况。
+    如果日志中出现错误，请复制错误的时间戳并取消筛选日志。 然后，将“查找”选项与时间戳结合使用，查看错误发生之前的情况。
 
 ### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>问题 2：将 Wi-Fi 配置文件部署到设备，但设备无法连接到网络
 

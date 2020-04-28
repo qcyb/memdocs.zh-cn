@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2bd295b0dca016971c34997873994a4fe1bc2c0d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334933"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079631"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>在 Android 设备上安装 Symantec Endpoint Protection Mobile
 
@@ -52,7 +52,7 @@ ms.locfileid: "79334933"
 
    * 如果未找到任何威胁，则所有三个威胁类型将显示为绿色。
 
-     * 公司门户中的“设备详细信息”  屏幕将显示你当前符合你公司的安全要求。
+     * 公司门户中的“设备详细信息”  屏幕将显示你当前符合公司的安全要求。
 
      ![你的设备当前符合策略](./media/mtd-device-now-compliant-android.png)
 

@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362584"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023191"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>引导式方案 - 云托管的新式桌面
 
-新式桌面是适用于信息工作者的最先进的生产力平台。 Office 365 专业增强版和 Windows 10 是新式桌面的核心组件，也是适用于 Windows 10 和 Microsoft Defender 高级威胁防护的最新安全基线。
+新式桌面是适用于信息工作者的最先进的生产力平台。 Microsoft 365 应用版和 Windows 10 是新式桌面的核心组件，也是适用于 Windows 10 和 Microsoft Defender 高级威胁防护的最新安全基线。
 
 通过云管理新式桌面，增加在 Internet 范围内远程操作的额外优势。 云管理使用内置的 Windows 移动设备管理策略并且删除了对本地 Active Directory 组策略的依赖。
 
@@ -46,7 +46,7 @@ ms.locfileid: "79362584"
 
 ## <a name="step-1---introduction"></a>步骤 1 - 简介
 
-使用此引导式方案，你将设置测试用户，在 Intune 中注册设备，并使用 Intune 建议的设置以及 Windows 10 和 Office 专业增强版部署该设备。 如果选择[在 Intune 中启用此保护](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)，则还将为设备配置 Microsoft Defender 高级威胁防护。 设置的用户和注册的设备将被添加到一个新的安全组中，并且将使用推荐设置进行配置，以便提高安全性和生产力。
+使用此引导式方案，你将设置测试用户，在 Intune 中注册设备，并使用 Intune 建议的设置以及 Windows 10 和 Microsoft 365 应用版部署该设备。 如果选择[在 Intune 中启用此保护](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)，则还将为设备配置 Microsoft Defender 高级威胁防护。 设置的用户和注册的设备将被添加到一个新的安全组中，并且将使用推荐设置进行配置，以便提高安全性和生产力。
 
 ### <a name="what-you-will-need-to-continue"></a>需要继续执行的操作
 
@@ -121,7 +121,7 @@ Windows Autopilot 自动配置新设备，这样用户就可以在无需 IT 人�
 
 用户将设备加入 Azure Active Directory 后，以下配置将应用于该设备：
 
-1. Office 365 专业增强版将自动安装在云托管的电脑上。 其中包括熟悉的应用程序，包括 Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business 和 Word。 你可以使用这些应用程序连接到 SharePoint Online、Exchange Online 和 Skype for Business Online 等 Office 365 服务。 与非订阅版本的 Office 不同，Office 365 专业增强版会定期更新新功能。 有关新功能的列表，请参阅 Office 365 中的新增功能。
+1. Microsoft 365 应用版将自动安装在云托管的电脑上。 其中包括熟悉的应用程序，包括 Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business 和 Word。 你可以使用这些应用程序连接到 SharePoint Online、Exchange Online 和 Skype for Business Online 等 Office 365 服务。 与 Office 的非订阅版本不同，Microsoft 365 应用版会定期更新，提供新功能。 有关新功能的列表，请参阅 Office 365 中的新增功能。
 2. Windows 安全基线将安装在云托管的电脑上。 如果已设置 Microsoft Defender 高级威胁防护，则该引导式方案还将配置 Defender 的基线设置。 Defender 高级威胁防护向 Windows 10 安全堆栈提供了新的泄露后保护层。 结合 Windows 10 中内置的客户端技术和强大的云服务，它将有助于检测已越过其他防御措施的威胁。 
 
 ## <a name="next-steps"></a>后续步骤

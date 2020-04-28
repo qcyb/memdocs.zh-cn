@@ -1,5 +1,5 @@
 ---
-title: 取消注册 Android 设备会造成什么结果？ |Microsoft Docs
+title: 取消注册 Android 设备会造成什么结果？ | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 368972acc1b3380b1adf9b21939adbca0dc1434c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8bbabee06e2aa94b6dc7c4d273c76f513005ddf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346854"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077013"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>从 Intune 取消注册 Android 设备会发生什么情况？
 
@@ -36,7 +36,7 @@ ms.locfileid: "79346854"
 
 - 设备将不再显示在公司门户中。
 
-- 再也不能从公司门户安装应用。
+- 你也不再能够从公司门户安装应用。
 
 - 将不再应用当添加设备时在设备上更改的任何设置（例如禁用相机，或需要一定的密码长度）。
 

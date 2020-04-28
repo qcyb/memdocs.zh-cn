@@ -18,15 +18,15 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355109"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077914"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>在 Azure 中我的 Intune 功能处于哪个位置？
-我们已将 Intune 移动到 Azure 门户，借此机会我们以更有逻辑的方式整理了某些任务。 但每一次改进都需要熟悉新的布局整理。 本参考指南面向非常熟悉经典门户中的 Intune 且想知道如何使用 Azure 门户中的 Intune 完成工作的用户。 如果本文不含要查找的功能，请在文章末尾处留下评论，以便我们能够更新本文。
+我们已将 Intune 移动到 Azure 门户，借此机会我们以更有逻辑的方式整理了某些任务。 但每一次改进都需要熟悉新的布局整理。 本参考指南面向非常熟悉经典门户中的 Intune 且想知道如何使用 Azure 门户中的 Intune 完成工作的用户。 如果本文不含你要查找的功能，请在文章末尾处留下评论，以便我们能够更新本文。
 ## <a name="quick-reference-guide"></a>快速参考指南
 
 |功能 |经典门户中的路径|Azure 门户中 Intune 内的路径|
@@ -52,7 +52,7 @@ Azure 门户中 Intune 使用 [Azure Active Directory (AD)](https://docs.microso
 
 ![经典移动设备注册规则的图像](./media/ui-changes/01-classic-rules.png)
 
-这些规则适用于你的 Intune 帐户中没有异常的所有用户。 在 Azure 门户中，这些规则现在表现为两种不同的策略类型：设备类型限制和设备限制。
+这些规则适用于你的 Intune 帐户中没有异常的所有用户。 在 Azure 门户中，这些规则现在以两种不同的策略类型显示：设备类型限制和设备限制限制。
 
 ![Azure 移动设备注册限制的图像](./media/ui-changes/02-azure-enroll-restrictions.png)
 
@@ -64,7 +64,7 @@ Azure 门户中 Intune 使用 [Azure Active Directory (AD)](https://docs.microso
 
 ![Azure 设备类型限制的图像](./media/ui-changes/04-azure-platform-restrictions.png)
 
-现在在设备类型限制的平台配置下管理允许或阻止个人拥有的设备的功能。
+现在，允许或阻止个人拥有的设备的功能在“设备类型限制”的“平台配置”下进行管理。
 
 ![Azure 个人设备阻止块设置的图像](./media/ui-changes/05-azure-personal-block.png)
 
@@ -81,7 +81,7 @@ Azure 门户中 Intune 使用 [Azure Active Directory (AD)](https://docs.microso
 如果希望在 Azure 门户中查看和修改符合性策略，需要从经典门户中删除旧策略。 然后在 Azure 门户中创建策略。 有关设备符合性策略的详细信息，请参阅 [Intune 中的设备符合性策略入门](../protect/device-compliance-get-started.md)。 
 
 ## <a name="where-did-apple-dep-go"></a>Apple DEP 处于哪个位置？
-在经典门户中，可以将 Intune 设置为与 Apple 设备注册计划进行集成，并手动请求与 Apple 服务同步：
+在经典门户中，可以将 Intune 设置为与 Apple 设备注册计划集成，并手动请求与 Apple 服务同步：
 
 ![经典 DEP 令牌的图像](./media/ui-changes/06-classic-dep-token.png)
 

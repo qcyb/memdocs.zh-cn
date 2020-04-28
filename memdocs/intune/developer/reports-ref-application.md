@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359854"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023310"
 ---
 # <a name="reference-for-application-entities"></a>应用程序实体引用
 
@@ -39,7 +39,7 @@ ms.locfileid: "79359854"
 
 appRevision  实体列出了应用的所有版本。
 
-| 属性  | Description | 示例 |
+| 属性  | 说明 | 示例 |
 |---------|------------|--------|
 | appKey |应用的唯一标识符。 |123 |
 | applicationId |应用的唯一标识符 - 类似于 AppKey，但该标识符是自然键。 |b66bc706-ffff-7437-0340-032819502773 |
@@ -61,7 +61,7 @@ appRevision  实体列出了应用的所有版本。
 
 appType  实体列出了应用的安装源。
 
-| 属性  | Description |
+| 属性  | 说明 |
 |---------|------------|
 | appTypeID |类型的 ID |
 | appTypeKey |密钥的代理键 |
@@ -69,7 +69,7 @@ appType  实体列出了应用的安装源。
 
 ### <a name="example"></a>示例
 
-| AppTypeID  | Name | Description |
+| AppTypeID  | 名称 | 说明 |
 |---------|------------|--------|
 | 0 |Android 应用商店应用 | Android 应用商店应用。 |
 | 1 |Android LOB 应用 | Android 业务线应用。 |
@@ -77,7 +77,7 @@ appType  实体列出了应用的安装源。
 | 3 |iOS 应用商店应用 | iOS 应用商店应用。 |
 | 4 |iOS LOB 应用 | iOS 业务线应用。 |
 | 5 |托管 iOS App Store 应用 (MAM?) | 启用了管理的 iOS APP Store 应用。 |
-| 6 |O365 Pro Plus 套件 | 适用于 Windows 10 的 Office 365 专业增强版套件。 |
+| 6 |O365 Pro Plus 套件 | 适用于 Windows 10 的 Microsoft 365 应用版。 |
 | 7 |Web 应用 | Web 应用。 |
 | 8 |Windows Phone 8.1 应用商店应用 | Windows Phone 8.1 应用商店应用。 |
 | 9 |Windows 应用商店应用 | Windows 应用商店应用。 |
@@ -90,7 +90,7 @@ appType  实体列出了应用的安装源。
 
 vppProgramType  实体列出了应用的可能 VPP 计划类型。
 
-| 属性  | Description |
+| 属性  | 说明 |
 |---------|------------|
 | vppProgramTypeID | 类型 ID。 |
 | vppProgramTypeKey | 密钥的代理键。 |
@@ -98,7 +98,7 @@ vppProgramType  实体列出了应用的可能 VPP 计划类型。
 
 ### <a name="example"></a>示例
 
-| VppProgramID  | Name | Description |
+| VppProgramID  | 名称 | 说明 |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Microsoft 的 VPP 计划。 |
 | 00000000-0000-0000-0000-000000000000 | 尚未提供 | 默认值，无 VPP。 |
@@ -110,7 +110,7 @@ vppProgramType  实体列出了应用的可能 VPP 计划类型。
 
 applicationInventory 项列出了收集清单时在设备上找到的应用程序  。
 
-| 属性  | Description |
+| 属性  | 说明 |
 |---------|------------|
 | deviceKey | 这是对包含 Intune 设备 ID 的“设备”表的引用。 |
 | dateKey | 对表明清单日期的日期表格的引用。 |
@@ -122,7 +122,7 @@ applicationInventory 项列出了收集清单时在设备上找到的应用程�
 
 mobileAppInstallState  实体表示已分配到包含设备和/或用户的组的移动应用程序的安装状态。
 
-| 属性 | Description |
+| 属性 | 说明 |
 |---|---|
 | appInstallStateKey | 帐户的应用安装状态的唯一 ID。 |
 | appInstallState | 应用安装状态的枚举值。 |

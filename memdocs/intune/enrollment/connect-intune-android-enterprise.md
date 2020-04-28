@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6027a8f193bc470c4c7ab7724f3b9736c2487980
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327169"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078016"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>将 Intune 帐户连接到托管的 Google Play 帐户
 
@@ -41,7 +41,7 @@ Intune 将自动向 Intune 管理控制台添加四个常见的与 Android Enter
 > [!NOTE]
 > 因为 Google 和 Microsoft 域之间的交互，此步骤可能需要你调整浏览器设置。  请确保“portal.azure.com”和“play.google.com”在浏览器中位于同一安全区域。
 
-1. 如果你尚未准备就绪，请将[移动设备管理机构设置](../fundamentals/mdm-authority-set.md)为“Microsoft Intune”  。
+1. 如果尚未准备就绪，请将[移动设备管理机构](../fundamentals/mdm-authority-set.md)设置为“Microsoft Intune”  ，以便为移动设备管理做好准备。
 2. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “Android” > “Android 注册” > “托管的 Google Play”     。  如果使用的是自定义 Intune 管理员角色，则访问此角色需要组织读取和更新权限。
    
    ![Android 企业注册屏幕](./media/connect-intune-android-enterprise/android-work-bind.png)

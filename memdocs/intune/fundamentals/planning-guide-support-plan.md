@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cb8107efa5961c74277afa84da861305d8b9484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2368e27cbd5f98683a0b00e6b23c070236c84491
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357280"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080107"
 ---
 # <a name="develop-a-support-plan"></a>制定支持计划
 
@@ -37,7 +37,7 @@ ms.locfileid: "79357280"
 
 - 有什么机会可以让支持团队早点参与到 Intune 部署流程中？
 
-让我们更详细地研究一下每个方面。
+让我们更详细地研究一下每个部分。
 
 ## <a name="which-teams-are-responsible-for-providing-support"></a>哪些团队负责提供支持？
 
@@ -49,7 +49,7 @@ ms.locfileid: "79357280"
 
 ## <a name="what-is-the-support-process"></a>支持流程是什么？
 
-对于产品推出的初始阶段，可将这 3 个层次全部囊括在网桥或 Skype 调用之中。 下面举例说明了组织如何实现其 IT 支持或帮助台工作流：
+对于产品推出的初始阶段，可将这 3 个层次全部囊括在网桥或 Skype 调用之中。 下面举例说明了组织如何实现其 IT 支持或支持人员工作流：
 
 1. 最终用户就注册问题联系第 1 层 IT 支持或帮助台。
 
@@ -71,7 +71,7 @@ ms.locfileid: "79357280"
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>计划如何提供 Intune 支持培训？
 
-请务必向 IT 支持或帮助台提供 Intune 技术培训，使培训处于适当级别并且适用于特定的支持层及其职责。 可让 Intune MDM 团队对支持主管进行此培训（培训培训师），然后让支持主管向其支持团队成员提供此培训。 培训通常为 2-3 小时，包括演讲和实验。
+请务必向 IT 支持或支持人员提供 Intune 技术培训，这样培训才能达到适当的水平并适用于特定的支持层及其职责。 可让 Intune MDM 团队对支持主管进行此培训（培训培训师），然后让支持主管向其支持团队成员提供此培训。 培训通常为 2-3 小时，包括演讲和实验。
 
 下面介绍 Intune 支持培训议程的示例。
 

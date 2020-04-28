@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77c8a972020113b36b57c992b64a6965f733d119
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 66053bae197a74bf83a41b7ea400ffdc3d514b06
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335466"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077574"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>取消注册 Android 设备管理  
 
@@ -52,14 +52,14 @@ ms.locfileid: "79335466"
 
 若要删除 Android 适用的公司门户应用存储在设备上的所有数据，请执行以下操作：
 
-- 通过点击“应用程序” **[应用名称]** “清除数据”来清除应用数据 >    >   。
+- 通过点击“应用程序” >  [应用名称]  > “清除数据”来清除应用数据    。
 - 删除以下文件夹：\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal。
 
 ## <a name="uninstall-the-company-portal-app"></a>卸载公司门户应用
 
 公司门户是一种设备管理应用。 因此在取消注册设备管理之前，都无法将其卸载。 该操作完成后，请点击并按住公司门户应用图标，直到看到“卸载”  。 点击“卸载”，从设备中删除应用  。  
 
-或者，点击“设置” **“应用”** “公司门户” > “卸载”   >    >   。  
+或者，点击“设置” > “应用” > “公司门户” > “卸载”     。  
 
 ### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>以设备管理员身份删除公司门户应用
 
@@ -71,12 +71,12 @@ ms.locfileid: "79335466"
 
 **选项 1**：  
 
-1. 选择“设置” **“安全性”** “其他安全设置” > “设备管理员”   >    >   。  
+1. 选择“设置” > “安全性” > “其他安全设置” > “设备管理员”     。  
 2. 清除“公司门户”选择  。  
 
 **选项 2**：
 
-1. 选择“设置” **“锁屏界面和安全性”** “其他安全设置” > “设备管理应用”   >    >   。
+1. 选择“设置” > “锁屏界面和安全性” > “其他安全设置” > “设备管理应用”     。
 2. 清除“公司门户”选择  。
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

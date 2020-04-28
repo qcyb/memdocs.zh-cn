@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 200bde56a4a1e77ce78678eddd35537c04dfa514
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325496"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079053"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>教程：保护托管设备上的 Exchange Online 电子邮件
 
@@ -43,7 +43,7 @@ ms.locfileid: "80325496"
 
 - Azure Active Directory Premium（[免费试用版](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)）
 
-- Office 365 商业版订阅，包括 Exchange（[免费试用版](https://go.microsoft.com/fwlink/p/?LinkID=510938)）
+- Microsoft 365 商业应用版订阅，包括 Exchange（[免费试用版](https://go.microsoft.com/fwlink/p/?LinkID=510938)）
 
 在开始之前，按照[快速入门：创建适用于 iOS/iPadOS 的电子邮件设备配置文件](../configuration/quickstart-email-profile.md)。
 
@@ -53,7 +53,7 @@ ms.locfileid: "80325496"
 
 ## <a name="create-the-ios-device-compliance-policy"></a>创建 iOS 设备符合性策略
 
-设置 Intune 设备符合性策略以设置设备必须满足才能被视为符合的条件。 在本教程中，我们将为 iOS 设备创建设备符合性策略。 符合性策略是特定于平台的，因此针对要评估的每个设备平台需要单独的符合性策略。
+设置 Intune 设备符合性策略以设置设备必须满足才能被视为符合的条件。 在本教程中，我们将为 iOS 设备创建设备合规性策略。 符合性策略是特定于平台的，因此针对要评估的每个设备平台需要单独的符合性策略。
 
 1. 在 Intune 中，选择“设备”   > “符合性策略”   > “创建策略”  。
 
@@ -100,7 +100,7 @@ ms.locfileid: "80325496"
 
 ## <a name="create-the-conditional-access-policy"></a>创建条件访问策略
 
-现在我们将创建一个条件访问策略，要求所有设备平台在 Intune 中注册并符合我们的 Intune 符合性策略，之后才能访问 Exchange Online。 我们也将要求使用 Outlook 应用访问电子邮件。 条件访问策略可在 Azure AD 门户或 Intune 门户中配置。 由于我们已在 Intune 门户中，我们将在此处创建该策略。
+现在我们将创建一个条件访问策略，要求所有设备平台在 Intune 中注册并符合我们的 Intune 合规性策略，之后才能访问 Exchange Online。 我们也将要求使用 Outlook 应用访问电子邮件。 条件访问策略可在 Azure AD 门户或 Intune 门户中配置。 由于我们已在 Intune 门户中，我们将在此处创建该策略。
 
 1. 在 Intune 中，选择“终结点安全”   > “条件访问”   > “新策略”  。
 

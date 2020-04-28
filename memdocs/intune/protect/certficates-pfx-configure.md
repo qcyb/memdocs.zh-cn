@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322785"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771469"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用 PKCS 证书
 
@@ -151,7 +151,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 3. 针对 PKCS #12 的连接器单击“下载证书连接器软件”  并将文件保存到可从服务器上进行访问的位置，将在该服务器上安装连接器。
 
    ![Microsoft Intune 证书连接器下载](./media/certficates-pfx-configure/download-ndes-connector.png)
- 
+
 4. 下载完成后，登录服务器。 然后：
 
     1. 确保已安装 .NET 4.5 Framework 或更高版本，因为它是 NDES 证书连接器的必需项。 Windows Server 2012 R2 和更高版本中自动包含 .NET 4.5 Framework。
@@ -202,7 +202,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 
    选择“下一步”  。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组  。 计划将此证书配置文件部署到接收 PKCS 证书配置文件的相同组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
     选择“下一步”  。
 
@@ -260,7 +260,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 
    选择“下一步”  。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组  。 计划将此证书配置文件部署到接收受信任证书配置文件的相同组。有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
     选择“下一步”  。
 

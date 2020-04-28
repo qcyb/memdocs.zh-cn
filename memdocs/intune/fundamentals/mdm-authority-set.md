@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326769"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077886"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>设置移动设备管理机构
 
@@ -73,7 +73,7 @@ ms.locfileid: "80326769"
 
 ## <a name="change-mdm-authority-to-office-365"></a>将 MDM 机构更改为 Office 365
 
-要激活 Office 365 MDM（或启用 MDM 共存和现有 Intune 服务），请转到 [https://protection.office.com](https://protection.office.com)，选择“数据丢失防护” **“设备安全性策略”** “查看托管设备列表” > “开始”   >    >   。
+要激活 Office 365 MDM（或启用 MDM 共存和现有 Intune 服务），请转到 [https://protection.office.com](https://protection.office.com)，选择“数据丢失防护” > “设备安全性策略” > “查看托管设备列表” > “开始”     。
 
 有关详细信息，请参阅[在 Office 365 中设置移动设备管理 (MDM)](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)。
 
@@ -89,7 +89,7 @@ ms.locfileid: "80326769"
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>更改 MDM 机构的预期结果
 
-- 当 Intune 服务检测到租户的 MDM 机构已更改时，它将向所有已注册的设备发送通知消息，以便签入并与服务同步（此通知并非计划的定期签入）。 因此，租户的 MDM 机构从 Intune 独立版更改后，开机且联机的所有设备将与服务连接，接收新的 MDM 机构，并且由新的 MDM 机构托管。 对这些设备的管理和保护不会中断。
+- 当 Intune 服务检测到租户的 MDM 机构已发生更改时，它将向所有已注册的设备发送通知消息，以便签入并与服务同步（此通知并非计划的定期签入）。 因此，租户的 MDM 机构从 Intune 独立版更改后，开机且联机的所有设备将与服务连接，接收新的 MDM 机构，并且由新的 MDM 机构托管。 对这些设备的管理和保护不会中断。
 - 更改 MDM 机构过程中（或在不久之后），即使设备开机且联机，但设备在新的 MDM 机构中注册到该服务之前，将会有最长八小时的延迟（取决于计划的下次定期签入的执行时间）。    
 
   > [!IMPORTANT]    
@@ -97,7 +97,7 @@ ms.locfileid: "80326769"
 
 - 用户可以通过手动启动从设备到服务的签入来快速更改为新的 MDM 机构。 用户可以通过使用公司门户应用轻松进行此更改，并启动设备符合性检查。
 - 更改 MDM 机构后，要验证设备签入并与服务同步后一切工作是否正常运行，可在新 MDM 机构中查找设备。
-- 在更改 MDM 机构期间设备处于脱机状态时，以及设备签入服务，会存在一个过渡期。 为帮助确保设备在此过渡期间仍然受到保护并可正常运行，以下配置文件将在设备上最多保留七天（或直到设备与新的 MDM 机构连接并接收将覆盖现有设置的新设置为止）：
+- 在更改 MDM 机构期间设备处于脱机状态时，以及设备签入服务，会存在一个过渡期。 为帮助确保设备在此过渡期间仍然受到保护并可正常运行，以下配置文件将在设备上保留长达七天（或直到设备与新的 MDM 机构连接并接收将覆盖现有设置的新设置为止）：
   - 电子邮件配置文件
   - VPN 配置文件
   - 证书配置文件

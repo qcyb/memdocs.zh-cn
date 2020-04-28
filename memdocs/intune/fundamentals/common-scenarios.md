@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9975ffb8ce56659016680304c936fc8bb7d0774
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f2244f484b44673454b1bbb6ba6286c253021517
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344189"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079257"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Microsoft Intune 的常见使用方式
 
-深入研究实现任务前，请务必让公司的企业移动性利益干系人对使用 Intune 的业务目标进行统筹。 无论是刚开始接触企业移动性，还是迁移自另一个产品，利益干系人统筹都很重要。  
+在深入研究如何实现任务前，请务必让公司的企业移动性利益干系人对使用 Intune 的业务目标进行统筹。 无论是刚开始接触企业移动性，还是迁移自另一个产品，利益干系人统筹都很重要。  
 
 对企业移动性的需求在不断地动态演化，用于解决这些需求的 Microsoft 方法有时可能不同于市场上的其他解决方案。 在业务目标上保持一致的最好办法是，从你想要为员工、合作伙伴和 IT 部门实现的方案的角度，来表达你的目标。  
 
@@ -45,7 +45,7 @@ Intune 和 Microsoft 企业移动性 + 安全性 (EMS) 为 Exchange Server 提�
 
 Intune 还支持对需要安全访问本地数据的移动应用（例如业务线应用服务器）启用访问权限。 实现此类型的访问通常需要将用于访问控制的 [Intune 托管证书](../protect/certificates-configure.md)与外围中的标准 VPN 网关或代理（例如 Microsoft Azure Active Directory 应用程序代理）结合使用。
 
-在这些情况下，访问公司数据的唯一方法是将设备注册到管理系统中。 当设备注册后，管理系统可确保只有符合公司策略的设备才能访问公司数据。 此外，可以借助 Intune 的[应用包装工具和应用 SDK](../developer/apps-prepare-mobile-application-management.md) 将已访问的数据包含在业务线应用中，这样它就不能将公司数据传递给消费者应用或服务。
+在这些情况下，访问公司数据的唯一方法是将设备注册到管理系统中。 当设备注册后，管理系统可确保只有符合公司策略的设备才能访问公司数据。 此外，可以借助 Intune 的[应用包装工具和应用 SDK](../developer/apps-prepare-mobile-application-management.md) 将已访问的数据包含在业务线应用中，这样它就不能将公司数据传递给消费者应用或服务了。
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
@@ -53,7 +53,7 @@ Intune 还支持对需要安全访问本地数据的移动应用（例如业务�
 
 在 Office 365 中保护公司数据（电子邮件、文档、即时消息、联系人）既方便了你，又给用户带来了更加顺畅的体验。
 
-Intune 和 Microsoft 企业移动性 + 安全性提供了独一无二的集成式条件性访问解决方案，确保用户、应用或设备在符合公司的合规性要求（已执行[多重身份验证](../enrollment/multi-factor-authentication.md)，已向 Intune 注册，使用托管应用、受支持的 OS 版本、设备 pin 和低用户风险配置文件等等）之前无法访问 Office 365 数据。
+Intune 和 Microsoft 企业移动性 + 安全性提供了独一无二的集成式条件性访问解决方案，确保用户、应用或设备在符合公司的合规性要求（已执行[多重身份验证](../enrollment/multi-factor-authentication.md)，已向 Intune 注册，使用托管应用、受支持的 OS 版本、设备 PIN 和低用户风险配置文件等等）之前无法访问 Office 365 数据。
 
 相应应用商店中的 Office 移动应用备有可通过 Intune 配置的数据包含策略。 这使你能够避免与未由 IT 管理的应用（例如本机电子邮件应用）和存储位置（例如 Dropbox）共享数据。 此功能完全内置于 Office 365 和 EMS 中。 无需部署其他基础结构便可获得此功能。
 

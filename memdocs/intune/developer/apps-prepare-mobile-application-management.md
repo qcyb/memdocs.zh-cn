@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a26e32d0a719df7c3982591042991ae760d9281
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 863e6e540fcb79ff18accc40142a8e50c1406943
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80611702"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078067"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>准备业务线应用以使用应用保护策略
 
@@ -104,7 +104,7 @@ Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS（Obj-
 |支持未进行设备注册的 MAM|X|X|
 |完全擦除应用数据|X|X|
 |多身份方案中的工作和学校数据选择性擦除 <br><br>**注意:** 对于 iOS/iPadOS，应用会随管理配置文件一起删除。|X||
-|防止“另存为”|X||
+|阻止“另存为”|X||
 |目标应用程序配置（或通过“MAM 通道”的应用配置）|X|X|
 |支持多身份标识|X||
 |可自定义样式 |X|||

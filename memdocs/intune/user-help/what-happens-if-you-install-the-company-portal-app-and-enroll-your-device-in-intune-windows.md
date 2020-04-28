@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65533f3d93d226b91493c98fd029c6257e7e6409
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335232"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077251"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>安装公司门户应用并在 Intune 中注册 Windows 设备后会发生什么情况？
 
@@ -45,7 +45,7 @@ ms.locfileid: "79335232"
 
 - 将设备重置回制造商的默认设置。 如果设备丢失或被盗，这非常有用。
 
-- 仅删除公司相关文件和业务应用。 *不会删除个人数据和设置。*
+- 仅删除公司相关文件和业务应用。 不会删除你的个人数据和设置。 
 
 - 公司支持人员可看到设备上安装的软件，包括个人安装的软件。
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bcc99937cfdf0c286eeb4f7f3d11ff4bf5c0c4f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 151b258826dcb65b3311b81e3c47bc5c089cb017
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322801"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771219"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用证书进行身份验证
 
@@ -99,7 +99,7 @@ ms.locfileid: "80322801"
 
 ## <a name="create-trusted-certificate-profiles"></a>创建受信任的证书配置文件
 
-必须先创建受信任的证书配置文件，才可创建 SCEP、PKCS 或 PKCS 导入的证书配置文件。 部署受信任的证书配置文件可确保每个设备认同 CA 的合法性。 SCEP 证书配置文件直接引用受信任的证书配置文件。 PKCS 证书配置文件不直接引用受信任的证书配置文件，而是直接引用托管 CA 的服务器。 PKCS 导入的证书配置文件不直接引用受信任的证书配置文件，但可以在设备上使用它。 将受信任的证书配置文件部署到设备可确保建立此信任。 如果设备不信任根 CA，SCEP 或 PKCS 证书配置文件策略将失败。
+必须先创建和部署受信任的证书配置文件，才能创建 SCEP、PKCS 或 PKCS 导入的证书配置文件。 将受信任的证书配置文件部署到接收其他证书配置文件类型的相同组，可确保每个设备都可以识别 CA 的合法性。 SCEP 证书配置文件直接引用受信任的证书配置文件。 PKCS 证书配置文件不直接引用受信任的证书配置文件，而是直接引用托管 CA 的服务器。 PKCS 导入的证书配置文件不直接引用受信任的证书配置文件，但可以在设备上使用它。 将受信任的证书配置文件部署到设备可确保建立此信任。 如果设备不信任根 CA，SCEP 或 PKCS 证书配置文件策略将失败。
 
 为要支持的每个设备平台创建单独的受信任证书配置文件，就像对 SCEP、PKCS 和 PKCS 导入的证书配置文件执行的操作一样。
 

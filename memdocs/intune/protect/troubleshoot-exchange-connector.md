@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af44b09f5e539306a24ae0e0294b3ad674f7cb74
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79338547"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079121"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Intune Exchange Connector 疑难解答
 
@@ -31,7 +31,7 @@ ms.locfileid: "79338547"
 
 ## <a name="before-you-start"></a>开始之前
 
-在开始对 Intune 中的 Exchange Connector 问题进行故障排除之前，请收集一些基本信息，为进一步操作打下坚实的基础。 此方法可帮助你更好地了解问题的性质，并更快地解决问题。
+在开始排查 Intune 中的 Exchange Connector 问题之前，请收集一些基本信息，为进一步操作打下坚实的基础。 此方法可帮助你更好地了解问题的性质，并更快地解决问题。
 
 - 验证你的进程是否满足安装要求。 请参阅[设置本地 Intune Exchange 连接器](exchange-connector-install.md)。
 - 验证你的帐户是否具有 Exchange 和 Intune 管理员权限。
@@ -57,7 +57,7 @@ ms.locfileid: "79338547"
 
 - 确保你的防火墙和代理服务器允许在托管 Intune Exchange Connector 和 Intune 服务的服务器之间进行通信。
 
-- 托管 Intune Exchange Connector 和 Exchange 客户端访问服务器 (CAS) 的计算机应已加入域且位于同一 LAN 上。 请确保为 Intune Exchange connector 使用的帐户添加所需的权限。
+- 托管 Intune Exchange Connector 和 Exchange 客户端访问服务器 (CAS) 的计算机应已加入域且位于同一 LAN 上。 请确保为 Intune Exchange Connector 使用的帐户添加所需的权限。
 
 - 用于检索自动发现设置的通知帐户  。 有关 Exchange 中自动发现的详细信息，请参阅 [Exchange Server 中的自动发现服务](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016)。
 

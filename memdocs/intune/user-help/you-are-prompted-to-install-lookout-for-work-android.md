@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d588955a625c6cf1e7771560f298bd612b10aff
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6eaf0013531018e77a65386ca32dece0bee4ea08
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346659"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079682"
 ---
 # <a name="install-lookout-for-work"></a>安装 Lookout for Work
 
@@ -68,7 +68,7 @@ ms.locfileid: "79346659"
 
    ![Lookout for Work 未找到任何安全威胁](./media/lookout-scan-no-threats-found-android.png)
 
-   公司门户中的“设备详细信息”屏幕将显示你当前符合你公司的安全要求。
+   公司门户中的“设备详细信息”屏幕将显示你当前符合公司的安全要求。
 
     ![你的设备当前符合策略](./media/mtd-device-now-compliant-android.png)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324335"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079308"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>使用 Microsoft Intune 部署 Windows 10 应用 
 
@@ -97,11 +97,11 @@ Microsoft Intune 支持 Windows 10 设备上的各种应用类型和部署方案
 - Win32 应用
 - 获得许可的适用于企业的 Microsoft Store 脱机应用
 - LOB 应用（MSI、APPX 和 MSIX）
-- Office 365 专业增强版
+- Microsoft 365 企业应用版
 
 已在设备上下文中选择要安装的 Windows LOB 应用（特别是 APPX 和 MSIX）和适用于企业的 Microsoft Store 应用（脱机应用）必须分配给设备组。 如果在用户上下文中部署了其中一个应用，安装将失败。 管理控制台将显示以下状态和错误：
   - 状态：失败。
-  - 错误：用户无法成为“设备上下文”安装的目标。
+  - 错误：不能将用户作为设备上下文安装的目标。
 
 > [!IMPORTANT]
 > 与 Autopilot 白色手套预配方案结合使用时，在设备上下文中部署的 LOB 应用和适用于企业的 Microsoft Store 应用不需要面向设备组。 有关详细信息，请参阅 [Windows Autopilot 白色手套部署](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)。

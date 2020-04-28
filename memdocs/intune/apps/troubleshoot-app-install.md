@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325812"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023361"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>排查应用安装问题
 
@@ -53,7 +53,7 @@ Intune 根据特定用户设备上安装的应用，提供应用疑难解答详�
 应用安装错误详细信息指出问题所在。 根据这些详细信息，可以确定解决问题的最佳措施。 有关排查应用安装问题的详细信息，请参阅 [Android 应用安装错误](app-install-error-codes.md#android-app-installation-errors)和 [iOS 应用安装错误](app-install-error-codes.md#ios-and-ipados-app-installation-errors)。
 
 > [!Note]  
-> 还可通过浏览器前往  [ 来访问“疑难解答”窗格 https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)。
+> 还可通过浏览器前往 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 来访问“疑难解答”窗格  。
 
 ## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>面向用户组的应用安装无法访问设备
 如果安装应用程序时遇到问题，请考虑下列操作：
@@ -113,7 +113,7 @@ Intune 根据特定用户设备上安装的应用，提供应用疑难解答详�
 [排除 Microsoft 应用商店应用的打包、部署和查询故障](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)主题中的信息有助于解决使用 Intune 或其他方式从 Microsoft 应用商店安装应用时可能会遇到的问题。
 
 ## <a name="app-troubleshooting-resources"></a>应用疑难解答资源
-- [将 Visio 和 Project 部署为 Office Pro Plus 部署的一部分](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
+- [在 Microsoft 365 应用版部署期间部署 Visio 和 Project](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
 - [采取措施，确保通过 Intune 部署的 MSfB 应用在 Windows 10 1903 上进行安装](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Take-Action-to-Ensure-MSfB-Apps-deployed-through/ba-p/658864)
 - [Microsoft Intune 中的 MSI 应用部署疑难解答](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-MSI-App-deployments-in-Microsoft/ba-p/359125)
 - [将软件分发到 Intune 经典 Windows PC 代理的最佳做法](https://support.microsoft.com/en-us/help/2583929/best-practices-for-intune-software-distribution-to-windows-pc)

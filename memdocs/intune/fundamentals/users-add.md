@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8239b750da0d04247608486ea7f3a11ca9c8f86
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326699"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077846"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>添加用户并授予对 Intune 的管理权限
 
@@ -106,7 +106,7 @@ ms.locfileid: "80326699"
 - 密码管理员 -（Office 365 和 Intune）重置密码、管理服务请求并监视服务运行状况  。 密码管理员仅限为用户重置密码。
 - 服务管理员 -（Office 365 和 Intune）向 Microsoft 提出支持请求，并查看服务仪表板和消息中心  。 除打开支持票证并读取外，他们还具有“仅查看”权限。
 - 帐务管理员 -（Office 365 和 Intune）采购、管理订阅、管理支持票证并监视服务运行状况  。
-- 用户管理员 -（Office 365 和 Intune）重置密码、监视服务运行状况、添加和删除用户帐户以及管理服务请求  。 用户管理管理员不能删除全局管理员、创建其他管理员角色，或为其他管理员重置密码。
+- 用户管理员 -（Office 365 和 Intune）重置密码、监视服务运行状况、添加和删除用户帐户以及管理服务请求  。 用户管理管理员不能删除全局管理员，也不能创建其他管理员角色或为其他管理员重置密码。
 - Intune 服务管理员 - 除使用“目录角色”选项创建管理员以外的所有 Intune 全局管理员权限   。
 
 创建 Microsoft Intune 订阅使用的是全局管理员帐户。 最佳做法是，不要将全局管理员用于日常管理任务。 虽然管理员不需要 Intune 许可证即可访问 Azure 门户上的 Intune，但在执行某些管理任务（例如设置 Exchange 服务连接器）时，则需要 Intune 许可证。

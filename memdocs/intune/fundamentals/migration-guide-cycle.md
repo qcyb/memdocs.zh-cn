@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d5a9c1fab01393f45c877165230ae68118b1113
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cdef53672c46fe4e49a5d21a22e585654c504f03
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358216"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075942"
 ---
 # <a name="typical-migration-cycle"></a>典型迁移周期
 
-以下情况非常常见，组织通过面向 IT 部门中的用户子集使用小型试验启动其 Intune 迁移。 此外，组织可能需要讨论组的更改意愿、用户数量、复杂性、要求、位置和业务风险等因素来帮助确定迁移时间范围。
+有一种情况非常常见，组织通过面向 IT 部门中的用户小组，使用小型试点启动其 Intune 迁移。 另外，组织可能需要讨论组的更改意愿、用户数量、复杂性、要求、位置和业务风险等因素来帮助确定迁移时间范围。
 
 以下示例说明如何安排目标组：
 
@@ -63,4 +63,4 @@ Intune 提供了几种方法，可用于监视迁移情况：
 
 ## <a name="post-migration"></a>迁移后
 
-迁移到 Intune 后，停用之前的 MDM 提供程序并取消订阅服务。 此外，按照 MDM 提供程序的说明，删除任何不需要的基础结构要求。
+迁移到 Intune 后，停用之前的 MDM 提供程序并取消订阅服务。 另外，按照 MDM 提供程序的说明，删除任何不需要的基础结构要求。

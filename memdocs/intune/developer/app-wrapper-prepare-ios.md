@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 373a5e55a28c6fab740a86a3ad2ad69c5fa08848
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345541"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078135"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>使用 Intune 应用包装工具准备 iOS 应用以便使用应用保护策略
 
@@ -101,7 +101,7 @@ ms.locfileid: "79345541"
 
    ![Apple 开发人员门户 - 证书、ID 和配置文件](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
 
-5. 安装完成后，单击 ![Apple 开发者门户](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) 并在右上角登录以添加 iOS 证书。
+5. 安装完成后，单击 ![“Apple 开发者门户”](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) 并在右上角登录以添加 iOS 证书。
 
 6. 在“生产”  下选择创建“内部和临时”  证书。
 
@@ -181,7 +181,7 @@ ms.locfileid: "79345541"
 > [!NOTE]
 > 如下表所示，某些参数是可选的。
 
-**示例：** 以下示例命令在名为 MyApp.ipa 的应用上运行应用包装工具。 指定签名证书的预配配置文件和 SHA-1 哈希，并用于对已包装的应用签名。 创建输出应用 (MyApp_Wrapped.ipa)，且将其存储在桌面文件夹中。
+**示例：** 下面的示例命令在 MyApp.ipa 应用中运行应用包装工具。 指定签名证书的预配配置文件和 SHA-1 哈希，并用于对已包装的应用签名。 创建输出应用 (MyApp_Wrapped.ipa)，且将其存储在桌面文件夹中。
 
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB"  -v true
@@ -215,19 +215,19 @@ ms.locfileid: "79345541"
 
 在 IntuneMAMPackager/Contents/MacOS 文件夹中，使用文本编辑器或 Xcode 打开 `Parameters.plist`（一个空白 plist 模板）。 为以下项输入参数：
 
-| Plist 项 | 类型 |  默认值 | 注释 |
+| Plist 项 | 类型 |  默认值 | 注意 |
 |------------------|-----|--------------|-----|
-| 输入应用程序包路径 |String|empty| 与 -i 相同|
-| 输出应用程序包路径 |String|empty| 与 -o 相同|
-| 预配配置文件路径 |String|empty| 与 -p 相同|
-| SHA-1 证书哈希 |String|empty| 与 -c 相同|
-| ADAL 机构 |String|empty| 与 -aa 相同|
-| ADAL 客户端 ID |String|empty| 与 -ac 相同|
-| ADAL 答复 URI |String|empty| 与 -ar 相同|
+| 输入应用程序包路径 |字符串|empty| 与 -i 相同|
+| 输出应用程序包路径 |字符串|empty| 与 -o 相同|
+| 预配配置文件路径 |字符串|empty| 与 -p 相同|
+| SHA-1 证书哈希 |字符串|empty| 与 -c 相同|
+| ADAL 机构 |字符串|empty| 与 -aa 相同|
+| ADAL 客户端 ID |字符串|empty| 与 -ac 相同|
+| ADAL 答复 URI |字符串|empty| 与 -ar 相同|
 | 已启用详情 |布尔值|false| 与 -v 相同|
 | 删除缺失的权利 |布尔值|false| 与 -c 相同|
 | 防止默认生成更新 |布尔值|false| 相当于使用不带参数的 -b|
-| 生成字符串替代 |String|empty| 已包装输出应用的自定义 CFBundleVersion|
+| 生成字符串替代 |字符串|empty| 已包装输出应用的自定义 CFBundleVersion|
 | 包括 Citrix XenMobile App SDK（网络变体）|布尔值|false| 与 -citrix 相同|
 | 扩展预配配置文件路径 |字符串数组|empty| 应用的一系列扩展预配配置文件。
 
@@ -327,7 +327,7 @@ ms.locfileid: "79345541"
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>适用于 iOS 的应用包装工具支持的功能
 
-|功能|Description|推荐指南|
+|功能|说明|推荐指南|
 |--------------|---------------|------------------------|
 |应用组|使用应用组可让多个应用访问共享容器，并支持应用之间的其他进程间通信。<br /><br />若要启用应用组，请打开“功能”  窗格，并单击“应用组”  中的“开”  。 你可以添加应用组，也可以选择现有应用组。|使用应用组时，请使用反向 DNS 表示法：<br /><br />*group.com.companyName.AppGroup*|
 |后台模式|启用后台模式后，iOS 应用可以在后台继续运行。||
@@ -421,7 +421,7 @@ ms.locfileid: "79345541"
 
 此功能是与适用于 iOS/iPadOS 的 Citrix MDX 应用包装器的集成。 对于常规的 Intune App Wrapping Tools，该集成只是一个附加的可选命令行标记 `-citrix`。
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>要求
 
 要使用 `-citrix` 标记，还需要在同一台 macOS 计算机上安装[适用于 iOS 的 Citrix MDX 应用包装器](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html)。 下载位于 [Citrix XenMobile 下载](https://www.citrix.com/downloads/xenmobile/)，并且仅供 Citrix 客户在登录后使用。 确保将其安装在默认位置：`/Applications/Citrix/MDXToolkit`。 
 

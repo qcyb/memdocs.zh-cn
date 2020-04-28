@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39f881b05c9698a8560fe009331fac3389b35bde
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 551f0a442f81712cff29a9ff6f55c62aeaba547a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364287"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078186"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>使用 Intune 在 Windows 10 设备上配置“参加测验”应用
 
@@ -52,7 +52,7 @@ ms.locfileid: "79364287"
   - `computerName\username`
 - **帐户名**：要设置本地来宾帐户类型，请输入“参加测试”应用使用的帐户名称。 帐户名称将在登录屏幕上以磁贴形式显示。 学生单击磁贴即可启动测试。  
 - **评估 URL**：输入希望用户参加的测验的 URL。 若要详细了解如何获取 URL，请参阅[“参加测验”文档](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)。
-- **打印机连接**：选择“需要”以仅允许从连接到打印机的设备访问“参加测试”应用  。 此设置还使应试者可以使用应用的打印按钮。 如果选择“未配置”，则允许学生从未连接到打印机的设备访问应用  。  
+- **打印机连接**：选择“需要”以仅允许从连接到打印机的设备访问“参加测试”应用  。 此设置还使应试者可以使用应用的“打印”按钮。 如果选择“未配置”，则允许学生从未连接到打印机的设备访问应用  。  
 - **屏幕监视**：选择“允许”  可在用户参加测验时监视屏幕活动。 如果选择“未配置”  ，便无法在测验期间监视屏幕。
 - **文本建议**：选择“允许”  可向测验者显示文本建议。 如果选择“未配置”  ，便无法向正在参加测验的用户显示文本建议。
 

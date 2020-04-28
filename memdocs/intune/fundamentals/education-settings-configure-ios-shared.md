@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8612640ec71075194af680535a988f2228bb66fd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362883"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076129"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>为共享 iPad 设备配置 Intune 教育设置
 
@@ -171,7 +171,7 @@ iOS 教育配置文件仅支持 PFX 证书。 不支持 SCEP 证书。
 4. 在“设备”窗格上，选择“所有设备”   。
 5. 在“设备 - 所有设备”  窗格上，选择一台设备。
 6. 在“设备”窗格上，选择“属性”  。
-7. 访问设备的属性窗格，在“设备类别”  文本框中输入设备类别。
+7. 在设备“属性”窗格的“设备类别”  文本框中输入设备类别。
 8. 在“设备”窗格上，选择“保存”  。
 
 设备现已关联到设备类别。 请对所有希望关联到创建的设备类别的设备重复此过程。

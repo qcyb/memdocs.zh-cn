@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: eabdae9fcc8bdc3b6c93d5b735a5b9fbf4dcf69a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488075"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078917"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 设备的批量注册
 
@@ -74,8 +74,8 @@ Azure AD 用户是这些设备上的标准用户并接收分配的 Intune 策略
 
 1. 在应用中所指定的“项目文件夹”  中访问指定位置的配置包。
 
-2. 选择向设备应用配置包的方式。  可使用以下方法之一向设备应用配置包：
-   - 将配置包置于 USB 驱动器，将 USB 驱动器插入想要进行批量注册的设备，并在初始设置时应用它
+2. 选择向设备应用预配程序包的方式。  可使用以下方法之一向设备应用配置包：
+   - 将预配程序包置于 USB 驱动器中，将 USB 驱动器插入要进行批量注册的设备，并在初始设置时应用它
    - 将预配程序包置于网络文件夹中，并在初始设置后应用它
 
    有关应用配置包的分步说明，请参阅[应用配置包](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package)。

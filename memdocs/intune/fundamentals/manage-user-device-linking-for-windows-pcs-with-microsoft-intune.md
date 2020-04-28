@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72b816938e803b28a06d3975f062f105d4c6a1cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8c501eee596a64015eeb332d4d1b96d46356ba1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358736"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077863"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>管理 Windows 电脑的用户设备链接
 
@@ -40,7 +40,7 @@ ms.locfileid: "79358736"
 
 2. 选择要链接用户的计算机，然后选择“链接用户”  。
 
-   “链接用户”  对话框显示可用用户的列表、其显示名称、用户 ID 和每个用户当前链接到的计算机的数量。 如果用户已链接到所选计算机，则该用户的名称和用户 ID 会显示在“当前用户”  下面。 如果计算机未链接到任何用户，则“当前用户”  下面将显示“无用户”  。
+   “链接用户”  对话框显示可用用户的列表、其显示名称、用户 ID 和每个用户当前链接到的计算机的数量。 如果用户已关联到所选电脑，则该用户的名称和用户 ID 会显示在“当前用户”  下面。 如果计算机未链接到任何用户，则“当前用户”  下面将显示“无用户”  。
 
 3. 执行以下操作之一：
 

@@ -19,30 +19,30 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1d6534fcbbf4e511635d452132f705fafb2e6166
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c82bf136f736218b3f831f1bed7471277093a57
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336701"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078866"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>如何设置 Android 设备锁定屏幕之前的时间量
 
-若要重新连接到你的工作，需按照适用于你所拥有设备的类型的步骤在你的设备上设置密码超时。
+若要重新连接到你的工作，需按照适用于你所拥有设备的类型的步骤，在你的设备上设置密码超时值。
 
 ## <a name="native-non-samsung-knox-device"></a>原生（非 Samsung Knox）设备
 
-1. 在设备的“设置”中，点击“安全” **“自动锁定”（在某些设备上显示为“以下时间后锁定电话”）**  &gt;   。
+1. 在设备的“设置”中，点击“安全”&gt;“自动锁定”（在某些设备上显示为“以下时间后锁定电话”）     。
 
-    如果未显示“自动锁定”（在某些设备上为“以下时间后锁定电话”），请确保你已在“设置” **“屏幕锁定”** “密码”下设置了有效密码   &gt;  &gt;  。
+    如果未显示“自动锁定”（在某些设备上为“以下时间后锁定电话”），请确保你已在“设置”&gt;“屏幕锁定”&gt;“密码”下设置了有效密码      。
 
 2. 选择密码超时值。
 
 ## <a name="samsung-knox-device"></a>Samsung Knox 设备
 
-1. 在设备的“设置”中，点击“锁屏界面和安全” **“自动锁定”**  &gt;  。
+1. 在设备的“设置”中，点击“锁屏界面和安全”&gt;“自动锁定”    。
 
-    如果未显示“锁定自动锁定”（在某些设备上为“以下时间后锁定电话”），请确保你已在“设置” **“屏幕锁定”** “密码”下设置了有效密码   &gt;  &gt;  。
+    如果未显示“锁定自动锁定”（在某些设备上为“以下时间后锁定电话”），请确保你已在“设置”&gt;“屏幕锁定”&gt;“密码”下设置了有效密码      。
 
 2. 选择密码超时值。
 

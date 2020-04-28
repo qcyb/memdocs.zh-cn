@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350663"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079138"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件访问疑难解答
 本文介绍了在你的用户无法访问受条件访问保护的资源时应采取的措施，以及在用户可访问受保护资源但应遭阻止时应采取的措施。
@@ -42,7 +42,7 @@ ms.locfileid: "79350663"
 
 - 用户和设备都必须符合分配的 Intune 符合性策略。
 
-- 默认情况下，必须为用户分配设备符合性策略。 这可能取决于“标记未分配符合性策略的设备”设置的配置，该设置可在 Intune 管理门户中的“设备符合性” **“符合性策略设置”下进行配置**   >   。
+- 默认情况下，必须为用户分配设备符合性策略。 这可能取决于“标记未分配符合性策略的设备”设置的配置，该设置可在 Intune 管理门户中的“设备符合性” > “符合性策略设置”下进行配置    。
 
 - 如果用户使用的是设备的本机邮件客户端而不是 Outlook，则必须在设备上激活 Exchange ActiveSync。 此操作在 iOS/iPadOS、Windows Phone 和 Android Knox 设备上自动进行。
 
@@ -80,12 +80,12 @@ ms.locfileid: "79350663"
   1. 打开公司门户应用。
   2. 通过三个点 (…) 或硬件菜单按钮转到“设置”页面。
   3. 选择“启用浏览器访问”  按钮。
-  4. 在 Chrome 浏览器中注销 Office 365 并重新启动 Chrome。  
+  4. 在 Chrome 浏览器中，从 Office 365 中注销并重启 Chrome。  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>设备受阻止且未收到隔离电子邮件
 
-- 验证设备是否作为 Exchange ActiveSync 设备显示在 Intune 管理控制台中。 如果没有，则设备发现可能会失败，可能是由 Exchange Connector 问题导致。 有关详细信息，请参阅 [Intune On-Premises Exchange 连接器疑难解答](troubleshoot-exchange-connector.md)。
+- 验证设备是否作为 Exchange ActiveSync 设备显示在 Intune 管理控制台中。 如果没有，则设备发现可能会失败，可能是由 Exchange 连接器问题导致。 有关详细信息，请参阅 [Intune On-Premises Exchange 连接器疑难解答](troubleshoot-exchange-connector.md)。
 
 - Exchange 连接器阻止设备之前，将发送激活（隔离）电子邮件。 如果设备已脱机，则可能不会收到此激活电子邮件。 
 
@@ -105,14 +105,14 @@ ms.locfileid: "79350663"
 
 如果某个设备不合规，但仍拥有访问权限，请执行以下操作。
 
-- 复查目标组和排除组。 如果用户未处于正确的目标组或处于排除组中，则不会将其阻止。 只对目标组中的用户的设备进行合规性检查。
+- 复查目标组和排除组。 如果用户未处于正确的目标组或处于排除组中，则不会阻止该用户。 只对目标组中的用户的设备进行合规性检查。
 
 - 请确保设备处于被发现的状态。 Exchange Connector 是否在用户位于 Exchange 2013 服务器上时指向 Exchange 2010 CAS？ 该情况下，如果默认的 Exchange 规则为“允许”，则即使用户处于目标组中，Intune 仍无法发现设备已连接到 Exchange。
 
 - 检查 Exchange 中的设备存在/访问状态：
-  - 使用此 PowerShell cmdlet 获取某个邮箱的所有移动设备的列表：“Get-ActiveSyncDeviceStatistics -mailbox mbx”。 如果未列出相应设备，则其未在访问 Exchange。
+  - 使用此 PowerShell cmdlet 获取某个邮箱的所有移动设备的列表：“Get-ActiveSyncDeviceStatistics -mailbox mbx”。 如果未列出相应设备，说明它未在访问 Exchange。
   
-  - 如果列出了相应设备，使用“Get-CASmailbox -identity:’upn’ | fl”cmdlet 获取其访问状态的详细信息，然后将此信息提供给 Microsoft 支持部门。
+  - 如果列出了相应设备，请使用“Get-CASmailbox -identity:'upn' | fl”cmdlet 获取其访问状态的详细信息，然后将此信息提供给 Microsoft 支持部门。
 
 ## <a name="next-steps"></a>后续步骤
 如果此信息没有帮助，还可以[获取对 Microsoft Intune 的支持](../fundamentals/get-support.md)。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aebb9163d236e5da48b92cfbbfc12e76db69b55c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339054"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079546"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune 中的数据安全性和数据共享
 
@@ -52,8 +52,8 @@ Intune 还使用 RBAC 和 JiT 等技术保护支持事件，以确保在默认�
 
 当租户管理员打开某些功能（如 Apple 设备注册计划）时，即表示管理员允许 Microsoft Intune 与相应的第三方共享数据。 在此情况下，Intune 可能与以下各方共享个人数据：
 
-- 作为 Microsoft 代理的第三方。
-- 非 Microsoft 代理的第三方（仅限租户管理员显式授予 Intune 执行此操作的权限时）。
+- 充当 Microsoft 代理的第三方。
+- 不充当 Microsoft 代理的第三方（仅限租户管理员显式授予 Intune 执行此操作的权限时）。
 
 作为 Microsoft 代理的所有第三方都包含在[联机服务分包商列表](https://aka.ms/Online_Serv_Subcontractor_List)中。
 

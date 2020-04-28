@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7ba564ace6837f81fd6d6c1b0cc27620f0123de2
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233595"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149111"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>使用 Samsung 的 Knox 移动注册自动注册 Android 设备
 
@@ -78,7 +78,7 @@ ms.locfileid: "80233595"
 
 \*在 Knox 门户中完成概要文件创建不需要此字段。 但是，Intune 确实要求填写此字段，以便配置文件可以在 Intune 中成功注册设备。
 
-### <a name="for-android"></a>适用于 Android
+### <a name="for-android-device-administrator"></a>对于 Android 设备管理员 
 
 有关分步指南，请参阅 [Samsung 的“创建配置文件”](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm)说明。
 

@@ -17,16 +17,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e9f30daef96180e58c6d4307d91155cf1305254
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2af62dd8480c1e804e1ab8558d270b95fe97bbd4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323062"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079784"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>创建基于设备的条件访问策略
 
-使用 Intune，可以通过向访问控制添加移动设备符合性来增强 Azure Active Directory 中的条件访问。 通过 Intune 符合性策略（该策略定义设备的符合性需求），就可以使用设备的符合性状态来允许或阻止对应用程序和服务的访问。 可以通过创建使用“要求设备标记为兼容”  设置的条件访问策略来实现这一点。
+使用 Intune，可以通过向访问控制添加移动设备符合性来增强 Azure Active Directory 中的条件访问。 通过 Intune 合规性策略（该策略定义设备的符合性要求），可以使用设备的符合性状态来允许或阻止对应用和服务的访问。 可以通过创建使用“要求设备标记为兼容”  设置的条件访问策略来实现这一点。
 
 条件访问策略指定要保护的应用或服务、可以访问应用或服务的条件，以及向其应用策略的用户。 尽管条件访问是一项 Azure AD 高级功能，但从 Intune 访问的“条件访问”节点与从 Azure AD 访问的节点相同   。
 
@@ -95,7 +95,7 @@ ms.locfileid: "80323062"
 
 10. 在“访问控制”  下，选择“授予”  。 根据设置的条件配置发生的情况。  可以从以下选项中选择：
 
-    - **阻止访问**：在此策略中指定的用户将在你指定的条件下被拒绝访问应用。
+    - **阻止访问**：根据你指定的条件，拒绝此策略中指定的用户访问应用。
     - **授予访问权限**：在此策略中指定的用户将被授予访问权限，但你可以要求进一步执行任何以下操作：
       - **需要多重身份验证**：用户将需要完成其他安全要求，如电话呼叫或发送短信。
       - **需要标记为兼容的设备**：设备必须与 Intune 兼容。 如果设备不兼容，将为用户提供在 Intune 中注册设备的选项。

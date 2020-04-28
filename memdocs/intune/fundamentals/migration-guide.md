@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7b09240c2bd1d562985ce69c35f07181dc5c9489
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358060"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079903"
 ---
 # <a name="intune-migration-guide"></a>Intune 迁移指南
 
@@ -32,11 +32,11 @@ ms.locfileid: "79358060"
 
 本指南全面介绍从第三方 MDM 提供程序迁移到 Intune 所涉及的各种详细信息。
 
-## <a name="whats-included-in-this-guide"></a>该指南包括什么？
+## <a name="whats-included-in-this-guide"></a>本指南包含哪些内容？
 
 本指南将迁移分成两个阶段，这两个阶段均包含任务、策略和战略指导，将帮助你逐步完成迁移到 Intune MDM 的完整过程。
 
-- [阶段 1：为移动设备管理准备 Intune](migration-guide-prepare.md)
+- [第 1 阶段：为移动设备管理准备 Intune](migration-guide-prepare.md)
 
   - [评估 MDM 迁移要求](migration-guide-prepare.md#assess-mdm-requirements)
 
@@ -48,7 +48,7 @@ ms.locfileid: "79358060"
 
   - [特殊迁移注意事项](migration-guide-considerations.md)
 
-- [阶段 2：迁移活动](migration-guide-campaign.md)
+- [第 2 阶段：迁移活动](migration-guide-campaign.md)
 
   - [通信计划](migration-guide-communication-plan.md)
 
@@ -72,4 +72,4 @@ ms.locfileid: "79358060"
 
 ## <a name="next-steps"></a>后续步骤
 
-[阶段 1：为移动设备管理准备 Intune](migration-guide-prepare.md)
+[第 1 阶段：为移动设备管理准备 Intune](migration-guide-prepare.md)

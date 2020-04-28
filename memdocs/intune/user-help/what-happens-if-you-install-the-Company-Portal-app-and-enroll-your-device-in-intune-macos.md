@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 581ff7ec85cc85e41968a4ed3a7b2616d0dd7c28
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ed1399f10a7a806ed6404e596a93b7aa5538caa6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346893"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077336"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-macos-device-in-intune"></a>如果安装公司门户应用并在 Intune 中注册 macOS 设备会怎样？
 
@@ -42,9 +42,9 @@ ms.locfileid: "79346893"
 
 注册设备后，公司支持人员可以：
 
-- 如果你的设备丢失或被盗，将设备重置回制造商的默认设置。
+- 在你的设备丢失或被盗时将设备重置回制造商的默认设置。
 
-- 删除公司相关的所有安装数据和业务应用。 不会删除你的个人数据和设置。
+- 删除公司相关的所有安装数据和业务应用。 不会删除个人数据和设置。
 
 - 要求你在设备上设置密码或 PIN。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2c5590acd870e2623491052ba43bf29e4676568
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9ad6414bd0565389b39cc97322341ada0b4b4c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344358"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079291"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>为运行 Intune 软件客户端的 Windows 电脑添加应用
 
@@ -42,7 +42,7 @@ ms.locfileid: "79344358"
 ## <a name="add-the-app"></a>添加应用
 遵循以下过程，使用 Intune 软件发行者来配置应用的属性，并将该应用上载到云存储空间：
 
-1. 在 [Microsoft Intune 管理员控制台](https://manage.microsoft.com)中，选择“应用” **“添加应用”，启动 Intune 软件发布工具**&gt;  。
+1. 在 [Microsoft Intune 管理员控制台](https://manage.microsoft.com)中，选择“应用”&gt;“添加应用”，启动 Intune 软件发布工具   。
 
    > [!TIP]
    > 在该发行者启动前，你可能需要先输入 Intune 用户名和密码。
@@ -53,7 +53,7 @@ ms.locfileid: "79344358"
    - **指定软件安装程序文件的位置**。 输入安装文件的位置，或选择“**浏览**”选择列表中某个位置。
    - **包括同一文件夹中的其他文件和子文件夹**。 某些使用 Windows Installer 的软件要求安装支持文件。 这些文件必须位于安装文件所在的文件夹中。 如果还想要部署这些支持文件，请选择此选项。
 
-   例如，如果你要将一个名为 Application.msi 的应用发布到 Intune，页面将如下所示：![发行者软件安装程序页](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
+   例如，如果你想将一个名为 Application.msi 的应用发布到 Intune，页面将如下所示：![发布工具的“软件设置”页](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
 
    此安装类型会使用一些云存储空间。
 
@@ -84,15 +84,15 @@ ms.locfileid: "79344358"
 
    如果应用满足任何配置的规则，则不会安装该应用。
 
-6. 仅对于“**Windows Installer**”文件类型（.msi 和 .exe）：在“**命令行参数**”页上，选择是否想要为安装程序提供可选命令行参数。
+6. 仅对于“Windows Installer”文件类型（.msi 和 .exe）  ：在“命令行参数”页上，选择是否希望为安装程序提供可选命令行参数  。
    Intune 自动添加以下参数：
    - 对于 .exe 文件，添加 **/install**。
    - 对于 .msi 文件，添加 **/quiet**。
    请注意，只有在应用包的创建者启用了相应功能的情况下，这些选项才会生效。
 
-7. 仅对于“**Windows Installer**”文件类型（仅 .exe）：在“**返回代码**”页上，你可以添加新的错误代码，在托管 Windows 电脑上安装应用时，Intune 将解释这些错误代码。
+7. 仅对于“Windows Installer”文件类型（仅限 .exe ）  ：在“返回代码”页上，你可以添加新的错误代码，在托管 Windows 电脑上安装应用时，Intune 将解释这些错误代码  。
 
-   默认情况下，Intune 使用行业标准的返回代码来报告应用包安装是失败还是成功：**0**（成功）或 **3010**（成功并重新启动）。 还可以向此列表中添加你自己的返回代码。 如果指定了返回代码列表，则在应用安装返回列表中不存在的代码，该代码会被解释为失败。
+   默认情况下，Intune 使用行业标准的返回代码来报告应用包安装是失败还是成功：0（成功）或 3010（成功并重启）   。 还可以向此列表中添加你自己的返回代码。 如果指定了返回代码列表，则在应用安装返回列表中不存在的代码，该代码会被解释为失败。
 
 8. 在“**摘要**”页上，审阅你指定的信息。 准备就绪后，选择“**上载**”。
 
@@ -104,4 +104,4 @@ ms.locfileid: "79344358"
 
 创建应用后，下一步是进行部署。 有关详细信息，请参阅[使用 Microsoft Intune 将应用分配到组](../apps/apps-deploy.md)。
 
-如需阅读有关将软件部署到 Windows 电脑的提示和技巧的详细信息，请参阅博客文章 [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929)（支持提示：将 Intune 软件分发到电脑的最佳实践）。
+如需阅读有关将软件部署到 Windows 电脑的提示和技巧的详细信息，请参阅博客文章[支持提示：Intune 软件分发到电脑的最佳做法](https://support.microsoft.com/en-US/help/2583929)。

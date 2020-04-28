@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: da2bc520448236c93845731b1f7c937d417fc2e0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325316"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078985"
 ---
 # <a name="send-custom-notifications-in-intune"></a>使用 Intune 发送自定义通知
 
-使用 Microsoft Intune 向使用托管 iOS/iPadOS 和 Android 设备的用户发送自定义通知。 这些消息在用户设备上显示为来自公司门户应用和 Microsoft Intune 应用的标准推送通知，就像设备上显示的来自其他应用程序的通知一样。 Windows 和 macOS 设备不支持 Intune 自定义通知。
+使用 Microsoft Intune 向使用托管 iOS/iPadOS 和 Android 设备的用户发送自定义通知。 这些消息在用户设备上显示为来自公司门户应用和 Microsoft Intune 应用的标准推送通知，就像设备上显示的来自其他应用程序的通知一样。 macOS 设备和 Windows 设备不支持 Intune 自定义通知。
 
 自定义通知消息包括短标题和不超过 500 个字符的消息正文。 可以出于任何常规通信目的自定义这些消息。
 

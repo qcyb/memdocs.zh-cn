@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 098ccdef50c9f006884f9b6ae6acc635da100cb2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725680"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023174"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用导入的 PKCS 证书
 
@@ -210,6 +210,9 @@ PowerShell 模块提供了使用 Windows 加密创建密钥的方法。 你也�
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>创建 PKCS 导入的证书配置文件
 
 将证书导入 Intune 后，创建“PKCS 导入的证书”配置文件，并将其分配给 Azure Active Directory 组  。
+
+> [!NOTE]
+> 创建 PKCS 导入的证书配置文件后，配置文件中的“预期目的”  和“密钥存储提供程序”  (KSP) 的值都是只读的，不能进行编辑。 如果需要为这些设置中的任何一个指定不同的值，请创建并部署一个新的配置文件。 
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 

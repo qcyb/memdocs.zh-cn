@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 104996e87c830701b1725129727c76d8c7a09ee3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344124"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076112"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>如何配置 iOS/iPadOS Classroom 应用的 Intune 设置
 
@@ -110,10 +110,10 @@ iOS 教育配置文件仅支持 PFX 证书。 不支持 SCEP 证书。
 在“教师 PKCS#12 证书”  下，配置下列值：
 
 - 使用者名称格式  - Intune 自动为教师证书添加前缀为 leader  的公用名。 为学生证书添加前缀为 member  的公用名。
-- **证书颁发机构** - 在 Windows Server 2008 R2 企业版或更高版本上运行的企业证书颁发机构 (CA)。 不支持独立 CA。 
+- 证书颁发机构  - Windows Server 2008 R2 企业版或更高版本上运行的企业证书颁发机构 (CA)。 不支持独立 CA。 
 - **证书颁发机构名称** - 输入你的证书颁发机构的名称。
 - **证书模板名称** - 输入已添加到发证 CA 的证书模板的名称。 
-- **续订阈值 (%)** - 指定设备请求续订证书之前剩余的证书生存期的百分比。
+- **续订阈值(%)** - 指定设备请求证书续订之前剩余的证书有效期限的百分比。
 - **证书有效期** - 指定距离证书过期的剩余时间量。
 你可以指定比指定证书模板中的有效期小的值，但不能指定较大的值。 例如，证书模板中的证书有效期为 2 年，则你可以指定值 1 年，但不能指定值 5 年。 该值还必须小于发证 CA 证书的剩余有效期。
 
@@ -135,10 +135,10 @@ iOS 教育配置文件仅支持 PFX 证书。 不支持 SCEP 证书。
 在“学生 PKCS#12 证书”  下，配置下列值：
 
 - 使用者名称格式  - Intune 自动为教师证书添加前缀为 leader  的公用名。 为学生证书添加前缀为 member  的公用名。
-- **证书颁发机构** - 在 Windows Server 2008 R2 企业版或更高版本上运行的企业证书颁发机构 (CA)。 不支持独立 CA。 
+- 证书颁发机构  - Windows Server 2008 R2 企业版或更高版本上运行的企业证书颁发机构 (CA)。 不支持独立 CA。 
 - **证书颁发机构名称** - 输入你的证书颁发机构的名称。
 - **证书模板名称** - 输入已添加到发证 CA 的证书模板的名称。 
-- **续订阈值 (%)** - 指定设备请求续订证书之前剩余的证书生存期的百分比。
+- **续订阈值(%)** - 指定设备请求证书续订之前剩余的证书有效期限的百分比。
 - **证书有效期** - 指定距离证书过期的剩余时间量。
 你可以指定比指定证书模板中的有效期小的值，但不能指定较大的值。 例如，证书模板中的证书有效期为 2 年，则你可以指定值 1 年，但不能指定值 5 年。 该值还必须小于发证 CA 证书的剩余有效期。
 
@@ -149,7 +149,7 @@ iOS 教育配置文件仅支持 PFX 证书。 不支持 SCEP 证书。
 1. 在“教育”  窗格上，选择“确定”。
 2. 在“创建配置文件”  窗格上，选择“创建”  。
 
-随即创建配置文件并在“配置文件列表”窗格上显示。
+配置文件随即创建并显示在“配置文件列表”窗格中。
 
 将该配置文件分配给与 Azure AD 同步学校数据时创建的教室组中的学生设备（请参阅[如何分配设备配置文件](../configuration/device-profile-assign.md)）。
 

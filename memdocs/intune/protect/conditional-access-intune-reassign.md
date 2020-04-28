@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28ca9e9b8ed77cdd01b415761fd90308d5b7017
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a36449de6d6ebc437b445309bb64f3a9b448d90f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352743"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079801"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>将条件访问策略从 Intune 经典门户重新分配到 Azure 门户
 
@@ -86,7 +86,7 @@ ms.locfileid: "79352743"
     ![Intune 和 Azure 门户之间的用户组用户界面比较图](./media/conditional-access-intune-reassign/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > 对 Azure 门户做出的选择应与之前对经典门户做出的选择相对应。 例如，如果在 Intune 经典门户中选择了所有用户，则应在 Azure 门户中选择“所有用户”  。 此外，如果在 Intune 经典门户中选择了“免除组”选项，则也需要在 Azure 门户中排除所选的这些组  。
+    > 对 Azure 门户做出的选择应与之前对经典门户做出的选择相对应。 例如，如果在 Intune 经典门户中选择了所有用户，则应在 Azure 门户中选择“所有用户”  。 另外，如果在 Intune 经典门户中选择了“免除组”选项，则还需要在 Azure 门户中排除所选的这些组  。
 
 5. 选择组后，单击“选择”，然后单击“完成”   。
 
@@ -96,7 +96,7 @@ ms.locfileid: "79352743"
 
 8. 选择要应用新条件访问策略的应用，然后单击“选择”  。
 
-9. 单击“完成”  。
+9. 单击“Done”（完成）  。
 
     ![Intune 和 Azure 门户之间的云应用用户界面比较图](./media/conditional-access-intune-reassign/reassign-ca-3.png)
 
@@ -154,7 +154,7 @@ ms.locfileid: "79352743"
     ![Azure 和 Intune 门户之间的用户组用户界面比较图](./media/conditional-access-intune-reassign/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > 对 Azure 门户做出的选择应与之前对 Azure 门户做出的选择相对应。 例如，如果在 Intune 经典门户中选择了所有用户，则应在 Azure 门户中选择“所有用户”  。 此外，如果在 Intune 经典门户中选择了“免除组”选项，则也需要在 Azure 门户中排除所选的这些组  。
+    > 对 Azure 门户做出的选择应与之前对 Azure 门户做出的选择相对应。 例如，如果在 Intune 经典门户中选择了所有用户，则应在 Azure 门户中选择“所有用户”  。 另外，如果在 Intune 经典门户中选择了“免除组”选项，则还需要在 Azure 门户中排除所选的这些组  。
 
 5. 选择组后，单击“选择”，然后单击“完成”   。
 
@@ -167,7 +167,7 @@ ms.locfileid: "79352743"
     > [!IMPORTANT] 
     > EAS 客户端的条件性访问策略不能包含任何其他云应用。
 
-8. 在“条件”边栏选项卡上，选择“客户端应用”，然后选择适用的客户端应用   。 如果选择阻止 Intune 不支持的客户端，请使用选项“仅将策略应用于支持的平台”  。
+8. 在“条件”边栏选项卡上，选择“客户端应用”，然后选择适用的客户端应用   。 如果选择阻止 Intune 不支持的客户端，请使用“仅将策略应用于支持的平台”选项  。
 
     ![Azure 和 Intune 门户之间的客户端应用用户界面比较图](./media/conditional-access-intune-reassign/reassign-ca-15.png)
 

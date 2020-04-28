@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1e1f1c04bed91de3ac193ea3b6a07bde4e8658ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638246"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077778"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>通过公司门户和 Entrust Datacard 设置 iOS 或 iPadOS 设备
 
@@ -43,7 +43,7 @@ ms.locfileid: "81638246"
    * 从组织的派生凭据提供程序 [Entrust Datacard](https://www.entrustdatacard.com/) 获取派生凭据。  
 
 ### <a name="what-are-derived-credentials"></a>什么是派生凭据？  
-派生凭据是派生自智能卡凭据并在设备上安装的证书。 它授予你对工作资源的远程访问权限，同时防止未经授权的用户访问敏感信息。  
+派生凭据是一种派生自智能卡凭据并在设备上安装的证书。 它授予你对工作资源的远程访问权限，同时防止未经授权的用户访问敏感信息。  
 
 派生凭据用于： 
 * 对登录到学校或工作应用、Wi-Fi 和 VPN 的学生和员工进行身份验证

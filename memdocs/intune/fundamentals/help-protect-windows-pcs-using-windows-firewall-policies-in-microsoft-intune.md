@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57210928bf92c5300db69dc68d5d5dd4d37795e7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362415"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079427"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>在 Microsoft Intune 中使用 Windows 防火墙策略帮助保护 Windows PC
 
@@ -54,7 +54,7 @@ Microsoft Intune 可通过多种方式帮助你保护使用 Intune 客户端管�
 
 ## <a name="configure-a-windows-firewall-policy"></a>配置 Windows 防火墙策略
 
-1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“策略” **“添加策略”** &gt;  。
+1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com/)中，选择“策略”&gt;“添加策略”   。
 
 2. 配置和部署 **Windows 防火墙设置**策略。 你可以使用建议的设置，或对设置进行自定义。 如果你需要有关如何创建和部署策略的详细信息，请参阅[使用 Microsoft Intune 计算机客户端的常见 Windows 电脑管理任务](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)。
 
@@ -114,7 +114,7 @@ Microsoft Intune 可通过多种方式帮助你保护使用 Intune 客户端管�
 |**文件和打印机共享**|允许用户与网络上的其他用户共享本地文件和打印机。 此设置使用 NetBIOS、链路本地多播名称解析 (LLMNR)、服务器消息块 (SMB) 协议和 RPC。|
 |**家庭组**<br>（Windows 7 或更高版本）|启用被管理的计算机以加入家庭组网络。|
 |**iSCSI 服务**|启用被管理的计算机以连接到 iSCSI 服务器和设备。|
-|**密钥管理服务**|在企业环境中针对许可证符合性对计算机进行计数。|
+|**密钥管理服务**|在企业环境中针对许可证合规性对计算机进行计数。|
 |**Media Center Extender**|启用 Media Center Extenders 以与运行 Windows Media Center 的计算机进行通信。 此设置使用简单服务发现协议 (SSDP) 和 qWave。|
 |**Netlogon 服务**|配置域客户端与域控制器之间用于验证用户和服务的安全通道。 此设置使用 RPC。|
 |**网络发现**|允许计算机发现其他设备以及被网络上的其他设备发现。 此设置使用功能发现主机和发布服务以及 SSDP、NetBIOS、LLMNR 和 UPnP 网络协议。|

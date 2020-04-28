@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ba37abadc8571cee53b97877f4a8a6695f78acd2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551349"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079325"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>在 Intune 中使用应用保护策略条件启动操作选择性地擦除数据
 
 使用 Intune 应用保护策略，可配置设置以阻止最终用户访问公司应用或帐户。 这些设置的目标是组织为越狱设备和最低 OS 版本等内容所设置的数据重定位和访问要求。
  
-通过使用这些设置，可显式选择从最终用户的设备上擦除公司数据，作为对违规行为所采取的措施。 对于某些设置，可根据不同的指定值配置多项操作，例如阻止访问和擦除数据。
+通过使用这些设置，可显式选择从最终用户的设备上擦除公司数据，以此作为对违规行为采取的措施。 对于某些设置，可根据不同的指定值配置多项操作，例如阻止访问和擦除数据。
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>使用条件启动操作创建应用保护策略
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“应用” **“应用保护策略”**  >   。
+2. 选择“应用” > “应用保护策略”   。
 3. 单击“创建策略”  并为策略选择设备平台。 
 4. 单击“配置所需设置”，查看可为策略配置的设置列表  。 
 5. 在“设置”窗格中向下滚动，将会看到标题为“条件启动”  的部分，内含可编辑的表。
@@ -88,10 +88,10 @@ ms.locfileid: "80551349"
 通过使用最小公司门户版本  ，可以指定在最终用户设备上强制执行的公司门户的特定最低定义版本。 使用此条件启动设置，可以在不满足每个值时将值设置为“阻止访问”、“擦除数据”和“警告”作为可能的操作    。 此值的可能格式遵循 [主版本].[次版本]、[主版本].[次版本].[内部版本] 或 [主版本].[次版本].[内部版本].[修订版本]    。 假设某些最终用户可能不希望立即强制更新应用，则在配置此设置时，“警告”选项可能是理想的选择。 Google Play 商店能够很好地仅为应用更新发送增量字节，但在更新数据时，仍可能有大量数据是用户不想使用的。 强制执行更新并下载更新的应用可能会导致更新时产生意外的数据费用。 如果已配置最小公司门户版本设置，则将影响获取公司门户版本 5.0.4560.0 的任何最终用户以及公司门户的任何未来版本  。 此设置对使用版本低于与此功能一起发布的公司门户版本的用户没有任何影响。 在设备上使用应用自动更新的最终用户可能看不到此功能的任何对话框，因为他们可能使用最新的公司门户版本。 此设置仅适用于已注册和未注册设备具有应用保护的 Android。
 
 若要使用“设备制造商”  设置，请输入 Android 制造商的分号分隔列表。 这些值不区分大小写。 除 Intune 报告外，还可以在设备设置下找到设备的 Android 制造商。 <br>
-示例输入：Manufacturer A;Manufacturer B  
+示例输入：制造商 A;制造商 B  
 
 >[!NOTE]
-> 以下是使用 Intune 的设备报告的一些常见制造商，可以用作输入：Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
+> 以下是使用 Intune 报告自设备的一些常见制造商，可以用作输入：Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
 在最终用户设备上，Intune 客户端执行操作的依据为，Intune 中指定的设备型号字符串与应用程序保护策略的简单匹配情况。 匹配完全取决于设备报告的内容。 建议你（即 IT 管理员）务必要根据各种设备制造商和型号对小型用户组测试此设置，以确保行为按预期发生。 默认值为“未配置”  。<br>
 请设置下列操作之一： 
@@ -109,7 +109,7 @@ ms.locfileid: "80551349"
 
 以下列表提供了常见的操作列表：
 - **阻止访问** - 阻止最终用户访问公司应用。
-- **擦除数据** - 擦除最终用户设备上的公司数据。
+- 擦除数据  - 擦除最终用户设备上的公司数据。
 - **警告** - 向最终用户提供对话框作为警告消息。
 
 在某些情况下，例如“最低 OS 版本”设置，根据不同的版本号，可将该设置配置为执行所有适用的操作  。 

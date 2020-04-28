@@ -15,18 +15,18 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bc28f1b5170fb955f8614f098a46ed0c66a9f3a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344371"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079274"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>用于通过 Microsoft 企业移动性 + 安全性 (EMS) 启用 BYOD 的技术决策
 
 为使员工能够在自己的设备上远程办公 (BYOD) 而制定策略时，需要针对以下方案做出关键决策：启用 BYOD 以及如何保护公司数据。 幸运的是，EMS 提供了一套全面解决方案所需的全部功能。  
 
-在本主题中，我们会查看启用 BYOD 使员工有权访问企业电子邮件的简单用例。 我们会重点关注需要管理整个设备还是只需要管理应用程序，这两者都是完全有效的选择。
+在本主题中，我们会查看启用 BYOD 使员工有权访问企业电子邮件的简单用例。 我们会重点关注是需要管理整个设备还是只需要管理应用程序，这两者都是完全有效的选择。
 
 ## <a name="assumptions"></a>假设
 * 具备 Azure Active Directory 和 Microsoft Intune 的基础知识

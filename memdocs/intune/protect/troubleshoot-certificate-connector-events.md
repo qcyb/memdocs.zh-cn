@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b75faa501fa91dc82bfec83b8c418e28b39fcec
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 592b42ca5f21cd68eaad01acf9895f7e5f4b5c73
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350676"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079155"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Intune 证书连接器事件和诊断代码
 
-从版本 6.1806.x.x 开始，Intune 连接器服务会在“事件查看器”（“应用程序和服务日志” **“Microsoft Intune 连接器”）中记录事件**   >   。 使用这些事件可帮助解决 Intune 连接器配置中的潜在问题。 这些事件记录操作的成功和失败，并且还包含带有消息的诊断代码，以帮助 IT 管理员进行故障排除。
+从版本 6.1806.x.x 开始，Intune 连接器服务会在“事件查看器”（“应用程序和服务日志” > “Microsoft Intune 连接器”）中记录事件    。 使用这些事件可帮助解决 Intune 连接器配置中的潜在问题。 这些事件记录操作的成功和失败，并且还包含带有消息的诊断代码，以帮助 IT 管理员进行故障排除。
 
 > [!TIP]  
 > 若要解决问题并验证 Intune 连接器设置，请参阅[证书颁发机构脚本示例](https://aka.ms/intuneconnectorverificationscript)。
@@ -45,8 +45,8 @@ ms.locfileid: "79350676"
 | 20102 | PkcsCertIssue_Failure  | 未能颁发 PKCS 证书。 查看事件详细信息，获取与此事件相关的设备 ID、用户 ID、CA 名称、证书模板名称和证书指纹。 | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | 已成功撤销证书。 查看事件详细信息，获取与此事件相关的设备 ID、用户 ID、CA 名称和证书序列号。 | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | 未能撤销证书。 查看事件详细信息，获取与此事件相关的设备 ID、用户 ID、CA 名称和证书序列号。 有关其他信息，请参阅 NDES SVC 日志。   | 0x00000000, 0x00000402, 0x0FFFFFFF |
-| 20300 | Upload_Success | 已成功下载证书的请求或撤销数据。 查看事件详细信息，获取上传详细信息。 | 0x00000000, 0x0FFFFFFF |
-| 20302 | Upload_Failure | 未能下载证书的请求或撤销数据。 查看“事件详细信息”>“上传状态”以确定故障点。| 0x00000000, 0x0FFFFFFF |
+| 20300 | Upload_Success | 已成功上传证书的请求或吊销数据。 查看事件详细信息，获取上传详细信息。 | 0x00000000, 0x0FFFFFFF |
+| 20302 | Upload_Failure | 未能上传证书的请求或吊销数据。 查看“事件详细信息”>“上传状态”以确定故障点。| 0x00000000, 0x0FFFFFFF |
 | 20400 | Download_Success | 已成功下载签署证书、下载客户端证书或撤销证书的请求。 查看事件详细信息，获取下载详细信息。  | 0x00000000, 0x0FFFFFFF |
 | 20402 | Download_Failure | 未能下载签署证书、下载客户端证书或撤销证书的请求。 查看事件详细信息，获取下载详细信息。 | 0x00000000, 0x0FFFFFFF |
 | 20500 | CRPVerifyMetric_Success  | 证书注册点已成功验证客户端质询 | 0x00000000, 0x0FFFFFFF |

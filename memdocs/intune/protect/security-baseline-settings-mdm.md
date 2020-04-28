@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b2f3952d0805237acf0fe71c4f0f1617618723
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f88c352206d087ca6e79f25ec078fabc000de66
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351144"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079172"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>适用于 Intune 的 MDM 安全基线设置  
 
@@ -124,7 +124,7 @@ ms.locfileid: "79351144"
 有关详细信息，请参阅 Windows 文档中的[策略 CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser)。  
 
 - **Microsoft Edge SmartScreen**  
-  默认情况下，Microsoft Edge 使用 Microsoft Defender SmartScreen（已启用）防止用户受潜在网络钓鱼诈骗和恶意软件侵袭。 此外，默认情况下，用户不能禁用（关闭）Microsoft Defender SmartScreen。 启用此策略将关闭 Microsoft Defender SmartScreen，并阻止用户将其打开。 请勿配置此策略，以允许用户选择打开或关闭 Microsoft Defender SmartScreen。  
+  默认情况下，Microsoft Edge 使用 Microsoft Defender SmartScreen（已启用）防止用户受潜在网络钓鱼诈骗和恶意软件侵袭。 此外，默认情况下，用户不能禁用（关闭）Microsoft Defender SmartScreen。 启用此策略将关闭 Microsoft Defender SmartScreen，并阻止用户将其打开。 如果想要让用户选择打开或关闭 Microsoft Defender SmartScreen，请勿配置此策略。  
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067029)   
   
   **默认值**：是  
@@ -320,7 +320,7 @@ ms.locfileid: "79351144"
       设置为“是”可防止使用简单密码  。 
 
   - **防止重用以前的密码**  
-    指定可以在历史记录中存储的无法使用的密码数。 该值包括用户的当前密码。 例如，如果设置为 1  ，则在选择新密码时，用户不能重用其当前密码。 设置为 5  意味着用户不能将其新密码设置为当前密码或以前四个密码中的任何一个。  
+    指定可以在历史记录中存储的不能使用的密码数。 该值包括用户的当前密码。 例如，如果设置为 1  ，则在选择新密码时，用户不能重用其当前密码。 设置为 5  意味着用户不能将其新密码设置为当前密码或以前四个密码中的任何一个。  
     [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2066795)  
     
     **默认值**：24  

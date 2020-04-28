@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e986a6dcb598a11a0f2906d6d7be8e2e1abb6aba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1e2b5f39c9c0316239c2de6f353c73e7f80f743c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351417"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079563"
 ---
 # <a name="data-collection-in-intune"></a>Intune 中的数据收集
 
 用户使用 Intune 注册公司设备或个人设备时，Intune 会收集并共享一些个人数据。 Intune 从以下来源收集个人数据：
 
-- 管理员在 Azure 门户中使用 Intune。
+- 管理员在 Azure 门户中使用 Intune 的情况。
 - 最终用户设备（他们注册 Intune 管理服务时以及使用过程中）。
-- 第三方服务处的客户帐户（按每个管理员的说明）。
+- 第三方服务中的客户帐户（按每个管理员的说明）。
 - 诊断、性能和使用情况信息。
 
 Intune 从这些来源中收集到的信息可以分为以下三类：[标识数据](#identified-data)、[使用假名的数据](#pseudonymized-data)以及[聚合数据](#aggregated-data)。
@@ -41,7 +41,7 @@ Intune 从这些来源中收集到的信息可以分为以下三类：[标识数
 
 ## <a name="identified-data"></a>标识数据
 
-Intune 收集的大部分个人数据都是标识数据。 此数据绑定至某个用户、设备或应用程序，对管理的性质来说至关重要。 标识数据用于管理用户的设备和应用程序，以及预配 Intune 服务。
+Intune 收集的大部分个人数据都是标识数据。 此数据绑定至某个用户、设备或应用程序，对管理的性质来说至关重要。 标识出的数据用于管理用户的设备和应用程序，以及用于预配 Intune 服务。
 
 Intune 收集的标识数据可能包括但不限于以下内容： 
 

@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 55c98368619338bb7018be0651f6cde4054cf9cf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322442"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079699"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>使用 Intune 监视设备加密
 
@@ -98,7 +98,7 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
 
   若要查看状态的更多详细信息，请依次转到“Intune”   > “设备配置”   > “配置文件”  ，再选择配置文件。 （可选）依次选择“设备状态”  和设备。
 
-- **状态详细信息** – 关于设备加密状态的高级详细信息。
+- 状态详细信息  - 关于设备加密状态的高级详细信息。
 
   > [!IMPORTANT]
   > 对于 Windows 10 设备，Intune 仅显示运行 Windows 10 2019 年 4 月更新或更高版本的设备的状态详细信息   。
@@ -182,9 +182,9 @@ Intune 支持多种选项来轮换和恢复个人恢复密钥。 轮换密钥的
 
 ### <a name="rotate-recovery-keys"></a>轮换恢复密钥
 
-- **自动执行轮换**：管理员可以配置 FileVault 设置个人恢复密钥轮换以定期自动生成新的恢复密钥。 为设备生成新密钥时，系统不会向用户显示密钥。 相反，用户必须从管理员或使用公司门户应用获取密钥。
+- **自动执行轮换**：管理员可以配置 FileVault 设置个人恢复密钥轮换以定期自动生成新的恢复密钥。 为设备生成新密钥时，不会向用户显示密钥。 相反，用户必须从管理员或使用公司门户应用获取密钥。
 
-- **手动轮换**：作为管理员，你可以查看自己使用 Intune 管理且使用 FileVault 加密的设备的相关信息。 然后，可以选择手动轮换企业设备的恢复密钥。 无法轮换个人设备的恢复密钥。
+- **手动轮换**：管理员可以查看自己使用 Intune 管理且使用 FileVault 加密的设备的相关信息。 然后，可以选择手动轮换企业设备的恢复密钥。 不能轮换个人设备的恢复密钥。
 
   轮换恢复密钥：
 

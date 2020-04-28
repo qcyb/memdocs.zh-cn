@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 542a49e53e8d95a1f0290001151e175a0bbd7eab
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8f533a04e9865b4d841bee1a2764eef2fbbbcda9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347465"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079376"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>将与 iOS 设备问题相关的错误发送给公司支持人员
 在 iOS 设备上使用公司门户应用有时会出现错误。 发生这种情况时，可以通过电子邮件将有关该错误的详细信息发送给公司的支持人员。 这些详细信息将提供为你解决该问题所需的上下文。

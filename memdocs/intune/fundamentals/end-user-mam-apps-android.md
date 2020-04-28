@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 347b64317d39be587acccbabc6530019f13c152d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b712b0365505ce4dab6162640cc8440799f2948b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344059"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079444"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Android 应用由应用保护策略托管时会出现的情况
 
@@ -78,7 +78,7 @@ Android 设备上与应用保护策略关联的所有应用都需要公司门户
 
 |**pfile**|
 |----|
-|Pfile 是一种用于受保护文件的通用“包装”格式，它可封装加密内容和 Azure 信息保护许可证。 它可以用于保护任何文件类型。|
+|Pfile 是一种用于受保护文件的通用“包装器”格式，它可封装加密内容和 Azure 信息保护许可证。 它可以用于保护任何文件类型。|
 
 ## <a name="next-steps"></a>后续步骤
 [iOS/iPadOS 应用由应用保护策略托管时会出现的情况](end-user-mam-apps-ios.md)

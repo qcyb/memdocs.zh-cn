@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488184"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022851"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教程：通过云使用 ADMX 模板和 Microsoft Intune 为 Windows 10 相关设备配置组策略
 
@@ -34,7 +34,7 @@ ms.locfileid: "80488184"
 ADMX 模板可用于以下服务：
 
 - **Microsoft Edge**：通过 [Microsoft Edge 策略文件](https://www.microsoftedgeinsider.com/en-us/enterprise)下载。
-- **Office**：通过 [Office 365 ProPlus：Office 2019 和 Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) 下载。
+- **Office**：在 [Microsoft 365 应用版、Office 2019 和 Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) 中下载。
 - **Windows**：内置于 Windows 10 OS 中。
 
 有关 ADMX 策略的详细信息，请参阅[了解支持 ADMX 的策略](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)。

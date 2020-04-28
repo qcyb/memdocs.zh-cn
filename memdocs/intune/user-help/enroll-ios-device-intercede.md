@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638211"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077761"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>通过公司门户和 Intercede 设置 iOS 或 iPadOS 设备
 
@@ -44,7 +44,7 @@ ms.locfileid: "81638211"
 
 
 ## <a name="what-are-derived-credentials"></a>什么是派生凭据？  
-派生凭据是派生自智能卡凭据并在设备上安装的证书。 它授予你对工作资源的远程访问权限，同时防止未经授权的用户访问敏感信息。  
+派生凭据是一种派生自智能卡凭据并在设备上安装的证书。 它授予你对工作资源的远程访问权限，同时防止未经授权的用户访问敏感信息。  
 
 派生凭据用于： 
 * 对登录到学校或工作应用、Wi-Fi 和 VPN 的学生和员工进行身份验证

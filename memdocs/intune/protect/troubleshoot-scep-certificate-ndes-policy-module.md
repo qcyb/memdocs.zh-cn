@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f0a4b260fcd2698315ba8b777d88b86e203259
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350000"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079104"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>在 Microsoft Intune 中对 NDES 策略模块进行故障排除
 
@@ -125,7 +125,7 @@ Signing certificate could not be retrieved. System.Security.Cryptography.Cryptog
 
 **解决方法**：在安装了连接器的服务器上，打开注册表编辑器，找到 `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` 注册表项，然后检查 SigningCertificate 值是否存在。
 
-如果此值不存在，请在 services.msc 中重新启动 Intune 连接器服务，然后检查该值是否显示在注册表中。 如果仍缺少该值，通常是因为 NDES 与 Intune 服务之间的服务器存在网络连接问题。
+如果此值不存在，请在 services.msc 中重启 Intune 连接器服务，然后检查该值是否显示在注册表中。 如果仍缺少该值，通常是因为 NDES 与 Intune 服务之间的服务器存在网络连接问题。
 
 ## <a name="ndes-passes-the-request-to-issue-the-certificate"></a>NDES 传递请求以颁发证书
 

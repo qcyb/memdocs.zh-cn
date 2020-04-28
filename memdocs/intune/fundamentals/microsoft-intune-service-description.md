@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358632"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078833"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune 服务说明
 
@@ -60,13 +60,13 @@ Microsoft 为合格的计划中的合格服务提供了 Intune 载入权益。 �
 
   以下为某些有帮助的提示：
 
-  - Office 365 消息中心中的消息是有针对性的。 这意味着，如果你的公司不具有适用于 EDU 产品/服务的 Intune，我们不会向你发送有关适用于 EDU 的 Intune 消息。
+  - Office 365 消息中心中的消息是有针对性的。 这意味着，如果你的公司不具有适用于 EDU 产品/服务的 Intune，我们将不会向你发送有关适用于 EDU 的 Intune 消息。
 
-  - 消息过期。 例如，您的服务已更新的通知与“新增功能”页面的链接可能会在下一个服务更新通知之前过期。 否则，你可能会积压大量不再相关的消息。
+  - 消息过期。 例如，服务已更新的通知与“新增功能”页面的链接可能会在下一个服务更新通知之前过期。 否则，你可能会积压大量不再相关的消息。
 
   - Office 365 管理移动应用允许你搜索所有消息，并且，如果你想要与组织中的同事分享，还可转发通知。
 
-  - 在编辑消息中心首选项下方，我们最终将切换为 **Intune**，因此，你会看到这些发布到 Intune 订阅上的消息。 如果你看到的是 Office 365 的移动设备管理，而不是 Intune 的，那么你看到的是不同的服务。
+  - 在编辑消息中心首选项下方，我们最终将切换为 Intune  ，因此，你会看到这些发布到 Intune 订阅上的消息。 如果你看到的是 Office 365 的移动设备管理，而不是 Intune 的，那么你看到的是不同的服务。
 
 - 还使用两个博客来分享 EMS 消息和 Intune 支持的最佳做法：
 
@@ -81,7 +81,7 @@ Microsoft 为合格的计划中的合格服务提供了 Intune 载入权益。 �
 
 为了帮助你对服务更改做好计划，我们将根据更改产生的影响，至少在服务变更前的 7-90 天通知你。 这些更改可能包括任何以下类型的更改：
 
-- 对你可能想要与支持人员或最终用户分享的最终用户体验的更改。 对此类更改，我们通常在 7-30 天前通知并将它们记录在 [Intune 应用 UI 中的新增功能](whats-new-app-ui.md)。 对于拼写错误的更改，我们通常不会在文档中标注。 但是，在 UI 中最终用户注册体验的任何一项更改都是非常重要的，因此，我们将会向 Office 365 消息中心的客户发送消息，并链接到 Intune App UI 中的“新增功能”部分，以便客户收到具体变更的通知，并在生产中推出更改之前有时间评估和更新最终用户的指南。
+- 对你可能想要与支持人员或最终用户分享的最终用户体验的更改。 我们通常会在 7 到 30 天之内提供这些更改的通知，并将其记录在 [Intune 应用 UI 的新增功能](whats-new-app-ui.md)中。 对于类似于拼写错误更改的内容，我们通常不会在文档中标注。 但是，在 UI 中最终用户注册体验的任何一项更改都是非常重要的，因此，我们将会向 Office 365 消息中心的客户发送消息，并链接到 Intune App UI 中的“新增功能”部分，以便客户收到具体变更的通知，并在生产中推出更改之前有时间评估和更新最终用户的指南。
 
 - 需要你采取操作的更改称为“计划更改”  ，通常会提前大约 30 天通知。 在 Office 365 消息中心，该“类别”会特别提及“计划更改”，而且，如果我们有在生产中推出更改的确切日期，我们还会加入“采取行动”日期  ，让你看到更改队列和解释标记。
 
@@ -92,7 +92,7 @@ Microsoft 为合格的计划中的合格服务提供了 Intune 载入权益。 �
 最后，对于需要采取任何事后操作让你的服务恢复正常，或根据客户反馈我们认为可能会带来巨大破坏的重大更改，在这种极少数的情况下，我们将根据 [Office 365 通信首选项](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc)的设置方式，以及你是否拥有有效的（工作邮箱优先）电子邮件地址，向服务管理员发送电子邮件。  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>语言支持
-Intune 在 Azure 门户中运行，支持后列语言：中文（简体）、中文（繁体）、捷克语、荷兰语、英语、德语、匈牙利语、意大利语、日语、葡萄牙语（巴西）、葡萄牙语（葡萄牙）、俄语、西班牙语、英语、法语、朝鲜语、波兰语、瑞典语和土耳其语。
+Intune 在 Azure 门户中运行，后者支持下列语言：简体中文、中文(繁体)、捷克语、荷兰语、英语、德语、匈牙利语、意大利语、日语、葡萄牙语(巴西)、葡萄牙语(葡萄牙)、俄语、西班牙语、英语、法语、韩语、波兰语、瑞典语和土耳其语。
 
 Intune 管理控制台和面向用户的移动体验除了 Azure 门户中支持的所有语言外，还支持丹麦语、希腊语、芬兰语、挪威语和罗马尼亚语。
 

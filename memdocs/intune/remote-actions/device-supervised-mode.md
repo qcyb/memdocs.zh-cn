@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6b4afd0c440455b7dab9c1e7674a935967b2fd64
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325086"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078934"
 ---
 # <a name="turn-on-iosipados-supervised-mode"></a>开启 iOS/iPadOS 监督模式
 
@@ -33,7 +33,7 @@ Apple iOS/iPadOS 监督模式为管理员提供更多用于管理 Apple 设备�
 
 在 Apple [设备注册计划 (DEP)](../enrollment/device-enrollment-program-enroll-ios.md) 中，Intune 支持监督模式。
 
-有关需要监督的 Apple 控件的列表，请参阅 Apple 的[负载设置参考](http://help.apple.com/configurator/mac/2.4/#/cad5370d089)。
+有关需要监督的 Apple 控件的列表，请参阅 Apple 的[有效负载设置参考](http://help.apple.com/configurator/mac/2.4/#/cad5370d089)。
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>在注册过程中启用监督模式
 

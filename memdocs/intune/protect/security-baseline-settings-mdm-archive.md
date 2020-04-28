@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2d058da21a0ab9afea68b1f9cc1be4a73930d43
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 92eafef5bac7f1008284f896b85981d170331382
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351170"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079206"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -125,7 +125,7 @@ ms.locfileid: "79351170"
 
 - **Microsoft Edge SmartScreen**  
 
-  默认情况下，Microsoft Edge 使用 Windows Defender SmartScreen（已启用）防止用户受潜在网络钓鱼诈骗和恶意软件侵袭。 此外，默认情况下，用户不能禁用（关闭）Windows Defender SmartScreen。 启用此策略将关闭 Windows Defender SmartScreen，并阻止用户将其打开。 请勿配置此策略，以允许用户选择打开或关闭 Windows Defender SmartScreen。  
+  默认情况下，Microsoft Edge 使用 Windows Defender SmartScreen（已启用）防止用户受潜在网络钓鱼诈骗和恶意软件侵袭。 此外，默认情况下，用户不能禁用（关闭）Windows Defender SmartScreen。 启用此策略将关闭 Windows Defender SmartScreen，并阻止用户将其打开。 请勿配置此策略，让用户选择打开或关闭 Windows Defender SmartScreen。  
   
   **默认值**：是  
   
@@ -297,7 +297,7 @@ ms.locfileid: "79351170"
       设置为“是”可防止使用简单密码  。 
 
   - **防止重用以前的密码**  
-    指定可以在历史记录中存储的无法使用的密码数。 该值包括用户的当前密码。 例如，如果设置为 1  ，则在选择新密码时，用户不能重用其当前密码。 设置为 5  意味着用户不能将其新密码设置为当前密码或以前四个密码中的任何一个。
+    指定可以在历史记录中存储的不能使用的密码数。 该值包括用户的当前密码。 例如，如果设置为 1  ，则在选择新密码时，用户不能重用其当前密码。 设置为 5  意味着用户不能将其新密码设置为当前密码或以前四个密码中的任何一个。
     
     **默认值**：24  
 
