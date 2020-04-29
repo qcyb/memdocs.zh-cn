@@ -16,12 +16,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08ed9df5f636ce014d5c9949a63bd06fb1c7c6f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0b66b486025fa67d138f9ace09b78d4e894737e
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350182"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254922"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Intune 的传递优化设置
 
@@ -60,9 +60,9 @@ Intune 控制台中的大多数选项都直接映射到传递优化设置，Wind
 
 |设置  |Windows 版本  |详细信息  |
 |---------|---------|---------|
-|[对等缓存所需的最小 RAM（以 GB 为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-ram-inclusive-allowed-to-use-peer-caching)      | 1703        | 指定设备使用对等缓存必须具有的最小 RAM 大小（以 GB 为单位）。 <br><br>**默认值**： 没有配置任何值   <br><br>**建议**：4 GB <br><br>策略 CSP：[DOMinRAMAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer) <br><br>        |
-|[对等缓存所需的最小磁盘大小（以 GB 为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-disk-size-allowed-to-use-peer-caching)      | 1703        | 指定设备使用对等缓存必须具有的最小磁盘大小（以 GB 为单位）。 <br><br>**默认值**：没有配置任何值   <br><br>**建议**：32 GB   <br><br>策略 CSP：[DOMinDiskSizeAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer) <br><br>    |
-|[对等缓存的最小内容文件大小（以 MB 为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-peer-caching-content-file-size)      | 1703        | 指定文件使用对等缓存必须达到或超过的最小大小（以 MB 为单位）。  <br><br>**默认值**：没有配置任何值   <br><br>**建议**：10 MB   <br><br>策略 CSP：[DOMinFileSizeToCache](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)  <br><br>      |
+|[对等缓存所需的最小 RAM（以 GB 为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-ram-inclusive-allowed-to-use-peer-caching)      | 1709        | 指定设备使用对等缓存必须具有的最小 RAM 大小（以 GB 为单位）。 <br><br>**默认值**： 没有配置任何值   <br><br>**建议**：4 GB <br><br>策略 CSP：[DOMinRAMAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer) <br><br>        |
+|[对等缓存所需的最小磁盘大小（以 GB 为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-disk-size-allowed-to-use-peer-caching)      | 1709        | 指定设备使用对等缓存必须具有的最小磁盘大小（以 GB 为单位）。 <br><br>**默认值**：没有配置任何值   <br><br>**建议**：32 GB   <br><br>策略 CSP：[DOMinDiskSizeAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer) <br><br>    |
+|[对等缓存的最小内容文件大小（以 MB 为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-peer-caching-content-file-size)      | 1709        | 指定文件使用对等缓存必须达到或超过的最小大小（以 MB 为单位）。  <br><br>**默认值**：没有配置任何值   <br><br>**建议**：10 MB   <br><br>策略 CSP：[DOMinFileSizeToCache](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)  <br><br>      |
 |[上传所需的最低电池剩余电量（以百分比为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#allow-uploads-while-the-device-is-on-battery-while-under-set-battery-level)      | 1709        | 以百分比形式指定设备将数据上传到对等所必须具有的最低电池剩余电量。 如果电池剩余电量下降到指定值，则任何活动上传都会自动暂停。   <br><br>**默认值**：没有配置任何值   <br><br>**建议**：40%   <br><br>策略 CSP：[DOMinBatteryPercentageAllowedToUpload](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbatterypercentageallowedtoupload) <br><br>        |
 |[修改缓存驱动器](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#modify-cache-drive)        | 1607        | 指定传递优化用于其缓存的驱动器。 可以使用环境变量、驱动器号或完整路径。  <br><br>**默认值**：%SystemDrive% <br><br>策略 CSP：[DOModifyCacheDrive](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domodifycachedrive) <br><br>        |
 | [最长缓存期限（以天为单位）](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-age)    | 1511         | 指定每个文件成功下载后，文件在设备的传递优化缓存中保存的期限。   <br><br>使用 Intune 配置缓存期限（以天为单位）。 定义的天数转换为相应秒数，这是 Windows 定义此设置的方式。 例如，Intune 配置为 3 天，在设备上会转换为 259200 秒（3 天）。  <br><br>**默认值**： 没有配置任何值      <br><br>**建议**：7   <br><br>策略 CSP：[DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |

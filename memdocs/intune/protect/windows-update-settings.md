@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078951"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254701"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune 中的 Windows 更新设置  
 
@@ -85,8 +85,7 @@ ms.locfileid: "82078951"
   支持的延迟期：  
 
   - *Windows 版本 1709 和更高版本* - 0 到 365 天  
-  - *Windows 版本 1703* - 0 至 180 天  
-
+  
   功能更新通常是 Windows 的新功能。  
 
 - **设置功能更新卸载期(2 到 60 天)**  
@@ -164,8 +163,6 @@ ms.locfileid: "82078951"
   
   此设置具有不同的结果，具体取决于 Windows 的设备版本：  
  
-  - *Windows 版本 1703 和更早版本* - 重启设备时，会出现一些检查项，包括检查活跃用户、电池剩余电量和正在运行的游戏等。  
-  
   - *Windows 版本 1709 及更高版本* - 在活动时间，不为更新运行以下进程：扫描、下载、安装和重启。 在活动时间后，只要通过电池和电源检查，更新进程就会运行并可将设备从睡眠状态唤醒、扫描、下载、安装和重启设备。 
 
 - **阻止用户暂停 Windows 更新**  
