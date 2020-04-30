@@ -54,12 +54,11 @@
 #### [不支持的安全修补程序](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [具有加密错误的设备](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### 移动威胁防御
-#### [安装移动威胁防御应用](you-are-prompted-to-install-mtd-android.md)
-##### [安装 Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
-##### [安装 Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
-##### [安装 SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
-##### [安装 Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
+### “移动威胁防御”应用 
+#### [安装 Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
+#### [安装 Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
+#### [安装 SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
+#### [安装 Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
 #### [解决威胁](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 ##### [使用 Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 ##### [使用 Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
@@ -99,12 +98,11 @@
 #### [更新设备以安装 Outlook](update-device-outlook-ios.md)
 #### [目前不支持我的 iOS 版本](your-ios-version-isnt-yet-supported.md)
 
-### 移动威胁防御
-#### [安装移动威胁防御应用](you-are-prompted-to-install-mtd-ios.md)
-##### [安装 Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-##### [安装 Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
-##### [安装 SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
-##### [安装 Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
+### “移动威胁防御”应用
+#### [安装 Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
+#### [安装 Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
+#### [安装 SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
+#### [安装 Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
 #### [解决威胁](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 ##### [使用 Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 ##### [使用 Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)

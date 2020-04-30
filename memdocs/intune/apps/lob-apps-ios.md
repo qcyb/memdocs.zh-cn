@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324076"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863088"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>将 iOS 业务线应用添加到 Microsoft Intune
 
@@ -34,7 +34,7 @@ ms.locfileid: "80324076"
 > [!NOTE]
 > iOS 设备用户可删除部分内置 iOS 应用（如“股市”和“地图”）。 无法使用 Intune 重新部署这些应用。 如果用户删除这些应用，则必须前往 App Store，并手动重新安装它们。
 >
-> 每个 iOS LOB 应用的大小上限为 4 GB。
+> 每个 iOS LOB 应用的大小上限为 2 GB。
 
 > [!NOTE]
 > 捆绑包标识符（例如 com.contoso.app）应为应用的唯一标识符  。 例如，若要在生产版本旁边安装用于测试的 LOB 应用的 beta 版本，则 beta 版本必须具有不同的唯一标识符（例如 com.contoso.app-beta）  。 否则，beta 版本将与生产重叠，并被视为升级。 重命名 .ipa 文件不会对此行为产生任何影响。
@@ -80,7 +80,7 @@ ms.locfileid: "80324076"
 
 ## <a name="step-3---assignments"></a>步骤 3 - 分配
 
-1. 为应用选择“必需”  、“适用于已注册的设备”  或“卸载”  组分配。 有关详细信息，请参阅[添加用于组织用户和设备的组](../fundamentals/groups-add.md)和[使用 Microsoft Intune 将应用分配到组](apps-deploy.md)。
+1. 为应用选择“必需”、“适用于已注册的设备”、“不论是否注册均可使用”或“卸载”组分配     。 有关详细信息，请参阅[添加用于组织用户和设备的组](../fundamentals/groups-add.md)和[使用 Microsoft Intune 将应用分配到组](apps-deploy.md)。
 2. 单击“下一步”  以显示“查看 + 创建”页  。
 
 ## <a name="step-4---review--create"></a>步骤 4 - 查看 + 创建

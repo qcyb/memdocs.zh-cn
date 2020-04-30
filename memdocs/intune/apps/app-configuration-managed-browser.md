@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323393"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80862833"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>使用 Microsoft Intune 受策略保护的浏览器管理 Web 访问
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-通过使用受 Intune 策略保护的浏览器（Microsoft Edge 或 Intune Managed Browser），可以确保始终能够安全地访问公司网站。  使用 Intune 进行配置后，受保护的浏览器可以利用以下功能：
+通过使用受 Intune 策略保护的浏览器（例如 Microsoft Edge），可以确保始终能够安全地访问公司网站。 使用 Intune 进行配置后，受保护的浏览器可以利用以下功能：
 
 - 应用程序保护策略
 - 条件性访问
@@ -38,11 +38,11 @@ ms.locfileid: "80323393"
 - Azure 应用程序代理集成
 
 > [!IMPORTANT]
-> Intune Managed Browser 将停用。 使用 Microsoft Edge 获取受保护的 Intune 浏览器体验。 
+> Intune Managed Browser 已停用。 使用 [Microsoft Edge](../apps/manage-microsoft-edge.md) 获取受保护的 Intune 浏览器体验。 
 
 ## <a name="microsoft-edge-support"></a>Microsoft Edge 支持
 
-可以使用 Microsoft Edge 支持 iOS/iPadOS 和 Android 设备上的企业方案。 Microsoft Edge 将增加对最终用户体验的改进，支持与 Intune Managed Browser 相同的所有管理方案。 Intune 策略启用的以下 Microsoft Edge 企业功能包括：
+可以使用 Microsoft Edge 支持 iOS/iPadOS 和 Android 设备上的企业方案。 Intune 策略启用的以下 Microsoft Edge 企业功能包括：
 
 - **双重标识** - 用户可以同时添加工作帐户以及个人帐户以进行浏览。 两个标识完全独立，这类似于 Office 365 和 Outlook 中的体系结构和体验。 Intune 管理员将能够为工作帐户中受保护的浏览体验设置所需的策略。 
 - **Intune 应用保护策略集成** - 管理员现在可以将应用保护策略定向到 Microsoft Edge，包括控制剪切、复制和粘贴，防止执行屏幕捕获，并确保仅在其他托管应用中打开用户选择的链接。
@@ -53,7 +53,7 @@ Microsoft Edge 的 Microsoft Intune 保护策略有助于保护组织的数据�
 
 ## <a name="getting-started"></a>开始使用
 
-Microsoft Edge 和 Intune Managed Browser 是 Web 浏览器应用，你和你的最终用户可以从公共应用商店中下载它以供组织使用。 
+Microsoft Edge 是 Web 浏览器应用，你和你的最终用户可以从公共应用商店中下载它并在组织中使用。 
 
 浏览器策略的操作系统要求：
 - Android 4 及更高版本，或
@@ -141,7 +141,7 @@ SSO 要求使用 iOS/iPadOS 上的 Microsoft Authenticator 应用或 Android 上
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“应用”   > “应用配置策略”   > “添加”   > “托管应用”  。
 3. 在“创建应用配置策略”窗格的“基本信息”页上，输入应用配置设置的“名称”和可选“描述”     。
-4. 选择“选择公共应用”  ，然后选择适用于 iOS/iPadOS 或适用于 Android（或适用于两者）的“Managed Browser”  和/或“Edge”  。
+4. 选择“选择公共应用”  ，然后选择适用于 iOS/iPadOS 或适用于 Android（或适用于两者）的“Managed Browser”  和/或“Microsoft Edge”  。
 5. 单击“选择”  以返回到“创建应用配置策略”  窗格。
 6. 单击“下一步”以显示“设置”页面   。
 7. 在“设置”  页面上，定义键值对以为应用提供配置。 请参阅本文的后续部分，了解可以定义的不同键值对。
@@ -189,7 +189,7 @@ SSO 要求使用 iOS/iPadOS 上的 Microsoft Authenticator 应用或 Android 上
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>如何为受保护的浏览器配置应用程序代理设置
 
-可将 Microsoft Edge、Intune Managed Browser 和 [Azure AD 应用程序代理]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)配合使用，以支持 iOS/iPadOS 和 Android 设备用户实现以下方案：
+可将 Microsoft Edge 和 [Azure AD 应用程序代理]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)配合使用，以支持 iOS/iPadOS 和 Android 设备用户实现以下方案：
 
 - 用户下载并登录到 Microsoft Outlook 应用。 将自动应用 Intune 应用保护策略。 它们对保存的数据进行加密，并阻止用户将公司文件传输到设备上的非托管应用或位置。 当用户接下来单击 Outlook 中 Intranet 站点的链接时，可以指定在受保护的浏览器应用程序中而不是在另一个浏览器中打开链接。 受保护的浏览器识别出这个 Intranet 站点已通过应用程序代理向用户公开。 将通过应用程序代理对用户进行自动路由，以便在进入 Intranet 站点前进行任何适用的多重身份验证和条件性访问。 之前在用户处于远程访问状态时，可能找不到该站点，现在用户可正常访问该网站且 Outlook 中的链接也按预期工作。
 - 远程用户打开受保护的浏览器应用程序，并使用内部 URL 导航到 Intranet 站点。 受保护的浏览器识别出这个 Intranet 站点已通过应用程序代理向用户公开。 将通过应用程序代理对用户进行自动路由，以便在进入 Intranet 站点前进行任何适用的多重身份验证和条件性访问。 之前在用户处于远程访问状态时，可能找不到该站点，现在用户可正常访问。
@@ -199,18 +199,17 @@ SSO 要求使用 iOS/iPadOS 上的 Microsoft Authenticator 应用或 Android 上
 - 通过 Azure AD 应用程序代理设置内部应用程序。
   - 要配置应用程序代理和发布应用程序，请参阅[设置文档](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)。 
   - [必须向重定向针对的企业应用程序分配用户](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-add-on-premises-application#add-a-user-for-testing)。 即使将应用程序的预身份验证设置为直通模式，以及即使已在应用程序代理设置中禁用用户分配要求，也必须执行此操作。
-- 必须使用 Managed Browser 应用的最低版本 1.2.0。
-- Managed Browser 或 Microsof Edge 应用的用户具有分配给该应用的 [Intune 应用保护策略](app-protection-policy.md)。
+- Microsof Edge 应用的用户必须具有分配给该应用的 [Intune 应用保护策略](app-protection-policy.md)。
 
     > [!NOTE]
-    > 更新的应用程序代理重定向数据最长可能需要 24 小时才能在 Managed Browser 和 Microsoft Edge 中生效。
+    > 更新的应用程序代理重定向数据最长可能需要 24 小时才能在 Microsoft Edge 中生效。
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>步骤 1：从 Outlook 启用指向受保护的浏览器的自动重定向
 Outlook 必须配置可启用**将 Web 内容限制为仅在 Managed Browser 中显示**这一设置的应用保护策略。
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>步骤 2:为受保护的浏览器分配一个应用配置策略
-此过程将 Managed Browser 或 Microsof Edge 应用配置为使用应用代理重定向。 
+此过程将 Microsof Edge 应用配置为使用应用代理重定向。 
 
 在策略的配置设置中打开“Edge”选项卡，为应用程序代理重定向值选择“启用”。   启用此设置时，用户即可以访问通过 Azure 应用程序代理发布的公司链接和本地 Web 应用。
 
@@ -223,7 +222,7 @@ Outlook 必须配置可启用**将 Web 内容限制为仅在 Managed Browser 中
 - 主页快捷方式图标显示为搜索控件下的图标。  无法对其进行编辑或删除。
 - 主页快捷方式将显示组织的名称以便进行区分。  它将始终显示为第一个图标。
 
-使用该过程创建 Microsoft Edge 或 Managed Browser 应用配置，提供以下键值对：
+使用创建 Microsoft Edge 应用配置的过程提供以下键值对：
 
 |                                Key                                |                                                           值                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -237,7 +236,7 @@ Outlook 必须配置可启用**将 Web 内容限制为仅在 Managed Browser 中
 - 这些书签显示在列表顶部。 用户创建的任何书签都会显示在这些书签下方。
 - 如果已启用应用代理重定向，可以使用应用代理 Web 应用的内部或外部 URL 添加应用。
 
-使用该过程创建 Microsoft Edge 或 Managed Browser 应用配置，提供以下键值对：
+使用创建 Microsoft Edge 应用配置的过程提供以下键值对：
 
 |                                Key                                 |                                                                                                                                                                                                                                                         值                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -245,7 +244,7 @@ Outlook 必须配置可启用**将 Web 内容限制为仅在 Managed Browser 中
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>如何为受保护的浏览器指定允许和阻止的 URL
 
-使用该过程创建 Microsoft Edge 或 Managed Browser 应用配置，提供以下键值对：
+使用创建 Microsoft Edge 应用配置的过程提供以下键值对：
 
 |Key|值|
 |-|-|
@@ -311,13 +310,13 @@ Outlook 必须配置可启用**将 Web 内容限制为仅在 Managed Browser 中
 
 用户尝试打开指向组织不允许的站点的链接时（如报刊文章等），他们可以在完全独立于工作上下文的个人上下文中完成此操作，这是此模型的优势之一。 默认情况下会启用这些软转换。 
 
-使用该过程创建 Microsoft Edge 或 Managed Browser 应用配置，提供以下键值对：
+使用创建 Microsoft Edge 应用配置的过程提供以下键值对：
 
 | Key                                                                | 值                                                 |
 |--------------------------------------------------------------------|-------------------------------------------------------|
 | **com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock** | False 将阻止这些软转换发生  |
 
-## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>如何在 iOS 上使用 Managed Browser 访问托管应用日志
+## <a name="how-to-access-managed-app-logs-using-the-managed-browser-on-ios"></a>如何在 iOS 上使用 Managed Browser 访问托管应用日志
 
 在 iOS/iPadOS 设备上安装了 Managed Browser 的最终用户可查看所有 Microsoft 已发布应用的管理状态。 他们还可针对托管 iOS/iPadOS 应用的疑难问题发送日志。
 

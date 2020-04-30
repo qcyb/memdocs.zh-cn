@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/17/2002
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebeb2c31b72ec10f4ce95b09e32b3e3c9accccfa
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 7b6940d191902627616501f192fc810363bee1a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323032"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81688232"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>在 Microsoft Intune 中使用派生凭据
 
-本文适用于运行 iOS 的设备 
+*本文适用于 iOS/iPadOS 和运行版本 7.0 及更高版本的 Android Enterprise 完全托管设备*
 
 在需要通过智能卡进行身份验证或加密和签名的环境中，现可以使用 Intune 为移动设备预配派生自用户智能卡的证书。 该证书称为派生凭据  。 Intune [支持多个派生凭据颁发者](#supported-issuers)，但每次每个租户只能应用一个颁发者。
 
@@ -34,18 +34,19 @@ ms.locfileid: "80323032"
 **借助 Intune 的实现**：
 
 - Intune 管理员将其租户配置为应用受支持派生凭据颁发者。 无需在派生凭据颁发者的系统中配置任何 Intune 特定设置。
-
 - Intune 管理员将“派生凭据”指定为以下对象的身份验证方法   ：
-
+  
+  **对于 iOS/iPadOS**：
   - Wi-Fi、VPN 和电子邮件（其中包括 iOS/iPadOS 本机邮件应用）等常见配置文件类型
-
   - 应用身份验证
-
   - S/MIME 签名和加密
 
+  **对于 Android Enterprise 完全托管设备**：
+  - Wi-Fi 和 VPN 等常见配置文件类型
+  - 应用身份验证
+  
 - 用户在计算机上使用智能卡获取派生凭据，以便向派生凭据颁发者进行身份验证。 然后，颁发者将派生自其智能卡的凭据颁发给移动设备。
-
-- 设备收到派生凭据之后，在应用或资源访问配置文件需要派生凭据时，使用它进行身份验证以及 S/MIME 签名和加密。 
+- 设备收到派生凭据之后，在应用或资源访问配置文件需要派生凭据时，使用它进行身份验证以及 S/MIME 签名和加密。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -53,21 +54,22 @@ ms.locfileid: "80323032"
 
 ### <a name="supported-platforms"></a>受支持的平台
 
-Intune 支持以下 OS 平台上的派生凭据：
+Intune 支持以下平台上的派生凭据：
 
 - iOS/iPadOS
+- Android Enterprise - 完全托管设备（版本 7.0 及更高版本）
 
 ### <a name="supported-issuers"></a>支持的颁发者
 
 Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置为应用以下颁发者：
 
-- **DISA Purebred**： https://cyber.mil/pki-pke/purebred/
+- **DISA Purebred**（仅限 iOS）：https:\//cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**： https://www.entrustdatacard.com/
 - **Intercede**： https://www.intercede.com/
 
-有关应用不同颁发者的关键详细信息，请查看该颁发者的指南<!-- , including the issuers end-user workflow-->。 更多信息，请参阅本文中的[派生凭据计划](#plan-for-derived-credentials)。
+有关应用不同颁发者的关键详细信息，请查看该颁发者的指南。 更多信息，请参阅本文中的[派生凭据计划](#plan-for-derived-credentials)。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 如果删除租户中的派生凭据颁发者，则通过该颁发者设置的派生凭据将会失效。
 >
 > 请参阅下文的[更改派生凭据颁发者](#change-the-derived-credential-issuer)。
@@ -76,23 +78,24 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 计划在将注册派生凭据的设备上部署 Intune 公司门户应用。 设备用户使用公司门户应用来开始凭据注册流程。
 
-对于 iOS/iPadOS 设备，请参阅[将 iOS/iPadOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)。
+- 对于 iOS 设备，请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)。
+- 对于 Android 设备，请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)。
 
 ## <a name="plan-for-derived-credentials"></a>派生凭据计划
 
 设置派生凭据颁发者之前，请了解以下注意事项。
 
-### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) 查看所选派生凭据颁发者的文档  
+### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) 查看所选派生凭据颁发者的文档
 
 配置颁发者之前，查看该颁发者的文档，以了解其系统如何将派生凭据交付设备。
 
-根据所选颁发者，注册时可能需要工作人员帮助用户完成该流程。 还应查看当前的 Intune 配置，以确保其不会阻止设备或用户完成凭据请求所需的访问。
+根据所选颁发者，注册时可能需要工作人员帮助用户完成该流程。 还需查看当前的 Intune 配置，以确保其不会阻止设备或用户完成凭据请求所需的访问。
 
 例如，可以使用条件访问来阻止通过不合规设备访问电子邮件。 如果依靠电子邮件通知来告知用户开始派生凭据注册流程，则用户可能只有在符合策略之后才会收到这些说明。
 
 同样，部分派生凭据请求工作流需要使用设备摄像头来扫描屏幕上的 QR 码。 此代码将该设备链接到针对具有用户智能卡凭据的派生凭据颁发者所发出的身份验证请求。 如果设备配置策略禁止使用摄像头，则用户将无法完成派生凭据注册请求。
 
-常规信息：
+**常规信息**：
 
 - 每次只能为每个租户配置一个颁发者，该颁发者将适用于租户中的所有用户和受支持设备。
 
@@ -106,39 +109,57 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-查看 [DISA Purebred 的用户工作流](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred)。 此工作流的关键要求包括以下内容：
+查看将与派生凭据协同使用的设备的特定于平台的用户工作流。
+
+- [iOS 和 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+
+**关键要求包括**：
 
 - 用户需要访问可在其中使用智能卡向颁发者进行身份验证的计算机或网亭。
-
 - 将注册派生凭据的设备必须安装 Intune 公司门户应用。
-
 - 使用 Intune 在将注册派生凭据的设备上[部署 DISA Purebred 应用](#deploy-the-disa-purebred-app)。 必须通过 Intune 部署此应用，以便进行管理，并使其可与 Intune 公司门户应用配合使用。 设备用户使用此应用来完成派生凭据请求。
-
 - DISA Purebred 应用需要[按应用的 VPN](../configuration/vpn-settings-configure.md)，以确保应用在注册派生凭据期间可以访问 DISA Purebred。
-
-- 设备用户在注册流程中必须使用实时代理。 用户在注册流程中会收到限时的一次性密码。
+- 设备用户在注册流程中必须使用实时代理。 在注册期间，随用户在注册流程中持续进行，系统将向其提供限时的一次性密码。
+- 当对使用派生凭据的策略进行更改时（如创建新的 Wi-Fi 配置文件），会通知 iOS 和 iPadOS 用户打开公司门户应用。
+- 当用户需要续订其派生凭据时，会通知用户打开公司门户应用。
 
 有关获取和配置 DISA Purebred 应用的信息，请参阅下文的[部署 DISA Purebred 应用](#deploy-the-disa-purebred-app)。
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-查看 [Entrust Datacard 的用户工作流](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard)。 此工作流的关键要求包括以下内容：
+查看将与派生凭据协同使用的设备的特定于平台的用户工作流。
+
+- [iOS 和 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [Android Enterprise 完全托管设备](../user-help/enroll-android-device-entrust-datacard.md)
+
+**关键要求包括**：
 
 - 用户需要访问可在其中使用智能卡向颁发者进行身份验证的计算机或网亭。
-
 - 将注册派生凭据的设备必须安装 Intune 公司门户应用。
-
 - 使用设备相机扫描 QR 码，该 QR 码会将身份验证请求链接到移动设备的派生凭据请求。
+- 将通过公司门户应用或电子邮件提示用户注册派生凭据。
+- 当对使用派生凭据的策略进行更改时（如创建新的 Wi-Fi 配置文件）：
+  - **iOS 和 iPadOS** - 将通知用户打开公司门户应用。
+  - **Android Enterprise 完全托管设备** - 无需打开公司门户应用。
+- 当用户需要续订其派生凭据时，会通知用户打开公司门户应用。
 
 #### <a name="intercede"></a>Intercede
 
-查看 [Intercede 的用户工作流](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede)。 此工作流的关键要求包括以下内容：
+查看将与派生凭据协同使用的设备的特定于平台的用户工作流。
+
+- [iOS 和 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [Android Enterprise 完全托管设备](../user-help/enroll-android-device-intercede.md)
+
+**关键要求包括**：
 
 - 用户需要访问可在其中使用智能卡向颁发者进行身份验证的计算机或网亭。
-
 - 将注册派生凭据的设备必须安装 Intune 公司门户应用。
-
 - 使用设备相机扫描 QR 码，该 QR 码会将身份验证请求链接到移动设备的派生凭据请求。
+- 将通过公司门户应用或电子邮件提示用户注册派生凭据。
+- 当对使用派生凭据的策略进行更改时（如创建新的 Wi-Fi 配置文件）：
+  - **iOS 和 iPadOS** - 将通知用户打开公司门户应用。
+  - **Android Enterprise 完全托管设备** - 无需打开公司门户应用。
+- 当用户需要续订其派生凭据时，会通知用户打开公司门户应用。
 
 ### <a name="3-deploy-a-trusted-root-certificate-to-devices"></a>3) 将受信任的根证书部署到设备
 
@@ -150,9 +171,15 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 建议提供用于托管指南的 URL。 为租户配置派生凭据颁发者时指定此 URL，即可在公司门户应用中提供此 URL。 如果你不指定自己的 URL，Intune 将提供指向通用详细信息的链接。 这些详细信息无法涵盖所有方案，因此对你的环境而言可能并不准确。
 
-### <a name="5-deploy-intune-policies-that-require-derived-credentials"></a>5) 部署需要派生凭据的 Intune 策略
+### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects"> 5) 部署需要派生凭据的 Intune 策略
 
-新建要求使用派生凭据的策略或编辑现有策略。 派生凭据取代了适用于应用身份验证、Wi-Fi、VPN、电子邮件以及 S/MIME 签名和加密的其他身份验证方法。
+新建要求使用派生凭据的策略或编辑现有策略。 派生凭据可替换以下对象的其他身份验证方法：
+
+- 应用身份验证
+- Wi-Fi
+- VPN
+- 电子邮件（仅限 iOS）
+- S/MIME 签名和加密，包括 Outlook（仅限 iOS）
 
 避免要求使用派生凭据来访问获取派生凭据的流程，因为这可能使用户无法完成请求。
 
@@ -169,7 +196,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 3. 为派生凭据颁发者策略指定易记的显示名称  。  此名称不会向设备用户显示。
 
 4. 对于“派生凭据颁发者”，选择已为租户选择的派生凭据颁发者  ：
-   - DISA Purebred
+   - DISA Purebred（仅限 iOS）
    - Entrust Datacard
    - Intercede  
 
@@ -181,7 +208,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
    - 为设备注册颁发者以获取新的派生凭据。
    - 当前凭据将到期时，获取新的派生凭据。
-   - 将派生凭据用于 Wi-Fi、VPN、电子邮件或应用身份验证以及 S/MIME 签名和加密的策略。
+   - 将派生凭据与[支持的对象](#supported-objects)协同使用。
 
 7. 准备就绪后，选择“保存”以完成派生凭据颁发者配置  。
 
@@ -197,8 +224,10 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 **完成以下任务**：
   
-1. 下载 [DISA Purebred 应用程序](https://cyber.mil/pki-pke/purebred/)。
-2. 在 Intune 中部署 DISA Purebred 应用程序。  请参阅[将 iOS/iPadOS 业务线应用添加到 Microsoft Intune](../apps/lob-apps-ios.md)。
+1. 下载 DISA Purebred 应用程序：https:\//cyber.mil/pki-pke/purebred/。
+
+2. 在 Intune 中部署 DISA Purebred 应用程序。 请参阅[将 iOS 业务线应用添加到 Microsoft Intune](../apps/lob-apps-ios.md)。
+
 3. 为 DISA Purebred 应用程序[创建按应用 VPN](../configuration/vpn-settings-configure.md)。
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>使用派生凭据进行身份验证以及 S/MIME 签名和加密
@@ -206,10 +235,16 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 可以针对以下配置文件类型和用途指定派生凭据  ：
 
 - [应用程序](#use-derived-credentials-for-app-authentication)
-- [Email](../configuration/email-settings-ios.md)
-- [VPN](../configuration/vpn-settings-ios.md)
+- 电子邮件：
+  - [iOS 和 iPadOS](../configuration/email-settings-ios.md)
+  - [Android Enterprise](../configuration/email-settings-android-enterprise.md)
+- VPN：
+  - [iOS 和 iPadOS](../configuration/vpn-settings-ios.md)
+  - [Android Enterprise](../configuration/vpn-settings-android-enterprise.md)
 - [S/MIME 签名和加密](certificates-s-mime-encryption-sign.md)
-- [Wi-Fi](../configuration/wi-fi-settings-ios.md)
+- Wi-Fi：
+  - [iOS 和 iPadOS](../configuration/wi-fi-settings-ios.md)
+  - [Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md)
 
   对于 Wi-Fi 配置文件，身份验证方法仅在 EAP 类型设置为以下值之一时可用   ：
   - EAP – TLS
@@ -221,35 +256,25 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 使用派生凭据在网站和应用程序中进行基于凭据的身份验证。 提供派生凭据进行应用身份验证：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+3. 输入以下设置：
 
-3. 输入以下属性：
-   - **平台**：选择将接收此配置文件的设备的平台。
-   - **配置文件**：选择“派生凭据” 
+   对于 iOS 和 iPadOS：
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，好的配置文件名为适用于 iOS 设备配置文件的派生凭据  。
+   - **描述**：输入包含设置概述以及其他所有重要详细信息的说明。
+   - **平台**：选择“iOS/iPadOS”  。
+   - **配置文件类型**：选择“派生凭据”  。
 
-4. 选择“创建”。 
+   对于 Android Enterprise：
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，一个不错的配置文件名为“适用于 Android Enterprise 设备配置文件的派生凭据”  。
+   - **描述**：输入包含设置概述以及其他所有重要详细信息的说明。
+   - **平台**：选择“Android Enterprise”  。
+   - **配置文件类型**：在“仅限设备所有者”下，选择“派生凭据”   。
 
-5. 在“基本信息”  中，输入以下属性：
+4. 选择“确定”，保存所做更改  。
+5. 完成后，选择“确定”   > “创建”  ，以创建 Intune 配置文件。 完成后，配置文件将显示在“设备 - 配置文件”  列表中。
+6. 依次选择新配置文件和“分配”  。 选择应接收策略的组。
 
-   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，可以为配置文件命名为“适用于 iOS/iPadOS 设备配置文件的派生凭据”  。
-   - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-
-6. 选择“下一步”  。
-
-7. 在“配置设置”  中，将“使用派生的凭据进行应用身份验证”  设置为“是”  ，然后选择“下一步”  。
-
-8. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
-
-   选择“下一步”  。
-
-9. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
-
-    选择“下一步”  。
-
-10. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
-
- 
 根据你在设置派生凭据颁发者时指定的设置，用户将收到应用或电子邮件通知。 该通知告知用户启动公司门户，以便能够处理派生凭据策略。
 
 ## <a name="renew-a-derived-credential"></a>续订派生凭据
@@ -260,7 +285,6 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 设备收到新的派生凭据之后，使用派生凭据的策略将重新部署到该设备。
 
-
 ## <a name="change-the-derived-credential-issuer"></a>更改派生凭据颁发者
 
 可以在租户级别更改凭据颁发者，但每个租户在同一时间只支持一个颁发者。
@@ -269,7 +293,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 ### <a name="change-the-issuer-for-your-tenant"></a>更改租户的颁发者
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 如果在删除颁发者后立即重新配置同一颁发者，仍必须更新配置文件和设备以使用该颁发者的派生凭据。 删除颁发者之前获取的派生凭据将失效。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
@@ -287,4 +311,4 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 ## <a name="next-steps"></a>后续步骤
 
-[设备配置文件概述](../configuration/device-profile-create.md)
+[创建设备配置文件](../configuration/device-profile-create.md)。

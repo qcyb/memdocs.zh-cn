@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80624903"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615519"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备
 
@@ -141,8 +141,6 @@ Intune 将自动向 Intune 管理控制台添加四个常见的与 Android Enter
 2. 在控制台中，选择“添加新应用程序”  。
 3. 采用与将任何应用发布到 Google Play 商店相同的方式，上传应用并提供有关应用的信息。 但是，必须选择“仅使此应用程序可供我的组织使用(<组织名称>)”   。
 
-    ![使应用仅可供你的组织使用](./media/apps-add-android-for-work/restrict.png)
-
     此操作使应用仅可供你的组织使用。 在公共的 Google Play 应用商店中，它将不可用。
 
     有关上传和发布 Android 应用的详细信息，请参阅 [Google 开发人员控制台帮助](https://support.google.com/googleplay/android-developer/answer/113469)。
@@ -218,6 +216,10 @@ Android Enterprise 需要用户先在托管的 Google Play Web 控制台中批�
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Android Enterprise 工作配置文件设备的其他托管 Google Play 应用报告
 
 对于部署到 Android Enterprise 工作配置文件设备的托管 Google Play 应用，可以使用 Intune 查看设备上安装的应用的状态和版本号。 
+
+## <a name="working-with-managed-google-play-closed-testing-tracks"></a>处理托管 Google Play 已结束的测试跟踪
+
+要执行测试，可将托管的 Google Play 应用的非生产版本分发至 Android Enterprise 方案（“Android Enterprise 工作配置文件”、“完全托管”和“专用”）中注册的设备    。 在 Intune 中，可查看是否已向应用发布了预生产生成测试跟踪，并可将该跟踪分配给 AAD 用户组或设备组。 将生产版本分配给当前既有组的工作流与分配非生产通道的工作流相同。 部署后，每个跟踪的安装状态将与托管的 Google Play 中的跟踪版本号相对应。 有关详细信息，请参阅 [Google Play 已结束的应用预发布测试跟踪](https://support.google.com/googleplay/android-developer/answer/3131213)。
 
 ## <a name="delete-managed-google-play-apps"></a>删除托管 Google Play 应用
 必要时，可以从 Microsoft Intune 中删除托管 Google Play 应用。 若要删除托管 Google Play 应用，请在 Azure 门户中打开“Microsoft Intune”，并依次选择“应用”   > “所有应用”  。 在应用列表中，选择托管 Google Play 应用右侧的省略号 (...)，再从随即显示的列表中选择“删除”  。 从应用列表删除托管的 Google Play 应用时，托管的 Google Play 应用会自动变为未批准状态。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5dbe2abf7a23be9f9e0051a2ff26590e749f98c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8fe917aff7f05df69ab827cf961d37b4729a583f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341927"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81267762"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Microsoft Intune 中的 Android 应用保护策略设置
 本文介绍适用于 Android 设备的应用保护策略设置。 可在 Azure 门户的“设置”  窗格中为应用保护策略[配置](app-protection-policies.md)所述的策略设置。
@@ -31,6 +31,8 @@ ms.locfileid: "79341927"
 
 > [!IMPORTANT]
 > 设备上需具备 Intune 公司门户，以接收 Android 设备的应用保护策略。 有关详细信息，请参阅 [Intune 公司门户访问应用要求](../fundamentals/end-user-mam-apps-android.md)。
+>
+> Intune Managed Browser 已停用。 使用 [Microsoft Edge](../apps/manage-microsoft-edge.md) 获取受保护的 Intune 浏览器体验。 
 
 ## <a name="data-protection"></a>数据保护 
 ### <a name="data-transfer"></a>数据传输
@@ -42,8 +44,6 @@ ms.locfileid: "79341927"
 |<ul><ui>**保存组织数据的副本** | 选择“阻止”，在此应用中禁用使用“另存为”选项  。 如果想要允许使用“另存为”，则选择“允许”  。 **注意:** Microsoft Excel、OneNote、PowerPoint 和 Word 支持此设置。  它也可能受第三方和 LOB 应用支持。| **允许** |  
 |<ul><ui>**允许用户将副本保存到所选的服务** |用户可以保存到所选的服务（OneDrive for Business、SharePoint 和本地存储）中。 将阻止所有其他服务。  | **未选择任何项** |
 | **从其他应用接收数据** | 指定哪些应用可将数据传输到此应用： <ul><li>**策略托管应用**：仅允许从其他策略托管应用进行传输。</li><li>**所有应用**：允许从任何应用传输的数据。</li><li>**无**：不允许从任何应用传输数据，包括其他策略托管应用。 </li></ul> <p>Intune 可能会允许从一些豁免应用和服务传输数据。 有关应用和服务的完整列表，请参阅[数据传输豁免](app-protection-policy-settings-android.md#data-transfer-exemptions)。 | **所有应用** |
-|<ul><ui>**在组织文档中打开数据** | 为上一选项选择“策略托管应用”时，此选项才可用  。 选择： <ul><li>**阻止**：禁用使用“打开”选项或其他选项在此应用的帐户之间共享数据  。 </li><li>**允许**：允许使用“打开”选项及其他选项在此应用的帐户之间共享数据  。||
-|<ul><ui>**允许用户从所选服务打开数据** | 为上一选项选择“阻止”时，此选项才可用  。 选择用户可从中打开数据的应用程序存储服务。 将阻止所有其他服务。 不选择服务会阻止用户打开数据。| |
 | **限制在其他应用间进行剪切、复制和粘贴** | 指定剪切、复制和粘贴操作何时可用于此应用。 选择： <ul><li>**阻止**：不允许在此应用和任何其他应用间进行剪切、复制和粘贴操作。</li><li>**策略托管应用**：允许在此应用和其他策略托管应用间进行剪切、复制和粘贴操作。</li><li>**带粘贴的策略托管应用**：允许在此应用和其他策略托管应用间进行剪切或复制。 允许将任何应用中的数据粘贴到此应用。</li><li>**任何应用**：不限制从此应用和对此应用进行剪切、复制和粘贴。 | **任何应用** |
 | <ul><ui>**剪切和复制任何应用的字符限制** | 指定可从组织数据和帐户中剪切或复制的字符数。  这样便可以在其他情况下会受到“限制与其他应用进行剪切、复制和粘贴”设置的限制时，共享指定数量的字符。<p>默认值 = 0<p>**注意**：需要 Intune 公司门户版本 5.0.4364.0 或更高版本。  | **0** |
 | **屏幕捕获和 Google 助手** | 选择“阻止”，则使用此应用时，会阻止设备的屏幕捕获和“Google 助手”功能   。 选择“允许”  还会在通过工作或学校帐户使用此应用时，导致应用切换器预览图像模糊。| **阻止** |
@@ -65,7 +65,7 @@ ms.locfileid: "79341927"
 |**限制使用其他应用传输 Web 内容** | 指定如何从策略管理的应用中打开 Web 内容（http/https 链接）。 选择： <ul><li>**任何应用**：允许在任何应用中使用 Web 链接。</li><li>**Intune Managed Browser**：仅允许在 Intune Managed Browser 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**Microsoft Edge**：仅允许在 Microsoft Edge 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**非托管浏览器**：允许 Web 内容仅在“非托管浏览器协议”  设置定义的非托管浏览器中打开。 Web 内容在目标浏览器中处于非托管状态。<br>**注意**：需要 Intune 公司门户版本 5.0.4415.0 或更高版本。</li><br><br>**策略托管的浏览器**<br>在 Android 上，如果未安装 Intune Managed Browser 和 Microsoft Edge，最终用户可以从支持 http/https 链接的其他策略托管应用中进行选择。<p>如果需要策略托管的浏览器，但未安装，系统将提示最终用户安装 Microsoft Edge。<p>如果需要使用策略托管的浏览器，则将由“允许应用向其他应用传送数据”策略设置管理 Android 应用链接  。<p>**Intune 设备注册**<br>如果正使用 Intune 管理设备，请参阅[使用 Microsoft Intune 的托管浏览器策略管理 Internet 访问](app-configuration-managed-browser.md)。<p>**策略托管的 Microsoft Edge**<br>移动设备（iOS/iPadOS 和 Android）的 Microsoft Edge 浏览器支持 Intune 应用保护策略。 在 Microsoft Edge 浏览器应用程序中使用其企业 Azure AD 帐户登录的用户将受 Intune 保护。 Microsoft Edge 浏览器集成了 APP SDK 并支持其除阻止以外的所有数据保护策略：<br><ul><li>**另存为**：Microsoft Edge 浏览器不允许用户向云存储提供商（如 OneDrive）添加直接的应用内连接。</li><li>**联系人同步**：Microsoft Edge 浏览器不会保存到本地联系人列表。</li></ul>**注意:** APP SDK 无法确定目标应用是否为浏览器。  在 Android 设备上，允许使用支持 http/https 意向的其他托管浏览器应用。 | 未配置  |
 |<ul><ui>**非托管浏览器 ID** | 输入单个浏览器的应用程序 ID。 策略托管应用程序的 Web 内容（http/https 链接）将在指定的浏览器中打开。  Web 内容在目标浏览器中处于非托管状态。 | **空** |
 |<ul><ui>**非托管浏览器名称** | 输入与“非托管浏览器 ID”  关联的浏览器的应用程序名称。 如果未安装指定的浏览器，将向用户显示此名称。  | **空** |
-| **组织数据通知** | 指定针对组织帐户通过 OS 通知共享的组织数据量。 此策略设置将影响本地设备和任何连接的设备，如可穿戴设备和智能扬声器。 应用可能会提供其他控件来自定义通知行为，或者可以选择不接受所有值。 选择： <ul><li>**阻止**：不共享通知。</li><ul><li>如果应用程序不支持，则将允许通知。</li></ul><li>**阻止组织数据**：不要在通知中共享组织数据。 例如“你有新邮件”，“你有个会议”。</li><UL><li>如果应用程序不支持，通知将被阻止。</li></ul><li>**允许**：在通知中共享组织数据</li></ul> <p>**注意**：*此设置需要应用支持。目前，适用于 Android 4.95.0 版本或更高版本的 Outlook 将支持此设置，此设置预计在 2019 年 12 月 16 日当周发布。* | **允许**   |
+| **组织数据通知** | 指定针对组织帐户通过 OS 通知共享的组织数据量。 此策略设置将影响本地设备和任何连接的设备，如可穿戴设备和智能扬声器。 应用可能会提供其他控件来自定义通知行为，或者可以选择不接受所有值。 选择： <ul><li>**阻止**：不共享通知。</li><ul><li>如果应用程序不支持，则将允许通知。</li></ul><li>**阻止组织数据**：不要在通知中共享组织数据。 例如“你有新邮件”，“你有个会议”。</li><UL><li>如果应用程序不支持，通知将被阻止。</li></ul><li>**允许**：在通知中共享组织数据</li></ul> <p>**注意**：*此设置需要应用支持。* 适用于 Android 4.0.95 或更高版本的 Outlook 支持此设置。 | **允许**   |
 
 ## <a name="data-transfer-exemptions"></a>数据传输豁免
 

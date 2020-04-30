@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a09b103f87b99e5ce7df3ec68760f1b55a9033bd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eda210408adbb15d82d6bfc31bef2f225f53bc6f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341849"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863071"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS 应用保护策略设置
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "79341849"
 本文介绍适用于 iOS/iPadOS 设备的应用保护策略设置。 在设置新策略时，可在 Azure 门户的“设置”  窗格中为应用保护策略[配置](app-protection-policies.md)所述的策略设置。
 
 策略设置分为三类：“数据重定位”、“访问要求”和“条件启动”    。 在本文中，术语策略托管应用指使用应用保护策略配置的应用。
+
+> [!IMPORTANT]
+> Intune Managed Browser 已停用。 使用 [Microsoft Edge](../apps/manage-microsoft-edge.md) 获取受保护的 Intune 浏览器体验。 
 
 ## <a name="data-protection"></a>数据保护
 

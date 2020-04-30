@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: f61f0dd7f0f3b343b8f68de0b20b06d0f69212ac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808085"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397775"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>为托管的 Android Enterprise 设备添加应用配置策略
 
@@ -47,7 +47,7 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 8. 单击“添加”  以显示“添加权限”  窗格。
 9. 选择要覆盖的权限。 授予的权限将覆盖所选应用的“默认应用权限”策略。
 10. 为每个权限设置“权限状态”  。 可以选择“提示”  、“自动授予”  或“自动拒绝”  。 有关权限的详细信息，请参阅[使用 Intune 将设备标记为符合或不符合的 Android Enterprise 设置](../protect/compliance-policy-create-android-for-work.md)。
-11. 如果托管应用支持配置设置，请选择下拉框中的“配置设置格式”  。 选择下列方法之一来添加配置信息：
+11. 如果托管应用支持配置设置，则会出现“配置设置格式”下拉框  。 选择下列方法之一来添加配置信息：
     - **使用配置设计器**
     - **输入 JSON 数据**<br><br>
     有关使用配置设计器的详细信息，请参阅[使用配置设计器](#use-the-configuration-designer)。 有关输入 XML 数据的详细信息，请参阅[输入 JSON 数据](#enter-json-data)。
@@ -110,9 +110,9 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 | **值** | <ul><li>一个或多个 <code>;</code> 分隔的 UPN。</li><li>仅允许此键定义的托管用户帐户。</li><li> 对于已注册 Intune 的设备，<code>{{userprincipalname}}</code> 令牌可用于表示已注册的用户帐户。</li></ul> |
 
    > [!NOTE]
-   > 以下应用处理上述应用配置，并且仅允许组织帐户：
-   > - Android 版 Edge（42.0.4.4048 及更高版本）
-   > - Office、Word、Excel、PowerPoint for Android（16.0.9327.1000 及更高版本）
+   > 上述应用配置由以下应用进行处理，它们仅允许组织帐户：
+   > - Android 版 Microsoft Edge（42.0.4.4048 及更高版本）
+   > - Android 版 Office、Word、Excel、PowerPoint（16.0.9327.1000 及更高版本）
    > - Android 版 OneDrive（5.28 及更高版本）
    > - Android 版 Outlook（2.2.222 及更高版本）
 

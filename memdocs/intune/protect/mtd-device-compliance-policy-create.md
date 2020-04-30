@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e05577967d874ea8e3cd5e4bdd5e20e204158921
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325439"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615679"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>使用 Intune 创建移动威胁防御 (MTD) 设备符合性策略
 
@@ -59,6 +59,11 @@ MTD 设备符合性策略先决条件：
    - **中**：如果有低级别或中等级别威胁，则设备符合要求。 如果检测到高级别威胁，则设备会被确定为不合规。
 
    - **高**：此级别是最不安全的威胁级别。 此选项将许可所有威胁级别，且仅将移动威胁防御用作报告目的。 设备必须使用此设置激活 MTD 应用。
+
+   > [!IMPORTANT]
+   > 对于 Android 企业设备所有者，在创建并保存了某个策略后，之后便无法编辑该策略和修改威胁级别。 若要进行编辑以更改“设备运行状况”设置“要求设备处于或低于设备威胁级别”的设备威胁级别，则该编辑无法生效  。 若要更改威胁级别值，必须删除当前策略并创建用于设置所需威胁级别的新策略。
+   >
+   > 这是一个已知问题，会在未来的一个 Intune 更新中得到解决。
 
 6. 选择“确定”  两次，然后选择“创建”  以创建策略。
 

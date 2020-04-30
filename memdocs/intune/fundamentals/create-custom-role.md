@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326800"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440571"
 ---
 # <a name="create-a-custom-role-in-intune"></a>在 Intune 中创建自定义角色
 
@@ -40,7 +40,7 @@ ms.locfileid: "80326800"
 
 3. 在“权限”页上，选择要用于此角色的权限  。
 
-4. 在“范围(标记)”页上，选择此角色的标记  。 此角色可访问同样具有这些标记的资源。 选择“下一步”  。
+4. 在“范围(标记)”页上，选择此角色的标记  。 将此角色分配给用户后，该用户可访问同样具有这些标记的资源。 选择“下一步”  。
 
 5. 完成后，在“查看 + 创建”页上，选择“创建”   。 新角色会显示在“Intune 角色 - 所有角色”  边栏选项卡上的列表中。
 

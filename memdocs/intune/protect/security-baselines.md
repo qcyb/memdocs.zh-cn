@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551691"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615668"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>使用安全基线在 Intune 中配置 Windows 10 设备
 
@@ -46,13 +46,34 @@ ms.locfileid: "80551691"
 
 若要详细了解此功能，最好参考 [Windows 安全基线](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)资源。 若要详细了解 MDM 以及可以在 Windows 设备上执行哪些操作，最好参考[移动设备管理](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) 资源。
 
+## <a name="available-security-baselines"></a>可用的安全基线
+
+以下安全基线实例可与 Intune 一起使用。 使用链接可以查看每个基线的最新实例的设置。
+
+- **MDM 安全基线**
+  - [2019 年 5 月 MDM 安全基线](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [预览版：2018 年 10 月的 MDM 安全基线](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Microsoft Defender ATP 基线**
+   *（若要使用此基线，环境必须满足使用 [Microsoft Defender 高级威胁防护](advanced-threat-protection.md#prerequisites)的先决条件）* 。
+  - [Microsoft Defender ATP 基线版本 3](security-baseline-settings-defender-atp.md)
+
+  > [!NOTE]
+  > Microsoft Defender ATP 安全基线已针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。  有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
+
+- **Microsoft Edge 基线**
+  - [2020 年 4 月的 Microsoft Edge 基线（Microsoft Edge 版本 80 及更高版本）](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [预览版：2019 年 10 月的 Microsoft Edge 基线（Microsoft Edge 版本 77 及更高版本）](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+可以继续使用和编辑之前基于预览版模板创建的配置文件，无需考虑该预览模板是否可用于创建新配置文件。
+
+如果准备好移动到所使用基线的较新版本，则请参阅本文中的[更改配置文件的基线版本](#change-the-baseline-version-for-a-profile)。 
+
 ## <a name="about-baseline-versions-and-instances"></a>关于基线版本和实例
 
 基线的每个新版本实例可以添加或删除设置或引入其他更改。 例如，当新版本的 Windows 10 中提供新 Windows 10 设置时，MDM 安全基线可能会收到包含最新设置的新版本实例。
 
-在 Intune 控制台中，每个基线的磁贴显示基线模板名称，以及相应基线的基本信息。 此类信息包括，你有多少配置文件使用相应基线类型、有多少基线类型的单独实例（版本）可用，以及标识相应基线模板添加到租户的时间的“上次发布日期”  。 以下示例展示了频繁使用的 MDM 安全基线的磁贴：
-
-![基线磁贴](./media/security-baselines/baseline-tile.png)
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的“终结点安全性” > “安全基线”下，你将看到可用基线的列表   。 此列表中有基线模板名称、使用该基线类型的配置文件数量、基线类型的单独实例（版本）可用数量，以及标识最新版本的基线模板何时可用的“上次发布日期”  。
 
 若要查看所使用的基线版本的详细信息，请选择基线磁贴以打开它的“概览”  窗格，再选择“版本”  。 此时，Intune 显示配置文件使用的基线版本的详细信息。 在“版本”窗格中，可以选择单个版本以进一步详细了解使用该版本的配置文件。 还可以选择两个不同的版本，然后选择“比较基线”  ，下载详细介绍其差异的 CSV 文件。
 
@@ -74,26 +95,6 @@ ms.locfileid: "80551691"
 
 - [在 Intune 中对策略和配置文件进行故障排除](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [监视安全基线](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-## <a name="available-security-baselines"></a>可用的安全基线
-
-以下安全基线实例可与 Intune 一起使用。 使用链接可以查看每个基线的最新实例的设置。
-
-- **MDM 安全基线**
-  - [2019 年 5 月 MDM 安全基线](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [预览版：2018 年 10 月的 MDM 安全基线](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Microsoft Defender ATP 基线**
-   *（若要使用此基线，环境必须满足使用 [Microsoft Defender 高级威胁防护](advanced-threat-protection.md#prerequisites)的先决条件）* 。
-  - [Microsoft Defender ATP 基线版本 3](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > Microsoft Defender ATP 安全基线已针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。  有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
-
-- **Microsoft Edge 基线**
-  - [预览版：Microsoft Edge 基线](security-baseline-settings-edge.md)
-
-可以继续使用和编辑之前基于预览版模板创建的配置文件，无需考虑该预览模板是否可用于创建新配置文件。
 
 ## <a name="manage-baselines"></a>管理基线
 

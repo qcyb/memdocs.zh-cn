@@ -6,30 +6,34 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: jinyoon
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0a9f4d9195c68664f42570746ade6d924c8da62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e5b568a90d4077c32a88044beea746907613eb0e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323011"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525727"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>将 Jamf Pro 与 Intune 集成以实现合规
 
-你的组织使用 [Jamf Pro](https://www.jamf.com) 管理 macOS 设备时，可以将 Microsoft Intune 符合性策略用于 Azure Active Directory (Azure AD) 条件访问，从而确保组织中的设备满足符合性要求，然后才能访问公司资源。 本文将帮助你配置 Jamf 与 Intune 的集成。
+你的组织使用 [Jamf Pro](https://www.jamf.com) 管理 macOS 设备时，可以将 Microsoft Intune 符合性策略用于 Azure Active Directory (Azure AD) 条件访问，从而确保组织中的设备满足符合性要求，然后才能访问公司资源。 若要将 Jamf Pro 与 Intune 集成，你有两个选项：
 
-将 Jamf Pro 与 Intune 集成时，可以通过 Azure AD 将 macOS 设备中的清单数据与 Intune 同步。 Intune 的符合性引擎随后会分析清单数据以生成报表。 Intune 的分析与有关设备用户的 Azure AD 标识的智能结合使用，以通过条件访问来驱动强制执行。 符合条件访问策略的设备可以访问受保护的公司资源。
+- **手动配置集成** - 使用本文中的信息来手动配置与 Intune 的 Jamf 集成。
+- **使用 Jamf 云连接器**（推荐）- 使用[将 Jamf 云连接器与 Microsoft Intune 协同使用](../protect/conditional-access-jamf-cloud-connector.md)中的信息来安装 Jamf 云连接器，以便将 Jamf Pro 与 Microsoft Intune 集成  。 云连接器自动执行手动配置集成时所需的多个步骤。
+
+
+将 Jamf Pro 与 Intune 集成时，可以通过 Azure AD 将 macOS 设备中的清单数据与 Intune 同步。 Intune 的符合性引擎随后会分析清单数据以生成报表。 可将 Intune 的分析与有关设备用户的 Azure AD 标识的智能结合使用，以通过条件访问来驱动强制执行。 符合条件访问策略的设备可以访问受保护的公司资源。
 
 配置集成后，将在使用 Jamf 管理的设备上[配置 Jamf 和 Intune 以使用条件访问强制实现符合性](conditional-access-assign-jamf.md)。
 
@@ -135,7 +139,7 @@ ms.locfileid: "80323011"
 2. 在 Intune 中，转到“合作伙伴设备管理”  页。 在“连接器设置”  下，为分配配置组：
 
    - 选择“包括”  ，并指定要向 Jamf 注册 macOS 的目标用户组。
-   - 使用“排除”  选择不会向 Jamf 注册而是将其 Mac 直接注册到 Intune 的用户组。
+   - 使用“排除”以选择不会向 Jamf 注册而是将其 Mac 直接注册到 Intune 的用户组  。
 
    “排除”  覆盖”包括”  ，这意味着在两个组中的任何设备都将从 Jamf 中排除，并直接注册到 Intune。
 
@@ -154,7 +158,7 @@ ms.locfileid: "80323011"
 
 ## <a name="disconnect-jamf-pro-and-intune"></a>断开 Jamf Pro 和 Intune 的连接
 
-如果不再使用 Jamf Pro 管理组织中的 Mac 并希望用户由 Intune 管理，则必须删除 Jamf Pro 和 Intune 之间的连接。 使用 Jamf Pro 控制台删除连接。
+如需删除 Jamf Pro 与 Intune 的集成，请使用以下步骤从 Jamf Pro 控制台中删除连接。此信息既适用于手动配置的集成，也适用于使用云连接器实现的集成。
 
 1. 在 Jamf Pro 中，转到“全局管理”   > “条件访问”  。 在“macOS Intune 集成”  选项卡上，选择“编辑”  。
 
