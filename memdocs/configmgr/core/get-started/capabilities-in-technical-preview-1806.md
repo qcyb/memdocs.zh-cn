@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074055"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210071"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -163,10 +163,10 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>为 Microsoft Edge 配置 Windows Defender SmartScreen 设置
 <!--1353701-->
-此版本向 [Microsoft Edge 浏览器符合性设置策略](../../compliance/deploy-use/browser-profiles.md)添加了三个 [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) 设置。 该策略现在包含“SmartScreen 设置”页上的以下附加设置  ：
-- **允许 SmartScreen**：指定是否允许 Windows Defender SmartScreen。 有关详细信息，请参阅 [AllowSmartScreen 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
-- **用户可以替代站点的 SmartScreen 提示**：指定用户是否可替代有关潜在恶意网站的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅 [PreventSmartScreenPromptOverride 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
-- **用户可以替代文件的 SmartScreen 提示**：指定用户是否可替代有关下载未经认证文件的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅[PreventSmartScreenPromptOverrideForFiles 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
+此版本向 [Microsoft Edge 浏览器符合性设置策略](../../compliance/deploy-use/browser-profiles.md)添加了三个 [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) 设置。 该策略现在包含“SmartScreen 设置”页上的以下附加设置  ：
+- **允许 SmartScreen**：指定是否允许 Windows Defender SmartScreen。 有关详细信息，请参阅 [AllowSmartScreen 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
+- **用户可以替代站点的 SmartScreen 提示**：指定用户是否可替代有关潜在恶意网站的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅 [PreventSmartScreenPromptOverride 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
+- **用户可以替代文件的 SmartScreen 提示**：指定用户是否可替代有关下载未经认证文件的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅[PreventSmartScreenPromptOverrideForFiles 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
 
 
 
