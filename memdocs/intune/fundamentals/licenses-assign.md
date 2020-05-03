@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326777"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210343"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>向用户分配许可证，以便他们能够在 Intune 中注册设备
 
@@ -34,9 +34,9 @@ ms.locfileid: "80326777"
 
 可以使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)手动添加基于云的用户并将许可证分配给基于云的用户帐户和从本地 Active Directory 同步到 Azure AD 的帐户。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“用户” **“所有用户”> 选择用户 >“许可证”** “分配” >     >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“用户” > “所有用户”> 选择用户 >“许可证” > “分配”     。
 
-2. 依次选择“Intune”框   > “保存”。 
+2. 依次选择“Intune”框   > “保存”。  若要使用企业移动性 + 安全性 E5 或其他许可证，请改为选中此框。
 
    ![Microsoft 365 管理中心产品许可证部分的屏幕截图。](./media/licenses-assign/mem-assign-license.png)
 

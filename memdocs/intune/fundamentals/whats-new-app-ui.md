@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087144"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255024"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 最终用户应用的 UI 更新
 
@@ -98,7 +98,8 @@ ms.locfileid: "80087144"
     <img src="./media/whats-new-app-ui/intune-app-android-device-notify.png" alt="Screenshot of Microsoft Intune app for Android - Notification" width="300">   
 
 
-## <a name="week-of-june-24-2019"></a>2019 年 6 月 24 日当周  
+## <a name="week-of-june-24-2019"></a>2019 年 6 月 24 日当周
+  
 
 ### <a name="view-all-installed-apps-from-new-company-portal-web-page----4224326---"></a>从新版公司门户网页查看所有已安装应用 <!-- 4224326 -->
 公司门户网站的新增“已安装应用”  页面将列出用户设备上安装的所有（要求安装和允许安装的）托管应用。 除了分配类型，用户还可以看到应用的发布者、发布日期和当前安装状态。 如果你并未要求或允许用户安装任何应用，则用户将看到一条消息，说明尚未安装任何公司应用。 若要在 Web 上查看新页面，请转到[公司门户网站](https://portal.manage.microsoft.com)，并单击“已安装应用”  。   
@@ -477,7 +478,7 @@ __从其他设备登录时的新登录体验__
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update---676505--"></a>与 Windows 10 创意者更新的应用同步改进 <!--676505-->
 
-面向 Windows 10 的公司门户应用，现在将针对具有 Windows 10 创意者更新（版本 1703）的设备自动启动应用安装请求同步。 这将减少“正在挂起同步”状态下的应用安装停止问题。 此外，用户也能够从应用中手动启动同步。
+适用于 Windows 10 的公司门户应用现在自动启动与 Windows 10 创意者更新（版本 1709）的设备应用安装请求同步。 这将减少“正在挂起同步”状态下的应用安装停止问题。 此外，用户也能够从应用中手动启动同步。
 
 ![一个 Windows 10 公司门户应用的图像，其中显示从公司门户应用商店下载 Microsoft Word 时的下载状态为待处理状态。](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 

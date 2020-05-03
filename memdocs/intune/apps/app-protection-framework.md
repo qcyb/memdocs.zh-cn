@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696511"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182287"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用应用保护策略的数据保护框架 
 
@@ -37,7 +37,7 @@ APP 数据保护配置框架分为三个不同的配置方案：
 
 - 级别 2 企业增强型数据保护 – 对于用户访问敏感或机密信息的设备，Microsoft 建议使用此配置。 此配置适用于访问工作或学校数据的大多数移动用户。 某些控制可能会影响用户体验。
 
-- 级别 3 企业级高数据保护 – 对于具有较大或较复杂的安全团队的组织所运行的设备，或是对于面临独特高风险的特定用户或组（例如，一个组织标识具有以下特点的用户：他们所处理的数据如果被盗，会直接对其股票价格产生严重影响），Microsoft 建议使用此配置。 可能会被资金雄厚且经验丰富的对手作为目标的组织应努力实现这种配置。
+- 级别 3 企业高数据保护 - 对于具有较大或较复杂的安全团队的组织所运行的设备，或对于面临独特高风险的特定用户或组（处理高度敏感数据的用户，而未经授权的披露会给组织造成相当大的物质损失），Microsoft 建议使用此配置。 可能会被资金雄厚且经验丰富的对手作为目标的组织应努力实现这种配置。
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>APP 数据保护框架部署方法
 
@@ -159,8 +159,8 @@ Microsoft 建议对使用方案进行查看和分类，然后使用针对该级�
 
 | 设置 | 设置描述 |          值/操作  |          平台        | 注意 |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 设备条件  |       最低 OS 版本  |          *格式：主要版本号.次要版本号.内部版本号 <br>示例： 12.4.4*/阻止访问 |          iOS/iPadOS        | Microsoft 建议配置最低 iOS 主要版本，以便与 Microsoft 应用支持的 iOS 版本匹配。   Microsoft 应用支持 N-1 方法，其中 N 是当前 iOS 主要发行版本。 对于次要版本和内部版本值，Microsoft 建议确保设备通过相应的安全更新保持最新状态。 请参阅 [Apple 安全更新](https://support.apple.com/en-us/HT201222)以获取 Apple 的最新建议 |
-| 设备条件  |       最低 OS 版本  |          *格式：主要版本号.次要版本号<br>   示例：8.0*/阻止访问   |          Android        | Microsoft 建议配置最低 Android 主要版本，以便与 Microsoft 应用支持的 Android 版本匹配。 遵循 Android Enterprise 建议要求的 OEM 和设备必须支持当前交付版本 + 一个字母升级。   当前，Android 建议对知识工作者使用 Android 8.0 及更高版本。   请参阅 [Android Enterprise 建议要求](https://www.android.com/enterprise/recommended/requirements/)以了解 Android 的最新建议 |
+| 设备条件  |       最低 OS 版本  |          格式：主要版本号.次要版本号.内部版本号 <br>示例：  12.4.6 / 阻止访问 |          iOS/iPadOS        | Microsoft 建议配置最低 iOS 主要版本，以便与 Microsoft 应用支持的 iOS 版本匹配。   Microsoft 应用支持 N-1 方法，其中 N 是当前 iOS 主要发行版本。 对于次要版本和内部版本值，Microsoft 建议确保设备通过相应的安全更新保持最新状态。 请参阅 [Apple 安全更新](https://support.apple.com/en-us/HT201222)以获取 Apple 的最新建议 |
+| 设备条件  |       最低 OS 版本  |          格式：主要版本号.次要版本号<br>   示例：  5.0 / 阻止访问   |          Android        | Microsoft 建议配置最低 Android 主要版本，以便与 Microsoft 应用支持的 Android 版本匹配。 遵循 Android Enterprise 建议要求的 OEM 和设备必须支持当前交付版本 + 一个字母升级。   当前，Android 建议对知识工作者使用 Android 8.0 及更高版本。   请参阅 [Android Enterprise 建议要求](https://www.android.com/enterprise/recommended/requirements/)以了解 Android 的最新建议 |
 | 设备条件  |       最低修补程序版本  |          *格式： YYYY-MM-DD <br> 示例：2020-01-01*/阻止访问  |          Android        | Android 设备可以接收每月安全修补程序，但发布依赖于 OEM 和/或运营商。 组织应确保已部署的 Android 设备在实现此设置之前收到安全更新。 有关最新修补程序版本，请参阅 [Android 安全公告](https://source.android.com/security/bulletin/)。  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>级别 3 企业高数据保护 
@@ -192,6 +192,7 @@ Microsoft 建议对使用方案进行查看和分类，然后使用针对该级�
 
 | 设置 | 设置描述 |          值/操作  |          平台        | 注意 |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 设备条件  |       最低 OS 版本  |          *格式：主要版本号.次要版本号<br>   示例：8.0*/阻止访问   |          Android        | Microsoft 建议配置最低 Android 主要版本，以便与 Microsoft 应用支持的 Android 版本匹配。 遵循 Android Enterprise 建议要求的 OEM 和设备必须支持当前交付版本 + 一个字母升级。   当前，Android 建议对知识工作者使用 Android 8.0 及更高版本。   请参阅 [Android Enterprise 建议要求](https://www.android.com/enterprise/recommended/requirements/)以了解 Android 的最新建议 |
 |       设备条件  |          已越狱/获得 root 权限的设备  |        不适用/擦除数据  |          iOS/iPadOS、Android        |  |
 |       设备条件  |          允许的最大威胁级别  |          安全/阻止访问  |          iOS/iPadOS、Android        | <p>可以使用移动威胁防御检查未注册设备是否存在威胁。 有关详细信息，请参阅[适用于未注册设备的移动威胁防御](https://aka.ms/mtdmamdocs)。      </p><p>     如果设备进行了注册，则可以跳过此设置，以便部署适用于已注册设备的移动威胁防御。 有关详细信息，请参阅[适用于已注册设备的移动威胁防御](../protect/mtd-device-compliance-policy-create.md)。</p> |
 

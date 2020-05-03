@@ -16,19 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6d409f3ba1dc91815ce3dc67a2d65e5703c7268
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac718ee2351260f79ae91882c71373111900d8fd
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322553"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254735"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>使用“全新启动”重置使用 Intune 的 Windows 10 设备
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-“全新启动”设备操作将删除在运行 Windows 10 版本 1703 或更高版本的电脑上安装的所有应用  。 “全新启动”有助于删除新电脑通常安装的预安装 (OEM) 应用。 
+“全新启动”  设备操作删除在运行 Windows 10 版本 1709 或更高版本的电脑上安装的所有应用。 “全新启动”有助于删除新电脑通常安装的预安装 (OEM) 应用。 
 
 1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备”   > “所有设备”  。
 2. 从管理的设备列表中，选择一个 Windows 10 桌面设备。
@@ -43,6 +43,6 @@ ms.locfileid: "80322553"
  > BYOD 设备将从 Azure AD 和移动设备管理中取消注册。
  > 启用 Azure Active Directory 的用户登录设备时，已联接 Azure AD 设备会再次注册到移动设备管理中。
  
-5. 单击“确定  ”。   
+5. 单击" **确定**"。   
 6. 若要查看此操作的状态，请返回到“设备”  ，然后单击“设备操作”  。  
 7. 设备将还原到初始登录屏幕。

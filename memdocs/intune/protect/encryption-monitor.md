@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 55c98368619338bb7018be0651f6cde4054cf9cf
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079699"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254990"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>使用 Intune 监视设备加密
 
@@ -53,10 +53,10 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
   - **就绪**：可以使用 MDM 策略对设备进行加密，前提是设备满足以下要求：
 
     **对于 macOS 设备**：
-    - MacOS 版本 10.13 或更高版本
+    - macOS 版本 10.13 或更高版本
 
     **对于 Windows 10 设备**：
-    - *商业版*、*企业版*、*教育版* 1703 或更高版本，或者 *Pro* 版本 1809 或更高版本
+    - 版本 1709 或更高版本（商业版  、企业版  、教育版  ），或版本 1809 或更高版本（专业版  ）
     - 设备必须安装有 TPM 芯片
 
     有关详细信息，请参阅 Windows 文档中的 [BitLocker 配置服务提供商 (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)。
@@ -120,9 +120,9 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
 
     *请考虑以下事项：Intune 无法在已加密的设备上设置 FileVault。相反，用户必须手动解密其设备，然后才能通过设备配置策略和 Intune 对其进行管理*。
 
-  - FileVault 需要用户在 MacOS Catalina 及更高版本中批准其管理配置文件。
+  - FileVault 需要用户在 macOS Catalina 及更高版本中批准其管理配置文件。
 
-    *请考虑以下事项：自 MacOS 版本 10.15 (Catalina) 起，用户批准的注册设置可能导致要求用户手动批准 FileVault 加密。有关详细信息，请参阅 Intune 文档中的[用户批准注册](../enrollment/macos-enroll.md)* 。
+    *请考虑以下事项：自 macOS 版本 10.15 (Catalina) 起，用户批准的注册设置可能会要求用户手动批准 FileVault 加密。有关详细信息，请参阅 Intune 文档中的[用户批准注册](../enrollment/macos-enroll.md)* 。
 
   - 未知。
 
@@ -229,7 +229,7 @@ Intune 提供了对 BitLocker 的 Azure AD 边栏选项卡的访问权限，以�
 
    如果 Azure AD 中没有密钥，Intune 将显示“未找到此设备的 BitLocker 密钥”  。
 
-使用 [BitLocker 配置服务提供程序](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) 获取 BitLocker 的信息。 Windows 10 1703 版本和更高版本，以及 Windows 10 专业版 1809 版本和更高版本支持 BitLocker CSP。
+使用 [BitLocker 配置服务提供程序](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) 获取 BitLocker 的信息。 Windows 10 版本 1709 及更高版本和 Windows 10 专业版版本 1809 及更高版本支持 BitLocker CSP。
 
 ## <a name="next-steps"></a>后续步骤
 

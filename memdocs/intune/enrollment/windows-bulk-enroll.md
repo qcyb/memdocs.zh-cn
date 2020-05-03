@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eabdae9fcc8bdc3b6c93d5b735a5b9fbf4dcf69a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 54b26c2b7599906df29e5130b99dc38124e0b411
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078917"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254786"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 设备的批量注册
 
@@ -32,7 +32,7 @@ Azure AD 用户是这些设备上的标准用户并接收分配的 Intune 策略
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Windows 设备批量注册的先决条件
 
-- 运行 Windows 10 创意者更新（内部版本 1703）或更高版本的设备
+- 运行 Windows 10 创意者更新（内部版本 1709）或更高版本的设备
 - [Windows 自动注册](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## <a name="create-a-provisioning-package"></a>创建预配包

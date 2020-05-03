@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084397"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182270"
 ---
 # <a name="install-mobile-threat-defense"></a>安装 Mobile Threat Defense   
 
@@ -30,7 +30,7 @@ ms.locfileid: "80084397"
 
 如果没有要求的 MTD 应用，则会阻止你使用工作或学校帐户登录受保护的应用。 本文介绍[如何安装 MTD 应用](set-up-mobile-threat-defense.md#install-app)以取消阻止。  
 
-有多种 MTD 供应商应用可供安装；你的组织将通知你使用哪一个。 
+有各种各样的 MTD 供应商应用可供安装，它们的名称都不同。 组织会指示你使用哪个应用。 如果你收到应用安装提示，但没有收到进一步说明或用于获取应用的链接，请联系 IT 支持人员。 
 
 
 ## <a name="information-your-organization-can-see"></a>组织可以查看的信息   

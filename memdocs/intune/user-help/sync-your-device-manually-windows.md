@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f9e62cd4c4034e4cf2eafaea56aa3e5175b1797e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335739"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254803"
 ---
 # <a name="sync-your-windows-device-manually"></a>手动同步 Windows 设备
 
@@ -40,7 +40,7 @@ Intune 支持从公司门户应用、桌面任务栏或“开始”菜单以及�
 * [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>直接从适用于 Windows 的公司门户应用同步
-完成这些步骤，以手动同步运行 Creator 的 Update（版本 1703）或更高版本的 Windows 10 设备。
+完成这些步骤，以手动同步运行创意者更新（版本 1709）或更高版本的 Windows 10 设备。
 
 1. 在设备上打开公司门户应用。
 

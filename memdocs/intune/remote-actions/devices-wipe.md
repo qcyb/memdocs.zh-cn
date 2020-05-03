@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e359b07669f45999ae3de4280d1eb65d5ca11064
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023327"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254684"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用“擦除”或“停用”操作删除设备，或手动取消注册设备
 
@@ -91,10 +91,11 @@ ms.locfileid: "82023327"
 |Wi-Fi 和 VPN 配置文件设置|删除。|
 |证书配置文件设置|已删除并吊销证书。|
 |管理代理|删除管理配置文件。|
-|电子邮件|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
+|电子邮件
+|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
 |Azure AD 脱离|删除 Azure AD 记录。|
 
-### <a name="android"></a>Android
+### <a name="android-device-administrator"></a>Android 设备管理员
 
 |数据类型|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -107,14 +108,15 @@ ms.locfileid: "82023327"
 |Wi-Fi 和 VPN 配置文件设置|删除。|删除。|
 |证书配置文件设置|已撤销证书，但未删除。|已删除并吊销证书。|
 |管理代理|撤销设备管理员权限。|撤销设备管理员权限。|
-|电子邮件|N/A（Android 设备不支持电子邮件配置文件）|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
+|电子邮件
+|N/A（Android 设备不支持电子邮件配置文件）|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
 |Azure AD 脱离|删除 Azure AD 记录。|删除 Azure AD 记录。|
 
-### <a name="android-work-profile"></a>Android 工作配置文件
+### <a name="android-enterprise-devices-with-a-work-profile"></a>带工作配置文件的 Android Enterprise 设备
 
 从 Android 工作配置文件设备上删除公司数据将删除该设备上工作配置文件中的所有数据、应用和设置。 设备将从 Intune 管理中停用。 Android 工作配置文件不支持擦除。
 
-### <a name="android-enterprise-kiosk-devices"></a>Android 企业展台设备
+### <a name="android-enterprise-dedicated-devices"></a>Android Enterprise 专用设备
 
 只能擦除展台设备。 不能停用 Android 展台设备。
 
@@ -134,11 +136,12 @@ ms.locfileid: "82023327"
 
 |数据类型|Windows 8.1 (MDM) 和 Windows RT 8.1|Windows RT|Windows Phone 8.1 和 Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Intune 安装的公司应用和关联数据|对于受 EFS 保护的文件，会撤销密钥。 用户无法打开文件。|未删除公司应用。|卸载最初通过公司门户安装的应用。 删除公司应用数据。|卸载应用。 删除旁加载密钥。<br>对于 Windows 10 版本 1703（创意者更新）及更高版本，不会删除 Microsoft 365 应用版。 在未注册设备上不会卸载已安装 Intune 管理扩展的 Win32 应用。 管理员可利用分配排除避免向 BYOD 设备提供 Win32 应用。|
+|Intune 安装的公司应用和关联数据|对于受 EFS 保护的文件，会撤销密钥。 用户无法打开文件。|未删除公司应用。|卸载最初通过公司门户安装的应用。 删除公司应用数据。|卸载应用。 删除旁加载密钥。<br>对于 Windows 10 版本 1709（创意者更新）及更高版本，不会删除 Microsoft 365 应用版。 在未注册设备上不会卸载已安装 Intune 管理扩展的 Win32 应用。 管理员可利用分配排除避免向 BYOD 设备提供 Win32 应用。|
 |设置|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|
 |Wi-Fi 和 VPN 配置文件设置|删除。|删除。|不支持。|删除。|
 |证书配置文件设置|已删除并吊销证书。|已删除并吊销证书。|不支持。|已删除并吊销证书。|
-|电子邮件|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。|不支持。|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。 删除由 Intune 预配的邮件帐户。|
+|电子邮件
+|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。|不支持。|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。 删除由 Intune 预配的邮件帐户。|
 |Azure AD 脱离|不能。|不能。|删除 Azure AD 记录。|删除 Azure AD 记录。|
 
 > [!NOTE]

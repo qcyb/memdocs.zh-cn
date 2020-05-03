@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808137"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254633"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用设备注册管理员帐户在 Intune 中注册设备
 
@@ -43,16 +43,23 @@ ms.locfileid: "80808137"
 - 向 DEM 帐户注册的每台设备都需要获得适当许可才能由 Intune 托管。 许可证可以是 Intune 用户许可证，也可以是 Intune 设备许可证。
 - 如果使用 DEM 帐户[注册 Android Enterprise 工作配置文件设备](android-work-profile-enroll.md)，则每个帐户最多可注册 10 台设备。
 - 不支持使用 DEM 帐户[注册 Android Enterprise 完全托管设备](android-fully-managed-enroll.md)。
+- 如果将 Azure AD 设备限制应用于 DEM 帐户，可防止你达到 DEM 帐户可以注册的 1,000 台设备限制。
+
+## <a name="enrollment-methods-supported-by-dem-accounts"></a>DEM 帐户支持的注册方法
+
+- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows 设备批量注册](windows-bulk-enroll.md)
+- DEM 通过公司门户启动
 
 ## <a name="add-a-device-enrollment-manager"></a>添加一个设备注册管理器
 
-1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” **“注册设备”** “设备注册管理器” >    >   。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
 
 2. 选择“添加”  。
 
 3. 在“添加用户”  边栏选项卡上，输入 DEM 用户的用户主体名称，并选择“添加”  。 DEM 用户将添加到 DEM 用户列表。
 
-## <a name="permissions-for-dem"></a>DEM 的权限
+## <a name="permissions-required-to-create-dem-accounts"></a>创建 DEM 帐户所需的权限
 
 需要全局管理员或 Intune 服务管理员 Azure AD 角色
 - 才能为 Azure AD 用户帐户分配 DEM 权限
@@ -60,13 +67,12 @@ ms.locfileid: "80808137"
 
 如果用户未分配到全局管理员或 Intune 服务管理员角色，但分配给他们的设备注册管理器角色启用了读取权限，则这些用户将只能查看自己创建的 DEM 用户。
 
-
 ## <a name="remove-device-enrollment-manager-permissions"></a>删除设备注册管理器权限
 
 删除设备注册管理器不会影响已注册的设备。
 
 **删除设备注册管理器**
 
-1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” **“注册设备”** “设备注册管理器” >    >   。
+1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
 2. 在“设备注册管理员”边栏选项卡上，选择 DEM 用户，然后选择“删除”   。
 

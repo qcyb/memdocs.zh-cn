@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb9695db99b8c170978ed2a27800b7cfe6090168
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323930"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166632"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>将 Windows 业务线应用添加到 Microsoft Intune
 
@@ -60,7 +60,9 @@ ms.locfileid: "80323930"
     - **名称**：输入显示在公司门户中的应用的名称。 请确保使用的所有应用名称都是唯一的。 如果同一应用名称存在两次，则公司门户中仅显示其中一个应用。
     - **描述**：输入应用的说明。 描述显示在公司门户中。
     - **发布者**：输入应用发布者的名称。
-    - **最低操作系统**：从列表中选择可安装应用的最低操作系统版本。 如果将应用分配到具有较低操作系统的设备，则不会安装该应用。
+    - 应用安装上下文  ：选择要与此应用相关联的安装上下文。 对于双模式应用，选择此应用所需的上下文。 对于其他所有应用，此设置是根据包预先选择的，无法进行修改。
+    - **忽略应用版本**：如果应用开发人员自动更新应用，则设置为“是”  。 此选项仅适用于移动 .msi 应用。
+    - **命令行参数**：（可选）输入要在 .msi 文件运行时应用到该文件的任意命令行参数。  例如 /q  。 不要添加 msiexec 命令或参数（如 /i  或 /x  ），因为它们是自动使用的。 有关详细信息，请参阅[命令行选项](https://docs.microsoft.com/windows/desktop/Msi/command-line-options)。 如果 .MSI 文件需要其他命令行选项，请考虑使用 [Win32 应用管理](app-management.md)。
     - **类别**：选择一个或多个内置应用类别，或选择你创建的类别。 “类别”可让用户在浏览公司门户时更轻松地查找应用。
     - **在公司门户中将此应用显示为特色应用**：当用户浏览应用时，在公司门户的主页上突出显示应用。
     - **信息 URL**：（可选）输入包含此应用相关信息的网站的 URL。 此 URL 显示在公司门户中。

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 905378b764fe3e8beee7eb90570cb9f871d9fa47
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bc6780d8956b00e9e0f177c69f067bafa4e8b49e
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346204"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182984"
 ---
-# <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>解决移动威胁防御应用发现的威胁
+# <a name="resolving-a-threat-found-by-a-mobile-threat-defense-app"></a>解决移动威胁防御应用发现的威胁
 
-移动威胁防御应用可检测到设备上的潜在威胁并发出警报。 某些组织将 Mobile Threat Defense 服务与 MDM 提供程序（如 Intune）进行集成。 集成后，Mobile Threat Defense 服务将报告威胁（如可疑应用、网络和 OS 漏洞），并在公司门户应用中提供通知。 然后，可在 Mobile Threat Defense 应用中找到有关威胁和修正步骤的详细信息。  
+移动威胁防御 (MTD) 应用检测设备上的潜在威胁（如可疑的应用、网络或 OS 漏洞），并向你发送警报。 当检测到威胁时，公司门户应用会通知你，并告知你它是否会影响你对学校或工作资源的访问。 然后，你会被重定向到 MTD 应用，以获取威胁的详细信息和修复步骤（若有）。 
 
-威胁在公司门户中显示为未解决的非符合性问题。 如果威胁类别为极具危险，公司将撤销你对其公司资源的访问权限。 只要设备上存在这些威胁，就可能无法：  
+如果威胁看起来风险太大（由组织确定），你对学校或工作资源的访问权限可能会被撤销。 只要设备上存在这些威胁，就可能无法：  
 
 * 连接公司电子邮件
 * 连接公司 Wi-Fi
@@ -36,7 +36,7 @@ ms.locfileid: "79346204"
 * 使用 OneDrive 同步公司文件
 * 访问公司应用
 
-下面是组织可能已设置的特定于 iOS 的移动威胁防御服务。 选择一个应用，了解有关其行为的详细信息。 
+有各种各样的 MTD 供应商应用可供获取，它们的名称都不同。 下面是几个可供获取的 iOS 专用应用。 请选择一个应用，看看它是如何与公司门户一起向你发送威胁警报的。 有关更多指南，请按照公司门户和 MTD 应用的屏幕上说明操作，或联系 IT 支持人员。 
 
 
 * [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
@@ -44,5 +44,5 @@ ms.locfileid: "79346204"
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-仍需帮助？ 请与公司支持人员联系。 可以在[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)中查找他们的联系信息。  
+仍需帮助？ 请联系支持人员。 可以在[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)中查找他们的联系信息。  
 
