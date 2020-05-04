@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4c0c913d3bc1467096090ac4e80d1d9d5f578a1b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79372545"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182304"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Android 用户如何获取其应用  
 
@@ -33,12 +33,12 @@ ms.locfileid: "79372545"
 | 应用类型 | 业务线 (LOB) 应用 | Play Store 应用  |
 | ------------- |-------------| -----|
 | 可用应用      | 用户在公司门户中点击“**安装**”。 此时将出现一条通知，用户需要点击该通知以开始安装。 安装成功后，通知即会消失。 | 用户在公司门户中点击应用，并转到 Play Store 中的应用页。 他们可以在那里开始安装。|
-| Required apps      | 在运行 Android 9.0 及更低版本的设备上，用户将看到一条通知（用户无法关闭此通知），此通知指示他们需要下载应用  。 用户点击该通知即可开始下载和安装。 安装成功后，通知即会消失。 在运行 Android 10 及更高版本的设备上，用户将看到一条通知（用户无法关闭此通知），此通知指示他们需要下载应用  。 用户点击该通知即可开始下载，然后获取通知以开始安装应用。 安装成功后，通知即会消失。| 用户将看到一条通知（用户无法关闭此通知），指示他们需要安装应用。 用户点击该通知，并转到 Play Store 中的应用页。 他们可以在那里开始安装。 安装成功后，通知即会消失。 |
+| Required apps      | 用户将看到一条通知（用户无法关闭此通知），指示他们需要安装应用。 用户点击通知以开始安装。 安装成功后，通知即会消失。    | 用户将看到一条通知（用户无法关闭此通知），指示他们需要安装应用。 用户点击该通知，并转到 Play Store 中的应用页。 他们可以在那里开始安装。 安装成功后，通知即会消失。 |
 
-最终用户需要允许来自未知源的安装才能安装 [LOB 应用](../apps/lob-apps-android.md)。 此设置通常位于两个位置：
+最终用户需要允许来自未知源的安装才能安装 [LOB 应用](../apps/lob-apps-android.md)。 此设置通常位于两个不同的位置，具体视 Android 版本而定：
 
-* Android 7.1.2 及更低版本：“设置” **“安全性”** “未知源”   >    >  
-* Android 8.0 及更高版本：“设置” **“应用和通知”** “特殊应用访问” **“安装未知应用”** “公司门户” > “允许来自此源”   >    >    >    >  
+* Android 7.1.2 及更低版本：“设置” > “安全性” > “未知源”   
+* Android 8.0 及更高版本：“设置” > “应用和通知” > “特殊应用访问” > “安装未知应用” > “公司门户” > “允许来自此源”      
 
 在这种情况下，公司门户应用将通知最终用户，并将最终用户直接引导至相应设置。 
 
@@ -47,13 +47,13 @@ ms.locfileid: "79372545"
 | 应用类型 | 业务线 (LOB) 应用 | Play Store 应用  |
 | ------------- |-------------| -----|
 | 可用应用      | 用户在公司门户中点击“**安装**”。 应用安装无需进一步的用户干预。 | 用户在公司门户中点击应用，并转到 Play Store 中的应用页。 他们可以在那里开始安装。|
-| Required apps      | 在运行 Android 9.0 及更低版本的设备上，安装应用无需任何用户干预  。 在运行 Android 10 及更高版本的设备上，用户将看到一条通知（用户无法关闭此通知），此通知指示他们需要下载应用  。 用户点击通知以开始安装。 安装成功后，通知即会消失。 | 用户将看到一条通知（用户无法关闭此通知），指示他们需要安装应用。 用户点击该通知，并转到 Play Store 中的应用页。 他们可以在那里开始安装。 安装成功后，通知即会消失。 |
+| Required apps      | 应用安装无需任何用户干预。    | 用户将看到一条通知（用户无法关闭此通知），指示他们需要安装应用。 用户点击该通知，并转到 Play Store 中的应用页。 他们可以在那里开始安装。 安装成功后，通知即会消失。 |
 
 应用可以是托管应用，也可以是非托管应用，如下所述。 托管应用的过程对于所有类型的 Android 设备都是相同的。
 
-**托管应用** - 这些是通过策略管理的应用。 它们已由 Intune“包装”或通过 Intune App SDK 生成。 这些应用可以由 Intune 进行管理，应用程序策略可以应用于它们。
+* 托管应用：这些应用通过策略进行托管。 它们已由 Intune“包装”或通过 Intune App SDK 生成。 这些应用可以由 Intune 进行管理，应用程序策略可以应用于它们。
 
-**非托管应用** - 这些不是通过策略管理的应用。 它们未由 Intune 包装或不包含 Intune App SDK。 应用程序策略不能应用于这些应用。
+* 非托管应用：这些应用不通过策略进行托管。 它们未由 Intune 包装或不包含 Intune App SDK。 应用程序策略不能应用于这些应用。
 
 ## <a name="zebra-devices-with-zebra-mobility-extensions"></a>带有 Zebra Mobility Extensions 的 Zebra 设备
 
