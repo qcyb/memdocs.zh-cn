@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696536"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183069"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问
 
@@ -39,8 +39,8 @@ Microsoft Edge 的 Microsoft Intune 保护策略有助于保护组织的数据�
 ## <a name="getting-started"></a>开始使用
 
 你与你的最终用户可从公共应用商店下载 Microsoft Edge 供组织使用。 浏览器策略的操作系统要求如下：
-- Android 4 及更高版本
-- iOS 8.0 及更高版本
+- Android 5 及更高版本
+- iOS 12.0 及更高版本
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Microsoft Edge 的应用程序保护策略
 
@@ -129,7 +129,7 @@ SSO 要求设备通过 Microsoft Authenticator 应用（iOS 设备）或 Intune 
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>将用户定向到 Microsoft Edge，而不是 Intune Managed Browser 
 
-Intune Managed Browser 和 Microsoft Edge 都可用作受策略保护的浏览器。 为引导用户使用正确的浏览器应用，请使用以下配置设置将所有 Intune 托管应用（例如 Outlook、OneDrive 和 SharePoint）设为目标：
+Microsoft Edge 可用作受策略保护的浏览器。 为引导用户使用正确的浏览器应用，请使用以下配置设置将所有 Intune 托管应用（例如 Outlook、OneDrive 和 SharePoint）设为目标：
 
 |    Key    |    值    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,7 +194,7 @@ Intune Managed Browser 和 Microsoft Edge 都可用作受策略保护的浏览�
 
 |    Key    |    值    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    指定一组 URL 的值。 每个顶级网站快捷方式都由标题和 URL 组成。 用字符 `|` 分隔标题和 URL。 例如： <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    指定一组 URL 的值。 每个顶级网站快捷方式都由标题和 URL 组成。 用字符 `|` 分隔标题和 URL。 例如： <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>为 Microsoft Edge 中的新标签页配置组织徽标和品牌颜色
 
@@ -277,7 +277,7 @@ Intune Managed Browser 和 Microsoft Edge 都可用作受策略保护的浏览�
 可使用多种 URL 格式来构建允许/阻止的站点列表。 下表详细介绍了这些允许的模式。 开始之前，请注意以下几点： 
 - 在将 URL 输入列表时，确保对所有 URL 添加“http://”  或“https://”  作为前缀。
 - 可以根据以下允许模式列表中的规则使用通配符 (\*)。
-- 通配符只能匹配主机名中的整体部分（由句点分隔）或路径的整体部分（由正斜杠分隔）。 例如，不支持 `http://*contoso.com`  。
+- 通配符只能匹配主机名中的整体部分（由句点分隔）或路径的整体部分（由正斜杠分隔）。 例如，不支持 `http://*contoso.com` 。
 - 可以在地址中指定端口号。 如果未指定端口号，则使用以下值：
   - 对于 http，使用端口 80
   - 对于 https，使用端口 443
@@ -415,7 +415,7 @@ Intune Managed Browser 和 Microsoft Edge 都可用作受策略保护的浏览�
 
 下面是 Microsoft Edge 的其他安全和隐私注意事项：
 
-- Microsoft Edge 不使用用户在其设备上为本机浏览器 https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps 设置的设置，因为 Microsoft Edge 无法访问这些设置。
+- Microsoft Edge 不使用用户在其设备上为本机浏览器设置的设置，因为 Microsoft Edge 无法访问这些设置。
 - 可以在与 Microsoft Edge 关联的应用保护策略中配置“访问需要简单 PIN”或“访问需要公司凭据”选项   。 如果用户选择身份验证页上的帮助链接，则可以浏览任何 Internet 站点，而不考虑它们是否已添加到策略中的阻止列表。
 - Microsoft Edge 仅能在用户直接访问站点时阻止访问。 用户使用中间服务（例如翻译服务）访问站点时，该策略则不会阻止访问。
 - 若要允许身份验证和访问 Intune 文档，请从允许或阻止列表设置中移除 *.microsoft.com  。 始终允许。

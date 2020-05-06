@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 3/13/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,22 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323093"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525661"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>在使用 Jamf Pro 管理的 Mac 上强制实现符合性
 
-[将 Jamf Pro 与 Intune 集成](conditional-access-integrate-jamf.md)时，可以使用条件访问策略对 Mac 设备强制实现与组织要求的符合性。  本文将帮助你完成以下任务：  
+将 Jamf Pro 与 Intune 集成时，可以使用条件访问策略对 Mac 设备强制实现与组织要求的符合性。 本文将帮助你完成以下任务：  
 
 - 创建条件访问策略。
 - 配置 Jamf Pro 以将 Intune 公司门户应用部署到使用 Jamf 管理的设备。
 - 配置设备，以在设备用户登录到 Jamf 自助服务应用内启动的公司门户应用时向 Azure AD 注册。 设备注册在 Azure AD 中建立标识，以允许通过条件访问策略来评估设备，以便访问公司资源。  
  
 本文中的过程需要访问 Intune 和 Jamf Pro 控制台。
+Intune 支持以下两种集成 Jamf Pro 的方法，你可以将它们与本文中的过程分开配置：
+
+- 建议：[使用 Jamf 云连接器集成 Jamf Pro 与 Intune](conditional-access-jamf-cloud-connector.md)
+- [手动配置 Jamf Pro 与 Intune 的集成](conditional-access-integrate-jamf.md)
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>在 Intune 中设置设备符合性策略
 
@@ -41,7 +45,7 @@ ms.locfileid: "80323093"
 
 2. 选择“设备” > “符合性策略”   。 如果使用以前创建的策略，请在控制台中选择该策略，然后转到此过程的下一步。 若要创建新策略，请选择“创建策略”，然后使用 macOS 的平台指定策略的详细信息    。 配置“设置”和“对不合规项的操作”以满足组织要求，然后选择“创建”以保存策略    。
 
-3. 在策略的“概述”窗格上，选择“分配”   。 使用可用选项配置哪些 Azure Active Directory (Azure AD) 用户和安全组接收此策略。 **Jamf 与 Intune 的集成不支持针对设备组的合规性策略。**
+3. 在策略的“概述”窗格上，选择“分配”   。 使用可用选项配置哪些 Azure Active Directory (Azure AD) 用户和安全组接收此策略。 Jamf 与 Intune 的集成不支持定目标到设备组的符合性策略  。
 
 > [!NOTE]
 > Jamf 与 Intune 的集成仅支持 AAD 用户组。 针对设备组的设备合规性策略将不适用。

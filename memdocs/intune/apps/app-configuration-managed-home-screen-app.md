@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358703"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693479"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>配置适用于 Android Enterprise 的 Microsoft 托管主屏幕应用
 
@@ -66,7 +66,6 @@ ms.locfileid: "80358703"
 | 设置应用图标大小 | integer | 2 | 使你能够设置主屏幕上显示的应用的图标大小。 可以在此配置中选择以下值来使用不同的尺寸：0（最小）、1（小）、2（常规）、3（大）和 4（最大）。 |
 | 设置应用文件夹图标 | integer | 0 | 使你能够在主屏幕上定义应用文件夹的外观。 可以从以下值中选择外观：Dark Square(0)；Dark Circle(1)；Light Square(2)；Light Circle(3)。 |
 | 设置屏幕方向 | integer | 1 | 使你能够将主屏幕的方向设置为纵向模式、横向模式或允许自动旋转。 可以通过输入值 1（纵向模式）、2（横向模式）或 3（自动旋转）来设置方向。 |
-| 启用设备遥测 | 布尔 | FALSE | 启用为托管主屏幕捕获的所有遥测。 如果启用此功能，Microsoft 将能够捕获设备使用情况遥测，例如某一特定应用在此设备上的启动次数。 |
 | 设置已列入允许列表的应用程序 | bundleArray | FALSE | 使你能够从设备上安装的应用中定义主屏幕上可见的应用集。 可以通过输入要使其可见的应用的应用包名称来定义应用，例如 com.microsoft.emmx 可以使设置在主屏幕上可访问。 已在此部分中列入允许列表的应用应已安装在设备上，以使其在主屏幕上可见。 |
 | 设置固定的 Web 链接 | bundleArray | FALSE | 使你能够将网站固定为主屏幕上的快速启动图标。 通过此配置，可以定义 URL 并将其添加到主屏幕，使最终用户只需轻轻点击一下即可在浏览器中启动。 |
 | 启用屏幕保护 | 布尔 | FALSE | 是否启用屏幕保护模式。 如果设置为 true，则可以配置“screen_saver_image”、“screen_saver_show_time”、“inactive_time_to_show_screen_saver”和“media_detect_screen_saver”     。 |
@@ -78,10 +77,17 @@ ms.locfileid: "80358703"
 | 虚拟主页按钮的类型 | 字符串 | swipe_up | 使用“swipe_up”来通过向上轻扫手势以访问主页按钮  。 使用“float”来访问最终用户可以在屏幕上移动的永久性粘滞的主页按钮  。 |
 | 电池和信号强度指示栏 | 布尔 | True  | 将此设置设为 `True` 可以显示电池和信号强度指示栏。 |
 | 退出锁定任务模式密码 | 字符串 |   | 输入 4 - 6 位数的代码来用于临时退出锁定任务模式以进行故障排除。 |
+| 显示托管设置 | 布尔 | TRUE | “托管设置”是一种“托管主屏幕”应用，仅在配置了任何快速访问设置时才显示，这些设置包括“显示 Wi-Fi 设置”、“显示蓝牙设置”、“显示卷设置”和“显示闪光灯设置”     。 也可以通过在屏幕上向下轻扫来访问这些设置。 将此键设置为 `False` 以隐藏“托管设置”应用，并使最终用户只能通过向下轻扫来访问设置。    |
+| 启用轻松访问调试菜单 | 布尔 | FALSE | 将此设置设为 `True`，可从“托管设置”应用中访问或通过在“托管主屏幕”中向下轻扫来访问调试菜单。 “调试”菜单是退出 kiosk 模式的功能当前所在的位置，其访问方式是单击“后退”按钮约 15 次。 将此设置为 `False`，使调试菜单的入口点只能通过“后退”按钮访问。   |
 | 显示 Wi-Fi 设置 | 布尔 | FALSE | 如果将此设置设为 `True`，最终用户则可以打开或关闭 Wi-Fi，或连接到不同的 Wi-Fi 网络。  |
+| 启用 Wi-fi 允许列表 | 布尔 | FALSE | 将此设置变为 `True`，并填写“Wi-Fi 允许列表”项以限制“托管主屏幕”中显示的 Wi-Fi 网络  。 设置为 `False`，显示设备发现的所有可能可用的 Wi-Fi 网络。 请注意，仅当“显示 Wi-Fi 设置”已设置为 `True` 并且“Wi-Fi 允许列表”已填写时，此设置才起作用   。   |
+| Wi-Fi 允许列表| bundleArray | FALSE | 允许列出你希望设备在托管主屏幕中显示的 Wi-Fi 网络的所有 SSID。 仅当“显示 Wi-Fi 设置”和启用“Wi-Fi 允许列表”已设置为 `True` 时，此列表才起作用   。 如果其中任何一个设置为 `False`，则不需要修改此配置。    |
 | 显示蓝牙设置 | 布尔 | FALSE | 如果将此设置设为 `True`，最终用户则可以打开或关闭蓝牙以及连接到支持蓝牙的不同设备。   |
+| 显示音量设置 | 布尔 | FALSE | 将此设置设为 `True`，可允许最终用户访问音量滑块，调整媒体音量。   |
+| 显示闪光灯设置 | 布尔 | FALSE | 将此设置设为 `True`，可允许最终用户打开或关闭设备的闪光灯。 如果设备不支持闪光灯，则即使配置为 `True`，此设置也不会显示。   |
+| 显示设备信息设置 | 布尔 | FALSE | 将此设置设为 `True` 允许最终用户从“托管设置”应用中或通过向下轻扫来访问有关设备的快速信息。 可访问的信息包括设备的标志、型号和序列号。   |
 | 文件夹中的应用程序按名称进行排序 | 布尔 | TRUE | 如果将此设置设为 `False`，则可以按指定顺序显示文件夹中的各个项。 否则，它们将按字母顺序显示在文件夹中。   |
-| 已启用应用程序顺序 | 布尔 | FALSE | 如果将此设置设为 `True`，则可以在托管主屏幕上设置应用程序、Web 链接和文件夹的顺序。 启用后，使用 app_order  设置顺序，最终用户则可以打开或关闭蓝牙以及连接到支持蓝牙的不同设备。   |
+| 已启用应用程序顺序 | 布尔 | FALSE | 如果将此设置设为 `True`，则可以在托管主屏幕上设置应用程序、Web 链接和文件夹的顺序。 启用后，使用“app_order”设置顺序  。   |
 | 应用程序顺序 | bundleArray | FALSE | 允许你在托管主屏幕上指定应用程序、Web 链接和文件夹的顺序。 若要使用此设置，必须启用“锁定主屏幕”，必须定义“设置网格大小”   ，并且必须将“已启用应用程序顺序”  设置为 `True`。   |
 
 ## <a name="enter-json-data"></a>输入 JSON 数据
@@ -124,10 +130,6 @@ ms.locfileid: "80358703"
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -182,6 +184,51 @@ ms.locfileid: "80358703"
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        }
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        }
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -335,7 +382,7 @@ ms.locfileid: "80358703"
 托管主屏幕应用现在可以访问 Google 的 Android 设备策略应用。 托管主屏幕应用是一种自定义启动器，用于使用多应用展台模式在 Intune 中注册为 Android Enterprise (AE) 专用设备的设备。 你可以访问 Android 设备策略应用，或引导用户访问 Android 设备策略应用，以获取支持和进行调试。 此启动功能在设备注册并锁定到托管主屏幕时可用。 无需其他安装项，即可使用此功能。
 
 ## <a name="managed-home-screen-debug-screen"></a>托管的主屏幕调试屏幕
-可以通过单击“后退”按钮访问托管的主屏幕的调试屏幕，直到显示调试屏幕（单击“后退”按钮 15 次或更多次）   。 在此调试屏幕中，可以启动 Android 设备策略应用程序、查看和上传日志，或临时暂停展台模式以更新设备。 有关暂停展台模式的详细信息，请参阅 Android Enterprise [专用设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-devices)中的“退出展台模式”  项。
+可以通过单击“后退”按钮访问托管的主屏幕的调试屏幕，直到显示调试屏幕（单击“后退”按钮 15 次或更多次）   。 在此调试屏幕中，可以启动 Android 设备策略应用程序、查看和上传日志，或临时暂停展台模式以更新设备。 有关暂停展台模式的详细信息，请参阅 Android Enterprise [专用设备设置](../configuration/device-restrictions-android-for-work.md#dedicated-devices)中的“退出展台模式”  项。 如果你想要使用更简单的方法访问托管主屏幕的调试屏幕，可以使用应用程序配置策略将“启用轻松访问调试菜单”设置为 `True` 。 
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f4b50ac8df811a3e71070ebec979139b3ebbe62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0834ee2ac6cbd7460ed96024a9b30ab503fae9fb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325116"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078330"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>对业务线应用进行签名，以便可以将其部署到具有 Intune 的 Windows 设备
 
@@ -87,7 +87,7 @@ Windows 8.1 桌面版/Windows 10 桌面版和移动版
 2. 获得应用之后，选择“**清单**”页中的应用。  
 3. 选择“**Windows 10 所有设备**”作为“**平台**”，然后选择相应的**体系结构**并下载。 此应用不需要应用许可证文件。
    ![可供下载的 Windows 10 X86 包详细信息的图像](./media/app-sideload-windows/Win10CP-all-devices.png)
-4. 下载“所需框架”下的所有包。 必须对 x86、x64 和 ARM 体系结构完成此操作，并生成如下所示的共 9 个包。
+4. 下载“所需框架”下的所有包。 必须对 x86、x64、ARM 和 ARM 64 体系结构完成此操作，这会生成如下所示的共 9 个包。
 
    ![要下载的依赖项文件的图像 ](./media/app-sideload-windows/Win10CP-dependent-files.png)
 5. 将公司门户应用上载到 Intune 之前，按以下方式创建一个包含构建的包的文件夹（例如，C:\Company Portal）：

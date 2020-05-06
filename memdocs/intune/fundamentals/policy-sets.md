@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551622"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023157"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>使用策略集对管理对象集合进行分组
 
@@ -89,7 +89,7 @@ ms.locfileid: "80551622"
   - Android 应用商店应用
   - Android 业务线应用
   - 托管 Android 业务线应用
-  - Office 365 专业增强版套件 (Windows 10)
+  - Microsoft 365 应用版 (Windows 10)
   - Web 链接
   - 内置 iOS/iPadOS 应用
   - 内置的 Android 应用
@@ -121,6 +121,7 @@ ms.locfileid: "80551622"
     如果将策略添加到部署到组的策略集中，则该组将显示为在工作负荷中直接分配，而不是“通过策略集分配”。 因此，MAM 不处理来自策略集的组分配删除。
 
 - 对于任何策略类型，MAM 不支持部署到“所有用户”和“所有设备”虚拟组   。
+- 无法选择“管理模板”类型的设备配置文件作为策略集的一部分。
 
 ## <a name="next-steps"></a>后续步骤
 

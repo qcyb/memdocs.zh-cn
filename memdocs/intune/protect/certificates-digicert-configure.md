@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322667"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079869"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>设置 DigiCert PKI 平台的 Intune 证书连接器
 
@@ -45,6 +45,7 @@ ms.locfileid: "80322667"
 ## <a name="prerequisites"></a>必备条件
 
 - **DigiCert CA 的活动订阅**：需要订阅才能从 DigiCert CA 获取注册机构 (RA) 证书。
+- Microsoft Intune 证书连接器的网络要求与[受管理设备](../fundamentals/intune-endpoints.md#access-for-managed-devices)相同。
 
 ## <a name="install-the-digicert-ra-certificate"></a>安装 DigiCert RA 证书
 
@@ -135,7 +136,7 @@ ms.locfileid: "80322667"
 
    g. 记录 RA 证书指纹副本（不含任何空格）。 下面是一个指纹示例：
 
-        RA Cert Thumbprint: “EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5”
+        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
 
     > [!NOTE]
     > 若要获取从 DigiCert CA 获取 RA 证书的帮助，请联系 [DigiCert 客户支持部门](mailto:enterprise-pkisupport@digicert.com)。
@@ -225,7 +226,7 @@ ms.locfileid: "80322667"
 
 ## <a name="create-a-trusted-certificate-profile"></a>创建受信任的证书配置文件
 
-为 Intune 托管设备部署的 PKCS 证书必须使用受信任的根证书进行链接。 若要建立此链接，请使用来自 DigiCert CA 的根证书创建 Intune 受信任的证书配置文件。
+为 Intune 托管设备部署的 PKCS 证书必须使用受信任的根证书进行链接。 若要建立此链，请使用 DigiCert CA 颁发的根证书创建 Intune 信任的证书配置文件，并将受信任的证书配置文件和 PKCS 证书配置文件都部署到同一组中。
 
 1. 从 DigiCert CA 中获取受信任的根证书：
 
@@ -326,7 +327,7 @@ Intune 证书连接器服务日志在 NDES 连接器计算机上的 %ProgramFile
 | NDES 连接器 - IssuePfx - 常规异常： <br> System.NullReferenceException：对象引用未设置为某个对象的实例。 | 此错误是暂时的。 重新启动 Intune 服务连接器。 <br><br> 1.打开“services.msc”  。 <br> 2.选择“Intune 连接器服务”  。 <br> 3.单击右键并选择“重新启动”  。 |
 | DigiCert 提供程序 - 无法获取 DigiCert 策略。 <br><br>“操作已超时。” | Intune 证书连接器在与 DigiCert CA 通信时收到“操作已超时”错误。 如果此错误继续出现，请增加连接超时值并重试。 <br><br> 若要增加连接超时值，请执行以下操作： <br> 1.转到 NDES 连接器计算机。 <br>2.在记事本中打开 %ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config  文件。 <br> 3.增加以下参数的超时值： <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4.重新启动 Intune 证书连接器服务。 <br><br> 如果问题仍然存在，请联系 DigiCert 客户支持部门。 |
 | DigiCert 提供程序 - 无法获取客户端证书。 | Intune 证书连接器从“本地计算机 - 个人证书存储”中检索不到资源授权证书。 若要解决此问题，请将资源授权证书连同其私钥一起安装在“本地计算机-个人证书存储”中。 <br><br> 资源授权证书必须从 DigiCert CA 获取。 有关详细信息，请联系 DigiCert 客户支持部门。 | 
-| DigiCert 提供程序 - 无法获取 DigiCert 策略。 <br><br>“请求已中止：无法创建 SSL/TLS 安全通道。" | 在以下情况下会发生此错误： <br><br> 1.Intune 证书连接器服务无权从“本地计算机-个人证书存储”中读取资源授权证书及其私钥。 若要解决此问题，请检查在 services.msc 中运行上下文帐户的连接器服务。 该连接器服务必须在 NT AUTHORITY\SYSTEM 上下文下运行。 <br><br> 2.Intune 管理门户中的 PKCS 证书配置文件在配置时可能使用了无效的 DigiCert CA 基本服务 FQDN。 FQDN 类似于 pki-ws.symauth.com  。 若要解决此问题，请咨询 DigiCert 客户支持部门，以确定该 URL 是否适合你的订阅。 <br><br> 3.Intune 证书连接器无法通过资源授权证书对 DigiCert CA 进行身份验证，因为它无法检索证书私钥。 若要解决此问题，请将资源授权证书连同其私钥一起安装在“本地计算机-个人证书存储”中。 <br><br> 如果问题仍然存在，请联系 DigiCert 客户支持部门。 |
+| DigiCert 提供程序 - 无法获取 DigiCert 策略。 <br><br>“请求已中止：无法创建 SSL/TLS 安全通道。” | 在以下情况下会发生此错误： <br><br> 1.Intune 证书连接器服务无权从“本地计算机-个人证书存储”中读取资源授权证书及其私钥。 若要解决此问题，请检查在 services.msc 中运行上下文帐户的连接器服务。 该连接器服务必须在 NT AUTHORITY\SYSTEM 上下文下运行。 <br><br> 2.Intune 管理门户中的 PKCS 证书配置文件在配置时可能使用了无效的 DigiCert CA 基本服务 FQDN。 FQDN 类似于 pki-ws.symauth.com  。 若要解决此问题，请咨询 DigiCert 客户支持部门，以确定该 URL 是否适合你的订阅。 <br><br> 3.Intune 证书连接器无法通过资源授权证书对 DigiCert CA 进行身份验证，因为它无法检索证书私钥。 若要解决此问题，请将资源授权证书连同其私钥一起安装在“本地计算机-个人证书存储”中。 <br><br> 如果问题仍然存在，请联系 DigiCert 客户支持部门。 |
 | DigiCert 提供程序 - 无法获取 DigiCert 策略。 <br><br>“无法理解请求元素。” | Intune 证书连接器无法获取 DigiCert 证书配置文件模板，因为客户端配置文件 OID 与 Intune 证书配置文件不匹配。 在其他情况下，Intune 证书连接器无法找到与 DigiCert CA 中客户端配置文件 OID 关联的证书配置文件模板。 <br><br> 若要解决此问题，请从 DigiCert CA 的 DigiCert 证书模板获取正确的客户端配置文件 OID。 然后更新 Intune 管理门户中的 PKCS 证书配置文件。 <br><br> 从 DigiCert CA 中获取证书配置文件 OID： <br> 1.登录到 DigiCert CA 管理门户。 <br> 2.选择“管理证书配置文件”  。 <br> 3.选择要使用的证书配置文件。 <br> 4.获取证书配置文件 OID。 这类似于以下示例： <br> `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109` <br><br> 使用正确的证书配置文件 OID 更新 PKCS 证书配置文件： <br>1.登录到 Intune 管理门户。 <br> 2.转到 PKCS 证书配置文件并选择“编辑”  。 <br> 3.在证书模板名称对应的字段中更新证书配置文件 OID。 <br> 4.保存 PKCS 证书配置文件。 |
 | DigiCert 提供程序 - 策略验证失败。 <br><br> 属性不属于 DigiCert 支持的证书模板属性列表。 | 当 DigiCert 证书配置文件模板和 Intune 证书配置文件之间存在差异时，DigiCert CA 将显示此消息。 SubjectName 或 SubjectAltName 中的属性不匹配时，可能会发生此问题   。 <br><br> 若要解决此问题，请在 DigiCert 证书配置文件模板中为 SubjectName 和 SubjectAltName 选择 Intune 支持的属性   。 有关详细信息，请参阅“证书参数”一节中的 Intune 支持的属性  。 |
 | 某些用户设备不接收来自 DigiCert CA 的 PKCS 证书。 | 当用户 UPN 包含特殊字符（如下划线）时会发生此问题（示例：`global_admin@intune.onmicrosoft.com`）。 <br><br> DigiCert CA 不支持 mail_firstname 和 mail_lastname 中的特殊字符   。 <br><br> 请执行以下步骤来帮助解决此问题： <br><br> 1.登录到 DigiCert CA 管理门户。 <br> 2.转到“管理证书配置文件”  。 <br> 3.选择用于 Intune 的证书配置文件。 <br> 4.选择“自定义选项”  链接。 <br> 5.选择“高级选项”  按钮。 <br> 6.在“证书字段 – 使用者 DN”下，添加“公用名 (CN)”字段并删除现有“公用名 (CN)”字段    。 添加和删除操作必须一起执行。 <br> 7.选择“保存”  。 <br><br> 通过上述更改，DigiCert 证书配置文件会请求“CN=<upn>”而不是 mail_firstname 和 mail_lastname    。 |

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4965f29144131895660796bc3282ba46d6b8101
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b93e850e7a38feb7dd5347670279f6d85b92455b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353601"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725653"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>在 Intune 中对电子邮件进行签名和加密的 S/MIME 概述
 
@@ -46,7 +46,7 @@ ms.locfileid: "79353601"
 
 Intune 中的签名证书使用 PKCS 证书。 [配置和使用 PKCS 证书](certficates-pfx-configure.md)介绍了如何在 Intune 环境中部署和使用 PKCS 证书。 这些步骤包括：
 
-- 下载并安装 Microsoft Intune 证书连接器以支持 PKCS 证书请求。
+- 下载并安装 Microsoft Intune 证书连接器以支持 PKCS 证书请求。 连接器的网络要求与[受管理设备](../fundamentals/intune-endpoints.md#access-for-managed-devices)相同。
 - 为设备创建受信任的根证书配置文件。 此步骤包括为证书颁发机构使用受信任的根证书和中间证书，然后将配置文件部署到设备。
 - 使用创建的证书模板创建 PKCS 证书配置文件。 此配置文件向设备颁发签名证书，并将 PKCS 证书配置文件部署到设备。
 

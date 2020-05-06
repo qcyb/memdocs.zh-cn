@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611727"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183001"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>有关 MAM 和应用保护的常见问题
 
@@ -39,9 +39,9 @@ MAM 可保护应用程序内组织的数据。 通过无需注册的 MAM (MAM-WE
 
 **MAM 支持哪些设备配置？**<br></br>
 Intune MAM 支持两种配置：
-- **Intune MDM + MAM**：IT 管理员仅可在已进行 Intune 移动设备管理 (MDM) 注册的设备上使用 MAM 和应用保护策略管理应用。 若要使用 MDM + MAM 管理应用，	客户应使用 Azure 门户 https://portal.azure.com 中的 Intune 控制台。
+- **Intune MDM + MAM**：IT 管理员仅可在已进行 Intune 移动设备管理 (MDM) 注册的设备上使用 MAM 和应用保护策略管理应用。 若要使用 MDM + MAM 管理应用，客户应使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-- **无需设备注册的 MAM**：无需设备注册的 MAM 或 MAM-WE 使 IT 管理员可以在未进行 Intune MDM 注册的设备上使用 MAM 和应用保护策略管理应用。 这意味着可以在进行了第三方 EMM 提供程序注册的设备上通过 Intune 管理应用。 若要使用 MAM-WE 管理应用，客户应使用 Azure 门户 [https://portal.azure.com](https://portal.azure.com) 中的 Intune 控制台。 此外，可以在已注册第三方企业移动性管理 (EMM) 提供程序或完全未注册 MDM 的设备上通过 Intune 管理应用。
+- **无需设备注册的 MAM**：无需设备注册的 MAM 或 MAM-WE 使 IT 管理员可以在未进行 Intune MDM 注册的设备上使用 MAM 和应用保护策略管理应用。 这意味着可以在进行了第三方 EMM 提供程序注册的设备上通过 Intune 管理应用。 若要使用 MAM-WE 管理应用，客户应使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 此外，可以在已注册第三方企业移动性管理 (EMM) 提供程序或完全未注册 MDM 的设备上通过 Intune 管理应用。
 
 
 ## <a name="app-protection-policies"></a>应用保护策略
@@ -55,6 +55,7 @@ Intune MAM 支持两种配置：
 **是否可以将 MDM 和 MAM 策略同时应用于不同设备的同一用户？例如，用户能够从启用了 MAM 的计算机访问其工作资源，并开始工作和使用 Intune MDM 托管设备。是否有针对此意见的注意事项？**<br></br>
 如果在不设置设备状态的情况下将 MAM 策略应用于用户，用户将同时在 BYOD 设备和 Intune 托管设备上获得 MAM 策略。 还可以根据托管状态应用 MAM 策略。 因此，在创建应用保护策略时，应在“面向所有应用类型”旁边选择“否”。 然后，执行以下任意操作：
 - 将不太严格的 MAM 策略应用于 Intune 托管设备，并将更严格的 MAM 策略应用于未注册 MDM 的设备。
+-   如对第三方托管设备执行的一样，将同等严格的 MAM 策略应用到 Intune 托管设备。
 - 将 MAM 策略仅应用于未注册的设备。
 
 有关详细信息，请参阅[如何监视应用保护策略](app-protection-policies-monitor.md)。
@@ -70,7 +71,7 @@ Intune MAM 支持两种配置：
 
 - 最终用户必须向其 Azure Active Directory 帐户分配 Microsoft Intune 许可证。 请参阅[管理 Intune 许可证](../fundamentals/licenses-assign.md)，以了解如何向最终用户分配 Intune 许可证。
 
-- 最终用户必须属于应用保护策略所针对的安全组。 同一应用保护策略必须面向正在使用的特定应用。 可以在 [Azure 门户](https://portal.azure.com)的 Intune 控制台中创建和部署应用保护策略。 当前可以在 [Microsoft 365 管理中心](https://admin.microsoft.com)创建安全组。
+- 最终用户必须属于应用保护策略所针对的安全组。 同一应用保护策略必须面向正在使用的特定应用。 可在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)创建和部署应用保护策略。 当前可以在 [Microsoft 365 管理中心](https://admin.microsoft.com)创建安全组。
 
 - 最终用户必须使用其 AAD 帐户登录到应用。
 
@@ -79,7 +80,7 @@ Intune MAM 支持两种配置：
 Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS/iPadOS（Obj-C、Swift）、Xamarin、Xamarin.Forms 平台生成的应用的支持。 虽然某些客户已成功将 Intune SDK 与 React Native 和 NativeScript 等其他平台集成，但我们不会使用受支持平台之外的任何方式为应用开发人员提供明确的指导或插件。
 
 **Intune APP SDK 是否支持 Microsoft 身份验证库 (MSAL) 或社交帐户？**<br></br>
-Intune APP SDK 使用一些适用于 SDK 的第一方和第三方版本的高级 ADAL 功能。 因此，MSAL 不适用于我们的许多核心方案，例如向 Intune 应用保护服务进行身份验证和条件启动。 鉴于来自 Microsoft 标识团队的全面指导是切换到适用于所有 Microsoft Office 应用的 MSAL，因此 Intune SDK 最终需要支持它，但目前没有计划。
+Intune App SDK 可以使用 Azure Active Directory 身份验证库或 Microsoft 身份验证库进行身份验证和条件启动。 它还依赖于 ADAL/MSAL 向 MAM 服务注册用户标识，用于不含设备注册方案的管理。
 
 **使用 [Outlook 移动应用](https://products.office.com/outlook)有什么其他要求？**
 
@@ -92,7 +93,7 @@ Intune APP SDK 使用一些适用于 SDK 的第一方和第三方版本的高级
 
 **使用 [Word、Excel 和 PowerPoint](https://products.office.com/business/office) 应用有什么其他要求？**
 
-- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Office 365 商业版或企业版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 遵循这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)可在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Office 365 许可证。
+- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 遵循这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)可在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Office 365 许可证。
 
 - 最终用户必须具有使用粒度另存为功能进行配置的托管位置（该功能位于“保存组织数据的副本”应用程序保护策略设置下）。 例如，如果托管位置为 OneDrive，则应在最终用户的 Word、Excel 或 PowerPoint 应用中对 [OneDrive](https://onedrive.live.com/about/) 应用进行配置。
 
@@ -163,7 +164,7 @@ Intune 能够使用 3 种不同方式擦除应用数据：完全设备擦除、M
 
 - **什么是 MDM 选择性擦除？**<br></br> 请参阅[删除设备 - 停用](../remote-actions/devices-wipe.md#retire)，了解删除公司数据的相关信息。
 
-- **什么是 MAM 选择性擦除？**<br></br> MAM 选择性擦除仅删除应用中的公司应用数据。 使用 Intune Azure 门户启动该请求。 若要了解如何启动擦除请求，请参阅[如何仅擦除应用中的公司数据](apps-selective-wipe.md)。
+- **什么是 MAM 选择性擦除？**<br></br> MAM 选择性擦除仅删除应用中的公司应用数据。 使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)来发起请求。 若要了解如何启动擦除请求，请参阅[如何仅擦除应用中的公司数据](apps-selective-wipe.md)。
 
 - **MAM 选择性擦除多久发生一次？**<br></br> 如果用户在启用了选择性擦除的情况下使用应用，那么 Intune App SDK 会每 30 分钟检查一次来自 Intune MAM 服务的选择性擦除请求。 它还会在用户第一次启动应用并使用其工作或学校帐户登录时检查选择性擦除。
 

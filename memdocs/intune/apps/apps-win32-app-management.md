@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620618"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254599"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune 独立版 - Win32 应用管理
 
@@ -357,6 +357,11 @@ Windows 10 1709 及更高版本的客户端将在 Windows 10 客户端上使用�
 ## <a name="set-win32-app-availability-and-notifications"></a>设置 Win32 应用可用性和通知
 可以为 Win32 应用配置开始时间和截止时间。 在开始时间，Intune 管理扩展将启动应用内容下载并缓存它以用于所需的意图。 应用将在截止时间安装。 对于可用应用，开始时间将指示应用在公司门户中的可见时间，并且在最终用户从公司门户请求应用时将下载内容。 此外，还可以启用重启宽限期。 
 
+> [!IMPORTANT]
+> “分配”部分中的“重启宽限期”设置仅在“程序”部分的“设备重启行为”设为以下任一选项时可用     ：
+> - **根据返回代码确定行为**
+> - **Intune 将强制重启设备**
+
 使用以下步骤，根据必需应用程序的日期和时间设置应用可用性：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
@@ -405,6 +410,8 @@ Windows 10 1709 及更高版本的客户端将在 Windows 10 客户端上使用�
 > **在 X86 客户端计算机上**：<br>
 > C:\Program Files\Microsoft Intune Management Extension\Content <br>
 > C:\windows\IMECache 
+>
+> 有关详细信息，请参阅[针对运行当前支持的 Windows 版本的企业计算机的病毒扫描建议](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)。
 
 ### <a name="detecting-the-win32-app-file-version-using-powershell"></a>检测使用 PowerShell 的 Win32 应用文件版本
 
