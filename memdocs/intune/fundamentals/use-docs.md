@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355083"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726041"
 ---
 # <a name="using-the-intune-docs"></a>使用 Intune 文档
 
@@ -117,11 +117,11 @@ ms.locfileid: "79355083"
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft 终结点管理器的文档整合
 
-为了更好地支持 Intune 和 Configuration Manager 的组合方案，此文档库已移动到 [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune)。 Configuration Manager 文档库以后会移动到 `docs.microsoft.com/mem/configmgr`。 所有链接都会自动重定向，因此无需进行任何更改即可读取此内容。
+为了更好地支持 Intune 和 Configuration Manager 的组合方案，Intune 和 Configuration Manager 文档已合并到 Microsoft Endpoint Manager 站点上。 Intune 文档现在位于 [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune)，Configuration Manager 文档库位于 [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr)。 如果你仍在使用旧 URL，所有链接都会自动重定向，因此你无需进行任何更改就能读取此内容。
 
 如果向文章提供反馈或做出贡献，则需要进行一些更改：
 
-- 现有 GitHub 问题都会保留在原始存储库 [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) 中。
+- 原始存储库 [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) 或 [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/) 中仍有现有 GitHub 问题。
 
   - 这些问题不会在链接文章的反馈部分中显示为开放或关闭的问题。
 

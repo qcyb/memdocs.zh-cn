@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611743"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078356"
 ---
 # <a name="app-protection-policies-overview"></a>应用保护策略概述
 
@@ -168,7 +168,7 @@ Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS/iPadOS
 ### <a name="word-excel-and-powerpoint"></a>Word、Excel 和 PowerPoint
 对于使用 [Word、Excel 和 PowerPoint](https://products.office.com/business/office) 应用的其他要求包括：
 
-- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Office 365 商业版或企业版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 遵循这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)可在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Office 365 许可证。
+- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 遵循这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)可在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Office 365 许可证。
 
 - 最终用户必须具有使用粒度另存为功能进行配置的托管位置（该功能位于“保存组织数据的副本”应用程序保护策略设置下）。 例如，如果托管位置为 OneDrive，则应在最终用户的 Word、Excel 或 PowerPoint 应用中对 [OneDrive](https://onedrive.live.com/about/) 应用进行配置。
 
@@ -301,7 +301,7 @@ MAM 选择性擦除仅删除应用中的公司应用数据。 使用 Intune Azur
 Intune 应用保护要求用户的身份在应用程序与 [Intune SDK](../developer/app-sdk.md) 之间保持一致。 保证此种一致的唯一方法是通过新式身份验证。 在某些情况下应用可能适用于本地配置，但它们既不一致也无法得到保证。
 
 **从托管应用中打开 Web 链接的安全方法**<br>
-IT 管理员可以为 [Intune Managed Browser 应用](app-configuration-managed-browser.md)（一种由 Microsoft Intune 开发的可使用 Intune 轻松管理的 Web 浏览器）部署和设置应用保护策略。 IT 管理员可以要求 Intune 托管应用中的所有 Web 链接均使用 Managed Browser 应用打开。
+IT 管理员可以为 [Microsoft Edge](app-configuration-managed-browser.md)（可使用 Intune 轻松管理的 Web 浏览器）部署和设置应用保护策略。 IT 管理员可以要求 Intune 托管应用中的所有 Web 链接均使用 Managed Browser 应用打开。
 
 ## <a name="app-protection-experience-for-ios-devices"></a>适用于 iOS 设备的应用保护体验
 

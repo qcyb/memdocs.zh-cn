@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326456"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078968"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>在 Intune 中重置或删除设备密码
 
@@ -42,7 +42,7 @@ ms.locfileid: "80326456"
 | macOS | 否 |
 | Windows | 否 |
 
-对于 Android 设备，这意味着仅在运行 6.x 或更早版本的设备上或在以展台模式运行的 Android Enterprise 设备上支持设备级密码重置。 这是因为 Google 取消了对设备管理员授权应用中重置 Android 7 设备密码的支持，适用于所有 MDM 供应商。
+对于 Android 设备，这意味着仅在运行 6.x 或更早版本的设备上或在以展台模式运行的 Android Enterprise 设备上支持设备级密码重置。 这是因为 Google 不再支持从设备管理员授权应用中重置 Android 7 设备的密码，这适用于所有 MDM 供应商。
 
 ## <a name="supported-platforms-for-android-enterprise-work-profile-passcode-reset"></a>支持 Android 企业工作配置文件密码重置的平台
 
@@ -59,13 +59,15 @@ ms.locfileid: "80326456"
 
 1. 使用以下任何角色登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)：Azure Active Directory 全局管理员、Azure Active Directory Intune 服务管理员、支持人员或角色管理员。
 2. 依次选择“设备”和“所有设备”   。
-3. 从你管理的设备列表中，选择一个设备，然后选择“删除密码”  。
+3. 从你管理的设备的列表中，选择一个设备，然后选择“重置密码”  。
 
-## <a name="reset-android-work-profile-passcodes"></a>重置 Android 工作配置文件密码
+## <a name="reset-android-work-profile-and-device-owner-passcodes"></a>重置 Android 工作配置文件和设备所有者设备的密码
 
 受支持的使用工作配置文件注册的 Android 企业设备会为最终用户接收新的托管配置文件解锁密码或托管配置文件质询。
 
-对于运行版本 8.x 或更高版本且已使用工作配置文件注册的 Android 企业设备，最终用户会在注册完成后立即收到激活其重置密码的通知。 需提供和设置工作配置文件密码时会显示该通知。 输入其密码后，该通知将消除。
+对于运行版本 8.x 或更高版本的 Android Enterprise 工作配置文件设备，最终用户会在注册完成后立即收到激活其重置密码的通知。 需提供和设置工作配置文件密码时会显示该通知。 在密码输入后，通知就会消除。
+
+对于运行版本 8.x 或更高版本的 Android Enterprise 设备所有者或工作配置文件设备，在从控制台中选择重置密码后，MEM Intune 管理员会看到临时密码。 必须在设备上输入临时密码。 设备的临时密码将在控制台中显示 7 天。
 
 
 ## <a name="remove-iosipados-passcodes"></a>删除 iOS/iPadOS 密码

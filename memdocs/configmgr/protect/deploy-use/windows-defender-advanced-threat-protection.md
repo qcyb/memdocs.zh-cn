@@ -2,7 +2,7 @@
 title: Microsoft Defender 高级威胁防护
 titleSuffix: Configuration Manager
 description: 了解如何管理和监视 Microsofts Defender 高级威胁防护 - 这是一项可帮助企业应对高级安全攻击的新服务。
-ms.date: 04/01/2020
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 186751bb8b1768b34573e2b614ce992b58fa9232
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706235"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210139"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender 高级威胁防护
 
@@ -29,7 +29,7 @@ Microsoft Defender ATP 是 [Windows Defender 安全中心](https://securitycente
 
 - Microsoft Defender 高级威胁防护联机服务的订阅  
 - 运行 Configuration Manager 客户端的客户端计算机
-- 使用以下[支持的客户端操作系统](#bkmk_os)部分中列出的 OS 的客户端。 
+- 使用以下[支持的客户端操作系统](#bkmk_os)部分中列出的 OS 的客户端。
 
 ### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> 支持的客户端操作系统
 根据所运行的 Configuration Manager 版本，可以加入以下客户端操作系统：
@@ -62,7 +62,7 @@ Microsoft Defender ATP 是 [Windows Defender 安全中心](https://securitycente
       1. 完成此过程后，从“配置连接”部分复制“工作区密钥”和“工作区 ID”。   
 
 > [!IMPORTANT]
-> Microsoft Defender ATP 配置文件包含敏感信息，应保障其安全。
+> - Microsoft Defender ATP 配置文件包含敏感信息，应保障其安全。
 
 ## <a name="onboard-devices"></a>加入设备
 
@@ -70,6 +70,7 @@ Microsoft Defender ATP 是 [Windows Defender 安全中心](https://securitycente
 1. 键入 Microsoft Defender ATP 策略的名称和说明，然后选择“加入”    。
 1. 浏览到组织的 Microsoft Defender ATP 云服务租户提供的配置文件  。
    - 对于“Windows 7 和 8.1”或“Windows Server 2008 R2 SP1、2012 R2 和 2016”，请提供“工作区密钥”和“工作区 ID”     。
+   - 对于 Configuration Manager 版本 2002，即使你仅加入 Windows Server 2019 和 Windows Server 1803 或更高版本，也需要工作区密钥和工作区 ID   。 要获取这些至，请从 [Microsoft Defender ATP 联机服务](https://securitycenter.windows.com/)中选择“设置” > “加入” > “Windows 7 和 8.1”    。 <!--7054188-->
 1. 指定从托管设备收集和共享的文件示例以进行分析。  
 
    - **无**

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 64cb05d6e031cfe08789d6b7c923d9e489d0e433
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401340"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254310"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>将 Microsoft Edge for Windows 10 添加到 Microsoft Intune
 
 必须首先将应用添加到 Intune 中，才可以部署、配置、监视或保护它们。 可用的[应用类型](apps-add.md#app-types-in-microsoft-intune)之一是 Microsoft Edge 版本 77 和更高版本  。 通过在 Intune 中选择此应用类型，可以将 Microsoft Edge 版本 77 和更高版本分配并安装到由你管理的运行 Windows 10 的设备  。
 
 > [!IMPORTANT]
-> 此应用类型处于“公共预览”阶段，提供适用于 Windows 10 的“稳定”、“Beta”和“开发”通道  。 部署仅使用英语 (EN)，但最终用户可以在“设置” > “语言”下更改浏览器中的显示语言   。 Microsoft Edge 是一款安装在系统上下文和类似体系结构中的 Win32 应用（在 x86 OS 上安装为 x86 应用，在 x64 OS 上安装为 x64 应用）。 Intune 将检测任何预先存在的 Microsoft Edge 安装。 如果其安装在用户上下文中，系统安装会将其覆盖。 如果其安装在系统上下文中，则报告安装成功。 另外，默认“启用”  Microsoft Edge 自动更新。
+> 此应用类型为 Windows 10 提供了稳定渠道、Beta 渠道和 Dev 渠道。 部署仅使用英语 (EN)，但最终用户可以在“设置” > “语言”下更改浏览器中的显示语言   。 Microsoft Edge 是一款安装在系统上下文和类似体系结构中的 Win32 应用（在 x86 OS 上安装为 x86 应用，在 x64 OS 上安装为 x64 应用）。 Intune 将检测任何预先存在的 Microsoft Edge 安装。 如果其安装在用户上下文中，系统安装会将其覆盖。 如果其安装在系统上下文中，则报告安装成功。 另外，默认“启用”  Microsoft Edge 自动更新。
 
 > [!NOTE]
 > Microsoft Edge 版本 77 和更高版本也同样适用于 macOS  。
@@ -38,7 +38,7 @@ ms.locfileid: "80401340"
 
 ## <a name="prerequisites"></a>必备条件
 
-- Windows 10 版本 1703 或更高版本。
+- Windows 10 版本 1709 或更高版本。
 - 用户上下文中适用于所有通道的任何预安装的 Microsoft Edge 版本 77 及更高版本都将被系统上下文中安装的 Edge 覆盖  。
 
 ## <a name="configure-the-app-in-intune"></a>在 Intune 中配置应用

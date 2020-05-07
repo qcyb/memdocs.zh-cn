@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407839"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209867"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Windows 10（及更高版本）设备设置
 
@@ -81,11 +81,13 @@ ms.locfileid: "80407839"
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **仅应用商店中的应用**：此设置决定用户从 Microsoft Store 以外的位置安装应用时的用户体验。 选项包括：
+- **仅应用商店中的应用**：此设置决定用户从 Microsoft Store 以外的位置安装应用时的用户体验。 它不会阻止安装来自 USB 设备、网络共享或其他非 Internet 源的内容。 使用可信浏览器，有助于确保这些保护按预期运行。
+
+  选项包括：
 
   - **未配置**（默认）：Intune 不会更改或更新此设置。 默认情况下，OS 可能允许最终用户从 Microsoft Store 以外的位置安装应用，包括其他策略设置中定义的应用。  
   - **任何位置**：关闭应用建议，并允许用户从任何位置安装应用。  
-  - **仅 Store**：强制最终用户仅从 Microsoft Store 安装应用。
+  - **仅 Store**：目的是为了防止在从 Internet 下载可执行内容时有恶意内容会影响用户设备。 当用户尝试从 Internet 安装应用时，安装会被阻止。 用户会看到一条消息，建议其从 Microsoft Store 下载应用。
   - **建议**：从 Microsoft Store 中可用的 Web 安装应用时，用户将看到一条消息，建议他们从该商店下载该应用。  
   - **首选 Store**：当用户从 Microsoft Store 以外的位置安装应用时警告用户。
 
@@ -132,7 +134,7 @@ ms.locfileid: "80407839"
 - **蓝牙可发现性**：选择“阻止”可阻止其他已启用蓝牙的设备发现此设备  。 选择“未配置”（默认）则允许其他支持蓝牙的设备（如耳机）发现该设备  。
 - **蓝牙预配对**：选择“阻止”可阻止配置特定蓝牙设备自动与主机设备配对  。 选择“未配置”（默认）则允许与主机设备自动配对  。
 - **蓝牙广告**：选择“阻止”可阻止设备发送蓝牙广告  。 选择“未配置”（默认）则允许设备发送蓝牙广告  。
-- **蓝牙允许的服务**：添加受允许的蓝牙服务和配置文件列表作为十六进制字符串，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`  。
+- **蓝牙允许的服务**：添加受允许的蓝牙服务和配置文件列表作为十六进制字符串，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` 。
 
   有关服务列表的详细信息，请参阅 [ServicesAllowedList 用法指南](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)。
 
@@ -140,10 +142,14 @@ ms.locfileid: "80407839"
 
 这些设置使用[帐户策略 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts)，该策略还列出了受支持的 Windows 版本。
 
+> [!IMPORTANT]
+> 阻止或禁用这些 Microsoft 帐户设置可能会影响要求用户登录 Azure AD 的注册方案。 例如，如果你使用的是 [AutoPilot 白手套](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)。 通常情况下，用户会看到 Azure AD 登录窗口。 如果这些设置设为“阻止”  或“禁用”  ，则可能不会显示 Azure AD 登录选项。 相反，系统会要求用户接受 EULA，并创建本地帐户，而这可能不是你所希望的。
+
 - **Microsoft 帐户**：选择“阻止”可阻止最终用户将 Microsoft 帐户与设备关联  。 选择“未配置”（默认）则允许添加和使用 Microsoft 帐户  。
+
 - **非 Microsoft 帐户**：选择“阻止”可阻止最终用户使用用户界面添加非 Microsoft 帐户  。 选择“未配置”（默认）可允许用户添加与 Microsoft 帐户无关的电子邮件帐户  。
 - **Microsoft 帐户的设置同步**：选择“未配置”（默认）可允许设备和应用设置与 Microsoft 帐户关联以在设备之间进行同步  。 选择“阻止”可阻止这种同步  。
-- **Microsoft 帐户登录助手**：设置为“未配置”（默认）后，最终用户可以启动和停止“Microsoft 帐户登录助手”(wlidsvc) 服务   。 此操作系统服务允许用户登录到其 Microsoft 帐户。 选择“禁用”可防止终端用户控制 Microsoft 登录助手服务 (wlidsvc)  。
+- **Microsoft 帐户登录助手**：设置为“未配置”（默认）后，最终用户可以启动和停止“Microsoft 帐户登录助手”(wlidsvc) 服务   。 此操作系统服务允许用户登录到其 Microsoft 帐户。 选择“禁用”  可以将 Microsoft 登录助手服务 (wlidsvc) 配置为“已禁用”，并阻止最终用户手动启动它。
 
 ## <a name="cloud-printer"></a>云打印机
 
@@ -404,7 +410,7 @@ ms.locfileid: "80407839"
 - **允许全屏模式**：选择“是”（默认）可允许 Microsoft Edge 使用全屏模式，该模式仅显示 Web 内容并隐藏 Microsoft Edge UI  。 选择“否”会阻止 Microsoft Edge 使用全屏模式  。
 - **允许关于标志页**：选择“是”（默认）可使用 OS 默认值，其可能允许访问 `about:flags` 页  。 `about:flags` 页面允许用户更改开发人员设置并启用实验性功能。 选择“否”可阻止最终用户访问 Microsoft Edge 中的 `about:flags` 页面  。
 - **允许开发人员工具**：选择“是”（默认）可允许用户默认使用 F12 开发人员工具来生成和调试网页  。 选择“否”可阻止最终用户使用 F12 开发人员工具  。
-- **允许 JavaScript**：选择“是”（默认）可允许脚本（如 Javascript）在 Microsoft Edge 浏览器中运行  。 选择“否”可阻止在设备上运行浏览器中的 Java 脚本  。
+- **允许 JavaScript**：选择“是”  （默认）可允许脚本（如 Javascript）在 Microsoft Edge 浏览器中运行。 选择“否”可阻止在设备上运行浏览器中的 Java 脚本  。
 - **用户可安装扩展**：选择“是”（默认）可允许最终用户在设备上安装 Microsoft Edge 扩展  。 选择“否”可阻止安装  。
 - **允许旁加载开发人员扩展**：选择“是”（默认）可使用 OS 默认值，其可能会允许旁加载  。 旁加载安装并运行未经验证的扩展。 选择“否”可阻止 Microsoft Edge 使用“加载扩展”功能进行旁加载   。 它不会阻止使用其他方式加载扩展，例如 PowerShell。
 - **必需扩展**：选择最终用户在 Microsoft Edge 中不能关闭的扩展。 输入包系列名称，然后选择“添加”  。 [查找每个应用 VPN 的包系列名称 (PFN)](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) 提供一些指导。
@@ -669,7 +675,7 @@ ms.locfileid: "80407839"
 
 ## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender Smart Screen
 
-- **Microsoft Edge SmartScreen**：选择“需要”可关闭 Microsoft Defender SmartScreen，并阻止用户将其打开  。 选择“未配置”（默认）可启动 SmartScreen  。 帮助保护用户免受潜在威胁，防止用户将其关闭。
+- **Microsoft Edge SmartScreen**：选择“需要”可打开 Microsoft Defender SmartScreen，并阻止用户将其关闭  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，操作系统会打开 SmartScreen，并允许用户打开和关闭它。
 
   Microsoft Edge 使用 Microsoft Defender SmartScreen（已启用）防止用户受潜在网络钓鱼诈骗和恶意软件侵袭。
 

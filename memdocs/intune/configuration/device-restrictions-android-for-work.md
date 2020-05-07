@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407886"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166564"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置
 
@@ -85,7 +85,7 @@ ms.locfileid: "80407886"
 
 ### <a name="system-security"></a>系统安全
 
-- **对应用进行威胁扫描**：选择“需要”（默认）可启用 Google Play 保护机制在应用安装前后对其进行扫描  。 如果它检测到威胁，可能会警告用户从设备中删除该应用。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能无法启用或运行 Google Play 保护机制以扫描应用。
+- **对应用进行威胁扫描**：选择“需要”（默认）可启用 Google Play 保护机制在应用安装前后对其进行扫描  。 如果它检测到威胁，可能会警告用户从设备中删除该应用。 设置为“未配置”时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能无法启用或运行 Google Play 保护机制以扫描应用。
 
 ### <a name="dedicated-devices"></a>专用设备
 
@@ -207,6 +207,9 @@ ms.locfileid: "80407886"
 - **密码到期前的天数**：输入在用户必须更改设备密码前，设备密码保持有效的天数（介于 1-365 天之间）。 例如，要使密码在 90 天后过期，请输入 `90`。 密码到期后，系统会提示用户创建新密码。 如果该值为空，Intune 不会更改或更新此设置。
 - **用户可重用某个密码前需使用的密码数**：使用此设置可限制用户创建以前用过的密码。 输入以前用过的不能重用的密码数，从 1 到 24。 例如，输入 `5` 意味着用户不能将其新密码设置为当前密码或以前四个密码中的任何一个。 如果该值为空，Intune 不会更改或更新此设置。
 - **擦除设备前的登录失败次数**：输入设备擦除前允许的错误密码数，范围为 4-11 个。 如果为 `0`（零），可能会禁用设备擦除功能。 如果该值为空，Intune 不会更改或更新此设置。
+
+  > [!NOTE]
+  > “设备所有者”设备不会收到设置密码的提示。 密码设置操作是强制性操作，需要手动设置密码。 如果设置的密码不满足要求，用于强制执行的策略将显示为失败，直到满足要求为止。
 
 ### <a name="power-settings"></a>电源设置
 

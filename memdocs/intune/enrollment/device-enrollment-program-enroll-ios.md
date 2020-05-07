@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82b9dd1db3bd625f21dcdbf2df375f5b8612e74a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327229"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023344"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备
 
@@ -32,7 +32,7 @@ ms.locfileid: "80327229"
 
 可以设置 Intune 以注册通过 Apple [自动设备注册 (ADE)](https://deploy.apple.com)（以前为设备注册计划）购买的 iOS/iPadOS 设备。 借助自动设备注册，可以在不接触设备的情况下注册大量设备。 iPhone、iPad 和 MacBook 等设备可以直接寄送给用户。 用户打开设备时，包含 Apple 产品典型现成体验的“设置助理”将运行预先配置的设置，设备将注册以便进行管理。
 
-若要启用 ADE，请使用 Intune 和 [Apple Business Manager (ABM)](https://business.apple.com/) 或 [Apple School Manager (ASM)](https://school.apple.com/) 门户。 需要序列号列表或购买订单编号，这样才能将设备分配到 Intune 以便在任一 Apple 门户中进行管理。 在 Intune 中创建 ADE 注册配置文件，这些配置文件包含注册过程中应用于设备的设置。 请注意，ADE 不能与[设备注册管理器](device-enrollment-manager-enroll.md)帐户共同使用。
+若要启用 ADE，请使用 Intune 和 [Apple Business Manager (ABM)](https://business.apple.com/) 或 [Apple School Manager (ASM)](https://school.apple.com/) 门户。 需要序列号列表或购买订单编号，这样才能将设备分配到 Intune 以便在任一 Apple 门户中进行管理。 在 Intune 中创建 ADE 注册配置文件，这些配置文件包含注册过程中应用于设备的设置。 ADE 无法用于[设备注册管理员](device-enrollment-manager-enroll.md)帐户。
 
 > [!NOTE]
 > ADE 设置最终用户不一定能删除的设备配置。 因此，在[迁移到 ADE](../fundamentals/migration-guide-considerations.md) 之前，必须擦除设备，使其返回到全新状态。
@@ -52,7 +52,7 @@ ADE 注册与 App Store 版公司门户应用不兼容。 可以授权用户访�
 
 Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式的 iOS/iPadOS 设备进行更多管理和控制，例如阻止屏幕捕获和阻止从 App Store 安装应用。 因此，这种模式对企业拥有的设备特别有用。 在 ADE 中，Intune 支持将设备配置为受监督模式。
 
-在 iOS/iPadOS 11 中，已弃用对未受监督的 ADE 设备的支持。 在 iOS/iPadOS 11 和更高版本中，应始终对 ADE 配置的设备进行监督。 在未来发布的 iOS/iPadOS 版本中，将忽略“ADE 受监督”标记  。
+在 iOS/iPadOS 11 中，已弃用对未受监督的 ADE 设备的支持。 在 iOS/iPadOS 11 和更高版本中，应始终对 ADE 配置的设备进行监督。 在 iOS/iPadOS 13.0 及更高版本中，将忽略 ADE“is_supervised”标志  。 在通过自动设备注册进行注册后，具有 13.0 及更高版本的所有 iOS/iPadOS 设备都将自动受到监视。 
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -66,6 +66,13 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 - 在 [Apple 的 ADE](https://deploy.apple.com) 中购买的设备
 - [移动设备管理 (MDM) 机构](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
+
+## <a name="supported-volume"></a>支持的卷
+
+- 每令牌的最大注册配置文件数：1,000  
+- 每配置文件的最大自动设备注册设备数：无限制（只要在每令牌的最大设备数范围内）
+- 每 Intune 帐户的最大自动设备注册令牌数：2,000
+- 每令牌的最大自动设备注册设备数：75,000
 
 ## <a name="get-an-apple-ade-token"></a>获取 Apple ADE 令牌
 
@@ -84,8 +91,8 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 
 2. 选择“我同意”，为 Microsoft 授予向 Apple 发送用户和设备信息的权限  。
 
-> [!NOTE]
-> 完成步骤 2 以下载 Intune 公钥证书后，请不要关闭向导或离开此页面。 如果关闭了向导或离开了此页面，则会使已下载的证书失效，你需要再次重复此过程。 如果遇到这种情况，“查看 + 创建”选项卡上的“创建”按钮通常会显示为灰色，并且你无法完成该过程   。
+   > [!NOTE]
+   > 完成步骤 2 以下载 Intune 公钥证书后，请不要关闭向导或离开此页面。 这样做会令已下载的证书失效，导致你需要再次重复此过程。 如果遇到这种情况，你通常会注意到“审阅 + 创建”  选项卡上的“创建”  按钮灰显，你无法完成此过程。
 
    ![Apple 证书工作区中用于下载公钥的“注册计划令牌”窗格的屏幕截图。](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
@@ -122,7 +129,7 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>步骤 4. 上传令牌并选择作用域标记。
 
-1. 在“Apple 令牌”框中，浏览到证书 (.pem) 文件，选择“打开”   。
+1. 在“Apple 令牌”  框中，浏览到证书 (.p7m) 文件，然后选择“打开”  。
 2. 如果要将[作用域标记](../fundamentals/scope-tags.md)应用于此 DEP 令牌，则选择“作用域 (标记)”，并选择所需的作用域标记  。 应用于令牌的作用域标记将由添加到此令牌的配置文件和设备继承。
 3. 选择“创建”  。
 
@@ -141,14 +148,15 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 
     ![“创建配置文件”的屏幕截图。](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. 在“基本信息”  页上，输入配置文件的“名称”  和“说明”  ，以便于管理。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组  。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 详细了解 [Azure Active Directory 动态组](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
+3. 在“基本信息”  页上，输入配置文件的“名称”  和“说明”  ，以便于管理。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组  。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 对于通过具有用户关联的自动设备注册进行了注册的设备，注册用户在设备设置之前就是成员的目标 AAD 用户组将确保最快地将策略交付给这些设备。 如果使应用程序和策略面向基于注册配置文件的动态组，则将导致在完成注册流之后，延迟一段时间后才会应用到设备。
+详细了解 [Azure Active Directory 动态组](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
 
     ![配置文件名称和描述。](./media/device-enrollment-program-enroll-ios/image05.png)
 
 4. 选择“下一步:  设备管理设置”。
 
 5. 对于“用户关联”，选择具有此配置文件的设备是否必须通过已分配的用户进行注册  。
-    - 通过用户关联进行注册  - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 如果使用 ADFS 且注册配置文件的“不使用设置助理而使用公司门户进行身份验证”  设置为“否”  ，则需使用 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)[了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
+    - 通过用户关联进行注册  - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 如果使用的是 ADFS，且使用设置助理进行身份验证，则需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)[（了解更多）](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
 
     - 不通过用户关联进行注册 - 为不属于单个用户的设备选择此选项  。 此选项适用于不访问本地用户数据的设备。 公司门户等应用将无法运行。
 
@@ -164,7 +172,7 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
     >
     > 使用 Apple 设置助理进行身份验证时，不支持执行这些操作。
 
-6. 如果对“选择用户必须进行身份验证的位置”  选择了“公司门户”  ，可以使用 VPP 令牌在设备上自动安装公司门户。 在这种情况下，用户无需提供 Apple ID。 要使用 VPP 令牌安装公司门户，请在“使用 VPP 安装公司门户”下选择一个令牌  。 要求已将公司门户添加到 VPP 令牌中。 若要确保在注册后继续更新公司门户应用，请确保已在 Intune 中配置了应用部署（“Intune”>“客户端应用”）。 因此，用户交互不是必需的，你很可能希望将公司门户作为 iOS/iPadOS VPP 应用，使其成为必需的应用，并使用设备许可进行分配。 请确保令牌没有过期，并且具有足够公司门户应用使用的设备许可证。 如果令牌到期或许可证用完，Intune 会改为安装 App Store 版公司门户，并提示输入 Apple ID。 
+6. 如果对“选择用户必须进行身份验证的位置”  选择了“公司门户”  ，可以使用 VPP 令牌在设备上自动安装公司门户。 在这种情况下，用户无需提供 Apple ID。 要使用 VPP 令牌安装公司门户，请在“使用 VPP 安装公司门户”下选择一个令牌  。 要求已将公司门户添加到 VPP 令牌中。 若要确保在注册后继续更新公司门户应用，请确保已在 Intune 中配置了应用部署（“Intune”>“客户端应用”）。 因此，用户交互不是必需的，你最有可能希望将公司门户作为 iOS/iPadOS VPP 应用，使之成为必需应用，并对分配使用设备授权。 请确保令牌没有过期，并且具有足够公司门户应用使用的设备许可证。 如果令牌到期或许可证用完，Intune 会改为安装 App Store 版公司门户，并提示输入 Apple ID。 
 
     > [!NOTE]
     > 如果将“选择用户必须进行身份验证的位置”  设置为“公司门户”  ，请务必在将公司门户下载到 ADE 设备的最初 24 小时内执行设备注册流程。 否则，注册可能会失败，需要恢复出厂设置才能注册设备。
@@ -197,10 +205,15 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 
 10. 选择是否要对使用此配置文件的设备进行锁定注册。 “锁定注册”  将禁用允许从“设置”  菜单删除管理配置文件的 iOS/iPadOS 设置。 在设备注册之后，如果不擦除设备，就无法更改此设置。 此类设备必须将“受监督”管理模式设置为“是”。   
 
+    > [!NOTE]
+    > 在设备通过“锁定的注册”  注册后，用户将无法在公司门户应用中使用“删除设备”  或“恢复出厂设置”  。 用户将无法使用这些选项。 用户也将无法在公司门户网站 (https://portal.manage.microsoft.com) 中删除设备。
+    > 此外，如果 BYOD 设备转换为 Apple 自动设备注册设备，并通过已启用“锁定的注册”  的配置文件进行注册，那将允许用户使用“删除设备”  和“恢复出厂设置”  30 天，30 天后这些选项将被禁用或不可用。 参考： https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859 。
+
 11. 选择是否要让使用此配置文件的设备能够“与计算机同步”  。 如果选择“通过证书允许 Apple Configurator”  ，则必须在“Apple Configurator 证书”  下选择证书。
 
      > [!NOTE]
-     > 如果将“与计算机同步”设置为“全部拒绝”   ，则 iOS 和 iPadOS 设备上的端口将受到限制。 该端口只能用于充电，不能用于其他操作。 将阻止端口使用 iTunes 或 Apple 配置器。
+     > 如果将“与计算机同步”设置为“全部拒绝”   ，则 iOS 和 iPadOS 设备上的端口将受到限制。 该端口只能用于充电，不能用于其他操作。 端口将被阻止使用 iTunes 或 Apple Configurator 2。
+     如果“与计算机同步”  设置为“通过证书允许 Apple Configurator”  ，请务必保存证书的本地副本，以供日后使用。 你将无法更改已上传的副本。 请务必保留此证书，以供日后使用。 
 
 12. 如果在上一步中选择了“通过证书允许 Apple Configurator”，则选择要导入的“Apple Configurator 证书”。 
 
@@ -287,7 +300,7 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 ## <a name="renew-an-ade-token"></a>续订 ADE 令牌  
 
 > [!NOTE]
-> 除了每年更新 ADE 令牌，当在 Apple Business Manager 中设置令牌的用户的托管 Apple ID 密码更改或该用户退出 Apple Business Manager 组织时，你还需要在 Intune 和 Apple Business Manager 中续订注册计划令牌。
+> 除了每年续订一次 ADE 令牌之外，还需要在以下情况下在 Intune 和 Apple Business Manager 中续订注册计划令牌：托管的 Apple ID 密码对在 Apple Business Manager 中设置令牌的用户或离开 Apple Business Manager 组织的用户发生更改。
 
 1. 转到 business.apple.com。  
 2. 在“管理服务器”下，选择与想要续订的令牌文件相关的 MDM 服务器  。
@@ -305,3 +318,15 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 8. 上传新下载的令牌。  
 9. 选择“续订令牌”  。 你将看到令牌已续订的确认消息。   
     ![确认消息屏幕截图。](./media/device-enrollment-program-enroll-ios/confirmation.png)
+
+## <a name="delete-an-ade-token-from-intune"></a>从 Intune 中删除 ADE 令牌
+
+只要满足以下条件，即可从 Intune 中删除注册配置文件令牌：
+- 未向令牌分配任何设备
+- 未向默认配置文件分配任何设备
+
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“设备”   > “iOS/macOS”   > “iOS/macOS 注册”   > “注册计划令牌”  > 选择令牌 >“设备”  。
+2. 删除向令牌分配的所有设备。
+3. 依次转到“设备”   > “iOS/macOS”   > “iOS/macOS 注册”   > “注册计划令牌”  > 选择令牌 >“配置文件”  。
+4. 删除默认配置文件（若有）。
+5. 依次转到“设备”   > “iOS/macOS”   > “iOS/macOS 注册”   > “注册计划令牌”  > 选择令牌 >“删除”  。

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407751"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771416"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -31,7 +31,7 @@ ms.locfileid: "80407751"
 
 ## <a name="customizing-the-user-experience"></a>自定义用户体验
 
-自定义最终用户体验有助于为最终用户提供熟悉且有用的体验。 为此，请导航到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“租户管理” > “自定义”，然后配置所需的设置   。 这些设置将适用于公司门户应用、公司门户网站和 Android 上 Intune 应用。
+自定义最终用户体验有助于为最终用户提供熟悉且有用的体验。 要执行此操作，请导航到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，并选择“租户管理” > “自定义”，可在其中编辑默认策略或创建多达 10 组的目标策略   。 这些设置将适用于公司门户应用、公司门户网站和 Android 上 Intune 应用。
 
 ## <a name="branding"></a>品牌打造
 
@@ -55,7 +55,8 @@ ms.locfileid: "80407751"
 合适的品牌形象可以表现出组织品牌的强烈意识，从而增强用户对组织的信任。 建议考虑以下用于获取、选择和优化显示位置图像的一些提示。
 
 - 联系市场部或文艺部。 他们可能已经拥有一组被认可的品牌图像。 他们也可以根据需要帮助你优化图像。
-- 请同时考虑横向和纵向的构图。 图像背景应足以围绕焦点。 可以基于设备大小、方向和平台对图像进行不同的剪裁。
+- 请同时考虑横向和纵向的构图。
+ 图像背景应足以围绕焦点。 可以基于设备大小、方向和平台对图像进行不同的剪裁。
 - 避免使用通用的图库图像。 此图像应体现组织的品牌，并使用户感到熟悉。 如果你没有，那么最好不要使用，这也比使用对用户没有任何意义的通用图像要好。
 - 删除不需要的元数据。 图像文件可以附带元数据，例如相机配置文件、地理位置、标题、字幕等。 使用图像优化工具去除此信息，以确保高质量并同时满足文件大小限制。
 
@@ -93,6 +94,7 @@ ms.locfileid: "80407751"
 | 隐私声明 URL | 79 | 将用户的隐私声明设置为在用户单击隐私链接时显示。 必须以 `https://www.contoso.com` 格式输入有效的 URL。 |
 | iOS/iPadOS ​公司门户中的隐私消息 | 520 | 保留默认值或设置自定义消息以列出组织在托管的 iOS/iPadOS 设备上可以看到或看不到的项。 可以使用 Markdown 添加项目符号、粗体、斜体和链接。 |
 | 设备注册 | 不适用 | 指定是否以及如何提示用户注册移动设备管理。 详细信息如下所示。 |
+| 设备所有权通知 | 不适用 | 在 Android 和 iOS 公司门户用户的设备所有权类型从“个人”更改为“公司”时，向他们发送推送通知。 此推送通知默认设为“关”。 当设备所有权设置为公司所有权时，Intune 可更好地访问设备，其中包括完整的应用清单、FileVault 密钥轮换、电话号码检索和一些特选远程操作。 有关详细信息，请参阅[更改设备所有权](../enrollment/corporate-identifiers-add.md#change-device-ownership)。  |
 
 ### <a name="device-enrollment-setting-options"></a>设备注册设置选项
 
@@ -110,7 +112,8 @@ ms.locfileid: "80407751"
 <sup>(1)</sup> **已知问题：** 如果将应用设置为需要注册才能安装，并且将设备注册设置为“不可用”，则 Android 上的公司门户应用仍将指导用户进行注册。 这将很快被删除。
 
 > [!NOTE]
-> 如果使用的是 Azure 政府版，则会向最终用户提供应用日志，由其决定当启动获取问题帮助的进程时如何进行共享。 但是，如果使用的不是 Azure 政府，那么当用户启动获取问题帮助的进程时，公司门户将直接向 Microsoft 发送应用日志。 向 Microsoft 发送应用日志可更轻松地排除故障和解决问题。
+> 如果使用的是 Azure 政府版，则会向最终用户提供应用日志，由其决定当启动获取问题帮助的进程时如何进行共享。
+ 但是，如果使用的不是 Azure 政府，那么当用户启动获取问题帮助的进程时，公司门户将直接向 Microsoft 发送应用日志。 向 Microsoft 发送应用日志可更轻松地排除故障和解决问题。
 
 > [!NOTE]
 > 与 Microsoft 和 Apple 策略保持一致，我们不会出于任何原因向任何第三方出售我们服务收集的任何数据。
@@ -137,7 +140,8 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 | 领域 | 说明 | 键盘快捷方式 |
 |:------------------:|:--------------:|:-----------------:|
 | 导航菜单 | 导航 | Alt+M |
-|  | 主页 | Alt+H |
+|  | 主页
+ | Alt+H |
 |  | 所有应用 | Alt+A |
 |  | 已安装的应用 | Alt+I |
 |  | 发送反馈 | Alt+F |
@@ -188,8 +192,8 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 <sup>(4)</sup>“重命名”仅更改公司门户应用或 Web 门户中的设备名称，不会更改设备上的名称  。<br>
 <sup>(5)</sup>“擦除”在用户注册的 iOS/iPadOS 设备上不可用  。<br>
 <sup>(6)</sup> 一些 Android 和 Android Enterprise 配置不支持“密码重置”  。 有关详细信息，请参阅[在 Intune 中重置或删除设备密码](../remote-actions/device-passcode-reset.md)。<br>
-<sup>(7)</sup>“停用”和“擦除”在 Android Enterprise 设备所有者场景（COPE、COBO、COSU）中不可用   。<br> 
-<sup>(8) </sup> 用户注册的 iOS/iPadOS 设备不支持“重置密码” **** 。
+<sup>(7)</sup>“停用”和“擦除”在 Android Enterprise 设备所有者场景（COPE、COBO、COSU）中不可用   。<br>
+<sup>(8)</sup> 用户注册的 iOS/iPadOS 设备不支持“重置密码”  。
 
 ## <a name="next-steps"></a>后续步骤
 

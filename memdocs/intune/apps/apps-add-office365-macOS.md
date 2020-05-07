@@ -1,12 +1,12 @@
 ---
-title: 使用 Microsoft Intune 将 Office 365 安装到 macOS 设备
+title: 使用 Microsoft Intune 将 Office 365 应用安装到 macOS 设备
 titleSuffix: ''
 description: 了解如何使用 Microsoft Intune 在 macOS 设备上安装 Office 365 应用。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,32 +18,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 007d5929c6d1b0dd953d4910b31c872582e817cc
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 39837fc3d97389d830fb1befe7e55c276022d351
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324853"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023225"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>使用 Microsoft Intune 将 Office 365 分配给 macOS 设备
 
-借助此应用类型，可以轻松地将 Office 365 2016 应用分配给 macOS 设备。 使用此应用类型，可以安装 Word、Excel、PowerPoint、Outlook 和 OneNote。 为帮助保护和不断更新应用，这些应用随附 Microsoft AutoUpdate (MAU)。 所需的应用将显示为 Intune 控制台的应用列表中的一个应用。
+借助此应用类型，可以轻松地将 Office 365 2016 应用分配给 macOS 设备。 使用此应用类型，可安装 Word、Excel、PowerPoint、Outlook、OneNote 和 Teams。 为帮助保护和不断更新应用，这些应用随附 Microsoft AutoUpdate (MAU)。 所需的应用将显示为 Intune 控制台的应用列表中的一个应用。
 
+> [!NOTE]
+> Microsoft Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 在我们的文档中，我们通常将它称为  Microsoft 365 应用版。
 
 ## <a name="before-you-start"></a>开始之前
 
-开始将 Office 365 添加到 macOS 设备前，请了解以下详细信息：
+开始将 Office 365 应用添加到 macOS 设备前，请了解以下详细信息：
 
 - 部署这些应用的设备必须运行 macOS 10.10 或更高版本。
 - Intune 仅支持添加 Office 2016 for Mac 套件随附的 Office 应用。
 - 当 Intune 安装应用套件时，如果任何 Office 应用处于打开状态，用户可能会丢失未保存文件中的数据。
 
-## <a name="select-the-office-365-suite-app-type"></a>选择 Office 365 套件应用类型
+## <a name="select-microsoft-365-apps"></a>选择 Microsoft 365 应用版
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“应用”   > “所有应用”   > “添加”  。
-3. 在“选择应用类型”  窗格的“Office 365 套件”  部分中选择“macOS”  。
-4. 单击“选择”  。 将显示“添加 Office 365 套件”  步骤。
+3. 在“选择应用类型”窗格的“Microsoft 365 应用版”部分中选择“macOS”    。
+4. 4. 单击“选择”  。 随即显示“添加 Microsoft 365 应用版”  步骤。
 
 ## <a name="step-1---app-suite-information"></a>步骤 1 - 应用套件信息
 
@@ -60,8 +62,8 @@ ms.locfileid: "80324853"
     - **开发者**：Microsoft 显示为开发者。
     - **所有者**：Microsoft 显示为所有者。
     - **备注**：输入想与此应用关联的任何备注。
-    - **徽标**：用户浏览公司门户时，Office 365 徽标与应用一同显示。
-2. 单击“下一步”  以显示“作用域标记”  页面。
+    - **徽标**：用户浏览公司门户时，Microsoft 365 应用版徽标与应用一同显示。
+2. 单击“下一步”  以显示“作用域标记”  页面。  
 
 ## <a name="step-2---select-scope-tags-optional"></a>步骤 2 - 选择作用域标记（可选）
 可以使用作用域标记来确定谁可以在 Intune 中查看客户端应用信息。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。
@@ -74,7 +76,7 @@ ms.locfileid: "80324853"
 1. 为应用套件选择“必需”  或“适用于已注册的设备”  组分配。 有关详细信息，请参阅[添加用于组织用户和设备的组](../fundamentals/groups-add.md)和[使用 Microsoft Intune 将应用分配到组](apps-deploy.md)。
 
     >[!Note]
-    > 无法通过 Intune 卸载 Office 365 for macOS 应用套件。
+    > 无法通过 Intune 卸载“适用于 macOS 的 Microsoft 365 应用版”应用套件。
 
 2. 单击“下一步”  以显示“查看 + 创建”页  。 
 
@@ -83,9 +85,9 @@ ms.locfileid: "80324853"
 1. 查看为应用套件输入的值和设置。
 2. 完成后，单击“创建”  将应用添加到 Intune。
 
-    随即显示创建的 Office 365 Window 10 应用套件的“概述”  边栏选项卡。 应用套件在应用列表中显示为各个条目。
+    随即显示“概述”  边栏选项卡。 应用套件在应用列表中显示为各个条目。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要了解如何将 Office 365 应用添加到 Windows 10 设备，请参阅[使用 Microsoft Intune 将 Office 365 专业增强版 2016 应用分配给 Windows 10 设备](apps-add-office365.md)。
+- 要了解如何将 Office 365 应用添加到 Windows 10 设备，请参阅[使用 Microsoft Intune 将 Microsoft 365 应用版分配给 Windows 10 设备](apps-add-office365.md)。
 - 要了解从用户组添加和排除应用分配，请参阅[添加和排除应用分配](apps-inc-exl-assignments.md)。

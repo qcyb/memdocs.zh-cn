@@ -2,7 +2,7 @@
 title: 业务流程组
 titleSuffix: Configuration Manager
 description: 创建业务流程组并向其部署更新。
-ms.date: 04/01/2020
+ms.date: 04/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d9998f298cee24e9f10b3fd8c5e58d7b76200485
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702975"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254905"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Configuration Manager 中的业务流程组
 <!--3098816-->
@@ -137,8 +137,7 @@ ms.locfileid: "81702975"
 1. 如果业务流程组处于“失败”状态  ：
    1. 确定业务流程失败的原因并解决所有问题。
    1. [重置组成员的业务流程状态](#bkmk_reset)。
-   1. 从“业务流程组”节点中，单击“启动业务流程”按钮重新启动业务流程   。
-    使用“启动业务流程”按钮重置该状态  。  
+   1. 从“业务流程组”节点中，单击“启动业务流程”按钮来重新开始业务流程   。
    [![启动业务流程](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
 
 

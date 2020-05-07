@@ -2,7 +2,7 @@
 title: 基于令牌的 CMG 身份验证
 titleSuffix: Configuration Manager
 description: 在内部网络上注册客户端以获得唯一令牌，或为基于 Internet 的设备创建批量注册令牌。
-ms.date: 04/01/2020
+ms.date: 04/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae92fa2f8e3ee3270de4777fd889bc5fc16a6de4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694135"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587267"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>为云管理网关进行基于令牌的身份验证
 
@@ -99,7 +99,7 @@ Configuration Manager 客户端与管理点一起管理此令牌，因此不存�
 
 #### <a name="lifetime"></a>/lifetime
 
-与 `/new` 参数结合使用，用于指定令牌的令牌有效期。 指定以分钟为单位的整数值。 默认值为 4,320（三天）。
+与 `/new` 参数结合使用，用于指定令牌的令牌有效期。 指定以分钟为单位的整数值。 默认值为 4,320（3 天）。 最大值为 10,080（7 天）。
 
 示例：`BulkRegistrationTokenTool.exe /lifetime:4320`
 

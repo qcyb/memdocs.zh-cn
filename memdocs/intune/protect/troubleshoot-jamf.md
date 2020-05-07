@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 04/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084640"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525694"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>对 Jamf Pro 与 Microsoft Intune 的集成进行故障排除
 
@@ -35,21 +35,22 @@ ms.locfileid: "80084640"
 
 在开始故障排除之前，请收集一些基本信息以阐明问题并缩短查找解决方案的时间。 例如，当遇到与 Jamf-Intune 集成相关的问题时，请始终验证是否满足了先决条件。 在开始故障排除之前，请查看以下注意事项：
 
-- 查看[将Jamf Pro 与 Intune 集成](conditional-access-integrate-jamf.md#prerequisites)的先决条件。
-- 所有用户都必须具有 Microsoft Intune 和 Microsoft AAD Premium P1 许可证 
+- 请查阅以下文章中的先决条件（具体视你如何配置 Jamf Pro 与 Intune 的集成而定）：
+  - [使用 Jamf 云连接器集成 Jamf Pro 与 Intune](conditional-access-jamf-cloud-connector.md)
+  - [集成 Jamf Pro 与 Intune](conditional-access-integrate-jamf.md#prerequisites)
+- 所有用户都必须具有 Microsoft Intune 和 Microsoft AAD Premium P1 许可证
 - 必须具有在 Jamf Pro 控制台中拥有 Microsoft Intune 集成权限的用户帐户。
 - 必须拥有在 Azure 中具有全局管理员权限的用户帐户。
 
+调查 Jamf Pro 与 Intune 的集成时，请考虑以下信息：
 
-调查 Jamf Pro 与 Intune 的集成时，请考虑以下信息： 
 - 确切错误消息是什么？
 - 错误消息位于何处？
 - 何时开始出现问题？  Jamf Pro 与 Intune 的集成是否有效？
 - 有多少用户受到影响？ 是所有用户都受影响还是仅仅一部分用户受影响？
 - 有多少设备受到影响？ 是所有设备都受影响还是仅仅一部分设备受影响？
  
-
-## <a name="common-problems"></a>常见问题 
+## <a name="common-problems"></a>常见问题
 
 以下信息可帮助你在设置 Intune 和 Jamf Pro 集成后识别并解决设备的常见问题。  
 
@@ -109,23 +110,23 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 #### <a name="cause-1"></a>原因 1  
 
-**Azure 中的 Jamf Pro 企业应用程序具有错误的权限或具有多个权限**  
+**Azure 中的 Jamf Pro 企业应用程序具有错误的权限或具有多个权限**
 
   在 Azure 中创建应用时，必须删除所有默认 API 权限，然后为 Intune 分配一个 update_device_attributes 权限  。 
 
   **解决方法**  
-  查看并在必要时更正在 Azure AD 中创建的 Jamf 应用的权限。 请参阅[在 Azure AD 中为 Jamf 创建应用程序](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory)的过程。 
+  审阅并更正（若有必要）Jamf 应用程序的权限。 如果你使用 Jamf Pro 云连接器，则会为你创建此应用程序。 如果手动配置了集成，则在 Azure AD 中创建了应用程序。 有关应用程序权限，请参阅[在 Azure AD 中创建 Jamf 应用程序](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory)过程。
 
 #### <a name="cause-2"></a>原因 2  
 
 未在 Azure AD 租户中创建 Jamf 本机 macOS 连接器应用，或者该连接器的同意是由没有全局管理员权限的帐户签署的   
 
   **解决方法**  
-  请参阅 docs.jamf.com 上的[与 Microsoft Intune 集成](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)中的“配置 macOS Intune 集成”部分  。 
+  请参阅 docs.jamf.com 上的[与 Microsoft Intune 集成](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)中的“配置 macOS Intune 集成”部分  。
 
 #### <a name="cause-3"></a>原因 3
 
-**用户没有有效的 Intune 或 Jamf 许可证**  
+**用户没有有效的 Intune 或 Jamf 许可证**
 
   缺少有效的许可证可导致以下错误，这表明 Jamf 许可证已过期：  
   ```
@@ -183,8 +184,10 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 关闭集成后，Jamf Pro 服务器会向 Intune 服务器发送一个脉冲，告知 Intune 已禁用集成。 
 
 **解决方法**  
-在 Jamf Pro 中重新启用 Intune 集成。 请参阅[在 Jamf Pro 中配置 Microsoft Intune 集成](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro)。
+在 Jamf Pro 中重新启用 Intune 集成。 请参阅以下内容（具体视你如何配置集成而定）：
 
+- [使用 Jamf 云连接器集成 Jamf Pro 与 Intune](conditional-access-jamf-cloud-connector.md)
+- [在 Jamf Pro 中手动配置 Microsoft Intune 集成](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro)。
 
 #### <a name="cause-6"></a><a name="cause-6"></a>原因 6  
 
@@ -226,8 +229,8 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
    - 种类：应用程序密码；帐户：com.microsoft.workplacejoin.registeredUserPrincipalName
    - 种类：证书；颁发者：MS-Organization-Access
    - 种类：标识首选项；名称（如果存在，则为 ADFS STS URL）： https://adfs\<DNSName>.com/adfs/ls
-   - 种类：标识首选项；名称： https://enterpriseregistration.windows.net
-   - 种类：标识首选项；名称： https://enterpriseregistration.windows.net/  
+   - 种类：标识首选项；名称：`https://enterpriseregistration.windows.net`
+   - 种类：标识首选项；名称：`https://enterpriseregistration.windows.net/`
 9. 重启 Mac 设备。
 10. 从设备中卸载公司门户。
 11. 请转到 portal.manage.microsoft.com 并删除 Mac 设备的所有实例。 等待至少 30 分钟，然后再执行下一步。
@@ -270,29 +273,27 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 从 Intune 和 Jamf Pro 集成中删除设备后，可能会遗留某些数据，这可能会导致连续注册创建重复条目。  
 
 **解决方法**  
-若要解决此问题，请按照本文前面的针对设备注册失败的[*原因 6*](#cause-6) 的解决方案进行操作  。 
+若要解决此问题，请按照本文前面的针对设备注册失败的[*原因 6*](#cause-6) 的解决方案进行操作  。
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>合规性策略无法评估设备  
 
-**原因**：Jamf 与 Intune 的集成不支持针对设备组的合规性策略。 
+**原因**：Jamf 与 Intune 的集成不支持针对设备组的合规性策略。
 
 **解决方法**  
-修改要分配给用户组的 macOS 设备的合规性策略。 
-
+修改要分配给用户组的 macOS 设备的合规性策略。
 
 ### <a name="could-not-retrieve-the-access-token-for-microsoft-graph-api"></a>无法检索 Microsoft Graph API 的访问令牌
 
 收到以下错误：
 
-```
-   Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.
-```   
+`Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.`
 
-此错误的源可能是以下某种原因： 
+此错误的源可能是以下某种原因：
 
 #### <a name="theres-a-permission-issue-with-the-jamf-pro-application-in-azure"></a>Azure 中的 Jamf Pro 应用存在权限问题
 
-在 Azure 中注册 Jamf Pro 应用时，会出现以下某种情况：  
+在 Azure 中注册 Jamf Pro 应用时，会出现以下某种情况：
+
 - 应用获得了多个权限。
 - 未选择“授予 \<你的公司> 管理许可”选项  。  
 
@@ -301,12 +302,13 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 #### <a name="a-license-required-for-jamf-intune-integration-has-expired"></a>Jamf-Intune 集成所需的许可证已过期
 
-**解决方法**：请参阅[设备注册失败](#devices-fail-to-register)的原因 3 的解决方案。 
+**解决方法**：请参阅[设备注册失败](#devices-fail-to-register)的原因 3 的解决方案。
 
 #### <a name="the-required-ports-arent-open-on-your-network"></a>网络上未打开所需的端口
 
-**解决方法**：查看将 Jamf Pro 与 Intune 集成的[先决条件](conditional-access-integrate-jamf.md#prerequisites)中的网络端口的信息。
-
+**解决方法**：  
+查看将 Jamf Pro 与 Intune 集成的[先决条件](conditional-access-jamf-cloud-connector.md#prerequisites)中的网络端口的信息。
 
 ## <a name="next-steps"></a>后续步骤
+
 了解有关[将 Jamf Pro 与 Intune 集成](conditional-access-integrate-jamf.md)的详细信息

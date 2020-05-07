@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083675"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023004"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune 的应用配置策略
 
@@ -72,6 +72,20 @@ ms.locfileid: "80083675"
 
 > [!NOTE]
 > 对于多标识应用（如 Microsoft Outlook），可以考虑用户首选项。 例如，重点收件箱将遵循用户设置，而不会更改配置。 使用其他参数可控制用户是否可以或不可以更改设置。 有关详细信息，请参阅[部署 Outlook for iOS/iPadOS 和 Outlook for Android 应用配置设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
+
+## <a name="android-app-configuration-policies"></a>Android 应用配置策略
+
+对于 Android 应用配置策略，可以在创建应用配置文件前选择设备注册类型。 可以考虑基于注册类型的证书配置文件（“工作配置文件”或“设备所有者配置文件”）。 此更新包括以下内容：
+
+1. 如果新建了配置文件，并为设备注册类型选择了“工作配置文件”和“设备所有者配置文件”，则无法关联证书配置文件与应用配置策略。
+2. 如果已创建新的配置文件，并且选择了仅“工作配置文件”，那么可以使用在设备配置下创建的工作配置文件证书策略。
+3. 如果已创建新的配置文件，并且选择了仅“设备所有者”，那么可以使用在设备配置下创建的设备所有者证书策略。 
+4. 如果将 Gmail 或 Nine 配置文件部署到尚没有任何用户的 Android Enterprise 专用设备，则部署将失败，因为 Intune 无法解析用户。
+
+> [!IMPORTANT]
+> 在此功能发布前（2004 年 - 2020 年 4 月版本）创建的且没有与任何证书配置文件关联的现有策略，将默认为设备注册类型选择“工作配置文件”和“设备所有者配置文件”。 另外，在此功能发布前创建的且与证书配置文件关联的现有策略，将默认为设备注册类型只选择“工作配置文件”。
+> 
+> 现有策略不会修正或颁发新证书。
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>验证托管应用配置策略
 
@@ -149,7 +163,7 @@ ms.locfileid: "80083675"
 
 ### <a name="android-configuration-on-managed-devices"></a>托管设备上的 Android 配置
 
-可以在托管应用配置的托管设备上使用 Intune 诊断日志  验证 iOS/iPadOS 配置。
+可以使用 Intune 诊断日志  在受管理设备上验证 Android 配置，以进行托管应用配置。
 
 若要从 Android 设备中收集日志，你或最终用户必须通过 USB 连接（或设备上等效的文件资源管理器  ）从设备下载日志。 下面是相关步骤：
 

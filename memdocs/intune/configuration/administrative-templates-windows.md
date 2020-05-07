@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75ef2a03c9f42f0bda78af009f0fb563fbcedb75
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219995"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254888"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>使用 Windows 10 模板在 Microsoft Intune 中配置组策略设置
 
@@ -41,7 +41,7 @@ Windows 设置类似于 Active Directory (AD) 中的组策略 (GPO) 设置。 �
 
 ## <a name="before-you-begin"></a>在开始之前
 
-- 其中一些设置从 Windows 10 版本 1703（RS2/内部版本 15063）开始提供。 所有 Windows 版本中均不包含某些设置。 为获得最佳体验，建议使用 Windows 10 企业版 1903（19H1/内部版本 18362）及更高版本。
+- 其中一些设置从 Windows 10 版本 1709（RS2/内部版本 15063）开始提供。 所有 Windows 版本中均不包含某些设置。 为获得最佳体验，建议使用 Windows 10 企业版 1903（19H1/内部版本 18362）及更高版本。
 
 - Windows 设置使用 [Windows 策略 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。 CSP 适用于不同版本的 Windows，例如家庭版、专业版和企业版等。 要查看 CSP 是否适用于特定版本，请转到 [Windows 策略 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。
 
@@ -102,6 +102,10 @@ Windows 设置类似于 Active Directory (AD) 中的组策略 (GPO) 设置。 �
     选择“下一步”  。
 
 14. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    如果将配置文件分配给用户组，则配置的 ADMX 设置将应用于用户注册和登录的任何设备。 如果将配置文件分配给设备组，则配置的 ADMX 设置将应用于登录该设备的任何用户。 如果 ADMX 设置是计算机配置 (`HKEY_LOCAL_MACHINE`) 或用户配置 (`HKEY_CURRENT_USER`)，则会发生此分配。 对于某些设置，分配给用户的计算机设置还可能会影响该设备上其他用户的体验。
+    
+    有关详细信息，请参阅[用户组与设备组](device-profile-assign.md#user-groups-vs-device-groups)。
 
     选择“下一步”  。
 

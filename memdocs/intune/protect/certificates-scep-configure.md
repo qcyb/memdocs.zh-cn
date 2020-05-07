@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2163f420089dcd8936d6dc64b8ce02c5ff268b53
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325739"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079886"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>配置基础结构以支持在 Intune 中使用 SCEP
 
@@ -46,13 +46,14 @@ Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和�
 
   - 托管 NDES 的服务器必须已加入域，并与企业 CA 位于相同的林中。
   - 不可使用在托管企业 CA 的服务器上安装的 NDES。
-  - 可以将 Microsoft Intune 证书连接器安装在托管 NDES 的同一服务器上。
+  - 可将 Microsoft Intune 证书连接器安装在托管 NDES 的同一服务器上。
 
   要详细了解 NDES，请参阅 Windows Server 文档[网络设备注册服务指南](https://technet.microsoft.com/library/hh831498.aspx)以及 [Using a Policy Module with the Network Device Enrollment Service（将策略模块与网络设备注册服务配合使用）](https://technet.microsoft.com/library/dn473016.aspx)。
 
 - Microsoft Intune 证书连接器  - 需要 Microsoft Intune 证书连接器才可在 Intune 中使用 SCEP 证书配置文件。 本文介绍了如何[安装此连接器](#install-the-intune-certificate-connector)。
 
-  该连接器支持美国联邦信息处理标准 (FIPS) 模式。 FIPS 不是必需的，但启用它时可颁发和吊销证书。
+  该连接器支持美国联邦信息处理标准 (FIPS) 模式。 FIPS 不是必需的，但启用它后，就可颁发和吊销证书。
+  - 连接器的网络要求与[受管理设备](../fundamentals/intune-endpoints.md#access-for-managed-devices)相同。
   - 该连接器必须与 NDES 服务器角色在同一服务器上运行，且该服务器运行 Windows Server 2012 R2 或更高版本。
   - 该连接器需要 .NET 4.5 Framework，而 Windows Server 2012 R2 中自动包含 .NET 4.5 Framework。
   - 必须在托管 NDES 和 Microsoft Intune 证书连接器的服务器上[禁用](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) Internet Explorer 增强型安全配置。
@@ -106,7 +107,7 @@ Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和�
 
 ## <a name="configure-the-certification-authority"></a>配置证书颁发机构
 
-在以下各节介绍了如何：
+在下面各部分中了解如何：
 
 - 为 NDES 配置和发布所需模板
 - 设置吊销证书的所需权限。
@@ -417,7 +418,7 @@ Microsoft Intune 证书连接器安装在运行 NDES 服务的服务器上。 �
 
    2. 必须为所用帐户分配有效的 Intune 许可证。
 
-   3. 登录后，Intune 证书连接器从 Intune 下载证书。 此证书用于连接器和 Intune 之间的身份验证。 如果所用帐户没有 Intune 许可证，则连接器（NDESConnectorUI.exe）无法从 Intune 获取证书。  
+   3. 登录后，Intune 证书连接器从 Intune 下载证书。 此证书用于连接器和 Intune 之间的身份验证。 如果所用帐户没有 Intune 许可证，则连接器 (NDESConnectorUI.exe) 无法从 Intune 获取证书。  
 
       如果组织使用代理服务器并且 NDES 服务器需要代理才能访问 Internet，请选择“使用代理服务器”  。 然后输入用于连接的代理服务器名称、端口和帐户凭据。
 

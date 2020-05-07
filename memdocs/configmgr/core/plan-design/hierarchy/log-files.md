@@ -2,7 +2,7 @@
 title: 日志文件引用
 titleSuffix: Configuration Manager
 description: Configuration Manager 客户端、服务器和依赖组件的所有日志文件的引用。
-ms.date: 11/29/2019
+ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6cd64d49abf7392c949a76ef198dabfc543dce7c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110162"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166530"
 ---
 # <a name="log-file-reference"></a>日志文件引用
 
@@ -29,86 +29,85 @@ ms.locfileid: "82110162"
 
 - [客户端日志文件](#BKMK_ClientLogs)  
 
-    - [客户端操作](#BKMK_ClientOpLogs)  
+  - [客户端操作](#BKMK_ClientOpLogs)  
 
-    - [客户端安装](#BKMK_ClientInstallLog)  
+  - [客户端安装](#BKMK_ClientInstallLog)  
 
-    - [适用于 Linux 和 UNIX 的客户端](#BKMK_LogFilesforLnU)  
+  - [适用于 Linux 和 UNIX 的客户端](#BKMK_LogFilesforLnU)  
 
-    - [适用于 Mac 计算机的客户端](#BKMK_LogfilesforMac)  
+  - [适用于 Mac 计算机的客户端](#BKMK_LogfilesforMac)  
 
 - [服务器日志文件](#BKMK_ServerLogs)  
 
-    - [站点服务器和站点系统](#BKMK_SiteSiteServerLog)  
+  - [站点服务器和站点系统](#BKMK_SiteSiteServerLog)  
 
-    - [站点服务器安装](#BKMK_SiteInstallLog)
+  - [站点服务器安装](#BKMK_SiteInstallLog)
 
-    - [数据仓库服务点](#BKMK_DataWarehouse)
+  - [数据仓库服务点](#BKMK_DataWarehouse)
 
-    - [回退状态点](#BKMK_FSPLog)  
+  - [回退状态点](#BKMK_FSPLog)  
 
-    - [管理点](#BKMK_MPLog)  
+  - [管理点](#BKMK_MPLog)  
 
-    - [服务连接点](#BKMK_WITLog)  
+  - [服务连接点](#BKMK_WITLog)  
 
-    - [软件更新点](#BKMK_SUPLog)  
+  - [软件更新点](#BKMK_SUPLog)  
 
 - [日志文件（按功能）](#BKMK_FunctionLogs)  
 
-    - [应用程序管理](#BKMK_AppManageLog)  
+  - [应用程序管理](#BKMK_AppManageLog)  
 
-    - [资产智能](#BKMK_AILog)  
+  - [资产智能](#BKMK_AILog)  
 
-    - [备份和恢复](#BKMK_BnRLog)  
+  - [备份和恢复](#BKMK_BnRLog)  
 
-    - [证书注册](#BKMK_CertificateEnrollment)
+  - [证书注册](#BKMK_CertificateEnrollment)
 
-    - [客户端通知](#BKMK_BGB)
+  - [客户端通知](#BKMK_BGB)
 
-    - [云管理网关](#cloud-management-gateway)
+  - [云管理网关](#cloud-management-gateway)
 
-    - [符合性设置和公司资源访问](#BKMK_CompSettingsLog)  
+  - [符合性设置和公司资源访问](#BKMK_CompSettingsLog)  
 
-    - [Configuration Manager 控制台](#BKMK_ConsoleLog)  
+  - [Configuration Manager 控制台](#BKMK_ConsoleLog)  
 
-    - [内容管理](#BKMK_ContentLog)  
+  - [内容管理](#BKMK_ContentLog)  
 
-    - [桌面分析](#desktop-analytics)
+  - [桌面分析](#desktop-analytics)
 
-    - [发现](#BKMK_DiscoveryLog)  
+  - [发现](#BKMK_DiscoveryLog)  
 
-    - [Endpoint Protection](#BKMK_EPLog)  
+  - [Endpoint Protection](#BKMK_EPLog)  
 
-    - [扩展](#BKMK_Extensions)  
+  - [扩展](#BKMK_Extensions)  
 
-    - [清单](#BKMK_InventoryLog)  
+  - [清单](#BKMK_InventoryLog)  
 
-    - [迁移](#BKMK_MigrationLog)  
+  - [迁移](#BKMK_MigrationLog)  
 
-    - [移动设备](#BKMK_MDMLog)  
+  - [移动设备](#BKMK_MDMLog)  
 
-    - [OS 部署](#BKMK_OSDLog)  
+  - [OS 部署](#BKMK_OSDLog)  
 
-    - [电源管理](#BKMK_PowerMgmtLog)  
+  - [电源管理](#BKMK_PowerMgmtLog)  
 
-    - [远程控制](#BKMK_RCLog)  
+  - [远程控制](#BKMK_RCLog)  
 
-    - [报表](#BKMK_ReportLog)  
+  - [报表](#BKMK_ReportLog)  
 
-    - [基于角色的管理](#BKMK_RBALog)  
+  - [基于角色的管理](#BKMK_RBALog)  
 
-    - [软件计数](#BKMK_MeteringLog)  
+  - [软件计数](#BKMK_MeteringLog)  
 
-    - [软件更新](#BKMK_SU_NAPLog)  
+  - [软件更新](#BKMK_SU_NAPLog)  
 
-    - [LAN 唤醒](#BKMK_WOLLog)  
+  - [LAN 唤醒](#BKMK_WOLLog)  
 
-    - [Windows 10 维护服务](#BKMK_WindowsServicingLog)
+  - [Windows 10 维护服务](#BKMK_WindowsServicingLog)
 
-    - [Windows 更新代理](#BKMK_WULog)  
+  - [Windows 更新代理](#BKMK_WULog)  
 
-    - [WSUS 服务器](#BKMK_WSUSLog)  
-
+  - [WSUS 服务器](#BKMK_WSUSLog)  
 
 ## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> 客户端日志文件
 
@@ -120,6 +119,7 @@ ms.locfileid: "82110162"
 
 |日志名称|说明|  
 |--------------|-----------------|  
+|ADALOperationProvider.log|有关向 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 请求端身份验证令牌的信息。|
 |BitLockerManagementHandler.log|记录有关 BitLocker 管理策略的信息。|
 |CAS.log|内容访问服务。 维持客户端上的本地包缓存。|  
 |Ccm32BitLauncher.log|记录用于启动客户端上标记为“以 32 位方式启动”的应用程序的操作  。|  
@@ -131,11 +131,12 @@ ms.locfileid: "82110162"
 |Ccmperf.log|记录与数据维护和捕获（与客户端性能计数器相关）关联的活动。|  
 |CcmRestart.log|记录客户端服务重启活动。|  
 |CCMSDKProvider.log|记录客户端 SDK 接口的活动。|  
+|ccmsqlce.log|记录客户端使用的 SQL 精简版的活动。 通常仅在你启用调试日志记录，或者组件存在问题时，才使用此日志。 客户端运行状况任务 (ccmeval) 通常会自行纠正此组件的问题。|
 |CertificateMaintenance.log|维护 Active Directory 域服务和管理点的证书。|  
 |CIDownloader.log|记录有关配置项目定义下载的详细信息。|  
-|CITaskMgr.log|记录为每种应用程序和部署类型启动的任务，例如内容下载和安装或卸载操作。|  
+|CITaskMgr.log|记录每种应用程序和部署类型的任务，例如内容下载和安装/卸载操作。|  
 |ClientAuth.log|记录客户端的签名和身份验证活动。|  
-|ClientIDManagerStartup.log|创建和维护客户端 GUID 并确定在客户端注册和分配过程中执行的任务。|  
+|ClientIDManagerStartup.log|创建和维护客户端 GUID，并确定客户端注册和分配期间的任务。|  
 |ClientLocation.log|记录与客户端站点分配相关的任务。|  
 |CMHttpsReadiness.log|记录运行 Configuration Manager HTTPS 准备情况评估工具的结果。 此工具检查计算机是否具有可用于 Configuration Manager 的公钥基础结构 PKI 客户端身份验证证书。|  
 |CmRcService.log|记录远程控制服务的信息。|  
@@ -208,28 +209,28 @@ ms.locfileid: "82110162"
 
 |日志名称|详细信息|
 |-------------------|-----------------------------------------------------------------|
-|Scxcm.log| 适用于 Linux 和 UNIX 的 Configuration Manager 客户端的核心服务 (ccmexec.bin) 的日志文件。 此日志文件包含有关 ccmexec.bin 的安装和当前操作的信息。<br /><br /> 默认情况下，此日志文件位于 **/var/opt/microsoft/scxcm.log**<br /><br /> 要更改该日志文件的位置，请编辑“/opt/microsoft/configmgr/etc/scxcm.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务，即可使更改生效。<br /><br /> 可以将日志级别设置为四个不同的设置之一。 |
-| Scxcmprovider.log |适用于 Linux 和 UNIX 的 Configuration Manager 客户端的 CIM 服务 (omiserver.bin) 的日志文件。 此日志文件包含有关 nwserver.bin 的当前操作的信息。<br /><br /> 此日志位于 <strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> 若要更改该日志文件的位置，请编辑“/opt/microsoft/omi/etc/scxcmprovider.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务，即可使更改生效。<br /><br /> 可以将日志级别设置为三个设置之一。|
+|Scxcm.log| 适用于 Linux 和 UNIX 的 Configuration Manager 客户端的核心服务 (ccmexec.bin) 的日志文件。 此日志文件包含有关 ccmexec.bin 的安装和当前操作的信息。 默认情况下，此日志文件位于 /var/opt/microsoft/scxcm.log  。 要更改该日志文件的位置，请编辑“/opt/microsoft/configmgr/etc/scxcm.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务，即可使更改生效。 可以将日志级别设置为四个不同的设置之一。 |
+| Scxcmprovider.log |适用于 Linux 和 UNIX 的 Configuration Manager 客户端的 CIM 服务 (omiserver.bin) 的日志文件。 此日志文件包含有关 nwserver.bin 的当前操作的信息。 此日志位于 `/var/opt/microsoft/configmgr/scxcmprovider.log`。 若要更改该日志文件的位置，请编辑“/opt/microsoft/omi/etc/scxcmprovider.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务，即可使更改生效。 可以将日志级别设置为三个设置之一。|
 
 这两个日志文件支持多个级别的日志记录：  
 
 - **scxcm.log**。 若要更改日志级别，请编辑 **/opt/microsoft/configmgr/etc/scxcm.conf**，并将 **MODULE** 标记的每个实例更改为所需的日志级别：  
 
-    - 错误：指示需要引起注意的问题  
+  - 错误：指示需要引起注意的问题  
 
-    - 警告：指示客户端操作可能出现的问题  
+  - 警告：指示客户端操作可能出现的问题  
 
-    - 信息：更详细的日志记录，指示客户端上的各个事件的状态  
+  - 信息：更详细的日志记录，指示客户端上的各个事件的状态  
 
-    - 跟踪：通常用于诊断问题的详细日志记录  
+  - 跟踪：通常用于诊断问题的详细日志记录  
 
 - **scxcmprovider.log**。 若要更改日志级别，请编辑 **/opt/microsoft/omi/etc/scxcmprovider.conf**，并将 **MODULE** 标记的每个实例更改为所需的日志级别：  
 
-    - 错误：指示需要引起注意的问题  
+  - 错误：指示需要引起注意的问题  
 
-    - 警告：指示客户端操作可能出现的问题
+  - 警告：指示客户端操作可能出现的问题
 
-    - 信息：更详细的日志记录，指示客户端上的各个事件的状态  
+  - 信息：更详细的日志记录，指示客户端上的各个事件的状态  
 
 在正常操作情况下，使用“错误”日志级别。 此日志级别创建最小的日志文件。 随着日志级别从“错误”提升至“警告”、“信息”直至“跟踪”，由于会将更多数据写入文件，因此将生成更大的日志文件。  
 
@@ -243,17 +244,16 @@ ms.locfileid: "82110162"
 
 ### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a>适用于 Mac 计算机的客户端
 
-适用于 Mac 计算机的 Configuration Manager 客户端将信息记录在以下日志文件中：  
+适用于 Mac 计算机的 Configuration Manager 客户端将信息记录在 Mac 计算机的以下日志文件中：  
 
-|日志名称|详细信息|  
-|--------------|-------------|  
-|CCMClient-&lt;*date_time*>.log|记录与 Mac 客户端操作相关的活动，包括应用程序管理、清单和错误日志记录。<br /><br /> 此日志文件位于 Mac 计算机上的 /Library/Application Support/Microsoft/CCM/Logs 文件夹中。|  
-|CCMAgent-&lt;*date_time*>.log|记录与客户端操作相关的信息，包括用户登录和注销操作以及 Mac 计算机活动。<br /><br /> 此日志文件位于 Mac 计算机上的 ~/Library/Logs 文件夹中。|  
-|CCMNotifications-&lt;*date_time*>.log|记录与在 Mac 计算机上显示的 Configuration Manager 通知相关的活动。<br /><br /> 此日志文件位于 Mac 计算机上的 ~/Library/Logs 文件夹中。|  
-|CCMPrefPane-&lt;*date_time*>.log|记录与 Mac 计算机上的 Configuration Manager 偏好设置对话框相关的活动，包括常规状态和错误记录。<br /><br /> 此日志文件位于 Mac 计算机上的 ~/Library/Logs 文件夹中。|  
+|日志名称|详细信息|位置|
+|--------------|-------------|-------------|
+|CCMClient-&lt;*date_time*>.log|记录与 Mac 客户端操作相关的活动，包括应用程序管理、清单和错误日志记录。| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent-&lt;*date_time*>.log|记录与客户端操作相关的信息，包括用户登录和注销操作以及 Mac 计算机活动。| `~/Library/Logs`|  
+|CCMNotifications-&lt;*date_time*>.log|记录与在 Mac 计算机上显示的 Configuration Manager 通知相关的活动。| `~/Library/Logs`|  
+|CCMPrefPane-&lt;*date_time*>.log|记录与 Mac 计算机上的 Configuration Manager 偏好设置对话框相关的活动，包括常规状态和错误记录。| `~/Library/Logs`|  
 
 站点系统服务器上的日志文件 SMS_DM.log  也会记录 Mac 计算机与为移动设备和 Mac 计算机设置的管理点之间的通信。  
-
 
 ## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> 服务器日志文件
 
@@ -277,6 +277,7 @@ ms.locfileid: "82110162"
 |CertMgr.log|记录站点内通信的证书活动。|站点系统服务器|  
 |chmgr.log|记录客户端健康状况管理器的活动。|站点服务器|  
 |Cidm.log|使用客户端安装数据管理器 (CIDM) 记录客户端设置的更改。|站点服务器|  
+|CollectionAADGroupSyncWorker.log | 自版本 2002 起，是指记录将集合成员身份结果同步到 Azure Active Directory 的日志文件。 在 1910 及更低版本中，此功能的日志记录合并到 SMS_AZUREAD_DISCOVERY_AGENT.log 中。 | 站点服务器|
 |colleval.log|记录有关集合计算器创建、更改和删除集合时的详细信息。|站点服务器|  
 |compmon.log|记录为站点服务器监视的组件线程的状态。|站点系统服务器|  
 |compsumm.log|记录组件状态摘要生成器任务。|站点服务器|  
@@ -284,7 +285,7 @@ ms.locfileid: "82110162"
 |dataldr.log|记录有关处理 Configuration Manager 数据库中的 (MIF) 文件和硬件清单的信息。|站点服务器|  
 |ddm.log|记录发现数据管理器的活动。|站点服务器|  
 |despool.log|记录传入的站点到站点通信传输|站点服务器|  
-|distmgr.log|记录有关包创建、压缩、增量复制和信息更新的详细信息。|站点服务器|  
+|distmgr.log|记录有关包创建、压缩、增量复制和信息更新的详细信息。 它还可包括分发管理器组件中的其他活动。 例如，安装分发点、连接尝试和安装组件。 要详细了解使用此日志的其他功能，请参阅[服务连接点](#BKMK_WITLog)和[操作系统部署](#BKMK_OSDLog)。|站点服务器|  
 |EPCtrlMgr.log|记录有关将来自 Endpoint Protection 站点系统角色服务器的恶意软件威胁信息与 Configuration Manager 数据库同步的信息。|站点服务器|  
 |EPMgr.log|记录 Endpoint Protection 站点系统角色的状态。|站点系统服务器|  
 |EPSetup.log|提供有关安装 Endpoint Protection 站点系统角色的信息。|站点系统服务器|  
@@ -296,7 +297,7 @@ ms.locfileid: "82110162"
 |inboxmgr.log|记录收件箱文件夹之间的文件传输活动。|站点服务器|  
 |inboxmon.log|记录对收件箱文件的处理和性能计数器的更新。|站点服务器|  
 |invproc.log|记录从辅助站点到其父站点的 MIF 文件转发。|站点服务器|  
-|migmctrl.log|记录有关涉及到迁移作业、共享分发点和分发点升级的迁移操作的信息。|Configuration Manager 层次结构中的顶层站点，以及每个子主站点。<br /><br /> 在多主站点的层次结构中，使用在管理中心站点中创建的日志文件。|  
+|migmctrl.log|记录有关涉及到迁移作业、共享分发点和分发点升级的迁移操作的信息。|Configuration Manager 层次结构中的顶层站点，以及每个子主站点。 在多主站点的层次结构中，使用在管理中心站点中创建的日志文件。|  
 |mpcontrol.log|记录管理点在 Windows Internet 名称服务 (WINS) 中的注册。 每 10 分钟记录一次管理点的可用性。|站点系统服务器|  
 |mpfdm.log|记录将客户端文件移到站点服务器上的相应 INBOXES 文件夹的管理点组件的操作。|站点系统服务器|  
 |mpMSI.log|记录有关管理点安装的详细信息。|站点服务器|  
@@ -323,7 +324,7 @@ ms.locfileid: "82110162"
 |sitecomp.log|记录有关对安装在站点中的所有站点系统服务器上的站点组件进行维护的详细信息。|站点服务器|  
 |sitectrl.log|记录对数据库中的站点控制对象所做的站点设置更改。|站点服务器|  
 |sitestat.log|记录所有站点系统的监视进程的可用性和磁盘空间。|站点服务器|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| 用于将集合成员身份结果同步到 Azure Active Directory 的日志文件。 这是从 Configuration Manager 版本 1906 开始第一次作为预发布功能引入。| 站点服务器|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| 记录 Azure Active Directory (Azure AD) 用户和用户组发现的日志文件。 在 1910 及更低版本中，它还记录了将集合成员结果同步到 Azure AD 的情况。| 站点服务器|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|用于同步来自适用于企业的 Microsoft Store 的应用的组件的日志文件。|站点服务器|
 |SMS_ISVUPDATES_SYNCAGENT.log| 用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。|
 |SMS_OrchestrationGroup.log| 业务流程组的日志文件|站点服务器|
@@ -355,7 +356,7 @@ ms.locfileid: "82110162"
 |ConfigMgrSetup.log|记录站点服务器安装程序的详细输出。|站点服务器|  
 |ConfigMgrSetupWizard.log|记录与安装向导中的活动相关的信息。|站点服务器|  
 |SMS_BOOTSTRAP.log|记录有关启动辅助站点安装过程的进度的信息。 实际安装过程的详细信息包含在 ConfigMgrSetup.log 中。|站点服务器|  
-|smstsvc.log|记录有关安装、使用和删除某 Windows 服务的信息，此服务的用途是，使用启动连接的服务器的计算机帐户来测试服务器之间的网络连接和权限。|站点服务器和站点系统服务器|  
+|smstsvc.log|记录有关 Windows 服务安装、使用和删除的信息。 Windows 使用此服务来测试服务器之间的网络连接和权限。 它会使用创建连接的服务器的计算机帐户。|站点服务器和站点系统服务器|  
 
 ### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> 数据仓库服务点
 
@@ -426,7 +427,7 @@ ms.locfileid: "82110162"
 |sitecomp.log|记录服务连接点安装的详细信息。|站点服务器|  
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
 |SMS_CLOUDCONNECTION.log|记录有关云服务的信息。|具有服务连接点的计算机|
-|SMSProv.log|记录 SMS 提供程序所执行的活动。 Configuration Manager 控制台活动使用 SMS 提供程序。|带有 SMS 提供程序的计算机|  
+|SMSProv.log|记录 SMS 提供程序的活动。 Configuration Manager 控制台活动使用 SMS 提供程序。|带有 SMS 提供程序的计算机|  
 |SrvBoot.log|记录关于服务连接点安装程序服务的详细信息。|具有服务连接点的计算机|  
 |Statesys.log|记录对移动设备管理消息的处理。|主站点和管理中心站点|  
 
@@ -527,7 +528,7 @@ ms.locfileid: "82110162"
 |Crpmsi.log|记录有关证书注册点的安装和配置的详细信息。|证书注册点|  
 |NDESPlugin.log|记录质询验证和证书注册活动。|Configuration Manager 策略模块和网络设备注册服务|  
 
-除了 Configuration Manager 日志文件外，请在运行网络设备注册服务的服务器和承载证书注册点的服务器上的事件查看器中查看 Windows 应用程序日志。 例如，从“NetworkDeviceEnrollmentService”  源中查找消息。 
+除了 Configuration Manager 日志文件外，请在运行网络设备注册服务的服务器和承载证书注册点的服务器上的事件查看器中查看 Windows 应用程序日志。 例如，从“NetworkDeviceEnrollmentService”  源中查找消息。
 
 你还可以使用下列日志文件：  
 
@@ -559,12 +560,11 @@ ms.locfileid: "82110162"
 
 |日志名称|说明|带有日志文件的计算机|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。<br>通过在注册表项 HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER 中编辑“Logging level”的值，可以配置日志记录级别 |主站点服务器或 CAS 上的 installdir  文件夹。|
-|CMGSetup.log<sup>[注释 1](#bkmk_note1)</sup>|记录有关云管理网关部署（Azure 中的本地部署）的第二阶段的详细信息<br>你可以使用“Azure 门户\云服务配置”  选项卡上的设置“跟踪级别”  （“信息”  （默认）、“详细”  、“错误”  ）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|CMGHttpHandler.log<sup>[注释 1](#bkmk_note1)</sup>|记录有关云管理网关 http 处理程序与 Azure 中的 Internet Information Services 绑定的详细信息<br>你可以使用“Azure 门户\云服务配置”  选项卡上的设置“跟踪级别”  （“信息”  （默认）、“详细”  、“错误”  ）配置日志记录级别。<br>从版本 1806 开始，该日志不存在。 组件功能合并到 CMG 服务组件中。 请改为参阅 CMGService.log。<!--SCCMDocs-pr issue #2822-->|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|CMGService.log<sup>[注释 1](#bkmk_note1)</sup>|记录有关 Azure 中云管理网关服务核心组件的详细信息<br>你可以使用“Azure 门户\云服务配置”  选项卡上的设置“跟踪级别”  （“信息”  （默认）、“详细”  、“错误”  ）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|SMS_Cloud_<br>ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
-|CMGContentService.log<sup>[注释 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->启用 CMG 从 Azure 存储中提供内容时，此日志会记录该服务的详细信息。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。 要配置日志记录级别，请在以下注册表项中编辑“日志记录级别”值：`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|主站点服务器或 CAS 上的 installdir  文件夹。|
+|CMGSetup.log <sup>[备注 1](#bkmk_note1)</sup>|记录有关云管理网关部署（Azure 中的本地部署）的第二阶段的详细信息。 要配置日志记录级别，请使用“Azure 门户\云服务配置”选项卡上的“跟踪级别”设置，即“信息”（默认）、“详细”和“错误”      。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|CMGService.log <sup>[备注 1](#bkmk_note1)</sup>|记录有关 Azure 中云管理网关服务核心组件的详细信息。 要配置日志记录级别，请使用“Azure 门户\云服务配置”选项卡上的“跟踪级别”设置，即“信息”（默认）、“详细”和“错误”      。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|SMS_Cloud_ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
+|CMGContentService.log <sup>[备注 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->启用 CMG 从 Azure 存储中提供内容时，此日志会记录该服务的详细信息。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
 
 - 对于部署疑难解答，请使用 **CloudMgr.log** 和 **CMGSetup.log**。
 - 对于服务运行状况疑难解答，请使用 **CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。
@@ -594,7 +594,7 @@ ms.locfileid: "82110162"
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|记录 Configuration Manager 控制台安装。|运行 Configuration Manager 控制台的计算机|  
 |SmsAdminUI.log|记录有关 Configuration Manager 控制台的操作的信息。|运行 Configuration Manager 控制台的计算机|  
-|SMSProv.log|记录 SMS 提供程序所执行的活动。 Configuration Manager 控制台活动使用 SMS 提供程序。|站点服务器或站点系统服务器|  
+|SMSProv.log|记录 SMS 提供程序的活动。 Configuration Manager 控制台活动使用 SMS 提供程序。|站点服务器或站点系统服务器|  
 
 ### <a name="content-management"></a><a name="BKMK_ContentLog"></a>内容管理
 
@@ -687,7 +687,7 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
-|migmctrl.log|记录有关涉及到迁移作业、共享分发点和分发点升级的迁移操作的信息。|Configuration Manager 层次结构中的顶层站点，以及每个子主站点。<br /><br /> 在多主站点的层次结构中，使用在管理中心站点中创建的日志文件。|  
+|migmctrl.log|记录有关涉及到迁移作业、共享分发点和分发点升级的迁移操作的信息。|Configuration Manager 层次结构中的顶层站点，以及每个子主站点。 在多主站点的层次结构中，使用在管理中心站点中创建的日志文件。|  
 
 ### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a>移动设备
 
@@ -772,7 +772,7 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |smpperf.log|记录状态迁移点性能计数器更新。|站点系统服务器|  
 |smspxe.log|记录有关使用 PXE 启动的客户端作出的响应的详细信息，以及有关启动映像和启动文件的扩展的详细信息。|站点系统服务器|  
 |smssmpsetup.log|记录有关状态迁移点的安装和配置详细信息。|站点系统服务器|
-| SMS_PhasedDeployment.log| 分阶段部署的日志文件|Configuration Manager 层次结构中的顶层站点| 
+| SMS_PhasedDeployment.log| 分阶段部署的日志文件|Configuration Manager 层次结构中的顶层站点|
 |Smsts.log|记录任务序列活动。|客户端|  
 |TSAgent.log|记录在启动任务序列之前的任务序列依赖项结果。|客户端|  
 |TaskSequenceProvider.log|记录在导入、导出或编辑任务序列时有关任务序列的详细信息。|站点系统服务器|  
@@ -835,10 +835,10 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |PolicyEvaluator.log|记录有关客户端计算机上的策略评估的详细信息，其中包括来自软件更新的策略。|客户端|  
 |RebootCoordinator.log|记录有关安装软件更新后在客户端计算机上协调系统重新启动的过程的详细信息。|客户端|  
 |ScanAgent.log|记录有关软件更新的扫描请求、WSUS 位置和相关操作的详细信息。|客户端|  
-|SdmAgent.log|记录有关对修正和符合性进行的跟踪的详细信息。 但是，软件更新日志文件 Updateshandler.log 可提供有关安装符合性所需的软件更新的更详细信息。<br /><br /> 此日志文件与符合性设置共享。|客户端|  
+|SdmAgent.log|记录有关对修正和符合性进行的跟踪的详细信息。 但是，软件更新日志文件 Updateshandler.log 可提供有关安装符合性所需的软件更新的更详细信息。 此日志文件与符合性设置共享。|客户端|  
 |ServiceWindowManager.log|记录有关维护时段评估的详细信息。|客户端|
-|SMS_ISVUPDATES_SYNCAGENT.log| 用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。| 
-|SMS_OrchestrationGroup.log| 业务流程组的日志文件|站点服务器| 
+|SMS_ISVUPDATES_SYNCAGENT.log| 用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。|
+|SMS_OrchestrationGroup.log| 业务流程组的日志文件|站点服务器|
 |SmsWusHandler.log|记录有关 Microsoft 更新清单工具的扫描过程的详细信息。|客户端|  
 |StateMessage.log|记录有关创建并发送到管理点的软件更新状态消息的详细信息。|客户端|  
 |SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
@@ -895,7 +895,6 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |SoftwareDistribution.log|记录有关从已配置的更新源同步到 WSUS 服务器数据库的软件更新的详细信息。|WSUS 服务器|  
 
 这些日志文件位于 `%ProgramFiles%\Update Services\LogFiles` 文件夹中。
-
 
 ## <a name="see-also"></a>另请参阅
 

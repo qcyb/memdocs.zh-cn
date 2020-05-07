@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326055"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254837"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>在 Microsoft Intune 中通过 OEMConfig 使用和管理 Android 企业版设备
 
@@ -151,17 +151,21 @@ OEMConfig 策略是一种特殊类型的设备配置策略，类似于[应用配
 
 | OEM | 捆绑 ID | OEM 文档（如果可用） |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Knox 服务插件管理员指南](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig 概述](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com.ascom.myco.oemconfig | |
+| Cipherlab | com.cipherlab.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
+| HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Samsung | com.samsung.android.knox.kpu | [Knox 服务插件管理员指南](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com.seuic.seuicoemconfig | |
 | Spectralink - 条形码 | com.spectralink.barcode.service |  |
 | Spectralink - 按钮 | com.spectralink.buttons |  |
 | Spectralink - 设备 | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - 日志记录 | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
-| Seuic | com.seuic.seuicoemconfig | |
 | Unitech 电子设备 | com.unitech.oemconfig | |
+| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig 概述](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 

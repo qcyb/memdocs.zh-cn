@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,20 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323152"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126067"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中创建和分配 SCEP 证书配置文件
 
 [配置基础结构](certificates-scep-configure.md)以支持简单证书注册协议 (SCEP) 证书之后，即可创建 SCEP 证书配置文件，然后将其分配给 Intune 中的用户和设备。
 
-> [!IMPORTANT]  
-> 对于将使用 SCEP 证书配置文件的设备，在创建 SCEP 证书配置文件之前，该设备必须信任受信任的根证书颁发机构 (CA)。 在 Intune 中使用受信任的证书配置文件为用户和设备预配受信任的根 CA 证书  有关受信任证书配置文件的信息，请参阅“在 Intune 中使用证书进行身份验证”中的[导出受信任的根 CA 证书](certificates-configure.md#export-the-trusted-root-ca-certificate)和[创建受信任的证书配置文件](certificates-configure.md#create-trusted-certificate-profiles)  。
-
+> [!IMPORTANT]
+> 使用 SCEP 证书配置文件的设备必须信任受信任的根证书颁发机构 (CA)。 最好是通过将[受信任的证书配置文件](../protect/certificates-configure.md#create-trusted-certificate-profiles)部署到接收 SCEP 证书配置文件的组中来建立根 CA 的信任。 受信任的证书配置文件会预配受信任的根 CA 证书。
 
 ## <a name="create-a-scep-certificate-profile"></a>创建 SCEP 证书配置文件
 
@@ -95,7 +94,8 @@ ms.locfileid: "80323152"
        - **序列号**
        - **自定义**：选中此选项时，也会显示“自定义”文本框  。 使用此字段输入一个自定义使用者名称格式，包括变量。 自定义格式支持两种变量：公用名 (CN)  和电子邮件 (E)  。 可将“公用名(CN)”设置为以下任何变量  ：
 
-         - **CN={{UserName}}** ：用户的用户主体名称，例如 janedoe@contoso.com。
+         - **CN={{UserName}}** ：用户的用户名（如 janedoe）。
+         - CN={{UserPrincipalName}}  ：用户的用户主体名称（如 janedoe@contoso.com）。\*
          - **CN={{AAD_Device_ID}}** ：在 Azure Active Directory (AD) 中注册设备时分配的 ID。 此 ID 通常用于向 Azure AD 进行身份验证。
          - **CN={{SERIALNUMBER}}** ：制造商通常用于标识设备的唯一序列号 (SN)。
          - **CN={{IMEINumber}}** ：用于标识移动电话的国际移动设备标识 (IMEI)。
@@ -111,6 +111,8 @@ ms.locfileid: "80323152"
          - CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US 
 
          该示例包含使用者名称格式，其中除了不仅使用了 CN 和 E 变量，还使用了组织单元、组织、位置、省/直辖市/自治区和国家/地区值的字符串。 [CertStrToName 函数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)介绍此函数及其支持的字符串。
+         
+         \* 对于 Android 仅设备所有者配置文件，CN={{UserPrincipalName}}  设置将不起作用。 Android 仅设备所有者配置文件可用于没有用户的设备，所以此配置文件将无法获取用户的用户主体名称。 如果确实需要对包含用户的设备使用此选项，可以使用如下解决方法：CN={{UserName}}\@contoso.com - 它提供你手动添加的用户名和域，例如 janedoe@contoso.com 
 
       - **“设备”证书类型**
 
@@ -224,7 +226,7 @@ ms.locfileid: "80323152"
 
    - **SCEP 服务器 URL**：
 
-     为通过 SCEP 颁发证书的 NDES 服务器输入 1 个或多个 URL。 例如，输入类似于 https://ndes.contoso.com/certsrv/mscep/mscep.dll 的内容  。 可根据需要添加其他用于负载均衡的 SCEP URL，因为 URL 会被随机推送到具有配置文件的设备。 如果某台 SCEP 服务器不可用，则 SCEP 请求将会失败，并且在稍后的设备签入中，可能针对这台已关闭的服务器发出证书请求。
+     为通过 SCEP 颁发证书的 NDES 服务器输入 1 个或多个 URL。 例如，输入类似于 `https://ndes.contoso.com/certsrv/mscep/mscep.dll` 的内容。 可根据需要添加其他用于负载均衡的 SCEP URL，因为 URL 会被随机推送到具有配置文件的设备。 如果某台 SCEP 服务器不可用，则 SCEP 请求将会失败，并且在稍后的设备签入中，可能针对这台已关闭的服务器发出证书请求。
 
 8. 选择“下一步”  。
 
@@ -259,7 +261,7 @@ ms.locfileid: "80323152"
 
 例如，使用者名称显示为 Test user (TestCompany, LLC)   。  如果 CSR 包含一个 CN，该 CN 在 TestCompany 和 LLC 之间有逗号，则会出现问题   。  可以通过在整个 CN 周围加上引号，或者删除 TestCompany 和 LLC   之间的逗号来避免这一问题：
 
-- **添加引号**：CN=  "Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **添加引号**：CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com 
 - **删除逗号**：*CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  但是，使用反斜杠字符转义逗号的尝试将失败，CRP 日志中出现错误：
@@ -282,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>分配证书配置文件
 
-分配 SCEP 证书配置文件的方法与[部署设备配置文件](../configuration/device-profile-assign.md)以实现其他目的相同。 但在继续之前，请考虑以下事项：
+分配 SCEP 证书配置文件的方法与[部署设备配置文件](../configuration/device-profile-assign.md)以实现其他目的相同。
+
+若要使用 SCEP 证书配置文件，设备还必须已接收受信任的证书配置文件，且该配置文件预配了受信任的根 CA 证书。 建议将受信任的根证书配置文件和 SCEP 证书配置文件都部署到相同的组中。
+
+在继续之前，请考虑以下事项：
 
 - 将 SCEP 证书配置文件分配给组时，将在设备上安装受信任的根 CA 证书文件（如“受信任的证书配置文件”中所述）  。 设备使用 SCEP 证书配置文件来为该受信任的根 CA 证书创建证书请求。
 
@@ -293,8 +299,6 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 - 若要在注册设备后向设备快速发布证书，请将证书配置文件分配给用户组（而不是设备组）。 如果分配到设备组，则需要在设备接收策略前进行完整的设备注册。
 
 - 如果使用 Intune 和 Configuration Manager 的共同管理，请在 Configuration Manager 中将资源访问策略的[工作负载滑块](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)设置为“Intune”  或“试点 Intune”  。 此设置允许 Windows 10 客户端启动请求证书的过程。
-
-- 尽管可单独创建和分配受信任的证书配置文件和 SCEP 证书配置文件，但必须分配这两种配置文件。 如果未在同一台设备上安装这两者，SCEP 证书策略将失败。 请确保所有受信任的根证书配置文件也都部署到 SCEP 配置文件所在的组。 例如，如果要将 SCEP 证书配置文件部署到用户组，则也必须将受信任的根（和中间）证书配置文件部署到同一用户组。
 
 > [!NOTE]
 > 在 iOS/iPadOS 设备上，当 SCEP 证书配置文件或 PKCS 证书配置文件与其他配置文件（如 Wi-Fi 或 VPN 配置文件）相关联，设备将收到其他每个配置文件的证书。 这会使 iOS/iPadOS 设备拥有 SCEP 或 PKCS 证书请求提供的多个证书。 

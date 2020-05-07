@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e1a7c9665f142bf7dd7832e6bac0e016539ddea
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 86c90d8313cd9eed853ad438a5ea9a31f0d834ce
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358723"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725535"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune 网络终结点  
 
@@ -34,6 +34,9 @@ ms.locfileid: "79358723"
 
 若要管理防火墙和代理服务器后面的设备，必须启用 Intune 的通信。
 
+> [!NOTE]
+> 本节中的信息也适用于 Microsoft Intune 证书连接器。 连接器的网络要求与受管理设备相同
+
 - 由于 Intune 客户端使用 **HTTP (80)** 和 **HTTPS (443)** ，因此代理服务器必须支持这两种协议。 Windows 信息保护使用端口 444。
 - 对于某些任务（例如下载经典电脑代理的软件更新），Intune 需要对 manage.microsoft.com 的未经身份验证的代理服务器访问权限
 
@@ -44,6 +47,7 @@ ms.locfileid: "79358723"
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 托管的设备需要允许“所有用户”  通过防火墙访问服务的配置。
+
 
 下表列出了 Intune 客户端访问的端口和服务：
 

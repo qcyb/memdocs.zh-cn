@@ -10,12 +10,12 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 075d371a334f26a788c656fe85ec01ae2338eb26
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 91434b70ca514430ab4cfd6815186bc6d6bc33db
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074820"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210122"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-configuration-manager"></a>在 Configuration Manager 中规划证书配置文件的证书模板权限
 
@@ -40,7 +40,7 @@ ms.locfileid: "82074820"
 ## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>为用户和计算机添加“读取”和“注册”权限  
  如果一个独立团队管理你的证书颁发机构 (CA) 基础结构团队，并且该独立团队希望 Configuration Manager 在向用户发送证书配置文件来请求用户证书之前验证用户是否具有有效的 Active Directory 域服务帐户，则可能适合为用户和计算机添加“读取”和“注册”权限。 对于此配置，你必须指定包含用户的一个或多个安全组，然后向那些组授予对证书模板的“读取”和“注册”权限。 在这种情况下，CA 管理员将管理安全控制。  
 
- 你可以同样指定包含计算机帐户的一个或多个安全组，并授予这些组对证书模板的“读取”和“注册”权限。 如果将计算机证书配置文件部署到是域成员的计算机，则必须为该计算机的计算机帐户授予“读取”和“注册”权限。 如果计算机不是域成员（例如，它是工作组计算机或个人移动设备），则无需这些权限。  
+ 你可以同样指定包含计算机帐户的一个或多个安全组，并授予这些组对证书模板的“读取”和“注册”权限。 如果将计算机证书配置文件部署到是域成员的计算机，则必须为该计算机的计算机帐户授予“读取”和“注册”权限。 如果计算机不是域成员，则不需要这些权限。 例如，如果它是工作组计算机或个人移动设备。  
 
  尽管此配置使用额外的安全控制，但这不是推荐的最佳做法。 因为指定的用户或设备的所有者可独立于 Configuration Manager 请求证书，并为证书“使用者”提供可能用于假冒另一个用户或设备的值。  
 

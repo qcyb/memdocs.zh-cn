@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337585"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077795"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>通过公司门户和 DISA Purebred 设置 iOS 或 iPadOS 设备  
 
@@ -39,10 +40,10 @@ ms.locfileid: "79337585"
 在本文中，你将：  
 
    * 通过 Intune 公司门户注册 iOS 或 iPadOS 移动设备。  
-   * 从组织的派生凭据提供程序 [DISA Purebred](https://cyber.mil/pki-pke/purebred/) 获取派生凭据。  
+   * 从组织的派生凭据提供程序 DISA Purebred (https:\//cyber.mil/pki-pke/purebred/) 获取派生凭据。  
 
 ## <a name="what-are-derived-credentials"></a>什么是派生凭据？  
-派生凭据是派生自智能卡凭据并在设备上安装的证书。 它授予你对工作资源的远程访问权限，同时防止未经授权的用户访问敏感信息。  
+派生凭据是一种派生自智能卡凭据并在设备上安装的证书。 它授予你对工作资源的远程访问权限，同时防止未经授权的用户访问敏感信息。  
 
 派生凭据用于： 
 * 对登录到学校或工作应用、Wi-Fi 和 VPN 的学生和员工进行身份验证

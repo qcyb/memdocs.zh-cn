@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324503"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078322"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>如何仅擦除 Intune 托管应用中的企业数据
 
@@ -40,9 +40,9 @@ ms.locfileid: "80324503"
 > 将删除从应用直接同步到本机通讯簿的联系人。 无法擦除从本机通讯簿同步到另一个外部源中的任何联系人。 目前仅适用于 Microsoft Outlook 应用。
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>已部署 WIP 策略（无需用户注册）
-无需要求 MDM 用户注册 Windows 10 设备，即可部署 Windows 信息保护 (WIP) 策略。 此配置允许公司基于 WIP 配置保护其企业文档，同时允许用户管理自己的 Windows 设备。 使用 WIP 策略保护文档后，Intune 管理员可以选择性擦除受保护的数据。 通过选择用户和设备，并发送擦除请求，所有通过 WIP 策略保护的数据都将不可用。 在 Azure 门户中的“Intune”内，依次选择“客户端应用”   > “应用选择性擦除”  。 有关详细信息，请参阅[通过 Intune 创建和部署 Windows 信息保护 (WIP) 应用保护策略](windows-information-protection-policy-create.md)。
+无需要求 MDM 用户注册 Windows 10 设备，即可部署 Windows 信息保护 (WIP) 策略。 此配置允许公司基于 WIP 配置保护其企业文档，同时允许用户管理自己的 Windows 设备。 在文档受到 WIP 策略保护后，Intune 管理员（[全局管理员或 Intune 服务管理员](../fundamentals/users-add.md#types-of-administrators)）可以选择性擦除受保护的数据。 通过选择用户和设备，并发送擦除请求，所有通过 WIP 策略保护的数据都将不可用。 在 Azure 门户中的“Intune”内，依次选择“客户端应用”   > “应用选择性擦除”  。 有关详细信息，请参阅[通过 Intune 创建和部署 Windows 信息保护 (WIP) 应用保护策略](windows-information-protection-policy-create.md)。
 
-## <a name="create-a-wipe-request"></a>创建擦除请求
+## <a name="create-a-device-based-wipe-request"></a>创建基于设备的擦除请求
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“应用” > “应用选择性擦除” > “创建擦除请求”    。<br>
@@ -61,6 +61,16 @@ ms.locfileid: "80324503"
 
    ![“客户端应用 - 应用选择性擦除”窗格的屏幕截图](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>创建基于用户的擦除请求
+
+通过将用户添加到用户级擦除，我们将自动向所有用户设备上的全部应用发出擦除命令。  用户将继续在每次签入时从所有设备中获得擦除命令。  必须将用户从列表中删除，才能重新启用用户。  
+
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 选择“应用” > “应用选择性擦除” > “创建擦除请求”    。<br>
+   选择“用户级擦除” 
+3. 单击“添加”  。此时，“选择用户”  窗格显示。
+4. 选择要擦除其应用数据的用户，然后单击“选择”  。
+
 ## <a name="monitor-your-wipe-requests"></a>监视擦除请求
 
 你将获得一个汇总报表，其中介绍了擦除请求的总体状态，并包括挂起请求数和失败次数。 若要获取更多详细信息，请按以下步骤操作：
@@ -74,7 +84,7 @@ ms.locfileid: "80324503"
 >[!IMPORTANT]
 > 用户必须打开应用才能进行擦除，进行请求后可能需要最多 30 分钟才能完成擦除。
 
-## <a name="delete-a-wipe-request"></a>删除擦除请求
+## <a name="delete-a-device-wipe-request"></a>删除设备擦除请求
 
 手动删除之前将显示具有挂起状态的擦除。 手动删除擦除请求：
 
@@ -85,6 +95,14 @@ ms.locfileid: "80324503"
     ![“应用选择性擦除”窗格中擦除请求列表的屏幕截图](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. 系统将提示你确认删除，请选择“是”  或“否”  ，然后单击“确定”  。
+
+## <a name="delete-a-user-wipe-request"></a>删除用户擦除请求
+
+除非被管理员删除，否则用户擦除会一直保留在列表中。 若要从列表中删除用户，请执行以下操作：
+
+1. 在“客户端应用 - 应用选择性擦除”  窗格上，选择“用户级擦除” 
+2. 在列表中，右键单击要删除的用户，然后选择“删除”  。 
+
 
 ## <a name="see-also"></a>另请参阅
 [什么是应用保护策略](app-protection-policy.md)

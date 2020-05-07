@@ -2,7 +2,7 @@
 title: 站点管理的安全和隐私
 titleSuffix: Configuration Manager
 description: 优化 Configuration Manager 中的站点管理的安全和隐私
-ms.date: 07/26/2019
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35c2738b363895671528196e99b324fd2fe6f5a7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 923018e35fae1ec1f5e9c0869ef22d43b5de552b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704575"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182253"
 ---
 # <a name="security-and-privacy-for-site-administration-in-configuration-manager"></a>Configuration Manager 中的站点管理的安全和隐私
 
@@ -169,7 +169,11 @@ Configuration Manager 客户端计算机使用代理 Web 服务器连接到基�
 
 ### <a name="if-you-use-email-notification-configure-authenticated-access-to-the-smtp-mail-server"></a>如果使用电子邮件通知，请配置对 SMTP 邮件服务器的身份验证访问权限
 
-尽可能使用支持身份验证访问权限的邮件服务器。 使用站点服务器的计算机帐户进行身份验证。 如果必须指定用于身份验证的用户帐户，请使用具有最低权限的帐户。  
+尽可能使用支持身份验证访问权限的邮件服务器。 使用站点服务器的计算机帐户进行身份验证。 如果必须指定用于身份验证的用户帐户，请使用具有最低权限的帐户。 
+
+### <a name="enforce-ldap-channel-binding-and-ldap-signing"></a>强制执行 LDAP 通道绑定和 LDAP 签名
+
+可配置服务器，使其拒绝不要求进行签名的简单身份验证和安全层 (SASL) LDAP 绑定，或者拒绝在明文连接上执行的 LDAP 简单绑定，从而提高 Active Directory 域控制器的安全性。 自版本 1910 起，Configuration Manager 支持强制执行 LDAP 通道绑定和 LDAP 签名。 有关详细信息，请参阅 [2020 年针对 Windows 的 LDAP 通道绑定和 LDAP 签名要求](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows)。 <!--6244453-->
 
 
 ## <a name="security-guidance-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> 站点服务器的安全指南

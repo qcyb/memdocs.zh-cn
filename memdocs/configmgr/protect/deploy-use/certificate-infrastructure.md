@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074990"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210105"
 ---
 # <a name="configure-certificate-infrastructure"></a>配置证书基础结构
 
@@ -34,7 +34,7 @@ ms.locfileid: "82074990"
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>安装和配置网络设备注册服务及依赖关系  
 
-1. 在运行 Windows Server 2012 R2 的服务器上，安装和配置用于 Active Directory 证书服务服务器角色的网络设备注册服务角色服务。 有关详细信息，请参阅 TechNet 上 Active Directory 证书服务库中的 [Network Device Enrollment Service Guidance（网络设备注册服务指导）](https://go.microsoft.com/fwlink/p/?LinkId=309016) 。  
+1. 在运行 Windows Server 2012 R2 的服务器上，安装和配置用于 Active Directory 证书服务服务器角色的网络设备注册服务角色服务。 有关详细信息，请参阅[网络设备注册服务指南](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。
 
 2. 检查并在必要时修改网络设备注册服务所使用的证书模板的安全权限：  
 
@@ -44,7 +44,7 @@ ms.locfileid: "82074990"
 
    -   对于网络设备注册服务应用程序池使用的 SCEP 服务帐户：“读取”和“注册”权限   。  
 
-        此项要求并不特定于 Configuration Manager，但却是配置网络设备注册服务过程的一部分。 有关详细信息，请参阅 TechNet 上 Active Directory 证书服务库中的 [Network Device Enrollment Service Guidance（网络设备注册服务指导）](https://go.microsoft.com/fwlink/p/?LinkId=309016) 。  
+        此项要求并不特定于 Configuration Manager，但却是配置网络设备注册服务过程的一部分。 有关详细信息，请参阅[网络设备注册服务指南](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。  
 
    > [!TIP]  
    >  若要确定网络设备注册服务所使用的证书模板，请在运行网络设备注册服务的服务器上查看下列注册表项：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP。  
@@ -69,7 +69,7 @@ ms.locfileid: "82074990"
 
    - 将“MaxRequestBytes”  项设置为“16777216”  。  
 
-     有关详细信息，请参阅 Microsoft 知识库中的文章 [820129：用于 Windows 的 Http.sys 注册表设置](https://go.microsoft.com/fwlink/?LinkId=309013)。  
+     有关详细信息，请参阅“Microsoft 支持”文章 [820129：面向 Windows 的 Http.sys 注册表设置](https://support.microsoft.com/help/820129)。
 
 6. 在同一服务器上的 Internet Information Services (IIS) 管理器中，修改 /certsrv/mscep 应用程序的请求筛选设置，然后重启服务器。 在“编辑请求筛选设置”  对话框中，“请求限制”  设置应如下所示：  
 
@@ -79,7 +79,7 @@ ms.locfileid: "82074990"
 
    - **最大查询字符串(字节)** ：**65534**  
 
-     有关这些设置以及如何配置这些设置的详细信息，请参阅 IIS 参考库中的 [Requests Limits（请求限制）](https://go.microsoft.com/fwlink/?LinkId=309014) 。  
+     要详细了解这些设置及其配置方式，请参阅 [IIIS 请求限制](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)。
 
 7. 如果希望能够请求有效期比所使用的证书模板短的证书：对于企业 CA，默认情况下会禁用此配置。 若要对企业 CA 启用此选项，请使用 certutil 命令行工具，然后通过使用下列命令停止并重启证书服务：  
 
@@ -89,9 +89,9 @@ ms.locfileid: "82074990"
 
    3. **net start certsvc**  
 
-      有关详细信息，请参阅 TechNet 上 PKI 技术库中的 [Certificate Services Tools and Settings（证书服务工具和设置）](https://go.microsoft.com/fwlink/p/?LinkId=309015) 。  
+      有关详细信息，请参阅[证书服务工具和设置](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))。
 
-8. 验证网络设备注册服务是否正常工作，例如使用以下链接进行验证： https://server.contoso.com/certsrv/mscep/mscep.dll  。 你应会看到内置的网络设备注册服务网页。 此网页说明服务是什么，并且说明了网络设备使用该 URL 来提交证书请求。  
+8. 验证网络设备注册服务是否正常工作，例如使用以下链接进行验证：`https://server.contoso.com/certsrv/mscep/mscep.dll`。 你应会看到内置的网络设备注册服务网页。 此网页说明服务是什么，并且说明了网络设备使用该 URL 来提交证书请求。  
 
    既然配置了网络设备注册服务和依赖关系，即可安装和配置证书注册点。
 
@@ -125,7 +125,7 @@ ms.locfileid: "82074990"
    - 如果选择“处理 SCEP 证书请求”  ，请配置以下内容：
      -   证书注册点的**网站名称**、**HTTPS 端口号**和**虚拟应用程序名称**。 这些字段使用默认值自动填充。 
      -   **网络设备注册服务和根 CA 证书的 URL** -单击“添加”  ，然后在“添加 URL 和根 CA 证书”  对话框中，指定以下内容：
-         - **网络设备注册服务的 URL**：采用以下格式指定 URL： https:// *<server_FQDN>* /certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请输入 https://server1.contoso.com/certsrv/mscep/mscep.dll  。
+         - **网络设备注册服务的 URL**：采用以下格式指定 URL： https:// *<server_FQDN>* /certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请键入 `https://server1.contoso.com/certsrv/mscep/mscep.dll`。
          - **根 CA 证书**：浏览到并选择你在**步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 Configuration Manager 策略模块将使用的客户端身份验证证书。  
 
    - 如果选择了“处理 PFX 证书请求”  ，则要为所选证书颁发机构配置连接详细信息和凭据。
@@ -157,7 +157,7 @@ ms.locfileid: "82074990"
 
     -   在站点系统服务器上，使用 <ConfigMgr Installation Path\>  \Logs\crpsetup.log 文件和 <ConfigMgr Installation Path\>  \Logs\crpmsi.log 文件。 成功的安装将返回退出代码 0。  
 
-    -   使用浏览器验证是否可连接到证书注册点的 URL（例如 https://server1.contoso.com/CMCertificateRegistration ）。 你应会看到应用程序名称的“服务器错误”  页，包含 HTTP 404 描述。  
+    -   使用浏览器验证是否可连接到证书注册点的 URL。 例如，`https://server1.contoso.com/CMCertificateRegistration`。 你应会看到应用程序名称的“服务器错误”  页，包含 HTTP 404 描述。  
 
 11. 找到证书注册点在主站点服务器计算机上的下列文件夹中自动创建的根 CA 的已导出证书文件：<ConfigMgr Installation Path\>  \inboxes\certmgr.box。 将此文件保存到你稍后在运行网络设备注册服务的服务器上安装 Configuration Manager 策略模块时可安全访问的安全位置。  
 
@@ -185,7 +185,7 @@ ms.locfileid: "82074990"
 
 4. 在“安装文件夹”  页上，接受策略模块的默认安装文件夹或指定其他文件夹，然后单击“下一步”  。  
 
-5. 在“证书注册点”  页上，使用站点系统服务器的 FQDN 以及证书注册点属性中指定的虚拟应用程序名称来指定证书注册点的 URL。 默认虚拟应用程序名称为 CMCertificateRegistration。 例如，如果站点系统服务器的 FQDN 为 server1.contoso.com，而你使用了默认的虚拟应用程序名称，则指定 https://server1.contoso.com/CMCertificateRegistration  。  
+5. 在“证书注册点”  页上，使用站点系统服务器的 FQDN 以及证书注册点属性中指定的虚拟应用程序名称来指定证书注册点的 URL。 默认虚拟应用程序名称为 CMCertificateRegistration。 例如，如果站点系统服务器的 FQDN 为 server1.contoso.com，而你使用了默认的虚拟应用程序名称，则指定 `https://server1.contoso.com/CMCertificateRegistration`。
 
 6. 接受默认端口“443”  ，或指定证书注册点正在使用的其他端口号，然后单击“下一步”  。  
 

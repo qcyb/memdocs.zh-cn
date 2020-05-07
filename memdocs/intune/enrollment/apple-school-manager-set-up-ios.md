@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 63a465e39e8a041c47b6748d9dacdebf3c6ea8a5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696557"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078101"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>通过 Apple School Manager 设置 iOS/iPadOS 设备注册
 
@@ -105,7 +105,7 @@ Apple School Manager 注册不能与 [Apple 的设备注册计划](device-enroll
     > 使用 Apple 设置助理进行身份验证时，不支持执行这些操作。
 
 6. 选择“设备管理设置”，然后选择是否要监督使用此配置文件的设备  。
-     “受监督”的设备会提供更多的管理选项，并且会默认禁用“激活锁”。 Microsoft 建议使用 ADE 作为启用受监督模式的机制，特别是针对计划部署大量 iOS/iPadOS 设备的组织。
+     “受监督”的设备会提供更多的管理选项，并且会默认禁用“激活锁”。 Microsoft 建议使用 ADE 作为启用 Intune 的受监督模式的机制，特别是针对计划部署大量 iOS/iPadOS 设备的组织。
 
     将通过两种方式通知用户他们的设备受到监督：
 

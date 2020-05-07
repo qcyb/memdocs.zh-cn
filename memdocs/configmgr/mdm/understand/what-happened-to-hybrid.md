@@ -47,7 +47,7 @@ ms.locfileid: "81724651"
 >
 > 此更改不会影响本地 Configuration Manager 或[适用于 Windows 10 设备的共同管理](../../comanage/overview.md)。 如果不确定是否使用混合 MDM，请进入 Configuration Manager 控制台的 "**管理**" 工作区，展开 "**云服务**"，然后选择 " **Microsoft Intune 订阅**"。 如果设置了 Microsoft Intune 订阅，那么你的租户已针对混合 MDM 进行了配置。
 >
-> **这对我有何影响？**
+> **这会对我产生哪些影响？**
 >
 > - Microsoft 将在明年支持使用混合 MDM。 该功能将继续接收主要 bug 修复。 Microsoft 将支持新版本操作系统上的现有功能，例如在 iOS 12 上注册。 将不再为混合 MDM 提供新功能。  
 >

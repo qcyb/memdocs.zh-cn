@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324744"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023242"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>将应用添加到 Microsoft Intune 
 
@@ -56,8 +56,8 @@ Intune 支持多种不同的应用类型。 为每种应用类型提供的可用
 | Windows Phone 8.1 应用商店应用  | 应用商店应用  | 选择“Windows Phone 8.1”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL   。 |
 | Microsoft 应用商店应用  | 应用商店应用  | 选择“Windows”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL   。 |
 | 托管的 Google Play 应用 | 应用商店应用  | 选择“托管 Google Play”  作为“应用类型”  ，搜索应用，再在 Intune 中选择应用。 |
-| 适用于 Windows 10 的 Office 365 应用  | 应用商店应用 (Office 365) | 在“Office 365 套件”下选择“Windows 10”作为“应用类型”，然后选择要安装的 Office 365 应用    。  |
-| 适用于 macOS 的 Office 365 应用 | 应用商店应用 (Office 365) | 在“Office 365 套件”下选择“macOS”作为“应用类型”，然后选择 Office 365 应用套件    。 |
+| 适用于 Windows 10 的 Office 365 应用  | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“Windows 10”作为“应用类型”，然后选择要安装的 Office 365 应用    。  |
+| 适用于 macOS 的 Office 365 应用 | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“macOS”作为“应用类型”，然后选择 Office 365 应用套件    。 |
 | 适用于 Windows 10 的 Microsoft Edge 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“Windows 10”作为“应用类型”    。 |
 | 适用于 macOS 的 Microsoft Edge 版本 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“macOS”作为“应用类型”    。 |
 | Android 业务线 (LOB) 应用 | LOB 应用 | 选择“业务线应用”  作为“应用类型”  ，选择“应用包文件”  ，然后输入扩展名为  .apk 的 Android 安装文件。  |
@@ -121,7 +121,7 @@ Intune 还支持对需要安全访问本地数据的客户端应用（例如业�
 通过 Intune 可以修改所部署应用程序的功能，帮助这些应用符合公司的符合性和安全性策略。 此操作使你可以确定如何保护公司数据。 Intune 托管应用是通过一组丰富的移动应用程序保护策略启用的，例如：
 
 - 限制“复制和粘贴”和“另存为”功能。
-- 将 Web 链接配置为在 Intune Managed Browser 应用中打开。
+- 将 Web 链接配置为在 Microsoft Edge 应用内打开。
 - 启用多标识使用和应用级条件访问。
 
 Intune 托管应用还可以启用应用保护，而无需注册，使你能够在不管理用户设备的情况下即可应用数据丢失防护策略。 此外，还可以使用 Intune App SDK 和应用包装工具在移动和业务线应用中进行移动应用管理。 有关这些工具的详细信息，请参阅 [Intune App SDK 概述](../developer/app-sdk.md)。

@@ -10,12 +10,12 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a13a22cc7e9ced580229306ab3680fca61319992
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706385"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126002"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试点
 
@@ -29,7 +29,7 @@ ms.locfileid: "81706385"
 > * 为 Windows 10 创建桌面分析部署计划  
 > * 使用 Configuration Manager 将 Windows 10 部署到试点组  
 
-如果没有 Azure 订阅，请在开始之前创建[免费帐户](https://azure.microsoft.com/free)。 正确配置后，使用桌面分析不会产生任何 Azure 费用。
+如果没有 Azure 订阅，请在开始之前创建一个[免费帐户](https://azure.microsoft.com/free)。 正确配置后，使用桌面分析不会产生任何 Azure 费用。
 
 桌面分析使用 Azure 订阅中的 Log Analytics 工作区  。 工作区实质上是包括帐户信息以及该帐户的简单配置信息的容器。 有关详细信息，请参阅[管理工作区](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)。
 
@@ -219,8 +219,7 @@ Configuration Manager 创建设置策略以配置目标集合中的设备。 此
 
 监视桌面分析的设备配置。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“桌面分析服务”节点，然后选择“连接运行状况”仪表板    。  
 
-Configuration Manager 会在创建连接的 60 分钟内同步集合。 在桌面分析门户中，转到“全局试点”  ，并查看 Configuration Manager 设备集合。
-
+Configuration Manager 会在创建连接的 60 分钟内同步集合。 在桌面分析门户中，转到“全局试点”，并查看 Configuration Manager 设备集合  。 门户的其余部分可能需要 2 到 3 天才能显示完整数据。 有关详细信息，请参阅[数据延迟](troubleshooting.md#data-latency)。
 
 ## <a name="create-a-desktop-analytics-deployment-plan"></a>创建桌面分析部署计划
 

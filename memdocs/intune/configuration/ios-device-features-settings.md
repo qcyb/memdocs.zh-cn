@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359392"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210196"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
@@ -97,7 +97,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
     添加到文件夹中页面的应用按照列表中的相同顺序从左向右排列。 如果添加的应用数超过了页面能够容纳的量，应用会移到其他页面。
 
-    - **文件夹名称**：输入文件夹的名称。 此名称在设备上向用户显示。
+    - **文件夹名称**：输入文件夹的名称。 该名称将显示在用户的设备上。
     - **页面列表**：添加页面，并输入以下属性  ：
 
       - **页面名称**：输入页面名称。 此名称用于在 Microsoft 终结点管理器管理中心内的引用。 它不  会显示在 iOS/iPadOS 设备上。
@@ -111,10 +111,10 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 #### <a name="example"></a>示例
 
-在下面的示例中，程序坞屏幕仅显示“Safari”、“邮件”和“股市”应用。 “邮件”应用被选为显示自己的属性：
+在下面的示例中，程序坞屏幕显示“Safari”、“邮件”和“股市”应用。 “邮件”应用被选为显示自己的属性：
 
 > [!div class="mx-imgBorder"]
-> ![示例 iOS/iPadOS 程序坞设置](./media/ios-device-features-settings/FfFiUcP.png)
+> ![Intune 中的示例 iOS/iPadOS 主屏幕布局程序坞设置](./media/ios-device-features-settings/dock-screen-mail-app.png)
 
 在你向 iPhone 分配策略后，程序坞如下图所示：
 
@@ -158,10 +158,15 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 #### <a name="example"></a>示例
 
-在下面的示例中，添加了名为“Contoso”  的新页面。 此页面显示“查找朋友”和“设置”应用。 “设置”应用被选为显示自己的属性：
+在下面的示例中，添加了名为“Contoso”  的新页面。 此页面显示“查找朋友”和“设置”应用：
 
 > [!div class="mx-imgBorder"]
-> ![Intune 中的 iOS/iPadOS 主屏幕设置示例](./media/ios-device-features-settings/Jc2OxyX.png)
+> ![Intune 中的 iOS/iPadOS 主屏幕布局新页面设置和示例](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+
+“设置”应用被选为显示自己的属性：
+
+> [!div class="mx-imgBorder"]
+> ![Intune 中的 iOS/iPadOS 主屏幕布局设置应用属性示例](./media/ios-device-features-settings/page-settings-app-properties.png)
 
 在你向 iPhone 分配策略后，页面如下图所示：
 
@@ -175,7 +180,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 - **添加**：添加应用通知：
 
   > [!div class="mx-imgBorder"]
-  > ![在 Intune 中的 iOS/iPadOS 配置文件内添加应用通知](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > ![在 Intune 中的 iOS/iPadOS 配置文件内添加应用通知](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
 
   - **应用捆绑 ID**：输入要添加的应用的“应用捆绑 ID”  。 有关示例，请参阅[内置 iOS/iPadOS 应用的捆绑 ID](bundle-ids-built-in-ios-apps.md)。
   - **应用名称**：输入要添加的应用的名称。 此名称用于在 Microsoft 终结点管理器管理中心内的引用。 它不会显示在设备上  。
@@ -214,9 +219,11 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>设置适用范围：设备注册、自动设备注册（受监督）
 
-- **AAD 中的用户名属性**：Intune 为 Azure AD 中的每个用户查找此属性。 然后，Intune 先填充相应字段（如“UPN”），再生成在设备上安装的 XML。 选项包括：
+- **领域**：输入 URL 的域部分。 例如，输入 `contoso.com`。
+- **Kerberos 主体名称**：Intune 为 Azure AD 中的每个用户查找此属性。 然后，Intune 先填充相应字段（如“UPN”），再生成在设备上安装的 XML。 选项包括：
 
-  - **用户主体名称**：UPN 分析方式如下：
+  - **未配置**：Intune 不会更改或更新此设置。 默认情况下，将配置文件部署到设备时，操作系统将提示用户提供 Kerberos 主体名称。 MDM 安装 SSO 配置文件时需要使用主体名称。
+  - **用户主体名称**：将按以下方式分析用户主体名称 (UPN)：
 
     > [!div class="mx-imgBorder"]
     > ![Intune 中的 iOS/iPadOS 用户名 SSO 属性](./media/ios-device-features-settings/User-name-attribute.png)
@@ -227,15 +234,22 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
   - **Intune 设备 ID**：Intune 自动选择 Intune 设备 ID。
 
-    默认情况下，应用只需使用设备 ID。 但如果应用使用领域和设备 ID，你可以在“领域”文本框中键入领域。
+    默认情况下，应用只需使用设备 ID。 但如果应用使用领域和设备 ID，则你可在“领域”文本框中键入领域  。
 
     > [!NOTE]
     > 如果使用设备 ID，则默认将领域留空。
 
   - **Azure AD 设备 ID**
+  - **SAM 帐户名**：Intune 将填充本地安全帐户管理器 (SAM) 帐户名。
 
-- **领域**：输入 URL 的域部分。 例如，输入 `contoso.com`。
-- **使用单一登录的 URL 前缀**：添加  组织中任何要求用户进行单一登录身份验证的 URL。
+
+- **应用**：在用户设备上添加可使用单一登录的应用  。
+
+  `AppIdentifierMatches` 数组必须包含与应用捆绑 ID 匹配的字符串。 这些字符串可以是完全匹配项（如 `com.contoso.myapp`），也可以使用 \* 通配符输入捆绑 ID 的前缀匹配项。 通配符必须位于句点字符 (.) 后面，并只能在字符串末尾出现一次（如 `com.contoso.*`）。 如果包括通配符，则程序包 ID 以前缀开头的任何应用都将被授予对帐户的访问权限。
+
+  使用应用名称输入一个用户友好名称，帮助识别捆绑 ID  。
+
+- **URL 前缀**：添加  组织中任何要求用户进行单一登录身份验证的 URL。
 
   例如，用户连接到任何这些站点时，iOS/iPadOS 设备会使用单一登录凭据。 用户不需要输入任何其他凭据。 如果已启用多重身份验证，用户必须输入第二重身份验证凭据。
 
@@ -246,13 +260,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
   `http://.com` 和 `https://.com` 模式分别匹配所有 HTTP 和 HTTPS URL。
 
-- **使用单一登录的应用**：在用户设备上添加可使用单一登录的应用  。
-
-  `AppIdentifierMatches` 数组必须包含与应用捆绑 ID 匹配的字符串。 这些字符串可以是完全匹配项（如 `com.contoso.myapp`），也可以使用 \* 通配符输入捆绑 ID 的前缀匹配项。 通配符必须位于句点字符 (.) 后面，并只能在字符串末尾出现一次（如 `com.contoso.*`）。 如果包括通配符，则程序包 ID 以前缀开头的任何应用都将被授予对帐户的访问权限。
-
-  使用应用名称输入一个用户友好名称，帮助识别捆绑 ID  。
-
-- **凭据续订证书**：如果使用证书（而不是密码）进行身份验证，选择现有 SCEP 或 PFX 证书作为身份验证证书。 通常，此证书是针对其他配置文件（如 VPN、Wi-Fi 或电子邮件）部署到用户的相同证书。
+- **续订证书**：如果使用证书（而不是密码）进行身份验证，选择现有 SCEP 或 PFX 证书作为身份验证证书。 通常，此证书是针对其他配置文件（如 VPN、Wi-Fi 或电子邮件）部署到用户的相同证书。
 
 ## <a name="web-content-filter"></a>Web 内容筛选器
 
@@ -288,37 +296,24 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 - **SSO 应用扩展类型**：选择 SSO 应用扩展的类型。 选项包括：
 
-  - **未配置**：Intune 不会更改或更新此设置。 默认情况下，OS 可能不使用应用扩展。 若要禁用应用扩展，可将 SSO 应用扩展类型切换为“未配置”  。
-  - **重定向**：使用通用的可自定义重定向应用扩展，通过新式身份验证流使用 SSO。 确保你知道组织应用扩展的扩展 ID。
+  - **未配置**：Intune 不会更改或更新此设置。 默认情况下，操作系统不会使用应用扩展。 若要禁用应用扩展，可将 SSO 应用扩展类型切换为“未配置”  。
+  - **Microsoft Azure AD**：使用 Microsoft 企业 SSO 插件，它是一个重定向类型的 SSO 应用扩展。 此插件为所有支持 [Apple 企业单一登录](https://developer.apple.com/documentation/authenticationservices)功能的应用程序提供 Active Directory 帐户的 SSO。 使用此 SSO 应用扩展类型可在使用 Azure AD 进行身份验证的 Microsoft 应用、组织应用和网站上启用 SSO。
 
-    在 iOS/iPadOS 13.0 以上的设备上，可以使用此重定向 SSO 应用扩展类型配置 Microsoft Azure AD SSO 应用扩展  。 借助 Microsoft Azure AD 扩展，可以在使用 Azure AD 进行身份验证的 Microsoft 应用和组织应用之间进行单一登录。 Azure AD 扩展充当高级身份验证代理，可改进安全性和用户体验。 此前使用 Microsoft Authenticator 应用进行中转身份验证的所有应用都将继续获取具有 SSO 扩展的 SSO。 Azure AD SSO 扩展尚不支持浏览器 SSO。 有关 SSO 和 iOS/iPadOS 身份验证代理的更多信息，请参阅[在 macOS 和 iOS/iPadOS 上配置 SSO](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)。  
-
-    **要配置 iOS Microsoft Azure AD 扩展：**
-
-    1. 将“SSO 应用扩展类型”  设置为“重定向”  。
-    2. 将“扩展 ID”  设置为 `com.microsoft.azureauthenticator.ssoextension`。
-    3. 将“团队 ID”  设置为 `SGGM6D27TK`。
-    4. 在“URL”  设置中，输入以下 URL：
-
-        - `https://login.microsoftonline.com`
-        - `https://login.windows.net`
-        - `https://login.microsoft.com`
-        - `https://sts.windows.net`
-        - `https://login.partner.microsoftonline.cn`
-        - `https://login.chinacloudapi.cn`
-        - `https://login.microsoftonline.de`
-        - `https://login.microsoftonline.us`
-        - `https://login.usgovcloudapi.net`
-        - `https://login-us.microsoftonline.com`
+    SSO 插件充当高级身份验证代理，可改进安全性和用户体验。 对于之前使用 Microsoft Authenticator 应用进行中转身份验证的所有应用，都将继续获取具有[适用于 Apple 设备的 Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)的 SSO。
 
     > [!IMPORTANT]
-    > 要通过 iOS/iPadOS Microsoft Azure AD 扩展实现 SSO，请首先在设备上安装 iOS/iPadOS Microsoft Authenticator 应用。 Authenticator 将 Azure AD 扩展传递到设备，MDM SSO 应用扩展设置激活 Azure AD 扩展。 在设备上安装了 Authenticator 和 SSO 应用扩展配置文件后，用户必须输入其凭据才能登录和建立会话。 然后，该会话可在不同的应用程序中使用，而无需用户再次进行身份验证。
+    > 要通过 Microsoft Azure AD SSO 应用扩展类型实现 SSO，请先在设备上安装 iOS/iPadOS 版 Microsoft Authenticator 应用。 Authenticator 应用将 Microsoft 企业 SSO 插件传递到设备，MDM SSO 应用扩展设置会激活该插件。 在设备上安装 Authenticator 和 SSO 应用扩展配置文件后，用户必须在设备上输入其凭据才能登录和建立会话。 然后，该会话可在不同的应用程序中使用，而无需用户再次进行身份验证。 有关 Authenticator 的详细信息，请参阅[什么是 Microsoft Authenticator 应用](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)。
 
+  - **重定向**：使用通用的可自定义重定向应用扩展，通过新式身份验证流使用 SSO。 确保你知道组织应用扩展的扩展 ID。
   - **凭据**：使用通用的可自定义凭据应用扩展，通过质询和响应身份验证流来使用 SSO。 确保你知道组织应用扩展的扩展 ID。
   - **Kerberos**：使用 Apple 的内置 Kerberos 扩展，该扩展包含在 iOS 13.0 以上版本和 iPadOS 13.0 以上版本中。 此选项是“凭据”  应用扩展的 Kerberos 特定版本。
 
   > [!TIP]
   > 使用“重定向”  和“凭据”  类型，可以添加自己的配置值以传递扩展。 如果使用的是“凭据”  ，请考虑使用 Apple 在“Kerberos”  类型中提供的内置配置设置。
+
+- **共享设备模式**（仅用于 Microsoft Azure AD）：如果要将 Microsoft 企业 SSO 插件部署到已配置支持 Azure AD 共享设备模式功能的 iOS/iPadOS 设备，请选择“启用”  。 通过共享模式下的设备，多名用户可以全局方式在支持共享设备模式的应用程序中登录和注销。 设置为“未配置”时，Intune 不会更改或更新此设置  。 默认情况下，iOS/iPadOS 设备不会在多名用户之间共享。
+
+  要详细了解共享设备模式及其启用方式，请参阅[共享设备模式概述](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)以及[适用于 iOS 设备的共享设备模式](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)。  
 
 - **扩展 ID**（“重定向”和“凭据”）：输入可标识 SSO 应用扩展的程序包标识符，如 `com.apple.extensiblesso`。
 
@@ -336,16 +331,16 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 - **URL**（仅用于“重定向”）：输入标识提供者的 URL 前缀，重定向应用扩展将代表它们使用 SSO。 当用户重定向到这些 URL 时，SSO 应用扩展会介入并提示 SSO。
 
   - Intune 单一登录应用扩展配置文件中的所有 URL 都必须是唯一的。 即使使用的是不同类型的 SSO 应用扩展，也不能在任何 SSO 应用扩展配置文件中使用重复的域。
-  - URL 必须以 http:// 或 https:// 开头。
+  - URL 必须以 `http://` 或 `https://` 开头。
 
-- **其他配置**（“重定向”和“凭据”）：输入要传递到 SSO 应用扩展的其他扩展特定数据：
+- **其他配置**（Microsoft Azure AD、“重定向”和“凭据”）：输入要传递到 SSO 应用扩展的其他扩展特定数据：
   - **密钥**：输入要添加的项的名称，如 `user name`。
   - **类型**：输入数据的类型。 选项包括：
 
     - 字符串
-    - 布尔值：在“配置值”中，输入 `True` 或 `False`  。
+    - 布尔值：在“配置值”中，输入 `True` 或 `False` 。
     - 整数：在“配置值”中，输入一个数字  。
-    
+
   - **值**：输入数据。
 
   - **添加**：选择此项可添加配置密钥。

@@ -5,17 +5,17 @@ description: 了解如何准备 Windows 10 基于 Internet 的设备进行共同
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 32c148b695a47241c6646a2a7309f0a27f3b3070
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691045"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137909"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
@@ -65,7 +65,7 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
 3. 在“启用”选项卡上，复制命令行  。 将其粘贴到记事本，保存以供下一过程使用。  
 
-命令行示例：`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
+命令行示例：`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 确定你的环境所需的命令行属性：  
@@ -91,14 +91,14 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
     有关详细信息，请参阅[关于客户端安装属性 - 预配](../core/clients/deploy/about-client-installation-properties.md#provisionts)。
 
-该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode   。<!--3607731-->
+该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSITECODE   。<!--3607731-->
 
 > [!NOTE]
 > 如果已从 Intune 部署 Configuration Manager 客户端，请使用新命令行和新 MSI 更新 Intune 应用。 <!-- SCCMDocs-pr issue 3084 -->
 
 下面的示例包含所有这些属性：
 
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001`
+`CCMSETUPCMD="CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001"`
 
 有关详细信息，请参阅[客户端安装属性](../core/clients/deploy/about-client-installation-properties.md)。
 
@@ -106,7 +106,7 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
 1. 转到 [Azure 门户](https://portal.azure.com)，然后打开 Intune 页。  
 
-2. 选择“客户端应用” **“应用”** “添加” >    >   。  
+2. 选择“客户端应用” > “应用” > “添加”    。  
 
 3. 在“其他”下，选择“业务线应用”   。  
 

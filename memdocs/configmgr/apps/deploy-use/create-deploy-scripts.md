@@ -2,7 +2,7 @@
 title: 创建和运行脚本
 titleSuffix: Configuration Manager
 description: 在客户端设备上创建并运行 PowerShell 脚本。
-ms.date: 04/01/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1c15106eeecdac0377900d913160bc23614327db
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689655"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605178"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -98,7 +98,7 @@ Configuration Manager 具有运行 PowerShell 脚本的集成功能。 PowerShel
 >最好是不允许脚本创建者审批自己的脚本。 仅实验室环境中允许此操作。 请仔细考虑在生产环境中更改此设置的潜在影响。
 
 ## <a name="security-scopes"></a>安全作用域
-*（随版本 1710 一起引入）*  
+  
 “运行脚本”使用安全作用域（Configuration Manager 中的一项现有功能）通过分配代表用户组的标记来控制脚本的创作和执行。 有关使用安全作用域的详细信息，请参阅[为 Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。
 
 ## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a>为脚本创建安全角色
@@ -168,11 +168,11 @@ Configuration Manager 具有运行 PowerShell 脚本的集成功能。 PowerShel
 5. 完成向导。 新脚本将显示在“脚本”  列表，且状态显示为“正等待审批”  。 在客户端设备上运行此脚本之前，必须先批准它。 
 
 > [!IMPORTANT]
-> 避免在使用“运行脚本”功能时编写设备重启或 Configuration Manager 代理重启的脚本。 执行此操作可能会导致连续的重启状态。 如有需要，从 Configuration Manager 版本 1710 起，已经对启用重启设备的客户端通知功能提供了增强。 [等待重新启动列](../../core/clients/manage/manage-clients.md#restart-clients)可以帮助识别需要重启的设备。 
+> 避免在使用“运行脚本”功能时编写设备重启或 Configuration Manager 代理重启的脚本。 执行此操作可能会导致连续的重启状态。 我们对启用重启设备的客户端通知功能进行了增强，供你需要时使用。 [等待重新启动列](../../core/clients/manage/manage-clients.md#restart-clients)可以帮助识别需要重启的设备。 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>脚本参数
-*（随版本 1710 一起引入）*  
+
 将参数添加到脚本可以为你的工作提供更高的灵活性。 最多只能包含 10 个参数。 以下内容概述“运行脚本”功能的当前功能以及“字符串”和“整数”数据类型的脚本参数   。 也提供了预设值列表。 如果脚本具有不受支持的数据类型，你将收到一个警告。
 
 在“创建脚本”  对话框中，单击“脚本”下的“脚本参数”   。
@@ -181,8 +181,7 @@ Configuration Manager 具有运行 PowerShell 脚本的集成功能。 PowerShel
 
 >[!IMPORTANT]
 > 参数值不能包含单引号。 </br></br>
-> 在 Configuration Manager 版本 1802 中存在一个已知问题，即无法将带空格的参数正确传递给脚本。 如果在参数中使用空格，则只能将参数中的第一项传递给脚本，而空格后的所有项均不会传递。 要解决此问题，管理员可采用将空格替换为其他字符并进行转换的编写脚本的方法，或使用其他方法。
-
+> 存在一个已知问题，其中包含的或以单引号引起来的参数值不会正确传递给脚本。 指定在脚本中包含空格的默认参数值时，请改用双引号。 在创建或执行脚本期间指定默认参数值时，无论该值是否包含空格，都无需用单引号或双引号将默认值引起来  。
 
 ### <a name="parameter-validation"></a>参数验证
 
@@ -282,22 +281,31 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-monitoring"></a>脚本监视
 
-在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 自版本 1710 起，可以在脚本执行时实时监视脚本，也可以返回到给定“运行脚本”功能执行报告。 脚本状态数据将作为[删除过期客户端操作维护任务](../../core/servers/manage/reference-for-maintenance-tasks.md)的一部分或删除脚本任务的一部分进行清理。<br>
+在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 可在脚本执行时进行实时监视，稍后回去查看某个给定“运行脚本”执行的状态和结果。 脚本状态数据将作为[删除过期客户端操作维护任务](../../core/servers/manage/reference-for-maintenance-tasks.md)的一部分或删除脚本任务的一部分进行清理。<br>
 
 ![脚本监视器 - 脚本运行状态](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. 在 Configuration Manager 控制台中，单击“监视”  。
 2. 在“监视”  工作区中，单击“脚本状态”  。
 3. 在“脚本状态”  列表中，可以查看在客户端设备上运行的每个脚本的结果。 脚本退出代码为“0”  通常表示脚本已成功运行。
-    - 从 Configuration Manager 1802 开始，脚本输出截断为 4 KB，以便提供更好的显示体验。  <!--510013-->
-   
+
+ 
    ![脚本监视器 - 截断的脚本](./media/run-scripts/Script-monitoring-truncated.png)
 
-## <a name="script-output-in-1810"></a>1810 中的脚本输出
+## <a name="script-output"></a>脚本输出
 
-可以原始或结构化 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。 如果该脚本返回有效的 JSON 格式的文本，则将详细输出视为 JSON 输出  或原始输出  。 否则，唯一的选择是脚本输出  。
+客户端采用 JSON 格式返回脚本输出，将脚本的结果通过管道传输至 [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet。 JSON 格式会始终如一地返回可读的脚本输出。 对于不以输出形式返回对象的脚本，ConvertTo-Json cmdlet 会将输出转换为客户端返回的简单字符串，而不是返回 JSON。  
 
-### <a name="example-script-output-is-valid-json"></a>例如：脚本输出是有效的 JSON
+- 收到未知结果或客户端脱机的脚本不会在图表或数据集中显示。 <!--507179-->
+- 避免返回大型脚本输出，因为它会截断为 4KB。 <!--508488-->
+- 将脚本中的枚举对象转换为字符串值，这样它们就能以 JSON 格式正确显示。 <!--508377-->
+
+   ![将枚举对象转换为字符串值](./media/run-scripts/enum-tostring-JSON.png)
+
+可以原始或结构化 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。 如果脚本返回有效的 JSON 格式的文本，或者输出可使用 [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet 转换为 JSON，则以 JSON 输出或原始输出的形式查看详细输出   。 否则，唯一的选择是脚本输出  。
+
+### <a name="example-script-output-is-convertible-to-valid-json"></a>例如：脚本输出可转换为有效的 JSON
+
 命令：`$PSVersionTable.PSVersion`  
 
 ``` Output
@@ -307,34 +315,14 @@ Major  Minor  Build  Revision
 ```
 
 ### <a name="example-script-output-isnt-valid-json"></a>例如：脚本输出是无效的 JSON
+
 命令：`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
 ```
 
-- 1810 客户端通过快速信道将少于 80KB 的输出返回到网站。 这一更改提高了查看脚本或查询输出的性能。  
-
-  - 如果脚本或查询输出大于 80 KB，客户端会通过状态消息发送数据。  
-  - 1802 之前的客户端继续使用状态消息。
-
-## <a name="script-output-pre-1810"></a>版本低于 1810 中的脚本输出
-
-- 从 Configuration Manager 1802 版开始，脚本输出重新使用 JSON 格式。 此格式一致返回可读的脚本输出。 
-- 收到未知结果或客户端脱机的脚本不会在图表或数据集中显示。 <!--507179-->
-- 避免返回大型脚本输出，因为它会截断为 4KB。 <!--508488-->
-- 在低级别版本的客户端上运行 Configuration Manager 版本 1802 或更高版本时，一些包含脚本输出格式设置的功能不可用。 <!--508487-->
-    - 如果 Configuration Manager 客户端版本低于 1802，你会得到一个字符串输出。
-    -  对于 Configuration Manager 客户端 1802 及更高版本，你会得到 JSON 格式。
-        - 例如，你可能得到两个结果，在一个客户端版本上显示 TEXT，在另一个版本上显示 "TEXT"（输出括在双引号中），这两个结果将作为两个不同的类别放入图表中。
-        - 如果需要解决此问题，请考虑针对两个不同的集合运行脚本。 一个集合包含版本低于 1802 的客户端，另一个集合包含 1802 及更高版本的客户端。 也可以将脚本中的枚举对象转换为字符串值，这样它们就能以 JSON 格式正确显示。 
-- 将脚本中的枚举对象转换为字符串值，这样它们就能以 JSON 格式正确显示。 <!--508377-->
-
-   ![将枚举对象转换为字符串值](./media/run-scripts/enum-tostring-JSON.png)
-
 ## <a name="log-files"></a>日志文件
-
-从版本 1810 开始，添加了其他日志记录以进行故障排除。
 
 - 在客户端上，默认情况下位于 C:\Windows\CCM\logs 中：  
   - **Scripts.log**  

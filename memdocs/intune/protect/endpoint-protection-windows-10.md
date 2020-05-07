@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275061"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506584"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Windows 10（及更高版本）设置，用于保护使用 Intune 的设备
 
@@ -478,7 +478,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   设置为“阻止”时，可以配置以下设置：   
 
   - **允许标准用户在 Azure AD 加入期间启用加密**  
-    此设置仅适用于加入 Azure Active Directory (Azure ADJ) 的设备，并取决于以前的设置 `Warning for other disk encryption`  。  
+    此设置仅适用于加入 Azure Active Directory (Azure ADJ) 的设备，并取决于以前的设置 `Warning for other disk encryption` 。  
     **默认值**：未配置  
     BitLocker CSP：[AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
@@ -748,17 +748,6 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     - “备份恢复密码和密钥包”   
     - “仅备份恢复密码”   
 
-  - 客户端驱动的恢复密码轮转   
-    **默认值**：已为已加入 Azure AD 的设备启用密钥轮换  
-    BitLocker CSP：[ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    如果使用此设置，则在（使用 bootmgr 或 WinRE）进行 OS 驱动器恢复后，将启动客户端驱动的恢复密码轮换。  
-
-    - 未配置  
-    - 已禁用密钥轮换  
-    - 已为已加入 Azure AD 的设备启用密钥轮换  
-    - 已为已加入混合 Azure AD 的设备启用密钥轮换  
-
   - **启用 BitLocker 之前在 Azure Active Directory 中存储恢复信息**  
     **默认值**：未配置  
  
@@ -942,6 +931,9 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 > **在 X86 客户端计算机上**：  
 > C:\Program Files\Microsoft Intune Management Extension\Content   
 > C:\windows\IMECache   
+>
+> 有关详细信息，请参阅[针对运行当前受支持的 Windows 版本的企业计算机的病毒扫描建议](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)。
+
 
 ### <a name="controlled-folder-access"></a>受控文件夹访问权限  
 
@@ -1264,9 +1256,8 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   **默认值**：未配置  
   LocalPoliciesSecurityOptions CSP：[Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **阻止** - 用户可以按下已插接便携设备的物理弹出按钮，从而安全地移除该设备。  
-  - **未配置** - 用户必须登录到设备，并接收移除该设备的权限。  
+  - **阻止** - 用户必须登录到设备，并接收移除该设备的权限。
+  - **未配置** - 用户可以按下已插接便携设备的物理弹出按钮，从而安全地移除该设备。
 
 - **为共享打印机安装打印机驱动程序**  
   **默认值**：未配置  
@@ -1309,8 +1300,8 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
   LocalPoliciesSecurityOptions CSP：[InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **启用** - 用户不需要按 CTRL+ALT+DEL 登录。  
-  - **未配置** - 用户需要在登录 Windows 之前按 CTRL+ALT+DEL。  
+  - **启用** -  用户需要在登录 Windows 之前按 CTRL+ALT+DEL。
+  - **未配置** - 用户不需要按 CTRL+ALT+DEL 登录。
 
 - **智能卡移除行为**  
   **默认值**：锁定工作站   

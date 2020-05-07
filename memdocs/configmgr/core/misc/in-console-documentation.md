@@ -2,7 +2,7 @@
 title: 控制台中文档
 titleSuffix: Configuration Manager
 description: 本文仅在 Configuration Manager 控制台中显示。
-ms.date: 03/12/2020
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 39331a7ab4a512e449770179af4b04f4c52bec73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668234"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126048"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "81668234"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Microsoft Endpoint Configuration Manager
 
-上次更新时间：*2020 年 3 月 12 日*
+上次更新时间：  2020 年 4 月 23 日
 
 此内容可以有助于学习 Configuration Manager 相关知识和为其提供支持。
 
@@ -35,42 +35,42 @@ ms.locfileid: "81668234"
 
 有关详细信息，请参阅下列文章：
 
-- [Configuration Manager 文档库](https://docs.microsoft.com/configmgr)  
-- [如何使用 Configuration Manager 文档](https://docs.microsoft.com/configmgr/core/understand/use-docs)
+- [Configuration Manager 文档库](https://docs.microsoft.com/mem/configmgr)  
+- [如何使用 Configuration Manager 文档](https://docs.microsoft.com/mem/configmgr/core/understand/use-docs)
 
 ## <a name="recommended"></a>建议
 
 重要文章的特选列表。
 
-- [桌面分析](https://docs.microsoft.com/configmgr/desktop-analytics/overview)
-- [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/configmgr/comanage/overview)  
-- [CMPivot](https://docs.microsoft.com/configmgr/core/servers/manage/cmpivot)  
-- [规划 BitLocker 管理](https://docs.microsoft.com/configmgr/protect/plan-design/bitlocker-management)  
-- [Microsoft Edge 管理](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge)  
-- [管理 Office 365 ProPlus 更新](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
-- [Configuration Manager Current Branch 和服务型 Windows 的基础知识](https://docs.microsoft.com/configmgr/core/understand/configuration-manager-and-windows-as-service)
-- [使用 Configuration Manager 优化 Windows 10 更新传递](https://docs.microsoft.com/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
-- [技术预览版](https://docs.microsoft.com/configmgr/core/get-started/technical-preview)
-- [使用云服务来补充本地基础结构](https://docs.microsoft.com/configmgr/core/understand/use-cloud-services)
+- [Microsoft Endpoint Manager 租户附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
+- [桌面分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview)
+- [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview)  
+- [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
+- [规划 BitLocker 管理](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
+- [Microsoft Edge 管理](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
+- [管理 Office 365 ProPlus 更新](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Configuration Manager Current Branch 和服务型 Windows 的基础知识](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service)
+- [使用 Configuration Manager 优化 Windows 10 更新传递](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
+- [技术预览版](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)
 
 ## <a name="trending"></a>趋势
 
-2020 年 2 月 1 日至 2 月 29 日期间最热门的文章。
+2020 年 3 月 1 日至 3 月 30 日期间最热门的文章。
 
 | 页面查看次数 | 标题 |
 |------------|-------|
-| 17949 | [日志文件引用](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16788 | [1910 版中的新增功能](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
-| 16336 | [桌面分析](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 15901 | [启用传输层安全性 (TLS) 1.2 概述](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 15582 | [更新和维护服务](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 13294 | [用于连接的端口](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 11675 | [将客户端部署到 Windows](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 11649 | [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 10898 | [什么是 Configuration Manager？](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 9837 | [软件中心用户指导](https://docs.microsoft.com/configmgr/core/understand/software-center) |
+| 22659 | [规划云管理网关](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 16797 | [日志文件引用](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
+| 16142 | [用于连接的端口](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
+| 15907 | [软件中心用户指导](https://docs.microsoft.com/configmgr/core/understand/software-center) |
+| 14667 | [更新和维护服务](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
+| 14455 | [启用传输层安全性 (TLS) 1.2 概述](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 12292 | [桌面分析](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 12062 | [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/configmgr/comanage/overview) |
+| 11741 | [什么是 Configuration Manager？](https://docs.microsoft.com/configmgr/core/understand/introduction) |
+| 11282 | [1910 版中的新增功能](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
 
-[Configuration Manager 中心页面](https://docs.microsoft.com/configmgr/)在此时间段获得了 31,487 次页面查看。
+[Configuration Manager 中心页面](https://docs.microsoft.com/mem/configmgr/)在此时间段获得了 36,258 次页面查看。
 
 ## <a name="recently-updated"></a>最近更新
 
@@ -78,31 +78,31 @@ ms.locfileid: "81668234"
 
 | 上次审阅时间 | 标题 |
 |---------------|-------|
-| 2020/2/28 | [技术预览版 2002.2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2) |
-| 2020/2/28 | [启用数据共享](https://docs.microsoft.com/configmgr/desktop-analytics/enable-data-sharing) |
-| 2020/2/26 | [管理高风险部署](https://docs.microsoft.com/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments) |
-| 2020/2/19 | [站点服务器弃用的内容](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-server) |
-| 2020/2/19 | [客户端弃用的内容](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client) |
-| 2020/2/14 | [将本地站点扩展并迁移到 Microsoft Azure](https://docs.microsoft.com/configmgr/core/support/azure-migration-tool) |
-| 2020/2/13 | [技术预览版 2002](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002) |
-| 2020/2/12 | [产品和许可常见问题解答](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq) |
-| 2020/2/3 | [桌面分析常见问题解答](https://docs.microsoft.com/configmgr/desktop-analytics/faq) |
-| 2020/2/3 | [技术预览 2001.2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2001-2) |
+| 2020/3/30 | [维护任务参考](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
+| 2020/3/30 | [管理软件更新的设置](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
+| 2020/3/25 | [Endpoint Protection 反恶意软件策略](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
+| 2020/3/23 | [面向现有设备的 Windows Autopilot](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
+| 2020/3/12 | [如何创建部署计划](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
+| 2020/3/12 | [如何部署到试点](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
+| 2020/3/12 | [桌面分析中的新增功能](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
+| 2020/3/3 | [兼容性评估](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
+| 2020/3/3 | [桌面分析](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
 
 ## <a name="troubleshooting-articles"></a>疑难解答文章
 
 用来帮助排查 Configuration Manager 组件和功能问题的指导式演练。
 
-- [排除应用程序部署故障](https://docs.microsoft.com/configmgr/apps/understand/app-deployment-technical-reference)
+- [排除应用程序部署故障](https://docs.microsoft.com/mem/configmgr/apps/understand/app-deployment-technical-reference)
 - [排查 PXE 启动问题](https://support.microsoft.com/help/4468612)
 - [了解 Configuration Manager 中的“更新和维护”节点和排除故障](https://support.microsoft.com/help/4490424)
 - [排查软件更新同步问题](https://support.microsoft.com/help/10059)
 - [了解并排查内容分发问题](https://support.microsoft.com/help/4482728)
-- [了解并排查适用于企业的 Microsoft Store 集成的问题](https://docs.microsoft.com/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
+- [了解并排查适用于企业的 Microsoft Store 集成的问题](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
 - [软件更新管理疑难解答](https://support.microsoft.com/help/10680)
 - [排查“安装应用程序”任务序列步骤问题](https://support.microsoft.com/help/18408/)
-- [桌面分析疑难解答](https://docs.microsoft.com/configmgr/desktop-analytics/troubleshooting)
-- [Microsoft 互连缓存排除故障](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
+- [桌面分析疑难解答](https://docs.microsoft.com/mem/configmgr/desktop-analytics/troubleshooting)
+- [Microsoft 互连缓存排除故障](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
+- [BitLocker 疑难解答](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot)
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
 

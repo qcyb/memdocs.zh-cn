@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255007"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842285"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 中前几个月的新增功能
 
@@ -4220,7 +4220,7 @@ Play Store 中支持托管配置选项的 Android 应用现在可以由 Intune �
 - 指定是否允许通知声音。
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>配置 iOS 应用以单一应用模式自主运行<!-- 737837 -->
-可以使用 Intune 设备配置文件配置 iOS 设备，以[自主单一应用模式](../configuration/device-restrictions-ios.md#autonomous-single-app-mode)运行指定应用。 配置此模式并运行应用时，将锁定设备，因此该设备只能运行该应用。 举个例子，当你配置一个允许用户在设备上进行测试的应用时就是如此。 应用的操作完成或删除此策略时，设备将恢复正常状态。
+可以使用 Intune 设备配置文件配置 iOS 设备，以[自主单一应用模式](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)运行指定应用。 配置此模式并运行应用时，将锁定设备，因此该设备只能运行该应用。 举个例子，当你配置一个允许用户在设备上进行测试的应用时就是如此。 应用的操作完成或删除此策略时，设备将恢复正常状态。
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>为 iOS 设备上的电子邮件和 Web 浏览配置受信任的域<!-- 723765 -->
 现在可以从 iOS 设备限制配置文件配置以下[域设置](../configuration/device-restrictions-ios.md#domains)：
