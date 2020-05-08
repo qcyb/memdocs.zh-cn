@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705445"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905706"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager Technical Preview 1609 中的功能
 
@@ -51,7 +51,6 @@ Endpoint Protection 反恶意软件策略设置的改进 - 现在可以指定 En
 
 Upgrade Analytics 使你能够评估和分析设备的准备情况以及与 Windows 10 的兼容性，从而实现更轻松、更流畅的升级。 通过将 Upgrade Analytics 与 Configuration Manager 集成，你可以访问 Configuration Manager 管理控制台中的升级兼容性数据，然后从设备列表中设置目标设备以进行升级或更新。
 
-有关 Upgrade Analytics 的详细信息，请参阅 [Upgrade Analytics 入门](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started)。
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Windows 10 VPN 混合配置文件的本机连接类型
 
@@ -348,7 +347,7 @@ Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 �
 - Office 365 客户端版本
 - Office 365 客户端语言
 - Office 365 客户端通道     
-有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](https://technet.microsoft.com/library/mt455210.aspx)。
+有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](https://docs.microsoft.com/deployoffice/overview-update-channels)。
 - 已在可用产品集中选择 Office 365 客户端的自动部署规则。
 
 你可以对仪表板执行以下操作：

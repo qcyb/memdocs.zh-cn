@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688515"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904574"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Configuration Manager 支持的配置
 
@@ -27,12 +27,12 @@ ms.locfileid: "81688515"
 
 如果 Configuration Manager 功能需要更具体的配置，相关信息会包含在特定于功能的文档中，作为对较通用配置详细信息的补充。  
 
- 以下各主题中所述的产品和技术受 Configuration Manager 支持。 但是，它们包括在此内容中并不表示对任何超出该产品个体支持生命周期的产品的扩展支持。 不支持将已超出支持生命周期的产品与 Configuration Manager 一起使用，包括[扩展的安全更新 (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) 计划包含的任何产品。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](https://go.microsoft.com/fwlink/p/?LinkId=208270) 网站。 有关 Configuration Manager 中的扩展的安全更新的详细信息，请参阅[用于 Configuration Manager 的客户端和设备的支持的操作系统版本](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)。
+ 以下各主题中所述的产品和技术受 Configuration Manager 支持。 但是，它们包括在此内容中并不表示对任何超出该产品个体支持生命周期的产品的扩展支持。 不支持将已超出支持生命周期的产品与 Configuration Manager 一起使用，包括[扩展的安全更新 (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) 计划包含的任何产品。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle) 网站。 有关 Configuration Manager 中的扩展的安全更新的详细信息，请参阅[用于 Configuration Manager 的客户端和设备的支持的操作系统版本](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)。
 
 > [!NOTE]  
->  有关 Microsoft 支持生命周期策略的信息，请转到 Microsoft 支持生命周期支持策略常见问题网站：[Microsoft 支持生命周期策略常见问题](https://go.microsoft.com/fwlink/p/?LinkId=31976)。  
+>  有关 Microsoft 支持生命周期策略的信息，请转到 Microsoft 支持生命周期支持策略常见问题网站：[Microsoft 支持生命周期策略常见问题](https://support.microsoft.com/lifecycle)。  
 
- 此外，Configuration Manager 不支持以下主题中未列出的产品和产品版本，除非它们已在[企业移动性和安全性博客](https://blogs.technet.microsoft.com/enterprisemobility/)上公布。  此博客上的内容有时会早于本文档正文的更新。
+ 此外，Configuration Manager 不支持以下主题中未列出的产品和产品版本，除非它们已在[企业移动性和安全性博客](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity)上公布。  此博客上的内容有时会早于本文档正文的更新。
 
 
 -  [大小和扩展数量](../../../core/plan-design/configs/size-and-scale-numbers.md)  

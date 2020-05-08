@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c6ff51edbd04a6d68f2770af123b1ac431542d2
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073936"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904705"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager 版本 1702 中的新增功能
 
@@ -28,8 +28,8 @@ Configuration Manager Current Branch 的更新 1702 作为控制台内更新提�
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
 >
 > 了解详细信息：    
-> - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [安装新站点](../../servers/deploy/install/installing-sites.md)  
+> - [在站点上安装更新](../../servers/manage/updates.md)  
 > - [基准和更新版本](../../servers/manage/updates.md#bkmk_Baselines)
 
 以下各节提供有关 Configuration Manager 版本 1702 中引入的更改和新功能的详细信息。  
@@ -71,7 +71,7 @@ Configuration Manager Current Branch 的更新 1702 作为控制台内更新提�
 - 右键单击控制台中的任何对象时。   
    ![右键单击选项](./media/feedback-option.png)   
 
-  选择“反馈”  将打开浏览器，并转到 [Configuration Manager UserVoice 反馈网站](https://go.microsoft.com/fwlink/?linkid=617029)。
+  选择“反馈”  将打开浏览器，并转到 [Configuration Manager UserVoice 反馈网站](https://configurationmanager.uservoice.com/forums/300492-ideas)。
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>更新和维护服务的更改

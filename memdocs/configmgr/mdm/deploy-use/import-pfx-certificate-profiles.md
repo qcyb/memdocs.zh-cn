@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f72dcba7e7f1e3af0bf168ca83deb958094879a
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 3304d480f0650191a784a9152ae464e81c2207a1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724591"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906398"
 ---
 # <a name="import-pfx-certificate-profiles"></a>导入 PFX 证书配置文件
 
@@ -28,7 +28,7 @@ ms.locfileid: "81724591"
 使用 Configuration Manager 导入证书凭据，然后将 PFX 文件设置到设备。 可以使用这些文件生成特定于用户的证书以支持加密的数据交换。
 
 > [!TIP]  
-> 有关此过程的分步演练，请参阅博客文章[如何在 Configuration Manager 中创建和部署 PFX 证书配置文件](https://blogs.technet.microsoft.com/karanrustagi/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager/)。  
+> 有关此过程的分步演练，请参阅博客文章[如何在 Configuration Manager 中创建和部署 PFX 证书配置文件](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)。  
 
 ## <a name="create-a-profile"></a>创建档案
 

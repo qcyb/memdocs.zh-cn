@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: fc2f2644ff042598d3df0ddfc1fd9d4d1adcc34a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906775"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自动部署软件更新  
 
@@ -85,7 +85,7 @@ ms.locfileid: "82110434"
 
      - ADR 中软件更新的限制为 1000 个软件更新。  
 
-     - 必要时，可对自动部署规则中软件更新的内容大小进行筛选。 有关详细信息，请参阅 [Configuration Manager and simplified Windows servicing on down level operating systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)（低级别操作系统上的 Configuration Manager 和简化的 Windows 维护）。  
+     - 必要时，可对自动部署规则中软件更新的内容大小进行筛选。 有关详细信息，请参阅 [Configuration Manager and simplified Windows servicing on down level operating systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)（低级别操作系统上的 Configuration Manager 和简化的 Windows 维护）。  
 
      - 自版本 1910 起，可将“已部署”用作自动部署规则的更新筛选器  。 此筛选器可帮助确定可能需要部署到试点或测试集合的新更新。 软件更新筛选器还可帮助避免重新部署旧更新。 
          - 请注意，将“已部署”  用作筛选器时，你可能已将更新部署到其他集合，如试点或测试集合。 <!--4852033-->

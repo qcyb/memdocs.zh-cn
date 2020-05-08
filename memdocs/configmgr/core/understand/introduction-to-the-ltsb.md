@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706915"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906103"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Configuration Manager 的 Long-Term Servicing Branch 简介
 
@@ -53,7 +53,7 @@ Configuration Manager 的 Current Branch 支持以下功能，但使用 LTSB 时
 
 ## <a name="find-ltsb-documentation"></a>查找 LTSB 文档
 
-LTSB 是在 Current Branch 版本 1606 基础之上构建而成。 使用 [Current Branch 文档](https://docs.microsoft.com/sccm/)，其中包含 LTSB 专属注意事项和限制。 以下文章中标识了这些注意事项和限制：
+LTSB 是在 Current Branch 版本 1606 基础之上构建而成。 使用 [Current Branch 文档](https://docs.microsoft.com/mem/configmgr/)，其中包含 LTSB 专属注意事项和限制。 以下文章中标识了这些注意事项和限制：
 
 - [安装 LTSB](install-the-ltsb.md)
 - [将 LTSB 升级到 Current Branch](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ LTSB 是在 Current Branch 版本 1606 基础之上构建而成。 使用 [Curre
 
 对 System Center Configuration Manager 具有永久权限或者允许 SA 或订阅在 10 月 1 日之后失效的客户，可以在失效时安装当前的 System Center Configuration Manager LTSB 版本。
 
-有关这些许可证的详细信息，请参阅[通过 Microsoft 批量许可计划购买的产品的完整条款和条件](https://go.microsoft.com/fwlink/?LinkId=800052)。
+有关这些许可证的详细信息，请参阅[通过 Microsoft 批量许可计划购买的产品的完整条款和条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)。
 
 有关 Configuration Manager 分支的许可详细信息，请参阅 [Configuration Manager 的许可和分支](learn-more-editions.md)。
 

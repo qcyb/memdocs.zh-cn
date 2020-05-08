@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702345"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904677"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1910 中的新增功能
 
@@ -46,7 +46,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 - [Intune](https://docs.microsoft.com/intune)
 - [桌面分析](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- [设备管理管理员控制台](https://go.microsoft.com/fwlink/?linkid=2109094)中的其他功能
+- [设备管理管理员控制台](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)中的其他功能
 
 有关详细信息，请参阅以下 Microsoft 公司副总裁 Brad Anderson 发布的关于 Microsoft 365 的帖子：
 

@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700265"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906476"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
@@ -231,7 +231,7 @@ SMS 编写器的编写器 ID 为：03ba67dd-dc6d-4729-a038-251f7018463b  。
 SMS 编写器服务必须采用本地系统帐户运行。  
 
 ### <a name="volume-shadow-copy-service"></a>卷影复制服务  
-VSS 是一组 COM API，它实现一个框架，以允许在系统上的应用程序继续写入卷时执行所有卷备份。 VSS 提供一个一致的接口，在用于更新磁盘上的数据的用户应用程序（SMS 编写器服务）和用于备份应用程序的用户应用程序（备份管理器服务）之间实现协作。 有关详细信息，请参阅[卷影复制服务](https://go.microsoft.com/fwlink/p/?LinkId=241968)。  
+VSS 是一组 COM API，它实现一个框架，以允许在系统上的应用程序继续写入卷时执行所有卷备份。 VSS 提供一个一致的接口，在用于更新磁盘上的数据的用户应用程序（SMS 编写器服务）和用于备份应用程序的用户应用程序（备份管理器服务）之间实现协作。 有关详细信息，请参阅[卷影复制服务](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)。  
 
 
 

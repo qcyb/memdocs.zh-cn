@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708525"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903959"
 ---
 # <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
@@ -193,7 +193,7 @@ ms.locfileid: "81708525"
 
 Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 利用更改跟踪，Configuration Manager 可以查询有关在上一个时间点之后对数据库表所做的更改的信息。 保持期指定更改跟踪信息将保留多长时间。 默认情况下，站点数据库被配置为具有 5 天保持期。 恢复站点数据库时，恢复过程在备份处于保持期内或保持期外这两种情况下会以不同方式继续进行。 例如，如果 SQL 服务器出现故障，并且上次备份是在 7 天之前，则它不在保持期范围内。
 
-有关 SQL Server 更改跟踪内部机制的详细信息，请参阅以下 SQL Server 团队的博客文章：[Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/)（更改跟踪清除 - 第 1 部分）和 [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2)（更改跟踪清除 - 第 2 部分）。
+有关 SQL Server 更改跟踪内部机制的详细信息，请参阅以下 SQL Server 团队的博客文章：[Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1)（更改跟踪清除 - 第 1 部分）和 [Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2)（更改跟踪清除 - 第 2 部分）。
 
 ### <a name="reinitialization-of-site-or-global-data"></a>重新初始化站点或全局数据
 

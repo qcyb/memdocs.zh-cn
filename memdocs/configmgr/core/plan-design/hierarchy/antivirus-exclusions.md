@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703735"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906210"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>建议为 Configuration Manager 使用的防病毒排除
 
@@ -114,10 +114,10 @@ ms.locfileid: "81703735"
 
 有关防病毒排除的详细信息，请参阅以下文章：
 
-[Configuration Manager Current Branch 防病毒排除 - System Center 顶级现场工程师博客](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
+[Configuration Manager Current Branch 防病毒排除 - System Center 顶级现场工程师博客](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831)
 
-[更新了 System Center 2012 Configuration Manager 防病毒排除以及有关 OSD 和启动映像的更多详细信息](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[更新了 System Center 2012 Configuration Manager 防病毒排除以及有关 OSD 和启动映像的更多详细信息](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371)
 
-[如何选择要在运行 SQL Server 的计算机上运行的防病毒软件](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[如何选择要在运行 SQL Server 的计算机上运行的防病毒软件](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[针对运行当前支持的 Windows 版本的企业计算机的病毒扫描建议](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[针对运行当前支持的 Windows 版本的企业计算机的病毒扫描建议](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

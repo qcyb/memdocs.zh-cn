@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ec5581567925ee57300274e50288058e06d80ec0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700725"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906174"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Configuration Manager 中的语言包
 
@@ -42,7 +42,7 @@ ms.locfileid: "81700725"
 
 ## <a name="server-languages"></a>服务器语言  
 
-使用下表将区域设置 ID 对应到你要在服务器上支持的语言。 有关区域设置 ID 的详细信息，请参阅 [Microsoft 指定的区域设置 ID](https://go.microsoft.com/fwlink/p/?LinkId=252609)。  
+使用下表将区域设置 ID 对应到你要在服务器上支持的语言。 有关区域设置 ID 的详细信息，请参阅 [Microsoft 指定的区域设置 ID](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。  
 
 |服务器语言|区域设置 ID (LCID)|3 个字母的代码|  
 |---------------------|------------------------|-----------------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "81700725"
 
 ## <a name="client-languages"></a>客户端语言  
 
-使用下表将区域设置 ID 对应到你要在客户端计算机上支持的语言。 有关区域设置 ID 的详细信息，请参阅 [Microsoft 指定的区域设置 ID](https://go.microsoft.com/fwlink/p/?LinkId=252609)。  
+使用下表将区域设置 ID 对应到你要在客户端计算机上支持的语言。 有关区域设置 ID 的详细信息，请参阅 [Microsoft 指定的区域设置 ID](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。  
 
 |客户端语言|区域设置 ID (LCID)|3 个字母的代码|  
 |---------------------|------------------------|-----------------------|  

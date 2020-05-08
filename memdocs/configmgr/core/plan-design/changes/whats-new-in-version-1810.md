@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073545"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906248"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -43,7 +43,7 @@ Configuration Manager Current Branch 的 1810 更新作为控制台中更新提�
 
 自 2018 年 8 月 14 日起，混合移动设备管理功能已弃用。 有关详细信息，请参阅[混合 MDM 出了什么问题](../../../mdm/understand/what-happened-to-hybrid.md)。<!--Intune feature 2683117-->  
 
-将于 2018 年 12 月 31 日结束对 Mac 版和 Linux 版 System Center Endpoint Protection (SCEP)（所有版本）的支持。 在支持结束后，可能会停止为 SCEP for Mac 和 SCEP for Linux 提供新的病毒定义。 有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。
+将于 2018 年 12 月 31 日结束对 Mac 版和 Linux 版 System Center Endpoint Protection (SCEP)（所有版本）的支持。 在支持结束后，可能会停止为 SCEP for Mac 和 SCEP for Linux 提供新的病毒定义。 有关详细信息，请参阅[“不再提供支持”博客文章](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)。
 
 Configuration Manager 现已弃用 Azure 的经典服务部署。 开始将 Azure 资源管理器部署用于云管理网关和云分发点。 有关详细信息，请参阅 [CMG 规划](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)。
 
