@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696025"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905234"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Configuration Manager Technical Preview 1805 中的功能
 
@@ -163,8 +163,6 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 <!--1358112-->
 
 Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能，可帮助管理后台网络传输。 对于在支持版本的 Windows Server 上运行的分发点，可以启用一个选项以帮助调整网络流量。 客户端仅在允许的情况下使用网络带宽。 
-
-有关 Windows LEDBAT 的详细信息，请参阅[新建传输改进](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)博客文章。
 
 
 ### <a name="prerequisites"></a>必备条件

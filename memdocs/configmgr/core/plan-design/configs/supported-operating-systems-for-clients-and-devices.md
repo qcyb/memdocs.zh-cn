@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078679"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904538"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
@@ -209,7 +209,7 @@ macOS 客户端安装包未与 Configuration Manager 媒体一同提供。 请�
 > [!Important]  
 > Configuration Manager 版本 1902 不再支持将 Linux 和 UNIX 作为客户端。 已在[版本 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support) 中宣布弃用。 请考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
 
-Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=525184)下载**适用于其他操作系统的客户端**。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的脚本。  
+Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=47719)下载**适用于其他操作系统的客户端**。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的脚本。  
 
 ### <a name="requirements-and-limitations"></a>要求和限制
 

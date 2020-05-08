@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701415"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906575"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>关于 Configuration Manager 隐私的其他信息
 
@@ -91,6 +91,6 @@ Microsoft Cloud Protection Service 不会有意收集个人信息。 就算 Micr
 
 在 Configuration Manager 控制台中，转到“监视”  工作区，选择“站点层次结构”  节点，然后切换到“地理视图”  。 此视图允许用户使用 Microsoft 必应地图提供的地图查看 Configuration Manager 物理服务器拓扑。 为了启用此功能，会将你提供的位置信息从服务器发送到 Bing 地图 Web 服务。
 
-Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Microsoft 站点和服务。 有关详细信息，请参阅 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=823548)。
+Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Microsoft 站点和服务。 有关详细信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)。
 
 你可以选择不为站点层次结构使用地理视图。 此默认“层次结构图表”视图允许你查看层次结构，且不使用必应地图服务。

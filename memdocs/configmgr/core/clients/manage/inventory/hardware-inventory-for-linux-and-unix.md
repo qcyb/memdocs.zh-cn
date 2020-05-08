@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695425"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906274"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Configuration Manager 中适用于 Linux 和 UNIX 的硬件清单
 
@@ -105,7 +105,7 @@ Linux 或 UNIX 服务器上的硬件清单会根据客户端设置中配置的�
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> 创建适用于 Linux 和 UNIX 计算机的自定义硬件清单提供程序。  
  若要创建适用于 Linux 和 UNIX 的 Configuration Manager 客户端的自定义硬件清单提供程序，请使用 **OMI 源-v.1.0.6** 并按照 OMI 入门指南中的说明进行操作。 此过程包括创建托管对象格式 (MOF) 文件，该文件用于定义新提供程序的架构。 随后，将 MOF 文件导入 Configuration Manager 以支持新自定义清单类。  
 
- OMI 源-v.1.0.6 和 OMI 入门指南均可以从 [开放组](https://github.com/microsoft/omi/blob/master/README.md) 网站下载。 可以在 OpenGroup.org 网站上的以下网页中的“文档”选项卡上找到这些下载内容  ：[开放式管理基础结构 (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805)。  
+ OMI 源-v.1.0.6 和 OMI 入门指南均可以从 [开放组](https://github.com/microsoft/omi/blob/master/README.md) 网站下载。 可以在 OpenGroup.org 网站上的以下网页中的“文档”选项卡上找到这些下载内容  ：[开放式管理基础结构 (OMI)](https://collaboration.opengroup.org/omi/)。  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> 使用自定义硬件清单提供程序对每个运行 Linux 或 UNIX 的计算机进行配置：  
  创建自定义清单提供程序后，必须在具有你想收集的清单的每个计算机上复制并注册提供程序库文件。  

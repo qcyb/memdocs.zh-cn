@@ -10,12 +10,12 @@ ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fff68eaad52f753d27971562a4bbfaa47a6cf6e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffa50d2cfb3095eb136128c09b74e9ee6a4eb501
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691345"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904396"
 ---
 # <a name="diagnostics-and-usage-data-for-configuration-manager"></a>Configuration Manager 的诊断和使用情况数据
 
@@ -28,7 +28,7 @@ Configuration Manager 收集有关自身的诊断和使用情况数据，Microso
 > [!NOTE]  
 > Configuration Manager 仅从站点 SQL Server 数据库收集数据，而不会直接从客户端或站点服务器收集数据。  
 
-有关详细信息，请参阅 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkID=626527)。  
+有关详细信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)。  
 
 > [!div class="nextstepaction"]
 > [Microsoft 如何使用诊断和使用情况数据](how-diagnostics-and-usage-data-is-used.md)

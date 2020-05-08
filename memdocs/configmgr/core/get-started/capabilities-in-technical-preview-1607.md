@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705555"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905700"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Configuration Manager Technical Preview 1607 中的功能
 
@@ -62,7 +62,7 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>对多个 PXE 启动的部署使用相同的网络适配器
 在 Technical Preview 版本 1607 中，当使用以太网适配器映射多个设备（如在多个设备上使用的 USB 以太网适配器）时，可以启用允许输入以太网适配器的硬件标识符的新设置。 在执行 PXE 安装和客户端注册时，Configuration Manager 忽略列表中的硬件标识符。
 
-有关此问题的详细信息，请参阅 [Configuration Manager OSD Support Team Blog](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)（Configuration Manager OSD 支持团队博客）。  
+有关此问题的详细信息，请参阅 [Configuration Manager OSD Support Team Blog](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721)（Configuration Manager OSD 支持团队博客）。  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>启用该功能可管理重复硬件标识符  
 1. 在 Configuration Manager 控制台中，转到“管理”   > “概述”   > “云服务”   > “更新与维护服务”   > “功能”  。

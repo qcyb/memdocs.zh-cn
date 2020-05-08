@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073596"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904654"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager 1802 版中的新增功能
 
@@ -169,7 +169,7 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 
 ### <a name="microsoft-edge-browser-policies"></a>Microsoft Edge 浏览器策略
 <!-- 1357310 -->
-在 Windows 10 客户端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web 浏览器的客户，可创建 Configuration Manager 符合性设置策略，以配置多个 Microsoft Edge 设置。 有关详细信息，请参阅[创建 Microsoft Edge 浏览器配置文件](../../../compliance/deploy-use/browser-profiles.md)。 
+在 Windows 10 客户端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web 浏览器的客户，可创建 Configuration Manager 符合性设置策略，以配置多个 Microsoft Edge 设置。 有关详细信息，请参阅[创建 Microsoft Edge 浏览器配置文件](../../../compliance/deploy-use/browser-profiles.md)。 
 
 
 

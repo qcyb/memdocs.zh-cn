@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 91c11e133c74cd3b55db09e8bf80fd6c4df7774d
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210088"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906362"
 ---
 # <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>在 Configuration Manager 中配置 Microsoft Edge 设置
 
 适用范围：  Configuration Manager (Current Branch)
 
 <!-- 1357310 -->
-从 1802 版开始，在 Windows 10 客户端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web 浏览器的客户，可创建 Configuration Manager 符合性设置策略，以配置多个 Microsoft Edge 设置。 
+从 1802 版开始，在 Windows 10 客户端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web 浏览器的客户，可创建 Configuration Manager 符合性设置策略，以配置多个 Microsoft Edge 设置。 
 
 此策略仅适用于 Windows 10 1703 或更高版本上的客户端。 <!--511552-->
 

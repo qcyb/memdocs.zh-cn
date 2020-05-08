@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078730"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905252"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Configuration Manager Technical Preview 1804 中的功能
 
@@ -134,8 +134,6 @@ ms.locfileid: "82078730"
 
 使用支持中心排除客户端故障、查看实时日志，或者捕获 Configuration Manager 客户端计算机状态供日后分析。 支持中心是用于整合多个管理员故障排除工具的单一工具。 在 Technical Preview 中可以看到修复了 bug 并进行了改进的支持中心最新版本的预览，以及我们的新日志查看器的预览。 在站点服务器的 cd.latest\SMSSETUP\Tools\SupportCenter  文件夹中找到支持中心安装程序。
 
- > [!Tip]  
- > 支持中心中的现有功能的旧文档在 [TechNet](https://technet.microsoft.com/library/dn688621.aspx) 上提供。 相关信息正在迁移到 docs.microsoft.com 库。  
 
 ### <a name="new-support-center-features"></a>新支持中心功能  
 
@@ -287,7 +285,7 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
 > 请记住，有 32 位 (x86) 应用程序和组件在 64 位 (x64) 系统上运行。 除非确定不需要 x86，否则在选择 x64 时也请启用它。  
 
 ### <a name="known-issues"></a>已知问题
-在添加体系结构条件后，自动部署规则属性页将在搜索条件中显示“标题”  。 自动部署规则仍会按预期运行，并选择正确的软件更新。 但是，此时不能同时包括“体系结构”和“标题”条件   。 <!--512634,512632-->
+在添加体系结构条件后，自动部署规则属性页将在搜索条件中显示“Title”  。 自动部署规则仍会按预期运行，并选择正确的软件更新。 但是，此时不能同时包括“体系结构”和“标题”条件   。 <!--512634,512632-->
 
 
 
