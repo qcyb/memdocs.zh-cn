@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615668"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693417"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>使用安全基线在 Intune 中配置 Windows 10 设备
 
@@ -56,7 +56,8 @@ ms.locfileid: "81615668"
 
 - **Microsoft Defender ATP 基线**
    *（若要使用此基线，环境必须满足使用 [Microsoft Defender 高级威胁防护](advanced-threat-protection.md#prerequisites)的先决条件）* 。
-  - [Microsoft Defender ATP 基线版本 3](security-baseline-settings-defender-atp.md)
+  - [2020 年 4 月的 Microsoft Defender ATP 基线 - 版本 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [2020 年 3 月的 Microsoft Defender ATP 基线 - 版本 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > Microsoft Defender ATP 安全基线已针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。  有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
@@ -75,13 +76,19 @@ ms.locfileid: "81615668"
 
 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的“终结点安全性” > “安全基线”下，你将看到可用基线的列表   。 此列表中有基线模板名称、使用该基线类型的配置文件数量、基线类型的单独实例（版本）可用数量，以及标识最新版本的基线模板何时可用的“上次发布日期”  。
 
-若要查看所使用的基线版本的详细信息，请选择基线磁贴以打开它的“概览”  窗格，再选择“版本”  。 此时，Intune 显示配置文件使用的基线版本的详细信息。 在“版本”窗格中，可以选择单个版本以进一步详细了解使用该版本的配置文件。 还可以选择两个不同的版本，然后选择“比较基线”  ，下载详细介绍其差异的 CSV 文件。
-
-![比较基线](./media/security-baselines/compare-baselines.png)
-
-创建安全基线配置文件  时，该配置文件将自动使用最新发布的安全基线实例。  可以继续使用和编辑之前创建的使用较低基线版本实例（包括使用预览版本创建的基线）的配置文件。
+若要查看所使用的基线版本的详细信息，请选择基线磁贴以打开它的“概览”  窗格，再选择“版本”  。 此时，Intune 显示配置文件使用的基线版本的详细信息，包括当前最新的基线版本。  可以选择单个版本以进一步详细了解使用该版本的配置文件。
 
 可以选择[更改给定配置文件使用的基线版本](#change-the-baseline-version-for-a-profile)。 这意味着当新版本推出时，无需创建新的基线配置文件即可充分利用它。 相反，当一切就绪后，可以选择基线配置文件，然后使用内置选项将相应配置文件的实例版本更改为新实例版本。
+
+### <a name="compare-baseline-versions"></a>比较基线版本
+
+在安全基线的“版本”窗格中，其中显示已部署的此基线的每个版本的列表  。 此列表还包括最新的和可用的基线版本。 创建新的安全基线配置文件时，该配置文件将使用最新版本的安全基线  。  可以继续使用和编辑之前创建的使用较低基线版本（包括使用预览版本创建的基线）的配置文件。
+
+若要了解版本之间的更改内容，请选择两个不同版本的复选框，然后选择“比较基线”下载详细说明这些差异的 CSV 文件  。 
+
+下载标识两个基线版本中的每个设置，并注明此设置是否已更改 (notEqual) 或保持不变 (equal)   。 详细信息还包括各版本对应设置的默认值，以及该设置是否已添加到较新版本或从较新版本中删除   。
+
+![比较基线](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>避免冲突
 
@@ -199,6 +206,14 @@ ms.locfileid: "81615668"
 当安全基线设置不再适用于设备，或基线中的设置设为“未配置”时，设备上的这些设置不会恢复为管理前的配置  。 相反，设备上之前管理的设置仍保留其从基线收到的最近一次配置，直到某个其他进程更新设备上的这些设置。
 
 可在稍后更改设备设置的其他进程包括其他或新的安全基线、设备配置文件、组策略配置或设备设置的手动编辑。
+
+### <a name="older-baseline-versions"></a>较旧的基线版本
+
+Microsoft Endpoint Manager 根据典型组织的不断变化的需求更新内置安全基线的版本。 每个新版本都会导致对特定基线进行版本更新。 预期结果就是客户将使用最新的基准版本作为其设备配置文件的起点。
+
+当租户中不再列出使用较旧基线的任何配置文件时，Microsoft Endpoint Manager 将仅列出可用的最新基线版本。
+
+如果有与较旧的基线相关联的配置文件，则该较旧的基线将继续列出。
 
 ## <a name="co-managed-devices"></a>共同管理的设备
 

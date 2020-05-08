@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086982"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587036"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 向设备添加电子邮件设置
 
@@ -96,6 +96,8 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 - **证书**：创建电子邮件配置文件时，选择之前在 Intune 中创建的证书配置文件。 该证书又称为标识证书。 它根据受信任的证书配置文件（或根证书）进行身份验证，以确定用户的设备可以连接。 受信任的证书会分配到对电子邮件连接进行身份验证的计算机。 通常，此计算机是本机邮件服务器。
 
+  如果对电子邮件配置文件使用基于证书的身份验证，请将电子邮件配置文件、证书配置文件和受信任的根配置文件部署到同一组，以确保每台设备都能识别证书颁发机构的合法性。
+
   有关如何在 Intune 中创建和使用证书配置文件的详细信息，请参阅[如何使用 Intune 配置证书](../protect/certificates-configure.md)。
 
 - **用户名和密码**：最终用户通过输入用户名和密码向本机邮件服务器进行身份验证。 电子邮件配置文件中不存在密码。 因此，最终用户需要在连接到电子邮件时输入密码。
@@ -110,7 +112,7 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 - **Android Samsung Knox Standard**：基于电子邮件地址检测到现有的重复电子邮件帐户，并使用 Intune 配置文件将其覆盖。 Android 不使用主机名验证配置文件。 请勿在不同主机上使用相同的电子邮件地址创建多个电子邮件配置文件。 配置文件相互覆盖。
 
-- **Android 工作配置文件**：Intune 提供了两个 Android 工作电子邮件配置文件：一个用于 Gmail 应用，另一个用于 Nine Work 应用。 这些应用在 Google Play 商店中提供，并且安装在设备工作配置文件中。 这些应用不会重复创建配置文件。 这两个应用支持到 Exchange 的连接。 要使用电子邮件连接，请将其中某个电子邮件应用部署到用户的设备上。 然后创建相应的电子邮件配置文件并对其进行部署。 Nine Work 等电子邮件应用可能需付费使用。 若有任何问题，请查看应用的许可详细信息或与应用公司联系。
+- **Android 工作配置文件**：Intune 提供了两个 Android 工作电子邮件配置文件：一个用于 Gmail 应用，另一个用于 Nine Work 应用。 这些应用在 Google Play 商店中提供，并且安装在设备工作配置文件中。 这些应用不会重复创建配置文件。 这两个应用支持到 Exchange 的连接。 要使用电子邮件连接，请将其中某个电子邮件应用部署到用户的设备上。 然后创建相应的电子邮件配置文件并对其进行部署。 可使用 Gmail 和 Nine 电子邮件配置文件，它们将同时适用于“工作配置文件”和“设备所有者”注册类型，包括对这两种电子邮件配置类型使用证书配置文件。 在“工作配置文件”的“设备配置”下创建的任何 Gmail 或 9 个策略将继续应用于设备，没有必要将它们移动到应用配置策略。 Nine Work 等电子邮件应用可能需付费使用。 若有任何问题，请查看应用的许可详细信息或与应用公司联系。 
 
 ## <a name="changes-to-assigned-email-profiles"></a>对已分配的电子邮件配置文件的更改
 

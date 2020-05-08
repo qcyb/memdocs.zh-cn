@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808101"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605161"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 中的 Windows 10 设备上使用 PowerShell 脚本
 
@@ -30,7 +30,7 @@ ms.locfileid: "80808101"
 
 此功能适用于：
 
-- Windows 10 及更高版本
+- Windows 10 及更高版本（Windows 10 家庭版除外）
 
 > [!NOTE]
 > 只要满足 Intune 管理扩展先决条件，如果 PowerShell 脚本或 Win32 应用分配给用户或设备，Intune 管理扩展就会自动安装。 有关详细信息，请参阅 Intune 管理扩展[先决条件](../apps/intune-management-extension.md#prerequisites)。
@@ -47,11 +47,14 @@ Intune 管理扩展对 Windows 10 MDM 内置功能进行了补充。 可创建�
 
 Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用户或设备分配 PowerShell 脚本或 Win32 应用时，系统将自动安装 Intune 管理扩展。
 
-- 运行 Windows 10 版本 1607 或更高版本的设备。 如果设备是通过[批量自动注册](../enrollment/windows-bulk-enroll.md)进行注册的，设备必须运行 Windows 10 版本 1703 或更高版本。 Windows 10 上的 S 模式不支持 Intune 管理扩展，因为该模式禁止运行非存储应用。 
+- 运行 Windows 10 版本 1607 或更高版本的设备。 如果设备是通过[批量自动注册](../enrollment/windows-bulk-enroll.md)进行注册的，设备必须运行 Windows 10 版本 1709 或更高版本。 Windows 10 上的 S 模式不支持 Intune 管理扩展，因为该模式禁止运行非存储应用。 
   
 - 加入 Azure Active Directory (AD) 的设备，其中包括：  
   
   - 已联接混合 Azure AD 的设备：同时加入 Azure Active Directory (AD) 和本地 Active Directory (AD) 的设备。 相关指南请参阅[规划混合 Azure Active Directory 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)。
+  
+  > [!TIP]
+  > 确保设备已[加入](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) Azure AD。 仅在 Azure AD 中[注册](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)的设备不会收到你的脚本。  
 
 - 在 Intune 中注册的设备，其中包括：
 
@@ -71,8 +74,8 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
     - [“客户端应用”工作负载](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [如何将 Configuration Manager 工作负载切换到 Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> 确保设备已[加入](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) Azure AD。 仅在 Azure AD 中[注册](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)的设备不会收到你的脚本。
+> [!NOTE]
+> 要了解如何使用 Window 10 虚拟机，请参阅[将 Windows 10 虚拟机与 Intune 配合使用](../fundamentals/windows-10-virtual-machines.md)。
 
 ## <a name="create-a-script-policy-and-assign-it"></a>创建脚本策略并分配该策略
 
@@ -125,6 +128,8 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 - 最终用户无需登录设备即可执行 PowerShell 脚本。
 
 - Intune 管理扩展代理每小时且每次重启后都会与 Intune 核对一次，以确定是否有任何新脚本或更改。 将策略分配给 Azure AD 组后，PowerShell 脚本将运行，还将报告运行结果。 脚本执行后，除非脚本或策略发生更改，否则不会再次执行。 如果脚本失败，Intune 管理扩展代理会尝试在接下来的连续 3 次 Intune 管理扩展代理签入中重试脚本三次。
+
+- 对于共享设备，将为每位登录的新用户运行 PowerShell 脚本。
 
 ### <a name="failure-to-run-script-example"></a>无法运行脚本示例
 上午 8 点

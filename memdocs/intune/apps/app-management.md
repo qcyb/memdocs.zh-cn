@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536855"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538141"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什么是 Microsoft Intune 应用管理？
 
@@ -111,6 +111,11 @@ iOS 应用包含一个预配配置文件和一个证书签名的代码。 证书
     - **应用类别**：添加、固定和删除应用类别名称。
     - 电子书  ：一些应用商店允许你为想要在公司使用的应用或书籍购买多个许可证。 有关系详细信息，请参阅[使用 Microsoft Intune 管理批量购买的应用和书籍](vpp-apps.md)。
 - **帮助和支持**：排查问题、请求获取支持或查看 Intune 状态。 有关详细信息，请参阅[排除问题](../fundamentals/help-desk-operators.md)。
+
+### <a name="try-the-interactive-guide"></a>尝试交互式指南
+[使用 Microsoft Endpoint Manager 管理并保护移动和桌面应用程序](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)交互式指南将引导您浏览 Microsoft Endpoint Manager 管理中心，并展示如何管理在 Intune 中注册的设备、使用策略强制实现合规性以及保护组织的数据。</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>其他信息
 控制台中的以下各项提供与应用相关的功能：

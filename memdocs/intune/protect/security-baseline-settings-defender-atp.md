@@ -5,34 +5,58 @@ description: Intune 支持用于管理 Microsoft Defender 高级威胁防护的�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397503"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693396"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 的 Microsoft Defender 高级威胁防护基线设置
 
 查看 Microsoft Intune 支持的 Microsoft Defender 高级威胁防护基线设置。 高级威胁防护 (ATP) 基线默认值表示针对 ATP 的建议配置，可能与其他安全基线中的基线默认值不匹配。
 
-本文中的详细信息适用于 2020 年 3 月 1 日发布的 Microsoft Defender ATP 基线版本 3。
+::: zone pivot="atp-april-2020"
+
+本文中的详细信息适用于 2020 年 4 月 21 日发布的 Microsoft Defender ATP 基线版本 4。 若要了解此版本的基线较以前版本的更改情况，请使用[比较基线](../protect/security-baselines.md#compare-baseline-versions)操作，该操作在查看此基线的“版本”窗格时可用  。
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+本文中的详细信息适用于 2020 年 3 月 1 日发布的 Microsoft Defender ATP 基线版本 3。 若要了解此版本的基线较以前版本的更改情况，请使用[比较基线](../protect/security-baselines.md#compare-baseline-versions)操作，该操作在查看此基线的“版本”窗格时可用  。
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 当环境满足使用 [Microsoft Defender 高级威胁防护](advanced-threat-protection.md#prerequisites)的先决条件时，Microsoft Defender 高级威胁防护基线才可用。
 
 此基线针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。 有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
+
 
 ## <a name="application-guard"></a>应用程序防护
 
@@ -630,11 +654,26 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   - **是**（默认）- 扫描所有已下载的文件和附件  。 设置返回到客户端默认设置，即启用，但用户可以对其进行更改。 要禁用此设置，请使用自定义 URI。
   - **未配置** - 设置返回到客户端默认设置，即启用，但用户可以对其进行更改。 要禁用此设置，请使用自定义 URI。
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **阻止访问保护**  
+  CSP：[Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **是**
+  - **未配置**（默认） 
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **阻止访问保护**  
   CSP：[Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **是**（默认） 
   - 未配置 
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **扫描浏览器脚本**  
   CSP：[Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -863,6 +902,8 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     - **不允许**
     - **必需**
     - **允许**（默认） 
+
+::: zone-end
 
 ## <a name="next-steps"></a>后续步骤
 

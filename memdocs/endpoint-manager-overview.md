@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/04/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939224776199407abb6a508f25bf5dadbacb882f
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "82135984"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782253"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft Endpoint Manager 概述
 
@@ -102,11 +102,11 @@ Endpoint Manager 包括以下服务：
 
 ## <a name="what-you-need-to-get-started"></a>入门所需操作
 
+Microsoft Endpoint Manager 是一个解决方案平台，它整合了多种技术。 它不是一种新的许可证。 服务根据其各自的许可条款获得许可。 有关详细信息，请参阅[产品许可条款](https://www.microsoft.com/licensing/product-licensing/products)。
+
 如果你目前使用 Configuration Manager，则还需要使用 Microsoft Intune 来共同管理 Windows 设备。 对于其他平台，例如 iOS/iPadOS 和 Android，则需要单独的 Intune 许可证。
 
-在大多数情况下，Microsoft 365 可能是最理想的选择，因为它提供了 Endpoint Manager 和 Office 365。
-
-有关详细信息，请参阅 [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)。
+在大多数情况下，Microsoft 365 可能是最理想的选择，因为它提供了 Endpoint Manager 和 Office 365。 有关详细信息，请参阅 [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)。
 
 ## <a name="next-steps"></a>后续步骤
 

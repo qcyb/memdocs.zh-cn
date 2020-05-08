@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079835"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745190"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>监视 Intune 设备符合性策略
 
@@ -102,6 +102,11 @@ ms.locfileid: "82079835"
 ![仪表板图像显示了处于该特定状态下的设备的更多详细信息](./media/compliance-policy-monitor/drill-down-details.png)
 
 如果要查看某一特定用户拥有的所有设备，还可以通过键入该用户的电子邮件来筛选图表报告。
+
+> [!TIP]
+> 如果没有用户登录到设备，则具有目标设备合规性策略的设备将向 Intune 发送合规性报告，显示“系统帐户”作为用户主体名称  。 这是因为设备合规性策略针对的是一组用户或设备，并且在评估合规性策略时没有用户登录到设备。
+>
+> 此外，如果有多个用户登录到同一设备，并且设备的目标恰巧为合规性策略且该策略的范围涵盖当前登录该设备的所有用户，则合规性报告可能会多次显示相同的设备，因为登录到设备的每个用户都需要评估设备合规性策略并将其报告回 Intune。
 
 #### <a name="filter-and-columns"></a>筛选器和列
 

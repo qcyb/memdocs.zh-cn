@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359468"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587262"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Intune 中的 macOS 终结点保护设置  
 
@@ -113,6 +113,18 @@ ms.locfileid: "80359468"
 
   - **允许的免验证次数**  
   设置在系统要求用户提供 FileVault 才能登录之前用户可忽略“启用 FileVault”提示的次数。 
+
+    > [!IMPORTANT]
+    >
+    > 值“无限制，始终提示”存在一个已知问题  。 此设置在下次登录时需要设备加密，而不是让用户在登录时绕过加密。 此问题预计将在 6 月下旬修复，并在 MC210922 中报告。
+    >
+    > 修复后，此设置将有一个新选项 - 零 (0)，这将要求设备在下次用户登录到设备时加密  。 此外，Intune 更新为包括此修补程序时，任何设置为“无限制，始终提示”的策略都将更新，以使用新值 0，此值维持要求加密的当前行为   。
+    >
+    > 修复此问题后，可以通过重新配置此设置来设置“无限制，始终提示”，从而使用绕过需要加密的功能，因为设置将按最初的预期运行，并允许用户绕过加密设备  。
+    >
+    > 如果已注册 macOS 设备，则可以在登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)时查看更多信息：转到“租户管理” > “租户状态”，选择“服务运行状况和消息中心”，然后查找消息 ID MC210922     。
+
+    <br> 
 
     - **未配置** - 需要在设备上进行加密，才能允许下次登录。  
     - 1 到 10 - 允许用户在要求对设备进行加密之前忽略 1 到 10 次的提示   。  

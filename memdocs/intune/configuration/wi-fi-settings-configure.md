@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086395"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587290"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>在 Microsoft Intune 中添加和使用设备上的 Wi-Fi 设置
 
@@ -97,6 +97,10 @@ Wi-Fi 配置文件支持以下设备平台：
     选择“下一步”  。
 
 11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+
+> [!TIP]
+> 如果对 Wi-Fi 配置文件使用基于证书的身份验证，请将 Wi-Fi 配置文件、证书配置文件和受信任的根配置文件部署到同一组，以确保每台设备都能识别证书颁发机构的合法性。  有关详细信息，请参阅[如何使用 Microsoft Intune 配置证书](../protect/certificates-configure.md)。
+
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345671"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506533"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune 中的传递优化设置
 
@@ -39,22 +39,28 @@ ms.locfileid: "79345671"
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 
 3. 输入以下属性：
+   - **平台**：选择“Windows 10 及更高版本”  。
+   - **配置文件类型**：选择“传递优化”  。
 
-    - **名称**：输入新配置文件的描述性名称。
-    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **平台**：选择“Windows 10 及更高版本”  。
-    - **配置文件类型**：选择“传递优化”  。
+4. 选择“创建”。 
 
-4. 选择“设置”   > “配置”  然后定义希望如何下载更新和应用。 要了解可用设置，请参阅 [Intune 的传递优化设置](delivery-optimization-settings.md)。
+5. 在“基本信息”页上，输入配置文件的名称和说明，然后选择“下一步”   。
 
-5. 完成后，选择“确定” > “创建”，保存所做更改   。
+6. 在“配置设置”页上，定义希望如何下载更新和应用的设置  。 要了解可用设置，请参阅 [Intune 的传递优化设置](delivery-optimization-settings.md)。
 
-配置文件随即创建并显示在列表中。 接下来，[分配配置文件](device-profile-assign.md)，然后[监视其状态](device-profile-monitor.md)。
+   完成配置设置后，选择“下一步”  。
 
-<!-- ## Move existing update rings to delivery optimization
+7. 在“作用域(标记)”页上，选择“选择作用域标记”以打开“选择标记”窗格，将作用域标记分配给配置文件    。
+  
+   选择“下一步”继续操作  。
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. 在“分配”页上，选择将接收此配置文件的组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+   选择“下一步”  。
+
+9. 在“适用性规则”页上，使用“规则”、“属性”和“值”选项来定义此配置文件如何在已分配的组中应用     。
+
+10. 完成后，在“查看 + 创建”页上，选择“创建”   。 配置文件随即创建并显示在列表中。 接下来，[分配配置文件](device-profile-assign.md)，然后[监视其状态](device-profile-monitor.md)。
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>从 Windows 10 更新通道中删除传递优化
 

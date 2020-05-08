@@ -28,9 +28,11 @@
    - **全部** - 所有用户都可以自动注册 Windows 10 设备
 
       > [!IMPORTANT]
-      > 对于 BYOD 设备，如果为所有用户（或同一用户组）启用了 MAM 用户范围和 MDM 用户范围（自动 MDM 注册），则 MAM 用户范围优先。 设备将使用 Windows 信息保护 (WIP) 策略（如果配置了该策略），而不是注册的 MDM。
+      > 对于 Windows BYOD 设备，如果为所有用户（或同一用户组）启用了 MAM 用户范围和 MDM 用户范围（自动 MDM 注册），则 MAM 用户范围优先。 如果配置了 Windows 信息保护 (WIP) 策略，设备将应用这些策略，而不会注册 MDM。
       >
-      > 对于企业设备，如果启用了两个范围，则 MDM 用户范围优先。 设备注册 MDM。
+      > 如果要使 Windows BYOD 设备自动注册到 MDM：将 MDM 用户范围配置为“所有”（或“部分”，并指定一个组），并将 MAM 用户范围配置为“无”（或“部分”，并指定一个组 - 确保用户不是 MDM 和 MAM 用户范围的目标组的成员）     。
+      >
+      >对于[企业设备](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices)，如果启用了 MDM 和 MAM 两个用户范围，则 MDM 用户范围优先。 设备将自动在配置的 MDM 中注册。
 
    > [!NOTE]
    > 必须将 MDM 用户作用域设置为包含用户对象的 Azure AD 组。

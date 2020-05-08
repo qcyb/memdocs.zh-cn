@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233479"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538099"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune 是适用于设备的 MDM 和 MAM 提供程序
 
 Microsoft Intune 是一项基于云的服务，关注移动设备管理 (MDM) 和移动应用程序管理 (MAM)。 Intune 包含在 Microsoft 的[企业移动性 + 安全性 (EMS) 套件](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)中，使用户能够提高工作效率，同时保护组织数据。 它与其他服务（包括 Microsoft 365 和 Azure Active Directory (Azure AD)）集成，控制具有访问权限的用户、他们有权访问的内容以及用于数据保护的 Azure 信息保护。 将它与 Microsoft 365 结合使用时，员工可以在其所有设备上高效工作，同时保护组织的信息。
 
-![Intune 体系结构示意图](./media/what-is-intune/intunearch_sm.png)
-
-查看 Intune 体系结构示意图的[大图](./media/what-is-intune/intunearchitecture.svg)。
+[![Intune 体系结构示意图](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 通过 Intune，还可以：
 
@@ -61,6 +59,11 @@ Microsoft Intune 是一项基于云的服务，关注移动设备管理 (MDM) �
 - [对使用设备配置文件的设备应用功能和设置](../configuration/device-profiles.md)
 
 - [使用 Microsoft Intune 保护设备](../protect/device-protect.md)
+
+### <a name="try-the-interactive-guide"></a>尝试交互式指南
+[使用 Microsoft Endpoint Manager 管理设备](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager)交互式指南将引导你浏览 Microsoft Endpoint Manager 管理中心，并展示如何管理和保护移动和桌面应用程序。</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="manage-apps"></a>管理应用
 
