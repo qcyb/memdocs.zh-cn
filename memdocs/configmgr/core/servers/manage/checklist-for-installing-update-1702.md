@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707735"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906454"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1702 的清单
 
@@ -89,7 +89,7 @@ ms.locfileid: "81707735"
 
 **查看适用于 Windows 10 的 Windows 评估和部署工具包 (ADK) 版本** Windows 10 ADK 应为版本 1607 或更高版本。 如果必须更新 ADK，请在开始更新 Configuration Manager 前进行此操作。 这可确保默认启动映像自动更新为最新版本的 Windows PE。 （自定义启动映像必须手动更新。）
 
-如果在更新 ADK 之前更新该站点，请参阅博客 [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/)（适用于 Windows 10 的 Configuration Manager 和 Windows ADK，版本 1607）获取可用于重新生成启动映像的脚本。
+如果在更新 ADK 之前更新该站点，请参阅博客 [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047)（适用于 Windows 10 的 Configuration Manager 和 Windows ADK，版本 1607）获取可用于重新生成启动映像的脚本。
 
 **查看站点和层次结构状态，并确认没有未解决的问题：** 更新站点之前，请解决远程计算机上安装的站点服务器、站点数据库服务器和站点系统角色的所有操作问题。 由于现有的操作问题，站点更新可能会失败。
 

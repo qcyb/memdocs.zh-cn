@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702815"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905135"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>规划将 Configuration Manager 对象迁移到 Configuration Manager Current Branch
 
@@ -123,7 +123,7 @@ ms.locfileid: "81702815"
 你可以迁移配置项目和配置基线。  
 
 > [!NOTE]  
->  迁移不支持 Configuration Manager 2007 源层次结构中未解释的配置项目。 你无法将这些配置项目迁移或导入到目标层次结构。 有关未解释的配置项目的详细信息，请参阅 Configuration Manager 2007 文档库的[关于所需的配置管理中的配置项目](https://go.microsoft.com/fwlink/?LinkId=103846)主题中的“未解释的配置项目”。  
+>  迁移不支持 Configuration Manager 2007 源层次结构中未解释的配置项目。 你无法将这些配置项目迁移或导入到目标层次结构。 有关未解释的配置项目的详细信息，请参阅 Configuration Manager 2007 文档库的[关于所需的配置管理中的配置项目](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item)主题中的“未解释的配置项目”。  
 
 可以导入 Configuration Manager 2007 配置包。 导入过程会自动转换配置包以与 Configuration Manager Current Branch 兼容。  
 

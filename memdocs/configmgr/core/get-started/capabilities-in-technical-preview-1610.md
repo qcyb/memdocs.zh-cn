@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705355"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905662"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Configuration Manager Technical Preview 1610 中的功能
 
@@ -29,7 +29,7 @@ ms.locfileid: "81705355"
 
 **以下是此版本可以试用的新功能。**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>按自动部署规则中的内容大小进行筛选
-现在可以对自动部署规则中软件更新的内容大小进行筛选。 例如，可以将“内容大小 (KB)”  筛选器设置为 **< 2048**，以仅下载小于 2 MB 的软件更新。 使用此筛选器可防止自动下载较大的软件更新，以便在带宽受到限制时更好地支持简化的 Windows 低级别维护。 有关详细信息，请参阅[低级别操作系统上的 Configuration Manager 和简化的 Windows 维护](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)。
+现在可以对自动部署规则中软件更新的内容大小进行筛选。 例如，可以将“内容大小 (KB)”  筛选器设置为 **< 2048**，以仅下载小于 2 MB 的软件更新。 使用此筛选器可防止自动下载较大的软件更新，以便在带宽受到限制时更好地支持简化的 Windows 低级别维护。 有关详细信息，请参阅[低级别操作系统上的 Configuration Manager 和简化的 Windows 维护](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)。
 
 #### <a name="to-configure-the-content-size-field"></a>配置内容大小字段
 若要配置“内容大小 (KB)”  字段，请在创建 ADR 时转到“创建自动部署规则向导”中的“软件更新”  页面，或转到现有 ADR 的属性中的“软件更新”  选项卡。

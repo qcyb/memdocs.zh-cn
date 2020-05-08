@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210071"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905178"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -81,10 +81,10 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
     > [!Tip]  
     > 软件更新点需要 HTTPS，因为它是用于处理签名证书的 WSUS API 的必需。 客户端也无需启用 HTTPS。 有关在 WSUS 上启用 HTTPS 的详细信息，请参阅以下文章获取帮助：  
-    > - [使用安全套接字层协议保护 WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS 支持博客文章](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [使用安全套接字层协议保护 WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS 支持博客文章](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- 软件更新点上有足够的磁盘空间供 WSUSContent 文件夹存储第三方软件更新的源二进制内容。 所需的存储空间根据供应商、更新类型和发布用于部署的特定更新而有所不同。 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 WSUS 支持团队博客文章 [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)（如何更改 WSUS 在本地存储更新的位置）。  
+- 软件更新点上有足够的磁盘空间供 WSUSContent 文件夹存储第三方软件更新的源二进制内容。 所需的存储空间根据供应商、更新类型和发布用于部署的特定更新而有所不同。 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 WSUS 支持团队博客文章 [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)（如何更改 WSUS 在本地存储更新的位置）。  
 
 - 启用和部署“软件更新”  组中的客户端设置 [“启用第三方软件更新”](../clients/deploy/about-client-settings.md#enable-third-party-software-updates)。  
 
@@ -191,9 +191,6 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 <!--1357861-->
 包转换管理器现在是一个集成工具，允许将旧的 Configuration Manager 2007 包转换为 Configuration Manager 当前分支应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
 
-> [!Tip]  
-> 包转换管理器中现有功能的旧文档在 [TechNet](https://technet.microsoft.com/library/hh531519.aspx) 上提供。 相关信息正在迁移到 docs.microsoft.com 库。
-
 ### <a name="try-it-out"></a>试试看！
  尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
@@ -206,7 +203,6 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
      - **转换包**：某些包可以通过此操作轻松地转换为应用程序。
      - **修复和转换**：有些包需要在转换为应用程序之前进行问题修复。  
 
-   有关这些操作的详细信息，请参阅[如何分析和转换包](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29)。  
 
 3. 转到“监视”工作区，然后选择“包转换状态”   。 这个新的仪表板显示站点中包的整体分析和转换状态。 新的后台任务自动汇总分析数据。  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078747"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905219"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Configuration Manager Technical Preview 1806.2 中的功能
 
@@ -147,7 +147,7 @@ Steps to workaround, if any.
 <!--1357427-->
 Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和应用程序包 (.msixbundle) 格式。 最新的 [Windows Insider Preview](https://insider.windows.com/) 内部版本当前支持这些格式。
 
-有关 MSIX 的概述，请参阅 [MSIX 详解](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/)。
+有关 MSIX 的概述，请参阅 [MSIX 详解](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)。
 
 有关如何创建新的 MSIX 应用，请参阅 [Insider 内部版本 17682 中引入的 MSIX 支持](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376)。
 

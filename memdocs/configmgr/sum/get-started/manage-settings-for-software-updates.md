@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703035"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906796"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>管理软件更新的设置  
 
@@ -40,7 +40,7 @@ ms.locfileid: "81703035"
 在为站点创建软件更新点时，客户端会获得计算机策略，此策略提供软件更新点服务器的名称，并且在计算机上配置“指定 Intranet Microsoft 更新服务位置”  本地策略。 WUA 检索在“设置检测更新的 Intranet 更新服务”  设置中指定的服务器名称，之后，它在扫描软件更新符合性时会连接到此服务器。 在为“指定 Intranet Microsoft 更新服务位置”  设置创建域策略时，它将替代本地策略，而且 WUA 可能会连接到软件更新点以外的服务器。 如果出现此情况，客户端可能会根据不同的产品、分类和语言扫描软件更新符合性。 因此，不应为客户端计算机配置 Active Directory 策略。  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>“允许来自 Intranet Microsoft 更新服务位置的签名内容”组策略  
-在计算机上的 WUA 扫描已创建并利用 System Center Updates Publisher 发布的软件更新之前，你必须启用“允许来自 Intranet Microsoft 更新服务位置的签名内容”  组策略设置。 在启用此策略设置时，如果在本地计算机上的“受信任的发布者”  证书存储中签署软件更新，则 WUA 将接受通过 Intranet 位置收到的这些软件更新。 有关 Updates Publisher 所需的组策略设置的详细信息，请参阅 [Updates Publisher 2011 文档库](https://go.microsoft.com/fwlink/p/?LinkId=232476)。  
+在计算机上的 WUA 扫描已创建并利用 System Center Updates Publisher 发布的软件更新之前，你必须启用“允许来自 Intranet Microsoft 更新服务位置的签名内容”  组策略设置。 在启用此策略设置时，如果在本地计算机上的“受信任的发布者”  证书存储中签署软件更新，则 WUA 将接受通过 Intranet 位置收到的这些软件更新。 有关 Updates Publisher 所需的组策略设置的详细信息，请参阅 [Updates Publisher 2011 文档库](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))。  
 
 ### <a name="automatic-updates-configuration"></a>自动更新的配置  
 自动更新允许在客户端计算机上接收安全更新和其他重要的下载内容。 若要配置自动更新，可通过“配置自动更新”  组策略设置或本地计算机上的“控制面板”进行。 在启用自动更新时，客户端计算机将收到更新通知，而且，视已配置的设置而定，客户端计算机将下载并安装所需的更新。 在自动更新与软件更新共存时，每台客户端计算机都可能会为同一个更新显示通知图标和弹出通知窗口。 而且，在需要重新启动时，每台客户端计算机都可能会为同一个更新显示重新启动对话框。  

@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706875"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906053"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Configuration Manager 的许可和分支
 
@@ -32,7 +32,7 @@ ms.locfileid: "81706875"
 
 自 2016 年 10 月 1 日起，具有 Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 Configuration Manager 具有权限的客户在安装时将会发现两个已许可的选项：Current Branch 和 Long-Term Servicing Branch (LTSB)。
 
-若要查看通过 Microsoft 批量许可计划购买的产品的完整条款和条件，请参阅[许可条款和文档](https://go.microsoft.com/fwlink/?LinkId=800052)。
+若要查看通过 Microsoft 批量许可计划购买的产品的完整条款和条件，请参阅[许可条款和文档](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)。
 
 
 ## <a name="licensed-branches"></a>许可的分支
@@ -117,7 +117,7 @@ LTSB 以 Current Branch 1606 版为基础，具有以下限制：
 
 - [VLSC 概述](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Microsoft 批量许可产品条款](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Microsoft 批量许可产品条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - 批量许可证客户可以从此处获得许可证摘要：[批量许可证服务中心](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。 转到“许可证”菜单，选择“许可证摘要”。  
 

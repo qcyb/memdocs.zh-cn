@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8889c0ee306eaaf682563b2e8e72d5482054d1c7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690255"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904096"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>准备 Windows Server 以支持 Configuration Manager
 
@@ -98,7 +98,7 @@ ms.locfileid: "81690255"
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> 分发点的 IIS 请求筛选  
 默认情况下，IIS 使用请求筛选来阻止 HTTP 或 HTTPS 通信访问多个文件扩展名和文件夹位置。 在分发点上，这会阻止客户端下载含有被阻止的扩展名或文件夹位置的包。  
 
-如果包源文件含有在 IIS 中被请求筛选配置阻止的扩展名，则必须将请求筛选设置为不阻止这些扩展名。 这可以通过分发点计算机上 IIS 管理器中的[编辑请求筛选功能](https://technet.microsoft.com/library/hh831621.aspx)来完成。  
+如果包源文件含有在 IIS 中被请求筛选配置阻止的扩展名，则必须将请求筛选设置为不阻止这些扩展名。 这可以通过分发点计算机上 IIS 管理器中的[编辑请求筛选功能](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11))来完成。  
 
 此外，Configuration Manager 将下列文件扩展名用于包和应用程序。 请确保请求筛选配置不会阻止以下文件扩展名：  
 
@@ -136,4 +136,4 @@ ms.locfileid: "81690255"
 - HEAD
 - PROPFIND
 
-有关详细信息，请参阅[在 IIS 中配置请求筛选](https://technet.microsoft.com/library/hh831621.aspx#Verbs)。 
+有关详细信息，请参阅[在 IIS 中配置请求筛选](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs)。 

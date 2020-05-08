@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: c857997bdbeed51286e874dcbecf00b414dfe6a0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699955"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906766"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Configuration Manager 中的软件更新简介
 
@@ -275,7 +275,7 @@ Configuration Manager 中的软件更新提供了一组工具和资源，可帮�
  有关 Configuration Manager 如何管理使用写入筛选器的嵌入式设备的详细信息，请参阅[规划 Windows Embedded 设备的客户端部署](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> 在 Configuration Manager 中扩展软件更新  
- 使用 Configuration Manager 管理 Microsoft 更新中不可用的软件更新。 将软件更新发布到更新服务器并在 Configuration Manager 中同步软件更新之后，你可以将软件更新部署到 Configuration Manager 客户端。 有关更新发布服务器的详细信息，请参阅 [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947)。  
+ 使用 Configuration Manager 管理 Microsoft 更新中不可用的软件更新。 将软件更新发布到更新服务器并在 Configuration Manager 中同步软件更新之后，你可以将软件更新部署到 Configuration Manager 客户端。 有关更新发布服务器的详细信息，请参阅 [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))。  
 
 ## <a name="next-steps"></a>后续步骤
 [规划软件更新](../plan-design/plan-for-software-updates.md)

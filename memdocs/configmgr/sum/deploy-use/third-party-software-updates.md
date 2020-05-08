@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f430979a2189494e977c501a36f9f039f860ca7a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771444"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906750"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 
@@ -30,7 +30,7 @@ ms.locfileid: "81771444"
 ## <a name="prerequisites"></a>必备条件 
 - 顶级软件更新点的 WSUSContent 文件夹上有足够的磁盘空间来存储第三方软件更新的源二进制内容。
     - 所需的存储空间根据供应商、更新类型和发布用于部署的特定更新而有所不同。
-    - 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)（如何更改 WSUS 在本地存储更新的位置）博客文章。
+    - 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)（如何更改 WSUS 在本地存储更新的位置）博客文章。
 - 第三方软件更新同步服务需要 Internet 访问。
     - 要获取合作伙伴目录列表，需通过 HTTPS 端口 443 访问 download.microsoft.com。 
     -  对任何第三方目录和更新内容文件的 Internet 访问。 可能需要除 443 以外的其他端口。
@@ -40,7 +40,7 @@ ms.locfileid: "81771444"
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>SUP 远离顶级站点服务器时的其他要求 
 
 1. 当 SUP 为远程时必须在 SUP 上启用 SSL。 这需要从内部证书颁发机构或通过公共提供程序生成的服务器身份验证证书。
-    - [在 WSUS 上配置 SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [在 WSUS 上配置 SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - 在 WSUS 上配置 SSL 时，请注意某些 Web 服务和虚拟目录始终是 HTTP 而不是 HTTPS。 
         - Configuration Manager 通过 HTTP 从 WSUS 内容目录下载软件更新包的第三方内容。   
     - [在 SUP 上配置 SSL](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -234,7 +234,7 @@ ms.locfileid: "81771444"
 -  Configuration Manager 具有目录 cab 文件格式的新版本。 新版本包含供应商二进制文件的证书。 批准并信任目录后，这些证书会添加到“管理”工作区中“安全”下的“证书”节点中    。  
      - 只要下载 URL 为 https 且更新已签名，便仍然可以使用旧的目录 cab 文件版本。 由于二进制文件的证书不在 cab 文件中且还未获批准，因此内容将无法发布。 可以通过在“证书”节点中查找证书，取消阻止它，然后再次发布更新来解决此问题  。 如果要发布使用不同证书签名的多个更新，需要取消阻止所使用的每个证书。
      - 有关详细信息，请参阅以下状态消息表中的状态消息 11523 和 11524。
--  当顶级软件更新点上的第三方软件更新同步服务要求使用代理服务器进行 Internet 访问时，数字签名检查可能会失败。 若要缓解此问题，请在站点系统上配置 WinHTTP 代理设置。 有关详细信息，请参阅 [WinHTTP 的 Netsh 命令](https://go.microsoft.com/fwlink/p/?linkid=199086)。
+-  当顶级软件更新点上的第三方软件更新同步服务要求使用代理服务器进行 Internet 访问时，数字签名检查可能会失败。 若要缓解此问题，请在站点系统上配置 WinHTTP 代理设置。 有关详细信息，请参阅 [WinHTTP 的 Netsh 命令](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))。
 - 如果对内容存储使用 CMG，且[客户端设置](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)“下载增量内容(若有)”  已启用，那么第三方更新的内容不会下载到客户端。 <!--6598587-->
 
 ## <a name="status-messages"></a>状态消息

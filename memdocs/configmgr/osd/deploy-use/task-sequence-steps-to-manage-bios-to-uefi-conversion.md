@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9183efd622cb425027500d3fe51ed7b86d3a94e4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b9bd8f8102cbf6c814956127fc95a5f3961779c0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079359"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906951"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>管理 BIOS 转换为 UEFI 所采用的任务序列步骤
 Windows 10 提供了许多需要启用 UEFI 的设备的新安全功能。 你可能拥有支持 UEFI 的新式 Windows 电脑，但正在使用旧版 BIOS。 将设备转换为 UEFI 需要你转到每台电脑、对硬盘重新分区并重新配置固件。 通过在 Configuration Manager 中使用任务序列，你可以准备用于 BIOS 到 UEFI 转换的硬盘，作为就地升级过程的一部分从 BIOS 转换为 UEFI，并收集 UEFI 信息作为硬件清单的一部分。
@@ -57,7 +57,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 ### <a name="to-convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换为 UEFI
 1. 创建一个操作系统升级任务序列，用于执行到 Windows 10 创意者更新的就地升级。
 2. 编辑任务序列。 在“正在后处理组”  中，添加以下任务顺序步骤：
-   1. 从“常规”中，添加“运行命令行”  步骤。 你将添加 MBR 2 GPT 工具的命令行，该工具将磁盘从 MBR 转换为 GPT，而不会修改或删除磁盘中的数据。 在命令行中，键入以下内容：**MBR2GPT /convert /disk:0 /AllowFullOS**。 你也可以选择在 Windows PE 中运行 MBR 2 GPT.EXE 工具，而不是在完整的操作系统中运行。 你可以通过在运行 MBR2GPT.EXE 工具并从命令行中删除 /AllowFullOS 选项之前添加重启计算机到 WinPE 的步骤来执行此操作。 有关该工具和可用选项的详细信息，请参阅 [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt)。
+   1. 从“常规”中，添加“运行命令行”  步骤。 你将添加 MBR 2 GPT 工具的命令行，该工具将磁盘从 MBR 转换为 GPT，而不会修改或删除磁盘中的数据。 在命令行中，键入以下内容：**MBR2GPT /convert /disk:0 /AllowFullOS**。 你也可以选择在 Windows PE 中运行 MBR 2 GPT.EXE 工具，而不是在完整的操作系统中运行。 你可以通过在运行 MBR2GPT.EXE 工具并从命令行中删除 /AllowFullOS 选项之前添加重启计算机到 WinPE 的步骤来执行此操作。 有关该工具和可用选项的详细信息，请参阅 [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)。
    2. 添加一个步骤以启动 OEM 工具，该工具可将固件从 BIOS 转换到 UEFI。 这通常是一个运行命令行任务序列步骤，其中有一个命令行来启动 OEM 工具。
    3. 从“常规”中，添加“重新启动计算机”  步骤。 要指定重新启动后要运行的内容，请选择“当前安装的默认操作系统”  。
 3. 部署任务序列。

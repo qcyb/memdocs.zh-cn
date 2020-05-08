@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705105"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905324"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Configuration Manager Technical Preview 1710 中的功能
 
@@ -125,7 +125,7 @@ PowerShell 脚本部署首次在 Technical Preview[ Tech Preview 1706](capabilit
 
 ## <a name="limited-support-for-cng-certificates"></a>对 CNG 证书的有限支持
 <!-- 1356191 -->
-从此版本开始，现在可以使用[加密 API：下一代加密技术 (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 证书模板用于以下方案：
+从此版本开始，现在可以使用[加密 API：下一代加密技术 (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) 证书模板用于以下方案：
 
 - 客户端注册和与 HTTPS 管理点的通信。   
 - 使用 HTTPS 分发点的软件分发和应用程序部署。   

@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691385"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904630"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
@@ -65,7 +65,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 - Microsoft 仍支持你使用的 SQL Server 版本。
 - SQL Server 支持在两个 SQL Server 版本之间进行复制。 有关详细信息，请参阅 [SQL Server 复制向后兼容性](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)。
 
-对于 SQL Server 2016 和更早版本，对每个 SQL 版本和 Service Pack 的支持均遵循 [Microsoft 生命周期策略](https://aka.ms/sqllifecycle)。 对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 从 SQL Server 2017 开始，将不会发布 Service Pack，因为它遵循[新式服务模型](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)。 SQL Server 团队建议在累积更新发布时进行持续的[主动安装](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)。
+对于 SQL Server 2016 和更早版本，对每个 SQL 版本和 Service Pack 的支持均遵循 [Microsoft 生命周期策略](https://aka.ms/sqllifecycle)。 对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 从 SQL Server 2017 开始，将不会发布 Service Pack，因为它遵循[新式服务模型](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)。 SQL Server 团队建议在累积更新发布时进行持续的[主动安装](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)。
 
 除非另行指定，否则 Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果添加了对新 SQL Server 版本的支持，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。
 

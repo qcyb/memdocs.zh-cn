@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690505"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906933"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>使用 Configuration Manager 部署 Windows to Go
 
@@ -23,7 +23,7 @@ ms.locfileid: "81690505"
 
 本主题提供用于在 Configuration Manager 中设置 Windows To Go 的步骤。 Windows To Go 是 Windows 8 的企业功能，利用此功能，可以创建一个 Windows To Go 工作区，无论计算机上运行哪种操作系统，均可以在满足 Windows 7 或 Windows 8 认证要求的计算机上从 USB 连接的外部驱动器中启动该工作区。 Windows To Go 工作区可以使用企业对其台式机和便携计算机使用的相同映像，并且可以用相同的方式接受管理。  
 
- 有关 Windows To Go 的详细信息，请参阅 [Windows To Go 功能概述](https://go.microsoft.com/fwlink/p/?LinkId=263433)。  
+ 有关 Windows To Go 的详细信息，请参阅 [Windows To Go 功能概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))。  
 
 ## <a name="provision-windows-to-go"></a>设置 Windows To Go  
  Windows To Go 是存储在通过 USB 连接的外部驱动器的操作系统上。 你可以设置 Windows To Go 驱动器，设置方法与设置其他操作系统部署的方法非常相似。 但是，因为 Windows To Go 旨在成为以用户为中心的高机动性解决方案，因此你必须采用略微不同的方法来设置这些驱动器。  

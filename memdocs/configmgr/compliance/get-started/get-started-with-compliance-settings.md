@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 59b0b799fd54e0e613f78b11b48b53b19d20ddbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692285"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906346"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Configuration Manager 中的符合性设置入门
 
@@ -107,7 +107,7 @@ ms.locfileid: "81692285"
 
 ## <a name="microsoft-edge-browser-profiles"></a>Microsoft Edge 浏览器配置文件
 <!-- 1357310 -->
-从版本 1802 开始，在 Windows 10 客户端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web 浏览器的客户，可创建符合性设置策略以配置多个 Microsoft Edge 设置。 
+从版本 1802 开始，在 Windows 10 客户端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web 浏览器的客户，可创建符合性设置策略以配置多个 Microsoft Edge 设置。 
 
 有关详细信息，请参阅 [Microsoft Edge 浏览器配置文件](../deploy-use/browser-profiles.md)。
 

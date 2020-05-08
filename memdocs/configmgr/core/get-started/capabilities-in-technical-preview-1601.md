@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076299"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905828"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager Technical Preview 1601 中的功能
 
@@ -164,7 +164,6 @@ ms.locfileid: "82076299"
 
  Configuration Manager 现在可通过从应用商店中导入许可证信息以及跟踪已使用的许可证数量来帮助你管理通过这样的计划所购买的应用。  
 
- 有关详细信息，请参阅[使用 Configuration Manager 管理通过批量采购计划购买的应用](https://technet.microsoft.com/library/mt627954.aspx)。  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS - 应用程序的应用配置<br />混合  
  一些 iOS 应用程序支持预配置应用程序应连接到的设置，如服务器或数据库。 Configuration Manager 现在支持将应用配置策略部署到设备，即使用户对此信息一无所知，也可立即使用此应用。 开发人员必须在其应用中启动此功能。  

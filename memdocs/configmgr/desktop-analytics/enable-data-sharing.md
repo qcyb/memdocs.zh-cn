@@ -10,12 +10,12 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f8dd7c4c561ca22c679ee8ae03764ebb20b87664
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708195"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906088"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>启用桌面分析的数据共享
 
@@ -74,6 +74,9 @@ Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级�
 > 对于隐私和数据完整性，Windows 在与诊断数据终结点通信时检查 Microsoft SSL 证书（证书固定）。 无法进行 SSL 拦截和检查。 若要使用桌面分析，请从 SSL 检查中排除这些终结点。<!-- BUG 4647542 -->
 
 从版本 2002 开始，如果 Configuration Manager 站点无法连接到云服务所需的终结点，则会引发严重状态消息 ID 11488。 当无法连接到服务时，SMS_SERVICE_CONNECTOR 组件状态将更改为严重。 在 Configuration Manager 控制台的[“组件状态”](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus)节点中查看详细状态。<!-- 5566763 -->
+
+> [!NOTE]
+> 有关 Microsoft IP 地址范围的详细信息，请参阅 [Microsoft 公共 IP 空间](https://www.microsoft.com/download/details.aspx?id=53602)。 这些地址会定期更新。 服务没有粒度，可以使用这些范围内的任何 IP 地址。
 
 ### <a name="server-connectivity-endpoints"></a>服务器连接终结点
 

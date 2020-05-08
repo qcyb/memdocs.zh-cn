@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba1f41af778602fb95d268c071b5f0d1dde158c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693385"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906216"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>迁移到 Configuration Manager Current Branch 的安全和隐私
 
@@ -48,9 +48,9 @@ ms.locfileid: "81693385"
 
  有关安全和隐私信息的详细信息，请参阅下列主题之一：  
 
--   有关 Configuration Manager 2007 隐私信息的详细信息，请参阅 Configuration Manager 2007 文档库中的[ Configuration Manager 2007 安全性和隐私](https://go.microsoft.com/fwlink/p/?LinkId=216450)。  
+-   有关 Configuration Manager 2007 隐私信息的详细信息，请参阅 Configuration Manager 2007 文档库中的[ Configuration Manager 2007 安全性和隐私](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10))。  
 
--   有关 System Center 2012 Configuration Manager 隐私信息的详细信息，请参阅 System Center 2012 Configuration Manager 文档库中的 [System Center 2012 Configuration Manager 安全性和隐私](https://technet.microsoft.com/library/gg682033.aspx)。  
+-   有关 System Center 2012 Configuration Manager 隐私信息的详细信息，请参阅 System Center 2012 Configuration Manager 文档库中的 [System Center 2012 Configuration Manager 安全性和隐私](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10))。  
 
 -   有关 Configuration Manager 的隐私信息的详细信息，请参阅 [Configuration Manager 的安全和隐私](../../core/plan-design/security/security-and-privacy.md)。  
 

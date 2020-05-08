@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694755"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906615"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>在 Configuration Manager 中配置资产智能
 
@@ -139,7 +139,7 @@ ms.locfileid: "81694755"
 4.  在“导入”  页上，指定是导入 Microsoft 批量许可 (MVLS) 文件（.xml 或 .csv）还是常规许可证声明文件 (.csv)。 有关创建常规许可证声明文件的详细信息，请参阅本主题后面的 [创建常规许可证声明信息文件以便导入](#BKMK_CreateGeneralLicenseStatement) 。  
 
     > [!WARNING]  
-    >  要下载可以导入资产智能目录的 .csv 格式的 MVLS 文件，请参阅 [Microsoft 批量许可服务中心](https://go.microsoft.com/fwlink/p/?LinkId=226547)。 要访问此信息，必须在网站上具有注册的帐户。 必须与 Microsoft 客户代表联系以了解有关如何获取 .xml 格式的 MVLS 文件的信息。  
+    >  要下载可以导入资产智能目录的 .csv 格式的 MVLS 文件，请参阅 [Microsoft 批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。 要访问此信息，必须在网站上具有注册的帐户。 必须与 Microsoft 客户代表联系以了解有关如何获取 .xml 格式的 MVLS 文件的信息。  
 
 5.  输入许可证声明文件的 UNC 路径，或选择“浏览”  以选择网络共享文件夹和文件。  
 

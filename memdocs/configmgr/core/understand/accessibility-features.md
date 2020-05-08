@@ -10,12 +10,12 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701255"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906117"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager 的辅助功能
 
@@ -89,5 +89,5 @@ Configuration Manager 包含可供所有人访问的功能。
 - [软件中心用户指导](software-center.md)
 
 > [!NOTE]  
-> 本文章中的信息可能仅适用于在美国获得 Microsoft 产品许可的用户。 如果在美国以外的国家/地区获得本产品，可以使用软件包附带的子公司信息卡或访问 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkId=8431)，获取 Microsoft 支持服务的联系信息。 可与你所在地的子公司联系，了解本节中描述的产品和服务的类型在你所在地区是否可用。 有关辅助功能的信息还提供了其他语言的版本，其中包括日语和法语。  
+> 本文章中的信息可能仅适用于在美国获得 Microsoft 产品许可的用户。 如果在美国以外的国家/地区获得本产品，可以使用软件包附带的子公司信息卡或访问 [Microsoft 辅助功能网站](https://www.microsoft.com/accessibility/)，获取 Microsoft 支持服务的联系信息。 可与你所在地的子公司联系，了解本节中描述的产品和服务的类型在你所在地区是否可用。 有关辅助功能的信息还提供了其他语言的版本，其中包括日语和法语。  
 

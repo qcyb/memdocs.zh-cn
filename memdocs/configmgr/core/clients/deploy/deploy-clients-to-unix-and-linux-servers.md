@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694035"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906322"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 UNIX 和 Linux 服务器
 
@@ -36,7 +36,7 @@ ms.locfileid: "81694035"
  安装客户端后，在 Configuration Manager 控制台指定客户端设置，从而用和配置基于 Windows 的客户端相同的方式配置客户端代理。 有关详细信息，请参阅  [Linux 和 UNIX 服务器的客户端设置](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)。  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a>有关客户端安装包和通用代理  
- 若要在特定平台上安装适用于 Linux 和 UNIX 的客户端，你必须对要安装客户端的计算机使用合适的客户端安装包。 合适的客户端安装包是从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=525184)下载的每个客户端的一部分。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的 **install** 脚本。  
+ 若要在特定平台上安装适用于 Linux 和 UNIX 的客户端，你必须对要安装客户端的计算机使用合适的客户端安装包。 合适的客户端安装包是从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=47719)下载的每个客户端的一部分。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的 **install** 脚本。  
 
  在安装客户端时，无论使用何种客户端安装包，都可以使用相同的过程和命令行属性。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81694035"
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a>在 Linux 和 UNIX 服务器上安装 Configuration Manager 客户端  
 
-1.  在 Windows 计算机上，为你想要管理的 [Linux 或 UNIX 服务器下载合适的客户端文件](https://go.microsoft.com/fwlink/?LinkID=525184) 。  
+1.  在 Windows 计算机上，为你想要管理的 [Linux 或 UNIX 服务器下载合适的客户端文件](https://www.microsoft.com/download/details.aspx?id=47719) 。  
 
 2.  在 Window 计算机上运行自解压 .exe 文件以提取安装脚本和客户端安装 .tar 文件。  
 
