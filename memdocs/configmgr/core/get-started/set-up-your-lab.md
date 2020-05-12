@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691405"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905162"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>设置 Configuration Manager 实验室
 
@@ -31,9 +31,9 @@ ms.locfileid: "81691405"
 
 -   该实验室环境使用 Windows Server 2012 R2，我们将在其中安装 Configuration Manager  。  
 
-     可以从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)下载 Windows Server 2012 R2 的评估版。  
+     可以从[评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)下载 Windows Server 2012 R2 的评估版。  
 
-     请考虑修改或禁用 Internet Explorer 增强的安全配置以便更轻松地访问在整个练习过程中引用的某些下载文件。 请查看 [Internet Explorer：增强的安全配置](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) 了解其他信息。  
+     请考虑修改或禁用 Internet Explorer 增强的安全配置以便更轻松地访问在整个练习过程中引用的某些下载文件。 有关详细信息，请参阅 [Internet Explorer：增强的安全配置](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))。  
 
 -   **实验室环境中将 SQL Server 2012 SP2** 用于站点数据库。  
 
@@ -45,7 +45,7 @@ ms.locfileid: "81691405"
 
     -   **SQL_Latin1_General_CP1_CI_AS** 作为“SQL 排序规则”  类。  
 
-    -   **Windows 身份验证**， [而不是 SQL 身份验证](https://technet.microsoft.com/library/ms144284.aspx)， is required.  
+    -   **Windows 身份验证**， [而不是 SQL 身份验证](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)， is required.  
 
     -   需要专用的 **SQL Server 实例**。  
 
@@ -61,11 +61,11 @@ ms.locfileid: "81691405"
 
 -   **域控制器使用 Windows Server 2008 R2**（安装了 Active Directory 域服务）。 域控制器还充当 DHCP 的主机和 DNS 服务器以便用于完全限定的域名。  
 
-     有关其他信息，请查看此 [Active Directory 域服务概述](https://technet.microsoft.com/library/hh831484)。  
+     有关详细信息，请参阅 [Active Directory 域服务概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11))。  
 
 -   **Hyper-V 与几个虚拟机一起使用**，以验证在这些练习中执行的管理步骤是否按预期正常工作。 建议最少三个虚拟机，并已安装 Windows 10。  
 
-     有关其他信息，请查看此 [Hyper-V 概述](https://technet.microsoft.com/library/hh831531.aspx)。  
+     有关详细信息，请参阅 [Hyper-V 概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))。  
 
 -   **管理员权限** 。  
 
@@ -95,7 +95,7 @@ ms.locfileid: "81691405"
 使 Configuration Manager 客户端能够查询 Active Directory 域服务以找到站点资源所需的后续步骤列于后续程序上。  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> 创建系统管理容器  
- 扩展架构时，Configuration Manager 不会在 Active Directory 域服务中自动创建所需的系统管理容器。 因此，你会为你的实验室创建此系统管理容器。 此步骤将要求你 [安装 ADSI 编辑器。](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
+ 扩展架构时，Configuration Manager 不会在 Active Directory 域服务中自动创建所需的系统管理容器。 因此，你会为你的实验室创建此系统管理容器。 此步骤将要求你[安装 ADSI 编辑器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10))。
 
  确保你以对 Active Directory 域服务中的“系统”  容器具有“创建所有子对象”  权限的帐户身份登录。  
 
@@ -129,7 +129,7 @@ ms.locfileid: "81691405"
 
 5.  单击“确定”  关闭“ADSI 编辑器”  控制台并完成该过程。  
 
-     有关此过程的其他见解，请查看[为 Configuration Manager 扩展 Active Directory 架构](../../core/plan-design/network/extend-the-active-directory-schema.md)  
+     有关详细信息，请参阅[为 Configuration Manager 扩展 Active Directory 架构](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> 使用 extadsch.exe 来扩展 Active Directory 架构  
  你将扩展此实验室中的 Active Directory 架构，因为这会使你能够以最小的管理开销使用所有 Configuration Manager 功能。 扩展 Active Directory 架构是林范围的配置，每个林执行一次该配置。 扩展架构永久修改基本 Active Directory 配置中的类和属性的集。 此操作不可逆。 扩展架构允许 Configuration Manager 访问组件，这可以使其可在实验室环境中最有效地工作。  
@@ -139,7 +139,7 @@ ms.locfileid: "81691405"
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>若要使用 extadsch.exe 来扩展 Active Directory 架构：  
 
-1.  创建架构主机域控制器的系统状态的备份。 有关备份主机域控制器的详细信息，请查看 [Windows Server Backup](https://technet.microsoft.com/library/cc770757.aspx)  
+1.  创建架构主机域控制器的系统状态的备份。 有关备份主机域控制器的详细信息，请参阅 [Windows Server 备份](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
 
 2.  导航至安装介质中的 **\SMSSETUP\BIN\X64** 。  
 
@@ -147,7 +147,7 @@ ms.locfileid: "81691405"
 
 4.  通过查看位于系统驱动器根目录中的 **extadsch.log** ，验证架构扩展是否成功。  
 
-     有关此过程的其他见解，请查看[为 Configuration Manager 扩展 Active Directory 架构](../../core/plan-design/network/extend-the-active-directory-schema.md)。  
+     有关详细信息，请参阅[为 Configuration Manager 扩展 Active Directory 架构](../../core/plan-design/network/extend-the-active-directory-schema.md)。  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> 其他必需的任务  
  你在安装前还需要完成以下任务。  
@@ -158,7 +158,7 @@ ms.locfileid: "81691405"
 
  **安装 .NET 并且 激活 Windows Communication Foundation**  
 
- 你需要安装这两种.NET 框架：首先安装 .NET 3.5.1，然后安装 .NET 4.5.2+。 你还需要激活 Windows Communication Foundation (WCF)。 WCF 通过面向服务的编程模型专为实现分布式计算、广泛的互操作性和直接支持服务方向提供可管理的方法，并简化了连接应用程序开发。 请查看 [什么是 Windows Communication Foundation？](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) ，了解关于 WCF 的其他见解。  
+ 你需要安装这两种.NET 框架：首先安装 .NET 3.5.1，然后安装 .NET 4.5.2+。 你还需要激活 Windows Communication Foundation (WCF)。 WCF 通过面向服务的编程模型专为实现分布式计算、广泛的互操作性和直接支持服务方向提供可管理的方法，并简化了连接应用程序开发。 有关详细信息，请参阅[什么是 Windows Communication Foundation？](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90))。
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>若要安装 .NET 并且激活 Windows Communication Foundation：  
 
@@ -198,27 +198,15 @@ ms.locfileid: "81691405"
 
 10. .NET 的基本安装完成后，导航到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=42643) 以获取 .NET Framework 4.5.2 的 Web 安装程序。 单击“下载”  按钮，然后单击“运行”以运行  安装程序。 它将自动检测并安装你选择的语言版本的所需组件。  
 
-有关其他信息，请查看以下文章以了解为什么需要这些 .NET 框架：  
-
--   [.NET Framework 版本和依赖关系](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [.NET Framework 4 RTM 应用程序兼容性演练](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [如何：将 ASP.NET Web 应用程序更新到 ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Microsoft .NET Framework 支持生命周期策略常见问题](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR 全面透彻解析 - 进程内并行](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **启用 BITS、IIS 和 RDC**  
 
-[后台智能传输服务 (BITS)](https://technet.microsoft.com/library/dn282296.aspx) 用于需要在客户端和服务器之间异步传输文件的应用程序。 通过计数前台和后台传输的流，BITS 保留了其他网络应用程序的响应能力。 如果传输会话中断，则它还会自动恢复文件传输。  
+[后台智能传输服务 (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) 用于需要在客户端和服务器之间异步传输文件的应用程序。 通过计数前台和后台传输的流，BITS 保留了其他网络应用程序的响应能力。 如果传输会话中断，则它还会自动恢复文件传输。  
 
 因为此站点服务器也将用作管理点，所以你需要为此实验室安装 BITS。  
 
 Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的灵活、可扩展的 Web 服务器。 由 Configuration Manager 将其用于大量站点系统角色。 有关 IIS 的其他信息，请查看[站点系统服务器网站](../../core/plan-design/network/websites-for-site-system-servers.md)。  
 
-[远程差分压缩 (RDC)](https://technet.microsoft.com/library/cc754372.aspx) 是应用程序可用于确定是否已对一组文件进行过任何更改的 API 集。 RDC 使应用程序能够仅复制文件已更改的部分，将网络流量保持在最低限度。  
+[远程差分压缩 (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) 是应用程序可用于确定是否已对一组文件进行过任何更改的 API 集。 RDC 使应用程序能够仅复制文件已更改的部分，将网络流量保持在最低限度。  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>若要启用 BITS、IIS 和 RDC 站点服务器角色：  
 

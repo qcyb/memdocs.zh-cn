@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78fad6f17681fa9822a378844ea4838c50383c82
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704815"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643266"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>为 Configuration Manager 配置边界组
 
@@ -211,6 +211,13 @@ ms.locfileid: "81704815"
 
 有关如何配置这些设置的详细信息，请参阅[配置边界组](boundary-group-procedures.md#bkmk_config)。
 
+如果设备在多个边界组中，则以下行为适用于这些设置：
+
+- 允许在此边界组中进行对等下载  ：如果在任何一个边界组中禁用此功能，则客户端不会使用交付优化。
+- 对等下载期间，只能使用同一子网内的对等点  ：如果在任何一个边界组中启用了此设置，则此设置生效。
+- 优先选择分发点而非同一子网内的对等点  ：如果在任何一个边界组中启用了此设置，则此设置生效。
+- 首选基于云的源而非本地源  ：如果在任何一个边界组中启用了此设置，则此设置生效。
+
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a> 允许在此边界组中进行对等下载
 
 默认情况下将启用此设置。 管理点向客户端提供包含对等源的内容位置的列表。 此设置还会影响[交付优化](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)组 ID 的应用。  
@@ -220,6 +227,9 @@ ms.locfileid: "81704815"
 - 如果你拥有的边界组包括来自地理上分散的位置（例如 VPN）的边界， 两个客户端可能位于同一边界组中，因为它们都通过 VPN 连接，但位于不适合对等共享内容的极其不同的位置。  
 
 - 如果将单个较大的而且不引用任何分发点的边界组用于站点分配。  
+
+> [!IMPORTANT]
+> 如果设备在多个边界组中，请确保在设备的所有边界组中启用此设置。 否则，客户端不会使用交付优化。 例如，它不会设置 DOGroupID 注册表项。
 
 #### <a name="during-peer-downloads-only-use-peers-within-the-same-subnet"></a><a name="bkmk_bgoptions2"></a> 对等下载期间，只能使用同一子网内的对等设备
 

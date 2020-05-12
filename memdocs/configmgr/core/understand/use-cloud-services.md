@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706695"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906428"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>将云服务与 Configuration Manager 结合使用
 
@@ -36,7 +36,7 @@ Configuration Manager 支持多个基于云的选项。 这些选项能补充本
 
 -   有关基于云的分发点的信息，请参阅[安装基于云的分发点](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)。
 
--   有关 Azure 的详细信息，请参阅 MSDN 库中的 [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965)。  
+-   有关 Azure 的详细信息，请参阅[什么是 Azure？](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure 虚拟机（用于基于云的基础结构）  
  Configuration Manager 支持使用在 Azure 虚拟机中运行的计算机，正如在物理公司网络中进行本地运行一样。 你可在以下方案中使用 Azure 虚拟机：  
@@ -78,12 +78,4 @@ Azure 虚拟机的使用需要一个 Azure 订阅。 根据所使用虚拟机的
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>基于云的服务的安全性  
  Configuration Manager 使用证书预配和访问 Azure 中的内容，并管理所使用的服务。 Configuration Manager 加密你存储在 Azure 中的数据，但除引入 Azure 提供的那些安全或数据控制之外，不会引入的其他安全或数据控制。  
 
- 有关详细信息，请参阅关于不同的基于云的资源方案的详细信息。 还可以查看 Azure 安全性的以下主题：  
-
--   [Azure：了解 Azure 中的安全帐户管理](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Azure 安全性概述](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [在云迁移中通过安全性十字路口](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Azure 中的数据安全性（1/2 部分）](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ 有关详细信息，请参阅关于不同的基于云的资源方案的详细信息。 另请参阅 [Azure 安全简介](https://docs.microsoft.com/azure/security/fundamentals/overview)。
