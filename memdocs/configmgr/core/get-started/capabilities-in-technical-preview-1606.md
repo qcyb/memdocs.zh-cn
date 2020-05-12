@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905678"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager Technical Preview 1606 中的功能
 
@@ -80,9 +80,9 @@ ms.locfileid: "81705565"
 
 “设备保护”是 Windows 10 的一种功能，它使用硬件和软件功能严格控制什么可以在设备上运行。
 
-有关“设备保护”的功能和工作方式的详细概述请参阅[此 Technet 文章](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview)。
+有关详细信息，请参阅[设备防护简介](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)。
 
-在此版本中，Configuration Manager 可与“设备保护”和 [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) 进行互操作，以便当通过 Configuration Manager 部署的可执行文件和 DLL 文件从托管安装程序到来时自动变为受信任，这意味着将允许它们在目标设备上运行，而其他软件将不允许运行，除非由其他 AppLocker 规则明确允许运行。  
+在此版本中，Configuration Manager 可与“设备保护”和 [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) 进行互操作，以便当通过 Configuration Manager 部署的可执行文件和 DLL 文件从托管安装程序到来时自动变为受信任，这意味着将允许它们在目标设备上运行，而其他软件将不允许运行，除非由其他 AppLocker 规则明确允许运行。  
 
 目前，无法从 Configuration Manager 控制台中配置此功能。 若要配置该策略，需要在每个客户端上配置注册表项并在客户端上配置 Windows 服务。
 完成此操作后，请配置 AppLocker 策略文件。 配置策略文件后，可以将其部署到任何兼容的客户端设备。
@@ -93,13 +93,11 @@ ms.locfileid: "81705565"
 - 审核模式 - 不会阻止应用程序运行，如果有阻止的应用程序，会在日志文件中报告（以后的一个更高版本的 Configuration Manager 将支持此功能）。
 - 启用强制 – 阻止应用程序运行。
 
-有关如何结合使用 Configuration Manager 和设备保护的详细信息，请参阅[企业移动性和安全性博客](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10)。
+有关详细信息，请参阅下列文章：
 
-延伸阅读：
+- [设备保护简介](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [设备保护简介](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [设备保护认证和符合性](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [设备保护部署指南](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Microsoft Defender 应用程序控制部署过程的规划和入门](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>本地移动设备管理的多个设备管理点  
   借助 Technical Preview 1606，本地移动设备管理 (MDM) 可支持Windows 10 周年更新中的新功能，该功能会自动将已注册设备配置为具有多个可供使用的设备管理点。 此功能允许设备在其正常使用的设备管理点不可用时回退到另一个设备管理点。 此功能仅适用于安装了 Windows 10 周年更新的电脑。  
@@ -221,7 +219,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 从 Technical Preview 1606 开始，可以使用 Configuration Manager 客户端代理设置而非组策略，来使 Office 365 客户端接收来自 Configuration Manager 的更新。 配置此设置和部署 Office 365 更新后，Configuration Manager 客户端代理将与 Office 365 客户端代理通信，从分发点下载 Office 365 更新并进行安装。 Configuration Manager 还会获取客户端代理设置的清单。
 
-有关详细信息，请参阅[管理 Office 365 ProPlus 更新](https://technet.microsoft.com/library/mt741983.aspx)。
+有关详细信息，请参阅[管理 Office 365 ProPlus 更新](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>设置 Configuration Manager 客户端设置以管理 Office 365 客户端代理
 1.  在 Configuration Manager 控制台中，单击“管理”   > “概述”   > “客户端设置”  。

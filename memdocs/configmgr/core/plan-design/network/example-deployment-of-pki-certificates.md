@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 994ee2916020ecc4e6d9d3c35f41fe24d5a31405
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904254"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构
 
@@ -52,7 +52,7 @@ ms.locfileid: "81701565"
 |证书要求|证书描述|  
 |-----------------------------|-----------------------------|  
 |运行 IIS 的站点系统的 Web 服务器证书|此证书用于对数据进行加密以及向客户端验证服务器。 此证书必须安装在站点系统服务器（运行 Internet Information Services (IIS) 且在 Configuration Manager 中设置为使用 HTTPS）上 Configuration Manager 的外部。<br /><br /> 有关设置和安装此证书的步骤，请参阅本主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](#BKMK_webserver2008_cm2012)。|  
-|客户端用于连接到基于云的分发点的服务证书|有关配置和安装此证书的步骤，请参阅本主题中的[为基于云的分发点部署服务证书](#BKMK_clouddp2008_cm2012)。<br /><br /> **重要事项：** 此证书与 Microsoft Azure 管理证书结合使用。 有关管理证书的详细信息，请参阅 MSDN 库的“Microsoft Azure 平台”部分中的[如何创建管理证书](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate)和[如何将管理证书添加到 Microsoft Azure 订阅](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)。|  
+|客户端用于连接到基于云的分发点的服务证书|有关配置和安装此证书的步骤，请参阅本主题中的[为基于云的分发点部署服务证书](#BKMK_clouddp2008_cm2012)。<br /><br /> **重要事项：** 此证书与 Microsoft Azure 管理证书结合使用。 有关管理证书的详细信息，请参阅[如何创建管理证书](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate)和[如何将管理证书添加到 Windows Azure 订阅](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)。|  
 |Windows 计算机的客户端证书|此证书用于向设置为使用 HTTPS 的站点系统验证 Configuration Manager 客户端计算机。 如果管理点和状态迁移点已设置为使用 HTTPS，也可以为管理点和状态迁移点使用此证书来监视其操作状态。 此证书必须安装在计算机上 Configuration Manager 的外部。<br /><br /> 有关设置和安装此证书的步骤，请参阅本主题中的[为 Windows 计算机部署客户端证书](#BKMK_client2008_cm2012)。|  
 |分发点的客户端证书|此证书有两个用途：<br /><br /> 在分发点发送状态消息之前，此证书向启用 HTTPS 的管理点验证分发点。<br /><br /> 如果选择了“为客户端启用 PXE 支持”  分发点选项，则会将证书发送到通过 PXE 方式启动的计算机，以便它们能够在操作系统部署过程中连接到启用 HTTPS 的管理点。<br /><br /> 有关设置和安装此证书的步骤，请参阅本主题中的[为分发点部署客户端证书](#BKMK_clientdistributionpoint2008_cm2012)。|  
 |移动设备的注册证书|此证书用于向设置为使用 HTTPS 的站点系统验证 Configuration Manager 移动设备客户端。 此证书必须作为 Configuration Manager 中的移动设备注册的一部分进行安装，并且选择配置的证书模板作为移动设备客户端设置。<br /><br /> 有关设置此证书的步骤，请参阅本主题中的[为移动设备部署注册证书](#BKMK_mobiledevices2008_cm2012)。|  

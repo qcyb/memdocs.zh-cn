@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706665"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906007"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -47,7 +47,7 @@ Microsoft 计划每年发布几次 Configuration Manager Current Branch 的更�
 
 若要将 Current Branch 作为新站点进行安装，请使用[基线介质](../servers/manage/updates.md#bkmk_Baselines)。 也可使用基线介质从 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 升级。 此介质的访问权取决于组织对 Configuration Manager 的许可方式。
 
-还可使用基线介质安装充当 Current Branch 评估版的新站点。 评估版不需要许可证。 评估版可使用 180 天。 它支持升级到 Current Branch 的许可版。 如果想仅安装评估版，可通过 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)获取。
+还可使用基线介质安装充当 Current Branch 评估版的新站点。 评估版不需要许可证。 评估版可使用 180 天。 它支持升级到 Current Branch 的许可版。 如果想仅安装评估版，可通过[评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)获取。
 
 > [!NOTE]
 > 使用基线介质安装新的 Configuration Manager 层次结构的站点。 如果以前安装了基准版本，请使用控制台中更新将站点更新到新版本。  
@@ -89,7 +89,7 @@ LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功
 >  
 > 若要在批量许可服务中心 (VLSC) 查找 Configuration Manager 版本 1606，请转到 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的“下载和密钥”选项卡，搜索 `System Center 2016`，然后选择“System Center 2016 Datacenter”或“System Center 2016 Standard”    。  
 >  
-> 也可从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)获取 System Center 2016 评估版。  
+> 也可从[评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)获取 System Center 2016 评估版。  
 
 ### <a name="features-of-the-ltsb"></a>LTSB 的功能
 

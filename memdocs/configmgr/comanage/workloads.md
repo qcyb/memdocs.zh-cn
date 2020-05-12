@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075704"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842217"
 ---
 # <a name="co-management-workloads"></a>共同管理工作负载
 
@@ -75,14 +75,13 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 - Windows Defender 应用程序控制  
 - Windows Defender 安全中心  
 - Windows Defender 高级威胁防护（现称为 Microsoft Defender 威胁防护）
-- Windows 信息保护  
 
 有关 Intune 功能的详细信息，请参阅 [Microsoft Intune 的 Endpoint Protection](https://docs.microsoft.com/intune/endpoint-protection-windows-10)。
 
 > [!Note]  
 > 在切换此工作负载时，Configuration Manager 策略将保留在设备上，直到 Intune 策略覆盖它们。 此行为可确保设备在过渡期间仍具有保护策略。
 >
-> Endpoint Protection 工作负载也是设备配置的一部分。 当切换[设备配置](#device-configuration)工作负载时，同样的行为适用。<!-- SCCMDocs.nl-nl issue #4 -->
+> Endpoint Protection 工作负载也是设备配置的一部分。 当切换[设备配置](#device-configuration)工作负载时，同样的行为适用。<!-- SCCMDocs.nl-nl issue #4 --> 切换设备配置工作负载时，它还包括“Windows 信息保护”功能策略，但其未包含在 Endpoint Protection 工作负载中。<!-- 4184095 -->
 >
 > 如果 Microsoft Defender 防病毒设置属于 Intune 设备配置的设备限制配置文件类型，则这些设置不在 Endpoint Protection 滑块的范围内。 要为启用了 Endpoint Protection 滑块的共同管理的设备管理 Microsoft Defender 防病毒设置，请使用“Microsoft Endpoint 管理中心” > “终结点安全性” > “防病毒”中新的防病毒策略    。 此策略类型提供了改进后的新选项，还支持可在设备限制配置文件中使用的设置。 <!--6609171-->
 >
@@ -97,6 +96,9 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 即使设备配置颁发机构是 Intune，你仍可将 Configuration Manager 中的设置部署到共同托管的设备。 此异常可用于配置组织需要但在 Intune 中尚不可用的设置。 在 [Configuration Manager 配置基线](../compliance/deploy-use/create-configuration-baselines.md)上指定此异常。 创建基线时，启用“即使是共同托管客户端也要始终应用此基线”选项  。 稍后，可以在现有基线属性的“常规”  选项卡上进行更改。  
 
 有关 Intune 功能的详细信息，请参阅[在 Microsoft Intune 中创建设备配置文件](https://docs.microsoft.com/intune/device-profile-create)。  
+
+> [!NOTE]
+> 切换设备配置工作负载时，它还包括“Windows 信息保护”功能策略，但其未包含在 Endpoint Protection 工作负载中。<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Office 即点即用应用
 

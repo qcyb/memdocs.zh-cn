@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 991b3e2ab654aff56d982c587ccc4bda53694294
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703255"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782106"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -177,7 +177,7 @@ ms.locfileid: "81703255"
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
-指定由 [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) 变量定义的路径。 当在启动任务序列前定义 SMSTSLocalDataDrive 时，例如设置集合变量，启动任务序列后，Configuration Manager 将定义 _SMSTSMDataPath 变量。
+指定由 [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) 变量定义的路径。 此路径指定了运行任务序列时在目标计算机上保存临时缓存文件的位置。 当在启动任务序列前定义 SMSTSLocalDataDrive 时，例如设置集合变量，启动任务序列后，Configuration Manager 将定义 _SMSTSMDataPath 变量。
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
@@ -1592,9 +1592,9 @@ Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
-指定运行任务序列时在目标计算机上保存临时文件的位置。
+指定了运行任务序列时在目标计算机上保存临时缓存文件的位置。
 
-在任务序列开始前设置此变量，例如通过设置集合变量。 任务序列启动后，Configuration Manager 定义 [_SMSTSMDataPath](#SMSTSMDataPath) 变量。
+在任务序列开始前设置此变量，例如通过设置集合变量。 任务序列启动后，Configuration Manager 根据定义的 SMSTSLocalDataDrive 变量来定义 [_SMSTSMDataPath](#SMSTSMDataPath) 变量。
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
@@ -1638,7 +1638,7 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-指定任务序列完成后运行的命令。 例如，指定任务序列将操作系统部署到设备后，在嵌入的设备上启用写入筛选器的脚本。
+指定任务序列完成后运行的命令。 例如，指定 `shutdown.exe /r /t 30 /f` 以在任务序列完成后 30 秒重启计算机。
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

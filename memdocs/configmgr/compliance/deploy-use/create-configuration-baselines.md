@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693285"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906667"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>创建 Configuration Manager 中的配置基线
 
@@ -23,6 +23,9 @@ ms.locfileid: "81693285"
 
 
 Configuration Manager 中的配置基线包含预定义的配置项目，还可包含其他配置基线。 在创建配置基线之后，可以将其部署到集合以便该集合中的设备下载配置基线并评估其符合性。  
+
+> [!TIP]
+> 无法指定 Configuration Manager 客户端评估基线中配置项目的顺序。 这是不确定的。<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>配置基线
 

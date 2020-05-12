@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a44123bc074c671f9b3d73af66b8d79c3ff433
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707255"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906498"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>为 Configuration Manager 部署和管理内容
 
@@ -409,7 +409,7 @@ ms.locfileid: "81707255"
 
 仅在正常的内容复制出现问题（通常使用控制台的监视节点来确认）之后必须重新分发内容时，使用此方法强制进行复制。   
 
-有关此 SDK 选项的详细信息，请参阅 MSDN.Microsoft.com 上的 [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx)（SMS_CM_UpdatePackages 类中的 RetryContentReplication 方法）。
+有关此 SDK 选项的详细信息，请参阅 [SMS_CM_UpdatePackages 类中的 RetryContentReplication 方法](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md)。
 
 ### <a name="remove-content"></a>删除内容
 不再需要分发点上的内容时，可以删除分发点上的内容文件。  

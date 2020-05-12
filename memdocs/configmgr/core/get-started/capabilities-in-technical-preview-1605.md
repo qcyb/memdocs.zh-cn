@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705595"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905739"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Configuration Manager Technical Preview 1605 中的功能
 
@@ -192,7 +192,7 @@ ms.locfileid: "81705595"
 
 #### <a name="general-prerequisites"></a>一般先决条件  
 
--   确保已完成[用于本地移动设备管理的准备步骤](https://technet.microsoft.com/library/mt613153.aspx)并[已注册设备](https://technet.microsoft.com/library/mt627870.aspx)。  
+-   确保已完成[用于本地 MDM 的准备步骤](../../mdm/plan-design/plan-on-premises-mdm.md)并[已注册设备](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)。  
 
 -   为了获得使用公司门户时的最佳应用程序安装体验，请确保 Configuration Manager 与 Microsoft Intune 之间已建立连接。  
 
@@ -284,7 +284,7 @@ ms.locfileid: "81705595"
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>创建服务器组的集合  
 
-1.  [创建一个设备集合](https://technet.microsoft.com/library/gg712295.aspx)，使其包含服务器组中的计算机。  
+1.  [创建一个设备集合](../clients/manage/collections/create-collections.md)，使其包含服务器组中的计算机。  
 
 2.  在“资产和符合性”  工作区中，单击“设备集合”  ，右键单击包含服务器组中的计算机的集合，然后单击“属性”  。  
 
@@ -325,9 +325,9 @@ ms.locfileid: "81705595"
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>将软件更新部署到服务器组并监视状态  
 
-1.  将[软件更新部署](https://technet.microsoft.com/library/gg712304.aspx)到服务器组集合。  
+1.  将[软件更新部署](../../sum/deploy-use/deploy-software-updates.md)到服务器组集合。  
 
-2.  [监视软件更新部署](https://technet.microsoft.com/library/gg712304.aspx)。 除了软件更新部署的标准监视视图之外，客户端在等待安装软件更新时，还将显示新的状态说明。 这一新状态显示为**等待锁定**。  
+2.  [监视软件更新部署](../../sum/deploy-use/monitor-software-updates.md)。 除了软件更新部署的标准监视视图之外，客户端在等待安装软件更新时，还将显示新的状态说明。 这一新状态显示为**等待锁定**。  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>清除服务器组中计算机的部署锁定  
 
