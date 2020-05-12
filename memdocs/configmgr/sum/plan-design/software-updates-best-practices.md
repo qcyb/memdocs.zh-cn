@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: dc0d416fdd186dbbeb4c61d48b688072bb830485
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb9a675970abb581a793208c73506e1e94cc6f63
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708705"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906692"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Configuration Manager 中软件更新的最佳做法
 
@@ -41,7 +41,7 @@ ms.locfileid: "81708705"
 
 - [How to implement a shared SUSDB for Configuration Manager software update points](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/How-to-implement-a-shared-SUSDB-for-Configuration-Manager/ba-p/274103)（如何为 Configuration Manager 软件更新点实现共享 SUSDB）  
 
-- [在使用 Configuration Manager 时共享内容数据库的多个 WSUS 实例的注意事项](https://blogs.technet.microsoft.com/wsus/2014/03/22/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb/)  
+- [在使用 Configuration Manager 时多个 WSUS 实例共享一个内容数据库的注意事项](https://docs.microsoft.com/archive/blogs/wsus/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb)。
 
 
 ### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-to-use-a-named-instance-and-the-other-to-use-the-default-instance"></a><a name="bkmk_sql-instance"></a> 当 Configuration Manager 和 WSUS 使用同一 SQL Server 时，请将其中的一个配置为使用命名实例，并将另一个配置为使用默认实例  

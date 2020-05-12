@@ -10,12 +10,12 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ba727aff682e3efbba6a91941a5499f9f00e8b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689315"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643207"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>使用 Configuration Manager 来管理适用于企业和教育的 Microsoft Store 中的应用
 
@@ -129,6 +129,9 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 - **所选语言**：从 Microsoft Store 中选择要同步的语言，并在软件中心中向用户显示。 例如，如果用户将 Windows 配置为德语，那么软件中心会在应用商店中显示德语字符串。 此行为要求语言同步并且针对特定应用程序存在。
 
 - **默认语言**：如果用户的语言不可用，请选择要使用的默认语言。  
+
+> [!NOTE]
+> Configuration Manager 不会同步来自应用商店的应用图标。 如果需要在软件中心为此应用显示一个图标，请在应用属性中手动添加。 有关详细信息，请参阅[手动指定应用程序信息](create-applications.md#bkmk_manual-app)。<!-- 2837053 -->
 
 ## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a> 创建并部署应用
 

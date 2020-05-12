@@ -10,12 +10,12 @@ ms.assetid: e67c691e-62ef-4f43-9cfb-0e957d1e7a5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a20ee62fefd401e56abbf86beed0c4685b19ea39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f63c52fcd2aaccbfbe04160581318126bc53db12
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689735"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643134"
 ---
 # <a name="create-application-groups"></a>创建应用程序组
 
@@ -66,3 +66,4 @@ ms.locfileid: "81689735"
 - 不要在组中包含任何需要重启的应用，否则组部署可能会失败。
 - *版本 1906*：无法将应用组部署到用户集合。
 - *版本 1906*：用户无法在软件中心卸载  应用组。
+- 如果删除应用组中的应用，则在下次查看应用组的属性时，你将看到以下警告：“无法加载组中所有应用程序的信息。” 对应用组进行简单的更改并保存。 例如，在“管理员备注”  中添加一个空格。 保存更改时，会将已删除的应用从组中清除。<!-- 7099542 -->

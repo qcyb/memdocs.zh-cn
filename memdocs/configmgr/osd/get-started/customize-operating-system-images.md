@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708955"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906920"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>使用 Configuration Manager 自定义操作系统映像
 
@@ -95,7 +95,7 @@ Configuration Manager 中的操作系统映像是 WIM 文件，并且表示在�
     > [!IMPORTANT]  
     >  “准备 Windows 以便捕获” [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 任务序列步骤会在 Sysprep 运行之前尝试将引用计算机上的本地管理员密码重置为空白值。 如果启用了本地安全策略“密码必须满足复杂性要求”  ，则此任务序列步骤将无法重置管理员密码。 在这种情况下，请在运行任务序列之前禁用此策略。  
 
-     有关 Sysprep 的详细信息，请参阅 [System Preparation (Sysprep) Technical Reference（系统准备 (Sysprep) 概述技术参考）](https://go.microsoft.com/fwlink/?LinkId=280286)。  
+     有关 Sysprep 的详细信息，请参阅 [Sysprep（系统准备）概述](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)。  
 
 -   **迁移安装方案所需的适当工具和脚本**  
 

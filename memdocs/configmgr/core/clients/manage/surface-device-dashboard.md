@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696345"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906292"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager 中的 Surface 设备仪表板
 
@@ -57,11 +57,9 @@ Surface 设备仪表板针对你的环境显示三个图表。
 
 ## <a name="more-information"></a>更多信息
 
-有关 Surface 设备的详细信息，请参阅：
-- [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) 网站。
+有关 Surface 设备的详细信息，请参阅 [Surface](https://www.microsoft.com/surface) 网站。
 
-有关在 Configuration Manager 中部署 Surface 固件更新的详细信息，请参阅：
-- [如何在 Configuration Manager 中管理 Surface 驱动程序更新]( https://support.microsoft.com/help/4098906)。
+有关在 Configuration Manager 中部署 Surface 固件更新的详细信息，请参阅[如何管理 Surface 驱动程序更新](https://support.microsoft.com/help/4098906)。
 
 
 

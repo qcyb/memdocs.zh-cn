@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 02/25/2020
+ms.date: 05/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 899471b03169f015caef058790b9f58200976c48
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702605"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905064"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -29,8 +29,9 @@ ms.locfileid: "81702605"
 
 以下功能已弃用。 仍可以使用这些功能，但 Microsoft 计划在将来终止支持。
 
-|功能|首次宣布弃用|支持&nbsp;删除|  
-|-----------|---|--------------|  
+|功能|首次宣布弃用|支持&nbsp;删除|
+|-----------|---|--------------|
+| 用于设备注册和安全更新的桌面分析选项“查看最新数据”  。<!-- 7080949 --> 有关详细信息，请参阅[数据延迟](../../../../desktop-analytics/troubleshooting.md#data-latency)。|2020 年 5 月|2020 年 7 月|
 |共享 Azure 内容的实现已更改。 使用启用了内容的云管理网关。 将来无法创建传统的云分发点。|2019 年 2 月|TBD<sup>[备注 1](#bkmk_note1)</sup>|
 |适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)。|2018 年 11 月|TBD<sup>[备注 1](#bkmk_note1)</sup>|
 
@@ -49,7 +50,7 @@ ms.locfileid: "81702605"
 | Configuration Manager 公司门户应用 | 2019 年 5 月 21 日 | 版本 1910 |
 | 应用程序目录包括两个站点系统角色：应用程序目录网站点和 Web 服务点。 有关详细信息，请参阅[删除应用程序目录](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat)。 | 2019 年 5 月 21 日 | 版本 1910 |
 |Configuration Manager 中 Windows Hello 企业版设置的基于证书的身份验证<br>有关详细信息，请参阅 [Windows Hello 企业版设置](../../../../protect/deploy-use/windows-hello-for-business-settings.md)。|2017 年 12 月|版本 1910|
-|适用于 Mac 和 Linux 的 System Center Endpoint Protection<br>有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。|2018 年 10 月|2018 年 12 月 31 日|
+|适用于 Mac 和 Linux 的 System Center Endpoint Protection<br>有关详细信息，请参阅[“不再提供支持”博客文章](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)。|2018 年 10 月|2018 年 12 月 31 日|
 |本地条件访问<br>有关详细信息，请参阅[混合 MDM 出了什么问题](../../../../mdm/understand/what-happened-to-hybrid.md)。|2019 年 1 月 30 日|2019 年 9 月 1 日|
 |混合移动设备管理 (MDM)<br>有关详细信息，请参阅[混合 MDM 出了什么问题](../../../../mdm/understand/what-happened-to-hybrid.md)。<br><br>自 1902 Intune 服务版本起，预计在 2019 年 2 月底，新客户便无法新建混合连接。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |安全内容自动化协议 (SCAP) 扩展。 <!--3607889--><br>[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=48741)仍提供经过认证的旧版本。|2018 年 9 月|版本 1810|
@@ -79,7 +80,7 @@ ms.locfileid: "81702605"
 
 Configuration Manager 已不再支持网络访问保护。 该功能已在 Windows Server 2012 R2 中弃用并从 Windows 10 中删除。  
 
-有关网络访问保护备选方案，请参阅 *网络策略和访问服务概述* 的 [已弃用功能](https://technet.microsoft.com/library/hh831683.aspx)部分。
+有关网络访问保护备选方案，请参阅 *网络策略和访问服务概述* 的 [已弃用功能](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11))部分。
 
 ## <a name="see-also"></a>另请参阅
 

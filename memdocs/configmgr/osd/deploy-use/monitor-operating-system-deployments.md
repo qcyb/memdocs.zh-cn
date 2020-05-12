@@ -2,7 +2,7 @@
 title: 监视操作系统部署
 titleSuffix: Configuration Manager
 description: 为帮助你监视操作系统部署对象，Configuration Manager 控制台提供了警报、报表和各种状态指示器。
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708475"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802160"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>在 Configuration Manager 中监视操作系统部署
 
@@ -45,6 +45,9 @@ Configuration Manager 控制台提供了以下方式来帮助你监视操作系�
 3.  单击要监视其部署状态的任务序列。  
 
 4.  在“主页”  选项卡上的“部署”  组中，单击“查看状态”  。  
+
+> [!NOTE]  
+> 启动升级时，将生成状态消息 52200。 这包含进行升级的用户。  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> 操作系统部署报表  
  提供多个预定义的操作系统部署报表。 它们分为几个类别，可用于报告有关状态迁移和任务序列部署的特定信息。 除了使用预先配置的报表之外，还可以按照企业的需求创建自定义软件更新报表。 有关详细信息，请参阅[报表的操作和维护](../../core/servers/manage/operations-and-maintenance-for-reporting.md)。  

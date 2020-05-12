@@ -2,7 +2,7 @@
 title: 代理服务器支持
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 站点系统服务器如何使用代理服务器。
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701475"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802083"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Configuration Manager 中的代理服务器支持
 
@@ -50,6 +50,10 @@ ms.locfileid: "81701475"
 - 默认情况下，使用计算机的“系统”帐户来建立连接  。 必要时，还可使用站点系统代理服务器帐户。  
 
 - 使用 Windows Web 浏览器 API。  
+
+### <a name="cloud-management-gateway-connection-point"></a>云管理网关连接点
+
+云管理网关 (CMG) 连接点是与 Azure 中的 CMG 服务进行通信的本地角色。 有关详细信息，请参阅 [CMG 规划](../../clients/manage/cmg/plan-cloud-management-gateway.md)。
 
 ### <a name="distribution-point"></a>分发点
 
@@ -111,3 +115,7 @@ ms.locfileid: "81701475"
     - **使用凭据连接至代理服务器**：许多代理服务器都要求用户进行身份验证。 站点系统服务器默认使用其计算机帐户来连接到代理服务器。 如有必要，请启用此选项，单击“设置”，然后选择“现有帐户”或指定“新帐户”    。 这些凭据就是站点系统代理服务器帐户  。  有关详细信息，请参阅 [Configuration Manager 中使用的帐户](../hierarchy/accounts.md)。  
 
 4. 选择“确定”  以保存新的代理服务器配置。  
+
+## <a name="next-steps"></a>后续步骤
+
+如果你的组织使用防火墙或代理设备限制与 Internet 的网络通信，则需要允许访问 Internet 终结点。 有关详细信息，请参阅 [Internet 访问要求](internet-endpoints.md)。

@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc7eb1a8ba721545bdee50d45887ab9d3aa8e952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704695"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906177"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Configuration Manager 站点数据库文件的自定义位置
 
@@ -36,6 +36,6 @@ ms.locfileid: "81704695"
 
 -   在 Configuration Manager 站点服务器上，停止 **SMS_Executive** 服务。  
 
--   请使用适用于你的 SQL Server 版本的文档，了解如何移动用户数据库。 例如，如果使用 SQL Server 2014，请参阅 TechNet 上的 [移动用户数据库](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) 。  
+-   有关如何移动用户数据库的详细信息，请参阅[移动用户数据库](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014)。  
 
 -   完成数据库文件移动后，在 Configuration Manager 站点服务器上重启 **SMS_Executive** 服务。  

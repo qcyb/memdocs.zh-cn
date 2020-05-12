@@ -2,7 +2,7 @@
 title: SQL Server 群集
 titleSuffix: Configuration Manager
 description: 使用 SQL Server 群集托管 Configuration Manager 站点数据库
-ms.date: 03/06/2019
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e731ef2d133c2187eb9eaa98c07afeed37645fa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700845"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643250"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>将 SQL Server 群集用于站点数据库
 
@@ -62,9 +62,12 @@ Configuration Manager 安装过程中，会在 Microsoft Windows Server 群集�
 
 - 若要支持 Kerberos 身份验证，请启用 TCP/IP  网络通信协议，使每个 SQL Server 群集节点进行网络连接。 不需要命名管道  协议，但可以将其用于排除 Kerberos 身份验证问题。 在“SQL Server 网络配置”  的“SQL Server 配置管理器”  中配置网络协议设置。  
 
-- 如果使用公钥基础结构 (PKI)，请参阅 [PKI 证书要求](../../../plan-design/network/pki-certificate-requirements.md)。 在将 SQL Server 群集用于站点数据库时，需要满足特定证书要求。  
+- 在将 SQL Server 群集用于站点数据库时，需要满足特定证书要求。 有关详细信息，请参阅下列文章：
+  - [在 SQL 故障转移群集配置中安装证书](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Configuration Manager 的 PKI 证书要求](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
-
+  > [!NOTE]
+  > 如果未在 SQL 中预设置证书，Configuration Manager 将为 SQL 创建并设置自签名证书。<!-- 7099499 -->
 
 ## <a name="limitations"></a>限制
 

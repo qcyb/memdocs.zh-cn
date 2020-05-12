@@ -2,7 +2,7 @@
 title: Microsoft 互连缓存
 titleSuffix: Configuration Manager
 description: 将 Configuration Manager 分发点用作传递优化的本地缓存服务器
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696205"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842200"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache
 
@@ -108,6 +108,20 @@ ms.locfileid: "81696205"
 - 手动将分发点属性配置为使用特定的驱动器号。
 
 - 如果设置为自动，请首先创建 no_sms_on_drive.sms 文件  。 然后对分发点属性进行一些更改，以触发配置更改。
+
+### <a name="automation"></a>自动化
+
+<!-- SCCMDocs#1911 -->
+
+可以使用 Configuration Manager SDK 自动配置分发点上的 Microsoft 联网缓存设置。 与所有站点角色一样，请使用 [SMS_SCI_SysResUse WMI 类](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)。 有关详细信息，请参阅[站点角色编程](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles)。
+
+更新分发点的 SMS_SCI_SysResUse  实例时，请设置以下属性：
+
+- AgreeDOINCLicense  ：设置为 `1` 以接受许可条款。
+- Flags  ：启用 `|= 4`，禁用 `&= ~4`
+- DiskSpaceDOINC  ：设置为 `Percentage` 或 `GB`
+- RetainDOINCCache  ：设置为 `0` 或 `1`
+- LocalDriveDOINC  ：设置为 `Automatic` 或特定驱动器号，如 `C:` 或 `D:`
 
 ## <a name="verify"></a>验证
 

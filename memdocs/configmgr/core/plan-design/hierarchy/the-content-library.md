@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 253de522937e48fa1f3939c7303faf7e43e4e047
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 567c03d231c145718f4f960bda7073ba4b904de2
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704535"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82880986"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager 中的内容库
 
@@ -196,3 +196,5 @@ Configuration Manager 会在以下情况下使用管理中心站点上的内容�
 - 若要查看是否存在任何哈希不匹配的情况，请从 Configuration Manager 控制台进行包验证。  
 
 - 最后，也可选择重新分发内容。 此操作应能解决大多数问题。  
+
+有关详细信息，请参阅[了解和排查 Configuration Manager 中的内容分发问题](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager)。

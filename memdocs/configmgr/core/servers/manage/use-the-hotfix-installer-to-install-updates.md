@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9389f407f8bdbafd057770ff63ed9b139e6600b5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704265"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906134"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>使用修补程序安装程序为 Configuration Manager 安装更新
 
@@ -169,7 +169,7 @@ Configuration Manager 的每个更新捆绑包都是可自提取的 .exe 文件 
 如果删除某计算机上的 SMS 提供程序，然后重新安装它，则之后必须在该计算机上重新安装 SMS 提供程序的更新。  
 
 ###  <a name="update-clients"></a><a name="BKMK_clients"></a>更新客户端  
-如果安装的更新中包含针对 Configuration Manager 客户端的更新，则需选择是在更新安装过程中自动升级客户端，还是以后手动升级客户端。 有关客户端自动升级的详细信息，请参阅 [如何升级 Windows 计算机的客户端](https://technet.microsoft.com/library/mt627885.aspx)。  
+如果安装的更新中包含针对 Configuration Manager 客户端的更新，则需选择是在更新安装过程中自动升级客户端，还是以后手动升级客户端。 有关客户端自动升级的详细信息，请参阅 [如何升级 Windows 计算机的客户端](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
 
 可以将更新与 Updates Publisher 或软件部署包一起部署，也可以选择在每个客户端上手动安装更新。 有关如何使用部署来安装更新的详细信息，请参阅本主题中的 [为 Configuration Manager 部署更新](#BKMK_Deploy) 部分。  
 
@@ -207,7 +207,7 @@ Updates Publisher 的目录名为“SCUPCatalog.cab”，它位于运行更新�
 > [!IMPORTANT]  
 > 在创建 SCUPCatalog.cab 时，使用了安装更新捆绑的站点服务器的特定路径，因此，无法在其他站点服务器上使用该文件。  
 
-在向导完成之后，可以将该目录导入到 Updates Publisher，然后使用 Configuration Manager 软件更新来部署更新。 有关 Updates Publisher 的信息，请参阅 System Center 2012 的 TechNet 库中的 [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449)。  
+在向导完成之后，可以将该目录导入到 Updates Publisher，然后使用 Configuration Manager 软件更新来部署更新。 有关 Updates Publisher 的信息，请参阅 [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))。  
 
 使用下列过程将 SCUPCatalog.cab 文件导入到更新发布服务器，然后发布更新。  
 
