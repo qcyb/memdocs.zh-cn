@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183069"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943852"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问
 
@@ -351,7 +351,7 @@ Microsoft Edge 可用作受策略保护的浏览器。 为引导用户使用正�
 
 |    Key    |    值    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **密码**：将禁用提供为最终用户保存密码的提示。    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **密码**：将禁用提供为最终用户保存密码的提示。    |
 
 ### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>禁止用户向 Microsoft Edge 添加扩展 
 

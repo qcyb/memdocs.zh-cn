@@ -5,7 +5,7 @@ description: 查看可使用 Microsoft Intune 管理的不同 Windows MDM 安全
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,16 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 zone_pivot_groups: windows-mdm-versions
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696496"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943903"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>适用于 Intune 的 Windows MDM 安全基线设置
 
@@ -31,10 +32,13 @@ ms.locfileid: "80696496"
 - 若要了解如何将安全基线与 Intune 配合使用，以及如何在安全基线配置文件中升级基线版本，请参阅[使用安全基线](security-baselines.md)。
 - 最新的基线版本为 2019 年 5 月版 MDM 安全基线 
 
+若要了解此版本的基线较以前版本的更改情况，请使用[比较基线](../protect/security-baselines.md#compare-baseline-versions)操作，该操作在查看此基线的“版本”窗格时可用  。
+
 确保选择要查看的基线版本。
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **2019 年 5 月 MDM 安全基线**：  
 > [!NOTE]
 > 在 2019 年 6 月，2019 年 5 月版 MDM 安全基线  模板已发布正式版（不以预览版提供）。 此安全基线版本取代了上一个基线版本 - 2018 年 10 月版 MDM 安全基线  。  在 2019 年 5 月版基线可用之前创建的配置文件不会更新，以反映 2019 年 5 月版中的设置和值。  虽然不能基于预览模板创建新的配置文件，但可编辑并继续使用之前基于预览模板创建的配置文件。
@@ -43,6 +47,7 @@ ms.locfileid: "80696496"
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **预览版 - 2018 年 10 月的 MDM 安全基线**：  
 > [!NOTE]
 > 这是在 2018 年 10 月发布的 MDM 安全基线的预览版本。 此基线预览版已在 2019 年 6 月被 2019 年 5 月版 MDM 安全基线  模板所取代，该版本已正式发布（不以预览版提供）。 在 2019 年 5 月版 MDM 安全基线  可用之前创建的配置文件不会更新以反映 2019 年 5 月版 MDM 安全基线中的设置和值。 虽然不能基于预览模板创建新的配置文件，但可编辑并继续使用之前基于预览模板创建的配置文件。
@@ -143,11 +148,17 @@ ms.locfileid: "80696496"
 
   对于 BitLocker 可移动驱动器策略，配置以下设置：
 
-  - **需要为写入权限进行加密**：  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **阻止对不受 BitLocker 保护的可移动数据驱动器的写入权限**：  
     **默认值**：是
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **需要为写入权限进行加密**：  
+    **默认值**：是
 
 - **BitLocker 可移动驱动器策略**：  
   此策略设置用于控制加密方法和密码长度。 此策略的值确定 BitLocker 用于加密的密码强度。 企业可能想要控制加密级别，增强安全性（AES-256 强于 AES-128）。 如果启用此设置，可以为固定的数据驱动器、操作系统驱动器和可移动数据驱动器单独配置加密算法和密钥加密强度。 对于固定的驱动器和操作系统驱动器，建议使用 XTS-AES 算法。 对于可移动驱动器，如果驱动器用于非运行 Windows 10（版本 1511 或更高版本）的其他设备，则应使用 AES-CBC 128 位或 AES-CBC 256 位。 如果驱动器已加密或正在进行加密，更改加密方法不会产生任何影响。 在这些情况下，将忽略此策略设置。  
@@ -281,7 +292,7 @@ ms.locfileid: "80696496"
 
 有关详细信息，请参阅 Windows 文档 [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard)（策略 CSP - DeviceGuard）。
 
-- **Credential Guard**：  
+- **启用 Credential Guard**：  
   此设置可让用户通过基于虚拟化的安全打开 Credential Guard，帮助在下次重启时保护凭据。  
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -381,7 +392,7 @@ ms.locfileid: "80696496"
 
     **默认值**：60
 
-  - **所需的密码类型**：  
+  - **所需密码**：  
     确定所需的 PIN 或密码类型。  
     [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -463,24 +474,24 @@ ms.locfileid: "80696496"
 有关详细信息，请参阅 Windows 文档中的 [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)（策略 CSP - 体验）。
 
 - **阻止 Windows 聚焦**：  
-  允许 IT 管理员关闭所有 Windows 聚焦功能 - 锁屏界面上的 Windows 聚焦、Windows 提示、Microsoft 使用者功能和其他相关的功能。  
+  允许 IT 管理员禁用（阻止）所有 Windows 聚焦功能。 这包括锁屏界面上的 Windows 聚焦、Windows 提示、Microsoft 使用者功能和其他相关功能。  
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **默认值**：是
 
-  将“阻止 Windows 聚焦”  设置为“是”  时，以下设置将可用。
+  如果“阻止 Windows 聚焦”  设置为“未配置”  ，则不会在设备上阻止 Windows 聚焦，你随后可以配置以下设置来阻止 Windows 聚焦的选定项：
 
   - **阻止 Windows 聚焦中的第三方建议**：  
     指定是否允许第三方软件发布者在 Windows 屏幕聚焦功能（例如，锁屏界面聚焦、“开始”菜单中的建议应用和 Windows 提示）中提供应用和内容建议。 用户仍可以看到有关 Microsoft 功能、应用和服务的建议。  
     [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **默认值**：是
+    **默认值**：未配置
 
   - **阻止使用者特定功能**：  
     允许 IT 管理员启用通常只面向使用者的体验，例如“入门”建议、成员资格通知、OOBE 后应用安装和重定向磁贴。  
     [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **默认值**：是
+    **默认值**：未配置
 
 ## <a name="exploit-guard"></a>攻击防护
 
@@ -1501,7 +1512,7 @@ ms.locfileid: "80696496"
 
   **默认值**：是
   
-- **允许 UI 访问安全位置的应用程序**：  
+- **仅允许 UI 访问安全位置的应用程序**：  
   此策略控制用户界面辅助功能（UIAccess 或 UIA）程序是否可以自动禁用标准用户使用提升权限提示的安全桌面。
 
   - 是  - UIA 程序（包括 Windows 远程协助）自动禁用用于提升权限提示的安全桌面。 如果你不禁用“用户帐户控制:提示提升权限时切换到安全桌面”策略设置，则会在交互式用户桌面而不是安全桌面上出现提示。
@@ -1539,151 +1550,168 @@ ms.locfileid: "80696496"
 
 有关详细信息，请参阅 Windows 文档 [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender)（策略 CSP - Defender）。
 
-- **扫描传入的电子邮件**：  
-  允许或不允许扫描电子邮件。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **默认值**：是
-
-- **Office 应用启动子进程类型**：  
-  Office 应用将无法创建子进程。 包括 Word、Excel、PowerPoint、OneNote 和 Access。 这是典型的恶意软件行为，尤其是在基于宏的攻击中，该行为试图使用 Office 应用启动或下载恶意可执行文件。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **默认值**：阻止
-
-- **Defender 示例提交同意类型**：  
-  检查 Microsoft Defender 中用户的同意级别是否可发送数据。 如果已获取所需同意，Microsoft Defender 会将其提交。 如果未获取（且用户已指定绝不要求），则发送数据前启动 UI 申请获取用户同意（前提是允许 Defender/AllowCloudProtection）。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **默认值**：自动发送安全示例
-
-- **签名更新间隔（以小时为单位）** ：  
-  Defender 签名更新间隔（小时）。
-
-  **默认值**：4
-
-- **脚本下载有效负载执行类型**：  
-  脚本下载有效负载执行类型。
-
-  **默认值**：阻止
-  
-- **防止凭据窃取类型**：  
-  Microsoft Defender 凭据保护使用基于虚拟化的安全性来隔离密钥，以便只有特权系统软件可以访问它们。 对这些机密的未经授权访问可能会导致凭据盗窃攻击，例如哈希传递或票证传递。 Microsoft Defender 凭据保护可通过保护 NTLM 密码哈希、Kerberos 票证授予票证和由应用程序存储为域凭据的凭据来防止这些攻击。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **默认值**：启用
-
-- **电子邮件内容执行类型**：  
-  此规则可阻止从 Microsoft Outlook 或 Webmail（如 Gmail.com 或 Outlook.com）的电子邮件中运行或启动以下文件类型：可执行文件（例如 .exe、.dll 或 .scr）、脚本文件（如 PowerShell.ps、VisualBasic.vbs 或 JavaScript.js 文件）、脚本存档文件。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **默认值**：阻止
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Adobe Reader 在子进程中启动**：  
+- **阻止 Adobe Reader 创建子进程**：  
 此规则通过阻止 Adobe Reader 创建其他进程来防止攻击。 通过社会工程或攻击，恶意软件可以下载并启动其他有效负载并中断 Adobe Reader。 通过阻止由 Adobe Reader 生成子进程，可以防止传播试图将它用作途径的恶意软件。
 [了解详细信息](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **默认值**：启用
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **网络保护**：  
-  此策略可用于在 Microsoft Defender 攻击防护中启用或禁用网络保护（阻止/审核）。 网络保护是 Microsoft Defender 攻击防护的一项功能，可阻止员工使用任何应用访问 Internet 上的钓鱼邮件、攻击宿主站点和恶意内容。 这包括阻止第三方浏览器连接到危险站点。 值类型为整数。 如果启用此设置，则会启用网络保护，且员工无法将其禁用。 可通过以下选项控制其行为：阻止和审核。 如果启用此策略并使用“阻止”选项，则会阻止用户和应用连接到危险的域。 可在 Microsoft Defender 安全中心看到此活动。 如果启用此策略并使用“审核”选项，则不会阻止用户/应用连接到危险的域。 但是，仍可在 Microsoft Defender 安全中心看到此活动。 如果禁用此策略，则不会阻止用户/应用连接到危险的域。 无法在 Microsoft Defender 安全中心看到任何网络活动。 如果未配置此策略，则默认禁用网络阻止。  
-  [了解详细信息](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Office 通信应用在子进程中启动**：  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **默认值**：启用
+
+- **输入检查安全智能更新的频率(0-24 小时)**  
+  CSP：[Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  指定检查新签名的频率。 值为 1 表示一小时，2 表示两小时，以此类推。
+
+  **默认值**：4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Defender 计划扫描日期**：  
   Defender 计划扫描日期。
 
   **默认值**：每天
 
-- **云提供的保护**：  
-  为了更好地保护你的电脑，Microsoft Defender 会将所发现的任何问题的相关信息发送到 Microsoft。 Microsoft 会分析该信息，详细了解影响你和其他客户的问题，并提供改进的解决方案。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **启用云提供的保护**：  
+  CSP：[Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  设置为“是”时，Windows Defender 会将所发现的任何问题的相关信息发送到 Microsoft。 如果设置为“未配置”，客户端将返回到启用该功能的默认设置，但允许用户禁用它。
 
   **默认值**：是  
 
-- **Defender 可能不需要的应用操作**：  
-  Microsoft Defender 防病毒中的可能不需要的应用程序 (PUA) 保护功能可以识别和阻止在网络中的终结点上下载和安装 PUA。 这些应用程序不被视为病毒、恶意软件或其他类型的威胁，但可能在终结点上执行对性能或使用产生不利影响的操作。 PUA 也指视为信誉不佳的应用程序。 典型 PUA 行为包括：各种类型的软件捆绑，广告注入到 Web 浏览器，检测问题、要求付费修复错误但始终保留在终结点上且不会进行任何更改或优化的驱动程序和注册表优化程序（也称为“流氓防病毒”程序）。 这些应用程序可能会增加网络受到恶意软件感染的风险、增加恶意软件感染的识别难度，而清理这些应用程序也会造成 IT 资源的浪费。  
-  [了解详细信息](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **启用实时保护**  
+  CSP：[Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **默认值**：阻止  
-
-- **脚本混淆的宏代码类型**：  
-  恶意软件和其他威胁可能会尝试在某些脚本文件中混淆或隐藏其恶意代码。 此规则可阻止运行混淆的脚本。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **默认值**：阻止
-
-- **完全扫描期间扫描可移动驱动器**：  
-  允许 Microsoft Defender 在完全扫描期间扫描可移动驱动器（例如闪存驱动器）中的恶意软件和不需要的软件。 Microsoft Defender 防病毒软件将在执行前扫描 USB 设备上的所有文件。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067036)
+  将此设置设置为“是”时，将强制执行实时监视，并且用户无法禁用它。 设置为“未配置”时，设置将返回到客户端默认设置，即启用，但用户可以对其进行更改。 要禁用实时监视，请使用自定义 URI。
 
   **默认值**：是  
 
 - **扫描存档文件**：  
-  Defender 扫描存档文件。
+  CSP：[Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  设置为“是”时，将强制执行存档文件（如 ZIP 或 CAB 文件扫描）。 设置为“未配置”时，设置将还原为客户端默认设置，即扫描存档文件，但用户可以禁用该操作。
 
   **默认值**：是
 
-- **行为监视**：  
-  允许或禁止 Microsoft Defender 行为监视功能。 这些传感器内嵌于 Windows 10，收集并处理来自操作系统的行为信号，并将该传感器数据发送至 Microsoft Defender ATP 的专用独立云实例。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **启用行为监视**：  
+  CSP：[Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  当此设置设置为“是”时，将强制执行行为监视，并且用户无法禁用它。 设置为“未配置”时，设置将返回到客户端默认设置，即启用，但用户可以对其进行更改。 要禁用实时监视，请使用自定义 URI。
 
   **默认值**：是
 
-- **扫描从网络文件夹中打开的文件**：  
-  如果文件为只读，则用户无法删除任何检测到的恶意软件。
+- **扫描传入的电子邮件**：  
+  CSP：[Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  设置为“是”时，将扫描电子邮件邮箱和邮件文件（例如 PST、DBX、MNX、MIME 和 BINHEX）。 设置为“未配置”时，设置将返回到客户端默认设置，即不扫描电子邮件文件。
 
   **默认值**：是
 
-- **不受信任的 USB 进程类型**：  
-  使用此规则，管理员可以防止从 USB 可移动驱动器（包括 SD 卡）运行未签名或不受信任的可执行文件。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **完全扫描期间扫描可移动驱动器**：  
+  CSP：[Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
+
+  设置为“是”时，在完全扫描期间，将会扫描可移动驱动器（例如 U 盘）。 设置为“未配置”时，设置将返回到客户端默认设置，即扫描可移动驱动器，但用户可以禁用此扫描。
+  **默认值**：是  
+
+- **阻止 Office 应用程序将代码注入其他进程**：  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  设置为“是”时，将阻止 Office 应用程序将代码注入其他进程。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **默认值**：阻止
 
-- **Office 应用其他进程注入类型**：  
-  Office 应用（包括 Word、Excel、PowerPoint 和 OneNote）无法将代码注入其他进程。 恶意软件通常会使用此方法来运行恶意代码，试图对防病毒扫描引擎隐藏活动。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **阻止 Office 应用程序创建可执行内容**  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  设置为“是”时，将不允许 Office 应用程序创建可执行内容。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：3B576869-A4EC-4529-8536-B80A7769E899
 
   **默认值**：阻止
 
-- **Office 宏代码运行 Win32 导入类型**：  
-  恶意软件可以在 Office 文件中使用宏代码来导入和加载 Win32 DLL，然后使用这些 DLL 进行 API 调用，以在整个系统中实现进一步感染。 此规则可尝试阻止包含可导入 Win32 DLL 的宏代码的 Office 文件。 这包括 Word、Excel、PowerPoint 和 OneNote。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **阻止所有 Office 应用程序创建子进程**  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  设置为“审核模式”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：D4F940AB-401B-4EFC-AADC-AD5F3C50688A
 
   **默认值**：阻止
 
-- **Defender 云阻止级别**：  
-  Defender 云阻止级别。
+- **阻止来自 Office 宏的 Win32 API 调用**：  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=872977)
 
-  **默认值**：未配置
+  设置为“是”时，将阻止 Office 宏使用 Win32 API 调用。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **默认值**：阻止
 
-- **实时监视**：  
-  Defender 要求实时监视。
+- **阻止执行可能经过模糊处理的脚本 (js/vbs/ps)** ：  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=872978)
 
-  **默认值**：是
+  设置为“是”时，Defender 将阻止执行经过模糊处理的脚本。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **默认值**：阻止
+
+- **电子邮件内容执行类型**：    
+  [阻止从电子邮件和 Web 邮件客户端下载可执行内容](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  设置为“是”时，将阻止从电子邮件和 Web 邮件客户端下载可执行内容。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。
+
+  **默认值**：阻止
+
+- **防止凭据窃取类型**：  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  设置为“是”时，将阻止尝试通过 lsass.exe 窃取凭据。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+
+  **默认值**：启用
+
+- **Defender 可能不需要的应用操作**：  
+  CSP：[Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+
+  Microsoft Defender 防病毒中的可能不需要的应用程序 (PUA) 保护功能可以识别和阻止在网络中的终结点上下载和安装 PUA。 这些应用程序不被视为病毒、恶意软件或其他类型的威胁，但可能在终结点上执行对性能或使用产生不利影响的操作。 PUA 也指视为信誉不佳的应用程序。 典型 PUA 行为包括：各种类型的软件捆绑，广告注入到 Web 浏览器，检测问题、要求付费修复错误但始终保留在终结点上且不会进行任何更改或优化的驱动程序和注册表优化程序（也称为“流氓防病毒”程序）。 这些应用程序可能会增加网络受到恶意软件感染的风险、增加恶意软件感染的识别难度，而清理这些应用程序也会造成 IT 资源的浪费。
+
+  **默认值**：阻止
+
+- **阻止从 USB 运行不受信任和未签名的进程**：  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  设置为“是”时，将阻止从 USB 驱动器执行不受信任/未签名的进程。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+
+  **默认值**：阻止
+
+- **网络保护**：  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  设置为“是”时，将为系统上的所有用户启用网络保护。 网络保护可保护员工免受网络钓鱼诈骗和 Internet 上的恶意内容的攻击。 这包括第三方浏览器。 如果将此设置为“仅审核”，则不会阻止用户进入危险域，但会改为引发 Windows 事件。 设置为“未配置”将返回 Windows 默认设置，即禁用。
+
+  **默认值**：启用
+
+- **Defender 示例提交同意类型**：  
+  [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  检查 Microsoft Defender 中用户的同意级别是否可发送数据。 如果已获取所需同意，Microsoft Defender 会将其提交。 如果没有（并且用户已指定从不询问），则系统会先启动 UI 征得用户同意（允许 Defender/AllowCloudProtection 时），然后才发送数据。
+
+  **默认值**：自动发送安全示例
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Office 通信应用在子进程中启动**：  
-  **默认值**：启用
+- **扫描网络文件**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **默认值**：是
+
+- **阻止 JavaScript 或 VBScript 启动下载的可执行内容**  
+  [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  设置为“是”时，Defender 将阻止执行从 Internet 下载的 JavaScript 或 VBScript 文件。 设置为“仅审核”时，将引发 Windows 事件，而不是阻止。 设置为“未配置”将返回 Windows 默认设置，即关闭。 此 ASR 规则通过以下 GUID 进行控制：D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Office 应用可执行内容创建或启动类型**：  
-  此规则针对创建或启动可执行文件的可疑和恶意外接程序和脚本（扩展）使用的典型行为。 这是典型的恶意软件技术。 将阻止 Office 应用使用扩展。 这些扩展通常使用 Windows Scripting Host（.WSH 文件）来运行脚本，自动执行某些任务或提供用户创建的外接程序功能。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **默认值**：阻止
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>MS 安全指南
 
@@ -1733,7 +1761,7 @@ ms.locfileid: "80696496"
 
   **默认值**：最高级别的保护
 
-- **网络 ICMP 重定向替代生成的 OSPF**：  
+- **网络 ICMP 重定向替代 OSPF 生成的路由**：  
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **默认值**：已禁用
@@ -1787,19 +1815,21 @@ ms.locfileid: "80696496"
 
   **默认值**：禁用远程协助
 
-  如果设置为“启用远程协助”  ，请配置以下其他设置：
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **请求的远程协助权限**：  
-    **默认值**：查看
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - **最长票证时间值**：  
-    **默认值**：未配置 
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - **最长票证时间段**：  
-    **默认值**：分钟
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **电子邮件邀请方法**：  
-    **默认值**：简单 MAPI
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1917,6 +1947,9 @@ ms.locfileid: "80696496"
 
 有关详细信息，请参阅 Windows 文档 [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)（策略 CSP - SmartScreen）。
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **阻止未经验证的文件**：  
   阻止用户运行未经验证的文件。
 
@@ -1933,6 +1966,26 @@ ms.locfileid: "80696496"
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **默认值**：是
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **启用 Windows SmartScreen**  
+  CSP：[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  设置为“是”时，将强制所有用户使用 SmartScreen。 设将此置为“未配置”将返回 Windows 默认设置，即启用 SmartScreen，但用户可以更改此设置。 要禁用 SmartScreen，请使用自定义 URI。
+
+  **默认值**：是
+
+- **阻止用户忽略 SmartScreen 警告**  
+  CSP：[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  设置为“是”时，SmartScreen 将不会显示一个让用户忽略警告并运行应用的选项。 将显示警告，但用户将能够绕过它。 设置为“未配置”将返回 Windows 默认设置，即允许用户重写。 此设置需要启用“对应用和文件强制实施 SmartScreen”设置。
+
+  **默认值**：是
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>System (系统)
 
@@ -1991,52 +2044,40 @@ ms.locfileid: "80696496"
 
 ## <a name="windows-hello-for-business"></a>Windows Hello 企业版
 
-- **启用以在可用时使用增强的反欺骗**
+- **阻止 Windows Hello 企业版**  
+  Windows Hello 企业版是一种取代密码、智能卡和虚拟智能卡登录 Windows 的替代方法。 如果禁用或未配置此策略设置，设备将预配 Windows Hello 企业版。 如果启用此策略设置，设备不会为任何用户预配 Windows Hello 企业版。
 
-  如果为“是”，则设备将使用增强的反欺骗（如可用）。 如果为“否”，则阻止使用反欺骗。 如果为“未配置”，则遵循在客户端上完成的配置。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **默认值**：Enabled
+  
+  设置为“禁用”时，可以配置以下设置： 
 
-  **默认值**：是
+  - **最小 PIN 长度**  
+    PIN 的最小长度必须介于 4 到 127 之间。
 
-- **配置 Windows Hello 企业版**
+    **默认值**：未配置 
 
-  Windows Hello 企业版是一种取代密码、智能卡和虚拟智能卡登录 Windows 的替代方法。
+  - **启用以在可用时使用增强的反欺骗**  
+    [反欺骗保护](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  > [!IMPORTANT]
-  > 此设置的选项与其隐含的含义相反。 如果值为“是”  ，则不启用 Windows Hello，相反，而是视为“未配置”进行处理  。 如果此设置设为“未配置”  ，则对接收此基线的设备启用 Windows Hello。
-  >
-  > 以下描述已经过修改以反映此行为。 这种设置含义相反的问题将在此安全基线的将来更新中修复。
+    如果启用，则设备将使用增强的反欺骗（如可用）。 如果未配置，则会遵守反欺骗的客户端配置。
 
-  - 如果设置为“未配置”  ，则启用 Windows Hello，并且设备将预配 Windows Hello 企业版。
-  - 如果设置为“是”  ，基线不会影响设备的策略设置。 这意味着，如果在设备上禁用 Windows Hello 企业版，它将保持禁用状态。 如果已启用它，则它保持启用状态。
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **默认值**：未配置
 
-  不能通过此基线禁用 Windows Hello 企业版。 可在配置 [Windows 注册](windows-hello.md)时或在设备配置文件中禁用 Windows Hello 企业版以实现[标识保护](identity-protection-configure.md)。  
+  - **PIN 中的小写字母**：  
+    如果为“必需”，用户 PIN 必须至少包含一个小写字母。
 
-  **默认值**：是
+    **默认值**：不允许
 
-- **要求 PIN 中含有小写字母**：  
-  如果为“必需”，用户 PIN 必须至少包含一个小写字母。
+  - **PIN 中的特殊字符**：  
+    如果为“必需”，用户 PIN 必须包含至少一个特殊字符。
 
-  **默认值**：然后用户才能访问
+    **默认值**：不允许
+ 
 
-- **要求 PIN 中含有特殊字符**：  
-  如果为“必需”，用户 PIN 必须包含至少一个特殊字符。
+  - **PIN 中的大写字母**：  
+    如果为“必需”，用户 PIN 必须包含至少一个大写字母。
 
-  **默认值**：然后用户才能访问
-
-- **最小 PIN 长度**：  
-  PIN 的最小长度必须介于 4 到 127 之间。
-
-  **默认值**：6
-
-- **要求 PIN 中含有大写字母**：  
-  如果为“必需”，用户 PIN 必须包含至少一个大写字母。
-
-  **默认值**：然后用户才能访问
+    **默认值**：不允许
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2062,7 +2103,7 @@ ms.locfileid: "80696496"
 
 有关详细信息，请参阅 Windows 文档 [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell)（策略 CSP - WindowsPowerShell）。
 
-- **Power shell shell 脚本块日志记录**：  
+- **PowerShell 脚本阻止日志记录**：  
   使用此策略设置，可以将所有的 PowerShell 脚本输入记录到 Microsoft-Windows-PowerShell/Operational 事件日志中。 如果启用此策略设置，则 Windows PowerShell 将记录命令、脚本块、函数和脚本的处理，无论是以交互方式调用还是通过自动方式处理。 如果禁用此策略设置，则将禁止记录 PowerShell 脚本输入。 如果启用脚本块调用日志记录，则 PowerShell 在调用命令、脚本块、函数或脚本启动或停止时还会记录事件。 启用调用日志记录时会生成大量事件日志。 注意：此策略设置存在于组策略编辑器中“计算机配置”和“用户配置”的下方。 “计算机配置”策略设置优先于“用户配置”策略设置。  
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067330)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360205"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881037"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune 数据仓库 API 的更改日志
 
@@ -265,4 +265,4 @@ User  实体集合包含企业中分配有许可证的所有 Azure Active Direct
 
 ## <a name="next-steps"></a>后续步骤
 - 了解 [Intune 每周新增功能](../fundamentals/whats-new.md)。 另外，还可找到即将发生的更改、有关服务的重要说明，以及有关过去版本的信息。
-- 请参阅 [Microsoft Intune 博客](https://go.microsoft.com/fwlink/?LinkID=273882)。
+- 请参阅 [Microsoft Intune 博客](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)。

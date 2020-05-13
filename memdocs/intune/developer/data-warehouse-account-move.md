@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078084"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881071"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>移动 Intune 数据仓库帐户数据 
 
@@ -83,4 +83,4 @@ ms.locfileid: "82078084"
 ## <a name="next-steps"></a>后续步骤
 
 - 了解 [Intune 每周新增功能](../fundamentals/whats-new.md)。 另外，还可找到即将发生的更改、有关服务的重要说明，以及有关过去版本的信息。
-- 请参阅 [Microsoft Intune 博客](https://go.microsoft.com/fwlink/?LinkID=273882)。
+- 请参阅 [Microsoft Intune 博客](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)。
