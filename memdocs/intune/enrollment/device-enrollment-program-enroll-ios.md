@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023344"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269059"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备
 
@@ -148,8 +148,7 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 
     ![“创建配置文件”的屏幕截图。](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. 在“基本信息”  页上，输入配置文件的“名称”  和“说明”  ，以便于管理。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组  。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 对于通过具有用户关联的自动设备注册进行了注册的设备，注册用户在设备设置之前就是成员的目标 AAD 用户组将确保最快地将策略交付给这些设备。 如果使应用程序和策略面向基于注册配置文件的动态组，则将导致在完成注册流之后，延迟一段时间后才会应用到设备。
-详细了解 [Azure Active Directory 动态组](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
+3. 在“基本信息”  页上，输入配置文件的“名称”  和“说明”  ，以便于管理。 用户看不到这些详细信息。 
 
     ![配置文件名称和描述。](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 16. 选择“下一步”  ，以转到“查看 + 创建”页  。
 
 17. 若要保存配置文件，则选择“创建”。 
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Azure Active Directory 中的动态组
+
+可使用注册“名称”  字段在 Azure Active Directory 中创建动态组。 有关详细信息，请参阅 [Azure Active Directory 动态组](/azure/active-directory/users-groups-roles/groups-dynamic-membership)。
+
+可以使用配置文件名称来定义 [enrollmentProfileName 参数](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)，以向设备分配此注册配置文件。
+
+为了在具有用户关联的 ADE 设备上实现最快的策略传递，请确保注册用户在设备创建前是 AAD 用户组的成员。 
+
+向注册配置文件分配动态组可能会导致在注册后向设备传递应用程序和策略时出现一些延迟。
+
 
 ## <a name="sync-managed-devices"></a>同步托管设备
 Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步，以在 Azure 门户的 Intune 中查看托管设备。

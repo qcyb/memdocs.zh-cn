@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086561"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943818"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>在 Intune 中创建 VPN 配置文件以连接到 VPN 服务器
 
@@ -182,7 +182,13 @@ VPN 配置文件可以使用来自不同制造商的多种不同的连接类型�
 
 在创建 VPN 配置文件时，选择之前已在 Intune 中创建的 SCEP 或 PKCS 证书配置文件。 该配置文件又称为身份证书。 用于对你创建的受信任的身份证书配置文件（或根证书）进行身份验证，以允许用户的设备进行连接  。 受信任的证书会分配到对 VPN 连接（通常是 VPN 服务器）进行身份验证的计算机。
 
+如果对 VPN 配置文件使用基于证书的身份验证，请将 VPN 配置文件、证书配置文件和受信任的根配置文件部署到同一组，以确保每台设备都能识别证书颁发机构的合法性。
+
 有关如何在 Intune 中创建和使用证书配置文件的详细信息，请参阅[如何使用 Microsoft Intune 配置证书](../protect/certificates-configure.md)。
+
+> [!NOTE]
+> VPN 身份验证不支持使用“PKCS 导入的证书”  配置文件类型添加的证书。 VPN 身份验证支持使用“PKCS 证书”  配置文件类型添加的证书。
+
 
 ### <a name="user-name-and-password"></a>用户名和密码
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
-ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
+ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82149188"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943801"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>使用 Intune 添加 iOS、iPadOS 或 macOS 设备功能设置
 
@@ -153,7 +153,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 在 Intune 中，使用这些设置配置由组织、标识提供者、Microsoft 或 Apple 创建的 SSO 应用扩展。 SSO 应用扩展将处理对用户的身份验证。 这些设置可配置重定向类型和凭据类型 SSO 应用扩展。
 
-- 重定向类型适用于 OAuth 和 SAML2 等新式验证协议。 可在 macOS 设备上使用通用的重定向扩展。 对于 iOS/iPadOS 设备，可在 Microsoft 的 Azure AD SSO 扩展（[Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)）和通用重定向扩展之间进行选择。
+- 重定向类型适用于 OpenID Connect、OAuth 和 SAML2 等新式身份验证协议。 可在 macOS 设备上使用通用的重定向扩展。 对于 iOS/iPadOS 设备，可在 Microsoft 的 Azure AD SSO 扩展（[Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)）和通用重定向扩展之间进行选择。
 - 凭据类型适用于质询与响应身份验证流。 可选择通用凭据扩展或者 Apple 提供的 Kerberos 专属凭据扩展。
 
 有关可以在 Intune 中配置的设置列表信息，请参阅 [iOS/iPadOS SSO 应用扩展](ios-device-features-settings.md#single-sign-on-app-extension)和 [macOS SSO 应用扩展](macos-device-features-settings.md#single-sign-on-app-extension)。

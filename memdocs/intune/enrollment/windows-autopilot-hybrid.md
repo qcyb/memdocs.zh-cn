@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ea6d407417300d2b758861ed35fcecc88f7ec74
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326962"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991708"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>使用 Intune 和 Windows Autopilot 部署加入混合 Azure AD 的设备
 可以使用 Intune 和 Windows Autopilot 设置加入混合 Azure Active Directory (Azure AD) 的设备。 为此，请执行本文中的步骤。
@@ -108,6 +108,8 @@ ms.locfileid: "80326962"
 ## <a name="install-the-intune-connector"></a>安装 Intune Connector
 
 用于 Active Directory 的 Intune 连接器必须安装在运行 Windows Server 2016 或更高版本的计算机上。 计算机还必须能够访问 Internet 和 Active Directory。 要增加扩展性和可用性或要支持多个 Active Directory 域，可以在环境中安装多个连接器。 建议在未运行任何其他 Intune 连接器的服务器上安装连接器。
+
+Intune 连接器需要与 [Intune 相同的终结点](../fundamentals/intune-endpoints.md)。
 
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备”   > “Windows”   > “Windows 注册”   > “适用于 Active Directory 的 Intune 连接器”   > “添加”  。 
 2. 按照说明下载连接器。

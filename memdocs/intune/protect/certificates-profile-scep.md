@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126067"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862371"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中创建和分配 SCEP 证书配置文件
 
@@ -301,7 +301,8 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 - 如果使用 Intune 和 Configuration Manager 的共同管理，请在 Configuration Manager 中将资源访问策略的[工作负载滑块](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)设置为“Intune”  或“试点 Intune”  。 此设置允许 Windows 10 客户端启动请求证书的过程。
 
 > [!NOTE]
-> 在 iOS/iPadOS 设备上，当 SCEP 证书配置文件或 PKCS 证书配置文件与其他配置文件（如 Wi-Fi 或 VPN 配置文件）相关联，设备将收到其他每个配置文件的证书。 这会使 iOS/iPadOS 设备拥有 SCEP 或 PKCS 证书请求提供的多个证书。 
+> - 在 iOS/iPadOS 设备上，当 SCEP 证书配置文件或 PKCS 证书配置文件与其他配置文件（如 Wi-Fi 或 VPN 配置文件）相关联，设备将收到其他每个配置文件的证书。 这会使 iOS/iPadOS 设备拥有 SCEP 或 PKCS 证书请求提供的多个证书。 
+> - 在 iOS 13 和 macOS 10.15 中，还需要考虑一些[额外的安全要求（已被 Apple 记录在案）](https://support.apple.com/HT210176)。  
 
 
 ## <a name="next-steps"></a>后续步骤

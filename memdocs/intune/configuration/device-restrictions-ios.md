@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407817"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269008"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 iOS 和 iPadOS 设备设置
 
@@ -95,6 +95,10 @@ ms.locfileid: "80407817"
 - **激活锁**：设置为“允许”可在受监管的 iOS/iPadOS 设备上启用“激活锁”  。 激活锁让重新激活丢失或被盗设备变得很难。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。
 - **阻止应用删除**：设置为“阻止”可阻止删除应用  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许用户从设备中删除应用。
 - **在设备锁定时允许使用 USB 附件**：设置为“允许”可允许 USB 附件与锁定超过一个小时的设备交换数据  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能不更新设备的 USB 受限模式，如果设备锁定时间超过一个小时，将阻止 USB 附件从设备传输数据。
+
+  此功能适用于：  
+  - iOS/iPadOS 11.4.1 及更高版本
+
 - **强制执行自动日期和时间**：“要求”可强制受监管设备自动设置日期和时间  。 当设备连接移动电话网络或启用了位置服务的 Wi-fi 时，将更新设备的时区。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。
 - **要求学生经批准方可离开 Classroom 课程**：“要求”可强制使用 Classroom 应用加入非托管课程的学生在获得教师许可后离开课程  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能不会强制学生请求权限。
 
@@ -292,7 +296,7 @@ ms.locfileid: "80407817"
   从 iOS/iPadOS 13.0 开始，此设置需要受监督的设备。
 
   - **从 App Store 安装应用**：设置为“阻止”不会在设备主屏幕上显示应用商店  。 用户可以继续使用 iTunes 或 Apple Configurator 安装应用。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许在主屏幕使用 App Store。
-  - **自动下载应用**：设置为“阻止”可阻止自动下载在其他设备上购买的应用  。 它不会影响对现有应用的更新。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许在设备上下载其他 iOS/iPadOS 设备上购买的应用。
+  - **自动下载应用**：设置为“阻止”  可阻止在其他设备上购买的应用的自动下载和新应用的自动更新。 它不会影响对现有应用的更新。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能会允许在其他 iOS/iPadOS 设备上购买的应用在设备上下载和更新。
 
 - **iTunes 限制级音乐、播客或新闻内容**：设置为“阻止”可阻止 iTunes 限制级音乐、播客或新闻内容  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许设备访问应用商店中认定为成人的内容。
 
@@ -324,7 +328,10 @@ ms.locfileid: "80407817"
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>设置适用范围：设备注册、自动设备注册（受监督）
 
+
 - **Spotlight 搜索从 Internet 返回结果**：“阻止”阻止 Spotlight 从 Internet 搜索返回任何结果  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许 Spotlight 搜索连接到 Internet 以提供搜索结果。
+
+  此设置在 UI 中重复，此问题将在即将发布的版本中得到修复。 目前，此设置适用于受监督的设备。 在将来的版本中，此设置适用于“设备注册”设备和“自动设备注册”设备，无需监督。
 
 - **Safari cookie**：选择在设备上处理 Cookie 的方式。 选项包括：
   - Allow
@@ -334,7 +341,7 @@ ms.locfileid: "80407817"
 
 - **Safari JavaScript**：设置为“阻止”可阻止在设备上运行浏览器中的 Java 脚本  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许 Java 脚本。
 
-- **Safari 弹出窗口**：设置为“阻止”可禁用 Web 浏览器中的弹出窗口阻止程序  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许弹出窗口阻止程序。
+- **Safari 弹出窗口**：设置为“阻止”可阻止 Safari Web 浏览器中的所有弹出窗口  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许弹出窗口阻止程序。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>设置适用范围：自动设备注册（监督）
 
@@ -386,6 +393,8 @@ ms.locfileid: "80407817"
 - **对“查找我的好友”应用设置的更改**：“阻止”可阻止更改“查找我的好友”应用的设置  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许用户更改”查找我的好友”应用的设置。
 
 - **Spotlight 搜索从 Internet 返回结果**：“阻止”阻止 Spotlight 从 Internet 搜索返回任何结果  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许 Spotlight 搜索连接到 Internet 以提供搜索结果。
+
+  此设置在 UI 中重复，此问题将在即将发布的版本中得到修复。 目前，此设置适用于受监督的设备。 在将来的版本中，此设置适用于“设备注册”设备和“自动设备注册”设备，无需监督。
 
 - **阻止从设备中删除系统应用**：设置为“阻止”可禁用从设备上删除系统应用的功能  。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能允许用户删除系统应用。
 
@@ -586,11 +595,16 @@ ms.locfileid: "80407817"
 
   从 iOS/iPadOS 13.0 开始，此设置需要受监督的设备。
 
-## <a name="autonomous-single-app-mode"></a>自治单应用模式
+## <a name="autonomous-single-app-mode-asam"></a>自治单应用模式 (ASAM)
 
-使用这些设置配置 iOS/iPadOS 设备，以自主单一应用模式运行特定应用。 如果配置了此模式且用户启动了一个已配置的应用，则设备将锁定到该应用。 在用户退出允许的应用前，禁用应用/任务切换。
+使用这些设置配置 iOS/iPadOS 设备，使其以自治单应用模式 (ASAM) 运行特定应用。 如果配置了此模式且用户启动了一个已配置的应用，则设备将锁定到该应用。 在用户退出允许的应用前，禁用应用/任务切换。
 
 例如，在学校或大学环境中，添加一个允许用户在设备上进行测试的应用。 或者，在用户进行身份验证前，将设备锁定在公司门户应用中。 在用户完成应用操作或你删除此策略时，设备将恢复正常状态。
+
+> [!NOTE]
+> 并非所有应用都支持自治单应用模式。 若要将应用置于自治单应用模式，通常需要应用配置策略提供的捆绑 ID 或键值对。 有关详细信息，请参阅 Apple 的 MDM 文档中的[`autonomousSingleAppModePermittedAppIDs`限制](https://developer.apple.com/documentation/devicemanagement/restrictions)。 有关正在配置的应用所需的特定设置的详细信息，请参阅供应商文档。
+
+例如，若要在自治单应用模式下配置 Zoom Room，Zoom 将指示使用 `us.zoom.zpcontroller` 捆绑 ID。 在此实例中，还会在缩放 Web 门户中进行更改。 有关详细信息，请参阅 [Zoom 帮助中心](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM)。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>设置适用范围：自动设备注册（监督）
 
@@ -601,6 +615,8 @@ ms.locfileid: "80407817"
 还可以  导入包含应用名称及其程序包 ID 的列表的 CSV 文件。 或，  导出包含应用的现有列表。
 
 ## <a name="kiosk"></a>Kiosk
+
+[单应用模式](https://support.apple.com/guide/mdm/mdm80a981/web)在 Intune 中称为“展台模式”。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>设置适用范围：自动设备注册（监督）
 
@@ -666,8 +682,7 @@ ms.locfileid: "80407817"
 
 仅在通过 Apple 设备注册计划或使用 Apple Configurator 初次设置设备时，才可启用 iOS/iPadOS 受监督模式。 启用受监督模式后，Intune 可使用以下功能配置设备：
 
-- 应用锁定（单应用模式） 
-- 全局 HTTP 代理 
+- 展台模式（单应用模式）：在 [Apple 开发人员文档](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)中称为“应用锁定”。
 - 禁用激活锁 
 - 自治单应用模式 
 - Web 内容筛选器 

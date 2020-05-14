@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407870"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862354"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 中 Android 和 Samsung Knox Standard 设备限制设置列表
 
@@ -114,7 +114,7 @@ ms.locfileid: "80407870"
 - **未配置**（默认）：Intune 不会更改或更新此设置。
 - **禁止的应用**：列出不允许用户安装和运行的应用（未由 Intune 托管）。 如果用户安装此列表中的某个应用，Intune 会通知你。
 - **允许的应用：** 列出允许用户安装的应用。 为了保持兼容性，用户不得安装其他应用。  系统会自动允许由 Intune 管理的应用，包括公司门户应用。
-- **应用列表**：**添加**应用：
+- **应用列表**：添加  应用：
   - **应用捆绑 ID**：输入应用程序包 ID。
   - **App Store URL**：输入所需应用的 Google Play 商店 URL。 例如，要添加适用于 Android 的 Microsoft 远程桌面应用，请输入 `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`。
 

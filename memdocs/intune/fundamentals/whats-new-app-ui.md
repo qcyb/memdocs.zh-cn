@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255024"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991791"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 最终用户应用的 UI 更新
 
@@ -36,6 +36,26 @@ ms.locfileid: "82255024"
 
 
 
+## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日当周  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>适用于 Android 的公司门户可指导用户在注册了工作配置文件后获取应用 <!-- 6103999 -->
+我们改进了公司门户中的应用内指南，可便于用户更轻松地查找和安装应用。 注册工作配置文件管理后，用户将看到一条说明如何在徽章版 Google Play 中查找建议的应用的消息。 [使用 Android 配置文件注册设备](../user-help/enroll-device-android-work-profile.md)中的最后一步已更新为显示这条新消息。 
+
+![公司门户的“设备”选项卡提示打开徽章版 Google Play 的示例图像。](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+用户还将在左侧的公司门户抽屉中看到新的“获取应用”  链接。 
+
+![突出显示“获取应用”菜单项的左侧公司门户抽屉的示例图像。](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+为了给这些新体验和改进体验腾出地方，下图中所示的“应用”  选项卡已被删除。  
+
+![现已删除“应用”选项卡的公司门户的示例图像。](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日当周   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改进了适用于 Android 的公司门户中的登录体验   
 我们即将更新适用于 Android 的公司门户应用中多个登录屏幕的布局，让用户体验更现代化、更简洁。 要查看所有适用于 Android 的公司门户注册说明，请转到[注册 Android 设备](../user-help/enroll-device-android-company-portal.md)或[使用 Android 工作配置文件注册](../user-help/enroll-device-android-work-profile.md)。   
@@ -44,7 +64,7 @@ ms.locfileid: "82255024"
 |已更新|上一个|   
 |---|---|   
 |![新的公司门户登录屏幕（包含“登录”按钮）的示例图片。](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![以前的公司门户登录页面的示例图片，显示一个更加繁忙的设计。](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![新的登录进度屏幕的示例图片，显示一个进度栏。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![以前的登录进度屏幕的示例图片，显示一个更加繁忙的设计。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![新的登录进度屏幕的示例图片，显示一个进度栏。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![以前的登录进度屏幕的示例图片，显示一个更加繁忙的设计。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>2020 年 2 月 3 日当周
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>从公司门户的 Android 工作配置文件注册中删除了屏幕 <!--6103987 -->
@@ -98,8 +118,7 @@ ms.locfileid: "82255024"
     <img src="./media/whats-new-app-ui/intune-app-android-device-notify.png" alt="Screenshot of Microsoft Intune app for Android - Notification" width="300">   
 
 
-## <a name="week-of-june-24-2019"></a>2019 年 6 月 24 日当周
-  
+## <a name="week-of-june-24-2019"></a>2019 年 6 月 24 日当周  
 
 ### <a name="view-all-installed-apps-from-new-company-portal-web-page----4224326---"></a>从新版公司门户网页查看所有已安装应用 <!-- 4224326 -->
 公司门户网站的新增“已安装应用”  页面将列出用户设备上安装的所有（要求安装和允许安装的）托管应用。 除了分配类型，用户还可以看到应用的发布者、发布日期和当前安装状态。 如果你并未要求或允许用户安装任何应用，则用户将看到一条消息，说明尚未安装任何公司应用。 若要在 Web 上查看新页面，请转到[公司门户网站](https://portal.manage.microsoft.com)，并单击“已安装应用”  。   
@@ -616,6 +635,6 @@ __之后__ ![现已更新版本加载页面的图像，其状态消息会显示�
 
 
 ## <a name="see-also"></a>另请参阅
-* [Microsoft Intune 博客](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune 博客](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [云平台路线图](https://www.microsoft.com/cloud-platform/roadmap)
 * [Intune 中的新增功能](whats-new.md)

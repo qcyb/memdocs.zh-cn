@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619570"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991744"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -51,6 +51,14 @@ ms.locfileid: "82619570"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日当周  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>适用于 Android 的公司门户可指导用户在注册了工作配置文件后获取应用 <!-- 6103999 -->
+我们改进了公司门户中的应用内指南，可便于用户更轻松地查找和安装应用。 注册工作配置文件管理后，用户将看到一条说明如何在徽章版 Google Play 中查找建议的应用的消息。 [使用 Android 配置文件注册设备](../user-help/enroll-device-android-work-profile.md)中的最后一步已更新为显示这条新消息。 用户还将在左侧的公司门户抽屉中看到新的“获取应用”  链接。 为了给这些新体验和改进体验腾出地方，“应用”  选项卡已被删除。 若要查看更新后的屏幕，请转到 [Intune 最终用户应用的 UI 更新](./whats-new-app-ui.md)。 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>2020 年 4 月 20 日当周
@@ -355,7 +363,6 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 
 - 派生凭据
 - 电子邮件
-
 - PKCS 证书
 - PKCS 导入的证书
 - SCEP 证书

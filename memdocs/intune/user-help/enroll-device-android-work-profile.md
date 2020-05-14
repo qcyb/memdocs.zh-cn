@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348583"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991591"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>使用 Android 工作配置文件注册设备
 
@@ -74,6 +74,15 @@ ms.locfileid: "79348583"
 9. 设置完成后，点击“完成”  。  
 
     ![公司门户的示例图像，“公司访问设置”屏幕，其中显示设置已完成并突出显示“完成”按钮。](./media/work-profile-done-1911.png)  
+
+10. 当系统提示在 Google Play 中查看组织建议的应用时，请选择“打开”  。 
+
+    ![公司门户提示打开徽章版 Google Play 的示例图像。](./media/get-apps-banner-android-2005.png) 
+
+    如果你尚未准备好安装应用，稍后随时都可以直接转到徽章版 Google Play 应用来访问这些应用。 也可以选择公司门户菜单中的“获取应用”  。  
+
+    ![突出显示“获取应用”链接的公司门户菜单的示例图像。](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>后续步骤  

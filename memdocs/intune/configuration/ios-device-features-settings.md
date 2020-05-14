@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210196"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943869"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
@@ -107,7 +107,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
       最多可以对设备程序坞添加 20  个页面。
 
 > [!NOTE]
-> 使用 Dock 设置添加图标时，将锁定主屏幕上的图标和页面，并且无法移动。 这可能是 iOS/iPadOS 和 Apple 的 MDM 策略的固有设计。
+> 如果你使用“主屏幕布局”设置添加页面或将页面和应用添加到程序坞，主屏幕和页面上的图标就会被锁定。 无法移动或删除它们。 此行为可能是根据 iOS/iPadOS 和 Apple 的 MDM 策略特意设计的。
 
 #### <a name="example"></a>示例
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 7827c85585d630f64ba9c6d342b6275fca506b1d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808152"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906961"
 ---
-# <a name="in-development-for-microsoft-intune---april-2020"></a>在 Microsoft Intune 的开发中 - 2020 年 4 月
+# <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 开发过程中的功能
 
 为了辅助就绪性和计划，此页面列出了正在开发但尚未发布的 Intune UI 更新和功能。 除本页上的信息外，另请注意： 
 
@@ -33,9 +33,11 @@ ms.locfileid: "80808152"
 - 有关策略性可交付内容和时间线，请参阅 [Microsoft 365 路线图](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS)。
 
 > [!NOTE]
-> 此页反映了我们目前希望在未来版本中提供的 Intune 功能。 日期和各项功能可能会更改。 本页未介绍我们正在开发的全部功能。
+> 此页反映了我们目前希望在即将到来的版本中提供的 Intune 功能。 日期和各项功能可能会更改。 本页未介绍我们正在开发的全部功能。
 
 **RSS 源**：通过将以下 URL 复制并粘贴到源阅读器中，可以在页面更新时收到通知：`https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
+
+本文的上次更新日期在上面的标题下方列出  。
 
 <!--
 ## What's coming to Intune in the Azure portal 
@@ -58,35 +60,36 @@ ms.locfileid: "80808152"
 <!-- ***********************************************-->
 ## <a name="app-management"></a>应用管理
 
-### <a name="update-to-android-app-configuration-policies---6113334----"></a>更新到 Android 应用配置策略<!-- 6113334  -->
-将更新 Android 应用配置策略，以允许管理员在创建应用配置文件之前选择设备注册类型。 此功能将添加到基于注册类型（工作配置文件或设备所有者）的证书配置文件帐户中。  发布时，将发生以下情况：
+### <a name="support-for-multiple-accounts-in-company-portal-for-mac---5779449----"></a>支持 Mac 公司门户中的多个帐户<!-- 5779449  -->
+macOS 设备上的公司门户现在会缓存用户帐户，使登录更容易。 用户不再需要在每次启动应用程序时登录到公司门户。 此外，如果缓存了多个用户帐户，则公司门户将显示帐户选取器，使用户无需输入其用户名。 
 
-- 在此功能发布之前创建的、没有任何与此策略关联的证书配置文件的现有策略将默认为适用于设备注册类型的工作配置文件和设备所有者配置文件。
-- 在此功能发布之前创建的、具有与证书配置文件关联的现有策略将默认为仅“工作配置文件”。
-- 如果已创建新的配置文件，并且为设备注册类型选择了“工作配置文件”和“设备所有者配置文件”，则无法将证书配置文件与应用配置策略关联。
-- 如果已创建新的配置文件，并且选择了仅“工作配置文件”，那么可以使用在设备配置下创建的工作配置文件证书策略。
-- 如果已创建新的配置文件，并且选择了仅“设备所有者”，那么可以使用在设备配置下创建的设备所有者证书策略。
+### <a name="auto-update-vpp-available-apps---3640511----"></a>自动更新 VPP 可用应用<!-- 3640511  -->
+如果为 VPP 令牌启用了“自动应用更新”功能，则发布为批量购买计划 (VPP) 可用应用的应用会自动更新  。 目前，VPP 可用应用不会自动更新。 最终用户必须转到公司门户，如果发布了更新版本，则重新安装该应用。 但是，必需应用当前支持自动更新。
 
-现有策略不会修正或颁发新证书。
+### <a name="customize-self-service-device-actions-in-the-company-portal--4393379----"></a>自定义公司门户中的自助设备操作<!--4393379  -->
+你将能够自定义在公司门户应用和网站中向最终用户显示的可用自助服务设备操作。 为了帮助防止发生意外的设备操作，可以通过选择“租户管理” > “自定义” > “创建” > “隐藏功能”，为公司门户应用配置这些设置     。 提供了以下选项：
+- 隐藏公司 Windows 设备上的“删除”按钮  。
+- 隐藏公司 Windows 设备上的“重置”按钮  。
+- 隐藏公司 iOS 设备上的“重置”按钮  。
+- 隐藏公司 iOS 设备上的“删除”按钮  。
 
-此外，我们还将添加 Gmail 和 9 个电子邮件配置文件，它们将同时适用于“工作配置文件”和“设备所有者”注册类型，包括对这两种电子邮件配置类型使用证书配置文件。  在“工作配置文件”的“设备配置”下创建的任何 Gmail 或 9 个策略将继续应用于设备，没有必要将它们移动到应用配置策略。
+有关详细信息，请参阅[公司门户中的用户自助设备操作](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal)。
 
-在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，可以通过选择“应用” > “应用配置策略”来查找应用配置策略   。 若要详细了解应用配置策略，请参阅 [Microsoft Intune 的应用配置策略](../apps/app-configuration-policies-overview.md)。
+### <a name="unified-delivery-of-azure-ad-enterprise-or-office-online-applications-in-the-company-portal--4404429---"></a>在公司门户中统一交付 Azure AD 企业版或 Office Online 应用程序<!--4404429 -->
+你将能够在公司门户中切换（“隐藏”或“显示”）显示 Azure AD 企业版或 Office Online 应用程序   。 每个用户将从所选的 Microsoft 服务中看到整个应用程序目录。 默认情况下，每个附加的应用源会设置为“隐藏”  。 此功能将首先在 2005 版本中的公司门户网站中生效，并应兼容 Windows、iOS/iPadOS 和 macOS 公司门户中的支持。 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“租户管理” > “自定义”，查找此未来设置   。 如需了解相关信息，请参阅[如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用](../apps/company-portal-app.md)。
 
-### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams 现已包含在适用于 macOS 的 Office 365 套件中<!-- 5903936  -->
-除了现有 Microsoft Office 应用（Word、Excel、PowerPoint、Outlook 和 OneNote）外，在 Microsoft Endpoint Manager 中分配了 Microsoft Office for macOS 的用户现在还将获得 Microsoft Teams。 Intune 将识别已安装其他 Office for macOS 应用的现有 Mac 设备，并在下次设备使用 Intune 签入时尝试安装 Microsoft Teams。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，可以通过选择“应用” > “macOS” > “添加”来查找适用于 macOS 的 Office 365 套件     。 有关详细信息，请参阅[使用 Microsoft Intune 将 Office 365 分配给 macOS 设备](../apps/apps-add-office365-macos.md)。
+### <a name="search-the-intune-docs-from-the-company-portal---1736480---"></a>从公司门户搜索 Intune 文档<!-- 1736480 -->
+现在可以从 macOS 应用的公司门户直接搜索 Intune 文档。 在菜单栏中，选择“帮助” > “搜索”，然后输入搜索的关键字以快速找到问题的答案   。
 
-### <a name="group-targeting-support-for-customization-pane----4722837----"></a>“自定义”窗格的组目标支持 <!-- 4722837  -->
-将能够使“自定义”窗格中的设置指向用户组。 在 Intune 门户中，选择“客户端应用” > “自定义”   。 有关更多详细信息，请参阅[如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用](company-portal-app.md]。
+### <a name="company-portal-for-android-will-guide-users-to-get-apps-after-work-profile-enrollment----6103999----"></a>适用于 Android 的公司门户会指导用户在注册了工作配置文件后获取应用 <!-- 6103999  -->
+我们正在改进公司门户中的应用内指南，使用户能够更轻松地查找和安装应用。  在工作配置文件管理中注册后，用户将看到一条消息，内容是他们可在 Google Play 的徽章版本中找到建议的应用。 用户还将在左侧的公司门户抽屉中看到一个新的“获取应用”链接  。 为给这些新体验和改进体验腾出位置，将删除“应用”选项卡  。 
+
+### <a name="android-company-portal-user-experience---5736084---"></a>Android 公司门户用户体验<!-- 5736084 -->
+在 2005 版本的 Android 公司门户中，收到应用保护策略发出的警告、阻止或擦除命令的 Android 设备的最终用户将看到新的用户体验。 最终用户将看到一条完整的页面消息，其中描述了警告、阻止或擦除的原因，以及解决此问题的步骤，并且不再看到当前的对话框体验。 有关详细信息，请参阅[适用于 Android 设备的应用保护体验](../apps/app-protection-policy.md#app-protection-experience-for-android-devices)和 [Microsoft Intune 中的 Android 应用保护策略设置](../apps/app-protection-policy-settings-android.md)。
+
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>设备配置
-
-### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>macOS 设备的有线网络设备配置文件<!-- 3508686  -->
-可使用新的 macOS 设备配置文件来配置有线网络（“设备配置” > “配置文件” > “创建配置文件” > 选择“macOS”作为平台 > 选择“有线网络”作为配置文件类型      ）。 使用此功能创建 802.1x 配置文件来管理有线网络，并将这些有线网络部署到 macOS 设备。
-
-适用于：
-- macOS
 
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>将为 Windows 平台更新设备配置文件设置和值<!-- 4091122 -->
 为 Windows 平台创建设备配置文件时（“设备”   > “配置文件”   > “创建配置文件”  > 任意“Windows”  平台选项），某些设置及其值与 CSP 不同，可能会令人不解。 将更新这些设置名称及其值，以清晰地反应其功能。
@@ -108,31 +111,37 @@ macOS 10.13 (High Sierra) 及更高版本支持 Defender ATP，必须在应用�
 
 此设置在以前创建的策略中不可用。 需要重新创建 FileVault 策略以配置此设置，才能利用它。 
 
-### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>针对不合规以操作形式发送推送通知 <!-- 1733150   -->
-对于 iOS 和 Android 平台，我们将添加针对不合规的新操作，该操作将通过公司门户应用发送应用推送通知。 用户可以单击通知，这将启动公司门户应用，然后显示不合规的原因。 管理员可以在 Microsoft Endpoint Manager 管理中心配置此新操作，方法是：转到“设备” > “合规性策略” > “创建策略”，然后选择“操作”即可发送应用推送通知     。
+### <a name="configure-system-extensions-on-macos-devices---6255624----"></a>在 macOS 设备上配置系统扩展<!-- 6255624  -->
+在 macOS 设备上，你可以创建一个内核扩展配置文件，在内核级别配置设置（“设备” > “配置文件” >  平台的“macOS”> 配置文件的“内核扩展”）     。 Apple 最终会弃用内核扩展，并在将来的版本中将它们替换为系统扩展。 系统扩展在用户空间中运行，并且不会向内核授予访问权限。 目的是为了提高安全性并提供更多的最终用户控制，同时在内核级别限制攻击。 内核扩展和系统扩展都允许用户安装可扩展操作系统的本机功能的应用扩展。
 
-### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>托管的 Google Play 应用的预发布测试<!-- 2681933  -->
-使用[Google Play 的应用预发布测试的封闭测试轨道](https://support.google.com/googleplay/android-developer/answer/3131213)的组织将能够使用 Intune 管理这些轨迹。 将可以有选择地将发布到 Google Play 预生产轨道的业务线应用分配给试验组，以便执行测试。 在 Intune 中，还将能够查看是否已向应用发布了预生产生成测试跟踪，并将跟踪分配给 AAD 用户或设备组。 此功能适用于我们当前支持的所有 Android Enterprise 方案（工作配置文件、完全托管和专用）。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，可以通过选择“应用” > “Android” > “添加”来添加托管的 Google Play 应用    。 有关详细信息，请参阅[使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备](../apps/apps-add-android-for-work.md)。
+在 Intune 中，你可以同时配置内核扩展和系统扩展（“设备” > “配置文件” >  平台的“macOS”> 配置文件的“内核扩展”）     。 内核扩展适用于 10.13.2 和更高版本。 系统扩展适用于 10.15 和更高版本。 从 macOS 10.15 到 macOS 10.15.4，内核扩展和系统扩展可并行运行。 
 
-### <a name="manage-smime-settings-for-outlook-on-android---6517085-----"></a>管理 Android 上 Outlook 的 S/MIME 设置<!-- 6517085   -->
-将能够使用应用配置策略在运行 Android Enterprise 的设备上管理 Outlook 的 S/MIME 设置。 还将可以选择是否允许设备用户在 Outlook 设置中启用或禁用 S/MIME。 若要使用适用于 Android 的应用配置策略，请在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“应用” > “应用配置策略” > “添加” > “托管设备”     。
-
-### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155----"></a>iOS/iPadOS 设备上 SSO 和 SSO 应用扩展配置文件中的其他选项<!-- 6504155  -->
-在 iOS/iPadOS 设备上，可以：
-
-- 在 SSO 配置文件（“设备” > “配置文件” > “创建配置文件” > “iOS/iPadOS”(针对平台) >“设备功能”(针对配置文件) >“单一登录”），将 Kerberos 主体名称设置为 SSO 配置文件中的安全帐户管理器 (SAM) 帐户名称       。 
-- 在 SSO 应用扩展配置文件（“设备” > “配置文件” > “创建配置文件” > “iOS/iPadOS”(针对平台) >“设备功能”(针对配置文件) >“单一登录应用扩展”）中，使用新的 SSO 应用扩展类型，以较少的单击次数配置 iOS/iPadOS Microsoft Azure AD 扩展       ）。 可以为共享设备启用 Azure AD 扩展，并向扩展发送特定于扩展的数据。
+要了解 macOS 设备上的内核扩展，请参阅[添加 macOS 内核扩展](../configuration/kernel-extensions-overview-macos.md)。
 
 适用于：
-- iOS/iPadOS 13.0+
-
-有关在 iOS/iPadOS 设备上使用单一登录的详细信息，请参阅[单一登录应用扩展概述](../configuration/device-features-configure.md#single-sign-on-app-extension)和[单一登录设置列表](../configuration/ios-device-features-settings.md#single-sign-on-app-extension)。
+- macOS 10.15 及更高版本
 
 <!-- ***********************************************-->
 ## <a name="device-enrollment"></a>设备注册
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>自带设备可以使用 VPN 进行部署<!--5015344 -->
-新的 Autopilot 配置文件“跳过域连接检查”切换允许部署混合 Azure AD Join 设备，而无需使用自己的第三方 Win32 VPN 客户端访问企业网络  。 若要查看新的切换，请前往 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备”  > “Windows” > “Windows 注册” > “部署配置文件” > “创建配置文件” > “全新体验 (OOBE)”       。
+此功能可能会延迟。
+
+### <a name="automated-device-sync-interval-down-to-12-hours--3077535---"></a>自动设备同步间隔缩短到 12 小时<!--3077535 -->
+对于 Apple 的自动设备注册，Intune 和 Apple Business Manager 之间的自动设备同步间隔将从 24 小时缩短到 12 小时。 有关同步的详细信息，请参阅[同步托管设备](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices)。
+
+### <a name="autopilot-support-for-hololens-2-devices--6305220--"></a>Hololens 2 设备的 Autopilot 支持<!--6305220-->
+Windows Autopilot 将支持 Hololens 2 设备。 有关在 Intune 中使用 Autopilot 的详细信息，请参阅[使用 Windows Autopilot 在 Intune 中注册 Windows 设备](../enrollment/enrollment-autopilot.md)。
+
+### <a name="enrollment-restrictions-will-support-scope-tags--4209550---"></a>注册限制将支持作用域标记<!--4209550 -->
+你将能够向注册限制分配作用域标记。 为此，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制”    。 创建任一一种限制，然后将看到“作用域标记”页  。
+
+### <a name="shared-ipads-for-business--6367326---"></a>适用于企业的共享 iPad<!--6367326 -->
+你将能够使用 Intune 和 Apple Business Manager 轻松、安全地设置共享 iPad，使多个员工可以共享设备。 Apple 的[共享 iPad](https://developer.apple.com/education/shared-ipad/) 可以为多个用户提供个性化的体验，同时保留用户数据。 借助托管 Apple ID，用户在登录组织中的任何共享 iPad 后即可访问他们的应用、数据和设置。 共享 iPad 使用联合标识。
+
+为了了解此功能，请转到[Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “iOS” > “iOS 注册” > “注册计划令牌”> 选择令牌** >“配置文件” > “创建配置文件” > “iOS”        。 在“管理设置”页上，选择“不使用用户关联注册”，你会看到“共享 iPad”选项    。
+
+**适用于：** iPadOS 13.4 及更高版本。 此版本添加了对使用共享 iPad 的临时会话的支持，因此用户不使用托管 Apple ID 也可访问设备。 注销后，设备会清除所有用户数据，以便立即准备投入使用，因此无需擦除设备。 
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>设备管理
@@ -140,23 +149,22 @@ macOS 10.13 (High Sierra) 及更高版本支持 Defender ATP，必须在应用�
 ### <a name="powershell-scripts-support-for-byod-devices---1862833----"></a>对 BYOD 设备的 PowerShell 脚本支持<!-- 1862833  -->
 PowerShell 脚本将支持 Intune 中已注册到 Azure AD 的设备。 有关 PowerShell 的详细信息，请参阅[在 Intune 中的 Windows 10 设备上使用 PowerShell 脚本](../apps/intune-management-extension.md)。 此功能不支持运行 Windows 10 家庭版的设备。
 
-### <a name="script-support-for-macos-devices---4280361----"></a>对 macOS 设备的脚本支持<!-- 4280361  -->
-你将能够向 macOS 设备添加和部署脚本。 此支持扩展了你配置 macOS 设备的能力，让你不再限于使用 macOS 设备上的本机 MDM 功能进行配置。
-
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics 将包括设备详细信息日志<!--6014987  -->
 Intune 设备详细信息日志将在“报告” > “Log Analytics”中提供   。 可以关联设备详细信息以生成自定义查询和 Azure 工作簿。
 
-### <a name="push-notification-when-device-ownership-type-is-changed---5575875----"></a>更改设备所有权类型时的推送通知<!-- 5575875  -->
-你将能够配置一条推送通知，以便在 Android 和 iOS 公司门户用户的设备所有权类型从“个人”更改为“公司”时，将推送通知发送给他们作为隐私保护。 通过选择“租户管理” > “自定义”，可以在 Microsoft Endpoint Manager 中找到此设置   。 若要了解有关设备所有权如何影响最终用户的详细信息，请参阅[更改设备所有权](../enrollment/corporate-identifiers-add.md#change-device-ownership)。
+
+### <a name="macos-script-support---6376978----"></a>macOS 脚本支持<!-- 6376978  -->
+macOS 的脚本支持现已正式发布。 此外，我们将添加对用户分配的脚本和已注册 Apple 自动设备注册（原名“设备注册计划”）的 macOS 设备的支持。 有关详细信息，请参阅[在 Intune 中的 macOS 设备上使用 Shell 脚本](../apps/macos-shell-scripts.md)。
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-<!--
-## Monitor and troubleshoot
--->
+## <a name="monitor-and-troubleshoot"></a>监视和故障排除
+
+### <a name="power-bi-compliance-report-template-v20---636958----"></a>Power BI 合规性报告模板 V2.0<!-- 636958  -->
+管理员能够将 Power BI 合规性报表模板的版本从 V1.0 更新到 V2.0。 V2.0 将包含改进的设计，以及模板中显示的计算和数据的更改。 如需了解相关信息，请参阅[使用 Power BI 连接到数据仓库](../developer/reports-proc-get-a-link-powerbi.md)。
 
 <!-- ***********************************************-->
 <!--
@@ -166,21 +174,34 @@ Intune 设备详细信息日志将在“报告” > “Log Analytics”中提供
 <!-- ***********************************************-->
 ## <a name="security"></a>安全
 
-### <a name="derived-credentials-support-on-android-fully-managed-devices--4839592--"></a>Android 完全托管设备上的派生凭据支持<!--4839592-->
-你将能够在 Android 企业版完全托管设备上使用派生凭据。 将添加有关为 Entrust Datacard、Intercede 和 DISA Purebred 检索派生凭据的支持。 你将能够使用派生凭据进行应用身份验证、Wi-Fi、VPN 或 S/MIME 签名，并/或通过支持该凭据的应用进行加密。
+### <a name="derived-credentials-support-for-disa-purebred-on-android-devices--4839592---"></a>派生凭据支持在 Android 设备上使用 DISA Purebred<!--4839592 -->
+你将能够在 Android Enterprise 完全托管设备上使用“DISA Purebred”作为[派生凭据](../protect/derived-credentials.md)提供程序（“租户管理” > “连接器和令牌” > “派生凭据”）     。 现将支持为 DISA Purebred 检索派生凭据。 你将能够使用派生凭据进行应用身份验证、Wi-Fi、VPN 或 S/MIME 签名，并/或通过支持该凭据的应用进行加密。 
+
+在 4 月，Intune 新增支持将 Entrust Datacard 和 Intercede 用作派生凭据的提供程序   。 
 
 ### <a name="privacy-preferences-settings-for-macos-devices---2934232---"></a>macOS 设备的隐私首选项设置<!-- 2934232 --> 
 随着 macOS Catalina 10.15 的发布，Apple 添加了新的安全和隐私增强功能。 默认情况下，应用程序和进程只有取得用户许可才能访问特定数据。 如果用户不提供许可，则应用程序和进程可能无法正常工作。 Intune 即将添加对以下设置的支持：对于运行 macOS 10.14 及更高版本的设备，允许 IT 管理员代表最终用户授予或不授予数据访问许可。 这些设置将确保应用程序和进行继续正常工作，并减少向最终用户显示的提示。
 
-### <a name="updated-ui-text-and-labels-for-windows-10-endpoint-protection-profile-settings---5983747---"></a>更新了 Windows 10 Endpoint Protection 配置文件设置的 UI 文本和标签<!-- 5983747 -->
-我们将更新以 Windows 10 设备配置文件的形式配置的各项设置的文本，让你能更轻松地了解设置的用途和效果。
 
-我们将更新的设置包括以下 Windows 10 设备配置文件：
+### <a name="duplicate-your-policies-in-endpoint-security---5892558-----"></a>在终结点安全性中复制策略<!-- 5892558   -->
+你将能够选择已在 Microsoft 终结点管理器管理中心的“终结点安全性”节点中创建的策略，然后复制该策略以创建副本。  你将能够复制的策略包括你为以下项目创建的策略： 
 
-- [设备限制](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) > Microsoft Defender 防病毒  
-- [Endpoint Protection](../protect/endpoint-protection-windows-10.md) > Microsoft Defender 防病毒
+- 防病毒
+- 磁盘加密
+- 防火墙
+- 终结点检测和响应
+- 攻击面减少
+- 帐户保护
 
-不会更改 Intune 支持的设置。 这只是对“Microsoft 终结点管理”管理中心 UI 文本的更新。
+复制操作将创建原始策略的副本，然后可以重命名和编辑该副本。 副本不包含原始策略的分配。
+
+### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>针对不合规以操作形式发送推送通知 <!-- 1733150   -->
+对于 iOS 和 Android 平台，我们将添加针对不合规的新操作，该操作将通过公司门户应用发送应用推送通知。 用户可以单击通知，这将启动公司门户应用，然后显示不合规的原因。 管理员可以在 Microsoft Endpoint Manager 管理中心配置此新操作，方法是：转到“设备” > “合规性策略” > “创建策略”，然后选择“操作”即可发送应用推送通知     。 
+
+### <a name="new-profile-for-endpoint-security-firewall-policy---5653324-----"></a>终结点安全性防火墙策略的新配置文件<!-- 5653324   -->
+作为预览版，我们将在 Intune 的终结点安全性的防火墙策略中添加适用于 Windows 10 和更高版本的附加配置文件（“终结点安全性” > “防火墙” > “创建策略”> 选择“Windows 10 和更高版本”）     。 
+
+此新配置文件的每个实例最多支持 150 条自定义 Microsoft Defender 防火墙规则  。 利用 Microsoft Defender 防火墙规则配置文件，你可以定义粒度 Windows 防火墙规则以允许或阻止 Windows 10 中的端口和应用程序。
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>通知

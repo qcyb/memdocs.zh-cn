@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357891"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943835"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune 网络配置要求和带宽
 
@@ -68,20 +68,12 @@ ms.locfileid: "79357891"
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         缓存大小         |             5 GB 到 30 GB             | 该值因网络中客户端计算机的数量和你使用的配置而异。 为了防止文件被过早删除，请针对你的环境调整缓存的大小。 |
 | 单个缓存文件大小 |                950 MB                 |                                                                     此设置可能不会在所有缓存代理服务器中可用。                                                                     |
-|   要缓存的对象类型    | 客户端使用<br /><br />和<br /><br />BITS |                                               Intune 包是通过 HTTP 执行的后台智能传输服务 (BITS) 下载检索的 CAB 文件。                                               |
+|   要缓存的对象类型    | HTTP<br /><br />HTTPS<br /><br />BITS |                                               Intune 包是通过 HTTP 执行的后台智能传输服务 (BITS) 下载检索的 CAB 文件。                                               |
 > [!NOTE]
 > 如果使用代理服务器来缓存内容请求，则仅会对客户端和代理之间以及从代理到 Intune 的通信进行加密。 将不会对从客户端到 Intune 的连接进行端到端加密。
 
 有关使用代理服务器来缓存内容的信息，请参阅代理服务器解决方案的文档。
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>在计算机上使用后台智能传输服务 (BITS)
-
-在进行配置的数小时内，可以在 Windows 计算机上使用 BITS 来减少网络带宽。 可以在 Intune 代理策略的“网络带宽”  页上配置 BITS 策略。
-
-> [!NOTE]
-> 对于 Windows 上的 MDM 管理，只有 OS 的 MobileMSI 应用类型的管理界面可使用 BITS 进行下载。 AppX/MsiX 使用自己的非 BITS 下载堆栈，通过 Intune 代理的 Win32 应用使用传递优化而不是 BITS。
-
-要详细了解 BITS 和 Windows 计算机，请参阅 TechNet 库中的 [后台智能传输服务](https://technet.microsoft.com/library/bb968799.aspx)。
 
 ### <a name="delivery-optimization"></a>传递优化
 
@@ -91,13 +83,28 @@ ms.locfileid: "79357891"
 
 可以将[传递优化设置](../configuration/delivery-optimization-settings.md)为设备配置文件的一部分。
 
-### <a name="use-branchcache-on-computers"></a>在计算机上使用 BranchCache
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>后台智能传输服务 (BITS) 和 BranchCache 
+
+你可以使用 Microsoft Intune [作为具有移动设备管理 (MDM) 的移动设备](../enrollment/windows-enroll.md)或具有 Intune 软件客户端的计算机来管理 Windows 电脑。 Microsoft 建议客户尽可能[使用 MDM 管理解决方案](../enrollment/windows-enroll.md)。 如果以这种方式管理，则 BranchCache 和 BITS 不受支持。 有关详细信息，请参阅[对比作为计算机或移动设备管理 Windows 电脑](pc-management-comparison.md)。
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>在计算机上使用 (BITS)（需要 Intune 软件客户端）
+
+在进行配置的数小时内，可以在 Windows 计算机上使用 BITS 来减少网络带宽。 可以在 Intune 代理策略的“网络带宽”  页上配置 BITS 策略。
+
+> [!NOTE]
+> 对于 Windows 上的 MDM 管理，只有 OS 的 MobileMSI 应用类型的管理界面可使用 BITS 进行下载。 AppX/MsiX 使用自己的非 BITS 下载堆栈，通过 Intune 代理的 Win32 应用使用传递优化而不是 BITS。
+
+要详细了解 BITS 和 Windows 计算机，请参阅 TechNet 库中的 [后台智能传输服务](https://technet.microsoft.com/library/bb968799.aspx)。
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>在计算机上使用 BranchCache（需要 Intune 软件客户端）
 
 Intune 客户端可以使用 BranchCache 来减少广域网 (WAN) 流量。 以下操作系统支持 BranchCache：
 
-- Silverlight
+- Windows 7
 - Windows 8.0
-- Windows 8。1
+- Windows 8.1
 - Windows 10
 
 要使用 BranchCache，客户端计算机必须已启用 BranchCache，然后针对“分布式缓存模式”  进行配置。
@@ -106,8 +113,6 @@ Intune 客户端可以使用 BranchCache 来减少广域网 (WAN) 流量。 以�
 
 如果使用 BranchCache，请与组织中的其他管理员一起协作来管理组策略和 Intune 防火墙策略。 确保他们不会部署禁用 BranchCache 或防火墙例外的策略。 有关 BranchCache 的详细信息，请参阅 [BranchCache 概述](https://technet.microsoft.com/library/hh831696.aspx)。
 
-> [!NOTE]
-> 你可以使用 Microsoft Intune [作为具有移动设备管理 (MDM) 的移动设备](../enrollment/windows-enroll.md)或具有 Intune 软件客户端的计算机来管理 Windows 电脑。 Microsoft 建议客户尽可能[使用 MDM 管理解决方案](../enrollment/windows-enroll.md)。 当以这种方式进行管理时，不支持 BranchCache。 有关详细信息，请参阅[对比作为计算机或移动设备管理 Windows 电脑](pc-management-comparison.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
