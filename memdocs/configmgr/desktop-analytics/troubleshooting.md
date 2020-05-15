@@ -10,12 +10,13 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96e9f7523ae8946b7756a8a39d1757e652eb3c8c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696895"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268243"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析故障排除
 
@@ -217,3 +218,6 @@ ms.locfileid: "81696895"
 此过程通常要花费 15-60 分钟。 具体取决于工作区的大小以及需要处理的更改的范围。 请求按需刷新数据时，不会更改诊断数据。  有关详细信息，请参阅[桌面分析常见问题](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。
 
 如果在上述时间范围内未看到更改发生更新，请等待 24 小时后再执行下一日刷新。 如果发现更长时间的延迟，请检查服务运行状况仪表板。 如果服务报告为正常，请联系 Microsoft 支持部门。<!-- 3896921 -->
+
+> [!IMPORTANT]
+> 桌面分析选项“查看最新数据”  已弃用。 此操作将在桌面分析服务的未来版本中删除。 有关详细信息，请参阅[已弃用的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  

@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075653"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268991"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>了解客户端如何查找 Configuration Manager 的站点资源和服务
 
@@ -62,7 +62,7 @@ Configuration Manager 客户端使用名为“服务定位”的进程来查找�
 
 可使用首选管理点。 首选管理点是客户端的已分配站点中的管理点，它与客户端用于查找站点系统服务器的边界组相关联。 首选管理点作为站点系统服务器与边界组相关联，其关联方式与分发点或状态迁移点与边界组的关联方式类似。 如果为层次结构启用首选管理点，则当客户端从其已分配站点使用管理点时，它将在从其分配的站点使用其他管理点之前尝试使用首选管理点。  
 
-还可使用 TechNet.com 上[管理点相关性](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx)博客中的信息来配置管理点相关性。 管理点相关性重写已分配管理点的默认行为，并使客户端能够使用一个或多个特定管理点。  
+还可使用[管理点相关性](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3)博客中的信息来配置管理点相关性。 管理点相关性重写已分配管理点的默认行为，并使客户端能够使用一个或多个特定管理点。  
 
 每当客户端需要联系管理点时，它就会检查 MP 列表，该列表本地存储在 Windows Management Instrumentation (WMI) 中。 安装客户端后，客户端会创建一个初始 MP 列表。 然后客户端会使用层次结构中有关每个管理点的详细信息定期更新该列表。  
 
@@ -131,12 +131,12 @@ MP 列表是客户端的首选服务定位源，因为它是客户端先前标�
 随后客户端会随机选择要使用的新管理点。  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
-加入域的客户端可以将 AD DS 用于服务定位。 这要求站点 [将数据发布到 Active Directory](https://technet.microsoft.com/library/hh696543.aspx)。  
+加入域的客户端可以将 AD DS 用于服务定位。 这要求站点 [将数据发布到 Active Directory](../../servers/deploy/configure/publish-site-data.md)。  
 
 当以下所有条件为 true 时，客户端可将 AD DS 用于服务定位：  
 
-- Active Directory [架构已扩展](https://technet.microsoft.com/library/mt345589.aspx)或已针对 System Center 2012 Configuration Manager 进行了扩展。  
-- [配置 Active Directory 林以进行发布](https://technet.microsoft.com/library/hh696542.aspx)，并配置 Configuration Manager 站点以进行发布。  
+- Active Directory [架构已扩展](../network/extend-the-active-directory-schema.md)或已针对 System Center 2012 Configuration Manager 进行了扩展。  
+- [配置 Active Directory 林以进行发布](../../servers/deploy/configure/publish-site-data.md)，并配置 Configuration Manager 站点以进行发布。  
 - 客户端计算机是 Active Directory 域的成员，并可访问全局编录服务器。  
 
 如果客户端在 AD DS 中找不到用于服务定位的管理点，那么它会尝试使用 DNS。  
@@ -148,7 +148,7 @@ Intranet 上的客户端可将 DNS 用于服务定位。 这要求层次结构�
 - 未扩展 AD DS 架构以支持 Configuration Manager。
 - Intranet 上的客户端位于没有为 Configuration Manager 发布启用的林中。  
 - 你的客户端位于工作组计算机上，并且未针对仅 Internet 的客户端管理对这些客户端进行配置。 （针对 Internet 配置的工作组客户端只与面向 Internet 的管理点通信，并且不会将 DNS 用于服务定位。）  
-- 你可以 [将客户端配置为从 DNS 中查找管理点](https://technet.microsoft.com/library/gg682055)。  
+- 你可以 [将客户端配置为从 DNS 中查找管理点](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)。  
 
 当一个站点将管理点的服务定位记录发布到 DNS 时：  
 
