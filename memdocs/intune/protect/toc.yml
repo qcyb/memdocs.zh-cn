@@ -60,12 +60,51 @@
           href: actions-for-noncompliance.md
         - name: 监视设备符合性
           href: compliance-policy-monitor.md
-    - name: 加密设备
+    - name: 终结点安全
+      href: endpoint-security.md
       items:
-        - name: 加密设备
-          href: encrypt-devices.md
-        - name: 监视设备加密
-          href: encryption-monitor.md
+        - name: 管理设备
+          href: endpoint-security-manage-devices.md
+        - name: 安全基线
+          items:
+            - name: 安全基线
+              href: security-baselines.md
+            - name: 监视基线
+              href: security-baselines-monitor.md
+        - name: 安全任务
+          href: atp-manage-vulnerabilities.md
+        - name: 安全策略
+          items:
+            - name: 管理安全策略
+              href: endpoint-security-policy.md
+            - name: 防病毒
+              href: endpoint-security-antivirus-policy.md
+            - name: 磁盘加密
+              href: endpoint-security-disk-encryption-policy.md
+            - name: 防火墙
+              href: endpoint-security-firewall-policy.md
+            - name: 终结点检测和响应
+              href: endpoint-security-edr-policy.md
+            - name: 攻击面减少
+              href: endpoint-security-asr-policy.md
+            - name: 帐户保护
+              href: endpoint-security-account-protection-policy.md
+        - name: Microsoft Defender ATP
+          href: advanced-threat-protection.md
+        - name: 加密磁盘
+          items:
+            - name: 管理 BitLocker 策略
+              href: encrypt-devices.md
+            - name: 管理 FileVault 策略
+              href: encrypt-devices-filevault.md
+            - name: 监视磁盘加密
+              href: encryption-monitor.md
+    - name: 标识保护
+      items:
+        - name: Windows Hello
+          href: windows-hello.md
+        - name: 标识保护
+          href: identity-protection-configure.md
     - name: 条件性访问
       items:
         - name: 条件访问概述
@@ -87,100 +126,76 @@
           href: app-based-conditional-access-intune-create.md
         - name: ADAL 和 Intune
           href: app-modern-authentication-block.md
-        - name: 适用于 macOS 的 Jamf Pro
-          items:
-            - name: 使用 Jamf 云连接器
-              href: conditional-access-jamf-cloud-connector.md
-            - name: 手动将 Jamf 与 Intune 集成
-              href: conditional-access-integrate-jamf.md
-            - name: 在使用 Jamf Pro 管理的 Mac 上强制实现符合性
-              href: conditional-access-assign-jamf.md
-    - name: 威胁防护
-      items:
-        - name: 移动威胁防御
-          href: mobile-threat-defense.md
-          items:
-            - name: 已取消注册的设备上的 MTD
-              items:
-                - name: 将 MTD 应用添加到已取消注册的设备
-                  href: mtd-add-apps-unenrolled-devices.md
-                - name: 创建 MTD 应用保护策略
-                  href: mtd-app-protection-policy.md
-                - name: 为已取消注册的设备启用 MTD
-                  href: mtd-enable-unenrolled-devices.md
-            - name: 已注册的设备上的 MTD
-              items:
-                - name: 将 MTD 应用添加到已注册的设备
-                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
-                - name: 创建 MTD 设备符合性策略
-                  href: mtd-device-compliance-policy-create.md
-                - name: 为已注册的设备启用 MTD
-                  href: mtd-connector-enable.md
-            - name: MTD 应用
-              items:
-                - name: 设置更佳的移动
-                  href: better-mobile-threat-defense-connector.md
-                  items:
-                    - name: 更佳的移动和 Intune 集成
-                      href: better-mobile-mtd-connector-integration.md
-                      displayName: sso
-                - name: 设置 Check Point
-                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-                  items:
-                    - name: Check Point 和 Intune 集成
-                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-                - name: 设置 Lookout
-                  href: lookout-mobile-threat-defense-connector.md
-                  items:
-                    - name: Lookout 和 Intune 集成
-                      href: lookout-mtd-connector-integration.md
-                - name: 设置 Pradeo
-                  href: pradeo-mobile-threat-defense-connector.md
-                  items:
-                    - name: Pradeo 和 Intune 集成
-                      href: pradeo-mtd-connector-integration.md
-                - name: 设置 Sophos Mobile
-                  href: sophos-mtd-connector.md
-                  items:
-                    - name: Sophos Mobile 和 Intune 集成
-                      href: sophos-mtd-connector-integration.md
-                - name: 设置 Symantec
-                  href: skycure-mobile-threat-defense-connector.md
-                  items:
-                    - name: Symantec 和 Intune 集成
-                      href: skycure-mtd-connector-integration.md
-                - name: 设置 Wandera
-                  href: wandera-mtd-connector.md
-                  items:
-                    - name: Wandera 和 Intune 集成
-                      href: wandera-mtd-connector-integration.md
-                - name: 设置 Zimperium
-                  href: zimperium-mobile-threat-defense-connector.md
-                  items:
-                    - name: Zimperium 和 Intune 集成
-                      href: zimperium-mtd-connector-integration.md
-        - name: Microsoft Defender
-          items:
-            - name: Microsoft Defender ATP
-              href: advanced-threat-protection.md
-            - name: 安全任务
-              href: atp-manage-vulnerabilities.md
-    - name: 安全基线
-      items:
-        - name: 安全基线
-          href: security-baselines.md
-        - name: 监视基线
-          href: security-baselines-monitor.md
+        - name: 将 Jamf Pro 与 Intune 集成以实现合规
+          href: conditional-access-integrate-jamf.md
+        - name: 在使用 Jamf Pro 管理的 Mac 上强制实现符合性
+          href: conditional-access-assign-jamf.md
     - name: Endpoint Protection
       href: endpoint-protection-configure.md
+    - name: 移动威胁防御合作伙伴
+      href: mobile-threat-defense.md
+      items:
+        - name: 已取消注册的设备上的 MTD
+          items:
+            - name: 将 MTD 应用添加到已取消注册的设备
+              href: mtd-add-apps-unenrolled-devices.md
+            - name: 创建 MTD 应用保护策略
+              href: mtd-app-protection-policy.md
+            - name: 为已取消注册的设备启用 MTD
+              href: mtd-enable-unenrolled-devices.md
+        - name: 已注册的设备上的 MTD
+          items:
+            - name: 将 MTD 应用添加到已注册的设备
+              href: mtd-apps-ios-app-configuration-policy-add-assign.md
+            - name: 创建 MTD 设备符合性策略
+              href: mtd-device-compliance-policy-create.md
+            - name: 为已注册的设备启用 MTD
+              href: mtd-connector-enable.md
+        - name: MTD 应用
+          items:
+            - name: 设置更佳的移动
+              href: better-mobile-threat-defense-connector.md
+              items:
+                - name: 更佳的移动和 Intune 集成
+                  href: better-mobile-mtd-connector-integration.md
+                  displayName: sso
+            - name: 设置 Check Point
+              href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+              items:
+                - name: Check Point 和 Intune 集成
+                  href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: 设置 Lookout
+              href: lookout-mobile-threat-defense-connector.md
+              items:
+                - name: Lookout 和 Intune 集成
+                  href: lookout-mtd-connector-integration.md
+            - name: 设置 Pradeo
+              href: pradeo-mobile-threat-defense-connector.md
+              items:
+                - name: Pradeo 和 Intune 集成
+                  href: pradeo-mtd-connector-integration.md
+            - name: 设置 Sophos Mobile
+              href: sophos-mtd-connector.md
+              items:
+                - name: Sophos Mobile 和 Intune 集成
+                  href: sophos-mtd-connector-integration.md
+            - name: 设置 Symantec
+              href: skycure-mobile-threat-defense-connector.md
+              items:
+                - name: Symantec 和 Intune 集成
+                  href: skycure-mtd-connector-integration.md
+            - name: 设置 Wandera
+              href: wandera-mtd-connector.md
+              items:
+                - name: Wandera 和 Intune 集成
+                  href: wandera-mtd-connector-integration.md
+            - name: 设置 Zimperium
+              href: zimperium-mobile-threat-defense-connector.md
+              items:
+                - name: Zimperium 和 Intune 集成
+                  href: zimperium-mtd-connector-integration.md
     - name: 网络访问控制
       href: network-access-control-integrate.md
-    - name: Windows Hello
-      items:
-        - name: Windows Hello
-          href: windows-hello.md
-        - name: 标识保护
-          href: identity-protection-configure.md
     - name: 证书
       items:
         - name: 使用证书进行身份验证
@@ -257,13 +272,8 @@
           href: troubleshoot-jamf.md
 - name: 参考
   items:
-    - name: 防病毒策略设置
-      items:
-        - name: macOS Defender 防病毒设置
-          href: antivirus-microsoft-defender-settings-macos.md
-        - name: Windows 10 Microsoft Defender 防病毒设置
-          href: antivirus-microsoft-defender-settings-windows.md
     - name: 用于添加第三方证书颁发机构的 API
+      href: scep-libraries-apis.md
     - name: 合规性策略设置
       items:
         - name: 合规性策略设置 - Android
@@ -280,7 +290,26 @@
           href: compliance-policy-create-windows-8-1.md
         - name: 合规性策略设置 - Windows Phone 8.1
           href: compliance-policy-create-windows-8-1.md
-      href: scep-libraries-apis.md
+    - name: 终结点安全策略设置
+      items:
+        - name: 防病毒策略设置
+          items:
+            - name: macOS Defender 防病毒设置
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender 防病毒设置
+              href: antivirus-microsoft-defender-settings-windows.md
+            - name: Windows 安全体验设置
+              href: antivirus-security-experience-windows-settings.md
+        - name: 磁盘加密配置文件设置
+          href: endpoint-security-disk-encryption-profile-settings.md
+        - name: 防火墙策略设置
+          href: endpoint-security-firewall-profile-settings.md
+        - name: 终结点检测和响应配置文件设置
+          href: endpoint-security-edr-profile-settings.md
+        - name: 攻击面减少配置文件设置
+          href: endpoint-security-asr-profile-settings.md
+        - name: 帐户保护配置文件设置
+          href: endpoint-security-account-protection-profile-settings.md
     - name: 安全基线设置
       items:
         - name: Windows 10 MDM 基线设置

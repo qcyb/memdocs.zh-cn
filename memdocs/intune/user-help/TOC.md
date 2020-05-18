@@ -20,6 +20,7 @@
 #### 使用派生的凭据注册
 ##### [注册 Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [注册 Intercede](enroll-android-device-intercede.md)
+##### [注册 Disa Purebred](enroll-android-device-disa-purebred.md)
 ### [移动到新的设备管理设置](move-to-new-device-management-setup.md)
 ### [在设备上使用托管应用](use-managed-apps-on-your-device-android.md)
 ### [加密设备](encrypt-your-device-android.md)
