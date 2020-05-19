@@ -10,16 +10,16 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700665"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268974"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>安装 Configuration Manager 站点的先决条件
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 在开始站点安装之前，先了解安装不同类型的 Configuration Manager 站点的先决条件。
 
@@ -40,23 +40,26 @@ ms.locfileid: "81700665"
 
 - 安装站点的用户帐户必须具有以下权限：  
 
-    - 下列服务器上的管理员  权限：  
+    - 下列服务器上的管理员权限：  
         - 站点服务器  
-        - 托管站点数据库  的每个服务器  
-        - 站点的每个 SMS 提供程序  实例  
+        - 托管站点数据库的每个服务器  
+        - 站点的每个 SMS 提供程序实例  
 
     - 托管站点数据库的 SQL Server 实例上的 **Sysadmin**  
 
         > [!IMPORTANT]  
         > Configuration Manager 安装完成后，站点服务器计算机帐户必须保留对 SQL Server 的 sysadmin 权限。 请勿从此帐户中删除 SQL sysadmin 权限。  
 
+    > [!NOTE]
+    > 若要详细了解在安装完成后是否需要这些权限，请参阅[提升的权限](../../../plan-design/hierarchy/accounts.md#elevated-permissions)。
+
 - 如果安装的是主站点，则需要下列附加权限：  
 
-    - 安装初始管理点和分发点的其他服务器上的管理员  权限（若不在站点服务器上）  
+    - 安装初始管理点和分发点的其他服务器上的管理员权限（若不在站点服务器上）  
 
 - 如果在管理中心站点下安装新的子级主站点，需要下列附加权限：  
 
-    - 托管管理中心站点的服务器上的管理员  权限  
+    - 托管管理中心站点的服务器上的管理员权限  
 
     - Configuration Manager 中基于角色的管理权限，这些权限相当于**基础结构管理员**或**完全权限管理员**的安全角色  
 
@@ -96,15 +99,15 @@ ms.locfileid: "81700665"
 
 #### <a name="computer-account-as-administrator"></a>管理员身份的计算机帐户
 
-承载新管理中心站点的服务器的计算机帐户必须是独立主站点服务器上“管理员”  组的成员。
+承载新管理中心站点的服务器的计算机帐户必须是独立主站点服务器上“管理员”组的成员。
 
-若要成功扩展独立主站点，新管理中心站点的计算机帐户必须具有独立主站点的“管理员”  权限。 仅在站点扩展期间需要。 站点扩展完成后，可从主站点的用户组中删除该帐户。  
+若要成功扩展独立主站点，新管理中心站点的计算机帐户必须具有独立主站点的“管理员”权限。 仅在站点扩展期间需要。 站点扩展完成后，可从主站点的用户组中删除该帐户。  
 
 #### <a name="installation-account-permissions"></a>安装帐户权限
 
 运行 Configuration Manager 安装程序以安装新管理中心站点的用户帐户必须在独立主站点上具有基于角色的管理权限。
 
-若要在站点扩展期间安装管理中心站点，必须在独立主站点的基于角色的管理中，将运行安装程序以安装管理中心站点的用户帐户定义为“完全权限管理员”  或“基础结构管理员”  。
+若要在站点扩展期间安装管理中心站点，必须在独立主站点的基于角色的管理中，将运行安装程序以安装管理中心站点的用户帐户定义为“完全权限管理员”或“基础结构管理员”。
 
 有关详细信息（包括所需权限的完整列表），请参阅[站点安装帐户](../../../plan-design/hierarchy/accounts.md#site-installation-account)。
 
@@ -134,11 +137,11 @@ Configuration Manager 仅在层次结构的顶层站点上支持这些角色。 
 - [适用于企业的 Microsoft Store](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [云管理网关](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-在版本 1806 及更高版本上，续订 Azure Active Directory 租户密钥。 有关详细信息，请参阅[续订密钥](../configure/azure-services-wizard.md#bkmk_renew)。
+最简单的方法是，续订 Azure Active Directory 租户密钥。 有关详细信息，请参阅[续订密钥](../configure/azure-services-wizard.md#bkmk_renew)。
 
 或者，删除并重新创建与该服务的连接：
 
-1. 在 Configuration Manager 控制台中，从“Azure 服务”  节点删除 Azure 服务。  
+1. 在 Configuration Manager 控制台中，从“Azure 服务”节点删除 Azure 服务。  
 
 2. 在 Azure 门户中，从“Azure Active Directory 租户”节点删除与该服务关联的租户。 此操作还会删除与该服务关联的 Azure AD Web 应用。  
 
@@ -151,15 +154,15 @@ Configuration Manager 仅在层次结构的顶层站点上支持这些角色。 
 
 - 必须安装必要的 Windows Server 角色、功能和 Windows 组件。 有关详细信息，请参阅[站点系统先决条件](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012secpreq)  
 
-- 在 Configuration Manager 控制台中配置辅助站点安装的管理员必须具有基于角色的管理权限，且这些权限相当于“基础结构管理员”  或“完全权限管理员”  的安全角色。  
+- 在 Configuration Manager 控制台中配置辅助站点安装的管理员必须具有基于角色的管理权限，且这些权限相当于“基础结构管理员”或“完全权限管理员”的安全角色。  
 
-- 父级主站点的计算机帐户必须是辅助站点服务器上的管理员  。  
+- 父级主站点的计算机帐户必须是辅助站点服务器上的管理员。  
 
 - 当辅助站点使用以前安装的 SQL Server 实例承载辅助站点数据库时：  
 
-    - 父级主站点的计算机帐户必须具有对辅助站点服务器上 SQL Server 实例的 sysadmin  权限。  
+    - 父级主站点的计算机帐户必须具有对辅助站点服务器上 SQL Server 实例的 sysadmin 权限。  
 
-    - 辅助站点服务器计算机的本地系统  帐户必须具有对辅助站点服务器上 SQL Server 实例的 sysadmin  权限。  
+    - 辅助站点服务器计算机的本地系统帐户必须具有对辅助站点服务器上 SQL Server 实例的 sysadmin 权限。  
 
         > [!IMPORTANT]  
         > Configuration Manager 安装完成后，两个帐户都必须保留 SQL Server 的 sysadmin 权限。 请勿从这些帐户中删除 sysadmin 权限。  

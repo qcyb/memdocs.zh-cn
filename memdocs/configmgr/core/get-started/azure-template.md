@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691395"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406691"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 实验室
 
-适用范围：*Configuration Manager（技术预览版分支）*
+适用范围：Configuration Manager（Current Branch、技术预览版分支）
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ ms.locfileid: "81691395"
 ## <a name="prerequisites"></a>必备条件
 
 此过程需要可在其中创建以下对象的 Azure 订阅： 
-- 两台用于域控制器和 MP & DP 角色的 Standard_B2s 虚拟机。
+- 两台用于域控制器、管理点和分发点的 Standard_B2s 虚拟机。
 - 一台用于主站点服务器和 SQL 数据库服务器的 Standard_B2ms 虚拟机。
 - Standard_LRS 存储帐户
 
 > [!Tip]  
-> 请参阅 [Azure 定价计算器](https://azure.microsoft.com/pricing/calculator/)以帮助确定潜在的费用。  
+> 请参阅 [Azure 定价计算器](https://azure.microsoft.com/pricing/calculator/)，这篇文章可帮助你确定潜在成本。  
 
 
 
@@ -48,7 +48,7 @@ ms.locfileid: "81691395"
 
 1. 请转到 [Configuration Manager 技术预览版模板](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/)或 [Configuration Manager 当前分支模板](https://azure.microsoft.com/resources/templates/sccm-currentbranch/)。  
 
-2. 选择“部署到 Azure”，随即打开 Azure 门户  。  
+2. 选择“部署到 Azure”，随即打开 Azure 门户。  
 
 3. 完成包含以下信息的 Azure 快速入门模板：
 
@@ -77,7 +77,7 @@ ms.locfileid: "81691395"
     > 
     > - **位置**：所有资源的位置
 
-4. 阅读条款和条件。 如果同意，请选择“我同意上述条款和条件”  。 然后选择“购买”以继续  。 
+4. 阅读条款和条件。 如果同意，请选择“我同意上述条款和条件”。 然后选择“购买”以继续。 
 
 Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状态。 
 
@@ -102,7 +102,7 @@ Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状
 ### `<prefix>DC01`
 
 - Active Directory 域控制器
-- Standard_B2s，它有两个 CPU 和 4 GB 的内存
+- 有两个处理器和 4GB 内存的 Standard_B2s
 - Windows Server 2019 Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Windows 功能和角色
@@ -113,7 +113,7 @@ Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状
 
 ### `<prefix>PS01`
 
-- Standard_B2ms，它有两个 CPU 和 8 GB 的内存
+- 有两个处理器和 8GB 内存的 Standard_B2ms
 - Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows PE 中的 Windows 10 ADK 
@@ -127,7 +127,7 @@ Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s，它有两个 CPU 和 4 GB 的内存
+- 有两个处理器和 4GB 内存的 Standard_B2s
 - Windows Server 2019 Datacenter Edition
 - 分发点
 - 管理点

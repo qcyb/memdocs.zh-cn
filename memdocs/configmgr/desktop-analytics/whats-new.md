@@ -2,7 +2,7 @@
 title: 桌面分析中的新增功能
 titleSuffix: Configuration Manager
 description: 桌面分析云服务最近每月发布的新功能摘要。
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be314aee43e93b5e3d264c70626e2f0b85e8e7f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706375"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268151"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
 
@@ -26,6 +27,16 @@ ms.locfileid: "81706375"
 
 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>2020 年 5 月
+
+### <a name="reduce-the-number-of-apps-for-review"></a>减少要审阅的应用数量
+
+<!-- 5542186 -->
+
+为了帮助合并和减少门户中“资产”页上显示的应用数量，它现在合并了具有相同名称和发布者的应用的所有版本。 “值得注意的应用”磁贴中的应用计数反映了此设置。 例如，它没有列出数百个 Microsoft Edge 实例，而是列出所有版本的一个实例。 可以对所有版本只做一次决策。 如需对特定应用版本做出决策，此行为是可配置的。
+
+有关详细信息，请参阅[关于资产 - 应用](about-assets.md#apps)。
 
 ## <a name="march-2020"></a>2020 年 3 月
 
@@ -50,7 +61,7 @@ ms.locfileid: "81706375"
 
 <!-- 5746559 -->
 
-Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分类，这可能导致 Windows 10 的更新失败或回滚  。 而现在，桌面分析可帮助你提前确定这些防护措施，让你能够在部署更新之前对资产进行修正。 有关详细信息，请参阅[兼容性评估 - 防护](compat-assessment.md#safeguards)。
+Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分类，这可能导致 Windows 10 的更新失败或回滚。 而现在，桌面分析可帮助你提前确定这些防护措施，让你能够在部署更新之前对资产进行修正。 有关详细信息，请参阅[兼容性评估 - 防护](compat-assessment.md#safeguards)。
 
 ## <a name="january-2020"></a>2020 年 1 月
 
@@ -64,7 +75,7 @@ Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分
 
 <!-- 5451636 -->
 
-选择门户右上角的“发送笑脸”图标，可分享你对于桌面分析的反馈。  有关详细信息，请参阅[分享产品反馈](get-support.md#bkmk_feedback)。
+选择门户右上角的“发送笑脸”图标，可分享你对于桌面分析的反馈。 有关详细信息，请参阅[分享产品反馈](get-support.md#bkmk_feedback)。
 
 ## <a name="october-2019"></a>2019 年 10 月
 
@@ -106,7 +117,7 @@ Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分
 
 <!-- 3587232 -->
 
-为了帮助减少批注值得注意的应用的工作量，某些类型的应用会被自动标记为“不重要”  。 这些应用的部署计划升级决策也会被标记为“就绪”  。 以下应用是兼容的，并且应在升级 Windows 后继续工作：
+为了帮助减少批注值得注意的应用的工作量，某些类型的应用会被自动标记为“不重要”。 这些应用的部署计划升级决策也会被标记为“就绪”。 以下应用是兼容的，并且应在升级 Windows 后继续工作：
 
 - Microsoft 发布的系统应用和组件
 
@@ -121,3 +132,7 @@ Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分
 <!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
 
 - [版本 1906 中的新增功能](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+
+## <a name="deprecated-features"></a>已弃用的功能
+
+当 Microsoft 计划删除桌面分析服务的重要功能时，此更改将作为 Configuration Manager 弃用的功能提前进行发布。 有关详细信息，请参阅[已弃用的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features)。

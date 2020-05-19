@@ -2,7 +2,7 @@
 title: 查找帮助
 titleSuffix: Configuration Manager
 description: 查找有关 Configuration Manager 的其他信息的资源。
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707155"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343178"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>查找使用 Configuration Manager 的帮助
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 本文以下部分提供多种资源，可用于查找有关使用 Configuration Manager 的帮助：  
 
@@ -63,11 +63,11 @@ ms.locfileid: "81707155"
 若要就喜欢的内容发送反馈，请按照以下说明操作：
 
 1. 在控制台的右上角，单击笑脸。
-2. 在下拉菜单中，选择“发送笑脸”或“发送皱眉表情”   。
+2. 在下拉菜单中，选择“发送笑脸”或“发送皱眉表情” 。
 3. 使用文本框对喜欢的内容或不喜欢的内容进行说明。 
 4. 选择是否要分享电子邮件地址和屏幕截图。
-5. 单击“提交反馈” 
-     - 如果没有 Internet 连接，请单击底部的“保存”  。 按照[发送为稍后提交而保存的反馈](#BKMK_NoInternet)部分中的说明，将其发送给 Microsoft。 
+5. 单击“提交反馈”
+     - 如果没有 Internet 连接，请单击底部的“保存”。 按照[发送为稍后提交而保存的反馈](#BKMK_NoInternet)部分中的说明，将其发送给 Microsoft。 
 
 ![在 Configuration Manager 1806 版中提交反馈表单](media/1806-feedback-form.png)
 
@@ -81,7 +81,7 @@ ms.locfileid: "81707155"
    - ID 为 53900 的消息表示提交成功。
    - ID 为 53901 的消息表示提交失败。
 
-通过“监视” > “系统状态” > “状态消息查询”查看状态消息    。 从“所有状态消息”查询开始，选择时间范围  。 加载消息后，单击“筛选消息”按钮，筛选消息 ID 53900 或 53901  。
+通过“监视” > “系统状态” > “状态消息查询”查看状态消息  。 从“所有状态消息”查询开始，选择时间范围。 加载消息后，单击“筛选消息”按钮，筛选消息 ID 53900 或 53901。
 
 如果[发送为稍后提交保存的反馈](find-help.md#BKMK_NoInternet)，则不会创建状态消息。
 
@@ -89,7 +89,7 @@ ms.locfileid: "81707155"
 
 ### <a name="send-a-suggestion"></a>发送建议
 
-发送建议时，将直接转到第三方网站 [UserVoice](https://configurationmanager.uservoice.com/) 来分享意见  。 Configuration Manager 产品团队使用以下 UserVoice 状态值：
+发送建议时，将直接转到第三方网站 [UserVoice](https://configurationmanager.uservoice.com/) 来分享意见。 Configuration Manager 产品团队使用以下 UserVoice 状态值：
 
 - **已注意** - 我们已了解该请求，它很有意义。 我们已将其添加到积压工作 (backlog)。
 - **已计划** - 我们已开始编码此功能，并且希望它在接下来的数月内能够在技术预览版本中提供。
@@ -101,7 +101,7 @@ ms.locfileid: "81707155"
 
 ### <a name="information-sent-with-feedback"></a>随反馈一起发送的信息
 
-发送笑脸或发送皱眉表情时，以下信息将随反馈发送   ：
+发送笑脸或发送皱眉表情时，以下信息将随反馈发送 ：
 
 - OS 内部版本信息
 - Configuration Manager 层次结构 ID
@@ -114,7 +114,7 @@ ms.locfileid: "81707155"
 
 ### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a> 发送为稍后提交而保存的反馈
 
-1. 单击“提供反馈”窗口底部的“保存”   。 
+1. 单击“提供反馈”窗口底部的“保存” 。 
 2. 保存 .zip 文件。 如果本地计算机无法访问 Internet，请将文件复制到连接了 Internet 的计算机。 
 3. 如果需要，复制位于 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\` 的 UploadOfflineFeedback 文件夹
     - 有关 cd.latest 文件夹的详细信息，请参阅 [CD.Latest 文件夹](../servers/manage/the-cd.latest-folder.md)
@@ -127,24 +127,31 @@ ms.locfileid: "81707155"
         - `-s --silent` 不记录到控制台（不能与 --verbose 配合使用）
         - `-v, --verbose` 输出详细日志记录到控制台（不能与 --silent 配合使用）
         - `--help` 显示帮助屏幕
+    
+    - 自版本 1910 起，UploadOfflineFeedback 实用工具支持使用代理服务器。 可以指定下列参数：
+        - `-x, --proxy` 指定用于连接 Internet 的代理服务器。
+        - `-o, --port` 指定用于连接 Internet 的代理服务器的端口。
+        - `-u, --user` 指定用于连接 Internet 的代理服务器的用户名。
+        - `-w, --password` 指定用于连接 Internet 的代理服务器的密码。 键入星号 (&#42;) 来生成密码提示符。 如果你在密码提示符处键入密码，密码不会显示。 强烈建议使用星号 (&#42;) 来生成密码输入提示符，因为命令行中的纯文本安全性较低。
+        - `-i` 跳过连接检查：跳过网络连接检查，只上传具有指定设置的反馈。
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>控制台反馈确认
 
 <!--3556010-->
-从版本 1902 开始，通过 Configuration Manager 控制台或 UploadOfflineFeedback.exe 发送反馈时，将显示确认消息。 此消息包含反馈 ID，可将其作为跟踪标识符提供给 Microsoft  。
+从版本 1902 开始，通过 Configuration Manager 控制台或 UploadOfflineFeedback.exe 发送反馈时，将显示确认消息。 此消息包含反馈 ID，可将其作为跟踪标识符提供给 Microsoft。
 
-- 若要复制反馈 ID，请选择 ID 旁边的复制图标，或使用 Ctrl + C 键盘快捷方式    。
+- 若要复制反馈 ID，请选择 ID 旁边的复制图标，或使用 Ctrl + C 键盘快捷方式  。
   - 此 ID 不会存储在计算机上，请确保在关闭窗口前先将其复制。
-- 单击“不再显示此消息”将禁止显示对话框并阻止其将来出现  。
+- 单击“不再显示此消息”将禁止显示对话框并阻止其将来出现。
 
    ![Configuration Manager 1902 控制台的反馈确认](media/1902-feedback-id-example.png)
-- UploadOfflineFeedback 命令工具将 FeedbackID 写入控制台，除非使用 - s 或 --silent   。
+- UploadOfflineFeedback 命令工具将 FeedbackID 写入控制台，除非使用 - s 或 --silent  。
 
   ![Configuration Manager 1902 控制台中的 UploadOfflineFeedback.exe 的反馈确认](media/1902-offline-feedback-id-example.png)
 
 ##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a> 1802 版及更早版本的产品反馈
 
-通过 Windows 10 内置的[反馈中心应用](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)报告潜在的产品缺陷。 添加新的反馈时，请务必选择“企业管理”类别，然后选择下列子类别之一   ：
+通过 Windows 10 内置的[反馈中心应用](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)报告潜在的产品缺陷。 添加新的反馈时，请务必选择“企业管理”类别，然后选择下列子类别之一 ：
 - Configuration Manager 客户端
 - Configuration Manager 控制台
 - Configuration Manager 操作系统部署

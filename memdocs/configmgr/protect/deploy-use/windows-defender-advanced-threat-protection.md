@@ -2,7 +2,7 @@
 title: Microsoft Defender 高级威胁防护
 titleSuffix: Configuration Manager
 description: 了解如何管理和监视 Microsofts Defender 高级威胁防护 - 这是一项可帮助企业应对高级安全攻击的新服务。
-ms.date: 04/27/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 801aee9665e567ce1a983fba294f1e58f58eee04
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210139"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406667"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender 高级威胁防护
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 Endpoint Protection 可帮助管理和监视 [Microsoft Defender 高级威胁防护 (ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)（之前称为 Windows Defender ATP）。 Microsoft Defender ATP 可帮助企业检测和调查其网络上的高级攻击并作出应对。 Configuration Manager 策略可帮助加入和监视 Windows 10 客户端。
 
@@ -40,10 +40,10 @@ Microsoft Defender ATP 是 [Windows Defender 安全中心](https://securitycente
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager 版本 2002 及更高版本
 <!--5229962-->
-- Windows 7 SP1
+自 Configuration Manager 版本 2002 起，可以加入以下操作系统：
+
 - Windows 8.1
 - Windows 10 1607 或更高版本
-- Windows Server 2008 R2 SP1
 - Windows Server 2012 R2
 - Windows Server 2016
 - Windows Server 2016 版本 1803
@@ -52,25 +52,25 @@ Microsoft Defender ATP 是 [Windows Defender 安全中心](https://securitycente
 ## <a name="create-an-onboarding-configuration-file"></a>创建加入配置文件
 
 1. 转到 [Microsoft Defender ATP 联机服务](https://securitycenter.windows.com/)并登录。
-1. 在“设置”下选择“计算机管理”，然后选择“加入”    。
+1. 在“设置”下选择“计算机管理”，然后选择“加入”  。
 1. 从列表中选择要加入的操作系统。
    - 如果要加入 Windows 10、Windows Server 1803 和 Windows Server 2019：
-      1. 请选择“Configuration Manager (Current Branch) 版本 1606”，然后选择“下载包”   。
+      1. 请选择“Configuration Manager (Current Branch) 版本 1606”，然后选择“下载包” 。
       1. 下载压缩的存档 (.zip) 文件并将内容解压缩。
-   - 如果要加入另一个 Windows 操作系统： 
-      1. 从列表中选择要加入的操作系统。 可选择“Windows 7 和 8.1”或“Windows Server 2008 R2 SP1、2012 R2 和 2016”   。
-      1. 完成此过程后，从“配置连接”部分复制“工作区密钥”和“工作区 ID”。   
+   - 如果要加入另一个 Windows 操作系统：
+      1. 从 Microsoft Defender ATP 联机服务显示的列表中选择要加入的操作系统。
+      1. 完成此过程后，从“配置连接”部分复制“工作区密钥”和“工作区 ID”。  
 
 > [!IMPORTANT]
 > - Microsoft Defender ATP 配置文件包含敏感信息，应保障其安全。
 
 ## <a name="onboard-devices"></a>加入设备
 
-1. 在 Configuration Manager 控制台中，导航到“资产和符合性” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后选择“创建 Windows Defender ATP 策略”     。 Microsoft Defender ATP 策略向导将打开。  
-1. 键入 Microsoft Defender ATP 策略的名称和说明，然后选择“加入”    。
-1. 浏览到组织的 Microsoft Defender ATP 云服务租户提供的配置文件  。
-   - 对于“Windows 7 和 8.1”或“Windows Server 2008 R2 SP1、2012 R2 和 2016”，请提供“工作区密钥”和“工作区 ID”     。
-   - 对于 Configuration Manager 版本 2002，即使你仅加入 Windows Server 2019 和 Windows Server 1803 或更高版本，也需要工作区密钥和工作区 ID   。 要获取这些至，请从 [Microsoft Defender ATP 联机服务](https://securitycenter.windows.com/)中选择“设置” > “加入” > “Windows 7 和 8.1”    。 <!--7054188-->
+1. 在 Configuration Manager 控制台中，导航到“资产和符合性” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后选择“创建 Windows Defender ATP 策略”   。 Microsoft Defender ATP 策略向导将打开。  
+1. 键入 Microsoft Defender ATP 策略的名称和说明，然后选择“加入”  。
+1. 浏览到组织的 Microsoft Defender ATP 云服务租户提供的配置文件。
+   - 对于 Windows 8.1 或 Windows Server 2012 R2 和 2016，请提供“工作区密钥”和“工作区 ID”。
+   - 对于 Configuration Manager 版本 2002，即使你仅加入 Windows Server 2019 和 Windows Server 1803 或更高版本，也需要工作区密钥和工作区 ID 。 要获取这些至，请从 [Microsoft Defender ATP 联机服务](https://securitycenter.windows.com/)中选择“设置” > “加入” > “Windows 7 和 8.1”  。 <!--7054188-->
 1. 指定从托管设备收集和共享的文件示例以进行分析。  
 
    - **无**
@@ -78,11 +78,11 @@ Microsoft Defender ATP 是 [Windows Defender 安全中心](https://securitycente
    - **所有文件类型**  
 1. 查看摘要，然后完成该向导。  
 
-选择“部署”，将 Microsoft Defender ATP 策略定向到客户端  。
+选择“部署”，将 Microsoft Defender ATP 策略定向到客户端。
 
 ## <a name="monitor"></a>监视
 
-1. 在 Configuration Manager 控制台中，导航到“监视” > “安全”，然后选择“Windows Defender ATP”    。  
+1. 在 Configuration Manager 控制台中，导航到“监视” > “安全”，然后选择“Windows Defender ATP”  。  
 
 1. 查看 Microsoft Defender 高级威胁防护仪表板。  
 
@@ -102,21 +102,21 @@ Microsoft Defender ATP 是 [Windows Defender 安全中心](https://securitycente
 
 1. 登录到 [Microsoft Defender ATP 联机服务](https://securitycenter.windows.com/)。
 
-1. 在“设置”下选择“计算机管理”，然后选择“加入”    。  
+1. 在“设置”下选择“计算机管理”，然后选择“加入”  。  
 
-1. 选择“Configuration Manager (Current Branch) 版本 1606”，然后选择“终结点载出”   。  
+1. 选择“Configuration Manager (Current Branch) 版本 1606”，然后选择“终结点载出” 。  
 
 1. 下载压缩的存档 (.zip) 文件并将内容解压缩。 载出文件的有效期为 30 天。
 
-1. 在 Configuration Manager 控制台中，导航到“资产和符合性” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后选择“创建 Windows Defender ATP 策略”     。 Microsoft Defender ATP 策略向导将打开。  
+1. 在 Configuration Manager 控制台中，导航到“资产和符合性” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后选择“创建 Windows Defender ATP 策略”   。 Microsoft Defender ATP 策略向导将打开。  
 
-1. 键入 Microsoft Defender ATP 策略的名称和说明，然后选择“登出”    。
+1. 键入 Microsoft Defender ATP 策略的名称和说明，然后选择“登出”  。
 
-1. 浏览到组织的 Microsoft Defender ATP 云服务租户提供的配置文件  。
+1. 浏览到组织的 Microsoft Defender ATP 云服务租户提供的配置文件。
 
 1. 查看摘要，然后完成该向导。  
 
-选择“部署”，将 Microsoft Defender ATP 策略定向到客户端  。  
+选择“部署”，将 Microsoft Defender ATP 策略定向到客户端。  
 
 > [!IMPORTANT]
 > Microsoft Defender ATP 配置文件包含敏感信息，应保障其安全。

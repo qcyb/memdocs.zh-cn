@@ -2,7 +2,7 @@
 title: 版本 2002 的清单
 titleSuffix: Configuration Manager
 description: 了解更新到 Configuration Manager 版本 2002 之前需要执行的操作。
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,28 +10,28 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708055"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268940"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 2002 的清单
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 使用 Configuration Manager 的 Current Branch 时，可安装版本为 2002 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement:-->版本 2002 也可用作[基线介质](updates.md#bkmk_Baselines)，因此，可使用该安装介质安装新层次结构的第一个站点。
 
 若要获取版本 2002 的更新，必须在层次结构的顶级站点上使用服务连接点。 站点系统角色可处于任一模式（联机或脱机）。 若要在服务连接点脱机时下载更新，请[使用服务连接工具](use-the-service-connection-tool.md)。<!-- SCCMDocs#1946 -->
 
-层次结构从 Microsoft 下载更新包之后，可在控制台中找到它。 在“管理”工作区中，选择“更新和维护服务”节点   。
+层次结构从 Microsoft 下载更新包之后，可在控制台中找到它。 在“管理”工作区中，选择“更新和维护服务”节点 。
 
-- 当更新列为“可用”  时，此更新即可准备安装。 安装版本 2002 之前，请查看以下[关于安装更新 2002](#about-installing-update-2002) 和[清单](#checklist)的信息，了解在开始更新之前要进行的配置。
+- 当更新列为“可用”时，此更新即可准备安装。 安装版本 2002 之前，请查看以下[关于安装更新 2002](#about-installing-update-2002) 和[清单](#checklist)的信息，了解在开始更新之前要进行的配置。
 
-- 如果更新显示为“正在下载”且未更改，请查看 hman.log 和 dmpdownloader.log 是否有误    。
+- 如果更新显示为“正在下载”且未更改，请查看 hman.log 和 dmpdownloader.log 是否有误  。
 
-  - dmpdownloader.log 可能指示 dmpdownloader 进程要等待一段时间之后才检查更新。 若要重启更新的重分发文件的下载，请在站点服务器上重启 SMS_Executive 服务  。
+  - dmpdownloader.log 可能指示 dmpdownloader 进程要等待一段时间之后才检查更新。 若要重启更新的重分发文件的下载，请在站点服务器上重启 SMS_Executive 服务。
 
   - 当代理服务器设置阻止从 `silverlight.dlservice.microsoft.com`、`download.microsoft.com` 和 `go.microsoft.com` 下载时，会出现另一个常见下载问题。
 
@@ -60,41 +60,43 @@ ms.locfileid: "81708055"
 > [!IMPORTANT]  
 > 在 CAS 上安装更新时，应注意以下限制和延迟存在，直到所有子主站点也完成了更新安装：
 >
-> -  客户端升级不会启动。 这包括客户端和预生产客户端的自动更新。 此外，不能将预生产客户端提升至生产，直到最后一个站点完成更新安装。 最后一个站点完成更新安装后，客户端更新将根据你的配置选择启动。
-> - 更新启用的新功能  将不可用。 此行为是为了防止 CAS 将与该功能有关的数据复制到尚未安装针对该功能的支持的站点。 所有主站点安装更新后，此功能将可供使用。
-> - CAS 和子主站点之间的复制链接  显示为未升级。 此状态会在更新安装状态中显示为“完成”  状态，并带有监视复制初始化的警告。 在控制台的“监视”工作区中，此状态将显示为“正在配置链接”   。
+> - 客户端升级不会启动。 这包括客户端和预生产客户端的自动更新。 此外，不能将预生产客户端提升至生产，直到最后一个站点完成更新安装。 最后一个站点完成更新安装后，客户端更新将根据你的配置选择启动。
+> - 更新启用的新功能将不可用。 此行为是为了防止 CAS 将与该功能有关的数据复制到尚未安装针对该功能的支持的站点。 所有主站点安装更新后，此功能将可供使用。
+> - CAS 和子主站点之间的复制链接显示为未升级。 此状态会在更新安装状态中显示为“完成”状态，并带有监视复制初始化的警告。 在控制台的“监视”工作区中，此状态将显示为“正在配置链接”。
 
 ### <a name="early-update-ring"></a>早期更新圈
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+自 2020 年 5 月 11 日起，版本 2002 公开发布，可供所有用户安装。 如果以前选择了早期更新通道，请注意此 Current Branch 版本的更新。
 
-此时，会向早期更新通道发布版本 2002。 若要安装此更新，则必须选择加入。 以下 PowerShell 脚本将层次结构或独立主站点添加到版本 2002 的早期更新通道：
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[版本 2002 选择加入脚本](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft 对脚本进行数字签名，并将其捆绑到签名的自解压可执行文件内。
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> 版本 2002 更新仅适用于运行版本 1810 或更高版本的站点。
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-若要选择加入早期更新圈，请执行以下操作：
+To opt-in to the early update ring:
 
-1. 打开 Windows PowerShell 并以管理员身份运行 
-1. 使用以下语法运行 EnableEarlyUpdateRing2002.ps1 脚本  ：
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    其中 `SiteServer` 表示管理中心站点或独立主站点。 例如 `EnableEarlyUpdateRing2002.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. 检查更新。 有关详细信息，请参阅[获取可用更新](install-in-console-updates.md#get-available-updates)。
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-版本 2002 更新现在应该可以在控制台中使用。
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> 此脚本仅将你的站点添加到版本 2002 的早期更新通道。 这并不是永久更改。
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>清单
 
@@ -104,9 +106,9 @@ Microsoft 对脚本进行数字签名，并将其捆绑到签名的自解压可�
 
 ### <a name="review-the-status-of-your-product-licensing"></a>查看产品许可的状态
 
-必须拥有有效的软件保障 (SA) 协议或等效的订阅权利才能安装此更新。 更新站点时，“许可”页将出现确认“软件保障到期日期”的选项   。
+必须拥有有效的软件保障 (SA) 协议或等效的订阅权利才能安装此更新。 更新站点时，“许可”页将出现确认“软件保障到期日期”的选项 。
 
-此值是可选的。 可将其指定为许可证到期日期的方便提示。 该日期在安装未来更新时可见。 你可能已在先前设置或安装更新期间指定了此值。 也可以在 Configuration Manager 控制台中指定此值。 在“管理”工作区中，展开“站点配置”，并选择“站点”    。 单击功能区中的“层次结构设置”，并切换到“许可”选项卡   。
+此值是可选的。 可将其指定为许可证到期日期的方便提示。 该日期在安装未来更新时可见。 你可能已在先前设置或安装更新期间指定了此值。 也可以在 Configuration Manager 控制台中指定此值。 在“管理”工作区中，展开“站点配置”，并选择“站点”  。 单击功能区中的“层次结构设置”，并切换到“许可”选项卡 。
 
 有关详细信息，请参阅[许可和分支](../../understand/learn-more-editions.md)。
 
@@ -149,7 +151,7 @@ Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manag
 
 #### <a name="database-replication"></a>数据库复制
 
-对于[数据库复制](../../plan-design/hierarchy/database-replication.md)，在开始更新之前，使用复制链接分析器  (RLA) 来帮助解决问题。 有关详细信息，请参阅[监视数据库复制](monitor-replication.md)。
+对于[数据库复制](../../plan-design/hierarchy/database-replication.md)，在开始更新之前，使用复制链接分析器 (RLA) 来帮助解决问题。 有关详细信息，请参阅[监视数据库复制](monitor-replication.md)。
 
 使用 RLA 回答下列问题：
 
@@ -163,8 +165,8 @@ Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manag
 
 对于[基于文件的复制](../../plan-design/hierarchy/file-based-replication.md)，检查所有收件箱在发送站点和接收站点上是否存在积压工作 (backlog)。 如果存在大量停滞或挂起的复制作业，请等待直到清除这些作业。<!-- SCCMDocs#1792 -->
 
-- 在发送站点上，查看 sender.log  。
-- 在接收站点上，查看 despooler log  。
+- 在发送站点上，查看 sender.log。
+- 在接收站点上，查看 despooler log。
 
 ### <a name="install-all-applicable-critical-windows-updates"></a>安装所有适用的关键 Windows 更新
 
@@ -206,7 +208,7 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 如果你或第三方产品自定义任何 Configuration Manager 配置文件，请保存自定义项的副本。
 
-例如，将自定义条目添加到 Configuration Manager 安装目录的 `bin\X64` 文件夹中的 osdinjection.xml  文件中。 在更新 Configuration Manager 后，这些自定义项不会保留。 需要重新应用自定义项。
+例如，将自定义条目添加到 Configuration Manager 安装目录的 `bin\X64` 文件夹中的 osdinjection.xml 文件中。 在更新 Configuration Manager 后，这些自定义项不会保留。 需要重新应用自定义项。
 
 ### <a name="plan-for-client-piloting"></a>规划客户端试点
 
@@ -230,11 +232,11 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 ### <a name="run-the-setup-prerequisite-checker"></a>运行安装程序先决条件检查程序
 
-当控制台将更新列为“可用”  时，可以运行先决条件检查程序，然后再安装更新。 （在站点上安装更新时，会再次运行必备组件检查程序。）
+当控制台将更新列为“可用”时，可以运行先决条件检查程序，然后再安装更新。 （在站点上安装更新时，会再次运行必备组件检查程序。）
 
-若要从控制台运行先决条件检查，请转到“管理”工作区，并选择“更新和服务”   。 选择“Configuration Manager 2002”更新包，然后在功能区中选择“运行先决条件检查”   。
+若要从控制台运行先决条件检查，请转到“管理”工作区，并选择“更新和服务” 。 选择“Configuration Manager 2002”更新包，然后在功能区中选择“运行先决条件检查” 。
 
-有关详细信息，请参阅[安装控制台内部更新前](install-in-console-updates.md#bkmk_beforeinstall)中的“安装更新之前运行先决条件检查程序”部分  。
+有关详细信息，请参阅[安装控制台内部更新前](install-in-console-updates.md#bkmk_beforeinstall)中的“安装更新之前运行先决条件检查程序”部分。
 
 > [!IMPORTANT]  
 > 运行先决条件检查程序时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行先决条件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行  **Setupwpf.exe** （Configuration Manager 安装程序）。
@@ -253,7 +255,7 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 ### <a name="confirm-version-and-restart-if-necessary"></a>确认版本并重启（如有必要）
 
-确保每个站点服务器和站点系统角色都已更新为版本 2002。 在控制台的“管理”工作区中，将“版本”列添加到“站点”和“分发点”节点     。 如有必要，站点系统角色将自动重新安装以更新到新的版本。
+确保每个站点服务器和站点系统角色都已更新为版本 2002。 在控制台的“管理”工作区中，将“版本”列添加到“站点”和“分发点”节点   。 如有必要，站点系统角色将自动重新安装以更新到新的版本。
 
 请考虑重新启动初次未成功更新的远程站点系统。 查看站点基础结构，确保适用的站点服务器和远程站点系统服务器已成功重新启动。 通常，仅当 Configuration Manager 安装 .NET 作为站点系统角色的先决条件时，站点服务器才重新启动。
 
@@ -261,9 +263,9 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 在 Configuration Manager 控制台中，转到以下位置以查看状态并确保复制处于活动状态：  
 
-- “监视”工作区、“站点层次结构”节点    
+- “监视”工作区、“站点层次结构”节点   
 
-- “监视”工作区、“数据库复制”节点    
+- “监视”工作区、“数据库复制”节点   
 
 有关详细信息，请参阅下列文章：  
 
@@ -302,10 +304,10 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 <!--SCCMDocs issue 775-->
 
-对使用的所有启动映像使用“更新分发点”操作，无论是默认启动映像还是自定义启动映像  。 此操作可确保客户端能够使用最新版本。 即使没有新的 Windows ADK 版本，Configuration Manager 客户端组件也可能随更新而更改。 如果未更新启动映像和媒体，设备上的任务序列部署可能会失败。
+对使用的所有启动映像使用“更新分发点”操作，无论是默认启动映像还是自定义启动映像。 此操作可确保客户端能够使用最新版本。 即使没有新的 Windows ADK 版本，Configuration Manager 客户端组件也可能随更新而更改。 如果未更新启动映像和媒体，设备上的任务序列部署可能会失败。
 
-更新站点时，Configuration Manager 会自动更新默认  启动映像。 它不会将更新的内容自动分发到分发点。 准备好在网络中分发此内容时，请对特定启动映像使用更新分发点  操作。
+更新站点时，Configuration Manager 会自动更新默认启动映像。 它不会将更新的内容自动分发到分发点。 准备好在网络中分发此内容时，请对特定启动映像使用更新分发点操作。
 
-更新站点后，手动更新任何自定义  启动映像。 如有必要，此操作将使用最新的客户端组件更新启动映像，可选择使用当前的 Windows PE 版本重载它，并将内容重新分发到分发点。
+更新站点后，手动更新任何自定义 启动映像。 如有必要，此操作将使用最新的客户端组件更新启动映像，可选择使用当前的 Windows PE 版本重载它，并将内容重新分发到分发点。
 
 有关详细信息，请参阅[使用启动映像更新分发点](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image)。

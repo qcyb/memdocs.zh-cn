@@ -2,7 +2,7 @@
 title: 兼容性评估
 titleSuffix: Configuration Manager
 description: 了解桌面分析中 Windows 应用和驱动程序的兼容性评估。
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109992"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268889"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>桌面分析中的兼容性评估
 
@@ -29,9 +30,9 @@ ms.locfileid: "82109992"
 
 - **高**：升级期间或之后，该应用程序几乎肯定会出现故障。 可能需要进行补救。
 
-- **未知**：该应用未经评估。 没有其他任何见解，如“MS 已知问题”  。
+- **未知**：该应用未经评估。 没有其他任何见解，如“MS 已知问题”或“Ready for Windows” 。
 
-在部署计划中的应用或驱动程序资产列表中，你将在“兼容性风险”  列中看到每个资产的这项值。
+在部署计划中的应用或驱动程序资产列表中，你将在“兼容性风险”列中看到每个资产的这项值。
 
 ## <a name="app-risk-assessment"></a>应用风险评估
 
@@ -40,15 +41,19 @@ ms.locfileid: "82109992"
 桌面分析使用以下几种来源来生成应用程序的评估等级：
 
 - [Microsoft 已知问题](#microsoft-known-issues)
+- [Ready for Windows](#ready-for-windows)
 - [高级见解](#advanced-insights)
 
 你可以在桌面分析中的应用上找到针对每个来源的评估。 在部署计划中的应用资产列表中，选择单个应用以打开其属性浮出窗格。 你将看到整体建议和评估级别。 **兼容性风险因素**部分显示了这些评估的详细信息。
+
+> [!TIP]
+> 如果“应用详细信息”窗格未显示兼容性评估，可能是因为“应用版本详细信息”设置处于禁用状态。 此设置合并了具有相同名称和发布者的应用的所有版本，默认处于禁用状态。 此服务仍对每个版本进行兼容性风险评估。 若要查看特定应用版本的兼容性风险评估，请打开“应用版本详细信息”。 有关详细信息，请参阅[计划资产](about-deployment-plans.md#plan-assets)。
 
 ## <a name="microsoft-known-issues"></a>Microsoft 已知问题
 
 桌面分析会查看 Microsoft 应用程序兼容性数据库中的任何已知问题。 它使用此数据库来确定来自 Microsoft 或其他发布者的公开可用的应用程序的任何现有兼容性块。 此检查仅适用于所选部署计划的目标操作系统。
 
-你将在“应用属性”窗格上看到以下作为“MS 已知问题”  的问题：
+你将在“应用属性”窗格上看到以下作为“MS 已知问题”的问题：
 
 ### <a name="asset-is-removed-during-upgrade"></a>资产在升级期间被删除
 
@@ -64,8 +69,8 @@ Windows 可以部分或完全删除这些资产：
 
 若要在桌面分析门户中查看此建议：
 
-1. 在部署计划中，选择“准备试点”  。
-1. 选择“应用”选项卡  。
+1. 在部署计划中，选择“准备试点”。
+1. 选择“应用”选项卡。
 1. 选择一个应用，然后在侧窗格中查看兼容性风险因素和建议。
 
 [![桌面分析门户中资产建议的屏幕截图](media/3594545-app-removed.png)](media/3594545-app-removed.png#lightbox)
@@ -104,7 +109,7 @@ Windows 检测到可能会干扰升级但需要进一步调查的问题。 在�
 
 ### <a name="multiple"></a>多个
 
-有多个问题影响此应用程序。 选择“查询”  以查看 Windows 检测到的问题详情。
+有多个问题影响此应用程序。 选择“查询”以查看 Windows 检测到的问题详情。
 
 ### <a name="reinstall-application-after-upgrading"></a>在升级后重新安装应用程序
 
@@ -114,22 +119,44 @@ Windows 检测到可能会干扰升级但需要进一步调查的问题。 在�
 
 <!-- 5746559 -->
 
-Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分类，这可能导致 Windows 10 的更新失败或回滚  。 Windows 还可能会升级，但会删除应用或驱动程序。 而现在，桌面分析可帮助你提前确定这些防护措施，让你能够在部署更新之前对资产进行修正。
+Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分类，这可能导致 Windows 10 的更新失败或回滚。 Windows 还可能会升级，但会删除应用或驱动程序。 而现在，桌面分析可帮助你提前确定这些防护措施，让你能够在部署更新之前对资产进行修正。
 
 1. 在桌面分析门户中，选择一项部署计划。
 
-1. 选择菜单中的“计划资产”，然后切换到“应用”选项卡   。
+1. 选择菜单中的“计划资产”，然后切换到“应用”选项卡 。
 
 1. 筛选名称列，显示其值中带有 `Safeguard` 一词的项目。 选择结果以查看详细信息。
 
     > [!NOTE]
     > 此条目并非是安装到你的设备上的真实应用。 它是一个占位符，帮助通过防护兼容性标记确定你环境中的应用或驱动程序。
 
-1. 在“建议”部分中，选择指向“了解详细信息”的链接  。 此链接将打开 Windows 网站，上面有带防护标记的应用或驱动程序的当前列表。
+1. 在“建议”部分中，选择指向“了解详细信息”的链接。 此链接将打开 Windows 网站，上面有带防护标记的应用或驱动程序的当前列表。
 
 1. 根据你环境中的资产列表来比较当前已发布的列表。 通过更新到兼容版本来修正任何潜在的问题应用或驱动程序。
 
 [![桌面分析中的保护应用屏幕截图](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Ready for Windows
+
+“采用状态”依据为，来自与 Microsoft 共享数据的商业设备的信息。 状态与软件供应商提供的支持声明集成。
+
+桌面分析为在商业设备中找到的每个版本的资产提供采用状态。 此状态不包括使用者设备或不共享数据的设备中的数据。 此状态可能不代表所有 Windows 10 设备的采用率。
+
+可能的类别包括：
+
+- **已广泛采用**：至少有 100,000 个商用 Windows 10 设备已安装此应用。
+
+- **已采用**：至少有 10,000 个商用 Windows 10 设备已安装此应用。
+
+- **数据不足**：很少有商用 Windows 10 设备共享此应用的信息，Microsoft 无法对其采用情况进行分类。
+
+- **联系开发人员**：此版本的应用可能存在兼容性问题。 Microsoft 建议联系软件提供商以了解详细信息。
+
+- **未知**：没有针对此应用程序的这一版本的可用信息。 可能有针对此应用程序的其他版本的可用信息。
+
+### <a name="support-statement"></a>支持声明
+
+如果软件提供商在 Windows 10 上支持此应用程序的一个或多个版本，则会在应用的属性窗格中看到此声明。 在“兼容性风险因素”部分中，查看“支持声明”。
 
 ## <a name="advanced-insights"></a>高级见解
 

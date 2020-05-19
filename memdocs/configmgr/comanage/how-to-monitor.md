@@ -2,7 +2,7 @@
 title: 监视共同管理
 titleSuffix: Configuration Manager
 description: 使用共同管理仪表板查看有关共同管理的设备的信息。
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688695"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268056"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>如何监视 Configuration Manager 中的共同管理
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 启用共同管理后，请使用以下方法监视共同管理设备：
 
@@ -33,7 +33,7 @@ ms.locfileid: "81688695"
 
 从版本 1802 开始，可查看含共同管理相关信息的仪表板。 此仪表板可帮助你查看环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。<!--1356648-->
 
-在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“共同管理”节点   。
+在 Configuration Manager 控制台中，转到“监视”工作区，然后选择“共同管理”节点 。
 
 自版本 1810 开始，通过在共同管理仪表板中增加了更多详细信息，共同管理仪表板的功能得到了增强。 <!--1358980-->
 
@@ -41,7 +41,7 @@ ms.locfileid: "81688695"
 
 ### <a name="co-managed-devices"></a>共同管理的设备
 
-适用于 1802 和 1806 两个版本 
+适用于 1802 和 1806 两个版本
 
 显示整个环境中共同管理的设备所占的百分比。
 
@@ -49,7 +49,7 @@ ms.locfileid: "81688695"
 
 ### <a name="client-os-distribution"></a>客户端 OS 分发
 
-适用于所有版本  
+适用于所有版本 
 
 按版本显示每个 OS 的客户端设备数量。 使用以下分组：  
 
@@ -66,7 +66,7 @@ ms.locfileid: "81688695"
 
 ### <a name="co-management-status-donut"></a>共同管理状态（圆环图）
 
-适用于 1802 和 1806 两个版本 
+适用于 1802 和 1806 两个版本
 
 显示以下类别中设备成功或失败的细目：
 
@@ -84,7 +84,7 @@ ms.locfileid: "81688695"
 
 ### <a name="co-management-status-funnel"></a>共同管理状态（漏斗图）
 
-适用于 1810 和更高版本 
+适用于 1810 和更高版本
 
 漏斗图，显示注册过程中具有以下状态的设备的数量：
   
@@ -97,7 +97,7 @@ ms.locfileid: "81688695"
 
 ### <a name="co-management-enrollment-status"></a>共同管理注册状态
 
-适用于 1810 和更高版本 
+适用于 1810 和更高版本
 
 显示以下类别中设备状态的细目：
 
@@ -109,9 +109,9 @@ ms.locfileid: "81688695"
 - 挂起用户登录  
 
     > [!Note]  
-    > 从版本 1906 开始，若要减少处于挂起状态的设备数，新的共同管理设备现可根据其 Azure AD 设备令牌自动注册到 Microsoft Intune 服务  。 无需等待用户登录到设备，就能启动自动注册。 为支持此行为，设备需要运行 Windows 10 版本 1803 或更高版本。
+    > 从版本 1906 开始，若要减少处于挂起状态的设备数，新的共同管理设备现可根据其 Azure AD 设备令牌自动注册到 Microsoft Intune 服务。 无需等待用户登录到设备，就能启动自动注册。 为支持此行为，设备需要运行 Windows 10 版本 1803 或更高版本。
     >
-    > 如果设备令牌出现故障，它会使用用户令牌回退到上一行为。 在 ComanagementHandler.log 中查找以下条目  ：`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
+    > 如果设备令牌出现故障，它会使用用户令牌回退到上一行为。 在 ComanagementHandler.log 中查找以下条目：`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
 在该磁贴中选择一种状态，即可深入查看相关状态的设备列表。  
 
@@ -120,7 +120,7 @@ ms.locfileid: "81688695"
 
 ### <a name="workload-transition"></a>工作负荷转换
 
-适用于所有版本 
+适用于所有版本
 
 显示一个条形图，其中包含为可用工作负荷而转换为 Microsoft Intune 的设备数量。
 
@@ -133,7 +133,7 @@ ms.locfileid: "81688695"
 
 ### <a name="enrollment-errors"></a>注册错误
 
-适用于 1810 和更高版本 
+适用于 1810 和更高版本
 
 此表是设备的注册错误列表。 这些错误可能来自 Windows 中的 MDM 组件、核心 Windows 操作系统或 Configuration Manager 客户端。
 
@@ -167,13 +167,13 @@ ms.locfileid: "81688695"
 
 ## <a name="deployment-policies"></a>部署策略
 
-在“监视”工作区的“部署”节点中创建了两个策略   。 一个策略用于试点组，另一个策略用于生产。 这些策略仅报告其中 Configuration Manager 应用了此策略的设备数量。 这些策略不考虑 Intune 中注册了多少设备，这是设备可实现共同管理的前提。  
+在“监视”工作区的“部署”节点中创建了两个策略 。 一个策略用于试点组，另一个策略用于生产。 这些策略仅报告其中 Configuration Manager 应用了此策略的设备数量。 这些策略不考虑 Intune 中注册了多少设备，这是设备可实现共同管理的前提。  
 
-生产策略 (CoMgmtSettingsProd) 定目标到“所有系统”  集合。 它有检查 OS 类型和版本的适用性条件。 如果客户端是服务器 OS 或不是 Windows 10，那么策略就不适用，且不会执行任何操作。
+生产策略 (CoMgmtSettingsProd) 定目标到“所有系统”集合。 它有检查 OS 类型和版本的适用性条件。 如果客户端是服务器 OS 或不是 Windows 10，那么策略就不适用，且不会执行任何操作。
 
 ## <a name="wmi-device-data"></a>WMI 设备数据
 
-查询 SMS_Client_ComanagementState  WMI 类。 可以在 Configuration Manager 中创建自定义集合，帮助确定共同管理部署的状态。 有关创建自定义集合的详细信息，请参阅[如何创建集合](../core/clients/manage/collections/create-collections.md)。
+在站点服务器上的 ROOT\SMS\site_&lt;SITECODE> 命名空间中查询 SMS_Client_ComanagementState WMI 类。 可以在 Configuration Manager 中创建自定义集合，帮助确定共同管理部署的状态。 有关创建自定义集合的详细信息，请参阅[如何创建集合](../core/clients/manage/collections/create-collections.md)。
 
 下列字段在 WMI 类中可用：  
 
@@ -183,6 +183,6 @@ ms.locfileid: "81688695"
 
 - **机构**：设备注册的机构  
 
-- **ComgmtPolicyPresent**：指定客户端上是否存在 Configuration Manager 共同管理策略。 如果“MDMEnrolled”值是“0”，则无论客户端是否存在共同管理策略，该设备都不会进行共同管理   。  
+- **ComgmtPolicyPresent**：指定客户端上是否存在 Configuration Manager 共同管理策略。 如果“MDMEnrolled”值是“0”，则无论客户端是否存在共同管理策略，该设备都不会进行共同管理 。  
 
-当“MDMEnrolled”和“ComgmtPolicyPresent”字段的值都为“1”时，设备才是被共同管理的    。  
+当“MDMEnrolled”和“ComgmtPolicyPresent”字段的值都为“1”时，设备才是被共同管理的  。  

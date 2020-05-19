@@ -10,16 +10,16 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587267"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383714"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>为云管理网关进行基于令牌的身份验证
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--5686290-->
 
@@ -99,9 +99,31 @@ Configuration Manager 客户端与管理点一起管理此令牌，因此不存�
 
 #### <a name="lifetime"></a>/lifetime
 
-与 `/new` 参数结合使用，用于指定令牌的令牌有效期。 指定以分钟为单位的整数值。 默认值为 4,320（3 天）。 最大值为 10,080（7 天）。
+与 `/new` 参数结合使用，用于指定令牌的令牌有效期。 指定以分钟为单位的整数值。 默认值为 4,320（三天）。 最大值为 10,080（7 天）。
 
 示例：`BulkRegistrationTokenTool.exe /lifetime:4320`
+
+## <a name="bulk-registration-token-management"></a>批量注册令牌管理
+
+可以在 Configuration Manager 控制台中查看以前创建的批量注册令牌及其生存期，并在必要时阻止使用它们。 不过，站点数据库并不存储批量注册令牌。
+
+#### <a name="to-review-a-bulk-registration-token"></a>审阅批量注册令牌的具体步骤
+
+1. 在 Configuration Manager 控制台中，单击“管理”。
+
+2. 在“管理”工作区中，展开“安全性”，然后单击“证书”。 控制台在细节窗格中列出所有与站点相关的证书以及批量注册令牌。
+
+3. 选择要审阅的批量注册令牌。
+
+可以根据 GUID 来识别特定的批量注册令牌。 批量注册令牌的 GUID 在令牌创建时显示。 如果需要，还可以对“类型”列进行筛选或排序。
+
+#### <a name="to-block-a-bulk-registration-token"></a>阻止批量注册令牌的具体步骤
+
+1. 在 Configuration Manager 控制台中，单击“管理”。
+
+2. 在“管理”工作区中，展开“安全性”，单击“证书”，然后选择要阻止的批量注册令牌。
+
+3. 在功能区栏的“主页”选项卡中或通过右键单击内容菜单，选择“阻止”。 反过来说，可以取消阻止之前阻止的批量注册令牌，具体方法为在功能区栏的“主页”选项卡中或通过右键单击内容菜单，选择“取消阻止”。
 
 ## <a name="see-also"></a>另请参阅
 

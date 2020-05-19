@@ -2,7 +2,7 @@
 title: 2002 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 2002 中引入的更改和新增功能的详细信息。
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702305"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381547"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
-Configuration Manager Current Branch 的更新 2002 作为控制台内更新提供。 将此更新应用于运行版本 1806 或更高版本的站点。 <!-- baseline only statement:-->安装新站点时，它也可作为基准版本提供。 本文汇总了 Configuration Manager 版本 2002 中的更改和新增功能。
+Configuration Manager Current Branch 的更新 2002 作为控制台内更新提供。 将此更新应用于运行版本 1810 或更高版本的站点。 <!-- baseline only statement:-->安装新站点时，它也可作为基准版本提供。 本文汇总了 Configuration Manager 版本 2002 中的更改和新增功能。
 
 始终查看安装此更新的最新清单。 有关详细信息，请参阅[用于安装更新 2002 的清单](../../servers/manage/checklist-for-installing-update-2002.md)。 更新站点后，还可以查看[更新后清单](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist)。
 
@@ -34,7 +34,7 @@ Configuration Manager Current Branch 的更新 2002 作为控制台内更新提�
 
 ### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a> 设备同步和设备操作
 <!--3555758-->
-Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 Microsoft 将 Configuration Manager 和 Intune 组合为单个控制台，称为“Microsoft Endpoint Manager 管理中心”  。 从此版本开始，可以从该管理中心的“设备”边栏选项卡中将 Configuration Manager 设备上传到云服务并执行操作  。
+Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 Microsoft 将 Configuration Manager 和 Intune 组合为单个控制台，称为“Microsoft Endpoint Manager 管理中心”。 从此版本开始，可以从该管理中心的“设备”边栏选项卡中将 Configuration Manager 设备上传到云服务并执行操作。
 
 有关详细信息，请参阅 [Microsoft Endpoint Manager 租户附加](../../../tenant-attach/device-sync-actions.md)。
 
@@ -51,7 +51,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
 
 此版本包括以下管理见解规则：
 
-- 由 Microsoft 顶级支持现场工程部门提供的 Configuration Manager 评估  组中的九个规则。 这些规则只是 Microsoft 顶级支持在服务中心提供的众多检查中的一个例子。<!-- 3607758 -->
+- 由 Microsoft 顶级支持现场工程部门提供的 Configuration Manager 评估组中的九个规则。 这些规则只是 Microsoft 顶级支持在服务中心提供的众多检查中的一个例子。<!-- 3607758 -->
 
   - Active Directory 安全组发现配置为过于频繁地运行
   - Active Directory 系统发现配置为过于频繁地运行
@@ -63,7 +63,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
   - 辅助站点安装问题
   - 将所有站点更新到同一版本
 
-- 云服务  组中的两个附加规则可帮助配置站点以便添加安全 HTTPS 通信：<!-- 6268489 -->
+- 云服务组中的两个附加规则可帮助配置站点以便添加安全 HTTPS 通信：<!-- 6268489 -->
 
   - 没有正确 HTTPS 配置的站点
   - 未上传到 Azure AD 的设备
@@ -79,7 +79,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
 - 为整个站点启用增强的 HTTP
 - 将基于 PKI 的证书手动绑定到托管 SMS 提供程序角色的服务器上的 IIS
 
-从此版本开始，管理服务会自动使用该站点的自签名证书。 此更改有助于减少摩擦，使管理服务更易于使用。 站点始终会生成此证书。 设置为“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的增强 HTTP 站点仅控制站点系统是否使用该证书。  现在，管理服务会忽略此站点设置，因为它始终使用站点的证书，即使没有其他站点系统使用增强的 HTTP 也是如此。 仍可以使用基于 PKI 的服务器身份验证证书。
+从此版本开始，管理服务会自动使用该站点的自签名证书。 此更改有助于减少摩擦，使管理服务更易于使用。 站点始终会生成此证书。 设置为“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的增强 HTTP 站点仅控制站点系统是否使用该证书。 现在，管理服务会忽略此站点设置，因为它始终使用站点的证书，即使没有其他站点系统使用增强的 HTTP 也是如此。 仍可以使用基于 PKI 的服务器身份验证证书。
 
 有关详细信息，请参阅以下新文章：
 
@@ -155,7 +155,7 @@ Configuration Manager 通过以下方法扩展其设备支持：
 
 <!-- 3555777 -->
 
-边界组包括以下对等下载适用的选项：对等下载期间，只能使用同一子网内的对等设备  。 如果启用此选项，管理点中的内容位置列表只包含与客户端位于同一子网和边界组中的对等源。 根据网络的配置，现在可以排除某些子网以进行匹配。 例如，你想要包含边界，但要排除特定的 VPN 子网。
+边界组包括以下对等下载适用的选项：对等下载期间，只能使用同一子网内的对等设备。 如果启用此选项，管理点中的内容位置列表只包含与客户端位于同一子网和边界组中的对等源。 根据网络的配置，现在可以排除某些子网以进行匹配。 例如，你想要包含边界，但要排除特定的 VPN 子网。
 
 有关详细信息，请参阅[边界组选项](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions)。
 
@@ -187,16 +187,16 @@ Configuration Manager 通过以下方法扩展其设备支持：
 
 <!--5954175-->
 
-可在具有要求规则或适用性列表的对象上的受支持 OS 版本列表中找到“所有 Windows 10 (ARM64)”平台  。
+可在具有要求规则或适用性列表的对象上的受支持 OS 版本列表中找到“所有 Windows 10 (ARM64)”平台。
 
 > [!NOTE]
-> 如果之前选择了顶层 Windows 10 平台，则此操作会自动选择“所有 Windows 10 (64 位)”和“所有 Windows 10 (32 位)”    。 不会自动选择此新平台。 如果要添加“所有 Windows 10 (ARM64)”，请在列表中手动选择它  。
+> 如果之前选择了顶层 Windows 10 平台，则此操作会自动选择“所有 Windows 10 (64 位)”和“所有 Windows 10 (32 位)”  。 不会自动选择此新平台。 如果要添加“所有 Windows 10 (ARM64)”，请在列表中手动选择它。
 
 要详细了解 Configuration Manager 对 ARM64 设备的支持，请参阅 [ARM64 上的 Windows 10](../configs/support-for-windows-10.md#bkmk_arm64)。
 
 ### <a name="track-configuration-item-remediations"></a>跟踪配置项目修正
 <!--4261411-->
-现在可在配置项目符合性规则上“跟踪修正历史记录(如支持)”  。 启用此选项后，客户端上发生的配置项目的任何修正都会生成状态消息。 历史记录存储在 Configuration Manager 数据库中。
+现在可在配置项目符合性规则上“跟踪修正历史记录(如支持)”。 启用此选项后，客户端上发生的配置项目的任何修正都会生成状态消息。 历史记录存储在 Configuration Manager 数据库中。
 
 有关详细信息，请参阅[为使用 Configuration Manager 客户端管理的 Windows 台式机和服务器计算机创建自定义配置项目](../../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md#bkmk_track)。
 
@@ -253,7 +253,7 @@ Microsoft Edge 管理仪表板可让你深入了解 Microsoft Edge 和其他浏�
 
 <!-- 6005561 -->
 
-现在可以在“准备情况检查”  任务序列步骤中验证更多设备属性。 在任务序列中使用此步骤来验证目标计算机是否满足前提条件。
+现在可以在“准备情况检查”任务序列步骤中验证更多设备属性。 在任务序列中使用此步骤来验证目标计算机是否满足前提条件。
 
 - 当前操作系统的体系结构
 - 最低操作系统版本
@@ -282,9 +282,9 @@ Microsoft Edge 管理仪表板可让你深入了解 Microsoft Edge 和其他浏�
 
 - 任务序列环境包含了新的只读变量 `_TSSecureBoot`。<!--5842295--> 使用此变量可确定启用了 UEFI 的设备上安全启动的状态。 有关详细信息，请参阅 [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot)。
 
-- 设置任务序列变量来配置“运行命令行”  和“运行 PowerShell 脚本”  步骤的用户上下文。<!-- 5573175 --> 有关详细信息，请参阅 [SMSTSRunCommandLineAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunCommandLineAsUser) 和 [SMSTSRunPowerShellAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunPowerShellAsUser)。
+- 设置任务序列变量来配置“运行命令行”和“运行 PowerShell 脚本”步骤的用户上下文。<!-- 5573175 --> 有关详细信息，请参阅 [SMSTSRunCommandLineAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunCommandLineAsUser) 和 [SMSTSRunPowerShellAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunPowerShellAsUser)。
 
-- 在“运行 PowerShell 脚本”  步骤中，现在可以将“参数”  属性设置为变量。<!-- 5690481 --> 有关详细信息，请参阅[运行 PowerShell 脚本](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript)。
+- 在“运行 PowerShell 脚本”步骤中，现在可以将“参数”属性设置为变量。<!-- 5690481 --> 有关详细信息，请参阅[运行 PowerShell 脚本](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript)。
 
 - Configuration Manager PXE 响应程序现在可向站点服务器发送状态消息。 此更改使你可以更轻松地对使用此服务的 OS 部署进行故障排除。<!-- 5568051 -->
 
@@ -353,7 +353,7 @@ Configuration Manager 扩展了对将设备加入 Microsoft Defender ATP 的支�
 
 <!--6521835-->
 
-为了帮助你通过边界组更好地对设备行为进行故障排除，现在可以查看特定设备的边界组。 在“设备”节点中，或在显示某个“设备集合”的成员时，将新的“边界组”列添加到列表视图中    。
+为了帮助你通过边界组更好地对设备行为进行故障排除，现在可以查看特定设备的边界组。 在“设备”节点中，或在显示某个“设备集合”的成员时，将新的“边界组”列添加到列表视图中  。
 
 有关详细信息，请参阅[边界组](../../servers/deploy/configure/boundary-groups.md#bkmk_show-boundary)。
 
@@ -376,7 +376,7 @@ ID 为 53900 的状态消息表示提交成功，而 53901 表示提交失败。
 
 <!--5891241-->
 
-与以前的版本中的改进类似，可以从“配置项目”和“配置基线”节点使用“所有子文件夹”搜索选项    。
+与以前的版本中的改进类似，可以从“配置项目”和“配置基线”节点使用“所有子文件夹”搜索选项  。
 
 ## <a name="tools"></a><a name="bkmk_tools"></a> 工具
 
@@ -405,15 +405,15 @@ OneTrace 现在支持可自定义的日志组，与支持中心的功能类似�
 - [Azure Active Directory 用户组发现](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956-->
 - [将集合成员身份结果同步到 Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)<!--3607475-->
 - [CMPivot 独立应用](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
-- [适用于共同托管设备的客户端应用](../../../comanage/workloads.md#client-apps)（以前称为适用于共同托管设备的移动应用  ）<!-- 1357892/3600959 -->
+- [适用于共同托管设备的客户端应用](../../../comanage/workloads.md#client-apps)（以前称为适用于共同托管设备的移动应用）<!-- 1357892/3600959 -->
 
 有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 2002 发行说明](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps)。
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_2002)。
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 2002）的更改摘要](https://support.microsoft.com/help/4556203)。
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -433,8 +433,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>后续步骤
 
-此时，会向早期更新通道发布版本 2002。 若要安装此更新，则必须选择启用。 有关详细信息，请参阅[早期更新圈](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring)。
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+自 2020 年 5 月 11 日起，版本 2002 公开发布，可供所有用户安装。
 
 准备好安装此版本时，请参阅[安装 Configuration Manager 的更新](../../servers/manage/updates.md)和[用于安装更新 2002 的清单](../../servers/manage/checklist-for-installing-update-2002.md)。
 
