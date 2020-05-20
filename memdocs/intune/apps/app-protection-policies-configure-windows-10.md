@@ -36,9 +36,9 @@ ms.locfileid: "80323695"
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“所有服务”  ，然后选择“M365 Azure Active Directory”  以切换仪表板。
 3. 选择 **Azure Active Directory**。
-4. 选择“管理”  组中的“移动性(MDM 和 MAM)”  。
+4. 选择“管理”组中的“移动性(MDM 和 MAM)”。
 5. 单击“Microsoft Intune”  。
-6. 配置“配置”  窗格上的“还原默认 MAM URL”  组中的设置。
+6. 配置“配置”窗格上的“还原默认 MAM URL”组中的设置。
 
    **MAM 用户范围**  
    使用 MAM 自动注册来管理员工的 Windows 设备上的企业数据。 将 MAM 自动注册配置为使用用户自己的设备方案。<ul><li>**无**<br>选择是否所有用户均不可在 MAM 中注册。</li><li>**部分**<br>选择包含将要在 MAM 中进行注册的用户的 Azure AD 组。</li><li>**全部**<br>选择是否所有用户均可在 MAM 中注册。</li></ul>

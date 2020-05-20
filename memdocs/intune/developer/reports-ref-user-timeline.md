@@ -80,5 +80,5 @@ John Smith 在 2017 年 7 月 25 日放弃其许可证。  “用户”表具有
 
 ## <a name="next-steps"></a>后续步骤
 
-- 要了解有关 Current User 实体的详细信息，请参阅 [current user 实体参考](reports-ref-data-model.md)  。
-- 要了解有关 User 实体的详细信息，请参阅 [User 实体参考](reports-ref-user.md)  。
+- 要了解有关 Current User 实体的详细信息，请参阅 [current user 实体参考](reports-ref-data-model.md)。
+- 要了解有关 User 实体的详细信息，请参阅 [User 实体参考](reports-ref-user.md)。

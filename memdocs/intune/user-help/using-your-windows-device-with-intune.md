@@ -48,7 +48,7 @@ ms.locfileid: "80084178"
 
 ## <a name="set-up-your-device-in-the-company-portal"></a>在公司门户中设置设备
 - [将我的 Windows 设备托管在公司门户中](windows-enrollment-company-portal.md)  
-- [对设备进行管托管意味着什么？  ](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+- [对设备进行管托管意味着什么？](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 - [公司可以在我的设备上看到哪些信息？](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [对设备进行加密](encrypt-your-device-windows.md)
 - [设置或更改设备密码](set-or-change-your-password-windows.md)

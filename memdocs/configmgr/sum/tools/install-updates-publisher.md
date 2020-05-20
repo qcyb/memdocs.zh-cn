@@ -103,13 +103,13 @@ System Center Updates Publisher 只能与 Configuration Manager 一起使用。 
 -   西班牙语
 
 ## <a name="install-updates-publisher"></a>安装 Updates Publisher
-从 **Microsoft 下载中心**获取用于安装 System Center Updates Publisher 的 [UpdatesPubliser.msi](https://www.microsoft.com/download/details.aspx?id=55543)。
+从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55543)获取用于安装 System Center Updates Publisher 的 **UpdatesPubliser.msi**。
 
-若要安装 Updates Publisher，在满足**先决条件**的计算机上运行 *UpdatesPublisher.msi*。 安装程序会创建以下文件夹，以包含运行 Updates Publisher 所必需的文件：%PROGRAMFILES%\Microsoft\UpdatesPublisher*。
+若要安装 Updates Publisher，在满足*先决条件*的计算机上运行 **UpdatesPublisher.msi**。 安装程序会创建以下文件夹，以包含运行 Updates Publisher 所必需的文件：%PROGRAMFILES%\Microsoft\UpdatesPublisher*。
 
 因为此文件夹包含使用 Updates Publisher 所必需的全部文件，所以可以将此文件夹及其内容复制到新的位置或计算机中，然后从相应位置使用 Updates Publisher。 不过，新的位置或计算机必须满足运行 Updates Publisher 的先决条件。
 
-安装完成后，运行“UpdatesPublisher”  文件夹中的 *UpdatesPublisher.exe*，启动 Updates Publisher。
+安装完成后，运行“UpdatesPublisher”文件夹中的 **UpdatesPublisher.exe**，启动 Updates Publisher。
 
 ## <a name="next-steps"></a>后续步骤
  安装 Updates Publisher 后，我们建议为 Updates Publisher [配置选项](updates-publisher-options.md)。 必须先配置一些选项，然后才能使用 Updates Publisher 的一些功能。

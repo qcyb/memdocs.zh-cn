@@ -85,7 +85,7 @@ ms.locfileid: "79339249"
 ### <a name="making-zimperium-available-to-end-users"></a>为最终用户提供 Zimperium
 
 - **Android**
-  - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”  部分时，请使用此 [Zimperium - Play Store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)。
+  - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”部分时，请使用此 [Zimperium - Play Store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)。
 - **iOS**
   - 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 完成“配置应用信息”部分时，请使用此 [Zimperium - App Store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)  。
 

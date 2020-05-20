@@ -568,7 +568,7 @@ catch {
 
 若需邀请用户成为租户的来宾，请执行以下操作：
 
-1. 从“快速任务”  面板选择“添加来宾用户”  。
+1. 从“快速任务”面板选择“添加来宾用户”。
 
     <img src="../media/azure-ad-add-guest.png" width="448" height="138" alt="Use Quick Tasks to add a guest user" />
 

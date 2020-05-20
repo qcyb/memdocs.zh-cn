@@ -38,7 +38,7 @@ ms.locfileid: "79343071"
 
 
 ## <a name="azure-portal-policy-configuration"></a>Azure 门户策略配置
-在 [Azure 门户的 Intune 边栏选项卡](../apps/app-protection-policies.md)中，[创建和分配应用保护策略](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview)。 也可以在 Intune 边栏选项卡中创建和分配[应用配置策略](../apps/app-configuration-policies-overview.md)。
+在 [Azure 门户的 Intune 边栏选项卡](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview)中，[创建和分配应用保护策略](../apps/app-protection-policies.md)。 也可以在 Intune 边栏选项卡中创建和分配[应用配置策略](../apps/app-configuration-policies-overview.md)。
 
 > [!NOTE]
 > 如果在 Azure 门户中未列出应用，则可以使用策略解决该问题，方法是选择“更多应用”选项并在文本框中提供包名称  。

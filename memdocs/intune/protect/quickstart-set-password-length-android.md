@@ -38,7 +38,7 @@ Intune 设备符合性策略指定设备为实现符合性而必须满足的规�
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 
-以[全局管理员](https://go.microsoft.com/fwlink/?linkid=2109431)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft Endpoint Manager 管理中心](../fundamentals/users-add.md#types-of-administrators)。
+以[全局管理员](../fundamentals/users-add.md#types-of-administrators)或 Intune [服务管理员](../fundamentals/users-add.md#types-of-administrators)身份登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 ## <a name="create-a-device-compliance-policy"></a>创建设备合规性策略
 

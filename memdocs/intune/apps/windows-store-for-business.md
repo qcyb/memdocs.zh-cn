@@ -61,7 +61,7 @@ ms.locfileid: "80323387"
 
 1. 请确保登录[适用于企业的 Microsoft Store](https://www.microsoft.com/business-store) 与登录 Intune 时使用的租户帐户相同。
 2. 在“业务应用商店”中，依次选择“管理”  选项卡、“设置”  和“分发”  选项卡。
-3. 如果没有专门将 Microsoft Intune  用作移动设备管理工具，请选择“添加管理工具”  来添加“Microsoft Intune”  。 如果尚未将 Microsoft Intune  激活为移动设备管理工具，请单击“Microsoft Intune”  旁边的“激活”  。 请注意，应激活“Microsoft Intune”  ，而不是“Microsoft Intune 注册”  。
+3. 如果没有专门将 Microsoft Intune  用作移动设备管理工具，请选择“添加管理工具”  来添加“Microsoft Intune”  。 如果尚未将 Microsoft Intune 激活为移动设备管理工具，请单击“Microsoft Intune”旁边的“激活”。 请注意，应激活“Microsoft Intune”  ，而不是“Microsoft Intune 注册”  。
 
 > [!NOTE]
 > 以前只能将一个用于分配应用的管理工具关联到适用于企业的 Microsoft 应用商店。 现在可将多种管理工具与该应用商店关联，例如 Intune 和 Configuration Manager。

@@ -28,7 +28,7 @@ ms.locfileid: "79346438"
 ---
 # <a name="enable-code-integrity"></a>启用代码完整性
 
-你的组织可能要求通过名为“代码完整性”的威胁防护功能启用电脑  。 代码完整性功能检查设备上的驱动程序和系统文件，查看是否存在损坏的迹象或恶意软件。 若要使代码完整性在设备上工作，还必须启用另一个称为[安全启动*的安全功能*](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot)。
+你的组织可能要求通过名为“代码完整性”的威胁防护功能启用电脑  。 代码完整性功能检查设备上的驱动程序和系统文件，查看是否存在损坏的迹象或恶意软件。 若要使代码完整性在设备上工作，还必须启用另一个称为[安全启动](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot)的安全功能。
 
 如果你的电脑不合规，原因是代码完整性已禁用，请联系组织的 IT 支持人员。 你的支持人员将帮助你启用安全启动，此操作会使你在下次启动设备时触发代码完整性。 
 

@@ -43,12 +43,12 @@ ms.locfileid: "81700185"
 ## <a name="edit-updates-and-bundles"></a>编辑更新和捆绑包
 可以选择存储库中的更新和捆绑包进行修改。
 
-在“更新工作区”  中，选择更新或捆绑包，然后在“开始”  选项卡中选择“编辑”  ，打开编辑向导。 虽然更新和捆绑包各自有向导，但它们密切相关，显示[“创建更新”](create-updates-with-updates-publisher.md#use-the-create-update-wizard)或[“创建捆绑包”](create-updates-with-updates-publisher.md#use-the-create-bundle-wizard)向导中的相同选项。
+在“更新工作区”中，选择更新或捆绑包，然后在“开始”选项卡中选择“编辑”，打开编辑向导。 虽然更新和捆绑包各自有向导，但它们密切相关，显示[“创建更新”](create-updates-with-updates-publisher.md#use-the-create-update-wizard)或[“创建捆绑包”](create-updates-with-updates-publisher.md#use-the-create-bundle-wizard)向导中的相同选项。
 
 编辑时，可以更改与更新或捆绑包相关的任意可用详细信息，以便能够在环境中使用。 例如，可以编辑适用性或优先规则，也可以更改语言。 还可以更改产品和供应商，将更新或捆绑包移到自定义文件夹中，从而对更新进行分组，以供你自己使用。
 
 ## <a name="assign-updates-and-bundles-to-a-publication"></a>将更新和捆绑包分配给发布项
-可以在“更新工作区”  中选择更新和捆绑包，然后从功能区的“开始”  选项卡中选择“分配”  ，将其添加到发布项中。 这会启动“分配软件更新”  向导。
+可以在“更新工作区”中选择更新和捆绑包，然后从功能区的“开始”选项卡中选择“分配”，将其添加到发布项中。 这会启动“分配软件更新”  向导。
 -  请参阅[发布更新和捆绑包](#publish-updates-and-bundles-from-the-updates-workspace)，了解如何选择更新和捆绑包，并将其作为一个任务进行发布。
 -  若要了解如何将各组更新和捆绑包作为一个对象进行管理，请参阅[管理发布项](updates-publisher-publications.md)。 将更新分配给发布项后，可以管理相应的发布项，继而会覆盖所有已分配更新。
 
@@ -64,7 +64,7 @@ ms.locfileid: "81700185"
 
     -   **自动** - 只有在已连接 Updates Publisher 和 Configuration Manager 时，此模式才可用（请参阅 [ConfigMgr 服务器](updates-publisher-options.md#configmgr-server)选项。）
 
-    使用此类型，Updates Publisher 可以查询 Configuration Manager，以确定应发布更新或捆绑包的完整内容还是仅元数据。 仅当更新满足 Updates Publisher 选项的“ConfigMgr 服务器”  页中指定的“请求客户端计数阈值”  和“包源大小阈值”  时，才会发布更新的完整内容。
+    使用此类型，Updates Publisher 可以查询 Configuration Manager，以确定应发布更新或捆绑包的完整内容还是仅元数据。 仅当更新满足 Updates Publisher 选项的“ConfigMgr 服务器”页中指定的“请求客户端计数阈值”和“包源大小阈值”时，才会发布更新的完整内容。
 
 -   选择发布项：
 
@@ -87,9 +87,9 @@ ms.locfileid: "81700185"
 > Updates Publisher 只能发布大小不超过 375 MB 的更新。
 
 ### <a name="to-publish-updates-and-bundles"></a>如何发布更新和捆绑包
-1.  转到“更新工作区”  ，并选择一个或多个要发布的更新和捆绑包。 然后，从功能区的“开始”  选项卡中，选择“发布” 
+1.  转到“更新工作区”  ，并选择一个或多个要发布的更新和捆绑包。 然后，从功能区的“开始”选项卡中，选择“发布”
 
-2.  在“发布”  向导的“选择”  页中，选择所需的更新发布方式。 选项与[分配更新](#assign-updates-and-bundles-to-a-publication)时相同：“完整内容”  、“仅元数据”  或“自动”  。
+2.  在“发布”向导的“选择”页中，选择所需的更新发布方式。 选项与[分配更新](#assign-updates-and-bundles-to-a-publication)时相同：“完整内容”  、“仅元数据”  或“自动”  。
 
     还可以选择使用新发布证书对所有更新进行签名。
 
@@ -102,14 +102,14 @@ ms.locfileid: "81700185"
 
 若要直接导出，请依次转到“更新工作区”   > “所有软件更新”  ，然后选择一个或多个更新和捆绑包。 无法导出供应商或产品文件夹，但可以选择一个文件夹，然后选择导出其中的更新。
 
-对于选定的一个或多个更新，请从功能区的“开始”  选项卡中选择“导出”  ，然后提供目录导出的路径和文件名。
+对于选定的一个或多个更新，请从功能区的“开始”选项卡中选择“导出”，然后提供目录导出的路径和文件名。
 
 可以视需要导出（添加）从属软件更新。
 
 ## <a name="delete-updates-and-bundles"></a>删除更新和捆绑包
 可以从 Updates Publisher 存储库中删除更新和更新捆绑包。
 
-依次转到“更新工作区”   > “所有软件更新”  ，并单独选择一个或多个更新。 然后，从功能区的“开始”  选项卡中，选择“删除”  。
+依次转到“更新工作区”   > “所有软件更新”  ，并单独选择一个或多个更新。 然后，从功能区的“开始”选项卡中，选择“删除”。
 
 -   如果只选择了尚未发布或已终止的更新或捆绑包，需要在删除之前确认删除。
 

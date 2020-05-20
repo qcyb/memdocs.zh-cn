@@ -75,7 +75,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android 设备管理**|**DEM[ 通过公司门户启动](#device-enrollment-manager)**| 否 | 否 | 否 |[详细信息](device-enrollment-manager-enroll.md)|
 |**Android 设备管理**|**（预声明的 IMEI 或 SN）用户通过公司门户启动**| 否 | “是” | 否 | [详细信息](corporate-identifiers-add.md)|
-|**带有 Zebra Mobility Extensions 的 Android 设备管理**|用户或 **DEM[ 通过公司门户启动](#device-enrollment-manager)**| 否 | 如果用户启动，则为是；如果 [DEM](#device-enrollment-manager) 启动，则为否 | 否 | [详细信息](../configuration/android-zebra-mx-overview.md)|
+|**带有 Zebra Mobility Extensions 的 Android 设备管理**|用户或 [DEM](#device-enrollment-manager) 通过公司门户启动| 否 | 如果用户启动，则为是；如果 [DEM](#device-enrollment-manager) 启动，则为否 | 否 | [详细信息](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise 专用**|**NFC、令牌、QR 代码、Zero Touch**| “是” | 否 | 可通过策略进行配置 | [详细信息](android-kiosk-enroll.md)|
 |**Android Enterprise 完全托管设备**|**NFC、令牌、QR 代码、Zero Touch**| “是” | 是；若启动 [DEM](device-enrollment.md#device-enrollment-manager)，则为否 | 可通过策略进行配置 | [详细信息](android-dedicated-devices-fully-managed-enroll.md)|
 

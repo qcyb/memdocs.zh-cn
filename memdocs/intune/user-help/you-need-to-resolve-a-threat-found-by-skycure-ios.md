@@ -38,7 +38,7 @@ Symantec Endpoint Protection (SEP) Mobile 是一项移动威胁防御服务，�
 
 ## <a name="troubleshoot-a-virus-or-security-threat"></a>排查病毒或安全威胁
 
-1. 尝试访问公司电子邮件或网站时，将收到一条消息，如以下屏幕截图所示。 点击“设备管理门户”链接，打开[公司门户网站](https://portal.manage.microsoft.com/devices)  。
+1. 尝试访问公司电子邮件或网站时，将收到一条消息，如以下屏幕截图所示。 点击“设备管理门户”链接，打开[公司门户网站](https://portal.manage.microsoft.com/devices)。
 
     ![Lookout for Work 错误消息示例屏幕截图，其中包含指向公司门户网站的链接和蓝色的“确定”按钮。](./media/mtd-go-to-device-management-portal-android.png)  
 

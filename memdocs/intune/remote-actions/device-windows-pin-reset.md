@@ -55,7 +55,7 @@ ms.locfileid: "80326278"
 
 **使用设备策略** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
-使用 Azure AD Directory ID 替换租户 ID，前者列在 [Azure 门户](https://portal.azure.com)中 Azure Active Directory 的“属性”中   。
+使用 Azure AD Directory ID 替换租户 ID，前者列在 [Azure 门户](https://portal.azure.com)中 Azure Active Directory 的“属性”中。
 
 将此 CSP 的值设置为“True”  。
 

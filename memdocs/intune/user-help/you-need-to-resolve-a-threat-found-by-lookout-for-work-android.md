@@ -39,7 +39,7 @@ Lookout for Work 应用是一项移动威胁防御服务，可识别 Android 设
 ## <a name="troubleshoot-virus-or-security-threat"></a>排查病毒或安全威胁  
 当 Lookout for Work 应用检测到安全或病毒威胁时，重新获取对公司资源的访问权限。  
 
-1. 如果检测到病毒或安全威胁，将收到一条消息，如以下屏幕截图所示。 点击“设备管理门户”链接，打开[公司门户网站](https://portal.manage.microsoft.com/devices)  。  
+1. 如果检测到病毒或安全威胁，将收到一条消息，如以下屏幕截图所示。 点击“设备管理门户”链接，打开[公司门户网站](https://portal.manage.microsoft.com/devices)。  
 
     ![Lookout for Work 错误消息示例屏幕截图，其中包含指向公司门户网站的链接和蓝色的“确定”按钮。](./media/mtd-go-to-device-management-portal-android.png)
 
