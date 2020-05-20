@@ -64,8 +64,8 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 
 如果尚未登录到门户，请完成以下步骤：
 
-1. 打开新的浏览器窗口，在地址栏中输入 **https://endpoint.microsoft.com** 。 
-2. 使用上述步骤中提供的用户 ID 登录 ( *yourID@yourdomain* .onmicrosoft.com)。
+1. 打开新的浏览器窗口，在地址栏中输入 https://endpoint.microsoft.com。 
+2. 使用上述步骤中提供的用户 ID 登录 (yourID@yourdomain.onmicrosoft.com)。
 
     ![门户登录页的图像](./media/free-trial-sign-up/azure-portal-signin.png)
 
@@ -86,8 +86,8 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 
 ### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>要将 MDM 机构设置为 Intune，请执行以下步骤：
 
-1. 打开新的浏览器窗口，在地址栏中输入 **https://portal.azure.com** 。 
-2. 选择“所有服务” **“Microsoft Intune”**  >   。
+1. 打开新的浏览器窗口，在地址栏中输入 https://portal.azure.com。 
+2. 选择“所有服务” > “Microsoft Intune”。
 3. 选择表示尚未启用设备管理的横幅，或者如果没有立即看到横幅，请选择“设备注册”  。 如果尚未启用设备管理，将显示“选择 MDM 机构”边栏选项卡  。
 
     > [!NOTE]
@@ -108,7 +108,7 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
 
 1. 转到 [Microsoft 365 管理中心](https://admin.microsoft.com)并使用管理员帐户登录。
 
-2. 在导航窗格中，选择“设置” **“域”** “添加域” >    >   。
+2. 在导航窗格中，选择“设置” > “域” > “添加域”。
 
 3. 输入自定义域名。 然后选择“下一步”  。
 

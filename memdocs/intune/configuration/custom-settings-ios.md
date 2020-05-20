@@ -42,17 +42,17 @@ ms.locfileid: "80359410"
 
 ## <a name="what-you-need-to-know"></a>须知内容
 
-- 使用 Apple Configurator 创建配置文件时，请确保导出的设置与设备上的 iOS/iPadOS 版本兼容  。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考”   。
+- 使用 Apple Configurator 创建配置文件时，请确保导出的设置与设备上的 iOS/iPadOS 版本兼容  。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考”。
 
 - 使用 Apple 配置文件管理器时，请务必  ：
 
   - 在配置文件管理器中启用[移动设备管理](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C)。
   - 在配置文件管理器中添加 [iOS/iPadOS 设备](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984)。
-  - 在配置文件管理器中添加设备后，转到“在库之下” > “设备”>“选择设备”>“设置”    。 输入设备的常规设置。
+  - 在配置文件管理器中添加设备后，转到“在库之下” > “设备”>“选择设备”>“设置”。 输入设备的常规设置。
 
     下载并保存此文件。 需在 Intune 配置文件中输入此文件。
 
-  - 请确保从 Apple 配置文件管理器导出的设置与设备上的 iOS/iPadOS 版本兼容。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考”   。
+  - 请确保从 Apple 配置文件管理器导出的设置与设备上的 iOS/iPadOS 版本兼容。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考”。
 
 ## <a name="custom-configuration-profile-settings"></a>自定义配置文件设置
 

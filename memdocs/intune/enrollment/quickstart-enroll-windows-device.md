@@ -48,7 +48,7 @@ ms.locfileid: "80327049"
 
    ![“Windows 设置”-“系统”的屏幕截图](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-01.png)
 
-2. 选择“系统” > “关于”   。 
+2. 选择“系统” > “关于”。 
 
    ![系统设置的屏幕截图](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-02.png)
 
@@ -60,7 +60,7 @@ ms.locfileid: "80327049"
 4. 请确认 Windows 10 版本为 1607 或更高版本   。
 
     > [!IMPORTANT]
-    > 本快速入门中提供的步骤适用于 Windows 10 版本1607 或更高版本，如果你的版本是 1511 或更低版本，请继续[这些步骤](../user-help/enroll-windows-10-device.md)   。  
+    > 本快速入门中提供的步骤适用于 Windows 10 版本1607 或更高版本，如果你的版本是 1511 或更低版本，请继续[这些步骤](../user-help/enroll-windows-10-device.md)。  
 
 ## <a name="enroll-windows-10-desktop"></a>注册 Windows 10 桌面版
 
@@ -68,7 +68,7 @@ ms.locfileid: "80327049"
 
    ![系统设置 -“帐户”的屏幕截图](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-03.png)
 
-2. 选择“访问工作或学校” > “连接”   。
+2. 选择“访问工作或学校” > “连接”。
 
     ![选择“访问工作学校帐户”](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
@@ -92,7 +92,7 @@ ms.locfileid: "80327049"
 ## <a name="confirm-your-device-enrollment-in-intune"></a>确认 Intune 中的设备注册
 
 1. 以全局管理员或 Intune 服务管理员身份登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备” > “所有设备”以查看 Intune 中已注册的设备   。
+2. 选择“设备” > “所有设备”以查看 Intune 中已注册的设备。
 3. 验证已在 Intune 中注册其他设备。
 
    ![Intune 已注册的设备的屏幕截图](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)

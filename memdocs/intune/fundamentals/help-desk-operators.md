@@ -53,7 +53,7 @@ ms.locfileid: "80085813"
 5. 通过键入名称或电子邮件地址选择用户。 单击“选择”  。 有关用户的疑难解答信息将显示在“疑难解答”窗格中。 下表介绍了相关信息。
 
 > [!Note]  
-> 还可通过浏览器前往  [ 来访问“疑难解答”窗格 https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting)。
+> 还可通过浏览器前往 [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) 来访问“疑难解答”窗格。
 
 ## <a name="areas-of-troubleshooting-dashboard"></a>疑难解答仪表板区域
 

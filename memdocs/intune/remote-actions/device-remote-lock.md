@@ -50,10 +50,10 @@ ms.locfileid: "80325139"
 ## <a name="remote-lock-a-device"></a>远程锁定设备
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“设备” **“所有设备”**  >   。
+3. 选择“设备” > “所有设备”。
 4. 在设备列表中选择一个设备，然后选择“远程锁定”操作  。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要查看此操作的状态，请选择“Microsoft Intune” **“设备”** “设备操作” >    >   。 
+- 若要查看此操作的状态，请选择“Microsoft Intune” > “设备” > “设备操作”。 
 - 有关有助于管理设备的其他操作，请参阅[可用操作](device-management.md)。

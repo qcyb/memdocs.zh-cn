@@ -42,7 +42,7 @@ ms.locfileid: "80326556"
 ## <a name="how-to-log-out-the-current-user"></a>如何注销当前用户
 
 1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备”   > “所有设备”  。
-2. 选择 iOS/iPadOS 设备 >“…” **“注销当前用户”**  >   。
+2. 选择 iOS/iPadOS 设备 >“…” > “注销当前用户”。
 
 ## <a name="next-steps"></a>后续步骤
 

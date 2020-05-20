@@ -38,7 +38,7 @@ ms.locfileid: "80325370"
 ## <a name="use-a-bulk-device-action"></a>使用批量设备操作
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备” **“所有设备”** “批量设备操作” >    >   。
+2. 选择“设备” > “所有设备” > “批量设备操作”。
 ![批量设备操作](./media/bulk-device-actions/bulk-device-actions.png)
 3. 在“批量设备操作”页上，选择“OS”和“设备操作”    。 某些设备操作有其他选项或其他填充字段。 选择**下一步**。
 4. 在“设备”页上，选择“1 到 100 个设备”>“下一步”   。

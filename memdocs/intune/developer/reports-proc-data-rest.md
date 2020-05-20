@@ -41,7 +41,7 @@ ms.locfileid: "79360023"
 
 在 Azure 中创建本机应用。 此本机应用即客户端应用。 本地客户端请求凭据时，在本地计算机上运行的客户端将引用 Intune 数据仓库 API。
 
-1. 登录到租户的 Azure 门户。 选择“Azure Active Directory” **“应用注册”，打开“应用注册”窗格** >    。
+1. 登录到租户的 Azure 门户。 选择“Azure Active Directory” > “应用注册”，打开“应用注册”窗格。
 2. 选择“新建应用注册”  。
 3. 键入应用详细信息。
     1. 在“名称”中键入易于理解的名称，例如 Intune 数据仓库客户端  。
@@ -96,12 +96,12 @@ ms.locfileid: "79360023"
 你还需要终结点。 要获取数据仓库终结点，将需要自定义源 URL。 可从“数据仓库”窗格中获取 OData 终结点。
 
 1. 登录到 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)。
-3. 选择“Microsoft Intune - 概述”  边栏选项卡右侧“其他任务”  下的数据仓库链接，打开“Intune 数据仓库”  窗格。
+3. 选择“Microsoft Intune - 概述”边栏选项卡右侧“其他任务”下的数据仓库链接，打开“Intune 数据仓库”窗格。
 4. 从“使用第三方报表服务”中复制自定义源 URL  。 它看上去应类似于：`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 终结点的格式如下所示：`https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
-例如，日期实体看上去应类似于：  `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
+例如，日期实体看上去应类似于：`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 
 有关详细信息，请参阅 [Intune 数据仓库 API 终结点](reports-api-url.md)。
 
@@ -127,7 +127,7 @@ ms.locfileid: "79360023"
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
-10. 添加在 Azure 中创建并命名为  **的本机应用的“客户端 ID”** `Intune Data Warehouse Client`。 如下所示：  
+10. 添加在 Azure 中创建并命名为 `Intune Data Warehouse Client` 的本机应用的“客户端 ID”。 如下所示：  
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
@@ -155,9 +155,9 @@ ms.locfileid: "79360023"
 > 可在 [GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs) 上访问以下代码示例。 请访问 GitHub 存储库，了解有关该示例的最新更改和更新。
 
 1. 打开“Microsoft Visual Studio”  。
-2. 选择“文件” **“新建项目”**  >   。 展开“Visual C#”，然后选择“控制台应用 (.Net Framework)”   。
+2. 选择“文件” > “新建项目”。 展开“Visual C#”，然后选择“控制台应用 (.Net Framework)”   。
 3. 将项目命名为 `IntuneDataWarehouseSamples`，浏览到要保存该项目的位置，然后选择“确定”  。
-4. 在解决方案资源管理器中右键单击该解决方案的名称，然后选择“管理用于解决方案的 NuGet 包...”  。 选择“浏览”，然后在搜索框中键入  `Microsoft.IdentityModel.Clients.ActiveDirectory`。
+4. 在解决方案资源管理器中右键单击该解决方案的名称，然后选择“管理用于解决方案的 NuGet 包...”  。 选择“浏览”，然后在搜索框中键入 `Microsoft.IdentityModel.Clients.ActiveDirectory`。
 5. 选择该包，选择“管理用于解决方案的包”下的“IntuneDataWarehouseSamples”项目，然后选择“安装”   。
 6. 选择“我接受”以接受 NuGet 包的许可  。
 7. 从解决方案资源管理器打开 `Program.cs`。

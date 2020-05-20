@@ -70,7 +70,7 @@ ms.locfileid: "79344969"
 
     ![选择要注册的组](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
 
-7. 选择“选择组” **“Contoso 测试人员”** “选择”作为已分配的组 >    >   。 
+7. 选择“选择组” > “Contoso 测试人员” > “选择”作为已分配的组。 
 8. 对于剩余的配置，可以使用默认值。
 9. 选择 **“保存”** 。
 

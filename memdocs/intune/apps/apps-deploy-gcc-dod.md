@@ -41,10 +41,10 @@ ms.locfileid: "79340913"
 如果需要从适用于企业的 Microsoft Store 中[下载脱机许可应用](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app)，请按照以下步骤下载应用程序： 
 
 1. 登录到[适用于企业的 Microsoft Store](https://businessstore.microsoft.com/)。
-2. 选择“管理” > “设置”   。
+2. 选择“管理” > “设置”。
 3. 在“购物体验”下，将“显示脱机应用”设置为“开”    。
 
-购买应用时，如果有脱机版本，可以选择将许可类型更改为脱机。 获取应用后，可以通过选择[适用于企业的 Microsoft Store](https://businessstore.microsoft.com/) 中的“管理” > “产品和服务”来管理该应用   。 此外，可以下载应用及其依赖项。 然后，可以使用 Intune 向用户部署此下载的应用（及其依赖项）。  
+购买应用时，如果有脱机版本，可以选择将许可类型更改为脱机。 获取应用后，可以通过选择[适用于企业的 Microsoft Store](https://businessstore.microsoft.com/) 中的“管理” > “产品和服务”来管理该应用。 此外，可以下载应用及其依赖项。 然后，可以使用 Intune 向用户部署此下载的应用（及其依赖项）。  
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>将 Intune 同步到适用于企业的 Microsoft Store 
 

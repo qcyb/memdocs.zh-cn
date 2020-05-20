@@ -100,6 +100,6 @@ ms.locfileid: "79347114"
 
 * [卸载公司门户应用](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) 
 
-* 重置公司门户应用。 打开“设置”应用并选择 >“应用” **“公司门户”** “高级选项” **“重置”**  >    >    >   。 
+* 重置公司门户应用。 打开“设置”应用并选择 >“应用” > “公司门户” > “高级选项” > “重置”。 
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

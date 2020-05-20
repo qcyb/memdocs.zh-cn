@@ -32,9 +32,9 @@ ms.locfileid: "80326818"
 - **全局管理员**
 - **Intune 服务管理员**
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” **“角色”** “所有角色” >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“租户管理” > “角色” > “所有角色”。
 
-2. 在“Intune 角色 - 所有角色”边栏选项卡上，选择要分配的内置角色 >“分配” **“分配”**   >   。
+2. 在“Intune 角色 - 所有角色”边栏选项卡上，选择要分配的内置角色 >“分配” > “分配”。
 
 5. 在“基本信息”页上，输入“分配名称”和可选“分配说明”，然后选择“下一步”     。
 

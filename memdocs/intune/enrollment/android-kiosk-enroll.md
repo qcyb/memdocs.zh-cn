@@ -46,7 +46,7 @@ Intune可帮助将应用和设置部署到 Android Enterprise 专用设备。 �
 
 要设置 Android Enterprise 专用设备管理，请执行以下步骤：
 
-1. 若准备管理移动设备，必须[将移动设备管理 (MDM) 机构设置为“Microsoft Intune”**以获取说明**](../fundamentals/mdm-authority-set.md)。 第一次设置 Intune 以进行移动设备管理时，只需设置一次此项。
+1. 若准备管理移动设备，必须[将移动设备管理 (MDM) 机构设置为“Microsoft Intune”](../fundamentals/mdm-authority-set.md)以获取说明。 第一次设置 Intune 以进行移动设备管理时，只需设置一次此项。
 2. [将 Intune 租户帐户连接到托管的 Google Play 帐户](connect-intune-android-enterprise.md)。
 3. [创建注册配置文件](#create-an-enrollment-profile)
 4. [创建设备组](#create-a-device-group)。
@@ -59,7 +59,7 @@ Intune可帮助将应用和设置部署到 Android Enterprise 专用设备。 �
 
 必须创建注册配置文件，以便注册专用设备。 创建配置文件时，它会提供注册令牌（随机字符串）和 QR 码。 可使用令牌或 QR 码[注册专用设备](#enroll-the-dedicated-devices)，具体取决于 Android OS 和设备版本。
 
-1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” **“Android ”** “Android 注册” > “公司拥有的专用设备”   >    >   。
+1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “Android ” > “Android 注册” > “公司拥有的专用设备”。
 2. 选择“创建”并填写必填字段  。
     - **名称**：键入将配置文件分配给动态设备组时将使用的名称。
     - **令牌到期日期**：令牌到期的日期。 Google 规定最长为 90 天。
@@ -69,7 +69,7 @@ Intune可帮助将应用和设置部署到 Android Enterprise 专用设备。 �
 
 可将应用和策略定位到已分配或动态设备组。 可按照以下步骤配置动态 AAD 设备组，以自动填充使用特定注册配置文件进行注册的设备：
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“组” **“所有组”** “新组” >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“组” > “所有组” > “新组”。
 2. 在“组”边栏选项卡中，填写必填字段，如下所示  ：
     - **组类型**：安全性
     - **组名**：键入直观的名称（如中心 1 设备）
@@ -81,7 +81,7 @@ Intune可帮助将应用和设置部署到 Android Enterprise 专用设备。 �
     - 在中间的框中，选择“等于”  。
     - 在最后一个字段中，输入之前创建的注册配置文件名称。
     有关动态成员身份规则的详细信息，请参阅 [AAD 中的组动态成员身份规则](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)。 
-5. 选择“添加查询” **“创建”**  >   。
+5. 选择“添加查询” > “创建”。
 
 ### <a name="replace-or-remove-tokens"></a>替换或删除令牌
 
@@ -92,7 +92,7 @@ Intune可帮助将应用和设置部署到 Android Enterprise 专用设备。 �
 
 替换或撤销令牌/QR 码不会对已注册的设备产生任何影响。
 
-1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” **“Android ”** “Android 注册” > “公司拥有的专用设备”   >    >   。
+1. 登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “Android ” > “Android 注册” > “公司拥有的专用设备”。
 2. 选择要使用的配置文件。
 3. 选择“令牌”  。
 4. 若要替换令牌，请选择“替换令牌”  。

@@ -68,9 +68,9 @@ Intune 的 URL 使用以下格式：
 
 ## <a name="datekey-range-filters"></a>DateKey 范围筛选器
 
-`DateKey` 范围筛选器可用于限制键属性为 `dateKey` 的某些集合可下载的数据量。 通过提供以下 `DateKey` 查询参数，`$filter` 筛选器可用于优化服务性能：
+`DateKey` 范围筛选器可用于限制键属性为 `dateKey` 的某些集合可下载的数据量。 通过提供以下 `$filter` 查询参数，`DateKey` 筛选器可用于优化服务性能：
 
-1. `DateKey` 中的 `$filter` 可单独支持 `lt/le/eq/ge/gt` 运算符并可与逻辑运算符 `and` 结合使用，将它们映射到开始日期和/或结束日期。
+1. `$filter` 中的 `DateKey` 可单独支持 `lt/le/eq/ge/gt` 运算符并可与逻辑运算符 `and` 结合使用，将它们映射到开始日期和/或结束日期。
 2. `maxhistorydays` 作为自定义查询选项提供。<br>
 
 ## <a name="filter-examples"></a>筛选器示例

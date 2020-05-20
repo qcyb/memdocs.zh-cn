@@ -52,11 +52,11 @@ Sophos Mobile 应用授权流程如下：
 
 ## <a name="to-set-up-sophos-mobile-integration"></a>设置 Sophos Mobile 集成  
 
-1. 登录 [Azure 门户]( https://portal.azure.com/)，转到“Intune” **“设备符合性”** “Mobile Threat Defense”> 选择“添加” >    >    。  
+1. 登录 [Azure 门户]( https://portal.azure.com/)，转到“Intune” > “设备符合性” > “Mobile Threat Defense”> 选择“添加”。  
 2. 在“添加连接器”页面上，使用下拉列表以选择“Sophos”   。 然后选择“创建”  。  
 3. 选择“打开 Sophos 管理控制台”链接  。  
 4. 使用 Sophos 凭据登录 [Sophos 管理控制台](https://central.sophos.com/)。  
-5. 转到“Mobile” **“设置”** “设置” > “Sophos 设置”   >    >   。  
+5. 转到“Mobile” > “设置” > “设置” > “Sophos 设置”。  
 6. 在“Sophos 设置”页面上，选择“Intune MTD”选项卡   。  
    ![Sophos 设置](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  

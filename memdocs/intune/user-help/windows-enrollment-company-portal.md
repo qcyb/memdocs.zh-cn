@@ -62,18 +62,18 @@ ms.locfileid: "79335102"
 
 4. 如果版本为  
 
-    * __1607 或更高版本__：通过[“设置” **“帐户”** “使用工作或学校帐户”路由 > 注册设备   >   ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)。   
-    * __1511 或更早版本__：通过[“设置” **“帐户”** “你的帐户”路由 > 注册设备   >   ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)。  
+    * __1607 或更高版本__：通过[“设置” > “帐户” > “使用工作或学校帐户”路由](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)注册设备。   
+    * __1511 或更早版本__：通过[“设置” > “帐户” > “你的帐户”路由](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)注册设备。  
 
 ### <a name="windows-10-mobile-devices"></a>Windows 10 移动设备
 
 1. 转到“所有应用”，然后选择“设置”应用   。
-2. 选择“系统” __“关于”__  >   。
+2. 选择“系统” > “关于”。
 3. 在“设备信息”下，找到“版本”   。  
 4. 如果版本为  
 
-    * __1607 或更高版本__：使用[“设置” **“使用工作或学校帐户”路由**注册设备 >   ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)。   
-    * __1511 或更早版本__：使用[“设置” **“帐户路由”** 注册设备 >   ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)。  
+    * __1607 或更高版本__：使用[“设置” > “使用工作或学校帐户”路由](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)注册设备。   
+    * __1511 或更早版本__：使用[“设置” > “帐户路由”](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)注册设备。  
 
 ## <a name="enroll-non-windows-10-devices"></a>注册非 Windows 10 设备  
 可参阅以下文章，通过公司门户网站注册其他受支持的 Windows 设备：   

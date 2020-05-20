@@ -50,12 +50,12 @@ ms.locfileid: "80325298"
 
 ## <a name="create-a-location"></a>创建位置
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“符合性策略”** “位置” > “创建”   >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “位置” > “创建”。
 
 2. 输入以下属性：  
 
    - 必需。 输入该位置的“名称”，例如“生产车间”或“第 44 号安全大楼”    。
-   - 可选。 使用 CIDR（无类别域际路由）表示法输入“IPv4 范围”，例如  `aaa.bbb.ccc.ddd/n`。
+   - 可选。 使用 CIDR（无类别域际路由）表示法输入“IPv4 范围”，例如 `aaa.bbb.ccc.ddd/n`。
    - 可选。 输入“IPv4 网关”地址，例如  `aaa.bbb.ccc.ddd`。
    - 可选。 输入“IPv4 DHCP 服务器”地址，例如  `aaa.bbb.ccc.ddd`。
    - 可选。 输入“IPv4 DNS 服务器”地址列表  。 此设置使用子集匹配  。 如果设备上的 IPv4 DNS 服务器是已定义值的子集，则该设备会被视为“进入”围墙。 请务必在每行上输入一个地址，例如：  

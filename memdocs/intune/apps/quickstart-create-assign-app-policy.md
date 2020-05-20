@@ -37,13 +37,13 @@ ms.locfileid: "79343851"
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 
-以[全局管理员或 Intune 服务管理员身份](https://aka.ms/intuneportal)登录 [Intune](../fundamentals/users-add.md#types-of-administrators)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
+以[全局管理员或 Intune 服务管理员身份](../fundamentals/users-add.md#types-of-administrators)登录 [Intune](https://aka.ms/intuneportal)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
 
 ## <a name="create-an-app-protection-policy"></a>创建应用保护策略
 
 可使用以下步骤创建应用保护策略：
 
-1. 在 [Intune](https://aka.ms/intuneportal) 中，选择“应用” **“应用保护策略”** “创建策略” >    >   。 
+1. 在 [Intune](https://aka.ms/intuneportal) 中，选择“应用” > “应用保护策略” > “创建策略”。 
 2. 输入以下详细信息：
 
     - **名称**：Windows 10 内容保护 
@@ -54,10 +54,10 @@ ms.locfileid: "79343851"
 3. 选择“受保护的应用”以选择必须遵守此策略的应用  。
 4. 单击“添加应用”  。
 5. 在“推荐的应用”下，选择“Word Mobile”   。
-5. 单击“确定” **“确定”**  >   。 
+5. 单击“确定” > “确定”。 
 6. 选择“所需的设置”以配置应用  。
 7. 单击“允许覆盖”以设置 Windows 信息保护模式  。 选择此选项将阻止企业数据离开受保护的应用。
-8. 单击“确定” **“创建”**  >   。
+8. 单击“确定” > “创建”。
 
 现在将在 Intune 中看到应用保护策略。
 
@@ -67,7 +67,7 @@ ms.locfileid: "79343851"
 
 可使用以下步骤分配应用保护策略：
 
-1. 在 [Intune](https://aka.ms/intuneportal) 中，选择“Intune” **“应用”** “应用保护策略” >    >   。 
+1. 在 [Intune](https://aka.ms/intuneportal) 中，选择“Intune” > “应用” > “应用保护策略”。 
 2. 选择先前创建的应用保护策略。 在本快速入门中，策略是“Windows 10 内容保护”  。
 3. 选择“分配”  。
 4. 单击“包括”选项卡上的“选择要包括的组”   。

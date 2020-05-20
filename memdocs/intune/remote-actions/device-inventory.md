@@ -34,7 +34,7 @@ ms.locfileid: "80696286"
 ## <a name="view-the-device-details"></a>查看设备详细信息
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“设备” > “所有设备”，然后选择某个列出的设备以打开其详细信息   ：
+3. 选择“设备” > “所有设备”，然后选择某个列出的设备以打开其详细信息：
 
    - “概述”显示设备名称，并列出设备的某些关键属性，例如该设备是个人设备还是公司设备、序列号、主要用户等  。 可以在设备上执行以下操作：
       - [停用](devices-wipe.md#retire)
@@ -52,7 +52,7 @@ ms.locfileid: "80696286"
       - [BitLocker 密钥轮换](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
       - [重命名设备](device-rename.md)
       - [新远程协助会话](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
-   - 使用“属性”可以将设备分配到[你创建的设备类别](../enrollment/device-group-mapping.md)，并将设备的所有权更改为个人设备或公司设备  。
+   - 使用“属性”可以将设备分配到[你创建的设备类别](../enrollment/device-group-mapping.md)，并将设备的所有权更改为个人设备或公司设备。
    - “硬件”包括有关设备的详细信息，例如设备 ID、操作系统和版本、存储空间等详细信息  。
    - “发现的应用”列出 Intune 发现的安装在设备上的所有应用以及应用版本  。 有关详细信息，请参阅 [Intune 发现的应用](../apps/app-discovered-apps.md)。
    - “设备符合性”列出分配到的所有符合性策略，以及设备是否符合要求  。

@@ -58,7 +58,7 @@ ms.locfileid: "79345554"
 
 Intune SDK 依赖于 [Active Directory 身份验证库 (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) 实现它的[身份验证](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)和条件启动方案，这需要使用 [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) 配置应用。 
 
-如果应用程序已配置为使用 ADAL 或 MSAL，并且拥有其自己的自定义客户端 ID 用于使用 Azure Active Directory 进行身份验证，请务必按以下步骤操作，将 Xamarin 应用权限授予 Intune 移动应用程序管理 (MAM) 服务。 请使用 [Intune SDK 入门指南](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)的[向 Intune 应用保护服务提供应用访问权限](app-sdk-get-started.md)一节中的说明。
+如果应用程序已配置为使用 ADAL 或 MSAL，并且拥有其自己的自定义客户端 ID 用于使用 Azure Active Directory 进行身份验证，请务必按以下步骤操作，将 Xamarin 应用权限授予 Intune 移动应用程序管理 (MAM) 服务。 请使用 [Intune SDK 入门指南](app-sdk-get-started.md)的[向 Intune 应用保护服务提供应用访问权限](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)一节中的说明。
 
 ## <a name="security-considerations"></a>安全注意事项
 
@@ -198,7 +198,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 > [!NOTE]
 > 除上面详述的 Xamarin.Android 集成外，还必须完成 Xamarin.Forms 集成。 重映射器的行为与 Xamarin.Forms 应用的行为有所不同，因此仍必须执行手动 MAM 替换。
 
-将重映射器添加到项目后，需要执行 MAM 等效替换。 如果将对 `FormsAppCompatActivity` 和 `FormsApplicationActivity` 的替代分别替换为 MAM 等效的 `OnCreate` 和 `OnResume`，则 `OnMAMCreate` 和 `OnMAMResume` 可以继续在应用程序中使用。
+将重映射器添加到项目后，需要执行 MAM 等效替换。 如果将对 `OnCreate` 和 `OnResume` 的替代分别替换为 MAM 等效的 `OnMAMCreate` 和 `OnMAMResume`，则 `FormsAppCompatActivity` 和 `FormsApplicationActivity` 可以继续在应用程序中使用。
 
 ```csharp
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity

@@ -70,9 +70,9 @@ ms.locfileid: "81690825"
 
 ### <a name="review-configuration-manager-client-health-in-intune"></a>在 Intune 中查看 Configuration Manager 客户端运行状况
 
-1. 登录到 [Azure 门户](https://portal.azure.com/)。  
+1. 登录到 {3}Azure 门户{4}。  
 
-2. 选择“所有服务” **“Intune”**  >   。 Intune 位于“监视 + 管理”部分  。  
+2. 选择“所有服务” > “Intune”。 Intune 位于“监视 + 管理”部分  。  
 
 3. 打开“Microsoft Intune”窗格后，在“帮助与支持”下的菜单中转到“故障排除”页    。  
 

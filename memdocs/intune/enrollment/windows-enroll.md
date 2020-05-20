@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com 是用于注册的首选 FQDN，但�
 不支持使用 CNAME 配置以外的方法。 例如，不支持使用代理服务器将 enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc 重定向到 enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc 或 manage.microsoft.com/EnrollmentServer/Discovery.svc。
 
 **步骤 2：验证 CNAME**（可选）<br>
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“Windows”** “Windows 注册” > “CNAME 验证”   >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “CNAME 验证”。
 2. 在“域”框中，输入公司网站，然后选择“测试”   。
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>告知用户如何注册 Windows 设备
@@ -114,7 +114,7 @@ EnterpriseEnrollment-s.manage.microsoft.com 是用于注册的首选 FQDN，但�
 有关最终用户注册说明，请参阅[在 Intune 中注册 Windows 设备](../user-help/windows-enrollment-company-portal.md)。 还可让用户查看 [IT 管理员可以在我的设备上看到什么](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)。
 
 >[!IMPORTANT]
-> 如果尚未启用自动 MDM 注册，但是具有已加入到 Azure AD 的 Windows 10 设备，则注册后可在 Intune 控制台中看到两条记录。 确保具有已加入 Azure AD 的设备的用户使用相同的帐户转到“帐户” **“访问工作或学校”和“连接”后，即可停止此操作** >    。 
+> 如果尚未启用自动 MDM 注册，但是具有已加入到 Azure AD 的 Windows 10 设备，则注册后可在 Intune 控制台中看到两条记录。 确保具有已加入 Azure AD 的设备的用户使用相同的帐户转到“帐户” > “访问工作或学校”和“连接”后，即可停止此操作。 
 
 有关最终用户任务的详细信息，请参阅[有关 Microsoft Intune 最终用户体验的资源](../fundamentals/end-user-educate.md)。
 

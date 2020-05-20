@@ -41,7 +41,7 @@ ms.locfileid: "79356903"
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>在 Microsoft 终结点管理器中登录到 Intune
 
-以[全局管理员或 Intune 服务管理员](https://go.microsoft.com/fwlink/?linkid=2109431)身份登录 [Microsoft 终结点管理器管理中心](users-add.md#types-of-administrators)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
+以[全局管理员或 Intune 服务管理员](users-add.md#types-of-administrators)身份登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。
 
 ## <a name="create-a-group"></a>创建组
 
@@ -56,7 +56,7 @@ ms.locfileid: "79356903"
 
     ![在 Microsoft Intune 中创建组的屏幕截图](./media/quickstart-create-group/quickstart-use-groups-01.png)
 
-7. 单击“选择” **“创建”**  >   。
+7. 单击“选择” > “创建”。
 
 已成功创建组后，该组将显示在“所有组”列表中  。 
 

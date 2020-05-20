@@ -48,7 +48,7 @@ Apple Configurator 注册方法不能与[设备注册管理器](device-enrollmen
 
 设备注册配置文件定义在注册期间应用的设置。 这些设置只应用一次。 按照以下步骤创建注册配置文件，使用 Apple Configurator 注册 iOS/iPadOS 设备。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“iOS”** “iOS 注册” > “Apple Configurator” **“配置文件”** “创建” >    >    >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “Apple Configurator” > “配置文件” > “创建”。
 
     ![创建 Apple Configurator 配置文件](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
 
@@ -88,7 +88,7 @@ Apple Configurator 注册方法不能与[设备注册管理器](device-enrollmen
     DLXQPCWVGHMJ，设备详细信息
 
    了解[如何查找 iOS/iPadOS 设备序列号](https://support.apple.com/HT204073)。
-2. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“iOS”** “iOS 注册” > “Apple Configurator” **“设备”** “添加” >    >    >    >   。
+2. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “Apple Configurator” > “设备” > “添加”。
 
 5. 选择一个注册配置文件  ，将其应用于导入的序列号。 如果想要让新的序列号详细信息覆盖现有的所有详细信息，请选择“覆盖现有标识符的详细信息”  。
 6. 在“导入设备”下，浏览到序列号的 .csv 文件，然后选择“添加”   。
@@ -100,18 +100,18 @@ Apple Configurator 注册方法不能与[设备注册管理器](device-enrollmen
 - AC 配置文件 
 
 #### <a name="assign-from-apple-configurator-devices"></a>从 Apple Configurator 设备分配
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“iOS”** “iOS 注册” > “Apple Configurator” **“设备”> 选择序列号 >“分配配置文件”**  >    >    >    。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “Apple Configurator” > “设备”> 选择序列号 >“分配配置文件”。
 2. 在“分配配置文件”下，选择要分配的新配置文件，然后选择“分配”    。
 
 #### <a name="assign-from-profiles"></a>从配置文件分配
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“iOS”** “iOS 注册” > “Apple Configurator” **“配置文件”> 选择配置文件** >    >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “Apple Configurator” > “配置文件”> 选择配置文件。
 2. 在配置文件中，选择“已分配设备”，然后选择“分配”   。
 3. 通过筛选找到要分配给配置文件的设备序列号，选择设备，然后选择“分配”  。
 
 ### <a name="export-the-profile"></a>导出配置文件
 创建配置文件并分配序列号后，必须从 Intune 中以 URL 的形式导出配置文件。 然后将其导入 Mac 上的 Apple Configurator 用于部署到设备。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“iOS”** “iOS 注册” > “Apple Configurator” **“配置文件”> 选择要导出的配置文件** >    >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “Apple Configurator” > “配置文件”> 选择要导出的配置文件。
 2. 在配置文件上，选择“导出配置文件”  。
 3. 复制“配置文件 URL”  。 然后可在 Apple Configurator 中添加它，以定义 iOS/iPadOS 设备使用的 Intune 配置文件。
 
@@ -147,7 +147,7 @@ Apple Configurator 注册方法不能与[设备注册管理器](device-enrollmen
 
 ### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>将配置文件作为 .mobileconfig 导出到 iOS/iPadOS 设备
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“iOS”** “iOS 注册” > “Apple Configurator” **“配置文件”> 选择要导出的配置文件>“导出配置文件”**  >    >    >    。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “Apple Configurator” > “配置文件”> 选择要导出的配置文件>“导出配置文件”。
 2. 在“直接许可登记表”下，选择“下载配置文件”并保存此文件。   注册配置文件的有效期仅为两周，必须在此时间重新创建。
 3. 将文件传输到运行 [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) 的 Mac 计算机，作为管理配置文件直接推送到 iOS/iPadOS 设备。
 4. 通过以下步骤使用 Apple Configurator 准备设备：
@@ -160,13 +160,13 @@ Apple Configurator 注册方法不能与[设备注册管理器](device-enrollmen
     4. 使用文件选取器选择从 Intune 导出的 .mobileconfig 文件，然后选择“添加”  。 配置文件将添加到设备。 如果设备是“非监督”状态，安装将需要在设备上验收。
 5. 使用以下步骤在 iOS/iPadOS 设备上安装配置文件。 设备必须已经完成设置助理且准备好使用。 如果注册需要应用部署，设备应设置一个 Apple ID，因为应用部署需要有一个 Apple ID 登录到应用商店。
     1. 解锁 iOS/iPadOS 设备。
-    2. 在“管理配置文件”  的“安装配置文件”  对话框中，选择“安装”  。
+    2. 在“管理配置文件”的“安装配置文件”对话框中，选择“安装”。
     3. 如有必要，提供“设备密码”或“Apple ID”。
     4. 接受“警告”  ，并选择“安装”  。
     5. 接受“远程警告”  ，并选择“信任”  。
     6. “已安装配置文件”  框确认配置文件“已安装”后，选择“完成”  。
 
-6. 在 iOS/iPadOS 设备上，打开“设置”并转到“常规” **“设备管理”** “管理配置文件”   >    >   。 确认配置文件安装已列出，并检查 iOS/iPadOS 策略限制和已安装的应用。 策略限制和应用可能需要 10 分钟才会出现在设备上。
+6. 在 iOS/iPadOS 设备上，打开“设置”并转到“常规” > “设备管理” > “管理配置文件”。 确认配置文件安装已列出，并检查 iOS/iPadOS 策略限制和已安装的应用。 策略限制和应用可能需要 10 分钟才会出现在设备上。
 
 7. 分配设备。 iOS/iPadOS 设备现已在 Intune 中注册并已托管。
 

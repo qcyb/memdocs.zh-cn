@@ -74,7 +74,7 @@ Microsoft 创建了与 Intune 集成的 API。 通过该 API，可验证证书�
 
 #### <a name="create-an-application-in-azure-active-directory"></a>在 Azure Active Directory 中创建应用程序  
 
-1. 在 [Azure 门户](https://portal.azure.com)中转到“Azure Active Directory” **“应用注册”，然后选择“新建注册”**  >    。  
+1. 在 [Azure 门户](https://portal.azure.com)中转到“Azure Active Directory” > “应用注册”，然后选择“新建注册”。  
 
 2. 在“注册应用程序”  页上，指定以下详细信息：  
    - 在“名称”  部分中，输入一个有意义的应用程序名称。  

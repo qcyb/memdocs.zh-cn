@@ -55,10 +55,10 @@ ms.locfileid: "79360010"
 > 在 Intune 中需要访问报表的权限  。 有关详细信息，请参阅[授权](reports-api-url.md#authorization)。
 
 1. 登录到 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)。
-2. 选择“Microsoft Intune - 概述”  边栏选项卡右侧“其他任务”  下的数据仓库链接，打开“Intune 数据仓库”  窗格。
+2. 选择“Microsoft Intune - 概述”边栏选项卡右侧“其他任务”下的数据仓库链接，打开“Intune 数据仓库”窗格。
 3. 复制自定义源 URL。 例如：`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. 打开 Power BI Desktop。
-5. 从菜单栏中，选择“文件” **“获取数据”** “Odata 源” >    >   。
+5. 从菜单栏中，选择“文件” > “获取数据” > “Odata 源”。
 6. 在“OData 数据源”窗口中，将从之前步骤中复制的自定义源 URL 粘贴到 URL 框  。
 7. 选择“基本”  。
 
@@ -93,7 +93,7 @@ ms.locfileid: "79360010"
 ![Power BI 树状图可视化效果](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. 在“可视化效果”窗格中，查找并选择“树状图”   。 “树状图”图表将被添加到报表画布  。
-2. 在“字段”窗格中，找到  **表**`devices`。
+2. 在“字段”窗格中，找到 `devices` 表。
 3. 展开 `devices` 表，然后选择 `manufacturer` 数据字段。
 4. 将 `manufacturer` 数据字段拖到报表画布，并将其放在“树状图”图表中  。
 5. 将 `deviceKey` 数据字段从 `devices` 表拖到“可视化效果”窗格中，并将其拖到复选框“在此处添加数据字段”中的“值”部分下    。  
@@ -106,8 +106,8 @@ ms.locfileid: "79360010"
 
 可以向树状图添加筛选器，以便使用应用解答其他问题。
 
-1. 要添加筛选器，请选择报表画布，然后选择“可视化效果”  下的切片器图标![](./media/reports-proc-create-with-odata/reports-create-slicer.png)（带数据模型和支持的关系的树状图  ）。 空的“切片器”可视化效果将显示在画布上  。
-2. 在“字段”窗格中，找到  **表**`ownerTypes`。
+1. 要添加筛选器，请选择报表画布，然后选择“可视化效果”下的切片器图标（带数据模型和支持的关系的树状图![](./media/reports-proc-create-with-odata/reports-create-slicer.png)）。 空的“切片器”可视化效果将显示在画布上  。
+2. 在“字段”窗格中，找到 `ownerTypes` 表。
 3. 展开 `ownerTypes` 表，然后选择 `ownerTypeName` 数据字段。
 4. 将 `onwerTypeName` 数据字段从 `ownerTypes` 表拖到“筛选器”窗格中，并将其放在复选框“在此处添加数据字段”中的“此页上的筛选器”部分下    。  
 

@@ -51,7 +51,7 @@ ms.locfileid: "80438757"
 
 ## <a name="assign-the-company-portal-app"></a>分配公司门户应用
 
-1.  [使用管理员帐户登录到 ](https://go.microsoft.com/fwlink/?linkid=2109431)Microsoft 终结点管理器管理中心 。 
+1.  使用管理员帐户登录到  [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 
 2. 在右窗格中选择“应用”选项卡  。
 3. 在“按平台”下，选择“Windows”   。
 4. 选择“公司门户(脱机)”  。

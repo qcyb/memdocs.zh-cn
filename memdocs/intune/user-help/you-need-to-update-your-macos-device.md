@@ -30,6 +30,6 @@ ms.locfileid: "79334504"
 
 [!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
 
-通过单击“App Store” **“更新”，更新 macOS 设备** >   。 选择最新提供的 macOS 更新，然后单击“更新”按钮  。
+通过单击“App Store” > “更新”，更新 macOS 设备。 选择最新提供的 macOS 更新，然后单击“更新”按钮  。
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

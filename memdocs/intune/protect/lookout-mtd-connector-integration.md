@@ -51,12 +51,12 @@ ms.locfileid: "79351742"
 
 1. 使用全局管理员帐户登录 [Azure 门户](https://portal.azure.com)。
 
-2. 转到“Azure Active Directory” > “属性”，然后查找你的“目录 ID”。    。 使用“复制”按钮复制目录 ID，然后将其保存在文本文件中。 
+2. 转到“Azure Active Directory” > “属性”，然后查找你的“目录 ID”。。 使用“复制”按钮复制目录 ID，然后将其保存在文本文件中。 
 
    ![Azure AD 属性](./media/lookout-mtd-connector-integration/azure-ad-properties.png)  
 
 3. 接下来，找到用于向 Azure AD 用户授予 Lookout 控制台访问权限的帐户的 Azure AD 组 ID。 一个组用于完全访问权限，用于受限访问权限的第二个组为可选组。   若要获得“对象 ID”，对各个组执行下面的操作：   
-   1. 转到“Azure Active Directory” > “组”，打开“组 - 全部组”窗格。     
+   1. 转到“Azure Active Directory” > “组”，打开“组 - 全部组”窗格。  
 
    2. 选择为完全访问权限创建的组，打开其“概述”窗格。    
 
@@ -87,7 +87,7 @@ Lookout 支持人员创建 Lookout 企业帐户后，将向公司的主要联系
 ### <a name="configure-the-intune-connector"></a>配置 Intune 连接器  
 下面的过程假设你先前已在 Azure AD 中创建用户组，来用于测试 Lookout 部署。 最佳做法是从一个小型用户组开始，来让 Lookout 和 Intune 管理员熟悉产品集成。 熟悉之后，可以将注册扩展到其他用户组。
 
-1. 登录到 [Lookout MES 控制台](https://aad.lookout.com)，转到“系统” > “连接器”，然后选择“添加连接器”。     选择“Intune”。 
+1. 登录到 [Lookout MES 控制台](https://aad.lookout.com)，转到“系统” > “连接器”，然后选择“添加连接器”。  选择“Intune”。 
 
    ![Lookout 控制台的示意图，其中“连接器”选项卡上有“Intune”选项](./media/lookout-mtd-connector-integration/lookout_mtp_setup-intune-connector.png)
 
@@ -119,7 +119,7 @@ Lookout 支持人员创建 Lookout 企业帐户后，将向公司的主要联系
 下面是可在 Lookout MES 控制台中配置的其他设置。  
 
 ### <a name="configure-enrollment-settings"></a>配置注册设置
-在 Lookout MES 控制台中，选择“系统” > “管理注册” > “注册设置”。     
+在 Lookout MES 控制台中，选择“系统” > “管理注册” > “注册设置”。  
 
 - 为“断开状态”指定在多少天之后将未连接的设备标记为断开连接。   
 
@@ -151,7 +151,7 @@ Lookout 移动终结点安全将移动威胁分为多种类型。 Lookout 威胁
 - 设备的初始状态为“待定”。   
 - 在设备上安装、打开和激活 Lookout for Work 应用后，设备状态将更新  。
 
-有关如何将 Lookout for Work 应用部署到设备的详细信息，请参阅[使用 Intune 添加 Lookout for Work 应用](mtd-apps-ios-app-configuration-policy-add-assign.md)。 
+有关如何将 Lookout for Work 应用部署到设备的详细信息，请参阅[使用 Intune 添加 Lookout for Work 应用](mtd-apps-ios-app-configuration-policy-add-assign.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

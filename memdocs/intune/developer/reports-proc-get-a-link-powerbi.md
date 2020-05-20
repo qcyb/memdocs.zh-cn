@@ -53,7 +53,7 @@ ms.locfileid: "79359880"
 
 Power BI [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用包含租户信息和一组基于数据仓库数据模型的预置报表。
 
-1. 导航到 [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用的“AppSource”页  以开始安装过程。
+1. 导航到 [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用的“AppSource”页以开始安装过程。
 2. 单击“立即获取”按钮，然后单击“继续”   。
 3. 当系统提示安装 Power BI 应用时，单击“安装”  。
 4. 安装完成后，单击“Intune 合规性(数据仓库)”应用磁贴  。
@@ -66,7 +66,7 @@ Power BI [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehous
 
 或者，从 Intune 门户安装应用：
 
-1. 登录 Azure 门户，选择“监视 + 管理” > “Intune”   。 还可为 Intune 搜索资源。
+1. 登录 Azure 门户，选择“监视 + 管理” > “Intune”。 还可为 Intune 搜索资源。
 2. 打开“设置 Intune 数据仓库”边栏选项卡  。
 3. 选择“获取 Power BI 应用”以访问和共享浏览器中为租户预创建的 Power BI 报表  。
 4. 请按照上述步骤 2-10 操作。
@@ -80,7 +80,7 @@ Power BI [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehous
 3. 在报表边栏选项卡中检索自定义源 URL，例如：<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. 打开 Power BI Desktop  。
-5. 选择“文件” > “获取数据”   。 选择“OData 源”  。
+5. 选择“文件” > “获取数据”。 选择“OData 源”  。
 6. 选择“基本”  。
 7. 在 URL 框中键入或粘贴 OData URL  。
 8. 选择“确定”  。

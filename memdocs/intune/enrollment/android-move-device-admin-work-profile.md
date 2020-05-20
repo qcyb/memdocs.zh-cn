@@ -45,12 +45,12 @@ ms.locfileid: "80624916"
 
 ## <a name="create-device-compliance-policy"></a>创建设备符合性策略
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” **“符合性策略”** “策略” > “创建策略”   >    >   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “策略” > “创建策略”。
 
     ![创建策略](./media/android-move-device-admin-work-profile/create-policy.png)
 
 2. 在“创建策略”  页上，将“平台”  设置为“Android 设备管理员”   > “创建”  。
-3. 在“基本信息”页上，键入“名称”和“说明” **“下一步”**    >   。
+3. 在“基本信息”页上，键入“名称”和“说明” > “下一步”。
 
     ![“基本信息”页](./media/android-move-device-admin-work-profile/basics.png)
     
