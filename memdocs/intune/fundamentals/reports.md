@@ -51,7 +51,7 @@ ms.locfileid: "80326746"
 ## <a name="non-compliant-devices-report-operational"></a>不符合设备报表（操作）
 不符合设备报表显示了通常由支持人员或管理员角色用来识别问题并帮助修正问题的数据。 这些报表中找到的数据是即时的，它会调用意外的行为且可操作。 该报表与工作负荷一起提供，从而使不符合设备报表可访问，而无需浏览至活动工作流之外。 此报表提供筛选、搜索、分页和排序功能。 此外，还可以向下钻取以帮助解决问题。
 
-你可以使用以下步骤查看“不符合设备”  报表：
+你可以使用以下步骤查看“不符合设备” 报表：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备”   > “监视”   > “不符合设备”  。
@@ -95,7 +95,7 @@ ms.locfileid: "80326746"
 
 设备符合性趋势的设备符合性趋势报表可显示一段时间内的设备符合性状态趋势。 你可以确定符合性高峰发生的位置，并相应地集中时间和精力。
 
-你可以使用以下步骤查看“趋势”  报表：
+你可以使用以下步骤查看“趋势”报表：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“报表”   > “趋势”  ，以查看 60 天内的设备符合性趋势。
@@ -103,7 +103,7 @@ ms.locfileid: "80326746"
     ![Intune 趋势报表](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Azure Monitor 集成报表（专业）
-你可以自定义自己的报表以获取所需数据。 可使用 [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/overview) 和 [Azure Monitor 工作簿](reports.md#log-analytics)通过 [Azure Monitor](reports.md#workbooks) 获取报表中的数据。 通过这些解决方案，可以创建自定义查询、配置警报，并使仪表板以所需方式显示设备符合性数据。 此外，你还可以将活动日志保留在你的 Azure 存储帐户中，使用[安全信息和事件管理 (SIEM) 工具](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)将活动日志与报表集成，并将报表关联到 Azure AD 活动日志。 除了导入仪表板以满足自定义报表需求外，还可以使用 Azure Monitor 工作簿。
+你可以自定义自己的报表以获取所需数据。 可使用 [Log Analytics](reports.md#log-analytics) 和 [Azure Monitor 工作簿](reports.md#workbooks)通过 [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) 获取报表中的数据。 通过这些解决方案，可以创建自定义查询、配置警报，并使仪表板以所需方式显示设备符合性数据。 此外，你还可以将活动日志保留在你的 Azure 存储帐户中，使用[安全信息和事件管理 (SIEM) 工具](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)将活动日志与报表集成，并将报表关联到 Azure AD 活动日志。 除了导入仪表板以满足自定义报表需求外，还可以使用 Azure Monitor 工作簿。
 
 > [!NOTE]
 > 复杂的报表功能需要 Azure 订阅。
