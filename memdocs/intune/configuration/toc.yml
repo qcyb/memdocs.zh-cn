@@ -18,8 +18,12 @@
     - name: 配置文件概述
       href: device-profile-create.md
     - name: 自定义设置
-      href: custom-settings-configure.md
-      displayName: oma-uri
+      displayName: 'oma-uri, csp'
+      items:
+        - name: 创建自定义配置文件
+          href: custom-settings-configure.md
+        - name: HoloLens 2 示例
+          href: custom-profile-hololens.md
     - name: 限制设备设置和功能
       href: device-restrictions-configure.md
       displayName: device restrictions
