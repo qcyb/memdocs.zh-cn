@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905266"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428188"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Configuration Manager Technical Preview 1802 中的功能
 
@@ -112,7 +112,7 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
    - 在“准备升级”  组中提前添加第二个“升级操作系统”  步骤。 将其命名为“升级评估”  。 指定相同的升级包，然后启用选项“不启动升级即执行 Windows 安装程序兼容性扫描”  。 启用“选项”选项卡上的“出错时继续”  。 
    - 紧跟此“升级评估”  步骤，添加“运行命令行”  步骤。 指定以下命令行：</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>在“选项”  选项卡上，添加以下条件： </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>此返回代码为 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的等效十进制数，表示不存在任何问题的成功兼容性扫描。 如果“升级评估”  步骤成功并返回此代码，则跳过此步骤。 否则，如果评估步骤返回任何其他返回代码，则此步骤的任务序列将失败，并会从 Windows 安装程序兼容性扫描中返回代码。
    - 有关详细信息，请参阅[升级操作系统](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)。
-- 如果要在此任务序列过程中将设备从 BIOS 更改为 UEFI，请参阅[在就地升级过程中从 BIOS 转换为 UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
+- 如果要在此任务序列过程中将设备从 BIOS 更改为 UEFI，请参阅[在就地升级过程中从 BIOS 转换为 UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)。
 
 如果你还有其他建议或意见，请从功能区的“主页”  选项卡发送“反馈”  。
 

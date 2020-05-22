@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703325"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429325"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>使用 Configuration Manager 将 Windows 升级到最新版本
 
@@ -85,7 +85,7 @@ ms.locfileid: "81703325"
 
   - 更改磁盘分区
   - 将系统体系结构从 x86 改为 x64
-  - 实现 UEFI。 （有关可选操作的更多信息，请参阅[在就地升级过程中从 BIOS 转换到 UEFI](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)。）
+  - 实现 UEFI。 （有关可选操作的更多信息，请参阅[在就地升级过程中从 BIOS 转换到 UEFI](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)。）
   - 修改基本操作系统语言  
 
 - 你有自定义要求，包括使用自定义基本映像、使用第三方磁盘加密或要求 WinPE 脱机操作。  

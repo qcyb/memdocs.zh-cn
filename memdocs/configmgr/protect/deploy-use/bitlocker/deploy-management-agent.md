@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075007"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428575"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -205,7 +205,7 @@ BitLocker 的 Configuration Manager 客户端处理程序可感知共同管理�
 
 要详细了解如何使用 Intune 管理 BitLocker，请参阅以下文章：
 
-- [使用 Intune 设备加密](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [使用 Intune 设备加密](../../../../intune/protect/encrypt-devices.md)
 - [Microsoft Intune 中 BitLocker 策略问题疑难解答](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>后续步骤
