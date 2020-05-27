@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/07/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 88c9b6789f4475a95201e975d3492acecde3927e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336415"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881141"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>从适用于 Windows 的公司门户应用重命名设备
 重命名设备，以便更为轻松地从其他设备识别此设备。 适用于 Windows 的公司门户应用允许重命名以下类型的连接设备：  

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b4a594575882b809edec639fb99ca3b377c401c9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b2b19f0a8791952acad3f2dd93289269ce5363b9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346919"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880665"
 ---
 # <a name="using-the-intune-company-portal-website"></a>使用 Intune 公司门户网站
 使用[公司门户网站](https://portal.manage.microsoft.com)搜索、安装和卸载学校或工作应用；以及查看、编辑、添加和删除已注册的设备。  
