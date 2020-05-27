@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2020
-ms.topic: reference
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4416e6bef4386358c964b0ed58aa568bb8c3a3a4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b754ce98dfafd6eefb9346561268db1e4b32ed3b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078152"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989854"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Microsoft Intune App SDK 概述
 Intune App SDK 可用于 iOS 和 Android，可让应用支持 Intune [应用保护策略](../apps/app-protection-policy.md)。 如果应用应用了应用保护策略，它可以由 Intune 托管，并被 Intune 识别为托管应用。 此 SDK 努力使应用开发者所需的代码更改数量降到最低。 你会发现可以在不改变应用行为的情况下启用大部分 SDK 功能。 为了增强最终用户和 IT 管理员体验，可利用 SDK 的 API 自定义应用行为以支持需要应用参与的功能。
