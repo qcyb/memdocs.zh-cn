@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 951293ff723ff0243d4068656497cbe0bca27ef9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551421"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989179"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>在 Microsoft Intune 中配置设备限制设置
 
@@ -36,13 +36,10 @@ Intune 包含设备限制策略，有助于管理员控制 Android、iOS/iPadOS�
 
 本文介绍了如何创建设备限制配置文件。 还可以查看所有适用于不同平台的可用设置。
 
-> [!NOTE]
-> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
-
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
 
     - **平台**：选择设备平台。 选项包括：  
@@ -55,19 +52,19 @@ Intune 包含设备限制策略，有助于管理员控制 Android、iOS/iPadOS�
         - **Windows 8.1 及更高版本**
         - **Windows Phone 8.1**
 
-    - **配置文件**：选择“设备限制”  。
+    - **配置文件**：选择“设备限制”。
 
-        若要为 Windows 10 协同版设备（如 Surface Hub）创建设备限制配置文件，请选择“设备限制(Windows 10 协同版)”  。
+        若要为 Windows 10 协同版设备（如 Surface Hub）创建设备限制配置文件，请选择“设备限制(Windows 10 协同版)”。
 
-4. 选择“创建”。 
-5. 在“基本信息”  中，输入以下属性：
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“iOS/iPadOS：阻止设备上的照相机”：  。
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“iOS/iPadOS：阻止设备上的照相机”：。
     - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”  。
+6. 选择“下一步”。
 
-7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
     - [Android 设备管理员](device-restrictions-android.md)
     - [Android Enterprise](device-restrictions-android-for-work.md)
@@ -79,16 +76,16 @@ Intune 包含设备限制策略，有助于管理员控制 Android、iOS/iPadOS�
     - [Windows 10 协同版](device-restrictions-windows-10-teams.md)
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-8. 选择“下一步”  。
-9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+8. 选择“下一步”。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="next-steps"></a>后续步骤
 

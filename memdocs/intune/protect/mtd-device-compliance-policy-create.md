@@ -6,8 +6,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06e975e386b0d754b03e75ffeda456a432a6dc4b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615679"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984998"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>使用 Intune 创建移动威胁防御 (MTD) 设备符合性策略
 
@@ -44,13 +44,13 @@ MTD 设备符合性策略先决条件：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “符合性策略”   > “创建策略”  。
+2. 选择“设备” > “符合性策略” > “创建策略”。
 
-3. 指定“名称”  、“说明”  ，选择“平台”  ，然后选择“设置”  部分下的“配置”  。
+3. 指定“名称”、“说明”，选择“平台”，然后选择“设置”部分下的“配置”。
 
-4. 在“符合性策略”窗格中，选择“设备运行状况”   。
+4. 在“符合性策略”窗格中，选择“设备运行状况” 。
 
-5. 在“设备运行状况”  窗格中，从“要求设备不高于设备威胁级别”  的下拉列表中选择移动威胁级别。
+5. 在“设备运行状况”窗格中，从“要求设备不高于设备威胁级别”的下拉列表中选择移动威胁级别。
 
    - **安全**：此级别是最安全的。 设备不能存在任何威胁，且仍可访问公司资源。 如果发现了任何威胁，设备都会被评估为不符合。
 
@@ -60,12 +60,7 @@ MTD 设备符合性策略先决条件：
 
    - **高**：此级别是最不安全的威胁级别。 此选项将许可所有威胁级别，且仅将移动威胁防御用作报告目的。 设备必须使用此设置激活 MTD 应用。
 
-   > [!IMPORTANT]
-   > 对于 Android 企业设备所有者，在创建并保存了某个策略后，之后便无法编辑该策略和修改威胁级别。 若要进行编辑以更改“设备运行状况”设置“要求设备处于或低于设备威胁级别”的设备威胁级别，则该编辑无法生效  。 若要更改威胁级别值，必须删除当前策略并创建用于设置所需威胁级别的新策略。
-   >
-   > 这是一个已知问题，会在未来的一个 Intune 更新中得到解决。
-
-6. 选择“确定”  两次，然后选择“创建”  以创建策略。
+6. 选择“确定”两次，然后选择“创建”以创建策略。
 
 > [!IMPORTANT]
 > 如果为 Office 365 或其他服务创建条件访问策略，将评估设备的符合性并阻止不符合设备访问公司资源，直到解决威胁。
@@ -76,9 +71,9 @@ MTD 设备符合性策略先决条件：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “符合性策略”  。
+2. 选择“设备” > “符合性策略”。
 
-3. 选择要分配给用户的策略，然后选择“分配”  。 使用可用选项包括  和排除  组以接收此策略。  
+3. 选择要分配给用户的策略，然后选择“分配”。 使用可用选项包括和排除组以接收此策略。  
 
 4. 选择“保存”以完成分配。 保存分配时，会将策略部署到所选用户，并评估其设备的符合性。
 

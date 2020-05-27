@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551386"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988824"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中创建符合性策略
 
@@ -52,23 +52,20 @@ ms.locfileid: "80551386"
   - iOS
   - macOS
   - Windows 10
-  - Windows 8。1
-  - Windows Phone 8。1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - 在 Intune 中注册设备（用于查看符合性状态）
 
 - 向一个用户设备注册，或在没有主要用户的情况下注册。 不支持向多个用户注册设备。
 
-> [!NOTE]
-> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
-
 ## <a name="create-the-policy"></a>创建策略
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “符合性策略”   > “策略”   >   “创建策略”。
+2. 选择“设备” > “符合性策略” > “策略” > “创建策略”。
 
-3. 从以下选项中选择此策略的“平台”  ：
+3. 从以下选项中选择此策略的“平台”：
    - *Android 设备管理员*
    - *Android Enterprise*
    - *iOS/iPadOS*
@@ -77,17 +74,17 @@ ms.locfileid: "80551386"
    - *Windows 8.1 及更高版本*
    - *Windows 10 及更高版本*
 
-    对于“Android Enterprise”，还可以选择一种“策略类型”   ：
-     - Android 设备所有者合规性策略 
-     - Android 工作配置文件合规性策略 
+    对于“Android Enterprise”，还可以选择一种“策略类型”：
+     - Android 设备所有者合规性策略
+     - Android 工作配置文件合规性策略
 
-    然后，选择“创建”  以打开“创建策略”  配置窗口。
+    然后，选择“创建”以打开“创建策略”配置窗口。
 
-4. 在“基本信息”  选项卡上，指定“名称”  ，以便稍后识别它们。 例如，策略名称最好为“将已越狱的 iOS/iPadOS 设备标记为不合规策略”  。
+4. 在“基本信息”选项卡上，指定“名称”，以便稍后识别它们。 例如，策略名称最好为“将已越狱的 iOS/iPadOS 设备标记为不合规策略”。
 
-   还可以选择指定“说明”  。
+   还可以选择指定“说明”。
   
-5. 在“合规性设置”  选项卡上，展开可用类别，并为策略配置设置。  下面的文章介绍了每个平台的设置：
+5. 在“合规性设置”选项卡上，展开可用类别，并为策略配置设置。  下面的文章介绍了每个平台的设置：
    - [Android 设备管理员](compliance-policy-create-android.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
@@ -95,27 +92,27 @@ ms.locfileid: "80551386"
    - [Windows Phone 8.1、Windows 8.1 及更高版本](compliance-policy-create-windows-8-1.md)
    - [Windows 10 及更高版本](compliance-policy-create-windows.md)  
 
-6. 在“位置”  选项卡上，可以根据设备位置强制实施合规性。 从现有位置进行选择。 如果尚无可用位置，请参阅[使用位置（网络围墙）](use-network-locations.md)提供的指南。
+6. 在“位置”选项卡上，可以根据设备位置强制实施合规性。 从现有位置进行选择。 如果尚无可用位置，请参阅[使用位置（网络围墙）](use-network-locations.md)提供的指南。
    > [!TIP]
-   > 位置  仅适用于 Android 设备管理员  平台。
+   > 位置仅适用于 Android 设备管理员平台。
 
-7. 在“对不合规项的操作”  选项卡上，指定一系列操作，以自动应用于不符合此合规性策略的设备。
+7. 在“对不合规项的操作”选项卡上，指定一系列操作，以自动应用于不符合此合规性策略的设备。
 
-   可以添加多个操作，并为某些操作配置计划和其他详细信息。 例如，可以将默认操作“标记不合规设备”  的计划更改为一天后执行。 然后，可以添加一个操作，以便在设备不合规时向用户发送电子邮件，向他们通知此状态。 还可以添加操作以锁定或停用仍然不合规的设备。
+   可以添加多个操作，并为某些操作配置计划和其他详细信息。 例如，可以将默认操作“标记不合规设备”的计划更改为一天后执行。 然后，可以添加一个操作，以便在设备不合规时向用户发送电子邮件，向他们通知此状态。 还可以添加操作以锁定或停用仍然不合规的设备。
 
    有关可以配置的操作的信息，请参阅[添加针对不合规设备的操作](actions-for-noncompliance.md)，包括了解如何创建通知电子邮件并发送给用户。
 
    另一个示例涉及位置的使用，可以至少向合规性策略添加一个位置。 在这种情况下，选择至少一个位置时，将应用针对不合规项的默认操作。 如果设备未连接到所选的任何位置，则被视为不合规。 可以配置计划，为用户提供宽限期（例如，一天）。
 
-8. 在“范围标记”  选项卡上，选择标记以帮助筛选特定组的策略，如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 添加设置后，还可以向符合性策略添加作用域标记。 
+8. 在“范围标记”选项卡上，选择标记以帮助筛选特定组的策略，如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`。 添加设置后，还可以向符合性策略添加作用域标记。 
 
    有关使用范围标记的信息，请参阅[使用范围标记筛选策略](../fundamentals/scope-tags.md)。
 
-9. 在“分配”  选项卡上，向组分配策略。  
+9. 在“分配”选项卡上，向组分配策略。  
 
-   选择“+ 选择要包括的组”  ，然后将策略分配给一个或多个组。 在下一步后保存策略时，策略将应用于这些组。 
+   选择“+ 选择要包括的组”，然后将策略分配给一个或多个组。 在下一步后保存策略时，策略将应用于这些组。 
 
-10. 在“查看 + 创建”选项卡中，查看设置，然后在准备好保存合规性策略时选择“创建”   。  
+10. 在“查看 + 创建”选项卡中，查看设置，然后在准备好保存合规性策略时选择“创建” 。  
 
     当策略所面向的用户或设备使用 Intune 签入时，会对其进行评估以确定是否满足合规性要求。
 
@@ -166,7 +163,7 @@ Intune 使用不同的刷新周期来检查符合性策略的更新。 如果设
 |---------|---------|
 |Unknown     |1|
 |不适用     |2|
-|符合|3|
+|合规|3|
 |InGracePeriod|4|
 |不符合|5|
 |错误|6|

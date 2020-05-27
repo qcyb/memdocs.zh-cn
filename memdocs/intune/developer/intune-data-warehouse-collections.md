@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022731"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709445"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 数据仓库收集
 
 以下 Intune 数据仓库收集提供数据仓库 API 实体的 v1.0 集合的属性、说明和示例。 
 
 ## <a name="apprevisions"></a>appRevisions
-appRevision  实体列出了应用的所有版本。
+appRevision 实体列出了应用的所有版本。
 
 |          属性          |                                      说明                                      |                示例               |
 |:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
@@ -51,7 +51,7 @@ appRevision  实体列出了应用的所有版本。
 | RowLastModifiedDateTimeUTC | 上次在数据仓库中修改此应用版本时的 UTC 日期和时间。 | 2016/11/23 0:00                      |
 
 ## <a name="apptypes"></a>appTypes
-appType  实体列出了应用的安装源。
+appType 实体列出了应用的安装源。
 
 |   属性  |        说明        |
 |:-----------:|:-------------------------:|
@@ -125,7 +125,7 @@ appType  实体列出了应用的安装源。
 |    InGracePeriod   |       设备不相容，但仍有权访问公司资源          |
 
 ## <a name="dates"></a>日期
-日期  实体表示跨多个数据仓库实体引用的日期。
+日期实体表示跨多个数据仓库实体引用的日期。
 
 |     属性    |                       说明                      |    示例    |
 |:---------------:|:------------------------------------------------------:|:-------------:|
@@ -157,7 +157,7 @@ appType  实体列出了应用的安装源。
 | deviceCategoryName | 设备类别的显示名称。                                            | 智能手机                          |
 
 ## <a name="deviceconfigurationprofiledeviceactivities"></a>deviceConfigurationProfileDeviceActivities
-DeviceConfigurationProfileDeviceActivity 实体列出每天处于成功、挂起、失败或错误状态的设备数  。 该数字反映了分配给该实体的设备配置文件。 例如，如果对于分配给某设备的所有策略，该设备均为成功状态，则当天的成功计数增加一。 如果向设备分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则实体会增加成功计数，同时让设备处于错误状态。 实体列出了过去 30 天中给定某天中处于各状态的设备数。
+DeviceConfigurationProfileDeviceActivity 实体列出每天处于成功、挂起、失败或错误状态的设备数。 该数字反映了分配给该实体的设备配置文件。 例如，如果对于分配给某设备的所有策略，该设备均为成功状态，则当天的成功计数增加一。 如果向设备分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则实体会增加成功计数，同时让设备处于错误状态。 实体列出了过去 30 天中给定某天中处于各状态的设备数。
 
 |  属性 |                                          说明                                          |  示例 |
 |:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
@@ -168,7 +168,7 @@ DeviceConfigurationProfileDeviceActivity 实体列出每天处于成功、挂起
 | Failed    | 处于失败状态的唯一设备数。                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
-DeviceConfigurationProfileUserActivity 实体列出每天处于成功、挂起、失败或错误状态的用户数  。 该数字反映了分配给该实体的设备配置文件。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 DeviceConfigurationProfileUserActivity 实体列出了过去 30 天内给定某天中处于各状态的用户数  。 
+DeviceConfigurationProfileUserActivity 实体列出每天处于成功、挂起、失败或错误状态的用户数。 该数字反映了分配给该实体的设备配置文件。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 DeviceConfigurationProfileUserActivity 实体列出了过去 30 天内给定某天中处于各状态的用户数。 
 
 | 属性  | 说明  | 示例  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
@@ -193,8 +193,10 @@ DeviceConfigurationProfileUserActivity 实体列出每天处于成功、挂起�
 | OSVersion                  | 操作系统版本。                                                                                                                                                                          |
 | JailBroken                 | 设备是否越狱或取得 root 权限。                                                                                                                                         |
 | DeviceCategoryKey          | 此设备的设备类别属性的键。                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
-DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册类型。 
+DeviceRegistrationState 实体表示由其他数据仓库收集引用的注册类型。 
 
 |           属性          |                                     说明                                     |
 |:---------------------------:|:-----------------------------------------------------------------------------------:|
@@ -211,7 +213,7 @@ DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册�
 |    Unknown                           |    未知状态                                                                                                                                                                   |
 
 ## <a name="devices"></a>设备
-设备  实体列出受管理的所有已注册设备及相应属性。
+设备实体列出受管理的所有已注册设备及相应属性。
 
 |          属性          |                                                                                       说明                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -222,7 +224,6 @@ DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册�
 | DeviceRegistrationState    | 此设备的客户端注册状态属性的键。                                                                                                                      |
 | OwnerTypeKey               | 此设备的所有者类型属性的键：企业、个人或未知。                                                                                                    |
 | EnrolledDateTime           | 设备注册的日期和时间。                                                                                                                                         |
-| EthernetMacAddress           | 此设备的唯一网络标识符。                                                                                                                                        |
 | LastSyncDateTime           | 使用 Intune 签入的上一已知设备。                                                                                                                                              |
 | ManagementAgentKey         | 与此设备关联的管理代理键。                                                                                                                             |
 | ManagementStateKey         | 与此设备关联的管理状态键，表明远程操作的最新状态或设备是否越狱/获取了 root 权限。                                                |
@@ -244,20 +245,16 @@ DeviceRegistrationState  实体表示由其他数据仓库收集引用的注册�
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | 设备受监督的状态                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | 可用存储（以字节为单位）。                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | 总存储容量（以字节为单位）。                                                                                                                                                                |
 | EncryptionState            | 设备的加密状态。                                                                                                                                                      |
 | SubscriberCarrier          | 设备的订阅者运营商                                                                                                                                                       |
 | PhoneNumber                | 设备的电话号码                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | 设备的移动电话技术                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
-| 型号                      | 设备型号。                                                                                                                                                                      |
-| Office365Version           | 设备上安装的 Office 365 版本。                                                                                                                             |
-| PhysicalMemoryInBytes      | 物理内存（以字节为单位）。                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes
-deviceType  实体表示由其他数据仓库实体引用的设备类型。 设备类型通常描述设备型号、制造商或同时包含这两项内容。
+deviceType 实体表示由其他数据仓库实体引用的设备类型。 设备类型通常描述设备型号、制造商或同时包含这两项内容。
 
 |    属性    |                                  说明                                 |
 |:--------------:|:----------------------------------------------------------------------------:|
@@ -294,7 +291,7 @@ deviceType  实体表示由其他数据仓库实体引用的设备类型。 设�
 | 255          | Unknown           | 未知设备类型                                 |
 
 ## <a name="deviceenrollmenttypes"></a>deviceEnrollmentTypes
-deviceEnrollmentType  实体表明设备的注册方式。 注册类型会捕获注册方式。 示例列出了不同的注册类型及其含义。
+deviceEnrollmentType 实体表明设备的注册方式。 注册类型会捕获注册方式。 示例列出了不同的注册类型及其含义。
 
 |         属性         |                                    说明                                    |
 |:------------------------:|:---------------------------------------------------------------------------------:|
@@ -319,7 +316,7 @@ deviceEnrollmentType  实体表明设备的注册方式。 注册类型会捕获
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | 使用设备身份验证的 Windows 10 Azure AD 联接。                                            |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
-EnrollmentActivity 实体表示设备注册活动  。
+EnrollmentActivity 实体表示设备注册活动。
 
 | 属性                      | 说明                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
@@ -333,7 +330,7 @@ EnrollmentActivity 实体表示设备注册活动  。
 | 计数                         | 符合上述分类的注册活动总数。  |
 
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
-EnrollmentEventStatus 实体表示设备注册结果  。
+EnrollmentEventStatus 实体表示设备注册结果。
 
 | 属性                   | 说明                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
@@ -349,7 +346,7 @@ EnrollmentEventStatus 实体表示设备注册结果  。
 | 不可用              | 注册状态不可用。  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
-EnrollmentFailureCategory 实体指示设备注册失败的原因  。 
+EnrollmentFailureCategory 实体指示设备注册失败的原因。 
 
 | 属性                       | 说明                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
@@ -376,7 +373,7 @@ EnrollmentFailureCategory 实体指示设备注册失败的原因  。
 | UserAbandonment                 | 最终用户放弃了注册。 （最终用户启动了加入，但未能及时完成）  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
-EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的详细原因  。  
+EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的详细原因。  
 
 | 属性                     | 说明                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
@@ -406,7 +403,7 @@ EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的�
 | APNSCertificateExpired           | 无法使用 Apple MDM Push Certificate 管理 Apple 设备。                                                                                                                            |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
-intuneManagementExtension  列出每日在每台 Windows 10 设备上的 intuneManagementExtension  运行状况。 将保留过去 60 天内的数据。
+intuneManagementExtension 列出每日在每台 Windows 10 设备上的 intuneManagementExtension 运行状况。 将保留过去 60 天内的数据。
 
 |       属性      |                          说明                          | 示例 |
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
@@ -417,7 +414,7 @@ intuneManagementExtension  列出每日在每台 Windows 10 设备上的 intuneM
 | ExtensionStateKey   | 运行状况状态的唯一标识符。                            | 2       |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
-IntuneManagementExtensionHealthState  列出 IntuneManagementExtension  的所有可能运行状况状态。
+IntuneManagementExtensionHealthState 列出 IntuneManagementExtension 的所有可能运行状况状态。
 
 |      属性     |                   说明                  | 示例 |
 |:-----------------:|:----------------------------------------------:|:-------:|
@@ -425,7 +422,7 @@ IntuneManagementExtensionHealthState  列出 IntuneManagementExtension  的所�
 | ExtensionState    | IntuneManagementExtension 的运行状况状态。 | Healthy |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
-IntuneManagementExtensionVersion  实体列出 IntuneManagementExtension  使用的所有版本。
+IntuneManagementExtensionVersion 实体列出 IntuneManagementExtension 使用的所有版本。
 
 |       属性      |                          说明                          | 示例 |
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
@@ -434,7 +431,7 @@ IntuneManagementExtensionVersion  实体列出 IntuneManagementExtension  使用
 
 ## <a name="mamapplications"></a>MamApplications
 
-MamApplication 实体列出了未在企业中注册便通过移动应用程序管理 (MAM) 托管的业务线 (LOB) 应用  。
+MamApplication 实体列出了未在企业中注册便通过移动应用程序管理 (MAM) 托管的业务线 (LOB) 应用。
 
 | 属性 | 说明 | 示例 |
 |---------|------------|--------|
@@ -449,7 +446,7 @@ MamApplication 实体列出了未在企业中注册便通过移动应用程序�
 
 ## <a name="mamapplicationinstances"></a>MamApplicationInstances
 
-MamApplicationInstance 实体将托管移动应用程序管理 (MAM) 应用列为单个实例（按每设备每用户）  。 实体中列出的所有用户和设备都受保护，因为向它们分配了至少一个 MAM 策略。
+MamApplicationInstance 实体将托管移动应用程序管理 (MAM) 应用列为单个实例（按每设备每用户）。 实体中列出的所有用户和设备都受保护，因为向它们分配了至少一个 MAM 策略。
 
 
 |          属性          |                                                                                                  说明                                                                                                  |               示例                |
@@ -473,7 +470,7 @@ MamApplicationInstance 实体将托管移动应用程序管理 (MAM) 应用列�
 
 ## <a name="mamcheckins"></a>MamCheckins
 
-MamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 应用实例后收集的数据  。 
+MamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 应用实例后收集的数据。 
 
 > [!Note]  
 > 若某个应用实例在一天中签入多次，数据仓库会将其存储为签入一次。
@@ -490,7 +487,7 @@ MamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 
-MamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（即使是越狱设备）  。
+MamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（即使是越狱设备）。
 
 | 属性 | 说明 | 示例 |
 |---------|------------|--------|
@@ -501,7 +498,7 @@ MamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（
 
 ## <a name="mamplatforms"></a>MamPlatforms
 
-MamPlatform 实体列出了安装有移动应用程序管理 (MAM) 应用的平台的名称和类型  。
+MamPlatform 实体列出了安装有移动应用程序管理 (MAM) 应用的平台的名称和类型。
 
 
 |          属性          |                                    说明                                    |                         示例                         |
@@ -512,7 +509,7 @@ MamPlatform 实体列出了安装有移动应用程序管理 (MAM) 应用的平�
 | RowLastModifiedDateTimeUtc | 上次在数据仓库中修改此平台时的 UTC 日期和时间。  |                 2016/11/23 - 中午 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
-managementAgentType  实体表示用于管理设备的代理。
+managementAgentType 实体表示用于管理设备的代理。
 
 |         属性        |                                       说明                                       |
 |:-----------------------:|:---------------------------------------------------------------------------------------:|
@@ -537,7 +534,7 @@ managementAgentType  实体表示用于管理设备的代理。
 | 64                    | GoogleCloudDevicePolicyController |  设备由 Google 的 CloudDPC 管理。                                 |
 
 ## <a name="managementstates"></a>managementStates
-ManagementState  实体提供有关设备状态的详细信息。 详细信息适用于应用远程操作、设备越狱或进行 root 的情况。
+ManagementState 实体提供有关设备状态的详细信息。 详细信息适用于应用远程操作、设备越狱或进行 root 的情况。
 
 |       属性      |                                     说明                                    |
 |:-------------------:|:----------------------------------------------------------------------------------:|
@@ -584,7 +581,7 @@ MobileAppInstallState 实体表示已分配到包含设备和/或用户的组的
 | 计数              | 总计数。                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
-ownerType  实体表明拥有设备的是公司、个人还是未知对象。
+ownerType 实体表明拥有设备的是公司、个人还是未知对象。
 
 |    属性   |                                                                                     说明                                                                                    |           示例          |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
@@ -596,7 +593,7 @@ ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 > 对于在为设备创建动态组时 Azure AD 中的 `ownerTypeName` 筛选器，需要将值 `deviceOwnership` 设置为 `Company`。 有关详细信息，请参阅[设备规则](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。 
 
 ## <a name="policies"></a>策略
-“策略”实体列出了设备配置文件、应用配置文件和符合性策略  。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。
+“策略”实体列出了设备配置文件、应用配置文件和符合性策略。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。
 
 |          属性          |                                                                       说明                                                                      |                示例               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
@@ -610,7 +607,7 @@ ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 | RowLastModifiedDateTimeUTC | 上次在数据仓库中修改策略时的 UTC 日期和时间。                                                                        | 2016/11/23 0:00                      |
 
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
-下表列出了每天处于成功、挂起、失败或错误状态的设备数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某设备的所有策略，该设备均为成功状态，则当天的成功计数增加一。 如果向设备分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则实体会增加成功计数，同时让设备处于错误状态。 policyDeviceActivity  实体列出了过去 30 天中给定某天中处于各状态的设备数。
+下表列出了每天处于成功、挂起、失败或错误状态的设备数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某设备的所有策略，该设备均为成功状态，则当天的成功计数增加一。 如果向设备分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则实体会增加成功计数，同时让设备处于错误状态。 policyDeviceActivity 实体列出了过去 30 天中给定某天中处于各状态的设备数。
 
 |  属性 |                                           说明                                           |        示例        |
 |:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
@@ -630,7 +627,7 @@ ownerType  实体表明拥有设备的是公司、个人还是未知对象。
 | PolicyPlatformTypeName | 策略平台类型的名称。              | AndroidForWork |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
-PolicyTypeActivity 列出了处于成功、挂起、失败或错误状态的总设备数  。 它列出了每天与设备配置文件、应用配置文件或符合性策略相关的这些状态。
+PolicyTypeActivity 列出了处于成功、挂起、失败或错误状态的总设备数。 它列出了每天与设备配置文件、应用配置文件或符合性策略相关的这些状态。
 
 |    属性   |                                          说明                                          |           示例           |
 |:-------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
@@ -643,7 +640,7 @@ PolicyTypeActivity 列出了处于成功、挂起、失败或错误状态的总�
 | Failed        | 处于失败状态的唯一设备数。                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
-PolicyType 实体列出了设备配置文件、应用配置文件和符合性策略的类型  。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。
+PolicyType 实体列出了设备配置文件、应用配置文件和符合性策略的类型。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。
 
 |    属性    |                       说明                      |            示例            |
 |:--------------:|:------------------------------------------------------:|:-----------------------------:|
@@ -652,7 +649,7 @@ PolicyType 实体列出了设备配置文件、应用配置文件和符合性策
 | PolicyTypeName | 策略类型名称。                               | Windows 10 符合性策略。 |
 
 ## <a name="policyuseractivities"></a>policyUserActivities
-下表列出了每天处于成功、挂起、失败或错误状态的用户数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 PolicyUserActivity  实体列出了过去 30 天中给定某天中处于各状态的用户数。
+下表列出了每天处于成功、挂起、失败或错误状态的用户数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 PolicyUserActivity 实体列出了过去 30 天中给定某天中处于各状态的用户数。
 
 |  属性 |                                          说明                                          |       示例       |
 |:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
@@ -663,7 +660,7 @@ PolicyType 实体列出了设备配置文件、应用配置文件和符合性策
 | 错误     | 处于错误状态的唯一设备数。                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
-termsAndConditions  实体表示给定条款和条件(T&C) 策略的元数据和内容。 当用户第一次尝试注册 Intune 并随后对管理员要求重新接受的位置进行编辑时，将向其显示 T&C 策略的内容。 它们使管理员能够就用户必须同意的规定进行通信，以使设备注册到 Intune。
+termsAndConditions 实体表示给定条款和条件(T&C) 策略的元数据和内容。 当用户第一次尝试注册 Intune 并随后对管理员要求重新接受的位置进行编辑时，将向其显示 T&C 策略的内容。 它们使管理员能够就用户必须同意的规定进行通信，以使设备注册到 Intune。
 
 |    属性        |    说明    |    示例        |
 |----------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
@@ -674,13 +671,13 @@ termsAndConditions  实体表示给定条款和条件(T&C) 策略的元数据和
 |    description    |    这些条款和条件的说明。     |         |
 |    title    |    这些条款和条件的标题。     |    设备管理公司策略        |
 |    summaryOfTerms    |    向用户提供的条款的摘要。     |    我同意条款和条件。    |
-|    termsAndConditionsBodyText    |    这些条款和条件文本的正文。       |    “设备加密”：强制执行 6 位 PIN     |
+|    termsAndConditionsBodyText    |    这些条款和条件文本的正文。       |    “设备加密”：强制执行 6 位 PIN    |
 |    isDeleted    |    该值是否被删除的 True 或 False 值。     |    False    |
 |    startDateInclusiveUTC    |    这些条款和条件的开始日期。     |    2018/8/23 4:01:34 AM    |
 |    endDateEclusiveUTC    |    这些条款和条件的结束日期。     |    9999/12/31 12:00:00 AM    |
 
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
-UserDeviceAssociation 实体包含组织中的用户设备关联  。
+UserDeviceAssociation 实体包含组织中的用户设备关联。
 
 |        名称        |                                             说明                                            |     示例     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
@@ -691,9 +688,9 @@ UserDeviceAssociation 实体包含组织中的用户设备关联  。
 | EndedDateTimeUTC   | IsDeleted 更改为 True 时的 UTC 日期和时间。                                               | 2017/6/23 0:00  |
 
 ## <a name="users"></a>用户
-用户  实体列出了企业中分配有许可证的所有 Azure Active Directory (Azure AD) 用户。
+用户实体列出了企业中分配有许可证的所有 Azure Active Directory (Azure AD) 用户。
 
-用户  实体集合包含用户数据。 这些记录包含数据收集期间的用户状态（即使用户已被删除）。 例如，在上个月期间，可能将某个用户添加到 Intune 然后又将其删除。 尽管在提交报告时该用户已不存在，但在上个月的数据中仍然会显示该用户及其状态。 可以创建一个报告，该报告将显示用户的历史记录在你的数据中存在的持续时间。
+用户实体集合包含用户数据。 这些记录包含数据收集期间的用户状态（即使用户已被删除）。 例如，在上个月期间，可能将某个用户添加到 Intune 然后又将其删除。 尽管在提交报告时该用户已不存在，但在上个月的数据中仍然会显示该用户及其状态。 可以创建一个报告，该报告将显示用户的历史记录在你的数据中存在的持续时间。
 
 |          属性          |                                                                                                           说明                                                                                                          |                示例               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
@@ -707,7 +704,7 @@ UserDeviceAssociation 实体包含组织中的用户设备关联  。
 | RowLastModifiedDateTimeUTC | 上次在数据仓库中修改记录时的 UTC 日期和时间                                                                                                                                                 | 2016/11/23 0:00                      |
 
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
-userTermsAndConditionsAcceptance  实体表示给定用户给定的条款和条件 (T&C) 策略的接受状态。 用户必须接受最新版本的条款才能继续访问公司门户。
+userTermsAndConditionsAcceptance 实体表示给定用户给定的条款和条件 (T&C) 策略的接受状态。 用户必须接受最新版本的条款才能继续访问公司门户。
 
 |    属性    |    说明    |    示例    |
 |-------------------------------|--------------------------------------------------------------------------------|----------------------------|
@@ -718,7 +715,7 @@ userTermsAndConditionsAcceptance  实体表示给定用户给定的条款和条�
 |    lastModifiedDateTimeUTC    |    上次修改此项的时间。     |    2018/8/23 4:01:34 AM    |
 
 ## <a name="vppprogramtypes"></a>vppProgramTypes 
-vppProgramType  实体列出了应用的可能 VPP 计划类型。
+vppProgramType 实体列出了应用的可能 VPP 计划类型。
 
 |      属性      |          说明         |
 |:------------------:|:----------------------------:|

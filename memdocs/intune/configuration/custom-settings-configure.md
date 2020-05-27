@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551365"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990099"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>使用 Intune 中的自定义设置创建配置文件
 
@@ -32,13 +32,10 @@ Microsoft Intune 含有许多内置设置，用于控制设备上的不同功能
 
 本文介绍如何为 Android 设备管理员、Android Enterprise、iOS/iPadOS、macOS 和 Windows 创建自定义配置文件。 还可以查看所有适用于不同平台的可用设置。
 
-> [!NOTE]
-> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
-
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
 
     - **平台**：选择设备平台。 选项包括：  
@@ -50,17 +47,17 @@ Microsoft Intune 含有许多内置设置，用于控制设备上的不同功能
         - **Windows 10 及更高版本**
         - **Windows Phone 8.1**
 
-    - **配置文件**：选择“自定义”  。
+    - **配置文件**：选择“自定义”。
 
-4. 选择“创建”。 
-5. 在“基本信息”  中，输入以下属性：
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，将策略名称命名为“Windows 10:  自定义启用 AllowVPNOverCellular 自定义 OMA-URI 的配置文件。
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，将策略名称命名为“Windows 10: 自定义启用 AllowVPNOverCellular 自定义 OMA-URI 的配置文件。
     - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”  。
+6. 选择“下一步”。
 
-7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
     - [Android 设备管理员](custom-settings-android.md)
     - [Android Enterprise](custom-settings-android-for-work.md)
@@ -70,20 +67,20 @@ Microsoft Intune 含有许多内置设置，用于控制设备上的不同功能
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-8. 选择“下一步”  。
-9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+8. 选择“下一步”。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="example"></a>示例
 
-下面的示例中启用了 Connectivity/AllowVPNOverCellular 设置  。 此设置可允许 Windows 10 设备在处于移动电话网络中时打开 VPN 连接。
+下面的示例中启用了 Connectivity/AllowVPNOverCellular 设置。 此设置可允许 Windows 10 设备在处于移动电话网络中时打开 VPN 连接。
 
 > [!div class="mx-imgBorder"]
 > ![Intune 和 Endpoint Manager 中包含 VPN 设置的自定义策略的示例](./media/custom-settings-configure/custom-policy-example.png)
