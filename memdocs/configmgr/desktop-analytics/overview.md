@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 23af311a78058240e6ebf8a2ca3c9e0fcdaf711f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: e9031b09fa6749d619c8048e70331a6f7c67d472
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268549"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633342"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -74,7 +74,7 @@ ms.locfileid: "83268549"
     > [!Important]  
     > 桌面分析当前要求在 Azure AD 租户中部署 Office 365 服务。 将来不必这样做。
 
-    - 设置工作区的工作区所有者权限，以及以下角色   ：  
+    - 设置工作区的工作区所有者权限，以及以下角色 ：  
 
       - [**桌面分析管理员**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色。
 
@@ -84,7 +84,7 @@ ms.locfileid: "83268549"
 
     - 要在载入后访问门户，你需要：
 
-      - 在其中创建工作区的资源组上的[桌面分析管理员  ](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色和[所有者  ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[参与者  ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)权限。
+      - 在其中创建工作区的资源组上的[桌面分析管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色和[所有者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[参与者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)权限。
 
 - 包含更新汇总 (4500571) 的 Configuration Manager 版本 1902 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](connect-configmgr.md#bkmk_hotfix)。  
 
@@ -94,7 +94,7 @@ ms.locfileid: "83268549"
     > 桌面分析支持多个 Configuration Manager 层次结构向一个 Azure AD 租户报告。<!-- 4814075 --> 如果你的环境中有多个层次结构，则有以下选项：
     >
     > - 使用不同的商业 ID 和 Azure AD 租户。
-    > - 将这两个层次结构配置为使用相同的 商业 ID 来共享 Azure AD 租户和桌面分析实例。
+    > - 将这两个层次结构配置为使用相同的 商业 ID 来共享 Azure AD 租户和桌面分析实例。 使用[不同的应用](connect-configmgr.md#bkmk_connect)连接每个层次结构。 断开层次结构的连接后，门户可能需要 30 分钟才能反映出更改。 
 
 - 运行 Windows 7、Windows 8.1 或 Windows 10 的设备  
 

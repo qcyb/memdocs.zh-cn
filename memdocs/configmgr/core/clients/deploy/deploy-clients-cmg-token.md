@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383714"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709378"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>为云管理网关进行基于令牌的身份验证
 
@@ -25,7 +25,7 @@ ms.locfileid: "83383714"
 
 云管理网关 (CMG) 支持许多类型的客户端，但是即使使用[增强的 HTTP](../../plan-design/hierarchy/enhanced-http.md)，这些客户端也需要[客户端身份验证证书](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway)。 如果客户端不经常连接到内部网络、无法加入 Azure Active Directory (Azure AD) 且无法安装 PKI 颁发的证书的基于 Internet，则在其上预配此证书要求可能非常困难。
 
-从版本 2002 开始，Configuration Manager 通过以下方法扩展其设备支持：
+为了克服这些挑战，从版本 2002 开始，Configuration Manager 通过以下方法扩展其设备支持：
 
 - 在内部网络上注册以获得唯一令牌
 
@@ -101,7 +101,7 @@ Configuration Manager 客户端与管理点一起管理此令牌，因此不存�
 
 与 `/new` 参数结合使用，用于指定令牌的令牌有效期。 指定以分钟为单位的整数值。 默认值为 4,320（三天）。 最大值为 10,080（7 天）。
 
-示例：`BulkRegistrationTokenTool.exe /lifetime:4320`
+示例：`BulkRegistrationTokenTool.exe /lifetime 4320`
 
 ## <a name="bulk-registration-token-management"></a>批量注册令牌管理
 

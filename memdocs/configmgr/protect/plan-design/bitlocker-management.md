@@ -10,16 +10,16 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 460c9dd503861ba9f45e85f471bb1cb1274754a0
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782105"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764112"
 ---
 # <a name="plan-for-bitlocker-management"></a>规划 BitLocker 管理
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!-- 3601034 -->
 
@@ -31,7 +31,7 @@ ms.locfileid: "82782105"
 更多详细信息，请参阅 [BitLocker 概述](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)。
 
 > [!TIP]
-> 若要使用 Microsoft Endpoint Manager 云服务管理共同管理的 Windows 10 设备上的加密，请将 [Endpoint Protection 工作负载](../../comanage/workloads.md#endpoint-protection)切换为 Intune  。 有关使用 Intune 的详细信息，请参阅 [Windows 加密](/intune/protect/endpoint-protection-windows-10#windows-encryption)。
+> 若要使用 Microsoft Endpoint Manager 云服务管理共同管理的 Windows 10 设备上的加密，请将 [Endpoint Protection 工作负载](../../comanage/workloads.md#endpoint-protection)切换为 Intune。 有关使用 Intune 的详细信息，请参阅 [Windows 加密](/intune/protect/endpoint-protection-windows-10#windows-encryption)。
 
 ## <a name="features"></a>功能
 
@@ -72,7 +72,7 @@ Configuration Manager 为 BitLocker 驱动器加密提供以下管理功能：
 
 ## <a name="prerequisites"></a>必备条件
 
-- 若要创建 BitLocker 管理策略，需要 Configuration Manager 中的“完全权限管理员”角色  。
+- 若要创建 BitLocker 管理策略，需要 Configuration Manager 中的“完全权限管理员”角色。
 
 - BitLocker 恢复服务需要 HTTPS 连接才能加密网络中从 Configuration Manager 客户端到管理点的恢复密钥。 共有两个选项：
 
@@ -85,7 +85,7 @@ Configuration Manager 为 BitLocker 驱动器加密提供以下管理功能：
 - 若要使用 BitLocker 管理报表，请安装 Reporting Services 点站点系统角色。 有关详细信息，请参阅[配置报表](../../core/servers/manage/configuring-reporting.md)。
 
     > [!NOTE]
-    > 若要使“恢复审核报表”在 Administration and Monitoring 网站中正常运行，请仅在主站点使用 Reporting Services 点  。
+    > 若要使“恢复审核报表”在 Administration and Monitoring 网站中正常运行，请仅在主站点使用 Reporting Services 点。
 
 - 若要使用自助门户或 Administration and Monitoring 网站，需要运行 IIS 的 Windows 服务器。 可以重用 Configuration Manager 站点系统，或使用连接到站点数据库服务器的独立 web 服务器。 使用[站点系统服务器支持的 OS 版本](../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)。
 
@@ -94,12 +94,12 @@ Configuration Manager 为 BitLocker 驱动器加密提供以下管理功能：
 
 - 在将托管自助门户的 Web 服务器上，安装 [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4)。
 
-- 运行门户安装程序脚本的用户帐户需要站点数据库服务器上的 SQL sysadmin 权限  。 在安装过程中，该脚本将设置 Web 服务器计算机帐户的登录名、用户和 SQL 角色权限。 安装自助门户和 Administration and Monitoring 网站后，可以从系统管理员角色中删除此用户帐户。
+- 运行门户安装程序脚本的用户帐户需要站点数据库服务器上的 SQL sysadmin 权限。 在安装过程中，该脚本将设置 Web 服务器计算机帐户的登录名、用户和 SQL 角色权限。 安装自助门户和 Administration and Monitoring 网站后，可以从系统管理员角色中删除此用户帐户。
 
 - 虚拟机 (VM) 或服务器操作系统不支持 BitLocker 管理。 出于此原因，一些功能可能无法在虚拟机或服务器操作系统上按预期运行。 例如，在虚拟机上，BitLocker 管理不会在虚拟机的固定驱动器上启动加密。 虚拟机中的其他固定驱动器可能会显示为“符合”，即使它们未加密，也不例外。
 
 > [!TIP]
-> 默认情况下，“启用 BitLocker”任务序列步骤仅加密驱动器上的已用空间   。 BitLocker 管理可使用“完整磁盘”加密  。 将此任务序列步骤配置为启用“使用完整磁盘加密”选项  。 有关详细信息，请参阅[任务序列步骤 - 启用 BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker)。
+> 默认情况下，“启用 BitLocker”任务序列步骤仅加密驱动器上的已用空间。 BitLocker 管理可使用“完整磁盘”加密。 将此任务序列步骤配置为启用“使用完整磁盘加密”选项。 有关详细信息，请参阅[任务序列步骤 - 启用 BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker)。
 
 ## <a name="next-steps"></a>后续步骤
 

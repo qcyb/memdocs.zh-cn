@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268175"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551598"
 ---
 <!-- 
 - Feature 1357546
@@ -107,11 +107,12 @@ ms.locfileid: "83268175"
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
 
-在 2020 年 2 月 21 日至 3 月 19 日期间新增或更新的支持文章。
+2020 年 3 月 20 日至 5 月 15 日期间的新增或更新的支持文章。
 
-- [KB 4552430 第三方更新类别同步在 Configuration Manager 中重置为默认值](https://support.microsoft.com/help/4552430)
-- [KB 4551013 无法在 Configuration Manager 中下载修订的第三方更新](https://support.microsoft.com/help/4551013)
-- [KB 4552181 内容分发在 Configuration Manager Current Branch 版本 1910 中暂停](https://support.microsoft.com/help/4552181)
-- [KB 4550023 Configuration Manager 就地升级任务序列未在 Windows 10 就地升级回滚后继续](https://support.microsoft.com/help/4550023)
+- [KB 4561494 在 Configuration Manager 中创建 Microsoft Edge 应用程序失败](https://support.microsoft.com/help/4561494)
+- [KB 4551059 远程 Configuration Manager 控制台每 10 分钟挂起 20 秒](https://support.microsoft.com/help/4551059)
+- [KB 4556203 Microsoft Endpoint Configuration Manager Current Branch（版本 2002）的更改摘要](https://support.microsoft.com/help/4556203)
+- [KB 4553501 Microsoft Endpoint Configuration Manager 版本 2002（早期更新通道）的更新](https://support.microsoft.com/help/4553501)
+- [KB 4561945 服务连接工具下载 ConfigMgr.AdminUIContent.cab 文件时出现“基础连接已关闭”错误](https://support.microsoft.com/help/4561945)
 
 要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 Microsoft Endpoint Configuration Manager。  

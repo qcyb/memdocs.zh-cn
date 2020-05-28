@@ -2,7 +2,7 @@
 title: 辅助功能
 titleSuffix: Configuration Manager
 description: 了解使 Configuration Manager 可供所有人访问的功能。
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,17 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906117"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556024"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager 的辅助功能
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 
 Configuration Manager 包含可供所有人访问的功能。
@@ -45,17 +46,25 @@ Configuration Manager 包含可供所有人访问的功能。
 |Ctrl + 4|  管理|
 
 
-### <a name="other-keyboard-shortcuts"></a>其他键盘快捷方式
+### <a name="other-console-shortcuts"></a>其他控制台快捷方式
 
 |键盘快捷方式|  目的|
 |--------|--------|  
 |Ctrl + M|将焦点设置在主（中心）窗格中。|
 |Ctrl + T|将焦点设置到导航窗格中的顶级节点。 如果焦点已在此窗格中，则将焦点设置到你访问的最后一个节点。|
 |Ctrl + I|将焦点设置到功能区下方的痕迹导航栏中。|
-|Ctrl + L|将焦点设置到“搜索”  字段中（可用时）。|
+|Ctrl + L|将焦点设置到“搜索”字段中（可用时）。|
 |Ctrl + D|将焦点设置到细节窗格中（可用时）。|
 |Alt     |将焦点移入和移出功能区。|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> CMPivot 快捷方式
+
+大部分 [Web 浏览器键盘快捷方式](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options)都可在 CMPivot 中使用。
+
+|键盘快捷方式|目的|
+|--------|--------|  
+|Ctrl + 1|将焦点设置在第一个选项卡上。|
+|Alt + &lt;|返回到地址|
 
 
 ## <a name="other-accessibility-features"></a>其他辅助功能
@@ -85,7 +94,7 @@ Configuration Manager 包含可供所有人访问的功能。
 ## <a name="see-also"></a>另请参阅
 
 有关导航 Configuration Manager 用户界面的基础知识的详细信息，请参阅以下文章：
-- [使用 Configuration Manager 控制台](../servers/manage/admin-console.md)  
+- [使用 Configuration Manager 控制台](../servers/manage/admin-console.md)
 - [软件中心用户指导](software-center.md)
 
 > [!NOTE]  

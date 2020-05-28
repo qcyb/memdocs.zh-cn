@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691255"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764044"
 ---
 # <a name="conditional-access-with-co-management"></a>启用共同管理的条件访问
 
@@ -37,7 +37,7 @@ ms.locfileid: "81691255"
 
     - 此评估在出现安全漏洞之后基于事件执行  
 
-Microsoft 公司副总裁 Brad Anderson 在 Ignite 2018主题演讲期间通过现场演示深入探讨了条件访问。 
+Microsoft 公司副总裁 Brad Anderson 在 Ignite 2018 主题演讲期间通过现场演示深入探讨了条件访问。 
 
 > [!VIDEO https://www.youtube.com/embed/7tDbUhVCX_I?start=1071]
 
@@ -98,21 +98,21 @@ Intune 还可与 Cisco ISE、Aruba Clear Pass 和 Citrix NetScaler 等合作伙�
 
 由于条件访问是企业移动性 + 安全性 (EMS) 的核心部分，因此，不需要本地设置或体系结构。 使用 Intune 和 Azure Active Directory (Azure AD)，可以在云中快速配置条件访问。 如果目前使用的是 Configuration Manager，可以通过共同管理轻松地将环境扩展到云，并立即开始使用。
 
-有关 ATP 集成的更多信息，请参阅以下博客文章：[Microsoft Defender ATP 设备风险评分暴露新的网络攻击，推动条件访问以保护网络](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/)。 这篇文章详细介绍了一个高级黑客组织如何使用从未见过的工具。 Microsoft 云检测到攻击并加以阻止，因为目标用户使用了条件访问。 入侵激活了设备基于风险的条件访问策略。 虽然攻击者已经在网络中建立了立足点，但该策略会自动限制受攻击的计算机访问由 Azure AD 管理的组织服务和数据。
+有关 ATP 集成的详细信息，请参阅以下博客文章：[Microsoft Defender ATP 设备风险评分暴露新的网络攻击，推动条件访问以保护网络](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/)。 这篇文章详细介绍了一个高级黑客组织如何使用从未见过的工具。 Microsoft 云检测到攻击并加以阻止，因为目标用户使用了条件访问。 入侵激活了设备基于风险的条件访问策略。 虽然攻击者已经在网络中建立了立足点，但该策略会自动限制受攻击的计算机访问由 Azure AD 管理的组织服务和数据。
 
 
 
 ## <a name="configure"></a>用户密码重置策略
 
-[启用共同管理](how-to-enable.md)后，可以轻松使用条件访问。 它需要将符合性策略  工作负载移至 Intune。 有关详细信息，请参阅[如何将 Configuration Manager 工作负载切换为 Intune](how-to-switch-workloads.md)。 
+[启用共同管理](how-to-enable.md)后，可以轻松使用条件访问。 它需要将符合性策略工作负载移至 Intune。 有关详细信息，请参阅[如何将 Configuration Manager 工作负载切换为 Intune](how-to-switch-workloads.md)。 
 
 有关使用条件访问的详细信息，请参阅以下文章： 
 
-- [Azure AD 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Azure AD 中的条件访问](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Intune 设备符合性策略](https://docs.microsoft.com/intune/device-compliance)  
 
-- [Intune 基于应用的条件访问](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [基于应用的 Intune 条件访问](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
 > 条件访问功能对于已联接混合 Azure AD 的设备是现成可用的。 这些功能包括多重身份验证和混合 Azure AD 联接访问控制。 具有此特性是因为它们基于 Azure AD 属性。 若要利用 Intune 和 Configuration Manager 中基于配置的评估，请启用共同管理。 通过此配置，可直接从 Intune 对符合要求的设备实现访问控制。 它还提供 Intune 的符合性策略评估功能。  

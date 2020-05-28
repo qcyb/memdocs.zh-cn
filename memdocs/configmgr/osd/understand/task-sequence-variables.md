@@ -10,18 +10,18 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782106"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429835"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
-本文是按字母顺序对所有可用变量的引用。 使用浏览器的查找  功能（通常使用 CTRL   + F  ）查找特定变量。 如果变量特定于特定步骤，会对此进行说明。 有关[任务序列步骤](task-sequence-steps.md)的文章包括特定于每个步骤的变量列表。
+本文是按字母顺序对所有可用变量的引用。 使用浏览器的查找功能（通常使用 CTRL + F）查找特定变量。 如果变量特定于特定步骤，会对此进行说明。 有关[任务序列步骤](task-sequence-steps.md)的文章包括特定于每个步骤的变量列表。
 
 有关详细信息，请参阅[使用任务序列变量](using-task-sequence-variables.md)。
 
@@ -37,7 +37,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_osdmigrateusmtpackageid"></a><a name="OSDMigrateUsmtPackageID"></a> _OSDMigrateUsmtPackageID
 
-适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。 
+适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。
 
 (input)
 
@@ -45,7 +45,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_osdmigrateusmtrestorepackageid"></a><a name="OSDMigrateUsmtRestorePackageID"></a> _OSDMigrateUsmtRestorePackageID
 
-适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。 
+适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。
 
 (input)
 
@@ -61,7 +61,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsassettag"></a><a name="SMSTSAssetTag"></a> _SMSTSAssetTag
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机的资产标记。
 
@@ -100,7 +100,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsdefaultgateways"></a><a name="SMSTSDefaultGateways"></a> _SMSTSDefaultGateways
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机使用的默认网关。
 
@@ -114,13 +114,13 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a> _SMSTSIPAddresses
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机使用的 IP 地址。
 
 ### <a name="_smstslastactionname"></a><a name="SMSTSLastActionName"></a> _SMSTSLastActionName
 
-存储运行的最后一个操作的名称。 此变量与 _SMSTSLastActionRetCode 相关  。 任务序列将这些值记录到 smsts.log 文件中。 对任务序列进行故障排除时，此变量十分有用。 当步骤失败时，自定义脚本可以包含步骤名称和返回代码。
+存储运行的最后一个操作的名称。 此变量与 _SMSTSLastActionRetCode 相关。 任务序列将这些值记录到 smsts.log 文件中。 对任务序列进行故障排除时，此变量十分有用。 当步骤失败时，自定义脚本可以包含步骤名称和返回代码。
 
 ### <a name="_smstslastactionretcode"></a><a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode
 
@@ -136,7 +136,7 @@ ms.locfileid: "82782106"
 
 - 如果最后一个步骤失败，此变量为 `false`。  
 
-- 如果由于该步骤被禁用或相关的条件被评估为 false  而导致任务序列跳过最后一个操作，则不会重置此变量。 它仍保留之前操作的值。  
+- 如果由于该步骤被禁用或相关的条件被评估为 false 而导致任务序列跳过最后一个操作，则不会重置此变量。 它仍保留之前操作的值。  
 
 ### <a name="_smstslastcontentdownloadlocation"></a><a name="SMSTSLastContentDownloadLocation"></a> _SMSTSLastContentDownloadLocation
 
@@ -161,7 +161,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsmacaddresses"></a><a name="SMSTSMacAddresses"></a> _SMSTSMacAddresses
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机使用的 MAC 地址。
 
@@ -171,7 +171,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsmake"></a><a name="SMSTSMake"></a> _SMSTSMake
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机的品牌。
 
@@ -185,7 +185,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsmodel"></a><a name="SMSTSModel"></a> _SMSTSModel
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机的型号。
 
@@ -203,7 +203,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsosupgradeactionreturncode"></a><a name="SMSTSOSUpgradeActionReturnCode"></a> _SMSTSOSUpgradeActionReturnCode
 
-适用于[升级操作系统](task-sequence-steps.md#BKMK_UpgradeOS)步骤。 
+适用于[升级操作系统](task-sequence-steps.md#BKMK_UpgradeOS)步骤。
 
 存储 Windows 安装程序返回的用于指示成功或失败的退出代码值。 此变量可与 `/Compat` 命令行选项结合使用。
 
@@ -233,7 +233,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsserialnumber"></a><a name="SMSTSSerialNumber"></a> _SMSTSSerialNumber
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机的序列号。
 
@@ -257,7 +257,7 @@ ms.locfileid: "82782106"
 
 #### <a name="example"></a>示例
 
-对于时区东部时间（美国和加拿大）  ：
+对于时区东部时间（美国和加拿大）：
 
 `300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time`
 
@@ -288,7 +288,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a> _SMSTSUUID
 
-适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。 
+适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
 指定计算机的 UUID。
 
@@ -298,87 +298,87 @@ ms.locfileid: "82782106"
 
 ### <a name="_ts_crmemory"></a><a name="TSCRMEMORY"></a> _TS_CRMEMORY
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“最小内存(MB)”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“最小内存(MB)”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a> _TS_CRSPEED
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“最小处理器速度(MHz)”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“最小处理器速度(MHz)”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a> _TS_CRDISK
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“最小可用磁盘空间(MB)”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“最小可用磁盘空间(MB)”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a> _TS_CROSTYPE
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“要刷新的当前 OS 为”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“要刷新的当前 OS 为”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crarch"></a><a name="TSCRARCH"></a> _TS_CRARCH
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“当前 OS 的体系结构”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“当前 OS 的体系结构”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a> _TS_CRMINOSVER
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“最低 OS 版本”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“最低 OS 版本”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a> _TS_CRMAXOSVER
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“最高 OS 版本”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“最高 OS 版本”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a> _TS_CRCLIENTMINVER
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“最低客户端版本”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“最低客户端版本”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a> _TS_CROSLANGUAGE
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“当前 OS 的语言”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“当前 OS 的语言”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a> _TS_CRACPOWER
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“交流电源已接通”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“交流电源已接通”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a> _TS_CRNETWORK
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“网络适配器已连接”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“网络适配器已连接”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 
-从版本 2002 开始  <!--6005561-->  
-适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤  。
+从版本 2002 开始 <!--6005561-->  
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
-这是一个只读变量，用于指示“网络适配器不是无线网络”检查返回的是 true (`1`) 还是 false (`0`)  。 如果未启用该检查，此只读变量的值将为空。
+这是一个只读变量，用于指示“网络适配器不是无线网络”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a> _TSAppInstallStatus
 
@@ -394,7 +394,7 @@ ms.locfileid: "82782106"
 
 ### <a name="_tssecureboot"></a><a name="TSSecureBoot"></a> _TSSecureBoot
 
-从版本 2002 开始  <!--5842295-->  
+从版本 2002 开始 <!--5842295-->  
 
 使用此变量可确定启用了 UEFI 的设备上安全启动的状态。 变量可以具有下列值之一：
 
@@ -404,15 +404,15 @@ ms.locfileid: "82782106"
 
 ### <a name="osdadapter"></a><a name="OSDAdapter"></a> OSDAdapter
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
-此任务序列变量是一个数组  变量。 数组中的每个元素都代表计算机上单个网络适配器的设置。 通过将数组变量名称与基于零的网络适配器下标及属性名称组合，访问每个适配器的设置。
+此任务序列变量是一个数组变量。 数组中的每个元素都代表计算机上单个网络适配器的设置。 通过将数组变量名称与基于零的网络适配器下标及属性名称组合，访问每个适配器的设置。
 
-如果应用网络设置步骤配置多个网络适配器，则使用变量名称中的下标 1定义第二个  网络适配器的属性  。 例如：OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList 和OSDAdapter1DNSDomain。
+如果应用网络设置步骤配置多个网络适配器，则使用变量名称中的下标 1定义第二个网络适配器的属性。 例如：OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList 和OSDAdapter1DNSDomain。
 
-以下变量名称可用于为将由此步骤配置的第一个  网络适配器定义属性：
+以下变量名称可用于为将由此步骤配置的第一个网络适配器定义属性：
 
 #### <a name="osdadapter0enabledhcp"></a>OSDAdapter0EnableDHCP
 
@@ -422,15 +422,15 @@ ms.locfileid: "82782106"
 
 #### <a name="osdadapter0ipaddresslist"></a>OSDAdapter0IPAddressList
 
-以逗号分隔的适配器 IP 地址列表。 除非“EnableDHCP”  设置为 `false`，否则将忽略此属性。 此设置是必需的。
+以逗号分隔的适配器 IP 地址列表。 除非“EnableDHCP”设置为 `false`，否则将忽略此属性。 此设置是必需的。
 
 #### <a name="osdadapter0subnetmask"></a>OSDAdapter0SubnetMask
 
-以逗号分隔的子网掩码列表。 除非“EnableDHCP”  设置为 `false`，否则将忽略此属性。 此设置是必需的。
+以逗号分隔的子网掩码列表。 除非“EnableDHCP”设置为 `false`，否则将忽略此属性。 此设置是必需的。
 
 #### <a name="osdadapter0gateways"></a>OSDAdapter0Gateways
 
-以逗号分隔的 IP 网关地址列表。 除非“EnableDHCP”  设置为 `false`，否则将忽略此属性。 此设置是必需的。
+以逗号分隔的 IP 网关地址列表。 除非“EnableDHCP”设置为 `false`，否则将忽略此属性。 此设置是必需的。
 
 #### <a name="osdadapter0dnsdomain"></a>OSDAdapter0DNSDomain
 
@@ -454,7 +454,7 @@ ms.locfileid: "82782106"
 
 #### <a name="osdadapter0ipprotocolfilterlist"></a>OSDAdapter0IPProtocolFilterList
 
-以逗号分隔的协议列表，这些协议被允许在 IP 的上层运行。 如果“EnableIPProtocolFiltering”  设置为 `false`，将忽略此属性。
+以逗号分隔的协议列表，这些协议被允许在 IP 的上层运行。 如果“EnableIPProtocolFiltering”设置为 `false`，将忽略此属性。
 
 #### <a name="osdadapter0enabletcpfiltering"></a>OSDAdapter0EnableTCPFiltering
 
@@ -462,7 +462,7 @@ ms.locfileid: "82782106"
 
 #### <a name="osdadapter0tcpfilterportlist"></a>OSDAdapter0TCPFilterPortList
 
-以逗号分隔的端口列表，这些端口将被授予对 TCP 的访问权限。 如果“EnableTCPFiltering”  设置为 `false`，将忽略此属性。
+以逗号分隔的端口列表，这些端口将被授予对 TCP 的访问权限。 如果“EnableTCPFiltering”设置为 `false`，将忽略此属性。
 
 #### <a name="osdadapter0tcpipnetbiosoptions"></a>OSDAdapter0TcpipNetbiosOptions
 
@@ -478,7 +478,7 @@ TCP/IP 上层的 NetBIOS 选项。 可能的值如下：
 
 #### <a name="osdadapter0winsserverlist"></a>OSDAdapter0WINSServerList
 
-以逗号分隔的 WINS 服务器 IP 地址列表。 除非“EnableWINS”  设置为 `true`，否则将忽略此属性。
+以逗号分隔的 WINS 服务器 IP 地址列表。 除非“EnableWINS”设置为 `true`，否则将忽略此属性。
 
 #### <a name="osdadapter0macaddress"></a>OSDAdapter0MacAddress
 
@@ -494,28 +494,28 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 #### <a name="example"></a>示例
 
-- OSDAdapterCount   = `1`  
-- OSDAdapter0EnableDHCP   = `FALSE`  
-- OSDAdapter0IPAddressList   = `192.168.0.40`  
-- OSDAdapter0SubnetMask   = `255.255.255.0`  
-- OSDAdapter0Gateways   = `192.168.0.1`  
-- OSDAdapter0DNSSuffix   = `contoso.com`  
+- OSDAdapterCount = `1`  
+- OSDAdapter0EnableDHCP = `FALSE`  
+- OSDAdapter0IPAddressList = `192.168.0.40`  
+- OSDAdapter0SubnetMask = `255.255.255.0`  
+- OSDAdapter0Gateways = `192.168.0.1`  
+- OSDAdapter0DNSSuffix = `contoso.com`  
 
 ### <a name="osdadaptercount"></a><a name="OSDAdapterCount"></a> OSDAdapterCount
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
-指定目标计算机上安装的网络适配器的数目。 在设置 OSDAdapterCount  值时，还需为每个适配器的所有配置选项设置值。
+指定目标计算机上安装的网络适配器的数目。 在设置 OSDAdapterCount 值时，还需为每个适配器的所有配置选项设置值。
 
-例如，如果为首个适配器设置 OSDAdapter0TCPIPNetbiosOptions  值，那么也必须设置该适配器的所有值。
+例如，如果为首个适配器设置 OSDAdapter0TCPIPNetbiosOptions 值，那么也必须设置该适配器的所有值。
 
-如果未指定此值，任务序列将忽略所有 OSDAdapter  值。
+如果未指定此值，任务序列将忽略所有 OSDAdapter 值。
 
 ### <a name="osdapplydriverbootcriticalcontentuniqueid"></a><a name="OSDApplyDriverBootCriticalContentUniqueID"></a> OSDApplyDriverBootCriticalContentUniqueID
 
-适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。 
+适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。
 
 (input)
 
@@ -523,27 +523,27 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdapplydriverbootcriticalhardwarecomponent"></a><a name="OSDApplyDriverBootCriticalHardwareComponent"></a> OSDApplyDriverBootCriticalHardwareComponent
 
-适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。 
+适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。
 
 (input)
 
-指定无论是否安装大容量存储设备驱动程序，此变量都必须为 scsi  。
+指定无论是否安装大容量存储设备驱动程序，此变量都必须为 scsi。
 
 如果设置了 [OSDApplyDriverBootCriticalContentUniqueID](#OSDApplyDriverBootCriticalContentUniqueID)，则需要此变量。
 
 ### <a name="osdapplydriverbootcriticalid"></a><a name="OSDApplyDriverBootCriticalID"></a> OSDApplyDriverBootCriticalID
 
-适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。 
+适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。
 
 (input)
 
-指定要安装的大容量存储设备驱动程序的启动关键 ID。 此 ID 列在设备驱动程序 txtsetup.oem 文件的 scsi  部分中。
+指定要安装的大容量存储设备驱动程序的启动关键 ID。 此 ID 列在设备驱动程序 txtsetup.oem 文件的 scsi 部分中。
 
 如果设置了 [OSDApplyDriverBootCriticalContentUniqueID](#OSDApplyDriverBootCriticalContentUniqueID)，则需要此变量。
 
 ### <a name="osdapplydriverbootcriticalinffile"></a><a name="OSDApplyDriverBootCriticalINFFile"></a> OSDApplyDriverBootCriticalINFFile
 
-适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。 
+适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。
 
 (input)
 
@@ -553,7 +553,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdautoapplydriverbestmatch"></a><a name="OSDAutoApplyDriverBestMatch"></a> OSDAutoApplyDriverBestMatch
 
-适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。 
+适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。
 
 (input)
 
@@ -567,15 +567,15 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdautoapplydrivercategorylist"></a><a name="OSDAutoApplyDriverCategoryList"></a> OSDAutoApplyDriverCategoryList
 
-适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。 
+适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。
 
 (input)
 
-驱动程序目录类别唯一 ID 的以逗号分隔的列表。 “自动应用驱动程序”  步骤只考虑至少一个指定类别中的驱动程序。 此值是可选的，默认情况下不设置。 可以通过枚举站点上的 SMS_CategoryInstance  对象列表来获取可用的类别 ID。
+驱动程序目录类别唯一 ID 的以逗号分隔的列表。 “自动应用驱动程序”步骤只考虑至少一个指定类别中的驱动程序。 此值是可选的，默认情况下不设置。 可以通过枚举站点上的 SMS_CategoryInstance 对象列表来获取可用的类别 ID。
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
-适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。 
+适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。
 
 <!-- 4512937 -->
 从版本 1906 开始，使用此变量设置恢复保护之前的重启次数。
@@ -586,7 +586,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdbitlockerrebootcountoverride"></a><a name="OSDBitLockerRebootCountOverride"></a> OSDBitLockerRebootCountOverride
 
-适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。 
+适用于[禁用 BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) 步骤。
 
 <!-- 4512937 -->
 从版本 1906 开始，设置此值来替代该步骤或 [OSDBitLockerRebootCount](#OSDBitLockerRebootCount) 变量设置的计数。 虽然其他方法只接受值 1 到 15，但如果将此变量设置为 0，则 BitLocker 会永远保持禁用状态。 虽然在任务序列设置一个值的情况下，此变量很有用，但建议在每个设备或每个集合上设置一个单独的值。
@@ -597,23 +597,23 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdbitlockerrecoverypassword"></a><a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
 
-适用于[启用 BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) 步骤。 
+适用于[启用 BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) 步骤。
 
 (input)
 
-“启用 BitLocker”  步骤使用指定的值作为恢复密码，而不是生成随机恢复密码。 此值必须是有效的数字 BitLocker 恢复密码。
+“启用 BitLocker”步骤使用指定的值作为恢复密码，而不是生成随机恢复密码。 此值必须是有效的数字 BitLocker 恢复密码。
 
 ### <a name="osdbitlockerstartupkey"></a><a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey
 
-适用于[启用 BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) 步骤。 
+适用于[启用 BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) 步骤。
 
 (input)
 
-“启用 BitLocker”  步骤使用受信任的平台模块 (TPM) 作为启动密钥，而不是为密钥管理选项“仅 USB 上的启动密钥”  生成随机启动密钥。 此值必须是一个有效的 256 位 Base-64 编码的 BitLocker 启动密钥。
+“启用 BitLocker”步骤使用受信任的平台模块 (TPM) 作为启动密钥，而不是为密钥管理选项“仅 USB 上的启动密钥”生成随机启动密钥。 此值必须是一个有效的 256 位 Base-64 编码的 BitLocker 启动密钥。
 
 ### <a name="osdcaptureaccount"></a><a name="OSDCaptureAccount"></a> OSDCaptureAccount
 
-适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。 
+适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。
 
 (input)
 
@@ -623,7 +623,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdcaptureaccountpassword"></a><a name="OSDCaptureAccountPassword"></a> OSDCaptureAccountPassword
 
-适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。 
+适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。
 
 (input)
 
@@ -631,7 +631,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdcapturedestination"></a><a name="OSDCaptureDestination"></a> OSDCaptureDestination
 
-适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。 
+适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。
 
 (input)
 
@@ -639,7 +639,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdcomputername-input"></a><a name="OSDComputerName-input"></a> OSDComputerName (input)
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定目标计算机的名称。
 
@@ -649,13 +649,13 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdcomputername-output"></a><a name="OSDComputerName-output"></a> OSDComputerName (output)
 
-适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。 
+适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。
 
 设置为计算机的 NetBIOS 名称。 仅当 [OSDMigrateComputerName](#OSDMigrateComputerName) 变量设置为 `true` 时设置该值。
 
 ### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a> OSDConfigFileName
 
-适用于[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)步骤。 
+适用于[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)步骤。
 
 (input)
 
@@ -663,7 +663,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osddataimageindex"></a><a name="OSDDataImageIndex"></a> OSDDataImageIndex
 
-适用于[应用数据映像](task-sequence-steps.md#BKMK_ApplyDataImage)步骤。 
+适用于[应用数据映像](task-sequence-steps.md#BKMK_ApplyDataImage)步骤。
 
 (input)
 
@@ -671,7 +671,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osddiskindex"></a><a name="OSDDiskIndex"></a> OSDDiskIndex
 
-适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。 
+适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。
 
 (input)
 
@@ -679,7 +679,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osddnsdomain"></a><a name="OSDDNSDomain"></a> OSDDNSDomain
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
@@ -687,7 +687,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osddnssuffixsearchorder"></a><a name="OSDDNSSuffixSearchOrder"></a> OSDDNSSuffixSearchOrder
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
@@ -695,7 +695,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osddomainname"></a><a name="OSDDomainName"></a> OSDDomainName
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
@@ -703,7 +703,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osddomainouname"></a><a name="OSDDomainOUName"></a> OSDDomainOUName
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
@@ -716,20 +716,20 @@ MAC 地址，用于匹配物理网络适配器的设置。
 ### <a name="osddonotlogcommand"></a><a name="OSDDoNotLogCommand"></a> OSDDoNotLogCommand
 
 <!--1358493-->
-适用于[安装包](task-sequence-steps.md#BKMK_InstallPackage)步骤。 
+适用于[安装包](task-sequence-steps.md#BKMK_InstallPackage)步骤。
 
-从版本 1902 开始   
-适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。 
+从版本 1902 开始  
+适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。
 
 (input)
 
-若要禁止显示或记录潜在的敏感数据，请将此变量设置为 `TRUE`。 在“安装包”步骤过程中，此变量将程序名称隐藏在 smsts.log 中   。
+若要禁止显示或记录潜在的敏感数据，请将此变量设置为 `TRUE`。 在“安装包”步骤过程中，此变量将程序名称隐藏在 smsts.log 中 。
 
-从版本 1902 开始，在将此变量设置为 `TRUE` 时，还可在日志文件中隐藏“运行命令行”步骤中的命令行  。<!--3654172-->
+从版本 1902 开始，在将此变量设置为 `TRUE` 时，还可在日志文件中隐藏“运行命令行”步骤中的命令行。<!--3654172-->
 
 ### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a> OSDEnableTCPIPFiltering
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
@@ -742,7 +742,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdgptbootdisk"></a><a name="OSDGPTBootDisk"></a> OSDGPTBootDisk
 
-适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。 
+适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。
 
 (input)
 
@@ -755,7 +755,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdimagecreator"></a><a name="OSDImageCreator"></a> OSDImageCreator
 
-适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。 
+适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。
 
 (input)
 
@@ -763,7 +763,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdimagedescription"></a><a name="OSDImageDescription"></a> OSDImageDescription
 
-适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。 
+适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。
 
 (input)
 
@@ -771,7 +771,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdimageindex"></a><a name="OSDImageIndex"></a> OSDImageIndex
 
-适用于[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)步骤。 
+适用于[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)步骤。
 
 (input)
 
@@ -779,7 +779,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdimageversion"></a><a name="OSDImageVersion"></a> OSDImageVersion
 
-适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。 
+适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。
 
 (input)
 
@@ -788,19 +788,19 @@ MAC 地址，用于匹配物理网络适配器的设置。
 ### <a name="osdinstalldriversadditionaloptions"></a><a name="OSDInstallDriversAdditionalOptions"></a> OSDInstallDriversAdditionalOptions
 
 <!--516679/2840016-->
-适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。 
+适用于[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)步骤。
 
 (input)
 
 指定在应用驱动程序包时添加到 DISM 命令行的其他选项。 任务序列不验证命令行选项。
 
-要使用此变量，在“应用驱动程序包”  步骤上，启用设置“使用递归选项通过运行 DISM 来安装驱动程序包”  。
+要使用此变量，在“应用驱动程序包”步骤上，启用设置“使用递归选项通过运行 DISM 来安装驱动程序包”。
 
 有关详细信息，请参阅 [Windows 10 DISM 命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)。
 
 ### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 
-适用于以下步骤：   
+适用于以下步骤：  
 
 - [应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
 - [加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
@@ -813,7 +813,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdjoindomainname"></a><a name="OSDJoinDomainName"></a> OSDJoinDomainName
 
-适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。 
+适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。
 
 (input)
 
@@ -821,7 +821,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdjoindomainouname"></a><a name="OSDJoinDomainOUName"></a> OSDJoinDomainOUName
 
-适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。 
+适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。
 
 (input)
 
@@ -833,7 +833,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdjoinpassword"></a><a name="OSDJoinPassword"></a> OSDJoinPassword
 
-适用于以下步骤：   
+适用于以下步骤：  
 
 - [应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
 - [加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
@@ -844,7 +844,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdjoinskipreboot"></a><a name="OSDJoinSkipReboot"></a> OSDJoinSkipReboot
 
-适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。 
+适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。
 
 (input)
 
@@ -857,7 +857,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdjointype"></a><a name="OSDJoinType"></a> OSDJoinType
 
-适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。 
+适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。
 
 (input)
 
@@ -870,7 +870,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdjoinworkgroupname"></a><a name="OSDJoinWorkgroupName"></a> OSDJoinWorkgroupName
 
-适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。 
+适用于[加入域或工作组](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)步骤。
 
 (input)
 
@@ -878,7 +878,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdkeepactivation"></a><a name="OSDKeepActivation"></a> OSDKeepActivation
 
-适用于[准备 Windows 以便捕获](task-sequence-steps.md#BKMK_PrepareWindowsforCapture)步骤。 
+适用于[准备 Windows 以便捕获](task-sequence-steps.md#BKMK_PrepareWindowsforCapture)步骤。
 
 (input)
 
@@ -891,25 +891,25 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdlocaladminpassword"></a><a name="OSDLocalAdminPassword"></a> OSDLocalAdminPassword
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 (input)
 
-指定本地管理员帐户密码。 如果启用选项“随机生成本地管理员密码并在所有支持的平台上禁用帐户”  ，则该步骤将忽略此变量。 指定的值字符数必须介于 1 和 255 之间。
+指定本地管理员帐户密码。 如果启用选项“随机生成本地管理员密码并在所有支持的平台上禁用帐户”，则该步骤将忽略此变量。 指定的值字符数必须介于 1 和 255 之间。
 
 ### <a name="osdlogpowershellparameters"></a><a name="OSDLogPowerShellParameters"></a> OSDLogPowerShellParameters
 
 <!--3556028-->
-从版本 1902 开始   
-适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。 
+从版本 1902 开始  
+适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。
 
 (input)
 
-为禁止记录潜在的敏感数据，“运行 PowerShell 脚本”步骤不会将脚本参数记录在 smsts.log 文件中   。 若要将脚本参数包含在任务序列日志中，请将此变量设置为 TRUE  。
+为禁止记录潜在的敏感数据，“运行 PowerShell 脚本”步骤不会将脚本参数记录在 smsts.log 文件中 。 若要将脚本参数包含在任务序列日志中，请将此变量设置为 TRUE。
 
 ### <a name="osdmigrateadaptersettings"></a><a name="OSDMigrateAdapterSettings"></a> OSDMigrateAdapterSettings
 
-适用于[捕获网络设置](task-sequence-steps.md#BKMK_CaptureNetworkSettings)步骤。 
+适用于[捕获网络设置](task-sequence-steps.md#BKMK_CaptureNetworkSettings)步骤。
 
 (input)
 
@@ -922,7 +922,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigrateadditionalcaptureoptions"></a><a name="OSDMigrateAdditionalCaptureOptions"></a> OSDMigrateAdditionalCaptureOptions
 
-适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。 
+适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。
 
 (input)
 
@@ -934,7 +934,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigrateadditionalrestoreoptions"></a><a name="OSDMigrateAdditionalRestoreOptions"></a> OSDMigrateAdditionalRestoreOptions
 
-适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。 
+适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。
 
 (input)
 
@@ -946,7 +946,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigratecomputername"></a><a name="OSDMigrateComputerName"></a> OSDMigrateComputerName
 
-适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。 
+适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。
 
 (input)
 
@@ -959,7 +959,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigrateconfigfiles"></a><a name="OSDMigrateConfigFiles"></a> OSDMigrateConfigFiles
 
-适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。 
+适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。
 
 (input)
 
@@ -971,7 +971,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigratecontinueonlockedfiles"></a><a name="OSDMigrateContinueOnLockedFiles"></a> OSDMigrateContinueOnLockedFiles
 
-适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。 
+适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。
 
 (input)
 
@@ -984,7 +984,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigratecontinueonrestore"></a><a name="OSDMigrateContinueOnRestore"></a> OSDMigrateContinueOnRestore
 
-适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。 
+适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。
 
 (input)
 
@@ -997,7 +997,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigrateenableverboselogging"></a><a name="OSDMigrateEnableVerboseLogging"></a> OSDMigrateEnableVerboseLogging
 
-适用于以下步骤：   
+适用于以下步骤：  
 
 - [捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)  
 - [还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)  
@@ -1013,7 +1013,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigratelocalaccounts"></a><a name="OSDMigrateLocalAccounts"></a> OSDMigrateLocalAccounts
 
-适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。 
+适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。
 
 (input)
 
@@ -1026,15 +1026,15 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigratelocalaccountpassword"></a><a name="OSDMigrateLocalAccountPassword"></a> OSDMigrateLocalAccountPassword
 
-适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。 
+适用于[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)步骤。
 
 (input)
 
-如果 [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) 变量为 `true`，此变量必须包含分配给所有  已迁移的本地帐户的密码。 USMT 将相同的密码分配给所有已迁移的本地帐户。 将此密码视为临时密码，稍后使用其他方法进行更改。
+如果 [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) 变量为 `true`，此变量必须包含分配给所有已迁移的本地帐户的密码。 USMT 将相同的密码分配给所有已迁移的本地帐户。 将此密码视为临时密码，稍后使用其他方法进行更改。
 
 ### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a> OSDMigrateMode
 
-适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。 
+适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。
 
 (input)
 
@@ -1048,7 +1048,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigratenetworkmembership"></a><a name="OSDMigrateNetworkMembership"></a> OSDMigrateNetworkMembership
 
-适用于[捕获网络设置](task-sequence-steps.md#BKMK_CaptureNetworkSettings)步骤。 
+适用于[捕获网络设置](task-sequence-steps.md#BKMK_CaptureNetworkSettings)步骤。
 
 (input)
 
@@ -1061,7 +1061,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigrateregistrationinfo"></a><a name="OSDMigrateRegistrationInfo"></a> OSDMigrateRegistrationInfo
 
-适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。 
+适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。
 
 (input)
 
@@ -1074,7 +1074,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigrateskipencryptedfiles"></a><a name="OSDMigrateSkipEncryptedFiles"></a> OSDMigrateSkipEncryptedFiles
 
-适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。 
+适用于[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)步骤。
 
 (input)
 
@@ -1087,7 +1087,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdmigratetimezone"></a><a name="OSDMigrateTimeZone"></a> OSDMigrateTimeZone
 
-适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。 
+适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。
 
 (input)
 
@@ -1100,7 +1100,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdnetworkjointype"></a><a name="OSDNetworkJoinType"></a> OSDNetworkJoinType
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
@@ -1113,13 +1113,13 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdpartitions"></a><a name="OSDPartitions"></a> OSDPartitions
 
-适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。 
+适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。
 
 (input)
 
 此任务序列变量是分区设置的一个数组变量。 数组中的每个元素都代表硬盘上单个分区的设置。 通过将数组变量名称与基于零的磁盘分区号及属性名称组合，可以访问为每个分区定义的设置。
 
-以下变量名称可用于为此步骤在硬盘上创建的第一个  分区定义属性：
+以下变量名称可用于为此步骤在硬盘上创建的第一个分区定义属性：
 
 #### <a name="osdpartitions0type"></a>OSDPartitions0Type
 
@@ -1147,17 +1147,17 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 #### <a name="osdpartitions0sizeunits"></a>OSDPartitions0SizeUnits
 
-该步骤使用这些单位来解释 OSDPartitions0Size  变量。 此属性为可选。 有效值为 `MB`（默认值）、`GB` 和 `Percent`。
+该步骤使用这些单位来解释 OSDPartitions0Size 变量。 此属性为可选。 有效值为 `MB`（默认值）、`GB` 和 `Percent`。
 
 #### <a name="osdpartitions0volumelettervariable"></a>OSDPartitions0VolumeLetterVariable
 
 此步骤创建分区后，分区始终使用 Windows PE 中的下一可用驱动器号。 使用此可选属性指定另一个任务序列变量的名称。 该步骤使用此变量保存新的驱动器号，供将来参考。
 
-如果使用此任务序列步骤定义多个分区，可使用变量名称中的下标 1  来定义第二个  分区的属性。 例如：OSDPartitions1Type、OSDPartitions1FileSystem、OSDPartitions1Bootable、OSDPartitions1QuickFormat 和 OSDPartitions1VolumeName      。
+如果使用此任务序列步骤定义多个分区，可使用变量名称中的下标 1 来定义第二个分区的属性。 例如：OSDPartitions1Type、OSDPartitions1FileSystem、OSDPartitions1Bootable、OSDPartitions1QuickFormat 和 OSDPartitions1VolumeName    。
 
 ### <a name="osdpartitionstyle"></a><a name="OSDPartitionStyle"></a> OSDPartitionStyle
 
-适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。 
+适用于[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤。
 
 (input)
 
@@ -1170,7 +1170,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdproductkey"></a><a name="OSDProductKey"></a> OSDProductKey
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 (input)
 
@@ -1178,7 +1178,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdrandomadminpassword"></a><a name="OSDRandomAdminPassword"></a> OSDRandomAdminPassword
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 (input)
 
@@ -1192,19 +1192,19 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdregisteredorgname-input"></a><a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定新操作系统中的默认注册组织名称。 指定的值字符数必须介于 1 和 255 之间。
 
 ### <a name="osdregisteredorgname-output"></a><a name="OSDRegisteredOrgName-output"></a> OSDRegisteredOrgName (output)
 
-适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。 
+适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。
 
 设置为计算机的注册组织名称。 仅当 [OSDMigrateRegistrationInfo](#OSDMigrateRegistrationInfo) 变量被设置为 `true` 时，才设置该值。
 
 ### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a> OSDRegisteredUserName
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 (input)
 
@@ -1212,7 +1212,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdserverlicenseconnectionlimit"></a><a name="OSDServerLicenseConnectionLimit"></a> OSDServerLicenseConnectionLimit
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 (input)
 
@@ -1220,7 +1220,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdserverlicensemode"></a><a name="OSDServerLicenseMode"></a> OSDServerLicenseMode
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 (input)
 
@@ -1233,7 +1233,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdsetupadditionalupgradeoptions"></a><a name="OSDSetupAdditionalUpgradeOptions"></a> OSDSetupAdditionalUpgradeOptions
 
-适用于[升级操作系统](task-sequence-steps.md#BKMK_UpgradeOS)步骤。 
+适用于[升级操作系统](task-sequence-steps.md#BKMK_UpgradeOS)步骤。
 
 (input)
 
@@ -1243,7 +1243,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdstatefallbacktonaa"></a><a name="OSDStateFallbackToNAA"></a> OSDStateFallbackToNAA
 
-适用于[请求状态存储](task-sequence-steps.md#BKMK_RequestStateStore)步骤。 
+适用于[请求状态存储](task-sequence-steps.md#BKMK_RequestStateStore)步骤。
 
 (input)
 
@@ -1258,7 +1258,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdstatesmpretrycount"></a><a name="OSDStateSMPRetryCount"></a> OSDStateSMPRetryCount
 
-适用于[请求状态存储](task-sequence-steps.md#BKMK_RequestStateStore)步骤。 
+适用于[请求状态存储](task-sequence-steps.md#BKMK_RequestStateStore)步骤。
 
 (input)
 
@@ -1266,7 +1266,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdstatesmpretrytime"></a><a name="OSDStateSMPRetryTime"></a> OSDStateSMPRetryTime
 
-适用于[请求状态存储](task-sequence-steps.md#BKMK_RequestStateStore)步骤。 
+适用于[请求状态存储](task-sequence-steps.md#BKMK_RequestStateStore)步骤。
 
 (input)
 
@@ -1274,7 +1274,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdstatestorepath"></a><a name="OSDStateStorePath"></a> OSDStateStorePath
 
-适用于以下步骤：   
+适用于以下步骤：  
 
 - [捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)  
 - [发布状态存储](task-sequence-steps.md#BKMK_ReleaseStateStore)  
@@ -1287,7 +1287,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdtargetsystemdrive"></a><a name="OSDTargetSystemDrive"></a> OSDTargetSystemDrive
 
-适用于[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)步骤。 
+适用于[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)步骤。
 
 (output)
 
@@ -1295,19 +1295,19 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdtargetsystemroot-input"></a><a name="OSDTargetSystemRoot-input"></a> OSDTargetSystemRoot (input)
 
-适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。 
+适用于[捕获 OS 映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)步骤。
 
 指定引用计算机上已安装操作系统的 Windows 目录的路径。 任务序列将验证它是由 Configuration Manager 捕获的受支持的操作系统。
 
 ### <a name="osdtargetsystemroot-output"></a><a name="OSDTargetSystemRoot-output"></a> OSDTargetSystemRoot (output)
 
-适用于[准备 Windows 以便捕获](task-sequence-steps.md#BKMK_PrepareWindowsforCapture)步骤。 
+适用于[准备 Windows 以便捕获](task-sequence-steps.md#BKMK_PrepareWindowsforCapture)步骤。
 
 指定引用计算机上已安装操作系统的 Windows 目录的路径。 任务序列将验证它是由 Configuration Manager 捕获的受支持的操作系统。
 
 ### <a name="osdtimezone-input"></a><a name="OSDTimeZone-input"></a> OSDTimeZone (input)
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定在新操作系统中使用的默认时区设置。
 
@@ -1315,13 +1315,13 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a> OSDTimeZone (output)
 
-适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。 
+适用于[捕获 Windows 设置](task-sequence-steps.md#BKMK_CaptureWindowsSettings)步骤。
 
 设置为计算机的时区。 仅当 [OSDMigrateTimeZone](#OSDMigrateTimeZone) 变量设置为 `true` 时，才设置该值。
 
 ### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a> OSDWindowsSettingsInputLocale
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定在新操作系统中使用的默认输入法区域设置。
 
@@ -1329,7 +1329,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdwindowssettingssystemlocale"></a><a name="OSDWindowsSettingsSystemLocale"></a> OSDWindowsSettingsSystemLocale
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定在新操作系统中使用的默认系统区域设置。
 
@@ -1337,7 +1337,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdwindowssettingsuilanguage"></a><a name="OSDWindowsSettingsUILanguage"></a> OSDWindowsSettingsUILanguage
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定在新操作系统中使用的默认用户界面语言设置。
 
@@ -1345,7 +1345,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdwindowssettingsuilanguagefallback"></a><a name="OSDWindowsSettingsUILanguageFallback"></a> OSDWindowsSettingsUILanguageFallback
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定在新操作系统中使用的备用用户界面语言设置。
 
@@ -1353,7 +1353,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdwindowssettingsuserlocale"></a><a name="OSDWindowsSettingsUserLocale"></a> OSDWindowsSettingsUserLocale
 
-适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。 
+适用于[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)步骤。
 
 指定在新操作系统中使用的默认用户区域设置。
 
@@ -1361,7 +1361,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdwipedestinationpartition"></a><a name="OSDWipeDestinationPartition"></a> OSDWipeDestinationPartition
 
-适用于[应用数据映像](task-sequence-steps.md#BKMK_ApplyDataImage)步骤。 
+适用于[应用数据映像](task-sequence-steps.md#BKMK_ApplyDataImage)步骤。
 
 (input)
 
@@ -1374,7 +1374,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="osdworkgroupname"></a><a name="OSDWorkgroupName"></a> OSDWorkgroupName
 
-适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。 
+适用于[应用网络设置](task-sequence-steps.md#BKMK_ApplyNetworkSettings)步骤。
 
 (input)
 
@@ -1384,7 +1384,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="setupcompletepause"></a><a name="SetupCompletePause"></a> SetupCompletePause
 
-适用于[升级操作系统](task-sequence-steps.md#BKMK_UpgradeOS)步骤。 
+适用于[升级操作系统](task-sequence-steps.md#BKMK_UpgradeOS)步骤。
 
 <!-- 4680263 -->
 
@@ -1392,7 +1392,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 以下日志条目是此问题的常见示例，你可使用此变量进行修正：
 
-- TSManager 组件在 smsts.log 中记录类似于以下错误的条目  ：
+- TSManager 组件在 smsts.log 中记录类似于以下错误的条目：
 
     ``` log
     Failed to initate policy evaluation for namespace 'root\ccm\policy\machine', hr=0x80041010
@@ -1400,7 +1400,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
     Task Sequence Manager could not initialize Task Sequence Environment. code 80041010
     ```
 
-- Windows 安装程序在 setupcomplete.log 中记录类似于以下错误的条目  ：
+- Windows 安装程序在 setupcomplete.log 中记录类似于以下错误的条目：
 
     ``` log
     Running C:\windows\CCM\\TSMBootstrap.exe to resume task sequence
@@ -1411,7 +1411,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsclientinstallproperties"></a><a name="SMSClientInstallProperties"></a> SMSClientInstallProperties
 
-适用于[安装 Windows 和 ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤。 
+适用于[安装 Windows 和 ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤。
 
 (input)
 
@@ -1421,7 +1421,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsconnectnetworkfolderaccount"></a><a name="SMSConnectNetworkFolderAccount"></a> SMSConnectNetworkFolderAccount
 
-适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。 
+适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。
 
 (input)
 
@@ -1431,7 +1431,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsconnectnetworkfolderdriveletter"></a><a name="SMSConnectNetworkFolderDriveLetter"></a> SMSConnectNetworkFolderDriveLetter
 
-适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。 
+适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。
 
 (input)
 
@@ -1444,7 +1444,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsconnectnetworkfolderpassword"></a><a name="SMSConnectNetworkFolderPassword"></a> SMSConnectNetworkFolderPassword
 
-适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。 
+适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。
 
 (input)
 
@@ -1452,7 +1452,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsconnectnetworkfolderpath"></a><a name="SMSConnectNetworkFolderPath"></a> SMSConnectNetworkFolderPath
 
-适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。 
+适用于[连接到网络文件夹](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)步骤。
 
 (input)
 
@@ -1464,7 +1464,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsinstallupdatetarget"></a><a name="SMSInstallUpdateTarget"></a> SMSInstallUpdateTarget
 
-适用于[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤。 
+适用于[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤。
 
 (input)
 
@@ -1477,7 +1477,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsrebootmessage"></a><a name="SMSRebootMessage"></a> SMSRebootMessage
 
-适用于[重新启动计算机](task-sequence-steps.md#BKMK_RestartComputer)步骤。 
+适用于[重新启动计算机](task-sequence-steps.md#BKMK_RestartComputer)步骤。
 
 (input)
 
@@ -1489,7 +1489,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smsreboottimeout"></a><a name="SMSRebootTimeout"></a> SMSRebootTimeout
 
-适用于[重新启动计算机](task-sequence-steps.md#BKMK_RestartComputer)步骤。 
+适用于[重新启动计算机](task-sequence-steps.md#BKMK_RestartComputer)步骤。
 
 (input)
 
@@ -1502,13 +1502,13 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smstsassignmentsdownloadinterval"></a><a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
 
-客户端自上次尝试（未返回策略）下载策略到再次尝试之前所等待的秒数。 默认情况下，客户端将等待 0  秒，然后再重试。
+客户端自上次尝试（未返回策略）下载策略到再次尝试之前所等待的秒数。 默认情况下，客户端将等待 0 秒，然后再重试。
 
 可以使用媒体或 PXE 中的预启动命令来设置此变量。
 
 ### <a name="smstsassignmentsdownloadretry"></a><a name="SMSTSAssignmentsDownloadRetry"></a> SMSTSAssignmentsDownloadRetry
 
-客户端在初次尝试下载策略而未找到策略之后再次进行下载尝试的次数。 默认情况下，客户端重新尝试 0  次。
+客户端在初次尝试下载策略而未找到策略之后再次进行下载尝试的次数。 默认情况下，客户端重新尝试 0 次。
 
 可以使用媒体或 PXE 中的预启动命令来设置此变量。
 
@@ -1536,7 +1536,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smstsdisablewow64redirection"></a><a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
-适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。 
+适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。
 
 (input)
 
@@ -1552,39 +1552,39 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 ### <a name="smstsdownloadretrycount"></a><a name="SMSTSDownloadRetryCount"></a> SMSTSDownloadRetryCount
 
-Configuration Manager 尝试从分发点下载内容的次数。 默认情况下，客户端重新尝试 2  次。
+Configuration Manager 尝试从分发点下载内容的次数。 默认情况下，客户端重新尝试 2 次。
 
 ### <a name="smstsdownloadretrydelay"></a><a name="SMSTSDownloadRetryDelay"></a> SMSTSDownloadRetryDelay
 
-Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 默认情况下，客户端将等待 15  秒，然后再重试。
+Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 默认情况下，客户端将等待 15 秒，然后再重试。
 
 ### <a name="smstsdriverrequestconnecttimeout"></a><a name="SMSTSDriverRequestConnectTimeOut"></a> SMSTSDriverRequestConnectTimeOut
 
-适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。 
+适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。
 
-请求驱动程序目录时，此变量用于指定任务序列等待 HTTP 服务器连接的秒数。 如果连接时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 60  秒。
+请求驱动程序目录时，此变量用于指定任务序列等待 HTTP 服务器连接的秒数。 如果连接时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 60 秒。
 
 ### <a name="smstsdriverrequestreceivetimeout"></a><a name="SMSTSDriverRequestReceiveTimeOut"></a> SMSTSDriverRequestReceiveTimeOut
 
-适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。 
+适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。
 
-请求驱动程序目录时，此变量用于指定任务序列等待响应的秒数。 如果连接时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 480  秒。
+请求驱动程序目录时，此变量用于指定任务序列等待响应的秒数。 如果连接时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 480 秒。
 
 ### <a name="smstsdriverrequestresolvetimeout"></a><a name="SMSTSDriverRequestResolveTimeOut"></a> SMSTSDriverRequestResolveTimeOut
 
-适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。 
+适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。
 
-请求驱动程序目录时，此变量用于指定任务序列等待 HTTP 名称解析的秒数。 如果连接时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 60  秒。
+请求驱动程序目录时，此变量用于指定任务序列等待 HTTP 名称解析的秒数。 如果连接时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 60 秒。
 
 ### <a name="smstsdriverrequestsendtimeout"></a><a name="SMSTSDriverRequestSendTimeOut"></a> SMSTSDriverRequestSendTimeOut
 
-适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。 
+适用于[自动应用驱动程序](task-sequence-steps.md#BKMK_AutoApplyDrivers)步骤。
 
-请求驱动程序目录时，此变量用于指定任务序列等待发送请求的秒数。 如果请求时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 60  秒。
+请求驱动程序目录时，此变量用于指定任务序列等待发送请求的秒数。 如果请求时间超过超时设定值，任务序列会取消该请求。 默认情况下，超时时间设置为 60 秒。
 
 ### <a name="smstserrordialogtimeout"></a><a name="SMSTSErrorDialogTimeout"></a> SMSTSErrorDialogTimeout
 
-当任务序列中发生错误时，它将显示对话框并包含相关错误。 任务序列在此变量指定的秒数后自动将其关闭。 默认情况下，该值为 900  秒（15 分钟）。
+当任务序列中发生错误时，它将显示对话框并包含相关错误。 任务序列在此变量指定的秒数后自动将其关闭。 默认情况下，该值为 900 秒（15 分钟）。
 
 ### <a name="smstslanguagefolder"></a><a name="SMSTSLanguageFolder"></a> SMSTSLanguageFolder
 
@@ -1602,7 +1602,7 @@ Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 
 
 ### <a name="smstsmplistrequesttimeoutenabled"></a><a name="SMSTSMPListRequestTimeoutEnabled"></a> SMSTSMPListRequestTimeoutEnabled
 
-适用于以下步骤：   
+适用于以下步骤：  
 
 - [安装应用程序](task-sequence-steps.md#BKMK_InstallApplication)  
 - [安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
@@ -1615,7 +1615,7 @@ Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 
 
 ### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a> SMSTSMPListRequestTimeout
 
-适用于以下步骤：   
+适用于以下步骤：  
 
 - [安装应用程序](task-sequence-steps.md#BKMK_InstallApplication)  
 - [安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
@@ -1630,7 +1630,7 @@ Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 
 
 ### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a> SMSTSPeerRequestPort
 
-Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端设置中配置的默认端口为 8004  。
+Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端设置中配置的默认端口为 8004。
 
 ### <a name="smstspersistcontent"></a><a name="SMSTSPersistContent"></a> SMSTSPersistContent
 
@@ -1689,20 +1689,20 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 ### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 
-从版本 2002 开始  <!-- 5573175 -->  
-适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。 
+从版本 2002 开始 <!-- 5573175 -->  
+适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。
 
-使用任务序列变量来配置“运行命令行”步骤使用的用户上下文  。 无需为“运行命令行”  步骤配置占位符帐户，即可使用 [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName) 和 [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword) 变量。
+使用任务序列变量来配置“运行命令行”步骤使用的用户上下文。 无需为“运行命令行”步骤配置占位符帐户，即可使用 [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName) 和 [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword) 变量。
 
 将 `SMSTSRunCommandLineAsUser` 配置为以下值之一：
 
-- `true`：任何后续“运行命令行”  步骤都会以在 `SMSTSRunCommandLineUserName` 中指定的用户为上下文运行。
+- `true`：任何后续“运行命令行”步骤都会以在 `SMSTSRunCommandLineUserName` 中指定的用户为上下文运行。
 
-- `false`：任何后续“运行命令行”  步骤都会在你为该步骤配置的上下文中运行。
+- `false`：任何后续“运行命令行”步骤都会在你为该步骤配置的上下文中运行。
 
 ### <a name="smstsruncommandlineusername"></a><a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
 
-适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。 
+适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。
 
 (input)
 
@@ -1711,13 +1711,13 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 > [!NOTE]
 > 从版本 2002 开始，可使用 [SMSTSRunCommandLineAsUser](task-sequence-variables.md#SMSTSRunCommandLineAsUser) 变量和此变量来配置此步骤使用的用户上下文。
 >
-> 在版本 1910 及更早版本中，请配置“运行命令行”步骤，设置为“作为以下帐户运行此步骤”   。 如果启用此选项，则请在使用变量设置用户名和密码时，为该帐户指定任意值。
+> 在版本 1910 及更早版本中，请配置“运行命令行”步骤，设置为“作为以下帐户运行此步骤” 。 如果启用此选项，则请在使用变量设置用户名和密码时，为该帐户指定任意值。
 
 有关任务序列运行方式帐户的详细信息，请参阅[帐户](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account)。
 
 ### <a name="smstsruncommandlineuserpassword"></a><a name="SMSTSRunCommandLineUserPassword"></a> SMSTSRunCommandLineUserPassword
 
-适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。 
+适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。
 
 (input)
 
@@ -1725,33 +1725,33 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 ### <a name="smstsrunpowershellasuser"></a><a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
 
-从版本 2002 开始  <!-- 5573175 -->  
-适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。 
+从版本 2002 开始 <!-- 5573175 -->  
+适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。
 
-使用任务序列变量来配置“运行 PowerShell 脚本”步骤使用的用户上下文  。 无需为“运行 PowerShell 脚本”  步骤配置占位符帐户，即可使用 [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName) 和 [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword) 变量。
+使用任务序列变量来配置“运行 PowerShell 脚本”步骤使用的用户上下文。 无需为“运行 PowerShell 脚本”步骤配置占位符帐户，即可使用 [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName) 和 [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword) 变量。
 
 将 `SMSTSRunPowerShellAsUser` 配置为以下值之一：
 
-- `true`：任何后续“运行 PowerShell 脚本”  步骤都会在 `SMSTSRunPowerShellUserName` 中指定的用户的上下文中运行。
+- `true`：任何后续“运行 PowerShell 脚本”步骤都会在 `SMSTSRunPowerShellUserName` 中指定的用户的上下文中运行。
 
-- `false`：任何后续“运行 PowerShell 脚本”  步骤都会在你为该步骤配置的上下文中运行。
+- `false`：任何后续“运行 PowerShell 脚本”步骤都会在你为该步骤配置的上下文中运行。
 
 ### <a name="smstsrunpowershellusername"></a><a name="SMSTSRunPowerShellUserName"></a> SMSTSRunPowerShellUserName
 
-适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。 
+适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。
 
 (input)
 
 指定运行 PowerShell 脚本所依据的帐户。 此值为用户名或域\用户名形式的字符串。 使用 [SMSTSRunPowerShellUserPassword](#SMSTSRunPowerShellUserPassword) 变量指定帐户密码。
 
 > [!NOTE]
-> 要使用这些变量，请配置“运行 PowerShell 脚本”步骤，设置为“作为以下帐户运行此步骤”   。 如果启用此选项，则请在使用变量设置用户名和密码时，为该帐户指定任意值。
+> 要使用这些变量，请配置“运行 PowerShell 脚本”步骤，设置为“作为以下帐户运行此步骤” 。 如果启用此选项，则请在使用变量设置用户名和密码时，为该帐户指定任意值。
 
 有关任务序列运行方式帐户的详细信息，请参阅[帐户](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account)。
 
 ### <a name="smstsrunpowershelluserpassword"></a><a name="SMSTSRunPowerShellUserPassword"></a> SMSTSRunPowerShellUserPassword
 
-适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。 
+适用于[运行 PowerShell 脚本](task-sequence-steps.md#BKMK_RunPowerShellScript)步骤。
 
 (input)
 
@@ -1759,7 +1759,7 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 ### <a name="smstssoftwareupdatescantimeout"></a><a name="SMSTSSoftwareUpdateScanTimeout"></a> SMSTSSoftwareUpdateScanTimeout
 
-适用于[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤。 
+适用于[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤。
 
 (input)
 
@@ -1775,7 +1775,7 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 ### <a name="smstswaitforsecondreboot"></a><a name="SMSTSWaitForSecondReboot"></a> SMSTSWaitForSecondReboot
 
-适用于[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤。 
+适用于[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤。
 
 (input)
 
@@ -1817,25 +1817,29 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 ### <a name="tserroronwarning"></a><a name="TSErrorOnWarning"></a> TSErrorOnWarning
 
-适用于[安装应用程序](task-sequence-steps.md#BKMK_InstallApplication)步骤。 
+适用于[安装应用程序](task-sequence-steps.md#BKMK_InstallApplication)步骤。
 
 (input)
 
-指定任务序列引擎是否在此步骤中将检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列会将 [_TSAppInstallStatus](#TSAppInstallStatus) 变量设置为 `Warning`。 将此变量设置为 `True` 时，如果任务序列将 _TSAppInstallStatus  设置为 `Warning`，结果会出错。 值 `False` 是默认行为。
+指定任务序列引擎是否在此步骤中将检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列会将 [_TSAppInstallStatus](#TSAppInstallStatus) 变量设置为 `Warning`。 将此变量设置为 `True` 时，如果任务序列将 _TSAppInstallStatus 设置为 `Warning`，结果会出错。 值 `False` 是默认行为。
 
 ### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a> TSProgressInfoLevel
 
-从版本 2002 开始 <!--5932692-->  
+从版本 2002 开始<!--5932692-->  
 
 指定此变量可控制任务序列进度窗口所显示的信息类型。 请采用以下变量值：
 
-- `1`：在进度文本中包括当前步骤和步骤总数。 例如“第 2 步，共 10 步”  。
-- `2`：包括当前步骤、步骤总数和完成百分比。 例如“第 2 步，共 10 步(已完成 20%)”  。
-- `3`：包含已完成的百分比。 例如“(已完成 20%)”  。
+- `1`：在进度文本中包括当前步骤和步骤总数。 例如“第 2 步，共 10 步”。
+- `2`：包括当前步骤、步骤总数和完成百分比。 例如“第 2 步，共 10 步(已完成 20%)”。
+- `3`：包含已完成的百分比。 例如“(已完成 20%)”。
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a> TSUEFIDrive
+
+“变量”字段中 FAT32 分区属性的用法。 当任务序列检测到此变量时，它将为转换到 UEFI 准备驱动器，准备就绪后会重启计算机。 有关详细信息，请参阅[用于实现从 BIOS 到 UEFI 的转换的任务序列步骤](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)。
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a> WorkingDirectory
 
-适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。 
+适用于[运行命令行](task-sequence-steps.md#BKMK_RunCommandLine)步骤。
 
 (input)
 
@@ -1864,7 +1868,7 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 >
 > 在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。
 
- 上一行为：应用映像时，OSDPreverveDriveLetter 变量确定任务序列是否使用在映像文件 (WIM) 中捕获的驱动器号。 可以将此变量的值设置为 `false` 以使用为“应用操作系统”  任务序列步骤中的“目标”  设置指定的位置。 有关详细信息，请参阅[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)。
+上一行为：应用映像时，OSDPreverveDriveLetter 变量确定任务序列是否使用在映像文件 (WIM) 中捕获的驱动器号。 可以将此变量的值设置为 `false` 以使用为“应用操作系统”任务序列步骤中的“目标”设置指定的位置。 有关详细信息，请参阅[应用 OS 映像](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)。
 
 
 ## <a name="see-also"></a>另请参阅

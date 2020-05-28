@@ -5,17 +5,17 @@ description: 了解如何准备 Windows 10 基于 Internet 的设备进行共同
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137909"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427781"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
@@ -33,11 +33,11 @@ ms.locfileid: "82137909"
 
 使用 Configuration Manager 可收集和报告 Intune 所需的设备信息。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 它用于在 Intune 中注册设备以支持 Windows Autopilot。
 
-1. 在 Configuration Manager 控制台中，转到“监视”  工作区，展开“报告”  节点，展开“报表”  ，然后选择“硬件 - 常规”  节点。  
+1. 在 Configuration Manager 控制台中，转到“监视”工作区，展开“报告”节点，展开“报表”，然后选择“硬件 - 常规”节点。  
 
-2. 运行“Windows Autopilot 设备信息”报表  并查看结果。  
+2. 运行“Windows Autopilot 设备信息”报表并查看结果。  
 
-3. 在报表查看器中，选择“导出”图标，并选择“CSV (逗号分隔)”选项   。  
+3. 在报表查看器中，选择“导出”图标，并选择“CSV (逗号分隔)”选项 。  
 
 4. 保存该文件后，将数据上传到 Intune。  
 
@@ -59,11 +59,11 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
 ### <a name="get-the-command-line-from-configuration-manager"></a>从 Configuration Manager 获取命令行
 
-1. 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“云服务”  ，然后选择“共同管理”  节点。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“共同管理”节点。  
 
-2. 选择共同管理对象，然后选择功能区中的“属性”  。  
+2. 选择共同管理对象，然后选择功能区中的“属性”。  
 
-3. 在“启用”选项卡上，复制命令行  。 将其粘贴到记事本，保存以供下一过程使用。  
+3. 在“启用”选项卡上，复制命令行。 将其粘贴到记事本，保存以供下一过程使用。  
 
 命令行示例：`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
@@ -91,7 +91,7 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
     有关详细信息，请参阅[关于客户端安装属性 - 预配](../core/clients/deploy/about-client-installation-properties.md#provisionts)。
 
-该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSITECODE   。<!--3607731-->
+该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSITECODE 。<!--3607731-->
 
 > [!NOTE]
 > 如果已从 Intune 部署 Configuration Manager 客户端，请使用新命令行和新 MSI 更新 Intune 应用。 <!-- SCCMDocs-pr issue 3084 -->
@@ -104,13 +104,13 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
 
 ### <a name="create-the-app-in-intune"></a>在 Intune 中创建应用
 
-1. 转到 [Azure 门户](https://portal.azure.com)，然后打开 Intune 页。  
+1. 转到 [Microsoft Endpoint Manager 管理中心](https://endpoint.microsoft.com)，然后展开左侧的导航窗格。  
 
-2. 选择“客户端应用” > “应用” > “添加”    。  
+2. 选择“应用” > “所有应用” > “添加”  。  
 
-3. 在“其他”下，选择“业务线应用”   。  
+3. 在“其他”下，选择“业务线应用” 。  
 
-4. 上传 ccmsetup.msi 应用包文件  。 此文件位于 Configuration Manager 站点服务器上的以下文件夹中：`<ConfigMgr installation directory>\bin\i386`。  
+4. 上传 ccmsetup.msi 应用包文件。 此文件位于 Configuration Manager 站点服务器上的以下文件夹中：`<ConfigMgr installation directory>\bin\i386`。  
 
     > [!Tip]  
     > 更新站点时，请确保同时在 Intune 中更新此应用。  

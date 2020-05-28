@@ -10,19 +10,19 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701665"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427723"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装云分发点
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 > [!Important]  
-> 共享 Azure 内容的实现已更改。 通过启用“允许 CMG 充当云分发点，并提供 Azure 存储中的内容”的选项，使用启用了内容的云管理网关  。 有关详细信息，请参阅[修改 CMG](../../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg)。
+> 共享 Azure 内容的实现已更改。 通过启用“允许 CMG 充当云分发点，并提供 Azure 存储中的内容”的选项，使用启用了内容的云管理网关。 有关详细信息，请参阅[修改 CMG](../../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg)。
 >
 > 将来无法创建传统的云分发点。 有关详细信息，请参阅[已删除和已弃用的功能](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。
 
@@ -46,50 +46,50 @@ ms.locfileid: "81701665"
 
 - 站点服务器可连接到 Azure。 如果网络使用代理，则[配置站点系统角色](#bkmk_proxy)。  
 
-- 要使用的 Azure 环境  。 例如，Azure 公有云或 Azure 美国政府云。  
+- 要使用的 Azure 环境。 例如，Azure 公有云或 Azure 美国政府云。  
 
-- 从版本 1806 开始（建议使用），请使用 Azure 资源管理器部署   。 有以下要求：<!--1322209-->  
+- 从版本 1806 开始（建议使用），请使用 Azure 资源管理器部署。 有以下要求：<!--1322209-->  
 
-    - 与 [Azure Active Directory](azure-services-wizard.md) 集成以实现云管理  。 不需要 Azure AD 用户发现。  
+    - 与 [Azure Active Directory](azure-services-wizard.md) 集成以实现云管理。 不需要 Azure AD 用户发现。  
 
-    - Azure 订阅 ID  。  
+    - Azure 订阅 ID。  
 
-    - Azure 资源组  。  
+    - Azure 资源组。  
 
-    - 订阅管理帐户需要在向导期间登录  。  
+    - 订阅管理帐户需要在向导期间登录。  
 
-- 导出为 .PFX 文件的服务器身份验证证书  。  
+- 导出为 .PFX 文件的服务器身份验证证书。  
 
-- 云分发点的全局唯一服务名称  。  
+- 云分发点的全局唯一服务名称。  
 
     > [!TIP]  
-    > 在请求使用此服务名称的服务器身份验证证书之前，请确认所需的 Azure 域名是唯一的。 例如，WallaceFalls.CloudApp.Net  。
+    > 在请求使用此服务名称的服务器身份验证证书之前，请确认所需的 Azure 域名是唯一的。 例如，WallaceFalls.CloudApp.Net。
     >
     > 1. 登录到 [Azure 门户](https://portal.azure.com)。
-    > 1. 选择“所有资源”，然后选择“添加”。  
-    > 1. 搜索“云服务”。  选择“创建”。 
-    > 1. 在“DNS 名称”字段中，键入所需的前缀，例如 WallaceFalls   。 界面将反映域名是否可用，或是否已被其他服务使用。
+    > 1. 选择“所有资源”，然后选择“添加”。 
+    > 1. 搜索“云服务”。 选择“创建”。
+    > 1. 在“DNS 名称”字段中，键入所需的前缀，例如 WallaceFalls。 界面将反映域名是否可用，或是否已被其他服务使用。
     >
     > 不要在门户中创建服务，仅使用此流程检查名称可用性。
 
-- 此部署所在的 Azure 区域  。  
+- 此部署所在的 Azure 区域。  
 
-- 如果仍需要在 Configuration Manager 1810 版本或更早版本中使用 Azure 经典服务部署  ，则需要满足以下要求：  
+- 如果仍需要在 Configuration Manager 1810 版本或更早版本中使用 Azure 经典服务部署，则需要满足以下要求：  
 
     > [!Important]  
     > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 开始将 Azure 资源管理器部署用于云分发点。 有关详细信息，请参阅 [Azure 资源管理器](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#azure-resource-manager)。  
     >
     > 从 Configuration Manager 版本 1902 起，Azure 资源管理器是云分发点的新实例的唯一部署机制。<!-- 3605704 -->
 
-    - Azure 订阅 ID  。  
+    - Azure 订阅 ID。  
 
-    - Azure 管理证书，同时导出为 .CER 和 .PFX 文件  。 Azure 订阅管理员需要将 .CER 管理证书添加到 [Azure 门户](https://portal.azure.com)中的订阅。  
+    - Azure 管理证书，同时导出为 .CER 和 .PFX 文件。 Azure 订阅管理员需要将 .CER 管理证书添加到 [Azure 门户](https://portal.azure.com)中的订阅。  
 
 ### <a name="branchcache"></a>BranchCache
 
 若要启用云分发点来使用 Windows BranchCache，请在站点服务器上安装 BranchCache 功能。<!-- SCCMDocs-pr#4054 -->
 
-- 如果站点服务器具有本地分发点站点系统角色，请将该角色属性中的选项配置为“启用并配置 BranchCache”  。 有关详细信息，请参阅[配置分发点](install-and-configure-distribution-points.md#bkmk_config-general)。
+- 如果站点服务器具有本地分发点站点系统角色，请将该角色属性中的选项配置为“启用并配置 BranchCache”。 有关详细信息，请参阅[配置分发点](install-and-configure-distribution-points.md#bkmk_config-general)。
 
 - 如果站点服务器没有分发点角色，请在 Windows 中安装 BranchCache 功能。 有关详细信息，请参阅[安装 BranchCache 功能](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)。
 
@@ -102,22 +102,22 @@ ms.locfileid: "81701665"
 
 在站点上执行此过程以托管由[设计](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_topology)确定的云分发点。  
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云分发点”    。 在功能区中，选择“创建云分发点”  。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云分发点”  。 在功能区中，选择“创建云分发点”。  
 
-2. 在创建云分发点向导的“常规”页上，配置以下设置  ：  
+2. 在创建云分发点向导的“常规”页上，配置以下设置：  
 
-    1. 首先指定 Azure 环境  。  
+    1. 首先指定 Azure 环境。  
 
-    2. 从版本 1806 开始（建议使用），请选择 Azure 资源管理器部署作为部署方法   。 选择“登录”以使用 Azure 订阅管理员帐户进行身份验证  。 向导使用 Azure AD 集成先决条件过程中存储的 信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅的**订阅 ID**。  
+    2. 从版本 1806 开始（建议使用），请选择 Azure 资源管理器部署作为部署方法。 选择“登录”以使用 Azure 订阅管理员帐户进行身份验证。 向导使用 Azure AD 集成先决条件过程中存储的 信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅的**订阅 ID**。  
 
     > [!Note]  
     > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。
     >
-    > 如果需要使用经典服务部署，请在此页面上选择该选项。 首先输入 Azure 订阅 ID  。 然后选择“浏览”并选择 .PFX 文件作为 Azure 管理证书  。  
+    > 如果需要使用经典服务部署，请在此页面上选择该选项。 首先输入 Azure 订阅 ID。 然后选择“浏览”并选择 .PFX 文件作为 Azure 管理证书。  
 
-3. 选择“下一步”  。 等待站点测试与 Azure 的连接。  
+3. 选择“下一步”。 等待站点测试与 Azure 的连接。  
 
-4. 在“设置”页上，指定以下设置，然后单击“下一步”   ：  
+4. 在“设置”页上，指定以下设置，然后单击“下一步” ：  
 
     - **区域**：选择要在其中创建云分发点的 Azure 区域。  
 
@@ -129,21 +129,21 @@ ms.locfileid: "81701665"
 
     - **主站点**：选择要将内容分发到此分发点的主站点。
 
-    - **证书文件**：选择“浏览”并选择 .PFX 文件作为此云分发点的服务器身份验证证书  。 来自此证书的公用名称将填充“服务 FQDN”和“服务名称”必填字段   。  
+    - **证书文件**：选择“浏览”并选择 .PFX 文件作为此云分发点的服务器身份验证证书。 来自此证书的公用名称将填充“服务 FQDN”和“服务名称”必填字段 。  
 
         > [!NOTE]  
-        > 云分发点服务器身份验证证书支持通配符。 如果使用通配符证书，请将“服务 FQDN”字段中的星号 (`*`) 替换为服务所需的主机名  。  
+        > 云分发点服务器身份验证证书支持通配符。 如果使用通配符证书，请将“服务 FQDN”字段中的星号 (`*`) 替换为服务所需的主机名。  
 
-5. 在“警报”  页上，设置存储配额、传输配额以及希望 Configuration Manager 在达到这些配额的百分之几时生成警报。 然后选择“下一步”  。  
+5. 在“警报”页上，设置存储配额、传输配额以及希望 Configuration Manager 在达到这些配额的百分之几时生成警报。 然后选择“下一步”。  
 
 6. 完成向导。  
 
 ### <a name="monitor-installation"></a>监视安装  
 
-该站点开始为云分发点创建新的托管服务。 关闭向导后，在 Configuration Manager 控制台中监视云分发点的安装进度。 还可监视主站点服务器上的 CloudMgr.log 文件  。 如有必要，请监视 Azure 门户中的云服务预配情况。  
+该站点开始为云分发点创建新的托管服务。 关闭向导后，在 Configuration Manager 控制台中监视云分发点的安装进度。 还可监视主站点服务器上的 CloudMgr.log 文件。 如有必要，请监视 Azure 门户中的云服务预配情况。  
 
 > [!NOTE]  
-> 在 Azure 中设置新的分发点最多可能需要 30 分钟。 在预配存储帐户之前，CloudMgr.log 文件会重复以下消息  ：  
+> 在 Azure 中设置新的分发点最多可能需要 30 分钟。 在预配存储帐户之前，CloudMgr.log 文件会重复以下消息：  
 > `Waiting for check if container exists. Will check again in 10 seconds`  
 > 在预配存储帐户后，将创建并配置服务。  
 
@@ -151,37 +151,37 @@ ms.locfileid: "81701665"
 
 使用以下方法验证云分发点安装已完成：  
 
-- 在 Configuration Manager 控制台中，转到“管理”  工作区。 展开“云服务”，然后选择“云分发点”节点   。 在列表中查找新的云分发点。 “状态”列应为“就绪”  。  
+- 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“云服务”，然后选择“云分发点”节点 。 在列表中查找新的云分发点。 “状态”列应为“就绪”。  
 
-- 在 Configuration Manager 控制台中，转到“监视”  工作区。 展开“系统状态”，然后选择“组件状态”节点   。 显示 SMS_CLOUD_SERVICES_MANAGER 组件中的所有消息，并查找状态消息 ID 9409   。  
+- 在 Configuration Manager 控制台中，转到“监视”工作区。 展开“系统状态”，然后选择“组件状态”节点 。 显示 SMS_CLOUD_SERVICES_MANAGER 组件中的所有消息，并查找状态消息 ID 9409 。  
 
-- 如有必要，请转到 Azure 门户。 云分发点的“部署”显示“就绪”状态   。  
+- 如有必要，请转到 Azure 门户。 云分发点的“部署”显示“就绪”状态 。  
 
 
 ## <a name="configure-dns"></a><a name="bkmk_dns"></a>配置 DNS  
 
-客户端必须能够将云分发点的名称解析为 Azure 管理的 IP 地址，然后才能使用云分发点。 管理点为它们提供云分发点的服务 FQDN  。 云分发点在 Azure 中作为服务名称存在  。 请在云分发点属性的“设置”选项卡上查看这些值  。
+客户端必须能够将云分发点的名称解析为 Azure 管理的 IP 地址，然后才能使用云分发点。 管理点为它们提供云分发点的服务 FQDN。 云分发点在 Azure 中作为服务名称存在。 请在云分发点属性的“设置”选项卡上查看这些值。
 
 > [!Note]  
-> 控制台中的“云分发点”节点包含名为“服务名称”的列，但实际上显示了“服务 FQDN”值    。 要查看这两个值，请打开云分发点的“属性”，然后切换到“设置”选项卡   。  
+> 控制台中的“云分发点”节点包含名为“服务名称”的列，但实际上显示了“服务 FQDN”值  。 要查看这两个值，请打开云分发点的“属性”，然后切换到“设置”选项卡 。  
 
 <!-- Remove based on feedback from RoYork
 If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
 -->
 
-服务器身份验证证书公用名称应包含域名。 从公共提供程序购买证书时，此名称是必需的。 从 PKI 颁发此证书时，建议使用此名称。 例如，`WallaceFalls.contoso.com`。 在“创建云分发点向导”中指定此证书时，公用名称将填充“服务 FQDN”属性 (`WallaceFalls.contoso.com`)  。 “服务名称”采用相同主机名 (`WallaceFalls`)，并将其附加到 Azure 域名 `cloudapp.net` 。 在此方案中，客户端需要将域的服务 FQDN (`WallaceFalls.contoso.com`) 解析为 Azure 服务名称 (`WallaceFalls.cloudapp.net`)   。 创建 CNAME 别名以映射这些名称。
+服务器身份验证证书公用名称应包含域名。 从公共提供程序购买证书时，此名称是必需的。 从 PKI 颁发此证书时，建议使用此名称。 例如，`WallaceFalls.contoso.com`。 在“创建云分发点向导”中指定此证书时，公用名称将填充“服务 FQDN”属性 (`WallaceFalls.contoso.com`)。 “服务名称”采用相同主机名 (`WallaceFalls`)，并将其附加到 Azure 域名 `cloudapp.net`。 在此方案中，客户端需要将域的服务 FQDN (`WallaceFalls.contoso.com`) 解析为 Azure 服务名称 (`WallaceFalls.cloudapp.net`) 。 创建 CNAME 别名以映射这些名称。
 
 ### <a name="create-cname-alias"></a>创建 CNAME 别名
 
-在组织的面向 Internet 的公共 DNS 中创建规范名称记录 (CNAME)。 此记录为客户端接收的云分发点的服务 FQDN 属性创建别名，别名为 Azure 服务名称   。 例如，为 `WallaceFalls.contoso.com` 到 `WallaceFalls.cloudapp.net` 创建新的 CNAME 记录。  
+在组织的面向 Internet 的公共 DNS 中创建规范名称记录 (CNAME)。 此记录为客户端接收的云分发点的服务 FQDN 属性创建别名，别名为 Azure 服务名称 。 例如，为 `WallaceFalls.contoso.com` 到 `WallaceFalls.cloudapp.net` 创建新的 CNAME 记录。  
 
 ### <a name="client-name-resolution-process"></a>客户端名称解析过程
 
 以下过程显示客户端如何解析云分发点的名称：  
 
-1. 客户端获取内容源列表中云分发点的服务 FQDN  。 例如，`WallaceFalls.contoso.com`。  
+1. 客户端获取内容源列表中云分发点的服务 FQDN。 例如，`WallaceFalls.contoso.com`。  
 
-2. 它查询 DNS，它使用 Azure 服务名称的 CNAME 别名解析服务 FQDN  。 例如，`WallaceFalls.cloudapp.net`。  
+2. 它查询 DNS，它使用 Azure 服务名称的 CNAME 别名解析服务 FQDN。 例如，`WallaceFalls.cloudapp.net`。  
 
 3. 再次查询 DNS，将 Azure 服务名称解析为 Azure 公共 IP 地址。  
 
@@ -205,9 +205,9 @@ If you issue the server authentication certificate from your PKI, you may direct
 
 默认客户端设置自动启用客户端以使用云分发点。 使用以下客户端设置控制对层次结构中所有云分发点的访问：  
 
-- 在“云设置”组中，修改设置“允许访问云分发点”   。  
+- 在“云设置”组中，修改设置“允许访问云分发点” 。  
 
-    - 默认情况下，此设置设为“是”  。  
+    - 默认情况下，此设置设为“是”。  
 
     - 修改并为用户和设备部署此设置。  
 
@@ -215,6 +215,8 @@ If you issue the server authentication certificate from your PKI, you may direct
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a>管理和监视  
 
 监视分发到云分发点的与任何其他本地分发点相同的内容。 有关详细信息，请参阅[监视内容](monitor-content-you-have-distributed.md)。
+
+在控制台中查看云分发点列表时，可向该列表添加其他列。 例如，“数据流出量”列显示客户端在过去 30 天内从服务下载的数据量。<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a> 警报  
 
@@ -229,7 +231,7 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
     > [!IMPORTANT]  
     > Configuration Manager 监视数据传输，但在数据传输量超出指定的传输警报阈值时不会停止数据传输。  
 
-在安装期间为每个云分发点指定阈值，或使用云分发点属性的“警报”选项卡  。  
+在安装期间为每个云分发点指定阈值，或使用云分发点属性的“警报”选项卡。  
 
 > [!NOTE]  
 > 云分发点的警报视 Azure 提供的使用量统计信息而定，且可能需要最多 24 小时才能变得可用。 有关 Azure 存储分析的详细信息，请参阅[存储分析](https://docs.microsoft.com/rest/api/storageservices/storage-analytics)。  
@@ -242,7 +244,7 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
 
 ## <a name="modify"></a><a name="bkmk_modify"></a>修改
 
-还可以在 Configuration Manager 控制台的“管理”工作区中的“云服务”下的“云分发点”节点中，查看有关分发点的高级信息    。 选择分发点，然后选择“属性”以查看更多详细信息  。  
+还可以在 Configuration Manager 控制台的“管理”工作区中的“云服务”下的“云分发点”节点中，查看有关分发点的高级信息  。 选择分发点，然后选择“属性”以查看更多详细信息。  
 
 编辑云分发点的属性时，以下选项卡包括要编辑的设置：  
 
@@ -291,8 +293,8 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
 > [!Tip]  
 > 确定云分发点的当前部署模型：<!--SCCMDocs issue #611-->  
 >
-> 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云分发点”节点    。  
-> 2. 将“部署模型”属性作为列添加到列表视图中  。 对于资源管理器部署，该属性为“Azure 资源管理器”  。  
+> 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云分发点”节点  。  
+> 2. 将“部署模型”属性作为列添加到列表视图中。 对于资源管理器部署，该属性为“Azure 资源管理器”。  
 
 ### <a name="stop-or-start-the-cloud-service-on-demand"></a>按需停止或启动云服务
 
@@ -302,15 +304,15 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
 
 使用以下过程停止云分发点：  
 
-1. 在 Configuration Manager 控制台中，转到“管理”  工作区。 展开“云服务”，然后选择“云分发点”节点   。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“云服务”，然后选择“云分发点”节点 。  
 
-2. 选择云分发点。 要停止在 Azure 中运行的云服务，请选择功能区中的“停止服务”  。  
+2. 选择云分发点。 要停止在 Azure 中运行的云服务，请选择功能区中的“停止服务”。  
 
-3. 选择“启动服务”以重启云分发点  。  
+3. 选择“启动服务”以重启云分发点。  
 
 ### <a name="delete-a-cloud-distribution-point"></a>删除云分发点
 
-若要卸载云分发点，请在 Configuration Manager 控制台中选择该分发点，然后选择“删除”  。  
+若要卸载云分发点，请在 Configuration Manager 控制台中选择该分发点，然后选择“删除”。  
 
 从层次结构中删除云分发点时，Configuration Manager 会从 Azure 中的云服务中删除内容。
 
@@ -343,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-以下示例是上述 PowerShell 脚本中 public_config 变量中引用的示例 diagnostics.wadcfgx 文件   。 有关详细信息，请参阅 [Azure 诊断扩展配置架构](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema)。  
+以下示例是上述 PowerShell 脚本中 public_config 变量中引用的示例 diagnostics.wadcfgx 文件 。 有关详细信息，请参阅 [Azure 诊断扩展配置架构](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema)。  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

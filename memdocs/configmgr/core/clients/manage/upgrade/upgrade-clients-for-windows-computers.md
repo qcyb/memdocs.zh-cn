@@ -10,16 +10,16 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696285"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427761"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中升级 Windows 计算机的客户端
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 可以使用客户端安装方法或自动客户端升级功能升级 Windows 计算机上的 Configuration Manager 客户端。 下面的客户端安装方法是在 Windows 计算机上升级客户端软件的有效方式：  
 
@@ -56,7 +56,7 @@ ms.locfileid: "81696285"
 - 一个或多个客户端安装文件的版本不同。  
 
 > [!NOTE]  
-> 若要确定层次结构中 Configuration Manager 客户端的不同版本，请使用报表文件夹“站点 - 客户端信息”  中的“按客户端版本列出的 Configuration Manager 客户端计数”  报表。  
+> 若要确定层次结构中 Configuration Manager 客户端的不同版本，请使用报表文件夹“站点 - 客户端信息”中的“按客户端版本列出的 Configuration Manager 客户端计数”报表。  
 
 默认情况下，Configuration Manager 会创建升级包。 它会自动将包发送给层次结构中的所有分发点。 如果对 CAS 上的客户端包进行更改，Configuration Manager 会自动更新包，并重新分发包。 例如，在添加客户端语言包时会发生更改。 如果启用自动客户端升级，则每个客户端都将自动安装新客户端语言包。
 
@@ -71,15 +71,15 @@ ms.locfileid: "81696285"
 
 使用以下过程配置 CAS 的自动客户端升级。 此配置适用于层次结构中的所有客户端。  
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点    。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点  。  
 
-1. 在功能区“主页”  选项卡的“站点”  组中，选择“层次结构设置”  。  
+1. 在功能区“主页”选项卡的“站点”组中，选择“层次结构设置”。  
 
-1. 切换到“客户端升级”  选项卡。查看生产客户端的版本和日期。 确保这是想要用来升级客户端的版本。 如果该客户端版本不是你想要的，可能需要将预生产客户端提升到生产。 有关详细信息，请参阅[如何在预生产集合中测试客户端升级](test-client-upgrades.md)。  
+1. 切换到“客户端升级”选项卡。查看生产客户端的版本和日期。 确保这是想要用来升级客户端的版本。 如果该客户端版本不是你想要的，可能需要将预生产客户端提升到生产。 有关详细信息，请参阅[如何在预生产集合中测试客户端升级](test-client-upgrades.md)。  
 
-1. 选择“使用生产客户端升级层次结构中的所有客户端”  。 选择“确定”  以确认。  
+1. 选择“使用生产客户端升级层次结构中的所有客户端”。 选择“确定”以确认。  
 
-1. 如果不希望将客户端升级应用到服务器，则选择“请勿升级服务器”  。  
+1. 如果不希望将客户端升级应用到服务器，则选择“请勿升级服务器”。  
 
 1. 指定设备必须升级客户端的天数。 设备接收策略后，它会在此天数内以随机间隔升级客户端。 此行为可防止同时升级大量客户端。
 
@@ -88,16 +88,16 @@ ms.locfileid: "81696285"
     >
     > 由于此行为，如果随机计划的升级时间不在正常的工作时间之内，则例行关闭的计算机可能需要比预期时间更长的时间来进行升级。
 
-1. 若要排除客户端升级，请选择“从升级中排除指定的客户端”  ，然后指定要排除的集合。 有关详细信息，请参阅[从升级中排除客户端](exclude-clients-windows.md)。
+1. 若要排除客户端升级，请选择“从升级中排除指定的客户端”，然后指定要排除的集合。 有关详细信息，请参阅[从升级中排除客户端](exclude-clients-windows.md)。
 
-1. 如果想要站点将客户端安装包复制到针对[预留内容](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent)启用的分发点，请选择“向针对预留内容启用的分发点自动分发客户端安装包”  选项。  
+1. 如果想要站点将客户端安装包复制到针对[预留内容](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent)启用的分发点，请选择“向针对预留内容启用的分发点自动分发客户端安装包”选项。  
 
-1. 选择“确定”  以保存设置并关闭“层次结构设置属性”。
+1. 选择“确定”以保存设置并关闭“层次结构设置属性”。
 
 客户端下次下载策略时将收到这些设置。
 
 > [!NOTE]
-> 客户端升级按已配置的任意 Configuration Manager 维护时段进行。
+> 客户端升级按已配置的任意 Configuration Manager 维护时段进行。 execmgr 线程在维护时段仅运行客户端安装程序启动程序 (ccmsetup.exe)。 如果设备运行带有写入筛选器的 Windows 版本，ccmsetup 会同时尝试下载和安装。 否则，ccmsetup 随机选择某个时间来下载内容。 下载内容并编译本地策略后，execmgr 会计划在下一个维护时段升级客户端。<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>后续步骤
 
