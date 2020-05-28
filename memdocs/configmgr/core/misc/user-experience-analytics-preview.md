@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6f481fa54a8018137a4b45bc62f6fde9c1f1165b
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381566"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764231"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>终结点分析预览版
 
@@ -102,6 +102,8 @@ ms.locfileid: "83381566"
 
 对于主动修正，用户需要在“设备配置”类别下拥有适合其角色的权限。  如果用户仅使用“主动修正”，则无需具备“终结点分析”类别中的权限。
 
+在首次使用主动修正之前，需要 [Intune 服务管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions)确认许可要求。
+
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a> 开始收集数据
 - 若要只注册 Intune 托管设备，请跳到[在终结点分析门户中加入](#bkmk_uea_onboard)部分。
 
@@ -112,7 +114,7 @@ ms.locfileid: "83381566"
 
 ### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a> 注册 Configuration Manager 托管设备
 <!--6051638, 5924760-->
-注册 Configuration Manager 设备前，请先验证[先决条件](#bkmk_uea_prereq)，其中包括启用 [Microsoft Endpoint Manager 租户附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)。 若要只注册 Intune 托管设备，请跳到[在终结点分析门户中加入](#bkmk_uea_onboard)部分。
+注册 Configuration Manager 设备前，请先验证[先决条件](#bkmk_uea_prereq)，其中包括启用 [Microsoft Endpoint Manager 租户附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)。 
 
 #### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a> 在 Configuration Manager 中启用终结点分析数据收集
 
@@ -238,7 +240,7 @@ Microsoft Intune 为用户提供诸多生产力优势，包括在离开公司网
 “启动性能”页具有为见解提供支持的报表选项卡，其中包括：
 1. 模型性能。 借助此选项卡，你可按设备型号查看引导和登录性能，这有助于确定性能问题是否只限于特定型号。
 1. 设备性能。 此选项卡提供所有设备的引导和登录指标。 可按特定指标（例如 GP 登录时间）进行排序，以查看哪些设备的该指标得分最差，从而帮助进行故障排除。 还可以按名称搜索设备。 如果单击浏览设备，可查看其引导和登录历史记录，这有助于确定近期性能是否有所退化
-1. 启动进程。 此选项卡（如果可见；我们仍在开发此功能，因此仅向部分用户发布了外部测试版）将显示哪些进程正影响登录“进入响应桌面的时间”阶段；也就是说，在桌面呈现后将 CPU 保持在 50% 以上。
+1. 启动进程。 启动进程会增加用户等待桌面响应的时间，从而对用户体验产生负面影响。 此选项卡（如果可见；我们仍在开发此功能，因此仅向部分用户发布了外部测试版）将显示哪些进程正影响登录“进入响应桌面的时间”阶段；也就是说，在桌面呈现后将 CPU 保持在 50% 以上。 此表仅列出了影响租户中至少 10 台设备的进程。  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a> 主动修正
 

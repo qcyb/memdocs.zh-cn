@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acb8900a57408152133637ead3b8a0cf4732b4a7
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268719"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633309"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备
 
@@ -26,9 +26,9 @@ ms.locfileid: "83268719"
 
 桌面分析使用两个主要 Windows 组件：
 
-- 兼容性组件  ：兼容性组件（评估程序  ）在 Windows 设备上运行诊断，以评估设备与最新版 Windows 10 的兼容性状态。
+- 兼容性组件：兼容性组件（评估程序）在 Windows 设备上运行诊断，以评估设备与最新版 Windows 10 的兼容性状态。
 
-- “已连接的用户体验和遥测”服务  ：在 Windows 诊断数据启用后，“已连接的用户体验和遥测”服务 (DiagTrack  ) 收集系统、应用程序和驱动器数据。 Microsoft 会分析这些数据，并通过桌面分析将其共享给你。
+- “已连接的用户体验和遥测”服务：在 Windows 诊断数据启用后，“已连接的用户体验和遥测”服务 (DiagTrack) 收集系统、应用程序和驱动器数据。 Microsoft 会分析这些数据，并通过桌面分析将其共享给你。
 
 安装这些组件的最新版本，以获取最佳桌面分析体验。
 
@@ -81,9 +81,9 @@ Configuration Manager 提供了管理这些设置并将其部署到客户端的�
 
 要更改这些设置，请按以下过程操作：
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。 选择“连接到桌面分析”，并在功能区中选择“属性”  。
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点  。 选择“连接到桌面分析”，并在功能区中选择“属性”。
 
-2. 在“诊断数据”  页上，根据需要更改以下设置：  
+2. 在“诊断数据”页上，根据需要更改以下设置：  
 
     - **商业 ID**：此值应自动填充你组织的 ID。 如果未填充，请确保将代理服务器配置为允许所有必需的[终结点](enable-data-sharing.md#endpoints)，然后再继续。 也可以手动从[桌面分析门户](monitor-connection-health.md#bkmk_ViewCommercialID)中检索商业 ID。
 
@@ -91,17 +91,17 @@ Configuration Manager 提供了管理这些设置并将其部署到客户端的�
 
     - **允许诊断数据中含有设备名称**：有关详细信息，请参阅[设备名称](#device-name)。  
 
-    对此页进行更改时，“可用功能”  页将显示桌面分析功能的预览，其中包含所选的诊断数据设置。  
+    对此页进行更改时，“可用功能”页将显示桌面分析功能的预览，其中包含所选的诊断数据设置。  
 
-3. 在“桌面分析连接”  页上，根据需要更改以下设置：
+3. 在“桌面分析连接”页上，根据需要更改以下设置：
 
     - **显示名称**：桌面分析门户使用此名称显示此 Configuration Manager 连接。  
 
     - **目标集合**：此集合包括 Configuration Manager 使用你的商业 ID 和诊断数据设置配置的所有设备。 它是 Configuration Manager 连接到桌面分析服务的完整设备集。  
 
-    - **目标集合中的设备使用经用户身份验证的代理进行出站通信**：默认情况下，此值为“否”  。 如果你的环境需要，请设置为“是”  。 有关详细信息，请参阅[代理服务器身份验证](enable-data-sharing.md#proxy-server-authentication)。
+    - **目标集合中的设备使用经用户身份验证的代理进行出站通信**：默认情况下，此值为“否”。 如果你的环境需要，请设置为“是”。 有关详细信息，请参阅[代理服务器身份验证](enable-data-sharing.md#proxy-server-authentication)。
 
-    - **选择要与桌面分析同步的特定集合**：选择“添加”  以包括“目标集合”  层次结构中的其他集合。 这些集合可在桌面分析门户中用于按照部署计划分组。 确保包括试点和试点排除集合。  <!-- 4097528 -->
+    - **选择要与桌面分析同步的特定集合**：选择“添加”以包括“目标集合”层次结构中的其他集合。 这些集合可在桌面分析门户中用于按照部署计划分组。 确保包括试点和试点排除集合。  <!-- 4097528 -->
 
         > [!IMPORTANT]
         > 这些集合在其成员身份更改时会继续同步。 例如，你的部署计划使用具有 Windows 7 成员身份规则的集合。 当这些设备升级到 Windows 10，且 Configuration Manager 评估集合成员身份时，这些设备将退出集合和部署计划。
@@ -120,15 +120,15 @@ Configuration Manager 提供了管理这些设置并将其部署到客户端的�
 
 ![显示“未知”名称的桌面分析设备列表](media/unknown-device-name.png)
 
-Configuration Manager 设置中的一个选项可供桌面分析配置此选项：**允许诊断数据中含有设备名称**。 此 Configuration Manager 设置控制 [Windows 策略设置](group-policy-settings.md) AllowDeviceNameInTelemetry  。
+Configuration Manager 设置中的一个选项可供桌面分析配置此选项：**允许诊断数据中含有设备名称**。 此 Configuration Manager 设置控制 [Windows 策略设置](group-policy-settings.md) AllowDeviceNameInTelemetry。
 
 ### <a name="conflict-resolution"></a>冲突解决
 
 一般情况下，使用 Configuration Manager 集合来定位桌面分析设置和注册。 使用直接成员身份或查询来包括或排除集合中的设备。 有关详细信息，请参阅[如何创建集合](../core/clients/manage/collections/create-collections.md)。
 
-如果值尚不存在，Configuration Manager 仅配置 Windows 设置。 如果需要为唯一设备组配置不同的设置，可以使用[“组策略”](group-policy-settings.md)。 组策略定位的设置优先于 Configuration Manager 设置。
+如果值尚不存在，Configuration Manager 仅配置 Windows 设置。 如果需要为唯一设备组配置不同的设置，可以使用[“组策略”](group-policy-settings.md)。 组策略定位的设置优先于 Configuration Manager 设置。 组策略所针对的设备可能未准确反映[“连接运行状况”](monitor-connection-health.md)仪表板中的状态。
 
-配置诊断数据级别时，请设置设备的上限。 默认情况下，在 Windows 10 版本 1803 及更高版本中，用户可以选择设置较低的级别。 你可以使用组策略设置“配置遥测选择使用设置用户界面”来控制此行为  。 有关详细信息，请参阅[桌面分析的组策略设置](group-policy-settings.md)。
+配置诊断数据级别时，请设置设备的上限。 默认情况下，在 Windows 10 版本 1803 及更高版本中，用户可以选择设置较低的级别。 你可以使用组策略设置“配置遥测选择使用设置用户界面”来控制此行为。 有关详细信息，请参阅[桌面分析的组策略设置](group-policy-settings.md)。
 
 ### <a name="proxy-settings"></a>代理设置
 
