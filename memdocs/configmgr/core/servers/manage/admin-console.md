@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110026"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878379"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>如何使用 Configuration Manager 控制台
 
@@ -228,7 +228,7 @@ Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 - 控制台版本不匹配（重要）：控制台版本与站点版本不匹配  
 - 有可用的站点更新（警告）：有一个新的更新包可用  
 
-有关详细信息和疑难解答帮助，请参阅控制台计算机上的 SmsAdminUI.log 文件  。 默认情况下，此日志文件位于以下路径：`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`。
+有关详细信息和疑难解答帮助，请参阅控制台计算机上的 SmsAdminUI.log 文件  。 默认情况下，此日志文件位于以下路径：`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`。
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a> 控制台中的文档仪表板

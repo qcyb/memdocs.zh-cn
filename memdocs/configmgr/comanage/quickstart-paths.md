@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691235"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983824"
 ---
 # <a name="paths-to-co-management"></a>共同管理的路径
 
@@ -45,7 +45,6 @@ ms.locfileid: "81691235"
         - 针对联盟域
 - 混合 Azure AD 联接的客户端代理设置
 - 配置设备自动注册到 Intune
-- 分配 Intune 用户许可证
 - 在 Configuration Manager 中启用共同管理
 
 有关此方法的教程，请参阅[教程：为现有 Configuration Manager 客户端启用共同管理](tutorial-co-manage-clients.md)。

@@ -10,16 +10,16 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904677"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879056"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1910 中的新增功能
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的更新 1910 作为控制台内更新提供。 将此更新应用于运行版本 1806 或更高版本的站点。 <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> 本文汇总了 Configuration Manager 版本 1910 中的更改和新增功能。
 
@@ -58,9 +58,9 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 
 在版本 1910 中，除了名称更改之外，Configuration Manager 的功能仍然相同。 某些名称更改可能会影响以下组件的使用：
 
-- **Configuration Manager 控制台**：在“Microsoft Endpoint Manager”文件夹中的 Windows“开始”菜单下，找到控制台和“远程控制查看器”的快捷方式   。
+- **Configuration Manager 控制台**：在“Microsoft Endpoint Manager”文件夹中的 Windows“开始”菜单下，找到控制台和“远程控制查看器”的快捷方式 。
 
-- **软件中心**：在“Microsoft Endpoint Manager”文件夹中的 Windows“开始”菜单下，找到软件中心快捷方式  。
+- **软件中心**：在“Microsoft Endpoint Manager”文件夹中的 Windows“开始”菜单下，找到软件中心快捷方式。
 
 ![Microsoft Endpoint Manager“开始”菜单图标](media/microsoft-endpoint-manager-start-menu.png)
 
@@ -123,7 +123,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 有关详细信息，请参阅 [Configuration Manager 中的 Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md#bkmk_intune)。
 
 > [!NOTE]
-> Configuration Manager Current Branch 版本 1906 包括[传递优化网络内缓存](../hierarchy/microsoft-connected-cache.md) (DOINC)，它是一项安装在 Windows Server 的应用程序，目前仍在开发中。 从 Current Branch 版本 1910 开始，此功能现在称为“Microsoft Connected Cache”。
+> Configuration Manager Current Branch 版本 1906 包括[传递优化网络内缓存](../hierarchy/microsoft-connected-cache.md)，它是一项安装于 Windows Server 的应用程序，目前仍在开发中。 从 Current Branch 版本 1910 开始，此功能现在称为“Microsoft Connected Cache”。
 >
 > 在 Configuration Manager 分发点上安装互联缓存后，会将传递优化服务流量卸载到本地源。 互联缓存通过有效地在字节范围级别缓存内容来实现此行为。
 
@@ -132,7 +132,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 ### <a name="include-custom-configuration-baselines-as-part-of-compliance-policy-assessment"></a>将自定义配置基线包含在合规性策略评估中
 <!--3608345-->
 
-现在可以将自定义配置基线评估添加为合规性策略评估规则。 创建或编辑配置基线时，现在可以使用“将此基线作为合规性策略的一部分进行评估”严格  。 添加或编辑合规性策略规则时，有一个名为“在合规性策略评估中包含配置的基线”的条件  。
+现在可以将自定义配置基线评估添加为合规性策略评估规则。 创建或编辑配置基线时，现在可以使用“将此基线作为合规性策略的一部分进行评估”严格。 添加或编辑合规性策略规则时，有一个名为“在合规性策略评估中包含配置的基线”的条件。
 
 对于共同管理的设备，当你配置 Intune 以将 Configuration Manager 合规性评估结果作为总体合规性状态的一部分时，此信息将发送到 Azure Active Directory。 然后，你可以使用它对 Office 365 资源进行条件访问。
 
@@ -144,7 +144,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 
 Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop)的支持。 此 Microsoft Azure 环境支持多个操作系统版本，其中一些版本允许多个并发活动用户会话。 例如，Windows 10 企业版多会话是其中一个操作系统版本。
 
-如果这些多会话设备中需要用户策略，并且接受任何潜在的性能影响，则可以立即配置客户端设置以启用用户策略。 在“客户端策略”组中，配置“为多个用户会话启用用户策略”设置   。
+如果这些多会话设备中需要用户策略，并且接受任何潜在的性能影响，则可以立即配置客户端设置以启用用户策略。 在“客户端策略”组中，配置“为多个用户会话启用用户策略”设置 。
 
 有关详细信息，请参阅[如何配置客户端设置](../../clients/deploy/configure-client-settings.md)。
 
@@ -166,8 +166,8 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 从当前分支版本 1906 开始，可以创建一组可以作为单个部署发送到设备集合的应用程序。 此版本改进了以下功能：
 
-- 用户可以在软件中心选择“卸载”应用组  。
-- 可以将应用组部署到用户集合  。
+- 用户可以在软件中心选择“卸载”应用组。
+- 可以将应用组部署到用户集合。
 
 有关更多一般信息，请参阅[创建应用程序组](../../../apps/deploy-use/create-app-groups.md)。
 
@@ -209,7 +209,7 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 <!--4910348-->
 
-为启动映像配置默认键盘布局。 在启动映像的“自定义”选项卡上，使用“在 WinPE 中设置默认键盘布局”新选项   。 如果选择 zh-cn 以外的其他语言，Configuration Manager 仍会在可用输入区域设置中包含 zh-cn。 在设备上，初始键盘布局为选定的区域设置，但用户可以将设备切换为 zh-cn（如果需要）。
+为启动映像配置默认键盘布局。 在启动映像的“自定义”选项卡上，使用“在 WinPE 中设置默认键盘布局”新选项 。 如果选择 zh-cn 以外的其他语言，Configuration Manager 仍会在可用输入区域设置中包含 zh-cn。 在设备上，初始键盘布局为选定的区域设置，但用户可以将设备切换为 zh-cn（如果需要）。
 
 有关详细信息，请参阅[管理启动映像](../../../osd/get-started/manage-boot-images.md#customization)。
 
@@ -217,7 +217,7 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 <!--4931110-->
 
-导入 OS 升级包时，可以使用“从所选升级包的 install.wim 文件中提取特定映像索引”选项  。 此行为类似于 [OS 映像](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages)，但它会覆盖 OS 升级包中的现有 install.wim。 它会将映像索引提取到临时位置，然后将其移动到原始源目录。
+导入 OS 升级包时，可以使用“从所选升级包的 install.wim 文件中提取特定映像索引”选项。 此行为类似于 [OS 映像](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages)，但它会覆盖 OS 升级包中的现有 install.wim。 它会将映像索引提取到临时位置，然后将其移动到原始源目录。
 
 有关详细信息，请参阅[管理 OS 升级包](../../../osd/get-started/manage-operating-system-upgrade-packages.md#BKMK_AddOSUpgradePkgs)。
 
@@ -225,7 +225,7 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 <!--user story 4977616/bug 4798352-->
 
-“运行命令行”步骤现在包含“输出到任务序列变量”选项   。 启用此选项时，任务序列会将命令的输出保存到你指定的自定义任务序列变量。
+“运行命令行”步骤现在包含“输出到任务序列变量”选项 。 启用此选项时，任务序列会将命令的输出保存到你指定的自定义任务序列变量。
 
 有关详细信息，请参阅[运行命令行](../../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)
 
@@ -233,7 +233,7 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 此版本包括对任务序列调试程序的以下改进：
 
-- 使用新的任务序列变量 TSDebugOnError，以便在任务序列返回错误时自动启动调试程序  。<!-- 5012536 -->
+- 使用新的任务序列变量 TSDebugOnError，以便在任务序列返回错误时自动启动调试程序。<!-- 5012536 -->
 - 如果你在调试程序中创建断点，随后任务序列重新启动计算机，则调试程序将在重新启动后保留断点。<!-- 5012509 -->
 
 有关详细信息，请参阅[任务序列调试器](../../../osd/deploy-use/debug-task-sequence.md)和[任务序列变量 - TSDebugOnError](../../../osd/understand/task-sequence-variables.md#TSDebugOnError)。
@@ -242,9 +242,9 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 <!--5411057, 5138936-->
 
-此版本添加了 OS 部署期间对语言配置的控制。 如果已应用这些语言设置，则此更改可帮助简化 OS 部署任务序列。 无需对每种语言使用多个步骤或单独的脚本，只需对内置“应用 Windows 设置”步骤且具有该语言条件的每种语言使用一个实例  。
+此版本添加了 OS 部署期间对语言配置的控制。 如果已应用这些语言设置，则此更改可帮助简化 OS 部署任务序列。 无需对每种语言使用多个步骤或单独的脚本，只需对内置“应用 Windows 设置”步骤且具有该语言条件的每种语言使用一个实例。
 
-使用“应用 Windows 设置”任务序列步骤配置以下新设置  ：
+使用“应用 Windows 设置”任务序列步骤配置以下新设置：
 
 - 输入区域设置（默认键盘布局）
 - 系统区域设置
@@ -258,7 +258,7 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 <!--4680263-->
 
-若要在 Windows 安装完成时解决高性能设备上 Windows 10 就地升级任务序列的计时问题，现在可以设置新的任务序列变量“SetupCompletePause”  。 在将以秒为单位的值分配给此变量时，Windows 安装过程会在启动任务序列之前延迟该时长。 此超时向 Configuration Manager 客户端提供了额外的时间来进行初始化。
+若要在 Windows 安装完成时解决高性能设备上 Windows 10 就地升级任务序列的计时问题，现在可以设置新的任务序列变量“SetupCompletePause”。 在将以秒为单位的值分配给此变量时，Windows 安装过程会在启动任务序列之前延迟该时长。 此超时向 Configuration Manager 客户端提供了额外的时间来进行初始化。
 
 有关详细信息，请参阅[任务序列变量 - SetupCompletePause](../../../osd/understand/task-sequence-variables.md#SetupCompletePause)。
 
@@ -283,7 +283,7 @@ Configuration Manager 当前分支版本 1906 引入了对 [Windows 虚拟桌面
 
 ### <a name="additional-software-update-filter-for-adrs"></a>ADR 的附加软件更新筛选器
 <!--4852033-->
-现在可以将“已部署”用作自动部署规则的更新筛选器 (ADR)  。 此筛选器可帮助确定可能需要部署到试点或测试集合的新更新。
+现在可以将“已部署”用作自动部署规则的更新筛选器 (ADR)。 此筛选器可帮助确定可能需要部署到试点或测试集合的新更新。
 
 有关详细信息，请参阅[自动部署软件更新](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)。
 
@@ -317,10 +317,10 @@ Configuration Manager 现在为 BitLocker 驱动器加密提供以下管理功�
 
 ### <a name="view-active-consoles-and-message-administrators-through-console-connections"></a>通过控制台连接查看活动控制台和消息管理员
 <!--4923997-->
-我们对控制台连接进行了以下改进  ：
+我们对控制台连接进行了以下改进：
 
 - 能够通过 Configuration Manager Microsoft Teams 向其他管理员发送消息。
-- “上次控制台检测信号”列已替换“上次连接时间”列   。
+- “上次控制台检测信号”列已替换“上次连接时间”列 。
   - 前台打开的控制台每 10 分钟发送一次检测信号，以帮助确定当前哪些控制台连接处于活动状态。
 
 有关详细信息，请参阅[查看最近连接的控制台](../../servers/manage/admin-console.md#bkmk_viewconnected)和[消息管理员](../../servers/manage/admin-console.md#bkmk_message)。
@@ -329,10 +329,10 @@ Configuration Manager 现在为 BitLocker 驱动器加密提供以下管理功�
 
 <!--4433455-->
 
-Configuration Manager 控制台中提供了“客户端诊断”的新设备操作  ：
+Configuration Manager 控制台中提供了“客户端诊断”的新设备操作：
 
-- **启用详细日志记录：** 将 CCM 组件的全局日志级别更改为详细，并启用调试日志记录  。
-- **禁用详细日志记录：** 将全局日志级别更改为默认值，并禁用调试日志记录  。
+- **启用详细日志记录：** 将 CCM 组件的全局日志级别更改为详细，并启用调试日志记录。
+- **禁用详细日志记录：** 将全局日志级别更改为默认值，并禁用调试日志记录。
 
 有关详细信息，请参阅[客户端诊断](../../clients/manage/client-notification.md#client-diagnostics)。
 
@@ -341,8 +341,8 @@ Configuration Manager 控制台中提供了“客户端诊断”的新设备操�
 
 此版本包括对 Configuration Manager 控制台搜索的以下改进：
 
-- 现在可以使用“驱动程序包”和“查询”节点中的“所有子文件夹”搜索选项    。<!--2841181,5424892-->
-- 如果搜索返回的结果超过 1,000 个，请选择通知栏上的“确定”以查看更多结果  。<!--4640570-->
+- 现在可以使用“驱动程序包”和“查询”节点中的“所有子文件夹”搜索选项  。<!--2841181,5424892-->
+- 如果搜索返回的结果超过 1,000 个，请选择通知栏上的“确定”以查看更多结果。<!--4640570-->
 
 ## <a name="other-updates"></a>其他更新
 

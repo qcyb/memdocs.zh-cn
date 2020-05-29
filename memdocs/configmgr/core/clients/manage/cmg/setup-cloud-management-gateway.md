@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383713"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877415"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -223,11 +223,11 @@ Configuration Manager 客户端会自动确定它是在 Intranet 上还是在 In
 
 - 系统满足以下条件之一：
 
- - 每个系统都有之前颁发的有效、唯一且受信任的客户端身份验证证书。
- 
- - 已建立 Azure AD 域联接
- 
- - 已建立混合 Azure AD 域联接。
+  - 每个系统都有之前颁发的有效、唯一且受信任的客户端身份验证证书。
+
+  - 已建立 Azure AD 域联接
+
+  - 已建立混合 Azure AD 域联接。
 
 - 你不希望或无法完全重新安装现有的客户端代理。
 

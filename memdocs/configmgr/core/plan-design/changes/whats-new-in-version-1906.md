@@ -10,16 +10,16 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078696"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879093"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的更新 1906 作为控制台中更新提供。 将此更新应用于运行版本 1802 或更高版本的站点。 <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> 本文汇总了 Configuration Manager 版本 1906 中的更改和新增功能。  
 
@@ -50,7 +50,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 ### <a name="site-server-maintenance-task-improvements"></a>站点服务器维护任务改进
 
 <!--3555894-->
-在站点服务器的详细信息视图上，站点服务器维护任务现可通过它们各自的选项卡进行查看和编辑。 新的“维护任务”选项卡提供了如下信息  ：
+在站点服务器的详细信息视图上，站点服务器维护任务现可通过它们各自的选项卡进行查看和编辑。 新的“维护任务”选项卡提供了如下信息：
 
 - 任务是否已启用
 - 任务计划
@@ -65,11 +65,11 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 ### <a name="configuration-manager-update-database-upgrade-monitoring"></a>Configuration Manager 更新数据库升级监视
 
 <!--4200581-->
-应用 Configuration Manager 更新时，现可在安装状态窗口中查看“升级 ConfigMgr 数据库”任务的状态  。
+应用 Configuration Manager 更新时，现可在安装状态窗口中查看“升级 ConfigMgr 数据库”任务的状态。
 
-- 如果数据库升级受阻，则会收到“正在进行，需要注意”的警告  。
+- 如果数据库升级受阻，则会收到“正在进行，需要注意”的警告。
    - cmupdate.log 将记录阻止数据库升级的 SQL 中的程序名和会话 ID。
-- 数据库升级不再受阻时，状态将重置为“正在进行”或“完成”   。
+- 数据库升级不再受阻时，状态将重置为“正在进行”或“完成” 。
    - 如果数据库升级受阻，则每 5 分钟进行一次检查，查看其是否仍然受阻。
 
    ![安装过程中的数据库升级监视](./media/4200581-database-upgrade-monitoring.png)
@@ -79,7 +79,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 ### <a name="management-insights-rule-for-ntlm-fallback"></a>NTLM 回退的管理见解规则
 
 <!--4572953-->
-管理见解包含一项新的规则，用于检测是否为站点启用了安全级别较低的 NTLM 身份验证回退方法：已启用 NTLM 回退  。
+管理见解包含一项新的规则，用于检测是否为站点启用了安全级别较低的 NTLM 身份验证回退方法：已启用 NTLM 回退。
 
 有关详细信息，请参阅[管理见解](../../servers/manage/management-insights.md#security)。
 
@@ -165,7 +165,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 
 <!--4683130-->
 
-已向 Configuration Manager 的内置[安全管理员](../../understand/fundamentals-of-role-based-administration.md#bkmk_Planroles)角色添加以下权限  ：
+已向 Configuration Manager 的内置[安全管理员](../../understand/fundamentals-of-role-based-administration.md#bkmk_Planroles)角色添加以下权限：
 
 - 读取 SMS 脚本
 - 在集合上运行 CMPivot
@@ -186,7 +186,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 ### <a name="use-your-distribution-point-as-an-in-network-cache-server-for-delivery-optimization"></a>将分发点用作传递优化的网络内缓存服务器
 
 <!--3555764-->
-现在可以在分发点上安装传递优化网络内缓存 (DOINC) 服务器。 通过将此内容缓存在本地，你的客户端可以从传递优化功能中受益，但你可帮助保护 WAN 链接。
+现在可以在分发点上安装传递优化网络内缓存服务器。 通过将此内容缓存在本地，你的客户端可以从传递优化功能中受益，但你可帮助保护 WAN 链接。
 
 此缓存服务器充当由传递优化下载的内容的按需透明缓存。 使用客户端设置以确保此服务器仅提供给本地 Configuration Manager 边界组的成员。
 
@@ -223,10 +223,10 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 ### <a name="configure-client-cache-minimum-retention-period"></a>配置客户端缓存最短保持期
 
 <!--4485509-->
-现在可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置定义了在需要更多空间的情况下，Configuration Manager 代理可以从缓存中删除内容之前应等待的最短时间。 在客户端设置的“客户端缓存设置”组中，配置以下设置  ：**可以删除缓存内容前的最短持续时间（以分钟为单位）** 。
+现在可以指定 Configuration Manager 客户端保留缓存内容的最短时间。 此客户端设置定义了在需要更多空间的情况下，Configuration Manager 代理可以从缓存中删除内容之前应等待的最短时间。 在客户端设置的“客户端缓存设置”组中，配置以下设置：**可以删除缓存内容前的最短持续时间（以分钟为单位）** 。
 
 > [!Note]  
-> 在同一个客户端设置组中，现有设置“在完整 OS 中启用 Configuration Manager 客户端以共享内容”现重命名为“启用为对等缓存源”   。 此设置的行为不会发生更改。  
+> 在同一个客户端设置组中，现有设置“在完整 OS 中启用 Configuration Manager 客户端以共享内容”现重命名为“启用为对等缓存源” 。 此设置的行为不会发生更改。  
 
 有关详细信息，请参阅[客户端缓存设置](../../clients/deploy/about-client-settings.md#client-cache-settings)。
 
@@ -235,7 +235,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 ### <a name="improvements-to-co-management-auto-enrollment"></a>共同管理自动注册的改进
 
-- 新的共同管理设备现可根据其 Azure Active Directory (Azure AD) 设备令牌自动注册到 Microsoft Intune 服务  。 无需等待用户登录到设备，就能启动自动注册。 这项更改有助于减少[注册状态](../../../comanage/how-to-monitor.md#co-management-enrollment-status)为“挂起用户登录”的设备数量  。<!-- 4454491 -->
+- 新的共同管理设备现可根据其 Azure Active Directory (Azure AD) 设备令牌自动注册到 Microsoft Intune 服务。 无需等待用户登录到设备，就能启动自动注册。 这项更改有助于减少[注册状态](../../../comanage/how-to-monitor.md#co-management-enrollment-status)为“挂起用户登录”的设备数量。<!-- 4454491 -->
 
 - 对于已将设备注册到共同管理的客户，新设备一旦满足先决条件即可立即注册。 例如，将设备联接到 Azure AD 并且安装了 Configuration Manager 客户端。<!--4321130-->
 
@@ -246,10 +246,10 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 <!--3555750-->
 现可为每个共同管理工作负载配置不同的试点集合。 如果能够使用不同的试点集合，那么在移动工作负载时就能采用更具体的方法。
 
-- 在“启用”选项卡上，现可指定 Intune 自动注册集合   。
-    - Intune 自动注册集合应包含所有要加入共同管理的客户端  。 它实质上是所有其他暂存集合的超集。
+- 在“启用”选项卡上，现可指定 Intune 自动注册集合 。
+    - Intune 自动注册集合应包含所有要加入共同管理的客户端。 它实质上是所有其他暂存集合的超集。
 
-- 在“暂存”选项卡上，现可为每个工作负载选择一个单独的集合，而不是将一个试点集合用于所有工作负载  。
+- 在“暂存”选项卡上，现可为每个工作负载选择一个单独的集合，而不是将一个试点集合用于所有工作负载。
 
     ![使用共同管理“暂存”选项卡，可为每个工作负载选择一个集合](./media/3555750-co-management-staging-tab.png)
 
@@ -268,7 +268,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 ### <a name="filter-applications-deployed-to-devices"></a>筛选部署到设备的应用程序
 
 <!--4451056-->
-以设备为目标的应用程序部署的用户类别在软件中心现显示为筛选器。 在其属性的“软件中心”页上，为应用程序指定“用户类别”   。 然后，在软件中心打开应用并查看可用的筛选器。
+以设备为目标的应用程序部署的用户类别在软件中心现显示为筛选器。 在其属性的“软件中心”页上，为应用程序指定“用户类别” 。 然后，在软件中心打开应用并查看可用的筛选器。
 
 有关详细信息，请参阅[手动指定应用程序信息](../../../apps/deploy-use/create-applications.md#bkmk_manual-app)。
 
@@ -302,11 +302,11 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 - 如果在控制台中批准了应用请求，然后拒绝该请求，则现在可以再次批准该请求。 批准后，应用将重新安装在客户端上。  
 
-- 在 Configuration Manager 控制台的“软件库”工作区中的“应用程序管理”下，“审批请求”节点重命名为“应用程序请求”     。<!-- SCCMDocs-pr#4028 -->
+- 在 Configuration Manager 控制台的“软件库”工作区中的“应用程序管理”下，“审批请求”节点重命名为“应用程序请求”   。<!-- SCCMDocs-pr#4028 -->
 
-- 要删除应用批准请求，可以使用新的 WMI 方法 DeleteInstance  。 此操作不会卸载设备上的应用。 如果尚未安装，则用户无法从软件中心安装该应用。
+- 要删除应用批准请求，可以使用新的 WMI 方法 DeleteInstance。 此操作不会卸载设备上的应用。 如果尚未安装，则用户无法从软件中心安装该应用。
 
-- 调用 CreateApprovedRequest API，为设备上的应用创建预先批准的请求  。 要阻止在客户端上自动安装应用，请将 AutoInstall 参数设置为 `FALSE` 。 用户可以在软件中心中看到该应用，但系统不会自动安装该应用。
+- 调用 CreateApprovedRequest API，为设备上的应用创建预先批准的请求。 要阻止在客户端上自动安装应用，请将 AutoInstall 参数设置为 `FALSE`。 用户可以在软件中心中看到该应用，但系统不会自动安装该应用。
 
 有关详细信息，请参阅[批准应用程序](../../../apps/deploy-use/app-approval.md)。
 
@@ -327,7 +327,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 ### <a name="clear-app-content-from-client-cache-during-task-sequence"></a>在任务序列期间清除客户端缓存中的应用内容
 
 <!--4485675-->
-在“安装应用程序”任务序列步骤中，现可在步骤运行后删除客户端缓存中的应用内容  。
+在“安装应用程序”任务序列步骤中，现可在步骤运行后删除客户端缓存中的应用内容。
 
 有关详细信息，请参阅[关于任务序列步骤](../../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication)。
 
@@ -337,7 +337,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 ### <a name="reclaim-sedo-lock-for-task-sequences"></a>回收任务序列的 SEDO 锁定
 
 <!--3699337-->
-如果 Configuration Manager 控制台停止响应，你可能会被锁定而无法对任务序列做出进一步更改。 尝试访问已锁定的任务序列时，现在可以放弃更改，并继续编辑对象  。
+如果 Configuration Manager 控制台停止响应，你可能会被锁定而无法对任务序列做出进一步更改。 尝试访问已锁定的任务序列时，现在可以放弃更改，并继续编辑对象。
 
 有关详细信息，请参阅[使用任务序列编辑器](../../../osd/understand/task-sequence-editor.md#bkmk_sedo)。
 
@@ -362,13 +362,13 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
     - **Set-CMTSStepRunTaskSequence**
 
-- 运行任务序列时，现可更加轻松地编辑变量。 在“任务序列向导”窗口中选择任务序列后，用于编辑任务序列变量的页面中包含一个“编辑”按钮  。<!-- 4668846 --> 有关详细信息，请参阅[如何使用任务序列变量](../../../osd/understand/using-task-sequence-variables.md#bkmk_set-tswiz)。
+- 运行任务序列时，现可更加轻松地编辑变量。 在“任务序列向导”窗口中选择任务序列后，用于编辑任务序列变量的页面中包含一个“编辑”按钮。<!-- 4668846 --> 有关详细信息，请参阅[如何使用任务序列变量](../../../osd/understand/using-task-sequence-variables.md#bkmk_set-tswiz)。
 
--  “禁用 BitLocker”任务序列步骤拥有新的重启计数器。 使用此选项可指定禁用 BitLocker 的重启次数。 此更改有助于简化任务序列。 可以使用单个步骤，而不是添加此步骤的多个实例。 <!--4512937--> 有关详细信息，请参阅[禁用 BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_DisableBitLocker)。
+- “禁用 BitLocker”任务序列步骤拥有新的重启计数器。 使用此选项可指定禁用 BitLocker 的重启次数。 此更改有助于简化任务序列。 可以使用单个步骤，而不是添加此步骤的多个实例。 <!--4512937--> 有关详细信息，请参阅[禁用 BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_DisableBitLocker)。
 
-- 将新的任务序列变量 SMSTSRebootDelayNext  与现有的 [SMSTSRebootDelay](../../../osd/understand/task-sequence-variables.md#SMSTSRebootDelay) 变量结合使用。 若要稍后执行超时值不同于第一个的任何重启，请将此新变量设置为其他值（以秒为单位）。 <!--4447680--> 有关详细信息，请参阅 [SMSTSRebootDelayNext](../../../osd/understand/task-sequence-variables.md#SMSTSRebootDelayNext)。
+- 将新的任务序列变量 SMSTSRebootDelayNext 与现有的 [SMSTSRebootDelay](../../../osd/understand/task-sequence-variables.md#SMSTSRebootDelay) 变量结合使用。 若要稍后执行超时值不同于第一个的任何重启，请将此新变量设置为其他值（以秒为单位）。 <!--4447680--> 有关详细信息，请参阅 [SMSTSRebootDelayNext](../../../osd/understand/task-sequence-variables.md#SMSTSRebootDelayNext)。
 
-- 任务序列设置了新的只读变量“_SMSTSLastContentDownloadLocation”  。 此变量包含下载任务序列或尝试下载内容的最后位置。 检查此变量，而不是分析客户端日志。<!-- 2840337 -->
+- 任务序列设置了新的只读变量“_SMSTSLastContentDownloadLocation”。 此变量包含下载任务序列或尝试下载内容的最后位置。 检查此变量，而不是分析客户端日志。<!-- 2840337 -->
 
 - 当你创建任务序列媒体时，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 如果情况需要，仍然可以包括该文件。<!-- 4090666 -->
 
@@ -408,7 +408,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 ### <a name="redesigned-notification-for-newly-available-software"></a>重新为最新可用的软件设计了通知
 
 <!--3555904-->
-“新软件可用”通知将仅为给定应用程序和修订版本的用户显示一次  。 用户每次登录时将不再看到该通知。 只有应用程序发生更改或重新部署时，用户才会看到另外的通知。
+“新软件可用”通知将仅为给定应用程序和修订版本的用户显示一次。 用户每次登录时将不再看到该通知。 只有应用程序发生更改或重新部署时，用户才会看到另外的通知。
 
 有关详细信息，请参阅[创建和部署应用程序](../../../apps/get-started/create-and-deploy-an-application.md#end-user-experience)。
 
@@ -416,9 +416,9 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 <!--3976435-->
 
-现在，系统将通过间歇性倒计时通知更频繁地提醒最终用户待重启。 可以在“计算机重新启动”页上的“客户端设置”中定义间歇性通知的时间间隔   。 更改“指定计算机重启倒计时通知的暂停持续时间(分钟)”  的值，以配置在出现最终倒计时通知前提醒用户等待重启的频率。
+现在，系统将通过间歇性倒计时通知更频繁地提醒最终用户待重启。 可以在“计算机重新启动”页上的“客户端设置”中定义间歇性通知的时间间隔 。 更改“指定计算机重启倒计时通知的暂停持续时间(分钟)”的值，以配置在出现最终倒计时通知前提醒用户等待重启的频率。
 
-此外，向用户显示一条临时通知，指示注销用户或重启计算机之前的时间间隔（以分钟为单位），这一时间间隔的最大值从 1440 分钟（24小时）增加到了 20160 分钟（两周）  。
+此外，向用户显示一条临时通知，指示注销用户或重启计算机之前的时间间隔（以分钟为单位），这一时间间隔的最大值从 1440 分钟（24小时）增加到了 20160 分钟（两周）。
 
 有关详细信息，请参阅[设备重新启动通知](../../clients/deploy/device-restart-notifications.md)和[关于客户端设置](../../clients/deploy/about-client-settings.md#computer-restart)。
 
@@ -434,7 +434,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 字符串 `CustomTab1` 是按顺序排列的第一个自定义选项卡。
 
-例如，在 Windows“运行”窗口中键入此 URL  。
+例如，在 Windows“运行”窗口中键入此 URL。
 
 此语法还可用于打开软件中心的默认选项卡：
 
@@ -465,7 +465,7 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 <!--3734426-->
 
-现可指定完成软件更新安装所需的最长时间。 可以在软件更新点上的“最长运行时间”  选项卡中指定以下各项：
+现可指定完成软件更新安装所需的最长时间。 可以在软件更新点上的“最长运行时间”选项卡中指定以下各项：
 
 - **Windows 功能更新的最长运行时间(分钟)**
 - **Office 365 更新和 Windows 非功能更新的最长运行时间(分钟)**
@@ -484,26 +484,26 @@ OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式�
 
 <!--4682946-->
 
-Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Microsoft 更新中，而不像早期版本那样作为 Windows 10 产品的一部分进行添加   。 这项更改需要你执行许多手动步骤，才可确保客户端显示这些更新。 我们已采取措施减少了需要手动对新产品执行操作的步骤数量。
+Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Microsoft 更新中，而不像早期版本那样作为 Windows 10 产品的一部分进行添加 。 这项更改需要你执行许多手动步骤，才可确保客户端显示这些更新。 我们已采取措施减少了需要手动对新产品执行操作的步骤数量。
 
-更新至 Configuration Manager 1906 版，并选择了 Windows 10 产品进行同步后，系统将自动执行以下操作  ：
+更新至 Configuration Manager 1906 版，并选择了 Windows 10 产品进行同步后，系统将自动执行以下操作：
 
-- 已添加 Windows 10 1903 版以及更高版本产品用于进行同步操作  。
-- 包含 Windows 10 产品的自动部署规则将更新为包含 Windows 10 1903 版和更高版本   。
-- 维护服务计划将更新为包含 Windows 10 1903 版和更高版本产品  。
+- 已添加 Windows 10 1903 版以及更高版本产品用于进行同步操作。
+- 包含 Windows 10 产品的自动部署规则将更新为包含 Windows 10 1903 版和更高版本 。
+- 维护服务计划将更新为包含 Windows 10 1903 版和更高版本产品。
 
 有关详细信息，请参阅[配置要同步的分类和产品](../../../sum/get-started/configure-classifications-and-products.md)、[维护服务计划](../../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow)和[自动部署规则](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)。
 
 ### <a name="drill-through-required-updates"></a>钻取必需更新
 
 <!--4224414-->
-现可深入查看符合性统计信息，了解哪些设备需要特定软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 若要深入查看设备列表，请在更新的“摘要”选项卡中选择饼图旁的“查看所需更新”超链接   。 单击此超链接将转到“设备”下的临时节点，可以在其中查看需要更新的设备  。
+现可深入查看符合性统计信息，了解哪些设备需要特定软件更新。 若要查看设备列表，需要具有查看更新和设备所属集合的权限。 若要深入查看设备列表，请在更新的“摘要”选项卡中选择饼图旁的“查看所需更新”超链接 。 单击此超链接将转到“设备”下的临时节点，可以在其中查看需要更新的设备。
 
- 可在以下位置找到“查看所需更新”超链接：
+可在以下位置找到“查看所需更新”超链接：
 
-   - “软件库” > “软件更新” > “所有软件更新”   
-   - “软件库” > “Windows 10 维护服务” > “所有 Windows 10 更新”   
-   - “软件库” > “Office 365 客户端管理” > “Office 365 更新”   
+   - “软件库” > “软件更新” > “所有软件更新”  
+   - “软件库” > “Windows 10 维护服务” > “所有 Windows 10 更新”  
+   - “软件库” > “Office 365 客户端管理” > “Office 365 更新”  
 
 有关详细信息，请参阅[监视软件更新](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[管理 Windows 即服务](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)和[管理 Office 365 专业增强版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates)。
 
@@ -514,7 +514,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 <!--4021125-->
 
-为了帮助你确定哪些设备已准备好升级到 Office 365 专业增强版，我们推出了新的就绪情况仪表板。 它包括 Configuration Manager 当前分支版本 1902 中发布的“Office 365 专业增强版升级就绪情况”  磁贴。 在 Configuration Manager 控制台中，转到“软件库”  工作区，展开“Office 365 客户端管理”  ，再选择“Office 365 专业增强版升级就绪情况”  节点。
+为了帮助你确定哪些设备已准备好升级到 Office 365 专业增强版，我们推出了新的就绪情况仪表板。 它包括 Configuration Manager 当前分支版本 1902 中发布的“Office 365 专业增强版升级就绪情况”磁贴。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“Office 365 客户端管理”，再选择“Office 365 专业增强版升级就绪情况”节点。
 
 若要详细了解仪表板、先决条件和如何使用此数据，请参阅 [Office 365 专业增强版集成的就绪情况](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash)。
 
@@ -536,14 +536,14 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 <!--3600867-->
 
-现在可以在文件夹上设置安全作用域。 如果有权访问文件夹中的对象，但无权访问文件夹，则无法查看对象。 同样，如果有权访问文件夹，但无权访问该文件夹中的对象，则无法查看对象。 右键单击文件夹，选择“设置安全作用域”  ，然后选择要应用的安全作用域。
+现在可以在文件夹上设置安全作用域。 如果有权访问文件夹中的对象，但无权访问文件夹，则无法查看对象。 同样，如果有权访问文件夹，但无权访问该文件夹中的对象，则无法查看对象。 右键单击文件夹，选择“设置安全作用域”，然后选择要应用的安全作用域。
 
 有关详细信息，请参阅[使用 Configuration Manager 控制台](../../servers/manage/admin-console.md#tips)和[配置基于角色的管理](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)。
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>将 SMBIOS GUID 列添加到设备和设备集合节点
 
 <!--4526580-->
-在设备和设备集合节点中，现在可以为“SMBIOS GUID”添加新列    。 此值与 System Resource 类的“BIOS GUID”属性相同  。 它是设备硬件的唯一标识符。
+在设备和设备集合节点中，现在可以为“SMBIOS GUID”添加新列  。 此值与 System Resource 类的“BIOS GUID”属性相同。 它是设备硬件的唯一标识符。
 
 ### <a name="administration-service-support-for-security-nodes"></a>对安全节点的管理服务支持
 
@@ -553,49 +553,49 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 有关详细信息，请参阅[管理服务](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service)。
 
 > [!Note]
-> 从版本 1906 开始，站点属性上的“客户端计算机通信”选项卡现在称为“通信安全”   。<!-- SCCMDocs#1645 -->  
+> 从版本 1906 开始，站点属性上的“客户端计算机通信”选项卡现在称为“通信安全” 。<!-- SCCMDocs#1645 -->  
 
 ### <a name="collections-tab-in-devices-node"></a>设备节点中的“集合”选项卡
 
 <!--4616810-->
-在“资产和符合性”工作区中，转到“设备”节点，然后选择设备   。 在详细信息窗格中，切换到新的“集合”选项卡  。此选项卡列出包含此设备的集合。
+在“资产和符合性”工作区中，转到“设备”节点，然后选择设备 。 在详细信息窗格中，切换到新的“集合”选项卡。此选项卡列出包含此设备的集合。
 
 > [!Note]  
-> - 此选项卡当前在“设备集合”节点下的设备子节点中不可用  。 例如，在集合上选择“显示成员”选项时，此选项卡不可用  。
-> - 对于某些用户而言，此选项卡可能无法按预期方式填充。 若要查看设备所属的完整集合列表，你必须具有“完全权限管理员”安全角色  。 这是一个已知问题。 <!--5107309-->
+> - 此选项卡当前在“设备集合”节点下的设备子节点中不可用。 例如，在集合上选择“显示成员”选项时，此选项卡不可用。
+> - 对于某些用户而言，此选项卡可能无法按预期方式填充。 若要查看设备所属的完整集合列表，你必须具有“完全权限管理员”安全角色。 这是一个已知问题。 <!--5107309-->
 
 ### <a name="task-sequences-tab-in-applications-node"></a>应用程序节点中的“任务序列”选项卡
 
 <!--4616810-->
-在“软件库”工作区中，展开“应用程序管理”，转到“应用程序”节点，然后选择应用程序    。 在详细信息窗格中，切换到新的“任务序列”选项卡  。此选项卡列出了引用此应用程序的任务序列。
+在“软件库”工作区中，展开“应用程序管理”，转到“应用程序”节点，然后选择应用程序  。 在详细信息窗格中，切换到新的“任务序列”选项卡。此选项卡列出了引用此应用程序的任务序列。
 
 ### <a name="show-collection-name-for-scripts"></a>显示脚本的集合名称
 
 <!--4616810-->
-在“监视”工作区中，选择“脚本状态”节点   。 除了列出 ID 之外，还列出了“集合名称”  。
+在“监视”工作区中，选择“脚本状态”节点 。 除了列出 ID 之外，还列出了“集合名称”。
 
 ### <a name="real-time-actions-from-device-lists"></a>设备列表中的实时操作
 
 <!--4616810-->
-有多种方法可以在“资产和符合性”工作区中的“设备”节点下显示设备列表   。
+有多种方法可以在“资产和符合性”工作区中的“设备”节点下显示设备列表 。
 
-- 在“资产和符合性”  工作区中，选择“设备集合”  节点。 选择设备集合，然后选择“显示成员”操作  。 此操作将打开“设备”节点的子节点，其中包含该集合的设备列表  。  
+- 在“资产和符合性”工作区中，选择“设备集合”节点。 选择设备集合，然后选择“显示成员”操作。 此操作将打开“设备”节点的子节点，其中包含该集合的设备列表。  
 
-  - 选择集合子节点时，现在可以从功能区的集合组中启动“CMPivot”  。  
+  - 选择集合子节点时，现在可以从功能区的集合组中启动“CMPivot”。  
 
-- 在“监视”工作区中，选择“部署”节点   。 选择部署，然后在功能区中选择“查看状态”操作  。 在部署状态窗格中，双击总资产，以向下钻取到设备列表。  
+- 在“监视”工作区中，选择“部署”节点 。 选择部署，然后在功能区中选择“查看状态”操作。 在部署状态窗格中，双击总资产，以向下钻取到设备列表。  
 
-  - 在此列表中选择设备时，现在可以从功能区的“设备”组中启动“CMPivot”和“运行脚本”   。  
+  - 在此列表中选择设备时，现在可以从功能区的“设备”组中启动“CMPivot”和“运行脚本” 。  
 
 ### <a name="order-by-program-name-in-task-sequence"></a>按任务序列中的程序名称进行排序
 
 <!--4616810-->
-在“软件库”工作区中，展开“操作系统”，选择“任务序列”节点    。 编辑任务序列，然后选择或添加[安装包](../../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步骤。 如果包包含多个程序，则下拉列表现在按字母顺序对程序进行排序。
+在“软件库”工作区中，展开“操作系统”，选择“任务序列”节点  。 编辑任务序列，然后选择或添加[安装包](../../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步骤。 如果包包含多个程序，则下拉列表现在按字母顺序对程序进行排序。
 
 ### <a name="correct-names-for-client-operations"></a>正确的客户端操作名称
 
 <!--4616810-->
-在“监视”工作区中，选择“客户端操作”   。 现在，“切换到下一个软件更新点”操作已正确命名  。
+在“监视”工作区中，选择“客户端操作” 。 现在，“切换到下一个软件更新点”操作已正确命名。
 
 
 ## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>弃用的功能和操作系统
