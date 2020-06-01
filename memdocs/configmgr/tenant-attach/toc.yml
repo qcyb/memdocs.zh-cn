@@ -6,3 +6,9 @@
       href: device-sync-actions.md
     - name: 排除设备操作故障
       href: technical-reference.md
+- name: 用于租户附加设备的 CMPivot（预览）
+  items:
+    - name: CMPivot 概述
+      href: cmpivot-overview-attached.md
+    - name: CMPivot 示例脚本
+      href: cmpivot-samples-attached.md
