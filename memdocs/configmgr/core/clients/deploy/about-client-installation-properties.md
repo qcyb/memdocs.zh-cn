@@ -10,18 +10,18 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428591"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153450"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>关于 Configuration Manager 中的客户端安装参数和属性
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
-使用 CCMSetup.exe 命令安装 Configuration Manager 客户端。 如果在命令行上提供客户端安装参数，这些参数会修改安装行为  。 如果在命令行上提供客户端安装属性，这些属性会修改已安装客户端代理的初始配置  。
+使用 CCMSetup.exe 命令安装 Configuration Manager 客户端。 如果在命令行上提供客户端安装参数，这些参数会修改安装行为。 如果在命令行上提供客户端安装属性，这些属性会修改已安装客户端代理的初始配置。
 
 ## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> 关于 CCMSetup.exe
 
@@ -36,14 +36,14 @@ CCMSetup.exe 命令从管理点或源位置下载所需的文件以安装客户�
 > [!NOTE]
 > 不能直接安装 client.msi。  
 
-CCMSetup.exe 提供了可自定义安装的命令行参数  。 参数以斜杠 (`/`) 作为前缀，按照约定为小写。 在必要时，使用一个冒号 (`:`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [CCMSetup.exe 命令行参数](#ccmsetupexe-command-line-parameters)。
+CCMSetup.exe 提供了可自定义安装的命令行参数。 参数以斜杠 (`/`) 作为前缀，按照约定为小写。 在必要时，使用一个冒号 (`:`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [CCMSetup.exe 命令行参数](#ccmsetupexe-command-line-parameters)。
 
-还可在 CCMSetup.exe 命令行中指定属性来修改 client.msi 的行为。按照约定属性均采用大写  。 使用等于号 (`=`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [Client.msi 属性](#clientMsiProps)。
+还可在 CCMSetup.exe 命令行中指定属性来修改 client.msi 的行为。按照约定属性均采用大写。 使用等于号 (`=`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [Client.msi 属性](#clientMsiProps)。
 
 > [!IMPORTANT]  
 > 指定 client.msi 的属性之前，先指定 CCMSetup 参数。  
 
-CCMSetup.exe 及支持文件位于 Configuration Manager 安装文件夹内“Client”文件夹中的站点服务器上  。 Configuration Manager 会将此文件夹共享到网络的站点共享下。 例如，`\\SiteServer\SMS_ABC\Client`。
+CCMSetup.exe 及支持文件位于 Configuration Manager 安装文件夹内“Client”文件夹中的站点服务器上。 Configuration Manager 会将此文件夹共享到网络的站点共享下。 例如，`\\SiteServer\SMS_ABC\Client`。
 
 在命令提示符处，CCMSetup.exe 命令使用下列格式：  
 
@@ -78,10 +78,12 @@ CCMSetup.exe 及支持文件位于 Configuration Manager 安装文件夹内“Cl
 
 ### <a name="source"></a>/source
 
-指定文件下载位置。 使用本地路径或 UNC 路径。 设备使用服务器消息块 (SMB) 协议下载文件。 若要使用“/source”，用于客户端安装的 Windows 用户帐户需要具有对该位置的“读取”权限   。
+指定文件下载位置。 使用本地路径或 UNC 路径。 设备使用服务器消息块 (SMB) 协议下载文件。 若要使用“/source”，用于客户端安装的 Windows 用户帐户需要具有对该位置的“读取”权限 。
+
+若要详细了解 ccmsetup 如何下载内容，请参阅[边界组 - 客户端安装](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)。 如果你同时使用 /mp 和 /source 参数，还可以参阅这篇文章中包含的 ccmsetup 行为详细信息。
 
 > [!TIP]  
-> 可在命令行上多次使用 /source  参数，以指定备用下载位置。  
+> 可在命令行上多次使用 /source 参数，以指定备用下载位置。  
 
 示例：`ccmsetup.exe /source:"\\server\share"`
 
@@ -89,14 +91,16 @@ CCMSetup.exe 及支持文件位于 Configuration Manager 安装文件夹内“Cl
 
 指定计算机要连接到的源管理点。 计算机使用此管理点来查找最近的安装文件分发点。 如果没有分发点或者计算机在 4 个小时后无法从分发点下载文件，则将从指定的管理点下载文件。  
 
+若要详细了解 ccmsetup 如何下载内容，请参阅[边界组 - 客户端安装](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)。 如果你同时使用 /mp 和 /source 参数，还可以参阅这篇文章中包含的 ccmsetup 行为详细信息。
+
 > [!IMPORTANT]  
-> 此参数指定初始管理点，以供计算机查找下载源，此管理点可以是任何站点中的任何管理点。 它不会将客户端分配到指定的管理点  。
+> 此参数指定初始管理点，以供计算机查找下载源，此管理点可以是任何站点中的任何管理点。 它不会将客户端分配到指定的管理点。
 
 计算机通过 HTTP 或 HTTPS 连接下载文件，具体情况视客户端连接的站点系统角色配置而定。 如果要进行配置，也可通过使用 BITS 限制进行下载。 如果所有分发点和管理点都仅针对 HTTPS 客户端连接进行配置，则需验证客户端计算机是否具有有效的客户端证书。  
 
-可使用 /mp  命令行参数来指定多个管理点。 如果计算机无法连接到第一个管理点，则会尝试连接指定列表中的下一个管理点。 在指定多个管理点时，请使用分号分隔各个值。
+可使用 /mp 命令行参数来指定多个管理点。 如果计算机无法连接到第一个管理点，则会尝试连接指定列表中的下一个管理点。 在指定多个管理点时，请使用分号分隔各个值。
 
-如果客户端使用 HTTPS 连接到管理点，请指定 FQDN 而不是计算机名。 值必须匹配管理点的 PKI 证书“使用者”或“使用者可选名称”   。 尽管 Configuration Manager 对于 Intranet 上的连接支持使用证书中的计算机名，但建议使用 FQDN。
+如果客户端使用 HTTPS 连接到管理点，请指定 FQDN 而不是计算机名。 值必须匹配管理点的 PKI 证书“使用者”或“使用者可选名称” 。 尽管 Configuration Manager 对于 Intranet 上的连接支持使用证书中的计算机名，但建议使用 FQDN。
 
 计算机名的示例：`ccmsetup.exe /mp:SMSMP01`  
 
@@ -112,12 +116,12 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
     (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
-- 附加 `https://` 前缀以与 /mp 参数一起使用  。
+- 附加 `https://` 前缀以与 /mp 参数一起使用。
 
 使用云管理网关 URL 时的示例：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> 为 /mp  参数指定云管理网关的 URL 时，它必须以 `https://` 开头。
+> 为 /mp 参数指定云管理网关的 URL 时，它必须以 `https://` 开头。
 
 ### <a name="regtoken"></a>/regtoken
 
@@ -138,7 +142,7 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 
 ### <a name="retry"></a>/retry
 
-如果 CCMSetup.exe 无法下载安装文件，请使用此参数指定重试间隔（以分钟为单位）。 除非达到 [/downloadtimeout](#downloadtimeout) 参数中指定的限制，否则 CCMSetup 将不断重试  。
+如果 CCMSetup.exe 无法下载安装文件，请使用此参数指定重试间隔（以分钟为单位）。 除非达到 [/downloadtimeout](#downloadtimeout) 参数中指定的限制，否则 CCMSetup 将不断重试。
 
 示例：`ccmsetup.exe /retry:20`  
 
@@ -153,7 +157,7 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 指定 CCMSetup 应作为使用本地系统帐户的服务运行。  
 
 > [!TIP]
-> 如果使用脚本来运行带 /service 参数的 CCMSetup.exe，CCMSetup.exe 将在服务启动后退出  。 它可能无法正确报告脚本的安装详细信息。
+> 如果使用脚本来运行带 /service 参数的 CCMSetup.exe，CCMSetup.exe 将在服务启动后退出。 它可能无法正确报告脚本的安装详细信息。
 
 示例：`ccmsetup.exe /service`  
 
@@ -191,9 +195,9 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 
 ### <a name="downloadtimeout"></a>/downloadtimeout
 
-如果 CCMSetup 未能下载客户端安装文件，则此参数指定最大超时时间（以分钟为单位）。 此超时时间之后，CCMSetup 将停止尝试下载安装文件。 默认值为 1440 分钟（一天）  。
+如果 CCMSetup 未能下载客户端安装文件，则此参数指定最大超时时间（以分钟为单位）。 此超时时间之后，CCMSetup 将停止尝试下载安装文件。 默认值为 1440 分钟（一天）。
 
-使用 [/retry](#retry) 参数指定重试尝试之间的间隔  。
+使用 [/retry](#retry) 参数指定重试尝试之间的间隔。
 
 示例：`ccmsetup.exe /downloadtimeout:100`
 
@@ -204,9 +208,9 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 示例：`CCMSetup.exe /UsePKICert`  
 
 > [!NOTE]
-> 在某些情况下，不必指定此参数，但仍可使用客户端证书。 例如，基于客户端推送和软件更新的客户端安装。 手动安装客户端时使用此参数，并对已启用 HTTPS 的管理点使用 /mp 参数  。
+> 在某些情况下，不必指定此参数，但仍可使用客户端证书。 例如，基于客户端推送和软件更新的客户端安装。 手动安装客户端时使用此参数，并对已启用 HTTPS 的管理点使用 /mp 参数。
 >
-> 安装客户端进行仅限 Internet 的通信时，也请指定此参数。 将 CCMALWAYSINF=1 属性与基于 Internet 的管理点 (CCMHOSTNAME) 和站点代码 (SMSSITECODE) 的属性一起使用    。 若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
+> 安装客户端进行仅限 Internet 的通信时，也请指定此参数。 将 CCMALWAYSINF=1 属性与基于 Internet 的管理点 (CCMHOSTNAME) 和站点代码 (SMSSITECODE) 的属性一起使用  。 若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
 
 ### <a name="nocrlcheck"></a>/NoCRLCheck
 
@@ -220,11 +224,11 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 
 - 如果 CCMSetup 作为服务运行，请将此文件放入 CCMSetup 系统文件夹：`%Windir%\Ccmsetup`。
 
-- 如果指定 [/noservice](#noservice) 参数，请将此文件与 CCMSetup.exe 放在同一文件夹中  。
+- 如果指定 [/noservice](#noservice) 参数，请将此文件与 CCMSetup.exe 放在同一文件夹中。
 
 示例：`CCMSetup.exe /config:"configuration file name.txt"`
 
-若要提供正确的文件格式，请使用站点服务器上 Configuration Manager 安装目录中 `\bin\<platform>` 文件夹中的“mobileclienttemplate.tcf”文件  。 此文件也包含有关各个部分及其使用方式的注释。 指定 `[Client Install]` 部分中的客户端安装属性，其后紧跟下列文本 `Install=INSTALL=ALL`。
+若要提供正确的文件格式，请使用站点服务器上 Configuration Manager 安装目录中 `\bin\<platform>` 文件夹中的“mobileclienttemplate.tcf”文件。 此文件也包含有关各个部分及其使用方式的注释。 指定 `[Client Install]` 部分中的客户端安装属性，其后紧跟下列文本 `Install=INSTALL=ALL`。
 
 示例 `[Client Install]` 部分条目：`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
@@ -251,7 +255,7 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 示例：`CCMSetup.exe /ExcludeFeatures:ClientUI` 不在客户端上安装软件中心。  
 
 > [!NOTE]  
-> `ClientUI` 是 /ExcludeFeatures 参数唯一支持的值  。
+> `ClientUI` 是 /ExcludeFeatures 参数唯一支持的值。
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe 返回代码
 
@@ -272,7 +276,7 @@ CCMSetup.exe 命令提供以下返回代码。 若要进行故障排除，请查
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD
 
-使用此 ccmsetup.msi 属性将其他命令行参数和属性传递给 ccmsetup.exe   。 将其他参数和属性括在引号 (`"`) 内。 使用 [Intune MDM 安装方法](plan/client-installation-methods.md#microsoft-intune-mdm-installation)启动 Configuration Manager 客户端时可使用此属性。
+使用此 ccmsetup.msi 属性将其他命令行参数和属性传递给 ccmsetup.exe 。 将其他参数和属性括在引号 (`"`) 内。 使用 [Intune MDM 安装方法](plan/client-installation-methods.md#microsoft-intune-mdm-installation)启动 Configuration Manager 客户端时可使用此属性。
 
 示例：`ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
@@ -281,19 +285,19 @@ CCMSetup.exe 命令提供以下返回代码。 若要进行故障排除，请查
 
 ## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a> Client.msi 属性
 
-以下属性可以修改 ccmsetup.exe 安装的 client.msi 的安装行为。 如果使用[客户端请求安装方法](plan/client-installation-methods.md#client-push-installation)，请在 Configuration Manager 控制台中“客户端请求安装属性”的“客户端”选项卡上指定这些属性   。
+以下属性可以修改 ccmsetup.exe 安装的 client.msi 的安装行为。 如果使用[客户端请求安装方法](plan/client-installation-methods.md#client-push-installation)，请在 Configuration Manager 控制台中“客户端请求安装属性”的“客户端”选项卡上指定这些属性 。
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-指定 Azure Active Directory (Azure AD) 客户端应用标识符。 在为云管理[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)时，需创建或导入客户端应用。 Azure 管理员可从 Azure 门户获取该属性的值。 有关详细信息，请参阅[获取应用程序 ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 对于 AADCLIENTAPPID 属性，此应用程序 ID 用于“本机”类型应用程序   。
+指定 Azure Active Directory (Azure AD) 客户端应用标识符。 在为云管理[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)时，需创建或导入客户端应用。 Azure 管理员可从 Azure 门户获取该属性的值。 有关详细信息，请参阅[获取应用程序 ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 对于 AADCLIENTAPPID 属性，此应用程序 ID 用于“本机”类型应用程序 。
 
 示例：`ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
 ### <a name="aadresourceuri"></a>AADRESOURCEURI
 
-指定 Azure AD 服务器应用标识符。 在为云管理[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)时，需创建或导入服务器应用。 创建服务器应用时，在“创建服务器应用程序”窗口中，该属性为 App ID URI  。
+指定 Azure AD 服务器应用标识符。 在为云管理[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)时，需创建或导入服务器应用。 创建服务器应用时，在“创建服务器应用程序”窗口中，该属性为 App ID URI。
 
-Azure 管理员可从 Azure 门户获取该属性的值。 在“Azure Active Directory”中，找到“应用注册”下的服务器应用   。 查找应用程序类型“Web 应用/API”  。 打开应用，选择“设置”，然后选择“属性”   。 使用此 AADRESOURCEURI 客户端安装属性的 App ID URI 值   。
+Azure 管理员可从 Azure 门户获取该属性的值。 在“Azure Active Directory”中，找到“应用注册”下的服务器应用 。 查找应用程序类型“Web 应用/API”。 打开应用，选择“设置”，然后选择“属性” 。 使用此 AADRESOURCEURI 客户端安装属性的 App ID URI 值 。
 
 示例：`ccmsetup.exe AADRESOURCEURI=https://contososerver`
 
@@ -303,7 +307,7 @@ Azure 管理员可从 Azure 门户获取该属性的值。 在“Azure Active Di
 
 - 在加入同一 Azure AD 租户的 Windows 10 设备上，打开命令提示符。
 - 运行以下命令：`dsregcmd.exe /status`
-- 在“设备状态”部分中，找到 TenantId  值。 例如 `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
+- 在“设备状态”部分中，找到 TenantId 值。 例如 `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
   > Azure 管理员还可在 Azure 门户中获取此值。 有关详细信息，请参阅[获取租户 ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
@@ -338,9 +342,9 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
-若要指定客户端始终以 Internet 为基础并永远不会连接到 Intranet，请将此属性值设置为 `1`。 客户端的连接类型显示为“始终连接 Internet”  。  
+若要指定客户端始终以 Internet 为基础并永远不会连接到 Intranet，请将此属性值设置为 `1`。 客户端的连接类型显示为“始终连接 Internet” 。  
 
-将此属性与 [CCMHOSTNAME](#ccmhostname) 结合使用可指定基于 Internet 的管理点的 FQDN  。 还可以将其与 CCMSetup 参数 [/UsePKICert](#usepkicert) 和站点代码 ([SMSSITECODE](#smssitecode)) 结合使用   。
+将此属性与 [CCMHOSTNAME](#ccmhostname) 结合使用可指定基于 Internet 的管理点的 FQDN。 还可以将其与 CCMSetup 参数 [/UsePKICert](#usepkicert) 和站点代码 ([SMSSITECODE](#smssitecode)) 结合使用 。
 
 若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。
 
@@ -355,7 +359,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 示例：`CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US | CN=Litware Corporate Root CA; O=Litware, Inc."`
 
 > [!TIP]
-> 在站点的 mobileclient.tcf 文件中使用 CertificateIssuers 属性的值   。 此文件位于站点服务器的 Configuration Manager 安装目录的 `\bin\<platform>` 子文件夹中。
+> 在站点的 mobileclient.tcf 文件中使用 CertificateIssuers 属性的值 。 此文件位于站点服务器的 Configuration Manager 安装目录的 `\bin\<platform>` 子文件夹中。
 
 若要详细了解证书颁发者列表以及客户端如何在证书选择过程中使用该列表，请参阅[规划 PKI 客户端证书选择](../../plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection)。
 
@@ -374,7 +378,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 - `CCMCERTSEL="SubjectStr:contoso.com"`：搜索在“使用者名称”或“使用者可选名称”中包含“`contoso.com`”的证书。
 
-使用 SubjectAttr 关键字在“使用者名称”或“使用者可选名称”中搜索对象标识符 (OID) 或可分辨名称属性  。
+使用 SubjectAttr 关键字在“使用者名称”或“使用者可选名称”中搜索对象标识符 (OID) 或可分辨名称属性。
 
 例如：
 
@@ -383,23 +387,23 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 - `CCMCERTSEL="SubjectAttr:OU = Computers"`：搜索以可分辨名称表示且名为 `Computers` 的组织单位属性。
 
 > [!IMPORTANT]
-> 如果使用“使用者名称”，则 Subject 关键字区分大小写，而 SubjectStr 关键字不区分大小写   。
+> 如果使用“使用者名称”，则 Subject 关键字区分大小写，而 SubjectStr 关键字不区分大小写 。
 >
-> 如果使用“使用者可选名称”框，Subject 和 SubjectStr 关键字均不区分大小写   。
+> 如果使用“使用者可选名称”框，Subject 和 SubjectStr 关键字均不区分大小写 。
 
 有关可用于证书选择的完整属性列表，请参阅[对于 PKI 证书选择条件支持的属性值](#BKMK_attributevalues)。
 
-如果有多个证书与搜索匹配，并且将 [CCMFIRSTCERT](#ccmfirstcert) 设置为 `1`，则客户端安装程序将选择有效期最长的证书  。
+如果有多个证书与搜索匹配，并且将 [CCMFIRSTCERT](#ccmfirstcert) 设置为 `1`，则客户端安装程序将选择有效期最长的证书。
 
 ### <a name="ccmcertstore"></a>CCMCERTSTORE
 
-如果客户端安装程序在计算机的默认“个人”证书存储中找不到有效证书，请使用此属性指定备用证书存储名称  。
+如果客户端安装程序在计算机的默认“个人”证书存储中找不到有效证书，请使用此属性指定备用证书存储名称。
 
 示例：`CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"`  
 
 ### <a name="ccmdebuglogging"></a>CCMDEBUGLOGGING
 
-此属性在客户端安装时启用调试日志记录。 此属性将使客户端记录有助于故障排除的低级信息。 避免在生产站点中使用此属性。 因为这会产生过多日志记录，可能导致难以在日志文件中查找相关信息。 同时启用 [CCMENABLELOGGING](#ccmenablelogging)  。
+此属性在客户端安装时启用调试日志记录。 此属性将使客户端记录有助于故障排除的低级信息。 避免在生产站点中使用此属性。 因为这会产生过多日志记录，可能导致难以在日志文件中查找相关信息。 同时启用 [CCMENABLELOGGING](#ccmenablelogging)。
 
 支持的值：
 
@@ -447,7 +451,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 如果客户端是通过 Internet 进行管理，则此属性指定基于 Internet 的管理点的 FQDN。  
 
-请勿使用 SMSSITECODE=AUTO 的安装属性指定此选项  .。 可直接将基于 Internet 的客户端分配给基于 Internet 的站点。
+请勿使用 SMSSITECODE=AUTO 的安装属性指定此选项.。 可直接将基于 Internet 的客户端分配给基于 Internet 的站点。
 
 示例：`CCMSetup.exe /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
@@ -461,12 +465,12 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
     (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
     ```
 
-- 将返回值按原样与 CCMHOSTNAME  属性一起使用。
+- 将返回值按原样与 CCMHOSTNAME 属性一起使用。
 
 例如：`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> 为 CCMHOSTNAME 属性指定 CMG 的地址时，请勿附加诸如 `https://` 之类的前缀  。 仅将此前缀与 CMG 的 /mp URL 一起使用  。
+> 为 CCMHOSTNAME 属性指定 CMG 的地址时，请勿附加诸如 `https://` 之类的前缀。 仅将此前缀与 CMG 的 /mp URL 一起使用。
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
@@ -485,7 +489,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 使用此属性设置用于安装 Configuration Manager 客户端文件的文件夹。 默认情况下，它使用 `%WinDir%\CCM`。
 
 > [!TIP]
-> 无论在何处安装客户端文件，它始终都会在 `%WinDir%\System32` 文件夹中安装 ccmcore.dll 文件  。 在 64 位操作系统上，它会在 `%WinDir%\SysWOW64` 文件夹中安装 ccmcore.dll 的副本。 此文件支持使用来自 Configuration Manager SDK 的 32 位版本的客户端 API 的 32 位应用程序。
+> 无论在何处安装客户端文件，它始终都会在 `%WinDir%\System32` 文件夹中安装 ccmcore.dll 文件。 在 64 位操作系统上，它会在 `%WinDir%\SysWOW64` 文件夹中安装 ccmcore.dll 的副本。 此文件支持使用来自 Configuration Manager SDK 的 32 位版本的客户端 API 的 32 位应用程序。
 
 示例：`CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`
 
@@ -526,7 +530,7 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
 ### <a name="disablecacheopt"></a>DISABLECACHEOPT
 
-如果设置为 TRUE，则此属性会禁止管理用户更改 Configuration Manager 控制面板中的客户端缓存文件夹设置  。  
+如果设置为 TRUE，则此属性会禁止管理用户更改 Configuration Manager 控制面板中的客户端缓存文件夹设置。  
 
 示例：`CCMSetup.exe DISABLECACHEOPT=TRUE`  
 
@@ -581,7 +585,7 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
 1. [创建非 OS 部署任务序列](../../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)以安装应用、安装软件更新和配置设置。
 
-1. 向新的内置集合“所有预配设备”[部署此任务序列](../../../osd/deploy-use/deploy-a-task-sequence.md)  。 请注意任务序列部署 ID，例如 `PRI20001`。
+1. 向新的内置集合“所有预配设备”[部署此任务序列](../../../osd/deploy-use/deploy-a-task-sequence.md)。 请注意任务序列部署 ID，例如 `PRI20001`。
 
 1. 在设备上[安装 Configuration Manager 客户端](deploy-clients-to-windows-computers.md#BKMK_Manual)，并包括以下属性：`PROVISIONTS=PRI20001`。 将此属性的值设置为任务序列部署 ID。
 
@@ -610,31 +614,31 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
 示例：`CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
-将此属性与 [SMSCACHEFLAGS](#smscacheflags) 属性结合使用可控制客户端缓存文件夹位置  。 示例：将客户端缓存文件夹安装在最大的可用客户端磁盘驱动器上：`CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
+将此属性与 [SMSCACHEFLAGS](#smscacheflags) 属性结合使用可控制客户端缓存文件夹位置。 示例：将客户端缓存文件夹安装在最大的可用客户端磁盘驱动器上：`CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
-请使用此属性指定客户端缓存文件夹的进一步安装详细信息。 可以单独或组合使用 SMSCACHEFLAGS 属性，组合使用时须以分号 (`;`) 隔开  。
+请使用此属性指定客户端缓存文件夹的进一步安装详细信息。 可以单独或组合使用 SMSCACHEFLAGS 属性，组合使用时须以分号 (`;`) 隔开。
 
 如果不包含此属性：
 
-- 客户端根据 [SMSCACHEDIR](#smscachedir) 属性安装缓存文件夹 
+- 客户端根据 [SMSCACHEDIR](#smscachedir) 属性安装缓存文件夹
 - 文件夹未压缩
-- 客户端使用 [SMSCACHESIZE](#smscachesize) 属性作为缓存的大小限制（以 MB 为单位） 
+- 客户端使用 [SMSCACHESIZE](#smscachesize) 属性作为缓存的大小限制（以 MB 为单位）
 
 升级现有客户端时，客户端安装程序将忽略此属性。
 
 #### <a name="values-for-the-smscacheflags-property"></a>SMSCACHEFLAGS 属性的值
 
-- **PERCENTDISKSPACE**：将缓存大小设置为总磁盘空间的百分比  。 如果指定此属性，请将 [SMSCACHESIZE](#smscachesize) 设置为百分比值  。
+- **PERCENTDISKSPACE**：将缓存大小设置为总磁盘空间的百分比。 如果指定此属性，请将 [SMSCACHESIZE](#smscachesize) 设置为百分比值。
 
-- **PERCENTFREEDISKSPACE**：将缓存大小设置为可用磁盘空间的百分比  。 如果指定此属性，请将 [SMSCACHESIZE](#smscachesize) 设置为百分比值  。 例如，该磁盘的可用空间为 10 MB ，你可以指定 `SMSCACHESIZE=50`。 客户端安装程序将缓存大小设置为 5 MB。 你不能将此属性与 PERCENTDISKSPACE 属性结合使用  。
+- **PERCENTFREEDISKSPACE**：将缓存大小设置为可用磁盘空间的百分比。 如果指定此属性，请将 [SMSCACHESIZE](#smscachesize) 设置为百分比值。 例如，该磁盘的可用空间为 10 MB ，你可以指定 `SMSCACHESIZE=50`。 客户端安装程序将缓存大小设置为 5 MB。 你不能将此属性与 PERCENTDISKSPACE 属性结合使用。
 
-- **MAXDRIVE**：将缓存安装在最大的可用磁盘上。 如果使用 [SMSCACHEDIR](#smscachedir) 属性指定路径，则客户端安装程序将忽略此值  。
+- **MAXDRIVE**：将缓存安装在最大的可用磁盘上。 如果使用 [SMSCACHEDIR](#smscachedir) 属性指定路径，则客户端安装程序将忽略此值。
 
-- **MAXDRIVESPACE**：将缓存安装在具有最大可用空间的磁盘驱动器上。 如果使用 [SMSCACHEDIR](#smscachedir) 属性指定路径，则客户端安装程序将忽略此值  。
+- **MAXDRIVESPACE**：将缓存安装在具有最大可用空间的磁盘驱动器上。 如果使用 [SMSCACHEDIR](#smscachedir) 属性指定路径，则客户端安装程序将忽略此值。
 
-- **NTFSONLY**：仅在 NTFS 格式化的磁盘驱动器上安装缓存。 如果使用 [SMSCACHEDIR](#smscachedir) 属性指定路径，则客户端安装程序将忽略此值  。
+- **NTFSONLY**：仅在 NTFS 格式化的磁盘驱动器上安装缓存。 如果使用 [SMSCACHEDIR](#smscachedir) 属性指定路径，则客户端安装程序将忽略此值。
 
 - **COMPRESS**：以压缩形式存储缓存。
 
@@ -652,7 +656,7 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 示例：`CCMSetup.exe SMSCACHESIZE=100`
 
 > [!NOTE]  
-> 如果重新安装客户端，则无法使用 SMSCACHESIZE 或 SMSCACHEFLAGS 将缓存大小设置为小于以前的值   。 先前的大小是最小值。
+> 如果重新安装客户端，则无法使用 SMSCACHESIZE 或 SMSCACHEFLAGS 将缓存大小设置为小于以前的值 。 先前的大小是最小值。
 
 ### <a name="smsconfigsource"></a>SMSCONFIGSOURCE
 
@@ -718,7 +722,7 @@ Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`
 
 ### <a name="smssigncert"></a>SMSSIGNCERT
 
-在站点服务器上指定导出的自签名证书的完整路径和名称。 站点服务器将此证书存储在 SMS 证书存储中  。 它具有使用者名称“站点服务器”和易记名称“站点服务器签名证书”   。
+在站点服务器上指定导出的自签名证书的完整路径和名称。 站点服务器将此证书存储在 SMS 证书存储中。 它具有使用者名称“站点服务器”和易记名称“站点服务器签名证书” 。
 
 示例：`CCMSetup.exe /UsePKICert SMSSIGNCERT=C:\folder\smssign.cer`
 
@@ -727,7 +731,7 @@ Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`
 此属性指定将客户端分配到的 Configuration Manager 站点。 此值可以是三个字符的站点代码，也可以是单词 `AUTO`。 如果指定了 `AUTO` 或者未指定此属性，则客户端会尝试从 Active Directory 域服务或指定的管理点确定其站点分配。 若要启用 `AUTO` 进行客户端升级，还必须设置 [SITEREASSIGN=TRUE](#sitereassign)。
 
 > [!NOTE]  
-> 如果还使用 [CCMHOSTNAME](#ccmhostname) 属性指定基于 Internet 的管理点，请勿将 `AUTO` 与 SMSSITECODE 结合使用   。 通过指定站点代码直接将客户端分配到其站点。
+> 如果还使用 [CCMHOSTNAME](#ccmhostname) 属性指定基于 Internet 的管理点，请勿将 `AUTO` 与 SMSSITECODE 结合使用 。 通过指定站点代码直接将客户端分配到其站点。
 
 示例：`CCMSetup.exe SMSSITECODE=XZY`
 
