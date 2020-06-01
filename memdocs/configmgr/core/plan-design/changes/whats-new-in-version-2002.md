@@ -2,7 +2,7 @@
 title: 2002 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 2002 中引入的更改和新增功能的详细信息。
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381547"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126475"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -328,6 +328,15 @@ Configuration Manager 现在可检测服务堆栈更新 (SSU) 是否为多个更
 
 <!-- 5229962 -->
 Configuration Manager 扩展了对将设备加入 Microsoft Defender ATP 的支持。 有关详细信息，请参阅 [Microsoft Defender 高级威胁防护](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)。
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 通过 Microsoft Endpoint Manager 管理中心将 Configuration Manager 客户端加入 Microsoft Defender ATP
+<!--5691658-->
+现在可以将 Microsoft Defender ATP 终结点检测和响应 (EDR) 加入策略部署到 Configuration Manager 托管客户端。 这些客户端不需要 Azure AD 或 MDM 注册，并且策略是针对 ConfigMgr 集合而不是 Azure AD 组。
+
+此功能使客户可以通过单一管理体验（Microsoft Endpoint Manager 管理中心）来管理 Intune MDM 和 Configuration Manager 客户端 EDR/ATP 加入。 有关详细信息，请参阅 [Intune 中关于终结点安全的终结点检测和响应策略](../../../../intune/protect/endpoint-security-edr-policy.md)。
+
+> [!Important]
+> 必须在环境中安装修补程序汇总 [KB4563473](https://support.microsoft.com/help/4563473)，才能使用此功能。
 
 ### <a name="improvements-to-bitlocker-management"></a>对 BitLocker 管理的改进
 

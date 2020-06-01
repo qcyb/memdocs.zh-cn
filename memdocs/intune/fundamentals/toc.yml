@@ -157,6 +157,10 @@
               href: intune-endpoints.md
             - name: Intune 美国政府终结点
               href: intune-us-government-endpoints.md
+            - name: 中国终结点
+              href: china-endpoints.md
+            - name: Intune 由世纪互联在中国运营
+              href: china.md
         - name: 登录到 Intune
           href: account-sign-up.md
         - name: 配置域

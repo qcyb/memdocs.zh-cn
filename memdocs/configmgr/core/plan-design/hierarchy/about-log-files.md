@@ -10,16 +10,16 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703745"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879012"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>关于 Configuration Manager 中的日志文件
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 在 Configuration Manager 中，客户端和站点服务器组件都将进程信息记录在单独的日志文件中。 可以使用日志文件中的信息来帮助排除可能出现的问题。 Configuration Manager 默认启用客户端和服务器组件的日志记录。
 
@@ -41,15 +41,15 @@ Configuration Manager 中的大多数进程将操作信息写入专用于该进�
 
 ### <a name="cmtrace"></a>CMTrace
 
-若要查看日志，请使用 Configuration Manager 日志查看器工具 CMTrace  。 它位于 Configuration Manager 源媒体的 `\SMSSetup\Tools` 文件夹中。 向已添加到“软件库”的所有启动映像中添加 CMTrace 工具。 CMTrace 日志查看工具自动与 Configuration Manager 客户端一起安装。<!--1357971--> 有关详细信息，请参阅 [CMTrace](../../support/cmtrace.md)。
+若要查看日志，请使用 Configuration Manager 日志查看器工具 CMTrace。 它位于 Configuration Manager 源媒体的 `\SMSSetup\Tools` 文件夹中。 向已添加到“软件库”的所有启动映像中添加 CMTrace 工具。 CMTrace 日志查看工具自动与 Configuration Manager 客户端一起安装。<!--1357971--> 有关详细信息，请参阅 [CMTrace](../../support/cmtrace.md)。
 
 ### <a name="onetrace"></a>OneTrace
 
-从版本 1906 开始，OneTrace  是一个带有支持中心的新日志查看器。 它的工作方式与 CMTrace 类似，同时进行了一些改进。 有关详细信息，请参阅[支持中心 OneTrace](../../support/support-center-onetrace.md)。
+从版本 1906 开始，OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式与 CMTrace 类似，同时进行了一些改进。 有关详细信息，请参阅[支持中心 OneTrace](../../support/support-center-onetrace.md)。
 
 ### <a name="support-center-log-viewer"></a>支持中心日志查看器
 
- 支持中心包括最新日志查看器。 此工具取代了 CMTrace，提供可自定义的界面，并支持选项卡和可停靠窗口。 它具有快速表示层，可以在几秒钟内加载大型日志文件。 有关详细信息，请参阅[支持中心日志查看器引用](../../support/support-center-ui-reference.md#bkmk_log-viewer)。
+支持中心包括最新日志查看器。 此工具取代了 CMTrace，提供可自定义的界面，并支持选项卡和可停靠窗口。 它具有快速表示层，可以在几秒钟内加载大型日志文件。 有关详细信息，请参阅[支持中心日志查看器引用](../../support/support-center-ui-reference.md#bkmk_log-viewer)。
 
 > [!Note]  
 > 支持中心和 OneTrace 使用 Windows Presentation Foundation (WPF)。 此组件在 Windows PE 中不可用。 继续在具有任务序列部署的启动映像中使用 CMTrace。
@@ -84,21 +84,21 @@ Configuration Manager 中的大多数进程将操作信息写入专用于该进�
 
 #### <a name="modify-logging-for-a-component"></a>修改组件的日志记录  
 
-1. 在 Configuration Manager 控制台中，转到“监视”工作区，展开“系统状态”，然后选择“站点状态”或“组件状态”节点     。  
+1. 在 Configuration Manager 控制台中，转到“监视”工作区，展开“系统状态”，然后选择“站点状态”或“组件状态”节点   。  
 
-2. 在功能区中，选择“启动”，然后选择“Configuration Manager 服务管理器”   。  
+2. 在功能区中，选择“启动”，然后选择“Configuration Manager 服务管理器” 。  
 
-3. 当 Configuration Manager 服务管理器打开时，连接到要管理的站点。 如果未显示要管理的站点，请选择“站点”  ，选择“连接”  ，然后输入正确的站点的站点服务器的名称。  
+3. 当 Configuration Manager 服务管理器打开时，连接到要管理的站点。 如果未显示要管理的站点，请选择“站点”，选择“连接”，然后输入正确的站点的站点服务器的名称。  
 
-4. 展开站点并转到“组件”  或“服务器”  ，具体情况取决于要管理的组件位于何处。  
+4. 展开站点并转到“组件”或“服务器”，具体情况取决于要管理的组件位于何处。  
 
 5. 在右侧窗格中，选择一个或多个组件。  
 
-6. 在“组件”  菜单上，选择“日志记录”  。  
+6. 在“组件”菜单上，选择“日志记录”。  
 
 7. 在“Configuration Manager 组件日志记录”  对话框中，为所选内容完成可用配置选项。  
 
-8. 选择“确定”  保存配置。  
+8. 选择“确定”保存配置。  
 
 ### <a name="configure-logging-options-by-using-the-windows-registry"></a><a name="bkmk_logoptions-registry"></a> 使用 Windows 注册表配置日志记录选项
 
@@ -116,8 +116,8 @@ Configuration Manager 中的大多数进程将操作信息写入专用于该进�
 
 在对这些注册表设置进行更改后，请重新启动组件：
 
-- 如果更改客户端设置，请重新启动“SMS 代理主机”  服务 (CcmExec)。
-- 如果更改服务器设置，请重新启动“SMS Executive”  服务。
+- 如果更改客户端设置，请重新启动“SMS 代理主机”服务 (CcmExec)。
+- 如果更改服务器设置，请重新启动“SMS Executive”服务。
 
 注册表设置因组件而异：
 
@@ -128,7 +128,7 @@ Configuration Manager 中的大多数进程将操作信息写入专用于该进�
 
 #### <a name="client-and-management-point-logging-options"></a><a name="bkmk_reg-client"></a> 客户端和管理点日志记录选项
 
-若要为客户端或管理点站点系统上的所有组件配置日志记录选项，请在以下 Windows 注册表项下配置这些 REG_DWORD  值：
+若要为客户端或管理点站点系统上的所有组件配置日志记录选项，请在以下 Windows 注册表项下配置这些 REG_DWORD 值：
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\@Global`
 
@@ -141,7 +141,7 @@ Configuration Manager 中的大多数进程将操作信息写入专用于该进�
 > [!Note]  
 > 不要更改此注册表项中可能存在的其他值。
 
-对于高级调试，也可以在以下 Windows 注册表项下添加此 REG_SZ 值  ：
+对于高级调试，也可以在以下 Windows 注册表项下添加此 REG_SZ 值：
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\DebugLogging`
 
@@ -170,7 +170,7 @@ Configuration Manager 中的大多数进程将操作信息写入专用于该进�
 > [!Note]  
 > 不要更改此注册表项中可能存在的其他值。
 
-若要为特定服务器组件配置日志记录选项，请在以下 Windows 注册表项下配置这些 REG_DWORD  值：
+若要为特定服务器组件配置日志记录选项，请在以下 Windows 注册表项下配置这些 REG_DWORD 值：
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\<ComponentName>`
 
@@ -190,7 +190,7 @@ DebugLogging 设置将使服务器记录有助于故障排除的低级信息。 
 
 可以全局配置设置，也可以为托管 Configuration Manager 服务器角色的站点系统上的特定组件配置设置。
 
-若要为特定服务器组件配置日志记录选项，请在以下 Windows 注册表项下配置这些 REG_DWORD  值：
+若要为特定服务器组件配置日志记录选项，请在以下 Windows 注册表项下配置这些 REG_DWORD 值：
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\<ComponentName>\Logging`
 
@@ -211,9 +211,12 @@ DebugLogging 设置将使服务器记录有助于故障排除的低级信息。 
 
 若要为 Configuration Manager 控制台更改 AdminUI.log 的详细级别，请使用以下过程：
 
-1. 在 XML 编辑器（如记事本）中打开控制台配置文件 Microsoft.ConfigurationManagement.exe.config  。 默认配置文件位于以下位置：`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. 在 XML 编辑器（如记事本）中打开控制台配置文件 Microsoft.ConfigurationManagement.exe.config。 默认配置文件位于以下位置：`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
 
-1. 在“system.diagnostics” > “源” > “源元素”下，将 switchValue 属性从 `Error` 更改为 `Verbose`    。 例如：
+    > [!IMPORTANT]
+    > 自版本 1910 起，此路径已更改为使用 `Microsoft Endpoint Manager` 文件夹。 请确保不使用可能存在于其他文件夹中的旧版文件。
+
+1. 在“system.diagnostics” > “源” > “源元素”下，将 switchValue 属性从 `Error` 更改为 `Verbose`   。 例如：
 
     原始：`<source name="SmsAdminUISnapIn" switchValue="Error">` 新建：`<source name="SmsAdminUISnapIn" switchValue="Verbose" >`
 
@@ -225,9 +228,9 @@ DebugLogging 设置将使服务器记录有助于故障排除的低级信息。 
 
 从版本 1910 开始，可从控制台启用或禁用客户端或集合上的详细日志记录：
 
-1. 在 Configuration Manager 控制台中，转到“资产和符合性”工作区，选择“设备”节点，并选择一个目标设备   。
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”工作区，选择“设备”节点，并选择一个目标设备 。
 
-1. 在功能区中，在“主页”选项卡上的“设备”组中，选择“客户端诊断”    。 选择一个可用的操作。
+1. 在功能区中，在“主页”选项卡上的“设备”组中，选择“客户端诊断”  。 选择一个可用的操作。
 
 有关详细信息，请参阅[客户端诊断](../../clients/manage/client-notification.md#client-diagnostics)。
 
@@ -240,15 +243,15 @@ Configuration Manager 和依赖组件将日志文件存储在不同的位置。 
 - 客户端：`C:\Windows\CCM\logs`
 - 服务器：`C:\Program Files\Microsoft Configuration Manager\Logs`
 - 管理点：`C:\SMS_CCM\Logs`
-- Configuration Manager 控制台：`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager 控制台：`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS：`C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>任务序列日志位置
 
-任务序列日志文件 smsts.log  的位置因任务序列的阶段而异：
+任务序列日志文件 smsts.log 的位置因任务序列的阶段而异：
 
 - 在 Windows PE 中，执行[格式化磁盘并分区](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk)步骤之前：`X:\Windows\temp\smstslog\smsts.log`（X 是 Windows PE RAM 驱动器）
-- 在 Windows PE 中，执行“格式化磁盘并分区  步骤之后：`X:\smstslog\smsts.log`，然后在驱动器就绪时复制到 `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
+- 在 Windows PE 中，执行“格式化磁盘并分区步骤之后：`X:\smstslog\smsts.log`，然后在驱动器就绪时复制到 `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - 在新的 Windows OS 中，安装客户端之前：`C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - 在 Windows 中，安装客户端之后：`C:\Windows\CCM\Logs\smstslog\smsts.log`
 - 在 Windows 中，任务序列完成之后：`C:\Windows\CCM\Logs\smsts.log`

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633309"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864883"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备
 
@@ -37,10 +37,10 @@ ms.locfileid: "83633309"
 | OS 版本 | 评估程序 | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | 包含 | [最新累积更新](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | 包含 | [最新累积更新](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | 包含 | [最新累积更新](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | 包含 | [最新累积更新](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978)<sup>[注释 2](#bkmk_note2)</sup> | [最新每月汇总](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664)<sup>[注释 3](#bkmk_note3)</sup> | [最新每月汇总](https://support.microsoft.com/help/4009469) |
 
@@ -51,7 +51,7 @@ ms.locfileid: "83633309"
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a> 注释 1：Windows 10
 
-虽然 Windows 10 默认包含这些组件，但 Windows 10 设备要求必须安装最新累积更新，才能获得完整的桌面分析功能。 例如，评估设备是否与最新 OS 版本兼容，以及获取有关部署和注册状态的准实时信息。
+虽然 Windows 10 默认包含这些组件，但 Windows 10 设备要求必须安装最新累积更新，才能获得完整的桌面分析功能，如评估设备与最新 OS 版本的兼容性。
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a> 注释 2：Windows 8.1
 

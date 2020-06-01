@@ -2,7 +2,7 @@
 title: 支持 Windows 10
 titleSuffix: Configuration Manager
 description: 了解支持作为客户端或 OSD 对 Configuration Manager 使用的 Windows 10 版本
-ms.date: 04/01/2020
+ms.date: 05/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7241db0220bf4adf9b55341514afb03de33c2589
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688595"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879077"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 了解 Configuration Manager 支持的 Windows 10 版本，包括：
 
@@ -53,11 +53,12 @@ Configuration Manager 版本将在[对该版本的支持](../../servers/manage/c
 | **Enterprise 2015 LTSB** <!--10/14/2025-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | **Enterprise 2016 LTSB** <!--10/13/2026-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | **Enterprise LTSC 2019** <!--01/09/2029-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--04/14/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/11/2021-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 2004<br>(10.0.19041)   <!--??/??/2021-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -80,10 +81,10 @@ Configuration Manager 版本将在[对该版本的支持](../../servers/manage/c
 
 Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 不支持 OS 部署。<!-- 1353704 -->
 
-从版本 2002 开始，<!--5954175--> 可在具有要求规则或适用性列表的对象上的受支持 OS 版本列表中找到“所有 Windows 10 (ARM64)”平台  。
+从版本 2002 开始，<!--5954175--> 可在具有要求规则或适用性列表的对象上的受支持 OS 版本列表中找到“所有 Windows 10 (ARM64)”平台。
 
 > [!NOTE]
-> 如果之前选择了顶层 Windows 10 平台，则此操作会自动选择“所有 Windows 10 (64 位)”和“所有 Windows 10 (32 位)”    。 不会自动选择此新平台。 如果要添加“所有 Windows 10 (ARM64)”，请在列表中手动选择它  。
+> 如果之前选择了顶层 Windows 10 平台，则此操作会自动选择“所有 Windows 10 (64 位)”和“所有 Windows 10 (32 位)”  。 不会自动选择此新平台。 如果要添加“所有 Windows 10 (ARM64)”，请在列表中手动选择它。
 
 ### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a> 支持 Windows 预览体验成员
 
@@ -102,7 +103,7 @@ Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 不支持
     > [!IMPORTANT]
     > 从 Windows 10 版本 1809 开始，Windows PE 是单独的安装程序。 但是功能上没有任何区别。
     >
-    > 确保同时下载适用于 Windows 10 的 Windows ADK  和适用于 ADK 的 Windows PE 加载项  。
+    > 确保同时下载适用于 Windows 10 的 Windows ADK 和适用于 ADK 的 Windows PE 加载项。
 
 下表列出了可用于不同版本 Configuration Manager 的 Windows 10 ADK 的版本。
 
@@ -112,11 +113,12 @@ Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 不支持
 | **1803**<br>(10.1.17134) | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) |
 | **1809**<br>(10.1.17763) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) |
 | **1903**<br>(10.1.18362) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 2004<br>(10.1.19041) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) |
 
 |Key|
 |--|
 | ![支持](media/green_check.png) = **支持** <br/> 此表仅显示与 Configuration Manager 版本相关的 Windows ADK 可支持性。 Microsoft 建议使用与要部署的 Windows 版本匹配的 Windows ADK。 部署最新的 Windows 10 版本时，请使用最新的 Windows ADK 版本。 最新的 Windows ADK 版本可能支持部署较低的 OS 版本，如 Windows 8.1。<!-- SCCMDocs issue 1229 --> 有关 Windows ADK 组件支持能力的详细信息，请参阅 [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)（DISM 支持的平台）和 [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)（USMT 要求）。 |
-| ![Backwards compatible](media/blue_compat.png)  = 后向兼容  <br/> 此组合未经测试，但应该适用。 我们会记录任何已知问题或注意事项。 |
+| ![Backwards compatible](media/blue_compat.png)  = 后向兼容 <br/> 此组合未经测试，但应该适用。 我们会记录任何已知问题或注意事项。 |
 | ![不支持](media/Red_X.png) = **不支持** |
 
 ### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a> Windows 10 ADK 支持说明

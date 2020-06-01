@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427823"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153426"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的客户端通知
 
@@ -140,7 +140,7 @@ ms.locfileid: "83427823"
 
 - 启用详细日志记录：将 CCM 组件的全局日志级别更改为详细，并启用调试日志记录。
 - 禁用详细日志记录：将全局日志级别更改为默认值，并禁用调试日志记录。
-- 收集客户端日志（从 2002 开始）：向所选客户端发送客户端通知消息以收集 CCM 日志。 使用软件清单文件收集返回日志。 <!--4226618-->
+- 收集客户端日志（从 2002 开始）：此网站向所选客户端发送客户端通知消息来收集 CCM 日志。 客户端使用与软件清单文件收集相同的通道将日志发送到管理点。 <!--4226618--> 无需在客户端设置中启用软件清单。<!-- MEMDocs#305 -->
    - 压缩客户端日志的大小限制为 100 MB。 <!--6366098-->
    - 使用[资源浏览器](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag)管理和查看这些文件。
 

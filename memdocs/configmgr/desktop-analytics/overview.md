@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e9031b09fa6749d619c8048e70331a6f7c67d472
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633342"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824058"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -94,7 +94,7 @@ ms.locfileid: "83633342"
     > 桌面分析支持多个 Configuration Manager 层次结构向一个 Azure AD 租户报告。<!-- 4814075 --> 如果你的环境中有多个层次结构，则有以下选项：
     >
     > - 使用不同的商业 ID 和 Azure AD 租户。
-    > - 将这两个层次结构配置为使用相同的 商业 ID 来共享 Azure AD 租户和桌面分析实例。 使用[不同的应用](connect-configmgr.md#bkmk_connect)连接每个层次结构。 断开层次结构的连接后，门户可能需要 30 分钟才能反映出更改。 
+    > - 将这两个层次结构配置为使用相同的 商业 ID 来共享 Azure AD 租户和桌面分析实例。 使用[不同的应用](connect-configmgr.md#bkmk_connect)连接每个层次结构。 在断开层次结构的连接后，门户最长可能需要 30 天才能反映出更改。 
 
 - 运行 Windows 7、Windows 8.1 或 Windows 10 的设备  
 

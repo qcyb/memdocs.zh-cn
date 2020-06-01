@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 6eb0a99043eefcdb54c27a183fbc1e1eec8899bf
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268634"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864865"
 ---
 # <a name="monitor-connection-health"></a>监视器连接运行状况
 
-使用 Configuration Manager 中的“连接运行状况”  仪表板，按设备运行状况向下钻取类别。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“桌面分析服务”节点，然后选择“连接运行状况”仪表板    。  
+使用 Configuration Manager 中的“连接运行状况”仪表板，按设备运行状况向下钻取类别。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“桌面分析服务”节点，然后选择“连接运行状况”仪表板  。  
 
 [![Configuration Manager 连接运行状况仪表板的屏幕截图](media/connection-health-dashboard.png)](media/connection-health-dashboard.png#lightbox)
 
@@ -30,9 +30,9 @@ ms.locfileid: "83268634"
 
 此磁贴显示下列有关从 Configuration Manager 到桌面分析的连接的基本信息：
 
-- **租户名称**：“Azure 服务”  节点中的桌面分析连接的名称
+- **租户名称**：“Azure 服务”节点中的桌面分析连接的名称
 
-- **目标集合**：将 Configuration Manager 连接到桌面分析时指定的相同目标集合  。 此集合包括 Configuration Manager 使用你的商业 ID 和诊断数据设置配置的所有设备。 它是 Configuration Manager 连接到桌面分析服务的完整设备集。
+- **目标集合**：将 Configuration Manager 连接到桌面分析时指定的相同目标集合。 此集合包括 Configuration Manager 使用你的商业 ID 和诊断数据设置配置的所有设备。 它是 Configuration Manager 连接到桌面分析服务的完整设备集。
 
 - **目标设备**：目标集合中的所有设备，以下类型的设备除外：
 
@@ -56,19 +56,19 @@ ms.locfileid: "83268634"
 
 - **同步的设备**：Configuration Manager 发送到桌面分析的合格设备数。 服务将这些设备包括在当前可见的快照中。
 
-- **上次服务同步**：与桌面分析门户中“上次更新”  时间相同。
+- **上次服务同步**：与桌面分析门户中“上次更新”时间相同。
 
 - **下次服务同步**：预计在桌面分析中获得下一个每日快照的时间。
 
 > [!Note]  
-> 第一次将设备注册到桌面分析时，可能需要几天时间才能完成数据上载和处理。 在此期间，“上次同步详细信息”  磁贴可能会显示为空白。
+> 第一次将设备注册到桌面分析时，可能需要几天时间才能完成数据上载和处理。 在此期间，“上次同步详细信息”磁贴可能会显示为空白。
 > 此外，当你请求按需快照时，此磁贴中的任何值都不会自动更新。 有关详细信息，请参阅[数据延迟](troubleshooting.md#data-latency)。
 
 如果认为某些设备未显示在桌面分析中，请确保桌面分析支持这些设备。 有关详细信息，请参阅[先决条件](overview.md#prerequisites)。
 
 ## <a name="connection-health"></a>连接运行状况
 
-“连接运行状况”  图表显示处于以下运行状况状态下的设备数：  
+“连接运行状况”图表显示处于以下运行状况状态下的设备数：  
 
 - [正确注册](#properly-enrolled)：设备显示在桌面分析中并具有完整清单
 - [无法注册](#unable-to-enroll)：出现阻止设备注册的阻塞性问题
@@ -84,7 +84,7 @@ ms.locfileid: "83268634"
 - [Missing prerequisites](#missing-prerequisites)  
  -->
 
-此图表中的设备总数应该与“连接详细信息”磁贴中“符合 DA 条件的设备”  值相同。
+此图表中的设备总数应该与“连接详细信息”磁贴中“符合 DA 条件的设备”值相同。
 
 在图表中选择切片，以向下钻取到具有该状态的设备列表。 有关详细信息，请参阅[设备列表](#device-list)。
 
@@ -104,6 +104,9 @@ ms.locfileid: "83268634"
 Configuration Manager 检测到一个或多个阻止设备注册的阻塞性问题。 有关详细信息，请参阅 [Configuration Manager 中的桌面分析设备属性](#bkmk_config-issues)列表。  
 
 例如，Configuration Manager 客户端版本低于 1902 (5.0.8790)。 将客户端更新到最新版本。 考虑为 Configuration Manager 站点启用自动客户端升级。 有关详细信息，请参阅[升级客户端](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade)。  
+
+> [!TIP]
+> Windows 7 的 2020 年 4 月扩展安全更新程序 (ESU) 有一个已知问题，导致设备误报此错误。 有关详细信息，请参阅[发行说明](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack)。<!-- 7283186 -->
 
 从版本 2002 开始，可以在两个领域更轻松地确定客户端代理配置问题：
 
@@ -135,7 +138,7 @@ Configuration Manager 已成功配置设备，但桌面分析无法创建兼容�
 
 ## <a name="device-list"></a>设备列表
 
-若要按状态查看特定的设备列表，请从“连接运行状况”  仪表板开始。 选择“连接运行状况”磁贴  的一个段，向下钻取到处于此状态的设备的列表。 默认情况下，此自定义设备视图显示以下桌面分析列：
+若要按状态查看特定的设备列表，请从“连接运行状况”仪表板开始。 选择“连接运行状况”磁贴的一个段，向下钻取到处于此状态的设备的列表。 默认情况下，此自定义设备视图显示以下桌面分析列：
 
 - 商业 ID 配置
 - 最低兼容性更新
@@ -176,7 +179,7 @@ Configuration Manager 已成功配置设备，但桌面分析无法创建兼容�
 - [唯一设备标识符检索](#unique-device-identifier-retrieval)  
 - [Windows 诊断数据选择加入](#windows-diagnostic-data-opt-in)  
 
-“连接运行状况”仪表板的“最常见的注册阻止程序和配置警报”  磁贴显示最常被设备报告为问题的属性。
+“连接运行状况”仪表板的“最常见的注册阻止程序和配置警报”磁贴显示最常被设备报告为问题的属性。
 
 ### <a name="endpoint-connectivity-checks"></a>终结点连接性检查
 
@@ -318,7 +321,7 @@ Start-Service -Name dps
 | OS 版本 | 终结点 |
 |------------|----------|
 | - Windows 10，版本 1809 或更高版本<br/>- Windows 10，版本 1803，带有 2018-09 或更高版本的累积更新 | `https://v10c.events.data.microsoft.com/health/keepalive` |
-| Windows 10，版本 1803，不带  2018-09 或更高版本的累积更新 | `https://v10.events.data.microsoft.com/health/keepalive` |
+| Windows 10，版本 1803，不带 2018-09 或更高版本的累积更新 | `https://v10.events.data.microsoft.com/health/keepalive` |
 | Windows 10，版本 1709 或更高版本 | `https://v10.vortex-win.data.microsoft.com/health/keepalive` |
 | Windows 7 或 Windows 8.1 | `https://vortex-win.data.microsoft.com/health/keepalive` |
 
@@ -371,14 +374,14 @@ Microsoft 使用唯一商业 ID 将设备中的信息映射到桌面分析工作
 
 <a name="bkmk_ViewCommercialID"></a> 若要在桌面分析门户中查看商业 ID，请使用以下过程：
 
-1. 转到桌面分析门户，在“全局设置”组中选择“连接服务”  。  
+1. 转到桌面分析门户，在“全局设置”组中选择“连接服务”。  
 
-2. 在“连接服务”  窗格中，默认情况下“注册设备”  窗格处于选中状态。 在“注册设备”窗格中，“信息”部分显示你的商业 ID 项。  
+2. 在“连接服务”窗格中，默认情况下“注册设备”窗格处于选中状态。 在“注册设备”窗格中，“信息”部分显示你的商业 ID 项。  
 
 [![桌面分析门户中商业 ID 的屏幕截图](media/commercial-id.png)](media/commercial-id.png#lightbox)
 
 > [!Important]  
-> 只有在无法使用当前 ID 项时，才获取新 ID 项  。 如果重新生成商业 ID，请 [使用新 ID 重新注册设备](enroll-devices.md#device-enrollment)。此过程可能会导致在过渡期间丢失诊断数据。  
+> 只有在无法使用当前 ID 项时，才获取新 ID 项。 如果重新生成商业 ID，请 [使用新 ID 重新注册设备](enroll-devices.md#device-enrollment)。此过程可能会导致在过渡期间丢失诊断数据。  
 
 ### <a name="windows-commercial-data-opt-in"></a>Windows 商业数据选择加入
 
@@ -411,6 +414,9 @@ Microsoft 使用唯一商业 ID 将设备中的信息映射到桌面分析工作
 
 - “已连接的用户体验和遥测”(diagtrack.dll) 组件已过时。 检查要求  
 
+    > [!TIP]
+    > Windows 7 的 2020 年 4 月扩展安全更新程序 (ESU) 有一个已知问题，导致设备误报此错误。 有关详细信息，请参阅[发行说明](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack)。<!-- 7283186 -->
+
 - 找不到“已连接的用户体验和遥测”(diagtrack.dll) 组件。 检查要求  
 
 - 启用并启动“已连接的用户体验和遥测”服务以将数据发送给 Microsoft  
@@ -423,7 +429,7 @@ Microsoft 使用唯一商业 ID 将设备中的信息映射到桌面分析工作
 
 安装最新更新。 有关详细信息，请参阅[设备更新](enroll-devices.md#update-devices)。
 
-确保设备上的“已连接的用户体验和遥测”服务正在运行  。
+确保设备上的“已连接的用户体验和遥测”服务正在运行。
 
 ### <a name="diagtrack-version"></a>DiagTrack 版本
 
@@ -447,7 +453,7 @@ Microsoft 使用唯一商业 ID 将设备中的信息映射到桌面分析工作
 <!--54-->
 桌面分析将 Microsoft 帐户服务用于更可靠的设备标识。
 
-确保未禁用“Microsoft 帐户登录助手”  服务。 启动类型应为“手动（触发器启动）”  。
+确保未禁用“Microsoft 帐户登录助手”服务。 启动类型应为“手动（触发器启动）”。
 
 若要禁用最终用户 Microsoft 帐户访问权限，请使用策略设置，而不是阻止此终结点。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。
 

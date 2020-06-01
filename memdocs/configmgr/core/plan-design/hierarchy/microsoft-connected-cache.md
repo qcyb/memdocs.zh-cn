@@ -10,23 +10,23 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842200"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878493"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--3555764-->
 
 从版本 1906 开始，你可以在分发点上安装 Microsoft Connected Cache 服务器。 通过将此内容缓存在本地，你的客户端可以从传递优化功能中受益，但你可帮助保护 WAN 链接。
 
 > [!NOTE]
-> 从版本 1910 开始，此功能现在称为“Microsoft Connected Cache”  。 它以前称为“传递优化网络内缓存 (DOINC)”。
+> 从版本 1910 开始，此功能现在称为“Microsoft Connected Cache”。 它旧称为“传递优化网络内缓存”。
 
 此缓存服务器充当由传递优化下载的内容的按需透明缓存。 使用客户端设置以确保此服务器仅提供给本地 Configuration Manager 边界组的成员。
 
@@ -55,7 +55,7 @@ ms.locfileid: "82842200"
 
 ## <a name="prerequisites-and-limitations"></a>先决条件和限制
 
-- 具有以下配置的本地分发点  ：
+- 具有以下配置的本地分发点：
 
   - 运行 Windows Server 2012、Windows Server 2012 R2、Windows Server 2016 或 Windows Server 2019
 
@@ -71,17 +71,17 @@ ms.locfileid: "82842200"
 
 ## <a name="enable-connected-cache"></a>启用 Connected Cache
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点   。
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点 。
 
-1. 选择“本地”分发点，然后在功能区中选择“属性”   。
+1. 选择“本地”分发点，然后在功能区中选择“属性”。
 
-1. 在分发点角色的属性中的“常规”选项卡中，配置以下设置  ：  
+1. 在分发点角色的属性中的“常规”选项卡中，配置以下设置：  
 
-    1. 启用选项“使此分发点用作 Microsoft Connected Cache 服务器”   
+    1. 启用选项“使此分发点用作 Microsoft Connected Cache 服务器”  
 
         查看并接受许可条款。
 
-    2. **要使用的本地驱动器**：选择要用于缓存的磁盘。 “自动”是默认值，使用可用空间最多的磁盘。<sup>[备注 1](#bkmk_note1)</sup>   
+    2. **要使用的本地驱动器**：选择要用于缓存的磁盘。 “自动”是默认值，使用可用空间最多的磁盘。<sup>[备注 1](#bkmk_note1)</sup>  
 
         > [!Note]  
         > 可以在以后更改此驱动器。 除非将缓存内容复制到新驱动器，否则会丢失任何缓存内容。
@@ -95,19 +95,19 @@ ms.locfileid: "82842200"
 
     4. **禁用 Connected Cache 服务器时保留缓存**：如果删除缓存服务器并启用此选项，服务器会将缓存内容存储在磁盘上。  
 
-1. 在“传递优化”组的客户端设置中，配置“使 Configuration Manage 管理的设备能够对下载的内容使用 Microsoft Connected Cache 服务器”设置   。  
+1. 在“传递优化”组的客户端设置中，配置“使 Configuration Manage 管理的设备能够对下载的内容使用 Microsoft Connected Cache 服务器”设置 。  
 
 ### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a> 注释 1：关于驱动器选择
 
-如果选择“自动”，则 Configuration Manager 安装 Connected Cache 组件时，将优先采用 no_sms_on_drive.sms 文件   。 例如，分发点具有 `C:\no_sms_on_drive.sms` 文件。 即使 C: 驱动器具有的可用空间最多，Configuration Manager 也会将 Connected Cache 配置为使用另一个驱动器进行缓存。
+如果选择“自动”，则 Configuration Manager 安装 Connected Cache 组件时，将优先采用 no_sms_on_drive.sms 文件 。 例如，分发点具有 `C:\no_sms_on_drive.sms` 文件。 即使 C: 驱动器具有的可用空间最多，Configuration Manager 也会将 Connected Cache 配置为使用另一个驱动器进行缓存。
 
-如果选择已具有 no_sms_on_drive.sms 文件的特定驱动器，则 Configuration Manager 将忽略该文件  。 将 Connected Cache 配置为使用该驱动器是一个明确的意图。 例如，分发点具有 `F:\no_sms_on_drive.sms` 文件。 将分发点属性显式配置为使用“F:”驱动器时，Configuration Manager 会将 Connected Cache 配置为使用 F: 驱动器进行缓存  。
+如果选择已具有 no_sms_on_drive.sms 文件的特定驱动器，则 Configuration Manager 将忽略该文件。 将 Connected Cache 配置为使用该驱动器是一个明确的意图。 例如，分发点具有 `F:\no_sms_on_drive.sms` 文件。 将分发点属性显式配置为使用“F:”驱动器时，Configuration Manager 会将 Connected Cache 配置为使用 F: 驱动器进行缓存。
 
 若要在安装 Connected Cache 后更改驱动器，请执行以下操作：
 
 - 手动将分发点属性配置为使用特定的驱动器号。
 
-- 如果设置为自动，请首先创建 no_sms_on_drive.sms 文件  。 然后对分发点属性进行一些更改，以触发配置更改。
+- 如果设置为自动，请首先创建 no_sms_on_drive.sms 文件。 然后对分发点属性进行一些更改，以触发配置更改。
 
 ### <a name="automation"></a>自动化
 
@@ -115,13 +115,13 @@ ms.locfileid: "82842200"
 
 可以使用 Configuration Manager SDK 自动配置分发点上的 Microsoft 联网缓存设置。 与所有站点角色一样，请使用 [SMS_SCI_SysResUse WMI 类](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)。 有关详细信息，请参阅[站点角色编程](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles)。
 
-更新分发点的 SMS_SCI_SysResUse  实例时，请设置以下属性：
+更新分发点的 SMS_SCI_SysResUse 实例时，请设置以下属性：
 
-- AgreeDOINCLicense  ：设置为 `1` 以接受许可条款。
-- Flags  ：启用 `|= 4`，禁用 `&= ~4`
-- DiskSpaceDOINC  ：设置为 `Percentage` 或 `GB`
-- RetainDOINCCache  ：设置为 `0` 或 `1`
-- LocalDriveDOINC  ：设置为 `Automatic` 或特定驱动器号，如 `C:` 或 `D:`
+- AgreeDOINCLicense：设置为 `1` 以接受许可条款。
+- Flags：启用 `|= 4`，禁用 `&= ~4`
+- DiskSpaceDOINC：设置为 `Percentage` 或 `GB`
+- RetainDOINCCache：设置为 `0` 或 `1`
+- LocalDriveDOINC：设置为 `Automatic` 或特定驱动器号，如 `C:` 或 `D:`
 
 ## <a name="verify"></a>验证
 
@@ -136,7 +136,7 @@ ms.locfileid: "82842200"
   - 客户端应用：Microsoft Store 应用和更新
   - Endpoint Protection：Windows Defender 定义更新
 
-在 Windows 10 版本 1809 或更高版本中，使用 Get-DeliveryOptimizationStatus Windows PowerShell cmdlet 验证此操作  。 在 cmdlet 输出中，查看 BytesFromCacheServer 值  。 有关详细信息，请参阅[监视传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)。
+在 Windows 10 版本 1809 或更高版本中，使用 Get-DeliveryOptimizationStatus Windows PowerShell cmdlet 验证此操作。 在 cmdlet 输出中，查看 BytesFromCacheServer 值。 有关详细信息，请参阅[监视传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)。
 
 如果缓存服务器返回任何 HTTP 故障，则传递优化客户端退回到原始云源。
 
@@ -157,7 +157,7 @@ ms.locfileid: "82842200"
 - 客户端设备需要至少具有 4 GB 的内存。
 
     > [!TIP]
-    > 使用以下组策略设置：计算机配置 > 管理模板 > Windows 组件 > 传递优化 > 启用对等缓存时所需的最小 RAM 容量（包含）（以 GB 为单位）  。
+    > 使用以下组策略设置：计算机配置 > 管理模板 > Windows 组件 > 传递优化 > 启用对等缓存时所需的最小 RAM 容量（包含）（以 GB 为单位）。
 
 #### <a name="site"></a>站点
 
@@ -165,14 +165,14 @@ ms.locfileid: "82842200"
 
 - 客户端和支持互联缓存的分发点必须位于同一个边界组中。
 
-- 在[传递优化](../../clients/deploy/about-client-settings.md#delivery-optimization)组中启用以下客户端设置  ：
+- 在[传递优化](../../clients/deploy/about-client-settings.md#delivery-optimization)组中启用以下客户端设置：
 
   - **将 Configuration Manager 边界组用于传递优化组 ID**
   - **使 Configuration Manager 托管的设备可使用 Microsoft 互联缓存服务器来下载内容**
 
-- 启用预发行功能“适用于共同管理设备的客户端应用”  。 有关详细信息，请参阅[预发行功能](../../servers/manage/pre-release-features.md)。
+- 启用预发行功能“适用于共同管理设备的客户端应用”。 有关详细信息，请参阅[预发行功能](../../servers/manage/pre-release-features.md)。
 
-- 启用共同管理，并将“客户端应用”  工作负载切换到“试点 Intune”  或“Intune”  。 有关详细信息，请参阅下列文章：
+- 启用共同管理，并将“客户端应用”工作负载切换到“试点 Intune”或“Intune”。 有关详细信息，请参阅下列文章：
 
   - [工作负载 - 客户端应用](../../../comanage/workloads.md#client-apps)
   - [如何启用共同管理](../../../comanage/how-to-enable.md)
@@ -189,7 +189,7 @@ ms.locfileid: "82842200"
   - 此应用至少需要 100 MB。
   
     > [!TIP]
-    > 使用以下组策略设置：计算机配置 > 管理模板 > Windows 组件 > 传递优化 > 对等缓存的最小内容文件大小（以 MB 为单位）  。
+    > 使用以下组策略设置：计算机配置 > 管理模板 > Windows 组件 > 传递优化 > 对等缓存的最小内容文件大小（以 MB 为单位）。
 
 ## <a name="see-also"></a>另请参阅
 

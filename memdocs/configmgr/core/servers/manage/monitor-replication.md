@@ -10,27 +10,27 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694405"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879816"
 ---
 # <a name="monitor-database-replication"></a>监视数据库复制
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
-使用 Configuration Manager 控制台“监视”工作区中的“数据复制”节点监视数据库复制的详细信息   。 可以监视站点之间的复制链接的状态。 还显示要连接到的站点的复制组的初始化和复制。  
+使用 Configuration Manager 控制台“监视”工作区中的“数据复制”节点监视数据库复制的详细信息 。 可以监视站点之间的复制链接的状态。 还显示要连接到的站点的复制组的初始化和复制。  
 
 > [!TIP]  
-> 尽管“数据库复制”  节点还出现在“管理”  工作区的“层次结构配置”  节点下，但你无法从该位置中查看数据库复制链接的复制状态。  
+> 尽管“数据库复制”节点还出现在“管理”工作区的“层次结构配置”节点下，但你无法从该位置中查看数据库复制链接的复制状态。  
 
 ## <a name="replication-link-status"></a><a name="BKMK_MonitorReplicationLinks"></a> 复制链接状态  
 
-站点之间的数据库复制涉及到若干组信息的复制，称为复制组  。 每个复制组发送和接收具有不同优先级的数据。 默认情况下，无法修改复制组中包含的数据以及复制的频率。  
+站点之间的数据库复制涉及到若干组信息的复制，称为复制组。 每个复制组发送和接收具有不同优先级的数据。 默认情况下，无法修改复制组中包含的数据以及复制的频率。  
 
-当复制链接处于活动状态且其状态未处于失败或降级状态时，所有组都可以快速复制。 如果一个或多个组在预期的时间段中无法完成复制，则链接将显示为降级  。 降级的链接仍然可以正常工作，但应对其监视以确保它们返回到活动状态。 调查这些链接，以确保不会发生其他降级或复制失败情况。  
+当复制链接处于活动状态且其状态未处于失败或降级状态时，所有组都可以快速复制。 如果一个或多个组在预期的时间段中无法完成复制，则链接将显示为降级。 降级的链接仍然可以正常工作，但应对其监视以确保它们返回到活动状态。 调查这些链接，以确保不会发生其他降级或复制失败情况。  
 
 为每个复制链接指定未成功复制的组重试的次数。 在达到此重试次数后，站点将链接的状态设置为降级或失败。 即使除了一个组之外的所有组均成功复制，则该站点也会将链接的状态设置为降级或失败。 设置为此状态，因为一个复制组无法在指定的尝试次数内完成复制。 有关详细信息，请参阅[数据库复制阈值](../../plan-design/hierarchy/database-replication.md#BKMK_DBRepThresholds)。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "81694405"
 
 ## <a name="monitor-replication-status"></a><a name="BKMK_MonitorReplicationStatus"></a> 监视复制状态
 
-使用“监视”  工作区中的“数据复制”  节点以查看复制链接的状态。 在复制链接的每个站点上查看有关数据库的详细信息。 你还可以查看有关复制组的详细信息。 要查看这些详细信息，请选择复制链接，然后为要查看的复制状态选择相应的选项卡。
+使用“监视”工作区中的“数据复制”节点以查看复制链接的状态。 在复制链接的每个站点上查看有关数据库的详细信息。 你还可以查看有关复制组的详细信息。 要查看这些详细信息，请选择复制链接，然后为要查看的复制状态选择相应的选项卡。
 
 以下部分详细介绍复制状态的不同选项卡：
 
@@ -65,7 +65,7 @@ ms.locfileid: "81694405"
 
 查看有关链接上两个站点之间的站点数据和全局数据复制的高级信息。  
 
-选择“查看历史流量数据报表”  来查看一个报表，其中显示有关链接上的复制所使用的网络带宽的详细信息。  
+选择“查看历史流量数据报表”来查看一个报表，其中显示有关链接上的复制所使用的网络带宽的详细信息。  
 
 ### <a name="parent-site"></a>父站点
 
@@ -95,7 +95,7 @@ ms.locfileid: "81694405"
 
 查看通过链接进行复制的组的初始化状态。 此信息可帮助你确定复制数据的初始化何时正在进行或已失败。  
 
-使用此信息来确定站点何时可能处于互操作性模式  。 当子站点运行的 Configuration Manager 版本与父站点不同时，将会出现互操作性模式。  
+使用此信息来确定站点何时可能处于互操作性模式。 当子站点运行的 Configuration Manager 版本与父站点不同时，将会出现互操作性模式。  
 
 ### <a name="replication-detail"></a>复制详细信息
 
@@ -107,7 +107,7 @@ ms.locfileid: "81694405"
 
 ## <a name="replication-link-analyzer"></a><a name="BKMK_RLA"></a> 复制链接分析器
 
-Configuration Manager 包括复制链接分析器  (RLA)，你使用该分析器来分析和修复复制问题。 复制失败时，使用 RLA 修正链接失败。 当复制停止工作但该站点尚未将其报告为失败时，RLA 也非常有用。
+Configuration Manager 包括复制链接分析器 (RLA)，你使用该分析器来分析和修复复制问题。 复制失败时，使用 RLA 修正链接失败。 当复制停止工作但该站点尚未将其报告为失败时，RLA 也非常有用。
 
 使用 RLA 修正层次结构中以下计算机之间的复制问题：  
 
@@ -120,9 +120,12 @@ Configuration Manager 包括复制链接分析器  (RLA)，你使用该分析器
 
 在 Configuration Manager 控制台中或命令提示符处运行 RLA：  
 
-- 在 Configuration Manager 控制台中运行：转到“监视”工作区，选择“数据库复制”节点   。 选择要分析的复制链接，然后在功能区中，选择“复制链接分析器”  。  
+- 在 Configuration Manager 控制台中运行：转到“监视”工作区，选择“数据库复制”节点 。 选择要分析的复制链接，然后在功能区中，选择“复制链接分析器”。  
 
-- 要在命令提示符处运行，请键入以下命令：`%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- 要在命令提示符处运行，请键入以下命令：`%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > 自版本 1910 起，此路径已更改为使用 `Microsoft Endpoint Manager` 文件夹。 请确保不使用可能存在于其他文件夹中的旧版文件。
 
 运行 RLA 时，它将使用一系列诊断规则和检查来检测问题。 查看该工具确定的问题。 在 RLA 有解决问题的说明时，则会将其显示出来。 如果 RLA 可以自动修正问题，则会显示该选项。
 
@@ -151,7 +154,7 @@ RLA 记录所有调查和修正操作，以提供其未在向导中显示的其�
 - 复制链接中涉及的每个 SQL Server 数据库上的 Sysadmin 权限。  
 
 > [!Note]  
-> 此帐户不需要特定的基于 Configuration Manager 角色的管理安全角色。 有权访问“数据库复制”  的管理用户可在 Configuration Manager 控制台中运行该工具。 对每台计算机有足够权限的系统管理员可以在命令提示符处运行该工具。  
+> 此帐户不需要特定的基于 Configuration Manager 角色的管理安全角色。 有权访问“数据库复制”的管理用户可在 Configuration Manager 控制台中运行该工具。 对每台计算机有足够权限的系统管理员可以在命令提示符处运行该工具。  
 
 ### <a name="rla-known-issue"></a>RLA 的已知问题
 
@@ -162,14 +165,14 @@ RLA 为从 System Center 2012 Configuration Manager 升级的主站点生成 SQL
 
 ### <a name="monitor-high-level-site-to-site-database-replication-status"></a>监视高级别站点到站点数据库复制状态
 
-1. 在 Configuration Manager 控制台中，转到“监视”  工作区。  
+1. 在 Configuration Manager 控制台中，转到“监视”工作区。  
 
-2. 选择“站点层次结构”  节点以打开“层次结构关系图”  视图。  
+2. 选择“站点层次结构”节点以打开“层次结构关系图”视图。  
 
 3. 将鼠标指针悬停在两个站点之间的线上。 查看这些站点的全局数据复制和站点数据复制的状态。  
 
 ### <a name="monitor-the-status-of-a-replication-link"></a>监视复制链接的状态
 
-1. 在 Configuration Manager 控制台中，转到“监视”  工作区。  
+1. 在 Configuration Manager 控制台中，转到“监视”工作区。  
 
-2. 选择“数据库复制”  节点，然后选择要监视的复制链接。 然后，选择相应的选项卡以查看有关该链接的复制状态的不同详细信息。  
+2. 选择“数据库复制”节点，然后选择要监视的复制链接。 然后，选择相应的选项卡以查看有关该链接的复制状态的不同详细信息。  

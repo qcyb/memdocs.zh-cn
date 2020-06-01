@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689075"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877753"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>包转换管理器插件配置 XML 的技术参考
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--1357861-->
 
@@ -43,8 +43,11 @@ ms.locfileid: "81689075"
 
 ## <a name="sample-configuration-xml"></a>示例配置 XML
 
-这一部分提供了 Configuration Manager 配置文件 (Microsoft.ConfigurationManagement.exe.config  ) 中包转换管理器配置 XML 元素的示例。默认情况下，此文件位于以下路径：  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+这一部分提供了 Configuration Manager 配置文件 (Microsoft.ConfigurationManagement.exe.config) 中包转换管理器配置 XML 元素的示例。默认情况下，此文件位于以下路径：  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> 自版本 1910 起，此路径已更改为使用 `Microsoft Endpoint Manager` 文件夹。 请确保不使用可能存在于其他文件夹中的旧版文件。 
 
 在示例中，与包转换管理器相关的元素在以下元素中：`Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

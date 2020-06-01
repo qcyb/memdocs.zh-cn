@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700865"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878102"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache 疑难解答
 
 本文提供有关 Configuration Manager 中的 Microsoft Connected Cache 的技术详细信息。 这些信息有助于解决环境中可能存在的问题。 有关该功能的工作原理及用法的详细信息，请参阅 [Configuration Manager 中的 Microsoft Connected Cache](../../../plan-design/hierarchy/microsoft-connected-cache.md)。
 
 > [!NOTE]
-> 从版本 1910 开始，此功能现在称为“Microsoft Connected Cache”  。 它以前称为“传递优化网络内缓存 (DOINC)”。
+> 从版本 1910 开始，此功能现在称为“Microsoft Connected Cache”。 它旧称为“传递优化网络内缓存”。
 
 ## <a name="verify"></a>验证
 
@@ -184,7 +184,7 @@ DO 缓存服务器安装并配置了 IIS [应用程序请求路由 (ARR)](https:
 
 ### <a name="allowed-server-variables"></a>允许的服务器变量
 
-安装 DO 缓存服务器后，默认网站具有以下本地服务器变量  ：
+安装 DO 缓存服务器后，默认网站具有以下本地服务器变量：
 
 - HTTP_HOST
 - QUERY_STRING
