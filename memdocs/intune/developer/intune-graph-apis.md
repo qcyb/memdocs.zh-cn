@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0412f15912ac9017ebc49f974ec621d86f8b6c0e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b87b2528dce4d007f2a2031a11fd69ea774c2033
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989089"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165900"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>如何使用 Azure AD 访问 Microsoft Graph Intune API
 
@@ -143,7 +143,7 @@ Azure AD 和 Microsoft Graph 使用权限范围来控制对公司资源的访问
 向 Microsoft Graph 授予权限时，你可以指定以下范围来控制对 Intune 功能的访问权限：下表总结了 Intune API 权限范围。  第一列显示 Azure 门户中显示的功能名称，第二列显示权限范围名称。
 
 _启用访问权限_设置 | 作用域名称
-:--|:--
+:--|---
 __在 Microsoft Intune 设备上执行影响用户的远程操作__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
 __读取和写入 Microsoft Intune 设备__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __读取 Microsoft Intune 设备__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)

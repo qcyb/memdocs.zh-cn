@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 05/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 299eba5cfd07edac44db35d3b3eb6b97e5242973
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f44bd52d12753ae25b8828d6c41d3055721a1fd6
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989991"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165985"
 ---
 # <a name="intune-reports"></a>Intune 报表
 利用 Microsoft Intune 报表，你可以更有效地主动在整个组织中监视终结点的运行状况和活动，还可以在 Intune 之间提供其他报表数据。 例如，你将能够查看有关设备符合性、设备运行状况和设备趋势的报表。 此外，你还可以创建自定义报表以获取更具体的数据。 
