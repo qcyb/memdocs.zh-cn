@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
+ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905145"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84226255"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -25,9 +25,9 @@ ms.locfileid: "82905145"
 
 由于此版本是技术预览版，因此详细信息和功能可能有所更改。
 
-此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 2001 为 2020 年 (`20`) 的 1 月 (`01`)  。 单独的文章专用于详细介绍每个预览版的单独功能。
+此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 2001 为 2020 年 (`20`) 的 1 月 (`01`)。 单独的文章专用于详细介绍每个预览版的单独功能。
 
-有关 Configuration Manager 的当前版本  中新增功能的信息，请参阅 [Configuration Manager 增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md)。
+有关 Configuration Manager 的当前版本 中新增功能的信息，请参阅 [Configuration Manager 增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md)。
 
 > [!Tip]
 > 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
@@ -63,7 +63,7 @@ ms.locfileid: "82905145"
 - 不支持从此预览分支更新到当前分支。
 
     > [!Note]
-    > 更新可用于预览版本时，仍从 Configuration Manager 控制台的“更新与维护服务”  节点查找并安装它们。 有关控制台中升级过程的视频，请观看 youtube.com 上的[安装 Configuration Manager 更新包](https://www.youtube.com/embed/KBd_EGFbUT8)。
+    > 更新可用于预览版本时，仍从 Configuration Manager 控制台的“更新与维护服务”节点查找并安装它们。 有关控制台中升级过程的视频，请观看 youtube.com 上的[安装 Configuration Manager 更新包](https://www.youtube.com/embed/KBd_EGFbUT8)。
 
 - 它仅支持独立主站点。 不支持管理中心站点、多个主站点或辅助站点。
 
@@ -116,20 +116,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 以下是最新 Configuration Manager 技术预览版中提供的功能：
 
-### <a name="technical-preview-version-2004"></a>技术预览版 2004
+### <a name="technical-preview-version-2005"></a>技术预览版 2005
 
-- [Microsoft Endpoint Manager 租户附加：ConfigMgr 客户端详细信息](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [来自 Microsoft 的通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [从控制台复制发现数据](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [对 CMPivot 的改进](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [支持 PowerShell 版本 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [格式化磁盘并分区的任务序列步骤改进](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [操作系统部署的管理见解规则](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [任务序列部署类型的 PowerShell cmdlet](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [租户附加：管理中心内的设备时间线](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [租户附加：从管理中心安装应用程序](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [租户附加：管理中心的 CMPivot](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [租户附加：从管理中心运行脚本](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [VPN 边界类型](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [软件中心的 Azure AD 身份验证](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [使用按流量计费的连接来安装和升级客户端](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [任务序列媒体对基于云的内容的支持](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [云管理网关 cmdlet 的改进](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [社区中心和 GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Microsoft 365 企业应用版](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [向 Microsoft 报告安装和升级失败](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Azure AD 应用密钥过期通知](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [BitLocker 任务序列步骤的改进](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [内容库清理工具的改进](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Windows 10 就地升级期间删除命令提示符](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。
@@ -145,7 +153,18 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 以下是自当前分支版本 2002 以来早期 Configuration Manager 技术预览版发布的功能：
 
 > [!TIP]
-> 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能  。 有关详细信息，请参阅[增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
+> 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能。 有关详细信息，请参阅[增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
+
+### <a name="technical-preview-version-2004"></a>技术预览版 2004
+
+- [Microsoft Endpoint Manager 租户附加：ConfigMgr 客户端详细信息](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [来自 Microsoft 的通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [从控制台复制发现数据](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [对 CMPivot 的改进](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [支持 PowerShell 版本 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [格式化磁盘并分区的任务序列步骤改进](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [操作系统部署的管理见解规则](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [任务序列部署类型的 PowerShell cmdlet](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### <a name="technical-preview-version-2003"></a>技术预览版 2003
 

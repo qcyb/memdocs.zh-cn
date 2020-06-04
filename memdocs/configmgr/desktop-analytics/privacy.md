@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268413"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223654"
 ---
 # <a name="desktop-analytics-data-privacy"></a>桌面分析数据隐私
 
@@ -55,7 +55,7 @@ ms.locfileid: "83268413"
 
     4. 将兼容性更新部署到所有目标设备。  
 
-3. 设备将诊断数据发送到适用于 Windows 的 Microsoft 诊断数据管理服务。 此服务托管于美国。  
+3. 设备将诊断数据发送到适用于 Windows 的 Microsoft 诊断数据管理服务。 所有诊断数据都通过 HTTPS 进行加密，并在从设备传输到此服务时使用证书固定。 Microsoft 数据管理服务在美国托管。
 
 4. Microsoft 每天都会生成一个以 IT 为中心的见解快照。 此快照合并了来自 Windows 的诊断数据与已注册设备的输入信息。 此过程发生在暂时存储中，仅供桌面分析使用。 暂时存储托管于美国的 Microsoft 数据中心。 所有数据都通过 SSL (HTTPS) 加密通道发送。 快照按商业 ID 进行隔离。  
 
