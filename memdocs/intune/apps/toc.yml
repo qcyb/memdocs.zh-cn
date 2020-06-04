@@ -145,6 +145,8 @@
               href: app-configuration-policies-outlook.md
             - name: 配置 Google Chrome for Android
               href: apps-configure-chrome-android.md
+            - name: 配置适用于 Android Enterprise 的 VPN
+              href: app-configuration-vpn-ae.md
         - name: 批量采购的应用和书籍
           items:
             - name: 批量采购概述
