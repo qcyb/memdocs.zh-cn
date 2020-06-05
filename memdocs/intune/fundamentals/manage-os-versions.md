@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft Intune 管理操作系统版本
+title: 使用 Intune 管理操作系统版本
 titleSuffix: Microsoft Intune
 description: 了解如何使用 Microsoft Intune 跨平台管理操作系统版本。
 keywords: ''
@@ -14,12 +14,12 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c25a40d288b643c289c05322e3e2d4677afb0b60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e4135dc90ff2739cb27ac95afa095bdfaf375d82
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362233"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330927"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>使用 Intune 管理操作系统版本
 在新式移动和桌面平台上，主要更新、修补程序和新版本的发布速度很快。 你在 Windows 上具有完全管理更新和修补程序的控制权限，但在 iOS/iPadOS 和 Android 等平台上，要求最终用户也参与此过程。  Microsoft Intune 可帮助构建跨不同平台的操作系统版本管理。
@@ -78,13 +78,13 @@ Intune MDM 设备符合性策略提供以下工具：
 
 ## <a name="managing-a-new-operating-system-version-rollout"></a>管理新操作系统版本的推出
 可使用本文所述 Intune 功能，在自定义的时间线内将组织移至新操作系统版本。 以下是关于某个示例部署模型的步骤说明，该示例在七天内将用户从操作系统 v1 移至操作系统 v2。
-- 步骤 1：使用注册限制将操作系统 v2 作为注册设备的最低版本  。 此操作确保新的最终用户设备在注册时满足符合性。
-- 步骤 2a：使用 Intune 应用保护策略，在应用打开或恢复时，警告用户他们需要操作系统 v2  。
-- 步骤 2b  。 使用设备符合性策略，将操作系统 v2 作为使设备获得符合性的最低版本。 使用针对不符合性的操作，允许七天的宽限期，并向最终用户发送包含时间线和要求的电子邮件通知  。
+- **步骤 1**：使用注册限制将操作系统 v2 作为注册设备的最低版本。 此操作确保新的最终用户设备在注册时满足符合性。
+- **步骤 2a**：使用 Intune 应用保护策略，在应用打开或恢复时，警告用户他们需要操作系统 v2。
+- 步骤 2b。 使用设备符合性策略，将操作系统 v2 作为使设备获得符合性的最低版本。 使用针对不符合性的操作，允许七天的宽限期，并向最终用户发送包含时间线和要求的电子邮件通知。
   - 这些策略将通过电子邮件或 Intune 公司门户，以及在打开启用了应用保护策略的应用时，告知最终用户现有设备需要更新。
   - 可运行符合性报告来标识不符合的用户。 
-- 步骤 3a：使用 Intune 应用保护策略，在设备未运行操作系统 v2 的情况下，当应用打开或恢复时阻止用户  。
-- 步骤 3b：使用设备符合性策略，将操作系统 v2 作为使设备获得符合性的最低版本  。
+- **步骤 3a**：使用 Intune 应用保护策略，在设备未运行操作系统 v2 的情况下，当应用打开或恢复时阻止用户。
+- **步骤 3b**：使用设备符合性策略，将操作系统 v2 作为使设备获得符合性的最低版本。
   - 这些策略要求更新设备，以便继续访问组织数据。 当与设备条件访问配合使用时，受保护的服务将被阻止。 启用了应用保护策略的应用在打开时或访问组织数据时将被阻止。
 
 ## <a name="next-steps"></a>后续步骤

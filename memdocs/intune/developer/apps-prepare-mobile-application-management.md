@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 739ebebe18628279e5242ab227cf0f43993eff08
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166019"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330859"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>准备业务线应用以使用应用保护策略
 
@@ -121,7 +121,6 @@ Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS（Obj-
 |配置组织帐户的应用通知内容|X|X|
 |要求使用经批准的键盘（仅限 Android）|X|X|
 |要求使用应用保护策略（条件访问）|X||
-|要求使用经批准的客户端应用（条件访问）|X||
 
 ## <a name="next-steps"></a>后续步骤
 
