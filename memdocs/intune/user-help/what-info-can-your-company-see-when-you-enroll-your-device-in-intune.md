@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210309"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882078"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>在我注册自己的设备时，我的组织可以看到哪些信息？
 
@@ -51,11 +51,18 @@ ms.locfileid: "82210309"
 - IMEI
 
  > [!NOTE]
- > 对于 Android Enterprise 完全托管设备和专用设备，你将无法看到所有应用清单。    
+ > 对于 Android Enterprise 完全托管设备和专用设备，你将无法看到所有应用清单。
+ 
+ > [!NOTE]
+ > 按照以下方式之一安装时，应用被视为“托管应用”：
+ > 1. 在 Intune 管理员发布应用为“可用”后，用户从公司门户应用进行安装。
+ > 2. Intune 管理员发布应用为“必需”，并且应用已安装在设备上。 
+ >
+ > 如果你是组织中的 IT 管理员或支持人员，并且想要了解 Intune 中应用管理的详细信息，请参阅[了解非托管应用、托管应用和 MAM 应用的功能](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164)。
     
 **组织可能会看到的信息：**
 
-- 电话号码：对于公司拥有的设备，公司可看到完整的电话号码。 对于个人拥有的设备，组织只能看到电话号码的最后四位数字。 可以在相应设备的“设备详细信息”页，查看每个设备的所有权类型  。
+- 电话号码：对于公司拥有的设备，公司可看到完整的电话号码。 对于个人拥有的设备，组织只能看到电话号码的最后四位数字。 可以在相应设备的“设备详细信息”页，查看每个设备的所有权类型。
 - 设备存储空间：如果无法安装所需的应用，组织可以查看设备的存储空间，以确定空间是否不足。  
 - 位置：你的组织永远不会看到你的设备的位置，除非你需要恢复丢失、受监督的 iOS 设备。 访问 [Apple iOS 文档](https://go.microsoft.com/fwlink/?linkid=853816)以详细了解受监督的设备。  
 - 应用清单详细信息：如果组织使用 Mobile Threat Defense，则可以查看有关 iOS 设备中的应用的详细信息。 了解[移动威胁防御](set-up-mobile-threat-defense.md)的详细信息。 如果你有个人设备，则组织只能看到托管应用清单。 如果你有公司拥有的设备，则组织可查看所有应用广告资源。

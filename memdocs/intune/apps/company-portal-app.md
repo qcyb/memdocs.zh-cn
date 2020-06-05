@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc08dc37d4f043b69888c0fc99274e8720ee5562
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985946"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165713"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -129,7 +129,7 @@ ms.locfileid: "83985946"
 
 | 字段名称 | 最大长度 | 更多信息 |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 当用户的设备所有权类型从“个人”更改为“企业”时，向他们发送推送通知（仅限 Android 和 iOS/iPadOS） | 不适用 | 在 Android 和 iOS 公司门户用户的设备所有权类型从“个人”更改为“公司”时，向他们发送推送通知。 此推送通知默认设为“关”。 当设备所有权设置为公司所有权时，Intune 可更好地访问设备，其中包括完整的应用清单、FileVault 密钥轮替、电话号码检索和一些特选远程操作。 有关详细信息，请参阅[更改设备所有权](../enrollment/corporate-identifiers-add.md#change-device-ownership)。  |
+| 当用户的设备所有权类型从“个人”更改为“企业”时，向他们发送推送通知（仅限 Android 和 iOS/iPadOS） | 不适用 | 在 Android 和 iOS 公司门户用户的设备所有权类型从“个人”更改为“公司”时，向他们发送推送通知。 此推送通知默认设为“关”。 当设备所有权设置为公司所有权时，Intune 可更好地访问设备，其中包括完整的应用清单、FileVault 密钥轮换、电话号码检索和一些特选远程操作。 有关详细信息，请参阅[更改设备所有权](../enrollment/corporate-identifiers-add.md#change-device-ownership)。  |
 
 ### <a name="app-sources"></a>应用源
 
@@ -180,7 +180,7 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 可以在 Windows 公司门户应用中使用以下键盘快捷方式。
 
 | 领域 | 说明 | 键盘快捷方式 |
-|:------------------:|:--------------:|:-----------------:|
+|--------------------|----------------|-------------------|
 | 导航菜单 | 导航 | Alt+M |
 |  | 主页 | Alt+H |
 |  | 所有应用 | Alt+A |
