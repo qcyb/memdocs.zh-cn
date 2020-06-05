@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077886"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985177"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>设置移动设备管理机构
 
@@ -36,17 +36,17 @@ ms.locfileid: "82077886"
 
 - **Intune 共同管理** - 集成了 Intune 云解决方案和适用于 Windows 10 设备的 Configuration Manager。 可使用 Configuration Manager 控制台配置 Intune。 [配置设备自动注册到 Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
 
-- **Office 365 的移动设备管理** - 集成了 Office 365 和 Intune 云解决方案。 可在 Microsoft 365 管理中心中配置 Intune。 包括 Intune 独立版中提供的部分功能。 在 Microsoft 365 管理中心中设置 MDM 机构。
+- **Office 365 的移动设备管理** - 集成了 Office 365 和 Intune 云解决方案。 可在 Microsoft 365 管理中心中配置 Intune。 包括 Intune 独立版中提供的部分功能。 请参阅[在 Office 365 中设置移动设备管理 (MDM)](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 
-- **Office 365 MDM 共存** 可以在租户上并发激活和使用 MDM for Office 365 以及 Intune，然后将管理机构设置为 Intune 或 MDM for Office 365，以便各个用户决定使用哪项服务管理移动设备。 基于分配给用户的许可证定义用户的管理机构。 有关详细信息，请参阅 [Microsoft Intune 与 MDM for Office 365 共存](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365)
+- **Office 365 MDM 共存** 可以同时在租户上激活和使用 MDM for Office 以及 Intune，并为每个用户将管理机构设置为 Intune 或 MDM for Office，以便决定使用哪项服务来管理其注册了 MDM 的设备。 将基于分配给每个用户的许可证定义用户的管理机构：如果用户只有 Microsoft 365 基本或标准许可证，则其设备将由 MDM for Office 管理。 如果用户有授权使用 Intune 的许可证，则其设备将由 Intune 管理。 如果向之前由 MDM for Office 管理的用户添加授权使用 Intune 的许可证，则其设备将切换到 Intune 管理。 在将用户切换到 Intune 之前，请务必分配 Intune 配置给用户，以替换 MDM for Office，否则其设备将丢失 MDM for Office 配置，并且不会从 Intune 接收任何替换信息。
 
 ## <a name="set-mdm-authority-to-intune"></a>将 MDM 机构设置为 Intune
 
 如果尚未设置 MDM 权限，请执行以下步骤。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择橙色横幅，打开“移动设备管理机构”设置  。 如果尚未设置 MDM 机构，则仅显示橙色横幅。
-2. 在“移动设备管理机构”下，从以下选项中选择你的 MDM 机构  ：
-   - Intune MDM 机构 
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择橙色横幅，打开“移动设备管理机构”设置。 如果尚未设置 MDM 机构，则仅显示橙色横幅。
+2. 在“移动设备管理机构”下，从以下选项中选择你的 MDM 机构：
+   - Intune MDM 机构
    - **无**
 
    ![Intune 移动设备管理机构设置屏幕的屏幕截图](./media/mdm-authority-set/set-mdm-auth.png)
@@ -70,14 +70,6 @@ ms.locfileid: "82077886"
 - 设备必须在更改后与服务连接，以便来自新 MDM 机构（Intune 独立版）的设置可替换设备上的现有设置。
 - 更改 MDM 机构后，来自先前 MDM 机构的一些基本设置（如配置文件）将在设备上最长保留 7 天，或直到设备首次连接到该服务为止。 建议尽快配置新 MDM 机构中的应用和设置（策略、配置文件、应用等），并将设置部署到包含具有现有已注册设备的用户的用户组。 更改 MDM 机构后，一旦设备连接到服务，它将从新 MDM 机构接收新设置，并防止在管理和保护方面出现空白。
 - 不会将没有关联用户的设备（通常在具有 iOS/iPadOS 设备注册计划或批处理注册方案时）迁移到新的 MDM 机构。 对于这些设备，需要调用支持以获取将它们移动到新 MDM 机构的帮助。
-
-## <a name="change-mdm-authority-to-office-365"></a>将 MDM 机构更改为 Office 365
-
-要激活 Office 365 MDM（或启用 MDM 共存和现有 Intune 服务），请转到 [https://protection.office.com](https://protection.office.com)，选择“数据丢失防护” > “设备安全性策略” > “查看托管设备列表” > “开始”     。
-
-有关详细信息，请参阅[在 Office 365 中设置移动设备管理 (MDM)](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)。
-
-如果希望仅由 Office 365 MDM 管理最终用户，请在激活 Office 365 MDM 后删除所有已分配的 Intune 和/或 EMS 许可证。
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>MDM 证书过期后的移动设备清理
 

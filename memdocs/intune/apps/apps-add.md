@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/11/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023242"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989485"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>将应用添加到 Microsoft Intune 
 
@@ -43,41 +43,41 @@ Intune 支持多种不同的应用类型。 为每种应用类型提供的可用
 | 内部编写的应用（业务线） | Intune 在设备上安装应用（需要提供安装文件）。 | 必须更新应用。 |
 | 内置的应用（内置应用） | Intune 在设备上安装应用。  | 应用是自动更新的。 |
 | Web 上的应用（Web 链接） | Intune 在设备主屏幕上创建一个到 Web 应用的快捷方式。 | 应用是自动更新的。 |
+| 其他 Microsoft 服务中的应用  | Intune 在公司门户中创建应用的快捷方式。 有关详细信息，请参阅[应用源设置选项](../apps/company-portal-app.md#app-source-setting-options)。 | 应用是自动更新的。 |
 
 ### <a name="specific-app-type-details"></a>特定应用类型详细信息
  
-下表列出了特定应用类型，以及如何在 Intune 的“添加应用”  窗格中添加它们：
+下表列出了特定应用类型，以及如何在 Intune 的“添加应用”窗格中添加它们：
 
 | **特定于应用的类型** | **常规类型** | **特定于应用的过程** |
 | --- | --- | --- |
-| Android 应用商店应用  | 应用商店应用  | 选择“Android”作为“应用类型”，然后输入应用的 Google Play 应用商店 URL   。 |
-| Android Enterprise 应用  | 应用商店应用  | 选择“Android”作为“应用类型”，然后输入应用的托管 Google Play 应用商店 URL   。 <sup>1</sup> |
-| iOS/iPadOS 应用商店应用  | 应用商店应用  | 选择“iOS”作为“应用类型”，搜索应用，然后在 Intune 内选择该应用   。 |
-| Windows Phone 8.1 应用商店应用  | 应用商店应用  | 选择“Windows Phone 8.1”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL   。 |
-| Microsoft 应用商店应用  | 应用商店应用  | 选择“Windows”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL   。 |
-| 托管的 Google Play 应用 | 应用商店应用  | 选择“托管 Google Play”  作为“应用类型”  ，搜索应用，再在 Intune 中选择应用。 |
-| 适用于 Windows 10 的 Office 365 应用  | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“Windows 10”作为“应用类型”，然后选择要安装的 Office 365 应用    。  |
-| 适用于 macOS 的 Office 365 应用 | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“macOS”作为“应用类型”，然后选择 Office 365 应用套件    。 |
-| 适用于 Windows 10 的 Microsoft Edge 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“Windows 10”作为“应用类型”    。 |
-| 适用于 macOS 的 Microsoft Edge 版本 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“macOS”作为“应用类型”    。 |
-| Android 业务线 (LOB) 应用 | LOB 应用 | 选择“业务线应用”  作为“应用类型”  ，选择“应用包文件”  ，然后输入扩展名为  .apk 的 Android 安装文件。  |
-| iOS/iPadOS LOB 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .ipa 的 iOS/iPadOS 安装文件     。  |
-| Windows Phone LOB 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .xap 的 Windows Phone 安装文件     。  |
-| Windows LOB 应用 | LOB 应用 | 选择“业务线”应用作为应用类型，选择“应用包文件”，然后输入扩展名为 .msi、.appx、.appxbundle、.msix 和 .msixbundle 的 Windows 安装文件        。 |
-| 内置 iOS/iPadOS 应用  | 内置应用 | 选择“内置应用”作为“应用类型”，然后从提供的应用列表中选择内置应用   。  |
-| 内置的 Android 应用  | 内置应用 | 选择“内置应用”作为“应用类型”，然后从提供的应用列表中选择内置应用   。  |
-| Web 应用  | Web 应用  | 选择“Web 链接”作为应用类型，然后输入指向该 Web 应用的有效 URL   。  |
-| Android 企业系统应用  | 应用商店应用  | 选择“Android Enterprise 系统应用”作为“应用类型”，然后输入应用名称、发布者和包文件   。  |
-| Windows 应用 (Win32)  | LOB 应用  | 选择“Windows 应用 (Win32)”作为“应用类型”，选择“应用包文件”，然后选择扩展名为 .intunewin 的安装文件     。  |
-| macOS LOB 应用 | LOB 应用  | 选择“业务线”作为“应用类型”，选择“应用包文件”，然后选择扩展名为 .intunemac 的安装文件     。  |
-
+| Android 应用商店应用  | 应用商店应用  | 选择“Android”作为“应用类型”，然后输入应用的 Google Play 应用商店 URL 。 |
+| Android Enterprise 应用  | 应用商店应用  | 选择“Android”作为“应用类型”，然后输入应用的托管 Google Play 应用商店 URL 。 <sup>1</sup> |
+| iOS/iPadOS 应用商店应用  | 应用商店应用  | 选择“iOS”作为“应用类型”，搜索应用，然后在 Intune 内选择该应用 。 |
+| Windows Phone 8.1 应用商店应用  | 应用商店应用  | 选择“Windows Phone 8.1”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL 。 |
+| Microsoft 应用商店应用  | 应用商店应用  | 选择“Windows”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL 。 |
+| 托管的 Google Play 应用 | 应用商店应用  | 选择“托管 Google Play”作为“应用类型”，搜索应用，再在 Intune 中选择应用。 |
+| 适用于 Windows 10 的 Office 365 应用  | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“Windows 10”作为“应用类型”，然后选择要安装的 Office 365 应用  。  |
+| 适用于 macOS 的 Office 365 应用 | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“macOS”作为“应用类型”，然后选择 Office 365 应用套件  。 |
+| 适用于 Windows 10 的 Microsoft Edge 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“Windows 10”作为“应用类型”  。 |
+| 适用于 macOS 的 Microsoft Edge 版本 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“macOS”作为“应用类型”  。 |
+| Android 业务线 (LOB) 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .apk 的 Android 安装文件。  |
+| iOS/iPadOS LOB 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .ipa 的 iOS/iPadOS 安装文件   。  |
+| Windows Phone LOB 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .xap 的 Windows Phone 安装文件   。  |
+| Windows LOB 应用 | LOB 应用 | 选择“业务线”应用作为应用类型，选择“应用包文件”，然后输入扩展名为 .msi、.appx、.appxbundle、.msix 和 .msixbundle 的 Windows 安装文件      。 |
+| 内置 iOS/iPadOS 应用  | 内置应用 | 选择“内置应用”作为“应用类型”，然后从提供的应用列表中选择内置应用 。  |
+| 内置的 Android 应用  | 内置应用 | 选择“内置应用”作为“应用类型”，然后从提供的应用列表中选择内置应用 。  |
+| Web 应用  | Web 应用  | 选择“Web 链接”作为应用类型，然后输入指向该 Web 应用的有效 URL 。  |
+| Android 企业系统应用  | 应用商店应用  | 选择“Android Enterprise 系统应用”作为“应用类型”，然后输入应用名称、发布者和包文件 。  |
+| Windows 应用 (Win32)  | LOB 应用  | 选择“Windows 应用 (Win32)”作为“应用类型”，选择“应用包文件”，然后选择扩展名为 .intunewin 的安装文件   。  |
+| macOS LOB 应用 | LOB 应用  | 选择“业务线”作为“应用类型”，选择“应用包文件”，然后选择扩展名为 .intunemac 的安装文件   。  |
 
 <sup>1</sup> 有关 Android Enterprise 和 Android 工作配置文件的详细信息，请参阅下面的[了解许可的应用](apps-add.md#understanding-licensed-apps)。
 
-可以在 Microsoft Intune 中添加应用，方法是通过选择“应用” > “所有应用” > “添加”    。 将显示“选择应用类型”窗格，可选择“应用类型”   。 
+可以在 Microsoft Intune 中添加应用，方法是通过选择“应用” > “所有应用” > “添加”  。 将显示“选择应用类型”窗格，可选择“应用类型” 。 
 
 >[!TIP]
-> LOB 应用是从应用安装文件添加的应用。 例如，若要安装 iOS/iPadOS LOB 应用，可以通过在“选择应用类型”窗格中选择“业务线应用”作为“应用类型”来添加应用程序    。 然后，选择应用包文件（扩展名为 .ipa）。 这些应用类型通常为内部编写。
+> LOB 应用是从应用安装文件添加的应用。 例如，若要安装 iOS/iPadOS LOB 应用，可以通过在“选择应用类型”窗格中选择“业务线应用”作为“应用类型”来添加应用程序  。 然后，选择应用包文件（扩展名为 .ipa）。 这些应用类型通常为内部编写。
 
 ## <a name="assess-app-requirements"></a>评估应用要求
 作为 IT 管理员，不仅可以确定你的组必须要使用的应用，而且可以确定每个组和子组所需的功能。 对于每个应用，应确定所需平台、需要应用的用户组、要为这些组应用的配置策略和要应用的保护策略。  
@@ -112,6 +112,7 @@ Intune 还支持对需要安全访问本地数据的客户端应用（例如业�
 - **应用商店中的应用**：上传到 Microsoft Store、iOS/iPadOS 应用商店或 Android 应用商店的应用是应用商店应用。 应用商店应用的提供者对应用进行维护并提供更新。 在应用商店列表选择应用，并使用 Intune 将其添加为用户的可用应用。
 - **内部编写的应用（业务线）** ：内部创建的应用是业务线 (LOB) 应用。 已经为支持 Intune 的平台（例如 Windows、iOS/iPadOS、macOS 或 Android）之一创建此应用类型的功能。 组织创建更新并将这些更新作为单独的文件提供给你。 可以通过使用 Intune 添加和部署更新为用户提供应用更新。
 - **Web 上的应用**：Web 应用是客户端-服务器应用程序。 服务器提供 Web 应用，其中包括 UI、内容和功能。 此外，新式 Web 托管平台通常会提供安全性、负载均衡和其他优势。 此应用类型是在 Web 上单独进行维护的。 可以使用 Intune 指向此应用类型。 还可以指定哪组用户可以访问此应用。 请注意，Android 不支持 Web 应用。
+- **其他 Microsoft 服务中的应用**：源自 Azure AD 或 Office Online 的应用。 Azure AD 企业应用程序通过 [Azure 门户](https://portal.azure.com)进行注册和分配。 Office Online 应用程序使用 [M365 管理中心](https://admin.microsoft.com)提供的授权控制进行分配。 可以在公司门户中向最终用户隐藏或显示 Azure AD 企业应用程序和 Office Online 应用程序。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“租户管理” > “自定义”，查找此配置设置 。 选择在公司门户中向最终用户隐藏或显示 Azure AD 企业应用程序或 Office Online 应用程序   。 每位最终用户将从所选的 Microsoft 服务中看到其整个应用程序目录。 默认情况下，每个附加的应用源会设置为“隐藏”。 有关详细信息，请参阅[应用源设置选项](../apps/company-portal-app.md#app-source-setting-options)。 
 
 确定组织需要的应用时，请考虑这些应用如何与云服务集成，应用访问什么数据，应用是否对 BYOD 用户可用以及应用是否需要 Internet 访问。
 
@@ -129,11 +130,11 @@ Intune 托管应用还可以启用应用保护，而无需注册，使你能够�
 ### <a name="understanding-licensed-apps"></a>了解获得许可的应用
 除了了解 Web 应用、应用商店应用和 LOB 应用，还应注意批量采购计划的应用和获得许可的应用的目标，例如： 
 - **适用于企业的 Apple 批量采购计划 (iOS)** ：iOS/iPadOS App Store 允许为想要在公司运行的应用购买多个许可证。 购买多个副本可帮助你有效地管理公司的应用。 有关详细信息，请参阅[管理批量购买的 iOS/iPadOS 应用](vpp-apps-ios.md)。
-- **Android 工作配置文件**：可采用与将应用分配到标准 Android 设备不同的方式，将应用分配到 Android 工作配置文件设备。 为 Android 工作配置文件安装的所有应用都来自托管 Google Play 商店。 使用 Intune 搜索并批准所需的应用。 然后，该应用会显示在 Azure 门户的“许可的应用”  节点中，可以像管理任何其他应用一样管理应用的分配。
+- **Android 工作配置文件**：可采用与将应用分配到标准 Android 设备不同的方式，将应用分配到 Android 工作配置文件设备。 为 Android 工作配置文件安装的所有应用都来自托管 Google Play 商店。 使用 Intune 搜索并批准所需的应用。 然后，该应用会显示在 Azure 门户的“许可的应用”节点中，可以像管理任何其他应用一样管理应用的分配。
 - **适用于企业的 Microsoft Store (Windows 10)** ：可在适用于企业的 Microsoft Store 中为组织查找和购买应用（单个或批量）。 通过将此应用商店与 Microsoft Intune 相连，可以在 Azure 门户中管理批量购买的应用。 有关详细信息，请参阅[管理来自适用于企业的 Microsoft Store 的应用](windows-store-for-business.md)。
 
     > [!NOTE]
-    > Windows 应用的文件扩展名包括 .msi、.appx、.appxbundle、.msix 和 .msixbundle      。  
+    > Windows 应用的文件扩展名包括 .msi、.appx、.appxbundle、.msix 和 .msixbundle    。  
 
 ## <a name="before-you-add-apps"></a>添加应用之前
 在开始添加和分配应用之前，请考虑以下几点：
@@ -157,25 +158,25 @@ Intune 托管应用还可以启用应用保护，而无需注册，使你能够�
 
 ## <a name="create-and-edit-categories-for-apps"></a>创建和编辑应用类别
 
-应用类别可用于对应用进行排序，让用户在公司门户中更容易查找应用。 可以向应用分配一个或多个类别（例如，“开发者应用”  或“通信应用”  ）。
+应用类别可用于对应用进行排序，让用户在公司门户中更容易查找应用。 可以向应用分配一个或多个类别（例如，“开发者应用”或“通信应用”）。
 
 向 Intune 添加应用时，可以视需要选择所需的类别。 请参阅平台专属主题，了解如何添加应用并分配类别。 若要创建和编辑你自己的类别，请按以下过程操作：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“应用”   > “应用类别”  。  
-     “应用类别”窗格显示当前类别的列表。 
+3. 选择“应用” > “应用类别”。  
+    “应用类别”窗格显示当前类别的列表。 
 5. 执行以下任一操作：
-    - 若要添加一个类别，在“创建类别”  窗格中选择“添加”  ，然后输入类别的名称。  
+    - 若要添加一个类别，在“创建类别”窗格中选择“添加”，然后输入类别的名称。  
     只能使用一种语言输入名称，并且 Intune 不会进行翻译。
-    - 若要编辑类别，请选择类别旁边的省略号 (...)  ，然后选择  “固定到仪表板”或“删除”  。
-6. 选择“创建”。 
+    - 若要编辑类别，请选择类别旁边的省略号 (...)，然后选择“固定到仪表板”或“删除”。
+6. 选择“创建”。
 
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Intune 自动添加的应用
 
 之前，Intune 包含了一些可供快速分配的内置应用。 根据 Intune 客户反馈，我们删除了此列表，并且不再显示内置应用。 但是，如果你已分配任何内置应用，则在应用列表中仍会看到这些应用。 可以根据需要继续分配这些应用。
 
 > [!NOTE]
-> 对于安装所需的非业务线应用，假定未检测到应用且应用的安装状态不是“安装挂起”，则 Intune 将尝试通过在每次设备签入时发送安装命令来安装该应用  。
+> 对于安装所需的非业务线应用，假定未检测到应用且应用的安装状态不是“安装挂起”，则 Intune 将尝试通过在每次设备签入时发送安装命令来安装该应用。
 
 ## <a name="installing-updating-or-removing-required-apps"></a>安装、更新或删除所需应用
 

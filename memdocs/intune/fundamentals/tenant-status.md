@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,22 +16,26 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696447"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690674"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>使用 Intune 租户状态页面
-Microsoft Intune“租户状态”页是一个集中式中心，可在其中查看有关租户的当前信息和重要详细信息。 详细信息包括许可证可用性及其使用、连接器状态以及有关 Intune 服务的重要通信。  
 
-若要查看仪表板，请登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理”  ，然后选择“租户状态”  。
+Microsoft Intune“租户状态”页是一个集中式中心，可在其中查看有关租户的当前信息和重要详细信息。 详细信息包括许可证可用性及其使用、连接器状态以及有关 Intune 服务的重要通信。
+
+> [!TIP]
+> 租户是 Azure Active Directory (Azure AD) 的实例。 Intune 订阅由 Azure AD 租户进行托管。 有关详细信息，请参阅 Azure AD 文档中的[设置租户](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant)。
+
+若要查看仪表板，请登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理”，然后选择“租户状态”。
 
 该页分为三个选项卡：
 
 ## <a name="tenant-details"></a>租户详细信息
-租户详细信息区域清晰明了地提供了有关租户的信息。 查看租户名称和位置、MDM 机构和租户服务发行版号等详细信息。 服务版本号是一个链接，可打开 Microsoft Docs 中的“Intune 的新变化”  一文。在“新增功能”中，可阅读有关 Intune 服务的最新功能和更新  。  
+租户详细信息区域清晰明了地提供了有关租户的信息。 查看租户名称和位置、MDM 机构和租户服务发行版号等详细信息。 服务版本号是一个链接，可打开 Microsoft Docs 中的“Intune 的新变化”一文。在“新增功能”中，可阅读有关 Intune 服务的最新功能和更新。  
 
 在此选项卡上，还可以找到有关可用许可证和分配给用户的许可证数量的基本信息。 未显示设备许可证。
 
@@ -39,10 +43,10 @@ Microsoft Intune“租户状态”页是一个集中式中心，可在其中查�
 连接器状态是一站式位置，用于查看 Intune 的所有可用连接器的状态。  
 
 连接器是：
-- **配置到外部服务的连接**。 例如，Apple Volume Purchase Program 服务或 Windows Autopilot 服务   。  此类连接器的状态基于上次成功的同步时间。
-- 连接到外部非托管服务所需的证书或凭据，例如 Apple Push Notification Services (APNS) 证书   。 此类连接器的状态基于证书或凭证的到期时间戳。  
+- **配置到外部服务的连接**。 例如，Apple Volume Purchase Program 服务或 Windows Autopilot 服务 。  此类连接器的状态基于上次成功的同步时间。
+- 连接到外部非托管服务所需的证书或凭据，例如 Apple Push Notification Services (APNS) 证书。 此类连接器的状态基于证书或凭证的到期时间戳。  
 
-打开“连接器状态”  选项卡时，列表顶部将显示所有运行不正常的连接器。 接着是带警告的连接器，然后是正常运行的连接器的列表。 尚未配置的连接器最后显示为“未启用”  。
+打开“连接器状态”选项卡时，列表顶部将显示所有运行不正常的连接器。 接着是带警告的连接器，然后是正常运行的连接器的列表。 尚未配置的连接器最后显示为“未启用”。
 
 如果任何一种类型的连接器不止一个，状态则为所有此类连接器的汇总。 任何单个连接器的非正常运行状态将用作组的运行状况。  
 
@@ -59,25 +63,25 @@ Microsoft Intune“租户状态”页是一个集中式中心，可在其中查�
 
 从列表中选择连接器时，门户将显示与该连接器相关的门户页面。 在连接器页中，可以查看以前配置的连接器的状态，或选择用于添加或创建该类型的新连接器的选项。
 
-例如，如果选择“VPP 到期日期”连接器，将打开“iOS 批量采购计划令牌”页面，可以在其中查看有关该连接器的更多详细信息   。 还可以创建新配置或编辑和修复现有配置中的问题。
+例如，如果选择“VPP 到期日期”连接器，将打开“iOS 批量采购计划令牌”页面，可以在其中查看有关该连接器的更多详细信息 。 还可以创建新配置或编辑和修复现有配置中的问题。
 
 ## <a name="service-health-dashboard"></a>服务运行状况仪表板  
-在“服务运行状况”仪表板上，可以查看影响租户的“服务事件”  的详细信息，以及提供有关更新和计划更改的信息的“Intune 新闻”  。
+在“服务运行状况”仪表板上，可以查看影响租户的“服务事件”的详细信息，以及提供有关更新和计划更改的信息的“Intune 新闻”。
 
-### <a name="intune-service-health"></a>Intune 服务运行状况
+### <a name="intune-service-health-and-message-center"></a>Intune 服务运行状况和消息中心
 无需导航到位于 [Microsoft 365 管理中心](https://admin.microsoft.com)的 Microsoft 365 服务运行状况仪表板或消息中心，即可查看活动事件和建议的详细信息。 仅显示影响租户的事件。  
 
-选择事件时，事件详细信息将直接显示在“租户状态”页面中。 若要查看过去的建议和事件，请选择“查看过去的事件/建议”  。 随即打开 Microsoft 365 管理中心，然后可以查看租户过去 30 天内的建议和事件。  
+选择事件时，事件详细信息将直接显示在“租户状态”页面中。 若要查看过去的建议和事件，请选择“查看过去的事件/建议”。 随即打开 Microsoft 365 管理中心，然后可以查看租户过去 30 天内的建议和事件。  
 
-要查看“Intune 服务运行状况”的信息，你的帐户必须在 Azure Active Directory 或 Microsoft 365 管理中心具有“全局管理员”或“服务管理员”角色    。 若要分配这些权限，请使用全局管理员权限登录 [Microsoft 365 管理中心](https://admin.microsoft.com)。 选择“用户”>“活动用户”，然后选择需要访问权限的帐户  。 选择角色的“编辑”，选择“服务管理员”或“全局管理员”，然后“保存”所做的编辑以分配该权限     。  
+要查看 Intune 服务运行状况的相关信息，你的帐户必须在 Azure Active Directory 或 Microsoft 365 管理中心具有全局管理员或服务支持管理员角色 。 若要分配这些权限，请使用全局管理员权限登录 [Microsoft 365 管理中心](https://admin.microsoft.com)。 选择“用户”>“活动用户”，然后选择需要访问权限的帐户。 为角色选择“编辑”，选择“服务支持管理员”或“全局管理员”，然后保存所做的编辑以分配该权限  。  
 
 仅可以通过 Microsoft 365 管理中心设置 Intune 服务运行状况的通信首选项。
 
-### <a name="intune-news"></a>Intune 新闻  
+### <a name="intune-message-center"></a>Intune 消息中心  
 无需导航到 Office 消息中心，即可查看来自 Intune 服务团队的信息性通信。 通信内容包括最近发生在 Intune 服务上的更改或者租户即将产生的更改的相关消息。  
 
-默认情况下，将显示最新的 10 条活动消息。 要查看更早的消息，请选择“查看之前的消息”，在 Microsoft 365 管理中心打开“消息中心”   。  
+默认情况下，将显示最新的 10 条活动消息。 要查看更早的消息，请选择“查看之前的消息”，在 Microsoft 365 管理中心打开“消息中心”。  
 
-要查看“Intune 新闻”的信息，你的帐户必须在 Azure Active Directory 中具有“全局管理员”或“服务管理员”角色；或者在 Microsoft 365 管理中心具有“消息中心读取者”角色    。  若要分配此权限，请使用管理员权限登录 [Microsoft 365 管理中心](https://admin.microsoft.com)。 选择“用户”>“活动用户”，然后选择需要访问权限的帐户  。 选择角色的“编辑”，选择“团队通信管理员”，然后“保存”所做的编辑以分配该权限     。  
+要查看 Intune 新闻的相关信息，你的帐户必须在 Azure Active Directory 中具有全局管理员或服务支持管理员角色，或者在 Microsoft 365 管理中心具有消息中心读取者角色  。  若要分配此权限，请使用管理员权限登录 [Microsoft 365 管理中心](https://admin.microsoft.com)。 选择“用户”>“活动用户”，然后选择需要访问权限的帐户。 选择角色的“编辑”，选择“团队通信管理员”，然后“保存”所做的编辑以分配该权限  。  
 
-仅可以通过 Microsoft 365 管理中心为 Intune 新闻设置通信首选项。
+仅可通过 Microsoft 365 管理中心为 Intune 消息中心设置通信首选项。

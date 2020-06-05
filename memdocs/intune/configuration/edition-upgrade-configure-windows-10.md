@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364378"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988416"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>使用 Microsoft Intune 在设备上升级 Windows 10 版本或切出 S 模式
-
-
 
 作为移动设备管理 (MDM) 解决方案的一部分，不妨升级 Windows 10 设备。 例如，不妨将 Windows 10 专业版设备升级为 Windows 10 企业版。 或者，你希望设备切出 S 模式。
 
@@ -97,24 +95,40 @@ ms.locfileid: "79364378"
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
+
+    - **平台**：选择“Windows 10 及更高版本”。
+    - **配置文件**：选择“版本升级”。
+
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
     - **名称**：输入新配置文件的描述性名称。 例如，输入 `Windows 10 edition upgrade profile` 或 `Windows 10 switch off S mode` 等名称。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **平台**：选择“Windows 10 及更高版本”  。
-    - **配置文件类型**：选择“版本升级”  。
-    - **设置**：输入要配置的设置。 有关所有设置及其用途的列表，请参阅：
 
-        - [Windows 10 升级和 S 模式](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. 选择“下一步”。
+7. 在“配置设置”中，输入要配置的设置。 有关所有设置及其用途的列表，请参阅：
 
-4. 选择“确定”   > “创建”  以保存所做的更改。
+    - [Windows 10 升级和 S 模式](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-此时，配置文件创建完成，并出现在列表中。 请务必[分配配置文件](device-profile-assign.md)，并[监视配置文件状态](device-profile-monitor.md)。
+8. 选择“下一步”。
+
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+    选择“下一步”。
+
+10. 在“分配”中，选择要接收配置文件的用户或用户组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    选择“下一步”。
+
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
+
+每台设备在下次签入时，将应用该策略。
 
 ## <a name="next-steps"></a>后续步骤
 
-创建配置文件后，即可进行分配。 下一步，[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
+[分配配置文件](device-profile-assign.md)之后，[监视其状态](device-profile-monitor.md)。
 
-查看适用于 [Windows 10](edition-upgrade-windows-settings.md) 和 [Windows Holographic for Business](holographic-upgrade.md) 设备的升级设置和 S 模式设置。
+请参阅适用于 [Windows 10](edition-upgrade-windows-settings.md) 和 [Windows Holographic for Business](holographic-upgrade.md) 设备的升级设置和 S 模式设置。

@@ -6,8 +6,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587036"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989155"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 向设备添加电子邮件设置
 
@@ -30,9 +30,9 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 可以使用电子邮件配置文件为以下设备配置内置电子邮件设置：
 
-- Samsung Knox Standard 4.0 和更高版本上的 Android 设备管理员
+- Samsung Knox Standard 5.0 和更高版本上的 Android 设备管理员
 - Android Enterprise
-- iOS 8.0 及更高版本
+- iOS 11.0 及更高版本
 - iPadOS 13.0 及更高版本
 - Windows Phone 8.1 及更高版本
 - Windows 10（桌面版）和 Windows 10 移动版
@@ -42,7 +42,7 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
 
     - **平台**：选择设备平台。 选项包括：  
@@ -53,17 +53,17 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
         - **Windows 10 及更高版本**
         - **Windows Phone 8.1**
 
-    - **配置文件**：选择“电子邮件”  。
+    - **配置文件**：选择“电子邮件”。
 
-4. 选择“创建”。 
-5. 在“基本信息”  中，输入以下属性：
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，将策略名称命名为“Windows 10:  适用于所有 Windows 10 设备的电子邮件设置。
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，将策略名称命名为“Windows 10: 适用于所有 Windows 10 设备的电子邮件设置。
     - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”  。
+6. 选择“下一步”。
 
-7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
     - [Android 设备管理员 (Samsung Knox Standard)](email-settings-android.md)
     - [Android Enterprise](email-settings-android-enterprise.md)
@@ -71,22 +71,22 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
     - [Windows 10](email-settings-windows-10.md)
     - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
-8. 选择“下一步”  。
-9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+8. 选择“下一步”。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="remove-an-email-profile"></a>删除电子邮件配置文件
 
 电子邮件配置文件分配给设备组，而不是用户组。 可以通过不同的方式从设备删除电子邮件配置文件，即使设备上只有一个电子邮件配置文件：
 
-- **选项 1**：打开电子邮件配置文件（“设备”   > “配置文件”  > 选择你的配置文件），然后选择“分配”  。 “包含”选项卡将显示已分配配置文件的组  。 右键单击“组”，然后单击“删除”  。 务必保存你的更改  。
+- **选项 1**：打开电子邮件配置文件（“设备” > “配置文件” > 选择你的配置文件），然后选择“分配”。 “包含”选项卡将显示已分配配置文件的组。 右键单击“组”，然后单击“删除”。 务必保存你的更改。
 
 - **选项 2**：[擦除或停用设备](../remote-actions/devices-wipe.md)。 这些操作可用于有选择地或完全删除数据和设置。
 
@@ -106,7 +106,7 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 如果用户已配置电子邮件帐户，则电子邮件配置文件的分配方式因平台而异。
 
-- **iOS/iPadOS**：基于主机名和电子邮件地址检测到现有的重复电子邮件配置文件。 重复的电子邮件配置文件会阻止分配 Intune 配置文件。 在这种情况下，公司门户应用通知用户它们不符合要求，并提示最终用户手动删除已配置的配置文件。 为了有助于防止这种情况发生，请告诉最终用户在安装电子邮件配置文件前先  注册，这样一来 Intune 就可以设置配置文件了。
+- **iOS/iPadOS**：基于主机名和电子邮件地址检测到现有的重复电子邮件配置文件。 重复的电子邮件配置文件会阻止分配 Intune 配置文件。 在这种情况下，公司门户应用通知用户它们不符合要求，并提示最终用户手动删除已配置的配置文件。 为了有助于防止这种情况发生，请告诉最终用户在安装电子邮件配置文件前先注册，这样一来 Intune 就可以设置配置文件了。
 
 - **Windows：** 基于主机名和电子邮件地址检测到现有的重复电子邮件配置文件。 Intune 覆盖最终用户创建的现有电子邮件配置文件。
 

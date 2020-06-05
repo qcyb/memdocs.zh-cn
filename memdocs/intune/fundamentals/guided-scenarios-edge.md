@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359061"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853530"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>引导式方案 - 部署 Microsoft Edge for Mobile
 
 按照此[引导式方案](guided-scenarios-overview.md)操作，可将 Microsoft Edge 应用分配到组织中使用 iOS/iPadOS 或 Android 设备的用户。 通过分配此应用可让你的用户使用其公司设备无缝浏览内容。
 
-Microsoft Edge 利用内置功能帮助用户合并、整理和管理工作内容，从而使用户摆脱 Web 混乱的局面。 如果 iOS/iPadOS 和 Android 设备用户在 Microsoft Edge 应用程序中使用其公司 Azure AD 帐户登录，他们将发现其浏览器已预加载工作区“收藏夹”和你定义的网站筛选器  。
+Microsoft Edge 利用内置功能帮助用户合并、整理和管理工作内容，从而使用户摆脱 Web 混乱的局面。 如果 iOS/iPadOS 和 Android 设备用户在 Microsoft Edge 应用程序中使用其公司 Azure AD 帐户登录，他们将发现其浏览器已预加载工作区“收藏夹”和你定义的网站筛选器。
 
 > [!NOTE]
 > 如果阻止用户注册 iOS/iPadOS 或 Android 设备，则此方案将不会启用注册，用户需要自行安装 Microsoft Edge。
@@ -49,13 +49,13 @@ Intune 策略启用的以下 Microsoft Edge 企业功能包括：
 
 ## <a name="step-1---introduction"></a>步骤 1 - 简介
 
-按照 Microsoft Edge for Mobile 引导式方案操作，你将为选定的 iOS/iPadOS 和 Android 用户组设置 Microsoft Edge 的基本部署  。 此部署将实现“双重标识”和“托管收藏夹和主页快捷键”   。 此外，所选用户注册的设备将通过 Intune 自动安装 Microsoft Edge 应用。 此自动安装将用于所有用户驱动的注册类型，包括：
+按照 Microsoft Edge for Mobile 引导式方案操作，你将为选定的 iOS/iPadOS 和 Android 用户组设置 Microsoft Edge 的基本部署。 此部署将实现“双重标识”和“托管收藏夹和主页快捷键” 。 此外，所选用户注册的设备将通过 Intune 自动安装 Microsoft Edge 应用。 此自动安装将用于所有用户驱动的注册类型，包括：
 
 - 通过公司门户应用进行 iOS/iPadOS 注册
 - 通过 Apple Business Manager 进行 iOS/iPadOS 用户相关性注册
 - 通过公司门户应用进行旧版 Android 注册
 
-这一引导式方案将自动使 MyApps 出现在 Microsoft Edge 的收藏夹中，并为浏览器配置你为 Intune 公司门户应用设置的品牌  。
+这一引导式方案将自动使 MyApps 出现在 Microsoft Edge 的收藏夹中，并为浏览器配置你为 Intune 公司门户应用设置的品牌。
 
 ### <a name="what-you-will-need-to-continue"></a>需要继续执行的操作
 
@@ -72,7 +72,7 @@ Intune 策略启用的以下 Microsoft Edge 企业功能包括：
 
 ## <a name="step-3---configuration"></a>步骤 3 - 配置
 
-在此步骤中，引导式方案将配置 Microsoft Edge，使其显示通过 Intune 分配到用户的所有其他应用，并与 Microsoft Intune 公司门户应用共享同一品牌。 可以使用“主页快捷方式 URL”、“托管书签”列表和“阻止的 URL”列表进一步配置 Microsoft Edge    。 用户在其设备上的 Microsoft Edge 中打开新选项卡时，“首页快捷方式 URL”将在搜索栏下方显示为用户的第一个图标  。 用户在其工作环境中使用 Microsoft Edge 时，可以使用“托管书签”中列出的收藏 URL  。 “阻止的 URL”指定阻止用户在工作环境中访问的网站  。 允许其他所有站点。
+在此步骤中，引导式方案将配置 Microsoft Edge，使其显示通过 Intune 分配到用户的所有其他应用，并与 Microsoft Intune 公司门户应用共享同一品牌。 可以使用“主页快捷方式 URL”、“托管书签”列表和“阻止的 URL”列表进一步配置 Microsoft Edge  。 用户在其设备上的 Microsoft Edge 中打开新选项卡时，“首页快捷方式 URL”将在搜索栏下方显示为用户的第一个图标。 用户在其工作环境中使用 Microsoft Edge 时，可以使用“托管书签”中列出的收藏 URL。 “阻止的 URL”指定阻止用户在工作环境中访问的网站。 允许其他所有站点。
 
 ## <a name="step-4---assignments"></a>步骤 4 - 分配
 
@@ -80,16 +80,15 @@ Intune 策略启用的以下 Microsoft Edge 企业功能包括：
 
 ## <a name="step-5---review--create"></a>步骤 5 - 查看 + 创建
 
-通过最后一个步骤可以查看配置的设置摘要。 查看你的选择后，请单击“创建”以完成引导式方案  。 
+通过最后一个步骤可以查看配置的设置摘要。 查看你的选择后，请单击“创建”以完成引导式方案。 
 
 > [!NOTE]
 > Edge 最多可能需要 12 小时才能接收配置。 有关详细信息，请参阅 [Microsoft Intune 的应用配置策略](../apps/app-configuration-policies-overview.md)。
 
 > [!IMPORTANT]
-> 引导式方案完成后，系统将显示摘要。 可以稍后修改摘要中列出的资源，但是将不会保存显示这些资源的表。
+> 引导式方案完成后，系统将显示摘要。 可稍后修改摘要中列出的资源，但是显示这些资源的表将不会保存。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 通过设置 Intune 应用保护策略集成来增强使用 Microsoft Edge 的安全性。 有关详细信息，请参阅 [Microsoft Edge 的应用程序保护策略](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge)。
-- 如果要包含 Intranet 站点，请使用 Azure 应用程序代理集成探索保护访问。 有关详细信息，请参阅[为 Microsoft Edge 配置应用程序代理设置](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge)。
-
+- 通过设置 Intune 应用保护策略集成来增强使用 Microsoft Edge 的安全性。 有关详细信息，请参阅[创建 Intune 应用保护策略](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies)。
+- 如果要包含 Intranet 站点，请使用 Azure 应用程序代理集成探索保护访问。 有关详细信息，请参阅[管理代理配置](../apps/manage-microsoft-edge.md#manage-proxy-configuration)。

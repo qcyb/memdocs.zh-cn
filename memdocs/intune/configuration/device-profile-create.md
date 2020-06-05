@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327438"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988460"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>在 Microsoft Intune 中创建设备配置文件
 
@@ -37,14 +37,14 @@ ms.locfileid: "80327438"
 
 ## <a name="create-the-profile"></a>创建配置文件
 
-在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)创建配置文件。 在此管理中心中，选择“设备”  。 有下列选项：
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)创建配置文件。 在此管理中心中，选择“设备”。 有下列选项：
 
 - **概述**：列出配置文件的状态，并提供有关分配给用户和设备的配置文件的其他详细信息。
 - **监视**：检查配置文件的状态（成功或失败），并查看配置文件中的日志。
-- 按平台  ：创建并查看按平台列出的策略和配置文件。 此视图还可能会显示特定于平台的功能。 例如，选择“Windows”  。 你将看到特定于 Windows 的功能，如 Windows 10 更新通道和 PowerShell 脚本   。
+- 按平台：创建并查看按平台列出的策略和配置文件。 此视图还可能会显示特定于平台的功能。 例如，选择“Windows”。 你将看到特定于 Windows 的功能，如 Windows 10 更新通道和 PowerShell 脚本 。
 - **策略**：创建设备配置文件，并上传自定义 [PowerShell 脚本](../apps/intune-management-extension.md)以在设备上运行，然后使用 [eSIM](esim-device-configuration.md) 向设备添加数据计划。
 
-创建配置文件（“配置文件” > “创建配置文件”   ）时，请选择平台：
+创建配置文件（“配置文件” > “创建配置文件” ）时，请选择平台：
 
 - **Android 设备管理员**
 - **Android Enterprise**
@@ -85,10 +85,9 @@ ms.locfileid: "80327438"
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-例如，如果选择“iOS/iPadOS”作为平台，配置文件类型选项外观将类似如下配置文件所示  ：
+例如，如果选择“iOS/iPadOS”作为平台，配置文件选项将类似于以下配置文件：
 
-> [!div class="mx-imgBorder"]
-> ![在 Intune 中创建 iOS/iPadOS 配置文件](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="在 Microsoft Intune 中创建 iOS/iPadOS 配置文件。":::
 
 ## <a name="scope-tags"></a>作用域标记
 
@@ -102,9 +101,9 @@ ms.locfileid: "80327438"
 
 - Windows 10 及更高版本
 
-适用性规则允许管理员针对满足特定条件的组中的设备。 例如，你创建了一个适用于所有 Windows 10 设备组的设备限制配置文件  。 接下来，只需将配置文件分配给运行 Windows 10 企业版的设备。
+适用性规则允许管理员针对满足特定条件的组中的设备。 例如，你创建了一个适用于所有 Windows 10 设备组的设备限制配置文件。 接下来，只需将配置文件分配给运行 Windows 10 企业版的设备。
 
-若要执行此任务，请创建适用性规则  。 这些规则对于以下情况非常有用：
+若要执行此任务，请创建适用性规则。 这些规则对于以下情况非常有用：
 
 - 你使用 Windows 10 教育版 (EDU)。 在毕罗思大学，你希望针对 RS3 和 RS4 之间的所有 Windows 10 EDU 设备。
 - 你希望针对 Contoso 人力资源的所有用户，但只需要 Windows 10 专业版或企业版设备。
@@ -113,11 +112,11 @@ ms.locfileid: "80327438"
 
 - 创建包括毕罗思大学的所有设备的设备组。 在配置文件中，添加一个在操作系统最低版本为 `16299`、最大版本为 `17134` 时应用的适用性规则。 将此配置文件分配给毕罗思大学设备组。
 
-  分配该配置文件后，该配置文件将应用于输入的最低和最高版本之间的设备。 对于不在输入的最低和最高版本之间的设备，其状态显示为“不适用”  。
+  分配该配置文件后，该配置文件将应用于输入的最低和最高版本之间的设备。 对于不在输入的最低和最高版本之间的设备，其状态显示为“不适用”。
 
 - 创建一个用户组，该用户组包括 Contoso 的人力资源 (HR) 中的所有用户。 在配置文件中，添加一个适用性规则，使其适用于运行 Windows 10 专业版或企业版的设备。 将此配置文件分配给 HR 用户组。
 
-  分配该配置文件后，该配置文件将应用于运行 Windows 10 专业版或企业版的设备。 对于未运行这些版本的设备，其状态显示为“不适用”  。
+  分配该配置文件后，该配置文件将应用于运行 Windows 10 专业版或企业版的设备。 对于未运行这些版本的设备，其状态显示为“不适用”。
 
 - 如果有两个配置文件具有完全相同的设置，则会应用没有适用性规则的配置文件。 
 
@@ -129,24 +128,23 @@ ms.locfileid: "80327438"
 
 ### <a name="add-a-rule"></a>添加规则
 
-1. 选择“适用性规则”  。 可以选择“规则”、“属性”和“OS 版本”    ：
+1. 选择“适用性规则”。 你可以选择“规则”和“属性” ：
 
-    > [!div class="mx-imgBorder"]
-    > ![在 Microsoft Intune 中向设备配置文件添加适用性规则](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="在 Microsoft Intune 中向 Windows 10 设备配置文件添加适用性规则。":::
 
-2. 在“规则”  中，选择是否要包括或排除用户或组。 选项包括：
+2. 在“规则”中，选择是否要包括或排除用户或组。 选项包括：
 
     - **在以下情况下分配配置文件**：包括满足你输入的条件的用户或组。
     - **在以下情况下不分配配置文件**：排除满足你输入的条件的用户或组。
 
-3. 在“属性”  中，选择筛选器。 选项包括： 
+3. 在“属性”中，选择筛选器。 选项包括： 
 
     - **OS 版本**：在列表中，选中要在规则中包括（或排除）的 Windows 10 版本。
-    - **OS 版本**：输入要在规则中包括（或排除）的最小和最大 Windows 10 版本号   。 两个值都是必需的。
+    - **OS 版本**：输入要在规则中包括（或排除）的最小和最大 Windows 10 版本号 。 两个值都是必需的。
 
       例如，对于最低版本，可以输入 `10.0.16299.0`（RS3 或 1709），对于最高版本，可以输入 `10.0.17134.0`（RS4 或 1803）。 或者，可以更精细地输入 `10.0.16299.001` 表示最低版本，`10.0.17134.319` 表示最高版本。
 
-4. 选择“添加”  ，保存所做更改。
+4. 选择“添加”，保存所做更改。
 
 ## <a name="refresh-cycle-times"></a>刷新周期时间
 
@@ -158,7 +156,7 @@ Intune 使用不同的刷新周期来检查配置文件的更新。 如果设备
 
 创建配置文件时，请考虑下列建议：
 
-- 命名策略，以便了解其定义和用途。 所有[符合性策略](../protect/create-compliance-policy.md)和[配置文件](../configuration/device-profile-create.md)都有一个可选的“说明”  属性。 在“说明”  中，具体明确并包含信息，使其他人知道策略的用途。
+- 命名策略，以便了解其定义和用途。 所有[符合性策略](../protect/create-compliance-policy.md)和[配置文件](../configuration/device-profile-create.md)都有一个可选的“说明”属性。 在“说明”中，具体明确并包含信息，使其他人知道策略的用途。
 
   某些配置文件示例包括：
 
@@ -174,12 +172,11 @@ Intune 使用不同的刷新周期来检查配置文件的更新。 如果设备
 
 - 将用户策略与设备策略分开。
 
-  例如，[Intune 中的管理模板](administrative-templates-windows.md)具有数百个 ADMX 设置。 这些模板将显示是否将设置应用于用户或设备。 创建管理模板时，将用户设置分配给用户组，并将设备设置分配给设备组。
+  例如，[Intune 中的管理模板](administrative-templates-windows.md)具有数千个 ADMX 设置。 这些模板将显示是否将设置应用于用户或设备。 创建管理模板时，将用户设置分配给用户组，并将设备设置分配给设备组。
 
   下图显示了可应用于用户和/或应用于设备的设置示例：
 
-  > [!div class="mx-imgBorder"]
-  > ![适用于用户和设备的 Intune 管理模板](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="适用于用户和设备的 Intune 管理模板。":::
 
 - 每次创建限制性策略时，请将此更改传达给用户。 例如，如果要将密码要求从 4 个字符更改为 6 个字符，请在分配策略之前告知用户。
 

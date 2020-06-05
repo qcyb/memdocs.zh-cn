@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078050"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709360"
 ---
 # <a name="reference-for-devices-entities"></a>设备实体引用
 
-“设备”类别包含移动设备的实体，可用于跟踪此类信息  ：
+“设备”类别包含移动设备的实体，可用于跟踪此类信息：
 
 - 设备类型
 - 设备登记和注册状态
@@ -40,7 +40,7 @@ ms.locfileid: "82078050"
 
 ## <a name="devicetypes"></a>deviceTypes
 
-deviceTypes 实体表示由其他数据仓库实体引用的设备类型  。 设备类型通常描述设备型号、制造商或同时包含这两项内容。
+deviceTypes 实体表示由其他数据仓库实体引用的设备类型。 设备类型通常描述设备型号、制造商或同时包含这两项内容。
 
 | 属性  | 说明 |
 |---------|------------|
@@ -74,7 +74,7 @@ deviceTypes 实体表示由其他数据仓库实体引用的设备类型  。 �
 | 255 |Unknown |未知设备类型 |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
-enrollmentActivity 实体表示设备注册活动  。
+enrollmentActivity 实体表示设备注册活动。
 
 | 属性                      | 说明                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
@@ -88,7 +88,7 @@ enrollmentActivity 实体表示设备注册活动  。
 | 计数                         | 符合上述分类的注册活动总数。  |
 
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
-enrollmentEventStatus 实体表示设备注册结果  。
+enrollmentEventStatus 实体表示设备注册结果。
 
 | 属性                   | 说明                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
@@ -104,7 +104,7 @@ enrollmentEventStatus 实体表示设备注册结果  。
 | 不可用              | 注册状态不可用。  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
-EnrollmentFailureCategory 实体指示设备注册失败的原因  。 
+EnrollmentFailureCategory 实体指示设备注册失败的原因。 
 
 | 属性                       | 说明                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
@@ -131,7 +131,7 @@ EnrollmentFailureCategory 实体指示设备注册失败的原因  。
 | UserAbandonment                 | 最终用户放弃了注册。 （最终用户启动了加入，但未能及时完成）  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
-EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的详细原因  。  
+EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的详细原因。  
 
 | 属性                     | 说明                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
@@ -161,7 +161,7 @@ EnrollmentFailureReason 实体表示特定失败类别中设备注册失败的�
 | APNSCertificateExpired           | 无法使用 Apple MDM Push Certificate 管理 Apple 设备。                                                                                                                            |
 ## <a name="ownertypes"></a>ownerTypes
 
-enrollmentType 实体表明拥有设备的是公司、个人还是未知对象  。
+enrollmentType 实体表明拥有设备的是公司、个人还是未知对象。
 
 | 属性  | 说明 | 示例 |
 |---------|------------|--------|
@@ -174,7 +174,7 @@ enrollmentType 实体表明拥有设备的是公司、个人还是未知对象  
 
 ## <a name="managementstates"></a>managementStates
 
-managementStates 实体提供有关设备状态的详细信息  。 详细信息适用于应用远程操作、设备越狱或进行 root 的情况。
+managementStates 实体提供有关设备状态的详细信息。 详细信息适用于应用远程操作、设备越狱或进行 root 的情况。
 
 | 属性  | 说明 |
 |---------|------------|
@@ -201,7 +201,7 @@ managementStates 实体提供有关设备状态的详细信息  。 详细信息
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 
-ManagementAgentType  实体表示用于管理设备的代理。
+ManagementAgentType 实体表示用于管理设备的代理。
 
 | 属性  | 说明 |
 |---------|------------|
@@ -223,7 +223,7 @@ ManagementAgentType  实体表示用于管理设备的代理。
 
 ## <a name="devices"></a>设备
 
-设备实体列出受管理的所有已注册设备及相应属性  。
+设备实体列出受管理的所有已注册设备及相应属性。
 
 |          属性          |                                                                                       说明                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -263,10 +263,15 @@ ManagementAgentType  实体表示用于管理设备的代理。
 | cellularTechnology         | 设备的移动电话技术                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICCD                       | 集成线路卡标识符                                                                                                                                                     |
+| windowsOsEdition           | Windows 操作系统版本。                                                                                                                             |
+| ethernetMacAddress           | 此设备的唯一网络标识符。                                                                                                                                        |
+| model                      | 设备型号。                                                                                                                                                                      |
+| office365Version           | 设备上安装的 Office 365 版本。                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
-devicePropertyHistory 实体具有的属性与设备表格和过去 90 天每个设备记录的每日快照的属性相同  。 DateKey 列表明每行的日期。
+devicePropertyHistory 实体具有的属性与设备表格和过去 90 天每个设备记录的每日快照的属性相同。 DateKey 列表明每行的日期。
 
 |          属性          |                                                                                      说明                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -281,4 +286,6 @@ devicePropertyHistory 实体具有的属性与设备表格和过去 90 天每个
 | OSVersion                  | 操作系统版本。                                                                                                                                                                          |
 | jailBroken                 | 设备是否越狱或取得 root 权限。                                                                                                                                         |
 | deviceCategoryKey          | 此设备的设备类别属性的键。 
+| physicalMemoryInBytes      | 物理内存（以字节为单位）。                                                                                                                                                          |
+| totalStorageSpaceInBytes   | 总存储容量（以字节为单位）。                                                                                                                                                                |
 

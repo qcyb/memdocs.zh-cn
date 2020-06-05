@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cb51d5f73edbc28572ee01d49ba4bd5a62cf6393
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551576"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989631"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>在 Intune 中添加终结点保护设置
 
@@ -39,14 +39,11 @@ ms.locfileid: "80551576"
 - [macOS 设置](endpoint-protection-macos.md)
 - [Windows 10 设置](endpoint-protection-windows-10.md)
 
-> [!NOTE]
-> Intune 用户界面 (UI) 正在更新为提供全屏体验，可能需要数周时间才能完成。 在租户收到此更新之前，创建或编辑本文所述的设置时的工作流将略有不同。
-
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>创建包含终结点保护设置的设备配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 
 3. 输入以下属性：
 
@@ -55,31 +52,32 @@ ms.locfileid: "80551576"
         - **macOS**
         - **Windows 10 及更高版本**
 
-    - **配置文件**：选择“Endpoint Protection”  。
+    - **配置文件**：选择“Endpoint Protection”。
 
-4. 选择“创建”。 
-5. 在“基本信息”  中，输入以下属性：
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”**为所有 macOS 设备配置防火墙的 Endpoint Protection 配置文件**。
-    - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
+   - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，好的策略名称可包括配置文件类型和平台。
 
-6. 选择“下一步”  。
+   - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+6. 选择“下一步”。
+
+7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
    - [macOS 设置](endpoint-protection-macos.md)
    - [Windows 10 设置](endpoint-protection-windows-10.md)
 
-8. 选择“下一步”  。
-9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+8. 选择“下一步”。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>为 Windows 10 设备添加自定义防火墙规则
 
@@ -99,23 +97,23 @@ Windows [防火墙配置服务提供程序](https://docs.microsoft.com/windows/c
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 
-3. 对于“平台”，选择“Windows 10 及更高版本”，对于“配置文件”，选择“Endpoint Protection”     。
+3. 对于“平台”，选择“Windows 10 及更高版本”，对于“配置文件”，选择“Endpoint Protection”。
 
-    选择“创建”。 
+    选择“创建”。
 
-4. 输入配置文件的“名称”>“下一步”   。
-5. 在“配置设置”中，选择“Microsoft Defender 防火墙”   。 对于“防火墙规则”，选择“添加”以打开“创建规则”页面    。
+4. 输入配置文件的“名称”>“下一步” 。
+5. 在“配置设置”中，选择“Microsoft Defender 防火墙” 。 对于“防火墙规则”，选择“添加”以打开“创建规则”页面 。
 
-6. 指定“防火墙规则”的设置，然后选择“确定”以保存该设置  。 若要查看文档中可用的自定义防火墙规则选项，请参阅[自定义防火墙规则](endpoint-protection-windows-10.md#firewall-rules)。
+6. 指定“防火墙规则”的设置，然后选择“确定”以保存该设置。 若要查看文档中可用的自定义防火墙规则选项，请参阅[自定义防火墙规则](endpoint-protection-windows-10.md#firewall-rules)。
 
-    1. 规则将显示在规则列表中的“Microsoft Defender 防火墙”页上  。
-    2. 若要修改规则，请从列表中选择规则，以打开“编辑规则”页  。
-    3. 若要从配置文件中删除规则，请选择规则的省略号“(…)”，然后选择“删除”  。
-    4. 若要更改规则的显示顺序，请选择规则列表顶部的向上箭头、向下箭头图标  。
+    1. 规则将显示在规则列表中的“Microsoft Defender 防火墙”页上。
+    2. 若要修改规则，请从列表中选择规则，以打开“编辑规则”页。
+    3. 若要从配置文件中删除规则，请选择规则的省略号“(…)”，然后选择“删除”。
+    4. 若要更改规则的显示顺序，请选择规则列表顶部的向上箭头、向下箭头图标。
 
-7. 选择“下一步”，直到看到“查看 + 创建”   。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+7. 选择“下一步”，直到看到“查看 + 创建” 。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="next-steps"></a>后续步骤
 

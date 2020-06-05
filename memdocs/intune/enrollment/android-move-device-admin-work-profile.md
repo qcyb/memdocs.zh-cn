@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624916"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989041"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>将 Android 设备从设备管理员转到工作配置文件管理
 
-通过使用符合性设置“阻止由设备管理员管理的设备”  ，可以帮助用户将自己的 Android 设备从设备管理员转到工作配置文件管理。 通过此设置，可以将不通过设备管理员管理的设备设为不符合要求。 
+通过使用符合性设置“阻止由设备管理员管理的设备”，可以帮助用户将自己的 Android 设备从设备管理员转到工作配置文件管理。 通过此设置，可以将不通过设备管理员管理的设备设为不符合要求。 
 
-当用户看到他们出于此原因不符合要求时，他们可以点击“解决”  。 系统会将他们转到一个清单，将指导他们完成一系列步骤：
+当用户看到他们出于此原因不符合要求时，他们可以点击“解决”。 系统会将他们转到一个清单，将指导他们完成一系列步骤：
 1. 从设备管理员管理取消注册
 2. 注册到工作配置文件管理
 3. 解决符合性问题。 
@@ -45,59 +45,63 @@ ms.locfileid: "80624916"
 
 ## <a name="create-device-compliance-policy"></a>创建设备符合性策略
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “策略” > “创建策略”。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “符合性策略” > “策略” > “创建策略”   。
 
     ![创建策略](./media/android-move-device-admin-work-profile/create-policy.png)
 
-2. 在“创建策略”  页上，将“平台”  设置为“Android 设备管理员”   > “创建”  。
-3. 在“基本信息”页上，键入“名称”和“说明” > “下一步”。
+2. 在“创建策略”页上，将“平台”设置为“Android 设备管理员” > “创建”。
+3. 在“基本信息”页上，键入“名称”和“说明” > “下一步”   。
 
     ![“基本信息”页](./media/android-move-device-admin-work-profile/basics.png)
     
-4. 在“符合性设置”  页上的“设备运行状况”  部分中，将“阻止由设备管理员托管的设备”设置为“是”    > “下一步”  。
+4. 在“符合性设置”页上的“设备运行状况”部分中，将“阻止由设备管理员托管的设备”设置为“是”  > “下一步”。
 
     ![阻止设备](./media/android-move-device-admin-work-profile/block-devices.png)
 
-5. 在“位置”  页上，根据需要添加位置，然后单击“下一步”  。
-6. 对于“对不符合要求项的操作”  ，可以设置“向最终用户发送电子邮件”  操作。
+5. 在“位置”页上，根据需要添加位置，然后单击“下一步”。
 
-    ![发送电子邮件](./media/android-move-device-admin-work-profile/send-email.png)
+6. 在“针对非符合性的操作”选项卡上，你可以配置[可用于处理不符合性的操作](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)来自定义此流的最终用户体验。
 
+    ![非符合性操作](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    在电子邮件中，可以在发送给用户的消息中添加以下 URL。 此 URL 将启动 Android 公司门户的“更新设备设置”  页。 可以在此页上开始执行转到工作配置文件管理的步骤。
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`。
-    - 对于美国政府版，可以改用以下链接：`https://portal.manage.microsoft.us/UpdateSettings.aspx`。
+    以下是一些可以考虑的操作：
+
+    - **标记不符合设备**：默认情况下，此操作设置为零 (0) 天，即会立即将设备标记为不符合。 将其更改为更大的天数可以为用户提供宽限期，在此期间，可以将流迁移至工作配置文件管理，且不会被标记为不符合。 例如，将其设置为 14 天，则用户将有两周时间从设备管理员迁移至工作配置文件管理，且没有失去资源访问权限的风险。
+    - **向最终用户发送推送通知**：将其配置为向设备管理员设备发送推送通知。 用户选择通知时，它将启动“Android 公司门户”进入“更新设备设置”页面，用户可以在其中着手将流迁移至工作配置文件管理。
+    - **向最终用户发送电子邮件**：将其配置为向用户发送有关从设备管理员迁移至工作配置文件管理的电子邮件。 你可以在邮件中加入以下 URL。选择该 URL 时将启动“Android 公司门户”进入“更新设备设置”页面，用户可以在其中着手将流迁移至工作配置文件管理。
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`。
+      - 对于美国政府版，可以改用以下链接：`https://portal.manage.microsoft.us/UpdateSettings.aspx`。
   
     > [!NOTE]
     > - 当然，在与用户通信时，可以使用用户友好的超文本链接。 不过，请不要使用 URL 缩短器，这样很可能导致链接失效。
     > - 如果 Android 公司门户在后台处于打开状态，当用户点击该链接时，他们可能会转到上次打开的页面。
     > - 用户必须在 Android 设备上点击此链接。 如果他们将其粘贴到浏览器中，则不会启动 Android 公司门户。 
 
-    选择**下一步**。
+    选择“下一步”。
 
-7. 在“范围标记”  页上，选择要包括的任何范围标记。
-8. 在“分配”  页上，将策略分配到其中的设备已注册设备管理员管理的组，然后单击“下一步”  。
-9. 在“查看 + 创建”  页上，确认所有设置，然后选择“创建”  。
+7. 在“范围标记”页上，选择要包括的任何范围标记。
+8. 在“分配”页上，将策略分配到其中的设备已注册设备管理员管理的组，然后单击“下一步”。
+9. 在“查看 + 创建”页上，确认所有设置，然后选择“创建”。
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 [转到新的设备管理设置的最终用户流程](../user-help/move-to-new-device-management-setup.md)可指导用户从设备管理员管理取消注册，并设置工作配置文件管理。 用户的[已注册 Android 设备管理员的设备](android-enroll-device-administrator.md)必须安装有 Android 公司门户版本 5.0.4720.0 或更高版本。
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>用户在点击“解决”后看到错误
-如果用户在点击“解决”  按钮后出现错误，可能是由于以下原因之一导致的：
+如果用户在点击“解决”按钮后出现错误，可能是由于以下原因之一导致的：
 - 未正确设置工作配置文件注册（未连接 Android Enterprise 帐户或设置了用于阻止工作配置文件注册的注册限制）。
 - 设备运行的是 Android 4.4 或更早版本，不支持注册工作配置文件。 
 - 设备制造商不支持在该设备型号上注册工作配置文件。
 
 ### <a name="resolve-button-doesnt-appear-on-the-users-device"></a>用户设备上不显示“解决”按钮
-如果用户符合上述设备符合性策略的要求并已注册设备管理员管理，用户设备上将不会显示“解决”  按钮。
+如果用户符合上述设备符合性策略的要求并已注册设备管理员管理，用户设备上将不会显示“解决”按钮。
 
-要显示“解决”按钮，用户必须推迟设置并从通知中重新开始该过程  。
+要显示“解决”按钮，用户必须推迟设置并从通知中重新开始该过程。
 
 为避免这种情况，请使用注册限制来阻止注册设备管理员管理。
 
 ### <a name="user-sees-an-error-after-tapping-url-to-update-device-settings-page"></a>用户点击 URL 转到“更新设备设置”页后看到错误
-当用户点击指向 Android 公司门户的“更新设备设置”页的 URL 时，浏览器中可能显示错误页面  。 此错误可能是由于以下原因之一导致的：
+当用户点击指向 Android 公司门户的“更新设备设置”页的 URL 时，浏览器中可能显示错误页面。 此错误可能是由于以下原因之一导致的：
 - 设备不是 Android 设备。
 - Android 设备没有公司门户应用。
 - Android 公司门户版本低于 5.0.4720.0。

@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007617"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853581"
 ---
 # <a name="review-client-app-protection-logs"></a>查看客户端应用保护日志
 
 了解可在应用保护日志中查看的设置。 启用移动客户端上的 Intune 诊断来访问这些日志。 
 
 启用和收集日志的过程因平台而异：
-- **iOS/iPadOS 设备** - 使用适用于 iOS/iPadOS 的 Microsoft Edge 收集日志。 有关详细信息，请参阅[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
-- **Windows 10 设备** - 使用“MDMDiag”和事件日志  。 请参阅 Windows 客户端管理内容中的[诊断 Windows 10 中的 MDM 故障](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)和博客 [Windows 10 Intune 策略故障排除](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)。
-- **Android 设备** - 使用 Android 版 Microsoft Edge 来收集日志。 有关详细信息，请参阅[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。 
+- **iOS/iPadOS 设备** - 使用适用于 iOS/iPadOS 的 Microsoft Edge 收集日志。 有关详细信息，请参阅[使用适用于 iOS 和 Android 的 Microsoft Edge 访问托管的应用日志](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
+- **Windows 10 设备** - 使用“MDMDiag”和事件日志。 请参阅 Windows 客户端管理内容中的[诊断 Windows 10 中的 MDM 故障](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)和博客 [Windows 10 Intune 策略故障排除](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)。
+- **Android 设备** - 使用 Android 版 Microsoft Edge 来收集日志。 有关详细信息，请参阅[使用适用于 iOS 和 Android 的 Microsoft Edge 访问托管的应用日志](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 
   > [!Note]
   > 在 Android 完全托管的设备上，在某些情况下，Intune 公司门户应用可能在所有应用下都可见。 当未安装或未启动与应用保护策略关联的应用时，可能会发生这种情况。 

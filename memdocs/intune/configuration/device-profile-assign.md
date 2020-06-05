@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078271"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989021"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中分配用户和设备配置文件
 
@@ -33,7 +33,7 @@ ms.locfileid: "82078271"
 > [!NOTE]  
 > 当配置文件被删除或不再分配给设备时，根据配置文件中设置的不同，可能会执行不同的操作。 这些设置基于 CSP，并且每个 CSP 可以不同地处理配置文件删除。 例如，设置可能会保留现有值，而不会恢复为默认值。 该行为由操作系统中的每个 CSP 控制。 有关 Windows CSP 的列表，请参阅[配置服务提供程序 (CSP) 参考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)。
 >
-> 要将设置更改为其他值，请创建新的配置文件，将设置配置为“未配置”  ，然后分配配置文件。 应用于设备后，用户应该可控制将设置更改为其首选值。
+> 要将设置更改为其他值，请创建新的配置文件，将设置配置为“未配置”，然后分配配置文件。 应用于设备后，用户应该可控制将设置更改为其首选值。
 >
 > 在配置这些设置时，我们建议部署到试验组。 有关 Intune 推出建议的更多信息，请参阅[创建推出计划](../fundamentals/planning-guide-rollout-plan.md)。
 
@@ -44,30 +44,30 @@ ms.locfileid: "82078271"
 ## <a name="assign-a-device-profile"></a>分配设备配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”  。 此时会列出所有配置文件。
-3. 选择要分配的配置文件，单击“分配”  。
-4. 选择“包含”组或“排除”组，然后选择组   。 选择组时，会选择 Azure AD 组。 若要选择多个组，请按住 Ctrl，然后选择组  。
+2. 选择“设备” > “配置文件”。 此时会列出所有配置文件。
+3. 选择要分配的配置文件，单击“分配”。
+4. 选择“包含”组或“排除”组，然后选择组 。 选择组时，会选择 Azure AD 组。 若要选择多个组，请按住 Ctrl，然后选择组。
 
-    ![在配置文件分配中包括或排除组选项的屏幕截图](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="在 Microsoft Intune 中从配置文件分配中包括或排除组选项的屏幕截图":::
 
-5. 单击“保存”以保存更改  。
+5. 单击“保存”以保存更改。
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>评估所面向的用户数
 
-分配配置文件后，还可以评估  受影响的用户数。 此功能计算用户数，不计算设备数。
+分配配置文件后，还可以评估受影响的用户数。 此功能计算用户数，不计算设备数。
 
-1. 在管理中心，选择“设备”   > “配置文件”  。
-2. 选择一个配置文件，依次单击“分配”   >   “评估”。 随即出现一条消息，显示此配置文件所面向的用户数。
+1. 在管理中心，选择“设备” > “配置文件”。
+2. 选择一个配置文件，依次单击“分配” > “评估”。 随即出现一条消息，显示此配置文件所面向的用户数。
 
-如果“评估”按钮呈灰显状态，请确保配置文件已分配到一个或多个组  。
+如果“评估”按钮呈灰显状态，请确保配置文件已分配到一个或多个组。
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>使用作用域标记或适用性规则
 
 创建或更新配置文件时，还可以向配置文件添加作用域标记和适用性规则。
 
-“作用域标记”非常适合用于将配置文件筛选到特定组（例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 [将 RBAC 和作用域标记用于分布式 IT](../fundamentals/scope-tags.md) 提供了详细信息。
+“作用域标记”非常适合用于将配置文件筛选到特定组（例如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 [将 RBAC 和作用域标记用于分布式 IT](../fundamentals/scope-tags.md) 提供了详细信息。
 
-在 Windows 10 设备上，可以添加适用性规则  ，以便配置文件仅适用于特定 OS 版本或特定 Windows 版本。 [适用性规则](device-profile-create.md#applicability-rules)包含详细信息。
+在 Windows 10 设备上，可以添加适用性规则，以便配置文件仅适用于特定 OS 版本或特定 Windows 版本。 [适用性规则](device-profile-create.md#applicability-rules)包含详细信息。
 
 ## <a name="user-groups-vs-device-groups"></a>用户组与设备组
 
@@ -109,7 +109,7 @@ ms.locfileid: "82078271"
 
 如果分配配置文件，请在包括和排除组时使用下表。 复选标记表示支持分配：
 
-![支持的选项在配置文件分配中包括或排除组](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="支持的选项在配置文件分配中包括或排除组":::
 
 ### <a name="what-you-should-know"></a>应了解的内容
 
@@ -118,11 +118,11 @@ ms.locfileid: "82078271"
   - 包括用户组和排除用户组
   - 包括设备组和排除设备组
 
-  例如，可将设备配置文件分配到“所有公司用户”  用户组，但排除“高级管理人员”  用户组中的成员。 由于这两个组都是用户组，因此除“高级管理人员”  之外的“所有公司用户”  获取配置文件。
+  例如，可将设备配置文件分配到“所有公司用户”用户组，但排除“高级管理人员”用户组中的成员。 由于这两个组都是用户组，因此除“高级管理人员”之外的“所有公司用户”获取配置文件。
 
 - Intune 不会评估用户到设备组的关系。 如果将配置文件分配到混合组，则结果可能不是你所预期的。
 
-  例如，将设备配置文件分配到“所有用户”用户组，但排除“所有个人设备”设备组   。 在此混合组配置文件分配中，“所有用户”  获取配置文件。 排除不适用。
+  例如，将设备配置文件分配到“所有用户”用户组，但排除“所有个人设备”设备组 。 在此混合组配置文件分配中，“所有用户”获取配置文件。 排除不适用。
 
   因此，建议不要将配置文件分配到混合组。
 

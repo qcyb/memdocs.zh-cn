@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254990"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989648"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>使用 Intune 监视设备加密
 
 Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密状态的详细信息，并查找设备恢复密钥的管理选项。 可用的恢复密钥选项取决于要查看的设备类型。
 
-要查找报告，请登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 选择“设备” > “监视器”，然后在“配置”下选择“加密报告”     。
+要查找报告，请登录到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 选择“设备” > “监视器”，然后在“配置”下选择“加密报告” 。
 
 ## <a name="view-encryption-details"></a>查看加密详细信息
 
@@ -48,7 +48,7 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
 - **设备名称** - 设备的名称。
 - **OS** - 设备平台（如 Windows 或 macOS）。
 - **OS 版本** - 设备上安装的 Windows 或 macOS 版本。
-- **TPM 版本**（仅适用于 Windows 10）  - Windows 10 设备上安装的受信任的平台模块 (TPM) 芯片版本。
+- **TPM 版本**（仅适用于 Windows 10）- Windows 10 设备上安装的受信任的平台模块 (TPM) 芯片版本。
 - **加密就绪情况** - 评估设备是否准备好支持适用的加密技术（如 BitLocker 或 FileVault 加密）。 设备标识为：
   - **就绪**：可以使用 MDM 策略对设备进行加密，前提是设备满足以下要求：
 
@@ -56,7 +56,7 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
     - macOS 版本 10.13 或更高版本
 
     **对于 Windows 10 设备**：
-    - 版本 1709 或更高版本（商业版  、企业版  、教育版  ），或版本 1809 或更高版本（专业版  ）
+    - 版本 1709 或更高版本（商业版、企业版、教育版），或版本 1809 或更高版本（专业版）
     - 设备必须安装有 TPM 芯片
 
     有关详细信息，请参阅 Windows 文档中的 [BitLocker 配置服务提供商 (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)。
@@ -70,38 +70,38 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
 
 ### <a name="device-encryption-status"></a>设备加密状态
 
-从加密报表选择设备时，Intune 会显示“设备加密状态”窗格  。 此窗格提供以下详细信息：
+从加密报表选择设备时，Intune 会显示“设备加密状态”窗格。 此窗格提供以下详细信息：
 
 - **设备名称** – 所查看设备的名称。
 
 - **加密就绪情况** - 通过 MDM 策略评估设备是否准备好支持加密。
 
-  例如：如果 Windows 10 设备的就绪情况为“未就绪”，它可能仍支持加密  。 要指定“就绪”，Windows 10 设备必须安装有 TPM 芯片  。 无需 TPM 芯片，即可支持加密。 （有关详细信息，请参阅上一部分中的“加密就绪情况”  。）
+  例如：如果 Windows 10 设备的就绪情况为“未就绪”，它可能仍支持加密。 要指定“就绪”，Windows 10 设备必须安装有 TPM 芯片。 无需 TPM 芯片，即可支持加密。 （有关详细信息，请参阅上一部分中的“加密就绪情况”。）
 
 - **加密状态** - OS 驱动器是否加密。 Intune 最多可能需要 24 小时才能开始报告设备加密状态或对该状态所做的更改。 此时间包括 OS 加密的时间，以及设备报告回 Intune 的时间。
 
   为了在设备正常签入前加快 FileVault 加密状态的报告速度，请让用户在加密完成后同步自己的设备。
 
-- **配置文件** - 适用于此设备且配置了以下值的“设备配置”配置文件列表  ：
+- **配置文件** - 适用于此设备且配置了以下值的“设备配置”配置文件列表：
 
   - macOS：
-    - 配置文件类型 = 终结点保护 
-    - “设置”>“FileVault”>“FileVault”=“启用” 
+    - 配置文件类型 = 终结点保护
+    - “设置”>“FileVault”>“FileVault”=“启用”
 
   - Windows 10：
-    - 配置文件类型 = 终结点保护 
-    - “设置”>“Windows 加密”>“加密设备”=“需要” 
+    - 配置文件类型 = 终结点保护
+    - “设置”>“Windows 加密”>“加密设备”=“需要”
 
-  如果配置文件状态摘要表明存在问题，则可使用配置文件列表来确定要查看的所有策略  。
+  如果配置文件状态摘要表明存在问题，则可使用配置文件列表来确定要查看的所有策略。
 
-- **配置文件状态摘要** – 适用于此设备的配置文件摘要。 摘要表示适用配置文件中的最不利条件。 例如，如果几个适用的配置文件中只有一个导致错误，则配置文件状态摘要将显示“错误”   。
+- **配置文件状态摘要** – 适用于此设备的配置文件摘要。 摘要表示适用配置文件中的最不利条件。 例如，如果几个适用的配置文件中只有一个导致错误，则配置文件状态摘要将显示“错误” 。
 
-  若要查看状态的更多详细信息，请依次转到“Intune”   > “设备配置”   > “配置文件”  ，再选择配置文件。 （可选）依次选择“设备状态”  和设备。
+  若要查看状态的更多详细信息，请依次转到“Intune” > “设备配置” > “配置文件”，再选择配置文件。 （可选）依次选择“设备状态”和设备。
 
-- 状态详细信息  - 关于设备加密状态的高级详细信息。
+- 状态详细信息 - 关于设备加密状态的高级详细信息。
 
   > [!IMPORTANT]
-  > 对于 Windows 10 设备，Intune 仅显示运行 Windows 10 2019 年 4 月更新或更高版本的设备的状态详细信息   。
+  > 对于 Windows 10 设备，Intune 仅显示运行 Windows 10 2019 年 4 月更新或更高版本的设备的状态详细信息 。
 
   此字段显示可检测到的每个适用错误的信息。 使用此信息可了解设备加密未准备就绪的原因。
 
@@ -163,74 +163,26 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
 
 ## <a name="export-report-details"></a>导出报表详细信息
 
-查看“加密”报表窗格时，可以选择“导出”以创建报表详细信息的 .csv 文件下载   。 此报表涵盖“加密报表”窗格中的高级详细信息以及你管理的所有设备的“设备加密状态”详细信息   。
+查看“加密”报表窗格时，可以选择“导出”以创建报表详细信息的 .csv 文件下载。 此报表涵盖“加密报表”窗格中的高级详细信息以及你管理的所有设备的“设备加密状态”详细信息 。
 
 ![导出详细信息](./media/encryption-monitor/export.png)
 
-此报表可用于识别设备组的问题。 例如，可使用报告来标识 macOS 设备列表，其中所有设备全都报告“用户已启用 FileVault”  （表示设备必须经过手动解密，然后 Intune 才能管理设备的 FileVault 设置）。
+此报表可用于识别设备组的问题。 例如，可使用报告来标识 macOS 设备列表，其中所有设备全都报告“用户已启用 FileVault”（表示设备必须经过手动解密，然后 Intune 才能管理设备的 FileVault 设置）。
 
-## <a name="filevault-recovery-keys"></a>FileVault 恢复密钥
+## <a name="manage-recovery-keys"></a>管理恢复密钥
 
-Intune 首次使用 FileVault 加密 macOS 设备时，会创建个人恢复密钥。 加密时，设备一次性向最终用户显示个人密钥。
+有关管理恢复密钥的详细信息，请参阅 Intune 文档中的以下内容：
 
-对于受管理设备，Intune 可以托管个人恢复密钥的副本。 通过对密钥进行托管，Intune 管理员可以轮换密钥以帮助保护设备，并且用户可以恢复丢失或轮换的个人恢复密钥。
+macOS FileVault：
+- [检索个人恢复密钥](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [轮换恢复密钥](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [恢复恢复密钥](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune 支持多种选项来轮换和恢复个人恢复密钥。 轮换密钥的一个原因是，当前个人密钥丢失或被认为存在风险。
-
-> [!IMPORTANT]
-> Intune 无法管理由用户加密而非由 Intune 加密的设备。 即 Intune 无法托管这些设备的个人恢复密钥，也无法管理轮换的恢复密钥。 用户必须解密其设备，然后让 Intune 对设备进行加密，Intune 才可以管理设备的 FileVault 和恢复密钥。
-
-### <a name="rotate-recovery-keys"></a>轮换恢复密钥
-
-- **自动执行轮换**：管理员可以配置 FileVault 设置个人恢复密钥轮换以定期自动生成新的恢复密钥。 为设备生成新密钥时，不会向用户显示密钥。 相反，用户必须从管理员或使用公司门户应用获取密钥。
-
-- **手动轮换**：管理员可以查看自己使用 Intune 管理且使用 FileVault 加密的设备的相关信息。 然后，可以选择手动轮换企业设备的恢复密钥。 不能轮换个人设备的恢复密钥。
-
-  轮换恢复密钥：
-
-  1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-  
-  2. 选择“设备”> “所有设备”     。
-  
-  3. 从设备列表中，选择已加密且要为其轮换密钥的设备。 然后在“监视”下，选择“ **恢复密钥**”。
-  
-  4. 在“恢复密钥”窗格中，选择“轮换 FileVault 恢复密钥”  。
-
-     设备下次使用 Intune 签入时，系统将轮换个人密钥。 需要时，最终用户可以通过公司门户获取新密钥。
-
-### <a name="recover-recovery-keys"></a>恢复恢复密钥
-
-- **管理员**：管理员无法查看使用 FileVault 加密的设备的个人恢复密钥。
-
-- **最终用户**：最终用户可以从任何设备使用公司门户网站查看其任何受管理设备的当前个人恢复密钥。 无法从公司门户应用中查看恢复密钥。
-
-  查看恢复密钥：
-  
-  1. 从任意设备登录 Intune 公司门户网站  。
-
-  2. 在门户中，转到“设备”，然后选择使用 FileVault 加密的 macOS 设备  。
-
-  3. 选择“获取恢复密钥”  。 系统会显示当前恢复密钥。
-
-## <a name="bitlocker-recovery-keys"></a>BitLocker 恢复密钥
-
-Intune 提供了对 BitLocker 的 Azure AD 边栏选项卡的访问权限，以便你能够在 Intune 门户中查看 Windows 10 设备的 BitLocker 密钥 ID 和恢复密钥。 为了能够访问，设备必须将其密钥托管到 Azure AD。
-
-1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-
-2. 选择“设备” > “所有设备”   。
-
-3. 选择列表中的设备，然后在“监视”下，选择“恢复密钥”   。
-  
-   如果 Azure AD 中有密钥，将提供以下信息：
-   - BitLocker 密钥 ID
-   - BitLocker 恢复密钥
-   - 驱动器类型
-
-   如果 Azure AD 中没有密钥，Intune 将显示“未找到此设备的 BitLocker 密钥”  。
-
-使用 [BitLocker 配置服务提供程序](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) 获取 BitLocker 的信息。 Windows 10 版本 1709 及更高版本和 Windows 10 专业版版本 1809 及更高版本支持 BitLocker CSP。
+Windows 10 BitLocker：
+- [轮换 BitLocker 恢复密钥](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>后续步骤
 
-创建[设备符合性](compliance-policy-create-windows.md)策略。
+[管理 BitLocker 策略](../protect/encrypt-devices.md)
+
+[管理 FileVault 策略](encrypt-devices-filevault.md)

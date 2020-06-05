@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126100"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991073"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中用于 SCEP 证书配置文件的设备到 NDES 服务器的通信进行故障排除
 
@@ -34,9 +34,9 @@ ms.locfileid: "82126100"
 IIS 日志包含所有平台的相同类型的条目。
 
 
-1. 在 NDES 服务器上，打开在以下文件夹中找到的最新 IIS 日志文件：%SystemDrive%\inetpub\logs\logfiles\w3svc1 
+1. 在 NDES 服务器上，打开在以下文件夹中找到的最新 IIS 日志文件：%SystemDrive%\inetpub\logs\logfiles\w3svc1
 
-2. 在日志中搜索类似于以下示例的条目。 这两个示例都包含状态 200  ，该状态显示在末尾处：
+2. 在日志中搜索类似于以下示例的条目。 这两个示例都包含状态 200，该状态显示在末尾处：
 
    `fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe operation=GetCACaps&message=default 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 186 0.`
 
@@ -110,15 +110,15 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ### <a name="windows-devices"></a>Windows 设备
 
-在要与 NDES 建立连接的 Windows 设备上，可以查看设备 Windows 事件查看器并查找成功连接的指示。 连接在设备“DeviceManagement-Enterprise-Diagnostics-Provide”   > “管理员”  日志中记录为事件 ID“36”  。
+在要与 NDES 建立连接的 Windows 设备上，可以查看设备 Windows 事件查看器并查找成功连接的指示。 连接在设备“DeviceManagement-Enterprise-Diagnostics-Provide” > “管理员”日志中记录为事件 ID“36”。
 
 要打开日志，请执行以下操作：
 
-1. 在设备上，运行 eventvwr.msc  以打开 Windows 事件查看器。
+1. 在设备上，运行 eventvwr.msc 以打开 Windows 事件查看器。
 
-2. 展开“应用程序和服务日志”   > “Microsoft”   > “Windows”   > “DeviceManagement-Enterprise-Diagnostic-Provider”   > “管理员”  。
+2. 展开“应用程序和服务日志” > “Microsoft” > “Windows” > “DeviceManagement-Enterprise-Diagnostic-Provider” > “管理员”。
 
-3. 查找事件“36”  ，如以下示例所示，其键行为“SCEP：  已成功生成证书请求”：
+3. 查找事件“36”，如以下示例所示，其键行为“SCEP：已成功生成证书请求”：
 
    ```
    Event ID:      36
@@ -137,7 +137,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ### <a name="status-code-500"></a>状态代码 500
 
-与以下示例类似的连接（状态代码为 500）表示未向 NDES 服务器上的 IIS_IURS 组分配“身份验证后模拟客户端”  用户权限。 在末尾显示状态值 500  ：
+与以下示例类似的连接（状态代码为 500）表示未向 NDES 服务器上的 IIS_IURS 组分配“身份验证后模拟客户端”用户权限。 在末尾显示状态值 500：
 
 ```
 2017-08-08 20:22:16 IP_address GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 - 10.5.14.22 profiled/1.0+CFNetwork/811.5.4+Darwin/16.6.0 - 500 0 1346 31
@@ -145,13 +145,13 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 **要解决此问题**：
 
-1. 在 NDES 服务器上，运行“secpol.msc”  以打开“本地安全策略”。
+1. 在 NDES 服务器上，运行“secpol.msc”以打开“本地安全策略”。
 
-2. 展开“本地策略”  ，然后单击“用户权限分配”  。
+2. 展开“本地策略”，然后单击“用户权限分配”。
 
-3. 在右窗格中双击“身份验证后模拟客户端”  。
+3. 在右窗格中双击“身份验证后模拟客户端”。
 
-4. 单击“添加用户或组…”  ，在“输入要选择的对象名称”  框中键入 IIS_IURS  ，然后单击“确定”  。
+4. 单击“添加用户或组…”，在“输入要选择的对象名称”框中键入 IIS_IURS，然后单击“确定”。
 
 5. 单击" **确定**"。
 
@@ -161,7 +161,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 使用以下步骤测试 SCEP 证书配置文件中指定的 URL。
 
-1. 在 Intune 中，编辑 SCEP 证书配置文件并复制服务器 URL。 此 URL 看起来应该如下所示： *https://contoso.com/certsrv/mscep/mscep.dll* 。
+1. 在 Intune 中，编辑 SCEP 证书配置文件并复制服务器 URL。 此 URL 应类似于：`https://contoso.com/certsrv/mscep/mscep.dll`.。
 
 2. 打开 Web 浏览器，然后浏览到该 SCEP 服务器 URL。 结果应为：**HTTP 错误 403.0 – 已禁止**。 此结果表示 URL 正常运行。
 
@@ -183,7 +183,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
   Mscep.dll 是一个 ISAPI 扩展，可以截获传入的请求并在其安装正确时显示 HTTP 403 错误。
   
-  **解决方法**：检查“SetupMsi.log”  文件，以确定是否成功安装了 Microsoft Intune 连接器。 在以下示例中，“已成功完成安装”  和“安装成功或错误状态：  0”表示安装成功：
+  **解决方法**：检查“SetupMsi.log”文件，以确定是否成功安装了 Microsoft Intune 连接器。 在以下示例中，“已成功完成安装”和“安装成功或错误状态：0”表示安装成功：
 
   ```
   MSI (c) (28:54) [16:13:11:905]: Product: Microsoft Intune Connector -- Installation completed successfully.
@@ -198,11 +198,11 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ![HTTP 错误 503。 此服务不可用](../protect/media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png)
 
-此问题通常是因为 IIS 中的 SCEP  应用程序池未启动所致。 在 NDES 服务器上，打开“IIS 管理器”  ，然后转到“应用程序池”  。 找到“SCEP”  应用程序池并确认它已启动。
+此问题通常是因为 IIS 中的 SCEP 应用程序池未启动所致。 在 NDES 服务器上，打开“IIS 管理器”，然后转到“应用程序池”。 找到“SCEP”应用程序池并确认它已启动。
 
 如果未启动 SCEP 应用程序池，请检查服务器上的应用程序事件日志：
 
-1. 在设备上，运行“eventvwr.msc”  以打开“事件查看器”  ，然后转到“Windows 日志”   > “应用程序”  。
+1. 在设备上，运行“eventvwr.msc”以打开“事件查看器”，然后转到“Windows 日志” > “应用程序”。
 
 2. 查找类似于以下示例的事件，这意味着接收到请求时，应用程序池崩溃：
 
@@ -226,20 +226,20 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
   
   要在“受信任的根证书颁发机构”证书存储中标识所有中间证书，请运行以下 PowerShell cmdlet：`Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
 
-  具有相同的“颁发对象”  和“颁发机构”  值的证书是一个根证书。 否则，它是中间证书。
+  具有相同的“颁发对象”和“颁发机构”值的证书是一个根证书。 否则，它是中间证书。
 
   删除证书并重启服务器后，再次运行 PowerShell cmdlet 以确认没有中间证书。 如果存在，请检查组策略是否将中间证书推送到 NDES 服务器。 如果是这样，请从组策略中排除 NDES 服务器，然后再次删除中间证书。
 
 - **原因 2**：对于 Intune 证书连接器使用的证书，证书吊销列表 (CRL) 中的 URL 受阻或无法访问。
 
   **解决方法**：启用其他日志记录以收集详细信息：
-  1. 打开事件查看器，单击“查看”  ，确保选中了“显示分析和调试日志”  选项。
-  2. 转到“应用程序和服务日志”   > “Microsoft”   > “Windows”   > “CAPI2”   > “可操作”  ，右键单击“可操作”  ，然后单击“启用日志”  。
+  1. 打开事件查看器，单击“查看”，确保选中了“显示分析和调试日志”选项。
+  2. 转到“应用程序和服务日志” > “Microsoft” > “Windows” > “CAPI2” > “可操作”，右键单击“可操作”，然后单击“启用日志”。
   3. 启用 CAPI2 日志记录后，重现问题，然后检查事件日志以解决问题。
 
-- **原因 3**：CertificateRegistrationSvc  的 IIS 权限已启用“Windows 身份验证”  。
+- **原因 3**：CertificateRegistrationSvc 的 IIS 权限已启用“Windows 身份验证”。
 
-  **解决方法**：启用“匿名身份验证”  并禁用“Windows 身份验证”  ，然后重启 NDES 服务器。
+  **解决方法**：启用“匿名身份验证”并禁用“Windows 身份验证”，然后重启 NDES 服务器。
 
   ![IIS 权限](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
@@ -262,9 +262,9 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 ![Gatewaytimeout 错误](../protect/media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
 
-- **原因**：Microsoft AAD 应用程序代理连接器  服务未启动。
+- **原因**：Microsoft AAD 应用程序代理连接器服务未启动。
 
-  **解决方法**：运行“services.msc”  ，然后确保“Microsoft AAD 应用程序代理连接器”  服务正在运行，并且将“启动类型”  设置为“自动”  。
+  **解决方法**：运行“services.msc”，然后确保“Microsoft AAD 应用程序代理连接器”服务正在运行，并且将“启动类型”设置为“自动”。
 
 #### <a name="http-414-request-uri-too-long"></a>HTTP 414 请求 URI 太长
 
@@ -274,21 +274,21 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 - **解决方法**：配置对长网址的支持。
 
-  1. 在 NDES 服务器中，打开 IIS 管理器，选择“默认网站” > “请求筛选” > “编辑功能设置”，以打开“编辑请求筛选设置”页面     。
+  1. 在 NDES 服务器中，打开 IIS 管理器，选择“默认网站” > “请求筛选” > “编辑功能设置”，以打开“编辑请求筛选设置”页面   。
 
   2. 配置下列设置：
-     - 最大 URL 长度(字节) = 65534 
-     - 最大查询字符串(字节) = 65534 
+     - 最大 URL 长度(字节) = 65534
+     - 最大查询字符串(字节) = 65534
 
-  3. 选择“确定”，保存此配置并关闭 IIS 管理器  。
+  3. 选择“确定”，保存此配置并关闭 IIS 管理器。
 
   4. 定位以下注册表项以确认其具有指示的值，以验证此配置：
 
      HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters
 
      以下值设置为 DWORD 值：
-     - 名称：MaxFieldLength  ，十进制值为 65534 
-     - 名称：MaxRequestBytes  ，十进制值为 65534 
+     - 名称：MaxFieldLength，十进制值为 65534
+     - 名称：MaxRequestBytes，十进制值为 65534
 
   5. 重启 NDES 服务器。
 
@@ -300,7 +300,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
 - **原因**：当应用程序代理配置中的 SCEP 外部 URL 不正确时，会发生此问题。 此 URL 的一个示例为 `https://contoso.com/certsrv/mscep/mscep.dll`。
 
-  **解决方法**：在应用程序代理配置中，为 SCEP 外部 URL 使用默认域 yourtenant.msappproxy.net  。
+  **解决方法**：在应用程序代理配置中，为 SCEP 外部 URL 使用默认域 yourtenant.msappproxy.net。
 
 #### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - 内部服务器错误
 
@@ -318,51 +318,51 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
   要请求新证书，请按照下列步骤操作：
 
-  1. 在证书颁发机构 (CA) 上或颁发 CA 时，打开证书模板 MMC。 确保已登录的用户和 NDES 服务器对“CEP 加密和 Exchange 注册代理(脱机请求)”证书模板具有“读取”  和“注册”  权限。
+  1. 在证书颁发机构 (CA) 上或颁发 CA 时，打开证书模板 MMC。 确保已登录的用户和 NDES 服务器对“CEP 加密和 Exchange 注册代理(脱机请求)”证书模板具有“读取”和“注册”权限。
 
-  2. 检查 NDES 服务器上已过期的证书，从证书中复制“主题”  信息。
+  2. 检查 NDES 服务器上已过期的证书，从证书中复制“主题”信息。
 
-  3. 打开“计算机帐户”的证书 MMC  。
+  3. 打开“计算机帐户”的证书 MMC。
 
-  4. 展开“个人”  ，右键单击“证书”  ，然后选择“所有任务”   > “申请新证书”  。
+  4. 展开“个人”，右键单击“证书”，然后选择“所有任务” > “申请新证书”。
 
-  5. 在“申请证书”  页上，选择“CEP 加密”  ，然后单击“注册此证书需要详细信息” **。单击这里以配置设置”** 。
+  5. 在“申请证书”页上，选择“CEP 加密”，然后单击“注册此证书需要详细信息” **。单击这里以配置设置”** 。
 
      ![选择“CEP 加密”](../protect/media/troubleshoot-scep-certificate-device-to-ndes/select-scep-encryption.png)
 
-  6. 在“证书属性”  中，单击“主题”  选项卡，用在步骤 2 中收集的信息填充“主题名称”  ，单击“添加”  ，然后单击“确定”  。
+  6. 在“证书属性”中，单击“主题”选项卡，用在步骤 2 中收集的信息填充“主题名称”，单击“添加”，然后单击“确定”。
 
   7. 完成证书注册。
 
-  8. 打开“我的用户帐户”  的证书 MMC。
+  8. 打开“我的用户帐户”的证书 MMC。
 
-     在注册“Exchange 注册代理(脱机请求)”证书时，必须在用户上下文中完成注册。 因为此证书模板的“主题类型”  设置为“用户”  。
+     在注册“Exchange 注册代理(脱机请求)”证书时，必须在用户上下文中完成注册。 因为此证书模板的“主题类型”设置为“用户”。
 
-  9. 展开“个人”  ，右键单击“证书”  ，然后选择“所有任务”   > “申请新证书”  。
+  9. 展开“个人”，右键单击“证书”，然后选择“所有任务” > “申请新证书”。
 
-  10. 在“申请证书”  页面上，选择“Exchange 注册代理(脱机请求)”  ，然后单击“注册此证书需要详细信息” **。单击这里以配置设置”** 。
+  10. 在“申请证书”页面上，选择“Exchange 注册代理(脱机请求)”，然后单击“注册此证书需要详细信息” **。单击这里以配置设置”** 。
 
       ![选择“Exchange 注册代理”](../protect/media/troubleshoot-scep-certificate-device-to-ndes/select-exchange-enrollment-agent.png)
 
-  11. 在“证书属性”  中，单击“主题”  选项卡，使用在步骤 2 中收集的信息填充“主题名称”  ，然后单击“添加”  。
+  11. 在“证书属性”中，单击“主题”选项卡，使用在步骤 2 中收集的信息填充“主题名称”，然后单击“添加”。
 
       ![证书属性](../protect/media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png)
 
-      选择“私钥”  选项卡，选择“使私钥可导出”  ，然后单击“确定”  。
+      选择“私钥”选项卡，选择“使私钥可导出”，然后单击“确定”。
 
       ![私钥](../protect/media/troubleshoot-scep-certificate-device-to-ndes/private-key.png)
 
   12. 完成证书注册。
 
-  13. 从当前用户证书存储中导出“Exchange 注册代理(脱机请求)”证书。 在证书导出向导中，单击“是，导出私钥”  。
+  13. 从当前用户证书存储中导出“Exchange 注册代理(脱机请求)”证书。 在证书导出向导中，单击“是，导出私钥”。
 
   14. 将证书导入到本地计算机证书存储。
 
   15. 在证书 MMC 中，对每个新证书执行以下操作：
 
-      右键单击证书，单击“所有任务”   > “管理私钥”  ，向 NDES 服务帐户添加“读取”  权限。
+      右键单击证书，单击“所有任务” > “管理私钥”，向 NDES 服务帐户添加“读取”权限。
 
-  16. 运行“iisreset”  命令以重启 IIS。
+  16. 运行“iisreset”命令以重启 IIS。
 
 ## <a name="next-steps"></a>后续步骤
 

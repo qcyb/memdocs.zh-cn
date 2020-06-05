@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4f85c30c9472849d26802c8cdccd7a95006a3e4a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364157"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984007"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>使用 Intune 控制共享电脑或多用户设备上的访问权限、帐户和电源功能
 
@@ -43,21 +43,42 @@ ms.locfileid: "79364157"
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
+
+   - **平台**：选择“Windows 10 及更高版本”。
+   - **配置文件**：选择“共享的多用户设备”。
+
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
    - **名称**：输入新配置文件的描述性名称。
    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-   - **平台**：选择“Windows 10 及更高版本”  。
-   - **配置文件类型**：选择“共享的多用户设备”  。
 
-4. 配置 [Windows 10 及更高版本](shared-user-device-settings-windows.md)和 [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) 的设置。
+6. 选择“下一步”。
+7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
-5. 选择“确定”   > “创建”  以保存所做的更改。
+    - [Windows 10 及更高版本](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-配置文件已创建并在列表中显示，但它尚未起到任何作用。 请务必向组织中的设备组[分配配置文件](device-profile-assign.md)。
+8. 选择“下一步”。
+
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+    选择“下一步”。
+
+10. 在“分配”中，选择将接收配置文件的设备组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    选择“下一步”。
+
+    > [!NOTE]
+    > 请务必向组织中的设备组分配配置文件。
+
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
+
+每台设备在下次签入时，将应用该策略。
 
 ## <a name="next-steps"></a>后续步骤
 
 - 请参阅 [Windows 10 及更高版本](shared-user-device-settings-windows.md)和 [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) 的所有设置。
-- [分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
+- [分配配置文件](device-profile-assign.md)之后，[监视其状态](device-profile-monitor.md)。

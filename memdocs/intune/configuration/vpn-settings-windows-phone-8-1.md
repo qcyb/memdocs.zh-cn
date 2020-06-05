@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9cf69afb3db3e7250f8bf491efbfb3ff64dc32ec
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086479"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556296"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 Windows Phone 8.1 设备添加 VPN 设置
 
@@ -37,17 +37,17 @@ ms.locfileid: "80086479"
 
 ## <a name="base-vpn-settings"></a>基础 VPN 设置
 
-- **将所有设置仅应用于 Windows Phone 8.1**：在 Intune 经典门户中配置此设置。 在 Microsoft 终结点管理器管理中心中，此设置不可更改。 如果将此项设置为“已配置”，则任何设置仅应用于 Windows Phone 8.1 设备  。 如果将此项设置为“未配置”，则这些设置也适用于 Windows 10 移动版设备  。
+- **将所有设置仅应用于 Windows Phone 8.1**：在 Intune 经典门户中配置此设置。 在 Microsoft 终结点管理器管理中心中，此设置不可更改。 如果将此项设置为“已配置”，则任何设置仅应用于 Windows Phone 8.1 设备。 如果将此项设置为“未配置”，则这些设置也适用于 Windows 10 移动版设备。
 - **连接名称**：为此连接输入名称。 用户在他们的设备上浏览可用 VPN 连接的列表时会看到此名称。
 - **身份验证方法**：从以下选项中选择设备向 VPN 服务器进行身份验证的方法：
-  - **证书**：在“身份验证证书”下，选择之前创建的 SCEP 或 PKCS 证书配置文件以对连接进行身份验证  。 有关证书配置文件的详细信息，请参阅[如何配置证书](../protect/certificates-configure.md)。
+  - **证书**：在“身份验证证书”下，选择之前创建的 SCEP 或 PKCS 证书配置文件以对连接进行身份验证。 有关证书配置文件的详细信息，请参阅[如何配置证书](../protect/certificates-configure.md)。
   - **用户名和密码**：最终用户必须提供用户名和密码才能登录 VPN 服务器。
 - **服务器**：添加设备连接到的一个或多个 VPN 服务器。
-  - **添加**：打开“添加行”  边栏选项卡，可在其中指定以下信息：
-    - **描述**：为服务器指定一个描述性名称，例如“Contoso VPN 服务器”  。
-    - **IP 地址或 FQDN**：提供设备连接到的 VPN 服务器的 IP 地址或完全限定的域名。 例如：“192.168.1.1”、“vpn.contoso.com”   。
+  - **添加**：打开“添加行”边栏选项卡，可在其中指定以下信息：
+    - **描述**：为服务器指定一个描述性名称，例如“Contoso VPN 服务器”。
+    - **IP 地址或 FQDN**：提供设备连接到的 VPN 服务器的 IP 地址或完全限定的域名。 例如：“192.168.1.1”、“vpn.contoso.com” 。
     - **默认服务器**：启用此服务器作为设备建立连接时使用的默认服务器。 请确保只将一台服务器设置为默认服务器。
-  - **导入**：浏览到以逗号分隔的文件，该文件包含采用以下格式的服务器列表：描述、IP 地址或 FQDN、默认服务器。 选择“确定”，将这些服务器导入到“服务器”列表   。
+  - **导入**：浏览到以逗号分隔的文件，该文件包含采用以下格式的服务器列表：描述、IP 地址或 FQDN、默认服务器。 选择“确定”，将这些服务器导入到“服务器”列表 。
   - **导出**：将服务器列表导出到逗号分隔值 (csv) 文件。
 
 - **不在公司 Wi-Fi 网络上使用 VPN**：启用此选项以指定当设备连接到公司 Wi-Fi 网络时不使用 VPN 连接。
@@ -63,7 +63,7 @@ ms.locfileid: "80086479"
 - **角色**（仅限 Pulse Secure）：指定有权访问此连接的用户角色的名称。 用户角色用于定义个人设置和选项，并启用或禁用某些访问功能。
 - **领域**（仅限 Pulse Secure）：指定你想要使用的身份验证领域的名称。 身份验证领域是“Pulse Secure”连接类型使用的身份验证资源的分组。
 
-- **DNS 后缀搜索列表**：**添加**一个或多个 DNS 后缀。 通过使用短名称连接到网站时，会搜索你指定的每个 DNS 后缀。 例如，指定 DNS 后缀“domain1.contoso.com”和“domain2.contoso.com”并访问 URL `http://mywebsite` 后，将会搜索 URL `http://mywebsite.domain1.contoso.com` 和 `http://mywebsite.domain2.contoso.com`  。
+- **DNS 后缀搜索列表**：**添加**一个或多个 DNS 后缀。 通过使用短名称连接到网站时，会搜索你指定的每个 DNS 后缀。 例如，指定 DNS 后缀“domain1.contoso.com”和“domain2.contoso.com”并访问 URL `http://mywebsite` 后，将会搜索 URL `http://mywebsite.domain1.contoso.com` 和 `http://mywebsite.domain2.contoso.com` 。
 
 - **自定义 XML**：指定配置 VPN 连接的任何自定义 XML 命令。
 
@@ -93,12 +93,12 @@ ms.locfileid: "80086479"
 
   有关编写自定义 XML 的详细信息，请参阅制造商的 VPN 文档。
 
-- **拆分隧道**：“启用”此设置，让设备根据流量确定使用哪个连接  。 例如，旅馆中的用户使用 VPN 连接来访问工作文件，但使用旅馆的标准网络进行常规的 Web 浏览。 如果想要让所有流量在 VPN 连接处于活动状态时使用 VPN 隧道，则设置为“禁用”  。
+- **拆分隧道**：“启用”此设置，让设备根据流量确定使用哪个连接。 例如，旅馆中的用户使用 VPN 连接来访问工作文件，但使用旅馆的标准网络进行常规的 Web 浏览。 如果想要让所有流量在 VPN 连接处于活动状态时使用 VPN 隧道，则设置为“禁用”。
 
 ## <a name="proxy-settings"></a>代理设置
 
 - **自动检测代理设置**：如果你的 VPN 服务器要求使用代理服务器进行连接，请指定你是否希望设备自动检测连接设置。
-- **自动配置脚本**：使用文件配置代理服务器。 输入包含配置文件的代理服务器 URL（例如 `http://proxy.contoso.com`）  。
+- **自动配置脚本**：使用文件配置代理服务器。 输入包含配置文件的代理服务器 URL（例如 `http://proxy.contoso.com`）。
 - **使用代理服务器**：如果想要手动输入代理服务器设置则启用此选项。
   - **地址**：输入代理服务器地址（作为 IP 地址）。
   - **端口号**：输入与代理服务器关联的端口号。
@@ -106,6 +106,6 @@ ms.locfileid: "80086479"
 
 ## <a name="next-steps"></a>后续步骤
 
-配置文件已创建，但它尚未起到任何作用。 下一步，[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
+[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
 在 [Android](vpn-settings-android.md)、[Android Enterprise](vpn-settings-android-enterprise.md)、[macOS](vpn-settings-macos.md) 和 [Windows 10](vpn-settings-windows-10.md) 设备上配置 VPN 设置。

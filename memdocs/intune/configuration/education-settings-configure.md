@@ -5,8 +5,8 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,18 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364326"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988398"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>在 Microsoft Intune 中的 Windows 10 设备上使用“参加测验”应用
 
-
-
-Intune 中的教育配置文件专为学生在设备上参加测验或考试而设计。 此功能包含“参加测验”  应用，以及用于添加测验 URL、选择最终用户的测验登录方式等的设置。 此功能支持以下平台：
+Intune 中的教育配置文件专为学生在设备上参加测验或考试而设计。 此功能包含“参加测验”应用，以及用于添加测验 URL、选择最终用户的测验登录方式等的设置。 此功能支持以下平台：
 
 - Windows 10 及更高版本
 
@@ -39,24 +37,39 @@ Intune 中的教育配置文件专为学生在设备上参加测验或考试而�
 ## <a name="create-a-device-profile"></a>创建设备配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
+
+    - **平台**：选择“Windows 10 及更高版本”。
+    - **配置文件**：选择“安全评估(教育)”。
+
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
     - **名称**：输入新配置文件的描述性名称。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **平台**：选择“Windows 10 及更高版本”  。
-    - **配置文件**：选择“教育配置文件”  。
 
-4. 输入要配置的设置：
+6. 选择“下一步”。
+7. 在“配置设置”中，输入要配置的设置：
 
     - [Windows 10 及更高版本](education-settings-windows.md)
 
-5. 选择“确定”   > “创建”  以保存所做的更改。
+8. 选择“下一步”。
 
-输入设置并创建配置文件后，配置文件将显示在配置文件列表中。 下一步，[将此配置文件分配给某些组](device-profile-assign.md)。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+    选择“下一步”。
+
+10. 在“分配”中，选择要接收配置文件的用户或用户组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    选择“下一步”。
+
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
+
+每台设备在下次签入时，将应用该策略。
 
 ## <a name="next-steps"></a>后续步骤
 
 查看 [Windows 10 教育设置](education-settings-windows.md)及其说明的列表。
 
-[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
+[分配配置文件](device-profile-assign.md)之后，[监视其状态](device-profile-monitor.md)。

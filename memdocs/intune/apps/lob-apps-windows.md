@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166632"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990624"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>将 Windows 业务线应用添加到 Microsoft Intune
 
@@ -37,60 +37,60 @@ ms.locfileid: "82166632"
 ## <a name="select-the-app-type"></a>选择应用类型
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“应用”   > “所有应用”   > “添加”  。
-3. 在“选择应用类型”  窗格中的“其他”  应用类型下，选择“业务线应用”  。
-4. 单击“选择”  。 将显示“添加应用”  步骤。
+2. 选择“应用” > “所有应用” > “添加”。
+3. 在“选择应用类型”窗格中的“其他”应用类型下，选择“业务线应用”。
+4. 单击“选择”。 将显示“添加应用”步骤。
 
 ## <a name="step-1---app-information"></a>步骤 1 - 应用信息
 
 ### <a name="select-the-app-package-file"></a>选择应用包文件
 
-1. 在“添加应用”  窗格中，单击“选择应用包文件”  。 
-2. 在“应用包文件”  窗格中，选择“浏览”按钮。 然后选择带扩展名“.msi”  、“.appx”  ，或“.appxbundle”  的 Windows 安装文件。
+1. 在“添加应用”窗格中，单击“选择应用包文件”。 
+2. 在“应用包文件”窗格中，选择“浏览”按钮。 然后选择带扩展名“.msi”、“.appx”，或“.appxbundle”的 Windows 安装文件。
    将显示应用详细信息。
 
     > [!NOTE]
-    > Windows 应用的文件扩展名包括 .msi、.appx、.appxbundle、.msix 和 .msixbundle      。  
+    > Windows 应用的文件扩展名包括 .msi、.appx、.appxbundle、.msix 和 .msixbundle    。 有关 .msix 的详细信息，请参阅 [MSIX 文档](https://docs.microsoft.com/windows/msix/)和 [MSIX 应用分发](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise)。
 
-3. 完成后，在“应用包文件”  窗格中选择“确定”  以添加应用。
+3. 完成后，在“应用包文件”窗格中选择“确定”以添加应用。
 
 ### <a name="set-app-information"></a>设置应用信息
 
-1. 在“应用信息”  页中，添加应用的详细信息。 此窗格中的某些值可能已自动填充，具体取决于所选应用。
+1. 在“应用信息”页中，添加应用的详细信息。 此窗格中的某些值可能已自动填充，具体取决于所选应用。
     - **名称**：输入显示在公司门户中的应用的名称。 请确保使用的所有应用名称都是唯一的。 如果同一应用名称存在两次，则公司门户中仅显示其中一个应用。
     - **描述**：输入应用的说明。 描述显示在公司门户中。
     - **发布者**：输入应用发布者的名称。
-    - 应用安装上下文  ：选择要与此应用相关联的安装上下文。 对于双模式应用，选择此应用所需的上下文。 对于其他所有应用，此设置是根据包预先选择的，无法进行修改。
-    - **忽略应用版本**：如果应用开发人员自动更新应用，则设置为“是”  。 此选项仅适用于移动 .msi 应用。
-    - **命令行参数**：（可选）输入要在 .msi 文件运行时应用到该文件的任意命令行参数。  例如 /q  。 不要添加 msiexec 命令或参数（如 /i  或 /x  ），因为它们是自动使用的。 有关详细信息，请参阅[命令行选项](https://docs.microsoft.com/windows/desktop/Msi/command-line-options)。 如果 .MSI 文件需要其他命令行选项，请考虑使用 [Win32 应用管理](app-management.md)。
+    - 应用安装上下文：选择要与此应用相关联的安装上下文。 对于双模式应用，选择此应用所需的上下文。 对于其他所有应用，此设置是根据包预先选择的，无法进行修改。
+    - **忽略应用版本**：如果应用开发人员自动更新应用，则设置为“是”。 此选项仅适用于移动 .msi 应用。
+    - **命令行参数**：（可选）输入要在 .msi 文件运行时应用到该文件的任意命令行参数。  例如 /q。 不要添加 msiexec 命令或参数（如 /i 或 /x），因为它们是自动使用的。 有关详细信息，请参阅[命令行选项](https://docs.microsoft.com/windows/desktop/Msi/command-line-options)。 如果 .MSI 文件需要其他命令行选项，请考虑使用 [Win32 应用管理](app-management.md)。
     - **类别**：选择一个或多个内置应用类别，或选择你创建的类别。 “类别”可让用户在浏览公司门户时更轻松地查找应用。
     - **在公司门户中将此应用显示为特色应用**：当用户浏览应用时，在公司门户的主页上突出显示应用。
     - **信息 URL**：（可选）输入包含此应用相关信息的网站的 URL。 此 URL 显示在公司门户中。
     - **隐私 URL**：（可选）输入包含此应用相关隐私信息的网站的 URL。 此 URL 显示在公司门户中。
     - **开发者**：（可选）输入应用开发者的名称。
-    - **所有者**：（可选）输入此应用的所有者的名称。 例如，“HR 部门”  。
+    - **所有者**：（可选）输入此应用的所有者的名称。 例如，“HR 部门”。
     - **备注**：输入想与此应用关联的任何备注。
     - **徽标**：上传与应用关联的图标。 用户浏览公司门户时，此图标将与应用一同显示。
-2. 单击“下一步”  以显示“作用域标记”  页面。
+2. 单击“下一步”以显示“作用域标记”页面。
 
 ## <a name="step-2---select-scope-tags-optional"></a>步骤 2 - 选择作用域标记（可选）
 
 可以使用作用域标记来确定谁可以在 Intune 中查看客户端应用信息。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-1. 单击“选择作用域标记”  可以选择为应用添加作用域标记。 
-2. 单击“下一步”以显示“分配”页面   。
+1. 单击“选择作用域标记”可以选择为应用添加作用域标记。 
+2. 单击“下一步”以显示“分配”页面 。
 
 ## <a name="step-3---assignments"></a>步骤 3 - 分配
 
-1. 为应用选择“必需”  、“适用于已注册的设备”  或“卸载”  组分配。 有关详细信息，请参阅[添加用于组织用户和设备的组](../fundamentals/groups-add.md)和[使用 Microsoft Intune 将应用分配到组](apps-deploy.md)。
-2. 单击“下一步”  以显示“查看 + 创建”页  。
+1. 为应用选择“必需”、“适用于已注册的设备”或“卸载”组分配。 有关详细信息，请参阅[添加用于组织用户和设备的组](../fundamentals/groups-add.md)和[使用 Microsoft Intune 将应用分配到组](apps-deploy.md)。
+2. 单击“下一步”以显示“查看 + 创建”页。
 
 ## <a name="step-4---review--create"></a>步骤 4 - 查看 + 创建
 
 1. 查看为应用输入的值和设置。
-2. 完成后，单击“创建”  将应用添加到 Intune。
+2. 完成后，单击“创建”将应用添加到 Intune。
 
-    将显示业务线应用的“概述”  边栏选项卡。
+    将显示业务线应用的“概述”边栏选项卡。
 
 你创建的应用现在显示在应用列表中。 从列表中，可以将应用分配到所选组。 如需帮助，请参阅[如何将应用分配到组](apps-deploy.md)。
 
@@ -105,7 +105,7 @@ ms.locfileid: "82166632"
 
 可以配置已知的自我更新移动 MSI 应用以忽略版本检查过程。
 
-某些基于 MSI 安装程序的应用会由应用开发者或其他更新方法自动更新。 对于这些自动更新的 MSI 应用，可以在“应用信息”  窗格中配置“忽略应用版本”  设置。 当此设置切换为“是”  时，Microsoft Intune 将不会强制执行在 Windows 客户端上安装的应用版本。
+某些基于 MSI 安装程序的应用会由应用开发者或其他更新方法自动更新。 对于这些自动更新的 MSI 应用，可以在“应用信息”窗格中配置“忽略应用版本”设置。 当此设置切换为“是”时，Microsoft Intune 将不会强制执行在 Windows 客户端上安装的应用版本。
 
 此功能有助于避免出现争用条件。 例如，当应用开发者自动更新应用并通过 Intune 更新时，就会出现争用条件。 两者都可能在 Windows 客户端上尝试强制执行一个应用版本，进而引发冲突。
 

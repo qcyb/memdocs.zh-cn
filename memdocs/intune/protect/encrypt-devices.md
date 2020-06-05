@@ -1,13 +1,13 @@
 ---
-title: 使用平台支持的加密方法加密设备
+title: 在 Intune 中通过 BitLocker 加密 Windows 10 设备
 titleSuffix: Microsoft Intune
-description: 使用内置加密方法（如 BitLocker 或 FileVault）加密设备，并在 Intune 门户中管理这些加密设备的恢复密钥。
+description: 使用 BitLocker 内置加密方法加密设备，并在 Intune 门户中管理这些加密设备的恢复密钥。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,114 +17,103 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322478"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989668"
 ---
-# <a name="use-device-encryption-with-intune"></a>使用 Intune 设备加密
+# <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>在 Intune 中管理适用于 Windows 10 的 BitLocker 策略
 
-使用 Intune 管理设备内置磁盘或驱动器加密以保护设备上的数据。
+使用 Intune 在运行 Windows 10 的设备上配置 BitLocker 磁盘加密。
 
-将磁盘加密配置为 Endpoint Protection 的设备配置配置文件的一部分。 Intune 支持以下平台和加密技术：
+运行 Windows 10 或更高版本的设备可以使用 BitLocker。 某些 BitLocker 设置要求设备具有受支持的 TPM。
 
-- macOS：FileVault
-- Windows 10 及更高版本：BitLocker
+使用以下策略类型之一在受管理设备上配置 BitLocker：
 
-Intune 还提供内置的[加密报表](encryption-monitor.md)，其中提供了有关所有受管理设备中的设备加密状态的详细信息。
+- [适用于 Windows 10 BitLocker 的终结点安全磁盘加密策略](#create-an-endpoint-security-policy-for-bitlocker)。 终结点安全中的 BitLocker 配置文件是专用于配置 BitLocker 的一组集中设置。
 
-## <a name="filevault-encryption-for-macos"></a>macOS 的 FileVault 加密
+  查看[磁盘加密策略中的 BitLocker 配置文件](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker)中可用的 BitLocker 设置。
 
-使用 Intune 在运行 macOS 的设备上配置 FileVault 磁盘加密。 然后，使用 Intune 加密报表查看这些设备的加密详细信息和管理 FileVault 加密设备的恢复密钥。
+- [用于 Windows 10 BitLocker 终结点保护的设备配置文件](#create-an-endpoint-security-policy-for-bitlocker)。 BitLocker 设置是 Windows 10 终结点保护的可用设置类别之一。
 
-若要使 FileVault 在设备上运行，需要用户批准的设备注册。 用户必须手动批准系统首选项中的管理配置文件，才能将注册视为用户批准。
+  查看[设备配置策略的终结点保护配置文件](../protect/endpoint-protection-windows-10.md#windows-settings)中可用的 BitLocker 设置。
 
-FileVault 是 macOS 附带的整盘加密程序。 可以使用 Intune 在运行 macOS 10.13 或更高版本的设备上配置 FileVault  。
+> [!TIP]
+> Intune 提供内置的[加密报告](encryption-monitor.md)，其中提供了有关所有受管理设备中的设备加密状态的详细信息。 在 Intune 使用 BitLocker 加密 Windows 10 设备之后，你可在查看 Intune 加密报告时查看和检索 BitLocker 恢复密钥。
+>
+> 还可以从设备访问 BitLocker 的重要信息，如 Azure Active Directory (Azure AD) 中所示。
+[加密报表](encryption-monitor.md)中提供了有关所有受管理设备中设备加密状态的详细信息。
 
-若要配置 FileVault，请为 macOS 平台创建用于 Endpoint Protection 的[设备配置配置文件](endpoint-protection-configure.md)。 FileVault 设置是 macOS Endpoint Protection 的可用设置类别之一。
+## <a name="permissions-to-manage-bitlocker"></a>用于管理 BitLocker 的权限
 
-创建使用 FileVault 加密设备的策略后，策略将分两个阶段应用于设备。 首先，准备好设备，以启用 Intune 检索和备份恢复密钥。 此操作称为“托管”。 托管密钥后，磁盘加密便可启动。
+若要在 Intune 中管理 BitLocker，你的帐户必须具有适用的 Intune [基于角色的访问控制](../fundamentals/role-based-access-control.md) (RBAC) 权限。
 
-![FileVault 设置](./media/encrypt-devices/filevault-settings.png)
+下面是 BitLocker 权限（“远程任务”类别的一部分）和授予权限的内置 RBAC 角色：
 
-如需深入了解可以使用 Intune 管理的 FileVault 设置，请参阅 Intune 文章中 macOS Endpoint Protection 设置的 [FileVault](endpoint-protection-macos.md#filevault)。
-
-### <a name="permissions-to-manage-filevault"></a>用于管理 FileVault 的权限
-
-若要在 Intune 中管理 FileVault，你的帐户必须具有适用的 Intune [基于角色的访问控制](../fundamentals/role-based-access-control.md) (RBAC) 权限。
-
-下面是 FileVault 权限（“远程任务”类别的一部分）和授予权限的内置 RBAC 角色  ：
- 
-- **获取 FileVault 密钥**：
-  - 支持人员操作员
-  - 终结点安全管理器
-
-- **轮换 FileVault 密钥**
+- 轮换 BitLocker 密钥
   - 支持人员操作员
 
-### <a name="how-to-configure-macos-filevault"></a>如何配置 macOS FileVault
+## <a name="create-and-deploy-policy"></a>创建和部署策略
+
+使用以下过程之一创建所需的策略类型。
+
+### <a name="create-an-endpoint-security-policy-for-bitlocker"></a>为 BitLocker 创建终结点安全策略
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“终结点安全” > “磁盘加密” > “创建策略”  。
 
 3. 设置下列选项:
+   1. **平台**：Windows 10 或更高版本
+   2. **配置文件**：BitLocker
 
-   - 平台：macOS
-   - 配置文件类型：Endpoint Protection
+   ![选择 BitLocker 配置文件](./media/encrypt-devices/select-windows-bitlocker-es.png)
 
-4. 选择“设置” > “FileVault”   。
+4. 在“配置设置”页上，根据业务需求配置 BitLocker 设置。  
 
-5. 对于 FileVault，请选择“启用”   。
+   如果要以无提示方式启用 BitLocker，请参阅本文中的[以无提示的方式在设备上启用 BitLocker](#silently-enable-bitlocker-on-devices)，了解其他先决条件以及必须使用的特定设置配置。
 
-6. 对于“恢复密钥类型”，仅支持“个人密钥”   。
+   选择“下一步”。
 
-   请考虑添加一条消息，以帮助指导最终用户检索其设备的恢复密钥。 使用个人恢复密钥轮换设置时，此信息对最终用户非常有用。通过该设置，可以定期自动为设备生成新的恢复密钥。
+5. 在“作用域标记”页上，选择“选择作用域标记”打开“选择标记”窗格，将作用域标记分配给配置文件 。
 
-   例如：若要检索丢失或最近轮换的恢复密钥，请从任意设备登录 Intune 公司门户网站。 在门户中，转到“设备”并选择已启用 FileVault 的设备，然后选择“获取恢复密钥”   。 系统会显示当前恢复密钥。
+   选择“下一步”继续操作。
 
-7. 配置其余 [FileVault 设置](endpoint-protection-macos.md#filevault)以满足业务需求，然后选择“确定”  。
+6. 在“分配”页上，选择将接收此配置文件的组。 有关分配配置文件的详细信息，请参阅“分配用户和设备配置文件”。
 
-  8. 完成其他设置配置，然后保存配置文件。  
+   选择“下一步”。
 
-### <a name="manage-filevault"></a>管理 FileVault
+7. 完成后，在“查看 + 创建”页上，选择“创建” 。 为创建的配置文件选择策略类型时，新配置文件将显示在列表中。
 
-在 Intune 使用 FileVault 加密 macOS 设备之后，你便可在查看 Intune [加密报表](encryption-monitor.md)时查看和管理 FileVault 恢复密钥。
-
-在 Intune 使用 FileVault 加密 macOS 设备后，你可以在任何设备上的 Web 公司门户中查看相应设备的个人恢复密钥。 在 Web 公司门户中，先选择已加密的 macOS 设备，再选择“获取恢复密钥”作为远程设备操作。
-
-### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>从 MEM 加密的 macOS 设备检索个人恢复密钥
-
-最终用户可以使用 iOS 公司门户应用、Android 公司门户应用或通过 Android Intune 应用检索其个人恢复密钥（FileVault 密钥）。 拥有个人恢复密钥的设备必须已注册 Intune，并且通过 Intune 使用 FileVault 加密。 使用 iOS 公司门户应用、Android 公司门户应用、Android Intune 应用或公司门户网站，最终用户可以看到访问其 Mac 设备所需的 FileVault  恢复密钥。 最终用户可以选择“设备”   > “加密并注册的 macOS 设备”   > “获取恢复密钥”  。 浏览器将显示 Web 公司门户并显示恢复密钥。 
-
-## <a name="bitlocker-encryption-for-windows-10"></a>适用于 Windows 10 的 BitLocker 加密
-
-使用 Intune 在运行 Windows 10 的设备上配置 BitLocker 磁盘加密。 然后，使用 Intune 加密报表查看这些设备的加密详细信息。 还可以从设备访问 BitLocker 的重要信息，如 Azure Active Directory (Azure AD) 中所示。
-
-BitLocker 适用于运行 Windows 10 或更高版本的设备  。
-
-为 Windows 10 或更高版本的平台创建用于 Endpoint Protection 的[设备配置配置文件](endpoint-protection-configure.md)时，请配置 BitLocker。 BitLocker 设置属于 Windows 10 Endpoint Protection 的 Windows 加密设置类别。
-
-![BitLocker 设置](./media/encrypt-devices/bitlocker-settings.png)
-
-### <a name="how-to-configure-windows-10-bitlocker"></a>如何配置 Windows 10 BitLocker
+### <a name="create-a-device-configuration-profile-for-bitlocker"></a>为 BitLocker 创建设备配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 
 3. 设置下列选项:
+   1. **平台**：Windows 10 及更高版本
+   2. **配置文件类型**：Endpoint Protection
 
-   - 平台：Windows 10 及更高版本
-   - 配置文件类型：Endpoint Protection
+   ![选择 BitLocker 配置文件](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
-4. 选择“设置” > “Windows Encryption”   。
+4. 选择“设置” > “Windows Encryption” 。
 
-5. 配置 BitLocker 的设置以满足你的业务需求，然后选择“确定”  。
+   ![BitLocker 设置](./media/encrypt-devices/bitlocker-settings.png)
 
-6. 完成其他设置配置，然后保存配置文件。
+5. 根据业务需求配置 BitLocker 设置。
+
+   如果要以无提示方式启用 BitLocker，请参阅本文中的[以无提示的方式在设备上启用 BitLocker](#silently-enable-bitlocker-on-devices)，了解其他先决条件以及必须使用的特定设置配置。
+
+6. 选择“确定”。
+
+7. 完成其他设置配置，然后保存配置文件。
+
+## <a name="manage-bitlocker"></a>管理 BitLocker
+
+若要查看有关接收 BitLocker 策略的设备的信息，请参阅[监视磁盘加密](../protect/encryption-monitor.md)。 查看加密报告时，还可以查看和检索 BitLocker 恢复密钥。
 
 ### <a name="silently-enable-bitlocker-on-devices"></a>以无提示的方式在设备上启用 BitLocker
 
@@ -139,22 +128,35 @@ BitLocker 适用于运行 Windows 10 或更高版本的设备  。
 
 **BitLocker 策略配置**：
 
-[BitLocker 基本设置](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings)的以下两个设置必须在 BitLocker 策略中进行配置：
+*BitLocker 基本设置*的以下两个设置必须在 BitLocker 策略中进行配置：
 
-- **其他磁盘加密的警告** = 阻止  。
-- **允许标准用户在 Azure AD 加入期间启用加密** = 允许 
+- **其他磁盘加密的警告** = 阻止。
+- **允许标准用户在 Azure AD 加入期间启用加密** = 允许
 
-BitLocker 策略不得要求使用启动 PIN 或启动密钥  。 需要 TPM 启动 PIN 或启动密钥时，BitLocker 无法以无提示的方式启用，并且需要与最终用户交互  。  通过同一策略中的以下三个 [BitLocker OS 驱动器设置](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings)可以满足此要求：
+BitLocker 策略不得要求使用启动 PIN 或启动密钥。 需要 TPM 启动 PIN 或启动密钥时，BitLocker 无法以无提示的方式启用，并且需要与最终用户交互。  通过同一策略中的以下三个 *BitLocker OS 驱动器设置*可以满足此要求：
 
-- 兼容的 TPM 启动 PIN 不得设置为需要使用 TPM 的启动 PIN  
-- 兼容的 TPM 启动密钥不得设置为需要使用 TPM 的启动密钥  
-- 兼容的 TPM 启动密钥和 PIN 不得设置为需要使用 TPM 的启动密钥和 PIN  
+- 兼容的 TPM 启动 PIN 不得设置为需要使用 TPM 的启动 PIN
+- 兼容的 TPM 启动密钥不得设置为需要使用 TPM 的启动密钥
+- 兼容的 TPM 启动密钥和 PIN 不得设置为需要使用 TPM 的启动密钥和 PIN
 
+### <a name="view-details-for-recovery-keys"></a>查看有关恢复密钥的详细信息
 
+Intune 提供了对 BitLocker 的 Azure AD 边栏选项卡的访问权限，以便你能够在 Intune 门户中查看 Windows 10 设备的 BitLocker 密钥 ID 和恢复密钥。 为了能够访问，设备必须将其密钥托管到 Azure AD。
 
-### <a name="manage-bitlocker"></a>管理 BitLocker
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-在 Intune 使用 BitLocker 加密 Windows 10 设备之后，你便可在查看 Intune [加密报表](encryption-monitor.md)时查看和检索 BitLocker 恢复密钥。
+2. 选择“设备” > “所有设备” 。
+
+3. 选择列表中的设备，然后在“监视”下，选择“恢复密钥”。
+  
+   如果 Azure AD 中有密钥，将提供以下信息：
+   - BitLocker 密钥 ID
+   - BitLocker 恢复密钥
+   - 驱动器类型
+
+   如果 Azure AD 中没有密钥，Intune 将显示“未找到此设备的 BitLocker 密钥”。
+
+使用 [BitLocker 配置服务提供程序](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) 获取 BitLocker 的信息。 Windows 10 1703 版本和更高版本，以及 Windows 10 专业版 1809 版本和更高版本支持 BitLocker CSP。
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker 恢复密码轮转
 
@@ -168,28 +170,24 @@ BitLocker 策略不得要求使用启动 PIN 或启动密钥  。 需要 TPM 启
 
 - Azure AD 加入和混合加入的设备必须启用密码轮转支持：
 
-  - 客户端驱动的恢复密码轮转 
+  - 客户端驱动的恢复密码轮转
 
-  此设置位于“Windows 加密”下，是 Windows 10 终结点保护设备配置策略的一部分  。
-  
+  此设置位于“Windows 加密”下，是 Windows 10 终结点保护设备配置策略的一部分。
+
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>BitLocker 恢复密码轮转
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备” > “所有设备”   。
+2. 选择“设备” > “所有设备” 。
 
-3. 在所管理的设备列表中，选择一个设备，选择“更多”  ，然后选择“BitLocker 密码轮转”  设备远程操作。
+3. 在所管理的设备列表中，选择一个设备，选择“更多”，然后选择“BitLocker 密码轮转”设备远程操作。
+
+4. 在设备的“概述”页面上，选择“BitLocker 密钥轮换”。 如果此选项未显示，请选择省略号 (…) 以显示更多选项，然后选择“BitLocker 密钥轮换”设备远程操作。
+
+   ![选择省略号以查看更多选项](./media/encrypt-devices/select-more.png)
 
 ## <a name="next-steps"></a>后续步骤
 
-创建[设备符合性](compliance-policy-create-windows.md)策略。
+[管理 FileVault 策略](../protect/encrypt-devices-filevault.md)
 
-使用加密报表管理以下内容：
-
-- [BitLocker 恢复密钥](encryption-monitor.md#bitlocker-recovery-keys)
-- [FileVault 恢复密钥](encryption-monitor.md#filevault-recovery-keys)
-
-查看可以使用 Intune 配置的加密设置：
-
-- [BitLocker](endpoint-protection-windows-10.md#windows-encryption)
-- [FileVault](endpoint-protection-macos.md#filevault)
+[监视磁盘加密](../protect/encryption-monitor.md)

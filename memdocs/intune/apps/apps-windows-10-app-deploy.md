@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079308"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985925"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>使用 Microsoft Intune 部署 Windows 10 应用 
 
@@ -75,8 +75,8 @@ Microsoft Intune 支持 Windows 10 设备上的各种应用类型和部署方案
 为适用于企业的 Microsoft Store 应用分类： 
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“应用”   > “所有应用”  。 
-3. 选择适用于企业的 Microsoft Store 应用。 然后选择“属性”   > “应用信息”   > “类别”  。 
+2. 选择“应用” > “所有应用”。 
+3. 选择适用于企业的 Microsoft Store 应用。 然后选择“属性” > “应用信息” > “类别”。 
 4. 选择类别。
 
 ## <a name="install-apps-on-windows-10-devices"></a>在 Windows 10 设备上安装应用
@@ -92,7 +92,9 @@ Microsoft Intune 支持 Windows 10 设备上的各种应用类型和部署方案
 > [!NOTE]
 > 对于构建为“双模式”应用的 Win32 应用，管理员必须选择该应用充当与该实例关联的所有分配的“用户模式”还是“计算机模式”应用。 无法更改每个分配的部署上下文。  
 
-只有在设备和 Intune 应用类型支持的情况下，才能在设备上下文中安装应用。 可以在设备上下文中安装以下应用类型，并将这些应用分配给设备组：
+只有在设备和 Intune 应用类型支持的情况下，才能在设备上下文中安装应用。 Windows 10 桌面和 Teams 设备（如 Surface Hub）支持设备上下文安装。 运行 Windows Holographic for Business 的设备（例如 Microsoft HoloLens）不支持此功能。
+
+可以在设备上下文中安装以下应用类型，并将这些应用分配给设备组：
 
 - Win32 应用
 - 获得许可的适用于企业的 Microsoft Store 脱机应用

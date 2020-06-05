@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e92315377a839a537dfc4c2da00d282d2cddf58f
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359358"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429089"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>在 Microsoft Intune 中使用适用于 macOS 设备的自定义设置
 
@@ -39,26 +39,26 @@ ms.locfileid: "80359358"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-[创建配置文件](custom-settings-configure.md)。
+[创建 macOS 自定义配置文件](custom-settings-configure.md)。
 
 ## <a name="what-you-need-to-know"></a>须知内容
 
-- 使用 Apple 配置器创建配置文件时，请确保导出的设置与设备上的 macOS 版本兼容  。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考”   。
+- 使用 Apple 配置器创建配置文件时，请确保导出的设置与设备上的 macOS 版本兼容。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考” 。
 
-- 使用 Apple 配置文件管理器时，请务必  ：
+- 使用 Apple 配置文件管理器时，请务必：
 
   - 在配置文件管理器中启用[移动设备管理](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C)。
   - 在配置文件管理器中添加 [macOS 设备](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984)。
-  - 在配置文件管理器中添加设备后，转到“在库之下” > “设备”>“选择设备”>“设置”    。 输入设备的常规、安全性、隐私、目录和证书设置。
+  - 在配置文件管理器中添加设备后，转到“在库之下” > “设备”>“选择设备”>“设置”  。 输入设备的常规、安全性、隐私、目录和证书设置。
 
     下载并保存此文件。 需在 Intune 配置文件中输入此文件。 
 
-  - 请确保从 Apple 配置文件管理器导出的设置与设备上的 macOS 版本兼容。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考”   。
+  - 请确保从 Apple 配置文件管理器导出的设置与设备上的 macOS 版本兼容。 有关如何解决不兼容设置的信息，请在 [Apple 开发人员](https://developer.apple.com/)网站上搜索“配置文件参考”和“移动设备管理协议参考” 。
 
 ## <a name="custom-configuration-profile-settings"></a>自定义配置文件设置
 
-- **自定义配置文件名称**：输入策略的名称。 此名称将在设备上和 Intune 状态中显示。
-- **配置的配置文件**：浏览到使用 Apple Configurator 或 Apple 配置文件管理器创建的配置文件。 已导入的文件显示在“文件内容”区域中  。
+- **配置文件名称**：输入策略的名称。 此名称将在设备上和 Intune 状态中显示。
+- **配置的配置文件**：浏览到使用 Apple Configurator 或 Apple 配置文件管理器创建的 `.xml` 或 `.mobileconfig` 文件。 文件最大为 1000000 字节（不到 1 MB）。 将显示导入的文件。 添加文件后，也可以删除文件。
 
   还可以将设备令牌添加到 `.mobileconfig` 文件中。 设备令牌用于添加特定于设备的信息。 例如，若要显示序列号，请输入 `{{serialnumber}}`。 在设备上，显示的文本类似于每个设备的唯一 `123456789ABC`。 输入变量时，请务必使用大括号 `{{ }}`。 [应用配置令牌](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)包含可用变量的列表。 还可以使用 `deviceid` 或任何其他特定于设备的值。
 
@@ -67,6 +67,6 @@ ms.locfileid: "80359358"
 
 ## <a name="next-steps"></a>后续步骤
 
-此时，配置文件创建完成，但它可能尚未执行任何操作。 下一步，[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
+[分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
 [在 iOS/iPadOS 设备上创建自定义配置文件](custom-settings-ios.md)。

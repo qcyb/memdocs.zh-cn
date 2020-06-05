@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325139"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983087"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>使用 Intune 远程锁定设备
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-“远程锁定”设备操作将锁定该设备  。 设备所有者必须输入其密码才能解锁设备。 可远程锁定已设置 PIN 或密码的设备。 不能远程锁定没有 PIN 或密码的设备。
+“远程锁定”设备操作将锁定该设备。 设备所有者必须输入其密码才能解锁设备。 可远程锁定已设置 PIN 或密码的设备。 不能远程锁定没有 PIN 或密码的设备。
 
 ## <a name="supported-platforms"></a>受支持的平台
 
-以下平台支持远程锁定  ：
+以下平台支持远程锁定：
 
 - Android
 - Android 企业展台设备
@@ -41,19 +41,20 @@ ms.locfileid: "80325139"
 - Windows 10 移动版
 - Windows Phone 8.1 及更高版本
 
-以下平台不支持远程锁定  ：
+以下平台不支持远程锁定：
 - Windows 10 桌面版
 
 > [!NOTE]
-> 对于 macOS 设备，请设置一个 6 位数的恢复 PIN。 设备锁定时，“设备概述”会显示 PIN，直到发送另一个设备操作  。
+> 对于 macOS 设备，请设置一个 6 位数的恢复 PIN。 设备锁定时，“设备概述”会显示 PIN，直到发送另一个设备操作。 请确保记下该 PIN，因为它仅在远程锁定命令发送后 7 天内可用。 7 天后，Intune 将不再具有该 PIN。 此外，不要对同一设备再次启动此命令，直至使用原始 PIN 来成功解锁设备。 应发送此命令，记下 PIN，在使用它成功进入 macOS 设备之前，不再将此命令发送到同一设备。  
+
 
 ## <a name="remote-lock-a-device"></a>远程锁定设备
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“设备” > “所有设备”。
-4. 在设备列表中选择一个设备，然后选择“远程锁定”操作  。
+3. 选择“设备” > “所有设备” 。
+4. 在设备列表中选择一个设备，然后选择“远程锁定”操作。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要查看此操作的状态，请选择“Microsoft Intune” > “设备” > “设备操作”。 
+- 若要查看此操作的状态，请选择“Microsoft Intune” > “设备” > “设备操作”  。 
 - 有关有助于管理设备的其他操作，请参阅[可用操作](device-management.md)。

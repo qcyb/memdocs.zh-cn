@@ -1,12 +1,12 @@
 ---
 title: 使用 Microsoft Intune 创建 iOS/iPadOS 或 macOS 设备配置文件 - Azure | Microsoft Docs
-description: 使用 Microsoft Intune 添加或创建 iOS、iPadOS 或 macOS 设备配置文件，再配置 AirPrint 设置、主屏幕布局、应用通知、共享设备、单一登录和 Web 内容筛选器设置。
+description: 添加或创建 iOS、iPadOS 或 macOS 设备配置文件。 在 Microsoft Intune 中配置 AirPrint 设置、主屏幕布局、应用通知、共享设备、单一登录和 Web 内容筛选器设置。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/06/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943801"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989190"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>使用 Intune 添加 iOS、iPadOS 或 macOS 设备功能设置
 
@@ -54,7 +54,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 ## <a name="app-notifications"></a>应用通知
 
-选择 iOS 和 iPadOS 设备上的应用接收通知的方式。 例如，从 Intune 发送应用通知，然后在通知中心、锁屏界面上显示它们，或发出提示音。
+选择 iOS 和 iPadOS 设备上的应用接收通知的方式。 例如，发送应用通知，使它们在通知中心、锁屏界面上显示，或发出提示音。
 
 有关可以在 Intune 中配置的设置列表信息，请参阅 [iOS/iPadOS 上的应用通知](ios-device-features-settings.md#app-notifications)。
 
@@ -86,8 +86,8 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 这些设置配置 iOS 和 iPadOS 设备的停靠面板和主屏幕中的应用布局和文件夹。 你可以：
 
-- 使用“停靠面板”设置将应用或文件夹添加到屏幕。  例如，在设备停靠面板上显示 Safari 和邮件应用。
-- 添加要在主屏幕上显示的页面，以及要在每个页面上显示的应用。  例如，添加 Contoso 页，并在此页面上添加设置应用。 
+- 使用“停靠面板”设置将应用或文件夹添加到屏幕。 例如，在设备停靠面板上显示 Safari 和邮件应用。
+- 添加要在主屏幕上显示的页面，以及要在每个页面上显示的应用。 例如，添加 Contoso 页，并在此页面上添加设置应用。
 
 有关可以在 Intune 中配置的设置列表信息，请参阅 [iOS/iPadOS 上的主屏幕布局](ios-device-features-settings.md#home-screen-layout)。
 
@@ -161,19 +161,19 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 有关开发 SSO 应用扩展的详细信息，请观看 Apple 网站上的[可扩展的企业 SSO](https://developer.apple.com/videos/play/tech-talks/301)。 若要阅读 Apple 的功能说明，请访问[“单一登录扩展”有效负载设置](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web)。 
 
 > [!NOTE]
-> 单一登录应用扩展功能不同于单一登录功能：  
+> 单一登录应用扩展功能不同于单一登录功能： 
 >
-> - “单一登录应用扩展”设置适用于 iPadOS 13.0、iOS 13.0 和 macOS 10.15（以及它们的更高版本）  。 单一登录设置适用于 iPadOS 13.0（以及更高版本）和 iOS 7.0 以及更高版本。 
+> - “单一登录应用扩展”设置适用于 iPadOS 13.0、iOS 13.0 和 macOS 10.15（以及它们的更高版本）。 单一登录设置适用于 iPadOS 13.0（以及更高版本）和 iOS 7.0 以及更高版本。
 >
-> - “单一登录应用扩展”设置定义了供标识提供者或组织使用的扩展，以提供无缝的企业登录体验  。 “单一登录”设置定义了有关用户访问服务器或应用时的 Kerberos 帐户信息  。
+> - “单一登录应用扩展”设置定义了供标识提供者或组织使用的扩展，以提供无缝的企业登录体验。 “单一登录”设置定义了有关用户访问服务器或应用时的 Kerberos 帐户信息。
 >
-> - 单一登录应用扩展使用 Apple 操作系统进行身份验证。  因此，它可能会提供比单一登录  更棒的最终用户体验。
+> - 单一登录应用扩展使用 Apple 操作系统进行身份验证。 因此，它可能会提供比单一登录更棒的最终用户体验。
 >
-> - 从开发角度而言，使用单一登录应用扩展，你可以使用任意类型的重定向 SSO 或凭据 SSO 身份验证  。 使用单一登录时，只可以使用 Kerberos SSO 身份验证。 
+> - 从开发角度而言，使用单一登录应用扩展，你可以使用任意类型的重定向 SSO 或凭据 SSO 身份验证。 使用单一登录时，只可以使用 Kerberos SSO 身份验证。
 >
-> - Kerberos 单一登录应用扩展由 Apple 开发，内置于 iOS/iPadOS 13.0 + 和 macOS 10.15 + 平台中  。 内置的 Kerberos 扩展可用于将用户登录到支持 Kerberos 身份验证的本机应用和网站。 单一登录不是 Kerberos 的 Apple 实现  。
+> - Kerberos 单一登录应用扩展由 Apple 开发，内置于 iOS/iPadOS 13.0 + 和 macOS 10.15 + 平台中。 内置的 Kerberos 扩展可用于将用户登录到支持 Kerberos 身份验证的本机应用和网站。 单一登录不是 Kerberos 的 Apple 实现。
 >
-> - 内置的 Kerberos 单一登录应用扩展可以像单一登录一样处理网页和应用的 Kerberos 质询   。 不过，内置的 Kerberos 扩展支持密码更改，并且在企业网络中效果更佳。 在 Kerberos 单一登录应用扩展和单一登录之间进行选择时，由于扩展可以提高性能和功能，因此我们建议使用前者   。
+> - 内置的 Kerberos 单一登录应用扩展可以像单一登录一样处理网页和应用的 Kerberos 质询 。 不过，内置的 Kerberos 扩展支持密码更改，并且在企业网络中效果更佳。 在 Kerberos 单一登录应用扩展和单一登录之间进行选择时，由于扩展可以提高性能和功能，因此我们建议使用前者 。
 
 适用于：
 
@@ -206,7 +206,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
 
     - **平台**：选择设备平台。 选项包括：  
@@ -214,31 +214,31 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
         - **iOS/iPadOS**
         - **macOS**
 
-    - **配置文件**：选择“设备功能”  。
+    - **配置文件**：选择“设备功能”。
 
-4. 选择“创建”。 
-5. 在“基本信息”  中，输入以下属性：
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”  。
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”。
     - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”  。
+6. 选择“下一步”。
 
-7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
+7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-8. 选择“下一步”  。
-9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+8. 选择“下一步”。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 ## <a name="next-steps"></a>后续步骤
 

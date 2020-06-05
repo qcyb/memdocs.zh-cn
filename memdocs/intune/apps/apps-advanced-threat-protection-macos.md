@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24938f85cf85e9c5934a0e26029ec2ccfc5c33a7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324660"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989451"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 将 Microsoft Defender ATP 添加到 macOS 设备
 
@@ -34,20 +34,20 @@ ms.locfileid: "80324660"
 - 使用 Intune 部署内核扩展。 有关详细信息，请参阅[ Intune 添加 macOS 内核扩展](../configuration/kernel-extensions-overview-macos.md)。
 
 > [!IMPORTANT]
-> 只有在安装 Microsoft Defender ATP 应用之前设备上存在内核扩展时，才能自动批准该扩展。 否则，用户将看到 Mac 上的“系统扩展受阻”的消息，并且必须通过转到“安全首选项”或“系统首选项” > “安全和隐私”，然后选择“允许”才能批准该扩展     。 有关详细信息，请参阅[排查 Microsoft Defender ATP for Mac 中的内核扩展问题](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext)。
+> 只有在安装 Microsoft Defender ATP 应用之前设备上存在内核扩展时，才能自动批准该扩展。 否则，用户将看到 Mac 上的“系统扩展受阻”的消息，并且必须通过转到“安全首选项”或“系统首选项” > “安全和隐私”，然后选择“允许”才能批准该扩展   。 有关详细信息，请参阅[排查 Microsoft Defender ATP for Mac 中的内核扩展问题](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext)。
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>将 Microsoft Defender ATP 添加到 Intune
 可以使用以下步骤将 Microsoft Defender ATP 添加到 Intune：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“应用”   > “所有应用”   > “添加”  。
-3. 在 Microsoft Defender ATP 下的“应用类型”列表中，选择“macOS”    。
+2. 选择“应用” > “所有应用” > “添加”。
+3. 在 Microsoft Defender ATP 下的“应用类型”列表中，选择“macOS”  。
 
 ## <a name="configure-app-information"></a>配置应用信息
 在此步骤中，提供有关此应用部署的信息。 此信息可帮助你在 Intune 中标识应用，还可帮助用户在公司门户中找到该应用。
 
-1. 单击“应用信息”以显示“应用信息”窗格   。
-2. 在“应用信息”窗格中，提供有关此应用部署的信息  。 此信息可帮助你在 Intune 中标识应用，还可帮助用户在公司门户中找到该应用。
+1. 单击“应用信息”以显示“应用信息”窗格 。
+2. 在“应用信息”窗格中，提供有关此应用部署的信息。 此信息可帮助你在 Intune 中标识应用，还可帮助用户在公司门户中找到该应用。
     - **名称**：输入应用的名称，该名称将显示在公司门户中。 请确保所有名称都是唯一的。 如果同一应用名称存在两次，则在公司门户中将仅向用户显示其中一个应用。
     - **描述**：输入应用的描述。 例如，可以在描述中列出目标用户。
     - **发布者**：Microsoft 显示为发布者。
@@ -58,17 +58,17 @@ ms.locfileid: "80324660"
     - **开发者**：Microsoft 显示为开发者。
     - **所有者**：Microsoft 显示为所有者。
     - **备注**：（可选）输入要与此应用关联的任何备注。
-3. 选择“确定”  。
+3. 选择“确定”。
 
 ## <a name="select-scope-tags-optional"></a>选择作用域标记（可选）。
 可以使用作用域标记来确定谁可以在 Intune 中查看客户端应用信息。 若要详细了解作用域标记，请参阅将基于角色的访问控制和作用域标记用于分布式 IT。
-1.    选择“作用域(标记)”   >   “添加”。
-2.    使用“选择”  框搜索作用域标记。
+1.    选择“作用域(标记)” > “添加”。
+2.    使用“选择”框搜索作用域标记。
 3.    选中要分配到此应用的作用域标记旁边的复选框。
-4.    单击“选择” > “确认”   。
+4.    单击“选择” > “确认” 。
 
 ## <a name="add-the-app"></a>添加应用
-完成配置后，从“应用”窗格中选择“添加”   。 
+完成配置后，从“应用”窗格中选择“添加” 。 
 
 此时，已创建的应用显示在应用列表中，可在此列表中将其分配到选择的组。 
 
@@ -76,7 +76,7 @@ ms.locfileid: "80324660"
 > 当前，Apple 没有提供通过 Intune 在 macOS 设备上卸载 Microsoft Defender ATP 的方法。
 
 ## <a name="next-steps"></a>后续步骤
-- 若要了解如何在 macOS 设备上配置 Microsoft Defender ATP，请参阅[在 macOS 设备上配置 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-preferences)。
+- 要了解如何在 Intune 中为终结点安全应用防病毒策略，请参阅 [Intune 中终结点安全的防病毒策略](../protect/endpoint-security-antivirus-policy.md) 
 - 要了解从用户组添加和排除应用分配，请参阅[添加和排除应用分配](apps-inc-exl-assignments.md)。
-- [将应用分配给组](apps-deploy.md)
+- 要了解如何将应用分配给 Intune 中的组，请参阅[将应用分配给组](apps-deploy.md)。
 

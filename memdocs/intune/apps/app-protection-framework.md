@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182287"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853564"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用应用保护策略的数据保护框架 
 
@@ -55,7 +55,7 @@ Microsoft 建议对 APP 数据保护框架采用以下部署圈方法：
 
 测试对 APP 进行的更改时，请注意[交付时间](app-protection-policy-delivery.md)。 可以监视针对给定用户的 APP 交付状态。 有关详细信息，请参阅[如何监视应用保护策略](app-protection-policies-monitor.md)。
 
-可以使用 Edge 和 URL about:Intunehelp  ，在设备上验证每个应用的单独 APP 设置。 有关详细信息，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)和[结合使用 Microsoft Edge 和 Microsoft Intune 来管理 Web 访问](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)。
+可以使用 Edge 和 URL about:Intunehelp，在设备上验证每个应用的单独 APP 设置。 有关详细信息，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)和[使用适用于 iOS 和 Android 的 Microsoft Edge 访问托管的应用日志](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 
 ## <a name="app-data-protection-framework-settings"></a>APP 数据保护框架设置
 
@@ -64,7 +64,7 @@ Microsoft 建议对 APP 数据保护框架采用以下部署圈方法：
 Microsoft 建议对使用方案进行查看和分类，然后使用针对该级别的规范性指导配置用户。 与任何框架一样，相应级别中的设置可能需要基于组织的需要进行调整，因为数据保护必须评估威胁环境、风险偏好以及对可用性的影响。  
 
 ### <a name="conditional-access-policies"></a>条件访问策略
-为了确保只有支持应用保护策略的应用才能访问工作或学校帐户数据，必须使用 Azure Active Directory 条件访问策略。 请参阅“方案1：  Office 365 应用需要批准的应用和应用保护策略”（位于[需要应用保护策略，才能使用条件访问进行云应用访问](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)中），了解实现特定策略的步骤。
+为了确保只有支持应用保护策略的应用才能访问工作或学校帐户数据，必须使用 Azure Active Directory 条件访问策略。 请参阅“方案1：Office 365 应用需要批准的应用和应用保护策略”（位于[需要应用保护策略，才能使用条件访问进行云应用访问](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)中），了解实现特定策略的步骤。
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>要包含在应用保护策略中的应用  
 
@@ -140,7 +140,7 @@ Microsoft 建议对使用方案进行查看和分类，然后使用针对该级�
 
 对于用户访问更敏感信息的设备，级别 2 是建议作为其标准的数据保护配置。 这些设备如今是企业中的自然目标。 这些建议并不假设有大量的高技能安全从业人员，因此大多数企业组织都应该可使用这些建议。 此配置通过限制数据传输方案以及要求最低操作系统版本来扩展级别 1 中的配置。
 
-级别 2 中实施的策略设置包括针对级别 1 建议的所有策略设置，仅添加或更新以下策略设置，以实现比级别 1 更多的控制和更复杂的配置。 尽管这些设置可能会对用户或应用程序产生稍高的影响，但它们会实施与在移动设备上访问敏感信息的用户所面临的风险更为相称的数据保护级别。
+级别 2 中实施的策略设置包括针对级别 1 建议的所有策略设置，但仅列出了已添加或已更改的以下设置，以实现比级别 1 更多的控制和更复杂的配置。 尽管这些设置可能会对用户或应用程序产生稍高的影响，但它们会实施与在移动设备上访问敏感信息的用户所面临的风险更为相称的数据保护级别。
 
 #### <a name="data-protection"></a>数据保护
 
@@ -159,15 +159,15 @@ Microsoft 建议对使用方案进行查看和分类，然后使用针对该级�
 
 | 设置 | 设置描述 |          值/操作  |          平台        | 注意 |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 设备条件  |       最低 OS 版本  |          格式：主要版本号.次要版本号.内部版本号 <br>示例：  12.4.6 / 阻止访问 |          iOS/iPadOS        | Microsoft 建议配置最低 iOS 主要版本，以便与 Microsoft 应用支持的 iOS 版本匹配。   Microsoft 应用支持 N-1 方法，其中 N 是当前 iOS 主要发行版本。 对于次要版本和内部版本值，Microsoft 建议确保设备通过相应的安全更新保持最新状态。 请参阅 [Apple 安全更新](https://support.apple.com/en-us/HT201222)以获取 Apple 的最新建议 |
-| 设备条件  |       最低 OS 版本  |          格式：主要版本号.次要版本号<br>   示例：  5.0 / 阻止访问   |          Android        | Microsoft 建议配置最低 Android 主要版本，以便与 Microsoft 应用支持的 Android 版本匹配。 遵循 Android Enterprise 建议要求的 OEM 和设备必须支持当前交付版本 + 一个字母升级。   当前，Android 建议对知识工作者使用 Android 8.0 及更高版本。   请参阅 [Android Enterprise 建议要求](https://www.android.com/enterprise/recommended/requirements/)以了解 Android 的最新建议 |
+| 设备条件  |       最低 OS 版本  |          *格式：主要版本号.次要版本号.内部版本号 <br>示例：* 12.4.6 / 阻止访问 |          iOS/iPadOS        | Microsoft 建议配置最低 iOS 主要版本，以便与 Microsoft 应用支持的 iOS 版本匹配。   Microsoft 应用支持 N-1 方法，其中 N 是当前 iOS 主要发行版本。 对于次要版本和内部版本值，Microsoft 建议确保设备通过相应的安全更新保持最新状态。 请参阅 [Apple 安全更新](https://support.apple.com/en-us/HT201222)以获取 Apple 的最新建议 |
+| 设备条件  |       最低 OS 版本  |          *格式：主要版本号.次要版本号<br>   示例：* 5.0 / 阻止访问   |          Android        | Microsoft 建议配置最低 Android 主要版本，以便与 Microsoft 应用支持的 Android 版本匹配。 遵循 Android Enterprise 建议要求的 OEM 和设备必须支持当前交付版本 + 一个字母升级。   当前，Android 建议对知识工作者使用 Android 8.0 及更高版本。   请参阅 [Android Enterprise 建议要求](https://www.android.com/enterprise/recommended/requirements/)以了解 Android 的最新建议 |
 | 设备条件  |       最低修补程序版本  |          *格式： YYYY-MM-DD <br> 示例：2020-01-01*/阻止访问  |          Android        | Android 设备可以接收每月安全修补程序，但发布依赖于 OEM 和/或运营商。 组织应确保已部署的 Android 设备在实现此设置之前收到安全更新。 有关最新修补程序版本，请参阅 [Android 安全公告](https://source.android.com/security/bulletin/)。  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>级别 3 企业高数据保护 
 
 对于具有大型和复杂安全组织的组织，或者对于将作为对手唯一目标的特定用户和组，级别 3 是建议作为标准的数据保护配置。 这类组织通常是资金雄厚且经验丰富的对手的目标，因此值得实施所介绍的其他约束和控制。 此配置通过限制其他数据传输方案、增加 PIN 配置的复杂性以及添加移动威胁检测，来扩展级别 2 中的配置。  
 
-级别 3 中实施的策略设置包括针对级别 2 和 1 建议的所有策略设置，仅添加或更新以下策略设置，以实现严格数据保护配置和控制。 这些策略设置可能会对用户或应用程序造成显著影响，从而实施与目标组织所面临的风险相称的安全级别。  
+级别 3 中实施的策略设置包括针对级别 2 建议的所有策略设置，但仅列出了已添加或已更改的以下设置，以实现比级别 2 更多的控制和更复杂的配置。 这些策略设置可能会对用户或应用程序造成显著影响，从而实施与目标组织所面临的风险相称的安全级别。  
 
 #### <a name="data-protection"></a>数据保护
 
@@ -176,7 +176,7 @@ Microsoft 建议对使用方案进行查看和分类，然后使用针对该级�
 | 数据传输 |       从其他应用接收数据  |          策略托管应用  |          iOS/iPadOS、Android         |  |
 | 数据传输 |       第三方键盘  |          阻止  |          iOS/iPadOS        | 在 iOS 上，这会阻止所有第三方键盘在应用中正常工作。  |
 | 数据传输 |       批准的键盘  |          要求  |          Android        | 使用 Android 时，必须选择键盘，才能基于已部署的 Android 设备进行使用。  |
-| 数据传输 |       选择待批准的键盘  |          添加/删除键盘   |          Android        | 使用 Android 时，必须选择键盘，才能基于已部署的 Android 设备进行使用。  |
+| 数据传输 |       选择待批准的键盘  |          添加/删除键盘  |          Android        | 使用 Android 时，必须选择键盘，才能基于已部署的 Android 设备进行使用。  |
 | 功能 |       打印组织数据  |          阻止  |          iOS/iPadOS、Android         |  |
 
 #### <a name="access-requirements"></a>访问要求

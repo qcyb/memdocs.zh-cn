@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326623"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791746"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>通过 Intune 管理和使用 Windows Holographic 和 HoloLens 设备上的不同设备管理功能
 
@@ -60,7 +60,7 @@ Intune 提供了公司门户应用，用户可使用该应用访问公司数据�
 
 符合性策略即设备为符合要求必须满足的规则和设置。 可以将这些策略与条件访问结合使用，阻止不符合要求的设备访问公司资源。 在 Intune 中可以为运行 Windows Holographic for Business 的设备创建符合性策略，从而允许或阻止其访问权限。 例如，可以创建一个要求启用 BitLocker 的策略。
 
-另请参阅[设备符合性策略入门](../protect/device-compliance-get-started.md)  。
+另请参阅[设备符合性策略入门](../protect/device-compliance-get-started.md)。
 
 ## <a name="deploy-and-manage-apps"></a>部署和管理应用
 
@@ -91,11 +91,11 @@ Intune 具有一些内置操作，允许 IT 管理员在本地设备上执行不
 
 使用运行 Windows Holographic for Business 的设备时，可使用以下操作： 
 
-- **[擦除](../remote-actions/devices-wipe.md#wipe)** ：执行“擦除”  操作可以从 Intune 中删除设备，并将设备还原回出厂默认设置。 请在将设备交给新用户之前或设备丢失或被盗时使用此操作。
+- **[擦除](../remote-actions/devices-wipe.md#wipe)** ：执行“擦除”操作可以从 Intune 中删除设备，并将设备还原回出厂默认设置。 请在将设备交给新用户之前或设备丢失或被盗时使用此操作。
 
-- **[停用](../remote-actions/devices-wipe.md#retire)** ：执行“停用”  操作可以从 Intune 中删除设备。 此外，它还会删除 Intune 分配的托管应用数据、设置和电子邮件配置文件。 用户的个人数据保留在设备上。
+- **[停用](../remote-actions/devices-wipe.md#retire)** ：执行“停用”操作可以从 Intune 中删除设备。 此外，它还会删除 Intune 分配的托管应用数据、设置和电子邮件配置文件。 用户的个人数据保留在设备上。
 
-- **[同步设备以获取最新策略和操作](../remote-actions/device-sync.md)** ：执行“同步”  操作可以强制设备立即使用 Intune 签入。 当设备签入时，该设备会立即收到分配给自己的任何挂起的操作或策略。 此功能有助于验证和对已分配的策略进行故障排除，而无需等待下一个安排的签入。
+- **[同步设备以获取最新策略和操作](../remote-actions/device-sync.md)** ：执行“同步”操作可以强制设备立即使用 Intune 签入。 当设备签入时，该设备会立即收到分配给自己的任何挂起的操作或策略。 此功能有助于验证和对已分配的策略进行故障排除，而无需等待下一个安排的签入。
 
 **[什么是 Microsoft Intune 设备管理？](../remote-actions/device-management.md)** 是了解使用 Azure 门户管理设备的最佳资源。 
 
@@ -107,7 +107,7 @@ Intune 具有一些内置操作，允许 IT 管理员在本地设备上执行不
 
 ## <a name="device-configuration-profiles"></a>设备配置文件
 
-[开始使用配置文件](../configuration/device-profiles.md)和[配置文件概述](../configuration/device-profile-create.md) 
+[开始使用配置文件](../configuration/device-profiles.md)和[配置文件概述](../configuration/device-profile-create.md)
 
 Intune 提供可在组织内的不同设备上启用或禁用的设置和功能。 这些设置和功能通过配置文件进行管理。 例如，可以在运行 Windows Holographic for Business 的设备上创建一个启用 Cortana 或使用 Microsoft Defender Smart Screen 的配置文件。
 
@@ -116,6 +116,8 @@ Intune 提供可在组织内的不同设备上启用或禁用的设置和功能�
 ### <a name="custom-device-settings"></a>[自定义设备设置](../configuration/custom-settings-windows-holographic.md)
 
 可通过在 Intune 中创建一个自定义配置文件来配置 OMA-URI（开放移动联盟统一资源标识符）设置。 可使用 OMA-URI 设置来控制 Windows Holographic for Business 设备上的各种功能，例如启用 VPN 或检查 Microsoft 更新上有无更新。
+
+请参阅使用 [Windows Defender 应用程序控制 (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) 允许或阻止在 HoloLens 2 设备上打开应用的[示例](../configuration/custom-profile-hololens.md)。
 
 ### <a name="configure-kiosk-mode"></a>[配置展台模式](../configuration/kiosk-settings-holographic.md)
 

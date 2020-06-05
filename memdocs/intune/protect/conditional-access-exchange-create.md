@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739901"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990308"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>配置 Intune 的 Exchange 本地访问权限
 
@@ -35,7 +35,7 @@ ms.locfileid: "81739901"
 
 在可配置条件访问之前，请先验证以下配置是否存在：
 
-- Exchange 版本为 Exchange 2010 SP3 或更高版本  。 支持 Exchange Server 客户端访问服务器 (CAS) 阵列。
+- Exchange 版本为 Exchange 2010 SP3 或更高版本。 支持 Exchange Server 客户端访问服务器 (CAS) 阵列。
 
 - 已安装并使用 [Exchange ActiveSync 本地 Exchange 连接器](exchange-connector-install.md)（用于将 Intune 连接到 Exchange）。
 
@@ -46,9 +46,9 @@ ms.locfileid: "81739901"
 
 - 此连接器支持 **Exchange CAS 环境**。 Intune 支持直接在 Exchange CAS 服务器上安装连接器。 建议将其安装在单独的计算机上，因为连接器会对服务器造成额外负载。 在配置连接器时，必须对其进行设置，以便与其中一个 Exchange CAS 服务器通信。
 
-- 必须使用基于证书的身份验证或用户凭据条目来配置 Exchange ActiveSync  。
+- 必须使用基于证书的身份验证或用户凭据条目来配置 Exchange ActiveSync。
 
-- 当配置条件访问策略并将其面向用户时，在用户可以连接到其电子邮件前，他们使用的设备  必须：
+- 当配置条件访问策略并将其面向用户时，在用户可以连接到其电子邮件前，他们使用的设备必须：
   - **已注册**到 Intune 或是已加入域的 PC。
   - **已在 Azure Active Directory 中注册**。 此外，还必须向 Azure Active Directory 注册客户端 Exchange ActiveSync ID。
 
@@ -66,21 +66,24 @@ ms.locfileid: "81739901"
 - **iOS/iPadOS 的本机电子邮件应用** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 - **EAS 邮件客户端（如 Android 4 或更高版本上的 Gmail）** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 
-- **Android 工作配置文件设备上的 EAS 邮件客户端**- Android 工作配置文件设备上仅支持 Gmail 和 Nine Work for Android Enterprise   。 为了使条件访问适用于 Android 工作配置文件，必须为 Gmail 或 Nine Work for Android Enterprise 应用部署电子邮件配置文件，还要将这些应用部署为必需的安装   。 部署应用后，可以设置基于设备的条件访问。
+- **Android 设备管理员上的 EAS 邮件客户端** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
+
+- **Android 工作配置文件设备上的 EAS 邮件客户端**- Android 工作配置文件设备上仅支持 Gmail 和 Nine Work for Android Enterprise 。 为了使条件访问适用于 Android 工作配置文件，必须为 Gmail 或 Nine Work for Android Enterprise 应用部署电子邮件配置文件，还要将这些应用部署为必需的安装 。 部署应用后，可以设置基于设备的条件访问。
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>为 Android 工作配置文件设备设置条件访问
 
   1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
   
-  2. 将 Gmail 或九个工作应用部署为“需要”  。
+  2. 将 Gmail 或九个工作应用部署为“需要”。
 
-  3. 选择“设备” > “配置配置文件” > “创建配置文件”，为配置文件输入“名称”和“描述”      。
+  3. 选择“设备” > “配置配置文件” > “创建配置文件”，为配置文件输入“名称”和“描述”    。
 
-  4. 在“平台”中选择“Android Enterprise”，在“配置文件类型”中选择“电子邮件”     。
+  4. 在“平台”中选择“Android Enterprise”，在“配置文件类型”中选择“电子邮件”   。
 
   5. 配置[电子邮件配置文件设置](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise)。
 
-  6. 完成后，选择“确定”   > “创建”  以保存所做的更改。
+  6. 完成后，选择“确定” > “创建”以保存所做的更改。
 
   7. 创建电子邮件配置文件后，[将其分配给组](https://docs.microsoft.com/intune/device-profile-assign)。
 
@@ -91,7 +94,7 @@ ms.locfileid: "81739901"
 
 ### <a name="support-for-pcs"></a>对 PC 的支持
 
-Windows 8.1 和更高版本上的本机邮件  应用程序（使用 Intune 向 MDM 注册时）
+Windows 8.1 和更高版本上的本机邮件应用程序（使用 Intune 向 MDM 注册时）
 
 ## <a name="configure-exchange-on-premises-access"></a>配置 Exchange 内部部署访问权限
 
@@ -99,58 +102,58 @@ Windows 8.1 和更高版本上的本机邮件  应用程序（使用 Intune 向 
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 转到“租户管理” > “Exchange 访问”，然后选择“Exchange 本地访问”    。
+2. 转到“租户管理” > “Exchange 访问”，然后选择“Exchange 本地访问”  。
 
-3. 在“Exchange 本地访问”  窗格上，选择“是”  以“启用 Exchange 本地访问控制”  。
+3. 在“Exchange 本地访问”窗格上，选择“是”以“启用 Exchange 本地访问控制”。
 
    > [!div class="mx-imgBorder"]
    > ![Exchange 本地访问屏幕的示例屏幕截图](./media/conditional-access-exchange-create/exchange-on-premises-access.png)
 
-4. 在“分配”  下，选择“选择要包含的组”  ，然后选择一个或多个要配置访问权限的组。
+4. 在“分配”下，选择“选择要包含的组”，然后选择一个或多个要配置访问权限的组。
 
    所选组的成员具有适用于本地 Exchange 访问的条件访问策略。 接收此策略的用户必须在 Intune 中注册其设备，并符合合规性配置文件，然后才能访问本地 Exchange。
 
    > [!div class="mx-imgBorder"]
    > ![选择要包含的组](./media/conditional-access-exchange-create/select-groups.png)
 
-5. 若要排除组，请选择“选择要排除的组”  ，然后选择一个或多个不满足在访问本地 Exchange 之前注册设备并符合合规性配置文件的要求的组。
+5. 若要排除组，请选择“选择要排除的组”，然后选择一个或多个不满足在访问本地 Exchange 之前注册设备并符合合规性配置文件的要求的组。
 
-   选择“保存”  以保存配置，并返回到“Exchange 访问”  窗格。
+   选择“保存”以保存配置，并返回到“Exchange 访问”窗格。
 
-6. 接下来，配置 Intune 本地 Exchange 连接器的设置。 在控制台中，选择“租户管理” > “Exchange 访问”> “Exchange ActiveSync 本地连接器”，然后选择要配置的 Exchange 组织的连接器    。
+6. 接下来，配置 Intune 本地 Exchange 连接器的设置。 在控制台中，选择“租户管理” > “Exchange 访问”> “Exchange ActiveSync 本地连接器”，然后选择要配置的 Exchange 组织的连接器  。
 
-7. 对于“用户通知”  ，选择“编辑”  以打开“编辑组织”  工作流，可以在其中修改“用户通知”  消息。
+7. 对于“用户通知”，选择“编辑”以打开“编辑组织”工作流，可以在其中修改“用户通知”消息。
 
    > [!div class="mx-imgBorder"]
    > ![“编辑组织”工作流的“通知”示例屏幕截图](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
    如果用户的设备不符合要求并且他们需要访问本地 Exchange，则修改发送给用户的默认电子邮件。 消息模板使用的是标记语言。 键入时还可看到消息的预览显示情况
 
-   选择“查看并保存”，然后选择“保存”   ，保存编辑内容以完成 Exchange 本地访问的配置。
+   选择“查看并保存”，然后选择“保存” ，保存编辑内容以完成 Exchange 本地访问的配置。
 
    > [!TIP]
    > 若要了解有关标记语言的详细信息，请参阅这篇维基百科[文章](https://en.wikipedia.org/wiki/Markup_language)。
 
-8. 接下来，选择“高级 Exchange ActiveSync 访问设置”   以打开“高级 Exchange ActiveSync 访问设置”工作流，可以在其中配置设备访问规则。
+8. 接下来，选择“高级 Exchange ActiveSync 访问设置”以打开“高级 Exchange ActiveSync 访问设置”工作流，可以在其中配置设备访问规则。
 
    > [!div class="mx-imgBorder"]
    > ![“编辑组织”工作流的“高级设置”示例屏幕截图](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
 
-   - 对于“非托管设备访问”，请设置不受条件访问或其他规则影响的设备访问的全局默认规则  ：
+   - 对于“非托管设备访问”，请设置不受条件访问或其他规则影响的设备访问的全局默认规则：
 
      - **允许访问** - 所有设备均可立即访问本地 Exchange。 如果属于前面过程中配置为包含的组中用户的设备，后来被评估为不符合合规性策略或未在 Intune 中注册，将阻止此设备。
 
      - **阻止访问**和**隔离** – 一开始会立即阻止所有设备访问本地 Exchange。 属于前面过程中配置为包含的组中的用户的设备在 Intune 中注册后获取访问权限，并被评估为符合策略。
 
-       未运行 Samsung Knox Standard 的 Android 设备不支持此设置，始终会被阻止  。
+       未运行 Samsung Knox Standard 的 Android 设备不支持此设置，始终会被阻止。
 
-   - 对于“设备平台例外”  ，选择“添加”  ，然后根据环境需要指定详细信息。
+   - 对于“设备平台例外”，选择“添加”，然后根据环境需要指定详细信息。
 
-      如果将“非托管设备访问”  设置为“已阻止”  ，则即使平台专门阻止，已注册且符合要求的设备仍可访问。  
+      如果将“非托管设备访问”设置为“已阻止”，则即使平台专门阻止，已注册且符合要求的设备仍可访问。  
 
-9. 选择“确定”，保存你的编辑内容  。
+9. 选择“确定”，保存你的编辑内容。
 
-10. 选择“查看并保存”，然后选择“保存”   以保存 Exchange 条件访问策略。
+10. 选择“查看并保存”，然后选择“保存” 以保存 Exchange 条件访问策略。
 
 ## <a name="next-steps"></a>后续步骤
 

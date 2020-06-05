@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28dfeecf841eb1b9c69f46b2002b350c83514e1d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086447"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990570"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>使用自定义设备配置文件，在 Intune 中创建具有预共享密钥的 Wi-Fi 配置文件
 
-预共享密钥 (PSK) 通常用于对 WiFi 网络或无线 LAN 的用户进行身份验证。 通过 Intune，可以创建使用预共享密钥的 WiFi 配置文件。 若要创建配置文件，请使用 Intune 中的“自定义设备配置文件”功能  。 本文还包含一些有关如何创建基于 EAP 的 Wi-Fi 配置文件的示例。
+预共享密钥 (PSK) 通常用于对 WiFi 网络或无线 LAN 的用户进行身份验证。 通过 Intune，可以创建使用预共享密钥的 WiFi 配置文件。 若要创建配置文件，请使用 Intune 中的“自定义设备配置文件”功能。 本文还包含一些有关如何创建基于 EAP 的 Wi-Fi 配置文件的示例。
 
 此功能支持：
 
@@ -49,15 +49,20 @@ ms.locfileid: "80086447"
 ## <a name="create-a-custom-profile"></a>创建自定义配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，良好的策略名称是“适用于 Android 设备管理员设备的自定义 OMA-URI Wi-Fi 配置文件设置”  。
-    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
     - **平台**：选择平台。
-    - **配置文件类型**：选择“自定义”  。
+    - **配置文件**：选择“自定义”。
 
-4. 在“设置”  中选择“添加”  。 输入具有以下属性的新 OMA URI 设置：
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
+
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，良好的策略名称是“适用于 Android 设备管理员设备的自定义 OMA-URI Wi-Fi 配置文件设置”。
+    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
+
+6. 选择“下一步”。
+7. 在“配置设置”中，选择“添加” 。 输入具有以下属性的新 OMA URI 设置：
 
     1. **名称**：输入 OMA-URI 设置的名称。
     2. **描述**：输入 OMA-URI 设置的描述。 此设置是可选的，但建议进行。
@@ -71,13 +76,25 @@ ms.locfileid: "80086447"
 
         SSID 是你为其创建策略的 SSID。 例如，如果 Wi-Fi 命名为 `Hotspot-1`，则输入 `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`。
 
-    4. **数据类型**：选择“字符串”  。
+    4. **数据类型**：选择“字符串”。
 
     5. **值**：粘贴 XML 代码。 请参阅本文中的[示例](#android-or-windows-wi-fi-profile-example)。 更新每个值以匹配你的网络设置。 请参阅代码的注释部分获取一些提示。
+    6. 选择“添加”，保存所做更改。
 
-5. 完成后，选择“确定”   > “创建”  以保存所做的更改。
+8. 选择“下一步”。
 
-配置文件显示在配置文件列表中。 接下来，向用户组[分配此配置文件](device-profile-assign.md)。 只能将此策略分配到用户组。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+
+    选择“下一步”。
+
+10. 在“分配”中，选择要接收配置文件的用户或用户组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+
+    > [!NOTE]
+    > 只能将此策略分配到用户组。
+
+    选择“下一步”。
+
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 每个设备在下次签入时，将应用该策略，且将在设备上创建 Wi-Fi 配置文件。 然后设备便能够自动连接到网络。
 
@@ -87,7 +104,7 @@ ms.locfileid: "80086447"
 
 ### <a name="what-you-need-to-know"></a>须知内容
 
-- `<protected>false</protected>` 必须设为 false  。 如果为 true，可能导致设备需要加密密码并尝试进行解密，这可能导致连接失败  。
+- `<protected>false</protected>` 必须设为 false。 如果为 true，可能导致设备需要加密密码并尝试进行解密，这可能导致连接失败。
 
 - `<hex>53534944</hex>` 应设置为 `<name><SSID of wifi profile></name>` 的十六进制值。 Windows 10 设备可能会返回误报的 `x87D1FDE8 Remediation failed` 错误，但设备仍包含该配置文件。
 
@@ -228,7 +245,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 还可以从现有的 Wi-Fi 连接创建 XML 文件。 在 Windows 计算机上，使用以下步骤：
 
 1. 为导出的 W-Fi-配置文件创建本地文件夹，如 c:\WiFi。
-2. 以管理员身份打开命令提示符（右键单击 `cmd` > “以管理员身份运行”  ）。
+2. 以管理员身份打开命令提示符（右键单击 `cmd` > “以管理员身份运行”）。
 3. 运行 `netsh wlan show profiles`。 将列出所有配置文件的名称。
 4. 运行 `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`。 此命令在 c:\Wifi 中创建一个名为 `Wi-Fi-YourProfileName.xml` 的文件。
 
@@ -238,7 +255,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 
         `key=clear` 以纯文本格式导出密钥，这是成功使用配置文件所必需的。
 
-创建 XML 文件后，将 XML 语法复制并粘贴到“OMA-URI 设置”>“数据类型”  。 [创建自定义配置文件](#create-a-custom-profile)（本文中）列出了步骤。
+创建 XML 文件后，将 XML 语法复制并粘贴到“OMA-URI 设置”>“数据类型”。 [创建自定义配置文件](#create-a-custom-profile)（本文中）列出了步骤。
 
 > [!TIP]
 > `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}` 还包括 XML 格式的所有配置文件。

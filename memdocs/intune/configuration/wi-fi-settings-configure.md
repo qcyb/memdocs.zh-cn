@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587290"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985497"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>在 Microsoft Intune 中添加和使用设备上的 Wi-Fi 设置
 
@@ -39,11 +39,11 @@ Wi-Fi 是许多移动设备用来实现网络访问的无线网络。 Microsoft 
 
 Wi-Fi 配置文件支持以下设备平台：
 
-- Android 4 及更高版本
+- Android 5 及更高版本
 - Android Enterprise 和展台
-- iOS 8.0 及更高版本
+- iOS 11.0 及更高版本
 - iPadOS 13.0 及更高版本
-- macOS X 10.11 及更高版本
+- macOS X 10.12 及更高版本
 - Windows 10 及更高版本、Windows 10 移动版和 Windows Holographic for Business
 
 > [!NOTE]
@@ -52,7 +52,7 @@ Wi-Fi 配置文件支持以下设备平台：
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下属性：
 
     - **平台**：选择设备平台。 选项包括：
@@ -64,21 +64,21 @@ Wi-Fi 配置文件支持以下设备平台：
       - **Windows 10 及更高版本**
       - **Windows 8.1 及更高版本**
 
-    - **配置文件**：选择“Wi-Fi”  。
+    - **配置文件**：选择“Wi-Fi”。
 
       > [!TIP]
       >
-      > - 对于作为专用设备（展台）运行的 Android Enterprise  设备，依次选择“仅设备所有者”   > “Wi-Fi”  。
-      > - 对于 Windows 8.1 及更高版本  ，可以选择“Wi-Fi 导入”  。 此选项允许你以之前从其他设备导出的 XML 文件形式导入 Wi-Fi 设置。
+      > - 对于作为专用设备（展台）运行的 Android Enterprise 设备，依次选择“仅设备所有者” > “Wi-Fi”。
+      > - 对于 Windows 8.1 及更高版本，可以选择“Wi-Fi 导入” 。 此选项允许你以之前从其他设备导出的 XML 文件形式导入 Wi-Fi 设置。
 
-4. 选择“创建”。 
-5. 在“基本信息”  中，输入以下属性：
+4. 选择“创建”。
+5. 在“基本信息”中，输入以下属性：
 
-    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 WiFi 配置文件”  。
+    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 WiFi 配置文件”。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”  。
-7. 在“配置设置”  中，根据所选择的平台，可配置的设置有所不同。 选择平台，进行详细设置：
+6. 选择“下一步”。
+7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，进行详细设置：
 
     - [Android 设备管理员](wi-fi-settings-android.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md)（包括专用设备）
@@ -87,16 +87,16 @@ Wi-Fi 配置文件支持以下设备平台：
     - [Windows 10 及更高版本](wi-fi-settings-windows.md)
     - [Windows 8.1 及更高版本](wi-fi-settings-import-windows-8-1.md)，包括 Windows Holographic for Business
 
-8. 选择“下一步”  。
-9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）  。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
+8. 选择“下一步”。
+9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组  。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
-11. 在“查看并创建”中查看设置  。 选择“创建”时，将保存所做的更改并分配配置文件  。 该策略也会显示在配置文件列表中。
+11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
 > [!TIP]
 > 如果对 Wi-Fi 配置文件使用基于证书的身份验证，请将 Wi-Fi 配置文件、证书配置文件和受信任的根配置文件部署到同一组，以确保每台设备都能识别证书颁发机构的合法性。  有关详细信息，请参阅[如何使用 Microsoft Intune 配置证书](../protect/certificates-configure.md)。

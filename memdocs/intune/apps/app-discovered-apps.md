@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,35 +18,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078390"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988717"
 ---
 # <a name="intune-discovered-apps"></a>Intune 发现的应用
 
-Intune 发现的应用是租户中在 Intune 注册相关设备上检测到的应用的列表  。 它充当租户的软件清单。 发现的应用是[应用安装](apps-monitor.md)报表中的单独报表  。 对于个人设备，Intune 从不收集有关非管理应用程序的信息。 在公司设备上，任何应用无论是否为受管理应用，此报表都将收集其相关信息。 下面是映射预期行为的表。 通常，报表从注册时间起每隔 7 天刷新一次（不是整个租户每周刷新一次）。 此刷新周期的唯一例外是通过 Win32 应用的 Intune 管理扩展收集的应用程序信息，该信息每隔 24 小时收集一次。
+Intune 发现的应用是租户中在 Intune 注册相关设备上检测到的应用的列表。 它充当租户的软件清单。 发现的应用是[应用安装](apps-monitor.md)报表中的单独报表。 对于个人设备，Intune 从不收集有关非管理应用程序的信息。 在公司设备上，任何应用无论是否为受管理应用，此报表都将收集其相关信息。 下面是映射预期行为的表。 通常，报表从注册时间起每隔 7 天刷新一次（不是整个租户每周刷新一次）。 此刷新周期的唯一例外是通过 Win32 应用的 Intune 管理扩展收集的应用程序信息，该信息每隔 24 小时收集一次。
 
 ## <a name="monitor-discovered-apps-with-intune"></a>使用 Intune 监视发现的应用
 
 Intune 提供有关在租户的 Intune 注册设备上检测到的应用的聚合列表。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“应用”   > “监视”   > “发现的应用”  。
+2. 选择“应用” > “监视” > “发现的应用”。
 
 >[!NOTE]
->从“发现的应用”窗格中选择“导出”，可以将发现的应用列表导出为 .csv 文件   。
+>从“发现的应用”窗格中选择“导出”，可以将发现的应用列表导出为 .csv 文件 。
 >
 >对于发现的 Win32 应用，当前没有聚合计数。 此类数据只能在每台设备上查看。
 
 Intune 还提供租户中单个设备的已发现应用的列表。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备” > “所有设备”   。
+2. 选择“设备” > “所有设备” 。
 3. 选择设备。
-4. 要查看此设备的检测到的应用，请在“监视器”部分中选择“已发现的应用”   。
+4. 要查看此设备的检测到的应用，请在“监视器”部分中选择“已发现的应用” 。
 
 ## <a name="details-of-discovered-apps"></a>发现的应用的详细信息
 
@@ -54,7 +54,7 @@ Intune 还提供租户中单个设备的已发现应用的列表。
 
 | 平台 | 个人拥有的设备 | 公司拥有的设备 | 刷新周期 |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10（Win32 应用）注意事项：[必须在设备上安装 Intune 管理扩展](intune-management-extension.md) | 不适用 | 设备上安装的所有应用 | 自设备注册时间起每隔 24 小时刷新一次 |
+| Windows 10（Win32 应用）注意事项：[必须在设备上安装 Intune 管理扩展](intune-management-extension.md) | 不适用 | 设备上已安装 MSI 的应用 | 自设备注册时间起每隔 24 小时刷新一次 |
 | Windows 10（现代应用） | 仅限托管现代应用 | 设备上安装的所有现代应用 | 自设备注册时间起每隔 7 天刷新一次 |
 | Windows 8.1 | 仅托管应用 | 仅托管应用 | 自设备注册时间起每隔 7 天刷新一次 |
 | Windows Phone 8 | 仅托管应用 | 仅托管应用 | 自设备注册时间起每隔 7 天刷新一次 |
