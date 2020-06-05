@@ -2,7 +2,7 @@
 title: 升级 Windows 上的客户端
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中升级 Windows 计算机上的客户端。
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427761"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347130"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中升级 Windows 计算机的客户端
 
@@ -59,9 +59,6 @@ ms.locfileid: "83427761"
 > 若要确定层次结构中 Configuration Manager 客户端的不同版本，请使用报表文件夹“站点 - 客户端信息”中的“按客户端版本列出的 Configuration Manager 客户端计数”报表。  
 
 默认情况下，Configuration Manager 会创建升级包。 它会自动将包发送给层次结构中的所有分发点。 如果对 CAS 上的客户端包进行更改，Configuration Manager 会自动更新包，并重新分发包。 例如，在添加客户端语言包时会发生更改。 如果启用自动客户端升级，则每个客户端都将自动安装新客户端语言包。
-
-> [!NOTE]  
-> Configuration Manager 不会将客户端升级包自动发送到 Configuration Manager 的基于云的分发点。  
 
 在整个层次结构中启用自动客户端升级。 此配置可让用户更轻松地使客户端保持最新状态。  
 

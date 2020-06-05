@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824058"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428643"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -70,9 +70,6 @@ ms.locfileid: "83824058"
 ### <a name="technical"></a>技术条件
 
 - 有效的全局 Azure 订阅，以及[全局管理员](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)权限。 不支持 [Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)。  
-
-    > [!Important]  
-    > 桌面分析当前要求在 Azure AD 租户中部署 Office 365 服务。 将来不必这样做。
 
     - 设置工作区的工作区所有者权限，以及以下角色 ：  
 
