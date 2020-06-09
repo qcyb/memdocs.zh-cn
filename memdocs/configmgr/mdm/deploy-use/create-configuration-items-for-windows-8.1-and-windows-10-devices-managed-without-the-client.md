@@ -10,16 +10,16 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724831"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506241"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Configuration Manager 中的本地 MDM 创建 Windows 设备的配置项目
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 使用 Configuration Manager **Windows 8.1 和 Windows 10**配置项目来管理使用本地移动设备管理（MDM）管理的 Windows 设备的设置。
 
@@ -62,7 +62,7 @@ ms.locfileid: "81724831"
 
     - **警告**
 
-    - **关键**
+    - **严重**
 
     - **事件严重**：对于 Configuration Manager 报表，不符合此符合性规则的设备将报告故障严重性 "**严重**"。 它还会在应用程序事件日志中将不相容状态记录为 Windows 事件。
 
@@ -89,7 +89,7 @@ ms.locfileid: "81724831"
 - **记住的密码数**：阻止重用以前使用过的密码。
 - **擦除设备前的失败登录尝试次数**：如果此数目的登录尝试失败，MDM 将擦除设备
 - **锁定设备前的空闲时间**：指定设备在锁定之前可以处于空闲状态的时间量。 当没有用户输入时，设备处于空闲状态。
-- **密码复杂性**：选择是否可以指定数字 PIN （例如`1234`），或者是否必须提供强密码。
+- **密码复杂性**：选择是否可以指定数字 PIN （例如 `1234` ），或者是否必须提供强密码。
   - **密码中需要的复杂字符集数**：如果密码复杂性很**强**，请选择密码所需的字符类型：大写字母、小写字母、数字或符号。 此值默认为 `2`。
 - **将密码恢复 PIN 发送到 Exchange Server**
 
@@ -127,7 +127,7 @@ ms.locfileid: "81724831"
 - **自定义电子邮件帐户**：允许或禁止在设备上使用非组织电子邮件帐户。
 - **在 Windows mail 应用中将 Microsoft 帐户设为可选**：启用此选项，不需要在 windows mail 中使用 Microsoft 帐户。
 
-### <a name="store"></a>应用商店
+### <a name="store"></a>存储
 
 这些设置仅适用于运行 Windows 10 和更高版本的设备。
 
@@ -136,7 +136,7 @@ ms.locfileid: "81724831"
 - **应用内购买**：允许或禁止用户进行应用内购买。
 - **应用商店发起应用启动**：禁用设备上预安装或从 Microsoft Store 安装的所有应用。
 - **自动更新应用商店中的应用**：允许或禁止从 Microsoft Store 安装的应用自动更新。
-- **在系统驱动器上安装应用**：允许或禁止设备在系统驱动器上安装应用，通常是`C:`驱动器。
+- **在系统驱动器上安装应用**：允许或禁止设备在系统驱动器上安装应用，通常是 `C:` 驱动器。
 - **在系统卷上安装应用数据**：启用此选项以允许应用在系统驱动器上存储数据。
 - **仅使用专用应用商店**：要求用户从专用应用商店下载应用。
 - **游戏 DVR**：禁用 Windows 游戏录制和广播
@@ -164,7 +164,7 @@ ms.locfileid: "81724831"
 - **受信任的站点区域的安全级别**：设置受信任的站点区域的安全级别： "高"、"中-高"、"中"、"中"、"中" 或 "低"。
 - **受限制的站点区域的安全级别**：设置受限制的站点区域的安全级别：高。
 - **Intranet 区域的命名空间**：将网站配置为在 intranet 区域中添加或删除。
-- **中转到 intranet 站点以获取单字条目**：例如`https://`，如果用户输入的有效站点名称没有前面的协议，则允许或禁止 Internet Explorer 自动进入 intranet 站点。
+- **中转到 intranet 站点以获取单字条目**：例如，如果用户输入的有效站点名称没有前面的协议，则允许或禁止 Internet Explorer 自动进入 intranet 站点 `https://` 。
 - **企业模式菜单选项**：允许用户从 Internet Explorer 的 "**工具**" 菜单中激活和停用企业模式。
   - **日志记录报告位置（URL）**：企业模式处于活动状态时，请指定用于记录访问的网站的 URL。
 - **企业模式站点列表位置（URL）**：企业模式处于活动状态时，请指定使用它的网站的列表。
@@ -242,7 +242,7 @@ ms.locfileid: "81724831"
         - **WPA2**
         - **WPA2-PSK**
     - **数据加密**：选择此连接使用的加密方法。 可用值根据你选择的**身份验证**方法发生变化：
-        - **已禁用**
+        - **禁用**
         - **WEP**
         - **TKIP**
         - **AES**
@@ -271,7 +271,7 @@ ms.locfileid: "81724831"
   - **对等**
 - **角色**：如果选择 " **SPC** （软件发行者证书）" 证书存储，请选择要与证书关联的角色：
   - **移动运营商**
-  - **Manager**
+  - 管理员
   - **通过身份验证的用户**
   - **IT 管理员**
   - **未通过身份验证的用户**
@@ -321,13 +321,13 @@ ms.locfileid: "81724831"
 - **在欢迎屏幕上显示的会议信息**：选择设备在**欢迎**屏幕的 "**会议**" 磁贴上显示的信息的类型：
   - **仅显示组织者和时间**
   - **显示组织者、时间和主题（私人会议隐藏主题）**
-- **锁屏背景图像 URL**：在 Windows 10 团队设备的 "**欢迎**" 屏幕上指定 url 以显示自定义背景。 使用启动 URL `https://`并使用 PNG 格式。
+- **锁屏背景图像 URL**：在 Windows 10 团队设备的 "**欢迎**" 屏幕上指定 url 以显示自定义背景。 使用启动 URL `https://` 并使用 PNG 格式。
 
 ### <a name="windows-information-protection"></a>Windows 信息保护  
 
 有关如何使用 Configuration Manager 配置企业数据保护的详细信息，请参阅[使用 Windows 信息保护（WIP）保护企业数据](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)。
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Microsoft Edge 旧版本
 
 这些设置仅适用于运行 Windows 10 和更高版本的设备。  
 
@@ -342,7 +342,7 @@ ms.locfileid: "81724831"
 - **扩展**：允许或禁止边缘扩展。
 - **InPrivate 浏览**：允许或禁止 inprivate 浏览，这不会存储历史记录或 cookie。
 - **WebRTC LOCALHOST ip 地址**：允许或禁止在用户使用 web RTC 协议进行电话呼叫时显示设备的 localhost ip 地址。
-- **阻止访问 about： flags**：允许或禁止用户访问包含开发人员和`about:flags`实验性设置的页面。
+- **阻止访问 about： flags**：允许或禁止用户访问 `about:flags` 包含开发人员和实验性设置的页面。
 - **文件的 SmartScreen 提示替代**：允许或禁止用户绕过有关下载潜在恶意文件的 smartscreen 筛选器警告。
 - **SmartScreen 提示替代**：允许或禁止用户绕过有关潜在恶意网站的 SmartScreen 筛选器警告。
 - **首次运行 URL**：指定用户第一次打开边缘时要显示的网站。
@@ -368,7 +368,7 @@ ms.locfileid: "81724831"
 - **扫描存档文件**： Defender 会扫描压缩的存档文件，例如 .zip 或 .cab 文件。
 - **扫描电子**邮件： Defender 会在电子邮件到达设备时扫描电子邮件。
 - **扫描可移动驱动器**： Defender 扫描可移动驱动器，如 USB 棒。
-- **扫描映射驱动器**： Defender 扫描映射到网络共享的驱动器。 例如， `H:`映射到用户的个人驱动器。 如果驱动器上的文件是只读的，则 Defender 无法删除在其中找到的任何恶意软件。
+- **扫描映射驱动器**： Defender 扫描映射到网络共享的驱动器。 例如， `H:` 映射到用户的个人驱动器。 如果驱动器上的文件是只读的，则 Defender 无法删除在其中找到的任何恶意软件。
 - **扫描从网络共享文件夹打开的文件**：当用户从共享网络路径打开文件时，Defender 将扫描这些文件。 例如，`\\server\share\file.doc`。 如果共享上的文件是只读的，则 Defender 无法删除它找到的任何恶意软件。
 - **签名更新间隔**：选择 Defender 检查新签名文件的时间间隔。
 - **允许云保护**： Defender 使用 Microsoft 云接收有关恶意软件活动的信息，并在首次看到时启用块等功能。
@@ -376,7 +376,7 @@ ms.locfileid: "81724831"
 - **可能不需要的应用程序检测**：防止设备运行由 Defender 分类为可能不需要的软件。 你可以防止这些应用程序运行，或使用审核模式来报告用户安装可能不需要的应用程序的时间。
 - **文件和文件夹排除**：将一个或多个文件和文件夹添加到排除列表。 例如，`C:\Path` 或 `%ProgramFiles%\Path\filename.exe`。 Defender 不会在任何实时或计划的扫描中包括这些文件和文件夹。
 - **文件扩展名排除**：将一个或多个文件扩展名添加到排除列表。 例如，`java` 或 `exe`。 Defender 不会在任何实时或计划的扫描中包括具有这些扩展名的任何文件。
-- **进程排除**：将特定进程添加到排除列表。 例如，`C:\path\myproc.exe`。 此排除类型仅支持以下扩展： `exe`、 `com`或。 `scr` Defender 不会在任何实时或计划的扫描中包括这些进程。
+- **进程排除**：将特定进程添加到排除列表。 例如，`C:\path\myproc.exe`。 此排除类型仅支持以下扩展： `exe` 、 `com` 或 `scr` 。 Defender 不会在任何实时或计划的扫描中包括这些进程。
 
 ### <a name="additional-settings"></a>其他设置
 
