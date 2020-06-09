@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525694"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270916"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>对 Jamf Pro 与 Microsoft Intune 的集成进行故障排除
 
@@ -58,7 +58,7 @@ ms.locfileid: "81525694"
 |-----------------|--------------------------|
 | **设备在 Jamf Pro 中被标记为无响应**  | [设备无法通过 Jamf Pro 或 Azure AD 签入](#devices-are-marked-as-unresponsive-in-jamf-pro) |
 | **打开应用时，设备无法注册，Mac 设备提示进行密钥链登录**  | [系统会提示用户输入密码，以允许应用注册到 Azure AD](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app)。 |
-| **设备无法注册**  | 可能的原因如下： <br> **-** [***原因 1*** - Azure 中的 Jamf Pro 应用具有不正确的权限](#cause-1) <br> **-** [***原因 2*** - Azure AD 中的 Jamf 本机 macOS 连接器存在问题](#cause-2)  <br> **-** [***原因 3*** - 用户没有有效的 Intune 或 Jamf 许可证](#cause-3) <br> **-** [***原因 4*** - 用户未使用 Jamf 自助服务来启动公司门户应用](#cause-4) <br> **-** [***原因 5*** - Intune 集成关闭](#cause-5) <br> **-** [***原因 6*** - 设备之前已在 Intune 中注册，或用户多次尝试注册设备](#cause-6) <br> **-** [***原因 7*** - JamfAAD 请求从用户的密钥链访问“Microsoft Workplace Join 密钥”](#cause-7) |
+| **设备无法注册**  | 可能的原因如下： <br> **-** [***原因 1*** - Azure 中的 Jamf Pro 应用具有不正确的权限](#cause-1) <br> **-** [***原因 2*** - Azure AD 中的 Jamf 本机 macOS 连接器存在问题](#cause-2) <br> **-** [***原因 3*** - 用户没有有效的 Intune 或 Jamf 许可证](#cause-3) <br> **-** [***原因 4*** - 用户未使用 Jamf 自助服务来启动公司门户应用](#cause-4) <br> **-** [***原因 5*** - Intune 集成关闭](#cause-5) <br> **-** [***原因 6*** - 设备之前已在 Intune 中注册，或用户多次尝试注册设备](#cause-6) <br> **-** [***原因 7*** - JamfAAD 请求从用户的密钥链访问“Microsoft Workplace Join 密钥”](#cause-7) |
 |  **Mac 设备在 Intune 中显示为兼容，但在 Azure 中显示为不兼容** | [设备注册问题](#mac-device-shows-compliant-in-intune-but-noncompliant-in-azure) |
 | **使用 Jamf 注册的 Mac 设备的 Intune 控制台中出现重复条目** | [同一设备的多个注册](#duplicate-entries-appear-in-the-intune-console-for-mac-devices-enrolled-by-using-jamf) |
 | **合规性策略无法评估设备** | [策略面向设备组](#compliance-policy-fails-to-evaluate-the-device) |
@@ -67,7 +67,7 @@ ms.locfileid: "81525694"
 
 ### <a name="devices-are-marked-as-unresponsive-in-jamf-pro"></a>设备在 Jamf Pro 中标记为无响应  
 
-**原因**：以下是 Jamf Pro 将设备标记为“无响应”的常见原因  ：
+**原因**：以下是 Jamf Pro 将设备标记为“无响应”的常见原因：
 
 - 设备无法使用 Jamf Pro 签入。  
   Jamf Pro 希望设备每 15 分钟签入一次。 如果设备在 24 小时内无法签入，Jamf 会将其标记为无响应。  
@@ -79,7 +79,7 @@ ms.locfileid: "81525694"
   - 如果 Azure 令牌过期，则会提示用户登录到 Azure 以获取新令牌。 Azure 访问的刷新令牌每七天生成一次。
 
 **解决方法**  
-Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须登录才能更正无响应状态  。 该用户必须是已加入该帐户的工作用户，因为他们在其登录密钥链中具有 Intune 中的标识。
+Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须登录才能更正无响应状态。 该用户必须是已加入该帐户的工作用户，因为他们在其登录密钥链中具有 Intune 中的标识。
 
 
 
@@ -102,7 +102,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 - **允许** - 一次性登录。 下次应用打开时，系统会提示再次登录。
 - **始终允许** - 为应用程序缓存登录凭据。 下次应用打开时，系统不会提示登录。  
 
-仅为一个应用选择“始终允许”可批准该应用以供将来登录  。 其他应用会提示进行身份验证，直到它们也设置为“始终允许”  。 一个应用的缓存凭据不能由另一个应用使用。  
+仅为一个应用选择“始终允许”可批准该应用以供将来登录。 其他应用会提示进行身份验证，直到它们也设置为“始终允许”。 一个应用的缓存凭据不能由另一个应用使用。  
 
 ### <a name="devices-fail-to-register"></a>设备无法注册  
 
@@ -112,17 +112,17 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 **Azure 中的 Jamf Pro 企业应用程序具有错误的权限或具有多个权限**
 
-  在 Azure 中创建应用时，必须删除所有默认 API 权限，然后为 Intune 分配一个 update_device_attributes 权限  。 
+  在 Azure 中创建应用时，必须删除所有默认 API 权限，然后为 Intune 分配一个 update_device_attributes 权限。 
 
   **解决方法**  
   审阅并更正（若有必要）Jamf 应用程序的权限。 如果你使用 Jamf Pro 云连接器，则会为你创建此应用程序。 如果手动配置了集成，则在 Azure AD 中创建了应用程序。 有关应用程序权限，请参阅[在 Azure AD 中创建 Jamf 应用程序](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory)过程。
 
 #### <a name="cause-2"></a>原因 2  
 
-未在 Azure AD 租户中创建 Jamf 本机 macOS 连接器应用，或者该连接器的同意是由没有全局管理员权限的帐户签署的   
+未在 Azure AD 租户中创建 Jamf 本机 macOS 连接器应用，或者该连接器的同意是由没有全局管理员权限的帐户签署的  
 
   **解决方法**  
-  请参阅 docs.jamf.com 上的[与 Microsoft Intune 集成](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)中的“配置 macOS Intune 集成”部分  。
+  请参阅 docs.jamf.com 上的[与 Microsoft Intune 集成](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)中的“配置 macOS Intune 集成”部分。
 
 #### <a name="cause-3"></a>原因 3
 
@@ -141,13 +141,13 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 #### <a name="cause-4"></a>原因 4  
 
-用户未使用 Jamf 自助服务来启动公司门户应用 
+用户未使用 Jamf 自助服务来启动公司门户应用
 
 若要让设备通过 Jamf 成功注册到 Intune，用户必须使用 Jamf 自助服务打开 Intune 公司门户。 如果用户手动打开公司门户，设备将无需连接到 Jamf 即可进行注册。  
 
 若要确定设备用于注册的服务，请查看设备上的公司门户应用。 通过 Jamf 注册后，你应该会收到通知，提示你打开自助服务应用以进行更改。
 
-在公司门户应用中，用户可能会看到 `Not registered`，并且公司门户日志中可能会出现类似于以下示例的条目  ：  
+在公司门户应用中，用户可能会看到 `Not registered`，并且公司门户日志中可能会出现类似于以下示例的条目：  
 
 ```
    Line 7783: <DATE> <IP ADDRESS> INFO com.microsoft.ssp.application TID=1  
@@ -157,7 +157,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 **解决方法**  
 若要将注册源从 Intune 更改为 Jamf：
-1. [从 Intune 取消注册 macOS 设备](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 若要避免未从 Intune 中完全删除的设备造成更多麻烦，请参阅此原因列表中的[原因 6](#cause-6)  。  
+1. [从 Intune 取消注册 macOS 设备](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 若要避免未从 Intune 中完全删除的设备造成更多麻烦，请参阅此原因列表中的[原因 6](#cause-6)。  
 
 2. 在设备上，使用 Jamf 自助服务打开公司门户应用，然后使用 Intune 注册设备。 此任务要求你[使用 Jamf 来部署适用于 macOS 的公司门户应用](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)，并[在 Jamf Pro 中创建了一个使用 Azure AD 注册用户设备的策略](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)。  
 
@@ -196,23 +196,22 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 如果设备未在 Jamf 中注册，但未从 Intune 中正确删除，或进行了多次注册尝试，则可能会在门户中看到同一设备的多个实例。 这会导致 Jamf 注册失败。
 
 **解决方法**  
-1. 在 Mac 上，启动“终端”  。
-2. 运行“sudo JAMF removemdmprofile”  。
-3. 运行“sudo JAMF removeFramework”  。
+1. 在 Mac 上，启动“终端”。
+2. 运行“sudo JAMF removemdmprofile”。
+3. 运行“sudo JAMF removeFramework”。
 4. 在 JAMF Pro 服务器上，删除计算机的清单记录。
 5. 从 AzureAD 中删除设备。
 6. 删除设备上的以下文件（如果存在）：
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
    - /Library/Application Support/com.microsoft.CompanyPortal
    - /Library/Application Support/com.jamfsoftware.selfservice.mac
-   - /Library/Saved Application
-   - State/com.jamfsoftware.selfservice.mac.savedState
+   - /Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState
    - /Library/Saved Application State/com.microsoft.CompanyPortal.savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration。windows。net
@@ -220,7 +219,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
    - https://device.login.microsoftonline.com/
    - Microsoft 会话传输密钥（公钥和私钥）
    - Microsoft Workplace Join 密钥（公钥和私钥）
-7. 从设备上的密钥链中删除引用 Microsoft、Intune 或公司门户的所有内容，包括 DeviceLogin.microsoft.com 证书    。 删除除 JAMF 公钥和私钥外的 JAMF 引用  。 
+7. 从设备上的密钥链中删除引用 Microsoft、Intune 或公司门户的所有内容，包括 DeviceLogin.microsoft.com 证书  。 删除除 JAMF 公钥和私钥外的 JAMF 引用。 
    > [!IMPORTANT]  
    > 删除公钥和私钥将中断设备注册。
 
@@ -251,7 +250,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 ```
 
 **解决方法**  
-若要成功使用 Azure AD 注册设备，Jamf 要求用户提供其帐户密码，并选择“允许”  。
+若要成功使用 Azure AD 注册设备，Jamf 要求用户提供其帐户密码，并选择“允许”。
 
 此请求类似于本文前面的[在打开应用时，Mac 设备提示输入密钥链登录](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app)的请求。  
 
@@ -263,7 +262,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 - 该设备已多次注册而未进行必要的清理。
 
 **解决方法**  
-若要解决此问题，请按照本文前面的针对设备注册失败的[*原因 6*](#cause-6) 的解决方案进行操作  。 
+若要解决此问题，请按照本文前面的针对设备注册失败的[*原因 6*](#cause-6) 的解决方案进行操作。 
 
 
 ### <a name="duplicate-entries-appear-in-the-intune-console-for-mac-devices-enrolled-by-using-jamf"></a>使用 Jamf 注册的 Mac 设备的 Intune 控制台中出现重复条目  
@@ -273,7 +272,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 从 Intune 和 Jamf Pro 集成中删除设备后，可能会遗留某些数据，这可能会导致连续注册创建重复条目。  
 
 **解决方法**  
-若要解决此问题，请按照本文前面的针对设备注册失败的[*原因 6*](#cause-6) 的解决方案进行操作  。
+若要解决此问题，请按照本文前面的针对设备注册失败的[*原因 6*](#cause-6) 的解决方案进行操作。
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>合规性策略无法评估设备  
 
@@ -295,7 +294,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 在 Azure 中注册 Jamf Pro 应用时，会出现以下某种情况：
 
 - 应用获得了多个权限。
-- 未选择“授予 \<你的公司> 管理许可”选项  。  
+- 未选择“授予 \<your company> 管理许可”选项。  
 
 **解决方法**  
 请参阅本文前面的[设备注册失败](#devices-fail-to-register)的原因 1 的解决方案。

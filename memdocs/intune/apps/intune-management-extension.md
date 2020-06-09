@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990730"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270933"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 中的 Windows 10 设备上使用 PowerShell 脚本
 
@@ -68,7 +68,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
     
     - 用户使用其 Azure AD 帐户登录设备，然后在 Intune 中进行注册。
 
-  - 使用 Configuration Manager 和 Intune 的共同托管设备。 确保将  “应用”工作负载设置为“试点 Intune”  或“Intune”  。 若要获取指南，请参阅下列文章： 
+  - 使用 Configuration Manager 和 Intune 的共同托管设备。 安装 Win32 应用时，请确保将“应用”工作负载设置为“试点 Intune”或“Intune”。 即使将“应用”工作负载设置为“Configuration Manager”，也会运行 PowerShell 脚本。 将 PowerShell 脚本面向设备时，Intune 管理扩展将部署到设备。 但是，如上所述，设备必须是已加入 Azure AD 或混合 Azure AD 的设备，并且必须运行 Windows 10 版本 1607 或更高版本。 若要获取指南，请参阅下列文章： 
   
     - [什么是共同管理](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [“客户端应用”工作负载](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
@@ -80,46 +80,46 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 ## <a name="create-a-script-policy-and-assign-it"></a>创建脚本策略并分配该策略
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “PowerShell 脚本”   > “添加”  。
+2. 选择“设备” > “PowerShell 脚本” > “添加”。
 
     ![在 Microsoft Intune 中添加和使用 PowerShell 脚本](./media/intune-management-extension/mgmt-extension-add-script.png)
 
-3. 在“基本信息”中，输入以下属性并选择“下一步”   ：
+3. 在“基本信息”中，输入以下属性并选择“下一步” ：
     - **名称**：输入 PowerShell 脚本的名称。 
     - **描述**：输入 PowerShell 脚本的说明。 此设置是可选的，但建议进行。
-4. 在“脚本设置”中，输入以下属性并选择“下一步”   ：
+4. 在“脚本设置”中，输入以下属性并选择“下一步” ：
     - **脚本位置**：浏览 PowerShell 脚本。 脚本必须小于 200 KB (ASCII)。
-    - **使用登录凭据运行此脚本**：选择“是”，可以使用设备上的用户凭据运行脚本  。 选择“否”（默认值），在系统上下文中运行该脚本  。 许多管理员选择“是”  。 如果脚本必须在系统上下文中运行，请选择“否”  。
-    - **强制执行脚本签名检查**：如果脚本必须由受信任的发布者签名，请选择“是”  。 如果不需要对脚本进行签名，请选择“否”（默认）  。 
-    - **在 64 位 PowerShell 主机中运行脚本**：选择“是”，可以在 64 位客户端体系结构上的 64 位 PowerShell (PS) 主机中运行脚本  。 选择“否”（默认），在 32 位 PowerShell 主机中运行脚本  。
+    - **使用登录凭据运行此脚本**：选择“是”，可以使用设备上的用户凭据运行脚本。 选择“否”（默认值），在系统上下文中运行该脚本。 许多管理员选择“是”。 如果脚本必须在系统上下文中运行，请选择“否”。
+    - **强制执行脚本签名检查**：如果脚本必须由受信任的发布者签名，请选择“是”。 如果不需要对脚本进行签名，请选择“否”（默认）。 
+    - **在 64 位 PowerShell 主机中运行脚本**：选择“是”，可以在 64 位客户端体系结构上的 64 位 PowerShell (PS) 主机中运行脚本。 选择“否”（默认），在 32 位 PowerShell 主机中运行脚本。
 
-      设置为“是”或“否”时，请对新策略行为和现有策略行为使用下表   ：
+      设置为“是”或“否”时，请对新策略行为和现有策略行为使用下表 ：
 
       | 在 64 位 PS 主机中运行脚本 | 客户端体系结构 | 新的 PS 脚本 | 现有的策略 PS 脚本 |
       | --- | --- | --- | --- | 
       | 否 | 32 位  | 支持 32 位 PS 主机 | 仅在 32 位 PS 主机中运行，该主机适用于 32 位和 64 位体系结构。 |
       | 是 | 64 位 | 在适用于 64 位体系结构的 64 位 PS 主机中运行脚本。 在 32 位上运行时，脚本在 32 位 PS 主机中运行。 | 在 32 位 PS 主机中运行脚本。 如果此设置更改为 64 位，则脚本将在 64 位 PS 主机中打开（它不会运行），并报告结果。 在 32 位上运行时，脚本在 32 位 PS 主机中运行。 |
 
-5. 选择“作用域标记”  。 作用域标记是可选的。 有关详细信息，请参阅[对分布式 IT 使用基于角色的访问控制 (RBAC) 和作用域标记](../fundamentals/scope-tags.md)。
+5. 选择“作用域标记”。 作用域标记是可选的。 有关详细信息，请参阅[对分布式 IT 使用基于角色的访问控制 (RBAC) 和作用域标记](../fundamentals/scope-tags.md)。
 
     添加作用域标记：
 
-    1. 选择“选择作用域标记”，然后从列表中选择现有作用域标记，然后选择“选择”   。
+    1. 选择“选择作用域标记”，然后从列表中选择现有作用域标记，然后选择“选择” 。
 
-    2. 完成后，选择“下一步”  。
+    2. 完成后，选择“下一步”。
 
-6. 选择“分配” >  选择要包含的组   。 随即显示 Azure AD 组的现有列表。
+6. 选择“分配” >  选择要包含的组 。 随即显示 Azure AD 组的现有列表。
 
-    1. 选择一个或多个组，其中的用户的设备会接收该脚本。 选择“选择”  。 你选择的组将显示在列表中，并将收到策略。
+    1. 选择一个或多个组，其中的用户的设备会接收该脚本。 选择“选择”。 你选择的组将显示在列表中，并将收到策略。
 
         > [!NOTE]
         > Intune 中的 PowerShell 脚本可定向于 Azure AD 设备安全组或 Azure AD 用户安全组。
 
-    2. 选择“下一步”  。
+    2. 选择“下一步”。
 
         ![将 PowerShell 脚本分配或部署到 Microsoft Intune 中的设备组](./media/intune-management-extension/mgmt-extension-assignments.png)
 
-7. 在“查看 + 添加”中，将显示你配置的设置的摘要  。 选择“添加”以保存脚本  。 选择“添加”后，策略将部署到你选择的组  。
+7. 在“查看 + 添加”中，将显示你配置的设置的摘要。 选择“添加”以保存脚本。 选择“添加”后，策略将部署到你选择的组。
 
 ## <a name="important-considerations"></a>重要注意事项
 
@@ -134,27 +134,27 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 ### <a name="failure-to-run-script-example"></a>无法运行脚本示例
 上午 8 点
   -  签入
-  -  运行脚本 ConfigScript01 
+  -  运行脚本 ConfigScript01
   -  脚本失败
 
 上午 9 点
   -  签入
-  -  运行脚本 ConfigScript01 
+  -  运行脚本 ConfigScript01
   -  脚本失败（重试次数 = 1）
 
 上午 10 点
   -  签入
-  -  运行脚本 ConfigScript01 
+  -  运行脚本 ConfigScript01
   -  脚本失败（重试次数 = 2）
   
 上午 11 点
   -  签入
-  -  运行脚本 ConfigScript01 
+  -  运行脚本 ConfigScript01
   -  脚本失败（重试次数 = 3）
 
 中午 12 点
   -  签入
-  - 没有额外尝试运行 ConfigScript01  脚本。
+  - 没有额外尝试运行 ConfigScript01 脚本。
   - 接下来，如果没有对脚本进行其他任何更改，则不会额外尝试运行脚本。
 
 
@@ -162,7 +162,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
 可在 Azure 门户中监视用户和设备的 PowerShell 脚本运行状态。
 
-在“PowerShell 脚本”中，选择要监视的脚本并选择“监视”，然后选择以下报表之一   ：
+在“PowerShell 脚本”中，选择要监视的脚本并选择“监视”，然后选择以下报表之一 ：
 
 - **设备状态**
 - **用户状态**
@@ -175,7 +175,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
 ## <a name="delete-a-script"></a>删除脚本
 
-在“PowerShell 脚本”中，右键单击该脚本，然后选择“删除”   。
+在“PowerShell 脚本”中，右键单击该脚本，然后选择“删除” 。
 
 ## <a name="common-issues-and-resolutions"></a>常见问题和解决方法
 
@@ -190,11 +190,11 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
 要查看是否会自动注册设备，可执行以下操作：
 
-  1. 转至“设置”   > “帐户”   > “访问工作或学校”  。
-  2. 选择已加入的帐户 >“信息”  。
-  3. 在“高级诊断报告”  下，选择“创建报表”  。
+  1. 转至“设置” > “帐户” > “访问工作或学校”。
+  2. 选择已加入的帐户 >“信息”。
+  3. 在“高级诊断报告”下，选择“创建报表”。
   4. 在 Web 浏览器中，打开 `MDMDiagReport`。
-  5. 搜索 MDMDeviceWithAAD 属性  。 如果存在此属性，则设备已自动注册。 如果没有此属性，则未自动注册设备。
+  5. 搜索 MDMDeviceWithAAD 属性。 如果存在此属性，则设备已自动注册。 如果没有此属性，则未自动注册设备。
 
 [启用 Windows 10 自动注册](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)分步介绍了如何在 Intune 中配置自动注册功能。
 
@@ -208,7 +208,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
   - 如果更改了脚本，请将其上传，再将其分配给用户或设备
   
     > [!TIP]
-    > Microsoft Intune 管理扩展是一项在设备上运行的服务，如同服务应用 (services.msc) 中列出中的任何其他服务一样  。 设备重启后，此服务可能也会重启，并检查是否随附 Intune 服务分配了任何 PowerShell 脚本。 如果 Microsoft Intune 管理扩展服务设置为“手动”，则设备重启后可能不会重启此服务  。
+    > Microsoft Intune 管理扩展是一项在设备上运行的服务，如同服务应用 (services.msc) 中列出中的任何其他服务一样。 设备重启后，此服务可能也会重启，并检查是否随附 Intune 服务分配了任何 PowerShell 脚本。 如果 Microsoft Intune 管理扩展服务设置为“手动”，则设备重启后可能不会重启此服务。
 
 - 确保设备已[加入 Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)。 仅加入你的工作区或组织（在 Azure AD 中[注册](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)）的设备不会收到脚本。
 - Intune 管理扩展客户端每小时检查一次 Intune 中的脚本或策略是否发生任何更改。

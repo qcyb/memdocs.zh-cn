@@ -6,7 +6,7 @@ keywords: Intune 数据仓库
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359880"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270984"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>使用 Power BI 连接到数据仓库
 
@@ -39,7 +39,7 @@ ms.locfileid: "79359880"
 - 软件更新
 - 设备清单日志
 
-还有十分有用的有关注册、符合性、设备配置文件和软件更新的趋势。 示例图表和报表向画布应用便于用户使用的筛选器。 若要使用高级筛选器，请查看 Power BI Desktop 中的“筛选器”窗格  。
+还有十分有用的有关注册、符合性、设备配置文件和软件更新的趋势。 示例图表和报表向画布应用便于用户使用的筛选器。 若要使用高级筛选器，请查看 Power BI Desktop 中的“筛选器”窗格。
 
 以下步骤介绍如何下载 Power BI 文件以及如何配合使用 Power BI 和 OData 链接。
 
@@ -47,53 +47,53 @@ ms.locfileid: "79359880"
 
 ## <a name="install-power-bi"></a>安装 Power BI
 
-安装最新版本的 [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi)。 有关详细信息，请参阅 [Power BI Desktop](https://powerbi.microsoft.com/desktop)
+安装最新版本的 [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi)。 有关详细信息，请参阅 [Power BI Desktop](https://powerbi.microsoft.com/desktop)。
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>使用 Power BI Intune 符合性数据仓库应用加载数据和报表
 
 Power BI [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用包含租户信息和一组基于数据仓库数据模型的预置报表。
 
 1. 导航到 [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用的“AppSource”页以开始安装过程。
-2. 单击“立即获取”按钮，然后单击“继续”   。
-3. 当系统提示安装 Power BI 应用时，单击“安装”  。
-4. 安装完成后，单击“Intune 合规性(数据仓库)”应用磁贴  。
-5. 单击“连接”按钮  。 随即显示“连接到 Intune 符合性(数据仓库)”对话框  。
-6. 单击“登录”按钮  。
+2. 单击“立即获取”按钮，然后单击“继续” 。
+3. 当系统提示安装 Power BI 应用时，单击“安装”。
+4. 安装完成后，单击“Intune 合规性(数据仓库)”应用磁贴。
+5. 单击“连接”按钮。 随即显示“连接到 Intune 符合性(数据仓库)”对话框。
+6. 单击“登录”按钮。
 7. 使用用户帐户登录，此帐户具有你要查看报表的租户的 Intune 数据仓库访问权限。
-8. 若要查看包含的仪表板，请单击“仪表板”选项卡，再单击“合规性概述”仪表板   。
-9. 若要查看所有可用的报表，请单击“报表”选项卡，再单击“合规性 V1.0”报表   。 可通过单击底部的选项卡来浏览报表页面。
-10. 若要稍后轻松导航回到这些报表，请单击“符合性 V1.0”报表旁边的星标  。 这会将报告添加到 Power BI 收藏夹中。
+8. 若要查看包含的仪表板，请单击“仪表板”选项卡，再单击“合规性概述”仪表板 。
+9. 若要查看所有可用的报表，请单击“报表”选项卡，再单击“合规性 V1.0”报表 。 可通过单击底部的选项卡来浏览报表页面。
+10. 若要稍后轻松导航回到这些报表，请单击“符合性 V1.0”报表旁边的星标。 这会将报告添加到 Power BI 收藏夹中。
 
-或者，从 Intune 门户安装应用：
+或者，可以从 Microsoft Endpoint Manager 管理中心安装应用：
 
-1. 登录 Azure 门户，选择“监视 + 管理” > “Intune”。 还可为 Intune 搜索资源。
-2. 打开“设置 Intune 数据仓库”边栏选项卡  。
-3. 选择“获取 Power BI 应用”以访问和共享浏览器中为租户预创建的 Power BI 报表  。
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 选择“报表” > “Intune 数据仓库” > “数据仓库”。
+3. 选择“获取 Power BI 应用”以访问和共享浏览器中为租户预创建的 Power BI 报表。
 4. 请按照上述步骤 2-10 操作。
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>使用 OData 链接加载 Power BI 中的数据
 
 借助经 Azure AD 身份验证的客户端，OData URL 可连接到数据仓库 API 中的 RESTful 终结点，该终结点向报告客户端公开数据模型。 按以下说明使用 Power BI Desktop 连接并创建自己的报表。 无需局限于 Power BI Desktop，可将自己最喜爱的分析工具与 OData URL 配合使用，前提是客户端支持 OAUTH2.0 身份验证和 OData v4.0 标准。
 
-1. 登录到 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)。
-2. 单击“概述”边栏选项卡右侧“其他任务”部分下的“设置 Intune 数据仓库”   。 将显示“Intune 数据仓库”边栏选项卡  。
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 选择“报表” > “Intune 数据仓库” > “数据仓库”。
 3. 在报表边栏选项卡中检索自定义源 URL，例如：<br>
-    `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4. 打开 Power BI Desktop  。
-5. 选择“文件” > “获取数据”。 选择“OData 源”  。
-6. 选择“基本”  。
-7. 在 URL 框中键入或粘贴 OData URL  。
-8. 选择“确定”  。
+    `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
+4. 打开 Power BI Desktop。
+5. 选择“文件” > “获取数据” 。 选择“OData 源”。
+6. 选择“基本”。
+7. 在 URL 框中键入或粘贴 OData URL。
+8. 选择“确定”。
 9. 如果尚未从 Power BI 桌面客户端为租户进行 Azure AD 身份验证，请键入凭据。 必须使用 OAuth 2.0 获得 Azure Active Directory (Azure AD) 授权后才能访问数据。  
-    1. 选择“组织帐户”  。  
+    1. 选择“组织帐户”。  
     2. 键入用户名和密码。  
-    3. 选择“登录”  。  
+    3. 选择“登录”。  
     4. 选择“**连接**”。  
-10. 选择“加载”  。
+10. 选择“加载”。
 
 ## <a name="next-steps"></a>后续步骤
 
-可获取环境相关问题的答案，例如在上周白天注册的设备数。 可使用从 Azure 边栏选项卡中检索的 Intune 数据仓库 Power BI 报表来获取有关 Intune 租户和客户端总体的见解。 同时，Intune 还提供其他许多扩展或重用数据的方法。 Power BI 和 Intune 数据仓库 API 提供其他功能，例如：
+可获取环境相关问题的答案，例如在上周白天注册的设备数。 可使用从 Microsoft Endpoint Management 管理中心的边栏选项卡中检索的 Intune 数据仓库 Power BI 报表来获取有关 Intune 租户和客户端总体的见解。 同时，Intune 还提供其他许多扩展或重用数据的方法。 Power BI 和 Intune 数据仓库 API 提供其他功能，例如：
 
 <!-- - You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
 - 已整理租户数据，便于用户从数据中获取见解。 有关数据组织方式的详细信息，请参阅[数据仓库数据模型](reports-ref-data-model.md)。

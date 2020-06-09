@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991791"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166141"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 最终用户应用的 UI 更新
 
@@ -36,17 +36,30 @@ ms.locfileid: "82991791"
 
 
 
+## <a name="week-of-may-18-2020"></a>2020 年 5 月 18 日当周  
+### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos---6057697---"></a>更新公司门户应用中适用于 iOS/iPadOS 和 macOS 的图标 <!--6057697 -->  
+我们更新了公司门户中的图标，以创建在双屏设备上受支持的更新式外观，并与 Microsoft Fluent Design System 保持一致。
+
+|已针对 iOS/iPadOS 进行了更新|以前适用于 iOS/iPadOS|   
+|---|---|   
+|![公司门户中适用于 iOS/iPadOS 的图像，突出显示底部菜单中的更新图标。](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![公司门户中适用于 iOS 的图像，突出显示前面的图标。](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|已针对 macOS 进行了更新|  
+|---|
+|![公司门户中适用于 macOS 的图像，“设备”选项卡，突出显示更新图标。](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
+
+
 ## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日当周  
 ### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>适用于 Android 的公司门户可指导用户在注册了工作配置文件后获取应用 <!-- 6103999 -->
 我们改进了公司门户中的应用内指南，可便于用户更轻松地查找和安装应用。 注册工作配置文件管理后，用户将看到一条说明如何在徽章版 Google Play 中查找建议的应用的消息。 [使用 Android 配置文件注册设备](../user-help/enroll-device-android-work-profile.md)中的最后一步已更新为显示这条新消息。 
 
 ![公司门户的“设备”选项卡提示打开徽章版 Google Play 的示例图像。](./media/whats-new-app-ui/updated-banner-android-2005.png)  
 
-用户还将在左侧的公司门户抽屉中看到新的“获取应用”  链接。 
+用户还将在左侧的公司门户抽屉中看到新的“获取应用”链接。 
 
 ![突出显示“获取应用”菜单项的左侧公司门户抽屉的示例图像。](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
 
-为了给这些新体验和改进体验腾出地方，下图中所示的“应用”  选项卡已被删除。  
+为了给这些新体验和改进体验腾出地方，下图中所示的“应用”选项卡已被删除。  
 
 ![现已删除“应用”选项卡的公司门户的示例图像。](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
 
@@ -68,12 +81,12 @@ ms.locfileid: "82991791"
 ## <a name="week-of-february-3-2020"></a>2020 年 2 月 3 日当周
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>从公司门户的 Android 工作配置文件注册中删除了屏幕 <!--6103987 -->
-从公司门户中的 Android 工作配置文件注册流中删除了“下一步是什么?”  屏幕，简化用户体验。 请转到[使用 Android 工作配置文件注册](../user-help/enroll-device-android-work-profile.md)，查看更新后的 Android 工作配置文件注册流。  
+从公司门户中的 Android 工作配置文件注册流中删除了“下一步是什么?”屏幕，简化用户体验。 请转到[使用 Android 工作配置文件注册](../user-help/enroll-device-android-work-profile.md)，查看更新后的 Android 工作配置文件注册流。  
 
 ## <a name="week-of-november-11-2019"></a>2019 年 11 月 11 日当周  
 
 ### <a name="web-apps-launched-from-the-windows-company-portal-app----5030972---"></a>从 Windows 公司门户应用启动的 Web 应用 <!-- 5030972 -->
-最终用户现在可以直接从 Windows 公司门户应用启动 Web 应用。 最终用户可以选择 Web 应用，然后选择选项“在浏览器中打开”  。 已发布的 Web URL 直接在 Web 浏览器中打开。 此功能将在下周推出。 有关 Web 应用的详细信息，请参阅[向 Microsoft Intune 添加 Web 应用](../apps/web-app.md)。
+最终用户现在可以直接从 Windows 公司门户应用启动 Web 应用。 最终用户可以选择 Web 应用，然后选择选项“在浏览器中打开”。 已发布的 Web URL 直接在 Web 浏览器中打开。 此功能将在下周推出。 有关 Web 应用的详细信息，请参阅[向 Microsoft Intune 添加 Web 应用](../apps/web-app.md)。
 
 ![从 Windows 公司门户应用启动的 Web 应用的示例图像](./media/whats-new-app-ui/webapp-open-in-browser.png)  
 
@@ -121,12 +134,12 @@ ms.locfileid: "82991791"
 ## <a name="week-of-june-24-2019"></a>2019 年 6 月 24 日当周  
 
 ### <a name="view-all-installed-apps-from-new-company-portal-web-page----4224326---"></a>从新版公司门户网页查看所有已安装应用 <!-- 4224326 -->
-公司门户网站的新增“已安装应用”  页面将列出用户设备上安装的所有（要求安装和允许安装的）托管应用。 除了分配类型，用户还可以看到应用的发布者、发布日期和当前安装状态。 如果你并未要求或允许用户安装任何应用，则用户将看到一条消息，说明尚未安装任何公司应用。 若要在 Web 上查看新页面，请转到[公司门户网站](https://portal.manage.microsoft.com)，并单击“已安装应用”  。   
+公司门户网站的新增“已安装应用”页面将列出用户设备上安装的所有（要求安装和允许安装的）托管应用。 除了分配类型，用户还可以看到应用的发布者、发布日期和当前安装状态。 如果你并未要求或允许用户安装任何应用，则用户将看到一条消息，说明尚未安装任何公司应用。 若要在 Web 上查看新页面，请转到[公司门户网站](https://portal.manage.microsoft.com)，并单击“已安装应用”。   
 
 ![公司门户网站“已安装应用”页面的屏幕截图。](./media/whats-new-app-ui/intune-installed-apps-1907.png)     
 
 ### <a name="new-view-lets-app-users-see-all-managed-apps-installed-on-device----2352913---"></a>新增视图，可相应用用户显示设备上安装的所有托管应用 <!-- 2352913 -->
-现在，适用于 Windows 的公司门户应用将列出用户设备上安装的所有（要求安装和允许安装的）托管应用。 用户还可以看到已尝试和待处理的应用安装及其当前状态。 如果你并未要求或允许用户安装应用，则用户将看到一条消息，说明尚未安装任何公司应用。 若要查看新视图，请转到公司门户的导航窗格，并选择“应用”   > “已安装应用”  。   
+现在，适用于 Windows 的公司门户应用将列出用户设备上安装的所有（要求安装和允许安装的）托管应用。 用户还可以看到已尝试和待处理的应用安装及其当前状态。 如果你并未要求或允许用户安装应用，则用户将看到一条消息，说明尚未安装任何公司应用。 若要查看新视图，请转到公司门户的导航窗格，并选择“应用” > “已安装应用”。   
 
 ![适用于 Windows 10 的公司门户应用“已安装应用”页面的示例屏幕截图。 ](./media/whats-new-app-ui/installed-apps-cp-1906.png)  
 
@@ -144,13 +157,13 @@ ms.locfileid: "82991791"
 ## <a name="week-of-april-15-2019"></a>2019 年 4 月 15 日当周  
 
 ### <a name="new-end-user-app-microsoft-intune-app---3903244---"></a>新最终用户应用（Microsoft Intune 应用） <!--3903244 -->  
-有一种适用于 Android 完全托管设备的新最终用户应用，名为 Microsoft Intune  。 此新应用质轻、现代，并可提供与公司门户应用类似的功能，但适用于完全托管的公司设备。 有关详细信息，请参阅 [Google Play 上的 Microsoft Intune 应用](https://play.google.com/store/apps/details?id=com.microsoft.intune)。  
+有一种适用于 Android 完全托管设备的新最终用户应用，名为 Microsoft Intune。 此新应用质轻、现代，并可提供与公司门户应用类似的功能，但适用于完全托管的公司设备。 有关详细信息，请参阅 [Google Play 上的 Microsoft Intune 应用](https://play.google.com/store/apps/details?id=com.microsoft.intune)。  
 
 设备详细信息屏幕的示例屏幕截图： 
 
 ![Microsoft Intune 应用的屏幕截图，其中显示了 Jane 的 Android 设备的详细信息。](./media/whats-new-app-ui/1904-intune-app-device-details.png)   
 
-“安装程序访问”屏幕的示例屏幕截图  ：  
+“安装程序访问”屏幕的示例屏幕截图：  
 
 ![Microsoft Intune 应用的屏幕截图，其中显示了安装程序访问注册屏幕。](./media/whats-new-app-ui/1904-intune-app-setup-access.png)   
 
@@ -158,7 +171,7 @@ ms.locfileid: "82991791"
 
 ![Microsoft Intune 应用的屏幕截图，其中显示了边栏菜单。](./media/whats-new-app-ui/1904-intune-app-navigation-menu.png)   
 
-“帮助”屏幕的示例屏幕截图  ：  
+“帮助”屏幕的示例屏幕截图：  
 
 ![Microsoft Intune 应用“帮助”屏幕的屏幕截图。](./media/whats-new-app-ui/1904-intune-app-help.png)   
 
@@ -178,7 +191,7 @@ ms.locfileid: "82991791"
 
 ## <a name="week-of-february-19-2019"></a>2019 年 2 月 19 日当周  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>适用于 Windows 10 的公司门户应用中的全新应用类别屏幕<!-- 3834780 WNready4Review -->  
-添加了名为“应用类别”的新屏幕，以改善适用于 Windows 10 的公司门户中的应用浏览和选择体验  。 用户现在可以看到他们的应用按照“特别推荐”、“教育”和“工作效率”等类别进行排序    。 此更改将出现在公司门户 10.3.3451.0 版及更高版本中。 有关在公司门户中安装应用的详细信息，请参阅[在设备上安装和共享应用](../user-help/install-apps-cpapp-windows.md)。  
+添加了名为“应用类别”的新屏幕，以改善适用于 Windows 10 的公司门户中的应用浏览和选择体验。 用户现在可以看到他们的应用按照“特别推荐”、“教育”和“工作效率”等类别进行排序  。 此更改将出现在公司门户 10.3.3451.0 版及更高版本中。 有关在公司门户中安装应用的详细信息，请参阅[在设备上安装和共享应用](../user-help/install-apps-cpapp-windows.md)。  
 
 ![适用于 Windows 10 的公司门户的应用类别屏幕的屏幕截图。](./media/whats-new-app-ui/1902_CP_app_categories.png)
 
@@ -215,15 +228,15 @@ Microsoft Intune 管理员可以上传自定义品牌图像，该图像将在 iO
 ## <a name="week-of-july-16-2018"></a>2018 年 7 月 16 日所在的一周  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>适用于 Windows 的公司门户应用中的更多同步机会   
-适用于 Windows 的公司门户应用现在允许直接从 Windows 任务栏和“开始”菜单启动同步。 如果唯一的任务是同步设备并访问公司资源，那么此功能极其有用。 要访问新功能，请右键单击固定到任务栏或“开始”菜单的公司门户图标  。 在菜单选项（也称为跳转列表）中，选择“同步此设备”  。 公司门户将打开“设置”页面并启动同步  。  
+适用于 Windows 的公司门户应用现在允许直接从 Windows 任务栏和“开始”菜单启动同步。 如果唯一的任务是同步设备并访问公司资源，那么此功能极其有用。 要访问新功能，请右键单击固定到任务栏或“开始”菜单的公司门户图标。 在菜单选项（也称为跳转列表）中，选择“同步此设备”。 公司门户将打开“设置”页面并启动同步。  
 
 ![设备桌面上 Windows 任务栏的屏幕截图。 已单击公司门户应用程序图标，以显示带有“固定到任务栏”、“关闭窗口”和“同步此设备”操作选项的菜单。](./media/whats-new-app-ui/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>适用于 Windows 的公司门户应用中的全新浏览体验  
 
-现在，在适用于 Windows 的公司门户应用中浏览或搜索应用时，用户可在现有的“磁贴”视图和新的“详细信息”视图之间切换   。 新视图列出应用程序详细信息，如名称、发布服务器、发布日期和安装状态。  
+现在，在适用于 Windows 的公司门户应用中浏览或搜索应用时，用户可在现有的“磁贴”视图和新的“详细信息”视图之间切换 。 新视图列出应用程序详细信息，如名称、发布服务器、发布日期和安装状态。  
 
-通过“应用”页的“已安装”视图，可查看有关已完成和进行中的应用安装的详细信息   。  
+通过“应用”页的“已安装”视图，可查看有关已完成和进行中的应用安装的详细信息 。  
 
 显示平铺视图的示例屏幕截图：  
  
@@ -297,7 +310,7 @@ Microsoft Intune 管理员可以上传自定义品牌图像，该图像将在 iO
 我们改进了适用于 iOS/iPadOS 的公司门户应用中的设备安装工作流。 语言更贴近用户，并尽可能地将屏幕合并。 我们还通过在整个安装文本中使用贵公司的名称，使语言更具有针对性。
 
 > [!NOTE]
-> 我们使用在 Azure 门户中设置的公司名称：“Microsoft Intune” > “客户端应用” > “公司门户品牌” > “公司名称”     。 如果你未设置此值，我们将使用你在  “Azure Active Directory” >   “属性” >   “名称”中设置的租户名称。 如果你尚未在公司门户品牌中设置公司名称，并且不希望显示租户名称，我们建议你在“公司门户品牌”选项卡中设置公司名称。如果你不希望此字符串显示在公司门户的标题中，则可以取消选中该复选框以“在徽标旁显示公司名称”。
+> 我们使用在 Azure 门户中设置的公司名称：“Microsoft Intune” > “客户端应用” > “公司门户品牌” > “公司名称”   。 如果你未设置此值，我们将使用你在“Azure Active Directory” > “属性” > “名称”中设置的租户名称。 如果你尚未在公司门户品牌中设置公司名称，并且不希望显示租户名称，我们建议你在“公司门户品牌”选项卡中设置公司名称。如果你不希望此字符串显示在公司门户的标题中，则可以取消选中该复选框以“在徽标旁显示公司名称”。
 
 |以前|完成|
 |---|---|
@@ -409,18 +422,18 @@ Android 公司门户应用的注册流程进行了简化，新增了文本，更
 
 更新后，“Intune 移动应用管理”(MAM) 对话框将具有新式外观和体验。 对话框功能与以前相同。
 
-之前的体验 
+之前的体验
 
 ![旧界面](./media/whats-new-app-ui/NewUI_Old_AttachFileHandler.jpg)
 
-新式体验 
+新式体验
 
 ![新式界面](./media/whats-new-app-ui/NewUI_Modern_AttachFileHandler.jpg)
 
 
 ### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>适用于 Windows 10 的公司门户应用上“设备详细信息”页的更新 <!-- 1287448 -->
 
-适用于 Windows 10 的公司门户应用将标题下的“类别”标签移动至“设备详细信息”页上的一个属性   。
+适用于 Windows 10 的公司门户应用将标题下的“类别”标签移动至“设备详细信息”页上的一个属性 。
 
 ![适用于 Windows 的公司门户应用的“设备详细信息”屏幕，现在“类别”字段显示为一个属性，而不是直接显示在屏幕标题的下方。](./media/whats-new-app-ui/cp_win10_category_tag_move_after_1708.png)
 
@@ -460,7 +473,7 @@ __从其他设备登录时的新登录体验__
 
 ![公司门户登录页，在网站的图形表示形式前方显示人形图标。 下面是“登录”按钮。 底部的链接指向 Microsoft 隐私和 Cookie 信息。](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_001.png)
 
-点击“从其他设备登录”链接  。
+点击“从其他设备登录”链接。
 
 ![通过使用工作计算机的唯一密码访问 aka.ms/devicelogin 页面，然后使用验证码进行登录可获得说明。](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
@@ -468,7 +481,7 @@ __从其他设备登录时的新登录体验__
 
 ![用户工作计算机上用户浏览器的图像，而不是公司门户应用的图像。 显示的“设备登录”页将提示用户输入他们在公司门户应用中收到的验证码。](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
-输入在公司门户应用中看到的验证码。 选择“继续”  ，你将能够使用受贵公司支持的任意方法进行身份验证，如智能卡。
+输入在公司门户应用中看到的验证码。 选择“继续”，你将能够使用受贵公司支持的任意方法进行身份验证，如智能卡。
 
 ![用户已在字段中输入唯一代码，且“设备登录”网站已请求确认 Intune 公司门户是否是接收登录授权的正确应用。](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_005.png)
 
@@ -481,9 +494,9 @@ __从其他设备登录时的新登录体验__
 ## <a name="june-2017"></a>2017 年 6 月
 
 ### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies"></a>适用于 Android 的公司门户应用现推出了全新的应用保护政策最终用户体验
-根据客户反馈，已修改适用于 Android 的公司门户应用，以便显示“访问公司内容”  按钮。 其目的在于，使最终用户在仅需要访问支持应用保护策略（Intune 移动应用程序管理的一项功能）的应用时，无需完成不必要的注册过程。
+根据客户反馈，已修改适用于 Android 的公司门户应用，以便显示“访问公司内容”按钮。 其目的在于，使最终用户在仅需要访问支持应用保护策略（Intune 移动应用程序管理的一项功能）的应用时，无需完成不必要的注册过程。
 
-用户只需点击“访问公司内容”  按钮，而不是开始注册设备。
+用户只需点击“访问公司内容”按钮，而不是开始注册设备。
 
 ![一个 Android 公司门户应用的图像，图像正中以较大文字显示“访问公司内容”，而不是按照标准情况提供立即注册选项](./media/whats-new-app-ui/and_access_company_content_after_1706.png)
 
@@ -491,7 +504,7 @@ __从其他设备登录时的新登录体验__
 
 ![公司门户网站图像，其中显示确认登录的画面。](./media/whats-new-app-ui/and_iwp_sign_in_auth_page_after_1706.png)
 
-仍可通过点击“操作”  菜单，让设备注册为完全管理。
+仍可通过点击“操作”菜单，让设备注册为完全管理。
 
 ![另一个 Android 公司门户应用的图像，其中显示了屏幕右上角的菜单，含有一个用于继续注册设备的选项。](./media/whats-new-app-ui/and_sign_in_menu_after_app_protection_policy_enrolled_after_1706.png)
 
@@ -602,11 +615,11 @@ __之后__ ![现已更新版本加载页面的图像，其状态消息会显示�
 
 ![左侧为更新之前的 Android 适用的公司门户应用的图像。 右侧为更新之后的 Android 适用的公司门户应用的图像。 两张图像中都选定了“应用”、“设备”和“联系 IT”三个可用选项卡中的“设备”选项卡。](./media/whats-new-app-ui/CP_Android_DevicesTab_BeforeAfter.png)
 
-* __界面__：更新了“应用”选项卡中的“特别推荐的应用”和“所有应用”按钮    。  “搜索”按钮现在是浮动的操作按钮。
+* __界面__：更新了“应用”选项卡中的“特别推荐的应用”和“所有应用”按钮  。“搜索”按钮现在是浮动的操作按钮。
 
 ![左侧为更新之前的 Android 适用的公司门户应用的图像。 右侧为更新之后的 Android 适用的公司门户应用的图像。 两张图像中都选定了“应用”、“设备”和“联系 IT”三个可用选项卡中的“应用”选项卡。](./media/whats-new-app-ui/CP_Android_AppsTab_BeforeAfter.png)
 
-* __导航__：为了更便于导航，“所有应用”以选项卡形式呈现出“特别推荐”、“所有”和“类别”视图    。 “联系 IT 部门”  已经过精简，更加清晰易辨。
+* __导航__：为了更便于导航，“所有应用”以选项卡形式呈现出“特别推荐”、“所有”和“类别”视图  。 “联系 IT 部门”已经过精简，更加清晰易辨。
 
 <html>
 <body>
