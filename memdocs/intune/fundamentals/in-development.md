@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562ef1eaa1cc98e3f5a654e90e4779e228768b6
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311197"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436748"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 开发过程中的功能
 
@@ -161,7 +161,7 @@ ms.locfileid: "84311197"
 - 删除的 Apple Business Manager 设备的计数将添加到“概览”页，可以在其中看到设备状态。
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>自带设备可以使用 VPN 进行部署<!--5015344 -->
-此功能可能会延迟。
+使用新的 Autopilot 配置文件“跳过域连接检查”切换，可以部署混合 Azure AD 联接设备，而无需使用自己的第三方 Win32 VPN 客户端访问企业网络。 若要查看新的切换，请前往 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备”  > “Windows” > “Windows 注册” > “部署配置文件” > “创建配置文件” > “全新体验 (OOBE)”     。
 
 ### <a name="shared-ipads-for-business--6367326---"></a>适用于企业的共享 iPad<!--6367326 -->
 你将能够使用 Intune 和 Apple Business Manager 轻松、安全地设置共享 iPad，使多个员工可以共享设备。 Apple 的[共享 iPad](https://developer.apple.com/education/shared-ipad/) 可以为多个用户提供个性化的体验，同时保留用户数据。 借助托管 Apple ID，用户在登录组织中的任何共享 iPad 后即可访问他们的应用、数据和设置。 共享 iPad 使用联合标识。

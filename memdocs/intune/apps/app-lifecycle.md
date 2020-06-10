@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342356"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428613"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Microsoft Intune 中的应用生命周期概述
 
@@ -30,7 +30,7 @@ ms.locfileid: "79342356"
 
 ![应用生命周期 - 添加、部署、配置、保护和停用。](./media/app-lifecycle/app-lifecycle.png "Intune 应用生命周期")
 
-## <a name="add"></a>“添加”
+## <a name="add"></a>添加
 
 应用部署的第一步是添加你要管理的应用并将其分配到 Intune 中。 尽管你可以使用许多不同的应用类型，但基本的过程都是相同的。 使用 Intune，可添加不同的应用类型，包括内部编写的应用（业务线）、应用商店中的应用、内置应用以及 Web 应用。 有关应用类型的详细信息，请参阅[如何将应用添加到 Microsoft Intune](apps-add.md)。
 
@@ -38,7 +38,7 @@ ms.locfileid: "79342356"
 
 在将应用添加到 Intune 后，就可以[将其分配到你管理的用户和设备](apps-deploy.md)。 Intune 让这一过程变得简单，部署应用后，可以在 Azure 门户中[监视 Intune 中的部署是否成功](apps-monitor.md)。 此外，在一些应用商店中，如 [Apple](vpp-apps-ios.md) 和 [Windows](windows-store-for-business.md) 应用商店，可以为公司批量购买应用许可证。 Intune 可以同步这些商店的数据，从而让你直接从 Intune 管理控制台为这些类型的应用部署和跟踪许可证使用情况。
 
-## <a name="configure"></a>配置
+## <a name="configure"></a>用户密码重置策略
 
 作为应用生命周期的一部分，将定期发布新版本的应用。 Intune 提供一些工具，可轻松地[将你部署的应用更新](apps-add.md)到较新版本。 此外，你还可以为一些应用配置额外的功能，例如：
 
@@ -54,7 +54,7 @@ Intune 为你提供了许多方法来帮助保护你的应用中的数据。 主
 
 ## <a name="retire"></a>停用
 
-最后，有可能你部署的应用会过期，并且需要将其删除。 Intune 使得[从服务停用应用](../remote-actions/device-management.md)变得简单。
+最后，有可能你部署的应用会过期，并且需要将其删除。 Intune 使卸载应用变得简单。 有关详细信息，请参阅[卸载应用](../apps/apps-add.md#uninstall-an-app)。
 
 ## <a name="next-steps"></a>后续步骤
 

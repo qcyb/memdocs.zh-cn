@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988603"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330995"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>如何创建和分配应用保护策略
 
@@ -51,7 +51,7 @@ APP 数据保护框架分为三个不同的配置级别，每个级别基于上�
 
 ## <a name="app-protection-policies-for-iosipados-and-android-apps"></a>面向 iOS/iPadOS 和 Android 应用的应用保护策略
 
-为 iOS/iPadOS 和 Android 应用创建应用保护策略时，需遵循新式 Intune 流程，生成新的应用保护策略。
+为 iOS/iPadOS 和 Android 应用创建应用保护策略时，需遵循新式 Intune 流程，生成新的应用保护策略。 有关为 Windows 应用创建应用保护策略的信息，请参阅[通过 Intune 创建和部署 Windows 信息保护 (WIP) 策略](../apps/windows-information-protection-policy-create.md)。
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>创建 iOS/iPadOS 或 Android 应用保护策略
 

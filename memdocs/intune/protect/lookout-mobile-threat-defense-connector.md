@@ -1,5 +1,5 @@
 ---
-title: Lookout MTD 连接器与 Microsoft Intune
+title: 将 Lookout Mobile Endpoint 与 Microsoft Intune 集成
 titleSuffix: Microsoft Intune
 description: 了解如何将 Intune 与 Lookout 移动威胁防御 (MTD) 相集成以控制移动设备对公司资源的访问。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c3ca25ce4bf4f6520e7ef5f7e3aaaff958060a2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1083e195cee20c3df9572db94395d462f9531a39
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990807"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330944"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout 移动终结点安全连接器与 Intune
 
@@ -36,9 +36,9 @@ ms.locfileid: "83990807"
 
 ## <a name="how-do-intune-and-lookout-mobile-endpoint-security-help-protect-company-resources"></a>Intune 和 Lookout 移动终结点安全如何帮助保护公司资源？
 
-在移动设备上安装并运行 Lookout 移动应用 Lookout for work  。 此应用可捕获文件系统、网络堆栈以及设备和应用程序遥测（如果有），然后将其发送到 Lookout 云服务，评估设备的移动威胁风险。 可在 Lookout 控制台中更改威胁的风险等级分类以满足你的需求。
+在移动设备上安装并运行 Lookout 移动应用 Lookout for work。 此应用可捕获文件系统、网络堆栈以及设备和应用程序遥测（如果有），然后将其发送到 Lookout 云服务，评估设备的移动威胁风险。 可在 Lookout 控制台中更改威胁的风险等级分类以满足你的需求。
 
-- 支持已注册设备  - Intune 设备符合性策略包括移动威胁防御 (MTD) 规则，该规则可以使用 Lookout for work 中的风险评估信息。 启用 MTD 规则后，Intune 将评估设备是否符合已启用的策略。 如果发现设备不符合，将阻止用户访问 Exchange Online 和 SharePoint Online 等公司资源。 用户还可以通过安装在其设备上的 Lookout for work 应用获取指导以解决问题并重新访问公司资源。 若要支持将 Lookout for work 与已注册设备一起使用，请执行以下操作：
+- 支持已注册设备 - Intune 设备符合性策略包括移动威胁防御 (MTD) 规则，该规则可以使用 Lookout for work 中的风险评估信息。 启用 MTD 规则后，Intune 将评估设备是否符合已启用的策略。 如果发现设备不符合，将阻止用户访问 Exchange Online 和 SharePoint Online 等公司资源。 用户还可以通过安装在其设备上的 Lookout for work 应用获取指导以解决问题并重新访问公司资源。 若要支持将 Lookout for work 与已注册设备一起使用，请执行以下操作：
   - [将 MTD 应用添加到设备](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
   - [创建支持 MTD 的设备合规性策略](../protect/mtd-device-compliance-policy-create.md)
   - [在 Intune 中启用 MTD 连接器](../protect/mtd-connector-enable.md)
@@ -88,7 +88,7 @@ ms.locfileid: "83990807"
 > [!div class="mx-imgBorder"]
 > ![显示在修正后授予访问权限的概念图](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>基于对网络的威胁来控制访问
+### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限
 
 检测中间人攻击等网络威胁，并基于设备风险保护对 WiFi 网络的访问。
 
@@ -104,7 +104,7 @@ ms.locfileid: "83990807"
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根据网络威胁控制对 SharePoint Online 的访问
 
-基于设备风险检测对网络的威胁，如中间人攻击和阻止同步企业文件。
+检测到中间人攻击等网络威胁时，根据设备风险阻止对公司文件进行同步。
 
 *检测到网络威胁时阻止 SharePoint Online：*
 

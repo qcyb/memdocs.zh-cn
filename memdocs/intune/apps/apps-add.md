@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989485"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428629"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>将应用添加到 Microsoft Intune 
 
@@ -187,6 +187,25 @@ Intune 会根据以下条件自动重新安装、更新或删除所需应用：
 - 如果必需的应用安装失败或设备上不存在该应用，Intune 将评估符合性并在此时间计划过后重新安装该应用。  
 - 管理员将应用定位为可供用户组使用且最终用户可从设备上的公司门户安装的应用。 之后，管理员会将应用从 v1 更新到 v2。 Intune 会在此时间计划过去时更新应用，前提是应用的任何早期版本仍然在设备上。
 - 如果管理员部署卸载意向并且该设备上存在此应用且卸载失败，Intune 会评估符合性，并在该时间计划过去时卸载该应用。   
+
+## <a name="uninstall-an-app"></a>卸载应用
+
+如果需要从用户的设备卸载应用，请使用以下步骤。
+
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+2. 选择“应用” > “所有应用” > “应用” > “分配” > “添加组”  。
+3. 在“添加组”窗格中，选择“卸载”。
+4. 选择“包括的组”，以选择受此应用分配影响的用户组。
+5. 选择要对其应用卸载分配的组。
+6. 在“选择组”窗格中单击“选择”。 
+7. 在“分配”窗格中单击“确定”以设置分配。 
+8. 如果想排除受此应用分配影响的任何用户组，请选择“排除组”。
+9. 如果已选择排除任何组，请在“选择组”中选择“选择” 。
+10. 在“添加组”窗格中选择“确定”。 
+11. 在应用的“分配”窗格中选择“保存”。 
+
+> [!IMPORTANT]
+> 为成功卸载应用，请务必先删除成员或组的安装分配，然后再将其分配到待卸载。 如果将一个组同时分配为安装应用和卸载应用，将保留而不会删除该应用。
 
 ## <a name="app-installation-errors"></a>应用安装错误
 

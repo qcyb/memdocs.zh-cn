@@ -1,5 +1,5 @@
 ---
-title: Symantec 连接器与 Microsoft Intune
+title: 将 Symantec Endpoint Protection Mobile 连接器与 Microsoft Intune 结合使用
 titleSuffix: Microsoft Intune
 description: 了解如何将 Intune 与 Symantec Endpoint Protection Mobile 相集成以控制移动设备对公司资源的访问。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dcca264716b35600addd917e0ee7f309f530b70
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b078996ba5c7822ce9d8273be1df96a7aad0248b
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988343"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330961"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile 连接器
 
@@ -68,9 +68,9 @@ Intune 设备符合性策略包括基于 SEP Mobile 风险评估的 SEP Mobile �
 
 Intune 支持与 SEP Mobile 集成的两种模式：
 
--  “基本设置”为只读模式，Intune 中的设备在该模式下对 SEP Mobile 可见。
+- “基本设置”为只读模式，Intune 中的设备在该模式下对 SEP Mobile 可见。
 
--  “完全集成”允许 SEP Mobile 向 Intune 报告设备风险和安全事件的详细信息。
+- “完全集成”允许 SEP Mobile 向 Intune 报告设备风险和安全事件的详细信息。
 
 ## <a name="sample-scenarios"></a>示例方案
 
@@ -94,7 +94,7 @@ Intune 支持与 SEP Mobile 集成的两种模式：
 
 ![检测到恶意应用后，在修正后授予访问权限的示意图](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>基于对网络的威胁来控制访问
+### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限
 
 检测**中间人**等网络威胁，并基于设备风险保护对 WiFi 网络的访问。
 

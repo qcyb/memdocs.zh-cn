@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988507"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347315"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理通过 Apple Volume Purchase Program 购买的 iOS 和 macOS 应用
 
@@ -180,7 +180,13 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 
 ## <a name="renewing-app-licenses"></a>续订应用许可证
 
-可以通过从 Apple Business Manager 或 Apple School Manager 下载新的令牌并更新 Intune 中的现有令牌来续订 Apple VPP 令牌。
+可以通过从 [Apple Business Manager](https://business.apple.com/) 或 [Apple School Manager](https://school.apple.com/) 下载新的令牌并更新 Intune 中的现有令牌来续订 Apple VPP 令牌。 
+
+若要续订 Apple VPP 令牌，请执行以下步骤：
+
+1. 导航到 [Apple Business Manager](https://business.apple.com/) 或 [Apple School Manager](https://school.apple.com/)。
+2. 在 Apple Business Manager 或 Apple School Manager 中下载新令牌，方法是选择“设置” > “应用和书籍” > “我的服务器令牌”   。
+3. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中更新令牌，方法是选择“租户管理” > “连接器和令牌” > “Apple VPP 令牌”  。 然后，手动上传令牌。
 
 ## <a name="deleting-a-vpp-app"></a>删除 VPP 应用
 
@@ -190,7 +196,7 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 
 可以利用分配给 Intune 自定义管理员角色的权限独立控制 Apple VPP 令牌和 VPP 应用访问。
 
-* 若要允许 Intune 自定义角色管理 Apple VPP 令牌，请在“应用” > “Apple VPP 令牌”中分配对“托管应用”的权限。  
+* 若要允许 Intune 自定义角色管理 Apple VPP 令牌，请在 Microsoft Endpoint Manager 管理中心中，选择“租户管理” > “连接器和令牌” > “Apple VPP 令牌”，为托管应用分配权限   。
 * 若要允许 Intune 自定义角色管理使用 iOS/iPadOS VPP 令牌购买的应用，请在“应用” > “所有应用”中分配对“移动应用”的权限  。 
 
 ## <a name="additional-information"></a>其他信息

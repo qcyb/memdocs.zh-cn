@@ -1,5 +1,5 @@
 ---
-title: 设置 Check Point SandBlast MTD
+title: 使用 Intune 设置 Check Point SandBlast MTD 连接器
 titleSuffix: Microsoft Intune
 description: 了解如何将 Intune 与 Check Point SandBlast Mobile Threat Defense 相集成以控制移动设备对公司资源的访问。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9c1450af064caa1f7572da0ab4753e9db68484c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a0645c771b304bfb4930f5cd365b9291366499b1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989254"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330910"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast 移动威胁防御连接器与 Intune
 
@@ -77,7 +77,7 @@ Intune 设备符合性策略包括基于 Check Point SandBlast 风险评估的 C
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD 授予访问权限](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
 
-### <a name="control-access-based-on-threat-to-network"></a>基于对网络的威胁来控制访问
+### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限
 
 检测**中间人**等网络威胁，并基于设备风险保护对 WiFi 网络的访问。
 

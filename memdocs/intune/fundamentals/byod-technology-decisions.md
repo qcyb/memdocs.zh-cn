@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079274"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455236"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>用于通过 Microsoft 企业移动性 + 安全性 (EMS) 启用 BYOD 的技术决策
 
@@ -72,14 +72,14 @@ ms.locfileid: "82079274"
 |用户帐户遭到泄露 | 阻止高风险用户 | 阻止高风险用户 |
 |用户帐户遭到泄露 | 设备 PIN | 应用 PIN |
 | | | |
-| 设备或应用遭到泄露 | 需要兼容设备 | 在应用启动时进行越狱检查 |
+| 设备或应用遭到泄露 | 需要兼容设备 | 应用启动时进行越狱/root 检查 |
 | 设备或应用遭到泄露 | 加密设备数据 | 加密应用数据 |
 | | | |
 |设备丢失或被盗 | 删除所有设备数据 | 删除所有应用数据|
 | | | |
-| 意外共享数据，或将数据保存到不安全的位置 | 限制设备数据备份 | 限制剪切/复制/粘贴|
+| 意外共享数据，或将数据保存到不安全的位置 | 限制设备数据备份 | 限制组织数据备份 |
 | 意外共享数据，或将数据保存到不安全的位置 | 限制另存为 | 限制另存为 |
-|意外共享数据，或将数据保存到不安全的位置 | 禁用打印 | n/a|
+|意外共享数据，或将数据保存到不安全的位置 | 禁用打印 | 禁用组织数据打印 |
 
 ## <a name="next-steps"></a>后续步骤
 现在是时候决定是否要在组织中启用 BYOD 了，可以选择是重点关注设备管理、应用管理还是上述两者的组合。 实现选择由你掌控，可以确信的是 Azure AD 提供的标识和安全功能在任何时候都可用。  

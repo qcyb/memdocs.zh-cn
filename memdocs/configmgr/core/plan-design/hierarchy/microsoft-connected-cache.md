@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878493"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455270"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache
 
@@ -63,7 +63,7 @@ ms.locfileid: "83878493"
 
   - 请勿预安装 IIS [应用程序请求路由](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) 功能。 Connected Cache 安装 ARR 并配置其设置。 Microsoft 不能保证 Connected Cache 的 ARR 配置不会与服务器上同时使用此功能的其他应用程序发生冲突。
 
-  - 分发点需要具有 Internet 连接才能访问 Microsoft 云。 特定 URL 可以基于特定于云的内容而不同。 有关详细信息，请参阅 [Internet 访问要求](../network/internet-endpoints.md)。
+  - 分发点需要具有 Internet 连接才能访问 Microsoft 云。 特定 URL 可以基于特定于云的内容而不同。 确保还允许终结点进行传递优化。 有关详细信息，请参阅 [Internet 访问要求](../network/internet-endpoints.md)。
 
   - 从版本 2002 开始，联网缓存应用程序可以使用未经身份验证的代理服务器进行 Internet 访问。 有关详细信息，请参阅[配置站点系统服务器的代理](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。<!-- 5856396 -->
 

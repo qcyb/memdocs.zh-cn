@@ -1,5 +1,5 @@
 ---
-title: 排查在 Microsoft Intune 中使用 SCEP 时，将证书传送到设备的问题 | Microsoft Docs
+title: 排查 Intune 的 SCEP 证书传送问题 | Microsoft Docs
 description: 排查在 Intune 中使用 SCEP 证书配置文件部署证书时，将证书从 CA 传送到设备的问题。
 keywords: ''
 author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3acd8f0605ffbfe4f04ea4a9f0aaf81249e38cf5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 401bc2abe1be925f78436ff6557896ed51e37cb1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991067"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330893"
 ---
 # <a name="troubleshoot-the-delivery-of-certificates-provisioned-by-scep-to-devices-in-microsoft-intune"></a>排查在 Microsoft Intune 中将 SCEP 预配的证书传送到设备的问题
 
@@ -93,14 +93,14 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 在 Windows 设备上，验证是否已传送证书：
 
-- 运行 eventvwr.msc  以打开“事件查看器”。 转到“应用程序和服务日志”   > “Microsoft”   > “Windows”   > “DeviceManagement-Enterprise-Diagnostic-Provider”   > “管理员”  并查找“事件 39”  。 此事件应具有以下内容的一般描述：**SCEP：已成功安装证书。**
+- 运行 eventvwr.msc 以打开“事件查看器”。 转到“应用程序和服务日志” > “Microsoft” > “Windows” > “DeviceManagement-Enterprise-Diagnostic-Provider” > “管理员”并查找“事件 39”。 此事件应具有以下内容的一般描述：**SCEP：已成功安装证书。**
 
    ![Windows 应用程序日志中的事件 39](../protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
 
-若要查看设备上的证书，请运行 certmgr.msc  以打开“证书 MMC”，并验证是否在设备的个人存储中正确安装了根证书和 SCEP 证书：
+若要查看设备上的证书，请运行 certmgr.msc 以打开“证书 MMC”，并验证是否在设备的个人存储中正确安装了根证书和 SCEP 证书：
 
-   1. 转到“证书(本地计算机)”   > “受信任的根证书颁发机构”   > “证书”  ，并验证来自 CA 的根证书是否存在。 “颁发对象”  和“颁发者”  的值将相同。
-   2. 在“证书 MMC”中，转到“证书 – 当前用户”   > “个人”   > “证书”  ，并验证请求的证书是否存在，该证书的“颁发者”  等于 CA 的名称。
+   1. 转到“证书(本地计算机)” > “受信任的根证书颁发机构” > “证书”，并验证来自 CA 的根证书是否存在。 “颁发对象”和“颁发者”的值将相同。
+   2. 在“证书 MMC”中，转到“证书 – 当前用户” > “个人” > “证书”，并验证请求的证书是否存在，该证书的“颁发者”等于 CA 的名称。
 
 ## <a name="troubleshoot-failures"></a>排查失败
 
@@ -116,7 +116,7 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 若要解决设备上未安装证书的问题，请查看 Windows 事件日志中提示问题的错误：
 
-- 在设备上，运行 eventvwr.msc  以打开“事件查看器”，然后转到“应用程序和服务日志”   > “Microsoft”   > “Windows”   > “DeviceManagement-Enterprise-Diagnostic-Provider”   > “管理员”  。
+- 在设备上，运行 eventvwr.msc 以打开“事件查看器”，然后转到“应用程序和服务日志” > “Microsoft” > “Windows” > “DeviceManagement-Enterprise-Diagnostic-Provider” > “管理员”。
 
 传送和安装证书到设备的错误通常与 Windows 操作相关，与 Intune 不相关。
 

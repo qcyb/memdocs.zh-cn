@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110128"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454964"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -25,7 +25,7 @@ ms.locfileid: "82110128"
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a>服务连接点
 
-这些配置适用于托管服务连接点的计算机以及该计算机与 Internet 之间的任何防火墙。 它们都必须允许通过 HTTPS 的传出端口“TCP 443”和 HTTP 的传出端口“TCP 80”与以下 Internet 位置传递通信   。
+这些配置适用于托管服务连接点的计算机以及该计算机与 Internet 之间的任何防火墙。 它们都必须允许通过 HTTPS 的传出端口“TCP 443”和 HTTP 的传出端口“TCP 80”与以下 Internet 位置传递通信 。
 
 服务连接点支持使用 Web 代理（具有或不具有身份验证皆可）来使用这些位置。 有关详细信息，请参阅[代理服务器支持](proxy-server-support.md)。
 
@@ -38,12 +38,12 @@ ms.locfileid: "82110128"
 
 从版本 2002 开始，如果 Configuration Manager 站点无法连接到云服务所需的终结点，则会引发严重状态消息 ID 11488。 当无法连接到服务时，SMS_SERVICE_CONNECTOR 组件状态将更改为严重。 在 Configuration Manager 控制台的[“组件状态”](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus)节点中查看详细状态。<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/> 更新和维护服务
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a> 更新和服务
 
 有关该功能的详细信息，请参阅 [Configuration Manager 的更新和服务](../../servers/manage/updates.md)。
 
 > [!Tip]  
-> 为[管理见解](../../servers/manage/management-insights.md)规则（即，将站点连接到 Microsoft 云来实现 Configuration Manager 更新）启用这些终结点  。
+> 为[管理见解](../../servers/manage/management-insights.md)规则（即，将站点连接到 Microsoft 云来实现 Configuration Manager 更新）启用这些终结点。
 
 - `*.akamaiedge.net`  
 
@@ -87,6 +87,18 @@ ms.locfileid: "82110128"
 
 如果将 Configuration Manager 与[适用于企业的 Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) 集成，请确保服务连接点和目标设备能够访问云服务。 有关详细信息，请参阅[适用于企业的 Microsoft Store 代理配置](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)。
 
+## <a name="delivery-optimization"></a>传递优化
+
+如果使用传递优化，则客户端需要与其云服务 `*.do.dsp.mp.microsoft.com` 进行通信
+
+支持 Microsoft 连接缓存的分发点也需要这些终结点。
+
+有关详细信息，请参阅下列文章：
+
+- [传递优化常见问题解答](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Configuration Manager 中内容管理的基本概念](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Configuration Manager 中的 Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md)
+
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a> 云服务
 
 <!-- SCCMDocs-pr #3402 -->
@@ -98,11 +110,11 @@ ms.locfileid: "82110128"
 - Azure Active Directory (Azure AD) 集成
 - 基于 Azure AD 的发现
 
-对于 CMG/CDP 服务部署，  服务连接点需要访问：
+对于 CMG/CDP 服务部署，服务连接点需要访问：
 
-- 特定的 Azure 终结点因环境而异，具体取决于配置。 Configuration Manager 将这些终结点存储在站点数据库中。 查询 SQL Server 中的 AzureEnvironments 表以获取 Azure 终结点的列表  。  
+- 特定的 Azure 终结点因环境而异，具体取决于配置。 Configuration Manager 将这些终结点存储在站点数据库中。 查询 SQL Server 中的 AzureEnvironments 表以获取 Azure 终结点的列表。  
 
- CMG 连接点需要访问以下服务终结点：
+CMG 连接点需要访问以下服务终结点：
 
 - 服务管理终结点：`https://management.core.windows.net/`  
 
@@ -110,11 +122,11 @@ ms.locfileid: "82110128"
 
     其中，`<name>` 是 CMG 或 CDP 的云服务名称。 例如，如果 CMG 是 `GraniteFalls.CloudApp.Net`，则允许的第一个存储终结点为 `GraniteFalls.blob.core.windows.net`。<!-- SCCMDocs#2288 -->
 
-对于通过 Configuration Manager 控制台和客户端进行的 Azure AD 令牌检索：  
+对于通过 Configuration Manager 控制台和客户端进行的 Azure AD 令牌检索： 
 
 - ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
 
-对于 Azure AD 用户发现，  服务连接点需要访问：
+对于 Azure AD 用户发现，服务连接点需要访问：
 
 - 1810 版及更早版本：Azure AD Graph 终结点 `https://graph.windows.net/`  
 
@@ -172,7 +184,7 @@ ms.locfileid: "82110128"
 ## <a name="manage-office-365"></a>管理 Office 365
 
 > [!NOTE]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 如果使用 Configuration Manager 部署和更新 Microsoft 365 企业应用版，请允许以下终结点：
 
@@ -207,7 +219,7 @@ when in current branch, get details from SCCMDocs-pr #3403
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>“监视”工作区、“站点层次结构”节点
 
-如果你使用  “地理视图”，则允许访问以下终结点：
+如果你使用“地理视图”，则允许访问以下终结点：
 
 - `http://maps.bing.com`
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 66e6156466d0432aaa8b3b162263f8207bdc9d78
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427781"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455100"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
@@ -78,7 +78,7 @@ Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows
   - AADCLIENTAPPID  
   - AADRESOURCEURI  
 
-- 如果客户端漫游回 Intranet，则需要以下属性：  
+- 如果客户端漫游回 Intranet，请使用以下属性：
   - SMSMP  
 
 - 如果使用自己的 PKI 证书且 CRL 未发布到 Internet，则需要以下参数：  

@@ -2,7 +2,7 @@
 title: 桌面分析中的新增功能
 titleSuffix: Configuration Manager
 description: 桌面分析云服务最近每月发布的新功能摘要。
-ms.date: 05/11/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268151"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454947"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
 
@@ -27,6 +27,12 @@ ms.locfileid: "83268151"
 
 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="june-2020"></a>2020 年 6 月
+
+### <a name="improvement-to-prerequisites"></a>对必备组件的改进
+
+桌面分析不再要求在 Azure Active Directory (Azure AD) 租户中部署 Office 365 服务。 Azure AD 中的 Office 365 客户端管理员应用现在为桌面分析应用，用于从服务中启用 Configuration Manager 检索信息和状态 。
 
 ## <a name="may-2020"></a>2020 年 5 月
 

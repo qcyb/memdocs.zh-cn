@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709378"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455015"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>为云管理网关进行基于令牌的身份验证
 
@@ -60,10 +60,16 @@ Configuration Manager 客户端与管理点一起管理此令牌，因此不存�
 
 1. 在基于 Internet 的设备上安装 Configuration Manager 客户端。 包括客户端安装参数：[ **/regtoken**](about-client-installation-properties.md#regtoken)。 下面的示例命令行包含其他必需的设置参数和属性：
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > 有关此命令行的详细信息，请参阅[使用 Azure AD 标识安装和注册客户端](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)。 此过程类似，只是不使用 Azure AD 属性。
+
+若要进行验证，请查看以下日志文件以获取类似条目：<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>已知问题
 
@@ -107,23 +113,23 @@ Configuration Manager 客户端与管理点一起管理此令牌，因此不存�
 
 可以在 Configuration Manager 控制台中查看以前创建的批量注册令牌及其生存期，并在必要时阻止使用它们。 不过，站点数据库并不存储批量注册令牌。
 
-#### <a name="to-review-a-bulk-registration-token"></a>审阅批量注册令牌的具体步骤
+### <a name="review-a-bulk-registration-token"></a>查看批量注册令牌
 
-1. 在 Configuration Manager 控制台中，单击“管理”。
+1. 在 Configuration Manager 控制台中，转到“管理”工作区。
 
-2. 在“管理”工作区中，展开“安全性”，然后单击“证书”。 控制台在细节窗格中列出所有与站点相关的证书以及批量注册令牌。
+2. 展开“安全性”，然后选择“证书”节点 。 控制台在细节窗格中列出所有与站点相关的证书以及批量注册令牌。
 
 3. 选择要审阅的批量注册令牌。
 
-可以根据 GUID 来识别特定的批量注册令牌。 批量注册令牌的 GUID 在令牌创建时显示。 如果需要，还可以对“类型”列进行筛选或排序。
+你可以对“类型”列进行筛选或排序。 可根据特定的批量注册令牌 GUID 进行识别。 创建批量注册令牌时，工具会显示 GUID。
 
-#### <a name="to-block-a-bulk-registration-token"></a>阻止批量注册令牌的具体步骤
+### <a name="block-a-bulk-registration-token"></a>阻止批量注册令牌
 
-1. 在 Configuration Manager 控制台中，单击“管理”。
+1. 在 Configuration Manager 控制台中，转到“管理”工作区。
 
-2. 在“管理”工作区中，展开“安全性”，单击“证书”，然后选择要阻止的批量注册令牌。
+2. 展开“安全性”，选择“证书”节点，然后选择要阻止的批量注册令牌 。
 
-3. 在功能区栏的“主页”选项卡中或通过右键单击内容菜单，选择“阻止”。 反过来说，可以取消阻止之前阻止的批量注册令牌，具体方法为在功能区栏的“主页”选项卡中或通过右键单击内容菜单，选择“取消阻止”。
+3. 在功能区栏的“主页”选项卡中或通过右键单击上下文菜单，选择“阻止” 。 若要取消阻止先前阻止的批量注册令牌，请选择“取消阻止”操作。
 
 ## <a name="see-also"></a>另请参阅
 

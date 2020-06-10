@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864884"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311156"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Windows 10（及更高版本）设备设置
 
@@ -1095,7 +1095,8 @@ ms.locfileid: "83864884"
 - **检测可能不需要的应用程序**：此功能标识并阻止在网络中下载和安装可能不需要的应用程序 (PUA)。 这些应用程序不会被视为病毒、恶意软件或其他类型的威胁。 但它们可以在终结点上运行可能影响终结点性能或使用的操作。 选择 Windows 检测到 PUA 时的保护级别。 选项包括：
 
   - **未配置**（默认）：Intune 不会更改或更新此设置。 默认情况下，Microsoft Defender 可能会禁用此功能。
-  - **阻止**：Microsoft Defender 会检测 PUA，并阻止检测到的项。 这些项目与其他威胁一起显示在历史记录中。
+  - **关闭**：关闭 PUA 保护。
+  - **启用**：Microsoft Defender 会检测 PUA，并阻止检测到的项。 这些项目与其他威胁一起显示在历史记录中。
   - **审核**：Microsoft Defender 会检测 PUA，但不执行任何操作。 可以查看有关 Microsoft Defender 将对其采取行动的应用程序的信息。 例如，在事件查看器中搜索 Microsoft Defender 创建的事件。
 
   有关可能不需要的应用程序的详细信息，请参阅[检测和阻止可能不需要的应用程序](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)。
