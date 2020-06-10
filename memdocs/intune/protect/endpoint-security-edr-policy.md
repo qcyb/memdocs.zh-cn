@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990878"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206326"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 中关于终结点安全性的终结点检测和响应策略
 
@@ -38,13 +38,13 @@ EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中
 
 在 [Microsoft endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的“终结点安全性”节点的“管理”下查找用于 EDR 的终结点安全性策略。
 
-查看[终结点检测和响应配置文件设置的设置](../protect/endpoint-security-edr-profile-settings.md)。
+查看[终结点检测和响应配置文件设置的设置](endpoint-security-edr-profile-settings.md)。
 
 ## <a name="prerequisites-for-edr-policies"></a>EDR 策略的先决条件
 
 常规：
 
-- **Microsoft Defender 高级威胁防护租户** - 必须先将 Defender ATP 租户和 Microsoft Endpoint Manager 租户（Intune 订阅）集成，才能创建 EDR 策略。 请参阅 Intune 文档中的[使用 Microsoft Defender ATP](../protect/advanced-threat-protection.md)。
+- **Microsoft Defender 高级威胁防护租户** - 必须先将 Defender ATP 租户和 Microsoft Endpoint Manager 租户（Intune 订阅）集成，才能创建 EDR 策略。 请参阅 Intune 文档中的[使用 Microsoft Defender ATP](advanced-threat-protection.md)。
 
 **支持 Configuration Manager 设备**：
 
@@ -67,7 +67,7 @@ EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中
 
 ## <a name="edr-profiles"></a>EDR 配置文件
 
-[查看](../protect/endpoint-security-edr-profile-settings.md)可为以下平台和配置文件配置的设置。
+[查看](endpoint-security-edr-profile-settings.md)可为以下平台和配置文件配置的设置。
 
 **Intune** - 对于使用 Intune 管理的设备，支持以下内容：
 
@@ -138,7 +138,7 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
       选择此选项后，向导会显示其他页面，用于完成共同管理的设置。 有关详细信息，请参阅 Configuration Manager 内容中的[启用共同管理](../../configmgr/comanage/how-to-enable.md)。
 
-     ![配置租户附加](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![配置租户附加](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. 单击“下一步”，然后单击“是”接受“创建 AAD 应用程序”通知  。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册，以促进将集合同步到 Microsoft Endpoint Manager 管理中心。
 
@@ -159,7 +159,7 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 3. 在“配置上传”选项卡中，选择“上传到 Microsoft Endpoint Manager 管理中心” 。 单击“应用” 。
    - 设备上传的默认设置是“我所有由 Microsoft Endpoint Configuration Manager 管理的设备”。 还可以选择将配置限制到一个或多个设备集合。
 
-     ![查看共同管理属性选项卡](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![查看共同管理属性选项卡](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. 出现提示时，请使用全局管理员帐户登录。
 
@@ -195,7 +195,7 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
    - 如果 Configuration Manager 层次结构未配置租户附加，则无法选择此选项。
   
-   ![配置云同步](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![配置云同步](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. 选择“确定”保存配置。
 
@@ -254,15 +254,21 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
 ## <a name="edr-policy-reports"></a>EDR 策略报告
 
-可以在 Microsoft Endpoint Manager 管理中心查看有关所部署的 EDR 策略的详细信息。 若要查看详细信息，请转到“终结点安全性” > “终结点部署和响应”，然后选择要查看合规性详细信息的策略 ：
+可以在 Microsoft Endpoint Manager 管理中心查看有关所部署的 EDR 策略的详细信息。 若要查看详细信息，请转到“终结点安全性” > “终结点部署和响应”，然后选择要查看符合性详细信息的策略 ：
 
-- 对于面向 Windows 10 及更高版本 (Intune) 的策略，会显示策略合规性概述。 还可以选择图表以查看接收了策略的设备的列表，并深入了解各个设备的详细信息。
+- 对于面向 Windows 10 及更高版本 (Intune) 的策略，会显示策略符合性概述。 还可以选择图表以查看接收了策略的设备的列表，并深入了解各个设备的详细信息。
 
-- 对于面向 Windows 10 和 Windows Server 平台 (Configuration Manager) 的策略，会看到策略合规性概述，但无法深入了解其他详细信息。 此视图的信息有限，因为管理中心从 Configuration Manager 接收到的状态详细信息有限，Configuration Manager 管理 Configuration Manager 设备的策略部署。
+  “具有 ATP 传感器的设备”图表仅显示通过使用 Windows 10 及更高版本配置文件成功加入 Defender ATP 的设备 。 若要确保此图表中完整显示你的设备，请将加入配置文件部署到你的所有设备中。 通过外部方法（如组策略或 PowerShell）加入 Defender ATP 的设备被视为不具有 ATP 传感器的设备。
 
-[查看](../protect/endpoint-security-edr-profile-settings.md)可同时为平台和配置文件配置的设置。
+- 对于面向 Windows 10 和 Windows Server 平台 (Configuration Manager) 的策略，会看到策略符合性概述，但无法深入了解其他详细信息。 此视图的信息有限，因为管理中心从 Configuration Manager 接收到的状态详细信息有限，Configuration Manager 管理 Configuration Manager 设备的策略部署。
+
+
+
+
+
+[查看](endpoint-security-edr-profile-settings.md)可同时为平台和配置文件配置的设置。
 
 ## <a name="next-steps"></a>后续步骤
 
-- [配置终结点安全策略](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [配置终结点安全策略](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - 阅读 Microsoft Defender ATP 文档，详细了解[终结点检测和响应](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)。

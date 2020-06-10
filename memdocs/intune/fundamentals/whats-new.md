@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824160"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223670"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -54,7 +54,22 @@ ms.locfileid: "83824160"
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>2020 年 5 月 25 日当周
+
+### <a name="app-management"></a>应用管理
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>ARM64 设备上的 Windows 32 位 (x86) 应用<!-- 5477661 -->
+根据部署可用于 ARM64 设备的 Windows 32 位 (x86) 应用现将在公司门户中显示。 有关 Windows 32 位应用的详细信息，请参阅 [Win32 应用管理](../apps/apps-win32-app-management.md)。
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Windows 公司门户应用图标<!-- 7114635 -->
+Windows 公司门户应用的图标已更新。 有关公司门户的更多详细信息，请参阅[如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用](../apps/company-portal-app.md)。
+
 ## <a name="week-of-may-18-2020"></a>2020 年 5 月 18 日当周
+
+### <a name="app-management"></a>应用管理  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>更新公司门户中 iOS/iPadOS 和 macOS 应用的图标<!--6057697 -->
+更新了公司门户中的图标，创建向 Microsoft Fluent Design System 看齐、双屏幕设备支持的时尚外观。 若要查看更新后的图标，请转到 [Intune 最终用户应用的 UI 更新](./whats-new-app-ui.md)。 
 
 ### <a name="device-security"></a>设备安全性
 
@@ -189,7 +204,7 @@ Intune [终结点安全](../protect/endpoint-security.md)的相关文档现已�
 - 创建重点安全策略并将其部署到托管设备
 - 配置与 Microsoft Defender 高级威胁防护的集成，并管理安全任务以帮助消除由 ATP 团队识别到的设备风险
 - 配置安全基线
-- 管理设备符合性和条件性访问策略
+- 管理设备符合性和条件访问策略
 - 在为 Configuration Manager 配置了“客户端附加”时，查看 Intune 和 Configuration Manager 中所有设备的符合性状态。
 
 除了内容的可用性之外，本月终结点安全还新增了以下内容：
@@ -526,9 +541,9 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 #### <a name="troubleshooting-pending-mam-policy-notification-changed-to-informational-icon--6348954---"></a>故障排除：挂起 MAM 策略通知更改为信息图标<!--6348954 -->
 “疑难解答”边栏选项卡上的挂起 MAM 策略的通知图标已更改为信息图标。
 
-####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>配置合规性策略时的 UI 更新<!-- 3961639    -->
+####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>配置符合性策略时的 UI 更新<!-- 3961639    -->
 
-我们更新了在 Microsoft 终结点管理器中[创建合规性策略](../protect/create-compliance-policy.md#create-the-policy)时的 UI（“设备” > “合规性策略” > “策略” > “创建策略”）。 我们提供了新的用户体验，它包含与以前使用过的相同的设置和详细信息。 新体验遵循类似向导的过程来创建合规性策略，并包含用于为策略添加“分配”的页面，以及用于在创建策略前检查配置的“审查 + 创建”页面。
+我们更新了在 Microsoft 终结点管理器中[创建符合性策略](../protect/create-compliance-policy.md#create-the-policy)时的 UI（“设备” > “符合性策略” > “策略” > “创建策略”）。 我们提供了新的用户体验，它包含与以前使用过的相同的设置和详细信息。 新体验遵循类似向导的过程来创建符合性策略，并包含用于为策略添加“分配”的页面，以及用于在创建策略前检查配置的“审查 + 创建”页面。
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>停用不合规的设备<!-- 1827291       -->
 我们为可添加到任何策略中的不合规设备添加了新的操作，以便[停用不合规的设备](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance)。  “停用不符合要求的设备”这一新操作会导致从设备中删除所有公司数据，并且还会将设备从 Intune 管理中删除。  当达到配置的值（以天为单位），此操作将运行，此时设备将变为可停用状态。 最小值为 30 天。  需要明确的 IT 管理员批准，才能使用“停用不合规的设备”部分（管理员可在其中停用所有符合条件的设备）停用设备。
@@ -569,13 +584,13 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 我们已向“Android 设备概述”页面中的 Microsoft 终结点管理器管理控制台添加报告，显示每个设备管理解决方案中已注册的 Android 设备数。 此图表（像 Azure 控制台中已经存在的相同图表一样）显示工作配置文件、完全托管、专用和设备管理员注册的设备计数。 若要查看报告，请选择“设备” > “Android” > “概述”。
 
 #### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-----"></a>指导用户从 Android 设备管理员管理转到工作配置文件管理<!--5857738   -->
-我们将发布 Android 设备管理员平台的新合规性性设置。 通过此设置，你可以将通过设备管理员管理的设备设为不合规。
+我们将发布 Android 设备管理员平台的新的符合性设置。 通过此设置，你可以将通过设备管理员管理的设备设为不合规。
 
 在这些不合规的设备上，用户将在“更新设备设置”页上看到“转到新设备管理设置”消息。  如果用户点击“解决”按钮，则会被引导完成以下操作：
 
 1. 从设备管理员管理取消注册
 2. 在工作配置文件管理中注册
-3. 解决合规性问题 
+3. 解决符合性问题 
  
 Google 将在新的 Android 版本中减少设备管理员支持，以便通过 Android Enterprise 实现更现代化、更丰富、更安全的设备管理。  Intune 将只能在 2020 年第二季度之前为运行 Android 10 及更高版本的设备管理员管理的 Android 设备提供完全支持。 在此之后，无法再对运行 Android 10 或更高版本的设备管理员管理的设备进行全面管理（Samsung 设备除外）。 特别是，受影响的设备将不会收到新的密码要求。
 
