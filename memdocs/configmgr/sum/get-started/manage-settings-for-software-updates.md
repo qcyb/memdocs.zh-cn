@@ -2,7 +2,7 @@
 title: 管理软件更新的设置
 titleSuffix: Configuration Manager
 description: 了解安装软件更新点后适用于你的站点的软件更新的客户端设置。
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,16 +10,16 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906796"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436663"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>管理软件更新的设置  
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 在 Configuration Manager 中同步软件更新后，配置并验证以下部分中的设置。
 
@@ -55,12 +55,12 @@ ms.locfileid: "82906796"
 
 #### <a name="to-open-software-update-properties"></a>打开软件更新属性  
 
-1. 在 Configuration Manager 控制台中，单击“软件库”  。  
-2. 在“软件库”工作区中，展开“软件更新”  ，并单击“所有软件更新”  。  
+1. 在 Configuration Manager 控制台中，单击“软件库”。  
+2. 在“软件库”工作区中，展开“软件更新” ，并单击“所有软件更新” 。  
 3. 选择一个或多个软件更新，然后在“主页”  选项卡上的“属性”  组中，单击“属性”  。  
 
    > [!NOTE]  
-   >  在“所有软件更新”  节点上，Configuration Manager 只显示分类为“严重”  和“安全”  且在过去 30 天内发布的软件更新。  
+   >  在“所有软件更新”节点上，Configuration Manager 只显示分类为“严重”和“安全”且在过去 30 天内发布的软件更新。  
 
 ###  <a name="review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> 查看软件更新信息  
 在软件更新属性中，你可以查看关于软件更新的详细信息。 当你选择多个软件更新时，不会显示详细信息。 以下部分描述可用于所选软件更新的信息。  
@@ -113,23 +113,23 @@ ms.locfileid: "82906796"
 在属性中，你可以为一个或多个软件更新配置软件更新设置。 你仅可以在管理中心站点或独立主站点中配置大多数软件更新设置。 下列部分将帮助你配置软件更新的设置。  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> 设置最长运行时间  
-在“最长运行时间”  选项卡中，设置对在客户端计算机上完成某软件更新所分配的最长时间。 如果更新所用时间比最长运行时值更长，Configuration Manager 将创建状态消息并停止监视软件更新安装的部署。 你仅可以在管理中心站点或独立主站点中配置此设置。  
+在“最长运行时间”  选项卡中，设置对在客户端计算机上完成某软件更新所分配的最长时间。 如果更新所用时间比最长运行时值更长，Configuration Manager 将创建状态消息并停止软件更新安装。 你仅可以在管理中心站点或独立主站点中配置此设置。  
 
 Configuration Manager 还使用此设置来确定是否在配置的维护时段中启动软件更新安装。 如果最长运行时间的值大于维护时段中的可用剩余时间，则软件更新安装会延迟，直到下个维护时段开始。 当要在具有配置的维护时段（时间段）的客户端计算机上安装多个软件更新时，首先将安装最长运行时间最短的软件更新，然后安装下一个最长运行时间最短的软件更新，并照此类推。 在其安装每个软件更新之前，客户端将验证可用的维护时段是否提供足够时间来安装软件更新。 在软件更新开始安装后，即使安装超过维护时段的结束时间，也将仍然继续安装。 有关维护时段的详细信息，请参阅[如何使用维护时段](../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
 在“最长运行时间”  选项卡上，你可以查看和配置下列设置：  
 
-- **最长运行时间**：指定为完成软件更新安装分配的最大分钟数，在此时段后，Configuration Manager 将不再监视安装。 此设置还用于确定在维护时段结束前是否有足够的可用剩余时间来安装更新。 对于 Service Pack，默认设置为 60 分钟。 对于其他类型的软件更新，如果你执行了 Configuration Manager 版本 1511 或更高版本的全新安装，则默认时间为 10 分钟，如果从之前的版本升级，则默认时间为 5 分钟。 值可以介于 5 至 9999 分钟之间。  
+- **最长运行时间**：指定为完成软件更新安装分配的最大分钟数，在此时段后，Configuration Manager 将停止安装。 此设置还用于确定在维护时段结束前是否有足够的可用剩余时间来安装更新。 对于 Service Pack，默认设置为 60 分钟。 对于其他类型的软件更新，如果你执行了 Configuration Manager 版本 1511 或更高版本的全新安装，则默认时间为 10 分钟，如果从之前的版本升级，则默认时间为 5 分钟。 值可以介于 5 至 9999 分钟之间。  
 
 > [!IMPORTANT]  
 >  请确保将最大运行时间值设置为小于配置的维护时段时间，或者将维护时段时间增加至大于最大运行时间值。 否则，将永远无法启动软件更新安装。  
 
 ####  <a name="set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> 设置自定义严重性  
-在软件更新属性中，你可以使用“自定义严重性”  选项卡来配置软件更新的自定义严重性值。 如果预定义的严重性值不能满足你的需要，则这项操作可能必不可少。 Configuration Manager 控制台的“自定义严重性”  列中列出了自定义值。 你可按定义的自定义严重性值对软件更新排序，并且还可以创建可对这些值进行筛选的查询和报表。 你仅可以在管理中心站点或独立主站点中配置此设置。  
+在软件更新属性中，你可以使用“自定义严重性”  选项卡来配置软件更新的自定义严重性值。 如果预定义的严重性值不能满足你的需要，则这项操作可能必不可少。 Configuration Manager 控制台的“自定义严重性”列中列出了自定义值。 你可按定义的自定义严重性值对软件更新排序，并且还可以创建可对这些值进行筛选的查询和报表。 你仅可以在管理中心站点或独立主站点中配置此设置。  
 
 你可以在“自定义严重性”  选项卡上配置下列设置。  
 
-- **自定义严重性**：为软件更新设置自定义的严重性值。 从列表中选择“严重”  、“重要”  、“中”  或“低”  。 默认情况下，自定义严重性值为空。
+- **自定义严重性**：为软件更新设置自定义的严重性值。 从列表中选择“严重” 、“重要” 、“中” 或“低”  。 默认情况下，自定义严重性值为空。
 
 ## <a name="crl-checking-for-software-updates"></a>软件更新的 CRL 检查
 默认情况下，在验证 Configuration Manager 软件更新上的签名时不会检查证书吊销列表 (CRL)。 如果在每次使用证书时都检查 CRL，则能更好地抵御因使用已吊销的证书而造成的安全威胁，但这样做会使连接出现延迟，并在执行 CRL 检查的计算机上引发额外的处理操作。  

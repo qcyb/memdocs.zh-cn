@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694935"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347196"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 根据通过云管理网关 (CMG) 管理 Internet 上的客户端所用的方案，可能需要以下一个或多个数字证书：  
 
@@ -48,11 +48,11 @@ ms.locfileid: "81694935"
 
 - 在使用以下策略配置 Windows 时：**系统加密：对加密、哈希和签名使用 FIPS 兼容算法**  
 
-- TLS 1.2  。 有关详细信息，请参阅[如何启用 TLS 1.2](../../../plan-design/security/enable-tls-1-2.md)。  
+- TLS 1.2。 有关详细信息，请参阅[如何启用 TLS 1.2](../../../plan-design/security/enable-tls-1-2.md)。  
 
 ## <a name="cmg-server-authentication-certificate"></a><a name="bkmk_serverauth"></a>CMG 服务器身份验证证书
 
-所有方案都需要此证书  。
+所有方案都需要此证书。
 
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
@@ -63,22 +63,22 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 >
 > 有关如何将 CMG 与通配符证书配合使用的详细信息，请参阅[设置 CMG](setup-cloud-management-gateway.md#set-up-a-cmg)。<!--SCCMDocs issue #565-->  
 
-此证书需要使用全局唯一名称标识 Azure 中的服务。 请求证书前，请确认所需的 Azure 域名是否唯一。 例如，GraniteFalls.CloudApp.Net  。
+此证书需要使用全局唯一名称标识 Azure 中的服务。 请求证书前，请确认所需的 Azure 域名是否唯一。 例如，GraniteFalls.CloudApp.Net。
 
 1. 登录到 [Azure 门户](https://portal.azure.com)。
-1. 选择“所有资源”，然后选择“添加”。  
-1. 搜索“云服务”。  选择“创建”。 
-1. 在“DNS 名称”字段中，键入所需的前缀，例如 GraniteFalls   。 界面将反映域名是否可用，或是否已被其他服务使用。
+1. 选择“所有资源”，然后选择“添加”。 
+1. 搜索“云服务”。 选择“创建”。
+1. 在“DNS 名称”字段中，键入所需的前缀，例如 GraniteFalls。 界面将反映域名是否可用，或是否已被其他服务使用。
 
     > [!Important]  
     > 不要在门户中创建服务，仅使用此流程检查名称可用性。
 
 若还要为内容启用 CMG，请确认 CMG 服务名称也是唯一的 Azure 存储帐户名称。 若 CMG 云服务名称是唯一的，但存储帐户名称不是唯一的，Configuration Manager 将无法在 Azure 中预配此服务。 在 Azure 门户中重复上面的过程，并执行下面的更改：
 
-- 搜索“存储帐户” 
-- 在“存储帐户名称”字段中测试你的名称 
+- 搜索“存储帐户”
+- 在“存储帐户名称”字段中测试你的名称
 
-DNS 名称前缀（例如 GraniteFalls  ）的长度应为 3 到 24 个字符，并且只能使用字母数字字符。 不要使用特殊字符，如短划线 (`-`)。<!-- SCCMDocs#1080 -->
+DNS 名称前缀（例如 GraniteFalls）的长度应为 3 到 24 个字符，并且只能使用字母数字字符。 不要使用特殊字符，如短划线 (`-`)。<!-- SCCMDocs#1080 -->
 
 ### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a>针对客户端的 CMG 受信任的根证书
 
@@ -100,18 +100,18 @@ DNS 名称前缀（例如 GraniteFalls  ）的长度应为 3 到 24 个字符，
 
 1. 在组织的公共 DNS 中创建规范名称记录 (CNAME)。 该记录会将 CMG 的别名创建为一个友好名称，你可以在公共证书中使用。
 
-    例如，Contoso 将其 CMG 命名为“GraniteFalls”。  在 Azure 中，此名称变为“GraniteFalls.CloudApp.Net”。  在 Contoso 的公共 DNS contoso.com 命名空间中，DNS 管理员为实际主机名 GraniteFalls.CloudApp.net 新建 GraniteFalls.Contoso.com 的 CNAME 记录   。  
+    例如，Contoso 将其 CMG 命名为“GraniteFalls”。 在 Azure 中，此名称变为“GraniteFalls.CloudApp.Net”。 在 Contoso 的公共 DNS contoso.com 命名空间中，DNS 管理员为实际主机名 GraniteFalls.CloudApp.net 新建 GraniteFalls.Contoso.com 的 CNAME 记录 。  
 
 2. 使用 CNAME 别名的公用名称 (CN) 向公共提供程序请求一个服务器身份验证证书。
 例如，Contoso 对证书 CN 使用 **GraniteFalls.Contoso.com**。  
 
-3. 使用此证书在 Configuration Manager 控制台中创建 CMG。 在创建云管理网关向导的“设置”页面  ：  
+3. 使用此证书在 Configuration Manager 控制台中创建 CMG。 在创建云管理网关向导的“设置”页面：  
 
-    - 当（从“证书文件”）添加此云服务的服务器证书时，向导将从证书 CN 中提取主机名用作服务名称  。  
+    - 当（从“证书文件”）添加此云服务的服务器证书时，向导将从证书 CN 中提取主机名用作服务名称。  
 
-    - 然后将该主机名追加到 Azure 美国政府云的 cloudapp.net 或 usgovcloudapp.net，作为用于在 Azure 中创建服务的服务 FQDN   。  
+    - 然后将该主机名追加到 Azure 美国政府云的 cloudapp.net 或 usgovcloudapp.net，作为用于在 Azure 中创建服务的服务 FQDN 。  
 
-    - 例如，当 Contoso 创建 CMG 时，Configuration Manager 会从证书 CN 中提取主机名 GraniteFalls  。 Azure 将实际服务创建为 GraniteFalls.CloudApp.net  。  
+    - 例如，当 Contoso 创建 CMG 时，Configuration Manager 会从证书 CN 中提取主机名 GraniteFalls。 Azure 将实际服务创建为 GraniteFalls.CloudApp.net。  
 
 在 Configuration Manager 中创建 CMG 实例时，虽然该证书具有 GraniteFalls.Contoso.com，但 Configuration Manager 仅提取主机名，例如：GraniteFalls。 它将该主机名追加到创建云服务时 Azure 所需的 CloudApp.net。 域的 DNS 命名空间中的 CNAME 别名 Contoso.com 将这两个 FQDN 映射在一起。 Configuration Manager 为客户端提供了用于访问此 CMG 的策略，DNS 映射将其绑定在一起，以便它们可以安全地访问 Azure 中的服务。<!--SCCMDocs issue #565-->  
 
@@ -123,9 +123,9 @@ DNS 名称前缀（例如 GraniteFalls  ）的长度应为 3 到 24 个字符，
 
 - 将 cloudapp.net 公共域用于 CMG Web 服务器证书时：  
 
-  - 在 Azure 公有云上，请使用以 cloudapp.net 结尾的名称   
+  - 在 Azure 公有云上，请使用以 cloudapp.net 结尾的名称  
 
-  - 针对 Azure 美国政府云，请使用以 usgovcloudapp.net 结尾的名称   
+  - 针对 Azure 美国政府云，请使用以 usgovcloudapp.net 结尾的名称  
 
 ## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a>客户端身份验证证书
 
@@ -161,29 +161,29 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 1. 单击“开始”菜单。 键入“run”打开“运行”窗口。 打开 `mmc`。  
 
-2. 在“文件”菜单中，选择“添加/删除管理单元...”  。  
+2. 在“文件”菜单中，选择“添加/删除管理单元...”。  
 
-3. 在“添加/删除管理单元”对话框中，选择“证书”，然后选择“添加”   。  
+3. 在“添加/删除管理单元”对话框中，选择“证书”，然后选择“添加” 。  
 
-    1. 在“证书管理单元”对话框中，选择“计算机帐户”，然后选择“下一步”   。  
+    1. 在“证书管理单元”对话框中，选择“计算机帐户”，然后选择“下一步” 。  
 
-    1. 在“选择计算机”对话框中，选择“本地计算机”，然后选择“完成”   。  
+    1. 在“选择计算机”对话框中，选择“本地计算机”，然后选择“完成” 。  
 
-    1. 在“添加/删除管理单元”对话框中，选择“确定”  。  
+    1. 在“添加/删除管理单元”对话框中，选择“确定”。  
 
-4. 依次展开“证书”、“个人”，然后选择“证书”    。  
+4. 依次展开“证书”、“个人”，然后选择“证书”  。  
 
-5. 选择一个预期用途为“客户端身份验证”的证书  。  
+5. 选择一个预期用途为“客户端身份验证”的证书。  
 
-    1. 从“操作”菜单中，选择“打开”  。  
+    1. 从“操作”菜单中，选择“打开”。  
 
-    1. 转到“证书路径”选项卡  。  
+    1. 转到“证书路径”选项卡。  
 
-    1. 从证书链上选择下一个证书，然后选择“查看证书”  。  
+    1. 从证书链上选择下一个证书，然后选择“查看证书”。  
 
-6. 在新“证书”对话框中，转到“详细信息”选项卡  。选择“复制到文件...”  。  
+6. 在新“证书”对话框中，转到“详细信息”选项卡。选择“复制到文件...”。  
 
-7. 使用默认证书格式（DER 编码二进制 X.509 (.CER)）完成证书导出向导  。 记下导出证书的名称和位置。  
+7. 使用默认证书格式（DER 编码二进制 X.509 (.CER)）完成证书导出向导。 记下导出证书的名称和位置。  
 
 8. 导出原始客户端身份验证证书的证书路径中的所有证书。 记下哪些导出证书是中间 CA，哪些是受信任的根 CA。  
 
@@ -191,14 +191,14 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 请在 Configuration Manager 的上下文外预配此证书。 例如，使用 Active Directory 证书服务和组策略颁发 Web 服务器证书。 有关详细信息，请参阅 [PKI 证书要求](../../../plan-design/network/pki-certificate-requirements.md)和[为运行 IIS 的站点系统部署 Web 服务器证书](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012)。
 
-使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP  。 有关详细信息，请参阅[增强型 HTTP](../../../plan-design/hierarchy/enhanced-http.md)。
+使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP。 有关详细信息，请参阅[增强型 HTTP](../../../plan-design/hierarchy/enhanced-http.md)。
 
 > [!Tip]  
-> 如果未使用增强型 HTTP，并且你的环境具有多个管理点，则无需使用 HTTPS 针对 CMG 启用所有管理点。 将启用 CMG 的管理点配置为  “仅 Internet”。 你的本地客户端就不会尝试使用它们。<!-- SCCMDocs#1676 -->
+> 如果未使用增强型 HTTP，并且你的环境具有多个管理点，则无需使用 HTTPS 针对 CMG 启用所有管理点。 将启用 CMG 的管理点配置为“仅 Internet”。 你的本地客户端就不会尝试使用它们。<!-- SCCMDocs#1676 -->
 
 ### <a name="enhanced-http-certificate-for-management-points"></a>管理点的增强型 HTTP 证书
 
-如果你启用增强型 HTTP，站点服务器会生成名为“SMS 角色 SSL 证书”  的自签名证书（由根 SMS 颁发证书颁发）。 管理点将此证书添加到绑定到端口 443 的 IIS 默认网站。
+如果你启用增强型 HTTP，站点服务器会生成名为“SMS 角色 SSL 证书”的自签名证书（由根 SMS 颁发证书颁发）。 管理点将此证书添加到绑定到端口 443 的 IIS 默认网站。
 
 ### <a name="management-point-client-connection-mode-summary"></a>管理点客户端连接模式摘要
 
@@ -238,19 +238,20 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 #### <a name="legend-of-terms"></a>图例中的术语
 
-- *工作组*：设备未加入域或 Azure AD，但具有[客户端身份验证证书](#bkmk_clientauth)  
-- *AD 域加入*：将设备加入本地 Active Directory 域  
-- *Azure AD 加入*：也称为云域加入，将设备加入 Azure Active Directory 租户  
-- *混合加入*：将设备加入 Active Directory 域和 Azure AD 租户  
-- *HTTP*：在管理点属性上，将客户端连接设置为“HTTP”   
-- *HTTPS*：在管理点属性上，将客户端连接设置为“HTTPS”   
-- *E-HTTP*：在站点属性的“客户端计算机通信”  选项卡上，将站点系统设置设为“HTTPS 或 HTTP”  ，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。  
+- *工作组*：设备未加入域或 Azure AD，但具有[客户端身份验证证书](#bkmk_clientauth)。
+- *AD 域加入*：将设备加入本地 Active Directory 域。
+- *Azure AD 加入*：也称为云域加入，将设备加入 Azure Active Directory 租户。 有关详细信息，请参阅[加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)。
+- *混合加入*：将设备加入本地 Active Directory，并向 Azure Active Directory 注册。 有关详细信息，请参阅[已加入混合 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)。
+- *HTTP*：在管理点属性上，将客户端连接设置为“HTTP”。
+- *HTTPS*：在管理点属性上，将客户端连接设置为“HTTPS”。
+- *E-HTTP*：在站点属性的“客户端计算机通信”选项卡上，将站点系统设置设为“HTTPS 或 HTTP”，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。
+
     > [!Note]
-    > 从版本 1906 开始，此选项卡称为“通信安全”  。<!-- SCCMDocs#1645 -->  
+    > 从版本 1906 开始，此选项卡称为“通信安全”。<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Azure 管理证书
 
-经典服务部署需要此证书。  Azure 资源管理器部署不需要此证书。
+经典服务部署需要此证书。 Azure 资源管理器部署不需要此证书。
 
 > [!Important]  
 > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 开始使用适用于云管理网关的 Azure 资源管理器部署。 有关详细信息，请参阅 [CMG 规划](plan-cloud-management-gateway.md#azure-resource-manager)。

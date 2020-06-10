@@ -2,7 +2,7 @@
 title: 维护任务参考
 titleSuffix: Configuration Manager
 description: 每个 Configuration Manager 站点维护任务的详细信息
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9964834bf3a6bfa8e5c0a0bb70039554134490ec
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708535"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428589"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Configuration Manager 中维护任务的参考
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 本文列出了每个 Configuration Manager 站点维护任务的详细信息。 每个条目指定任务可用的站点类型，以及是否在默认情况下启用。
 
@@ -50,9 +50,9 @@ ms.locfileid: "81708535"
 ### <a name="clear-undiscovered-clients"></a>清除未发现的客户端
 
 > [!Tip]
-> 还可以在名为“清除安装标志”  控制台中看到此任务。
+> 还可以在名为“清除安装标志”控制台中看到此任务。
 
-使用此任务删除“客户端重新发现”期间未提交检测信号发现记录的客户端的安装标记  。 安装的标记阻止向可能具有活动 Configuration Manager 客户端的计算机进行自动客户端请求安装。  
+使用此任务删除“客户端重新发现”期间未提交检测信号发现记录的客户端的安装标记。 安装的标记阻止向可能具有活动 Configuration Manager 客户端的计算机进行自动客户端请求安装。  
 
 |||
 |---------|---------|
@@ -96,6 +96,7 @@ ms.locfileid: "81708535"
 
 - 过期的客户端通知，如计算机的下载请求或用户策略
 - Endpoint Protection，例如管理用户所提出的让客户端运行扫描或下载更新的定义的请求
+- 运行脚本状态结果
 
 |||
 |---------|---------|
@@ -240,9 +241,9 @@ ms.locfileid: "81708535"
 ### <a name="delete-aged-exchange-partnership"></a>删除过期的 Exchange 合作关系
 
 > [!Tip]
-> > 还可以在名为“删除由 Exchange Server 连接器托管的过期设备”的控制台中看到此任务  。
+> > 还可以在名为“删除由 Exchange Server 连接器托管的过期设备”的控制台中看到此任务。
 
-使用此任务删除由 Exchange Server 连接器托管的移动设备的过期数据。 此站点根据 Exchange Server 连接器属性的“发现”选项卡上的“忽略非活动天数超过以下值的移动设备”来删除此数据   。 有关详细信息，请参阅[使用 Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。
+使用此任务删除由 Exchange Server 连接器托管的移动设备的过期数据。 此站点根据 Exchange Server 连接器属性的“发现”选项卡上的“忽略非活动天数超过以下值的移动设备”来删除此数据 。 有关详细信息，请参阅[使用 Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。
 
 |||
 |---------|---------|
@@ -407,10 +408,10 @@ ms.locfileid: "81708535"
 
 使用此任务从数据库中删除非活动客户端的发现数据。 当客户端标记为过时并且由针对客户端状态所做的配置进行标记时，此站点会将客户端标记为不活动。
 
-此任务仅针对作为 Configuration Manager 客户端的资源运行。 它不同于删除任何过期的发现数据记录的“删除过期的发现数据”  任务。 在站点运行此任务时，它会从层次结构内所有站点的数据库中删除数据。 有关详细信息，请参阅[如何配置客户端状态](../../clients/deploy/configure-client-status.md)。
+此任务仅针对作为 Configuration Manager 客户端的资源运行。 它不同于删除任何过期的发现数据记录的“删除过期的发现数据”任务。 在站点运行此任务时，它会从层次结构内所有站点的数据库中删除数据。 有关详细信息，请参阅[如何配置客户端状态](../../clients/deploy/configure-client-status.md)。
 
 > [!IMPORTANT]  
-> 启用此任务时，请将此任务配置为按大于“检测信号发现”  计划的间隔运行。 此配置允许活动客户端发送“检测信号发现”记录，以将其客户端记录标记为活动状态，从而阻止此任务删除它们。  
+> 启用此任务时，请将此任务配置为按大于“检测信号发现”计划的间隔运行。 此配置允许活动客户端发送“检测信号发现”记录，以将其客户端记录标记为活动状态，从而阻止此任务删除它们。  
 
 |||
 |---------|---------|
@@ -501,7 +502,7 @@ ms.locfileid: "81708535"
 
 此任务可用于将来自多个记录的软件计数文件使用情况数据汇总成一条总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
-若要汇总软件计数数据和节省数据库中的磁盘空间，请配合使用此任务与“汇总软件计数每月使用数据”  任务。 有关详细信息，请参阅 [软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
+若要汇总软件计数数据和节省数据库中的磁盘空间，请配合使用此任务与“汇总软件计数每月使用数据”任务。 有关详细信息，请参阅 [软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
 
 |||
 |---------|---------|
@@ -523,7 +524,7 @@ ms.locfileid: "81708535"
 
 此任务可用于将来自多个记录的软件计数每月使用情况数据汇总成一条总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
-若要汇总软件计数数据和节省数据库中的空间，请配合使用此任务与“汇总软件计数文件使用数据”  任务。 有关详细信息，请参阅 [软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
+若要汇总软件计数数据和节省数据库中的空间，请配合使用此任务与“汇总软件计数文件使用数据”任务。 有关详细信息，请参阅 [软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。
 
 |||
 |---------|---------|

@@ -2,7 +2,7 @@
 title: 安装客户端（使用 Azure AD）
 titleSuffix: Configuration Manager
 description: 在 Windows 10 设备上安装并分配 Configuration Manager 客户端（使用 Azure Active Directory 进行身份验证）
-ms.date: 03/20/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a55440e7ba61ec62d9f0c91c0a23b98bab5884c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694105"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347009"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
@@ -40,9 +40,9 @@ ms.locfileid: "81694105"
 
   - 已登录用户必须是 Azure AD 标识。
 
-  - 如果用户是联合标识或同步标识，则必须使用 Configuration Manager [Active Directory 用户发现](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)和 [Azure AD 用户发现](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)。 若要详细了解混合标识，请参阅[定义混合标识采用策略](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->  
+  - 如果用户是联合标识或同步标识，请配置 Configuration Manager [Active Directory 用户发现](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)和 [Azure AD 用户发现](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)。 若要详细了解混合标识，请参阅[定义混合标识采用策略](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->
 
-- 除了管理点站点系统角色的[现有先决条件](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq)，还需在此服务器上启用“ASP.NET 4.5”  。 包括启用 ASP.NET 4.5 时自动选择的任何其他选项。  
+- 除了管理点站点系统角色的[现有先决条件](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq)，还需在此服务器上启用“ASP.NET 4.5”。 包括启用 ASP.NET 4.5 时自动选择的任何其他选项。  
 
 - 确定管理点是否需要 HTTPS。 有关详细信息，请参阅[为管理点启用 HTTPS](../manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps)。  
 
@@ -53,50 +53,53 @@ ms.locfileid: "81694105"
 
 ## <a name="configure-azure-services-for-cloud-management"></a>配置 Azure 服务以进行云管理
 
-首先，将 Configuration Manager 站点连接到 Azure AD。 有关此流程的详细信息，请参阅[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)。 创建到“云管理”服务的连接  。
+首先，将 Configuration Manager 站点连接到 Azure AD。 有关此流程的详细信息，请参阅[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)。 创建到“云管理”服务的连接。
 
-在加入“云管理”期间启用 [Azure AD 用户发现](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  。
+在加入“云管理”期间启用 [Azure AD 用户发现](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)。
 
 完成以上操作后，Configuration Manager 站点将连接到 Azure AD。
 
 ## <a name="configure-client-settings"></a>配置客户端设置
 
-这些客户端设置有助于 Windows 10 加入 Azure AD。 它们还可使基于 Internet 的客户端使用 CMG 和云分发点。
+这些客户端设置帮助将 Windows 10 设备配置为混合加入。 它们还可使基于 Internet 的客户端使用 CMG 和云分发点。
 
-1. 按照[如何配置客户端设置](configure-client-settings.md)中的信息，在“云服务”部分配置以下客户端设置  。  
+1. 在“云服务”组中配置以下客户端设置。 有关详细信息，请参阅[如何配置客户端设置](configure-client-settings.md)。
 
     - **允许访问云分发点**：启用此设置可帮助基于 Internet 的设备获取安装 Configuration Manager 客户端所需的内容。 如果内容在云分发点上不可用，设备可以从 CMG 检索该内容。 客户端安装启动会在 4 小时内重试云分发点，之后将回退到 CMG。<!--495533-->  
 
-    - **在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备**：设置为“是”或“否”   。 默认设置为“是”  。 这也是 Windows 10 1709 版中的默认行为。
+    - **在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备**：设置为“是”或“否” 。 默认设置为“是”。 这也是 Windows 10 1709 版中的默认行为。
 
-    - **允许客户端使用云管理网关**：设置为“是”（默认）或“否”   。  
+        > [!TIP]
+        > 混合加入的设备加入本地 Active Directory 域并向 Azure AD 注册。 有关详细信息，请参阅[已加入混合 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)。<!-- MEMDocs#325 -->
+
+    - **允许客户端使用云管理网关**：设置为“是”（默认）或“否” 。  
 
 2. 将客户端设置部署到所需的设备集合。 不要将这些设置部署到用户集合。
 
-要确认设备已加入 Azure AD，请在命令提示符中运行 `dsregcmd.exe /status`。 如果设备已加入 Azure AD，结果中的“AzureAdjoined”字段会显示“YES”   。
+若要确认设备已混合加入，请在命令提示符中运行 `dsregcmd.exe /status`。 如果设备已加入 Azure AD 或已混合加入，结果中的“AzureAdjoined”字段会显示“YES” 。 有关详细信息，请参阅 [dsregcmd 命令 - 设备状态](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd)。
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>使用 Azure AD 标识安装并注册客户端
 
 要使用 Azure AD 标识手动安装客户端，请首先查看[如何手动安装客户端](deploy-clients-to-windows-computers.md#BKMK_Manual)了解常规流程。
 
- > [!Note]  
- > 设备需要访问 Internet 与 Azure AD 通信，但不需要基于 Internet。
+> [!Note]  
+> 设备需要访问 Internet 与 Azure AD 通信，但不需要基于 Internet。
 
 以下示例显示命令行的一般结构：`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
 
 有关详细信息，请参阅[客户端安装属性](about-client-installation-properties.md)。
 
-/mp 参数和 CCMHOSTNAME 属性指定以下项之一，具体取决于应用场景   ：
+/mp 参数和 CCMHOSTNAME 属性指定以下项之一，具体取决于应用场景 ：
 
-- 本地管理点。 仅指定 /mp 参数  。 不需要 CCMHOSTNAME 属性  。
+- 本地管理点。 仅指定 /mp 参数。 不需要 CCMHOSTNAME 属性。
 - 云管理网关
 - 基于 Internet 的管理点
 
-SMSMP 属性指定本地或基于 Internet 的管理点  。
+SMSMP 属性指定本地或基于 Internet 的管理点。
 
-本示例使用云管理网关。 它将替代示例值：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+本示例使用云管理网关。 它将替换示例值：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
-该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 此行为进一步简化了在具有多个 Azure AD 租户的环境中安装客户端的过程。 只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode   。<!--3607731-->
+该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 此行为进一步简化了在具有多个 Azure AD 租户的环境中安装客户端的过程。 只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode 。<!--3607731-->
 
 若要使用 Azure AD 标识通过 Microsoft Intune 自动执行客户端安装，请参阅[如何准备基于 Internet 的设备以进行共同管理](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)。
 

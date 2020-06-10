@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764231"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428678"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>终结点分析预览版
 
@@ -347,8 +347,11 @@ Microsoft Intune 管理扩展服务从 Intune 获取并运行脚本。 脚本每
 1. 启用数据收集后，必须重启已成功完成数据收集配置的设备，然后，必须等待最多 24 小时才能看到设备在设备性能选项卡中显示。
 1. 如果设备已成功完成数据收集配置，随后又重启，但在 24 小时后仍看不到它，则可能是因为该设备无法到达我们的收集终结点。 如果公司使用代理服务器并且尚未在代理中启用终结点，则可能会发生此问题。 有关详细信息，请参阅[终结点故障排除](#bkmk_uea_endpoints)。
 
+### <a name="data-collection-for-intune-managed-devices"></a>从 Intune 托管设备收集数据
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> 终结点
+终结点分析利用 Windows 10 和 Windows Server 互连用户体验和遥测组件 (DiagTrack) 从 Intune 托管的设备收集数据。 确保设备上的“已连接的用户体验和遥测”服务正在运行。
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> 终结点
 
 若要向终结点分析注册设备，需要将所需功能数据发送给 Microsoft。 如果你的环境使用代理服务器，请使用此信息来帮助配置代理。
 
@@ -364,15 +367,15 @@ Microsoft Intune 管理扩展服务从 Intune 获取并运行脚本。 脚本每
 | `https://*.manage.microsoft.com` | 用于使设备收集和设备与终结点分析同步（仅限担任 Configuration Manager 服务器角色的情况）。 有关详细信息，请参阅[配置站点系统服务器的代理](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 |
 
 
-### <a name="proxy-server-authentication"></a>代理服务器身份验证
+#### <a name="proxy-server-authentication"></a>代理服务器身份验证
 
 如果你的组织使用代理服务器身份验证进行 Internet 访问，请确保它不会因为身份验证而阻止数据。 如果你的代理不允许设备发送此数据，则它们不会显示在桌面分析中。
 
-#### <a name="bypass-recommended"></a>免验证（推荐）
+##### <a name="bypass-recommended"></a>免验证（推荐）
 
 将代理服务器配置为不要求对数据共享终结点的流量进行代理身份验证。 此选项是最全面的解决方案。 适用于所有 Windows 10 版本。  
 
-#### <a name="user-proxy-authentication"></a>用户代理身份验证
+##### <a name="user-proxy-authentication"></a>用户代理身份验证
 
 将设备配置为使用登录用户的上下文进行代理身份验证。 此方法需要以下配置：
 
@@ -385,7 +388,7 @@ Microsoft Intune 管理扩展服务从 Intune 获取并运行脚本。 脚本每
 > [!IMPORTANT]
 > 用户代理身份验证方法与使用 Microsoft Defender 高级威胁防护不兼容。 出现此行为是因为，此身份验证依赖于设置为 `0` 的 DisableEnterpriseAuthProxy 注册表项，而 Microsoft Defender ATP 要求将其设置为 `1`。 有关详细信息，请参阅[在 Microsoft Defender ATP 中配置计算机代理和 Internet 连接设置](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)。
 
-#### <a name="device-proxy-authentication"></a>设备代理身份验证
+##### <a name="device-proxy-authentication"></a>设备代理身份验证
 
 此方法支持以下方案：
 

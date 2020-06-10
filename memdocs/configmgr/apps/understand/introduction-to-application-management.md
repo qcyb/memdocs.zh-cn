@@ -10,16 +10,16 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d3cd21fe4b1d53ecbb0bc60818405cb795a4f289
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b2fc0dfe37ad51ce1a549545c3eaa716395438d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690215"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347102"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Configuration Manager 中的应用程序管理简介
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 本文介绍开始使用 Configuration Manager 应用程序之前要了解的基础知识。  
 
@@ -28,15 +28,15 @@ ms.locfileid: "81690215"
 
 ## <a name="what-is-an-application"></a>什么是应用程序?
 
-尽管“应用程序”或“应用”是在计算和 Configuration Manager 中广泛使用的一个术语，但它具备特定的含义   。 将应用程序想象为一个框。 这个框包含一套或多套软件包的安装文件（称为*部署类型*），以及如何部署该软件的说明。  
+尽管“应用程序”或“应用”是在计算和 Configuration Manager 中广泛使用的一个术语，但它具备特定的含义 。 将应用程序想象为一个框。 这个框包含一套或多套软件包的安装文件（称为*部署类型*），以及如何部署该软件的说明。  
 
-在将应用程序部署到设备时，“要求”决定 Configuration Manager 会在设备上安装哪种部署类型  。  
+在将应用程序部署到设备时，“要求”决定 Configuration Manager 会在设备上安装哪种部署类型。  
 
 可以通过应用程序执行更多操作。 阅读本指南即可了解这些内容。 以下部分介绍在深入学习前需要了解的一些概念：  
 
 ### <a name="deployment-type"></a>部署类型
 
-如果说“应用程序”是一个框，则“部署类型”就是框中这套内容   。 应用程序至少需要一个部署类型，因为类型决定了该应用的安装方式。 请使用多个部署类型来配置同一个应用程序的不同内容和安装程序。
+如果说“应用程序”是一个框，则“部署类型”就是框中这套内容 。 应用程序至少需要一个部署类型，因为类型决定了该应用的安装方式。 请使用多个部署类型来配置同一个应用程序的不同内容和安装程序。
 
 例如，假设公司有一个名为 Astoria 的业务线应用程序。 应用程序的开发者提供了以下应用安装方式：
 
@@ -50,74 +50,74 @@ ms.locfileid: "81690215"
 
 ### <a name="requirements"></a>要求
 
-在先前版本的 Configuration Manager 中，你创建了要将应用程序部署到的设备的集合。 尽管仍可创建集合，但请使用“要求”为应用程序部署指定更详细的条件  。
+在先前版本的 Configuration Manager 中，你创建了要将应用程序部署到的设备的集合。 尽管仍可创建集合，但请使用“要求”为应用程序部署指定更详细的条件。
 
 例如，指定只能在运行 Windows 10 的设备上安装应用程序。 在将应用程序部署到所有设备时，它只在运行 Windows 10 的设备上安装。
 
-Configuration Manager 会评估要求，从而确定是否安装应用程序及其任何部署类型。 然后，它会确定用于安装应用程序的正确部署类型。 默认情况下，Configuration Manager 客户端根据“计划部署的重新评估”客户端设置每 7 天重新评估一次要求规则以确定符合性  。
+Configuration Manager 会评估要求，从而确定是否安装应用程序及其任何部署类型。 然后，它会确定用于安装应用程序的正确部署类型。 默认情况下，Configuration Manager 客户端根据“计划部署的重新评估”客户端设置每 7 天重新评估一次要求规则以确定符合性。
 
 有关详细信息，请参阅[创建和部署应用程序](../get-started/create-and-deploy-an-application.md)以及[部署类型要求](../deploy-use/create-applications.md#bkmk_dt-require)。
 
 ### <a name="global-conditions"></a>全局条件
 
-尽管对单个应用程序中的特定部署类型使用要求，但也可创建全局条件  。 这些条件是可用于任何应用程序和部署类型的预定义要求库。 Configuration Manager 包含一套内置全局条件，你也可自行创建全局条件。
+尽管对单个应用程序中的特定部署类型使用要求，但也可创建全局条件。 这些条件是可用于任何应用程序和部署类型的预定义要求库。 Configuration Manager 包含一套内置全局条件，你也可自行创建全局条件。
 
 有关详细信息，请参阅[创建全局条件](../deploy-use/create-global-conditions.md)。
 
 ### <a name="simulated-deployment"></a>模拟部署
 
-模拟部署对应用程序的要求、检测方法和依赖关系进行评估  。 客户端在未实际安装应用程序的情况下报告结果。
+模拟部署对应用程序的要求、检测方法和依赖关系进行评估。 客户端在未实际安装应用程序的情况下报告结果。
 
 有关详细信息，请参阅[模拟应用程序部署](../deploy-use/simulate-application-deployments.md)。  
 
 ### <a name="deployment-action"></a>部署操作
 
-部署操作指定是要安装还是要卸载正在部署的应用程序  。 并非所有部署类型都支持卸载操作。
+部署操作指定是要安装还是要卸载正在部署的应用程序。 并非所有部署类型都支持卸载操作。
 
 有关详细信息，请参阅[部署应用程序](../deploy-use/deploy-applications.md)。  
 
 ### <a name="deployment-purpose"></a>部署目的
 
-部署目的指定部署应用为“必需”还是“可用”    ：  
+部署目的指定部署应用为“必需”还是“可用” ：  
 
-- 客户端根据所设置的计划自动安装“必需”部署  。 如果应用程序未隐藏，则用户可跟踪其部署状态。 在截止时间之前，用户还可通过软件中心安装应用程序。  
+- 客户端根据所设置的计划自动安装“必需”部署。 如果应用程序未隐藏，则用户可跟踪其部署状态。 在截止时间之前，用户还可通过软件中心安装应用程序。  
 
-- 如果将应用程序作为“可用”应用部署给用户，则用户能在软件中心查看到该应用，并可根据需要进行请求  。  
+- 如果将应用程序作为“可用”应用部署给用户，则用户能在软件中心查看到该应用，并可根据需要进行请求。  
 
 有关详细信息，请参阅[部署应用程序](../deploy-use/deploy-applications.md)。  
 
 ### <a name="revisions"></a>修订版本
 
-在修订应用程序或部署类型时，Configuration Manager 会创建应用程序的新版本  。 在 Configuration Manager 控制台中执行以下操作：
+在修订应用程序或部署类型时，Configuration Manager 会创建应用程序的新版本。 在 Configuration Manager 控制台中执行以下操作：
 
 - 显示每个应用程序修订版的历史记录
 - 查看其属性
 - 还原应用程序的上一版本
 - 删除旧版本
 
-有关详细信息，请参阅[更新和停用应用程序](../deploy-use/update-and-retire-applications.md)。  
+有关详细信息，请参阅[修订应用程序](../deploy-use/revise-and-supersede-applications.md#application-revisions)。  
 
 ### <a name="detection-method"></a>检测方法
 
-使用检测方法发现设备是否已安装应用程序  。 如果检测方法指示已安装应用程序，则 Configuration Manager 不会尝试再次安装。
+使用检测方法发现设备是否已安装应用程序。 如果检测方法指示已安装应用程序，则 Configuration Manager 不会尝试再次安装。
 
 有关详细信息，请参阅[部署类型检测方法选项](../deploy-use/create-applications.md#bkmk_dt-detect)。
 
 ### <a name="dependencies"></a>依赖关系
 
-依赖关系定义客户端在安装部署类型之前必须安装的另一应用程序中的一个或多个部署类型  。
+依赖关系定义客户端在安装部署类型之前必须安装的另一应用程序中的一个或多个部署类型。
 
 有关详细信息，请参阅[部署类型依赖关系](../deploy-use/create-applications.md#bkmk_dt-depend)。  
 
 ### <a name="supersedence"></a>取代
 
-Configuration Manager 允许使用取代关系来升级或替换现有应用程序  。 取代应用程序时，请指定新的部署类型来替换被取代的应用程序的部署类型。 还可决定在客户端安装取代应用程序前是要升级还是要卸载被取代的应用程序。
+Configuration Manager 允许使用取代关系来升级或替换现有应用程序。 取代应用程序时，请指定新的部署类型来替换被取代的应用程序的部署类型。 还可决定在客户端安装取代应用程序前是要升级还是要卸载被取代的应用程序。
 
 有关详细信息，请参阅[应用程序取代](../deploy-use/revise-and-supersede-applications.md#application-supersedence)。  
 
 ### <a name="user-centric-management"></a>以用户为中心的管理
 
-Configuration Manager 应用程序支持以用户为中心的管理，它可将特定用户关联到特定设备  。 不用记住用户设备的名称，即可将应用部署到用户和设备。 此功能有助于确保始终能在每台用户设备上使用最重要的应用。 如果用户购买了新的计算机，则在登录之前，Configuration Manager 会自动在设备上安装其应用。
+Configuration Manager 应用程序支持以用户为中心的管理，它可将特定用户关联到特定设备。 不用记住用户设备的名称，即可将应用部署到用户和设备。 此功能有助于确保始终能在每台用户设备上使用最重要的应用。 如果用户购买了新的计算机，则在登录之前，Configuration Manager 会自动在设备上安装其应用。
 
 有关详细信息，请参阅[将用户和设备与用户设备相关性进行链接](../deploy-use/link-users-and-devices-with-user-device-affinity.md)。  
 
@@ -157,7 +157,7 @@ Configuration Manager 应用程序支持以用户为中心的管理，它可将�
 
 ## <a name="state-based-applications"></a>基于状态的应用程序  
 
-Configuration Manager 应用程序使用基于状态的监视。 可跟踪用户和设备的最新应用程序部署状态。 这些状态消息显示了有关单个设备的信息。 例如，如果将应用程序部署到用户集合，则可在 Configuration Manager 控制台中查看此部署的符合性状态和部署目的。 在 Configuration Manager 控制台的“监视”工作区中监视所有软件的部署  。 有关详细信息，请参阅[监视应用程序](../deploy-use/monitor-applications-from-the-console.md)。  
+Configuration Manager 应用程序使用基于状态的监视。 可跟踪用户和设备的最新应用程序部署状态。 这些状态消息显示了有关单个设备的信息。 例如，如果将应用程序部署到用户集合，则可在 Configuration Manager 控制台中查看此部署的符合性状态和部署目的。 在 Configuration Manager 控制台的“监视”工作区中监视所有软件的部署。 有关详细信息，请参阅[监视应用程序](../deploy-use/monitor-applications-from-the-console.md)。  
 
 Configuration Manager 客户端定期对应用程序部署进行重新评估。 例如：  
 
@@ -165,7 +165,7 @@ Configuration Manager 客户端定期对应用程序部署进行重新评估。 
 
 - Configuration Manager 不会在设备上安装应用程序，因为它不满足要求。 随后将对设备进行更改，现在它即满足要求。 Configuration Manager 检测到此更改，且客户端会安装该应用程序。  
 
-可设置应用程序部署的重新评估间隔时间。 使用“软件部署”组中的“计划部署的重新评估”客户端设置   。 有关详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md#software-deployment)。  
+可设置应用程序部署的重新评估间隔时间。 使用“软件部署”组中的“计划部署的重新评估”客户端设置 。 有关详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md#software-deployment)。  
 
 ## <a name="get-started-creating-an-application"></a>创建应用程序入门  
 

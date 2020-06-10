@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824012"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311214"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>如何通过桌面分析部署到试点
 
@@ -104,7 +104,7 @@ ms.locfileid: "83824012"
 Configuration Manager 使用桌面分析中的数据来为试点和生产部署创建集合。 这些集合位于“资产和符合性”工作区的“设备集合”节点中的“部署计划”文件夹。
 
 > [!IMPORTANT]
-> 这些集合由用于桌面分析部署计划的 Configuration Manager 管理。 不支持手动更改。
+> 这些集合由用于桌面分析部署计划的 Configuration Manager 管理。 不支持手动更改。 如果删除其中一个集合，则桌面分析将不起作用，并且你必须再次[连接 Configuration Manager](connect-configmgr.md)。<!--7208090-->
 
 若要确保设备在每个部署阶段后正常运行，请使用以下步骤来创建桌面分析集成的分阶段部署：
 

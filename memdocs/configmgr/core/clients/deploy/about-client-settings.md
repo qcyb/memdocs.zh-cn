@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877529"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347162"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -276,7 +276,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 如果计算机需要 BitLocker PIN 条目，则在软件安装之后重启计算机时，此选项可以略过输入 PIN 的要求。  
 
-- **始终**：在安装需要重启的软件并且启动计算机重启之后，Configuration Manager 会临时暂停 BitLocker。 此设置仅适用于 Configuration Manager 启动的计算机重启。 当用户重启计算机时，此设置不会暂停输入 BitLocker PIN 的要求。 在 Windows 启动后恢复 BitLocker PIN 输入要求。
+- **始终**：在安装需要重启的软件并重启计算机之后，Configuration Manager 会临时暂停 BitLocker。 仅当 Configuration Manager 重启计算机时，此设置才适用。 当用户重启计算机时，此设置不会暂停输入 BitLocker PIN 的要求。 在 Windows 启动后恢复 BitLocker PIN 输入要求。
 
 - **从不**：在安装需要重启的软件之后，Configuration Manager 不会暂停 BitLocker。 在此情况下，直到用户输入 PIN 来完成标准启动过程并加载 Windows，才能完成软件安装。
 
@@ -329,29 +329,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 设置介于 0 和 120 小时之间的宽限期。 将此设置和“根据用户偏好延迟此强制部署”的部署属性结合使用。 有关详细信息，请参阅[部署应用程序](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)。
 
-
 ## <a name="computer-restart"></a>计算机重启
 
-以下设置的持续时间必须比应用于计算机的最短维护时段更短：
+有关这些设置的详细信息，请参阅[设备重启通知](device-restart-notifications.md)。<!-- 7182335 -->
 
-- **向用户显示一条临时通知，指示注销用户或重新启动计算机之前的间隔(分钟)**
-- **显示用户无法关闭的对话框，该对话框显示注销用户或重新启动计算机之前的倒计时间隔(分钟)**
-
-
-有关维护时段的详细信息，请参阅[如何使用维护时段](../manage/collections/use-maintenance-windows.md)。
-
-- **“指定计算机重启倒计时通知的暂停持续时间(分钟)”** （从版本 1906 开始）<!--3976435-->
-  - 默认值为 240 分钟。
-  - 推迟持续时间值应小于临时通知值减去用户无法关闭的通知值之后的值。
-  - 有关详细信息，请参阅[设备重新启动通知](device-restart-notifications.md)。
-
-**当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知**<!--3555947-->：自版本 1902 起，将此设置配置为“是”会增加用户体验的侵入性。 此设置适用于应用程序、任务序列和软件更新的所有部署。 有关详细信息，请参阅[为软件中心制定计划](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact)。
-
-> [!IMPORTANT]
-> 在某些情况下，Configuration Manager 1902 中的该对话框将不会替换 Toast 通知。 要解决此问题，请安装 [Configuration Manager 版本1902 的更新汇总](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)。 <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>传递优化 
+## <a name="delivery-optimization"></a>传递优化
 
 <!-- 1324696 -->
 使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 配置传递优化以在对等方之间共享内容时使用边界组。
@@ -363,7 +345,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>将 Configuration Manager 边界组用于交付优化组 ID
 
-选择“是”将边界组标识符用作客户端上的传递优化组标识符。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有所需内容的对等方。 启用此设置还会将目标客户端上的传递优化下载模式设置为“组(2)”选项。
+选择“是”将边界组标识符用作客户端上的传递优化组标识符。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有内容的对等方。 启用此设置还会将目标客户端上的传递优化下载模式设置为“组(2)”选项。
 
 > [!Note]
 > Microsoft 建议让客户端通过本地策略（而不是通过组策略）来配置此设置。 这样就可将边界组标识符设置为客户端上的传递优化组标识符。 有关详细信息，请参阅[传递优化](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)。
@@ -411,7 +393,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>允许用户将要求的重启推迟一段时间，以完成 Endpoint Protection 安装（小时）
 
-如果在安装 Endpoint Protection 客户端后需要重启，该设置会指定用户可以延迟所需重启的小时数。 此设置要求将“在安装 Endpoint Protection 客户端后取消任何所需的计算机重启”设置为“否”。  
+如果在安装 Endpoint Protection 客户端后需要重启，该设置会指定用户可以延迟所需重启的小时数。 此设置要求你禁用以下设置：**在安装 Endpoint Protection 客户端后取消任何所需的计算机重启**。
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>禁用替代源（例如 Microsoft Windows Update、Microsoft Windows Server Update Services 或 UNC 共享）来更新客户端计算机的初始定义
 
@@ -423,7 +405,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>移动设备旧客户端的轮询间隔
 
-选择“设置间隔”，指定旧移动设备轮询策略的时间长度（以分钟或小时为单位）。 这些设备包括 Windows CE、Mac OS X，以及 Unix 或 Linux 等平台。
+选择“设置间隔”，指定旧移动设备轮询策略的时间长度（以分钟或小时为单位）。 这些设备包括 Windows CE、macOS，以及 Unix 或 Linux 等平台。
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>新式设备的轮询间隔（分钟）
 
@@ -529,7 +511,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="allow-network-wake-up"></a>允许网络唤醒
 
-已添加到 1810。 如果设置为“启用”，则将网络适配器上的电源设置配置为允许网络适配器唤醒设备。 如果设置为“禁用”，则将网络适配器上的电源设置配置为不允许网络适配器唤醒设备。
+如果启用此设置，客户端会将计算机上的电源设置配置为允许网络适配器唤醒设备。 如果禁用此设置，则计算机的网络适配器无法唤醒设备。
 
 ### <a name="enable-wake-up-proxy"></a>启用唤醒代理
 
@@ -549,7 +531,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
     > [!IMPORTANT]  
     > 此数字必须与站点“属性”中的数字匹配。 如果在一个位置更改此数字，则不会在其他位置自动更新此数字。  
 
-- **针对唤醒代理的 Windows Defender 防火墙例外**：Configuration Manager 客户端自动配置运行 Windows Defender 防火墙的设备上的唤醒代理端口号。 选择“配置”指定所需的防火墙配置文件。  
+- **针对唤醒代理的 Windows Defender 防火墙例外**：Configuration Manager 客户端自动配置运行 Windows Defender 防火墙的设备上的唤醒代理端口号。 选择“配置”指定防火墙配置文件。  
 
     如果客户端运行其他防火墙，请手动将其配置为允许“唤醒代理端口号 (UDP)”。  
 
@@ -671,7 +653,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a>在软件中心隐藏安装的应用程序
 
-启用此选项后，已安装的应用程序将不再显示在“应用程序”选项卡中。安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。 仍可以在安装状态选项卡下查看已安装的应用程序。 <!--1357592-->
+启用此选项后，已安装的应用程序将不再显示在“应用程序”选项卡中。安装或升级到 Configuration Manager 时，此选项会设置为默认选项。 仍可以在安装状态选项卡下查看已安装的应用程序。 <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a>隐藏软件中心中的应用程序目录链接
 
@@ -694,9 +676,9 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 - **安装状态**
 - **设备符合性**
 - **选项**
-- 通过单击“添加”选项卡按钮，最多可添加 5 个自定义选项卡。
+- 通过单击“添加选项卡”按钮，最多可添加 5 个自定义选项卡。
   - 指定自定义选项卡的“选项卡名称”和“内容 URL”。
-  - 单击“删除选项卡”删除自定义选项卡。  
+  - 选择“删除选项卡”删除自定义选项卡。  
 
   >[!Important]  
   > - 若要将一些网站功能用作软件中心内的自定义选项卡，它们可能无法正常运行。 将结果部署到客户端之前，请确保测试结果。 <!--519659-->
@@ -731,9 +713,9 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
   - 软件中心始终使用默认设置。 用户可以更改此筛选器，但软件中心不会保留其首选项。  
 
-- 将“默认应用程序视图用”设置为“平铺视图”或“列表视图”  。 
+- 将“默认应用程序视图用”设置为“平铺视图”或“列表视图”  。
 
-  - 如果用户更改此配置，则软件中心以后会保留用户的首选项。 
+  - 如果用户更改此配置，则软件中心以后会保留用户的首选项。
 
 
 ## <a name="software-deployment"></a>软件部署  
@@ -911,7 +893,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>当“软件更新”维护时段可用时，在“所有部署”维护时段中启用软件更新安装
 
-从版本 1810 开始，将此选项设置为“是”且客户端定义了至少一个"软件更新"维护时段时，将在"所有部署"维护时段安装软件更新。
+将此选项设置为“是”且客户端定义了至少一个"软件更新"维护时段时，将在"所有部署"维护时段安装软件更新。
 
 默认情况下，此设置设为“否” 。 此值使用与以前相同的行为：如果两种类型都存在，则它将忽略时段。 <!--2839307-->
 

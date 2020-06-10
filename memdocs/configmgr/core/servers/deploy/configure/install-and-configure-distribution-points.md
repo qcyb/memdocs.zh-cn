@@ -2,7 +2,7 @@
 title: 管理分发点
 titleSuffix: Configuration Manager
 description: 使用分发点托管部署到设备和用户的内容。
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1cc931bd0e02be66f608db11e0052fde571a427
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d1d93dd446a65fda0b259bb10e0c944780d41059
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701675"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347085"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 安装 Configuration Manager 分发点以托骨干部署到设备和用户的内容文件。 创建分发点组以简化管理分发点和将内容分发到分发点的方式。  
 
-使用安装向导安装新的分发点  。 有关详细信息，请参阅[安装分发点](#bkmk_install)。 要管理现有分发点的属性，请编辑分发点的属性  。 有关详细信息，请参阅[配置分发点](#bkmk_configs)。
+使用安装向导安装新的分发点。 有关详细信息，请参阅[安装分发点](#bkmk_install)。 要管理现有分发点的属性，请编辑分发点的属性。 有关详细信息，请参阅[配置分发点](#bkmk_configs)。
 
 使用任一方法配置大多数分发点设置。 有几个设置仅安装或编辑时才可用，但无法同时可用：  
 
@@ -54,13 +54,13 @@ ms.locfileid: "81701675"
 
 - 你必须拥有下列安全权限才能创建和配置分发点：  
 
-    - “分发点”  对象的“读取”  权限  
+    - “分发点” 对象的“读取”  权限  
 
-    - “分发点”  对象的“复制到分发点”  权限  
+    - “分发点” 对象的“复制到分发点”  权限  
 
-    - “站点”  对象的“修改”  权限  
+    - “站点” 对象的“修改”  权限  
 
-    - “站点”  对象的“管理操作系统部署证书”  权限  
+    - “站点” 对象的“管理操作系统部署证书”  权限  
 
 - 在托管分发点的 Windows 服务器上安装 Internet Information Services (IIS)。 或者，安装站点系统角色时，Configuration Manager 会为用户安装并配置 IIS。  
 
@@ -68,7 +68,7 @@ ms.locfileid: "81701675"
 
 使用此过程添加新的分发点。 要更改现有分发点的配置，请参阅[配置分发点](#bkmk_configs)部分。  
 
-从[安装站点系统角色](install-site-system-roles.md)的常规过程开始。 在“创建站点系统服务器”向导的“系统角色选择”页上选择“分发点”角色   。 此操作将以下页面添加到向导：  
+从[安装站点系统角色](install-site-system-roles.md)的常规过程开始。 在“创建站点系统服务器”向导的“系统角色选择”页上选择“分发点”角色 。 此操作将以下页面添加到向导：  
 
 - [分发点](#bkmk_config-general)
 - [通信](#bkmk_config-comm)
@@ -86,7 +86,7 @@ ms.locfileid: "81701675"
 >
 > - **为分发点配置驱动器空间设置**  
 
-有关特定于分发点角色向导页的详细信息，请参阅[配置分发点](#bkmk_configs)部分。 例如，如果要将分发点安装为[拉取分发点](#bkmk_config-pull)，请选择“启用此分发点以从其他分发点拉取内容”选项  。 然后进行拉取分发点所需的其他配置。  
+有关特定于分发点角色向导页的详细信息，请参阅[配置分发点](#bkmk_configs)部分。 例如，如果要将分发点安装为[拉取分发点](#bkmk_config-pull)，请选择“启用此分发点以从其他分发点拉取内容”选项。 然后进行拉取分发点所需的其他配置。  
 
 完成“创建站点系统服务器”向导后，该站点会将分发点角色添加到站点系统服务器。  
 
@@ -116,49 +116,49 @@ ms.locfileid: "81701675"
 
 ### <a name="procedure-to-create-and-configure-a-new-distribution-point-group"></a><a name="bkmk_dpgroup-create"></a>创建和配置新分发点组的过程  
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点组”节点   。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点组”节点 。  
 
-2. 在功能区上，选择“创建组”  。  
+2. 在功能区上，选择“创建组”。  
 
-3. 在“创建新分发点组”窗口中，输入组的名称  和描述  （可选）。  
+3. 在“创建新分发点组”窗口中，输入组的名称和描述（可选）。  
 
-4. 在“成员”  选项卡上，选择“添加”  。  
+4. 在“成员”选项卡上，选择“添加”。  
 
-5. 在“添加分发点”窗口中，选择一个或多个分发点，将其添加为组成员。 然后选择“确定”  。  
+5. 在“添加分发点”窗口中，选择一个或多个分发点，将其添加为组成员。 然后选择“确定”。  
 
-6. 如有必要，切换到“创建新分发点组”窗口的“集合”  选项卡，然后选择“添加”  。  
+6. 如有必要，切换到“创建新分发点组”窗口的“集合”选项卡，然后选择“添加”。  
 
-7. 在“选择集合”窗口中，选择要与分发点组关联的集合，再选择“确定”  。  
+7. 在“选择集合”窗口中，选择要与分发点组关联的集合，再选择“确定”。  
 
-8. 在“创建新分发点组”窗口中，选择“确定”  以创建组。  
+8. 在“创建新分发点组”窗口中，选择“确定”以创建组。  
 
 #### <a name="create-a-new-group-from-an-existing-distribution-point"></a>从现有分发点创建新组
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点   。 选择一个或多个分发点以添加到新分发点组中。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点 。 选择一个或多个分发点以添加到新分发点组中。  
 
-2. 在功能区中，选择“添加所选项”  ，然后选择“将所选项添加到新分发点组中”  。  
+2. 在功能区中，选择“添加所选项”，然后选择“将所选项添加到新分发点组中”。  
 
-此过程会自动使用所选服务器填充“创建新分发点组”窗口的“成员”选项卡  。
+此过程会自动使用所选服务器填充“创建新分发点组”窗口的“成员”选项卡。
 
 ### <a name="procedure-to-modify-an-existing-distribution-point-group"></a><a name="bkmk_dpgroup-modify"></a>修改现有分发点组的过程  
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点组”节点   。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点组”节点 。  
 
-2. 选择要修改的现有分发点组。 在功能区中，选择“属性”  。  
+2. 选择要修改的现有分发点组。 在功能区中，选择“属性”。  
 
-3. 要将新集合与此组关联，请切换到“集合”  选项卡，然后选择“添加”  。 选择该集合，然后选择“确定”  。  
+3. 要将新集合与此组关联，请切换到“集合”选项卡，然后选择“添加”。 选择该集合，然后选择“确定”。  
 
-4. 要将新分发点添加到此组，请切换到“成员”  选项卡，然后选择“添加”  。 选择分发点，然后选择“确定”  。  
+4. 要将新分发点添加到此组，请切换到“成员”选项卡，然后选择“添加”。 选择分发点，然后选择“确定”。  
 
-5. 选择“确定”  以保存对分发点组所做的更改。  
+5. 选择“确定”以保存对分发点组所做的更改。  
 
 ### <a name="procedure-to-add-selected-distribution-points-to-existing-distribution-point-groups"></a><a name="bkmk_dpgroup-addexist"></a>将所选分发点添加到现有分发点组的过程  
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点   。 选择一个或多个分发点以添加到现有组中。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点 。 选择一个或多个分发点以添加到现有组中。  
 
-2. 在功能区中，选择“添加所选项”  ，然后选择“将所选项添加到现有分发点组中”  。  
+2. 在功能区中，选择“添加所选项”，然后选择“将所选项添加到现有分发点组中”。  
 
-3. 在“可用分发点组”中，选择要将所选分发点添加为其成员的组  。 然后选择“确定”  。  
+3. 在“可用分发点组”中，选择要将所选分发点添加为其成员的组。 然后选择“确定”。  
 
 
 ## <a name="reassign-a-distribution-point"></a><a name="bkmk_reassign"></a>重新分配分发点
@@ -178,15 +178,15 @@ ms.locfileid: "81701675"
 
 1. 在 Configuration Manager 控制台中，连接到管理中心站点。  
 
-2. 转到“管理”工作区，并选择“分发点”节点   。  
+2. 转到“管理”工作区，并选择“分发点”节点 。  
 
-3. 右键单击目标分发点，然后选择“重新分配分发点”  。  
+3. 右键单击目标分发点，然后选择“重新分配分发点”。  
 
 4. 选择想要向其重新分配分发点的目标站点服务器和站点代码。  
 
 像添加新角色时那样监视重新分配。 最简单的方法是在几分钟后刷新控制台视图。 将站点代码列添加到视图中。 Configuration Manager 重新分配服务器时会更改此值。 如果尝试在刷新控制台视图之前在目标服务器上执行另一项操作，会出现“找不到对象”错误。 在服务器上开始任何其他操作之前，请确保此过程完成并刷新控制台视图。
 
-重新分配分发点后，请刷新服务器的证书。 新的站点服务器需要使用其公钥重新加密此证书，并将其存储在站点数据库中。 有关详细信息，请参阅分发点属性的“[常规](#bkmk_config-general)”选项卡上的“创建自签名证书或导入分发点的公钥基础结构 (PKI) 客户端证书”设置  。
+重新分配分发点后，请刷新服务器的证书。 新的站点服务器需要使用其公钥重新加密此证书，并将其存储在站点数据库中。 有关详细信息，请参阅分发点属性的“[常规](#bkmk_config-general)”选项卡上的“创建自签名证书或导入分发点的公钥基础结构 (PKI) 客户端证书”设置。
 
 - 对于 PKI 证书，无需创建新证书。 导入相同的 .PFX，并输入密码。  
 
@@ -239,15 +239,15 @@ ms.locfileid: "81701675"
 
 ### <a name="enable-maintenance-mode"></a>启用维护模式
 
-若要将分发点置于维护模式，用户帐户需要“站点”  类上的“修改”  权限。 例如，基础结构管理员  和完全权限管理员  内置角色具有此权限。<!-- SCCMDocs-pr issue #3407 -->
+若要将分发点置于维护模式，用户帐户需要“站点”类上的“修改”权限。 例如，基础结构管理员和完全权限管理员内置角色具有此权限。<!-- SCCMDocs-pr issue #3407 -->
 
-1. 在 Configuration Manager 控制台中，转到“管理”  工作区。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区。  
 
-2. 选择“分发点”  节点。  
+2. 选择“分发点”节点。  
 
-3. 选择目标分发点，并从功能区中选择“启用维护模式”  。  
+3. 选择目标分发点，并从功能区中选择“启用维护模式”。  
 
-若要查看分发点的当前状态，请向控制台中的“分发点”节点添加“分发模式”列  。
+若要查看分发点的当前状态，请向控制台中的“分发点”节点添加“分发模式”列。
 
 有关使用 Configuration Manager SDK 自动执行此过程的详细信息，请参阅[类 SMS_DistributionPointInfo 中的 SetDPMaintenanceMode 方法](../../../../develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md)。
 
@@ -274,27 +274,27 @@ ms.locfileid: "81701675"
 
 #### <a name="procedure-to-change-a-distribution-point"></a><a name="bkmk_change-procedure"></a>更改分发点的过程
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点   。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“分发点”节点 。  
 
-2. 选择要配置的分发点。 在功能区中，选择“属性”  。  
+2. 选择要配置的分发点。 在功能区中，选择“属性”。  
 
 3. 编辑分发点的属性时，请使用以下部分中的信息。  
 
-4. 进行所需更改后，请选择“确定”  以保存设置并关闭分发点属性。  
+4. 进行所需更改后，请选择“确定”以保存设置并关闭分发点属性。  
 
 ### <a name="general"></a><a name="bkmk_config-general"></a>常规  
 
 > [!Note]  
 > 在版本 1902 及更早版本中，此页包含 HTTP/HTTPS 和证书的更多设置。 从版本 1906 开始，这些设置现在位于[通信](#bkmk_config-comm)页上。
 
-以下设置位于“创建站点系统服务器”向导的“分发点”页和分发点属性窗口的“常规”选项卡上   ：  
+以下设置位于“创建站点系统服务器”向导的“分发点”页和分发点属性窗口的“常规”选项卡上 ：  
 
 - **描述**：此分发点角色的可选描述。  
 
 - **在 Configuration Manager 要求的情况下安装和配置 IIS**：如果服务器上尚未安装 IIS，Configuration Manager 将安装并配置它。 Configuration Manager 在所有分发点上都需要 IIS。 如果未选择此设置，并且服务器上未安装 IIS，需要先安装 IIS，Configuration Manager 才能成功安装分发点。  
 
     > [!NOTE]  
-    > 此选项仅在“创建站点系统服务器”向导的“分发点”页上  。 它仅在[安装新分发点](#bkmk_install-procedure)时可用。  
+    > 此选项仅在“创建站点系统服务器”向导的“分发点”页上。 它仅在[安装新分发点](#bkmk_install-procedure)时可用。  
 
 - **启用和配置此分发点的 BranchCache**：选择此设置以允许 Configuration Manager 在分发点服务器上配置 Windows BranchCache。 有关详细信息，请参阅 [BranchCache](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)。  
 
@@ -307,12 +307,16 @@ ms.locfileid: "81701675"
     - 包含更新汇总 (4462978) 的 Configuration Manager 版本 1806 或更高版本  
 
         - Windows Server 版本 1709 或更高版本
-        - 包含更新 KB4132216 和 KB4284833 的 Windows Server 2016
+        - Windows Server 2016，其中包含以下更新：
+           - 2018 年 6 月 21 日发布的累积更新 KB4132216，或更高版本的累积更新。
+           - 2018 年 5 月 18 日发布的服务堆栈更新 KB4284833，或更高版本的服务堆栈更新。
 
     - Configuration Manager 版本 1810 或更高版本：
 
         - Windows Server 版本 1709 或更高版本
-        - 包含更新 KB4132216 和 KB4284833 的 Windows Server 2016
+        - Windows Server 2016，其中包含以下更新：
+           - 2018 年 6 月 21 日发布的累积更新 KB4132216，或更高版本的累积更新。
+           - 2018 年 5 月 18 日发布的服务堆栈更新 KB4284833，或更高版本的服务堆栈更新。
         - Windows Server 2019  
 
 - **为预留内容启用此分发点**：使用此设置可在分发软件之前向服务器添加内容。 由于内容文件已在内容库中，因此，当分发软件时，不会通过网络传输内容文件。 有关详细信息，请参阅[预留内容](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent)。  
@@ -323,11 +327,11 @@ ms.locfileid: "81701675"
 ### <a name="communication"></a><a name="bkmk_config-comm"></a>通信
 
 > [!Note]  
-> 从版本 1906 开始，以下设置位于“通信”  选项卡上。在版本 1902 及更早版本中，这些设置位于[常规](#bkmk_config-general)选项卡上。
+> 从版本 1906 开始，以下设置位于“通信”选项卡上。在版本 1902 及更早版本中，这些设置位于[常规](#bkmk_config-general)选项卡上。
 
-以下设置位于“创建站点系统服务器”向导和分发点属性窗口的“通信”页上  ：  
+以下设置位于“创建站点系统服务器”向导和分发点属性窗口的“通信”页上：  
 
-- **配置客户端设备与分发点通信的方式**：使用 HTTP 或 HTTPS 有一些优点和缺点   。 有关详细信息，请参阅[内容管理的最佳安全做法](../../../plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement)。  
+- **配置客户端设备与分发点通信的方式**：使用 HTTP 或 HTTPS 有一些优点和缺点 。 有关详细信息，请参阅[内容管理的最佳安全做法](../../../plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement)。  
 
 - **允许客户端进行匿名连接**：此设置指定分发点是否允许从 Configuration Manager 客户端到内容库的匿名连接。  
 
@@ -344,9 +348,9 @@ ms.locfileid: "81701675"
 
     - 在分发点发送状态消息之前，该证书向管理点验证分发点。  
 
-    - 当在“PXE 设置”页上“为客户端启用 PXE 支持”时，分发点会将其发送到 PXE 启动的计算机   。 然后，这些计算机使用它在 OS 部署过程中连接到管理点。  
+    - 当在“PXE 设置”页上“为客户端启用 PXE 支持”时，分发点会将其发送到 PXE 启动的计算机 。 然后，这些计算机使用它在 OS 部署过程中连接到管理点。  
 
-    在站点中为 HTTP 配置所有管理点时，请选择“创建自签名证书”选项  。 配置 HTTPS 的管理点时，请使用从 PKI“导入证书”选项  。  
+    在站点中为 HTTP 配置所有管理点时，请选择“创建自签名证书”选项。 配置 HTTPS 的管理点时，请使用从 PKI“导入证书”选项。  
 
     要导入证书，请浏览到有效的公钥加密标准 (PKCS #12) 文件。 此 PFX 或 CER 文件具有 PKI 证书，其中包含对 Configuration Manager 的以下要求：  
 
@@ -370,7 +374,7 @@ ms.locfileid: "81701675"
 
 - **保留的驱动器空间 (MB)** ：在 Configuration Manager 选择其他驱动器并对其继续执行复制过程之前，此值会确定驱动器上的可用空间量。 内容文件可以跨多个驱动器。  
 
-- **内容位置**：在此分发点上指定内容库和包共享的位置。 默认情况下，所有内容位置设置为“自动”  。 Configuration Manager 将内容复制到主内容位置，直至可用空间量达到指定的“保留的驱动器空间 (MB)”  值。 选择“自动”时，Configuration Manager 会将主要内容位置设置为安装时磁盘空间最大的磁盘驱动器  。 它将辅助位置设置为具有第二大可用磁盘空间的磁盘驱动器。 当主位置和辅助位置达到保留的驱动器空间时，Configuration Manager 将选择另一个具有最多可用磁盘空间的可用驱动器，以继续执行复制过程。  
+- **内容位置**：在此分发点上指定内容库和包共享的位置。 默认情况下，所有内容位置设置为“自动”。 Configuration Manager 将内容复制到主内容位置，直至可用空间量达到指定的“保留的驱动器空间 (MB)”值。 选择“自动”时，Configuration Manager 会将主要内容位置设置为安装时磁盘空间最大的磁盘驱动器。 它将辅助位置设置为具有第二大可用磁盘空间的磁盘驱动器。 当主位置和辅助位置达到保留的驱动器空间时，Configuration Manager 将选择另一个具有最多可用磁盘空间的可用驱动器，以继续执行复制过程。  
 
 > [!Tip]  
 > 若要阻止 Configuration Manager 安装在特定驱动器上，请在安装分发点之前创建一个名为 **no_sms_on_drive.sms** 的空文件，并将该文件复制到驱动器的根文件夹。  
@@ -388,11 +392,11 @@ ms.locfileid: "81701675"
 
 ### <a name="pull-distribution-point"></a><a name="bkmk_config-pull"></a>拉取分发点  
 
-当你“启用此分发点以从其他分发点拉取内容”时，它将成为拉取分发点  。 可更改分发点获取分发内容的方式。 有关详细信息，请参阅[使用拉取分发点](../../../plan-design/hierarchy/use-a-pull-distribution-point.md)。
+当你“启用此分发点以从其他分发点拉取内容”时，它将成为拉取分发点。 可更改分发点获取分发内容的方式。 有关详细信息，请参阅[使用拉取分发点](../../../plan-design/hierarchy/use-a-pull-distribution-point.md)。
 
 对于所配置的每个拉取分发点，指定从中获取内容的一个或多个源分发点：  
 
-- 选择“添加”  ，然后选择一个或多个可用分发点作为源。  
+- 选择“添加”，然后选择一个或多个可用分发点作为源。  
 
 - 使用箭头按钮调整优先级。 当拉取分发点尝试传输内容时，优先级是它与源分发点联系的顺序。 它首先联系具有最低值的分发点。  
 
@@ -404,10 +408,10 @@ ms.locfileid: "81701675"
 
 从版本 1806 开始，可在没有 WDS 的分发点上启用 PXE。
 
-选择“为客户端启用 PXE 支持”选项，然后配置下列设置  ：  
+选择“为客户端启用 PXE 支持”选项，然后配置下列设置：  
 
 > [!Note]  
-> 在“查看 PXE 的所需端口”  对话框中，选择“是”  ，以确认你想要启用 PXE。 Configuration Manager 将在 Windows 防火墙上自动配置默认端口。 如果使用其他防火墙，请手动配置这些端口。  
+> 在“查看 PXE 的所需端口”对话框中，选择“是”，以确认你想要启用 PXE。 Configuration Manager 将在 Windows 防火墙上自动配置默认端口。 如果使用其他防火墙，请手动配置这些端口。  
 >
 > 如果在同一台服务器上安装 WDS 和 DHCP，请配置 WDS 以侦听其他端口。 默认情况下，DHCP 侦听同一端口。 有关详细信息，请参阅 [WDS 和 DHCP 在同一个服务器上时的注意事项](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP)。  
 
@@ -415,7 +419,7 @@ ms.locfileid: "81701675"
 
 - **启用未知计算机支持**：指定是否启用对不受 Configuration Manager 管理的计算机的支持。 有关详细信息，请参阅[准备未知计算机部署](../../../../osd/get-started/prepare-for-unknown-computer-deployments.md)。  
 
-- **在没有 Windows 部署服务的情况下启用 PXE 响应方**：从版本 1806 开始，可通过此选项在分发点上启用 PXE 响应方，而不需要 WDS。 此 PXE 响应程序支持 IPv6 网络。 如果在已启用 PXE 的分发点上启用此选项，Configuration Manager 将暂停 WDS 服务。 如果禁用此选项，但仍使用“为客户端启用 PXE 支持”  ，分发点会重新启用 WDS。<!--1357580-->  
+- **在没有 Windows 部署服务的情况下启用 PXE 响应方**：从版本 1806 开始，可通过此选项在分发点上启用 PXE 响应方，而不需要 WDS。 此 PXE 响应程序支持 IPv6 网络。 如果在已启用 PXE 的分发点上启用此选项，Configuration Manager 将暂停 WDS 服务。 如果禁用此选项，但仍使用“为客户端启用 PXE 支持”，分发点会重新启用 WDS。<!--1357580-->  
 
     > [!Note]  
     > 在版本 1810 及更低版本中，不支持在同时运行 DHCP 服务器的服务器上使用不含 WDS 的 PXE 响应程序。
@@ -437,7 +441,7 @@ ms.locfileid: "81701675"
 - **网络接口**：指定分发点响应来自所有网络接口或来自特定网络接口的 PXE 请求。 如果分发点响应特定网络接口，然后提供每个网络接口的 MAC 地址。  
 
     > [!Note]  
-    > 更改网络接口时，请重新启动 WDS 服务以确保正确保存配置。 自版本 1806 起，使用 PXE 响应程序服务时，重启“ConfigMgr PXE 响应程序服务”  (SccmPxe)。<!--SCCMDocs issue 642-->  
+    > 更改网络接口时，请重新启动 WDS 服务以确保正确保存配置。 自版本 1806 起，使用 PXE 响应程序服务时，重启“ConfigMgr PXE 响应程序服务”(SccmPxe)。<!--SCCMDocs issue 642-->  
 
 - **指定 PXE 服务器响应延迟(秒)** ：使用多个 PXE 服务器时，请指定启用了 PXE 的此分发点在响应计算机请求之前应等待的时长。 默认情况下，启用了 Configuration Manager PXE 的分发点会立即响应。  
 
@@ -447,7 +451,7 @@ ms.locfileid: "81701675"
 
 启用多播时，Configuration Manager 会在服务器上安装 Windows 部署服务 (WDS)（如有需要）。  
 
-选择“启用多播以将数据同时发送到多个客户端”选项，然后配置下列设置  ：  
+选择“启用多播以将数据同时发送到多个客户端”选项，然后配置下列设置：  
 
 - **多播连接帐户**：指定在为多播配置 Configuration Manager 数据库连接时使用的帐户。 有关详细信息，请参阅[多播连接帐户](../../../plan-design/hierarchy/accounts.md#multicast-connection-account)。  
 
@@ -470,11 +474,11 @@ ms.locfileid: "81701675"
     - **最小会话大小(客户端)** ：指定在 Configuration Manager 开始部署操作系统之前必须收到的请求数。  
 
 > [!IMPORTANT]  
-> 从版本 1806 开始，若要启用和配置分发点属性“多播”选项卡上的多播，分发点必须使用 Windows 部署服务  。  
+> 从版本 1806 开始，若要启用和配置分发点属性“多播”选项卡上的多播，分发点必须使用 Windows 部署服务。  
 >
-> - 如果你“为客户端启用 PXE 支持”并“启用多播以将数据同时发送到多个客户端”，则无法“在没有 Windows 部署服务的情况下启用 PXE 响应程序”    。  
+> - 如果你“为客户端启用 PXE 支持”并“启用多播以将数据同时发送到多个客户端”，则无法“在没有 Windows 部署服务的情况下启用 PXE 响应程序”  。  
 >
-> - 如果你“为客户端启用 PXE 支持”并“在没有 Windows 部署服务的情况下启用 PXE 响应程序”，则无法“启用多播以将数据同时发送到多个客户端”     
+> - 如果你“为客户端启用 PXE 支持”并“在没有 Windows 部署服务的情况下启用 PXE 响应程序”，则无法“启用多播以将数据同时发送到多个客户端”    
 
 ### <a name="group-relationships"></a><a name="bkmk_config-group"></a>组关系  
 
@@ -483,9 +487,9 @@ ms.locfileid: "81701675"
 
 管理此分发点所属的分发点组。  
 
-要将此分发点作为成员添加到现有分发点组，请选择“添加”  。 在“添加到分发点组”窗口中，选择现有组，然后选择“确定”  。  
+要将此分发点作为成员添加到现有分发点组，请选择“添加”。 在“添加到分发点组”窗口中，选择现有组，然后选择“确定”。  
 
-要从分发点组中删除此分发点，请在列表中选择组，然后选择“删除”  。 从分发点组中删除分发点不会删除分发点中的任何内容。
+要从分发点组中删除此分发点，请在列表中选择组，然后选择“删除”。 从分发点组中删除分发点不会删除分发点中的任何内容。
 
 ### <a name="content"></a><a name="bkmk_config-content"></a>内容  
 
@@ -494,7 +498,7 @@ ms.locfileid: "81701675"
 
 管理已分发到分发点的内容。 从部署包列表中进行选择，然后执行以下操作：  
 
-- **验证**：启动对软件内容文件的完整性进行验证的过程。 若要查看内容验证过程的结果，请在“监视”  工作区中展开“分发状态”  ，然后选择“内容状态”  节点。 有关详细信息，请参阅[验证内容](deploy-and-manage-content.md#validate-content)。  
+- **验证**：启动对软件内容文件的完整性进行验证的过程。 若要查看内容验证过程的结果，请在“监视”工作区中展开“分发状态”，然后选择“内容状态”节点。 有关详细信息，请参阅[验证内容](deploy-and-manage-content.md#validate-content)。  
 
 - **重新分发**：将所选软件的所有内容文件复制到分发点，并覆盖现有文件。 通常使用此操作来修复内容文件。 有关详细信息，请参阅[重新分发内容](deploy-and-manage-content.md#redistribute-content)。  
 
@@ -502,9 +506,9 @@ ms.locfileid: "81701675"
 
 ### <a name="content-validation"></a><a name="bkmk_config-valid"></a>内容验证  
 
-设置计划以验证分发点上内容文件的完整性。 如果按计划启用内容验证，Configuration Manager 将在计划的时间启动进程。 它根据本地 SMS_PackagesInContLib SCCMDP 类验证分发点上的所有内容。 你还可以配置内容验证优先级。 默认情况下，优先级设置为“最低”  。 在验证过程中，提高优先级可能会增加服务器上的处理器和磁盘利用率，但应会更快完成。
+设置计划以验证分发点上内容文件的完整性。 如果按计划启用内容验证，Configuration Manager 将在计划的时间启动进程。 它根据本地 SMS_PackagesInContLib SCCMDP 类验证分发点上的所有内容。 你还可以配置内容验证优先级。 默认情况下，优先级设置为“最低” 。 在验证过程中，提高优先级可能会增加服务器上的处理器和磁盘利用率，但应会更快完成。
 
-若要查看内容验证过程的结果，请在“监视”  工作区中展开“分发状态”  ，然后选择“内容状态”  节点。 会显示每种软件类型（例如，应用程序、软件更新包以及启动映像）的内容。  
+若要查看内容验证过程的结果，请在“监视”工作区中展开“分发状态”，然后选择“内容状态”节点。 会显示每种软件类型（例如，应用程序、软件更新包以及启动映像）的内容。  
 
 > [!WARNING]  
 > 虽然使用计算机的本地时间来指定内容验证计划，但 Configuration Manager 控制台仍会在 UTC 中显示该计划。  
@@ -515,13 +519,13 @@ ms.locfileid: "81701675"
 
 管理为其分配此分发点的边界组。 将分发点添加到至少一个边界组中。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将此分发点用作内容源位置。
 
-配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组  。 有关详细信息，请参阅[边界组](boundary-groups.md)。
+配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组。 有关详细信息，请参阅[边界组](boundary-groups.md)。
 
-选择“添加”  ，然后从列表中选择现有边界组。
+选择“添加”，然后从列表中选择现有边界组。
 
-要为此分发点创建新边界组，请选择“创建”  。 有关如何创建和配置边界组的详细信息，请参阅[边界组的过程](boundary-group-procedures.md)。
+要为此分发点创建新边界组，请选择“创建”。 有关如何创建和配置边界组的详细信息，请参阅[边界组的过程](boundary-group-procedures.md)。
 
-编辑以前安装的分发点的属性时，请管理“启用按需分发”选项  。 此选项允许 Configuration Manager 在客户端请求时自动将内容分发到此服务器。 有关详细信息，请参阅[按需内容分发](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution)。
+编辑以前安装的分发点的属性时，请管理“启用按需分发”选项。 此选项允许 Configuration Manager 在客户端请求时自动将内容分发到此服务器。 有关详细信息，请参阅[按需内容分发](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution)。
 
 ### <a name="schedule"></a><a name="bkmk_config-sched"></a>计划  
 
@@ -532,7 +536,7 @@ ms.locfileid: "81701675"
 
 配置一个计划，该计划限制 Configuration Manager 何时可将数据传输到分发点。 按优先级来限制数据或为所选时间段关闭连接。
 
-要限制数据，请在网格中选择时间段，并选择下列任一“可用性”设置  ：  
+要限制数据，请在网格中选择时间段，并选择下列任一“可用性”设置：  
 
 - **为所有优先级打开**：Configuration Manager 将数据发送到分发点而不受任何限制。 此设置是所有时间段的默认设置。  
 
@@ -542,7 +546,7 @@ ms.locfileid: "81701675"
 
 - **已关闭**：Configuration Manager 不向分发点发送任何数据。  
 
-在软件属性的“分发设置”选项卡上配置软件的“分发优先级”   。
+在软件属性的“分发设置”选项卡上配置软件的“分发优先级” 。
 
 > [!IMPORTANT]  
 > 计划基于发送站点的时区，而不是分发点的时区。  
@@ -560,4 +564,4 @@ ms.locfileid: "81701675"
 
 - **脉冲模式**：此选项指定站点服务器发送到分发点的数据块的大小。 你也可以指定在两次发送各个数据块之间的时间延迟。 如果必须在连接到分发点的极低带宽网络上发送数据，请使用此选项。 例如，你有每五秒发送 1 KB 数据的约束，而不管某个给定时间的链接速度或其使用率如何。  
 
-- **限制为按小时指定的最大传输速率**：指定此设置可以让站点仅使用你配置的一定比例时间，将数据发送到分发点。 使用此选项时，Configuration Manager 无法识别网络的可用带宽。 它划分了可发送数据的时间。 服务器发送数据的时间很短，在此时间后是不发送数据的时间段。 例如，如果将“限制可用带宽”设置为 50%，Configuration Manager 传输数据一段时间后，在相同的时间内不发送任何数据   。 不会管理实际数据量大小或数据块大小。 它只管理发送数据的时间量。  
+- **限制为按小时指定的最大传输速率**：指定此设置可以让站点仅使用你配置的一定比例时间，将数据发送到分发点。 使用此选项时，Configuration Manager 无法识别网络的可用带宽。 它划分了可发送数据的时间。 服务器发送数据的时间很短，在此时间后是不发送数据的时间段。 例如，如果将“限制可用带宽”设置为 50%，Configuration Manager 传输数据一段时间后，在相同的时间内不发送任何数据 。 不会管理实际数据量大小或数据块大小。 它只管理发送数据的时间量。  

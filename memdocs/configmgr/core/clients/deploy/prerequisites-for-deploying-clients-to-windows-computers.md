@@ -2,7 +2,7 @@
 title: Windows 客户端部署先决条件
 titleSuffix: Configuration Manager
 description: 了解将 Configuration Manager 客户端部署到 Windows 计算机的先决条件。
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694785"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428554"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>在 Configuration Manager 中将客户端部署到 Windows 计算机的先决条件
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 在环境中部署 Configuration Manager 客户端有下列外部依赖关系和产品内部依赖关系。 此外，每个客户端部署方法有其自己的先决条件，要成功安装客户端，必须满足其自己的先决条件。  
 
@@ -28,18 +28,20 @@ ms.locfileid: "81694785"
 > [!NOTE]  
 > 本文中显示的软件版本号仅列出所需的最低版本号。  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a>Windows 客户端的先决条件  
 
 请查看下列信息，确定在 Windows 设备上安装 Configuration Manager 客户端的先决条件。  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
+### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系
 
-|组件|说明|  
-|---|---|  
-|Windows Installer 版本 3.1.4000.2435|这是支持将 Windows Installer 更新文件 (.msp) 用于包和软件更新所必需的。|  
-|Microsoft 后台智能传输服务 (BITS) 2.5 版|需要允许客户端计算机和 Configuration Manager 站点系统之间的受限数据传输。 客户端安装过程中不会自动下载 BITS。 在计算机上安装 BITS 后，通常需要重启来完成安装。<br /><br /> 大多数操作系统都包括 BITS。 如果未包括，请在安装 Configuration Manager 客户端之前安装 BITS。|  
-|Microsoft 任务计划程序|在客户端上启用此服务，以便完成客户端安装。|  
+其中许多组件都是 Windows 默认启用的服务或功能。 请勿在 Configuration Manager 客户端上禁用这些组件。
+
+|组件|说明|
+|---|---|
+|Windows Installer|这是支持将 Windows Installer 文件用于应用程序和软件更新所必需的。|
+|Microsoft 后台智能传输服务 (BITS)|需要允许客户端计算机和 Configuration Manager 站点系统之间的受限数据传输。|
+|Microsoft 任务计划程序|对于客户端操作（例如定期评估 Configuration Manager 客户端的运行状况）是必需的。|
+|Microsoft 远程差分压缩 (RDC)|需要该项以优化网络上的数据传输。|
 |SHA-2 代码签名支持|从版本 1906 开始，客户端需要对 SHA-2 代码签名算法的支持。 有关详细信息，请参阅 [SHA-2 代码签名支持](#bkmk_sha2)。|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a> SHA-2 代码签名支持
@@ -64,18 +66,15 @@ ms.locfileid: "81694785"
 
 Configuration Manager 客户端具备外部依赖项。 这些依赖项取决于 OS 版本以及客户端计算机上安装的软件。  
 
-如果客户端需要这些依赖项来完成安装，则它会自动安装这些依赖项。  
+如果客户端需要这些依赖项来完成安装，则它会自动安装这些依赖项。
 
-|组件|说明|  
-|---|---|  
-|Windows Update 代理版本 7.0.6000.363|Windows 要求支持更新检测和部署。|  
-|Microsoft Core XML Services (MSXML) 版本 6.20.5002 或更高版本|要求支持在 Windows 中处理 XML 文档。|  
-|Microsoft 远程差分压缩 (RDC)|需要该项以优化网络上的数据传输。|  
-|Microsoft Visual C++ 2013 可再发行组件版本 12.0.21005.1|需要该项以支持客户端操作。 在客户端计算机上安装此更新时，可能需要重启才能完成安装。|  
-|Microsoft Visual C++ 2005 可再发行组件版本 8.0.50727.42|对于 1606 或更早版本，需要该项以支持 Microsoft SQL Server Compact 操作。|  
-|Windows 映像 API 6.0.6001.18000|需要该项以允许 Configuration Manager 管理 Windows 映像 (.wim) 文件。|  
-|Microsoft 策略平台 1.2.3514.0|需要该项以允许客户端评估符合性设置。|  
-|Microsoft .NET Framework 版本 4.5.2|需要该项以支持客户端操作。 如果未安装 Microsoft .NET Framework 4.5 或更高版本，则自动将其安装在客户端计算机上。 有关详细信息，请参阅[有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息](#dotNet)。|  
+|组件|说明|
+|---|---|
+|Microsoft Core XML Services (MSXML) 版本 6.20.5002 或更高版本 (`msxml6.msi`)|要求支持在 Windows 中处理 XML 文档。|
+|Microsoft Visual C++ 2013 可再发行程序包版本 12.0.40660.0 (`vcredist_x*.exe`)|需要该项以支持客户端操作。 在客户端计算机上安装此更新时，可能需要重启才能完成安装。|<!-- SCCMDocs#1526 -->
+|Windows 映像 API 6.0.6001.18000 或更高版本 (`wimgapi.msi`)|需要该项以允许 Configuration Manager 管理 Windows 映像 (.wim) 文件。|
+|Microsoft 策略平台 1.2.3514.0 或更高版本 (`MicrosoftPolicyPlatformSetup.msi`)|需要该项以允许客户端评估符合性设置。|  
+|Microsoft .NET Framework 版本 4.5.2 或更高版本 (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|需要该项以支持客户端操作。 如果未安装 Microsoft .NET Framework 4.5 或更高版本，则自动将其安装在客户端计算机上。 有关详细信息，请参阅[有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息](#dotNet)。|  
 |Microsoft SQL Server Compact 4.0 SP1 组件|需要该项以存储与客户端操作相关的信息。|  
 
 > [!Important]
@@ -93,7 +92,7 @@ Configuration Manager 客户端具备外部依赖项。 这些依赖项取决于
 > [!NOTE]  
 > 不再支持 .NET 4.0、4.5 和 4.5.1。 有关详细信息，请参阅 [Microsoft .NET Framework 支持生命周期策略常见问题解答](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)。  
 
-Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 用户将在系统托盘中看到“需要重启”  通知。 下面是需要客户端计算机重启的常见情况：  
+Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 用户将在系统托盘中看到“需要重启”通知。 下面是需要客户端计算机重启的常见情况：  
 
 - 计算机上正在运行.NET 应用程序或服务。  
 
@@ -120,7 +119,7 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 #### <a name="client-push-installation"></a>客户端请求安装  
 
-- 站点通过客户端请求安装帐户连接到计算机来安装客户端。 在客户端请求安装属性的“帐户”选项卡上指定这些帐户  。 该帐户必须是目标计算机上本地管理员组的成员。  
+- 站点通过客户端请求安装帐户连接到计算机来安装客户端。 在客户端请求安装属性的“帐户”选项卡上指定这些帐户。 该帐户必须是目标计算机上本地管理员组的成员。  
 
     如果未指定客户端请求安装帐户，站点服务器则使用其自己的计算机帐户。  
 
@@ -128,7 +127,7 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 - 计算机具有 ADMIN$ 共享。  
 
-- 要对所发现的资源自动推送 Configuration Manager 客户端，请在客户端请求安装属性中选择“对已分配资源启用客户端请求安装”  。  
+- 要对所发现的资源自动推送 Configuration Manager 客户端，请在客户端请求安装属性中选择“对已分配资源启用客户端请求安装”。  
 
 - 客户端计算机需要与分发点或管理点进行通信，以便下载源文件。  
 
@@ -136,11 +135,11 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 要使用客户端请求，需要具备以下安全权限：  
 
-- 配置客户端请求安装帐户：“站点”对象的“修改”和“读取”权限    。  
+- 配置客户端请求安装帐户：“站点”对象的“修改”和“读取”权限  。  
 
-- 使用客户端请求将客户端安装到集合、设备和查询：“集合”对象的“修改资源”和“读取”权限    。  
+- 使用客户端请求将客户端安装到集合、设备和查询：“集合”对象的“修改资源”和“读取”权限  。  
 
-“基础结构管理员”默认安全角色包括管理客户端请求安装所需的权限  。  
+“基础结构管理员”默认安全角色包括管理客户端请求安装所需的权限。  
 
 #### <a name="software-update-point-based-installation"></a>基于软件更新点的安装  
 
@@ -217,7 +216,7 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
     此安全组用于配置在移动设备注册过程中使用的证书模板。  
 
-- 可选但建议使用：名为 ConfigMgrEnroll（CNAME 记录）的 DNS 别名  。 为注册代理点的服务器名称配置此别名。  
+- 可选但建议使用：名为 ConfigMgrEnroll（CNAME 记录）的 DNS 别名。 为注册代理点的服务器名称配置此别名。  
 
     需要此 DNS 别名以支持注册服务的自动发现。 如果未配置此 DNS 记录，则用户必须在注册过程中手动指定注册代理点的名称。  
 
@@ -249,23 +248,23 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 - 要针对移动设备配置注册，你必须具有下列安全权限：  
 
-    - 添加、修改和删除注册站点系统角色：“站点”对象的“修改”权限   。  
+    - 添加、修改和删除注册站点系统角色：“站点”对象的“修改”权限 。  
 
-    - 配置注册的客户端设置：默认客户端设置需要“站点”对象的“修改”权限，自定义客户端设置需要“客户端代理”权限    。  
+    - 配置注册的客户端设置：默认客户端设置需要“站点”对象的“修改”权限，自定义客户端设置需要“客户端代理”权限  。  
 
-    “完全权限管理员”默认安全角色包括配置注册站点系统角色所需的权限  。  
+    “完全权限管理员”默认安全角色包括配置注册站点系统角色所需的权限。  
 
 - 要管理注册的移动设备，你必须具有下列安全权限：  
 
-    - 擦除或停用移动设备：“集合”对象的“删除资源”权限   。  
+    - 擦除或停用移动设备：“集合”对象的“删除资源”权限 。  
 
-    - 取消擦除或停用命令：“集合”对象的“删除资源”权限   。  
+    - 取消擦除或停用命令：“集合”对象的“删除资源”权限 。  
 
-    - 允许和阻止移动设备：“集合”对象的“修改资源”权限   。  
+    - 允许和阻止移动设备：“集合”对象的“修改资源”权限 。  
 
-    - 远程锁定或重置移动设备上的密码：“集合”对象的“修改资源”权限   。  
+    - 远程锁定或重置移动设备上的密码：“集合”对象的“修改资源”权限 。  
 
-    “操作管理员”默认安全角色包括管理移动设备所需的权限  。  
+    “操作管理员”默认安全角色包括管理移动设备所需的权限。  
 
     有关如何配置安全权限的详细信息，请参阅[基于角色的管理的基础](../../understand/fundamentals-of-role-based-administration.md)和[配置基于角色的管理](../../servers/deploy/configure/configure-role-based-administration.md)。  
 

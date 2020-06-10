@@ -10,16 +10,16 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906388"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270848"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 Windows 应用程序
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 除了[创建应用程序](../deploy-use/create-applications.md)的其他 Configuration Manager 要求和过程，在创建和部署适用于 Windows 设备的应用程序时还需考虑以下注意事项。  
 
@@ -27,7 +27,7 @@ ms.locfileid: "82906388"
 
 Configuration Manager 支持为 Windows 8.1 和 Windows 10 设备部署 Windows 应用包 (.appx) 和应用程序包 (.appxbundle) 格式。
 
-在 Configuration Manager 控制台中创建应用程序时，请将应用程序安装文件“类型”选为“Windows 应用包”（\*.appx、\*.appxbundle、\*.msix、\*.msixbundle）   。 有关一般情况下创建应用的详细信息，请参阅[创建应用程序](../deploy-use/create-applications.md)。 有关 MSIX 格式的详细信息，请参阅[支持 MSIX 格式](#bkmk_msix)。
+在 Configuration Manager 控制台中创建应用程序时，请将应用程序安装文件“类型”选为“Windows 应用包”（\*.appx、\*.appxbundle、\*.msix、\*.msixbundle） 。 有关一般情况下创建应用的详细信息，请参阅[创建应用程序](../deploy-use/create-applications.md)。 有关 MSIX 格式的详细信息，请参阅[支持 MSIX 格式](#bkmk_msix)。
 
 > [!Note]  
 > 若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。<!--SCCMDocs issue 646-->  
@@ -39,7 +39,7 @@ Configuration Manager 支持为 Windows 8.1 和 Windows 10 设备部署 Windows 
 > [!Important]  
 > 在设备上安装、预配和更新相同 Windows 应用包的不同版本时要小心，否则可能会导致意外的结果。 使用 Configuration Manager 预配应用时就需要注意些，但随后用户可从 Microsoft Store 更新应用。 有关详细信息，请在[管理来自适用于企业的 Microsoft Store 的应用](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)时参阅下一步指南。  
 
-当预配脱机许可应用时，Configuration Manager 不允许 Windows 从 Microsoft Store 自动更新它。  
+使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 有关详细信息，请参阅[使用 Configuration Manager 来管理适用于企业和教育的 Microsoft Store 中的应用](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)。<!-- MEMDocs#316 -->
 
 Configuration Manager 在 Windows 10 所有受支持的版本上支持应用预配。<!--SCCMDocs-pr issue 2762-->
 
@@ -48,7 +48,7 @@ Configuration Manager 在 Windows 10 所有受支持的版本上支持应用预�
 - Uninstall action: Windows 10, version 1703 and later
 -->
 
-若要配置此功能的 Windows 应用部署类型，请启用“为设备上的所有用户预配此应用程序”选项  。 有关详细信息，请参阅[创建应用程序](../deploy-use/create-applications.md)。
+若要配置此功能的 Windows 应用部署类型，请启用“为设备上的所有用户预配此应用程序”选项。 有关详细信息，请参阅[创建应用程序](../deploy-use/create-applications.md)。
 
 > [!Note]  
 > 如果需要从用户已经登录的设备中卸载已预配的应用程序，则需要创建两个卸载部署。 将第一个卸载部署定位到包含设备的设备集合。 将第二个卸载部署定位到包含已登录到具有预配应用程序的设备的用户的用户集合。 当在设备上卸载预配的应用时，Windows 当前不会为用户卸载该应用。
@@ -85,7 +85,7 @@ Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.m
 
 #### <a name="process-to-convert-applications-to-msix-format"></a>将应用程序转换为 MSIX 格式的过程
 
-1. 提升 Configuration Manager 控制台，转到“软件库”  工作区，展开“应用程序管理”  ，然后选择“应用程序”  节点。  
+1. 提升 Configuration Manager 控制台，转到“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”节点。  
 
 2. 选择具有 Windows Installer (.msi) 部署类型的应用程序。  
 
@@ -96,7 +96,7 @@ Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.m
     >
     > 不要提前在引用设备上安装此应用程序。  
 
-3. 选择功能区中的“转换为 .MSIX”  。
+3. 选择功能区中的“转换为 .MSIX”。
 
 向导完成后，MSIX 打包工具将在向导中指定的位置创建一个 MSIX 文件。 在此过程中，Configuration Manager 将以无提示方式在引用设备上安装应用程序。
 
@@ -126,35 +126,35 @@ Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.m
 
 只能在应用上添加非 OS 部署任务序列作为部署类型。 不支持影响较大的 OS 部署或 OS 升级任务序列。 <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
-将此部署类型添加到应用时，请在“任务序列”页面上配置其属性  。 有关详细信息，请参阅[部署类型“任务序列”选项](../deploy-use/create-applications.md#bkmk_dt-ts)  。
+将此部署类型添加到应用时，请在“任务序列”页面上配置其属性。 有关详细信息，请参阅[部署类型“任务序列”选项](../deploy-use/create-applications.md#bkmk_dt-ts)。
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>任务序列部署类型的先决条件
 
 创建自定义任务序列：
 
-- 仅使用非 OS 部署步骤，例如：安装包、运行命令行或运行 PowerShell 脚本    。 有关包括支持步骤的完整列表在内的详细信息，请参阅[为非 OS 部署创建任务序列](../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)。
+- 仅使用非 OS 部署步骤，例如：安装包、运行命令行或运行 PowerShell 脚本  。 有关包括支持步骤的完整列表在内的详细信息，请参阅[为非 OS 部署创建任务序列](../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)。
 
-- 在任务序列属性的“用户通知”选项卡上，请勿为影响较大的任务序列选择此选项  。
+- 在任务序列属性的“用户通知”选项卡上，请勿为影响较大的任务序列选择此选项。
 
 <!-- - If you use the **Install Application** step in the task sequence, don't add an app to that step that has a task sequence deployment type. -->
 
 创建应用程序时，若要添加任务序列部署类型，你的用户帐户需要具备读取任务序列的权限。<!-- 6348976 --> 可使用下列选项之一配置这些权限：
 
-- 将应用管理员的用户帐户添加到内置的“只读分析员”角色  。 此角色允许用户查看所有 Configuration Manager 对象。
+- 将应用管理员的用户帐户添加到内置的“只读分析员”角色。 此角色允许用户查看所有 Configuration Manager 对象。
 
-- 复制内置的“应用程序管理员”角色以创建自定义角色  。 在“任务序列包”对象上添加读取权限   。
+- 复制内置的“应用程序管理员”角色以创建自定义角色。 在“任务序列包”对象上添加读取权限 。
 
 ### <a name="known-issues-for-a-task-sequence-deployment-type"></a>任务序列部署类型的已知问题
 
 - 暂时无法将应用任务序列部署到用户集合
 
-- 请勿在此任务序列中使用“安装应用程序”步骤  。 使用[安装包](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步骤来安装应用。
+- 请勿在此任务序列中使用“安装应用程序”步骤。 使用[安装包](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步骤来安装应用。
 
 ## <a name="support-for-universal-windows-platform-uwp-apps"></a><a name="bkmk_uwp"></a> 对通用 Windows 平台 (UWP) 应用的支持  
 
-Windows 10 设备无需旁加载密钥即可安装业务线应用。 但是，若要在 Windows 上启用旁加载，注册表项 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` 的值必须为 1  。  
+Windows 10 设备无需旁加载密钥即可安装业务线应用。 但是，若要在 Windows 上启用旁加载，注册表项 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` 的值必须为 1。  
 
-如果未配置此注册表项，Configuration Manager 在第一次向设备部署应用时自动将此值设置为 1  。 如果将此值设置为 0，则 Configuration Manager 无法自动更改此值，业务线应用部署失败  。  
+如果未配置此注册表项，Configuration Manager 在第一次向设备部署应用时自动将此值设置为 1。 如果将此值设置为 0，则 Configuration Manager 无法自动更改此值，业务线应用部署失败。  
 
 数字签名 UWP 业务线应用。 使用在部署应用的每台设备上受信任的代码签名证书。 使用组织 PKI 中的证书，或从 Windows 已信任其公共根证书的第三方提供程序购买证书。  
 
@@ -162,9 +162,9 @@ Windows 10 设备无需旁加载密钥即可安装业务线应用。 但是，�
 
 | 包  | Symantec  | 非 Symantec  |
 |---------|---------|---------|
-| Windows 10 移动设备上的通用 .appx 包  | 是 | 是 |
-| .xap 包  | 是 | 否 |
-| 为 Windows Phone 8.1 生成的 .appx 包，可在 Windows 10 移动设备上安装  | 是 | 否 |
+| Windows 10 移动设备上的通用 .appx 包 | 是 | 是 |
+| .xap 包 | 是 | 否 |
+| 为 Windows Phone 8.1 生成的 .appx 包，可在 Windows 10 移动设备上安装 | 是 | 否 |
 
 ## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a> 将 Windows Installer 应用部署到已注册 MDM 的 Windows 10 设备  
 

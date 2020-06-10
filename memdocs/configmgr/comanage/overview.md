@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690995"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347179"
 ---
 # <a name="what-is-co-management"></a>什么是共同管理？
 
@@ -33,7 +33,7 @@ ms.locfileid: "81690995"
 [以完整尺寸查看关系图](media/co-management-overview.svg)
 
 > [!Note]  
-> 同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备，这种配置称为“共同管理”  。 使用 Configuration Manager 管理设备并注册第三方 MDM 服务，这种配置称为“共存”  。 如果没有在两者之间进行适当协调，为一个设备设置两个管理权限可能会很有挑战性。 通过共同管理，Configuration Manager 和 Intune 共同平衡[工作负荷](#workloads)，以确保没有冲突。 由于第三方服务中不存在这种交互，因此共存的管理功能存在一些限制。 有关详细信息，请参阅[第三方 MDM 与 Configuration Manager 共存](coexistence.md)。
+> 同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备，这种配置称为“共同管理”。 使用 Configuration Manager 管理设备并注册第三方 MDM 服务，这种配置称为“共存”。 如果没有在两者之间进行适当协调，为一个设备设置两个管理权限可能会很有挑战性。 通过共同管理，Configuration Manager 和 Intune 共同平衡[工作负荷](#workloads)，以确保没有冲突。 由于第三方服务中不存在这种交互，因此共存的管理功能存在一些限制。 有关详细信息，请参阅[第三方 MDM 与 Configuration Manager 共存](coexistence.md)。
 
 ## <a name="paths-to-co-management"></a>共同管理的路径
 
@@ -100,9 +100,9 @@ ms.locfileid: "81690995"
 
 ### <a name="azure-ad"></a>Azure AD
 
-- Windows 10 设备必须加入 Azure AD。 它们可以是以下任一类型：  
+- Windows 10 设备必须连接到 Azure AD。 它们可以是以下任一类型：  
 
-  - [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)，其中设备已加入本地 Active Directory 和 Azure Active Directory。  
+  - [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)，其中设备已加入到本地 Active Directory 且使用 Azure Active Directory 注册。
 
   - 仅限[已联接 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 （此类型有时称为“已加入云域”）<!--SCCMDocs issue 605-->  
 
@@ -124,10 +124,10 @@ ms.locfileid: "81690995"
 <!--SCCMDocs issue #667-->
 | 操作 | 所需角色 |
 |----|----|
-| 在 Configuration Manager 中设置云管理网关 | Azure 订阅管理员  |
-| 从 Configuration Manager 中创建 Azure AD 应用 | Azure AD 全局管理员  |
-| 在 Configuration Manager 中导入 Azure 应用 | Configuration Manager 完全权限管理员 <br>无需任何其他的 Azure 角色 |
-| 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员   。<!--SCCMDoc issue 626--> |
+| 在 Configuration Manager 中设置云管理网关 | Azure 订阅管理员 |
+| 从 Configuration Manager 中创建 Azure AD 应用 | Azure AD 全局管理员 |
+| 在 Configuration Manager 中导入 Azure 应用 | Configuration Manager 完全权限管理员<br>无需任何其他的 Azure 角色 |
+| 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员 。<!--SCCMDoc issue 626--> |
 
 要详细了解 Azure 角色，请参阅[了解不同角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)。
 

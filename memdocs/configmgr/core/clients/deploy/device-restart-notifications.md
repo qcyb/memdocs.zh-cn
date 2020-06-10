@@ -2,7 +2,7 @@
 title: 设备重新启动通知
 titleSuffix: Configuration Manager
 description: 重新启动 Configuration Manager 中各种客户端设置的通知行为。
-ms.date: 08/23/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,26 +10,22 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5b6d383b2d5904f4d31fff5f549127dc21c39f29
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693955"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347213"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager 中的设备重新启动通知
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
-用户收到等待设备重新启动的通知可能因[计算机重新启动客户端设置](about-client-settings.md#computer-restart)和所使用的 Configuration Manager 版本而异。 本文可帮助管理员确定哪些用户体验用于等待设备重新启动的通知。
-
->[!NOTE]
-> - 本文重点介绍 Configuration Manager 版本 1902 和版本 1906 中找到的客户端设置。
-
+用户收到等待设备重启的通知可能因[计算机重启客户端设置](#client-settings)和所使用的 Configuration Manager 版本而异。 本文可帮助你配置等待设备重启通知的用户体验。
 
 ## <a name="deployment-types-for-restart-notifications"></a>重新启动通知的部署类型
 
-[计算机重新启动客户端设置](about-client-settings.md#computer-restart)可更改需要重新启动以下类型的所有必需部署的用户体验：
+[计算机重新启动客户端设置](#client-settings)可更改需要重新启动以下类型的所有必需部署的用户体验：
 
 - [应用程序](../../../apps/deploy-use/deploy-applications.md)
 - [任务序列](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
@@ -37,38 +33,163 @@ ms.locfileid: "81693955"
 
 ## <a name="restart-notification-types"></a>重新启动通知类型
 
-需要重新启动时，将向最终用户显示即将重新启动的通知。 用户可以收到以下四个常规通知：
+当设备需要重启时，客户端会向最终用户显示即将重启的通知。 用户可以收到以下四种常规通知。
 
-**Toast 通知**告知你需要重新启动。 Toast 通知中的信息可能因所运行的 Configuration Manager 版本而异。 此类通知是 Windows OS 的本机通知，你也可以使用此类通知来查看第三方软件。
+### <a name="toast-notification"></a>Toast 通知
+
+Windows toast 通知会通知用户设备需要重启。 Toast 通知中的信息可能因所运行的 Configuration Manager 版本而异。 此类通知是 Windows 操作系统的本机通知。 你还可以看到第三方软件使用此类通知。
 
 ![等待重新启动的 Toast 通知](media/3555947-restart-toast.png)
 
-带有暂停选项的软件中心通知，用于显示在强制重新启动之前剩余的时间。 该消息可能因 Configuration Manager 版本而异。
+### <a name="software-center-notification-with-snooze"></a>带有推迟按钮的软件中心通知
+
+软件中心将显示一个通知，其中带有一个推迟选项以及在强制设备重启之前的剩余时间。 该消息可能因 Configuration Manager 版本而异。
 
 ![带有暂停按钮的等待重新启动软件中心通知](media/3976435-snooze-restart-countdown.png)
 
-用户无法关闭的软件中心最终倒计时通知。 暂停按钮灰显。
+### <a name="software-center-final-countdown-notification"></a>软件中心最终倒计时通知
+
+软件中心显示此最终倒计时通知，用户无法关闭或推迟此通知。
 
 ![软件中心最终倒计时通知](media/3976435-final-restart-countdown.png)
 
-如果用户在截止时间之前主动安装需要重新启动的必需软件，则他们将看到不同的通知。 当用户体验设置允许通知，并且不使用部署的 Toast 通知时，将显示以下通知。 有关配置这些设置的详细信息，请参阅[部署用户体验设置](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)和[所需部署的用户通知](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)  。
+从版本 1906 开始，在等待重启时间小于 24 小时之前，用户在重启通知中将无法看到进度条。
+
+### <a name="software-center-notification-before-deadline"></a>截止时间之前的软件中心通知
+
+如果用户在截止时间之前主动安装需要重启的必需软件，他们将看到不同的通知。 当用户体验设置允许通知，并且不使用部署的 Toast 通知时，将显示以下通知。 有关配置这些设置的详细信息，请参阅[部署用户体验设置](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)和[所需部署的用户通知](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)。
 
 ![主动安装的软件的通知](media/3976435-proactive-user-restart-notification.png)
 
-- 当你不使用 Toast 通知时，标记为“可用”的软件的对话框与主动安装的软件类似  。
+#### <a name="available-apps"></a>可用应用
 
-  - 对于  可用软件，通知没有重新启动的截止时间，用户可以选择自己的暂停间隔。 有关详细信息，请参阅[批准设置](../../../apps/deploy-use/deploy-applications.md#bkmk_approval)。
+当你不使用 Toast 通知时，标记为“可用”的软件的对话框与主动安装的软件类似。 对于可用软件，通知没有重新启动的截止时间，用户可以选择自己的暂停间隔。 有关详细信息，请参阅[批准设置](../../../apps/deploy-use/deploy-applications.md#bkmk_approval)。
 
-    ![标记为“可用”的软件在通知中没有重新启动的截止时间。](media/3555947-deployment-marked-available-restart.png)
+![标记为“可用”的软件在通知中没有重新启动的截止时间。](media/3555947-deployment-marked-available-restart.png)
 
-## <a name="device-restart-notifications-in-version-1902"></a>版本 1902 中的设备重新启动通知
+## <a name="client-settings"></a>客户端设置
+
+要控制客户端重启行为，请在“计算机重启”组中配置以下设备客户端设置。 有关详细信息，请参阅[如何配置客户端设置](configure-client-settings.md)。
+
+### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>指定在最后期限之后、设备重启之前的时间长度(以分钟为单位)
+
+此设置的持续时间必须比应用于计算机的最短维护时段更短。 有关维护时段的详细信息，请参阅[如何使用维护时段](../manage/collections/use-maintenance-windows.md)。
+
+默认值为 90 分钟。 从版本 1906 开始，最大值从 1440 分钟（24小时）增加到 20160 分钟（两周）。
+
+> [!NOTE]
+> 此设置之前的标题为“向用户显示一条临时通知，以指明注销用户或重启计算机之前的间隔(分钟)”。
+
+### <a name="specify-the-amount-of-time-that-a-user-is-presented-a-final-countdown-notification-before-a-device-gets-restarted-minutes"></a>指定在设备重启之前向用户显示最后倒计时通知的时间长度(以分钟为单位)
+
+此设置的持续时间必须比应用于计算机的最短维护时段更短。 有关维护时段的详细信息，请参阅[如何使用维护时段](../manage/collections/use-maintenance-windows.md)。
+
+默认值为 15 分钟。
+
+> [!NOTE]
+> 此设置之前的标题为“显示用户无法关闭的对话框，该对话框显示注销用户或重启计算机之前的倒计时间隔(分钟)”。
+
+### <a name="specify-the-frequency-of-reminder-notifications-presented-to-the-user-after-the-deadline-before-a-device-gets-restarted-minutes"></a>指定在最后期限之后、重启设备之前向用户显示提醒通知的频率(分钟)
+<!--3976435-->
+_从版本 1906 开始_
+
+此频率时间间隔值应小于“指定在最后期限之后、设备重启之前的时间长度(以分钟为单位)”的值减去“指定在设备重启之前向用户显示最后倒计时通知的时间长度(以分钟为单位)”的值之差。 否则，提醒通知将不起作用。
+
+默认值为 240 分钟。
+
+> [!NOTE]
+> 此设置之前标题为“指定计算机重启倒计时通知的暂停持续时间(分钟)”。
+
+### <a name="when-a-deployment-requires-a-restart-show-a-dialog-window-to-the-user-instead-of-a-toast-notification"></a>当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知
+<!--3555947-->
+自版本 1902 起，将此设置配置为“是”会增加用户体验的侵入性。 此设置适用于应用程序、任务序列和软件更新的所有部署。 有关详细信息，请参阅[为软件中心制定计划](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact)。
+
+> [!IMPORTANT]
+> 在某些情况下，Configuration Manager 1902 中的该对话框将不会替换 Toast 通知。 要解决此问题，请安装 [Configuration Manager 版本1902 的更新汇总](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)。 <!--4404715-->
+
+## <a name="device-restart-notifications-version-1906"></a>设备重启通知（版本 1906）
+<!--3976435-->
+某些客户倾向于经常发送重启通知并允许用户推迟较短的时间。 而其他客户允许用户将重启推迟更长一段时间，并且不会经常通知用户等待重启。 从 Configuration Manager 版本 1906 开始，管理员可以更好地控制重启通知的时间和频率。
+
+### <a name="install-required-software-at-or-after-the-deadline"></a>在截止时间或之后安装所需的软件
+
+在截止时间或截止时间之后安装所需软件时，用户将看到因所选客户端设置而异的通知。
+
+如果设置“当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知”设置为：
+
+- **否**：当部署达到最终倒计时通知时，Windows 会显示 toast 通知。
+
+- **是**：软件中心显示通知：
+
+  - 如果重启时间大于 24 小时，则会显示估计的重启时间。 此通知的时间取决于以下设置：**指定在最后期限之后、设备重启之前的时间长度(以分钟为单位)** 。
+
+    ![重新启动时间大于 24 小时](media/3976435-notification-greater-than-24-hours.png)
+
+  - 如果重启时间小于 24 小时，则会显示一个进度栏。 此通知的时间取决于以下设置：**指定在最后期限之后、设备重启之前的时间长度(以分钟为单位)** 。
+
+    ![重新启动时间小于 24 小时](media/3976435-notification-less-than-24-hours.png)
+
+如果用户选择“推迟”，则在推迟期过后会显示另一个临时通知。 此行为假设尚未达到最终倒计时。 下一个通知的时间取决于以下设置：**指定在最后期限之后、重启设备之前向用户显示提醒通知的频率(分钟)** 。 如果用户选择“推迟”，而你的推迟间隔为 1 小时，则软件中心将在 60 分钟后再次通知用户。 此行为假设尚未达到最终倒计时。
+
+当它达到最后倒计时时，软件中心会向用户显示无法关闭的通知。 进度条显示为红色，用户不能“推迟”它。
+
+![版本 1906 中的软件中心最终倒计时通知](media/3976435-1906-final-restart-countdown.png)
+
+### <a name="proactively-install-required-software-before-the-deadline"></a>在截止时间之前主动安装必需的软件
+
+如果用户在截止时间之前主动安装需要重启的必需软件，他们看到的通知将有所不同。 有关配置这些设置的详细信息，请参阅[部署用户体验设置](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)和[所需部署的用户通知](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)。
+
+当用户体验设置允许通知，并且不使用部署的 Toast 通知时，将显示以下通知：
+
+![主动安装的软件的通知](media/3976435-proactive-user-restart-notification.png)
+
+部署达到其截止时间之后，软件中心会遵循此行为[在截止时间或之后安装必需的软件](#install-required-software-at-or-after-the-deadline)。
+
+## <a name="example-configurations"></a>示例配置
+
+下面的示例说明如何配置客户端设置以实现特定的行为。
+
+### <a name="reminders-are-off"></a>提醒已关闭
+
+| 设置 | 值 |
+|---------|---------|
+|指定在最后期限之后、设备重启之前的时间长度(以分钟为单位)|180|
+|指定在设备重启之前向用户显示最后倒计时通知的时间长度(以分钟为单位)|60|
+|指定在最后期限之后、重启设备之前向用户显示提醒通知的频率(分钟)|240|
+|当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知|否|
+
+设备将在部署截止时间三小时（180 分钟）后重启。 在重启之前一小时（**60** 分钟），用户会看到其无法关闭或推迟的倒计时。 首个提醒通知设置为在晚于重启时间的截止时间四小时（240 分钟）后重启。 因此，用户看不到任何提醒。
+
+### <a name="low-reminder-frequency"></a>低提醒频率
+
+| 设置 | 值 |
+|---------|---------|
+|指定在最后期限之后、设备重启之前的时间长度(以分钟为单位)|7200|
+|指定在设备重启之前向用户显示最后倒计时通知的时间长度(以分钟为单位)|120|
+|指定在最后期限之后、重启设备之前向用户显示提醒通知的频率(分钟)|900|
+|当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知|是|
+
+设备将在部署截止时间五天（7200 分钟）后重启。 在重启前两小时（120 分钟），用户会看到其无法关闭或推迟的倒计时。 此配置允许在 118 小时内显示提醒 (`(7200 - 120) / 60`)。 截止时间 15 小时（900 分钟）后，软件中心将显示第一个提醒。 每 15 小时（900 分钟）显示最多六个额外提醒。 用户看到提醒作为窗口显示在屏幕上，而不是几秒钟后消失的通知。
+
+### <a name="high-reminder-frequency"></a>高提醒频率
+
+| 设置 | 值 |
+|---------|---------|
+|指定在最后期限之后、设备重启之前的时间长度(以分钟为单位)|2880|
+|指定在设备重启之前向用户显示最后倒计时通知的时间长度(以分钟为单位)|60|
+|指定在最后期限之后、重启设备之前向用户显示提醒通知的频率(分钟)|30|
+|当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知|是|
+
+设备将在部署截止时间两天（2880 分钟）后重启。 在重启之前一小时（60 分钟），用户会看到其无法关闭或推迟的倒计时。 此配置允许在 47 小时内显示提醒 (`(2880 - 60) / 60`)。 截止时间 30 分钟后，软件中心将显示第一个提醒。 每 30 分钟显示最多 92 个额外提醒。 用户看到提醒作为窗口显示在屏幕上，而不是几秒钟后消失的通知。
+
+## <a name="device-restart-notifications-version-1902"></a>设备重启通知（版本 1902）
 
 <!--3555947-->
 有时用户看不到有关重启或必需的部署的 Windows toast 通知。 然后，他们也看不到推迟提醒体验。 当客户端临近截止时间时，此行为可能导致不佳的用户体验。
 
 从版本 1902 开始，在要求进行软件更改或部署需要重新启动时，可以选择使用侵入性更强的对话框窗口。
 
-在客户端设置的[计算机重新启动](about-client-settings.md#computer-restart)组中，启用以下选项：**当部署要求重启时，向用户显示一个对话框窗口而不是 toast 通知**。  
+在客户端设置的[计算机重新启动](#client-settings)组中，启用以下选项：**当部署要求重启时，向用户显示一个对话框窗口而不是 toast 通知**。  
 
 配置此客户端设置可更改需要重新启动 Toast 通知的所有必需部署的用户体验：
 
@@ -100,52 +221,12 @@ ms.locfileid: "81693955"
 > [!IMPORTANT]
 > 在某些情况下，Configuration Manager 1902 中的该对话框将不会替换 Toast 通知。 要解决此问题，请安装 [Configuration Manager 版本1902 的更新汇总](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)。 <!--4404715-->
 
-## <a name="device-restart-notifications-starting-in-version-1906"></a>从版本 1906 开始的设备重新启动通知
-<!--3976435-->
-某些管理员倾向于经常发送重新启动通知并将重新启动推迟较短的时间。 而其他管理员允许用户将重新启动推迟更长一段时间，并希望用户不经常收到等待重新启动的通知。 Configuration Manager 版本 1906 使管理员可以更好地控制重新启动通知的时间和频率。 在 1906 中引入了以下各项以使管理员拥有更大的控制权限：
-
-- “指定计算机重启倒计时通知的暂停持续时间(分钟)”  已添加到[“计算机重启客户端设置”](about-client-settings.md#computer-restart)。
-- 向用户显示一条临时通知，指示注销用户或重启计算机之前的时间间隔（以分钟为单位），这一时间间隔的最大值从 1440 分钟（24小时）增加到了 20160 分钟（两周）  。
-- 在挂起重启时间小于 24 小时之前，用户在重启通知中将无法看到进度条。
-
-### <a name="notifications-when-required-software-is-installed-at-or-after-the-deadline"></a>在截止时间或截止时间之后安装所需软件时的通知
-
-在截止时间或截止时间之后安装所需软件时，用户将看到因所选客户端设置而异的通知。
-
-如果设置“当部署要求重启时，向用户显示对话框窗口，而不是 toast 通知”  设置为：
-
-- **否** - 在收到最终倒计时通知之前，将使用 Toast 通知。
-- **是** - 会显示软件中心通知。
-  - 如果重新启动时间大于 24 小时，则会显示估计的重新启动时间。 此通知的时间取决于以下设置：**向用户显示一条临时通知，指示注销用户或重新启动计算机之前的时间间隔(分钟)** 。
-
-     ![重新启动时间大于 24 小时](media/3976435-notification-greater-than-24-hours.png)
-
-  - 如果重启时间小于 24 小时，则会显示进度栏。 此通知的时间取决于以下设置：**向用户显示一条临时通知，指示注销用户或重新启动计算机之前的间隔(分钟)**
-
-     ![重新启动时间小于 24 小时](media/3976435-notification-less-than-24-hours.png)
-
-如果用户选择“暂停”  按钮，则会在暂停时段过后显示另一个临时通知，假设尚未进入最终倒计时。 下一个通知的时间取决于以下设置：**指定计算机重新启动倒计时通知的暂停持续时间(小时)** 。 如果用户选择“暂停”  ，并且暂停间隔为 1 小时，则将在 60 分钟内再次通知用户，假设尚未进入最终倒计时。
-
-进入最后倒计时时，将向用户显示他们无法关闭的通知。 进度条用红色显示，用户不能点击“暂停”  。
-
-![版本 1906 中的软件中心最终倒计时通知](media/3976435-1906-final-restart-countdown.png)
-
-### <a name="the-user-proactively-installs-before-the-deadline"></a>用户在截止时间之前主动安装
-
-如果用户在截止时间之前主动安装需要重新启动的必需软件，则他们将看到不同的通知。 有关配置这些设置的详细信息，请参阅[部署用户体验设置](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)和[所需部署的用户通知](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)  。 
-
-当用户体验设置允许通知，并且不使用部署的 Toast 通知时，将显示以下通知：
-
-![主动安装的软件的通知](media/3976435-proactive-user-restart-notification.png)
-
-软件的截止时间过后，就会遵循[在截止时间或截止时间之后安装所需软件时的通知](#notifications-when-required-software-is-installed-at-or-after-the-deadline)行为。
-
 ## <a name="log-files"></a>日志文件
 
-使用 RebootCoordinator.log 和 SCNotify.log 对设备重新启动进行故障排除   。 你可能还需要根据所使用的部署类型使用其他客户端[日志文件](../../plan-design/hierarchy/log-files.md)。
+若要对设备重启进行故障排除，请在客户端上使用 RebootCoordinator.log 和 SCNotify.log 文件 。 你可能还需要根据特定的部署类型使用其他客户端[日志文件](../../plan-design/hierarchy/log-files.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
-- [应用程序管理简介](../../../apps/understand/introduction-to-application-management.md)
-- [操作系统部署简介](../../../osd/understand/introduction-to-operating-system-deployment.md)
-- [软件更新管理简介](../../../sum/understand/software-updates-introduction.md)
+- [如何配置客户端设置](configure-client-settings.md)
+- [应用程序部署 **“用户体验”设置**](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)
+- [所需应用部署的用户通知](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)
