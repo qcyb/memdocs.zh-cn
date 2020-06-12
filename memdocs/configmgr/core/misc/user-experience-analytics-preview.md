@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428678"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455117"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>终结点分析预览版
 
@@ -56,7 +56,7 @@ ms.locfileid: "84428678"
 
 对于此预览版，可以通过 Configuration Manager 或 Microsoft Intune 来注册设备。 
 
-若要通过 Intune 注册设备，此预览版要求：
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a>要通过 Intune 注册设备，此预览版要求：
 - 运行 Windows 10 的 Intune 注册设备
 - 启动性能见解仅适用于运行 Windows 10 企业版（目前不支持家庭版和专业版）版本 1903 或更高版本的设备，并且设备必须已联接 Azure AD 或混合 Azure AD。 当前尚不支持已加入工作区的计算机。
 - 从设备到 Microsoft 公有云的网络连接。 有关详细信息，请参阅[终结点](#bkmk_uea_endpoints)。
@@ -64,11 +64,12 @@ ms.locfileid: "84428678"
    - 单击“启动”，即表示你同意并确认，你的客户数据可能存储在配置 Microsoft Intune 租户时所选位置的外部。
    - 单击“开始”以收集数据后，其他只读角色可以查看数据。
 
-若要通过 Configuration Manager 注册设备，此预览版要求：
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a>要通过 Configuration Manager 注册设备，此预览版要求：
 - Configuration Manager 版本 2002 或更高版本
 - 客户端已升级到版本 2002 或更高版本
 - 已启用 [Microsoft Endpoint Manager 租户附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)，且带有北美或欧洲 Azure 租户位置（我们将很快扩展到其他区域）
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a>主动修正脚本要求：
 无论是通过 Intune 还是 Configuration Manager 注册设备，[**主动修正脚本**](#bkmk_uea_prs)都具有以下要求：
 - 设备必须已联接 Azure AD 或混合 Azure AD，且必须满足下列条件之一：
 - 一台由 Intune 管理的 Windows 10 企业版、专业版或教育版设备

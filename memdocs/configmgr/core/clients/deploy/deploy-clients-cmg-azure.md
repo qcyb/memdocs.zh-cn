@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347009"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454998"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
@@ -95,7 +95,7 @@ ms.locfileid: "84347009"
 - 云管理网关
 - 基于 Internet 的管理点
 
-SMSMP 属性指定本地或基于 Internet 的管理点。
+SMSMP 属性可指定本地管理点。 这不是必需的。 建议将已加入 Azure AD 设备漫游到 Intranet，以便它们能够找到本地管理点。
 
 本示例使用云管理网关。 它将替换示例值：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
