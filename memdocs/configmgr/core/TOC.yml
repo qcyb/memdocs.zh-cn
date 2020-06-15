@@ -464,6 +464,8 @@
           href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: 管理基础结构
   items:
+    - name: 社区中心
+      href: servers/manage/community-hub.md
     - name: 管理见解
       href: servers/manage/management-insights.md
     - name: CMPivot
@@ -777,6 +779,8 @@
           href: clients/manage/collections/prerequisites-for-collections.md
         - name: 集合的最佳实践
           href: clients/manage/collections/best-practices-for-collections.md
+        - name: 集合评估
+          href: clients/manage/collections/collection-evaluation.md
         - name: 如何创建集合
           href: clients/manage/collections/create-collections.md
         - name: 如何管理集合
