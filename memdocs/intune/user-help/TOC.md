@@ -83,7 +83,7 @@
 ### [使用公司门户重置设备可能会发生什么情况？](effects-of-device-reset-company-portal-ios.md)
 ### [取消注册设备](unenroll-your-device-from-intune-ios.md)
 #### [如果取消注册设备会发生什么情况？](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [手动同步设备](sync-your-device-manually-ios.md)
+### [手动同步 iOS 设备](sync-your-device-manually-ios.md)
 
 ### [修复 iOS 的常见问题](troubleshoot-your-device-iOS.md)
 #### [重新连接受威胁的 iOS 设备](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [注册 macOS 设备](enroll-your-device-in-intune-macos-cp.md)
 ### [注册组织提供的 macOS 设备](enroll-company-device-macos.md)  
 ### [取消注册 macOS 设备](unenroll-your-device-from-intune-macos.md)  
+### [手动同步 macOS 设备](sync-your-device-manually-macos.md)
 ### [修复 macOS 的常见问题](troubleshoot-your-device-macos.md)
 #### [尚不支持我的 macOS 版本](your-macos-version-isnt-yet-supported.md)
 #### [更新 macOS 设备](you-need-to-update-your-macos-device.md)

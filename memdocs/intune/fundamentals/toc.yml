@@ -17,7 +17,7 @@
         - name: 开发过程中的功能
           href: in-development.md
         - name: 重要通知
-          href: 'whats-new.md#notices'
+          href: whats-new.md#notices
 - name: 快速入门
   items:
     - name: 免费试用 Intune
@@ -163,6 +163,8 @@
               href: china.md
         - name: 登录到 Intune
           href: account-sign-up.md
+        - name: 未经许可的管理员
+          href: unlicensed-admins.md
         - name: 配置域
           href: custom-domain-name-configure.md
         - name: 添加用户
