@@ -19,7 +19,7 @@ ms.locfileid: "81690045"
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-configuration-manager"></a>如何在 Configuration Manager 中管理 Linux 和 UNIX 服务器上的客户端
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 > [!Important]  
 > 从版本 1902 开始，Configuration Manager 不支持 Linux 或 UNIX 客户端。 
@@ -41,7 +41,7 @@ ms.locfileid: "81690045"
 
   硬件清单的默认客户端设置包括有关客户端计算机的操作系统的信息。 你可以使用 **Operating System** 类的 **Caption** 属性来标识 Linux 或 UNIX 服务器的操作系统。  
 
-  在 Configuration Manager 控制台的“资产和符合性”  工作区中的“设备”  节点下，可查看有关运行 Linux 和 UNIX 的 Configuration Manager 客户端的计算机的详细信息。 在 Configuration Manager 控制台的“资产和符合性”  工作区中，可在“操作系统”  列中查看每台计算机的操作系统名称。  
+  在 Configuration Manager 控制台的“资产和符合性”工作区中的“设备”节点下，可查看有关运行 Linux 和 UNIX 的 Configuration Manager 客户端的计算机的详细信息。 在 Configuration Manager 控制台的“资产和符合性”工作区中，可在“操作系统”列中查看每台计算机的操作系统名称。  
 
   默认情况下，Linux 和 UNIX 服务器属于 **所有系统** 集合的成员。 建议生成仅包括 Linux 和 UNIX 服务器或其子集的自定义集合。 通过自定义集合，可管理向诸如计算机组部署软件或分配客户端设置等操作，以便准确衡量部署是否成功。   
 
@@ -59,7 +59,7 @@ ms.locfileid: "81690045"
 
  例如，Linux 和 UNIX 服务器会忽略启用并配置了远程控制设置的自定义客户端设备设置，因为 Linux 和 UNIX 客户端不支持远程控制。  
 
-##  <a name="computer-policy-for-linux-and-unix-servers"></a><a name="BKMK_PolicyforLnU"> Linux 和 UNIX 服务器的计算机策略  
+##  <a name="computer-policy-for-linux-and-unix-servers"></a><a name="BKMK_PolicyforLnU"></a> Linux 和 UNIX 服务器的计算机策略  
  Linux 和 UNIX 服务器的客户端定期轮询其站点中的计算机策略，以了解请求的配置，并检查部署。  
 
  也可以强制 Linux 或 UNIX 服务器的客户端立即轮询计算机策略。 为此，请使用服务器上的**根**凭据运行以下命令： **/opt/microsoft/configmgr/bin/ccmexec -rs policy**  
