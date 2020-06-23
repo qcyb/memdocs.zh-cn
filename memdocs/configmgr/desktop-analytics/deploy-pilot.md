@@ -152,7 +152,7 @@ Configuration Manager 使用桌面分析中的数据来为试点和生产部署�
 
   - 设备所包含的值得注意的资产“就绪”或“就绪（带修正）” 
 
-  - 设备状态为“已阻止”、“替换设备”[](about-deployment-plans.md#plan-assets)或“重新安装设备”
+  - 设备状态为“已阻止”、[“替换设备”](about-deployment-plans.md#plan-assets)或“重新安装设备”
 
 - **未评审**：设备所包含的值得注意的资产“未评审”或“正在评审”
 
