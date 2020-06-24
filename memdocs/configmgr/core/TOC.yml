@@ -584,6 +584,8 @@
               href: servers/manage/introduction-to-reporting.md
             - name: 与 Power BI 报表服务器集成
               href: servers/manage/powerbi-report-server.md
+            - name: 安装 Power BI 示例报表
+              href: servers/manage/powerbi-sample-reports.md
             - name: 报表规划
               items:
                 - name: 报表规划
