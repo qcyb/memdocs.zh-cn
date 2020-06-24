@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764129"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264033"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>引导式方案 - 云托管的新式桌面
 
@@ -126,5 +127,5 @@ Windows Autopilot 自动配置新设备，这样用户就可以在无需 IT 人�
 
 ## <a name="next-steps"></a>后续步骤
 
-- 如果使用的是 Microsoft Defender 高级威胁检测，请创建 [Intune 符合性策略](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy)以要求 Defender 威胁分析满足符合性要求。
+- 如果使用的是 Microsoft Defender 高级威胁检测，请创建 [Intune 符合性策略](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level)以要求 Defender 威胁分析满足符合性要求。
 - 如果设备不满足 Intune 符合性，请创建[基于设备的条件访问策略](../protect/advanced-threat-protection.md#create-a-conditional-access-policy)以阻止访问。

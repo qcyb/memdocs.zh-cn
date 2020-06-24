@@ -451,7 +451,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 如果客户端是通过 Internet 进行管理，则此属性指定基于 Internet 的管理点的 FQDN。  
 
-请勿使用 SMSSITECODE=AUTO 的安装属性指定此选项.。 可直接将基于 Internet 的客户端分配给基于 Internet 的站点。
+请勿使用 SMSSITECODE=AUTO 的安装属性指定此选项。 可直接将基于 Internet 的客户端分配给基于 Internet 的站点。
 
 示例：`CCMSetup.exe /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 

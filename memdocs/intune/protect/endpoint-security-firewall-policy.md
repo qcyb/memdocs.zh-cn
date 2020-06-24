@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431613"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776865"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Intune 中关于终结点安全性的防火墙策略
 
-使用 Intune 中的终结点安全性防火墙策略为运行 macOS 和 Windows 10 的设备配置设备内置防火墙。 内置防火墙包括适用于 Windows 设备的 BitLocker 和适用于 macOS 的 FileVault。
+使用 Intune 中的终结点安全性防火墙策略为运行 macOS 和 Windows 10 的设备配置设备内置防火墙。
 
 虽然可以通过在设备配置中使用 Endpoint Protection 配置文件来配置相同的防火墙设置，但设备配置文件还包含其他类别的设置。 这些附加设置与防火墙无关，可能会使仅需要为环境配置防火墙设置的任务复杂化。
 
