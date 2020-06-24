@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429747"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680398"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 macOS 设备设置
 
@@ -190,7 +190,7 @@ ms.locfileid: "83429747"
 
   - **代码要求**：输入应用程序或进程的代码签名。
 
-    当应用或二进制文件由开发人员证书签名时，将创建代码签名。 要查找该名称，请在终端应用 `codesign --display -r -/path/to/app/binary` 中手动运行 `codesign` 命令。 代码签名是 `=>` 之后的所有内容。
+    当应用或二进制文件由开发人员证书签名时，将创建代码签名。 要查找该名称，请在终端应用 `codesign --display -r - /path/to/app/binary` 中手动运行 `codesign` 命令。 代码签名是 `=>` 之后的所有内容。
 
   - **启用静态代码验证**：为应用或进程选择“是”则会以静态方式验证代码要求。 设置为“未配置”时，Intune 不会更改或更新此设置。
 

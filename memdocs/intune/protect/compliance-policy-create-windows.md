@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906904"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107406"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 Windows 10 及更高版本设置
 
@@ -46,13 +46,12 @@ ms.locfileid: "82906904"
 - **需要 BitLocker**：  
    Windows BitLocker 驱动器加密可以加密所有存储在 Windows 操作系统卷上的数据。 BitLocker 使用受信任的平台模块 (TPM) 来帮助保护 Windows 操作系统和用户数据。 此外，它还有助于确认计算机不被篡改，即使它处于无人参与、丢失或被盗状态，也不例外。 如果计算机装有兼容的 TPM，BitLocker 将使用该 TPM 锁定用于保护数据的加密密钥。 因此，仅当 TPM 验证计算机状态后，才能访问密钥。  
 
-   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
-   - **必需** - 当系统关闭或休眠时，设备能够保护存储在驱动器上的数据免受未经授权的访问。  
-
+  - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
+  - **必需** - 当系统关闭或休眠时，设备能够保护存储在驱动器上的数据免受未经授权的访问。  
 
 - **需要在设备上启用安全启动**：  
-    - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
-    - **必需** - 将系统强制启动为工厂信任的状态。 用于启动设备的核心组件必须具有制造设备的组织所信任的正确加密签名。 UEFI 固件会在允许设备启动前确认签名。 如果有任何文件被篡改，从而破坏了签名，系统将不会启动。
+  - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
+  - **必需** - 将系统强制启动为工厂信任的状态。 用于启动设备的核心组件必须具有制造设备的组织所信任的正确加密签名。 UEFI 固件会在允许设备启动前确认签名。 如果有任何文件被篡改，从而破坏了签名，系统将不会启动。
 
   > [!NOTE]
   > 一些 TPM 1.2 和 2.0 设备支持“需要在设备上启用安全启动”设置  。 对于不支持 TPM 2.0 或更高版本的设备，Intune 中的策略状态显示为“不符合”  。 有关受支持版本的详细信息，请参阅[设备运行状况证明](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation)。
@@ -60,7 +59,7 @@ ms.locfileid: "82906904"
 - **要求代码完整性**：  
   代码完整性是一种功能，可用于在每次将驱动器文件或系统文件加载到内存时，验证文件的完整性。
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
-  -  **必需** - 代码完整性功能检测是否要将未签名的驱动程序文件或系统文件加载到内核中。 此外，它还检测系统文件是否已被恶意软件更改，或是否被具有管理员特权的用户帐户运行。
+  - **必需** - 代码完整性功能检测是否要将未签名的驱动程序文件或系统文件加载到内核中。 此外，它还检测系统文件是否已被恶意软件更改，或是否被具有管理员特权的用户帐户运行。
 
 更多资源：
 
@@ -104,7 +103,7 @@ ms.locfileid: "82906904"
 
 - **要求设备与Configuration Manager 相符合**：  
   - **未配置**（默认）- Intune 不会检查是否符合任何 Configuration Manager 设置要求。 
-  - **必需** - 要求符合 Configuration Manager 中的所有设置（配置项目）。  
+  - **必需** - 要求符合 Configuration Manager 中的所有设置（配置项目）。
 
     例如，要求所有软件更新都安装在设备上。 在 Configuration Manager 中，此要求具有“已安装”状态。 如果设备上的任意计划处于未知状态，此设备在 Intune 中不符合要求。
 
@@ -128,7 +127,7 @@ ms.locfileid: "82906904"
   
   设置为“字母数字”时，有下列可用设置  ：  
   - **密码复杂性**：  
-    选项包括： 
+    选项包括：
     - **需要数字和小写字母**（默认值） 
     - **需要数字、小写字母和大写字母**
     - **需要数字、小写字母、大写字母和特殊字符**
@@ -172,7 +171,7 @@ ms.locfileid: "82906904"
 
 - **防火墙**：  
   - **未配置**（默认）  - Intune 不控制 Microsoft Defender 防火墙，也不更改现有设置。
-  - **需要** - 打开 Microsoft Defender 防火墙，并阻止用户将其关闭。  
+  - **需要** - 打开 Microsoft Defender 防火墙，并阻止用户将其关闭。
 
   [防火墙 CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
@@ -181,27 +180,21 @@ ms.locfileid: "82906904"
 
 - **受信任的平台模块 (TPM)** ：  
   - **未配置**（默认）  - Intune 不检查设备的 TPM 芯片版本。
-  - **需要** - Intune 检查 TPM 芯片版本是否符合要求。 如果 TPM 芯片版本大于 0（零），则设备符合要求  。 如果设备上没有 TPM 版本，则设备不符合要求。  
+  - **需要** - Intune 检查 TPM 芯片版本是否符合要求。 如果 TPM 芯片版本大于 0（零），则设备符合要求  。 如果设备上没有 TPM 版本，则设备不符合要求。
 
   [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion node](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **防病毒**：  
-  - **未配置**（默认）- Intune 不会检查设备上安装的任何防病毒软件解决方案。  
+  - **未配置**（默认）- Intune 不会检查设备上安装的任何防病毒软件解决方案。 
   - **必需** - 使用在 [Windows 安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)注册的防病毒解决方案（如 Symantec 和 Microsoft Defender）来检查符合性。
-  
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
-  > [!NOTE]
-  > Windows 10 家庭版  不支持 DeviceStatus CSP for Antivirus，并报告状态为“不适用”  。 Intune 团队正在努力修复此问题。 若要规避此限制，不妨在设备符合性策略中使用 [Windows Defender](#defender) 设置。 Windows Defender 设置可以与 Windows 10 家庭版配合使用。  
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 - **反间谍软件**：  
   - **未配置**（默认）- Intune 不会检查设备上安装的任何反间谍软件解决方案。 
-  - **必需** - 使用在 [Windows 安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)注册的反间谍解决方案（如 Symantec 和 Microsoft Defender）来检查符合性。  
-  
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  - **必需** - 使用在 [Windows 安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)注册的反间谍解决方案（如 Symantec 和 Microsoft Defender）来检查符合性。
 
-  > [!NOTE]
-  > Windows 10 家庭版  不支持 DeviceStatus CSP for Antispyware，并报告状态为“不适用”  。 Intune 团队正在努力修复此问题。 若要规避此限制，不妨在设备符合性策略中使用 [Windows Defender](#defender) 设置。 Windows Defender 设置可以与 Windows 10 家庭版配合使用。 
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -212,7 +205,7 @@ ms.locfileid: "82906904"
   - **需要** - 打开 Microsoft Defender 反恶意软件服务，并阻止用户将其关闭。
 
 - **Microsoft Defender 反恶意软件的最低版本**：  
-  输入 Microsoft Defender 反恶意软件服务的最低允许版本。 例如，输入 `4.11.0.0`。 如果留空，则可以使用任何版本的 Microsoft Defender 反恶意软件服务。  
+  输入 Microsoft Defender 反恶意软件服务的最低允许版本。 例如，输入 `4.11.0.0`。 如果留空，则可以使用任何版本的 Microsoft Defender 反恶意软件服务。
 
   默认情况下，没有配置任何版本  。
 
@@ -244,7 +237,6 @@ ms.locfileid: "82906904"
   - **高** - 此选项是最不安全的，允许所有威胁级别。 如果将此解决方案仅用作报告目的，则可能有用。
   
   要将 Microsoft Defender ATP（高级威胁防护）设置为防御威胁服务，请参阅[启用使用条件访问权限的 Microsoft Defender ATP](advanced-threat-protection.md)。
-
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 

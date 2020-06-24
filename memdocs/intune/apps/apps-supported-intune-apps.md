@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a8c73b85ed4e21b543b691a18ae90747a747388
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6291aa606fb6125eec5c5b6cab56315953d2d5b
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986567"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107556"
 ---
 # <a name="microsoft-intune-protected-apps"></a>受 Microsoft Intune 保护的应用  
 
@@ -105,7 +105,7 @@ ms.locfileid: "83986567"
 | **适用于 Intune 的 Smartcrypt**<p><img alt="Partner app - Smartcrypt for Intune icon" src="./media/apps-supported-intune-apps/icon-p-smartcrypt.png" width="100"> | 适用于 Intune 的 Smartcrypt 专为在 Intune 环境中运行内容的现有 PKWARE 客户设计。 使用 Smartcrypt，可以在旅途中完成工作。 它快速、安全且易于使用，让你可以从任何位置高效工作。 如果不确定你是否可以使用 Smartcrypt，请与公司的 IT 管理员联系。 借助 Smartcrypt，可以完成以下工作：使用 Smartkey 加密和解密文件；使用 x.509 数字证书解密存档；创建和管理 Smartkeys；使用 x.509 数字证书对数据进行数字签名和身份验证；使用强密码加密（包括 AE2）加密和解密文件；使用现有 Active Directory 凭据登录；创建和查看未加密的 zip 存档。 Smartcrypt 在数据的核心对其进行保护，消除了使用、共享或存储数据的所有位置存在的漏洞。 近 30 年来，PKWARE 向超过 30,000 家企业客户和超过 200 个政府机构提供了加密和压缩软件。 适用于 iOS/iPadOS 和 Android。 | [App Store 链接 (iOS)](https://apps.apple.com/app/smartcrypt-for-intune/id1489232256) |  
 | **Speaking Email**<p><img alt="Partner app - Speaking Email icon" src="./media/apps-supported-intune-apps/icon-p-speaking-email-icon.png" width="100">   | 可便于用户在移动时阅读电子邮件，从而每天节省更多时间。 借助能在开车时安全使用的语音命令和简单手势，可以在移动时存档、标记或回复电子邮件。<p>智能内容检测功能跳过免责声明、回复标题和电子邮件签名，仅朗读不复杂的内容。<p>员工可以通过 Intune 登录，从而访问 Office 365 Exchange 电子邮件。 | [App Store 链接 (iOS)](https://itunes.apple.com/app/apple-store/id991406423?ct=intune) | 
 | **Synergi Life**<p><img alt="Partner app - Synergi Life icon" src="./media/apps-supported-intune-apps/icon-p-synergi-life.png" width="100"> | Synergi Life 移动应用是 Synergi Life 的扩展，可便于用户随时随地使用手机创建快照和录制语音，从而轻松生成观察和事件报告。<p>Synergi Life（旧称为 Synergi）是完整的风险和 QHSE 管理业务解决方案，可管理所有不符合性、事件、风险、风险分析、审核、评估和改进建议。<p>必须是 Synergi Life 风险和 QHSE 管理系统的许可用户，并且有必要的后端许可软件和服务，才能使用 Synergi Life 移动应用。 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.dnv.mobilesolutions.synergimobile.uibase)、[App Store 链接 (iOS)](https://itunes.apple.com/us/app/synergi-life/id641181737)  |  
-| **适用于 Intune 的 Tact**<p><img alt="Partner app - Tact for Intune icon" src="./media/apps-supported-intune-apps/icon-p-tact-icon.png" width="100"> | 适用于 Intune 的 Tact 是第一个 CRM 和销售助理，它整合了来自 Salesforce.com、电子邮件、日历、地图和其他日常工具的数据，以提供会话式的人性化体验。 Tact 由 AI 提供支持，它可以自动完成销售人员的管理工作，整合 CRM 与其他数据源以提供单一管理平台，并向每个卖方推送情报以提高其绩效。 企业现可通过适用于 Intune 的 Tact 提高卖方生产力、丰富客户数据并提高 CRM 采用率，同时确保应用程序层的企业级安全性。 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.tactile.tact)、[App Store 链接 (iOS)](https://apps.apple.com/us/app/tact-for-intune/id1477117416?mt=8)  |  
+| **适用于 Intune 的 Tact**<p><img alt="Partner app - Tact for Intune icon" src="./media/apps-supported-intune-apps/icon-p-tact-icon.png" width="100"> | 适用于 Intune 的 Tact 是第一个 CRM 和销售助理，它整合了来自 Salesforce.com、电子邮件、日历、地图和其他日常工具的数据，以提供会话式的人性化体验。 Tact 由 AI 提供支持，它可以自动完成销售人员的管理工作，整合 CRM 与其他数据源以提供单一管理平台，并向每个卖方推送情报以提高其绩效。 企业现可通过适用于 Intune 的 Tact 提高卖方生产力、丰富客户数据并提高 CRM 采用率，同时确保应用程序层的企业级安全性。 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.tactile.tact.intune)、[App Store 链接 (iOS)](https://apps.apple.com/us/app/tact-for-intune/id1477117416?mt=8)  |  
 | **适用于 Intune 的 Vera**<p><img alt="Partner app - Vera for Intune icon" src="./media/apps-supported-intune-apps/icon-p-vera.png" width="100"> | 使用适用于 Intune 的 Vera，可以直接在移动设备中加密、跟踪和撤消对文件和电子邮件附件的访问权限。 可以保护最有价值的信息，无论使用何种应用：Microsoft、Box、Google、Dropbox 等。 | [App Store 链接 (iOS)](https://itunes.apple.com/us/app/vera-for-intune/id1235182010?mt=8) |  
 | **Workspace ONE Send**<p><img alt="Partner app - Intune partner app - Workspace ONE Send icon" src="./media/apps-supported-intune-apps/icon-p-workspace-one-send-icon.png" width="100"> | Workspace ONE Send 使用 Microsoft Intune 为客户提供顺畅的编辑和发送功能，以使用 VMware 效率应用管理 Office 365 应用。 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.airwatch.vmsend)、<br>[App Store 链接 (iOS)](https://itunes.apple.com/us/app/vmware-workspace-one-send/id1336333505?mt=8) |
 | **Zero - 律师电子邮件**<p><img alt="Partner app - Zero - email for attorneys icon" src="./media/apps-supported-intune-apps/icon-p-zero.png" width="100"> | ZERØ 的电子邮件客户端设计精良，可帮助律师减少工作，增加收入。 使用 ZERØ，律师可以：<ul><li>预先将消息归档到文档管理系统或相应的电子邮件文件夹。</li><li>根据重要性和发件人等参数对收件箱进行排序。</li><li>如果他们即将向潜在的错误收件人发送邮件，则会立即收到警告。</li><li>自动并同时捕获通过移动设备与客户端邮件进行交互所花费的时间。</li></ul> | [App Store 链接 (iOS)](https://apps.apple.com/app/zero-email-for-attorneys/id1216474378) |  

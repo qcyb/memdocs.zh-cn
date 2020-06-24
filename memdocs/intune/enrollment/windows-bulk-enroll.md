@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecbde2f6e6a40379cd37a6ddebe09fa9dab8e3b1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988918"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216529"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 设备的批量注册
 
@@ -37,7 +37,7 @@ Azure AD 用户是这些设备上的标准用户并接收分配的 Intune 策略
 
 ## <a name="create-a-provisioning-package"></a>创建预配包
 
-1. 从 Microsoft 应用商店下载 [Windows 配置设计器 (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22)。
+1. 从 Microsoft 应用商店下载 [Windows 配置设计器 (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22)。
    ![Windows 配置设计器应用商店的屏幕截图](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
 2. 打开“Windows 配置设计器”  应用，然后选择“配置桌面设备”  。
