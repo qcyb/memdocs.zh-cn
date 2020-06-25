@@ -51,7 +51,7 @@ ms.locfileid: "84331012"
 
 1. 使用全局管理员帐户登录 [Azure 门户](https://portal.azure.com)。
 
-2. 转到“Azure Active Directory” > “属性”，然后查找你的“目录 ID”。  。 使用“复制”按钮复制目录 ID，然后将其保存在文本文件中。
+2. 转到“Azure Active Directory” > “属性”，然后查找你的“目录 ID”。   使用“复制”按钮复制目录 ID，然后将其保存在文本文件中。
 
    ![Azure AD 属性](./media/lookout-mtd-connector-integration/azure-ad-properties.png)  
 
