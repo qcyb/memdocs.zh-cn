@@ -258,6 +258,8 @@
               href: troubleshoot-scep-certificate-delivery.md
             - name: 证书部署报告
               href: troubleshoot-scep-certificate-reporting.md
+        - name: PKCS 证书配置文件疑难解答
+          href: troubleshoot-pkcs-certificate-profiles.md
         - name: Exchange Connector 疑难解答
           items:
             - name: Exchange Connector 疑难解答
