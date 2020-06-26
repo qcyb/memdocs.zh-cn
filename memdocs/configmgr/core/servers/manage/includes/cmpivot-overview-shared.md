@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
-ms.openlocfilehash: ad725a2aeb01984d8bce71f66307792e8d1691ee
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.date: 06/05/2020
+ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226429"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466867"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -128,7 +128,6 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
 |ProtectedVolumeInformation|受保护的卷信息|
 |协议|协议|
 |QuickFixEngineering|快速修补工程|
-|Registry()|特定注册表项的所有值|
 |SCSIController|SCSI 控制器|
 |SerialPortConfiguration|串行端口配置|
 |SerialPorts|串行端口|
@@ -270,4 +269,5 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
 |实体|FileContent()|特定文件的内容|
 |实体|NAPClient|NAP 客户端|
 |实体|NAPSystemHealthAgent|NAP系统健康代理|
+|实体|Registry()|特定注册表项的所有值<!--7371183-->|
 |表运算符|呈现|将结果呈现为图形输出|
