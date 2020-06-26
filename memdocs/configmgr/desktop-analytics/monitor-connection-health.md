@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864865"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746555"
 ---
 # <a name="monitor-connection-health"></a>监视器连接运行状况
 
@@ -217,7 +217,7 @@ Configuration Manager 已成功配置设备，但桌面分析无法创建兼容�
 
 - 无法配置设备应用兼容性数据收集 (SetRequestAllAppraiserVersions)。 检查日志中是否有异常详细信息  
 
-- 无法将 RequestAllAppraiserVersions 写入注册表项 `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`。 检查权限  
+- 无法将 RequestAllAppraiserVersions 写入注册表项 `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser`。 检查权限  
 
 检查此注册表项的权限。 确保本地系统帐户可以访问此项，以便 Configuration Manager 客户端进行设置。  
 
@@ -343,7 +343,7 @@ Start-Service -Name dps
 
 此属性可能会显示以下错误：
 
-- 身份验证代理已启用。 在 `HKLM\Software\Policies\Microsoft\Windows\DataCollection` 中将 DisableEnterpriseAuthProxy 设置为 0
+- 身份验证代理已启用。 在 `HKLM:\Software\Policies\Microsoft\Windows\DataCollection` 中将 DisableEnterpriseAuthProxy 设置为 0
 
 - 无法检查身份验证代理状态。 检查日志中是否有异常详细信息
 
