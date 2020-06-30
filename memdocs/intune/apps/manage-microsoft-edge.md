@@ -1,12 +1,12 @@
 ---
-title: 通过 Intune 管理适用于 iOS 和 Android 的 Microsoft Edge
+title: 通过 Intune 管理适用于 iOS 和 Android 的 Edge
 titleSuffix: ''
-description: 对适用于 iOS 和 Android 的 Microsoft Edge 使用 Intune 应用保护策略，确保访问公司网站时，安全措施始终到位。
+description: 对适用于 iOS 和 Android 的 Microsoft Edge 使用 Intune 应用保护和配置策略，确保访问公司网站时，安全措施始终到位。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988377"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973054"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>将适用于 iOS 和 Android 的 Microsoft Edge 与 Microsoft Intune 结合使用来管理 Web 访问
 
@@ -63,7 +63,7 @@ APP 数据保护框架分为三个不同的配置级别，每个级别基于上�
 
 无论设备是否已注册统一终结点管理 (UEM) 解决方案，都需要使用[如何创建和分配应用保护策略](app-protection-policies.md)中的步骤来为 iOS 和 Android 应用创建 Intune 应用保护策略。 这些策略必须至少满足以下条件：
 
-1. 包括所有 Microsoft 移动应用程序（如 Outlook、OneDrive、Office 或 Teams），因为这样可以确保用户在任何 Microsoft 应用中均能够以安全的方式访问和处理工作或学校数据。
+1. 包括所有 Microsoft 365 移动应用程序（如 Edge、Outlook、OneDrive、Office 或 Teams），因为这样可以确保用户在任何 Microsoft 应用中均能够以安全的方式访问和处理工作或学校数据。
 
 2. 它们将分配给所有用户。 这可确保所有用户都受到保护，不管他们使用的是适用于 iOS 还是 Android 的 Microsoft Edge。
 
@@ -443,3 +443,4 @@ Microsoft Edge 支持以下配置设置：
 ## <a name="next-steps"></a>后续步骤
 
 - [什么是应用保护策略？](app-protection-policy.md) 
+- [Microsoft Intune 的应用配置策略](app-configuration-policies-overview.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882078"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107318"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>在我注册自己的设备时，我的组织可以看到哪些信息？
 
@@ -64,6 +64,6 @@ ms.locfileid: "83882078"
 
 - 电话号码：对于公司拥有的设备，公司可看到完整的电话号码。 对于个人拥有的设备，组织只能看到电话号码的最后四位数字。 可以在相应设备的“设备详细信息”页，查看每个设备的所有权类型。
 - 设备存储空间：如果无法安装所需的应用，组织可以查看设备的存储空间，以确定空间是否不足。  
-- 位置：你的组织永远不会看到你的设备的位置，除非你需要恢复丢失、受监督的 iOS 设备。 访问 [Apple iOS 文档](https://go.microsoft.com/fwlink/?linkid=853816)以详细了解受监督的设备。  
-- 应用清单详细信息：如果组织使用 Mobile Threat Defense，则可以查看有关 iOS 设备中的应用的详细信息。 了解[移动威胁防御](set-up-mobile-threat-defense.md)的详细信息。 如果你有个人设备，则组织只能看到托管应用清单。 如果你有公司拥有的设备，则组织可查看所有应用广告资源。
+- 位置：对于公司拥有的设备，组织可以查看丢失设备的位置。 对于个人拥有的设备，组织永远看不到设备的位置，除非他们试图查找丢失的、受监督的 iOS 设备。 访问 [Apple iOS 文档](https://go.microsoft.com/fwlink/?linkid=853816)以详细了解受监督的设备。  
+- 应用清单详细信息：如果组织使用 Mobile Threat Defense，则可以查看有关 iOS 设备中的应用的详细信息。 了解[移动威胁防御](set-up-mobile-threat-defense.md)的详细信息。 否则，对于个人拥有的设备，组织只能查看托管的应用清单。 对于公司拥有的设备，组织可以查看所有应用广告资源。
 - 网络信息：可能向组织支持人员提供有关 Android 设备网络连接信息。 例如，如果组织要求设备在某个建筑物内使用，则设备将标识所连接的网络。 
