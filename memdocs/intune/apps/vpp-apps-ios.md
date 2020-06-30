@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9012cf55bcd74ab0786c3d961bc60914f9ade04e
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347315"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093319"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理通过 Apple Volume Purchase Program 购买的 iOS 和 macOS 应用
 
@@ -134,7 +134,6 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 > [!NOTE]  
 > Intune（或其他任何相关 MDM）不会安装 VPP 应用。 Intune 会连接到 VPP 帐户，并告诉 Apple 将哪些应用许可证分配到哪些设备。 从这里开始，所有实际安装都由 Apple 和设备进行协调。
 > 
-> [Apple MDM 协议参考，第 135 页](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>VPP 的最终用户提示
 
@@ -188,6 +187,9 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 2. 在 Apple Business Manager 或 Apple School Manager 中下载新令牌，方法是选择“设置” > “应用和书籍” > “我的服务器令牌”   。
 3. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中更新令牌，方法是选择“租户管理” > “连接器和令牌” > “Apple VPP 令牌”  。 然后，手动上传令牌。
 
+>[!NOTE]
+>当在 Apple Business Manager 中设置令牌的用户更改其密码，或用户离开 Apple Business Manager 组织时，你必须从 Apple Business Manager 下载新的 Apple VPP 或位置令牌，并更新 Intune 中的现有令牌。 未续订的令牌将在 Intune 中显示为“无效”状态。
+
 ## <a name="deleting-a-vpp-app"></a>删除 VPP 应用
 
 目前，无法从 Microsoft Intune 中删除 iOS/iPadOS VPP 应用。
@@ -204,6 +206,8 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 Apple 提供针对创建和续订 VPP 令牌的直接协助。 有关详细信息，请参阅 Apple 文档一部分的[使用批量采购计划 (VPP) 将内容分发给用户](https://go.microsoft.com/fwlink/?linkid=2014661)。 
 
 如果在 Intune 门户中指示了“分配给外部 MDM”，你（管理员）必须从第三方 MDM 中删除 VPP 令牌，然后才能使用 Intune 中的 VPP 令牌。
+
+如果某个令牌的状态为“重复”，则已上载多个具有相同令牌位置的令牌 。 删除重复的令牌以重新开始同步令牌。 你仍然可以为标记为重复的令牌分配和撤销许可证。 但是，令牌标记为重复后，购买的新应用和书籍的许可证可能不会反映出来。
 
 ## <a name="frequently-asked-questions"></a>常见问题解答
 

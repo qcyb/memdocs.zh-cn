@@ -1,11 +1,11 @@
 ---
-title: Microsoft Intune 中适用于 iOS/iPadOS 和 Android 设备的 Outlook 设置
-description: 创建配置策略以设置在 iOS/iPadOS 和 Android 设备上运行的 Microsoft Outlook 设置。
+title: 通过 Intune 管理适用于 iOS 和 Android 的 Outlook
+description: 对适用于 iOS 和 Android 的 Outlook 使用 Intune 应用保护和配置策略，确保访问团队协作体验时，安全措施始终到位。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,29 +16,72 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0918f5d8a9e3225321c067b25886f0f04a2dc78f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3db207e4c1c75706c1f54762bf74c1757d342ac1
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973037"
 ---
-# <a name="microsoft-outlook-configuration-settings"></a>Microsoft Outlook 配置设置 
+# <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>通过 Microsoft Intune 使用适用于 iOS 和 Android 的 Outlook 来管理消息协作访问
 
-使用配置策略以设置在 iOS/iPadOS 和 Android 设备上运行的 Microsoft Outlook 设置。 
+适用于 iOS 和 Android 的 Outlook 应用旨在通过将电子邮件、日历、联系人和其他文件组合在一起，使组织中的用户能够通过移动设备执行更多操作。
 
-对于已注册的设备：
-- 要为托管的 iOS/iPadOS 设备创建应用配置策略，请参阅[为托管的 iOS/iPadOS 设备添加应用配置策略](app-configuration-policies-use-ios.md)。 
-- 要为托管的 Android 设备创建应用配置策略，请参阅[为托管的 Android 设备添加应用配置策略](app-configuration-policies-use-android.md)。 
+订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件性访问）可获得最丰富和最广泛的 Office 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略允许从移动设备连接到适用于 iOS 和 Android 的 Outlook，还需要部署 Intune 应用保护策略，确保协作体验受到保护。
 
-对于未注册的设备，请参阅[为受管理应用添加应用配置策略（无需设备注册）](app-configuration-policies-managed-app.md)，以为 Outlook for iOS/iPadOS 和 Outlook for Android 创建应用配置策略。
+## <a name="apply-conditional-access"></a>应用条件访问
+组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Outlook 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
 
-## <a name="configuration-settings"></a>配置设置
+1. 请遵循“步骤 1：为 Office 365 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），这允许使用适用于 iOS 和 Android 的 Outlook，但阻止支持 OAuth 的 Exchange ActiveSync 客户端连接到 Exchange Online。
 
-在 Intune 中添加配置策略时，可指定用于配置 Outlook for iOS/iPadOS 和 Outlook for Android 的设置。 在“配置设置”窗格中，可指定电子邮件帐户配置，并配置应用专用设置。
+   > [!NOTE]
+   > 此策略可确保移动用户可以使用适用的应用访问所有 Office 终结点。
 
-有关 Outlook for iOS/iPadOS 和 Outlook for Android 支持的应用配置设置的特定过程步骤和详细文档，请参阅[部署 Outlook for iOS/iPadOS 和 Outlook for Android 应用配置设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
+2. 请遵循“步骤 2：为具有 ActiveSync (EAS) 的 Exchange Online 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），该策略将阻止 Exchange ActiveSync 客户端利用基本身份验证连接到 Exchange Online。
+
+   上述策略利用授权控制[需要应用保护策略](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)，确保在授予访问权限之前，将 Intune 应用保护策略应用于适用于 iOS 和 Android 的 Outlook 中的关联帐户。 如果用户未分配到 Intune 应用保护策略，未获得 Intune 许可，或者该应用未包含在 Intune 应用保护策略中，则该策略将阻止用户获取访问令牌和访问消息数据。
+
+3. 最后，请遵循[如何：使用条件访问阻止对 Azure AD 的旧身份验证](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication)，以阻止 iOS 和 Android 设备上的其他 Exchange 协议的旧身份验证；此策略应仅面向 Office 365 Exchange Online 云应用及 iOS 和 Android 设备平台。 这可确保使用 Exchange Web 服务、IMAP4 或 POP3 协议且具有基本身份验证的移动应用无法连接到 Exchange Online。
+
+## <a name="create-intune-app-protection-policies"></a>创建 Intune 应用保护策略
+
+应用保护策略 (APP) 定义允许的应用以及这些应用可对组织的数据执行的操作。 APP 中可用的选项使组织能够根据特定需求调整保护。 对于某些组织而言，实现完整方案所需的策略设置可能并不明显。 为了帮助组织确定移动客户端终结点强化的优先级，Microsoft 为其面向 iOS 和 Android 移动应用管理的 APP 数据保护框架引入了分类法。
+
+APP 数据保护框架分为三个不同的配置级别，每个级别基于上一个级别进行构建：
+
+- 企业基本数据保护（级别 1）可确保应用受 PIN 保护和经过加密处理，并执行选择性擦除操作。 对于 Android 设备，此级别验证 Android 设备证明。 这是一个入门级配置，可在 Exchange Online 邮箱策略中提供类似的数据保护控制，并将 IT 和用户群引入 APP。
+- 企业增强型数据保护（级别 2）引入了 APP 数据泄露预防机制和最低 OS 要求。 此配置适用于访问工作或学校数据的大多数移动用户。
+- 企业高级数据保护（级别 3）引入了高级数据保护机制、增强的PIN 配置和 APP 移动威胁防御。 此配置适用于访问高风险数据的用户。
+
+若要查看每个配置级别的具体建议以及必须受保护的核心应用，请查看[使用应用保护策略的数据保护框架](app-protection-framework.md)。
+
+无论设备是否已注册统一终结点管理 (UEM) 解决方案，都需要使用[如何创建和分配应用保护策略](app-protection-policies.md)中的步骤来为 iOS 和 Android 应用创建 Intune 应用保护策略。 这些策略必须至少满足以下条件：
+
+1. 包括所有 Microsoft 365 移动应用程序（如 Edge、Outlook、OneDrive、Office 或 Teams），因为这样可以确保用户在任何 Microsoft 应用中均能够以安全的方式访问和处理工作或学校数据。
+
+2. 它们将分配给所有用户。 这可确保所有用户都受到保护，不管他们使用的是适用于 iOS 还是 Android 的 Outlook。
+
+3. 确定哪一个框架级别满足你的要求。 大多数组织应实现企业增强型数据保护（级别 2）中定义的设置，因为这样可以启用数据保护和访问要求控制。
+
+有关可用设置的详细信息，请参阅 [Android 应用保护策略设置](app-protection-policy-settings-android.md) 和 [iOS 应用保护策略设置](app-protection-policy-settings-ios.md)。
+
+> [!IMPORTANT]
+> 若要针对未在 Intune 中注册的 Android 设备上的应用应用 Intune 应用保护策略，用户还必须安装 Intune 公司门户。 有关详细信息，请参阅 [Android 应用由应用保护策略托管时会出现的情况](../fundamentals/end-user-mam-apps-android.md)。
+
+## <a name="utilize-app-configuration"></a>利用应用配置
+
+适用于 iOS 和 Android 的 Outlook 支持允许统一终结点管理（例如允许 Microsoft Endpoint Manager 和管理员自定义应用的行为）的应用设置。
+
+可以通过已注册设备上的移动设备管理 (MDM) OS 通道（iOS 上为 [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) 通道，Android 上为 [Android in the Enterprise](https://developer.android.com/work/managed-configurations) 通道）来交付应用配置，也可以通过 Intune 应用保护策略 (APP) 通道来交付应用配置。 适用于 iOS 和 Android 的 Outlook 支持以下配置方案：
+
+- 仅允许工作或学校帐户
+- 常规应用配置设置
+- S/MIME 设置
+- 数据保护设置
+
+有关 Outlook for iOS 和 Outlook for Android 支持的应用配置设置的特定过程步骤和详细文档，请参阅[部署 Outlook for iOS 和 Outlook for Android 的应用配置设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 有关详细信息，请参阅 [Microsoft Intune 的应用配置策略](app-configuration-policies-overview.md)
+- [什么是应用保护策略？](app-protection-policy.md) 
+- [Microsoft Intune 的应用配置策略](app-configuration-policies-overview.md)

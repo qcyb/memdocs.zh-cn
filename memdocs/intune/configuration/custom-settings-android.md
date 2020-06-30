@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364599"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264101"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>在 Microsoft Intune 中使用适用于 Android 设备的自定义设置
 
@@ -35,6 +35,7 @@ Android 自定义配置文件使用开放移动联盟统一资源标识符 (OMA-
 - [创建具有预共享密钥的 Wi-Fi 配置文件](/intune/wi-fi-profile-shared-key)
 - [创建每应用 VPN 配置文件](/intune/android-pulse-secure-per-app-vpn)
 - [允许和阻止适用于 Samsung Knox 标准版设备的应用](/intune/samsung-knox-apps-allow-block)
+- [在适用于 Android 的 Microsoft Defender 高级威胁防护中配置 Web 保护](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
 
 >[!IMPORTANT]
 > 自定义配置文件中仅可配置列出的设置。 Android 设备不公开可配置的 OMA-URI 设置的完整列表。 如需查看更多设置，请在 [Intune Uservoice 网站](https://microsoftintune.uservoice.com/forums/291681-ideas)投票支持其他设置。
@@ -44,15 +45,15 @@ Android 自定义配置文件使用开放移动联盟统一资源标识符 (OMA-
 ## <a name="create-the-profile"></a>创建配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
+2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入以下设置：
 
-    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，将配置文件命名为“Android 自定义配置文件”就很不错  。
+    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，将配置文件命名为“Android 自定义配置文件”就很不错。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **平台**：选择“Android”  。
-    - **配置文件类型**：选择“自定义”  。
+    - **平台**：选择“Android”。
+    - **配置文件类型**：选择“自定义”。
 
-4. 在“自定义 OMA-URI 设置”中，选择“添加”   。 输入以下设置：
+4. 在“自定义 OMA-URI 设置”中，选择“添加” 。 输入以下设置：
 
     - **名称**：输入 OMA-URI 设置的唯一名称，便于轻松查找。
     - **描述**：输入包含设置概述以及其他所有重要详细信息的说明。
@@ -67,12 +68,12 @@ Android 自定义配置文件使用开放移动联盟统一资源标识符 (OMA-
       - 布尔值
       - Base64（文件）
 
-    - **值**：输入要与已输入的 OMA-URI 关联的数据值。 值取决于所选的数据类型。 例如，如果选择了“日期和时间”，则从日期选取器中选择值  。
+    - **值**：输入要与已输入的 OMA-URI 关联的数据值。 值取决于所选的数据类型。 例如，如果选择了“日期和时间”，则从日期选取器中选择值。
 
-    添加一些设置后，可以选择“导出”  。 “导出”将创建逗号分隔值 (.csv) 文件中添加的所有值的列表  。
+    添加一些设置后，可以选择“导出”。 “导出”将创建逗号分隔值 (.csv) 文件中添加的所有值的列表。
 
-5. 选择“确定”，保存所做更改  。 根据需要继续添加更多设置。
-6. 完成后，选择“确定”   > “创建”  ，以创建 Intune 配置文件。 完成后，配置文件将显示在“设备 - 配置文件”  列表中。
+5. 选择“确定”，保存所做更改。 根据需要继续添加更多设置。
+6. 完成后，选择“确定” > “创建”，以创建 Intune 配置文件。 完成后，配置文件将显示在“设备 - 配置文件”列表中。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879675"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 中关于终结点安全性的终结点检测和响应策略
 
-将 Microsoft Defender 高级威胁防护 (Defender ATP) 和 Intune 进行集成时，可以使用用于终结点检测和响应 (EDR) 的终结点安全性策略来管理 EDR 设置并将设备加入 Defender ATP。
+将 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 和 Intune 进行集成时，可以使用用于终结点检测和响应 (EDR) 的终结点安全性策略来管理 EDR 设置并将设备加入 Microsoft Defender ATP。
 
-Defender ATP 终结点检测和响应功能提供近乎实时且可操作的高级攻击检测。 安全分析师可以有效地对警报进行优先级排序、全面了解漏洞，并采取响应操作来消除威胁。
+Microsoft Defender ATP 终结点检测和响应功能提供准实时且可操作的高级攻击检测。 安全分析师可以有效地对警报进行优先级排序、全面了解漏洞，并采取响应操作来消除威胁。
 
-EDR 策略包括特定于平台的配置文件，用于管理 EDR 的设置。 配置文件自动包括用于 Defender ATP 的加入包。 加入包用于确定如何配置设备以将其与 Defender ATP 结合使用。 加入设备后，可以开始使用该设备的威胁数据。
+EDR 策略包括特定于平台的配置文件，用于管理 EDR 的设置。 配置文件自动包括用于 Microsoft Defender ATP 的加入包。 加入包用于确定如何配置设备以将其与 Microsoft Defender ATP 结合使用。 加入设备后，可以开始使用该设备的威胁数据。
 
 EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中的设备组，并部署到使用 Configuration Manager 管理的本地设备集合，包括 Windows 服务器。 不同管理路径的 EDR 策略需要不同的加入包。 因此，需要为所管理的不同类型的设备创建单独的 EDR 策略。
 
@@ -44,7 +44,7 @@ EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中
 
 常规：
 
-- **Microsoft Defender 高级威胁防护租户** - 必须先将 Defender ATP 租户和 Microsoft Endpoint Manager 租户（Intune 订阅）集成，才能创建 EDR 策略。 请参阅 Intune 文档中的[使用 Microsoft Defender ATP](advanced-threat-protection.md)。
+- **Microsoft Defender 高级威胁防护租户** - 必须先将 Microsoft Defender ATP 租户和 Microsoft Endpoint Manager 租户（Intune 订阅）集成，才能创建 EDR 策略。 请参阅 Intune 文档中的[使用 Microsoft Defender ATP](advanced-threat-protection.md)。
 
 **支持 Configuration Manager 设备**：
 
@@ -254,16 +254,13 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
 ## <a name="edr-policy-reports"></a>EDR 策略报告
 
-可以在 Microsoft Endpoint Manager 管理中心查看有关所部署的 EDR 策略的详细信息。 若要查看详细信息，请转到“终结点安全性” > “终结点部署和响应”，然后选择要查看符合性详细信息的策略 ：
+可以在 Microsoft Endpoint Manager 管理中心查看有关所部署的 EDR 策略的详细信息。 若要查看详细信息，请转到“终结点安全性” > “终结点部署和响应”，然后选择要查看合规性详细信息的策略 ：
 
-- 对于面向 Windows 10 及更高版本 (Intune) 的策略，会显示策略符合性概述。 还可以选择图表以查看接收了策略的设备的列表，并深入了解各个设备的详细信息。
+- 对于面向 Windows 10 及更高版本 (Intune) 的策略，会显示策略合规性概述。 还可以选择图表以查看接收了策略的设备的列表，并深入了解各个设备的详细信息。
 
-  “具有 ATP 传感器的设备”图表仅显示通过使用 Windows 10 及更高版本配置文件成功加入 Defender ATP 的设备 。 若要确保此图表中完整显示你的设备，请将加入配置文件部署到你的所有设备中。 通过外部方法（如组策略或 PowerShell）加入 Defender ATP 的设备被视为不具有 ATP 传感器的设备。
+  “具有 ATP 传感器的设备”图表仅显示通过使用 Windows 10 及更高版本配置文件成功加入 Microsoft Defender ATP 的设备 。 若要确保此图表中完整显示你的设备，请将加入配置文件部署到你的所有设备中。 通过外部方法（如组策略或 PowerShell）加入 Microsoft Defender ATP 的设备被视为不具有 ATP 传感器的设备。
 
-- 对于面向 Windows 10 和 Windows Server 平台 (Configuration Manager) 的策略，会看到策略符合性概述，但无法深入了解其他详细信息。 此视图的信息有限，因为管理中心从 Configuration Manager 接收到的状态详细信息有限，Configuration Manager 管理 Configuration Manager 设备的策略部署。
-
-
-
+- 对于面向 Windows 10 和 Windows Server 平台 (Configuration Manager) 的策略，会看到策略合规性概述，但无法深入了解其他详细信息。 此视图的信息有限，因为管理中心从 Configuration Manager 接收到的状态详细信息有限，Configuration Manager 管理 Configuration Manager 设备的策略部署。
 
 
 [查看](endpoint-security-edr-profile-settings.md)可同时为平台和配置文件配置的设置。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988937"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093061"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>在 Intune 中注册 iOS/iPadOS 设备
 
@@ -61,7 +61,7 @@ Intune 管理员可以为 iOS/iPadOS 和 iPadOS 设备设置注册，以访问�
 
 ## <a name="automated-device-enrollment"></a>自动设备注册
 
-组织可以通过 Apple 的自动设备注册 (ADE) 购买 iOS/iPadOS 设备。 ADE 允许用户通过“无线方式”部署注册配置文件以对设备进行管理。 有关详细信息，请参阅[设备注册计划](device-enrollment-program-enroll-ios.md)。
+组织可以通过 Apple 的自动设备注册 (ADE) 购买 iOS/iPadOS 设备。 ADE 允许用户通过“无线方式”部署注册配置文件以对设备进行管理。 有关详细信息，请参阅[通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备](device-enrollment-program-enroll-ios.md)。
 
 ## <a name="user-enrollment"></a>用户注册
 与其他注册方法相比，用户注册为管理员提供部分管理选项。 有关详细信息，请参阅[用户注册支持的操作、密码和其他选项](ios-user-enrollment-supported-actions.md)和[设置 iOS/iPadOS 和 iPadOS 用户注册](ios-user-enrollment.md)。
@@ -101,7 +101,7 @@ Apple School Manager 是适用于学校的设备购买和注册计划。 与 ADE
 
 配置为无用户关联的设备不支持公司门户，并且不应安装应用。 公司门户适用于具有企业凭据的用户，并且需要访问个性化企业资源（例如电子邮件）的权限。 注册为无用户关联的设备并不具有专用的用户登录。 展台、销售点 (POS) 或共享实用程序设备是注册为“无用户关联”的设备的典型用例。
 
-如果需要用户关联，注册设备前请确保设备的注册配置文件选中“用户关联”  。 若要更改设备的关联状态，必须停用并重新注册设备。
+如果需要用户关联，注册设备前请确保设备的注册配置文件选中“用户关联”。 若要更改设备的关联状态，必须停用并重新注册设备。
 
 ## <a name="see-also"></a>另请参阅
 

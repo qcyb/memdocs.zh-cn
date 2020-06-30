@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166141"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740856"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 最终用户应用的 UI 更新
 
@@ -34,6 +34,14 @@ ms.locfileid: "84166141"
 
 如果你是员工或学生，请务必查看屏幕截图和公司门户帮助文档的链接。 有关如何使用公司门户应用的详细信息，请参阅[公司门户用户帮助文档](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)。  
 
+
+## <a name="week-of-june-8-2020"></a>2020 年 6 月 8 日当周 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>适用于 iOS/iPadOS 公司门户中信息屏幕的更新 <!-- 7032452 -->
+我们已在适用于 iOS/iPadOS 的公司门户中更新了信息屏幕，以更好地说明管理员可以在设备上看到和执行的操作。 这些说明仅涉及公司拥有的设备。 只更新了文本，没有对管理员可以在用户设备上看到或执行的操作进行实际修改。 若要了解更多关于管理员可见的内容，请参阅[在我注册自己的设备时，我的组织可以看到哪些信息？](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+
+
+[![显示更新文本的公司门户信息屏幕截图。](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>2020 年 5 月 18 日当周  
@@ -62,12 +70,6 @@ ms.locfileid: "84166141"
 为了给这些新体验和改进体验腾出地方，下图中所示的“应用”选项卡已被删除。  
 
 ![现已删除“应用”选项卡的公司门户的示例图像。](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日当周   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改进了适用于 Android 的公司门户中的登录体验   

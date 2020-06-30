@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990176"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264118"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>在 Microsoft Intune 中通过 OEMConfig 使用和管理 Android 企业版设备
 
@@ -116,6 +116,8 @@ OEMConfig 策略是一种特殊类型的设备配置策略，类似于[应用配
       - 许多设置都具有 OEM 提供的默认值。 若要查看是否有默认值，请将鼠标悬停在该设置旁边的“信息”图标上。 工具提示将显示该设置的默认值（如果适用），以及 OEM 提供的更多详细信息。
 
       - 单击“清除”将从配置文件中删除设置。 如果配置文件中没有设置，则应用配置文件时，设备上的值不会更改。
+      
+      - 使用“定位”按钮查找设置。 在侧面板中，键入关键字以查看所有相关设置及其说明。 选择任何设置以自动将该设置添加到配置设计器树（如果该树尚未存在）。 它还会自动打开树，以便你可以看到设置。 
 
       - 如果在配置设计器中创建空的（未配置的）捆绑，切换到 JSON 编辑器时会将其删除。
 
@@ -155,15 +157,23 @@ OEMConfig 策略是一种特殊类型的设备配置策略，类似于[应用配
 
 | OEM | 捆绑 ID | OEM 文档（如果可用） |
 | --- | --- | ---|
+| Archos | com.archos.oemconfig | |
 | Ascom | com.ascom.myco.oemconfig | |
+| Bluebird | com.bluebird.android.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
-| Honeywell | com.honeywell.oemconfig |  |
+| Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
-| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
+| HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
+| Lenovo | com.lenovo.oemconfig.rel | |
+| LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Panasonic | com.panasonic.mobile.oemconfig | |
+| Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Knox 服务插件管理员指南](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com.seuic.seuicoemconfig | |
+| Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink - 条形码 | com.spectralink.barcode.service |  |
 | Spectralink - 按钮 | com.spectralink.buttons |  |
 | Spectralink - 设备 | com.spectralink.slnkdevicesettings  |  |

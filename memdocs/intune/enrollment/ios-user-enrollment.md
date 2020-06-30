@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d98f3f8205490848d9f5137e97e7796eee67a67
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436765"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093774"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>设置 iOS/iPadOS 和 iPadOS 用户注册（预览版）
 
@@ -42,7 +42,7 @@ ms.locfileid: "84436765"
 
 注册配置文件定义注册时应用于设备组的设置。 
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册类型(预览)” > “创建配置文件” > “iOS/iPadOS”。 此配置文件将说明 iOS/iPadOS 和 iPadOS 最终用户在未通过公司 Apple 方法注册的设备上的注册体验。 如果你想要进行更改，可以在创建此配置文件后对其进行编辑。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS 注册” > “注册类型(预览)” > “创建配置文件” > “iOS/iPadOS”。 此配置文件将说明 iOS/iPadOS 和 iPadOS 最终用户在未通过公司 Apple 方法注册的设备上的注册体验。 如果你想要进行更改，可以在创建此配置文件后对其进行编辑。
 
     ![创建 Apple 注册配置文件](./media/ios-user-enrollment/create-profile.png)
 
@@ -77,7 +77,7 @@ ms.locfileid: "84436765"
 
 创建多个注册类型配置文件后，可以更改应用的优先级顺序。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册类型(预览)”。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS 注册” > “注册类型(预览)”。
 2. 按你希望应用的顺序拖放列表中的配置文件。
 
 如果任何用户的配置文件之间发生冲突，则会为用户应用较高优先级的配置文件。

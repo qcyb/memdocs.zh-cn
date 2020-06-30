@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65ba8319668baed6605bb8d0f409a4ea19a5140f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b1a3dffd48f67c53d9a61340e2b70be2e3a2afcf
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990108"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092941"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS 应用保护策略设置
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -43,12 +43,13 @@ ms.locfileid: "83990108"
 | **将组织数据备份到 iTunes 和 iCloud 备份** | 选择“阻止”，阻止此应用将工作或学校数据备份到 iTunes 和 iCloud。 选择“允许”，允许此应用将工作或学校数据备份到 iTunes 和 iCloud。 | **允许**  |
 | 将组织数据发送到其他应用 | 指定哪些应用可从此应用接收数据： <ul><li>**所有应用**：允许传输到任何应用。 接收应用能够读取和编辑数据。</li><li>**无**：不允许将数据传输到任何应用，包括其他策略托管应用。 如果用户执行托管的打开位置功能并传输文档，则数据将被加密且不可读。</li><li> **策略托管应用**：仅允许传输到其他策略托管应用。 <p><p>**注意:** _用户可以在允许共享到非托管应用的未注册设备或已注册设备上，通过打开位置或共享扩展将内容传输到非托管应用。传输的数据由 Intune 加密，非托管应用无法读取。_</li><li>**具有 OS 共享功能的策略托管应用**：仅允许将数据传输到其他策略托管应用，以及将文件传输到已注册设备上的其他 MDM 托管应用。 <p><p>**注意:** “具有 OS 共享功能的策略托管应用”值仅适用于 MDM 注册设备 _。如果此设置针对未注册设备上的用户，则会应用“策略托管应用”值的行为。用户可以通过打开位置或共享扩展将未加密的内容传输到 iOS MDM allowOpenFromManagedtoUnmanaged 设置允许的任何应用程序。有关此 iOS/iPadOS MDM 设置的详细信息，请参阅 https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf 。_<p><p></li><li>**具有“打开方式/共享”筛选功能的策略托管应用**：仅允许传输到其他策略托管应用，并筛选 OS“打开方式/共享”对话框，以仅显示策略托管应用。 若要配置“打开方式/共享”对话框的筛选，充当文件/文档源的应用和可打开此文件/文档的应用均需具有用于 iOS 8.1.1 版本或更高版本的 Intune SDK。 <p><p>**注意:** _如果应用支持 Intune 专用数据类型，则用户可以通过打开方式或共享扩展将内容传输到非托管应用。传输的数据由 Intune 加密，非托管应用无法读取。_</li></ul><br>此外，当设置为“策略托管应用”或“无”时，Spotlight 搜索（启用在应用内搜索数据）和 Siri 快捷方式 iOS 功能会受到阻止。 <p><p>此策略也适用于 iOS/iPadOS 通用链接。 通用 Web 链接由“在 Intune Managed Browser 中打开应用链接”策略设置托管。 <p> 默认情况下，Intune 允许向一些豁免应用和服务传输数据。 此外，如果需要允许将数据传输到不支持 Intune APP 的应用，则可以创建自己的豁免项目。 有关详细信息，请参阅[数据传输豁免](#data-transfer-exemptions)。 | **所有应用** |
 | <ul><ui>**选择要豁免的应用** | 为上一选项选择“策略托管应用”时，此选项才可用。   |   |
+| <ul><ui>**保存组织数据的副本** | 选择“阻止”，在此应用中禁用使用“另存为”选项。 如果想要允许使用“另存为”，请选择“允许”。 <br><br>**注意:** *Microsoft Excel、OneNote、Outlook、PowerPoint 和 Word 支持此设置。它还可以受第三方和 LOB 应用支持*。 <br><br> 如果设置为“阻止”，可以配置以下设置“允许用户将副本保存到所选的服务” 。   | <br><br> **允许**   |
+| <ul><ui><ul><ui>**允许用户将副本保存到所选的服务** | 用户可以保存到所选的服务（OneDrive for Business、SharePoint 和本地存储）中。 将阻止所有其他服务。| **未选择任何项**  |
+|<ul><ui>**将电信数据传输到** | 通常，当用户在应用中选择超链接的电话号码时，会打开一个拨号应用，预填充了该电话号码并随时可供拨打。 对于此设置，选择当从策略托管的应用启动电话号码时要如何处理此类型的内容传输：<ul><li>**无，不在应用之间传输此数据**：如果检测到电话号码，不传输通信数据。</li><li>**特定拨号应用**：当检测到电话号码时，允许特定的拨号应用启动联系人。</li><li>**任何拨号应用**：当检测到电话号码时，允许使用任何拨号应用启动联系人。</li></ul>| **任何拨号应用** |  
+|<ul><ui><ul><ui>**拨号器应用 URL 方案** | 选择任何拨号应用后，必须提供用于在 iOS 设备上启动拨号应用的拨号应用 URL 方案。 有关详细信息，请参阅有关[电话链接](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/PhoneLinks/PhoneLinks.html#//apple_ref/doc/uid/TP40007899-CH6-SW1)的 Apple 文档。 | **空** |
 | **从其他应用接收数据** | 指定哪些应用可将数据传输到此应用： <ul><li>**所有应用**：允许从任何应用传输的数据。</li><li>**无**：不允许从任何应用传输数据，包括其他策略托管应用。</li><li>**策略托管应用**：仅允许从其他策略托管应用进行传输。</li><li>**所有包含传入组织数据的应用**：允许从任何应用传输的数据。 将所有不带用户标识的传入数据视为组织中的数据。 该数据将使用由 `IntuneMAMUPN` 设置定义的 MDM 注册用户标识进行标记。<p><p>**注意:** “所有包含传入组织数据的应用”值仅适用于 MDM 注册设备 _。如果此设置针对未注册设备上的用户，则会应用“任何应用”值的行为_。</li></ul> Intune 可能会允许从一些豁免应用和服务传输数据。 有关应用和服务的完整列表，请参阅[数据传输豁免](#data-transfer-exemptions)。 非注册 iOS/iPadOS 设备上已启用多标识 MAM 的应用程序会忽略此策略，并允许所有传入数据。<br><br> | **所有应用**    |
-| **保存组织数据的副本** | 选择“阻止”，在此应用中禁用使用“另存为”选项。 如果想要允许使用“另存为”，请选择“允许”。 <br><br>**注意:** *Microsoft Excel、OneNote、Outlook、PowerPoint 和 Word 支持此设置。它还可以受第三方和 LOB 应用支持*。 <br><br> 如果设置为“阻止”，可以配置以下设置“允许用户将副本保存到所选的服务” 。   | <br><br> **允许**   |
-| <ul><ui>**允许用户将副本保存到所选的服务** | 用户可以保存到所选的服务（OneDrive for Business、SharePoint 和本地存储）中。 将阻止所有其他服务。| **未选择任何项**  |
 | **限制在其他应用间进行剪切、复制和粘贴** | 指定剪切、复制和粘贴操作何时可用于此应用。 选择： <ul><li>**阻止**：不允许在此应用和任何其他应用间进行剪切、复制和粘贴操作。</li><li>**策略托管应用**：允许在此应用和其他策略托管应用间进行剪切、复制和粘贴操作。</li><li>**带粘贴的策略托管应用**：允许在此应用和其他策略托管应用间进行剪切或复制。 允许将任何应用中的数据粘贴到此应用。</li><li>**任何应用**：不限制从此应用和对此应用进行剪切、复制和粘贴。</ul> | **任何应用**   |
 | <ul><ui>**剪切和复制任何应用的字符限制** | 指定可从组织数据和帐户中剪切或复制的字符数。  这允许将指定数量的字符共享到任何应用程序，而不受“限制使用其他应用剪切、复制和粘贴”设置的限制。<p>默认值 = 0<p>**注意**：*要求应用具有 Intune SDK 版本 9.0.14 或更高版本*。  | **0**   |
-| **组织数据通知** | 指定如何针对组织帐户通过 OS 通知共享组织数据。 此策略设置将影响本地设备和任何连接的设备，如可穿戴设备和智能扬声器。 应用可能会提供其他控件来自定义通知行为，或者可以选择不接受所有值。 选择： <ul><li>**阻止**：不共享通知。</li><ul><li>如果应用程序不支持，则将允许通知。</li></ul><li>**阻止组织数据**：例如，不在通知中共享组织数据。</li><UL><li>“你有新邮件”；“你有个会议”。</li><li>如果应用程序不支持，通知将被阻止。</li></ul><li>**允许**：在通知中共享组织数据。</li></ul> <p>**注意**：*此设置需要应用支持。此时，Outlook for iOS 版本 4.34.0 或更高版本支持此设置。* | **允许**   |
 | **第三方键盘** | 选择“阻止”来阻止在托管应用程序中使用第三方键盘。<p>启用此设置后，用户将收到一次性消息，说明禁止使用第三方键盘。 用户首次需要使用键盘与组织数据进行交互时，将会出现此消息。 使用托管应用程序时，只能使用标准的 iOS/iPadOS 键盘，所有其他键盘选项都将禁用。 此设置将影响多身份应用程序的组织和个人帐户。 此设置不影响在非托管应用程序中使用第三方键盘。<p>**注意:** 此功能要求应用使用 Intune SDK 版本12.0.16 或更高版本。 如果应用的 SDK 版本范围从 8.0.14 到（包括）12.0.15，则不会为多身份应用正确应用此功能。 有关更多详细信息，请参阅[已知问题：个人帐户的 iOS/iPadOS 中不阻止第三方键盘](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486)。 | **允许**  |
 
 ### <a name="encryption"></a>加密
@@ -64,7 +65,7 @@ ms.locfileid: "83990108"
 | **打印组织数据** | 选择“阻止”，阻止应用打印工作或学校数据。 如果将此设置保留为“允许”（默认值），用户将能够导出和打印所有组织数据。  | **允许**  |
 | **限制使用其他应用传输 Web 内容** | 指定如何从策略管理的应用中打开 Web 内容（http/https 链接）。 选择： <ul><li>**任何应用**：允许在任何应用中使用 Web 链接。</li><li>**Intune Managed Browser**：仅允许在 Intune Managed Browser 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**Microsoft Edge**：仅允许在 Microsoft Edge 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**非托管浏览器**：允许 Web 内容仅在“非托管浏览器协议”设置定义的非托管浏览器中打开。 Web 内容在目标浏览器中处于非托管状态。<br>**注意**：要求应用具有 Intune SDK 版本 11.0.9 或更高版本。</li></ul> 如果正使用 Intune 管理设备，请参阅[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](app-configuration-managed-browser.md)。<br><br>如果需要策略托管的浏览器，但未安装，系统将提示最终用户安装 Microsoft Edge。<p>如果需要使用策略托管的浏览器，请通过“允许应用向其他应用传送数据”策略设置管理 iOS/iPadOS 通用链接。 <p>**Intune 设备注册**<br>如果使用 Intune 管理设备，请参阅“使用 Microsoft Intune 的托管浏览器策略管理 Internet 访问”。 <p>**策略托管的 Microsoft Edge**<br>移动设备（iOS/iPadOS 和 Android）的 Microsoft Edge 浏览器支持 Intune 应用保护策略。 在 Microsoft Edge 浏览器应用程序中使用其企业 Azure AD 帐户登录的用户将受 Intune 保护。 Microsoft Edge 浏览器集成了 Intune SDK 并支持其除阻止以外的所有数据保护策略：<br><ul><li>**另存为**：Microsoft Edge 浏览器不允许用户向云存储提供商（如 OneDrive）添加直接的应用内连接。</li><li>**联系人同步**：Microsoft Edge 浏览器不会保存到本地联系人列表。</li></ul><br>**注意**：*Intune SDK 无法确定目标应用是否为浏览器。在 iOS/iPadOS 设备上，不允许使用其他托管浏览器应用。*    | 未配置  |
 |<ul><ui>**非托管浏览器协议** | 输入单个非托管浏览器的协议。 策略托管应用程序的 Web 内容（http/https 链接）将在支持此协议的任何浏览器中打开。 Web 内容在目标浏览器中处于非托管状态。 <br><br>只有当你想要与特定浏览器共享受保护的内容，但又不允许使用 Intune 应用保护策略，才能使用此功能。 必须与浏览器供应商联系，确定所需的浏览器支持协议。<br><br>**注意**：*只包含协议前缀。如果浏览器需要 `mybrowser://www.microsoft.com` 格式的链接，请输入 `mybrowser`。*<br>链接将转换为：<br><ul><li>`http://www.microsoft.com` > `mybrowser://www.microsoft.com`</li><li>`https://www.microsoft.com` > `mybrowsers://www.microsoft.com`</li></ul> | **空**  |
-
+| **组织数据通知** | 指定如何针对组织帐户通过 OS 通知共享组织数据。 此策略设置将影响本地设备和任何连接的设备，如可穿戴设备和智能扬声器。 应用可能会提供其他控件来自定义通知行为，或者可以选择不接受所有值。 选择： <ul><li>**阻止**：不共享通知。</li><ul><li>如果应用程序不支持，则将允许通知。</li></ul><li>**阻止组织数据**：例如，不在通知中共享组织数据。</li><UL><li>“你有新邮件”；“你有个会议”。</li><li>如果应用程序不支持，通知将被阻止。</li></ul><li>**允许**：在通知中共享组织数据。</li></ul> <p>**注意**：*此设置需要应用支持。此时，Outlook for iOS 版本 4.34.0 或更高版本支持此设置。* | **允许**   |
 > [!NOTE]  
 > 无数据保护设置可以控制 iOS/iPadOS 设备上由 Apple 托管的打开方式功能。 要使用“管理 Apple 打开方式”，请参阅[使用 Microsoft Intune 管理 iOS/iPadOS 应用之间的数据传输](data-transfer-between-apps-manage-ios.md)。
 

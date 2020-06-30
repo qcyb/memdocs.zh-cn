@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988755"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973088"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>为托管的 Android Enterprise 设备添加应用配置策略
 
@@ -35,55 +35,55 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 > 并非所有应用都支持应用配置。 请咨询应用开发人员，确定他们的应用是否支持应用配置策略。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“应用”   > “应用配置策略”   > “添加”   > “托管设备”  。 请注意，可以在“受管理设备”  和“托管应用”  之间进行选择。 有关详细信息，请参阅[支持应用配置的应用](app-configuration-policies-overview.md#apps-that-support-app-configuration)。
-3. 在“基本信息”  页上，设置以下详细信息：
+2. 选择“应用” > “应用配置策略” > “添加” > “托管设备”。 请注意，可以在“受管理设备”和“托管应用”之间进行选择。 有关详细信息，请参阅[支持应用配置的应用](app-configuration-policies-overview.md#apps-that-support-app-configuration)。
+3. 在“基本信息”页上，设置以下详细信息：
     - **名称** - 在 Azure 门户中显示的配置文件名。
     - **说明** - 在 Azure 门户中显示的配置文件说明。
-    - **设备注册类型** - 此设置设为“托管设备”。 
-4. 选择“Android Enterprise”  作为“平台”  。
-5. 单击“目标应用”  旁边的“选择应用”  。 随即将显示“关联应用”窗格  。 
-6. 在“关联应用”  窗格上，选择要与配置策略关联的托管应用，然后单击“确定”  。
-7. 单击“下一步”以显示“设置”页面   。
-8. 单击“添加”  以显示“添加权限”  窗格。
+    - **设备注册类型** - 此设置设为“托管设备”。
+4. 选择“Android Enterprise”作为“平台”。
+5. 单击“目标应用”旁边的“选择应用”。 随即将显示“关联应用”窗格。 
+6. 在“关联应用”窗格上，选择要与配置策略关联的托管应用，然后单击“确定”。
+7. 单击“下一步”以显示“设置”页面 。
+8. 单击“添加”以显示“添加权限”窗格。
 9. 选择要覆盖的权限。 授予的权限将覆盖所选应用的“默认应用权限”策略。
-10. 为每个权限设置“权限状态”  。 可以选择“提示”  、“自动授予”  或“自动拒绝”  。 有关权限的详细信息，请参阅[使用 Intune 将设备标记为符合或不符合的 Android Enterprise 设置](../protect/compliance-policy-create-android-for-work.md)。
-11. 如果托管应用支持配置设置，则会出现“配置设置格式”下拉框  。 选择下列方法之一来添加配置信息：
+10. 为每个权限设置“权限状态”。 可以选择“提示”、“自动授予”或“自动拒绝”。 有关权限的详细信息，请参阅[使用 Intune 将设备标记为符合或不符合的 Android Enterprise 设置](../protect/compliance-policy-create-android-for-work.md)。
+11. 如果托管应用支持配置设置，则会出现“配置设置格式”下拉框。 选择下列方法之一来添加配置信息：
     - **使用配置设计器**
     - **输入 JSON 数据**<br><br>
     有关使用配置设计器的详细信息，请参阅[使用配置设计器](#use-the-configuration-designer)。 有关输入 XML 数据的详细信息，请参阅[输入 JSON 数据](#enter-json-data)。
-12. 单击“下一步”以显示“分配”页面   。
-13. 在“分配给”  旁边的下拉框中，选择“选定组”  、“所有用户”  、“所有设备”  或“所有用户和所有设备”  以分配应用配置策略。
+12. 单击“下一步”以显示“分配”页面 。
+13. 在“分配给”旁边的下拉框中，选择“选定组”、“所有用户”、“所有设备”或“所有用户和所有设备”以分配应用配置策略。
 
     ![策略分配“包括”选项卡的屏幕截屏](./media/app-configuration-policies-use-ios/app-config-policy01.png)
 
-14. 在下拉框中选择“所有用户”  。
+14. 在下拉框中选择“所有用户”。
 
     ![策略分配“所有用户”下拉列表选项的屏幕截图](./media/app-configuration-policies-use-ios/app-config-policy02.png)
 
-15. 单击“选择要排除的组”以显示相关窗格  。
+15. 单击“选择要排除的组”以显示相关窗格。
 
     ![策略分配“选择要排除的组”窗格的屏幕截图](./media/app-configuration-policies-use-ios/app-config-policy03.png)
 
-16. 选择想要排除的组，然后单击“选择”  。
+16. 选择想要排除的组，然后单击“选择”。
 
     >[!NOTE]
     >添加组时，如果给定的分配类型中已包括任何其他组，则在其他包括分配类型中，会预先选定该组且无法更改。 因此，已被使用的组无法用作排除组。
 
-17. 单击“下一步”  以显示“查看 + 创建”页  。
-18. 单击“创建”  ，将应用配置策略添加到 Intune。
+17. 单击“下一步”以显示“查看 + 创建”页。
+18. 单击“创建”，将应用配置策略添加到 Intune。
 
 ## <a name="use-the-configuration-designer"></a>使用配置设计器
 
 当托管 Google Play 应用已设计为支持配置设置时，可以对该应用使用配置设计器。 配置适用于在 Intune 中注册的设备。 通过设计器可以为应用公开的设置配置特定的配置值。
 
-1. 选择“添加”  。 选择想为应用输入的配置设置的列表。
+1. 选择“添加”。 选择想为应用输入的配置设置的列表。
 
     如果将 GMail 或 Nine Work 用于电子邮件应用，请参阅[用于配置电子邮件的 Android Enterprise 设备设置](../configuration/email-settings-android-enterprise.md)以了解有关这些设置的详细信息。
 
 2. 对于配置中的每个项和值，请设置以下内容：
 
     - **值类型**：配置值的数据类型。 至于字符串值类型，可以根据需要选择变量或证书配置文件作为值类型。
-    - **配置值**：配置的值。 如果选择变量或证书作为值类型  ，则从变量或证书配置文件的列表中进行选择。 如果选择证书，则会在运行时填充部署到设备的证书的证书别名。
+    - **配置值**：配置的值。 如果选择变量或证书作为值类型，则从变量或证书配置文件的列表中进行选择。 如果选择证书，则会在运行时填充部署到设备的证书的证书别名。
 
 ### <a name="supported-variables-for-configuration-values"></a>可用作配置值的变量
 
@@ -103,7 +103,7 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>仅允许在多身份应用中配置组织帐户 
 
-作为 Microsoft Intune 管理员，你可以控制将哪些用户帐户添加到托管设备上的 Microsoft 应用中。 可以将访问权限限制为仅允许的组织用户帐户，并阻止已注册设备上的个人帐户。 对于 Android 设备，请使用以下键/值对：
+作为 Microsoft Intune 管理员，你可以控制将哪些工作或学校帐户添加到托管设备上的 Microsoft 应用中。 可以将访问权限限制为仅允许的组织用户帐户，并阻止已注册设备上的个人帐户。 对于 Android 设备，请在托管设备应用配置策略中使用以下键/值对：
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
@@ -120,9 +120,9 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 
 无法使用配置设计器在应用上（例如捆绑型的应用）配置某些配置设置。 使用 JSON 编辑器配置这些值。 在安装应用时，自动向应用提供设置。
 
-1. 对于“配置设置格式”  ，请选择“输入 JSON 编辑器”  。
-2. 在编辑器中，可定义配置设置的 JSON 值。 你可以选择“下载 JSON 模板”  ，下载随后可配置的示例文件。
-3. 选择“确定”，然后选择“添加”   。
+1. 对于“配置设置格式”，请选择“输入 JSON 编辑器”。
+2. 在编辑器中，可定义配置设置的 JSON 值。 你可以选择“下载 JSON 模板”，下载随后可配置的示例文件。
+3. 选择“确定”，然后选择“添加” 。
 
 此时，策略创建完成，并出现在列表中。
 
@@ -134,22 +134,22 @@ Microsoft Intune 中的应用配置策略向托管 Android Enterprise 设备上�
 
 例如，应用使用设备的麦克风。 系统会提示用户授予应用权限以使用麦克风。
 
-1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“应用”   > “应用配置策略”   >  “添加”   > “托管设备”  。
+1. 在 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“应用” > “应用配置策略” >  “添加” > “托管设备”。
 2. 添加以下属性：
 
-    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“适用于整个公司的 Android Enterprise 提示权限应用策略”  。
+    - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“适用于整个公司的 Android Enterprise 提示权限应用策略”。
     - **说明**。 输入配置文件的说明。 此设置是可选的，但建议进行。
-    - **设备注册类型**：此设置设为“托管设备”。 
-    - **平台**：选择“Android”  。
+    - **设备注册类型**：此设置设为“托管设备”。
+    - **平台**：选择“Android”。
 
-3. 选择“关联应用”  。 选择要定义配置策略的应用。 从已批准并与 Intune 同步的 Android 工作配置文件应用列表中选择。
-4. 选择“权限”   > “添加”  。 从列表中，选择可用的应用权限 >“确定”  。
+3. 选择“关联应用”。 选择要定义配置策略的应用。 从已批准并与 Intune 同步的 Android 工作配置文件应用列表中选择。
+4. 选择“权限” > “添加”。 从列表中，选择可用的应用权限 >“确定”。
 5. 为各权限选择选项以授予此策略：
-    - “提示”  。 提示用户接受或拒绝。
+    - “提示”。 提示用户接受或拒绝。
     - **“自动授予”** 。 无需通知用户即自动批准。
-    - “自动拒绝”  。 无需通知用户即自动拒绝。
-6. 要分配应用配置策略，请依次选择“应用配置策略”>“分配”   > “选择组”  。 选择要分配的用户组 >“选择”  。
-7. 选择“保存”  以分配策略。
+    - “自动拒绝”。 无需通知用户即自动拒绝。
+6. 要分配应用配置策略，请依次选择“应用配置策略”>“分配” > “选择组”。 选择要分配的用户组 >“选择”。
+7. 选择“保存”以分配策略。
 
 ## <a name="additional-information"></a>其他信息
 

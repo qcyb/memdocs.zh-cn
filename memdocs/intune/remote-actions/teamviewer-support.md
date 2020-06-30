@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988243"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746589"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>使用 TeamViewer 远程管理 Intune 设备
 
@@ -48,19 +48,19 @@ ms.locfileid: "83988243"
 要向设备提供远程协助，请按照以下步骤配置 Intune TeamViewer 连接器：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“租户管理” > “连接器和令牌” > “TeamViewer 连接器”    。
-3. 选择“连接”  ，然后接受许可协议。
-4. 选择“登录到 TeamViewer 并授权”  。
-5. 随即一个 Web 页面将打开 TeamViewer 网站。 输入 TeamViewer 许可证凭据，然后单击“登录”  。
+2. 选择“租户管理” > “连接器和令牌” > “TeamViewer 连接器”  。
+3. 选择“连接”，然后接受许可协议。
+4. 选择“登录到 TeamViewer 并授权”。
+5. 随即一个 Web 页面将打开 TeamViewer 网站。 输入 TeamViewer 许可证凭据，然后单击“登录”。
 
 ## <a name="remotely-administer-a-device"></a>远程管理设备
 
 配置连接器后，即可远程管理设备。 请使用以下步骤： 
 
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中。
-2. 依次选择“设备”和“所有设备”   。
-3. 从列表中，选择想要远程管理的设备>“…” > “新远程协助会话”   。
-4. 将 Intune 连接到 TeamViewer 服务后，将看到设备的一些相关信息。 选择“连接”  可开始远程会话。
+2. 依次选择“设备”和“所有设备” 。
+3. 从列表中，选择想要远程管理的设备>“…” > “新远程协助会话” 。
+4. 将 Intune 连接到 TeamViewer 服务后，将看到设备的一些相关信息。 选择“连接”可开始远程会话。
 
 ![使用 TeamViewer 远程管理 Android 设备 - 示例](./media/teamviewer-support/android-teamviewer.png)
 
@@ -69,6 +69,6 @@ ms.locfileid: "83988243"
 > [!NOTE]
 > 使用“无用户”方法（如设备注册管理器 (DEM) 和 Windows 配置设计器 (WCD)）注册的 Windows 设备不会在公司门户应用中显示 TeamViewer 通知。 在这些情况下，建议使用 TeamViewer 门户生成会话。
 
-在 TeamViewer 中，可对设备完成一系列操作，包括控制该设备。 有关可执行操作的详细信息，请参阅 [TeamViewer 指南](https://www.teamviewer.com/support/documents/)。
+在 TeamViewer 中，可对设备完成一系列操作，包括控制该设备。 有关可执行操作的详细信息，请参阅 [TeamViewer 社区页面](https://community.teamviewer.com/)。
 
 完成后，关闭 TeamViewer 窗口。

@@ -5,23 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257029"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093698"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置
 
@@ -87,93 +87,124 @@ ms.locfileid: "84257029"
 
 - **对应用进行威胁扫描**：选择“需要”（默认）可启用 Google Play 保护机制在应用安装前后对其进行扫描。 如果它检测到威胁，可能会警告用户从设备中删除该应用。 设置为“未配置”时，Intune 不会更改或更新此设置。 默认情况下，OS 可能无法启用或运行 Google Play 保护机制以扫描应用。
 
-### <a name="dedicated-devices"></a>专用设备
+### <a name="device-experience"></a>设备体验
 
-使用这些设置可在专用设备上配置展台样式的体验。 可将设备配置为运行一个应用或运行多个应用。 设备设置为展台模式时，只能使用你添加的应用。 这些设置适用于 Android Enterprise 专用设备。 它们不适用于 Android Enterprise 完全托管设备。
+使用这些设置可在专用设备或完全受管理设备上配置展台样式的体验。 可将设备配置为运行一个应用或运行多个应用。 设备设置为展台模式时，只能使用你添加的应用。
 
-**展台模式**：选择设备是运行一个应用还是运行多个应用。
+**注册配置文件类型**：选择注册配置文件类型以开始在设备上配置微软桌面或 Microsoft 托管主屏幕。 选项包括：
 
-- **未配置**：Intune 不会更改或更新此设置。
-- **单个应用**：用户只能访问设备上的一个应用。 设备启动时，仅特定应用启动。 限制用户打开新应用或更改正在运行的应用。
+- **未配置**：Intune 不会更改或更新此设置。 默认情况下，用户可能会看到设备的默认主屏幕体验。
+- **专用设备**：在专用设备上配置展台样式的体验。 在配置这些设置之前，请确保在设备上[添加](../apps/apps-add-android-for-work.md)并[分配](../apps/apps-deploy.md)所需的应用。
 
-  - **选择托管应用**：从列表中选择托管的 Google Play 应用。
+  - **展台模式**：选择设备是运行一个应用还是运行多个应用。 选项包括：
 
-    如果未列出任何应用，则可以将[一些 Android 应用](../apps/apps-add-android-for-work.md)添加到设备。 请确保[将应用分配给为专用设备创建的设备组](../apps/apps-deploy.md)。
+    - **未配置**：Intune 不会更改或更新此设置。
+    - **单个应用**：用户只能访问设备上的一个应用。 设备启动时，仅特定应用启动。 限制用户打开新应用或更改正在运行的应用。
 
-  > [!IMPORTANT]
-  > 使用单应用展台模式时，拨号器/电话应用程序可能无法正常工作。
+      - **用于展台模式的应用**：从列表中选择托管的 Google Play 应用。
+
+      > [!IMPORTANT]
+      > 使用单应用展台模式时，拨号器/电话应用可能无法正常工作。
   
-- **多应用**：用户可访问设备上一组有限的应用。 设备启动时，仅添加的应用启动。 还可以添加一些用户可以打开的 Web 链接。 应用策略后，用户会在主屏幕上看到允许应用的图标。
+    - **多应用**：用户可访问设备上一组有限的应用。 设备启动时，仅添加的应用启动。 还可以添加一些用户可以打开的 Web 链接。 应用策略后，用户会在主屏幕上看到允许应用的图标。
 
-  > [!IMPORTANT]
-  > 对于多应用专用设备，必须将 Google Play 的[托管主屏幕应用](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)：
-  >   - 在 Intune 中[添加为客户端应用](../apps/apps-add-android-for-work.md)
-  >   - [分配给为专用设备创建的设备组](../apps/apps-deploy.md)
-  >
-  > “托管主屏幕”应用不需要位于配置文件中，但需要将其添加为客户端应用。 将“托管主屏幕”应用添加为客户端应用后，在配置文件中添加的任何其他应用都会在“托管主屏幕”应用中显示为图标。
-  >
-  > 使用多应用展台模式时，拨号器/电话应用程序可能无法正常工作。 
+      > [!IMPORTANT]
+      > 对于多应用专用设备，必须将 Google Play 的[托管主屏幕应用](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)：
+      >   - [已在 Intune 中添加](../apps/apps-add-android-for-work.md)
+      >   - [分配给为专用设备创建的设备组](../apps/apps-deploy.md)
+      >
+      > “托管主屏幕”应用不需要位于配置文件中，但需要被添加为应用。 添加“托管主屏幕”应用后，在配置文件中添加的任何其他应用都会在“托管主屏幕”应用中显示为图标 。
+      >
+      > 使用多应用展台模式时，拨号器/电话应用程序可能无法正常工作。 
 
-  - **添加**：从列表中选择应用。
+      - **添加**：从列表中选择应用。
 
-    如果未列出“托管主屏幕”应用，则[从 Google Play 添加该应用](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)。 请确保将[应用分配](../apps/apps-deploy.md)给为专用设备创建的设备组。
+        如果未列出“托管主屏幕”应用，则[从 Google Play 添加该应用](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)。 请确保将[应用分配](../apps/apps-deploy.md)给为专用设备创建的设备组。
 
-    还可以将其他由组织创建的 [Android 应用](../apps/apps-add-android-for-work.md)和 [Web 应用](../apps/web-app.md)添加到设备。 请确保[将应用分配给为专用设备创建的设备组](../apps/apps-deploy.md)。
+        还可以将其他由组织创建的 [Android 应用](../apps/apps-add-android-for-work.md)和 [Web 应用](../apps/web-app.md)添加到设备。 请确保[将应用分配给为专用设备创建的设备组](../apps/apps-deploy.md)。
 
-  - **虚拟主页按钮**：一个软键按钮，它将用户返回到托管主屏幕，使用户可在应用之间切换。 选项包括：
+      - **虚拟主页按钮**：一个软键按钮，它将用户返回到托管主屏幕，使用户可在应用之间切换。 选项包括：
+        - **未配置**（默认）：不显示主页按钮。 用户必须使用“后退”按钮以在应用之间切换。
+        - **向上轻扫**：当用户在设备上向上轻扫时，显示主页按钮。
+        - **浮动**：在设备上显示持久的浮动主页按钮。
 
-    - **未配置**（默认）：不显示主页按钮。 用户必须使用“后退”按钮以在应用之间切换。
-    - **向上轻扫**：当用户在设备上向上轻扫时，显示主页按钮。
-    - **浮动**：在设备上显示持久的浮动主页按钮。
-
-  - **退出展台模式**：设置为“启用”可允许管理员临时暂停展台模式以更新设备。 要使用此功能，管理员需要：
+      - **退出展台模式**：设置为“启用”可允许管理员临时暂停展台模式以更新设备。 要使用此功能，管理员需要：
   
-    1. 继续选择后退按钮，直到显示“退出展台”按钮。 
-    2. 选择“退出展台”按钮后，输入“退出展台模式代码”PIN 。
-    3. 完成后，选择“托管主屏幕”应用。 此步骤会将设备重新锁定为多应用展台模式。
+        1. 继续选择后退按钮，直到显示“退出展台”按钮。 
+        2. 选择“退出展台”按钮后，输入“退出展台模式代码”PIN 。
+        3. 完成后，选择“托管主屏幕”应用。 此步骤会将设备重新锁定为多应用展台模式。
 
-      设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能会阻止管理员暂停展台模式。 如果管理员继续选择后退按钮，并选择“退出展台”按钮，则会显示一条消息，要求输入密码。
+        设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能会阻止管理员暂停展台模式。 如果管理员继续选择后退按钮，并选择“退出展台”按钮，则会显示一条消息，要求输入密码。
 
-    - **退出展台模式代码**：输入 4-6 位数字 PIN。 管理员使用此 PIN 临时暂停展台模式。
+      - **退出展台模式代码**：输入 4-6 位数字 PIN。 管理员使用此 PIN 临时暂停展台模式。
 
-  - **设置自定义 URL 背景**：输入 URL 以自定义专用设备上的背景屏幕。 例如，输入 `http://contoso.com/backgroundimage.jpg`。
+      - **设置自定义 URL 背景**：输入 URL 以自定义专用设备上的背景屏幕。 例如，输入 `http://contoso.com/backgroundimage.jpg`。
 
-    > [!NOTE]
-    > 对于大多数情况，建议先开始使用不小于以下大小的图像：
-    >
-    > - 电话：1080x1920 像素
-    > - 平板电脑：1920x1080 像素
-    >
-    > 为获得最佳体验和清晰的细节，建议按显示器规格和设备创建图像资产。
-    >
-    > 新式显示器具有更高的像素密度，并且可以显示等效的 2K/4K 清晰度的图像。
+        > [!NOTE]
+        > 对于大多数情况，建议先开始使用不小于以下大小的图像：
+        >
+        > - 电话：1080x1920 像素
+        > - 平板电脑：1920x1080 像素
+        >
+        > 为获得最佳体验和清晰的细节，建议按显示器规格和设备创建图像资产。
+        >
+        > 新式显示器具有更高的像素密度，并且可以显示等效的 2K/4K 清晰度的图像。
 
-  - **Wi-Fi 配置**：若为“启用”，则在托管主屏幕上显示 Wi-Fi 控件，并允许用户将设备连接到不同的 Wi-Fi 网络。 启用此功能还会开启设备的位置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示 Wi-Fi 控件。 它阻止用户在使用托管主屏幕时连接到 Wi-Fi 网络。
+      - **Wi-Fi 配置**：若为“启用”，则在托管主屏幕上显示 Wi-Fi 控件，并允许用户将设备连接到不同的 Wi-Fi 网络。 启用此功能还会开启设备的位置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示 Wi-Fi 控件。 它阻止用户在使用托管主屏幕时连接到 Wi-Fi 网络。
 
-  - **蓝牙配置**：设置为“启用”时，可在托管的主屏幕上显示蓝牙控件，并允许用户通过蓝牙对设备进行配对。 启用此功能还会开启设备的位置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示蓝牙控件。 它阻止用户在使用托管的主屏幕时配置蓝牙和配对设备。
+      - **蓝牙配置**：设置为“启用”时，可在托管的主屏幕上显示蓝牙控件，并允许用户通过蓝牙对设备进行配对。 启用此功能还会开启设备的位置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示蓝牙控件。 它阻止用户在使用托管的主屏幕时配置蓝牙和配对设备。
 
-  - **闪光灯访问权限**：设置为“启用”时，可在托管的主屏幕上显示闪光灯控件，并允许用户打开或关闭闪光灯。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示闪光灯。 它阻止用户在使用托管主屏幕时使用闪光灯。
+      - **闪光灯访问权限**：设置为“启用”时，可在托管的主屏幕上显示闪光灯控件，并允许用户打开或关闭闪光灯。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示闪光灯。 它阻止用户在使用托管主屏幕时使用闪光灯。
 
-  - **媒体音量控制**：设置为“启用”时，可在托管的主屏幕上显示媒体音量控件，并允许用户使用滑块调整设备的媒体音量。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示媒体音量控制。 它阻止用户在使用托管主屏幕时调整设备的媒体音量，除非用户的硬件按钮支持此操作。
+      - **媒体音量控制**：设置为“启用”时，可在托管的主屏幕上显示媒体音量控件，并允许用户使用滑块调整设备的媒体音量。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示媒体音量控制。 它阻止用户在使用托管主屏幕时调整设备的媒体音量，除非用户的硬件按钮支持此操作。
 
-  - **屏幕保护模式**：若为“启用”，则当设备锁定或超时时，托管主屏幕上会显示屏幕保护程序。设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示屏幕保护。
+      - **屏幕保护模式**：若为“启用”，则当设备锁定或超时时，托管主屏幕上会显示屏幕保护程序。设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示屏幕保护。
 
-    启用后，还需配置：
+        启用后，还需配置：
 
-    - **设置自定义屏幕保护图像**：输入自定义 PNG、JPG、JPEG、GIF、BMP、WebP 或 ICOIMAGE 的 URL。 例如，输入：
+        - **设置自定义屏幕保护图像**：输入自定义 PNG、JPG、JPEG、GIF、BMP、WebP 或 ICOIMAGE 的 URL。 如果未输入 URL，则使用设备的默认图像（如果存在默认图像）。 
+        
+          例如，输入：
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      如果未输入 URL，则使用设备的默认图像（如果存在默认图像）。
+          > [!TIP]
+          > 任何可转换为位图的文件资源 URL 均受支持。
 
-      > [!TIP]
-      > 任何可转换为位图的文件资源 URL 均受支持。
+        - **在关闭屏幕之前设备显示屏幕保护程序的秒数**：选择设备显示屏幕保护程序的时长。 请输入一个介于 0 到 9999999 秒之间的值。 默认值 `0` 秒。 当为空或设置为 0 (`0`) 时，屏幕保护程序将处于活动状态，直到用户与设备交互。
+        - **在显示屏幕保护之前设备处于非活动状态的秒数**：选择在显示屏幕保护程序之前设备处于空闲状态的时长。 请输入一个介于 1 到 9999999 秒之间的值。 默认值为 `30` 秒。 必须输入一个大于零 (`0`) 的数字。
+        - **启动屏幕保护程序前检测媒体**：若为“启用”（默认值），则当音频或视频在设备上播放时，不会显示屏幕保护程序。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能会显示屏幕保护，即使正在播放音频或视频也是如此。
 
-    - **在关闭屏幕之前设备显示屏幕保护程序的秒数**：选择设备显示屏幕保护程序的时长。 请输入一个介于 0 到 9999999 秒之间的值。 默认值 `0` 秒。 当为空或设置为 0 (`0`) 时，屏幕保护程序将处于活动状态，直到用户与设备交互。
-    - **在显示屏幕保护之前设备处于非活动状态的秒数**：选择在显示屏幕保护程序之前设备处于空闲状态的时长。 请输入一个介于 1 到 9999999 秒之间的值。 默认值为 `30` 秒。 必须输入一个大于零 (`0`) 的数字。
-    - **启动屏幕保护程序前检测媒体**：若为“启用”（默认值），则当音频或视频在设备上播放时，不会显示屏幕保护程序。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能会显示屏幕保护，即使正在播放音频或视频也是如此。
+- **完全托管**：在完全托管的设备上配置微软桌面应用。
+
+  - **将微软桌面设置为默认桌面**：选择“启用”可将微软桌面设置为主屏幕上的默认桌面。 如果将微软桌面设置为默认桌面，则用户不能使用其他桌面。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，不会强制将微软桌面作为默认桌面。
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>Password
 
@@ -298,8 +329,9 @@ ms.locfileid: "84257029"
 
 - **限制在工作和个人配置文件之间执行复制和粘贴操作**：设置为“阻止”可阻止在工作和个人应用之间执行复制和粘贴操作。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能允许用户在个人资料中使用应用的复制和粘贴来共享数据。
 - **工作和个人配置文件之间的数据共享**：如果工作配置文件中的应用可以与个人配置文件中的应用共享，则选中此项。 例如，可以控制应用程序中的共享操作（例如，“共享...”） Chrome 浏览器应用中的选项。 此设置不适用于复制/粘贴剪贴板行为。 选项包括：
-  - **设备默认值**：设备的默认共享行为，根据 Android 版本而有所差异。 默认情况下，允许从个人配置文件到工作配置文件的共享。 此外，默认情况下，已阻止从工作配置文件到个人配置文件的共享。 此设置可防止工作配置文件的数据共享到个人配置文件。 在运行 6.0 及更高版本的设备上，Google 不会阻止个人配置文件共享到工作配置文件。
-  - **阻止任何跨边界的共享**：阻止工作和个人配置文件之间的共享。
+  - **设备默认值**：设备的默认共享行为因 Android 版本而异：
+    - 在运行 Android 6.0 及更高版本的设备上，已阻止从工作配置文件到个人配置文件的共享。 允许从个人配置文件到工作配置文件的共享。
+    - 在运行 Android 5.0 及更低版本的设备上，工作配置文件和个人配置文件之间的共享在两个方向都被阻止。
   - **工作配置文件中的应用可以处理来自个人配置文件的共享请求**：启用内置 Android 功能，以允许从个人配置文件到工作配置文件的共享。 启用此功能后，从个人配置文件中的应用发起的共享请求将能与工作配置文件中的应用共享。 此设置是运行 6.0 之前的版本的 Android 设备的默认行为。
   - **无共享限制**：将双向启用跨工作配置文件边界共享。 选择此设置时，工作配置文件中的应用可以将数据与个人配置文件中未标记的应用共享。 该设置允许工作配置文件中托管的应用与设备未托管一侧上的应用共享。 因此，谨慎使用此设置。
 

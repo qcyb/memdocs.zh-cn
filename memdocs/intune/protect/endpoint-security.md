@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990821"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879708"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>在 Microsoft Intune 中管理终结点安全性
 
@@ -31,15 +31,15 @@ ms.locfileid: "83990821"
 
 - **查看所有托管设备的状态**。 借助[所有设备](#manage-devices)视图，可概括性地了解设备符合性，然后深入到特定设备来了解未满足的符合性策略，以便解决它们。
 
-- **部署为设备建立最佳做法安全配置的安全基线**。 Intune 包括用于 Windows 设备的[安全基线](#manage-security-baselines)，还有一个不断扩充的应用程序列表，其中有 Microsoft Defender 高级威胁防护 (Defender ATP) 和 Microsoft Edge 等应用。 安全基线是预配置的几组 Windows 设置，可帮助应用相关安全团队建议的一组已知设置和默认值。
+- **部署为设备建立最佳做法安全配置的安全基线**。 Intune 包括用于 Windows 设备的[安全基线](#manage-security-baselines)，还有一个不断扩充的应用程序列表，其中有 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 和 Microsoft Edge 等应用。 安全基线是预配置的几组 Windows 设置，可帮助应用相关安全团队建议的一组已知设置和默认值。
 
-- **通过严格集中的策略管理设备上的安全配置**。  每个[终结点安全性策略](#use-policies-to-manage-device-security)侧重于设备安全的各个方面，例如防病毒、磁盘加密、防火墙，以及通过与 Defender ATP 集成而实现的数个方面。
+- **通过严格集中的策略管理设备上的安全配置**。  每个[终结点安全性策略](#use-policies-to-manage-device-security)侧重于设备安全的各个方面，例如防病毒、磁盘加密、防火墙，以及通过与 Microsoft Defender ATP 集成而实现的数个方面。
 
 - **通过符合性策略制定设备和用户要求**。 通过[符合性策略](../protect/device-compliance-get-started.md)，可设置设备和用户为实现符合性而必须满足的规则。 规则可包括操作系统版本、密码要求和设备威胁级别等等。
 
   与 Azure Active Directory (Azure AD) [条件访问策略](#configure-conditional-access)集成来强制实施符合性策略时，可控制托管设备及尚未托管的设备对公司资源的访问权限。
 
-- **将 Intune 与 Microsoft Defender ATP 团队集成**。 通过[与 Defender ATP 集成](#set-up-integration-with-defender-atp)，获取对[安全任务](#review-security-tasks-from-defender-atp)的访问权限。 安全任务将 Defender ATP 和 Intune 紧密相连，帮助安全团队确定存在风险的设备并向 Intune 管理员提供详细的修正步骤供其采取行动。
+- **将 Intune 与 Microsoft Defender ATP 团队集成**。 通过[与 Microsoft Defender ATP 集成](#set-up-integration-with-microsoft-defender-atp)，获取对[安全任务](#review-security-tasks-from-microsoft-defender-atp)的访问权限。 安全任务将 Microsoft Defender ATP 和 Intune 紧密相连，帮助安全团队确定存在风险的设备并向 Intune 管理员提供详细的修正步骤供其采取行动。
 
 本文的下面各部分介绍了可通过管理中心的终结点安全性节点执行的不同任务，以及使用这些任务所需的基于角色的访问控制 (RBAC) 权限。
 
@@ -61,13 +61,13 @@ Intune 中的安全基线是预配置的几组设置，这些设置是 Microsoft
 
 安全基线是 Intune 中配置设备设置的几种方法之一。 管理设置时，请务必了解环境中可用于配置设备的其他方法，从而避免冲突。 请参阅本文后面的[避免策略冲突](#avoid-policy-conflicts)。
 
-## <a name="review-security-tasks-from-defender-atp"></a>查看 Defender ATP 中的安全任务
+## <a name="review-security-tasks-from-microsoft-defender-atp"></a>查看 Microsoft Defender ATP 中的安全任务
 
-将 Intune 与 Microsoft Defender 高级威胁防护 (Defender ATP) 集成后，可查看 Intune 中的安全任务，这些任务可识别存在风险的设备并提供降低风险的步骤。 然后，可使用这些任务在风险成功得到缓解后向 Defender ATP 报告。
+将 Intune 与 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 集成后，可查看 Intune 中的安全任务，这些任务可识别存在风险的设备并提供降低风险的步骤。 然后，可使用这些任务在风险成功得到缓解后向 Microsoft Defender ATP 报告。
 
-- Defender ATP 团队将确定存在风险的设备，并将该信息作为安全任务传递给 Intune 团队。 他们单击几下即可为 Intune 创建安全任务，用于识别存在风险的设备以及漏洞，并提供有关如何缓解风险的指导。
+- Microsoft Defender ATP 团队将确定存在风险的设备，并将该信息作为安全任务传递给 Intune 团队。 他们单击几下即可为 Intune 创建安全任务，用于识别存在风险的设备以及漏洞，并提供有关如何缓解风险的指导。
 
-- Intune 管理员会查看安全任务，然后在 Intune 中进行操作以修正这些任务。 缓解后，他们将任务设置为“完成”，然后将该状态传达回 Defender ATP 团队。
+- Intune 管理员会查看安全任务，然后在 Intune 中进行操作以修正这些任务。 缓解后，他们将任务设置为“完成”，然后将该状态传达回 Microsoft Defender ATP 团队。
 
 通过安全任务，这两个团队可在哪些设备存在风险，以及如何、何时修正这些风险方面保持同步。
 
@@ -93,7 +93,7 @@ Intune 中的安全基线是预配置的几组设置，这些设置是 Microsoft
 
 - 要求设备运行最低版本或特定版本的操作系统
 - 设置密码要求
-- 指定由 Defender ATP 或其他 Mobile Threat Defense 合作伙伴确定的最大允许设备威胁级别
+- 指定由 Microsoft Defender ATP 或其他移动威胁防御合作伙伴确定的最大允许设备威胁级别
 
 除了策略规则，符合性策略还支持：
 
@@ -119,18 +119,18 @@ Intune 将设备符合性策略的结果传递给 Azure AD，然后 Azure AD 使
 
 要详细了解如何条件访问与 Intune 结合使用，请参阅[了解条件访问和 Intune](../protect/conditional-access.md)。
 
-## <a name="set-up-integration-with-defender-atp"></a>设置与 Defender ATP 的集成
+## <a name="set-up-integration-with-microsoft-defender-atp"></a>设置与 Microsoft Defender ATP 集成
 
-将 Microsoft Defender 高级威胁防护 (Defender ATP) 与 Intune 集成后，可提高确定和应对风险的能力。
+将 Microsoft Defender ATP 与 Intune 集成后，可提高确定和应对风险的能力。
 
-虽然 Intune 可与多个 [Mobile Threat Defense 合作伙伴](../protect/mobile-threat-defense.md)集成，但使用 Defender ATP 时，Defender ATP 与 Intune 紧密集成，你还能访问深层设备保护选项，包括：
+虽然 Intune 可与多个[移动威胁防御合作伙伴](../protect/mobile-threat-defense.md)集成，但使用 Microsoft Defender ATP 时，将 Microsoft Defender ATP 与 Intune 紧密集成，你还能访问深层设备保护选项，包括：
 
 - 安全任务 - ATP 与 Intune 管理员之间就存在风险的设备、如何修正风险以及确认何时缓解风险方面进行无缝通信。
-- 简化在客户端上加入 Defender ATP 的流程。
+- 简化在客户端上加入 Microsoft Defender ATP 的流程。
 - 在 Intune 符合性策略中使用 ATP 设备风险信号。
 - 获得“篡改防护”功能。
 
- 要详细了解如何将 Defender ATP 与 Intune 结合使用，请参阅[使用 Intune 中的条件访问强制执行 Microsoft Defender ATP 的符合性](../protect/advanced-threat-protection.md)。
+ 要详细了解如何将 Microsoft Defender ATP 与 Intune 结合使用，请参阅[使用 Intune 中的条件访问强制执行 Microsoft Defender ATP 的符合性](../protect/advanced-threat-protection.md)。
 
 ## <a name="role-based-access-control-requirements"></a>基于角色的访问控制要求
 
@@ -218,7 +218,7 @@ Intune 将设备符合性策略的结果传递给 Azure AD，然后 Azure AD 使
 
 要避免冲突，一种方法是不使用不同的基线、相同基线的实例，也不使用不同策略类型和实例来管理设备上的相同设置。 这要求规划用于将配置部署到不同设备的方法。 使用多种方法或同一方法的实例来配置相同的设置时，请确保不同方法一致或未部署到同一设备。
 
-如果发生冲突，可使用 Intune 的内置工具来确定这些冲突的来源并进行解决。 有关详细信息，请参阅：
+如果发生冲突，可使用 Intune 的内置工具来确定这些冲突的来源并进行解决。 有关详情，请参阅：
 
 - [在 Intune 中对策略和配置文件进行故障排除](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [监视安全基线](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
@@ -230,4 +230,4 @@ Intune 将设备符合性策略的结果传递给 Azure AD，然后 Azure AD 使
 - [安全基线](../protect/security-baselines.md)
 - [符合性策略](../protect/device-compliance-get-started.md)
 - [条件访问策略](#configure-conditional-access)
-- [与 Defender ATP 集成](../protect/advanced-threat-protection.md)
+- [与 Microsoft Defender ATP 集成](../protect/advanced-threat-protection.md)

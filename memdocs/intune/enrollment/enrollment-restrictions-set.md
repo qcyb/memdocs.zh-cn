@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989080"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746487"
 ---
 # <a name="set-enrollment-restrictions"></a>设置注册限制
 
@@ -64,7 +64,7 @@ ms.locfileid: "83989080"
 3. 选择“下一步”，转到“平台设置”页。 
 4. 在“平台”中，对想要此限制允许的平台选择“允许”。 
     ![选择平台设置的屏幕截图](./media/enrollment-restrictions-set/choose-platform-settings.png)
-5. 在“版本”中，选择想要允许的平台支持的最低版本和最高版本。 版本限制仅适用于向公司门户注册的设备。
+5. 在“版本”中，选择想要允许的平台支持的最低版本和最高版本。 对于 iOS 和 Android，版本限制仅适用于向公司门户注册的设备。
      支持的版本格式包括：
     - Android 设备管理员和 Android Enterprise 工作配置文件支持 major.minor.rev.build。
     - iOS/iPadOS 支持 major.minor.rev。操作系统版本不会应用于使用设备注册计划、Apple School Manager 或 Apple Configurator 应用注册的 Apple 设备。

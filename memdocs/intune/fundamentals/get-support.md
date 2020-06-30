@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989494"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093151"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>如何获取对 Microsoft Intune 的支持
 
@@ -41,9 +41,6 @@ Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为
 可从 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)以及 Azure 门户中 Intune 下的所有边栏选项卡（或页面）获得 Intune 的帮助和支持体验。
 
 “帮助和支持”体验与 [Microsoft 365 管理中心](https://admin.microsoft.com/)中显示的体验类似，并取代了之前的“帮助 + 支持”，对于 Azure 的其他服务它保持不变。 
-
-> [!TIP]
-> 从 2019 年 11 月 18 日开始，向租户推出已更新并简化的控制台内体验，以便用户获得帮助和支持。 如果你尚未能感受此新体验，敬请期待，很快就会推出。
 
 ### <a name="options-to-access-help-and-support"></a>用于访问帮助和支持的选项
 
@@ -66,18 +63,23 @@ Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为
 
 - **从 Microsoft Endpoint Manager 管理中心**
 
-  - 从 Microsoft Endpoint Manager 管理中心的任何节点，选择“?” 图标，然后使用下拉列表选择想要获得相关帮助的管理类型。 Microsoft Endpoint Manager 管理中心支持以下管理类型，必须选择需要获得相关帮助的特定管理类型，如 Intune：
+  - 从 Microsoft Endpoint Manager 管理中心的任何节点，选择“?” 图标（位于门户的右上角），以打开“帮助”窗格。 选择“帮助 + 支持”，打开“选择一种管理类型”页面 。
 
-    - Configuration Manager（包括桌面分析）
+    > [!div class="mx-imgBorder"]
+    > ![打开管理类型选择页面](./media/get-support/management-types.png)
+
+    使用下拉列表选择需要帮助的管理类型，这将打开适用的“帮助和支持”页面。 Microsoft Endpoint Manager 管理中心支持以下管理类型，必须选择需要获得相关帮助的特定管理类型，如 Intune：
+
+    - 配置管理器
     - Intune
-    - 共同管理  
+    - 共同管理
 
     > [!div class="mx-imgBorder"]
     > ![选择管理类型](./media/get-support/select-management-type.png)
 
-    选择管理类型后，“帮助和支持”页随即打开，可以在其中指定详细信息以[查找解决方案](#find-solutions)，用于解决特定问题。 系统会根据你所选的管理类型筛选详细信息。
+    选择管理类型后，应用程序“帮助和支持”页随即打开，可以在其中指定详细信息以[查找特定问题的解决方案](#find-solutions)。 系统会根据你所选的管理类型筛选详细信息。
 
-     如果未选择正确的管理类型（1），请单击“选择管理类型”（2）返回到管理类型选择下拉列表：
+     如果未选择正确的管理类型 (1)，请单击“选择管理类型”(2) 返回到管理类型选择下拉列表：
 
     > [!div class="mx-imgBorder"]
     > ![确认管理类型](./media/get-support/confirm-management-selection.png)

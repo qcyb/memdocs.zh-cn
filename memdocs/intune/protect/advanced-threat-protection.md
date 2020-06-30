@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35871aba60d45719b9a6da50184a6113f72e6044
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1141879a282219cdac72273e47c84b51df172d04
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989295"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264050"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>使用 Intune 中的条件访问强制执行 Microsoft Defender ATP 的符合性
 
@@ -29,12 +29,12 @@ ms.locfileid: "83989295"
 
 要成功，请配合使用以下配置：
 
-- **在 Intune 和 Microsoft Defender ATP 之间创建一个服务到服务的连接**。 通过这个连接，Microsoft Defender ATP 可以从使用 Intune 管理的 Windows 10 和 Android 设备收集有关计算机风险的数据。
+- **在 Intune 和 Microsoft Defender ATP 之间创建一个服务到服务的连接**。 通过这个连接，Microsoft Defender ATP 可以从使用 Intune 管理的受支持设备收集有关计算机风险的数据。
 - **使用设备配置配置文件将设备载入 Microsoft Defender ATP**。 载入设备将其配置为与 Microsoft Defender ATP 进行通信，并提供有助于评估其风险级别的数据。
 - **使用设备合规性策略设置要允许的风险级别**。 由 Microsoft Defender ATP 报告风险等级。 将超出允许风险级别的设备识别为不合规。
-- 使用条件访问策略阻止用户从不合规的设备访问公司资源。
+- “使用条件访问策略”阻止用户从不合规的设备访问公司资源。
 
-将 Intune 与 Microsoft Defender ATP 集成时，可以充分利用 ATP 威胁和漏洞管理 (TVM) 并[使用 Intune 修正由 TVM 标识的终结点漏洞](atp-manage-vulnerabilities.md)。
+将 Intune 与 Microsoft Defender ATP 集成时，可以充分利用 Microsoft Defender ATP 威胁和漏洞管理 (TVM) 并[使用 Intune 修正由 TVM 标识的终结点漏洞](atp-manage-vulnerabilities.md)。
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>将 Microsoft Defender ATP 和 Intune 结合使用的示例
 
@@ -51,7 +51,9 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 - 在本例中，Microsoft Defender ATP 检测设备是否存在以下情形：执行了异常代码、遇到了进程权限提升、插入了恶意代码，以及发布了可疑的远程 Shell。
 - 基于该设备的这些操作，Microsoft Defender ATP [将该设备分类为高风险](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity)，并在 Microsoft Defender 安全中心门户中包含可疑活动的详细报告。
 
-因为你有 Intune 设备合规性策略来对具有“中等”或“高”风险级别的设备分类为不合规，所以受危害的设备被分类为不合规。 这种分类允许条件访问策略介入并阻止从该设备访问公司资源。
+因为你有 Intune 设备合规性策略来对具有“中等”或“高”风险级别的设备分类为不合规，所以受危害的设备被分类为不合规 。 这种分类允许条件访问策略介入并阻止从该设备访问公司资源。
+
+你还可以使用 Intune 策略修改 Android 上 Microsoft Defender ATP 的某些配置。 有关详细信息，请参阅本文后面的[在运行 Android 的设备上配置 Web 保护](#configure-web-protection-on-devices-that-run-android)。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -68,9 +70,9 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
 第一步是在 Intune 和 Microsoft Defender ATP 之间设置服务到服务连接。 这需要管理访问 Microsoft Defender 安全中心和 Intune。
 
-### <a name="to-enable-defender-atp"></a>启用 Defender ATP
+### <a name="to-enable-microsoft-defender-atp"></a>启用 Microsoft Defender ATP
 
-只需为每个租户启用一次 Defender ATP。
+只需为每个租户启用一次 Microsoft Defender ATP。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
@@ -87,13 +89,13 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
    3. 选择“保存首选项”。
 
 4. 返回到 Microsoft Endpoint Manager 管理中心的“Microsoft Defender ATP”。 在“MDM 符合性策略设置”下，根据组织的需求：
-   - 将“将 Windows 设备版本 10.0.15063 及更高版本连接到 Microsoft Defender ATP”设置为“启用”和/或 
-   - 将“将 Android 设备版本 6.0.0 及更高版本连接到 Microsoft Defender ATP”设置为“启用” 。
+   - 将“将 Windows 设备版本 10.0.15063 及更高版本连接到 Microsoft Defender ATP”设置为“启用” 
+   - 将“将 Android 设备版本 6.0.0 及更高版本连接到 Microsoft Defender ATP”设置为“启用” 
 
 5. 选择“保存”。
 
 > [!TIP]
-> 如果你将新应用集成到 Intune Mobile Threat Defense，并启用与 Intune 的连接，Intune 会在 Azure Active Directory 中创建经典条件访问策略。 集成的每个 MTD 应用（包括 [Defender ATP](advanced-threat-protection.md) 或其他任何 [MTD 合作伙伴](mobile-threat-defense.md#mobile-threat-defense-partners)）都会新建经典条件访问策略。 可以忽略这些策略，但不能对其进行编辑、删除或禁用。
+> 如果你将新应用集成到 Intune Mobile Threat Defense，并启用与 Intune 的连接，Intune 会在 Azure Active Directory 中创建经典条件访问策略。 集成的每个 MTD 应用（包括 [Microsoft Defender ATP](advanced-threat-protection.md) 或其他任何 [MTD 合作伙伴](mobile-threat-defense.md#mobile-threat-defense-partners)）都会新建经典条件访问策略。 可以忽略这些策略，但不能对其进行编辑、删除或禁用。
 >
 > 如果删除了经典策略，你将需要删除负责创建它的 Intune 的连接，然后重新设置。 此过程将重新创建经典策略。 不支持将 MTD 应用的经典策略迁移到新的条件访问策略类型。
 >
@@ -106,9 +108,9 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 >
 > 要查看经典条件访问策略，请转到 [Azure](https://portal.azure.com/#home) 中的“Azure Active Directory” > “条件访问” > “经典策略”  。
 
-## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>使用配置文件载入 Windows 设备 
+## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>使用配置文件载入 Windows 设备
 
-对于 Windows 平台，在 Intune 和 Microsoft Defender ATP 之间建立服务到服务连接之后，将 Intune 管理的设备载入到 ATP，以便收集和使用有关其风险级别的数据。 要载入设备，请使用适用于 Microsoft Defender ATP 的设备配置文件。
+对于 Windows 平台，在 Intune 和 Microsoft Defender ATP 之间建立服务到服务连接之后，请将 Intune 管理的设备载入到 Microsoft Defender ATP，以便收集使用有关其风险级别的数据。 要载入设备，请使用适用于 Microsoft Defender ATP 的设备配置文件。
 
 建立到 Microsoft Defender ATP 的连接后，Intune 会接收到来自 Microsoft Defender ATP 的 Microsoft Defender ATP 载入配置包。 此包部署到具有设备配置文件的设备上。 配置包配置设备，以与 [Microsoft Defender ATP 服务](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)进行通信以扫描文件、检测威胁，并向 Microsoft Defender ATP 报告风险。 使用配置包载入设备后，不需要再次执行本操作。 还可以使用[组策略或 Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) 载入设备。
 
@@ -117,7 +119,7 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备” > “配置文件” > “创建配置文件”。
 3. 输入“名称”和“描述”。
-4. 在“平台”中，选择“Windows 10 及更高版本” 
+4. 在“平台”中，选择“Windows 10 及更高版本”
 5. 对于“配置文件类型”，请选择“Microsoft Defender ATP (Windows 10 桌面版)”。
 6. 配置设置：
 
@@ -131,40 +133,141 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
      有关这些 Microsoft Defender ATP 设置的详细信息，请参阅[使用 Microsoft Endpoint Configuration Manager 载入 Windows 10 计算机](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm)。
 
-7. 选择“确定”和“创建”保存更改，此操作将创建配置文件。
+7. 选择“确定”，然后“创建”保存更改，此操作将创建配置文件 。
 8. [将设备配置文件分配给](../configuration/device-profile-assign.md)希望使用 Microsoft Defender ATP 进行评估的设备。
 
-## <a name="create-and-assign-the-compliance-policy"></a>创建并分配合规性策略
+## <a name="onboard-android-devices"></a>载入 Android 设备
+在 Intune 和 Microsoft Defender ATP 之间建立服务到服务连接之后，必须将受管理设备载入到 Microsoft Defender ATP，以便收集和使用有关其风险级别的数据。
+
+有关载入 Android 设备的详细说明（包括最终用户和管理员的先决条件），请参阅 Microsoft Defender ATP 文档中的[适用于 Android 的 Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android)。
+
+## <a name="create-and-assign-compliance-policy-to-set-device-risk-level"></a>创建并分配合规性策略以设置设备风险级别
 
 对于 Windows 和 Android 设备，合规性策略确定设备可接受的风险级别。
 
-如果对创建合规性策略不熟悉，请参考*在 Microsoft Intune 中创建合规性策略*一文中的[创建策略](../protect/create-compliance-policy.md#create-the-policy)过程。 以下信息具体介绍如何将 Defender ATP 配置为合规性策略的一部分。
+如果对创建合规性策略不熟悉，请参考在 Microsoft Intune 中创建合规性策略一文中的[创建策略](../protect/create-compliance-policy.md#create-the-policy)过程。 以下信息具体介绍如何将 Microsoft Defender ATP 配置为合规性策略的一部分。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 选择“设备” > “符合性策略” > “策略” > “创建策略”。
 
-3. 对于“平台”，请选择“Windows 10 及更高版本”、“Android 设备管理员”和/或“Android Enterprise” 。 然后，选择“创建”以打开“创建策略”配置窗口。
+3. 对于“平台”，请使用下拉框选择以下选项之一：
+   - **Windows 10 及更高版本**
+   - **Android 设备管理员**
+   - **Android Enterprise**
 
-4. 指定可稍后可帮助你识别它的“名称”。 还可以选择指定“说明”。
+   接下来，选择“创建”以打开“创建策略”配置窗口 。
+
+4. 指定“名称”以帮助你稍后识别此策略。 还可以选择指定“说明”。
   
-5. 在“合规性设置”选项卡上，展开“Microsoft Defender ATP”组并将“要求设备不高于计算机风险评分”设置为首选级别。
+5. 在“合规性设置”选项卡上，展开“Microsoft Defender ATP”组并将选项“要求设备不高于计算机风险评分”设置为首选级别  。
 
    威胁级别分类[由 Microsoft Defender ATP 确定](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue)。
 
    - **清除**：此级别是最安全的。 设备不能存在任何威胁，且仍可访问公司资源。 如果发现了任何威胁，设备都会被评估为不符合。 （Microsoft Defender ATP 使用“安全”值。）
    - **低**：如果只有低级别威胁，设备符合策略。 具有中等级别或高级别威胁的设备不符合策略。
    - **中**：如果有低级别或中等级别威胁，设备符合策略。 如果检测到高级别威胁，则设备会被确定为不合规。
-   - **高**：此级别最不安全，允许所有威胁级别。 因此，存在高、中等或低级别威胁的设备被视为符合策略。
+   - **高**：此级别最不安全，允许所有威胁级别。 存在高、中等或低级别威胁的设备被视为合规。
 
 6. 完成策略的配置，包括将策略分配给适用的组。
 
+## <a name="configure-web-protection-on-devices-that-run-android"></a>在运行 Android 的设备上配置 Web 保护
+
+默认情况下，适用于 Android 的 Microsoft Defender ATP 包含并启用了 Web 保护功能。 [Web 保护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview)有助于保护设备免受 Web 威胁，并保护用户免受钓鱼网站攻击。
+
+虽然默认是启用的，但在某些 Android 设备上有正当的理由禁用此保护。 例如，你可以选择仅使用 Microsoft Defender ATP 应用扫描功能，或在 Web 保护扫描到有害 URL 时阻止使用 VPN。
+
+Intune 支持关闭全部或部分 Web 保护功能。 你使用的方法和可禁用的功能取决于 Android 设备向 Intune 注册的方式：
+
+- **Android 设备管理员**：使用配置文件在设备上设置自定义 OMA-URI 设置以禁用整个 Web 保护功能或仅禁用对 VPN 的使用。 有关 Android 设备自定义设置的常规信息，请参阅[自定义设置](../configuration/custom-settings-android.md)。
+
+- **Android Enterprise 工作配置文件**：使用应用配置文件和配置设计器禁用 Web 保护。 此方法和注册类型支持禁用所有 Web 保护功能，但不支持仅禁用对 VPN 的使用。 有关应用配置策略的常规信息，请参阅[使用配置设计器](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer)。
+
+若要在设备上配置 Web 保护，请使用以下过程创建和部署适用的配置。
+
+### <a name="disable-web-protection-for-android-device-administrator"></a>禁用 Android 设备管理员的 Web 保护
+
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+
+2. 选择“设备” > “配置文件” > “创建配置文件”。
+
+3. 输入以下设置：
+
+   - **平台**：选择“Android 设备管理员”
+   - **配置文件**：选择“自定义”
+
+   选择“创建”。
+
+4. 在“基本信息”上，输入以下详细信息：
+
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，适用于Microsoft Defender ATP Web 保护的 Android 自定义配置文件
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议设置。
+
+5. 在“配置设置”中，选择“添加” 。
+
+   指定要部署的配置的设置：
+
+   - **禁用 Web 保护**：
+     - **名称**：输入 OMA-URI 设置的唯一名称，便于轻松查找。 例如，禁用 Microsoft Defender ATP Web 保护
+     - **描述**：（可选）输入包含设置概述以及其他所有重要详细信息的说明。
+     - **OMA-URI**：输入“./Vendor/MSFT/DefenderATP/AntiPhishing”
+     - **数据类型**：使用下拉菜单，然后选择“整数”
+     - **值**：输入“0”以禁用 Web 保护，包括基于 VPN 的扫描。
+       > [!NOTE]
+       > 输入“1”以启用 Web 保护，这是 Web 保护的默认设置。
+
+   - **通过 Web 保护仅禁用对 VPN 的使用：**
+     - **名称**：输入 OMA-URI 设置的唯一名称，便于轻松查找。 例如，禁用 Microsoft Defender ATP Web 保护 VPN
+     - **描述**：（可选）输入包含设置概述以及其他所有重要详细信息的说明。
+     - **OMA-URI**：输入“./Vendor/MSFT/DefenderATP/Vpn”
+     - **数据类型**：使用下拉菜单，然后选择“整数”
+     - **值**：输入“0”以禁用基于 VPN 的扫描。
+       > [!NOTE]
+       > 输入“1”以启用 Web 保护，这是 Web 保护的默认设置。
+
+   选择“添加”保存 OMA-URI 设置配置，然后选择“下一步”继续 。
+
+6. 在“分配”中，指定将接收此配置文件的组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+7. 完成后，在“查看 + 创建”上，选择“创建” 。 为创建的配置文件选择策略类型时，新配置文件将显示在列表中。
+
+### <a name="disable-web-protection-for-android-enterprise-work-profile"></a>禁用 Android Enterprise 工作配置文件的 Web 保护
+
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+
+2. 选择“应用” > “应用配置策略” > “添加”，然后选择受管理设备  。
+
+3. 在“基本信息”上，输入以下详细信息：
+
+   - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，适用于 Microsoft Defender ATP Web 保护的 Android 应用配置。
+   - **描述**：输入配置文件的说明。 此设置是可选的，但建议设置。
+   - **平台**：选择“Android Enterprise”
+   - **配置文件类型**：选择“仅工作配置文件”
+   - **目标应用**：单击“选择应用”。
+
+4. 在“关联应用”上，找到并选择“Defender ATP”，然后选择“确定” > “下一步”   。
+
+5. 在“设置”上，使用“配置设置格式”的下拉列表，选择“使用配置设计器”，然后单击“添加”   。 此时会打开 JSON 编辑器。
+
+6. 找到并选择“Web 保护”，然后选择“确定”，返回到“设置”页面  。
+
+7. 对于“配置值”，输入“0”以禁用 Web 保护 。
+
+   > [!NOTE]
+   > 输入“1”以启用 Web 保护，这是 Web 保护的默认设置。
+
+   选择“下一步”继续操作。
+
+8. 在“分配”中，指定将接收此配置文件的组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+9. 完成后，在“查看 + 创建”上，选择“创建” 。 为创建的配置文件选择策略类型时，新配置文件将显示在列表中。
+
 ## <a name="create-a-conditional-access-policy"></a>创建条件访问策略
 
-条件访问策略阻止设备访问超过合规性策略中设置的威胁级别的资源。 可以阻止设备访问公司资源，如 SharePoint 或 Exchange Online。
+条件访问策略可以使用来自 Microsoft Defender ATP 的数据阻止设备访问超过威胁级别的资源。 可以阻止设备访问公司资源，如 SharePoint 或 Exchange Online。
 
 > [!TIP]
-> 条件访问是一项 Azure Active Directory (Azure AD) 技术。 从 Microsoft Endpoint Manager 管理中心访问的条件访问节点与从 Azure AD 访问的节点相同。
+> 条件访问是一项 Azure Active Directory (Azure AD) 技术。 在 Microsoft Endpoint Manager 管理中心中找到的条件访问节点是 Azure AD 中的节点 。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
@@ -188,7 +291,7 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
 ## <a name="monitor-device-compliance"></a>监视设备符合性
 
-接下来，监视具有 Microsoft Defender ATP 符合性策略的设备状态。
+监视具有 Microsoft Defender ATP 合规性策略的设备状态。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
@@ -204,7 +307,7 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
 ## <a name="view-onboarding-status"></a>查看载入状态
 
-若要查看所有 Intune 托管的 Windows 10 设备的载入状态，可以转到“终结点安全性” > “Microsoft Defender ATP” 。 在此页中，还可以启动设备配置文件的创建，以便将更多设备载入 Microsoft Defender ATP。
+若要查看所有 Intune 受管理设备的载入状态，可以转到“终结点安全性” > “Microsoft Defender ATP” 。 在此页中，还可以开始设备配置文件的创建，以便将更多设备载入 Microsoft Defender ATP。
 
 ## <a name="next-steps"></a>后续步骤
 

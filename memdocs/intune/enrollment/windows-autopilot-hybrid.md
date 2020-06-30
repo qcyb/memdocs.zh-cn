@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428657"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093477"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>使用 Intune 和 Windows Autopilot 部署加入混合 Azure AD 的设备
 可以使用 Intune 和 Windows Autopilot 设置加入混合 Azure Active Directory (Azure AD) 的设备。 为此，请执行本文中的步骤。
@@ -111,20 +111,18 @@ ms.locfileid: "84428657"
 
 Intune 连接器需要与 [Intune 相同的终结点](../fundamentals/intune-endpoints.md)。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “适用于 Active Directory 的 Intune 连接器” > “添加”。 
-2. 按照说明下载连接器。
-3. 打开下载的连接器安装文件 ODJConnectorBootstrapper.exe，安装连接器。
-4. 设置结束时，选择“配置”。
-5. 选择“登录”。
-6. 输入用户全局管理员或 Intune 管理员角色凭据。  
+1. 关闭 IE 增强的安全配置。 默认情况下，Windows Server 已打开 Internet Explorer 增强的安全配置。 如果无法登录到用于 Active Directory 的 Intune 连接器，则为管理员关闭 IE 增强的安全配置。 [如何关闭 Internet Explorer 增强的安全配置](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)。 
+2. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “适用于 Active Directory 的 Intune 连接器” > “添加”。 
+3. 按照说明下载连接器。
+4. 打开下载的连接器安装文件 ODJConnectorBootstrapper.exe，安装连接器。
+5. 设置结束时，选择“配置”。
+6. 选择“登录”。
+7. 输入用户全局管理员或 Intune 管理员角色凭据。  
    必须为用户帐户分配 Intune 许可证。
-7. 转到“设备” > “Windows” > “Windows 注册” > “适用于 Active Directory 的 Intune 连接器”，然后确认连接状态为“活动”    。
+8. 转到“设备” > “Windows” > “Windows 注册” > “适用于 Active Directory 的 Intune 连接器”，然后确认连接状态为“活动”    。
 
 > [!NOTE]
 > 登录到连接器之后，可能需要几分钟才能显示在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中。 它只有在能够成功与 Intune 服务通信时才会显示。
-
-### <a name="turn-off-ie-enhanced-security-configuration"></a>关闭 IE 增强的安全配置
-默认情况下，Windows Server 已打开 Internet Explorer 增强的安全配置。 如果无法登录到用于 Active Directory 的 Intune 连接器，则为管理员关闭 IE 增强的安全配置。 [如何关闭 Internet Explorer 增强的安全配置](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
 
 ### <a name="configure-web-proxy-settings"></a>配置 Web 代理设置
 
@@ -193,12 +191,13 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。
 4. 选择“下一步”。
 5. 在“全新体验 (OOBE)”页上，对于“部署模式”，选择“用户驱动”。
 6. 在“加入到 Azure AD 时的身份”框中，选择“已加入混合 Azure AD” 。
-7. 根据需要，在“全新体验 (OOBE)”上配置剩余选项。
-8. 选择“下一步”。
-9. 在“作用域标记”页上，为此配置文件选择“[作用域标记](../fundamentals/scope-tags.md)”。
-10. 选择“下一步”。
-11. 在“分配”页上，选择“要包括的组”> 搜索并选择“设备组”>“选择”。
-12. 选择“下一步” > “创建”。
+7.  如果是在利用 VPN 支持的组织网络中部署设备，请将“跳过域连接检查”选项设置为“是”。  有关其他信息，请参阅[通过 VPN 加入混合 Azure Active Directory 的用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support)。
+8. 根据需要，在“全新体验 (OOBE)”上配置剩余选项。
+9. 选择“下一步”。
+10. 在“作用域标记”页上，为此配置文件选择“[作用域标记](../fundamentals/scope-tags.md)”。
+11. 选择“下一步”。
+12. 在“分配”页上，选择“要包括的组”> 搜索并选择“设备组”>“选择”。
+13. 选择“下一步” > “创建”。
 
 设备配置文件的状态从“未分配”更改为“正在分配”，最后更改为“已分配”，此过程大约用时 15 分钟  。
 

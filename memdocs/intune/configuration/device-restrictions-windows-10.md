@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311156"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216478"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Windows 10（及更高版本）设备设置
 
@@ -141,6 +141,10 @@ ms.locfileid: "84311156"
 - **蓝牙广告**：选择“阻止”可阻止设备发送蓝牙广告。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能允许设备发送蓝牙播发。
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **蓝牙近端连接**：选择“阻止”可防止设备用户使用迅速配对和其他近端连接方案。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能允许设备发送蓝牙播发。
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **蓝牙允许的服务**：添加受允许的蓝牙服务和配置文件列表作为十六进制字符串，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`。
 
@@ -322,6 +326,9 @@ ms.locfileid: "84311156"
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge 浏览器
 
 这些设置使用[浏览器策略 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser)，该策略还列出了受支持的 Windows 版本。
+
+> [!NOTE]
+> 使用适用于 Microsoft Edge 45 及更早版本的浏览器策略 CSP。 对于 Microsoft Edge Enterprise 77 及更高版本，请参阅[使用 Microsoft Intune 配置 Microsoft Edge 策略设置](/DeployEdge/configure-edge-with-intune)。
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>使用 Microsoft Edge 展台模式
 

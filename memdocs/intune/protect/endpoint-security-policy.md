@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990866"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879731"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>使用 Microsoft Intune 中的终结点安全策略管理设备安全
 
@@ -35,13 +35,13 @@ ms.locfileid: "83990866"
 
 以下是每个终结点安全策略类型的简要说明。 要了解有关它们的更多信息，包括每个策略类型的可用策略，请单击指向每种策略类型专用内容的链接：
 
-- [防病毒](../protect/endpoint-security-antivirus-policy.md) - 防病毒策略可帮助安全管理员专注于受管理设备的独立防病毒设置组。 若要使用防病毒策略，请将 Intune 和 Microsoft Defender 高级威胁防护 (Defender ATP) 集成为 Mobile Threat Defense 解决方案。
+- [防病毒](../protect/endpoint-security-antivirus-policy.md) - 防病毒策略可帮助安全管理员专注于受管理设备的独立防病毒设置组。 若要使用防病毒策略，请将 Intune 与 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 集成为移动威胁防御解决方案。
 
 - [磁盘加密](../protect/endpoint-security-disk-encryption-policy.md) - 终结点安全磁盘加密配置文件只关注与设备内置加密方法（如 FileVault 或 BitLocker）相关的设置。 此举可使安全管理员轻松管理磁盘加密设置，而不必浏览大量不相关的设置。
 
-- [防火墙](../protect/endpoint-security-firewall-policy.md) - 使用 Intune 中的终结点安全防火墙策略为运行 macOS 和 Windows 10 的设备配置设备内置防火墙。 内置防火墙包括适用于 Windows 设备的 BitLocker 和适用于 macOS 的 FileVault。
+- [防火墙](../protect/endpoint-security-firewall-policy.md) - 使用 Intune 中的终结点安全防火墙策略为运行 macOS 和 Windows 10 的设备配置设备内置防火墙。 
 
-- [终结点检测和响应](../protect/endpoint-security-edr-policy.md) - 将 Defender ATP 与 Intune 集成时，请使用油管终结点检测和响应 (EDR) 的终结点安全策略来管理 EDR 设置并将设备加入 Defender ATP。
+- [终结点检测和响应](../protect/endpoint-security-edr-policy.md) - 将 Microsoft Defender ATP 与 Intune 集成时，请使用油管终结点检测和响应 (EDR) 的终结点安全策略来管理 EDR 设置并将设备加入 Microsoft Defender ATP。
 
 - [攻击面减少](../protect/endpoint-security-asr-policy.md) - 在 Windows 10 设备上使用 Defender 防病毒时，可以使用 Intune 终结点安全策略来减少攻击面，以管理设备的这些设置。
 

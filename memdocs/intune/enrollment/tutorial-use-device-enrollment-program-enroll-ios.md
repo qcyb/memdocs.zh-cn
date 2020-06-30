@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 47f249d105fbc2481dd1d66956032c91d5006834
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078900"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093519"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>教程：使用 Apple 商务管理 (ABM) 中的 Apple 公司设备注册功能在 Intune 中注册 iOS/iPadOS 设备
 Apple 商务管理中的设备注册功能简化了注册设备过程。 Intune 还支持 Apple 的旧版设备注册计划 (DEP) 门户，但我们鼓励使用 Apple 商务管理重新开始注册。 借助 Microsoft Intune 和 Apple 公司设备注册，设备会在用户第一次打开设备时自动安全地进行注册。 因此可以向许多用户发送设备，而无需单独设置每个设备。 
@@ -44,91 +44,91 @@ Apple 商务管理中的设备注册功能简化了注册设备过程。 Intune 
 
 可以使用 Apple 门户创建设备注册令牌。 还可以使用门户将设备分配到 Intune 以进行管理。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌” > “添加”      。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS/iPadOS 注册” > “注册计划令牌” > “添加”    。
 
-2. 选择“我同意”，为 Microsoft 授予向 Apple 发送用户和设备信息的权限  。
+2. 选择“我同意”，为 Microsoft 授予向 Apple 发送用户和设备信息的权限。
 
    ![Apple 证书工作区中用于下载公钥的“注册计划令牌”窗格的屏幕截图。](./media/tutorial-use-device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. 选择“下载公钥”，将加密密钥 (.pem) 文件下载到本地并保存  。 .pem 文件用于从 Apple 门户请求信任关系证书。
+3. 选择“下载公钥”，将加密密钥 (.pem) 文件下载到本地并保存。 .pem 文件用于从 Apple 门户请求信任关系证书。
 
-4. 选择“创建 Apple 设备注册计划令牌”，以打开 Apple 部署计划门户，并使用公司 Apple ID 登录  。 可使用此 Apple ID 续订令牌。
+4. 选择“创建 Apple 设备注册计划令牌”，以打开 Apple 部署计划门户，并使用公司 Apple ID 登录。 可使用此 Apple ID 续订令牌。
 
-5. 在 Apple [部署计划门户](https://deploy.apple.com)中，对“设备注册计划”选择“开始”   。 你的注册流程可能与 [Apple 商务管理](https://business.apple.com)中的以下步骤略有不同。
+5. 在 Apple [部署计划门户](https://deploy.apple.com)中，对“设备注册计划”选择“开始” 。 你的注册流程可能与 [Apple 商务管理](https://business.apple.com)中的以下步骤略有不同。
 
-4. 在“管理服务器”  页上，选择“添加 MDM 服务器”  。
+4. 在“管理服务器”页上，选择“添加 MDM 服务器”。
 
-5. 对于“MDM 服务器名称”，请输入 TestMDMServer，然后选择“下一步”    。 服务器名称供参考，用于识别移动设备管理 (MDM) 服务器。 它不是 Microsoft Intune 服务器的名称或 URL。
+5. 对于“MDM 服务器名称”，请输入 TestMDMServer，然后选择“下一步”。 服务器名称供参考，用于识别移动设备管理 (MDM) 服务器。 它不是 Microsoft Intune 服务器的名称或 URL。
 
-6. “添加&lt;服务器名称&gt;”  对话框随即打开，提示“上传公钥”  。 选择“选择文件…”  以上传 .pem 文件，然后选择“下一步”  。
+6. “添加&lt;服务器名称&gt;”对话框随即打开，提示“上传公钥”。 选择“选择文件…” 以上传 .pem 文件，然后选择“下一步”。
 
-6. 转到“部署计划” > “设备注册计划” > “托管设备”    。
-7. 在“选择设备依据”下，选择“序列号”   。 <!--ask Tiffany about this-->
+6. 转到“部署计划” > “设备注册计划” > “托管设备”  。
+7. 在“选择设备依据”下，选择“序列号” 。 <!--ask Tiffany about this-->
 
-8. 对于“选择操作”，选择“分配到服务器”，选择为 Microsoft Intune 指定的 &lt;服务器名称&gt;，然后选择“确定”    。 Apple 门户将指定的设备分配到 Intune 服务器以进行管理，然后显示“分配完成”  。
+8. 对于“选择操作”，选择“分配到服务器”，选择为 Microsoft Intune 指定的 &lt;服务器名称&gt;，然后选择“确定”  。 Apple 门户将指定的设备分配到 Intune 服务器以进行管理，然后显示“分配完成”。
 
-   在 Apple 门户中，转到“部署计划”  &gt;“设备注册计划”  &gt;“查看分配历史记录”  ，以查看设备及其 MDM 服务器分配的列表。
+   在 Apple 门户中，转到“部署计划”&gt;“设备注册计划”&gt;“查看分配历史记录”，以查看设备及其 MDM 服务器分配的列表。
 
 9. 在 Azure 门户的 Intune 中，提供了用于创建此令牌的 Apple ID，以供未来参考。
 
     ![指定用来创建注册计划令牌的 Apple ID 并浏览到注册计划令牌的屏幕截图。](./media/tutorial-use-device-enrollment-program-enroll-ios/image03.png)
 
-10. 在“Apple 令牌”框中，浏览到证书 (.pem) 文件，选择“打开”，然后选择“创建”    。 
+10. 在“Apple 令牌”框中，浏览到证书 (.pem) 文件，选择“打开”，然后选择“创建”  。 
 
 11. 如果要应用作用域标记来限制可以访问此令牌的管理员，请选择“作用域”。
 
 ## <a name="create-an-apple-enrollment-profile"></a>创建 Apple 注册配置文件
 现在你已经安装了令牌，接着可以为公司拥有的 iOS/iPadOS 设备创建注册配置文件。 设备注册配置文件定义注册时应用于设备组的设置。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌”     。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS 注册” > “注册计划令牌”   。
 
-2. 选择刚刚安装的令牌，然后选择“配置文件” > “创建配置文件” > “iOS”    。
+2. 选择刚刚安装的令牌，然后选择“配置文件” > “创建配置文件” > “iOS/iPadOS”  。
 
-3. 在“基本”页上，为“名称”输入“TestProfile”，为“说明”输入“iOS/iPadOS 设备的测试 ADE”      。 用户看不到这些详细信息。
+3. 在“基本”页上，为“名称”输入“TestProfile”，为“说明”输入“iOS/iPadOS 设备的测试 ADE”。 用户看不到这些详细信息。
 
-4. 选择“下一步”  。
+4. 选择“下一步”。
 
-5. 在“管理设置”页上，决定是否希望设备使用用户关联注册   。 用户关联专为特定用户将使用的设备而设计。 如果用户希望使用公司门户来获取安装应用等服务，请选择“注册用户关联”  。 如果用户不需要公司门户，或者你要为多位用户预配设备，请选择“不注册用户关联”  。
+5. 在“管理设置”页上，决定是否希望设备使用用户关联注册 。 用户关联专为特定用户将使用的设备而设计。 如果用户希望使用公司门户来获取安装应用等服务，请选择“注册用户关联”。 如果用户不需要公司门户，或者你要为多位用户预配设备，请选择“不注册用户关联”。
 
-6. 如果选择“使用用户关联注册”，则会出现“选择用户必须进行身份验证的位置”选项  。 请决定是否要使用公司门户或 Apple 设置助理进行身份验证。
+6. 如果选择“使用用户关联注册”，则会出现“选择用户必须进行身份验证的位置”选项。 请决定是否要使用公司门户或 Apple 设置助理进行身份验证。
    - **公司门户**：选择此选项以使用多重身份验证、允许用户在首次登录时更改密码，或提示用户在注册期间重置过期的密码。 如果希望公司门户应用程序在最终用户的设备上自动更新，请通过 Apple 的批量采购计划 (VPP) 将公司门户作为必需的应用单独部署给这些用户。
    - **设置助理**：选择此选项以通过 Apple 设置助理使用 Apple 提供的基本 HTTP 身份验证
   
-7. 如果选择“使用用户关联注册并使用公司门户进行身份验证”，则会显示“使用 VPP 安装公司门户”选项  。 如果使用 VPP 令牌安装公司门户，则用户在注册期间无需输入 Apple ID 和密码即可从 App Store 下载公司门户。 在“使用 VPP 安装公司门户”下选择“使用令牌:”来选择具有可用的公司门户免费许可证的 VPP 令牌   。 如果不想使用 VPP 部署公司门户，请选择“不使用 VPP”  。 
+7. 如果选择“使用用户关联注册并使用公司门户进行身份验证”，则会显示“使用 VPP 安装公司门户”选项。 如果使用 VPP 令牌安装公司门户，则用户在注册期间无需输入 Apple ID 和密码即可从 App Store 下载公司门户。 在“使用 VPP 安装公司门户”下选择“使用令牌:”来选择具有可用的公司门户免费许可证的 VPP 令牌 。 如果不想使用 VPP 部署公司门户，请选择“不使用 VPP”。 
 
-8. 如果选择了“使用用户关联注册”、“使用公司门户进行身份验证”以及“使用 VPP 安装公司门户”，请决定是否要在身份验证前以单应用模式运行公司门户。 此设置使你能够确保用户在完成公司注册之前无法访问其他应用。 如果要在注册完成之前将用户限制在此流，请在“在身份验证前以单应用模式运行公司门户”下选择“是”   。 
+8. 如果选择了“使用用户关联注册”、“使用公司门户进行身份验证”以及“使用 VPP 安装公司门户”，请决定是否要在身份验证前以单应用模式运行公司门户。 此设置使你能够确保用户在完成公司注册之前无法访问其他应用。 如果要在注册完成之前将用户限制在此流，请在“在身份验证前以单应用模式运行公司门户”下选择“是” 。 
 
-9. 在“设备管理设置”下，选择“已监督”下的“是”（如果选择了“使用用户关联注册”，则其将自动设置为“是”）      。 受监督的设备可以提供适用于公司 iOS/iPadOS 设备的大多数管理选项。
+9. 在“设备管理设置”下，选择“已监督”下的“是”（如果选择了“使用用户关联注册”，则其将自动设置为“是”）    。 受监督的设备可以提供适用于公司 iOS/iPadOS 设备的大多数管理选项。
 
-10. 在“锁定的注册”下选择“是”以确保用户无法删除公司设备的管理   。 
+10. 在“锁定的注册”下选择“是”以确保用户无法删除公司设备的管理 。 
 
-11. 选择“与计算机同步”下的一个选项以确定 iOS/iPadOS 设备是否能够与计算机同步  。
+11. 选择“与计算机同步”下的一个选项以确定 iOS/iPadOS 设备是否能够与计算机同步。
 
-12. 默认情况下，Apple 将使用设备类型（即 iPad）来命名设备。 若要提供其他名称模板，请选择“应用设备名称模板”下的“是”   。 输入要应用于设备的名称，字符串 {{SERIAL}} 和 {{DEVICETYPE}} 将替换为每台设备的序列号和设备类型   。 否则，请在“应用设备名称模板”下选择“否”   。
+12. 默认情况下，Apple 将使用设备类型（即 iPad）来命名设备。 若要提供其他名称模板，请选择“应用设备名称模板”下的“是” 。 输入要应用于设备的名称，字符串 {{SERIAL}} 和 {{DEVICETYPE}} 将替换为每台设备的序列号和设备类型 。 否则，请在“应用设备名称模板”下选择“否” 。
 
-13. 选择“下一步”  。
+13. 选择“下一步”。
 
-14. 在“设置助理”页上，为“部门名称”输入“教程部门”    。 此字符串是用户在设备激活期间点击“关于配置”时看到的内容  。
+14. 在“设置助理”页上，为“部门名称”输入“教程部门”。 此字符串是用户在设备激活期间点击“关于配置”时看到的内容。
 
-15. 在“部门电话”下，输入电话号码  。 在激活期间中，用户点击“需要帮助”按钮时，会显示该号码  。
+15. 在“部门电话”下，输入电话号码。 在激活期间中，用户点击“需要帮助”按钮时，会显示该号码。
 
-16. 在设备激活期间，可以“显示”或“隐藏”各种屏幕   。 为了获得最无缝的注册体验，请将所有屏幕设置为“隐藏”  。
+16. 在设备激活期间，可以“显示”或“隐藏”各种屏幕 。 为了获得最无缝的注册体验，请将所有屏幕设置为“隐藏”。
 
-17. 选择“下一步”  ，以转到“查看 + 创建”页  。 选择“创建”。 
+17. 选择“下一步”，以转到“查看 + 创建”页。 选择“创建”。
 
 ## <a name="sync-managed-devices-to-intune"></a>将托管设备同步到 Intune
 
 使用 ABM、ASM 或 ADE 门户设置注册计划令牌并将设备分配给 MDM 服务器后，可以等待这些设备同步到 Intune 服务，也可以手动推送同步。如果不执行手动同步，设备可能需要长达 24 小时才能显示在 Azure 门户中。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌”> 在列表中选择令牌 >“设备” > “同步”       。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS 注册” > “注册计划令牌”> 从列表中选择令牌 >“设备” > “同步”     。
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>将注册配置文件分配到 iOS/iPadOS 设备
 
 必须先向设备分配注册计划配置文件才能注册他们。 这些设备从 Apple 同步到 Intune，并且必须已分配给 ABM、ASM 或 ADE 门户中相应的 MDM 服务器令牌。
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS” > “iOS 注册” > “注册计划令牌”> 在列表中选择令牌     。
-2. 选择“设备”> 在列表中选择设备 >“分配配置文件”。  
-3. 在“分配配置文件”下，为设备选择配置文件，然后选择“分配”   。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS 注册” > “注册计划令牌”> 从列表中选择令牌。
+2. 选择“设备”> 在列表中选择设备 >“分配配置文件”。 
+3. 在“分配配置文件”下，为设备选择配置文件，然后选择“分配” 。
 
 ## <a name="distribute-devices-to-users"></a>将设备分发给用户
 

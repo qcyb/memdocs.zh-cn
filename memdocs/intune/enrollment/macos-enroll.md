@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cd8c57dcaede1331838946d93c4fce16801651b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990500"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093754"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>在 Intune 中设置 macOS 设备注册
 
@@ -73,19 +73,22 @@ Intune 可以管理 macOS 设备以允许用户访问公司电子邮件和应用
 
 可以使用 Parallels Desktop 或 VMware Fusion 注册用于测试的 macOS 虚拟机。 
 
-对于 Parallels Desktop，需要设置虚拟机的硬件类型和序列号，使 Intune 能够识别它们。 按照 Parallels 的设置硬件类型和[序列号](http://kb.parallels.com/123455)说明进行操作，设置测试所必需的设置。 建议运行虚拟机的设备的硬件类型与要创建的虚拟机的硬件类型相匹配。 可通过“Apple 菜单” > “关于此 Mac” > “系统报告” > “模型标识符”找到此硬件类型     。 
+对于 Parallels Desktop，需要设置虚拟机的硬件类型和序列号，使 Intune 能够识别它们。 按照 Parallels 的设置硬件类型和[序列号](http://kb.parallels.com/123455)说明进行操作，设置测试所必需的设置。 建议运行虚拟机的设备的硬件类型与要创建的虚拟机的硬件类型相匹配。 可通过“Apple 菜单” > “关于此 Mac” > “系统报告” > “模型标识符”找到此硬件类型   。 
 
-对于 VMware Fusion，需要[编辑 .vmx 文件](https://kb.vmware.com/s/article/1014782)，设置虚拟机的硬件模型和序列号。 建议运行虚拟机的设备的硬件类型与要创建的虚拟机的硬件类型相匹配。 可通过“Apple 菜单” > “关于此 Mac” > “系统报告” > “模型标识符”找到此硬件类型     。 
+对于 VMware Fusion，需要[编辑 .vmx 文件](https://kb.vmware.com/s/article/1014782)，设置虚拟机的硬件模型和序列号。 建议运行虚拟机的设备的硬件类型与要创建的虚拟机的硬件类型相匹配。 可通过“Apple 菜单” > “关于此 Mac” > “系统报告” > “模型标识符”找到此硬件类型   。 
 
 ## <a name="user-approved-enrollment"></a>用户已批准注册
+
 用户批准的 MDM 注册是一种可用于管理某些安全敏感设置的 macOS 注册类型。 有关详细信息，请参阅 [Apple 的支持文档](https://support.apple.com/HT208019)。  
  
-在 BYOD 注册过程中，将要求用户手动批准 Apple 管理配置文件。 适用于 macOS 的公司门户应用提供了说明。 尽管无需批准此管理配置文件即可完成注册，但 Intune 建议经过用户批准完成注册。 若在注册过程中用户未批准此配置文件，用户可以转到“系统首选项”   > “配置文件”，  选择管理配置文件，然后选择“批准”。     
+从 2020 年 6 月起，Intune 中的所有新 macOS MDM 注册（包括不是通过自动设备注册 (ADE) 完成的注册）都视为已获用户批准。  最终用户必须在“系统首选项” > “配置文件”中手动安装管理配置文件，从而为管理配置文件提供批准。 针对 BYOD macOS 用户从公司门户应用自动启动系统首选项。 公司门户应用中提供了[有关安装管理配置文件的说明](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。     
+
+ 如果最终用户未在“系统首选项” > “配置文件”中手动提供管理配置文件的批准，则在 2020 年 6 月之前的 BYOD macOS MDM 注册可能未获用户批准。 对于 2020 年 6 月之后的 BYOD 注册，公司门户应用为用户启动“系统首选项”，用户将需要选择“安装”。 若在注册过程中用户未批准该管理配置文件，用户可以转到“系统首选项” > “配置文件”，选择管理配置文件，然后选择“批准”在稍后批准配置文件。
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>查明设备是否处于“用户已批准”状态
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备” > “所有设备”，再依次选择相关设备和“硬件”    。
-3. 选中  “用户已批准注册”字段。
+2. 选择“设备” > “所有设备”，再依次选择相关设备和“硬件”  。
+3. 选中“用户已批准注册”字段。
 
 
 ## <a name="next-steps"></a>后续步骤

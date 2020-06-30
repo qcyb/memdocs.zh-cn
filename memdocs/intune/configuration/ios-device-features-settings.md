@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551921"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814952"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
@@ -78,6 +78,11 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 - iPadOS 13.0 及更高版本
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>设置适用范围：自动设备注册（监督）
+
+> [!NOTE]
+> 仅向停靠、页面或页面上的文件夹添加一个应用。 在所有位置添加相同的应用可防止该应用在设备上显示，并可能显示报告错误。
+>
+> 例如，如果将相机应用添加到停靠和页面，则不会显示相机应用，并且报告可能会显示策略错误。 若要将相机应用添加到主屏幕布局中，请仅选择停靠或页面，而不是同时选择两者。
 
 ### <a name="dock"></a>程序坞
 
@@ -210,7 +215,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 - **锁屏脚注：** 输入一个可帮助在设备丢失或被盗时将其找回的注释。 可以输入所需的任何文本。 例如，输入类似于 `If found, call Contoso at ...` 的内容。
 
-  设备令牌还可以用于向这些字段添加特定于设备的信息。 例如，若要显示序列号，请输入 `Serial Number: {{serialnumber}}`。 在锁屏上，文本显示类似于 `Serial Number 123456789ABC`。 输入变量时，请务必使用大括号 `{{ }}`。 [应用配置令牌](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)包含可用变量的列表。 还可以使用 `deviceName` 或任何其他特定于设备的值。
+  设备令牌还可以用于向这些字段添加特定于设备的信息。 例如，若要显示序列号，请输入 `Serial Number: {{serialnumber}}` 或 `Device ID: {{DEVICEID}}`。 在锁屏上，文本显示类似于 `Serial Number 123456789ABC`。 输入变量时，请务必使用大括号 `{{ }}`。 [应用配置令牌](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)包含可用变量的列表。 还可以使用 `DEVICENAME` 或任何其他特定于设备的值。
 
   > [!NOTE]
   > 变量不在 UI 中进行验证，且区分大小写。 因此，可能会看到使用不正确输入保存的配置文件。 例如，如果输入 `{{DeviceID}}` 而不是 `{{deviceid}}` 或“{{DEVICEID}}”，则显示文本字符串而不是设备的唯一 ID。 请确保输入正确的信息。 支持全部小写或全部大写的变量，但不支持混合使用。 
@@ -314,6 +319,10 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 - **共享设备模式**（仅用于 Microsoft Azure AD）：如果要将 Microsoft 企业 SSO 插件部署到已配置支持 Azure AD 共享设备模式功能的 iOS/iPadOS 设备，请选择“启用”。 通过共享模式下的设备，多名用户可以全局方式在支持共享设备模式的应用程序中登录和注销。 设置为“未配置”时，Intune 不会更改或更新此设置。 默认情况下，iOS/iPadOS 设备不会在多名用户之间共享。
 
   要详细了解共享设备模式及其启用方式，请参阅[共享设备模式概述](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)以及[适用于 iOS 设备的共享设备模式](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)。  
+
+  此功能适用于：
+  
+  - iOS/iPadOS 13.5 及更高版本
 
 - **扩展 ID**（“重定向”和“凭据”）：输入可标识 SSO 应用扩展的程序包标识符，如 `com.apple.extensiblesso`。
 

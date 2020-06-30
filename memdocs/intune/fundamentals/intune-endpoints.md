@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ec674f8aa0ec0fd00aaf4be25f307158d79781
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126492"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216495"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune 网络终结点  
 
@@ -53,7 +53,7 @@ ms.locfileid: "84126492"
 
 |域    |IP 地址      |
 |-----------|----------------|
-|login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net| 详细信息 [Office 365 URL 和 IP 地址范围](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
+| login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net <br> enterpriseregistration。windows。net | 详细信息 [Office 365 URL 和 IP 地址范围](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
 | sts.manage.microsoft.com | 13.93.223.241 <br>52.170.32.182 <br>52.164.224.159 <br>52.174.178.4 <br>13.75.122.143 <br>52.163.120.84<br>13.73.112.122<br>52.237.192.112|
 |Manage.microsoft.com <br>i.manage.microsoft.com <br>r.manage.microsoft.com <br>a.manage.microsoft.com <br>p.manage.microsoft.com <br>EnterpriseEnrollment.manage.microsoft.com <br>EnterpriseEnrollment-s.manage.microsoft.com |40.83.123.72<br>13.76.177.110<br>52.169.9.87<br>52.174.26.23<br>104.40.82.191<br>13.82.96.212<br>52.147.8.239<br>40.115.69.185|
@@ -67,13 +67,11 @@ ms.locfileid: "84126492"
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub02.manage.microsoft.com|137.135.130.29|
 |fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
 |fef.amsua0602.manage.microsoft.com|52.161.28.64|
-|enterpriseregistration。windows。net|52.175.211.189|
 |fef.amsua0102.manage.microsoft.com|52.242.211.0|
 |fef.amsua0702.manage.microsoft.com|52.232.225.75|
 |fef.amsub0502.manage.microsoft.com|40.67.219.144|
@@ -127,3 +125,19 @@ ms.locfileid: "84126492"
 |各种功能，包括访问万维网、iTunes 商店、macOS 应用商店、iCloud、消息等。 |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 或 443   |
 
 有关详细信息，请参阅 Apple 的 [Apple 软件产品使用的 TCP 和 UDP 端口](https://support.apple.com/HT202944)、[关于 macOS、iOS/iPadOS 和 iTunes 服务器主机连接和 iTunes 后台进程](https://support.apple.com/HT201999)，以及[如果你的 macOS 和 iOS/iPadOS 客户端不获取 Apple 推送通知](https://support.apple.com/HT203609)。  
+
+## <a name="android-port-information"></a>Android 端口信息
+
+根据选择管理 Android 设备的方式，你可能需要打开 Google Android Enterprise 端口和/或 Android 推送通知。 有关支持的 Android 管理方法的更多信息，请参阅 [Android 注册文档](https://docs.microsoft.com/mem/intune/enrollment/android-enroll)。 
+
+[!NOTE]
+由于 Google 移动服务在中国不可用，因此在中国由 Intune 管理的设备无法使用需要 Google 移动服务的功能。 这些功能包括：Google Play 保护机制功能，如 SafetyNet 设备证明、管理 Google Play 商店的应用、Android Enterprise 功能（请参阅 [Google 文档](https://support.google.com/work/android/answer/6270910)）。 此外，Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。
+
+### <a name="google-android-enterprise"></a>Google Android Enterprise 
+
+Google 针对其 [Android Enterprise 蓝皮书](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)的“防火墙”部分中所述的所需网络端口和目标主机名提供了相关文档。 
+
+### <a name="android-push-notification"></a>Android 推送通知
+
+Intune 利用 Google Firebase 云消息传递 (FCM)，让推送通知来触发设备操作和签入。Android 设备管理员和 Android Enterprise 都要求采用这种机制。 有关 FCM 网络要求的信息，请参阅 Google 的 [FCM 端口和防火墙](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall)。
+

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988460"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093299"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>在 Microsoft Intune 中创建设备配置文件
 
-使用设备配置文件，可以添加和配置设置，然后将这些设置推送到组织中的设备。 [对使用设备配置文件的设备应用功能和设置](device-profiles.md)介绍了更多详细信息，包括可以执行的操作。
+使用设备配置文件，可以添加和配置设置，然后将这些设置推送到组织中的设备。 有关更多详细信息（包括可以执行的操作），请参阅[对使用设备配置文件的设备应用功能和设置](device-profiles.md)。
 
 本文：
 
@@ -84,6 +84,7 @@ ms.locfileid: "83988460"
 - [受信任的证书](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [有线网络 (macOS)](wired-network-settings-macos.md)
 
 例如，如果选择“iOS/iPadOS”作为平台，配置文件选项将类似于以下配置文件：
 
@@ -178,7 +179,7 @@ Intune 使用不同的刷新周期来检查配置文件的更新。 如果设备
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="适用于用户和设备的 Intune 管理模板。":::
 
-- 每次创建限制性策略时，请将此更改传达给用户。 例如，如果要将密码要求从 4 个字符更改为 6 个字符，请在分配策略之前告知用户。
+- 每次创建限制性策略时，请将此更改传达给用户。 例如，如果要将密码要求从四 (4) 个字符更改为六 (6) 个字符，请在分配策略之前告知用户。
 
 ## <a name="next-steps"></a>后续步骤
 

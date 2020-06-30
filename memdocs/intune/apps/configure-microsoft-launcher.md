@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985846"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795697"
 ---
 # <a name="configure-microsoft-launcher"></a>配置 Microsoft Launcher
 
@@ -33,7 +33,7 @@ Microsoft Launcher 是一款 Android 应用程序，它允许用户对手机进�
 
 ## <a name="how-to-configure-the-microsoft-launcher-app"></a>如何配置 Microsoft Launcher 应用 
 
-将 Microsoft Launcher 应用程序[添加到 Intune](../apps/apps-add.md)后，导航到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后选择“应用” > “应用配置策略”   。 为运行“Android”的“托管设备”添加配置策略，并选择“Microsoft Launcher”作为关联应用   。 单击“配置设置”以配置可用的各种 Microsoft Launcher 设置  。 
+将 Microsoft Launcher 应用程序[添加到 Intune](../apps/apps-add.md)后，导航到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后选择“应用” > “应用配置策略” 。 为运行“Android”的“托管设备”添加配置策略，并选择“Microsoft Launcher”作为关联应用 。 单击“配置设置”以配置可用的各种 Microsoft Launcher 设置。 
 
 ## <a name="choosing-a-configuration-settings-format"></a>选择配置设置格式 
 
@@ -43,7 +43,7 @@ Microsoft Launcher 是一款 Android 应用程序，它允许用户对手机进�
 
 - **JSON 数据**：使你能够使用 JSON 脚本来定义所有可能的配置项。 
 
-如果使用配置设计器来添加属性，则可以通过从“配置设置格式”下拉列表中选择“输入 JSON 数据”来自动将这些属性转换为 JSON   ，如下所示。 
+如果使用配置设计器来添加属性，则可以通过从“配置设置格式”下拉列表中选择“输入 JSON 数据”来自动将这些属性转换为 JSON ，如下所示。
 
    ![配置设置格式 - 使用配置设计器](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
 
@@ -62,21 +62,21 @@ Microsoft Launcher 是一款 Android 应用程序，它允许用户对手机进�
 
 |    Configuration 注册表项    |    值类型    |    默认值    |    说明     |
 |---------------------------------------------------|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    注册类型    |    字符串     |    默认    |    允许设置此策略应应用到的注册类型。 当前值“默认”表示“CorporateOwnedBuisnessOnly”。   目前没有其他支持的注册类型。        JSON 键名称：management_mode_key        |
-|    允许“主屏幕应用顺序”用户更改    |    布尔值    |    True    |    允许指定最终用户是否可以更改“主屏幕应用顺序”设置。 <ul><li>若设置为 True，将仅对初始部署执行策略定义的应用顺序。  随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行此应用顺序。 </li></ul><br>**注意:** 只能通过 JSON 编辑器配置主屏幕应用顺序。<br><br>JSON 键名称：<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
+|    注册类型    |    字符串     |    默认    |    允许设置此策略应应用到的注册类型。 当前值“默认”表示“CorporateOwnedBuisnessOnly”。  目前没有其他支持的注册类型。        JSON 键名称：management_mode_key        |
+|    允许“主屏幕应用顺序”用户更改    |    布尔值    |    True    |    允许指定最终用户是否可以更改“主屏幕应用顺序”设置。<ul><li>若设置为 True，将仅对初始部署执行策略定义的应用顺序。 随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行此应用顺序。</li></ul><br>**注意:** 只能通过 JSON 编辑器配置主屏幕应用顺序。<br><br>JSON 键名称：<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
 |    设置网格大小    |    字符串    |    自动    |    使你能够设置要在主屏幕上定位的应用的网格大小。 可以设置应用行数和列数来按以下格式定义网格大小：`columns;rows`。 如果定义网格大小，主屏幕上的一行中将显示的最大应用数量就是设置的行数，主屏幕上的一列中将显示的最大应用数量就是设置的列数。<br><br>        JSON 键名称：<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
 |    设置设备墙纸    |    字符串    |    Null    |    使你能够通过输入要设置为壁纸的图像的 URL 来设置所选的壁纸。<br><br>JSON 键名称：<br>`com.microsoft.launcher.Wallpaper.URL`    |
-|    允许“设置设备墙纸”用户更改    |    Bool    |    True    |    允许指定最终用户是否可以更改“设置设备墙纸”设置。<ul><li>若设置为 True，将仅对初始部署执行策略中的墙纸。  随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行此墙纸。 </li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
-|    源启用    |    布尔值    |    True    |    在用户轻扫到主屏幕右侧时，允许你在设备上启用启动器源。<ul><li>若设置为“True”，将启用源。 </li><li>若设置为“False”，将禁用源。 </li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Feed.Enabled`    |
-|    允许“源启用”用户更改    |    布尔值    |    True    |     允许指定最终用户是否可以更改“源启用”设置。 <ul><li>若设置为 True，将仅对初始部署执行源。  随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行源。 </li></ul><br>JSON 键名称：`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
-|    搜索栏放置   |    字符串    |    底部    |  允许在主屏幕上指定“搜索栏的位置”  。 <ul><li>如果设置为“底部”，搜索栏将位于主屏幕的底部  。</li><li>如果设置为“顶部”，搜索栏将位于主屏幕的顶部  。</li><li>如果设置为“隐藏”，搜索栏将从主屏幕中移除  。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    允许用户更改搜索栏放置位置   |    Bool    |    True    |  允许指定最终用户是否可以更改“搜索栏放置”设置  。 <ul><li>若设置为 True，将仅对初始部署强制执行搜索栏放置  。 随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，则搜索栏的位置将在每次同步时强制执行  。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
-|    停靠模式  |    字符串    |    显示    | 在用户轻扫到主屏幕右侧时，允许在设备上启用停靠。<ul><li>如果设置为“显示”，则停靠将启用  。</li><li>如果设置为“隐藏”，停靠将从主屏幕隐藏，但用户可以在需要时显示它  。</li><li>如果设置为“禁用”，则将禁用停靠  。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Dock.Mode`    |
-|   允许用户更改“停靠模式”   |    字符串    |    True    |  允许指定最终用户是否可以更改“停靠模式”设置。<ul><li>若设置为 True，将仅对初始部署强制执行停靠模式设置  。 随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行停靠模式设置  。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
+|    允许“设置设备墙纸”用户更改    |    Bool    |    True    |    允许指定最终用户是否可以更改“设置设备墙纸”设置。<ul><li>若设置为 True，将仅对初始部署执行策略中的墙纸。 随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行此墙纸。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
+|    源启用    |    布尔值    |    True    |    在用户轻扫到主屏幕右侧时，允许你在设备上启用启动器源。<ul><li>若设置为“True”，将启用源。</li><li>若设置为“False”，将禁用源。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Feed.Enabled`    |
+|    允许“源启用”用户更改    |    布尔值    |    True    |     允许指定最终用户是否可以更改“源启用”设置。<ul><li>若设置为 True，将仅对初始部署执行源。 随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行源。</li></ul><br>JSON 键名称：`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    搜索栏放置   |    字符串    |    底部    |  允许在主屏幕上指定“搜索栏的位置”。 <ul><li>如果设置为“底部”，搜索栏将位于主屏幕的底部。</li><li>如果设置为“顶部”，搜索栏将位于主屏幕的顶部。</li><li>如果设置为“隐藏”，搜索栏将从主屏幕中移除。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    允许用户更改搜索栏放置位置   |    Bool    |    True    |  允许指定最终用户是否可以更改“搜索栏放置”设置。 <ul><li>若设置为 True，将仅对初始部署强制执行搜索栏放置。 随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，则搜索栏的位置将在每次同步时强制执行。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**注意：** 对于微软桌面 v 6.2 及更高版本，将不再强制执行此设置。 因此，将此值设置为 `True` 将不起作用。 最终用户将无法自定义设备上搜索栏的位置。    |
+|    停靠模式  |    字符串    |    显示    | 在用户轻扫到主屏幕右侧时，允许在设备上启用停靠。<ul><li>如果设置为“显示”，则停靠将启用。</li><li>如果设置为“隐藏”，停靠将从主屏幕隐藏，但用户可以在需要时显示它。</li><li>如果设置为“禁用”，则将禁用停靠。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Dock.Mode`    |
+|   允许用户更改“停靠模式”   |    字符串    |    True    |  允许指定最终用户是否可以更改“停靠模式”设置。<ul><li>若设置为 True，将仅对初始部署强制执行停靠模式设置。 随后，将不再执行此策略，以便采用用户可能作出的任何更改。</li><li>若设置为“False”，每次同步时都将执行停靠模式设置。</li></ul><br>JSON 键名称：<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>输入 JSON 数据
 
-输入 JSON 数据来配置托管主屏幕的所有可用设置以及“Microsoft Launcher”中禁用的设置  ，如下所示。
+输入 JSON 数据来配置托管主屏幕的所有可用设置以及“Microsoft Launcher”中禁用的设置，如下所示。
 
    ![配置设计器 - JSON 数据](./media/configure-microsoft-launcher/configure-microsoft-launcher-03.png)
 

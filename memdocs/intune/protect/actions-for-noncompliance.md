@@ -1,11 +1,11 @@
 ---
 title: 不符合要求的 Microsoft Intune 操作及相关消息 - Azure | Microsoft Docs
-description: 创建通知电子邮件，发送到不符合的设备。 在设备被标记为“不符合”后添加操作，例如添加宽限期以符合要求，或创建计划用于阻止访问在满足符合要求之前进行访问。 在 Azure 中使用 Microsoft Intune 完成此操作。
+description: 创建通知电子邮件，发送到不符合的设备。 添加要应用于不满足合规性策略的设备的操作。 操作可以包括一个宽限期以实现合规性、阻止对网络资源的访问或停用不合规设备。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989308"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093725"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>为 Intune 中不符合要求的设备配置操作
 
@@ -29,11 +29,11 @@ ms.locfileid: "83989308"
 
 ## <a name="overview"></a>概述
 
-默认情况下，每个符合性策略都包括针对不符合性的操作（即“将设备标记为不符合”），计划为零 (0) 天 。 此默认设置使得在 Intune 检测到不符合的设备时，会立即将它标记为“不符合”。 然后，Azure Active Directory (AD) [条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)会阻止设备。
+默认情况下，每个符合性策略都包括针对不符合性的操作（即“将设备标记为不符合”），计划为零 (0) 天 。 此默认设置使得在 Intune 检测到不符合的设备时，会立即将它标记为“不符合”。 设备标记为不合规后，Azure Active Directory (AD) [条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)会阻止设备。
 
 通过配置针对不符合性的操作，你可灵活决定如何处理不符合的设备以及何时处理。 例如，你可选择不立即阻止设备，并给予用户宽限期以使其符合要求。
 
-对于可设置的每个操作，都可配置一个计划，该计划根据将设备标记为“不符合”后的天数来确定该操作何时生效。 你还可配置一个操作的多个实例。 在策略中设置一个操作的多个实例时，如果设备仍然不符合要求，则该操作将在稍后的计划时间再次运行。
+对于设置的每个操作，都可以配置一个确定该操作何时生效的计划。 计划是在将设备标记为不合规之后的天数。 你还可配置一个操作的多个实例。 在策略中设置一个操作的多个实例时，如果设备仍然不符合要求，则该操作将在稍后的计划时间再次运行。
 
 并非所有操作都适用于所有平台。
 
@@ -48,7 +48,7 @@ ms.locfileid: "83989308"
 - **向最终用户发送电子邮件**：此操作将向用户发送电子邮件通知。
 启用此操作时：
 
-  - 选择此操作发送的通知消息模板。 必须[创建通知消息模板](#create-a-notification-message-template)，然后才能将其分配给此操作。 创建自定义通知时，可自定义主题和邮件正文，还可包含公司徽标、公司名称和其他联系信息。
+  - 选择此操作发送的通知消息模板。 需要先[创建通知消息模板](#create-a-notification-message-template)，然后才能将其分配给此操作。 创建自定义通知时，可自定义主题和邮件正文，还可包含公司徽标、公司名称和其他联系信息。
   - 通过选择一个或多个 Azure AD 组，选择将邮件发送给其他收件人。
 
 发送电子邮件时，Intune 会在电子邮件通知中附上不符合设备的详细信息。
@@ -100,12 +100,12 @@ ms.locfileid: "83989308"
   
   例如，你可将第一个操作计划为零天，然后添加该操作的第二个实例并将其计划设为三天。 在第二次通知之前出现的这种延迟会给用户几天时间来解决问题，从而避免第二次通知。
 
-  为了避免向用户发送过多的重复消息，请检查哪些符合性策略包括关于不符合性的推送通知并进行简化，同时检查计划，避免过于频繁地就同一问题发送重复通知。
+  为了避免向用户发送过多的重复消息，请检查哪些合规性策略包括关于不合规的推送通知并进行简化，同时检查计划，避免过于频繁地重复通知。
 
   请注意以下几点：
   - 如果一个策略的多个实例设为同一天发送推送通知，则当天只发送一则通知。
 
-  - 如果多个符合性策略包含相同的符合性条件，并包含具有相同计划的推送通知操作，则会在同一天向同一台设备发送多个通知。
+  - 如果多个合规性策略包含相同的合规性条件，并包含具有相同计划的推送通知操作，Intune 会在同一天向同一台设备发送多个通知。
 
 ## <a name="before-you-begin"></a>在开始之前
 
@@ -126,22 +126,22 @@ ms.locfileid: "83989308"
 要向用户发送电子邮件，请创建通知消息模板。 设备不符合要求时，在模板中输入的详细信息将显示在发送给用户的电子邮件中。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备” > “符合性策略” > “通知” > “创建通知”。
+2. 选择“终结点安全性” > “设备合规性” > “通知” > “创建通知”   。
 3. 在“基本”下，指定以下信息：
 
    - **Name**
    - **主题**
    - **Message**
 
-4. 此外，在“基本”下，配置以下通知选项，这些选项都默认为“启用”：
+4. 此外，在“基本”下，配置以下通知选项：
 
-   - **电子邮件标头 – 包括公司徽标**
-   - **电子邮件页脚 – 包括公司名称**
-   - **电子邮件页脚 – 包括联系人信息**
+   - **电子邮件标头 - 包括公司徽标**（默认 = 启用） - 作为公司门户品牌的一部分上传的徽标可用于电子邮件模板。 有关公司门户品牌的详细信息，请参阅[公司标识品牌自定义](../apps/company-portal-app.md#customizing-the-user-experience)。
+   - **电子邮件页脚 - 包括公司名称**（默认 = 启用）
+   - **电子邮件页脚 - 包括联系人信息**（默认 = 启用）
+   - **公司门户网站链接**（默认 = 禁用）- 当设置为“启用”时，电子邮件将包括一个指向公司门户网站的链接 。
 
-   作为公司门户品牌的一部分上传的徽标可用于电子邮件模板。 有关公司门户品牌的详细信息，请参阅[公司标识品牌自定义](../apps/company-portal-app.md#customizing-the-user-experience)。
-
-   ![Intune 中符合性通知邮件的示例](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![Intune 中合规性通知邮件的示例](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    选择“下一步”继续操作。
 
@@ -185,7 +185,7 @@ ms.locfileid: "83989308"
 
    在合规性策略中，假设还想要通知用户。 可以添加“向最终用户发送电子邮件”操作。 在此“发送电子邮件”操作中，将“计划”设置为“2”天。 如果设备或最终用户在第 2 天仍被评估为不合规，系统就会在第 2 天发送电子邮件。 若要在被评估为不合规的第 5 天再次向用户发送电子邮件，请添加另一个操作，并将“计划”设置为“5”天。
 
-  若要详细了解合规性和内置操作，请参阅[合规性概述](device-compliance-get-started.md)。
+   若要详细了解合规性和内置操作，请参阅[合规性概述](device-compliance-get-started.md)。
 
 6. 完成后，选择“添加” > “确定”，保存所做更改 。
 

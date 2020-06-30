@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761f46cdf8865694ba8960044954a16c415a3eba
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4319435b170203f6dfd3763f1d05d2752fc76f8e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988233"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107508"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>查找 Intune 设备的主要用户
 
@@ -31,23 +31,22 @@ ms.locfileid: "83988233"
 ## <a name="find-a-devices-primary-user"></a>查找设备的主要用户
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”  > 选择一台设备。
-3. 在“概述”页面上，可以看到列出的主要用户  。
+2. 选择“设备”> 选择一台设备。
+3. 在“概述”页面上，可以看到列出的主要用户。
 
 ## <a name="change-a-devices-primary-user"></a>更改设备的主要用户
 
 可以为已联接 Azure AD 或已联接混合 Azure AD 的 Windows 10 设备更新设备的主要用户。
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-2. 选择“设备”   > “所有设备”  > 选择设备 >“属性”   > “更改主要用户”  。
-3. 选择新用户，然后选择“选择”  。
+2. 选择“设备” > “所有设备”> 选择设备 >“属性” > “更改主要用户”。
+3. 选择新用户，然后选择“选择”。
 
 更新主要用户之后，它也会在 Intune 和 Azure AD 设备边栏选项卡中更新。
 >[!NOTE]
 >1. 对跨终结点管理器和 Azure AD 的主要用户的更新最多可能需要 10 分钟才能反映出来。
->2. 目前无法在共同托管的 Windows 10 设备上更改主要用户。 
->3. 更改设备的主要用户不会对本地组成员资格进行任何更改，例如在“管理员”本地组中添加或删除用户
->4. 更改主要用户不会更改“注册者”用户。 
+>2. 更改设备的主要用户不会对本地组成员资格进行任何更改，例如在“管理员”本地组中添加或删除用户
+>3. 更改主要用户不会更改“注册者”用户。 
 
 
 ## <a name="what-is-the-primary-user"></a>什么是主要用户？
@@ -79,16 +78,18 @@ Intune 会在注册过程中或不久后自动将主要用户添加到设备。 
 | Windows | 仅注册 MDM | 注册用户 | 在注册过程中 | 
 | Windows | 混合 AADJ + 自动注册 GPO | 登录到 Windows 的第一个用户 | 当第一个用户登录到 Windows 时| 
 | Windows | 共同管理 | 登录到 Windows 的第一个用户 | 当第一个用户登录到 Windows 时 | 
-| Windows | Azure AD 联接（批量注册令牌） | 无 | Not applicable | 
-| Windows | Azure AD 联接（Autopilot 自部署模式） | 无 | Not applicable | 
+| Windows | Azure AD 联接（批量注册令牌） | 无 | “不适用” | 
+| Windows | Azure AD 联接（Autopilot 自部署模式） | 无 | “不适用” | 
 | 跨平台 | 使用公司门户应用进行用户驱动的注册 | 注册用户 | 在注册过程中 |
 | 跨平台 | 设备注册管理员 (DEM) | 注册 DEM 用户 | 在注册过程中 |
 | iOS/iPadOS、macOS | Apple 自动设备注册（具有用户关联的 DEP） | 注册用户 | 在注册过程中 |
-| iOS/iPadOS、macOS | Apple 自动设备注册（没有用户关联的 DEP） | 无 | Not applicable |
-| Android | Android 公司拥有的专用设备 | 无 | Not applicable |
+| iOS/iPadOS、macOS | Apple 自动设备注册（没有用户关联的 DEP） | 无 | “不适用” |
+| Android | Android 公司拥有的专用设备 | 无 | “不适用” |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>主要用户和 Azure AD 设备所有者
-在某些情况下，Intune 主要用户可能与 Azure AD 设备的“所有者”  属性（可在“设备”   > “Azure AD 设备”  下查看）不同。 在将设备注册到 Azure Active Directory 过程中会添加Azure AD 设备所有者。
+在某些情况下，Intune 主要用户可能与 Azure AD 设备的“所有者”属性（可在“设备” > “Azure AD 设备”下查看）不同。 在将设备注册到 Azure Active Directory 过程中会添加Azure AD 设备所有者。
+
+对于新注册的 Azure AD 设备，在设置 Intune 主要用户的同时，会自动设置 Azure AD“所有者”属性。
 
 ## <a name="next-steps"></a>后续步骤
 [管理 Intune 设备。](device-management.md)

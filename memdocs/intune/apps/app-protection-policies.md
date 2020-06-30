@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330995"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216393"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>如何创建和分配应用保护策略
 
@@ -183,14 +183,14 @@ Intune 应用保护策略是一种针对用户身份的策略，因此用户的�
 
 ### <a name="device-types"></a>设备类型
 
-- **非托管**：非托管设备是未检测到 Intune MDM 管理的设备。 这包括由第三方 MDM 供应商托管的设备。
+- **非托管**：对于 iOS/iPadOS 设备，非托管设备是指 Intune MDM 管理或第三方 MDM/EMM 解决方案未传递 `IntuneMAMUPN` 密钥的任何设备。 对于 Android 设备，非托管设备是指未检测到 Intune MDM 管理的设备。 这包括由第三方 MDM 供应商托管的设备。
 - **Intune 托管设备**：托管设备由 Intune MDM 管理。
 - **Android 设备管理员**：使用 Android 设备管理 API 的 Intune 托管设备。
 - **Android Enterprise**：使用 Android Enterprise 工作配置文件或 Android Enterprise 完全设备管理的 Intune 托管设备。
 
 在 Android 上，无论选择哪种设备类型，Android 设备都将提示安装 Intune 公司门户应用。 例如，如果选择“Android Enterprise”，则仍会提示使用非托管 Android 设备的用户。
 
-对于 iOS/iPadOS，要对“非托管”设备强制执行“设备类型”选择，则需要其他应用配置设置。 这些配置将与管理特定应用的应用服务通信，并且该应用设置将不适用：
+对于 iOS/iPadOS，要对 Intune 管理的设备强制执行“设备类型”选择，则需要其他应用配置设置。 这些配置将与管理特定应用的应用服务通信，并且该应用设置将不适用：
 
 - 必须为所有 MDM 托管应用程序配置“IntuneMAMUPN”。 有关详细信息，请参阅[如何在 Microsoft Intune 中管理 iOS/iPadOS 应用之间的数据传输](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)。
 - 必须为所有第三方和业务线 MDM 托管应用程序配置“IntuneMAMDeviceID”。 应将“IntuneMAMDeviceID”配置为设备 ID 令牌。 例如，`key=IntuneMAMDeviceID, value={{deviceID}}`。 有关详细信息，请参阅[为受管理 iOS/iPadOS 设备添加应用配置策略](app-configuration-policies-use-ios.md)。

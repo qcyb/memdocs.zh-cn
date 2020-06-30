@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983799"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093182"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中使用设备配置文件的设备应用功能和设置
 
@@ -41,7 +41,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="administrative-templates"></a>管理模板
 
-[管理模板](administrative-templates-windows.md)包括数百个可针对 Internet Explorer、OneDrive、远程桌面、Word、Excel 和其他 Office 程序配置的设置。
+[管理模板](administrative-templates-windows.md)包括数百个可针对 Internet Explorer、Microsoft Edge、OneDrive、远程桌面、Word、Excel 和其他 Office 程序配置的设置。
 
 这些模板为管理员提供了类似于组策略的简化设置视图，但它们是完全基于云的。
 
@@ -132,7 +132,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 - Windows 10 及更高版本
 
-## <a name="edition-upgrade"></a>版本升级
+## <a name="edition-upgrade-and-mode-switch"></a>版本升级和模式切换
 
 [Windows 10 版本升级](edition-upgrade-configure-windows-10.md)将运行某些 Windows 10 版本的设备自动升级到较新的版本。
 
@@ -202,7 +202,15 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 - Windows 10 及更高版本
 
-展台设置也可用作适用于 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) 和 [iOS/iPadOS](device-restrictions-ios.md#kiosk) 的设备限制。
+展台设置也可用作适用于 [Android](device-restrictions-android.md#kiosk)、[Android Enterprise](device-restrictions-android-for-work.md#device-experience) 和 [iOS/iPadOS](device-restrictions-ios.md#kiosk) 的设备限制。
+
+## <a name="mx-profile-zebra"></a>MX 配置文件 (Zebra)
+
+[移动性扩展 (MX)](android-zebra-mx-overview.md) 阐述了内置 Intune 设置，这些设置可用于自定义或添加更多特定于 Zebra 设备的设置。 Zebra 设备通常用于工厂车间和零售环境。 如果你有数百或数千台 Zebra 设备，则可以使用 Intune 来配置和管理这些设备。
+
+此功能支持：
+
+- Android 设备管理员
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -214,7 +222,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) 标准允许 OEM（原始设备制造商）和 EMM（企业移动性管理）按照标准方式构建和支持特定于 OEM 的 Android Enterprise 设备功能。 OEM 使用 OEMConfig 创建架构来定义特定于 OEM 的管理功能，并将其嵌入上传到 Google Play 的应用。 Intune 从该应用读取此架构，允许 Intune 管理员配置架构中的设置。
+在 Android Enterprise 设备上，[OEMConfig](android-oem-configuration-overview.md) 标准允许 OEM（原始设备制造商）和 EMM（企业移动性管理）按照标准方式构建和支持特定于 OEM 的功能。 OEM 使用 OEMConfig 创建架构来定义特定于 OEM 的管理功能，并将其嵌入上传到 Google Play 的应用。 Intune 从该应用读取此架构，并允许 Intune 管理员配置架构中的设置。
 
 此功能支持：
 
@@ -222,7 +230,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="powershell-scripts"></a>PowerShell 脚本
 
-[Windows 10 设备的 PowerShell 脚本](../apps/intune-management-extension.md)使用 Intune 管理扩展从 Intune 上传 PowerShell 脚本，然后在设备上运行这些脚本。 另请参阅使用此扩展所需的条件、如何将它们添加到 Intune，以及其他重要信息。
+[PowerShell 脚本](../apps/intune-management-extension.md)使用 Intune 管理扩展从 Intune 上传 PowerShell 脚本，然后在设备上运行这些脚本。 另请参阅使用此扩展所需的条件、如何将它们添加到 Intune，以及其他重要信息。
 
 此功能支持：
 
@@ -278,7 +286,7 @@ macOS 设备上的[首选项文件](preference-file-settings-macos.md)包括有�
 
 [Wi-Fi 设置](wi-fi-settings-configure.md)将无线网络设置分配给用户和设备。 分配 WiFi 配置文件后，用户无需自行配置即可访问公司 Wi-Fi。 
 
-此功能支持： 
+此功能支持：
 
 - Android 设备管理员
 - Android Enterprise
@@ -286,6 +294,16 @@ macOS 设备上的[首选项文件](preference-file-settings-macos.md)包括有�
 - macOS
 - Windows 8.1 （仅限导入）
 - Windows 10 及更高版本
+
+## <a name="wired-networks"></a>有线网络
+
+[有线网络](wired-networks-configure.md)可用于为 macOS 桌面计算机创建和管理 802.1x 有线连接。 在配置文件中，选择网络接口，选择接受的 EAP 类型，并输入服务器信任设置，包括 PKCS 和 SCEP 证书。
+
+分配配置文件时，macOS 桌面用户无需自行配置即可访问公司有线网络。
+
+此功能支持：
+
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra 移动性扩展 (MX)
 
