@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093687"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502368"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 中 Android 和 Samsung Knox Standard 设备限制设置列表
 
@@ -178,7 +178,7 @@ ms.locfileid: "85093687"
 
 展台设置仅适用于 Samsung Knox Standard 设备和使用 Intune 管理的应用。
 
-- 添加要在设备处于展台模式时运行的应用。 在展台模式下，仅运行所添加的应用，未添加的应用不会运行。 当设备处于展台模式时，预安装的浏览器不会作为应用运行。 如果需要浏览器，请考虑使用 [Managed Browser](../apps/app-configuration-managed-browser.md)。
+- 添加要在设备处于展台模式时运行的应用。 在展台模式下，仅运行所添加的应用，未添加的应用不会运行。 当设备处于展台模式时，预安装的浏览器不会作为应用运行。 如果需要浏览器，请考虑使用 [Managed Browser](../apps/manage-microsoft-edge.md)。
 
   应用选项：
 

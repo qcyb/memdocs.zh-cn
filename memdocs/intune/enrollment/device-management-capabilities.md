@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989842"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502623"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Microsoft Intune 已注册设备管理功能
 
@@ -55,7 +55,7 @@ ms.locfileid: "83989842"
 |移动应用程序管理|使用针对所有设备（无论是否由 Intune 托管）的移动应用程序管理配置应用的限制。 你可以通过限制数据的复制粘贴、外部备份和应用之间的数据传输等操作来提高公司数据的安全性。|[在 Microsoft Intune 控制台中配置和部署移动应用程序管理策略](../developer/app-wrapper-prepare-android.md)|
 |iOS 移动应用配置|使用移动应用配置策略可提供用户在运行 iOS/iPadOS 应用时可能需要的设置。 例如，某一个应用可能要求用户指定端口号或登录信息。 你可以简化应用配置并减少支持呼叫次数。|[使用 Microsoft Intune 中的移动应用配置策略配置 iOS/iPadOS 应用](../apps/app-configuration-policies-use-ios.md)|
 |iOS/iPadOS 移动应用预配配置文件|帮助你将预配配置文件部署到即将到期的 iOS/iPadOS 应用。 |[使用 iOS/iPadOS 移动预配配置文件策略防止应用过期](../apps/app-provisioning-profile-ios.md)|
-|托管浏览器|配置托管浏览器策略以控制设备用户可访问的网站。 此外，您可以将移动应用程序管理策略应用到托管浏览器。|[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](../apps/app-configuration-managed-browser.md)|
+|托管浏览器|配置托管浏览器策略以控制设备用户可访问的网站。 此外，您可以将移动应用程序管理策略应用到托管浏览器。|[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](../apps/manage-microsoft-edge.md)|
 |Windows Hello 企业版|让你可以与 Windows Hello 企业版集成，这是一种适用于 Windows 10 的替代登录方法，它使用本地 Active Directory 或 Azure Active Directory 来取代密码、智能卡或虚拟智能卡。|[使用 Microsoft Intune 控制设备上的 Windows Hello 企业版设置](../protect/windows-hello.md)|
 |批量购买应用程序|帮助你通过以下操作管理通过批量购买计划购买的应用：从应用商店中导入许可证信息、跟踪已使用的许可证的数量，以及阻止安装超出你所拥有的应用的更多副本。|[使用 Microsoft Intune 管理批量购买的应用](../apps/vpp-apps.md)|
 

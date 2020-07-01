@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1881e43c1725d92a81d794fa240e6394eff1cbd4
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264067"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502385"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 中前几个月的新增功能
 
@@ -1679,7 +1679,7 @@ Intune 管理员可以指定 Intune APP“限制使用其他应用剪切、复�
 现在可以使用 Intune 从 Azure Active Directory 查看有关 BitLocker 密钥 ID 和 BitLocker 恢复密钥的[详细信息](../protect/encryption-monitor.md)。
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Microsoft Edge 支持 iOS 和 Android 设备上的 Intune 方案<!-- 3411007 -->
-Microsoft Edge 支持与 Intune Managed Browser 相同的所有管理方案，并新增了对最终用户体验的改进。 Intune 策略启用的 Microsoft Edge 企业功能包括双重标识、应用保护策略集成、Azure 应用程序代理集成、托管收藏夹和主页快捷方式。 有关详细信息，请参阅 [Microsoft Edge 支持](../apps/app-configuration-managed-browser.md#microsoft-edge-support)。
+Microsoft Edge 支持与 Intune Managed Browser 相同的所有管理方案，并新增了对最终用户体验的改进。 Intune 策略启用的 Microsoft Edge 企业功能包括双重标识、应用保护策略集成、Azure 应用程序代理集成、托管收藏夹和主页快捷方式。 有关详细信息，请参阅 [Microsoft Edge 支持](../apps/manage-microsoft-edge.md)。
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices--3105122----"></a>Exchange Online/Intune 连接器不再支持只有 EAS 的设备<!--3105122  -->
 Intune 控制台不再支持查看和管理使用 Intune 连接器连接到 Exchange Online 的只有 EAS 的设备。 但你有以下选项：
@@ -1726,7 +1726,7 @@ Intune 控制台不再支持查看和管理使用 Intune 连接器连接到 Exch
 可以向应用配置策略添加范围标记，以便只有具有特定角色（该角色也分配有该作用域标记）的人员才能够访问应用配置策略。 应用配置策略仅针对或关联到分配有相同范围标记的应用。 有关详细信息，请参阅[使用 RBAC 和范围标记](scope-tags.md)。
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Microsoft Edge 支持 iOS 和 Android 设备上的 Intune 方案<!-- 3411007 -->
-Microsoft Edge 将增加对最终用户体验的改进，支持与 Intune 托管浏览器相同的所有管理方案。 Intune 策略启用的 Microsoft Edge 企业功能包括双重标识、应用保护策略集成、Azure 应用程序代理集成、托管收藏夹和主页快捷方式。 有关详细信息，请参阅 [Microsoft Edge 支持](../apps/app-configuration-managed-browser.md#microsoft-edge-support)。
+Microsoft Edge 将增加对最终用户体验的改进，支持与 Intune 托管浏览器相同的所有管理方案。 Intune 策略启用的 Microsoft Edge 企业功能包括双重标识、应用保护策略集成、Azure 应用程序代理集成、托管收藏夹和主页快捷方式。 有关详细信息，请参阅 [Microsoft Edge 支持](../apps/manage-microsoft-edge.md)。
 
 
 
@@ -3935,7 +3935,7 @@ Intune 管理扩展允许你在 Intune 中上传 PowerShell 脚本以在 Windows
 #### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>访问 iOS 的托管应用日志<!-- 1469920 -->
 安装了 Managed Browser 的最终用户现在可查看所有 Microsoft 已发布应用的管理状态，并可针对托管 iOS 应用的疑难问题发送日志。
 
-若要了解如何在运行于 iOS 设备上的 Managed Browser 中启用疑难解答模式，请参阅[如何在 iOS 上使用 Managed Browser 访问托管应用日志](../apps/app-configuration-managed-browser.md)。
+若要了解如何在运行于 iOS 设备上的 Managed Browser 中启用疑难解答模式，请参阅[如何在 iOS 上使用 Managed Browser 访问托管应用日志](../apps/manage-microsoft-edge.md)。
 
 #### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>在适用于 iOS 的公司门户（版本 2.9.0）中对设备设置工作流的改进<!-- 1417174 -->
 
@@ -4355,11 +4355,11 @@ Intune 现支持上传 iOS、macOS 和 Android 序列号作为公司设备的标
 对于适用于 Exchange 和 SharePoint Online 的基于应用的条件访问策略，适用于 iOS 和 Android 的 Microsoft Teams 应用现属于已批准应用。 将能够利用基于应用的条件访问通过 Azure 门户中的“Intune 应用保护”边栏选项卡为所有租户配置应用。
 
 #### <a name="managed-browser-and-app-proxy-integration---1287310---"></a>Managed Browser 和应用代理集成<!-- 1287310 -->
-Intune Managed Browser 现在可与 Azure AD 应用程序代理服务集成，以使用户甚至可在远程工作的时候访问内部网站。 浏览器用户只需像平时一样简单输入网站 URL，Managed Browser 便会通过应用代理 Web 网关路由请求。 有关详细信息，请参阅[使用 Managed Browser 策略管理 Internet 访问权限](../apps/app-configuration-managed-browser.md)。
+Intune Managed Browser 现在可与 Azure AD 应用程序代理服务集成，以使用户甚至可在远程工作的时候访问内部网站。 浏览器用户只需像平时一样简单输入网站 URL，Managed Browser 便会通过应用代理 Web 网关路由请求。 有关详细信息，请参阅[使用 Managed Browser 策略管理 Internet 访问权限](../apps/manage-microsoft-edge.md)。
 
 #### <a name="new-app-configuration-settings-for-the-intune-managed-browser---682951---"></a>Intune Managed Browser 的新应用配置设置<!-- 682951 -->
 在此版本中，我们为适用于 iOS 和 Android 的 Intune Managed Browser 应用添加了进一步配置。 现在你能够使用应用配置策略为浏览器配置默认主页和书签。
-有关详细信息，请参阅[使用 Managed Browser 策略管理 Internet 访问](../apps/app-configuration-managed-browser.md)
+有关详细信息，请参阅[使用 Managed Browser 策略管理 Internet 访问](../apps/manage-microsoft-edge.md)
 
 #### <a name="bitlocker-settings-for-windows-10----951707---"></a>适用于 Windows 10 的 BitLocker 设置 <!-- 951707 -->
 你现在可以使用新的 Intune 设备配置文件为 Windows 10 设备配置 BitLocker 设置。 例如，可以要求加密设备，还可以配置在打开 BitLocker 时应用的进一步设置。
@@ -4446,10 +4446,10 @@ Android 和 iOS 上均提供此功能。 Intune 支持对 OS 平台版本、应�
 应用商店中的部分 Android 应用支持托管的配置选项，可让 IT 管理员控制应用在工作配置文件中的运行方式。 使用 Intune，现在可以查看应用支持的配置，并在 Azure 门户中使用配置设计器或 JSON 编辑器对它们进行配置。 有关详细信息，请参阅[使用针对 Android for Work 的应用配置](../apps/app-configuration-policies-use-android.md)。
 
 #### <a name="new-app-configuration-capability-for-mam-without-enrollment---677969---"></a>针对没有注册的 MAM 的新应用注册功能<!-- 677969 -->
-你现在可以通过没有注册通道的 MAM 创建应用配置策略。 此功能相当于移动设备管理 (MDM) 应用配置中提供的应用配置策略。 有关使用没有注册的 MAM 的应用配置示例，请参阅[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](../apps/app-configuration-managed-browser.md)。
+你现在可以通过没有注册通道的 MAM 创建应用配置策略。 此功能相当于移动设备管理 (MDM) 应用配置中提供的应用配置策略。 有关使用没有注册的 MAM 的应用配置示例，请参阅[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](../apps/manage-microsoft-edge.md)。
 
 #### <a name="configure-allowed-and-blocked-url-lists-for-the-managed-browser---682960---"></a>为 Managed Browser 配置允许和阻止的 URL 列表<!-- 682960 -->
-你现在可以使用 Azure 门户中的应用配置设置为 Intune Managed Browser 配置允许和阻止的域和 URL 列表。 无论是在受管还是不受管的设备上使用它，都可以配置这些设置。 有关详细信息，请参阅[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](../apps/app-configuration-managed-browser.md)。
+你现在可以使用 Azure 门户中的应用配置设置为 Intune Managed Browser 配置允许和阻止的域和 URL 列表。 无论是在受管还是不受管的设备上使用它，都可以配置这些设置。 有关详细信息，请参阅[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](../apps/manage-microsoft-edge.md)。
 
 #### <a name="app-protection-policy-helpdesk-view---1069473---"></a>应用保护策略支持人员视图<!-- 1069473 -->
 IT 支持人员用户现在可以在“疑难解答”边栏选项卡中查看用户许可证状态和已分配给用户的应用保护策略应用的状态。 有关详细信息，请参阅[疑难解答](./help-desk-operators.md)。

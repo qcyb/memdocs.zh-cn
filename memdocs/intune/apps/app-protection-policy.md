@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989623"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502589"
 ---
 # <a name="app-protection-policies-overview"></a>应用保护策略概述
 
@@ -313,7 +313,7 @@ MAM 选择性擦除仅删除应用中的公司应用数据。 使用 Intune Azur
 Intune 应用保护要求用户的身份在应用程序与 [Intune SDK](../developer/app-sdk.md) 之间保持一致。 保证此种一致的唯一方法是通过新式身份验证。 在某些情况下应用可能适用于本地配置，但它们既不一致也无法得到保证。
 
 **从托管应用中打开 Web 链接的安全方法**<br>
-IT 管理员可以为 [Microsoft Edge](app-configuration-managed-browser.md)（可使用 Intune 轻松管理的 Web 浏览器）部署和设置应用保护策略。 IT 管理员可以要求 Intune 托管应用中的所有 Web 链接均使用 Managed Browser 应用打开。
+IT 管理员可以为 [Microsoft Edge](manage-microsoft-edge.md)（可使用 Intune 轻松管理的 Web 浏览器）部署和设置应用保护策略。 IT 管理员可以要求 Intune 托管应用中的所有 Web 链接均使用 Managed Browser 应用打开。
 
 ## <a name="app-protection-experience-for-ios-devices"></a>适用于 iOS 设备的应用保护体验
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58c78b43fc90aba68fa20d20153b33e7879636e6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c0a732db0adf9d08bf8a453a365002d8e1f8b22d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166070"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502708"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Microsoft Intune App SDK 概述
 Intune App SDK 可用于 iOS 和 Android，可让应用支持 Intune [应用保护策略](../apps/app-protection-policy.md)。 如果应用应用了应用保护策略，它可以由 Intune 托管，并被 Intune 识别为托管应用。 此 SDK 努力使应用开发者所需的代码更改数量降到最低。 你会发现可以在不改变应用行为的情况下启用大部分 SDK 功能。 为了增强最终用户和 IT 管理员体验，可利用 SDK 的 API 自定义应用行为以支持需要应用参与的功能。
@@ -47,7 +47,7 @@ IT 管理员可以强制执行策略，确保对应用保存到设备的数据�
 IT 管理员可从 Intune 托管的应用远程擦除企业数据。 此功能基于标识，将仅删除与最终用户的公司标识相关联的文件。 若要执行此操作，此功能要求应用的参与。 应用可指定基于用户设置应进行擦除的标识。 在应用没有指定这些用户设置的情况下，默认行为是擦除应用程序目录，并通知最终用户已删除访问权限。
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>强制使用托管浏览器
-IT 管理员可使用 [Intune Managed Browser 应用](../apps/app-configuration-managed-browser.md)强制打开应用中的 Web 链接。 此功能可确保企业环境中显示的链接保持在 Intune 管理的应用的域中。
+IT 管理员可使用 [Intune Managed Browser 应用](../apps/manage-microsoft-edge.md)强制打开应用中的 Web 链接。 此功能可确保企业环境中显示的链接保持在 Intune 管理的应用的域中。
 
 ### <a name="enforce-a-pin-policy"></a>强制执行 PIN 策略
 IT 管理员可要求最终用户输入 PIN 以访问应用中的公司数据。 这可确保使用应用的用户与最初使用工作或学校帐户登录的用户为同一用户。 最终用户配置其 PIN 时，Intune App SDK 使用 Azure Active Directory 验证最终用户的凭据是否为已注册的 Intune 帐户。

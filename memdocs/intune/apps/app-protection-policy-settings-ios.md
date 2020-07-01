@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1a3dffd48f67c53d9a61340e2b70be2e3a2afcf
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 6cfd2879c6e764da9a1b758e072f0b80ee434713
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092941"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502657"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS 应用保护策略设置
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85092941"
 |------|----------|-------|
 | **使用本机联系人应用同步应用** |  选择“阻止”，阻止应用将数据保存到设备上的本机“联系人”应用。 如果选择“允许”，应用可以将数据保存到设备上的本机“联系人”应用。 <br><br>执行选择性擦除以从应用删除工作或学校数据时，将删除从应用直接同步到本机“联系人”应用的联系人。 无法擦除从本机通讯簿同步到另一个外部源中的任何联系人。 目前仅适用于 Microsoft Outlook 应用。   | **允许**  |
 | **打印组织数据** | 选择“阻止”，阻止应用打印工作或学校数据。 如果将此设置保留为“允许”（默认值），用户将能够导出和打印所有组织数据。  | **允许**  |
-| **限制使用其他应用传输 Web 内容** | 指定如何从策略管理的应用中打开 Web 内容（http/https 链接）。 选择： <ul><li>**任何应用**：允许在任何应用中使用 Web 链接。</li><li>**Intune Managed Browser**：仅允许在 Intune Managed Browser 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**Microsoft Edge**：仅允许在 Microsoft Edge 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**非托管浏览器**：允许 Web 内容仅在“非托管浏览器协议”设置定义的非托管浏览器中打开。 Web 内容在目标浏览器中处于非托管状态。<br>**注意**：要求应用具有 Intune SDK 版本 11.0.9 或更高版本。</li></ul> 如果正使用 Intune 管理设备，请参阅[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](app-configuration-managed-browser.md)。<br><br>如果需要策略托管的浏览器，但未安装，系统将提示最终用户安装 Microsoft Edge。<p>如果需要使用策略托管的浏览器，请通过“允许应用向其他应用传送数据”策略设置管理 iOS/iPadOS 通用链接。 <p>**Intune 设备注册**<br>如果使用 Intune 管理设备，请参阅“使用 Microsoft Intune 的托管浏览器策略管理 Internet 访问”。 <p>**策略托管的 Microsoft Edge**<br>移动设备（iOS/iPadOS 和 Android）的 Microsoft Edge 浏览器支持 Intune 应用保护策略。 在 Microsoft Edge 浏览器应用程序中使用其企业 Azure AD 帐户登录的用户将受 Intune 保护。 Microsoft Edge 浏览器集成了 Intune SDK 并支持其除阻止以外的所有数据保护策略：<br><ul><li>**另存为**：Microsoft Edge 浏览器不允许用户向云存储提供商（如 OneDrive）添加直接的应用内连接。</li><li>**联系人同步**：Microsoft Edge 浏览器不会保存到本地联系人列表。</li></ul><br>**注意**：*Intune SDK 无法确定目标应用是否为浏览器。在 iOS/iPadOS 设备上，不允许使用其他托管浏览器应用。*    | 未配置  |
+| **限制使用其他应用传输 Web 内容** | 指定如何从策略管理的应用中打开 Web 内容（http/https 链接）。 选择： <ul><li>**任何应用**：允许在任何应用中使用 Web 链接。</li><li>**Intune Managed Browser**：仅允许在 Intune Managed Browser 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**Microsoft Edge**：仅允许在 Microsoft Edge 中打开 Web 内容。 此浏览器是策略托管的浏览器。</li><li>**非托管浏览器**：允许 Web 内容仅在“非托管浏览器协议”设置定义的非托管浏览器中打开。 Web 内容在目标浏览器中处于非托管状态。<br>**注意**：要求应用具有 Intune SDK 版本 11.0.9 或更高版本。</li></ul> 如果正使用 Intune 管理设备，请参阅[使用 Microsoft Intune 的 Managed Browser 策略管理 Internet 访问](manage-microsoft-edge.md)。<br><br>如果需要策略托管的浏览器，但未安装，系统将提示最终用户安装 Microsoft Edge。<p>如果需要使用策略托管的浏览器，请通过“允许应用向其他应用传送数据”策略设置管理 iOS/iPadOS 通用链接。 <p>**Intune 设备注册**<br>如果使用 Intune 管理设备，请参阅“使用 Microsoft Intune 的托管浏览器策略管理 Internet 访问”。 <p>**策略托管的 Microsoft Edge**<br>移动设备（iOS/iPadOS 和 Android）的 Microsoft Edge 浏览器支持 Intune 应用保护策略。 在 Microsoft Edge 浏览器应用程序中使用其企业 Azure AD 帐户登录的用户将受 Intune 保护。 Microsoft Edge 浏览器集成了 Intune SDK 并支持其除阻止以外的所有数据保护策略：<br><ul><li>**另存为**：Microsoft Edge 浏览器不允许用户向云存储提供商（如 OneDrive）添加直接的应用内连接。</li><li>**联系人同步**：Microsoft Edge 浏览器不会保存到本地联系人列表。</li></ul><br>**注意**：*Intune SDK 无法确定目标应用是否为浏览器。在 iOS/iPadOS 设备上，不允许使用其他托管浏览器应用。*    | 未配置  |
 |<ul><ui>**非托管浏览器协议** | 输入单个非托管浏览器的协议。 策略托管应用程序的 Web 内容（http/https 链接）将在支持此协议的任何浏览器中打开。 Web 内容在目标浏览器中处于非托管状态。 <br><br>只有当你想要与特定浏览器共享受保护的内容，但又不允许使用 Intune 应用保护策略，才能使用此功能。 必须与浏览器供应商联系，确定所需的浏览器支持协议。<br><br>**注意**：*只包含协议前缀。如果浏览器需要 `mybrowser://www.microsoft.com` 格式的链接，请输入 `mybrowser`。*<br>链接将转换为：<br><ul><li>`http://www.microsoft.com` > `mybrowser://www.microsoft.com`</li><li>`https://www.microsoft.com` > `mybrowsers://www.microsoft.com`</li></ul> | **空**  |
 | **组织数据通知** | 指定如何针对组织帐户通过 OS 通知共享组织数据。 此策略设置将影响本地设备和任何连接的设备，如可穿戴设备和智能扬声器。 应用可能会提供其他控件来自定义通知行为，或者可以选择不接受所有值。 选择： <ul><li>**阻止**：不共享通知。</li><ul><li>如果应用程序不支持，则将允许通知。</li></ul><li>**阻止组织数据**：例如，不在通知中共享组织数据。</li><UL><li>“你有新邮件”；“你有个会议”。</li><li>如果应用程序不支持，通知将被阻止。</li></ul><li>**允许**：在通知中共享组织数据。</li></ul> <p>**注意**：*此设置需要应用支持。此时，Outlook for iOS 版本 4.34.0 或更高版本支持此设置。* | **允许**   |
 > [!NOTE]  

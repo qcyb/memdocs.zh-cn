@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b988e4ddeb306c7da290c87e8a32fa0571627257
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431665"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353626"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Intune 中的终结点安全性磁盘加密策略
 
@@ -64,5 +64,5 @@ ms.locfileid: "83431665"
 
 ## <a name="next-steps"></a>后续步骤
 
-- [要创建 FileVault 配置文件](../protect/encrypt-devices-filevault.md#create-an-endpoint-security-policy-for-filevault)
+- [要创建 FileVault 配置文件](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
 - [要创建 BitLocker 配置文件](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-bitlocker)
