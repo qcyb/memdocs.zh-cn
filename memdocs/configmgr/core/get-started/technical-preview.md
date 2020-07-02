@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 05/29/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226255"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383132"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -116,9 +116,41 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
 
 以下是最新 Configuration Manager 技术预览版中提供的功能：
+
+### <a name="technical-preview-version-2006"></a>技术预览版 2006
+
+- [在共同管理的设备上使用公司门户应用](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [通过 CMG 改进可用应用](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranet 客户端可以使用 CMG 软件更新点](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [通过 CMG 改进任务序列](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [针对远程工作者进行优化的管理见解](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [对 VPN 边界类型的改进](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [租户附加：对 Microsoft Endpoint Manager 管理中心中 Configuration Manager 操作的改进](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [对终结点保护策略的 CMG 支持](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [在租户附加加入期间导入以前创建的 Azure AD 应用程序](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [通过按流量计费的连接对客户端升级进行的改进](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [对管理设备重启的改进](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [改进了对 Windows 虚拟桌面的支持](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [指向 Configuration Manager 社区中心项的直接链接](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+
+> [!NOTE]
+> 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。
+
+## <a name="features-in-recent-technical-previews"></a>最新的技术预览版中的功能
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+以下是自当前分支版本 2002 以来早期 Configuration Manager 技术预览版发布的功能：
+
+> [!TIP]
+> 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能。 有关详细信息，请参阅[增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
 
 ### <a name="technical-preview-version-2005"></a>技术预览版 2005
 
@@ -138,22 +170,6 @@ bullet format:
 - [BitLocker 任务序列步骤的改进](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
 - [内容库清理工具的改进](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
 - [Windows 10 就地升级期间删除命令提示符](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-> [!NOTE]
-> 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。
-
-## <a name="features-in-recent-technical-previews"></a>最新的技术预览版中的功能
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-以下是自当前分支版本 2002 以来早期 Configuration Manager 技术预览版发布的功能：
-
-> [!TIP]
-> 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能。 有关详细信息，请参阅[增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
 
 ### <a name="technical-preview-version-2004"></a>技术预览版 2004
 

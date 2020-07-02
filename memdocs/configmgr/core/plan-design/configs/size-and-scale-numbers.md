@@ -10,16 +10,16 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0861bb73769beb6c7595b896afc8d0e156eef94d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688615"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715622"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>用于 Configuration Manager 的大小和扩展数量
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 每个 Configuration Manager 部署都存在可支持的站点、站点系统角色和设备的最大数量。 这些数量因层次结构（使用的站点的类型和数量）和部署的站点系统角色而异。 本文中的信息可帮助确定用于支持需要管理的设备的站点系统角色和站点的数量。
 
@@ -136,6 +136,9 @@ ms.locfileid: "81688615"
 
 有关管理点可支持的客户端数和设备数的信息，请参阅[管理点](#bkmk_mp)部分。  
 
+> [!NOTE]
+> 如果你启用管理点以支持[云管理网关](../../clients/manage/cmg/plan-cloud-management-gateway.md)，则它将按惯例为基于 Internet 的客户端请求提供服务。 管理点的调整大小指南并不会更改它是在本地还是基于 Internet 的客户端提供服务。
+
 ### <a name="software-update-point"></a>软件更新点  
 
 使用以下建议作为基线。 此基线可帮助你确定适合于你的组织的软件更新容量计划相关信息。 实际容量要求可能与本文中所列的建议有所不同，具体取决于以下条件：
@@ -144,6 +147,9 @@ ms.locfileid: "81688615"
 - 用于托管软件更新点站点系统的硬件
 - 受管客户端的数量
 - 服务器上安装的其他站点系统角色  
+
+> [!NOTE]
+> 如果你启用软件更新点以支持[云管理网关](../../clients/manage/cmg/plan-cloud-management-gateway.md)，则它将按惯例为基于 Internet 的客户端请求提供服务。 软件更新点的调整大小指南并不会更改它是在本地还是基于 Internet 的客户端提供服务。
 
 #### <a name="capacity-planning-for-the-software-update-point"></a><a name="BKMK_SUMCapacity"></a> 软件更新点的容量规划  
 
@@ -164,7 +170,7 @@ ms.locfileid: "81688615"
 
 使用下列容量信息来规划软件更新对象：  
 
-- **将部署中的软件更新数量限制为 1000** - 为每个软件更新部署将软件更新数限制为 1000。 创建自动部署规则 (ADR) 时，指定限制软件更新数量的条件。 如果指定的条件返回超过 1000 个软件更新时，ADR 失效。 在 Configuration Manager 控制台中的“自动部署规则”节点上查看 ADR 的状态  。 手动部署软件更新时，选择进行部署的更新不能超过 1000 个。  
+- **将部署中的软件更新数量限制为 1000** - 为每个软件更新部署将软件更新数限制为 1000。 创建自动部署规则 (ADR) 时，指定限制软件更新数量的条件。 如果指定的条件返回超过 1000 个软件更新时，ADR 失效。 在 Configuration Manager 控制台中的“自动部署规则”节点上查看 ADR 的状态。 手动部署软件更新时，选择进行部署的更新不能超过 1000 个。  
 
   配置基线中的软件更新数量也限制为 1000。 有关详细信息，请参阅[创建配置基线](../../../compliance/deploy-use/create-configuration-baselines.md)。
 

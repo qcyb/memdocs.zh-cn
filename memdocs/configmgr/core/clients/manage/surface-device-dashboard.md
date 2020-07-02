@@ -5,21 +5,21 @@ description: 使用仪表板查看有关 Surface 设备的信息。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613934"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager 中的 Surface 设备仪表板
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 从 1802 版开始，可通过 Surface 设备仪表板快速了解在环境中找到的 Surface 设备的相关信息。 <!--1355788-->
 
@@ -28,8 +28,8 @@ ms.locfileid: "82906292"
 若要打开 Surface 设备仪表板，请使用以下步骤： 
 
 1. 打开 Configuration Manager 控制台。 
-2. 单击“监视”  节点。 
-3. 若要加载仪表板，请单击“Surface 设备”  。
+2. 单击“监视”节点。 
+3. 若要加载仪表板，请单击“Surface 设备”。
 
 **Surface 设备仪表板**
 ![Surface 设备仪表板](media/Surface-device-dashboard.PNG)
@@ -59,7 +59,7 @@ Surface 设备仪表板针对你的环境显示三个图表。
 
 有关 Surface 设备的详细信息，请参阅 [Surface](https://www.microsoft.com/surface) 网站。
 
-有关在 Configuration Manager 中部署 Surface 固件更新的详细信息，请参阅[如何管理 Surface 驱动程序更新](https://support.microsoft.com/help/4098906)。
+有关在 Configuration Manager 中部署 Surface 固件更新的详细信息，请参阅[管理 Surface 驱动程序更新](../../../sum/deploy-use/surface-drivers.md)。
 
 
 

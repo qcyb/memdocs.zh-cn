@@ -2,7 +2,7 @@
 title: Internet 访问要求
 titleSuffix: Configuration Manager
 description: 了解允许使用 Configuration Manager 功能的完整功能的 Internet 终结点。
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454964"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740755"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -77,7 +77,8 @@ ms.locfileid: "84454964"
 
 有关该功能的详细信息，请参阅[配置用于 Configuration Manager 的 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)。
 
-- `management.azure.com`  
+- `management.azure.com`（Azure 公有云）
+- `management.usgovcloudapi.net`（Azure 美国政府云）
 
 ## <a name="co-management"></a>共同管理
 
@@ -110,31 +111,66 @@ ms.locfileid: "84454964"
 - Azure Active Directory (Azure AD) 集成
 - 基于 Azure AD 的发现
 
+有关 CMG 的详细信息，请参阅 [CMG 规划](../../clients/manage/cmg/plan-cloud-management-gateway.md)。
+
+以下部分按角色列出终结点。 某些终结点通过 `<name>`（这是 CMG 或 CDP 的云服务名称）引用服务。 例如，如果 CMG 为 `GraniteFalls.CloudApp.Net`，则实际存储终结点为 `GraniteFalls.blob.core.windows.net`。<!-- SCCMDocs#2288 -->
+
+### <a name="service-connection-point"></a>服务连接点
+
 对于 CMG/CDP 服务部署，服务连接点需要访问：
 
-- 特定的 Azure 终结点因环境而异，具体取决于配置。 Configuration Manager 将这些终结点存储在站点数据库中。 查询 SQL Server 中的 AzureEnvironments 表以获取 Azure 终结点的列表。  
+- 特定的 Azure 终结点因环境而异，具体取决于配置。 Configuration Manager 将这些终结点存储在站点数据库中。 查询 SQL Server 中的 AzureEnvironments 表以获取 Azure 终结点的列表。
+
+- [Azure 服务](#azure-services)
+
+- 对于 Azure AD 用户发现：
+
+  - 1902 版及更高版本：Microsoft Graph 终结点 `https://graph.microsoft.com/`
+
+  - 1810 版及更早版本：Azure AD Graph 终结点 `https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>CMG 连接点
 
 CMG 连接点需要访问以下服务终结点：
 
+- 云服务名称（用于 CMG 或 CDP）：
+  - `<name>.cloudapp.net`（Azure 公有云）
+  - `<name>.usgovcloudapp.net`（Azure 美国政府云）
+
 - 服务管理终结点：`https://management.core.windows.net/`  
 
-- 存储终结点：`<name>.blob.core.windows.net` 和 `<name>.table.core.windows.net`
+- 存储终结点（用于启用内容的 CMG 或 CDP）：
+  - `<name>.blob.core.windows.net`（Azure 公有云）
+  - `<name>.blob.core.usgovcloudapi.net`（Azure 美国政府云）
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    其中，`<name>` 是 CMG 或 CDP 的云服务名称。 例如，如果 CMG 是 `GraniteFalls.CloudApp.Net`，则允许的第一个存储终结点为 `GraniteFalls.blob.core.windows.net`。<!-- SCCMDocs#2288 -->
+CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角色的详细信息，请参阅[代理服务器支持](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 CMG 连接点仅需要连接到 CMG 服务终结点。 它不需要访问其他 Azure 终结点。
 
-对于通过 Configuration Manager 控制台和客户端进行的 Azure AD 令牌检索： 
+### <a name="configuration-manager-client"></a>Configuration Manager 客户端
 
-- ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
+- 云服务名称（用于 CMG 或 CDP）：
+  - `<name>.cloudapp.net`（Azure 公有云）
+  - `<name>.usgovcloudapp.net`（Azure 美国政府云）
 
-对于 Azure AD 用户发现，服务连接点需要访问：
+- 存储终结点（用于启用内容的 CMG 或 CDP）：
+  - `<name>.blob.core.windows.net`（Azure 公有云）
+  - `<name>.blob.core.usgovcloudapi.net`（Azure 美国政府云）
 
-- 1810 版及更早版本：Azure AD Graph 终结点 `https://graph.windows.net/`  
+- 对于 Azure AD 令牌检索，Azure AD 终结点：
+  - `login.microsoftonline.com`（Azure 公有云）
+  - `login.microsoftonline.us`（Azure 美国政府云）
 
-- 1902 版及更高版本：Microsoft Graph 终结点 `https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Configuration Manager 控制台
 
-云管理点 (CMG) 连接点站点系统支持使用 Web 代理。 有关配置代理的此角色的详细信息，请参阅[代理服务器支持](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 CMG 连接点仅需要连接到 CMG 服务终结点。 它不需要访问其他 Azure 终结点。
+- 对于 Azure AD 令牌检索，Azure AD 终结点：
 
-有关 CMG 的详细信息，请参阅 [CMG 规划](../../clients/manage/cmg/plan-cloud-management-gateway.md)。
+  - Azure 公有云
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Azure 美国政府云
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a>软件更新
 
@@ -204,18 +240,23 @@ CMG 连接点需要访问以下服务终结点：
 
 有关此功能的详细信息，请参阅[产品反馈](../../understand/find-help.md#product-feedback)。
 
-### <a name="community-workspace-documentation-node"></a>“社区”工作区、“文档”节点
+### <a name="community-workspace"></a>社区工作区
+
+#### <a name="documentation-node"></a>文档节点
+
+有关此控制台节点的详细信息，请参阅[使用 Configuration Manager 控制台](../../servers/manage/admin-console.md)。
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-有关此控制台节点的详细信息，请参阅[使用 Configuration Manager 控制台](../../servers/manage/admin-console.md)。
+#### <a name="community-hub"></a>社区中心
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+有关此功能的详细信息，请参阅[社区中心](../../servers/manage/community-hub.md)。
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>“监视”工作区、“站点层次结构”节点
 

@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906565"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353439"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 Configuration Manager 使用签名和加密帮助保护 Configuration Manager 层次结构中的设备的管理。 借助签名，如果数据在传输过程中发生更改，则会放弃它。 加密可帮助阻止攻击者使用网络协议分析器读取数据。  
 
@@ -70,7 +70,7 @@ Configuration Manager 使用签名和加密帮助保护 Configuration Manager �
  对于每个操作系统部署包，你可以在使用多播向计算机传输包时启用加密。 加密使用高级加密标准 (AES)。 如果启用加密，则不需要其他证书配置。 启用多播的分发点将自动生成对称密钥来加密包。 每个包都有不同的加密密钥。 系统使用标准 Windows API 将密钥存储在启用多播的分发点上。 当客户端连接到多播会话时，会通过通道进行密钥交换，通道使用 PKI 颁发的客户端身份验证证书（如果客户端使用 HTTPS）或自签名证书（如果客户端使用 HTTP）进行加密。 客户端仅在多播会话期间将密钥存储在内存中。  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>用于部署操作系统的媒体加密  
- 使用媒体部署操作系统以及指定密码来保护媒体时，系统使用高级加密标准 (AES) 对环境变量进行加密。 系统不加密媒体上的其他数据，包括应用程序的包和内容。  
+ 使用媒体部署操作系统以及指定密码来保护媒体时，系统使用高级加密标准 (AES) 以及 128 位密钥大小对环境变量进行加密。 系统不加密媒体上的其他数据，包括应用程序的包和内容。  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>基于云的分发点上承载的内容的加密  
  从 System Center 2012 Configuration Manager SP1 开始，在使用基于云的分发点时，使用高级加密标准 (AES) 以及 256 位密钥大小对上载到这些分发点的内容进行加密。 每当对内容进行更新时，都会重新加密内容。 当客户端下载内容时，会通过 HTTPS 连接来加密和保护内容。  

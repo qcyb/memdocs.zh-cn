@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268906"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107293"
 ---
 # <a name="assets-in-desktop-analytics"></a>桌面分析中的资产
 
@@ -56,7 +56,7 @@ ms.locfileid: "83268906"
 
 当“应用版本详细信息”设置处于禁用状态时，“应用详细信息”窗格显示它合并的应用版本和语言的数量。 你保存的对应用详细信息的任何更改会应用于所有版本。 例如，设置“重要性”或“所有者”。 有些值会显示“多个”，这表示在所有版本中没有一个一致的值。
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> 系统和应用商店应用的自动升级决策
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> 系统和应用商店应用的自动升级决策
 
 <!-- 3587232 -->
 标识“重要性”和“升级决策” 对于桌面分析工作流中的所有值得注意的应用都非常重要。 为了帮助减少批注这些应用的工作量，某些类型的应用会被自动标记为“不重要”。 这些应用的部署计划升级决策也会被标记为“就绪”。 以下应用是兼容的，并且应在升级 Windows 后继续工作：

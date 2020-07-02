@@ -2,7 +2,7 @@
 title: 2002 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 2002 中引入的更改和新增功能的详细信息。
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126475"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721850"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -329,7 +329,7 @@ Configuration Manager 现在可检测服务堆栈更新 (SSU) 是否为多个更
 <!-- 5229962 -->
 Configuration Manager 扩展了对将设备加入 Microsoft Defender ATP 的支持。 有关详细信息，请参阅 [Microsoft Defender 高级威胁防护](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)。
 
-## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 通过 Microsoft Endpoint Manager 管理中心将 Configuration Manager 客户端加入 Microsoft Defender ATP
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 通过 Microsoft Endpoint Manager 管理中心将 Configuration Manager 客户端加入 Microsoft Defender ATP
 <!--5691658-->
 现在可以将 Microsoft Defender ATP 终结点检测和响应 (EDR) 加入策略部署到 Configuration Manager 托管客户端。 这些客户端不需要 Azure AD 或 MDM 注册，并且策略是针对 ConfigMgr 集合而不是 Azure AD 组。
 
@@ -386,6 +386,16 @@ ID 为 53900 的状态消息表示提交成功，而 53901 表示提交失败。
 <!--5891241-->
 
 与以前的版本中的改进类似，可以从“配置项目”和“配置基线”节点使用“所有子文件夹”搜索选项  。
+
+### <a name="community-hub"></a>社区中心
+
+<!--3555935, 3555936-->
+
+2020 年 6 月首次引入
+
+多年来，IT 管理员社区积累了丰富的知识。 我们打造了 Configuration Manager 社区中心，以方便彼此共享，而不必从头开始重新创建脚本和报告等项目。 通过借鉴其他人的工作，你可以节省工作小时数。 社区中心支持你和其他人在相互借鉴各自工作的基础上生成内容，从而发展创造力。 GitHub 已构建面向全行业的共享流程和工具。 现在，社区中心将直接在 Configuration Manager 控制台中利用这些工具，作为推动新社区发展的基础组件。
+
+有关详细信息，请参阅[社区中心和 GitHub](../../servers/manage/community-hub.md)。
 
 ## <a name="tools"></a><a name="bkmk_tools"></a> 工具
 

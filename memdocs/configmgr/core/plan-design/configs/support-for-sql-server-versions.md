@@ -2,7 +2,7 @@
 title: 支持的 SQL Server 版本
 titleSuffix: Configuration Manager
 description: 获取托管 Configuration Manager 站点数据库的 SQL Server 版本和配置要求。
-ms.date: 04/03/2020
+ms.date: 06/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904630"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383166"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 每个 Configuration Manager 站点都需要受支持的 SQL Server 版本和配置来托管站点数据库。  
 
@@ -74,7 +74,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019：Standard、Enterprise
 
-自配置管理器版本 1910 起，可以将此版本与任何累积更新结合使用，但前提是累积更新版本受到 SQL 生命周期支持。
+自 Configuration Manager 版本 1910 起，可以将此版本与累积更新 5 (CU5) 或更高版本结合使用，但前提是累积更新版本受到 SQL 生命周期支持。 CU5 是 SQL Server 2019 的最低要求，因为它解决了[标量 UDF 内联](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)问题。
 
 此版本的 SQL 可用于以下站点：
 
@@ -82,19 +82,20 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 - 主站点
 - 辅助站点
 
-#### <a name="known-issue-with-sql-server-2019"></a>SQL Server 2019 的已知问题
+<!--
+#### Known issue with SQL Server 2019
 
-SQL 2019 中的<!--6436234--> 新功能[标量 UDF 内联](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)存在已知问题。 若要解决此问题，并禁用 UDF 内联，请对 SQL 2019 服务器运行以下脚本：
+There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-可能需要在运行此脚本后重启 SQL Server，但不一定必须这样做。 有关详细信息，请参阅[在不更改兼容性级别的情况下禁用标量 UDF 内联](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level)。
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
-可以为站点数据库服务器安全禁用此 SQL 功能，因为配置管理器不使用它。
+You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
-如果你没有在 SQL 2019 中禁用标量 UDF 内联，那么站点服务器会随机地无法查询站点数据库。 例如，hman.log  中显示以下错误：
+If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
 
 ```hman.log
 *** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
@@ -103,13 +104,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF
 Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
 ```
 
-其他日志（如 SmsAdminUI.log  ）中可能会显示类似错误。
+You may see similar errors in other logs, such as **SmsAdminUI.log**.
 
-SQL Server 版本 2019 记录以下错误：
+SQL Server version 2019 logs the following error:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-它的日志目录（默认路径为 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`）中还会显示 SQL 中的故障转储（`.mdump` 文件）。
+You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+-->
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：Standard、Enterprise
 
@@ -191,25 +193,25 @@ Configuration Manager 要求站点数据库的兼容性级别不低于 Configura
 
 仅“数据库引擎服务”  功能是每个站点服务器所必需的。  
 
-Configuration Manager 数据库复制不需要“SQL Server 复制”  功能。 但是，当你使用[管理点的数据库副本](../../servers/deploy/configure/database-replicas-for-management-points.md)时，则需进行此 SQL Server 配置。  
+Configuration Manager 数据库复制不需要“SQL Server 复制”功能。 但是，当你使用[管理点的数据库副本](../../servers/deploy/configure/database-replicas-for-management-points.md)时，则需进行此 SQL Server 配置。  
 
 ### <a name="windows-authentication"></a>Windows 身份验证
 
-Configuration Manager 需要“Windows 身份验证”  来验证与数据库的连接。  
+Configuration Manager 需要“Windows 身份验证”来验证与数据库的连接。  
 
 ### <a name="sql-server-instance"></a>SQL Server 实例
 
-为每个站点使用专用的 SQL Server 实例。 此实例可以为命名实例  或默认实例  。  
+为每个站点使用专用的 SQL Server 实例。 此实例可以为命名实例或默认实例。  
 
 ### <a name="sql-server-memory"></a>SQL Server 内存
 
-使用 SQL Server Management Studio 保留用于 SQL Server 的内存。 在“服务器内存选项”下设置“最小服务器内存”   。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
+使用 SQL Server Management Studio 保留用于 SQL Server 的内存。 在“服务器内存选项”下设置“最小服务器内存” 。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
 
 - **对于作为站点服务器安装在同一计算机上的数据库服务器**：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 50% 到 80%。  
 
 - **对于专用的数据库服务器（远离站点服务器）** ：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 80% 到 90%。  
 
-- 对于使用中的每个 SQL Server 实例的缓冲池内存预留  ：  
+- 对于使用中的每个 SQL Server 实例的缓冲池内存预留：  
 
   - 对于中央管理站点：至少设置 8 GB。  
   - 对于主站点：至少设置 8 GB。  
@@ -229,7 +231,7 @@ Configuration Manager 需要“Windows 身份验证”  来验证与数据库的
 
 ### <a name="trustworthy-setting"></a>可信设置
 
-Configuration Manager 会自动启用 SQL [可信数据库属性](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)。 Configuration Manager 要求此属性为“打开”  。
+Configuration Manager 会自动启用 SQL [可信数据库属性](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)。 Configuration Manager 要求此属性为“打开”。
 
 ## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> SQL Server 可选配置
 
@@ -239,7 +241,7 @@ Configuration Manager 会自动启用 SQL [可信数据库属性](https://docs.m
 
 你可以将 SQL Server 服务配置为使用以下账户运行：  
 
-- 低权限域用户  帐户：  
+- 低权限域用户帐户：  
 
   - 此配置是最佳做法，并且可能要求你手动注册该帐户的服务主体名称 (SPN)。  
 
@@ -274,7 +276,7 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 对于与 SQL Server 数据库引擎的通信和站点间复制，可以使用默认的 SQL Server 端口配置，也可以指定自定义端口：  
 
 - **站点间通信**使用 SQL Server Service Broker，它默认使用端口 TCP 4022。  
-- SQL Server 数据库引擎与各种 Configuration Manager 站点系统角色之间的站点内通信  默认使用端口 TCP 1433。 下列站点系统角色直接与 SQL Server 数据库进行通信：  
+- SQL Server 数据库引擎与各种 Configuration Manager 站点系统角色之间的站点内通信默认使用端口 TCP 1433。 下列站点系统角色直接与 SQL Server 数据库进行通信：  
 
   - 管理点  
   - SMS 提供程序计算机  

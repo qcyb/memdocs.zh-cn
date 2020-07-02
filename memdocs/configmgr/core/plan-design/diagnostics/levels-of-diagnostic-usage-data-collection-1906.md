@@ -10,16 +10,16 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae606018baf159fe753645a380593506773c7a39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35432fe7805c2a301eb8b101c194dad738f8ab6d
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703855"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84505901"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>版本 1906 的诊断和使用情况数据
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 以下部分提供有关每个级别所收集数据的其他详细信息。 有关级别以及如何更改这些级别的详细信息，请参阅[诊断使用情况数据的级别](levels-overview.md)。
 
@@ -316,7 +316,7 @@ ms.locfileid: "81703855"
 
 - Windows Hello 企业版策略（已创建、已部署）  
 
-- 部署的 Microsoft Edge 浏览器策略计数  
+- 部署的 Microsoft Edge 旧版浏览器策略计数  
 
 - OneDrive 策略计数（已创建、已部署）
 

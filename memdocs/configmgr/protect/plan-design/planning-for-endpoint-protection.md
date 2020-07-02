@@ -9,12 +9,12 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 720b5060c913ff3157624c4b6060802af396d221
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590501"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>规划 Endpoint Protection 在配置管理器
 
@@ -81,7 +81,7 @@ Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint 
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender 高级威胁防护
 
-自 Configuration Manager（当前分支）版本 1606 起，Endpoint Protection 可帮助管理和监视 Microsoft Defender 高级威胁防护 (ATP)（之前称为 Windows Defender ATP）。 Microsoft Defender ATP 是一种服务，可帮助企业检测、调查其网络上的高级攻击并做出响应。 请参阅[Microsoft Defender 高级威胁防护](../deploy-use/windows-defender-advanced-threat-protection.md)。
+自 Configuration Manager（当前分支）版本 1606 起，Endpoint Protection 可帮助管理和监视 Microsoft Defender 高级威胁防护 (ATP)（之前称为 Windows Defender ATP）。 Microsoft Defender ATP 是一种服务，可帮助企业检测、调查其网络上的高级攻击并做出响应。 请参阅[Microsoft Defender 高级威胁防护](../deploy-use/defender-advanced-threat-protection.md)。
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection 工作流  
  可以借助以下关系图了解在 Configuration Manager 层次结构中实现 Endpoint Protection 的工作流。  

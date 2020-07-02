@@ -10,16 +10,16 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbd7c516515718cca96bff9b1715233964cb2aa5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699625"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715673"
 ---
 # <a name="set-up-bitlocker-portals"></a>设置 BitLocker 门户
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--3601034-->
 
@@ -28,7 +28,7 @@ ms.locfileid: "81699625"
 - 用户自助服务门户
 - 管理和监视网站（支持门户）
 
-可以在包含 IIS 的现有站点服务器上安装这些门户，也可以使用独立 Web 服务器来托管它们。
+可以在安装了 IIS 的现有站点服务器或站点系统服务器上安装这些门户，也可以使用独立 Web 服务器来托管它们。
 
 > [!NOTE]
 > 请仅使用主站点数据库安装自助门户以及管理和监视网站。 在层次结构中，为每个主站点安装这些网站。
@@ -45,21 +45,21 @@ ms.locfileid: "81699625"
 
 - `-SqlDatabaseName <DatabaseName>`（必需）：主站点数据库的名称（例如，`CM_ABC`）。
 
-- `-ReportWebServiceUrl <ReportWebServiceUrl>`：主站点的报告服务点的 Web 服务 URL。 这是“Reporting Services 配置管理器”  中的“Web 服务 URL”  值。
+- `-ReportWebServiceUrl <ReportWebServiceUrl>`：主站点的报告服务点的 Web 服务 URL。 这是“Reporting Services 配置管理器”中的“Web 服务 URL”值。
 
     > [!NOTE]
-    > 此参数用于安装关联自管理和监视网站的恢复审核报告  。 默认情况下，Configuration Manager 包括其他 BitLocker 管理报告。
+    > 此参数用于安装关联自管理和监视网站的恢复审核报告。 默认情况下，Configuration Manager 包括其他 BitLocker 管理报告。
 
-- `-HelpdeskUsersGroupName <DomainUserGroup>`：例如，`contoso\BitLocker help desk users`。 其成员有权访问 Administration and Monitoring 网站的“管理 TPM”和“驱动器恢复”区域的域用户组   。 使用这些选项时，此角色需要填写所有字段，包括用户的域和帐户名。
+- `-HelpdeskUsersGroupName <DomainUserGroup>`：例如，`contoso\BitLocker help desk users`。 其成员有权访问 Administration and Monitoring 网站的“管理 TPM”和“驱动器恢复”区域的域用户组 。 使用这些选项时，此角色需要填写所有字段，包括用户的域和帐户名。
 
 - `-HelpdeskAdminsGroupName <DomainUserGroup>`：例如，`contoso\BitLocker help desk admins`。 一个域用户组，其成员有权访问管理和监视网站的所有恢复区域。 当帮助用户恢复其驱动器时，此角色仅需要输入恢复密钥。
 
-- `-MbamReportUsersGroupName <DomainUserGroup>`：例如，`contoso\BitLocker report users`。 一个域用户组，其成员拥有管理和监视网站的“报表”区域的只读访问权限  。
+- `-MbamReportUsersGroupName <DomainUserGroup>`：例如，`contoso\BitLocker report users`。 一个域用户组，其成员拥有管理和监视网站的“报表”区域的只读访问权限。
 
     > [!NOTE]
-    > 安装程序脚本不会创建你在 -HelpdeskUsersGroupName  、-HelpdeskAdminsGroupName  和 -MbamReportUsersGroupName  参数中指定的域用户组。 运行脚本前，请务必先创建这些组。
+    > 安装程序脚本不会创建你在 -HelpdeskUsersGroupName、-HelpdeskAdminsGroupName 和 -MbamReportUsersGroupName 参数中指定的域用户组。 运行脚本前，请务必先创建这些组。
     >
-    > 如果指定 -HelpdeskUsersGroupName  、-HelpdeskAdminsGroupName  和 -MbamReportUsersGroupName  参数，请务必同时指定域名和组名。 使用格式 `"domain\user_group"`。 请勿排除域名。 如果域名或组名包含空格或特殊字符，请用引号 (`"`) 将参数引起来。
+    > 如果指定 -HelpdeskUsersGroupName、-HelpdeskAdminsGroupName 和 -MbamReportUsersGroupName 参数，请务必同时指定域名和组名。 使用格式 `"domain\user_group"`。 请勿排除域名。 如果域名或组名包含空格或特殊字符，请用引号 (`"`) 将参数引起来。
 
 - `-SiteInstall Both`：指定要安装的组件。 有效选项包括：
   - `Both`：安装全部两个组件
@@ -112,7 +112,7 @@ ms.locfileid: "81699625"
 
 使用以下日志进行监视和故障排除：
 
-- Microsoft-Windows-MBAM-Web  下的 Windows 事件日志。 有关详细信息，请参阅[关于 BitLocker 事件日志](../../tech-ref/bitlocker/about-event-logs.md)和[服务器事件日志](../../tech-ref/bitlocker/server-event-logs.md)。
+- Microsoft-Windows-MBAM-Web 下的 Windows 事件日志。 有关详细信息，请参阅[关于 BitLocker 事件日志](../../tech-ref/bitlocker/about-event-logs.md)和[服务器事件日志](../../tech-ref/bitlocker/server-event-logs.md)。
 
 - 每个组件的跟踪日志位于以下默认位置：
 

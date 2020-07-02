@@ -10,16 +10,16 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c596ba410adc979b92a000c28d815e89695a9b0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694345"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814901"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>与 Power BI 报表服务器集成
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--3721603-->
 
@@ -40,9 +40,11 @@ ms.locfileid: "81694345"
 
     > [!IMPORTANT]
     > - 只使用 [Microsoft 下载中心](https://www.microsoft.com/download/)的 Power BI Desktop 版本，不要使用 Microsoft Store 中的版本。
-    > - 只使用[声明已“针对 Power BI 报表服务器进行了优化”的 Power BI Desktop](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop) 版本  。
+    > - 只使用[声明已“针对 Power BI 报表服务器进行了优化”的 Power BI Desktop](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop) 版本。
 
 - Power BI 集成使用相同的基于角色的管理进行报告。
+    > [!NOTE]
+    > Power BI 报表服务器不支持启用 RBAC 的报表，因此，无论报表的分配范围如何，报表的所有查看器都将看到相同的结果。
 
 ## <a name="configure-the-reporting-services-point"></a>配置 Reporting Services 点
 
@@ -52,7 +54,7 @@ ms.locfileid: "81694345"
 
 仅当站点中已有 Reporting Services 点时，才使用此过程。 请在同一服务器上执行此过程的所有步骤：
 
-1. 在报表服务器 Configuration Manager 中，备份“加密密钥”   。 有关详细信息，请参阅 [SSRS 加密密钥 - 备份和还原加密密钥](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys)。
+1. 在报表服务器 Configuration Manager 中，备份“加密密钥” 。 有关详细信息，请参阅 [SSRS 加密密钥 - 备份和还原加密密钥](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys)。
 
     > [!WARNING]
     > 如果跳过此步骤，将无法访问 SQL Server Reporting Services 中的任何自定义报表。
@@ -67,7 +69,7 @@ ms.locfileid: "81694345"
 
     1. 使用以前的报表服务器数据库。
 
-    1. 使用报表服务器 Configuration Manager，还原“加密密钥”   。
+    1. 使用报表服务器 Configuration Manager，还原“加密密钥” 。
 
 1. 在 Configuration Manager 中添加 Reporting Services 点角色。
 
@@ -89,19 +91,19 @@ ms.locfileid: "81694345"
 
 ## <a name="create-power-bi-reports"></a>创建 Power BI 报表
 
-1. 在 Configuration Manager 控制台中，转到“监视”工作区，展开“报告”，然后选择新的“Power BI 报表”节点    。
+1. 在 Configuration Manager 控制台中，转到“监视”工作区，展开“报告”，然后选择新的“Power BI 报表”节点  。
 
-1. 在功能区上，选择“创建报表”  。 此操作将打开 Power BI Desktop。
+1. 在功能区上，选择“创建报表”。 此操作将打开 Power BI Desktop。
 
 1. 在 Power BI Desktop 中创建报表。
 
-    - 在 Power BI Desktop 中，当你连接到数据源时，为连接设置选择“DirectQuery”  。
+    - 在 Power BI Desktop 中，当你连接到数据源时，为连接设置选择“DirectQuery”。
 
     - 在这些报表中仅使用受支持的 SQL 视图。 有关详细信息，请参阅[在 Configuration Manager 中使用 SQL Server 视图创建自定义报表](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md)。
 
-1. 当报表准备就绪可保存时，请前往“文件”菜单，选择“另存为”，然后选择“Power BI 报表服务器”    。
+1. 当报表准备就绪可保存时，请前往“文件”菜单，选择“另存为”，然后选择“Power BI 报表服务器”  。
 
-1. 在“Power BI 报表服务器选择”窗口中，输入 Reporting Services 点的 URL 作为“新报表服务器地址”   。 例如，`https://rsp.contoso.com/Reports`。
+1. 在“Power BI 报表服务器选择”窗口中，输入 Reporting Services 点的 URL 作为“新报表服务器地址” 。 例如，`https://rsp.contoso.com/Reports`。
 
 在 Configuration Manager 控制台中，可以在 Power BI 报表列表中看到新报表。
 
@@ -109,11 +111,11 @@ ms.locfileid: "81694345"
 
 创建报表后，在 Configuration Manager 控制台中执行以下操作：
 
-- 在浏览器中运行  ：在 Web 浏览器中打开 Power BI 报表。 与其他人共享此 URL，例如：`https://rsp.contoso.com/Reports/POWERBI/ConfigMgr_ABC/Windows%2010/Windows10%20Dashboard?rs:embed=true`
+- 在浏览器中运行：在 Web 浏览器中打开 Power BI 报表。 与其他人共享此 URL，例如：`https://rsp.contoso.com/Reports/POWERBI/ConfigMgr_ABC/Windows%2010/Windows10%20Dashboard?rs:embed=true`
 
     > [!TIP]
     > 只能在 Web 浏览器中查看这些报表。
 
-- **编辑**：在 Power BI Desktop 中对报表进行更改。 对于现有报表，请使用“保存”选项将更改保存回报表服务器  。
+- **编辑**：在 Power BI Desktop 中对报表进行更改。 对于现有报表，请使用“保存”选项将更改保存回报表服务器。
 
 有关用于报告的日志文件的详细信息，请参阅[日志文件引用 - 报告](../../plan-design/hierarchy/log-files.md#BKMK_ReportLog)。

@@ -10,16 +10,16 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430133"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383234"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>在 Configuration Manager 中创建任务序列来升级操作系统
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 在 Configuration Manager 中使用任务序列，自动升级目标计算机上的 OS。 可以从 Windows 7 或更高版本升级到 Windows 10，或从 Windows Server 2012 或更高版本升级到 Windows Server 2016。 创建一个任务序列，该任务序列引用要安装的 OS 升级包和任何其他内容，如应用程序或软件更新。 用于升级 OS 的任务序列是[将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)方案的一部分。  
 
@@ -32,7 +32,7 @@ ms.locfileid: "83430133"
 
 - [OS 升级包](../get-started/manage-operating-system-upgrade-packages.md)必须在 Configuration Manager 控制台中可用。  
 
-- 升级到 Windows Server 2016 时，请在“升级操作系统”任务序列步骤中选择“忽略任何可拒绝的兼容性消息”  。 否则，升级将失败。  
+- 升级到 Windows Server 2016 时，请在“升级操作系统”任务序列步骤中选择“忽略任何可拒绝的兼容性消息”。 否则，升级将失败。  
 
 ### <a name="required-if-used"></a>必需（若使用）  
 
@@ -43,23 +43,23 @@ ms.locfileid: "83430133"
 
 ## <a name="create-a-task-sequence-to-upgrade-an-os"></a><a name="BKMK_UpgradeOS"></a> 创建用于升级 OS 的任务序列  
 
-若要升级客户端上的 OS，请创建一个任务序列，并在“创建任务序列向导”中选择“通过升级包升级操作系统”  。 该向导添加任务序列步骤，用于升级 OS、应用软件更新和安装应用程序。
+若要升级客户端上的 OS，请创建一个任务序列，并在“创建任务序列向导”中选择“通过升级包升级操作系统”。 该向导添加任务序列步骤，用于升级 OS、应用软件更新和安装应用程序。
 
-1. 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“任务序列”    。  
+1. 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“任务序列”  。  
 
-2. 在功能区的“主页”选项卡上的“创建”组中，选择“创建任务序列”    。  
+2. 在功能区的“主页”选项卡上的“创建”组中，选择“创建任务序列”  。  
 
-3. 在创建任务序列向导的“创建新的任务序列”页上，选择“通过升级包升级操作系统”，然后选择“下一步”    。  
+3. 在创建任务序列向导的“创建新的任务序列”页上，选择“通过升级包升级操作系统”，然后选择“下一步”  。  
 
-4. 在“任务序列信息”页上，指定以下设置  ：  
+4. 在“任务序列信息”页上，指定以下设置：  
 
     - **任务序列名称**：指定用于标识任务序列的名称。  
 
     - **描述**：（可选）指定描述。  
 
-5. 在“升级 Windows 操作系统”页上，指定以下设置  ：  
+5. 在“升级 Windows 操作系统”页上，指定以下设置：  
 
-    - **升级包**：指定包含 OS 升级源文件的升级包。 可以通过查看“属性”窗格中的信息来验证是否选择了正确的升级包  。 有关详细信息，请参阅[管理 OS 升级包](../get-started/manage-operating-system-upgrade-packages.md)。  
+    - **升级包**：指定包含 OS 升级源文件的升级包。 可以通过查看“属性”窗格中的信息来验证是否选择了正确的升级包。 有关详细信息，请参阅[管理 OS 升级包](../get-started/manage-operating-system-upgrade-packages.md)。  
 
     - **版本索引**：如果包中有多个 OS 版本索引可用，请选择所需的版本索引。 默认情况下，该向导会选择第一个索引。  
 
@@ -68,11 +68,11 @@ ms.locfileid: "83430133"
         > [!Note]  
         > 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。
 
-    - **忽略任何不重要的兼容性消息**：如果要升级到 Windows Server 2016，请选择此设置。 如果不选择此设置，则任务序列无法完成，因为 Windows 安装程序正等待用户在“Windows 应用兼容性”对话框上选择“确认”  。  
+    - **忽略任何不重要的兼容性消息**：如果要升级到 Windows Server 2016，请选择此设置。 如果不选择此设置，则任务序列无法完成，因为 Windows 安装程序正等待用户在“Windows 应用兼容性”对话框上选择“确认”。  
 
-6. 在“包括更新”页上，指定是安装必需、全部，还是不安装软件更新  。 然后选择“下一步”  。 如果指定要安装软件更新，则 Configuration Manager 仅安装以目标计算机所在的集合为目标的那些更新。  
+6. 在“包括更新”页上，指定是安装必需、全部，还是不安装软件更新。 然后选择“下一步”。 如果指定要安装软件更新，则 Configuration Manager 仅安装以目标计算机所在的集合为目标的那些更新。  
 
-7. 在“安装应用程序”  页上，指定要安装在目标计算机上的应用程序，然后选择“下一步”  。 如果指定多个应用程序，也请指定任务序列是否要在特定应用程序的安装失败时继续进行。  
+7. 在“安装应用程序”页上，指定要安装在目标计算机上的应用程序，然后选择“下一步”。 如果指定多个应用程序，也请指定任务序列是否要在特定应用程序的安装失败时继续进行。  
 
 8. 完成向导。  
 
@@ -94,7 +94,7 @@ Windows 10 就地升级任务序列的默认模板包括其他组，其中包含
 
 ## <a name="recommended-task-sequence-steps-to-prepare-for-upgrade"></a>准备升级的建议任务序列步骤
 
-Windows 10 就地升级的默认任务序列模板包括在升级过程前要添加的带建议操作的其他组。 “准备升级”组中的这些操作在许多将设备成功升级到 Windows 10 的客户之间是通用的  。 如果现有任务序列尚无这些操作，请将它们手动添加到“准备升级”  组中的任务序列。  
+Windows 10 就地升级的默认任务序列模板包括在升级过程前要添加的带建议操作的其他组。 “准备升级”组中的这些操作在许多将设备成功升级到 Windows 10 的客户之间是通用的。 如果现有任务序列尚无这些操作，请将它们手动添加到“准备升级”组中的任务序列。  
 
 ### <a name="battery-checks"></a>电池检查
 
@@ -124,7 +124,7 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程前要添
 
 在此组中添加步骤，删除任何与此版本的 Windows 10 不兼容的应用程序。 卸载应用程序的方法不同。  
 
-如果应用程序使用 Windows Installer，则从应用程序的 Windows Installer 部署类型属性上的“程序”  选项卡中复制“卸载程序”  命令行。 然后在此组中添加“运行命令行”  步骤，并附加卸载程序命令行。 例如：
+如果应用程序使用 Windows Installer，则从应用程序的 Windows Installer 部署类型属性上的“程序”选项卡中复制“卸载程序”命令行。 然后在此组中添加“运行命令行”步骤，并附加卸载程序命令行。 例如：
 
 `msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`  
 
@@ -136,28 +136,28 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程前要添
 
 在此组中添加步骤，删除或暂停防病毒程序等第三方安全程序。  
 
-如果使用的是第三方磁盘加密程序，请为 Windows 安装程序的加密驱动程序提供 `/ReflectDrivers` [命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers)。 在此组的任务序列中添加[设置任务序列变量](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)步骤。 将任务序列变量设置为“OSDSetupAdditionalUpgradeOptions”  。 将值设置为 `/ReflectDrivers`，并附加驱动程序的路径。 此[任务序列变量](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)附加了任务序列使用的 Windows 安装程序命令行。 请联系你的软件供应商，以获得有关此进程的任何其他指导。  
+如果使用的是第三方磁盘加密程序，请为 Windows 安装程序的加密驱动程序提供 `/ReflectDrivers` [命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers)。 在此组的任务序列中添加[设置任务序列变量](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)步骤。 将任务序列变量设置为“OSDSetupAdditionalUpgradeOptions”。 将值设置为 `/ReflectDrivers`，并附加驱动程序的路径。 此[任务序列变量](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)附加了任务序列使用的 Windows 安装程序命令行。 请联系你的软件供应商，以获得有关此进程的任何其他指导。  
 
 ### <a name="download-package-content-task-sequence-step"></a>下载包内容的任务序列步骤  
 
-在以下方案中，可先使用[下载包内容](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)步骤，再使用“升级操作系统”步骤  ：  
+在以下方案中，可先使用[下载包内容](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)步骤，再使用“升级操作系统”步骤：  
 
-- 使用可用于 x86 和 x64 平台的单一升级任务序列。 包括“准备升级”组中的两个“下载包内容”步骤   。 在每个步骤上设置条件，检测客户端体系结构。 此条件可使该步骤仅下载相应的 OS 升级包。 将每个“下载包内容”  步骤配置为使用相同的变量，并将该变量用于“升级操作系统”  步骤的媒体路径。  
+- 使用可用于 x86 和 x64 平台的单一升级任务序列。 包括“准备升级”组中的两个“下载包内容”步骤 。 在每个步骤上设置条件，检测客户端体系结构。 此条件可使该步骤仅下载相应的 OS 升级包。 将每个“下载包内容”步骤配置为使用相同的变量，并将该变量用于“升级操作系统”步骤的媒体路径。  
 
-- 若要动态下载适用的驱动程序包，请使用两个“下载包内容”  步骤以及检测每个驱动程序包的相应硬件类型的条件。 配置每个“下载包内容”步骤，使其使用相同的变量  。 然后将该变量用于“升级操作系统”步骤上驱动程序部分中的“预留内容”变量   。  
+- 若要动态下载适用的驱动程序包，请使用两个“下载包内容”步骤以及检测每个驱动程序包的相应硬件类型的条件。 配置每个“下载包内容”步骤，使其使用相同的变量。 然后将该变量用于“升级操作系统”步骤上驱动程序部分中的“预留内容”变量 。  
 
     > [!NOTE]  
-    > Configuration Manager 向此变量名称中添加数字后缀。 例如，若将 `%mycontent%` 指定为自定义变量，客户端会将所有引用内容存储在此位置。 当引用后续步骤（如“升级操作系统”）中的变量时，请使用带数字后缀的变量  。 在本示例中，使用 `%mycontent01%` 或 `%mycontent02%`，其中编号对应于“下载包内容”步骤列出此特定内容的顺序  。  
+    > Configuration Manager 向此变量名称中添加数字后缀。 例如，若将 `%mycontent%` 指定为自定义变量，客户端会将所有引用内容存储在此位置。 当引用后续步骤（如“升级操作系统”）中的变量时，请使用带数字后缀的变量。 在本示例中，使用 `%mycontent01%` 或 `%mycontent02%`，其中编号对应于“下载包内容”步骤列出此特定内容的顺序。  
 
 
 ## <a name="recommended-task-sequence-steps-for-post-processing"></a>后期处理的建议任务序列步骤
 
-创建任务序列后，在任务序列的“后期处理”组中添加其他步骤  。  
+创建任务序列后，在任务序列的“后期处理”组中添加其他步骤。  
 
 > [!NOTE]  
 > 此任务序列不是线性的。 步骤中存在可能影响任务序列结果的条件。 此行为取决于是否成功升级客户端计算机，或是否必须将客户端计算机回滚到原始 OS。  
 
-Windows 10 就地升级的默认任务序列模板包括在升级过程后要添加的带建议操作的其他组。 “后期处理”组中的这些操作在许多将设备成功升级到 Windows 10 的客户之间是通用的  。 如果现有任务序列尚无这些操作，请将它们手动添加到“后处理”  组中的任务序列。  
+Windows 10 就地升级的默认任务序列模板包括在升级过程后要添加的带建议操作的其他组。 “后期处理”组中的这些操作在许多将设备成功升级到 Windows 10 的客户之间是通用的。 如果现有任务序列尚无这些操作，请将它们手动添加到“后处理”组中的任务序列。  
 
 ### <a name="apply-setup-based-drivers"></a>应用基于设置的驱动程序
 
@@ -187,13 +187,13 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 
 ## <a name="optional-task-sequence-steps-for-rollback"></a>回滚的可选任务序列步骤  
 
-如果重启计算机后升级过程出现问题，Windows 安装程序会将系统回滚到以前的 OS。 然后，任务序列继续执行“回滚”组中的任何步骤  。 创建任务序列后，请在必要时在此组中添加可选步骤。 例如，撤消在“准备升级”组中对系统所做的任何更改，例如卸载不兼容的软件。
+如果重启计算机后升级过程出现问题，Windows 安装程序会将系统回滚到以前的 OS。 然后，任务序列继续执行“回滚”组中的任何步骤。 创建任务序列后，请在必要时在此组中添加可选步骤。 例如，撤消在“准备升级”组中对系统所做的任何更改，例如卸载不兼容的软件。
 
 
 ## <a name="recommended-task-sequence-steps-on-failure"></a>在失败情况下推荐的任务序列步骤
 
 <!--1358500-->
-从版本 1806 开始，Windows 10 就地升级的默认任务序列模板包括一个“如果失败，则运行操作”的组  。 此组包括在升级失败时要添加的推荐操作。 这些操作有助于进行故障排除。
+从版本 1806 开始，Windows 10 就地升级的默认任务序列模板包括一个“如果失败，则运行操作”的组。 此组包括在升级失败时要添加的推荐操作。 这些操作有助于进行故障排除。
 
 ### <a name="collect-logs"></a>收集日志
 
@@ -211,7 +211,7 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 
 - 有关 Configuration Manager 客户端日志的详细信息，请参阅 [Configuration Manager 客户端日志](../../core/plan-design/hierarchy/log-files.md#BKMK_ClientLogs)。  
 
-- 有关 _SMSTSLogPath  和其他有用变量的详细信息，请参阅[任务序列变量](../understand/task-sequence-variables.md)。  
+- 有关 _SMSTSLogPath 和其他有用变量的详细信息，请参阅[任务序列变量](../understand/task-sequence-variables.md)。  
 
 ### <a name="run-diagnostic-tools"></a>运行诊断工具
 
@@ -221,9 +221,11 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 
 - 在 Configuration Manager 中，[创建工具包](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program)。  
 
-- 向该组任务序列添加[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 使用“包”  选项来引用该工具。 以下字符串是一个示例命令行  ：  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+- 向该组任务序列添加[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 使用“包”选项来引用该工具。 以下字符串是一个示例命令行：  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> 始终使用最新版本的 SetupDiag 来实现最新功能，并修复已知问题。 有关详细信息，请参阅 [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)。
 
 ## <a name="additional-recommendations"></a>其他建议
 
@@ -233,29 +235,29 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 
 ### <a name="check-minimum-disk-space"></a>检查最小磁盘空间
 
-在默认的“检查准备情况”  步骤中，启用“确保最小可用磁盘空间 (MB)”  。 对于 32 位 OS 升级包，将值设置为至少 16384  (16 GB)，对于 64 位设置为至少 20480  (20 GB)。  
+在默认的“检查准备情况”步骤中，启用“确保最小可用磁盘空间 (MB)”。 对于 32 位 OS 升级包，将值设置为至少 16384 (16 GB)，对于 64 位设置为至少 20480 (20 GB)。  
 
 ### <a name="retry-downloading-policy"></a>重试下载策略
 
-使用 SMSTSDownloadRetryCount  [任务序列变量](../understand/task-sequence-variables.md#SMSTSDownloadRetryCount)重试下载策略。 当前在默认情况下，客户端重试两次；此变量设置为二 (2)。 如果客户端未连接到有线的 Intranet 网络，额外的重试会帮助客户端获得策略。 使用该变量不会产生负面的副作用，除了因无法下载策略导致的延迟故障。<!--501016--> 此外，也可以增加“SMSTSDownloadRetryDelay”  变量的值（默认值为 15 秒）。  
+使用 SMSTSDownloadRetryCount [任务序列变量](../understand/task-sequence-variables.md#SMSTSDownloadRetryCount)重试下载策略。 当前在默认情况下，客户端重试两次；此变量设置为二 (2)。 如果客户端未连接到有线的 Intranet 网络，额外的重试会帮助客户端获得策略。 使用该变量不会产生负面的副作用，除了因无法下载策略导致的延迟故障。<!--501016--> 此外，也可以增加“SMSTSDownloadRetryDelay”变量的值（默认值为 15 秒）。  
 
 ### <a name="perform-an-inline-compatibility-assessment"></a>执行内联兼容性评估
 
-1. 在“准备升级”  组中提前添加第二个“升级操作系统”  步骤。  
+1. 在“准备升级”组中提前添加第二个“升级操作系统”步骤。  
 
-    1. 将其命名为“升级评估”  。
-    1. 指定相同的升级包，然后启用选项“不启动升级即执行 Windows 安装程序兼容性扫描”  。
-    1. 启用“选项”选项卡上的“出错时继续”  。  
+    1. 将其命名为“升级评估”。
+    1. 指定相同的升级包，然后启用选项“不启动升级即执行 Windows 安装程序兼容性扫描”。
+    1. 启用“选项”选项卡上的“出错时继续”。  
 
-1. 紧跟此“升级评估”  步骤，添加“运行命令行”  步骤。 指定以下命令行：
+1. 紧跟此“升级评估”步骤，添加“运行命令行”步骤。 指定以下命令行：
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
-1. 在“选项”  选项卡上，添加以下条件：
+1. 在“选项”选项卡上，添加以下条件：
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-此返回代码为 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的等效十进制数，表示不存在任何问题的成功兼容性扫描。 如果“升级评估”步骤成功并返回此代码，任务序列会跳过此步骤  。 否则，如果评估步骤返回任何其他返回代码，则此步骤的任务序列将失败，并会从 Windows 安装程序兼容性扫描中返回代码。 有关 _SMSTSOSUpgradeActionReturnCode  的详细信息，请参阅[任务序列变量](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)。
+此返回代码为 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的等效十进制数，表示不存在任何问题的成功兼容性扫描。 如果“升级评估”步骤成功并返回此代码，任务序列会跳过此步骤。 否则，如果评估步骤返回任何其他返回代码，则此步骤的任务序列将失败，并会从 Windows 安装程序兼容性扫描中返回代码。 有关 _SMSTSOSUpgradeActionReturnCode 的详细信息，请参阅[任务序列变量](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)。
 
 有关详细信息，请参阅[升级操作系统](../understand/task-sequence-steps.md#BKMK_UpgradeOS)。  
 
@@ -266,13 +268,13 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 ### <a name="manage-bitlocker"></a>管理 BitLocker
 
 <!--SCCMDocs issue #494-->
-如果使用 BitLocker 磁盘加密，则在默认情况下 Windows 安装程序会在升级期间自动将它暂停。 从 Windows 10 版本 1803 开始，Windows 安装程序包括了 `/BitLocker` 命令行参数，以便控制此行为。 如果安全要求需要磁盘加密全程保持活动状态，请使用“准备升级”  组中的 OSDSetupAdditionalUpgradeOptions  [任务序列变量](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)来包含 `/BitLocker TryKeepActive`。 有关详细信息，请参阅 [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)。
+如果使用 BitLocker 磁盘加密，则在默认情况下 Windows 安装程序会在升级期间自动将它暂停。 从 Windows 10 版本 1803 开始，Windows 安装程序包括了 `/BitLocker` 命令行参数，以便控制此行为。 如果安全要求需要磁盘加密全程保持活动状态，请使用“准备升级”组中的 OSDSetupAdditionalUpgradeOptions [任务序列变量](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)来包含 `/BitLocker TryKeepActive`。 有关详细信息，请参阅 [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)。
 
 ### <a name="remove-default-apps"></a>删除默认应用
 
 <!--SCCMDocs issue #526-->
 部分客户删除了 Windows 10 中默认预配的应用。 例如，必应天气应用或 Microsoft Solitaire Collection。 在某些情况下，这些应用会在 Windows 10 后重新出现。 有关详细信息，请参阅[如何从 Windows 10 中彻底删除应用](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update)。
 
-向“准备升级”组中的任务序列添加“运行命令行”步骤   。 指定类似以下示例的命令行：
+向“准备升级”组中的任务序列添加“运行命令行”步骤 。 指定类似以下示例的命令行：
 
 `cmd /c reg add "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f`

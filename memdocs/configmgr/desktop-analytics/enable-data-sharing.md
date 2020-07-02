@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268736"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795645"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>启用桌面分析的数据共享
 
@@ -31,23 +31,23 @@ ms.locfileid: "83268736"
 > [!Important]  
 > 在大多数情况下，仅使用 Configuration Manager 来配置这些设置。 也不要在域组策略对象中应用这些设置。 有关详细信息，请参阅[冲突解决](enroll-devices.md#conflict-resolution)。
 
-桌面分析的基础功能以基本的[诊断数据级别](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)进行工作  。 如果未在 Configuration Manager 中配置“增强(受限)”级别，则不会获得桌面分析的以下功能  ：
+桌面分析的基础功能以基本的[诊断数据级别](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)进行工作。 如果未在 Configuration Manager 中配置“增强(受限)”级别，则不会获得桌面分析的以下功能：
 
 - 应用使用情况
 - [其他 App Insights](compat-assessment.md#additional-insights)
-- 部署状态数据
-- 运行状况监视数据
+- [部署状态数据](deploy-prod.md#address-deployment-alerts)
+- [运行状况监视数据](health-status-monitoring.md)
 
-Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级别以从中获得最大好处  。
+Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级别以从中获得最大好处。
 
 > [!Tip]
-> Configuration Manager 中的“增强(受限)”设置与运行 Windows 10 版本 1709 及更高版本的设备上可用的“将增强的诊断数据限制为 Windows Analytics 要求的最小值”策略设置相同   。
+> Configuration Manager 中的“增强(受限)”设置与运行 Windows 10 版本 1709 及更高版本的设备上可用的“将增强的诊断数据限制为 Windows Analytics 要求的最小值”策略设置相同 。
 >
-> 运行 Windows 10 版本 1703 及更低版本、Windows 8.1 或 Windows 7 的设备没有此策略设置。 在 Configuration Manager 中配置“增强(受限)”设置时，这些设备会返回到“基本”级别   。
+> 运行 Windows 10 版本 1703 及更低版本、Windows 8.1 或 Windows 7 的设备没有此策略设置。 在 Configuration Manager 中配置“增强(受限)”设置时，这些设备会返回到“基本”级别 。
 >
-> 运行 Windows 10 版本 1709 的设备具有此策略设置。 但是，当在 Configuration Manager 中配置“增强(受限)”设置时，这些设备也会返回到“基本”级别   。
+> 运行 Windows 10 版本 1709 的设备具有此策略设置。 但是，当在 Configuration Manager 中配置“增强(受限)”设置时，这些设备也会返回到“基本”级别 。
 
-有关使用“增强(受限)”与 Microsoft 共享的诊断数据的详细信息，请参阅 [Windows 10 增强的诊断数据事件与字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  。
+有关使用“增强(受限)”与 Microsoft 共享的诊断数据的详细信息，请参阅 [Windows 10 增强的诊断数据事件与字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
 
 > [!Important]
 > Microsoft 坚定地承诺提供用于让你自己控制隐私的工具和资源。 因此，尽管桌面分析支持 Windows 8.1 设备，但 Microsoft 不会从欧洲国家/地区（EEA 和瑞士）的 Windows 8.1 设备中收集 Windows 诊断数据。
@@ -96,7 +96,7 @@ Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级�
 | 终结点  | 函数  |
 |-----------|-----------|
 | `https://v10c.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行安装了 2018-09 累积更新或更高版本的 Windows 10 版本 1809 或更高版本或版本 1803 的设备使用。 |
-| `https://v10.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行未安装 2018-09 累积更新的 Windows 10 版本 1803 的设备使用  。 |
+| `https://v10.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行未安装 2018-09 累积更新的 Windows 10 版本 1803 的设备使用。 |
 | `https://v10.vortex-win.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行 Windows 10 版本 1709 或更高版本的设备使用。 |
 | `https://vortex-win.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行 Windows 7 和 Windows 8.1 的设备使用 |
 
@@ -135,12 +135,12 @@ Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级�
 
 - 设备具有受支持的 Windows 版本的最新质量更新
 
-- 在 Windows 设置的“网络和 Internet”组中的“代理设置”中配置用户级代理（WinINET 代理）  。 还可以使用旧版”Internet 选项”控制面板。
+- 在 Windows 设置的“网络和 Internet”组中的“代理设置”中配置用户级代理（WinINET 代理）。 还可以使用旧版”Internet 选项”控制面板。
 
 - 确保用户拥有访问诊断数据终结点的代理权限。 此选项要求设备具有拥有代理权限的控制台用户，因此无法将此方法用于无外设设备。
 
 > [!IMPORTANT]
-> 用户代理身份验证方法与使用 Microsoft Defender 高级威胁防护不兼容。 出现此行为是因为，此身份验证依赖于设置为 `0` 的 DisableEnterpriseAuthProxy 注册表项，而 Microsoft Defender ATP 要求将其设置为 `1` 。 有关详细信息，请参阅[在 Microsoft Defender ATP 中配置计算机代理和 Internet 连接设置](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)。
+> 用户代理身份验证方法与使用 Microsoft Defender 高级威胁防护不兼容。 出现此行为是因为，此身份验证依赖于设置为 `0` 的 DisableEnterpriseAuthProxy 注册表项，而 Microsoft Defender ATP 要求将其设置为 `1`。 有关详细信息，请参阅[在 Microsoft Defender ATP 中配置计算机代理和 Internet 连接设置](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)。
 
 ### <a name="device-proxy-authentication"></a>设备代理身份验证
 

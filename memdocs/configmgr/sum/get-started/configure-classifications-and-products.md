@@ -5,21 +5,21 @@ description: 按照以下步骤在 Configuration Manager 控制台中配置要�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078458"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614082"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 在 Configuration Manager 中，将根据你在软件更新点组件属性中指定的设置在同步过程期间检索软件更新元数据。 首次同步软件更新后，或者当发布新产品和分类时，必须转到这些属性以选择新项。 使用下列过程来配置要同步的分类和产品。  
 
@@ -28,11 +28,11 @@ ms.locfileid: "82078458"
 
 ## <a name="to-configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
-1. 在 **Configuration Manager** 控制台中，导航到“管理”   > “站点配置”   > “站点”  。
+1. 在 **Configuration Manager** 控制台中，导航到“管理” > “站点配置” > “站点”。
 
 2. 选择管理中心站点或独立主站点。  
 
-3. 在“主页”  选项卡上的“设置”  组中，单击“配置站点组件”  ，再单击“软件更新点”  。
+3. 在“主页”  选项卡上的“设置”  组中，单击“配置站点组件” ，再单击“软件更新点” 。
 
 4. 在“分类”  选项卡上，指定要为其同步软件更新的软件更新分类。  
 
@@ -46,12 +46,12 @@ ms.locfileid: "82078458"
      - **工具**：指定可帮助完成一项或多项任务的实用程序或功能。  
      - **更新汇总**：指定为便于部署而一起打包的修补程序、安全更新、关键更新和其他更新的经过测试的累积集合。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
      - **更新**：指定广泛发布的针对特定问题的修补程序。 更新解决了非关键且与安全无关的 bug。  
-     - **升级**：为 Windows 10 特性和功能指定升级。 软件更新点和站点必须运行最低具有[修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 6.2 来获取“升级”  分类。 有关安装此更新以及其他“升级”更新的详细信息，请参阅[软件更新的先决条件](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012)  。
-
+     - **升级**：为 Windows 10 特性和功能指定升级。 软件更新点和站点必须运行最低具有[修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 6.2 来获取“升级”分类。 有关安装此更新以及其他“升级”更新的详细信息，请参阅[软件更新的先决条件](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012)。
+    
     > [!NOTE]
-    > 可以选中“包括 Microsoft Surface 驱动程序和固件更新”复选框来同步 Microsoft Surface 驱动程序  。<!--1098490--> 有关详细信息，请参阅[包括 Microsoft Surface 驱动程序和固件更新](#bkmk_Surface)一节。
+    > 可以选中“包括 Microsoft Surface 驱动程序和固件更新”复选框来同步 Microsoft Surface 驱动程序。<!--1098490--> 所有软件更新点都必须运行 Windows Server 2016 或更高版本，才能成功同步 Surface 驱动程序。 如果启用 Surface 驱动程序后，在运行 Windows Server 2012 的计算机上启用软件更新点，则驱动程序更新的扫描结果不准确。 这会导致在 Configuration Manager 控制台和 Configuration Manager 报表中显示不正确的符合性数据。 有关详细信息，请参阅[使用 Configuration Manager 管理 Surface 驱动程序](../deploy-use/surface-drivers.md)。
 
-5. 在“产品”  选项卡上，指定要为其同步软件更新的产品，然后单击“关闭”  。  
+5. 在“产品”  选项卡上，指定要为其同步软件更新的产品，然后单击“关闭” 。  
 
     - Configuration Manager 存储产品和产品系列的列表，你在初次安装软件更新点时可以从此列表中进行选择。 如果某些产品和产品系列是在发布 Configuration Manager 之后发布的，那么，在完成软件更新同步（这将更新可供你从中进行选择的可用产品和产品系列的列表）之前，可能无法选择它们。  
 
@@ -60,20 +60,13 @@ ms.locfileid: "82078458"
     - 当软件更新适用于多个产品，且至少选中其中一个产品进行同步时，所有产品都将在 Configuration Manager 控制台中显示，即使未选中某些产品也是如此。 例如，Windows Server 2012 是你选择的唯一操作系统，而且软件更新适用于 Windows 8 和 Windows Server 2012，那么，这两个产品都会显示在 Configuration Manager 控制台中。  
 
     > [!NOTE]  
-    > Windows 10 版本 1903 以及更高版本作为独立产品添加到 Microsoft 更新，而不像早期版本那样属于 Windows 10 产品   。 这项更改需要你执行许多手动步骤，才可确保客户端显示这些更新。 我们已采取措施减少了需要手动对 Configuration Manager 版本 1906 中的新产品执行操作的步骤数量。 <!--4682946-->
+    > Windows 10 版本 1903 以及更高版本作为独立产品添加到 Microsoft 更新，而不像早期版本那样属于 Windows 10 产品 。 这项更改需要你执行许多手动步骤，才可确保客户端显示这些更新。 我们已采取措施减少了需要手动对 Configuration Manager 版本 1906 中的新产品执行操作的步骤数量。 <!--4682946-->
     >
-    > 更新至 Configuration Manager 1906 版，并选择了 Windows 10 产品进行同步后，系统将自动执行以下操作  ：
-    > - 已添加 Windows 10 1903 版以及更高版本产品用于进行同步操作  。
-    > - 包含 Windows 10 产品的[自动部署规则](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)将更新为包含 Windows 10 1903 版和更高版本   。
-    > - [维护服务计划](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow)将更新为包含 Windows 10 1903 版和更高版本产品  。
+    > 更新至 Configuration Manager 1906 版，并选择了 Windows 10 产品进行同步后，系统将自动执行以下操作：
+    > - 已添加 Windows 10 1903 版以及更高版本产品用于进行同步操作。
+    > - 包含 Windows 10 产品的[自动部署规则](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)将更新为包含 Windows 10 1903 版和更高版本 。
+    > - [维护服务计划](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow)将更新为包含 Windows 10 1903 版和更高版本产品。
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a> 包括 Microsoft Surface 驱动程序和固件更新
-
-可以选中“包括 Microsoft Surface 驱动程序和固件更新”复选框来同步 Microsoft Surface 驱动程序  。<!--1098490--> 所有软件更新点必须运行安装有累积更新 [KB4025339](https://support.microsoft.com/help/4025339) 的 Windows Server 2016 或更高版本，才能成功同步 Surface 驱动程序。 如果启用 Surface 驱动程序后，在运行 Windows Server 2012 的计算机上启用软件更新点，则驱动程序更新的扫描结果不准确。 这会导致在 Configuration Manager 控制台和 Configuration Manager 报表中显示不正确的符合性数据。  
-
-- 此功能在 1706 版中首次引入，属于[预发行功能](../../core/servers/manage/pre-release-features.md)。 从版本 1710 开始，此功能不再属于预发行功能。  
-- 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](../../core/servers/manage/install-in-console-updates.md#bkmk_options)。<!--505213-->  
-- ARM 设备的驱动程序不支持同步。
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>配置 Windows 10 各版本的产品
 
@@ -99,11 +92,11 @@ Windows 10 版本 1909 与 Windows 10 版本 1903 使用的是同一种常用核
     - 2019 年 10 月 8 日发布的最小累积更新 [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389)。
     - 2019 年 9 月 24 日发布的最小服务堆栈更新 [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390)。
   - 此更新与其他任何功能更新一样，无法从 `https:\\catalog.update.microsoft.com` 导入。
-  - 如果选中“Windows 10 版本 1903 和更高版本”产品和“升级”分类进行同步，更新将自动与 WSUS 同步   。
-  - 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“Windows 10 维护服务”，然后选择“全部 Windows 10 更新”节点    。 搜索术语“enablement”或“4517245”。
+  - 如果选中“Windows 10 版本 1903 和更高版本”产品和“升级”分类进行同步，更新将自动与 WSUS 同步 。
+  - 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“Windows 10 维护服务”，然后选择“全部 Windows 10 更新”节点  。 搜索术语“enablement”或“4517245”。
 
     > [!TIP]
-    > 由于这些是功能更新，因此它们不在“全部软件更新”节点中  。
+    > 由于这些是功能更新，因此它们不在“全部软件更新”节点中。
 
 - Windows 10 版本 1809 和更低版本的客户端通过单一直接功能更新进行升级。
   - 这与之前在 Windows 10 中完成的其他所有功能更新安装一样。
@@ -113,17 +106,17 @@ Windows 10 版本 1909 与 Windows 10 版本 1903 使用的是同一种常用核
 
 ### <a name="windows-10-version-1903-and-later"></a>Windows 10 版本 1903 及更高版本
 
-Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Microsoft 更新中，而不像早期版本那样作为 Windows 10 产品的一部分进行添加   。 这项更改需要你执行许多手动步骤，才可确保客户端显示这些更新。 我们已采取措施减少了需要手动对 Configuration Manager 版本 1906 中的新产品执行操作的步骤数量。 <!--4682946-->
+Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Microsoft 更新中，而不像早期版本那样作为 Windows 10 产品的一部分进行添加 。 这项更改需要你执行许多手动步骤，才可确保客户端显示这些更新。 我们已采取措施减少了需要手动对 Configuration Manager 版本 1906 中的新产品执行操作的步骤数量。 <!--4682946-->
 
 #### <a name="windows-10-version-1903-and-later-with-configuration-manager-version-1906"></a>Windows 10 版本 1903 和更高版本以及 Configuration Manager 版本 1906
-更新至 Configuration Manager 1906 版，并选择了 Windows 10 产品进行同步后，系统将自动执行以下操作  ：
-- 已添加 Windows 10 1903 版以及更高版本产品用于进行同步操作  。
-- 包含 Windows 10 产品的[自动部署规则](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)将更新为包含 Windows 10 1903 版和更高版本   。
-- [维护服务计划](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow)将更新为包含 Windows 10 1903 版和更高版本产品  。
+更新至 Configuration Manager 1906 版，并选择了 Windows 10 产品进行同步后，系统将自动执行以下操作：
+- 已添加 Windows 10 1903 版以及更高版本产品用于进行同步操作。
+- 包含 Windows 10 产品的[自动部署规则](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)将更新为包含 Windows 10 1903 版和更高版本 。
+- [维护服务计划](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow)将更新为包含 Windows 10 1903 版和更高版本产品。
 
 #### <a name="windows-10-version-1903-and-later-with-configuration-manager-version-1902"></a>Windows 10 版本 1903 和更高版本以及 Configuration Manager 版本 1902
 如果使用的是 Windows 10 版本 1903 客户端以及 Configuration Manager 1902，则需要：
-- 选择 Windows 10 1903 版以及更高版本产品用于进行同步操作  。
+- 选择 Windows 10 1903 版以及更高版本产品用于进行同步操作。
 - 更新 Windows 10 版本 1903 客户端的所有[自动部署规则](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)。
 - 更新 Windows 10 版本 1903 客户端的[维护服务计划](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow)。
 
@@ -141,23 +134,23 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>启用 Windows 预览体验计划升级和更新
 
-需要为 Windows 预览体验计划升级和更新启用产品和分类。 Windows 预览体验计划的功能更新、累积更新和其他更新位于 Windows 预览体验计划预发行版产品类别中  。
+需要为 Windows 预览体验计划升级和更新启用产品和分类。 Windows 预览体验计划的功能更新、累积更新和其他更新位于 Windows 预览体验计划预发行版产品类别中。
 
-1. 在 **Configuration Manager** 控制台中，导航到“管理”   > “站点配置”   > “站点”  。
+1. 在 **Configuration Manager** 控制台中，导航到“管理” > “站点配置” > “站点”。
 2. 选择管理中心站点或独立主站点。  
-3. 在“主页”  选项卡上的“设置”  组中，单击“配置站点组件”  ，再单击“软件更新点”  。
-4. 在“产品”选项卡中，确保选中以下产品进行同步  ：
+3. 在“主页”  选项卡上的“设置”  组中，单击“配置站点组件” ，再单击“软件更新点” 。
+4. 在“产品”选项卡中，确保选中以下产品进行同步：
     - Windows 预览体验计划预发行版
     - Windows 10 版本 1903 及更高版本
-5. 在“分类”选项卡中，确保选中以下分类进行同步  ：
+5. 在“分类”选项卡中，确保选中以下分类进行同步：
     - 升级
     - 安全更新
     - 更新（可选）
-6. 单击“确定”  关闭“软件更新点组件属性”  。
+6. 单击“确定” 关闭“软件更新点组件属性” 。
 
 ### <a name="upgrading-windows-insider-devices"></a>升级 Windows 预览体验计划设备
 
-同步 Windows 预览体验计划的升级后，可以在“软件库” > “Windows 10 维护服务” > 全部 Windows 10 更新”中进行查看    。
+同步 Windows 预览体验计划的升级后，可以在“软件库” > “Windows 10 维护服务” > 全部 Windows 10 更新”中进行查看  。
 
 ![Windows 10 维护服务的 Windows 预览体验计划功能更新](media/3556023-windows-insiders-pre-release-feature-update.png)
 
@@ -175,7 +168,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 ### <a name="keeping-insider-devices-up-to-date"></a>使预览体验成员设备保持最新
 
-Windows 预览体验计划的累积更新将可适用于 WSUS，经扩展后可适用于 Configuration Manager。 这些累积更新的发布频率与 Windows 10 版本 1903 累积更新的发布频率相似。 Windows 预览体验计划累积更新位于“Windows 预览体验计划预发行版”产品类别中，并归类为“安全更新程序”或“更新”    。 可以按常规软件更新流程（如按[自动部署规则](../deploy-use/automatically-deploy-software-updates.md)或[分阶段部署](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)）部署 Windows 预览体验计划的累积更新。
+Windows 预览体验计划的累积更新将可适用于 WSUS，经扩展后可适用于 Configuration Manager。 这些累积更新的发布频率与 Windows 10 版本 1903 累积更新的发布频率相似。 Windows 预览体验计划累积更新位于“Windows 预览体验计划预发行版”产品类别中，并归类为“安全更新程序”或“更新”  。 可以按常规软件更新流程（如按[自动部署规则](../deploy-use/automatically-deploy-software-updates.md)或[分阶段部署](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)）部署 Windows 预览体验计划的累积更新。
 
 ## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> 扩展的安全更新和 Configuration Manager
 

@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764112"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531462"
 ---
 # <a name="plan-for-bitlocker-management"></a>规划 BitLocker 管理
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764112"
 
 <!-- 3601034 -->
 
-从版本 1910 开始，请使用 Configuration Manager 管理本地 Windows 客户端的 BitLocker 驱动器加密 (BDE)。 它提供了可代替 Microsoft BitLocker Administration and Monitoring (MBAM) 的完整 BitLocker 生命周期管理。
+从版本 1910 开始，请使用 Configuration Manager 管理已加入 Active Directory 的本地 Windows 客户端的 BitLocker 驱动器加密 (BDE)。 不支持加入 Azure Active Directory 的客户端或工作组客户端。 它提供了可代替 Microsoft BitLocker Administration and Monitoring (MBAM) 的完整 BitLocker 生命周期管理。
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](../../core/servers/manage/install-in-console-updates.md#bkmk_options)。  
@@ -92,7 +92,7 @@ Configuration Manager 为 BitLocker 驱动器加密提供以下管理功能：
     > [!NOTE]
     > 请仅使用主站点数据库安装自助门户以及管理和监视网站。 在层次结构中，为每个主站点安装这些网站。
 
-- 在将托管自助门户的 Web 服务器上，安装 [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4)。
+- 在将承载自助服务门户的 Web 服务器上，先安装 [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) 和 .NET Framework 3.5 功能，然后再开始安装过程。 在门户安装过程中，将自动安装其他必需的 Windows 服务器角色和功能。
 
 - 运行门户安装程序脚本的用户帐户需要站点数据库服务器上的 SQL sysadmin 权限。 在安装过程中，该脚本将设置 Web 服务器计算机帐户的登录名、用户和 SQL 角色权限。 安装自助门户和 Administration and Monitoring 网站后，可以从系统管理员角色中删除此用户帐户。
 

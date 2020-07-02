@@ -2,7 +2,7 @@
 title: 规划云管理网关
 titleSuffix: Configuration Manager
 description: 规划和设计云管理网关 (CMG)，简化基于 Internet 的客户端管理。
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254616"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715639"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--1101764-->
 云管理网关 (CMG) 提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他本地基础结构。 也不需要将本地基础结构向 Internet 公开。
@@ -79,37 +79,40 @@ ms.locfileid: "82254616"
 
 CMG 部署和操作包括以下组件：  
 
-- Azure 中的“CMG 云服务”对 Configuration Manager 客户端请求进行身份验证并将其转发给 CMG 连接点  。  
+- Azure 中的“CMG 云服务”对 Configuration Manager 客户端请求进行身份验证并将其转发给 CMG 连接点。  
 
-- “CMG 连接点”站点系统角色可实现从本地网络到 Azure 中 CMG 服务的一致且高性能的连接  。 它还可将设置发布到 CMG 中，其中包括连接信息和安全设置。 CMG 连接点根据 URL 映射将客户端请求从 CMG 转发到本地角色。
+- “CMG 连接点”站点系统角色可实现从本地网络到 Azure 中 CMG 服务的一致且高性能的连接。 它还可将设置发布到 CMG 中，其中包括连接信息和安全设置。 CMG 连接点根据 URL 映射将客户端请求从 CMG 转发到本地角色。
 
-- [服务连接点](../../../servers/deploy/configure/about-the-service-connection-point.md)站点系统角色运行云服务管理器组件，该组件负责处理所有 CMG 部署任务  。 此外，它还可以监视并报告 Azure AD 中的服务运行状况和日志信息。 确保服务连接点处于[联机模式](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)。  
+- [服务连接点](../../../servers/deploy/configure/about-the-service-connection-point.md)站点系统角色运行云服务管理器组件，该组件负责处理所有 CMG 部署任务。 此外，它还可以监视并报告 Azure AD 中的服务运行状况和日志信息。 确保服务连接点处于[联机模式](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)。  
 
-- “管理点”站点系统角色按照惯例处理客户端请求  。  
+- “管理点”站点系统角色按照惯例处理客户端请求。
 
-- “软件更新点”站点系统角色按照惯例处理客户端请求  。  
+- “软件更新点”站点系统角色按照惯例处理客户端请求。
 
-- “基于 Internet 的客户端”连接到 CMG 以访问本地 Configuration Manager 组件  。
+    > [!NOTE]
+    > 管理点和软件更新点的调整大小指南并不会更改它们是在本地还是基于 Internet 的客户端提供服务。 有关详细信息，请参阅[调整大小和扩展数量](../../../plan-design/configs/size-and-scale-numbers.md#management-point)。
 
-- CMG 使用“基于证书的 HTTPS”Web 服务来帮助保护与客户端的网络通信  。  
+- “基于 Internet 的客户端”连接到 CMG 以访问本地 Configuration Manager 组件。
 
-- 基于 Internet 的客户端使用“PKI 证书或 Azure AD”进行标识和身份验证  。  
+- CMG 使用“基于证书的 HTTPS”Web 服务来帮助保护与客户端的网络通信。  
 
-- [云分发点](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)按需向基于 Internet 的客户端提供内容  。  
+- 基于 Internet 的客户端使用“PKI 证书或 Azure AD”进行标识和身份验证。  
+
+- [云分发点](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)按需向基于 Internet 的客户端提供内容。  
 
   - CMG 还可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](setup-cloud-management-gateway.md#modify-a-cmg)。<!--1358651-->  
 
 ### <a name="azure-resource-manager"></a>Azure 资源管理器
 
 <!-- 1324735 -->
-使用 Azure 资源管理器部署创建 CMG  。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+使用 Azure 资源管理器部署创建 CMG。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
 > [!NOTE]
 > 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)。
 
 从 Configuration Manager 版本 1902 起，Azure 资源管理器是云管理网关的新实例的唯一部署机制。 现有部署将继续使用。<!-- 3605704 -->
 
-在 Configuration Manager 版本 1810 及更早版本中，CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”  选项。 要简化资源的部署和管理，建议为所有新的 CMG 实例使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有 CMG 实例。 有关详细信息，请参阅[修改 CMG](setup-cloud-management-gateway.md#modify-a-cmg)。
+在 Configuration Manager 版本 1810 及更早版本中，CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。 要简化资源的部署和管理，建议为所有新的 CMG 实例使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有 CMG 实例。 有关详细信息，请参阅[修改 CMG](setup-cloud-management-gateway.md#modify-a-cmg)。
 
 > [!IMPORTANT]
 > Configuration Manager 已弃用 Azure 的经典服务部署。 1810 版是支持创建这些 Azure 部署的最后一个版本。 此功能将在未来的 Configuration Manager 版本中删除。<!--SCCMDocs-pr issue #2993-->  
@@ -151,37 +154,55 @@ CMG 部署和操作包括以下组件：
 > [!TIP]
 > 无需部署多个云管理网关即可满足地理位置的需求。 Configuration Manager 客户端通常不受云服务发生的轻微延迟的影响，即使在地理位置上相距遥远时也是如此。
 
+### <a name="test-environments"></a>测试环境
+<!-- SCCMDocs#1225 -->
+许多组织拥有独立的生产、测试、开发或质量保证环境。 计划 CMG 部署时，请考虑下列问题：
+
+- 你的组织有多少个 Azure AD 租户？
+  - 是否有用于测试的单独租户？
+  - 同一租户中的用户和设备标识是否相同？
+
+- 每个租户有多少订阅？
+  - 是否有特定于测试的订阅？
+
+Configuration Manager 的 Azure 云管理服务支持多个租户。 多个 Configuration Manager 站点可连接到同一个租户。 单个站点可以将多个 CMG 服务部署到不同的订阅中。 多个站点可以将 CMG 服务部署到同一订阅中。 Configuration Manager 提供的灵活性取决于你的环境和业务要求。
+
+有关详细信息，请参阅以下常见问题解答：[用户帐户是否必须与托管 CMG 云服务的订阅关联的租户位于同一 Azure AD 租户中？](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## <a name="requirements"></a>要求
 
-- 承载 CMG 的 Azure 订阅  。
+- 承载 CMG 的 Azure 订阅。
 
-- 你的用户帐户必须是 Configuration Manager 中的“完全权限管理员”或“基础结构管理员”   。<!-- SCCMDocs#2146 -->
+    > [!IMPORTANT]
+    > CMG 不支持使用 Azure 云服务提供商 (CSP) 的订阅。<!-- MEMDocs#320 -->
 
-- Azure 管理员需参与某些组件的初始创建，具体视设计而定  。 此角色可以与 Configuration Manager 管理员相同，也可是独立角色。 如果是独立角色，则不需要 Configuration Manager 中的权限。
+- 你的用户帐户必须是 Configuration Manager 中的“完全权限管理员”或“基础结构管理员” 。<!-- SCCMDocs#2146 -->
 
-  - 要部署 CMG，你需要订阅管理员 
-  - 要将站点与 Azure AD 集成以使用 Azure Resource Manager 部署 CMG，你需要全局管理员 
+- Azure 管理员需参与某些组件的初始创建，具体视设计而定。 此角色可以与 Configuration Manager 管理员相同，也可是独立角色。 如果是独立角色，则不需要 Configuration Manager 中的权限。
 
-- 至少一个承载 CMG 连接点的本地 Windows 服务器  。 可将此角色与其他 Configuration Manager 站点系统角色归置在一起。  
+  - 要部署 CMG，你需要“订阅所有者”
+  - 要将站点与 Azure AD 集成以使用 Azure Resource Manager 部署 CMG，你需要全局管理员
 
-- 服务连接点必须处于[联机模式](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)  。  
+- 至少一个承载 CMG 连接点的本地 Windows 服务器。 可将此角色与其他 Configuration Manager 站点系统角色归置在一起。  
 
-- 与 Azure AD  集成，用于通过 Azure 资源管理器部署该服务。 有关详细信息，请参阅[配置 Azure 服务](../../../servers/deploy/configure/azure-services-wizard.md)。  
+- 服务连接点必须处于[联机模式](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)。  
 
-- 用于 CMG 的[服务器身份验证证书](certificates-for-cloud-management-gateway.md#bkmk_serverauth)  。  
+- 与 Azure AD 集成，用于通过 Azure 资源管理器部署该服务。 有关详细信息，请参阅[配置 Azure 服务](../../../servers/deploy/configure/azure-services-wizard.md)。  
 
-- 可能需要其他证书，具体取决于客户端操作系统版本和身份验证模型  。 有关详细信息，请参阅 [CMG 证书](certificates-for-cloud-management-gateway.md)。  
+- 用于 CMG 的[服务器身份验证证书](certificates-for-cloud-management-gateway.md#bkmk_serverauth)。  
 
-    使用站点选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”时，管理点可以是 HTTP  。 有关详细信息，请参阅[增强型 HTTP](../../../plan-design/hierarchy/enhanced-http.md)。
+- 可能需要其他证书，具体取决于客户端操作系统版本和身份验证模型。 有关详细信息，请参阅 [CMG 证书](certificates-for-cloud-management-gateway.md)。  
 
-- 在 Configuration Manager 版本 1810 或更早版本中，如果使用 Azure 经典部署方法，则必须使用 [Azure 管理证书](certificates-for-cloud-management-gateway.md#bkmk_azuremgmt)。   
+    使用站点选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”时，管理点可以是 HTTP。 有关详细信息，请参阅[增强型 HTTP](../../../plan-design/hierarchy/enhanced-http.md)。
+
+- 在 Configuration Manager 版本 1810 或更早版本中，如果使用 Azure 经典部署方法，则必须使用 [Azure 管理证书](certificates-for-cloud-management-gateway.md#bkmk_azuremgmt)。  
 
     > [!TIP]  
-    > 使用“Azure 资源管理器”部署模型  。 它不需要此管理证书。
+    > 使用“Azure 资源管理器”部署模型。 它不需要此管理证书。
     >
     > 从版本 1810 开始弃用经典部署方法。  
 
-- 客户端必须使用 IPv4  。  
+- 客户端必须使用 IPv4。  
 
 ## <a name="specifications"></a>规格
 
@@ -193,7 +214,7 @@ CMG 部署和操作包括以下组件：
 
 - 使用网络负载均衡器的软件更新点不适用于 CMG。 <!--505311-->  
 
-- 使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- 使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 计划中可用的 Azure 服务](https://docs.microsoft.com/partner-center/azure-plan-available)。
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager 功能支持
 
@@ -231,7 +252,7 @@ CMG 部署和操作包括以下组件：
 |Key|
 |--|
 |![支持](media/green_check.png) = 所有受支持的 Configuration Manager 版本的 CMG 都支持此功能  |
-|![支持](media/green_check.png) (YYMM) = 自 Configuration Manager YYMM 版起，CMG 支持此功能    |
+|![支持](media/green_check.png) (YYMM) = 自 Configuration Manager YYMM 版起，CMG 支持此功能   |
 |![不支持](media/Red_X.png) = CMG 不支持此功能 |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> 注释 1：支持 Endpoint Protection
@@ -270,25 +291,25 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 
 - 即使没有任何客户端与 CMG 进行通信，某些后台通信也会使 CMG 和本地站点之间出现网络流量。  
 
-- 在 Configuration Manager 控制台中查看出站数据传输 (GB)  。 有关详细信息，请参阅[监视 CMG 上的客户端](monitor-clients-cloud-management-gateway.md)。  
+- 在 Configuration Manager 控制台中查看出站数据传输 (GB)。 有关详细信息，请参阅[监视 CMG 上的客户端](monitor-clients-cloud-management-gateway.md)。  
 
 - 请参阅 [Azure 带宽定价详细信息](https://azure.microsoft.com/pricing/details/bandwidth/)以帮助确定潜在的费用。 数据传输定价是分层的。 使用得越多，每 GB 支付的费用就越少。  
 
-- 出于估算目的，可假设基于 Internet 的每个客户端每月大约耗费 100－300 MB  。 预计默认客户端配置使用的数据会更少。 预计高性能客户端配置使用的数据会更多。 实际使用情况可能会有所不同，具体取决于客户端设置的配置。  
+- 出于估算目的，可假设基于 Internet 的每个客户端每月大约耗费 100－300 MB。 预计默认客户端配置使用的数据会更少。 预计高性能客户端配置使用的数据会更多。 实际使用情况可能会有所不同，具体取决于客户端设置的配置。  
 
     > [!NOTE]  
     > 执行其他操作（例如，部署软件更新或应用程序）时，从 Azure 传输的出站数据量会增加。
 
 - 基于 Internet 的客户端可免费从 Windows 更新获取 Microsoft 软件更新内容。 不要将包含 Microsoft 更新内容的更新包分发到云分发点，否则可能会造成存储和数据出口成本。  
 
--  如果用于验证客户端证书吊销的 CMG 选项配置错误，可能会导致从客户端到 CMG 的额外流量。 这种额外的流量可能会增加 Azure 流出量数据，从而增加 Azure 成本。<!-- SCCMDocs#1434 --> 有关详细信息，请参阅[发布证书吊销列表](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl)。  
+- 如果用于验证客户端证书吊销的 CMG 选项配置错误，可能会导致从客户端到 CMG 的额外流量。 这种额外的流量可能会增加 Azure 流出量数据，从而增加 Azure 成本。<!-- SCCMDocs#1434 --> 有关详细信息，请参阅[发布证书吊销列表](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl)。  
 
 ### <a name="content-storage"></a>内容存储
 
 - 基于 Internet 的客户端可免费从 Windows 更新获取 Microsoft 软件更新内容。 不要将包含 Microsoft 更新内容的更新包分发到云分发点，否则可能会造成存储和数据出口成本。  
 
 - 对于其他任何必要内容（例如应用程序或第三方软件更新），必须分发到云分发点。 目前，CMG 仅支持从云分发点向客户端发送内容。
-   - 将 CMG 用于内容存储时，如果“在有可用内容时下载增量内容”[客户端设置](../../deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)已启用，则第三方更新内容不会下载到客户端  。 <!--6598587--> 
+   - 将 CMG 用于内容存储时，如果“在有可用内容时下载增量内容”[客户端设置](../../deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)已启用，则第三方更新内容不会下载到客户端。 <!--6598587--> 
 
 - 有关详细信息，请参阅使用[云分发点](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_cost)所产生的成本。  
 
@@ -333,6 +354,9 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 
 3. 客户端通过 HTTPS 端口 443 连接到 CMG。 它使用 Azure AD 或客户端身份验证证书进行身份验证。  
 
+    > [!NOTE]
+    > 如果你启用 CMG 来提供内容或使用云分发点，则客户端将通过 HTTPS 端口 443 直接连接到 Azure blob 存储。 有关详细信息，请参阅[使用基于云的分发点](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow)。<!-- SCCMDocs#2332 -->
+
 4. CMG 通过现有连接将客户端通信转发到本地 CMG 连接点。 无需打开任何入站防火墙端口。  
 
 5. CMG 连接点将客户端通信转发到本地管理点和软件更新点。  
@@ -341,7 +365,7 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 
 ### <a name="required-ports"></a>所需端口
 
-此表列出了所需网络端口和协议。 客户端是启动连接的设备，需要出站端口  。 服务器是接受连接的设备，需要入站端口  。
+此表列出了所需网络端口和协议。 客户端是启动连接的设备，需要出站端口。 服务器是接受连接的设备，需要入站端口。
 
 | 客户端 | 协议 | Port | 服务器 | 说明 |
 |--------|----------|------|--------|-------------|
@@ -350,6 +374,7 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 | CMG 连接点 | HTTPS | 443 | CMG 服务 | 回退协议，将 CMG 通道构建为只有一个 VM 实例<sup>[注释 2](#bkmk_port-note2)</sup> |
 | CMG 连接点 | HTTPS | 10124-10139 | CMG 服务 | 回退协议，将 CMG 通道构建为 2 个或更多 VM 实例<sup>[注释 3](#bkmk_port-note3)</sup> |
 | 客户端 | HTTPS | 443 | CMG | 常规客户端通信 |
+| 客户端 | HTTPS | 443 | Blob 存储 | 下载基于云的内容 |
 | CMG 连接点 | HTTPS 或 HTTP | 443 或 80 | 管理点 | 本地流量，端口取决于管理点配置 |
 | CMG 连接点 | HTTPS 或 HTTP | 443 或 80 | 软件更新点 | 本地流量，端口取决于软件更新点配置 |
 

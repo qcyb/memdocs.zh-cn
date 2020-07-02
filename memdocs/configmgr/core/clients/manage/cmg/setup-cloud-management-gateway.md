@@ -5,17 +5,17 @@ description: 使用此分步过程来设置云管理网关 (CMG)。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877415"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715231"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -25,7 +25,6 @@ ms.locfileid: "83877415"
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](../../../servers/manage/install-in-console-updates.md#bkmk_options)。
-
 
 ## <a name="before-you-begin"></a>在开始之前
 
@@ -39,11 +38,11 @@ ms.locfileid: "83877415"
 
 - 对于 CMG 的 [Azure 资源管理器](plan-cloud-management-gateway.md#azure-resource-manager)部署，需要满足以下要求：  
 
-    - 与 [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) 集成以实现**云管理**。 不需要 Azure AD 用户发现。  
+  - 与 [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) 集成以实现**云管理**。 不需要 Azure AD 用户发现。 要将站点与 Azure AD 集成以使用 Azure 资源管理器部署 CMG，你需要全局管理员。
 
-    - 必须在 Azure 订阅中注册 Microsoft.ClassicCompute & Microsoft.Storage 资源提供程序 。 有关详细信息，请参阅 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)。
+  - 必须在 Azure 订阅中注册 Microsoft.ClassicCompute & Microsoft.Storage 资源提供程序 。 有关详细信息，请参阅 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)。
 
-    - 订阅管理员需要进行登录。  
+  - 订阅所有者需要登录才能部署 CMG。
 
 - 服务的全局唯一名称。 此名称来自 [CMG 服务器身份验证证书](certificates-for-cloud-management-gateway.md#bkmk_serverauth)。  
 
@@ -60,10 +59,9 @@ ms.locfileid: "83877415"
     >
     > 从 Configuration Manager 版本 1902 起，Azure 资源管理器是云管理网关的新实例的唯一部署机制。<!-- 3605704 -->
 
-    - Azure 订阅 ID  
+  - Azure 订阅 ID  
 
-    - Azure 管理证书  
-
+  - Azure 管理证书  
 
 ## <a name="set-up-a-cmg"></a>设置 CMG
 
@@ -73,7 +71,7 @@ ms.locfileid: "83877415"
 
 2. 选择功能区中的“创建云管理网关”。  
 
-3. 在向导的“常规”页上，选择“登录”。 使用 Azure 订阅管理员帐户进行身份验证。 向导使用 Azure AD 集成先决条件过程中存储的 信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅的**订阅 ID**。
+3. 在向导的“常规”页上，选择“登录”。 使用 Azure 订阅所有者帐户进行身份验证。 向导使用 Azure AD 集成先决条件过程中存储的信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的订阅的订阅 ID。
 
     > [!Note]  
     > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 在版本 1902 和更早版本中，选择 Azure 资源管理器部署作为 CMG 部署方法。
@@ -100,7 +98,7 @@ ms.locfileid: "83877415"
 10. 选择“证书”以添加受信任的客户端根证书。 添加信任链中的所有证书。  
 
     > [!Note]  
-    > 从 1806 版开始，创建 CMG 时，不再需要在设置页上提供受信任的根证书。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。<!--SCCMDocs-pr issue #2872-->  
+    > 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要受信任的根证书。 如果使用 PKI 客户端身份验证证书，则需要向 CMG 添加受信任的根证书。<!--SCCMDocs-pr issue #2872-->
     >
     > 在版本 1902 和更早版本中，只能添加两个受信任的根 CA 和四个中间（从属）CA。<!-- SCCMDocs-pr#4022 -->
 
@@ -108,7 +106,7 @@ ms.locfileid: "83877415"
 
 12. 从版本 1906 开始，可以强制执行 TLS 1.2。 此设置仅适用于 Azure 云服务 VM。 它不适用于任何本地 Configuration Manager 站点服务器或客户端。 有关 TLS 1.2 的详细信息，请参阅[如何启用 TLS 1.2](../../../plan-design/security/enable-tls-1-2.md)。<!-- SCCMDocs-pr#4021 -->
 
-13. 默认情况下，从版本 1806 开始，向导会启用以下选项：允许 CMG 充当云分发点，并提供 Azure 存储中的内容。 CMG 现还可向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。  
+13. 默认情况下，向导会启用以下选项：允许 CMG 充当云分发点，并提供 Azure 存储中的内容。 CMG 还可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。
 
 14. 选择“下一步”。  
 
@@ -116,9 +114,8 @@ ms.locfileid: "83877415"
 
 16. 检查设置，然后选择“下一步”。 Configuration Manager 开始设置服务。 关闭向导后，需花 5 到 15 分钟在 Azure 中完整预配该服务。 检查新 CMG 的“状态”列，确定服务是否已准备就绪。  
 
-    > [!Note]  
+    > [!NOTE]
     > 若要排查 CMG 部署问题，请使用 **CloudMgr.log** 和 **CMGSetup.log**。 有关详细信息，请参阅[日志文件](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)。
-
 
 ## <a name="configure-primary-site-for-client-certificate-authentication"></a>为主站点配置客户端证书身份验证
 
@@ -128,23 +125,21 @@ ms.locfileid: "83877415"
 
 2. 选择要将基于 Internet 的客户端分配到的主站点，选择“属性”。  
 
-3. 切换到主站点属性表的“客户端计算机通信”选项卡，选中“在可用时使用 PKI 客户端证书(客户端身份验证)”。  
+3. 切换到主站点属性表的“通信安全”选项卡，选中“在可用时使用 PKI 客户端证书(客户端身份验证)”。  
 
-    > [!Note]
-    > 从版本 1906 开始，此选项卡称为“通信安全”。<!-- SCCMDocs#1645 -->  
+    > [!NOTE]
+    > 在版本 1902 及更早版本中，此选项卡称为“客户端计算机通信”。<!-- SCCMDocs#1645 -->
 
 4. 如果未发布 CRL，请取消选择“客户端检查站点系统的证书吊销列表(CRL)”选项。  
-
 
 ## <a name="add-the-cmg-connection-point"></a>添加 CMG 连接点
 
 CMG 连接点是与 CMG 通信的站点系统角色。 若要添加 CMG 连接点，请按照常规说明[安装站点系统角色](../../../servers/deploy/configure/install-site-system-roles.md)。 在“添加站点系统角色”向导的“系统角色选择”页上，选择“云管理网关连接点”。 然后选择该服务器连接到的“云管理网关名称”。 该向导会显示选定 CMG 所在的区域。
 
-> [!Important]
+> [!IMPORTANT]
 > 在某些情况下，CMG 连接点必须具有[客户端身份验证证书](certificates-for-cloud-management-gateway.md#bkmk_clientauth)。
 
 若要排查 CMG 服务运行状况问题，请使用 **CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。 有关详细信息，请参阅[日志文件](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)。
-
 
 ## <a name="configure-client-facing-roles-for-cmg-traffic"></a>为 CMG 通信配置面向客户端的角色
 
@@ -162,7 +157,6 @@ CMG 连接点是与 CMG 通信的站点系统角色。 若要添加 CMG 连接�
 
 为其他管理点（酌情而定）和所有软件更新点重复这些步骤。
 
-
 ## <a name="configure-boundary-groups"></a>配置边界组
 
 <!--3640932-->
@@ -172,17 +166,16 @@ CMG 连接点是与 CMG 通信的站点系统角色。 若要添加 CMG 连接�
 
 在[创建或边界组](../../../servers/deploy/configure/boundary-group-procedures.md)时，在“引用”选项卡上，添加云管理网关。 此操作将 CMG 与此边界组关联。
 
-
 ## <a name="configure-clients-for-cmg"></a>为 CMG 配置客户端
 
-一旦运行 CMG 和站点系统角色，客户端就会在发出下一个位置请求时自动获取 CMG 服务的位置。 除非[安装并分配 Windows 10 客户端（使用 Azure AD 进行身份验证）](../../deploy/deploy-clients-cmg-azure.md)，否则客户端必须位于 Intranet 上，才能接收 CMG 服务的位置。 位置请求的轮询周期为 24 小时。 如果不想等待按正常计划执行的位置请求，可以通过重新启动计算机上的 SMS 代理主机服务 (ccmexec.exe) 强制执行该请求。  
+一旦运行 CMG 和站点系统角色，客户端就会在发出下一个位置请求时自动获取 CMG 服务的位置。 除非[安装并分配 Windows 10 客户端（使用 Azure AD 进行身份验证）](../../deploy/deploy-clients-cmg-azure.md)，否则客户端必须位于 Intranet 上，才能接收 CMG 服务的位置。 位置请求的轮询周期为 24 小时。 如果不想等待正常计划的位置请求，则可以强制执行请求。 若要强制执行请求，请重启计算机上的 SMS Agent Host 服务 (ccmexec.exe)。
 
-> [!Note]
+> [!NOTE]
 > 默认情况下，所有客户端均接收 CMG 策略。 可使用客户端设置[“允许客户端使用云管理网关”](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway)控制此行为。
 
 Configuration Manager 客户端会自动确定它是在 Intranet 上还是在 Internet 上。 如果客户端可以访问域控制器或本地管理点，它会将自己的连接类型设置为“当前 Intranet”。 否则，它会切换为“当前 Internet”，并使用 CMG 服务的位置与站点通信。
 
->[!NOTE]
+> [!NOTE]
 > 不管客户端是在 Intranet 上还是在 Internet 上，都可以强制它始终使用 CMG。 此配置可用于测试目的，或用于你希望强制始终使用 CMG 的客户端。 请在客户端上设置以下注册表项：
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
@@ -191,17 +184,20 @@ Configuration Manager 客户端会自动确定它是在 Intranet 上还是在 In
 >
 > 即使客户端漫游到边界组配置将以其他方式利用本地资源的位置，此设置也将始终适用。
 
+若要验证客户端是否具有指定 CMG 的策略，请在客户端计算机上以管理员身份打开 Windows PowerShell 命令提示符，然后运行以下命令：
 
-若要验证客户端是否具有指定 CMG 的策略，请在客户端计算机上以管理员身份打开 Windows PowerShell 命令提示符，然后运行以下命令：`Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```powershell
+Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```
 
 此命令会显示客户端知道的所有基于 Internet 的管理点。 虽然 CMG 在技术上不是基于 Internet 的管理点，但对客户端而言却是如此。
 
-> [!Note]  
+> [!NOTE]  
 > 若要排查 CMG 客户端通信问题，请使用 **CMGHttpHandler.log**、**CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。 有关详细信息，请参阅[日志文件](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)。
 
 ### <a name="install-off-premises-clients-using-a-cmg"></a>使用 CMG 安装外部客户端
 
-若要在当前未连接到 Intranet 的系统中安装客户端代理，必须满足以下条件之一。 在所有情况下，都需要目标系统上的本地管理员帐户。
+若要在当前未连接到 Intranet 的系统中安装 Configuration Manager 客户端，必须满足以下条件之一。 在所有情况下，都需要目标系统上的本地管理员帐户。
 
 1. Configuration Manager 站点已正确配置为使用 PKI 证书进行客户端身份验证。 此外，每个客户端系统都有一个之前颁发的有效、唯一且受信任的客户端身份验证证书。
 
@@ -209,35 +205,37 @@ Configuration Manager 客户端会自动确定它是在 Intranet 上还是在 In
 
 3. 站点运行的是 Configuration Manager 版本 2002 或更高版本。
 
-对于选项 1 和 2，在调用 ccmsetup.exe 时使用 /mp 参数来指定 CMG 的 URL。 有关详细信息，请参阅[关于客户端安装参数和属性](../../deploy/about-client-installation-properties.md#mp)。
+对于选项 1 和 2，在运行 ccmsetup.exe 时使用 /mp 参数来指定 CMG 的 URL。 有关详细信息，请参阅[关于客户端安装参数和属性](../../deploy/about-client-installation-properties.md#mp)。
 
-对于选项 3，自 Configuration Manager 版本 2002 起，可以使用批量注册令牌在未连接到 Intranet 的系统中安装客户端代理。 若要详细了解这种方法，请参阅[创建批量注册令牌](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)。
+对于选项 3，自 Configuration Manager 版本 2002 起，可以使用批量注册令牌在未连接到 Intranet 的系统中安装客户端。 若要详细了解这种方法，请参阅[创建批量注册令牌](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)。
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>为外部客户端配置 CMG
 
 在满足以下条件的情况下，可以将系统连接到最近配置的 CMG：  
 
-- 系统已安装 Configuration Manager 客户端代理。
+- 系统已安装 Configuration Manager 客户端。
 
 - 系统未连接到且无法连接到 Intranet。
 
 - 系统满足以下条件之一：
 
-  - 每个系统都有之前颁发的有效、唯一且受信任的客户端身份验证证书。
+  - 每个系统都有之前颁发的有效、唯一且受信任的客户端身份验证证书
 
   - 已建立 Azure AD 域联接
 
-  - 已建立混合 Azure AD 域联接。
+  - 已建立混合 Azure AD 域联接
 
-- 你不希望或无法完全重新安装现有的客户端代理。
+- 你不希望或无法完全重新安装现有的客户端。
 
 - 可以通过一种方法来更改计算机注册表值，并使用本地管理员帐户来重启 SMS Agent Host 服务。
 
-若要在这些系统中强制连接，请在 HKLM\Software\Microsoft\CCM 下创建注册表值 CMGFQDNs（类型为 REG_SZ）。 将此值设置为 CMG 的 URL（例如，`https://contoso-cmg.contoso.com`）。 设置完成后，重启客户端系统上的 SMS Agent Host 服务。
+若要在这些系统上强制进行连接，请在密钥 `HKLM\Software\Microsoft\CCM` 中创建 REG_SZ 注册表项 `CMGFQDNs`。 将此值设置为 CMG 的 URL，例如 `https://contoso-cmg.contoso.com`。 然后重启设备上的 SMS Agent Host Windows 服务。
 
-如果 Configuration Manager 客户端没有在注册表中设置当前 CMG 或面向 Internet 的管理点，它会自动检查 CMGFQDNs 注册表值。 当 SMS Agent Host 服务启动或检测到网络更改时，此检查每 25 小时执行一次。 如果客户端连接到站点并了解 CMG，它就会自动更新此值。
+如果 Configuration Manager 客户端没有在注册表中设置当前 CMG 或面向 Internet 的管理点，它会自动检查 `CMGFQDNs` 注册表值。 当 SMS Agent Host 服务启动或检测到网络更改时，此检查每 25 小时执行一次。 如果客户端连接到站点并了解 CMG，它就会自动更新此值。
 
 ## <a name="modify-a-cmg"></a>修改 CMG
+
+### <a name="cmg-properties"></a>CMG 属性
 
 创建 CMG 之后，可以修改它的某些设置。 在 Configuration Manager 控制台中选择该 CMG，然后选择“属性”。 配置以下选项卡上的设置：  
 
@@ -249,18 +247,17 @@ Configuration Manager 客户端会自动确定它是在 Intranet 上还是在 In
 
 - **证书文件**：更改 CMG 的服务器身份验证证书。 在证书过期之前更新证书时，此选项很有用。  
 
-- **VM 实例**：更改该服务在 Azure 中使用的虚拟机数量。 此设置允许你基于利用率或成本考虑，以动态方式横向或纵向扩展该服务。  
+- **VM 实例**：更改该服务在 Azure 中使用的虚拟机数量。 此设置允许你基于使用情况或成本考虑，以动态方式扩展或缩减该服务。  
 
 - **证书**：添加或删除受信任的根或中间 CA 证书。 在添加新的 CA 或停用过期证书时，此选项很有用。  
 
 - **验证客户端证书吊销**：如果最初在创建 CMG 时未启用此设置，可以在发布 CRL 后启用。 有关详细信息，请参阅[发布证书吊销列表](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl)。  
 
-- 允许 CMG 充当云分发点，并提供 Azure 存储中的内容：从版本 1806 开始，默认启用此新选项。 CMG 现还可向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。<!--1358651-->  
+- 允许 CMG 充当云分发点并在 Azure 存储中提供内容：默认情况下启用该选项。 CMG 还可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。<!--1358651-->
 
 #### <a name="alerts"></a>警报
 
 可在创建 CMG 后随时重新配置警报。
-
 
 ### <a name="redeploy-the-service"></a>重新部署服务
 
@@ -296,7 +293,7 @@ Configuration Manager 客户端会自动确定它是在 Intranet 上还是在 In
 
     4. 删除经典 CMG。  
 
-> [!Tip]  
+> [!TIP]
 > 确定 CMG 的当前部署模型：<!--SCCMDocs issue #611-->  
 >
 > 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云管理网关”节点  。  
@@ -312,7 +309,6 @@ Configuration Manager 客户端会自动确定它是在 Intranet 上还是在 In
 ### <a name="delete-the-service"></a>删除服务
 
 如果需要删除 CMG，也从 Configuration Manager 控制台执行此操作。 手动删除 Azure 中的任何组件都会导致系统不一致。 此状态会留下孤立的信息，并且可能发生意外的行为。
-
 
 ## <a name="next-steps"></a>后续步骤
 

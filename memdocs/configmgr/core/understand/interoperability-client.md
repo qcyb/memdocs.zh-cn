@@ -10,16 +10,16 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61296321251be45cfa0449a3e4f21ba79a024753
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78e89307e66107b259d818a84fa4dbca878a843c
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590892"
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>使用 Configuration Manager 客户端软件，实现与未来 Current Branch 站点版本的扩展互操作性
 
-适用范围：  Configuration Manager (Current Branch)  
+适用范围：Configuration Manager (Current Branch)  
 
 业务要求可能不允许定期更新某些设备上的 Configuration Manager 客户端。 例如，需要遵循变更管理策略，或设备属于任务关键型。 可通过安装一个长期使用的新客户端来满足这些需求，这一客户端称为扩展互操作性客户端 (EIC)。 EIC 应仅用于无法经常更新的特定设备，如展台或销售点设备。 继续对大多数客户端使用[自动客户端升级](../clients/manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)。
 
@@ -48,13 +48,15 @@ ms.locfileid: "81706975"
 
 1. 从 Configuration Manager 更新安装介质的 `\SMSSETUP\Client` 文件夹中获取受支持的 EIC 版本。 请务必复制文件夹的全部内容。  
 
-    > [!TIP]  
-    > 若要在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) 查找 Configuration Manager 介质，请转到“下载和密钥”选项卡，搜索“`System Center Config`”，然后选择“System Center Config Mgr (Current Branch)”   。
+<!--
+    > [!TIP]
+    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, and search for **Microsoft Endpoint Configmgr (current branch)**.
+-->
 
 1. 在这些设备上手动安装 EIC。 有关详细信息，请参阅[手动安装客户端](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)。  
 
     > [!Important]  
-    > 将版本 1606 客户端升级到版本 1802 时，请使用 CCMSETUP 选项“/AlwaysExcludeUpgrade:True”  。 否则，客户端可能从管理点接收策略，以在排除策略之前自动升级。  
+    > 将版本 1606 客户端升级到版本 1802 时，请使用 CCMSETUP 选项“/AlwaysExcludeUpgrade:True”。 否则，客户端可能从管理点接收策略，以在排除策略之前自动升级。  
 
 ## <a name="limitations"></a>限制
 

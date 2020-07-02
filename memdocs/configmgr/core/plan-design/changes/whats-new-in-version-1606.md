@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590467"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager 版本 1606 中的新增功能
 
@@ -198,7 +198,7 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
 
 Endpoint Protection 可以帮助管理和监视 Microsoft Defender 高级威胁防护 (ATP)。 Microsoft Defender ATP 是一种新服务，可帮助企业检测、调查其网络上的高级攻击并做出响应。 Configuration Manager 策略可帮助载入和监视运行 Windows 10 版本 1607（内部版本 14328）或更高版本的托管计算机。
 
-有关详细信息，请参阅 [Microsoft Defender 高级威胁防护](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md)。
+有关详细信息，请参阅 [Microsoft Defender 高级威胁防护](../../../protect/deploy-use/defender-advanced-threat-protection.md)。
 
 ### <a name="device-categories"></a>设备类别
 可创建设备类别，可将其用于配合使用 Configuration Manager 和 Microsoft Intune 时自动在设备集合中放置设备。 然后要求用户在 Intune 中注册设备时选择某个设备类别。 此外，还可从 Configuration Manager 控制台中更改设备类别。

@@ -2,7 +2,7 @@
 title: 基于令牌的 CMG 身份验证
 titleSuffix: Configuration Manager
 description: 在内部网络上注册客户端以获得唯一令牌，或为基于 Internet 的设备创建批量注册令牌。
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455015"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715656"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>为云管理网关进行基于令牌的身份验证
 
@@ -70,6 +70,16 @@ Configuration Manager 客户端与管理点一起管理此令牌，因此不存�
 ```ClientLocation.log
 Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
 ```
+
+若要排查安装问题，请查看客户端上的 `%WinDir%\ccmsetup\logs\ccmsetup.log`。 安装之后，查看 `%WinDir%\ccm\logs\ClientIDManagerStartup.log`。
+
+在服务器上，查看以下日志：
+
+- [CMG 日志](../../plan-design/hierarchy/log-files.md#cloud-management-gateway)
+- 管理点
+  - CCM_STS.log
+  - MP_RegistrationManager.log
+  - ClientAuth.log
 
 ### <a name="known-issues"></a>已知问题
 

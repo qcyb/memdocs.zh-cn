@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455270"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814912"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache
 
@@ -37,7 +37,7 @@ ms.locfileid: "84455270"
 
 ## <a name="how-it-works"></a>工作原理
 
-当你配置客户端以使用 Connected Cache 服务器时，它们不再从 Internet 请求 Microsoft 云托管内容。 客户端从安装在分发点上的缓存服务器请求此内容。 本地服务器使用 IIS 功能的应用程序请求路由 (ARR) 缓存此内容。 然后，缓存服务器可快速响应对同一内容的任何未来请求。 如果 Connected Cache 服务器不可用，或者尚未缓存内容，客户端将从 Internet 下载内容。 客户端还使用传递优化，因此从其网络中的对等端下载部分内容。
+当你配置客户端以使用 Connected Cache 服务器时，它们不再从 Internet 请求 Microsoft 云托管内容。 客户端从安装在分发点上的缓存服务器请求此内容。 本地服务器使用 IIS 功能的应用程序请求路由 (ARR) 缓存此内容。 然后，缓存服务器可快速响应对同一内容的任何未来请求。 如果 Connected Cache 服务器不可用，或者尚未缓存内容，客户端将从 Internet 下载内容。 客户端还使用传递优化从其网络中的对等端下载部分内容。
 
 ![Connected Cache 的工作原理示意图](media/3555764-microsoft-connected-cache.png)
 

@@ -2,7 +2,7 @@
 title: 控制台中文档
 titleSuffix: Configuration Manager
 description: 本文仅在 Configuration Manager 控制台中显示。
-ms.date: 05/11/2020
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 0e38f35f49e827893be5e7763a52dd3b5a901bf7
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551598"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353524"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "83551598"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Microsoft Endpoint Configuration Manager
 
-上次更新时间：2020 年 5 月 11 日
+上次更新时间：*2020 年 6 月 8 日*
 
 此内容可以有助于学习 Configuration Manager 相关知识和为其提供支持。
 
@@ -55,22 +55,22 @@ ms.locfileid: "83551598"
 
 ## <a name="trending"></a>趋势
 
-2020 年 4 月 1 日至 4 月 30 日期间最热门的文章。
+2020 年 5 月 1 日至 5 月 31 日期间最热门的文章。
 
 | 页面查看次数 | 标题 |
 |------------|-------|
-| 37071 | [规划云管理网关](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 19105 | [日志文件引用](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 17942 | [用于连接的端口](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 15564 | [更新和维护服务](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 15389 | [启用传输层安全性 (TLS) 1.2 概述](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 15316 | [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 15229 | [软件中心用户指导](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 14978 | [如何在客户端上启用传输层安全性 (TLS) 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 13522 | [桌面分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
-| 13017 | [客户端设置](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
+| 22624 | [规划云管理网关](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 18451 | [2002 版中的新增功能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 17763 | [日志文件引用](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 16718 | [如何在客户端上启用传输层安全性 (TLS) 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 16004 | [用于连接的端口](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 13965 | [启用传输层安全性 (TLS) 1.2 概述](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 13398 | [更新和维护服务](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 13279 | [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 13260 | [软件中心用户指导](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 12624 | [桌面分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
 
-[Configuration Manager 中心页面](https://docs.microsoft.com/mem/configmgr/)在此时间段期间的页面查看次数为 41,479 次。
+[Configuration Manager 中心页面](https://docs.microsoft.com/mem/configmgr/)在此时间段期间的页面查看次数为 34,986 次。
 
 ## <a name="recently-updated"></a>最近更新
 
@@ -78,16 +78,16 @@ ms.locfileid: "83551598"
 
 | 上次审阅时间 | 标题 |
 |---------------|-------|
-| 2020/4/30 | [技术预览版 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
-| 2020/4/29 | [基于令牌的 CMG 身份验证](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
-| 2020 年 4 月 28 日 | [业务流程组](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
-| 2020 年 4 月 15 日 | [应用程序批准流程](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
-| 2020 年 4 月 15 日 | [在桌面分析中注册设备](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
-| 2020 年 4 月 10 日 | [Microsoft Endpoint Manager 租户附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
-| 2020 年 4 月 8 日 | [与 Power BI 报表服务器集成](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
-| 2020 年 4 月 8 日 | [发行说明](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 2020 年 4 月 1 日 | [什么是管理服务](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
-| 2020 年 4 月 1 日 | [2002 版中的新增功能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 2020 年 5 月 29 日 | [技术预览版 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
+| 2020 年 5 月 27 日 | [支持 Windows 10](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
+| 2020 年 5 月 26 日 | [CMPivot 概述](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
+| 2020 年 5 月 26 日 | [租户附加的 CMPivot 概述](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
+| 2020 年 5 月 26 日 | [租户附加的 CMPivot 示例脚本](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
+| 2020 年 5 月 26 日 | [2002 版中的新增功能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 2020 年 5 月 21 日 | [发行说明](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 2020 年 5 月 14 日 | [推荐硬件](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
+| 2020 年 5 月 11 日 | [桌面分析中的资产](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
+| 2020 年 5 月 11 日 | [桌面分析中的新增功能](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
 
 ## <a name="troubleshooting-articles"></a>疑难解答文章
 
@@ -107,12 +107,10 @@ ms.locfileid: "83551598"
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
 
-2020 年 3 月 20 日至 5 月 15 日期间的新增或更新的支持文章。
+2020 年 5 月 16 日至 6 月 22 日期间新增或更新的支持文章。
 
-- [KB 4561494 在 Configuration Manager 中创建 Microsoft Edge 应用程序失败](https://support.microsoft.com/help/4561494)
-- [KB 4551059 远程 Configuration Manager 控制台每 10 分钟挂起 20 秒](https://support.microsoft.com/help/4551059)
-- [KB 4556203 Microsoft Endpoint Configuration Manager Current Branch（版本 2002）的更改摘要](https://support.microsoft.com/help/4556203)
-- [KB 4553501 Microsoft Endpoint Configuration Manager 版本 2002（早期更新通道）的更新](https://support.microsoft.com/help/4553501)
-- [KB 4561945 服务连接工具下载 ConfigMgr.AdminUIContent.cab 文件时出现“基础连接已关闭”错误](https://support.microsoft.com/help/4561945)
+- [KB 4564442 在具有 BIOS 类型固件的计算机上使用 Microsoft Deployment Toolkit 进行 Windows 10 部署失败](https://support.microsoft.com/help/4564442)
+- [KB 4563473 Configuration Manager 版本 2002 租户附加问题的更新汇总](https://support.microsoft.com/help/4563473)
+- [KB 4567007 更新到 Configuration Manager 当前分支版本 2002 后，PXE 启动失败或任务序列延迟](https://support.microsoft.com/help/4567007)
 
 要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 Microsoft Endpoint Configuration Manager。  

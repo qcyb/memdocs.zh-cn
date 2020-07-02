@@ -10,16 +10,16 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428575"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715690"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--3601034-->
 
@@ -40,13 +40,13 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 在创建和部署此策略时，Configuration Manager 客户端将在设备上启用 BitLocker 管理代理。
 
 > [!NOTE]
-> 若要创建 BitLocker 管理策略，需要 Configuration Manager 中的“完全权限管理员”角色  。
+> 若要创建 BitLocker 管理策略，需要 Configuration Manager 中的“完全权限管理员”角色。
 
-1. 在 Configuration Manager 控制台中，转到“资产和符合性”工作区，展开“Endpoint Protection”，然后选择“BitLocker 管理”节点    。
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”工作区，展开“Endpoint Protection”，然后选择“BitLocker 管理”节点  。
 
-1. 在功能区中选择“创建 BitLocker 管理控制策略”  。
+1. 在功能区中选择“创建 BitLocker 管理控制策略”。
 
-1. 在“常规”页中，指定名称和可选说明  。 选择要在具有此策略的客户端上启用的组件：  
+1. 在“常规”页中，指定名称和可选说明。 选择要在具有此策略的客户端上启用的组件：  
 
     - **操作系统驱动器**：管理是否加密 OS 驱动器
 
@@ -56,20 +56,20 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 
     - **客户端管理**：管理 BitLocker 驱动器加密恢复信息的密钥恢复服务备份  
 
-1. 在“设置”页面上，针对 BitLocker 驱动器加密配置以下全局设置  ：
+1. 在“设置”页面上，针对 BitLocker 驱动器加密配置以下全局设置：
 
     > [!NOTE]
     > 启用 BitLocker 时，Configuration Manager 会应用这些设置。 如果驱动器已加密或正在处理中，则对这些策略设置的任何更改都不会更改设备上的驱动器加密状况。
     >
     > 如果禁用或未配置这些设置，BitLocker 将采用默认加密方法（AES 128 位）。
 
-    - 对于 Windows 8.1 设备，请启用“驱动器加密方法和密码强度”选项  。 然后选择加密方法。
+    - 对于 Windows 8.1 设备，请启用“驱动器加密方法和密码强度”选项。 然后选择加密方法。
 
-    - 对于 Windows 10 设备，请启用“驱动器加密方法和密码强度(Windows 10)”选项  。 然后分别为 OS 驱动器、固定数据驱动器和可移动数据驱动器选择加密方法。
+    - 对于 Windows 10 设备，请启用“驱动器加密方法和密码强度(Windows 10)”选项。 然后分别为 OS 驱动器、固定数据驱动器和可移动数据驱动器选择加密方法。
 
     若要详细了解此页面上的这些设置和其他设置，请参阅[设置参考 - 设置](../../tech-ref/bitlocker/settings.md#setup)。
 
-1. 在“操作系统驱动器”页上，指定以下设置  ：  
+1. 在“操作系统驱动器”页上，指定以下设置：  
 
     - **操作系统驱动器加密设置**：如果启用此设置，用户必须保护 OS 驱动器，并且 BitLocker 会加密驱动器。 如果禁用该设置，用户无法保护驱动器。  
 
@@ -81,15 +81,15 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 
     若要详细了解此页面上的这些设置和其他设置，请参阅[设置参考 - OS 驱动器](../../tech-ref/bitlocker/settings.md#os-drive)。
 
-1. 在“固定驱动器”页面上，指定以下设置  ：
+1. 在“固定驱动器”页面上，指定以下设置：
 
-    - **固定数据驱动器加密**：如果启用此设置，BitLocker 会要求用户将所有固定数据驱动器置于被保护状态。 然后对数据驱动器进行加密。 启用此策略时，请启用自动解锁或“固定数据驱动器密码策略”设置  。
+    - **固定数据驱动器加密**：如果启用此设置，BitLocker 会要求用户将所有固定数据驱动器置于被保护状态。 然后对数据驱动器进行加密。 启用此策略时，请启用自动解锁或“固定数据驱动器密码策略”设置。
 
     - **为固定数据驱动器配置自动解锁**：允许或要求 BitLocker 自动解锁任何加密的数据驱动器。 若要使用自动解锁，还需要使用 BitLocker 加密 OS 驱动器。
 
     若要详细了解此页面上的这些设置和其他设置，请参阅[设置参考 - 固定驱动器](../../tech-ref/bitlocker/settings.md#fixed-drive)。
 
-1. 在“可移动驱动器”页面上，指定以下设置  ：
+1. 在“可移动驱动器”页面上，指定以下设置：
 
     - **可移动数据驱动器加密**：如果启用此设置并允许用户应用 BitLocker 保护，Configuration Manager 客户端会将有关可移动驱动器的恢复信息保存到管理点上的恢复服务。 此行为允许用户在忘记或丢失保护手段（密码）的情况下恢复驱动器。
 
@@ -99,7 +99,7 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 
     若要详细了解此页面上的这些设置和其他设置，请参阅[设置参考 - 可移动驱动器](../../tech-ref/bitlocker/settings.md#removable-drive)。
 
-1. 在“客户端管理”页上，指定以下设置  ：
+1. 在“客户端管理”页上，指定以下设置：
 
     > [!IMPORTANT]
     > 如果管理点中没有已启用 HTTPS 的网站，请勿配置此设置。 有关详细信息，请参阅[恢复服务](#recovery-service)。
@@ -114,33 +114,33 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 
 1. 完成向导。
 
-若要更改现有策略的设置，请在列表中选择它，然后选择“属性”  。
+若要更改现有策略的设置，请在列表中选择它，然后选择“属性”。
 
 在创建多个策略时，可以配置它们的相对优先级。 如果将多个策略部署到一个客户端，系统会根据优先级值来确定其设置。
 
 ## <a name="deploy-a-policy"></a>部署策略
 
-1. 选择“BitLocker 管理”节点中的现有策略  。 在功能区中，选择“部署”  。
+1. 选择“BitLocker 管理”节点中的现有策略。 在功能区中，选择“部署”。
 
 1. 选择作为部署目标的设备集合。
 
-1. 如果希望设备在任何时候都可能加密或解密其驱动器，请选择“允许维护时段外的修正”选项  。 即使集合存在维护时段，仍会修正此 BitLocker 策略。
+1. 如果希望设备在任何时候都可能加密或解密其驱动器，请选择“允许维护时段外的修正”选项。 即使集合存在维护时段，仍会修正此 BitLocker 策略。
 
-1. 配置简单计划或自定义计划   。 默认情况下，客户端每 12 小时评估一次针对此策略的符合性。
+1. 配置简单计划或自定义计划 。 客户端根据计划中指定的设置来评估其合规性。
 
-1. 选择“确定”部署策略  。
+1. 选择“确定”部署策略。
 
-可以为同一策略创建多个部署。 若要查看有关每个部署的其他信息，请在“BitLocker 管理”节点中选择策略，然后在详细信息窗格中切换到“部署”选项卡   。
+可以为同一策略创建多个部署。 若要查看有关每个部署的其他信息，请在“BitLocker 管理”节点中选择策略，然后在详细信息窗格中切换到“部署”选项卡 。
 
 ## <a name="monitor"></a>监视
 
-在“BitLocker 管理”节点的详细信息窗格中，查看有关策略部署的基本符合性统计信息  ：
+在“BitLocker 管理”节点的详细信息窗格中，查看有关策略部署的基本符合性统计信息：
 
 - 符合性计数
 - 失败计数
 - 不符合项计数
 
-切换到“部署”选项卡，查看符合性百分比和推荐的操作  。 选择部署，然后在功能区中选择“查看状态”  。 此操作会将视图切换到“监视”工作区的“部署”节点   。 与其他配置策略部署的部署类似，可以在此视图中查看更详细的符合性状态。
+切换到“部署”选项卡，查看符合性百分比和推荐的操作。 选择部署，然后在功能区中选择“查看状态”。 此操作会将视图切换到“监视”工作区的“部署”节点 。 与其他配置策略部署的部署类似，可以在此视图中查看更详细的符合性状态。
 
 若要了解客户端报告不符合 BitLocker 管理策略的原因，请参阅[不符合性代码](../../tech-ref/bitlocker/non-compliance-codes.md)。
 
@@ -191,7 +191,7 @@ Configuration Manager 将恢复信息存储在站点数据库中。 如果没有
 
 Configuration Manager 不会重新加密已使用 BitLocker 驱动器加密保护的驱动器。 如果部署的 BitLocker 管理策略与驱动器的当前保护状况不匹配，则会将其报告为不符合。 驱动器仍会受到保护。
 
-例如，使用 MBAM 在没有 PIN 保护的情况下加密驱动器，但 Configuration Manager 策略需要 PIN。 即使驱动器已加密，它也不符合该策略。
+例如，使用 MBAM 通过 AES-XTS 128 加密算法对驱动器进行加密，但是 Configuration Manager 策略需要 AES-XTS 256。 即使驱动器已加密，它也不符合该策略。
 
 为了解决此问题，请先在设备上禁用 BitLocker。 然后使用新设置部署新策略。
 
@@ -201,7 +201,7 @@ Configuration Manager 不会重新加密已使用 BitLocker 驱动器加密保�
 
 BitLocker 的 Configuration Manager 客户端处理程序可感知共同管理。 如果设备已进行共同管理，并且你将 [Endpoint Protection 工作负载](../../../comanage/workloads.md#endpoint-protection)切换到了 Intune，则 Configuration Manager 客户端会忽略它的 BitLocker 策略。 该设备会从 Intune 获取 Windows 加密策略。
 
-在切换加密管理机构时，请计划[重新加密](#re-encryption)。
+切换加密管理机构并且所需的加密算法也发生更改时，你将需要计划[重新加密](#re-encryption)。
 
 要详细了解如何使用 Intune 管理 BitLocker，请参阅以下文章：
 

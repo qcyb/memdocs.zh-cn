@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223654"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795629"
 ---
 # <a name="desktop-analytics-data-privacy"></a>桌面分析数据隐私
 
@@ -57,6 +57,8 @@ ms.locfileid: "84223654"
 
 3. 设备将诊断数据发送到适用于 Windows 的 Microsoft 诊断数据管理服务。 所有诊断数据都通过 HTTPS 进行加密，并在从设备传输到此服务时使用证书固定。 Microsoft 数据管理服务在美国托管。
 
+      - 应用程序故障、内核错误、无响应的应用程序和其他特定于应用程序的问题使用 Windows 错误报告 API 向 Microsoft 发送应用程序特定的问题报告。 有关此数据流的特定详细信息，请参阅[使用 WER](https://docs.microsoft.com/windows/win32/wer/using-wer)。
+      
 4. Microsoft 每天都会生成一个以 IT 为中心的见解快照。 此快照合并了来自 Windows 的诊断数据与已注册设备的输入信息。 此过程发生在暂时存储中，仅供桌面分析使用。 暂时存储托管于美国的 Microsoft 数据中心。 所有数据都通过 SSL (HTTPS) 加密通道发送。 快照按商业 ID 进行隔离。  
 
 5. 然后，快照会被复制到你的 Azure Log Analytics 工作区。 此数据传输在 HTTPS Webhook 引入协议下发生，这是 Log Analytics 的一项特性。 桌面分析对 Log Analytics 存储没有任何读取或写入权限。 桌面分析使用共享访问签名 (SAS) URI 调用 Webhook API。 然后 Log Analytics 通过 HTTPS 获取存储表中的数据。
@@ -78,6 +80,8 @@ ms.locfileid: "84223654"
 - [Windows 10 版本 1809 基本级别 Windows 诊断事件与字段](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [桌面分析所使用的 Windows 10 版本 1709 增强的诊断数据事件与字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Windows 安装程序错误报告](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [诊断数据查看器概述](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

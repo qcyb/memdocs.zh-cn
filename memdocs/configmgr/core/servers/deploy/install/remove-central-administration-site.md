@@ -2,7 +2,7 @@
 title: 删除 CAS
 titleSuffix: Configuration Manager
 description: 删除管理中心站点 (CAS)，以便将 Configuration Manager 基础结构简化为单个独立主站点。
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6704075d707306f55a50a937185c9bdd28b18cc5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700615"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613972"
 ---
 # <a name="remove-the-central-administration-site"></a>删除管理中心站点
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!-- 3607277 -->
 
@@ -63,7 +63,7 @@ ms.locfileid: "81700615"
 
 - 如果使用 Configuration Manager 或 System Center Updates Publisher 管理[第三方软件更新](../../../../sum/deploy-use/third-party-software-updates.md)，请从 CAS 上的软件更新点导出 WSUS 签名证书。
 
-  - 删除 CAS 之前，等待任何必需的第三方软件更新部署的最后期限。 客户端会预下载必需部署的内容，更改软件更新点时，内容哈希会随软件更新的本地发布  而更改。 （此行为不会影响其他内容类型，只影响第三方软件更新进行本地发布。）如果在这些必需部署仍在进行时删除 CAS，则它们会在客户端上失败，并出现哈希不匹配错误。
+  - 删除 CAS 之前，等待任何必需的第三方软件更新部署的最后期限。 客户端会预下载必需部署的内容，更改软件更新点时，内容哈希会随软件更新的本地发布而更改。 （此行为不会影响其他内容类型，只影响第三方软件更新进行本地发布。）如果在这些必需部署仍在进行时删除 CAS，则它们会在客户端上失败，并出现哈希不匹配错误。
 
 - 检查可能依赖于 CAS 的任何第三方软件。
 
@@ -71,19 +71,19 @@ ms.locfileid: "81700615"
 
 - 运行 Configuration Manager 安装程序的管理用户需要以下安全权限：
 
-  - CAS 服务器上的本地“管理员”  权限
+  - CAS 服务器上的本地“管理员”权限
 
-  - 如果 CAS 数据库服务器是站点服务器的远程服务器，则为 CAS 的远程站点数据库服务器上的本地“管理员”  权限。
+  - 如果 CAS 数据库服务器是站点服务器的远程服务器，则为 CAS 的远程站点数据库服务器上的本地“管理员”权限。
 
-  - CAS 站点数据库上的 Sysadmin  权限
+  - CAS 站点数据库上的 Sysadmin 权限
 
-  - 主站点服务器上的本地“管理员”  权限
+  - 主站点服务器上的本地“管理员”权限
 
-  - 如果主站点数据库服务器是主站点服务器的远程服务器，则为主站点的远程站点数据库服务器上的本地“管理员”  权限。
+  - 如果主站点数据库服务器是主站点服务器的远程服务器，则为主站点的远程站点数据库服务器上的本地“管理员”权限。
 
-  - 主站点数据库上的 Sysadmin  权限
+  - 主站点数据库上的 Sysadmin 权限
 
-  - CAS 和主站点上的“基础结构管理员”  或“完全权限管理员”  安全角色
+  - CAS 和主站点上的“基础结构管理员”或“完全权限管理员”安全角色
 
 - 层次结构中只有一个子级主站点。 有关详细信息，请参阅[卸载主站点](uninstall-sites-and-hierarchies.md#bkmk_primary)。
 
@@ -91,25 +91,25 @@ ms.locfileid: "81700615"
 
 1. 使用以下方法之一在 CAS 服务器上启动 Configuration Manager 安装程序：
 
-    - 在“开始”  菜单上，选择“Configuration Manager 安装程序”  。
+    - 在“开始”菜单上，选择“Configuration Manager 安装程序”。
 
-    - 在 Configuration Manager 安装介质  的目录中，打开 `\SMSSETUP\BIN\X64\setup.exe`。 确保此版本与站点版本相同。
+    - 在 Configuration Manager 安装介质的目录中，打开 `\SMSSETUP\BIN\X64\setup.exe`。 确保此版本与站点版本相同。
 
-    - 在安装  Configuration Manager 的目录中，打开 `\BIN\X64\setup.exe`。
+    - 在安装 Configuration Manager 的目录中，打开 `\BIN\X64\setup.exe`。
 
-1. 查看“准备工作”  页上的信息。
+1. 查看“准备工作”页上的信息。
 
-1. 在“开始使用”  页上，选择“执行站点维护或重置此站点”  。
+1. 在“开始使用”页上，选择“执行站点维护或重置此站点”。
 
-1. 在“站点维护”  页上，选择“删除管理中心站点”  。 <!-- or is it still "delete"? -->
+1. 在“站点维护”页上，选择“删除管理中心站点”。 <!-- or is it still "delete"? -->
 
-1. 在“重新配置现有站点系统角色”  页上：
+1. 在“重新配置现有站点系统角色”页上：
 
-    - 服务连接点  ：输入主站点中的站点系统的完全限定域名，以托管此必需角色。 有关详细信息，请参阅[关于服务连接点](../configure/about-the-service-connection-point.md)。
+    - 服务连接点：输入主站点中的站点系统的完全限定域名，以托管此必需角色。 有关详细信息，请参阅[关于服务连接点](../configure/about-the-service-connection-point.md)。
 
-    - 软件更新点  ：选择主站点中的现有软件更新点。 安装程序会将此软件更新点配置为与 CAS 配置同步。
+    - 软件更新点：选择主站点中的现有软件更新点。 安装程序会将此软件更新点配置为与 CAS 配置同步。
 
-    安装程序会检查指定服务器是否满足先决条件。 准备好继续时，选择“开始安装”  。
+    安装程序会检查指定服务器是否满足先决条件。 准备好继续时，选择“开始安装”。
 
 如果安装程序出现问题，请使用向导重试该过程。
 
@@ -121,9 +121,9 @@ ms.locfileid: "81700615"
 
 - CAS 服务器上的 `C:\ConfigMgrSetup.log`
 
-- 主站点服务器上的 Configuration Manager 日志目录中的 hman.log 
+- 主站点服务器上的 Configuration Manager 日志目录中的 hman.log
 
-使用“监视”  工作区中的“站点层次结构”  节点可直观显示层次结构的更改。 例如，下图显示了 SHY  CAS、HAW  主站点和 VWT  辅助站点的事前与事后比较：
+使用“监视”工作区中的“站点层次结构”节点可直观显示层次结构的更改。 例如，下图显示了 SHY CAS、HAW 主站点和 VWT 辅助站点的事前与事后比较：
 
 | 以前  | 完成   |
 |---------|---------|
@@ -143,7 +143,7 @@ ms.locfileid: "81700615"
 
 - 如果将 Configuration Manager 与 [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context) 连接，则需要重置连接。 解决任何问题的第一步是[续订密钥](../configure/azure-services-wizard.md#bkmk_renew)。 如果这无法解决问题，请重新创建连接。<!-- 5584635 -->
 
-- 在版本 2002 中，如果启用了 Surface 驱动程序的同步，请在删除 CAS 之后重新配置此功能。 有关详细信息，请参阅[包括 Microsoft Surface 驱动程序和固件更新](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface)。<!-- 5728727 -->
+- 在版本 2002 中，如果启用了 Surface 驱动程序的同步，请在删除 CAS 之后重新配置此功能。 有关详细信息，请参阅 [Microsoft Surface 驱动程序和固件更新](../../../../sum/deploy-use/surface-drivers.md)。<!-- 5728727 -->
 
 - 如果管理第三方软件更新：
 

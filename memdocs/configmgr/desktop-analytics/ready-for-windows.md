@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268345"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353456"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for modern desktop 停用常见问题
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Ready for Windows 采用状态
+
+“采用状态”依据为，来自与 Microsoft 共享数据的商业设备的信息。 状态与软件供应商提供的支持声明集成。
+
+桌面分析为在商业设备中找到的每个版本的资产提供采用状态。 此状态不包括使用者设备或不共享数据的设备中的数据。 此状态可能不代表所有 Windows 10 设备的采用率。
+
+可能的类别包括：
+
+- **已广泛采用**：至少有 100,000 个商用 Windows 10 设备已安装此应用。
+
+- **已采用**：至少有 10,000 个商用 Windows 10 设备已安装此应用。
+
+- **数据不足**：很少有商用 Windows 10 设备共享此应用的信息，Microsoft 无法对其采用情况进行分类。
+
+- **联系开发人员**：此版本的应用可能存在兼容性问题。 Microsoft 建议联系软件提供商以了解详细信息。
+
+- **未知**：没有针对此应用程序的这一版本的可用信息。 可能有针对此应用程序的其他版本的可用信息。
 
 ## <a name="general"></a>常规
 
@@ -29,12 +47,12 @@ ms.locfileid: "83268345"
 
 许多客户在获取 Windows 10 和 Office 365 ProPlus 并保持最新状态方面面临着挑战。 主要的挑战是测试应用程序，因为此过程通常需要手动完成。 IT 管理员和应用程序所有者要不断分析现有应用程序并解决出现的任何问题，这需要花费很长时间。
 
-“Ready for modern desktop”  目录列出了在运行 Windows 10 和 Office 365 ProPlus 的商业设备上受支持且已在使用的软件解决方案。 该目录可帮助 IT 经理考虑最新版本的 Windows 10 和 Office 365 的部署。
+“Ready for modern desktop”目录列出了在运行 Windows 10 和 Office 365 ProPlus 的商业设备上受支持且已在使用的软件解决方案。 该目录可帮助 IT 经理考虑最新版本的 Windows 10 和 Office 365 的部署。
 
 IT 经理提供的反馈是，他们希望这些见解与他们已经用来进行部署计划的工具集成在一起。 在 Configuration Manager 中使用[桌面分析](https://aka.ms/dadocs)和 [Office 365 ProPlus 就绪功能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)来计划和管理 Windows 10 和 Office 365 ProPlus 升级项目。 
 
 > [!Note]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 ### <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -58,17 +76,17 @@ IT 经理提供的反馈是，他们希望这些见解与他们已经用来进�
 
 -    **Configuration Manager 集成**：它在云中启用现有本地基础结构。 使用此数据和分析在设备上部署和管理 Windows。
 
-### <a name="what-does-the-ready-for-windows-status-mean-in-desktop-analytics"></a>在桌面分析中“Ready for Windows”状态指的是什么  ？
+### <a name="what-does-the-ready-for-windows-status-mean-in-desktop-analytics"></a>在桌面分析中“Ready for Windows”状态指的是什么？
 
-“采用状态”  基于与 Microsoft 共享数据的商业设备的信息。 状态与软件供应商提供的支持声明集成。
+“采用状态”基于与 Microsoft 共享数据的商业设备的信息。 状态与软件供应商提供的支持声明集成。
 
 桌面分析为在商业设备中找到的每个版本的资产提供采用状态。 此状态不包括使用者设备或不共享数据的设备中的数据。 此状态可能不代表所有 Windows 10 设备的采用率。
 
 有关详细信息，请参阅[兼容性评估](compat-assessment.md)。
 
-### <a name="what-assets-get-the-ready-for-windows-status-in-desktop-analytics"></a>哪些资产在桌面分析中获得“Ready for Windows”状态  ？ 
+### <a name="what-assets-get-the-ready-for-windows-status-in-desktop-analytics"></a>哪些资产在桌面分析中获得“Ready for Windows”状态？ 
 
-在以下情况下，资产会在桌面分析中显示“Ready for Windows”状态  ：
+在以下情况下，资产会在桌面分析中显示“Ready for Windows”状态：
 
 -    软件提供商声明支持解决方案。
 -    客户将其部署在与 Microsoft 共享信息的大量商业 Windows 10 设备上。

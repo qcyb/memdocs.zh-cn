@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270865"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383149"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -256,11 +256,7 @@ Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中�
 
 - SQL over TCP：TCP 1433
 
-安装完成后，以下端口必须在 Configuration Manager 中保持开放状态：  
-
-- SQL Server Service Broker：TCP 4022  
-
-- SQL over TCP：TCP 1433  
+安装完成后，上述端口必须在 Configuration Manager 和复制链接分析器中保持开放状态。<!-- MEMDocs#375 -->
 
 可以为这些配置使用自定义端口。 在可用性组中的所有副本上，在终结点处使用相同的自定义端口。
 

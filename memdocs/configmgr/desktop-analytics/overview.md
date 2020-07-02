@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428643"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353473"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -81,7 +81,7 @@ ms.locfileid: "84428643"
 
     - 要在载入后访问门户，你需要：
 
-      - 在其中创建工作区的资源组上的[桌面分析管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色和[所有者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[参与者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)权限。
+      - 创建的 Log Analytics 工作区的[桌面分析管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色和[所有者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[参与者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)权限。
 
 - 包含更新汇总 (4500571) 的 Configuration Manager 版本 1902 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](connect-configmgr.md#bkmk_hotfix)。  
 
