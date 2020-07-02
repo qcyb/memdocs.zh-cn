@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590433"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -325,9 +325,9 @@ Configuration Manager 现在可检测服务堆栈更新 (SSU) 是否为多个更
 ## <a name="protection"></a><a name="bkmk_protect"></a> 保护
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>扩展 Microsoft Defender 高级威胁防护(ATP) 加入支持
-
+ 
 <!-- 5229962 -->
-Configuration Manager 扩展了对将设备加入 Microsoft Defender ATP 的支持。 有关详细信息，请参阅 [Microsoft Defender 高级威胁防护](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)。
+Configuration Manager 扩展了对将设备加入 Microsoft Defender ATP 的支持。 有关详细信息，请参阅 [Microsoft Defender 高级威胁防护](../../../protect/deploy-use/defender-advanced-threat-protection.md)。
 
 ### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 通过 Microsoft Endpoint Manager 管理中心将 Configuration Manager 客户端加入 Microsoft Defender ATP
 <!--5691658-->

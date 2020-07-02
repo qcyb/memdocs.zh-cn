@@ -2,7 +2,7 @@
 title: 客户端安装参数和属性
 titleSuffix: Configuration Manager
 description: 了解用于安装 Configuration Manager 客户端的 ccmsetup 命令行参数和属性。
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455032"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383030"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>关于 Configuration Manager 中的客户端安装参数和属性
 
@@ -256,6 +256,28 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 
 > [!NOTE]  
 > `ClientUI` 是 /ExcludeFeatures 参数唯一支持的值。
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+此参数指定当你启用[自动客户端升级](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)时是否将自动升级客户端。
+
+支持的值：
+
+- `TRUE`：客户端不会自动升级
+- `FALSE`：客户端自动升级（默认）
+
+例如：  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+有关详细信息，请参阅[扩展互操作性客户端](../../understand/interoperability-client.md)。
+
+> [!NOTE]  
+> 使用 /AlwaysExcludeUpgrade 参数时，自动升级仍会运行。 但是，当 CCMSetup 运行以执行升级时，它会注意到 /AlwaysExcludeUpgrade 参数已设置，并且将在 ccmsetup.log 中记录以下行： 
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup 随后会立即退出，而不会执行升级。
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe 返回代码
 
