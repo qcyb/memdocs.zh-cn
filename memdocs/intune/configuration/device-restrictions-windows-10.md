@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591062"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Windows 10（及更高版本）设备设置
 
@@ -30,6 +30,8 @@ ms.locfileid: "85216478"
 
 > [!Note]
 > 并非所有选项在所有版本的 Windows 上都可用。 若要查看受支持的版本，请参阅 [policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider)（策略 CSP）（打开另一个 Microsoft 网站）。
+>  
+> Windows 10 设备限制配置文件中大多数可配置的设置都部署在设备级别。 部署到用户组的策略将对目标用户和随后登录相应设备并有 Intune 许可证的其他任何用户生效。
 
 ## <a name="before-you-begin"></a>在开始之前
 

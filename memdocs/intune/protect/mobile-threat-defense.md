@@ -6,30 +6,33 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2019
+ms.date: 06/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
-ms.reviewer: davidra
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aa02c58f2a2d75389be357ac7c700c2bac99027
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351573"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332856"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>使用 Intune 的移动威胁防御集成
 
 Intune 可以集成来自移动威胁防御 (MTD) 供应商的数据，作为设备符合性策略和设备条件访问规则的信息源。 使用此信息，可通过阻止存在风险的移动设备的访问，来帮助保护 Exchange 和 SharePoint 等公司资源。
 
 Intune 可以使用 Intune 应用保护策略将此相同的数据用作未注册设备的源。 因此，管理员可以使用此信息帮助保护[受 Microsoft Intune 保护的应用](../apps/apps-supported-intune-apps.md)中的公司数据，并发出阻止或选择性擦除。
+
+> [!NOTE]
+> 暂不支持移动威胁防御与 Intune GCC High 和 DoD 产品/服务集成。 详细了解 [Microsoft Intune 针对美国政府 GCC High 的支持](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description)。
 
 ## <a name="protect-corporate-resources"></a>保护公司资源
 
@@ -47,7 +50,7 @@ Intune 使用移动威胁防御连接器在 Intune 和所选的 MTD 供应商之
 
 启用后，Intune 将从个人和公司拥有的设备收集应用清单信息，这些信息可供 MTD 提供程序提取，例如 Lookout for Work。 可通过 iOS 设备的用户收集应用清单。
 
-此服务为选择性加入；默认情况下不会共享任何应用清单信息。 Intune 管理员必须在移动威胁防御连接器设置中启用”适用于 iOS 设备的应用同步”，然后才能共享应用清单信息  。
+此服务为选择性加入；默认情况下不会共享任何应用清单信息。 Intune 管理员必须在移动威胁防御连接器设置中启用”适用于 iOS 设备的应用同步”，然后才能共享应用清单信息。
 
 **应用清单**  
 如果为 iOS/iPadOS 设备启用“应用同步”，来自公司和个人拥有的 iOS/iPadOS 设备的清单将发送给 MTD 服务提供程序。 应用清单中的数据包括：

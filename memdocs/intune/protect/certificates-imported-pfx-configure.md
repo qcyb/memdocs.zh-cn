@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591113"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用导入的 PKCS 证书
 
@@ -271,6 +271,12 @@ PowerShell 模块提供了使用 Windows 加密创建密钥的方法。 你也�
 如果使用 DigiCert PKI 平台服务，则可以使用适用于 Intune S/MIME 证书的 DigiCert 导入工具，将 PFX 证书导入到 Intune。 使用此工具，则无需按照本文前面所述[将 PFX 证书导入到 Intune](#import-pfx-certificates-to-intune) 部分中的说明进行操作。
 
 若要详细了解 DigiCert 导入工具，以及如何获取该工具，请参阅 DigiCert 知识库中的 https://knowledge.digicert.com/tutorials/microsoft-intune.html 。
+
+### <a name="keytalk"></a>KeyTalk
+
+如果使用 KeyTalk 服务，则可以配置服务来将 PFX 证书导入到 Intune。 完成集成后，无需按照本文前面详细介绍的[将 PFX 证书导入到 Intune](#import-pfx-certificates-to-intune) 部分中的说明操作。
+
+若要详细了解 KeyTalk 与 Intune 的集成，请参阅 KeyTalk 知识库中的 https://keytalk.com/support 。
 
 ## <a name="next-steps"></a>后续步骤
 

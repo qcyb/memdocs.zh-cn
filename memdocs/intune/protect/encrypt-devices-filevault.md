@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989690"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353559"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>通过 Intune 对 macOS 使用 FileVault 磁盘加密
 
@@ -30,18 +30,18 @@ Intune 支持 macOS FileVault 磁盘加密。 FileVault 是 macOS 附带的整�
 
 使用以下策略类型之一配置托管设备上的 FileVault：
 
-- [macOS FileVault 的终结点安全策略](#create-an-endpoint-security-policy-for-filevault)。 终结点安全中的 FileVault 配置文件是专用于配置 FileVault 的一组集中设置。
+- [macOS FileVault 的终结点安全策略](#create-endpoint-security-policy-for-filevault)。 终结点安全中的 FileVault 配置文件是专用于配置 FileVault 的一组集中设置。
 
   查看[用于磁盘加密策略的配置文件中可用的 FileVault 设置](../protect/endpoint-security-disk-encryption-profile-settings.md)。
 
-- [用于 macOS FileVault 终结点保护的设备配置文件](#create-an-endpoint-security-policy-for-filevault)。 FileVault 设置是 macOS Endpoint Protection 的可用设置类别之一。 有关使用设备配置文件的详细信息，请参阅[在 Inunte 中创建设备配置文件](../configuration/device-profile-create.md)。
+- [用于 macOS FileVault 终结点保护的设备配置文件](#create-endpoint-security-policy-for-filevault)。 FileVault 设置是 macOS Endpoint Protection 的可用设置类别之一。 有关使用设备配置文件的详细信息，请参阅[在 Inunte 中创建设备配置文件](../configuration/device-profile-create.md)。
 
   查看[用于设备配置策略的终结点保护配置文件中可用的 FileVault 设置](../protect/endpoint-protection-macos.md#filevault)。
 
 若要管理 Windows 10 的 BitLocker，请参阅[管理 BitLocker 策略](../protect/encrypt-devices.md)。
 
 > [!TIP]
-> [加密报表](encryption-monitor.md)中提供了有关所有受管理设备中设备加密状态的详细信息。
+> Intune 提供内置的[加密报告](encryption-monitor.md)，其中提供了有关所有受管理设备中的设备加密状态的详细信息。
 
 创建使用 FileVault 加密设备的策略后，策略将分两个阶段应用于设备。 首先，准备好设备，以启用 Intune 检索和备份恢复密钥。 此操作称为“托管”。 托管密钥后，磁盘加密便可启动。
 
@@ -60,17 +60,15 @@ Intune 支持 macOS FileVault 磁盘加密。 FileVault 是 macOS 附带的整�
 - **轮换 FileVault 密钥**
   - 支持人员操作员
 
-## <a name="create-and-deploy-policy"></a>创建和部署策略
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>为 FileVault 创建终结点安全策略
+## <a name="create-endpoint-security-policy-for-filevault"></a>为 FileVault 创建终结点安全策略
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 选择“终结点安全” > “磁盘加密” > “创建策略”  。
 
 3. 在“基本信息”页上，输入以下属性，然后选择“下一步” 。
-   1. **平台**：macOS
-   2. **配置文件**：FileVault
+   - **平台**：macOS
+   - **配置文件**：FileVault
 
    ![选择 FileVault 配置文件](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -94,33 +92,49 @@ Intune 支持 macOS FileVault 磁盘加密。 FileVault 是 macOS 附带的整�
 
 8. 完成后，在“查看 + 创建”页上，选择“创建” 。 为创建的配置文件选择策略类型时，新配置文件将显示在列表中。
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>为 FileVault 创建设备配置策略
+## <a name="create-device-configuration-policy-for-filevault"></a>为 FileVault 创建设备配置策略
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
 2. 选择“设备” > “配置文件” > “创建配置文件”。
 
-3. 设置下列选项:
-   1. **平台**：macOS
-   2. **配置文件**：Endpoint Protection
+3. 在“创建配置文件”页上，设置以下选项，然后单击“创建”：
+   - **平台**：macOS
+   - **配置文件**：Endpoint Protection
 
    ![选择 FileVault 配置文件](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. 选择“设置” > “FileVault” 。
+4. 在“基本信息”页上，输入以下属性：
 
-   ![FileVault 设置](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，好的策略名称可包括配置文件类型和平台。
 
-5. 对于 FileVault，请选择“启用”。
+   - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-6. 对于“恢复密钥类型”，仅支持“个人密钥”。
+5. 在“配置设置”页上，选择“FileVault”，以展开可用设置：
 
-   请考虑添加一条消息，以帮助指导用户检索其设备的恢复密钥。 使用个人恢复密钥轮换设置时，此信息对用户非常有用。通过该设置，可以定期自动为设备生成新的恢复密钥。
+   > [!div class="mx-imgBorder"]
+   > ![“FileVault”设置](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   例如：若要检索丢失或最近轮换的恢复密钥，请从任意设备登录 Intune 公司门户网站。 在门户中，转到“设备”并选择已启用 FileVault 的设备，然后选择“获取恢复密钥” 。 系统会显示当前恢复密钥。
+6. 配置下列设置：
+  
+   - 对于“启用 FileVault”，选择“是”。
 
-7. 配置其余 [FileVault 设置](endpoint-protection-macos.md#filevault)以满足业务需求，然后选择“确定”。
+   - 对于“恢复密钥类型”，选择“个人密钥”。
 
-8. 完成其他设置配置，然后保存配置文件。
+   - 对于“个人恢复密钥的托管位置说明”，添加有助于指导用户如何为设备检索恢复密钥的消息。 使用个人恢复密钥轮换设置时，此信息对用户非常有用。通过该设置，可以定期自动为设备生成新的恢复密钥。
+
+     例如：若要检索丢失或最近轮换的恢复密钥，请从任意设备登录 Intune 公司门户网站。 在门户中，转到“设备”并选择已启用 FileVault 的设备，然后选择“获取恢复密钥” 。 系统会显示当前恢复密钥。
+
+   配置其余 [FileVault 设置](endpoint-protection-macos.md#filevault)来满足业务需求，然后选择“下一步”。
+
+7. 在“作用域标记”页上，选择“选择作用域标记”打开“选择标记”窗格，将作用域标记分配给配置文件 。
+
+   选择“下一步”继续操作。
+
+8. 在“分配”页上，选择将接收此配置文件的组。 有关分配配置文件的详细信息，请参阅“分配用户和设备配置文件”。
+选择“下一步”。
+
+9. 完成后，在“查看 + 创建”页上，选择“创建” 。 为创建的配置文件选择策略类型时，新配置文件将显示在列表中。
 
 ## <a name="manage-filevault"></a>管理 FileVault
 

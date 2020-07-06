@@ -55,7 +55,7 @@ Microsoft 建议对 APP 数据保护框架采用以下部署圈方法：
 
 测试对 APP 进行的更改时，请注意[交付时间](app-protection-policy-delivery.md)。 可以监视针对给定用户的 APP 交付状态。 有关详细信息，请参阅[如何监视应用保护策略](app-protection-policies-monitor.md)。
 
-可以使用 Edge 和 URL about:Intunehelp，在设备上验证每个应用的单独 APP 设置。 有关详细信息，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)和[使用适用于 iOS 和 Android 的 Microsoft Edge 访问托管的应用日志](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
+可以使用 Microsoft Edge 和 URL about:Intunehelp，在设备上验证每个应用的单独 APP 设置。 有关详细信息，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)和[使用适用于 iOS 和 Android 的 Microsoft Edge 访问托管的应用日志](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 
 ## <a name="app-data-protection-framework-settings"></a>APP 数据保护框架设置
 

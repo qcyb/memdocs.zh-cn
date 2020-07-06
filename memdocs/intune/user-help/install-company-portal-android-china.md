@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 06/23/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,22 +19,32 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ec600051020d5d4fdd3c81556332e3ea6c21187b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882155"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332768"
 ---
 # <a name="install-company-portal-app-in-mainland-china"></a>在中国大陆安装公司门户应用   
 
 安装 Intune 公司门户应用，以从 Android 设备访问学校或工作资源。 应用在中国大陆提供，可以从下面的应用商店安装： 
 
-* [百度](https://go.microsoft.com/fwlink/?linkid=836946)
-* [华为](https://go.microsoft.com/fwlink/?linkid=836948)
-* [小米](https://go.microsoft.com/fwlink/?linkid=836947) 
-* [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 
-在设备上安装应用后，请按照组织的说明操作，以设置学校或工作设备。 若要获取注册方面的帮助，请参阅[通过 Intune 公司门户注册 Android 设备](enroll-device-android-company-portal.md)。  
+* [小米](https://go.microsoft.com/fwlink/?linkid=836947) 
+* OPPO
+* [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
+* [华为](https://go.microsoft.com/fwlink/?linkid=836948)
+
+公司门户也可以从[百度 App Store](https://go.microsoft.com/fwlink/?linkid=2133565) 获取。 若要找到它，请执行以下操作：  
+ 
+   1. 转到[百度 App Store](https://go.microsoft.com/fwlink/?linkid=2133565)。  
+   2. 通过在搜索栏中输入“公司门户”，搜索公司门户应用。  
+   3. 选择包含公司门户的一览 ![公司门户图标](./media/company-portal-logo-small-2006.png) 图标。  
+
+
+## <a name="next-steps"></a>后续步骤  
+在设备上安装应用后，请按照组织的说明操作，以设置学校或工作设备。 若要获取注册方面的帮助，请参阅[通过 Intune 公司门户注册 Android 设备](enroll-device-android-company-portal.md)。 
+
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

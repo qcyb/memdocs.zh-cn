@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988561"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353490"
 ---
 # <a name="enroll-android-devices"></a>注册 Android 设备
 
@@ -38,7 +38,9 @@ Intune 管理员可按以下方式注册 Android 设备：
 
 ## <a name="prerequisites"></a>必备条件
 
-若准备管理移动设备，必须将移动设备管理 MDM 机构设置为“Microsoft Intune”  。 请参阅[设置 MDM 机构](../fundamentals/mdm-authority-set.md)，了解有关说明。 第一次设置 Intune 以进行移动设备管理时，只需设置一次此项目。
+若准备管理移动设备，必须将移动设备管理 MDM 机构设置为“Microsoft Intune”。 请参阅[设置 MDM 机构](../fundamentals/mdm-authority-set.md)，了解有关说明。 第一次设置 Intune 以进行移动设备管理时，只需设置一次此项目。
+
+对于 Android Enterprise，请参阅以下来自 Google 的支持文章，以确保 Android Enterprise 可用于你所在的国家或地区： https://support.google.com/work/android/answer/6270910
 
 对于由 Zebra Technologies 制造的设备，你可能需要根据特定设备的功能授予公司门户额外的权限。 [Zebra 设备上的移动性扩展](../configuration/android-zebra-mx-overview.md)具有更多详细信息。
 

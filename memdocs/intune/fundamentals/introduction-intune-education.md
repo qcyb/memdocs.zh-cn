@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57878ee1f87d53c05ad7eddd39714a5fc5a8ae08
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b3c3485496b6f72bd51241d47c12de3990a6802
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358827"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353541"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Intune for Education 与 Intune 中完整的设备管理体验有何不同？
 
-Intune for Education 使学校数据受到保护的同时让教师和学生能够高效地工作和学习。 Intune 是基于云的企业移动性管理 (EMM) 服务，该服务是 Intune for Education 的基础。
+Intune for Education 使学校数据受到保护的同时让教师和学生能够高效地工作和学习。 Intune for Education 由 Microsoft 的 Intune 服务提供技术支持，即一种基于云的企业移动性管理 (EMM) 服务。
 
 ![Intune for Education 控制台与 Intune 控制台对比。](./media/introduction-intune-education/intune-azure-vs-intuneEDU.png)
 
-借助 Intune for Education，你可以使用 Intune 中提供的完整 MDM 功能管理 Windows 10 和 iOS/iPadOS 设备。 完整的设备管理体验可实现对 Windows、iOS/iPadOS 和 Android 设备的管理。  
+借助 Intune for Education，你可以使用 Intune 中提供的完整 MDM 功能管理 Windows 10 和 iOS/iPadOS 设备。 完整的设备管理体验可实现对 Windows、iOS/iPadOS 和 Android 设备的管理。 
 
 Intune for Education 可以单独使用，也可以与 [Intune 提供的完整的设备管理体验](what-is-intune.md)完美结合。 它还可以与 [Microsoft Education](https://microsoft.com/education) 中提供的其他工具一起使用，方便你轻松地将 Intune for Education 与 Microsoft 其他有用的教学工具结合使用。  
 

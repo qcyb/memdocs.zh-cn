@@ -50,7 +50,7 @@ Microsoft 不亲自参与该服务的运营。 由世纪互联运营、提供和
 - Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。 
 - 为了遵守本地法规和提供改进的功能，Intune 客户端体验（公司门户应用）在中国可能有所不同。
 - 隔离不可用。
-- 移动应用程序管理 (MAM) 的可用性取决于这些应用在中国大陆的可用性。
+- 移动应用程序管理 (MAM) 的可用性取决于这些应用在中国的可用性。
 
 ## <a name="you-control-customer-data"></a>由你控制客户数据
 

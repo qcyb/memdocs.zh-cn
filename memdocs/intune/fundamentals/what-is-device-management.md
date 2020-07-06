@@ -4,7 +4,7 @@ description: Microsoft 365 企业版包含 Microsoft Intune。 了解 Intune 如
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223629"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353609"
 ---
 # <a name="device-management-overview"></a>设备管理概述
 
-所有管理员的关键任务是保护组织的资源和数据。 此任务是设备管理。 用户可以通过多个设备打开和共享个人文件、访问网站以及安装应用和游戏。 这些用户也是员工和学生。 他们希望使用他们的设备访问工作和学校资源，例如电子邮件和 OneNote。
+所有管理员的关键任务都是保护组织内用户设备上的组织资源和数据。 此任务是设备管理。 用户通过个人帐户接收和发送电子邮件，在家里和餐馆浏览网站，并安装应用和游戏。 这些用户也是员工和学生。 他们希望在设备上访问工作和学校资源（如电子邮件和 OneNote），并快速访问这些资源。 作为管理员，你的目标是保护这些资源，同时方便用户跨多台设备进行轻松访问。
 
 设备管理使组织能够保护其资源和数据，并允许组织使用不同设备。
 

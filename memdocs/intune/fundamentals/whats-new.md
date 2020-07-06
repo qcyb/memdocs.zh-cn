@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263948"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502283"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -58,18 +58,32 @@ ms.locfileid: "85263948"
 
 ## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日当周
 
+### <a name="app-management"></a>应用管理
+
+#### <a name="newly-available-protected-apps-for-intune---7248952---"></a>新提供的适用于 Intune 的受保护应用<!-- 7248952 -->
+现在提供了以下受保护的应用：
+- BlueJeans 视频会议
+- Cisco Jabber for Intune
+- Tableau Mobile for Intune
+- ZERO for Intune
+
+有关受保护应用的详细信息，请参阅[受 Microsoft Intune 保护的应用](../apps/apps-supported-intune-apps.md)。
+
 ### <a name="monitor-and-troubleshoot"></a>监视和故障排除
+
+#### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>使用终结点分析来提高用户工作效率并降低 IT 支持成本<!-- 5653063 --> 
+在接下来的一周内，此功能将会推出。终结点分析旨在通过提供用户体验见解来提高用户工作效率，并降低 IT 支持成本。 通过这些见解，IT 可以使用主动支持来优化最终用户体验，并通过评估配置更改对用户的影响来检测用户体验回归。 有关详细信息，请参阅[终结点分析（预览）](https://aka.ms/uea)。
 
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>使用脚本包主动修正最终用户设备问题<!-- 5933328 -->
 你可以在最终用户设备上创建和运行脚本包，以主动查找和修复组织中的主要支持问题。 部署脚本包将有助于减少支持调用。 选择自行创建脚本包，也可部署我们编写并在我们的环境中使用的某个脚本包，以减少支持工单。 借助 Intune，可查看已部署脚本包的状态，并监视检测和修正结果。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“报表” > “终结点分析” > “主动修正”  。 有关详细信息，请参阅[主动修正](https://aka.ms/uea_prs)。
 
 ### <a name="device-security"></a>设备安全性
 
-### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>在面向 Android 的合规性策略中使用 Microsoft Defender ATP<!-- 4425686  -->
+#### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>在面向 Android 的合规性策略中使用 Microsoft Defender ATP<!-- 4425686  -->
 
 现在你可以使用 Intune [将 Android 设备载入到 Microsoft Defender 高级威胁防护](../protect/advanced-threat-protection.md#onboard-android-devices)。 载入注册的设备后，面向 Android 的合规性策略可以使用来自 Microsoft Defender ATP 的威胁级别信号。 这些信号与先前可以用于 Windows 10 设备的信号相同。
 
-### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>配置面向 Android 设备的 Defender ATP Web 保护<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>配置面向 Android 设备的 Defender ATP Web 保护<!-- 6185563 WNReady -->
 
 当使用面向 Android 设备的 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 时，可以[配置 Microsoft Defender ATP Web 保护](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)以禁用钓鱼网站扫描功能，或阻止扫描使用 VPN。
 

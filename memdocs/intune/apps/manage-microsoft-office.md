@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977254"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383251"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>通过 Microsoft Intune 使用适用于 iOS 和 Android 的 Office 管理协作体验
 
@@ -108,7 +108,13 @@ APP 数据保护框架分为三个不同的配置级别，每个级别基于上�
 
 ### <a name="manage-file-transfers"></a>管理文件传输
 
-默认情况下，Office 允许用户与附近的用户共享文件并将文件传输到桌面系统。
+默认情况下，借助适用于 iOS 和 Android 的 Office，用户可以使用各种机制来共享内容：
+
+- 如果文件托管在 OneDrive 或 SharePoint 中，用户可以直接在文件中发起共享请求。
+- 用户可以使用“传输文件”操作将文件传输到桌面系统。
+- 用户可以使用“共享到附近”操作将文件共享到附近的移动设备。
+
+“传输文件”和“共享到附近”操作只适用于媒体、本地文件和不受应用保护策略保护的文件。 
 
 |    Key    |    值    |
 |-------------------------------------------------------------------|-------------|

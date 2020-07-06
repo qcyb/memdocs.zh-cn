@@ -5,7 +5,7 @@ keywords: 什么是 Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 06/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,16 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538099"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332803"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune 是适用于设备的 MDM 和 MAM 提供程序
 
-Microsoft Intune 是一项基于云的服务，关注移动设备管理 (MDM) 和移动应用程序管理 (MAM)。 Intune 包含在 Microsoft 的[企业移动性 + 安全性 (EMS) 套件](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)中，使用户能够提高工作效率，同时保护组织数据。 它与其他服务（包括 Microsoft 365 和 Azure Active Directory (Azure AD)）集成，控制具有访问权限的用户、他们有权访问的内容以及用于数据保护的 Azure 信息保护。 将它与 Microsoft 365 结合使用时，员工可以在其所有设备上高效工作，同时保护组织的信息。
+Microsoft Intune 是一项基于云的服务，关注移动设备管理 (MDM) 和移动应用程序管理 (MAM)。 可以控制如何使用组织的设备，包括移动电话、平板电脑和笔记本电脑。 还可以配置特定策略来控制应用程序。 例如，可以阻止电子邮件发送给组织外部人员。 Intune 还可便于组织中的人员在学校或工作中使用个人设备。 在个人设备上，Intune 有助于确保组织数据始终受到保护，并能将组织数据与个人数据隔离开来。
+
+Intune 属于 Microsoft [企业移动性 + 安全性 (EMS) 套件](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)。 Intune 与 Azure Active Directory (Azure AD) 集成，以控制谁有权可以访问什么。 它还与 Azure 信息保护集成，以实现数据保护。 它可以与 Microsoft 365 产品套件配合使用。 例如，可以将 Microsoft Teams、OneNote 和其他 Microsoft 365 应用部署到设备。 借助此功能，组织中的人员可以在自己的所有设备上高效工作，同时使用你创建的策略来保护组织的信息。
 
 [![Intune 体系结构示意图](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
@@ -76,7 +78,7 @@ Intune 中的移动应用程序管理 (MAM) 设计为在应用程序级别（包
 - 查看有关使用哪些应用的报表，并跟踪其使用情况。
 - 通过仅从应用中删除组织数据进行选择性擦除。
 
-Intune 提供移动应用安全的一种方法是通过[应用保护策略](../apps/app-protection-policy.md)  。 应用保护策略：
+Intune 提供移动应用安全的一种方法是通过[应用保护策略](../apps/app-protection-policy.md)。 应用保护策略：
 
 - 使用 Azure AD 标识将组织数据与个人数据隔离。 因此，个人信息与组织 IT 识别隔离。 使用组织凭据访问的数据被授予其他安全保护。
 - 通过限制用户可执行的操作（例如复制和粘贴、保存以及查看）来帮助保护个人设备上的访问权限。
