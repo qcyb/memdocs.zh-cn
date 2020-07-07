@@ -2,7 +2,7 @@
 title: 使用 CMPivot 获得实时数据
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用 CMPivot 实时查询客户端。
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,17 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702085"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914643"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
 <!--1358456-->
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 Configuration Manager 总是提供设备数据的大型集中式存储，客户可将其用于报告目的。 该站点通常每周都会收集这些数据。 从 1806 版开始，CMPivot 这种新的控制台中实用工具现提供对环境中设备实时状态的访问。 它立即对目标集合中的所有连接设备运行查询，并返回结果。 可以在工具中对此数据进行筛选和分组。 通过提供来自联机客户端的实时数据，可以更快地回答业务问题、解决问题并对安全事件作出响应。
 
@@ -46,20 +45,23 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
   - IPConfig
   - SMBConfig
 
+- CMPivot 和 [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) 安装程序通过 Microsoft 代码签名证书进行签名。 如果“受信任的发行者”存储中未列出该证书，则需要添加它。 否则，当 PowerShell 执行策略设置为“AllSigned”时，CMPivot 和 Microsoft Edge 安装程序不会运行。 <!--7585106-->
 
 - CMPivot 的权限：
-  - “SMS 脚本”对象上的“读取权限”  
-  - “集合”上的“运行脚本”权限  
-    - 或者，从版本 1906 开始，可以在“集合”  上使用“运行 CMPivot”  。
-  - “清单报表”上的“读取”权限  
+  - “SMS 脚本”对象上的“读取权限” 
+  - “集合”上的“运行脚本”权限 
+    - 或者，从版本 1906 开始，可以在“集合”上使用“运行 CMPivot”。
+  - “清单报表”上的“读取”权限 
   - 默认范围。
 
 >[!NOTE]
-> “运行脚本”  是“运行 CMPivot”  权限的超集。
+> “运行脚本”是“运行 CMPivot”权限的超集。
+
+CMPivot 和 Edge 安装程序通过 Microsoft 代码签名证书进行签名。 如果“受信任的发行者”存储中未列出该证书，则需要添加它。 否则，当 PowerShell 执行策略设置为“AllSigned”时，CMPivot 和 Edge 安装程序不会运行。
  
 ## <a name="limitations"></a>限制
 
-- 在层次结构中，将 Configuration Manager 控制台连接到主站点以运行 CMPivot  。 当“启动 CMPivot”操作连接到管理中心站点 (CAS) 时，它不会出现在控制台中  。
+- 在层次结构中，将 Configuration Manager 控制台连接到主站点以运行 CMPivot。 当“启动 CMPivot”操作连接到管理中心站点 (CAS) 时，它不会出现在控制台中。
   - 从 Configuration Manager 版本 1902 开始，就可以从 CAS 运行 CMPivot。 在某些环境中，需要其他权限。 有关详细信息，请参阅[从版本 1902 开始的 CMPivot](#bkmk_cmpivot1902)。
 
 - CMPivot 仅返回用于将客户端连接到当前站点的数据。  
@@ -70,27 +72,27 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
 
 - 只有一个 CMPivot 实例可以在运行 Configuration Manager 控制台的计算机上同时运行。  
 
-- 在版本 1806 中，只有在组名为“管理员”时，对“管理员”  实体的查询才起作用。 如果组名已本地化，则不起作用。 例如，法语“Administrateurs”。<!--SCCMDocs issue 759-->  
+- 在版本 1806 中，只有在组名为“管理员”时，对“管理员”实体的查询才起作用。 如果组名已本地化，则不起作用。 例如，法语“Administrateurs”。<!--SCCMDocs issue 759-->  
 
 
 ## <a name="start-cmpivot"></a>启动 CMPivot
 
-1. 在 Configuration Manager 控制台中，连接到主站点。 转到“资产和符合性”  工作区，并选择“设备集合”  节点。 选择目标集合，然后单击功能区中的“启动 CMPivot”  ，以便启动该工具。  
+1. 在 Configuration Manager 控制台中，连接到主站点。 转到“资产和符合性”工作区，并选择“设备集合”节点。 选择目标集合，然后单击功能区中的“启动 CMPivot”，以便启动该工具。  
 
     > [!Tip]  
     > 如果看不到此选项，请检查以下配置：  
     > 
     > - 与站点管理员确认你的帐户具有所需权限。 有关详细信息，请参阅[先决条件](#prerequisites)。  
     > 
-    > - 将控制台连接到主站点  。  
+    > - 将控制台连接到主站点。  
 
 2. 界面进一步提供有关使用该工具的信息。  
 
      - 可在顶部手动输入查询字符串，或单击联机文档中的链接。  
 
-     - 单击其中一个实体  将其添加到查询字符串。  
+     - 单击其中一个实体将其添加到查询字符串。  
 
-     - 有关表运算符  、聚合函数  和标量函数  的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用 [Kusto 查询语言 (KQL)](https://docs.microsoft.com/azure/kusto/query/)。  
+     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用 [Kusto 查询语言 (KQL)](https://docs.microsoft.com/azure/kusto/query/)。  
 
 3. 打开 CMPivot 窗口，查看来自客户端的结果。 关闭 CMPivot 窗口时，会话已完成。  
 
@@ -107,7 +109,7 @@ CMPivot 窗口包含以下元素：
 
 1. CMPivot 当前定位的集合位于顶部的标题栏和窗口底部的状态栏中。 例如，上面屏幕截图中的“PM_Team_Machines”。  
 
-2. 左侧窗格列出了客户端上可用的实体  。 一些实体依赖于 WMI，而其他实体则使用 PowerShell 从客户端获取数据。   
+2. 左侧窗格列出了客户端上可用的实体。 一些实体依赖于 WMI，而其他实体则使用 PowerShell 从客户端获取数据。   
 
     - 右键单击实体，执行以下操作：  
 
@@ -119,9 +121,9 @@ CMPivot 窗口包含以下元素：
 
     - 展开实体以查看每个实体可用的特定属性。 双击某个属性，将其添加到当前游标位置的查询。  
 
-3. “主页”选项卡显示有关 CMPivot 的常规信息，包括示例查询和支持文档的链接  。  
+3. “主页”选项卡显示有关 CMPivot 的常规信息，包括示例查询和支持文档的链接。  
 
-4. “查询”选项卡显示查询窗格、结果窗格和状态栏  。 在上面的屏幕截图示例中选中了“查询”选项卡。  
+4. “查询”选项卡显示查询窗格、结果窗格和状态栏。 在上面的屏幕截图示例中选中了“查询”选项卡。  
 
 5. 通过查询窗格，可以在集合中生成或键入要在客户端上运行的查询。  
 
@@ -129,7 +131,7 @@ CMPivot 窗口包含以下元素：
 
     - 在查询窗格中剪切、复制或粘贴内容。  
     <!-- markdownlint-disable MD038 -->
-    - 默认情况下，此窗格使用 IntelliSense。 例如，如果开始键入 `D`，IntelliSense 会建议以该字母开头的所有实体。 选择一个选项，然后按 Tab 将其插入。 键入一个管道字符和一个空格 `| `，然后 IntelliSense 便会建议所有表运算符。 插入 `summarize` 并键入空格，IntelliSense 会建议所有聚合函数。 有关这些运算符和函数的详细信息，请单击 CMPivot 中的“主页”选项卡  。  
+    - 默认情况下，此窗格使用 IntelliSense。 例如，如果开始键入 `D`，IntelliSense 会建议以该字母开头的所有实体。 选择一个选项，然后按 Tab 将其插入。 键入一个管道字符和一个空格 `| `，然后 IntelliSense 便会建议所有表运算符。 插入 `summarize` 并键入空格，IntelliSense 会建议所有聚合函数。 有关这些运算符和函数的详细信息，请单击 CMPivot 中的“主页”选项卡。  
 
     - 查询窗格还提供以下选项：  
 
@@ -198,38 +200,38 @@ CMPivot 窗口包含以下元素：
 
 ### <a name="example-1-stop-a-running-service"></a>示例 1：停止正在运行的服务
 
-安全管理员要求尽快对会计部门的所有设备停止并禁用计算机浏览器服务。 可对会计部门中所有设备的集合启动 CMPivot，并在“Service”实体上选择“查询全部”   。 
+安全管理员要求尽快对会计部门的所有设备停止并禁用计算机浏览器服务。 可对会计部门中所有设备的集合启动 CMPivot，并在“Service”实体上选择“查询全部” 。 
 
 `Service`
 
-显示结果时，右键单击“Name”列，然后选择“分组依据”   。 
+显示结果时，右键单击“Name”列，然后选择“分组依据” 。 
 
 `Service | summarize dcount( Device ) by Name`
 
-在“浏览器”服务的行中，单击“dcount_”列中的超链接数字   。 
+在“浏览器”服务的行中，单击“dcount_”列中的超链接数字 。 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 
-可以选择多个设备，右键单击所选设备，然后选择“运行脚本”  。 此操作将启动“运行脚本”向导，你可以通过该向导运行用于停止和禁用服务的现有脚本。 借助 CMPivot，可以快速响应所有活动计算机的安全事件，并在“运行脚本”向导中查看结果。 然后继续创建配置基线，以修复集合中的其他计算机，因为它们将来会变为活动状态。 
+可以选择多个设备，右键单击所选设备，然后选择“运行脚本”。 此操作将启动“运行脚本”向导，你可以通过该向导运行用于停止和禁用服务的现有脚本。 借助 CMPivot，可以快速响应所有活动计算机的安全事件，并在“运行脚本”向导中查看结果。 然后继续创建配置基线，以修复集合中的其他计算机，因为它们将来会变为活动状态。 
 
 ![浏览器服务和“运行脚本”操作的 CMPivot 示例](media/cmpivot-example1.png)
 
 
 ### <a name="example-2-proactively-resolve-application-failures"></a>示例 2：主动解决应用程序故障  
 
-为主动进行操作维护，可每周一次对管理的服务器集合运行 CMPivot，并在“AppCrash”实体上选择“查询所有”   。 右键单击“FileName”列，然后选择“升序排序”   。 一台设备会为 sqlsqm.exe 返回七个结果，时间戳大约为每天 03:00。 你可以在其中一行中选择文件名，右键单击该名称，然后选择“使用必应进行搜索”  。 在 Web 浏览器中浏览搜索结果时，可找到有关此问题的 Microsoft 支持文章，其中会包含详细信息和解决方案。 
+为主动进行操作维护，可每周一次对管理的服务器集合运行 CMPivot，并在“AppCrash”实体上选择“查询所有” 。 右键单击“FileName”列，然后选择“升序排序” 。 一台设备会为 sqlsqm.exe 返回七个结果，时间戳大约为每天 03:00。 你可以在其中一行中选择文件名，右键单击该名称，然后选择“使用必应进行搜索”。 在 Web 浏览器中浏览搜索结果时，可找到有关此问题的 Microsoft 支持文章，其中会包含详细信息和解决方案。 
 
 
 ### <a name="example-3-bios-version"></a>示例 3：BIOS 版本
 
-若要[缓解推测执行端通道漏洞](https://techcommunity.microsoft.com/t5/configuration-manager-blog/additional-guidance-to-mitigate-speculative-execution-side/ba-p/274974)，其中一个要求就是更新系统 BIOS。 首先查询 BIOS 实体  。 然后按“Version”属性进行分组   。 再右键单击某个特定值，例如“LENOVO - 1140”，并选择“显示具备以下条件的设备”  。  
+若要[缓解推测执行端通道漏洞](https://techcommunity.microsoft.com/t5/configuration-manager-blog/additional-guidance-to-mitigate-speculative-execution-side/ba-p/274974)，其中一个要求就是更新系统 BIOS。 首先查询 BIOS 实体。 然后按“Version”属性进行分组 。 再右键单击某个特定值，例如“LENOVO - 1140”，并选择“显示具备以下条件的设备”。  
 
 `Bios | summarize countif( (Version == 'LENOVO - 1140') ) by Device | where (countif_ > 0)`
 
 
 ### <a name="example-4-free-disk-space"></a>示例 4：可用磁盘空间
 
-需要在网络文件服务器上临时存储大型文件，但不确定哪个磁盘拥有足够的容量。 对文件服务器集合启动 CMPivot，并查询“Disk”实体  。 修改 CMPivot 的查询以快速返回包含实时存储数据的活动服务器列表：  
+需要在网络文件服务器上临时存储大型文件，但不确定哪个磁盘拥有足够的容量。 对文件服务器集合启动 CMPivot，并查询“Disk”实体。 修改 CMPivot 的查询以快速返回包含实时存储数据的活动服务器列表：  
 
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
@@ -253,8 +255,8 @@ CMPivot 窗口包含以下元素：
   - 如果实体有 5 个属性，即表示将显示 5 列和最多 20,000 行。
   - 对于有 10 个属性的实体，最多显示 10,000 行。
   - 显示的总数据将小于或等于 100,000 个单元格。
-- 在“查询摘要”选项卡上，选择“故障”或“脱机”设备的计数，然后选择“创建集合”选项。  使用此选项，可通过修正部署轻松定位这些设备。
-- 通过单击文件夹图标保存收藏夹查询  。
+- 在“查询摘要”选项卡上，选择“故障”或“脱机”设备的计数，然后选择“创建集合”选项。 使用此选项，可通过修正部署轻松定位这些设备。
+- 通过单击文件夹图标保存收藏夹查询。
    ![在 CMPivot 中保存收藏夹查询的示例](media/cmpivot-favorite.png)
 
 - 更新至 1810 版本的客户端会通过快速信道将不超过 80 KB 的输出返回到站点。
@@ -307,7 +309,7 @@ CCMRecentlyUsedApplications
 ![CMPivot 条形图可视化效果示例](media/1359068-cmpivot-barchart.png)
 
 #### <a name="example-time-chart"></a>示例：时间图
-要呈现时间图，请使用新的 bin() 运算符对某段时间的事件进行分组  。 以下查询显示过去七天内设备启动的时间：
+要呈现时间图，请使用新的 bin() 运算符对某段时间的事件进行分组。 以下查询显示过去七天内设备启动的时间：
 
 ``` Kusto
 OperatingSystem
@@ -379,13 +381,13 @@ CMPivot 包括以下标量运算符：
 
 ### <a name="query-summary"></a><a name="bkmk_cmpivot-summary"></a>查询摘要
 
-选择 CMPivot 窗口底部的“查询摘要”选项卡  。 此状态可帮助你识别离线的客户端，或排查可能发生的故障。 在“计数”列中选择一个值以打开具有该状态的特定设备的列表。 
+选择 CMPivot 窗口底部的“查询摘要”选项卡。 此状态可帮助你识别离线的客户端，或排查可能发生的故障。 在“计数”列中选择一个值以打开具有该状态的特定设备的列表。 
 
 例如，选择状态为“故障”的设备的计数。 请查看特定的错误消息，并导出这些设备列表。 如果错误是无法识别的特定 cmdlet，请使用导出的设备列表创建集合以部署 Windows PowerShell 更新。  
 
 ### <a name="cmpivot-audit-status-messages"></a>CMPivot 审核状态消息
 
-从版本 1810 开始，运行 CMPivot 时，MessageID 40805 会创建审核状态消息  。 可通过转到“监视” > “系统状态” > “状态消息查询”    查看状态消息。 可为指定用户运行所有审核状态消息，为指定站点运行所有审核状态消息，或创建自己的状态消息查询   。
+从版本 1810 开始，运行 CMPivot 时，MessageID 40805 会创建审核状态消息。 可通过转到“监视” > “系统状态” > “状态消息查询”  查看状态消息。 可为指定用户运行所有审核状态消息，为指定站点运行所有审核状态消息，或创建自己的状态消息查询 。
 
 消息使用以下格式：
 
@@ -413,14 +415,14 @@ MessageId 40805:User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Scr
    1. 将 CAS 远程 SQL Server 和 CAS 站点服务器添加到 [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) 组。
    ![主站点 SQL Server 上的 Configmgr_DviewAccess 组](media/cmpivot-dviewaccess-group.png)
 1. 转到 Active Directory 用户和计算机。
-   1. 对于每个主站点服务器，请右键单击并选择“属性”  。
-      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”  。 
-      1. 选择“仅使用 Kerberos”  。
+   1. 对于每个主站点服务器，请右键单击并选择“属性”。
+      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”。 
+      1. 选择“仅使用 Kerberos”。
       1. 使用端口和实例添加 CAS SQL Server 服务。
       1. 请确保这些更改与公司安全策略保持一致！
-   1. 对于 CAS 站点，请右键单击并选择“属性”  。
-      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”  。 
-      1. 选择“仅使用 Kerberos”  。
+   1. 对于 CAS 站点，请右键单击并选择“属性”。
+      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”。 
+      1. 选择“仅使用 Kerberos”。
       1. 使用端口和实例添加每个主站点的 SQL Server 服务。
       1. 请确保这些更改与公司安全策略保持一致！
 
@@ -431,14 +433,14 @@ MessageId 40805:User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Scr
 1. 请转到每个主站点的 SQL Server。
    1. 将 CAS 提供程序计算机帐户和 CAS 站点服务器添加到 [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) 组。
 1. 转到 Active Directory 用户和计算机。
-   1. 选择 CAS 提供程序计算机，右键单击并选择“属性”  。
-      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”  。 
-      1. 选择“仅使用 Kerberos”  。
+   1. 选择 CAS 提供程序计算机，右键单击并选择“属性”。
+      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”。 
+      1. 选择“仅使用 Kerberos”。
       1. 使用端口和实例添加每个主站点的 SQL Server 服务。
       1. 请确保这些更改与公司安全策略保持一致！
-   1. 选择 CAS 站点服务器，右键单击并选择“属性”  。
-      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”  。 
-      1. 选择“仅使用 Kerberos”  。
+   1. 选择 CAS 站点服务器，右键单击并选择“属性”。
+      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”。 
+      1. 选择“仅使用 Kerberos”。
       1. 使用端口和实例添加每个主站点的 SQL Server 服务。
       1. 请确保这些更改与公司安全策略保持一致！
 1. 重启 CAS 远程提供程序计算机。
@@ -448,14 +450,14 @@ MessageId 40805:User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Scr
 1. 请转到每个主站点的 SQL Server。
    1. 将 CAS 站点服务器添加到 [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) 组。
 1. 转到 Active Directory 用户和计算机。
-   1. 对于每个主站点服务器，请右键单击并选择“属性”  。
-      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”  。 
-      1. 选择“仅使用 Kerberos”  。
+   1. 对于每个主站点服务器，请右键单击并选择“属性”。
+      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”。 
+      1. 选择“仅使用 Kerberos”。
       1. 使用端口和实例为 SQL 节点添加 CAS SQL Server 服务帐户。
       1. 请确保这些更改与公司安全策略保持一致！
-   1. 选择 CAS 站点服务器，右键单击并选择“属性”  。
-      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”  。 
-      1. 选择“仅使用 Kerberos”  。
+   1. 选择 CAS 站点服务器，右键单击并选择“属性”。
+      1. 在委托选项卡上，选择第三个选项，“仅信任此计算机委派指定的服务”。 
+      1. 选择“仅使用 Kerberos”。
       1. 使用端口和实例添加每个主站点的 SQL Server 服务。
       1. 请确保这些更改与公司安全策略保持一致！
 1. 请确保 [SPN 发布](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs)使用 CAS SQL 侦听器名称和每个主 SQL 侦听器名称。
@@ -481,11 +483,11 @@ MessageId 40805:User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Scr
 | [联接](https://docs.microsoft.com/azure/kusto/query/joinoperator)| 通过匹配同一设备的行来合并两个表的行，以便形成新的表|
 |呈现|将结果呈现为图形输出|
 
-CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句的支持  。 有关详细信息，请参阅[示例](#bkmk_cmpivot_examples1906)部分和 Kusto 的[联接运算符](https://docs.microsoft.com/azure/kusto/query/joinoperator)一文。
+CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句的支持。 有关详细信息，请参阅[示例](#bkmk_cmpivot_examples1906)部分和 Kusto 的[联接运算符](https://docs.microsoft.com/azure/kusto/query/joinoperator)一文。
 
 #### <a name="limitations-for-joins"></a>联接的限制
 
-1. 联接列始终在“Device”字段上隐式完成  。
+1. 联接列始终在“Device”字段上隐式完成。
 1. 每个查询最多可使用 5 个联接。
 1. 最多可使用 64 个合并列。
 
@@ -543,14 +545,14 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
 ### <a name="added-cmpivot-permissions-to-the-security-administrator-role"></a><a name="bkmk_cmpivot_secadmin1906"></a> 已向安全管理员角色添加 CMPivot 权限
 <!--4683130-->
 
-从版本 1906 开始，已向 Configuration Manager 的内置安全管理员角色添加以下权限  ：
+从版本 1906 开始，已向 Configuration Manager 的内置安全管理员角色添加以下权限：
 
- - 读取  SMS 脚本
- - 在集合上运行 CMPivot 
- - 读取清单报表 
+ - 读取 SMS 脚本
+ - 在集合上运行 CMPivot
+ - 读取清单报表
 
 >[!NOTE]
-> “运行脚本”  是“运行 CMPivot”  权限的超集。
+> “运行脚本”是“运行 CMPivot”权限的超集。
  
 
 ### <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a> CMPivot 独立应用
@@ -574,7 +576,7 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
    ![浏览到要对其运行查询的集合](./media/3555890-cmpivot-standalone-browse-collection.png)
 
 > [!NOTE]
-> 右键单击操作（例如，“运行脚本”、“资源浏览器”）和 Web 搜索在 CMPivot 独立应用中不可用   。 CMPivot 独立应用的主要用途是独立于 Configuration Manager 基础结构进行查询。 为帮助安全管理员，CMPivot 独立应用确实包含连接到 Microsoft Defender 安全中心的功能。 <!--5605358-->
+> 右键单击操作（例如，“运行脚本”、“资源浏览器”）和 Web 搜索在 CMPivot 独立应用中不可用 。 CMPivot 独立应用的主要用途是独立于 Configuration Manager 基础结构进行查询。 为帮助安全管理员，CMPivot 独立应用确实包含连接到 Microsoft Defender 安全中心的功能。 <!--5605358-->
 
 ## <a name="cmpivot-starting-in-version-1910"></a><a name="bkmk_cmpivot1910"></a> 从版本 1910 开始的 CMPivot
 <!--5410930, 3197353-->
@@ -676,8 +678,8 @@ EPStatus
 
 #### <a name="known-issues-for-local-device-query-evaluation"></a>本地设备查询评估的已知问题
 
- - 如果在“此电脑”上查询你无权访问的 WMI 实体（例如锁定的 WMI 类），则可能会在 CMPivot 中出现故障  。 使用具有提升权限的帐户运行 CMPivot 以查询这些实体。 <!--5753242-->
-- 如果在“此电脑”上查询非 WMI 实体，你将看到“无效的命名空间”或不明确的异常   。
+ - 如果在“此电脑”上查询你无权访问的 WMI 实体（例如锁定的 WMI 类），则可能会在 CMPivot 中出现故障。 使用具有提升权限的帐户运行 CMPivot 以查询这些实体。 <!--5753242-->
+- 如果在“此电脑”上查询非 WMI 实体，你将看到“无效的命名空间”或不明确的异常 。
 - 从“开始”菜单快捷方式运行 CMPivot 独立应用，而不是直接从可执行文件的路径运行。 <!--5787962-->
 
 ### <a name="other-enhancements"></a><a name="bkmk_Other"></a> 其他增强功能
@@ -690,7 +692,7 @@ EPStatus
    | where Manufacturer like '%Micro%'
    ```
 
-- 我们已将 CcmLog() 和 EventLog() 实体更新为在默认情况下仅查看最近 24 小时内的消息   。 通过传入可选的时间跨度可以覆盖此行为。 例如，以下查询将查看最近 1 小时内的事件：
+- 我们已将 CcmLog() 和 EventLog() 实体更新为在默认情况下仅查看最近 24 小时内的消息 。 通过传入可选的时间跨度可以覆盖此行为。 例如，以下查询将查看最近 1 小时内的事件：
 
    ```kusto
    CcmLog('Scripts',1h)
@@ -708,7 +710,7 @@ EPStatus
 
 - CMPivot 会自动连接到最后一个站点。<!-- 5420395 --> 启动 CMPivot 后，可以根据需要连接到新站点。
 
-- 从“导出”菜单中，选择新选项“查询链接到剪贴板”   。<!-- 5431577 --> 此操作会将链接复制到剪贴板，以便与他人共享。 例如：
+- 从“导出”菜单中，选择新选项“查询链接到剪贴板” 。<!-- 5431577 --> 此操作会将链接复制到剪贴板，以便与他人共享。 例如：
 
     `cmpivot:Ly8gU2FtcGxlIHF1ZXJ5DQpPcGVyYXRpbmdTeXN0ZW0NCnwgc3VtbWFyaXplIGNvdW50KCkgYnkgQ2FwdGlvbg0KfCBvcmRlciBieSBjb3VudF8gYXNjDQp8IHJlbmRlciBiYXJjaGFydA==`
 
@@ -725,7 +727,7 @@ EPStatus
     > [!TIP]
     > 要使此链接正常工作，请[安装 CMPivot 独立版本](#install-cmpivot-standalone)。
 
-- 在查询结果中，如果设备已在 Microsoft Defender 高级威胁防护 (ATP) 中注册，请右键单击该设备以启动 Microsoft Defender 安全中心在线门户  。
+- 在查询结果中，如果设备已在 Microsoft Defender 高级威胁防护 (ATP) 中注册，请右键单击该设备以启动 Microsoft Defender 安全中心在线门户。
 
 ### <a name="known-issues-for-cmpivot-in-version-1910"></a>版本 1910 中 CMPivot 的已知问题
 
@@ -744,7 +746,7 @@ EPStatus
 
 CMPivot 使用 Configuration Manager“快速通道”向客户端发送查询。 其他功能也使用这个从服务器到客户端的信道，例如客户端通知操作、客户端状态和 Endpoint Protection。 客户端通过类似的快速状况消息系统返回结果。 状况消息临时存储在数据库中。 如需深入了解用于客户端通知的端口，请参阅[端口](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-MP)一文。
 
-查询和结果都只是文本。 InstallSoftware 和 Process 实体均返回一些最大的结果集   。 性能测试期间，对于这些查询而言，来自一个客户端的最大状态消息文件大小小于 1 KB  。 扩展到包含 50,000 个活动客户端的大型环境后，此一次性查询将在网络上生成不超过 50 MB 的数据。 欢迎页上所有带下划线的项，每个客户端将返回不超过 1k 的信息。
+查询和结果都只是文本。 InstallSoftware 和 Process 实体均返回一些最大的结果集 。 性能测试期间，对于这些查询而言，来自一个客户端的最大状态消息文件大小小于 1 KB。 扩展到包含 50,000 个活动客户端的大型环境后，此一次性查询将在网络上生成不超过 50 MB 的数据。 欢迎页上所有带下划线的项，每个客户端将返回不超过 1k 的信息。
 
 ![CMPivot 带下划线的实体示例](media/cmpivot-underlined-entities.png)
 
@@ -756,12 +758,12 @@ CMPivot 使用 Configuration Manager“快速通道”向客户端发送查询�
 
  CMPivot 交互将记录到以下日志文件：
 
- 服务器端：
+服务器端：
 - SmsProv.log
 - BgbServer.log
 - StateSys.log
 
- 客户端：
+客户端：
 - CCMNotificationAgent.log
 - Scripts.log
 - StateMessage.log

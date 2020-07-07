@@ -10,12 +10,11 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
-ms.translationtype: HT
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715639"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502249"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -227,15 +226,16 @@ Configuration Manager 的 Azure 云管理服务支持多个租户。 多个 Conf
 | 硬件和软件清单     | ![支持](media/green_check.png) |
 | 客户端状态和通知     | ![支持](media/green_check.png) |
 | 运行脚本     | ![支持](media/green_check.png) |
+| CMPivot     | ![支持](media/green_check.png) |
 | 符合性设置     | ![支持](media/green_check.png) |
-| 客户端安装<br>（带 Azure AD 集成）     | ![支持](media/green_check.png) |
+| 客户端安装<br>（带 [Azure AD 集成](../../deploy/deploy-clients-cmg-azure.md)） | ![支持](media/green_check.png) |
+| 客户端安装<br>（带[令牌身份验证](../../deploy/deploy-clients-cmg-token.md)） | ![支持](media/green_check.png) (2002) |
 | 软件分发（以设备为目标）     | ![支持](media/green_check.png) |
 | 软件分发（以用户为目标，必需）<br>（带 Azure AD 集成）     | ![支持](media/green_check.png) |
 | 软件分发（以用户为目标，可用）<br>（[所有要求](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)） | ![支持](media/green_check.png) |
-| Windows 10 就地升级任务序列      | ![支持](media/green_check.png) |
-| 不使用启动映像并使用选项部署的任务序列：**启动任务序列之前在本地下载所有内容**      | ![支持](media/green_check.png) |
-| 不使用启动映像的任务序列  | ![支持](media/green_check.png) (1910)|
-| CMPivot     | ![支持](media/green_check.png) |
+| Windows 10 [就地升级任务序列](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![支持](media/green_check.png) |
+| 不使用启动映像并使用选项部署的任务序列：**启动任务序列之前在本地下载所有内容** | ![支持](media/green_check.png) |
+| 不使用启动映像和[任一下载选项](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg)的任务序列 | ![支持](media/green_check.png) (1910)|
 | 任何其他任务序列方案     | ![不支持](media/Red_X.png) |
 | 客户端推送     | ![不支持](media/Red_X.png) |
 | 自动站点分配     | ![不支持](media/Red_X.png) |

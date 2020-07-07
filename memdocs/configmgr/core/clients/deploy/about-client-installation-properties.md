@@ -10,12 +10,11 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
-ms.translationtype: HT
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383030"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854399"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>关于 Configuration Manager 中的客户端安装参数和属性
 
@@ -601,7 +600,11 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
 从版本 2002 开始，在客户端成功注册到站点后，使用此属性可在客户端上启动任务序列。
 
+> [!NOTE]
+> 如果任务序列安装软件更新或应用程序，客户端需要有效的客户端身份验证证书。 令牌身份验证不能独立工作。 有关详细信息，请参阅[发行说明 - OS 部署](../../servers/deploy/install/release-notes.md#os-deployment)。<!--7527072-->
+      
 例如，使用 Windows Autopilot 预配新的 Windows 10 设备，将其自动注册到 Microsoft Intune，然后安装 Configuration Manager 客户端以进行共同管理。 如果指定此新选项，则新预配的客户端将运行一个任务序列。 通过此过程，可以更灵活地安装应用程序和软件更新，或配置设置。
+
 
 请按以下过程操作：
 
@@ -617,6 +620,8 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
       > 此方法可能具有其他先决条件。 例如将站点注册到 Azure Active Directory，或创建启用内容的云管理网关。
 
 安装客户端并正确注册到站点后，它启动引用的任务序列。 如果客户端注册失败，则任务序列不会启动。
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

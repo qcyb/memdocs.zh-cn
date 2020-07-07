@@ -2,7 +2,7 @@
 title: 在桌面分析中注册设备
 titleSuffix: Configuration Manager
 description: 了解如何在桌面分析中注册设备。
-ms.date: 04/15/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
-ms.translationtype: HT
+ms.openlocfilehash: 8f3a2cfd2cb18d6247c35ae46efab2ab9f89b254
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864883"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819995"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备
 
@@ -36,6 +35,7 @@ ms.locfileid: "83864883"
 
 | OS 版本 | 评估程序 | DiagTrack |
 | --------------| ----------------------- | -------------------|
+| Windows 10 2004 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4555932) |
 | Windows 10 1909 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4529964) |
 | Windows 10 1903 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4498140) |
 | Windows 10 1809 | 包含<sup>[注释 1](#bkmk_note1)</sup> | [最新累积更新](https://support.microsoft.com/help/4464619) |

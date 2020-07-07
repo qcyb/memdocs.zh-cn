@@ -10,12 +10,11 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590413"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot 与共同管理
 
@@ -41,7 +40,7 @@ Windows Autopilot 支持多种方案，可通过共同管理最大限度地利�
 
 
 
-## <a name="benefits"></a>优点
+## <a name="benefits"></a>好处
 
 在结合使用共同管理与 Autopilot 时，可确保连接网络的新设备最终会处于相同的管理状态。 在此设置中，设备将被注册到 Intune 并拥有一个 Configuration Manager 客户端。  这样，可以使用新的 Windows 10 预配模型，并且无需创建、维护和更新自定义 OS 映像。 
 
@@ -77,9 +76,9 @@ Windows Autopilot 使用设备上预安装的 Windows 10 的 OEM 优化版本。
 
 ## <a name="case-study"></a>案例研究
 
-德国的物流和铁路运输公司 DB Shenker 使用 Autopilot 来提高员工工作效率，并使其 IT 团队免于执行日常支持任务。 Shenker 已弃用传统的映像，改为通过云进行预配。 他们现在使用 Azure AD 联接和 Intune 以启动新设备并使其快速运行。 
+德国的物流和铁路运输公司 DB Schenker 使用 Autopilot 来提高员工工作效率，并使其 IT 团队免于执行日常支持任务。 DB Schenker 已弃用传统的映像，改为通过云进行预配。 他们现在使用 Azure AD 联接和 Intune 以启动新设备并使其快速运行。 
 
-Shenker 现在使用 Windows Autopilot，远程工作人员再也不必在出差提供 IT 服务方面浪费时间了。 他们将其工作硬件直接从制造商处运送到其当地驻地办事处。 工作人员将新设备连接到 Internet，并使用其 Azure AD 凭据登录。 设备随后连接到 Schenker 的 IT 部门为用户的个人配置文件分配的应用程序和服务。
+DB Shenker 现在使用 Windows Autopilot，远程工作人员再也不必在出差提供 IT 服务方面浪费时间了。 他们将其工作硬件直接从制造商处运送到其当地驻地办事处。 工作人员将新设备连接到 Internet，并使用其 Azure AD 凭据登录。 设备随后连接到 DB Schenker 的 IT 部门为用户的个人配置文件分配的应用程序和服务。
 
 有关详细信息，请参阅[全球物流公司集中管理 IT 并使员工在统一的现代数字化工作平台中工作](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10)。
 
@@ -91,7 +90,7 @@ Shenker 现在使用 Windows Autopilot，远程工作人员再也不必在出差
 
 
 
-## <a name="configure"></a>配置
+## <a name="configure"></a>用户密码重置策略
 
 有关详细信息，请参阅下列文章：
 

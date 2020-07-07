@@ -2,7 +2,7 @@
 title: 桌面分析故障排除
 titleSuffix: Configuration Manager
 description: 帮助解决桌面分析问题的技术详细信息。
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
-ms.translationtype: HT
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828969"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析故障排除
 
@@ -205,7 +204,7 @@ ms.locfileid: "84428582"
 
 - “诊断数据”指的是从客户端设备上载到 Microsoft 的系统元数据。 此数据支持桌面分析。 它包括诸如设备清单之类的属性，以及安全和功能更新状态。
 
-默认情况下，每天自动刷新桌面分析门户中的所有数据。 此刷新包括诊断数据中的更改，以及对配置（管理员数据）所做的任何更改。 它应在每天 08:00 UTC 之前显示在桌面分析门户中。
+默认情况下，每天自动刷新桌面分析门户中的所有数据。 此刷新包括最近两天的诊断数据更改，以及对配置（管理员数据）进行的任何更改。 它应在每天 08:00 UTC 之前显示在桌面分析门户中。
 
 更改管理员数据时，会触发工作区中管理员数据的按需刷新。 从桌面分析门户的任意页面，打开数据流通浮出控件：
 
@@ -221,3 +220,39 @@ ms.locfileid: "84428582"
 
 > [!IMPORTANT]
 > 桌面分析选项“查看最新数据”已弃用。 此操作将在桌面分析服务的未来版本中删除。 有关详细信息，请参阅[已弃用的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  
+
+## <a name="service-notifications"></a>服务通知
+
+<!-- 4982509 -->
+
+桌面分析门户可以向管理员显示通知横幅。 通过这些通知，Microsoft 可以向你传达重要事件和问题。 下列部分详细介绍了你可能看到的通知。
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>查看桌面分析的本月新增功能
+
+此信息通知可让你了解服务的更改。 有关详细信息，请参阅[桌面分析的新增功能](whats-new.md) (`https://aka.ms/danews`)。
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>有新的先决条件。 要继续使用桌面分析，请查看新要求
+
+此信息通知可让你了解先决条件的更改。 例如，新的 Internet 终结点或软件更新。 有关详细信息，请参阅[先决条件](overview.md#prerequisites) (`https://aka.ms/daprereqs`)。
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>我们正在调查对桌面分析产生影响的问题
+
+此警告通知表明 Microsoft 已意识到对桌面分析服务产生影响的问题。 问题通常与生成快照有关。 如果你看到此通知时，则表明 Microsoft 正在调查问题，以确定影响的范围和来源。 无需联系 Microsoft 支持部门。 有关详细信息，请参阅[数据流](privacy.md#data-flow)。
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>我们正在调查数据延迟问题。 如果你在过去 24 小时内注册了新设备或更改了任何资产，它们可能不会立即显示
+
+此警告通知表明 Microsoft 已意识到对桌面分析服务产生影响的问题。 Microsoft 会持续监视服务，以确认所有组件都在正确的时间更新快照。 在此监视过程中，其中一个组件未按预期完成。 如果你看到此通知时，则表明 Microsoft 正在调查问题。 无需联系 Microsoft 支持部门。 有关详细信息，请参阅[数据流](privacy.md#data-flow)。
+
+如果你最近[注册了设备](enroll-devices.md)或更改了[资产](about-assets.md)，请等待 Microsoft 解决该问题。 你无需重复任何操作。
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>我们解决了暂时性的数据延迟问题。 每日刷新门户数据延迟
+
+此通知可告诉你数据延迟曾出现问题。 服务仍在处理快照，数据刷新延迟。 有关详细信息，请参阅[数据延迟](#data-latency)。
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>我们解决了数据延迟问题。 如果你在过去 24 小时内注册了新设备或更改了任何资产，它们可能不会立即显示
+
+此通知可告诉你 Microsoft 解决了以前报告的数据延迟问题。 你可能会在将来的快照中看到旧数据。 如果你在过去 24 小时内[注册了设备](enroll-devices.md)或进行了设备配置更改，它们无法立即显示在门户中。 你可以继续使用桌面分析来对[资产](about-assets.md)进行分类，并准备[部署计划](about-deployment-plans.md)。 这些操作可以使用以前的快照中的数据。
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>我们解决了桌面分析的问题。 每日刷新门户数据按预期进行
+
+此通知可让你知道 Microsoft 识别了在处理过程中停止工作的快照组件。 Microsoft 重启了该组件，这需要一些时间来处理快照。 Microsoft 会持续监视服务，以确认所有组件都在正确的时间更新快照。

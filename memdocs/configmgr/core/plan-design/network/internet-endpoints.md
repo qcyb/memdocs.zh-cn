@@ -2,7 +2,7 @@
 title: Internet 访问要求
 titleSuffix: Configuration Manager
 description: 了解允许使用 Configuration Manager 功能的完整功能的 Internet 终结点。
-ms.date: 06/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
-ms.translationtype: HT
+ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819944"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -230,6 +229,8 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 
 - `config.office.com`，用于为企业部署创建 Microsoft 365 企业应用版的自定义配置
 
+- `contentstorage.osi.office.net`，支持 Office 加载项就绪情况评估<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Configuration Manager 控制台
 
 具有 Configuration Manager 控制台的计算机需要访问以下 Internet 终结点获取特定功能：
@@ -267,6 +268,14 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 ## <a name="desktop-analytics"></a>桌面分析
 
 有关桌面分析云服务所需终结点的详细信息，请参阅[启用数据共享](../../../desktop-analytics/enable-data-sharing.md#endpoints)。
+
+## <a name="tenant-attach"></a>租户附加
+
+有关租户附加功能所需终结点的详细信息，请参阅[启用租户附加](../../../tenant-attach/device-sync-actions.md#internet-endpoints)。
+
+## <a name="endpoint-analytics"></a>终结点分析
+
+有关终结点分析所需终结点的详细信息，请参阅[终结点分析代理配置](../../../../analytics/troubleshoot.md#bkmk_endpoints)。
 
 ## <a name="microsoft-public-ip-addresses"></a>Microsoft 公共 IP 地址
 

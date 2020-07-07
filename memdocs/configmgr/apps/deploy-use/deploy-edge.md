@@ -2,7 +2,7 @@
 title: 部署并更新 Microsoft Edge 版本 77 及更高版本
 titleSuffix: Configuration Manager
 description: 如何在 Configuration Manager 中部署并更新 Microsoft Edge 版本 77 及更高版本
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
-ms.translationtype: HT
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776927"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914560"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge 管理
 
@@ -33,6 +32,8 @@ ms.locfileid: "84776927"
 
 - PowerShell [执行策略](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)不能设置为“受限”。
   - 执行 PowerShell 以执行安装。
+
+- Microsoft Edge 安装程序和 [CMPivot](../../core/servers/manage/cmpivot.md) 通过 Microsoft 代码签名证书进行签名。 如果“受信任的发行者”存储中未列出该证书，则需要添加它。 否则，当 PowerShell 执行策略设置为“AllSigned”时，Microsoft Edge 安装程序和 CMPivot 不会运行。 <!--7585106-->
 
 运行 Configuration Manager 控制台的设备需要能够访问以下终结点：
 
@@ -135,6 +136,22 @@ ms.locfileid: "84776927"
 在“软件库”工作区中，单击“Microsoft Edge 管理”以查看仪表板 。 单击“浏览”并选择其他集合，更改关系图数据的集合。 下拉列表中默认包含五个最大的集合。 如果选择的集合不在列表中，则新选择的集合将位于下拉列表中的底部位置。
 
 [![Microsoft Edge 管理仪表板](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>已知问题
+
+### <a name="hardware-inventory-may-fail-to-process"></a>硬件清单可能处理失败
+<!--7535675-->
+设备的硬件清单可能处理失败。 Dataldr.log 文件中可能会出现类似如下的错误：
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**缓解措施：** 若要暂时避开此问题，请禁止收集浏览器使用情况 (SMS_BrowerUsage) 硬件清单类。 当前未利用此类。
 
 ## <a name="next-steps"></a>后续步骤
 

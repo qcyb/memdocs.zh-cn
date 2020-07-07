@@ -11,25 +11,28 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
-ms.translationtype: HT
+ms.openlocfilehash: 96a014f4919480854b57bae82e982ce783f5f59b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268923"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590960"
 ---
 # <a name="updates-in-desktop-analytics"></a>桌面分析中的更新
 
 在桌面分析门户中，查看安全和功能更新的状态。 在桌面分析主菜单的监视器组中选择这些节点。 这些节点可让你深入了解环境中这些更新的状态。
 
+<!--7362999-->
+
+> [!IMPORTANT]
+> 桌面分析显示其商业 ID 与桌面分析工作区关联的设备的安全和功能更新状态。 无论是否已将设备注册到 Configuration Manager，都将发生此行为。 这些磁贴上的总设备数可能与[**连接服务**](monitor-connection-health.md#commercial-id-configuration)中注册的设备数不匹配。
 
 ## <a name="security-updates"></a>安全更新
 
-若要查看安全更新的当前状态，请在桌面分析的“监视器”部分中选择“安全更新”   ：
+若要查看安全更新的当前状态，请在桌面分析的“监视器”部分中选择“安全更新” ：
 
 ![桌面分析的安全更新节点](media/security-updates.png)
 
-此视图汇总了运行 Windows 10 的设备的安全更新  。 条形图中的设备按以下标签分类：
+此视图汇总了运行 Windows 10 的设备的安全更新。 条形图中的设备按以下标签分类：
 
 #### <a name="latest"></a>最新
 
@@ -47,9 +50,9 @@ ms.locfileid: "83268923"
 
 桌面分析尚未评估设备。 此状态包括运行 Windows 7、Windows 8.1 的设备或注册 Windows 预览体验计划的 Windows 10 设备。  
 
-要查看安全更新的采用趋势，请针对特定版本的 Windows 选择“查看详细信息”  。 堆积面积图按一段时间内安装的安全更新对设备进行分类。
+要查看安全更新的采用趋势，请针对特定版本的 Windows 选择“查看详细信息”。 堆积面积图按一段时间内安装的安全更新对设备进行分类。
 
-要查看安全更新的部署状态，请选择“全部查看”  。 此视图按下列类别列出设备：
+要查看安全更新的部署状态，请选择“全部查看”。 此视图按下列类别列出设备：
 
 - 未启动
 - 正在进行
@@ -57,18 +60,18 @@ ms.locfileid: "83268923"
 - 需要注意 - 设备（按设备名称排序）
 - 需要注意 - 问题（按问题类型排序）
 
-要显示具有指出服务仍在处理的新信息的设备，请选择“查看最新数据”  。 桌面分析将在下次完全数据刷新后显示此信息。
+要显示具有指出服务仍在处理的新信息的设备，请选择“查看最新数据”。 桌面分析将在下次完全数据刷新后显示此信息。
 
   > [!IMPORTANT]
-  > 桌面分析选项“查看最新数据”  已弃用。 此操作将在桌面分析服务的未来版本中删除。 有关详细信息，请参阅[已弃用的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  
+  > 桌面分析选项“查看最新数据”已弃用。 此操作将在桌面分析服务的未来版本中删除。 有关详细信息，请参阅[已弃用的功能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)。<!--7080949-->  
 
 ## <a name="feature-updates"></a>功能更新
 
-若要查看功能更新的当前状态，请在桌面分析的“监视器”部分中选择“功能更新”   ：
+若要查看功能更新的当前状态，请在桌面分析的“监视器”部分中选择“功能更新” ：
 
 ![桌面分析的功能更新节点](media/feature-updates.png)
 
-此视图汇总了运行 Windows 10 的设备的功能更新  。
+此视图汇总了运行 Windows 10 的设备的功能更新。
 
 有关服务期的详细信息，请参阅 [Windows 生命周期简报](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)  
 

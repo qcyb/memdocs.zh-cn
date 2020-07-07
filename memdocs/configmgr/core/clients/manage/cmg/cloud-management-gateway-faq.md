@@ -10,12 +10,11 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
-ms.translationtype: HT
+ms.openlocfilehash: ecc91168cc90af58c40903ea3d288eeaa82be7a0
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721884"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502232"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>有关云管理网关的常见问题解答
 
@@ -87,6 +86,16 @@ ms.locfileid: "84721884"
 如果选择部署 CMG，并使用 PKI 证书在已启用 CMG 的管理点上进行 HTTPS 通信，请在管理点属性上选择“仅允许 Internet 客户端”。 此设置可确保内部客户端继续在你的环境中使用 HTTP 管理点。
 
 如果使用增强型 HTTP，则无需配置此设置。 直接与已启用 CMG 的管理点通信时，客户端继续使用 HTTP。 有关详细信息，请参阅[增强型 HTTP](../../../plan-design/hierarchy/enhanced-http.md)。
+
+### <a name="what-are-the-differences-with-client-authentication-between-azure-ad-and-certificates"></a>Azure AD 与证书之间的客户端身份验证有何区别？
+<!-- MEMDocs#277 -->
+可以使用 Azure AD 或设备的[客户端身份验证证书](certificates-for-cloud-management-gateway.md#bkmk_clientauth)对 CMG 服务进行身份验证。
+
+如果你使用 Active Directory 加入域的身份来管理传统 Windows 客户端，则这些客户端需要 PKI 证书来保护通信渠道。 这些客户端可能包括 Windows 8.1 和 Windows 10。 你可以使用所有 CMG 支持的功能，但软件分发仅限于设备。 在设备漫游到 Internet 之前，安装 Configuration Manager 客户端，或者在版本 2002 或更高版本中使用令牌身份验证。
+
+还可以使用现代身份（可以是加入云域的混合 Azure AD 或纯 Azure AD）来管理 Windows 10 客户端。 客户端使用 Azure AD 进行身份验证而不是使用 PKI 证书。 Azure AD 的设置、配置和维护比复杂的 PKI 系统更简单。 你可以执行所有相同的管理活动并向用户分发软件。 它还支持在远程设备上安装客户端的其他方法。
+
+Microsoft 建议将设备加入 Azure AD。 基于 Internet 的设备可以使用 Azure AD 向 Configuration Manager 进行身份验证。 无论设备是在 Internet 上还是连接到内部网络，它都同时支持设备和用户方案。 有关详细信息，请参阅[使用 Azure AD 标识安装和注册客户端](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)。
 
 ## <a name="next-steps"></a>后续步骤
 

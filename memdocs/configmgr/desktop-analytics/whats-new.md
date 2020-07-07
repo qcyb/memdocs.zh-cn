@@ -2,7 +2,7 @@
 title: 桌面分析中的新增功能
 titleSuffix: Configuration Manager
 description: 桌面分析云服务最近每月发布的新功能摘要。
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
-ms.translationtype: HT
+ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819962"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
 
@@ -27,6 +26,28 @@ ms.locfileid: "84454947"
 
 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="july-2020"></a>2020 年 7 月
+
+### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Windows 10 版本 2004，现已在桌面分析中提供
+
+<!-- 7370207 -->
+
+在桌面分析门户中，在监视安全和功能更新时，现在可看到 Windows 10 版本 2004。 创建部署计划时，可以选择 Windows 10 版本 2004 作为目标版本。
+
+### <a name="improved-support-for-viewing-the-portal-from-any-device"></a>改进了对从任何设备查看门户的支持
+
+<!-- 6270240 -->
+
+现在可以使用多种设备在 Microsoft Endpoint Manager 管理中心查看桌面分析门户。 现在，它符合 Web 内容辅助功能准则 (WCAG) 2.1，显示分辨率最低可达 320 x 256 像素。 例如，下图是 Apple iPhone 8 中显示的门户：
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="iPhone 8 上的桌面分析门户":::
+
+### <a name="notifications-for-service-impacting-events"></a>影响服务的事件的通知
+
+<!-- 4982509 -->
+
+桌面分析门户现在可以显示通知横幅。 通过这些通知，Microsoft 可以向你传达重要事件和问题。 例如，服务的已知问题、数据延迟或新的先决条件。 有关详细信息，请参阅[服务通知](troubleshooting.md#service-notifications)。
 
 ## <a name="june-2020"></a>2020 年 6 月
 

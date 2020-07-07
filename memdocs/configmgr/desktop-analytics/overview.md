@@ -2,7 +2,7 @@
 title: 桌面分析
 titleSuffix: Configuration Manager
 description: 与 Configuration Manager 集成的桌面分析服务的概述。
-ms.date: 03/03/2020
+ms.date: 06/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
-ms.translationtype: HT
+ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590909"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -70,6 +69,9 @@ ms.locfileid: "85353473"
 ### <a name="technical"></a>技术条件
 
 - 有效的全局 Azure 订阅，以及[全局管理员](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)权限。 不支持 [Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)。  
+
+    > [!IMPORTANT]
+    > 桌面分析是 Azure 全球版中托管的一项 Windows 服务，它利用 Windows 诊断数据。 Azure 全球服务适用于美国政府客户，但它不符合[美国政府社区合规性 (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) 属性。 有关 Microsoft 产品和服务的符合性服务/产品列表，请参阅 [Microsoft 信任中心](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)。 桌面分析不适用于 GCC High 或美国国防部 (DOD) 客户。 不支持使用 Azure 政府订阅来托管桌面分析工作区。
 
     - 设置工作区的工作区所有者权限，以及以下角色 ：  
 
