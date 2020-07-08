@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216495"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088473"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune 网络终结点  
 
@@ -67,7 +67,6 @@ ms.locfileid: "85216495"
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -130,8 +129,8 @@ ms.locfileid: "85216495"
 
 根据选择管理 Android 设备的方式，你可能需要打开 Google Android Enterprise 端口和/或 Android 推送通知。 有关支持的 Android 管理方法的更多信息，请参阅 [Android 注册文档](https://docs.microsoft.com/mem/intune/enrollment/android-enroll)。 
 
-[!NOTE]
-由于 Google 移动服务在中国不可用，因此在中国由 Intune 管理的设备无法使用需要 Google 移动服务的功能。 这些功能包括：Google Play 保护机制功能，如 SafetyNet 设备证明、管理 Google Play 商店的应用、Android Enterprise 功能（请参阅 [Google 文档](https://support.google.com/work/android/answer/6270910)）。 此外，Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。
+> [!NOTE]
+> 由于 Google 移动服务在中国不可用，因此在中国由 Intune 管理的设备无法使用需要 Google 移动服务的功能。 这些功能包括：Google Play 保护机制功能，如 SafetyNet 设备证明、管理 Google Play 商店的应用、Android Enterprise 功能（请参阅 [Google 文档](https://support.google.com/work/android/answer/6270910)）。 此外，Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -141,3 +140,6 @@ Google 针对其 [Android Enterprise 蓝皮书](https://static.googleusercontent
 
 Intune 利用 Google Firebase 云消息传递 (FCM)，让推送通知来触发设备操作和签入。Android 设备管理员和 Android Enterprise 都要求采用这种机制。 有关 FCM 网络要求的信息，请参阅 Google 的 [FCM 端口和防火墙](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall)。
 
+## <a name="endpoint-analytics"></a>终结点分析
+
+有关终结点分析所需终结点的详细信息，请参阅[终结点分析代理配置](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints)。

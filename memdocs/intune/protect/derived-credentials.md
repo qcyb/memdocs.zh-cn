@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 5/15/2020
+ms.date: 07/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c244785db3071fd75c89307ce5b902a131124bc6
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 038dfccd49b25546b5edddc785c7ee4c86bf83a3
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828986"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>在 Microsoft Intune 中使用派生凭据
 
@@ -64,7 +64,7 @@ Intune 支持以下平台上的派生凭据：
 
 Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置为应用以下颁发者：
 
-- **DISA Purebred**（仅限 iOS）： https://public.cyber.mil/pki-pke/purebred/
+- **DISA Purebred**： https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**： https://www.entrustdatacard.com/
 - **Intercede**： https://www.intercede.com/
 

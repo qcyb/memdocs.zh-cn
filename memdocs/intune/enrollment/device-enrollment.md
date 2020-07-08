@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986391"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088456"
 ---
 # <a name="what-is-device-enrollment"></a>什么是设备注册？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,6 +45,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |**[USB-Direct](#usb-direct)**| 否 | 否 | 否|[详细信息](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>macOS 注册方法
+
 | **方法** |  **需要重置** |  **用户关联** | **Locked** | **详细信息**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | 否| “是” | 否 | [详细信息](macos-enroll.md)|
@@ -54,7 +55,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 ## <a name="windows-enrollment-methods"></a>Windows 注册方法
 
 | **方法** | **需要重置** | **用户关联** | **Locked** | **详细信息**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | 否 | “是” | 否 | [详细信息](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| 否 |否 |否 |[详细信息](device-enrollment-manager-enroll.md)|
 |**自动注册** | 否 |“是” |否 | [详细信息](windows-enroll.md#enable-windows-10-automatic-enrollment)|
@@ -77,7 +78,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |**Android 设备管理**|**（预声明的 IMEI 或 SN）用户通过公司门户启动**| 否 | “是” | 否 | [详细信息](corporate-identifiers-add.md)|
 |**带有 Zebra Mobility Extensions 的 Android 设备管理**|用户或 [DEM](#device-enrollment-manager) 通过公司门户启动| 否 | 如果用户启动，则为是；如果 [DEM](#device-enrollment-manager) 启动，则为否 | 否 | [详细信息](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise 专用**|**NFC、令牌、QR 代码、Zero Touch**| “是” | 否 | 可通过策略进行配置 | [详细信息](android-kiosk-enroll.md)|
-|**Android Enterprise 完全托管设备**|**NFC、令牌、QR 代码、Zero Touch**| “是” | 是；若启动 [DEM](device-enrollment.md#device-enrollment-manager)，则为否 | 可通过策略进行配置 | [详细信息](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise 完全托管设备**|**NFC、令牌、QR 代码、Zero Touch**| “是” | 是 | 可通过策略进行配置 | [详细信息](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>自带设备办公

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791729"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088371"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft Endpoint Manager 概述
 
@@ -43,7 +43,6 @@ Endpoint Manager 包括以下服务：
   如果你有本地基础结构（如 Exchange 或 Active Directory），还可以使用 Intune 连接器：
 
   - 适用于 Active Directory 的 Intune 连接器将条目添加到使用 Windows Autopilot 注册的计算机的本地 Active Directory 域中。 有关详细信息，请参阅[部署已加入混合 Azure AD 的设备](/mem/intune/enrollment/windows-autopilot-hybrid)。
-  - 如果设备已在 Intune 中注册并符合你的策略要求，则 Intune Exchange 连接器允许（或阻止）设备访问 Exchange 服务器。 有关详细信息，请参阅[设置本地 Intune Exchange 连接器](/mem/intune/protect/exchange-connector-install)。
   - Intune 证书连接器处理来自使用证书进行身份验证和 S/MIME 电子邮件加密的设备的证书请求。 有关详细信息，请参阅[使用证书进行身份验证](/mem/intune/protect/certificates-configure)。
 
   作为 Endpoint Manager 的一部分，使用 Intune 创建和检查合规性，并使用云将应用、功能和设置部署到设备。
