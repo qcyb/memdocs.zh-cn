@@ -52,6 +52,8 @@
       items:
         - name: 符合性概述
           href: device-compliance-get-started.md
+        - name: 设备合规性合作伙伴
+          href: device-compliance-partners.md
         - name: 创建策略
           href: create-compliance-policy.md
         - name: 基于位置的符合性
