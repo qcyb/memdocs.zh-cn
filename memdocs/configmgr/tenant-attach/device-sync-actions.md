@@ -2,20 +2,20 @@
 title: Microsoft Endpoint Manager 租户附加
 titleSuffix: Configuration Manager
 description: 将 Configuration Manager 设备上传到云服务，并从管理中心执行操作。
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795612"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210300"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft 终结点管理器租户附加：设备同步和设备操作
 <!--3555758 live 3/4/2020-->
@@ -25,9 +25,9 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
 
 从 Configuration Manager 版本2002开始，你可以将 Configuration Manager 设备上传到云服务，并从管理中心的 "**设备**" 边栏选项卡中执行操作。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-- 在应用此更改时作为*全局管理员*登录的帐户。 有关详细信息，请参阅[Azure Active Directory （Azure AD）管理员角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)。
+- 在应用此更改时作为*全局管理员*登录的帐户。 有关详细信息，请参阅[Azure Active Directory (Azure AD) 管理员角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)。
    - 载入在 Azure AD 租户中创建第三方应用和第一方服务主体。
 - Azure 公有云环境。
 - 触发设备操作的用户帐户具有以下先决条件：
@@ -56,8 +56,9 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
 1. 右键单击共同管理设置，然后选择“属性”。
 1. 在“配置上传”选项卡中，选择“上传到 Microsoft Endpoint Manager 管理中心” 。 单击“应用” 。
    - 设备上传的默认设置是“我所有由 Microsoft Endpoint Configuration Manager 管理的设备”。 如果需要，可以将上传限制为单个设备集合。
+1. 如果你还想要深入了解[终结点分析](../../analytics/overview.md)中的最终用户体验，请选中 "为已**上传到 Microsoft 终结点管理器的设备启用终结点分析**" 选项。
 
-   [![共同管理配置向导](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![将设备上传到 Microsoft 终结点管理器管理中心](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. 出现提示时，请使用全局管理员帐户登录。
 1. 单击“是”接受“创建 AAD 应用程序”通知 。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册以促进同步。
 1. 完成更改后，单击“确定”退出共同管理属性。
@@ -77,6 +78,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
    [![共同管理配置向导](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. 单击“下一步”，然后单击“是”接受“创建 AAD 应用程序”通知  。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册以促进同步。
 1. 在 "**配置上传**" 页上，为**Microsoft 终结点管理的所有设备**选择建议的设备上传设置 Configuration Manager。 如果需要，可以将上传限制为单个设备集合。
+1. 如果你还想要深入了解[终结点分析](../../analytics/overview.md)中的最终用户体验，请选中 "为已**上传到 Microsoft 终结点管理器的设备启用终结点分析**" 选项
 1. 单击“摘要”查看所选内容，然后单击“下一步” 。
 1. 完成向导后，单击“关闭”。  
 
@@ -120,4 +122,4 @@ Configuration Manager 客户端的特定设备可能不会上载到服务中。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关租户附加日志文件的详细信息，请参阅[租户附加故障排除](technical-reference.md)。
+有关租户附加日志文件的详细信息，请参阅[租户附加故障排除](troubleshoot.md)。
