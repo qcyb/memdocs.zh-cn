@@ -1,5 +1,5 @@
 ---
-title: 在中国大陆安装 Intune 公司门户应用 | Microsoft Docs
+title: 在中华人民共和国安装 Intune 公司门户应用 | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 58ba595b65ade57fee0ff3fe40242b27a2ff8ba4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332768"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021831"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>在中国大陆安装公司门户应用   
+# <a name="install-company-portal-app-in-peoples-republic-of-china"></a>在中华人民共和国安装公司门户应用
 
-安装 Intune 公司门户应用，以从 Android 设备访问学校或工作资源。 应用在中国大陆提供，可以从下面的应用商店安装： 
+安装 Intune 公司门户应用，以从 Android 设备访问学校或工作资源。 此应用在中华人民共和国提供，可以从下面的应用商店安装： 
 
 
 * [小米](https://go.microsoft.com/fwlink/?linkid=836947) 

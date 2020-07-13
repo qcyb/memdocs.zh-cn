@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 879cb5d1659b886a01e564574452bd9e5370664c
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126809"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022341"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune 由世纪互联在中国运营  
 
@@ -50,7 +50,7 @@ Microsoft 不亲自参与该服务的运营。 由世纪互联运营、提供和
 - Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。 
 - 为了遵守本地法规和提供改进的功能，Intune 客户端体验（公司门户应用）在中国可能有所不同。
 - 隔离不可用。
-- 移动应用程序管理 (MAM) 的可用性取决于这些应用在中国的可用性。
+- 移动应用管理 (MAM) 的可用性取决于这些应用在中华人民共和国的可用性。
 
 ## <a name="you-control-customer-data"></a>由你控制客户数据
 

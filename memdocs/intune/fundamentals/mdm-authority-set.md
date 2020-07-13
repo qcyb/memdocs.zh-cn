@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 9b0fab472f9bef682666d743c8a53b1308f32b40
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270950"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022426"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>设置移动设备管理机构
 
@@ -36,9 +36,9 @@ ms.locfileid: "84270950"
 
 - **Intune 共同管理** - 集成了 Intune 云解决方案和适用于 Windows 10 设备的 Configuration Manager。 可使用 Configuration Manager 控制台配置 Intune。 [配置设备自动注册到 Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
 
-- **适用于 Office 365 的移动设备管理** - 如果你已激活 MDM for Office 365，你将看到 MDM 机构已设置为“Office 365”。 如果要开始使用 Intune，则需要购买 Intune 许可证。
+- **Office 365 的基本移动性和安全性** - 如果已激活此配置，则会看到 MDM 授权设置为“Office 365”。 如果要开始使用 Intune，则需要购买 Intune 许可证。
 
-- **Office 365 MDM 共存** - 如果你已在使用 MDM for Office 365，你可将 Intune 添加到租户上，然后将管理机构设置为 Intune 或 MDM for Office 365，以便各个用户决定使用哪项服务管理其注册了 MDM 的设备。 将基于分配给每个用户的许可证定义用户的管理机构：如果用户只有 Microsoft 365 基本或标准许可证，则其设备将由 MDM for Office 管理。 如果用户有授权使用 Intune 的许可证，则其设备将由 Intune 管理。 如果向之前由 MDM for Office 管理的用户添加授权使用 Intune 的许可证，则其设备将切换到 Intune 管理。 在将用户切换到 Intune 之前，请务必分配 Intune 配置给用户，以替换 MDM for Office，否则其设备将丢失 MDM for Office 配置，并且不会从 Intune 接收任何替换信息。
+- **Office 365 的基本移动性和安全性共存** - 如果你已在使用 Office 365 的基本移动性和安全性，则可将 Intune 添加到租户上，然后将管理机构设置为 Intune 或 Office 365 的基本移动性和安全性，以便各个用户可决定使用哪项服务管理其注册了 MDM 的设备。 将基于分配给每个用户的许可证定义用户的管理机构：如果用户只有 Microsoft 365 基本或标准许可证，则其设备将由 Office 365 的基本移动性和安全性进行管理。 如果用户有授权使用 Intune 的许可证，则其设备将由 Intune 管理。 如果向之前由 Office 365 的基本移动性和安全性管理的用户添加授权使用 Intune 的许可证，则其设备将切换到 Intune 管理。 在将用户切换到 Intune 之前，请务必分配 Intune 配置给用户，以替换 Office 365 的基本移动性和安全性，否则其设备将丢失 Office 365 的基本移动性和安全性配置，并且不会从 Intune 接收任何替换信息。
 
 ## <a name="set-mdm-authority-to-intune"></a>将 MDM 机构设置为 Intune
 
@@ -77,7 +77,7 @@ ms.locfileid: "84270950"
 
 ## <a name="remove-mdm-authority"></a>删除 MDM 机构
 
-可将 MDM 机构更改回“未知”。 服务使用 MDM 机构确定已注册设备的目标报告门户（Microsoft Intune 或 Office 365 MDM）。
+可将 MDM 机构更改回“未知”。 服务使用 MDM 机构确定已注册设备的目标报告门户（Microsoft Intune 或 Office 365 的基本移动性和安全性）。
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>更改 MDM 机构的预期结果
 

@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da332528854af2b53879d30d6de90c927b49a889
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358203"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022205"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>在 Microsoft Intune 中推动最终用户采用条件访问
 
@@ -73,7 +73,7 @@ ms.locfileid: "79358203"
 
 - [为 SharePoint Online 设置基于应用的条件访问策略](../protect/app-based-conditional-access-intune-create.md)
 
-- [屏蔽不使用现代验证 (ADAL) 的应用](../protect/app-modern-authentication-block.md)
+- [不使用新式身份验证（ADAL 和 MSAL）的应用](../protect/app-modern-authentication-block.md) 
 
 ## <a name="next-steps"></a>后续步骤
 

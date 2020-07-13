@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332870"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088490"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备
 
@@ -69,7 +69,7 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 - 每令牌的最大注册配置文件数：1,000  
 - 每配置文件的最大自动设备注册设备数：无限制（只要在每令牌的最大设备数范围内）
 - 每 Intune 帐户的最大自动设备注册令牌数：2,000
-- 每令牌的最大自动设备注册设备数：第一次同步的限制为 75,000-80,000 台设备。 Intune 将继续与 ABM 或 ASM 同步，每 12 小时签入一次，以便每次再添加 80,000 台设备。 手动同步也会再添加 80,000 台设备。 同步将继续进行，并且设备将继续以 75,000-80,000 台设备为单位从 ABM/ASM 批量同步到 Intune。 
+- 每令牌的最大自动设备注册设备数：第一次同步的限制为 75,000-80,000 台设备。 Intune 将继续与 ABM 或 ASM 同步，每 12 小时签入一次，以便每次再添加更多设备。 手动同步（每 15 分钟触发一次）还将向 Intune 添加另一批设备。 同步将继续进行，并且设备将继续从 ABM/ASM 大批同步到 Intune。 
 
 ## <a name="get-an-apple-ade-token"></a>获取 Apple ADE 令牌
 

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353626"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972057"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Intune 中的终结点安全性磁盘加密策略
 
@@ -29,7 +29,7 @@ ms.locfileid: "85353626"
 
 尽管可以通过使用“Endpoint Protection”配置文件进行设备配置，以配置相同的设备设置，但设备配置文件包含其他类别的设置。 这些额外设置与磁盘加密无关，并且可能使仅配置磁盘加密的任务复杂化。
 
-在 [Microsoft endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的“终结点安全性”节点中的“管理”下查找用于磁盘加密策略的终结点安全性策略。
+在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的“终结点安全性”节点中的“管理”下，查找用于磁盘加密的终结点安全性策略。
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>磁盘加密策略的先决条件
 

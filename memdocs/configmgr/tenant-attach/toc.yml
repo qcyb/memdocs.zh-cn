@@ -4,11 +4,17 @@
   items:
     - name: 启用租户附加
       href: device-sync-actions.md
-    - name: 排除设备操作故障
-      href: technical-reference.md
+    - name: 客户端详细信息（预览）
+      href: client-details.md
 - name: 用于租户附加设备的 CMPivot（预览）
   items:
     - name: CMPivot 概述
       href: cmpivot-overview-attached.md
     - name: CMPivot 示例脚本
       href: cmpivot-samples-attached.md
+- name: 故障排除
+  items:
+    - name: 租户附加和设备操作
+      href: troubleshoot.md
+    - name: 客户端详细信息（预览）
+      href: troubleshoot-client-details.md

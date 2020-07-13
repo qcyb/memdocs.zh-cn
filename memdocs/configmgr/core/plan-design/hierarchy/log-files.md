@@ -2,7 +2,7 @@
 title: 日志文件引用
 titleSuffix: Configuration Manager
 description: Configuration Manager 客户端、服务器和依赖组件的所有日志文件的引用。
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715571"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210337"
 ---
 # <a name="log-file-reference"></a>日志文件引用
 
@@ -77,6 +77,8 @@ ms.locfileid: "84715571"
 
   - [发现](#BKMK_DiscoveryLog)  
 
+  - [终结点分析](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [扩展](#BKMK_Extensions)  
@@ -171,7 +173,10 @@ ms.locfileid: "84715571"
 |SCClient_&lt;*domain*\>@&lt;*username*\>_2.log|记录客户端计算机上的指定用户在软件中心中的历史活动。|  
 |Scheduler.log|记录所有客户端操作的计划任务的活动。|  
 |SCNotify_&lt;*domain*\>@&lt;*username*\>_1.log|记录用于为指定用户将有关软件的信息通知用户的活动。|  
-|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|记录用于为指定用户将有关软件的信息通知用户的历史信息。|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|记录用于为指定用户将有关软件的信息通知用户的历史信息。|
+|SensorWmiProvider.log|记录终结点分析传感器的 WMI 提供程序的活动。|
+|SensorEndpoint.log|记录执行终结点分析策略以及将客户端数据上传到站点服务器的过程。|
+|SensorManagedProvider.log|记录收集和处理用于终结点分析的事件和信息的过程。|
 |setuppolicyevaluator.log|记录 WMI 中的配置和清单策略创建。|  
 |SleepAgent_&lt;*domain*\>@SYSTEM_0.log|唤醒代理的主日志文件。|  
 |smscliui.log|记录控制面板中 Configuration Manager 客户端的使用。|  
@@ -344,7 +349,8 @@ ms.locfileid: "84715571"
 |srsrpsetup.log|记录报表点安装过程的结果。|站点系统服务器|  
 |statesys.log|记录对状态系统消息的处理。|站点服务器|  
 |statmgr.log|记录将所有状态消息写入到数据库的操作。|站点服务器|  
-|swmproc.log|记录对计数文件和设置的处理。|站点服务器|  
+|swmproc.log|记录对计数文件和设置的处理。|站点服务器|
+|UXAnalyticsUploadWorker.log|记录将数据上传到终结点分析服务的过程。|站点服务器|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> 站点服务器安装
 
@@ -427,6 +433,7 @@ ms.locfileid: "84715571"
 |objreplmgr.log|记录对策略和分配的处理。|主站点服务器|  
 |policypv.log|记录所有策略的策略生成情况。|站点服务器|  
 |outgoingcontentmanager.log|记录上传到 Microsoft Intune 的内容。|具有服务连接点的计算机|  
+|ServiceConnectionTool.log|基于所用的参数，记录有关[服务连接工具](../../servers/manage/use-the-service-connection-tool.md)使用情况的详细信息。 每次运行该工具时，该工具都将替换现有的任何日志文件。|它与工具所在的位置相同|
 |sitecomp.log|记录服务连接点安装的详细信息。|站点服务器|  
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
 |SMS_CLOUDCONNECTION.log|记录有关云服务的信息。|具有服务连接点的计算机|
@@ -643,6 +650,15 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |ddm.log|记录发现数据管理器的活动。|站点服务器|  
 |InventoryAgent.log|记录客户端上的硬件清单、软件清单和检测信号发现操作的活动。|客户端|  
 |netdisc.log|记录网络发现操作。|站点服务器|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> 终结点分析
+
+|日志名称|说明|带有日志文件的计算机|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|记录将数据上传到终结点分析服务的过程。|站点服务器|  
+|SensorWmiProvider.log|记录终结点分析传感器的 WMI 提供程序的活动。|客户端|  
+|SensorEndpoint.log|记录执行终结点分析策略以及将客户端数据上传到站点服务器的过程。|客户端|
+|SensorManagedProvider.log|记录收集和处理用于终结点分析的事件和信息的过程。|客户端|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 

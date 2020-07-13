@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8171eb3cf484c61e2b99046b36553a633d92044e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431457"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088524"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>在 Microsoft Intune 中使用终结点安全功能管理设备
 
@@ -66,6 +66,8 @@ ms.locfileid: "83431457"
     通过共同管理，可[选择不同的共同管理工作负载](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)来确定由 Configuration Manager 或 Intune 管理哪些方面。 这些选项将影响设备应用的策略，还将影响如何向管理中心报告符合性数据。
 
     例如，可使用 Intune 配置防病毒、防火墙和加密方面的策略。 这些策略类型被视为 Endpoint Protection 的策略。 要让共同管理的设备使用 Intune 策略而不是 Configuration Manager 策略，请将 Endpoint Protection 的共同管理滑块设置为“Intune”或“试点 Intune” 。 如果将滑块设置为 Configuration Manager，则设备将改为使用 Configuration Manager 的策略和设置。
+
+  - **Workspace ONE** - 这些设备由第三方设备符合性合作伙伴 (Workspace ONE) 进行管理。 有关详细信息，请参阅[设备符合性合作伙伴](../protect/device-compliance-partners.md)。
 
 - **符合性**：符合性是根据分配给设备的符合性策略进行评估的。 这些策略的来源以及控制台中显示的信息由设备的托管方式（Intune、Configuration Manager 或共同管理）决定。 要使共同管理的设备报告符合性状态，请将设备符合性的共同管理滑块设置为“Intune”或“试点 Intune”。  
 

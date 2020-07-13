@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 163a0d231192277f27c69d7bcf983e817393d526
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383115"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022358"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
 
@@ -79,7 +79,10 @@ Microsoft.Intune.MAM.SDK.aar 必须指定为 Android 库引用。 要执行此�
 
 如果 [ProGuard](http://proguard.sourceforge.net/)（或任何其他收缩/混淆机制）用作一个生成步骤，SDK 则具有必须包含的其他配置规则。 当生成中包含 .AAR 时，我们的规则会自动集成到 proguard 步骤中，并保留必要的类文件。
 
-Azure Active Directory 身份验证库 (ADAL) 可能有其自己的 ProGuard 限制。 如果应用集成 ADAL，则必须遵循 ADAL 文档中的这些限制。
+[Microsoft 身份验证库 (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) 可能有其自己的 ProGuard 限制。 如果应用集成 MSAL，则必须遵循 MSAL 文档中的这些限制。
+
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 ### <a name="policy-enforcement"></a>策略强制
 Intune App SDK 是一个 Android 库，使应用能够支持和参与 Intune 策略的强制执行。 
@@ -92,7 +95,7 @@ Intune App SDK 是一个 Android 库，使应用能够支持和参与 Intune 策
 ### <a name="build-tooling"></a>生成工具
 此 SDK 提供了可以自动执行 MAM 等效项替换的生成工具（用于 Gradle 生成的一个插件和用于非 Gradle 生成的一个命令行工具）。 这些工具将转换由 Java 编译生成的类文件，并且不会修改原始源代码。
 
-工具仅执行[直接替换](#class-and-method-replacements)。 它们不执行任何更复杂的 SDK 集成，例如[另存为策略](#enable-features-that-require-app-participation)、[多个标识](#multi-identity-optional)、[App-WE 注册](#app-protection-policy-without-device-enrollment)、[AndroidManifest 修改](#manifest-replacements)或 [ADAL 配置](#configure-azure-active-directory-authentication-library-adal)，因此在应用完全启用 Intune 之前必须完成这些集成。 请仔细查看本文档的其余部分以了解与应用相关的集成点。
+工具仅执行[直接替换](#class-and-method-replacements)。 它们不执行任何更复杂的 SDK 集成，例如[另存为策略](#enable-features-that-require-app-participation)、[多个标识](#multi-identity-optional)、[App-WE 注册](#app-protection-policy-without-device-enrollment)或 [AndroidManifest 修改](#manifest-replacements)，因此在应用完全启用 Intune 之前必须完成这些集成。 请仔细查看本文档的其余部分以了解与应用相关的集成点。
 
 > [!NOTE]
 > 可以针对已通过手动替换执行了部分或完整的 MAM SDK 源集成的项目运行工具。 你的项目必须仍将 MAM SDK 列为依赖项。
@@ -421,7 +424,10 @@ Intune App SDK 需要具有三个 [Android 系统权限](https://developer.andro
 
 Azure Active Directory 身份验证库 ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) 需要这些权限以执行代理身份验证。 如果未对应用授予这些权限或权限被用户废除，则将禁用需要代理（公司门户应用）的身份验证流。
 
-## <a name="logging"></a>Logging
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
+
+## <a name="logging"></a>日志记录
 
 应尽早初始化日志记录，以从记录的数据中获取最大价值。 `Application.onMAMCreate()` 通常是初始化日志记录的最佳位置。
 
@@ -886,6 +892,9 @@ MAM 调用应用的 `MANAGEMENT_REMOVED` 接收器时，以下情况为 true：
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>配置 Azure Active Directory Authentication Library (ADAL)
 
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
+
 首先，请阅读 [GitHub 上的 ADAL 存储库](https://github.com/AzureAD/azure-activedirectory-library-for-android)中的 ADAL 集成指南。
 
 SDK 依赖于 [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) 实现其[身份验证](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)和条件启动方案，这要求应用通过 [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) 进行配置。 配置值通过 AndroidManifest 元数据传递给 SDK。
@@ -989,6 +998,9 @@ SDK 依赖于 [ADAL](https://azure.microsoft.com/documentation/articles/active-d
 
 应用需要提供一个回调，以代表 SDK 从 Azure Active Directory Authentication Library (ADAL) 获取适当的访问令牌。 假定应用已使用 ADAL 进行用户身份验证，并获取它自己的访问令牌。
 
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
+
 当应用彻底删除一个帐户时，它应取消注册该帐户，以表明该应用不应再将策略应用于此用户。 如果用户已在 MAM 服务中注册，将注销用户并擦除应用。
 
 
@@ -1064,6 +1076,9 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. 应用必须实现 `MAMServiceAuthenticationCallback` 接口以允许 SDK 为给定用户和资源 ID 请求 ADAL 令牌。 必须通过调用其 `registerAuthenticationCallback()` 方法将回调实例提供给 `MAMEnrollmentManager`。 应用生命周期中可能在较早便需要令牌，以用于注册重试或应用保护策略刷新签入，因此注册回调的理想位置是在应用 `MAMApplication` 子类的 `onMAMCreate()` 方法中。
 
+  > [!NOTE]
+  > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
+
 2. `acquireToken()` 方法应获取给定用户的请求资源 ID 的访问令牌。 如果无法获取请求的令牌，则会返回 null。
 
     > [!NOTE]
@@ -1099,6 +1114,9 @@ Result getRegisteredAccountStatus(String upn);
 2. 由于必须进行 AAD 身份验证，因此注册用户帐户的最佳时机是在用户登录应用并成功使用 ADAL 进行身份验证之后。用户的 AAD ID 和租户 ID 作为 [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) 对象的一部分从 ADAL 身份验证调用返回。
     * 租户 ID 来自 `AuthenticationResult.getTenantID()` 方法。
     * 在来自 `AuthenticationResult.getUserInfo()` 的 `UserInfo` 类型子对象中找到了用户的相关信息，而 AAD 用户 ID 正是通过调用 `UserInfo.getUserId()` 从该对象中检索而得 。
+
+  > [!NOTE]
+  > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 3. 若要从 Intune 管理中取消注册帐户，应用应调用 `unregisterAccountForMAM()`。 如果该帐户已成功注册并托管，SDK 将取消注册该帐户并擦除其数据。 将会停止定期注册重试。 SDK 经通知异步提供取消注册请求的状态。
 
@@ -1139,6 +1157,9 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 #### <a name="authentication"></a>身份验证
 
 * 当应用调用 `registerAccountForMAM()` 时，不久后它可能会通过另一个线程在其 `MAMServiceAuthenticationCallback` 接口上收到回调。 理想情况下，应用会在注册帐户之前从 ADAL 获取自己的令牌，以更快获取所请求的令牌。 如果应用从回叫返回有效令牌，注册将继续进行，并且该应用将会通过通知获取最终结果。
+
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 * 如果应用未返回有效的 AAD 令牌，则注册尝试的最终结果将是 `AUTHORIZATION_NEEDED`。 如果应用通过通知收到此结果，则强烈建议通过获取先前从 `acquireToken()` 请求的用户和资源的令牌并调用 `updateToken()` 方法再次启动注册过程来加快注册过程。
 
@@ -1204,6 +1225,9 @@ ADAL 库有一个新的错误代码，它用于通知应用无法获取令牌是
 
 > [!NOTE]
 > 要使用这个新的错误代码以及对带策略保证的 APP CA 的其他支持，需具备 ADAL 库 1.15.0 版（或更高版本）。
+
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
 
@@ -2067,6 +2091,9 @@ MAMThemeManager.setAppTheme(R.style.AppTheme);
 可通过下列步骤启用默认注册：
 
 1. 如果应用集成了 ADAL 或者你需要启用 SSO，则请按照[通用 ADAL 配置](#common-adal-configurations) #2 [配置 ADAL](#configure-azure-active-directory-authentication-library-adal)。 如果不需要，则可跳过此步骤。
+
+  > [!NOTE]
+  > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
    
 2. 通过将以下值放入 `<application>` 标志下的清单来启用默认注册：
 

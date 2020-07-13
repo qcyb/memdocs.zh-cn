@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eea60eec6f36a5ab8a97b5e4402d75b4a8eb54b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991156"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972023"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>将移动威胁防御应用添加到未注册的设备
 
@@ -37,16 +37,17 @@ ms.locfileid: "83991156"
 > 本文适用于支持应用保护策略的所有移动威胁防御合作伙伴：
 >
 > - Better Mobile（Android、iOS/iPadOS）
-> - Zimperium（Android、iOS/iPadOS）
 > - Lookout for Work（Android、iOS/iPadOS）
->
-> 对于未注册的设备，不需要 iOS 应用配置策略来设置通过 Intune 使用的适用于 iOS 的移动威胁防御应用。  。 这是与 Intune 已注册设备的关键差别。
+> - Wandera（Android、iOS/iPadOS）
+> - Zimperium（Android、iOS/iPadOS）
+
+> 对于未注册的设备，不需要 iOS 应用配置策略来设置通过 Intune 使用的适用于 iOS 的移动威胁防御应用。 这是与 Intune 已注册设备的关键差别。
 
 ## <a name="configure-microsoft-authenticator-for-ios-via-intune-optional"></a>通过 Intune 配置适用于 iOS 的 Microsoft Authenticator（可选）
 
 将 Intune 应用保护策略用于移动威胁防御时，Intune 将指导最终用户安装、登录并将其设备注册到 Microsoft Authenticator (iOS)。
 
-但是，如果想要通过 Intune 公司门户向最终用户提供应用，请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md) 的相关说明。 完成“配置应用信息”部分时，请使用此 [Microsoft Authenticator - iOS 应用商店 URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)  。 最后，请不要忘记[通过 Intune 将应用分配到组](../apps/apps-deploy.md)。
+但是，如果想要通过 Intune 公司门户向最终用户提供应用，请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md) 的相关说明。 完成“配置应用信息”部分时，请使用此 [Microsoft Authenticator - iOS 应用商店 URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)。 最后，请不要忘记[通过 Intune 将应用分配到组](../apps/apps-deploy.md)。
 
 > [!NOTE]
 > 对于 iOS 设备，需要 [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)，这样用户便可让 Azure AD 检查自己的标识。 Intune 公司门户在 Android 设备上以中转站的方式工作，以便用户能够让 Azure AD 检查自己的标识。
@@ -57,16 +58,16 @@ ms.locfileid: "83991156"
 
 但是，如果你想要通过 Intune 公司门户向最终用户提供该应用，则可以在 [Azure 门户](https://portal.azure.com/)中执行以下步骤。 请务必熟悉以下过程：
 
-- [将应用添加到 Intune](../apps/apps-add.md)。
-- [使用 Intune 分配应用](../apps/apps-deploy.md)。
+- [将应用添加到 Intune](../apps/apps-add.md)
+- [使用 Intune 分配应用](../apps/apps-deploy.md)
 
 ### <a name="making-lookout-for-work-available-to-end-users"></a>为最终用户提供 Lookout for Work
 
 - **Android**  
-  - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”部分时，请使用此 [Lookout for Work - Play Store URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise)  。
+  - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”部分时，请使用此 [Lookout for Work - Play Store URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise)。
 
 - **iOS**
-  - 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 完成“配置应用信息”部分时，请使用此 [Lookout for Work - iOS App Store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8)  。
+  - 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 完成“配置应用信息”部分时，请使用此 [Lookout for Work - iOS App Store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8)。
 
 <!-- ### Making Symantec Endpoint Protection Mobile available to end users
 - **Android**
@@ -87,7 +88,7 @@ ms.locfileid: "83991156"
 - **Android**
   - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”部分时，请使用此 [Zimperium - Play Store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)。
 - **iOS**
-  - 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 完成“配置应用信息”部分时，请使用此 [Zimperium - App Store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)  。
+  - 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 完成“配置应用信息”部分时，请使用此 [Zimperium - App Store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)。
 
 <!-- ### Making Pradeo available to end users
 - **Android**
@@ -99,24 +100,24 @@ ms.locfileid: "83991156"
 ### <a name="making-better-mobile-available-to-end-users"></a>为最终用户提供 Better Mobile
 
 - **Android**
-  - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”部分时，请使用此 [Active Shield - Play Store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise)  。
+  - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”部分时，请使用此 [Active Shield - Play Store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise)。
 
-<!-- - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->
+- **iOS**
+  - 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 完成“配置应用信息”部分时，请使用此 [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4)。
 
 <!-- ### Making Sophos available to end users
 - **Android**
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Sophos - Play Store URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) when completing the **Configure app information** section.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) when completing the **Configure app information** section.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) when completing the **Configure app information** section.  -->
 
-### Making Wandera available to end users
+### <a name="making-wandera-available-to-end-users"></a>为最终用户提供 Wandera
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.wandera.android) when completing the **Configure app information** section. For **Minimum operating system**, select **Android 5.0**.
+  - 请参阅[将 Android 应用商店应用添加到 Microsoft Intune](../apps/store-apps-android.md)，查看相关操作说明。 完成“配置应用信息”部分时，请使用此 [Wandera Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.wandera.android)。
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile - - App Store URL](https://itunes.apple.com/app/wandera/id605469330) when completing the **Configure app information** section. -->
+  - 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 完成“配置应用信息”部分时，请使用此 [Wandera Mobile - App Store URL](https://itunes.apple.com/app/wandera/id605469330)。
 
 ## <a name="next-steps"></a>后续步骤
 

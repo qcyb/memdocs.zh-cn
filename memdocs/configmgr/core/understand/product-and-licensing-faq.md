@@ -2,7 +2,7 @@
 title: 产品和许可常见问题解答
 titleSuffix: Configuration Manager
 description: 查找 Configuration Manager 产品和许可常见问题的答案。
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854416"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157818"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
@@ -77,11 +78,11 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 
 - 如果通过其他方式将 Windows 10 设备注册到 Intune，则它仍需要完整的 Intune 许可证。 例如，使用 Autopilot 预配设备，或者用户手动执行自助注册。
 
-- 为将现有 Configuration Manager 托管设备在无用户参与的情况下注册到 Intune 以便大规模共同管理，共同管理会使用名为 Windows 10 自动注册的 Azure Active Directory (Azure AD) 功能。 自动注册需要 Azure AD Premium (AADP1) 许可证，该许可证独立于 Microsoft Endpoint Manager。 为在此场景中使用共同管理，过去要求你将 AADP1 和 Intune 许可证分配给每个单独的用户。 从 2019 年 12 月 1 日开始，共同管理许可已更改。 你现在无需为此场景分配单独的 Intune 许可证，但其他注册场景仍需要它们。 为使自动注册和共同管理正常工作，AADP1 许可要求仍保持不变。
+- 为将现有 Configuration Manager 托管设备在无用户参与的情况下注册到 Intune 以便大规模共同管理，共同管理会使用名为 Windows 10 自动注册的 Azure Active Directory (Azure AD) 功能。 附带共同管理功能的自动注册需要使用 Azure AD Premium (AADP1) 和 Intune 的许可证。 从 2019 年 12 月 1 日开始，不再需要单独为此方案分配 Intune 许可证。 Microsoft Endpoint Manager 现在包含用于共同管理的 Intune 许可证。 需要单独的 AADP1 许可才能运行此方案，这一点仍然不变。 你仍需要为其他注册方案分配 Intune 许可证。
 
 - 如果要使用 Intune 管理 iOS、Android 或 macOS 设备，则需要通过独立 Intune 许可证、Microsoft 企业移动性 + 安全性 (EMS) 或 Microsoft 365 进行相应的 Intune 订阅。
 
-- 如果没有任何 Intune 相关订阅计划，而要支持共同管理，需购买至少一个 Intune 许可证。 此许可证允许管理员访问到 Microsoft Endpoint Manager 管理中心。
+- 如果没有任何 Intune 相关订阅计划，而要支持共同管理，需购买至少一个 Intune 许可证。 此许可证用于允许管理员激活订阅计划，并允许其访问 Microsoft Endpoint Manager 管理中心。
 
 - 如果使用 Microsoft 365 内置[基本移动性和安全性](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0)，则当用户也具有由基本移动性和安全性管理的设备时，不能将新的共同管理许可证用于该用户。 若要将共同管理许可证用于由 Configuration Manager 管理的用户设备，请执行以下任一操作：
 

@@ -5,7 +5,7 @@ description: Intune 支持用于管理 Microsoft Defender 高级威胁防护的�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429344"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022173"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -859,9 +859,9 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
 - **阻止用户忽略 SmartScreen 警告**  
   CSP：[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   此设置需要启用“对应用和文件强制实施 SmartScreen”设置。
-  - **是**（默认）- SmartScreen 将不会显示一个让用户忽略警告并运行应用的选项。 将显示警告，但用户将能够绕过它。
-  - **未配置** - 将设置返回到 Windows 默认设置，这允许用户重写。
+   此设置要求将“启用 Windows SmartScreen”设置为“是”。
+  - **是**（默认）- 启用 SmartScreen，且用户无法绕过针对文件或恶意应用的警告。
+  - **未配置** - 用户可以忽略针对文件和恶意应用的 SmartScreen 警告。
 
 - **仅需要应用商店中的应用**  
 

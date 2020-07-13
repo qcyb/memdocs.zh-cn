@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65235caa7e53dbe8dee4605803a6e58d6ab31a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344111"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088388"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune 移动设备管理 (MDM) 生命周期概述
 
-用户管理的所有设备都有一个生命周期  。 Intune 可帮助管理此生命周期（从注册到配置和保护，再到不再需要时停用设备）。
+用户管理的所有设备都有一个生命周期。 Intune 可帮助管理此生命周期（从注册到配置和保护，再到不再需要时停用设备）。 下面是一个示例：首先需要向 Microsoft Intune 帐户注册你公司购买的 iPad，以便你的公司能够管理它；然后，需要根据你公司的喜好进行配置；然后，用户存储在其中的数据需要受到保护；最后，当不再需要该 iPad 时，必须[停用或擦除](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe)其中的所有敏感数据。
 
 ![设备生命周期](./media/device-lifecycle/device-lifecycle.png "Intune 设备生命周期")
 
@@ -32,7 +32,7 @@ ms.locfileid: "79344111"
 
 当今的移动设备管理 (MDM) 策略适用于各种手机、平板电脑和电脑（iOS/iPadOS、Android、Windows 和 Mac OS X）。 如果你需要能够管理设备（这对公司拥有的设备来说很常见），第一步便是[设置设备注册](../enrollment/device-enrollment.md)。 你还可以通过向 Intune (MDM) 注册设备或[安装 Intune 客户端软件](manage-windows-pcs-with-microsoft-intune.md)来管理 Windows 电脑。
 
-## <a name="configure"></a>配置
+## <a name="configure"></a>用户密码重置策略
 
 将你的设备注册只是第一步。 若要充分利用所有这些 Intune 功能并确保你的设备安全且符合公司标准，你可以从各种策略中选择。 这些策略让你能够几乎配置受管理设备运作方式的方方面面。 例如，对于含有公司数据的设备，用户是否应该有密码？ 你可以要求获得密码。 你有公司 Wi-Fi 吗？ 你可以自动配置它。 以下是可用的配置选项类型：
 
@@ -45,7 +45,7 @@ ms.locfileid: "79344111"
 在现代 IT 世界中，保护设备免受未经授权的访问是需要执行的最重要的任务之一。 除了设备生命周期的**配置**步骤中的项之外，Intune 还提供以下功能来帮助保护你管理的设备免受未经授权的访问或恶意攻击：
 
 - [**Multi-Factor Authentication**](../enrollment/multi-factor-authentication.md)。 对用户登录添加一层额外的身份验证可以帮助增强设备安全性。 很多设备支持多重身份验证，这要求提供第二重身份验证（如电话呼叫或短信），用户才能获得访问权限。
-- [**Windows Hello 企业版设置**](../protect/windows-hello.md)。 Windows Hello 企业版是一种备用登录方法，可让用户使用  “手势”（如指纹或 Windows Hello）进行登录，而无需密码。
+- [**Windows Hello 企业版设置**](../protect/windows-hello.md)。 Windows Hello 企业版是一种备用登录方法，可让用户使用“手势”（如指纹或 Windows Hello）进行登录，而无需密码。
 - [**保护 Windows 电脑的策略（使用 Intune 客户端软件）** ](policies-to-protect-windows-pcs-in-microsoft-intune.md)。 当你使用 Intune 客户端软件管理 Windows 电脑时，可以使用允许你在所管理的电脑上控制 Endpoint Protection、软件更新和 Windows 防火墙的设置的策略。
 
 ## <a name="retire"></a>停用

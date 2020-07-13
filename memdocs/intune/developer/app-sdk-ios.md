@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34235f5e8a2badd61e39f43f8a5cc724f64dbd9
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: a69176e347453131c76d669b14fd7ec37b331071
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383268"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052487"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>用于 iOS 的 Microsoft Intune App SDK 开发人员指南
 
@@ -120,17 +120,17 @@ Intune App SDK for iOS 的目标是在最大程度上减少代码更改的情况
      ![Intune App SDK iOS：复制资源包](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. 将以下 iOS 框架添加到项目：  
--  MessageUI.framework  
--  Security.framework  
--  CoreServices.framework  
--  SystemConfiguration.framework  
--  libsqlite3.tbd  
--  libc++.tbd  
--  ImageIO.framework  
--  LocalAuthentication.framework  
--  AudioToolbox.framework  
--  QuartzCore.framework  
--  WebKit.framework
+   -  MessageUI.framework  
+   -  Security.framework  
+   -  CoreServices.framework  
+   -  SystemConfiguration.framework  
+   -  libsqlite3.tbd  
+   -  libc++.tbd  
+   -  ImageIO.framework  
+   -  LocalAuthentication.framework  
+   -  AudioToolbox.framework  
+   -  QuartzCore.framework  
+   -  WebKit.framework
 
 3. 选择每个项目目标的“功能”并启用“密钥链共享”开关，启用密钥链共享（如果尚未启用）。 需要启用 Keychain 共享才能继续执行下一步。
 
@@ -177,6 +177,9 @@ Intune App SDK for iOS 的目标是在最大程度上减少代码更改的情况
 如果未指定“-o”参数，将就地修改输入文件。 因为此工具是幂等类型，所以只要更改了应用的 Info.plist 或权利文件，就应该重新运行此工具。 还应在更新 Intune SDK 时下载并运行此工具的最新版本，以防最新版本中更改了 Info.plist 配置要求。
 
 ## <a name="configure-adalmsal"></a>配置 ADAL/MSAL
+
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 Intune App SDK 可以使用 [Azure Active Directory 身份验证库](https://github.com/AzureAD/azure-activedirectory-library-for-objc)或 [Microsoft 身份验证库](https://github.com/AzureAD/microsoft-authentication-library-for-objc)进行身份验证和条件启动。 它还依赖于 ADAL/MSAL 向 MAM 服务注册用户标识，用于不含设备注册方案的管理。
 
@@ -287,6 +290,9 @@ VerboseLoggingEnabled | 布尔值 | 如果设置为“是”，Intune 将以详�
 > 应用保护策略启用加密时，适用于 iOS 的 Intune App SDK 将使用 256 位加密密钥。 所有应用都需要拥有当前 SDK 版本以允许受保护的数据共享。
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>已使用 ADAL 或 MSAL 的应用
+
+> [!NOTE]
+> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 如果已使用 ADAL 或 MSAL，应用应在用户已成功通过身份验证后对 `IntuneMAMEnrollmentManager` 实例调用 `registerAndEnrollAccount` 方法：
 
@@ -467,7 +473,7 @@ MAMPolicyRequired| 布尔值| 如果应用没有 Intune 应用保护策略，指
 实例 | 说明
 ----- | -----------
 IntuneMAMPolicyManager.h | IntuneMAMPolicyManager 类公开部署到应用程序的 Intune APP 策略。 值得注意的是，它公开对[启用多身份标识](app-sdk-ios.md#enable-multi-identity-optional)有用的 API。 |
-IntuneMAMPolicy.h | IntuneMAMPolicy 类公开一些适用于该应用的 MAM 策略设置。 公开这些策略以便应用自定义其 UI。 大多数策略设置由 SDK 而不是应用实现。 “另存为”控件是应由应用实现的唯一设置。 此类公开了实现“另存为”所需的一些 API。 |
+IntuneMAMPolicy.h | IntuneMAMPolicy 类公开一些适用于该应用的 MAM 策略设置。 其中的大多数策略都将公开，以便应用可自定义其 UI。 大多数策略设置由 SDK 而不是应用实现。 但是，也存在一些例外。 应用开发人员应查看此标头中的注释，以确定哪些 API 适用于其应用程序的方案。 |
 IntuneMAMFileProtectionManager.h | IntuneMAMFileProtectionManager 类公开 API，应用可使用这些 API 根据提供的标识显式保护文件和目录。 标识可由 Intune 托管或非托管，SDK 将应用相应的 MAM 策略。 可选择是否使用此类。 |
 IntuneMAMDataProtectionManager.h | IntuneMAMDataProtectionManager 类公开 API，应用可以使用这些 API 来保护给定提供标识的数据缓冲区。 标识可由 Intune 托管或非托管，SDK 将相应地应用加密。 |
 
@@ -478,6 +484,12 @@ Intune 允许 IT 管理员指定用户可以登录哪些帐户。 应用可以�
 若要查询允许的帐户，应用应检查 `IntuneMAMEnrollmentManager` 上的 `allowedAccounts` 属性。 `allowedAccounts` 属性要么是包含允许帐户的数组，要么是 nil。 如果属性为 nil，则未指定允许的帐户。
 
 应用还可以通过观察 `IntuneMAMAllowedAccountsDidChangeNotification` 通知来对 `allowedAccounts` 属性的更改作出反应。 每当 `allowedAccounts` 属性的值发生更改时，就会发布该通知。
+
+## <a name="implement-file-encryption-required"></a>需要实现文件加密
+
+当 IT 管理员要求应用程序对保存到磁盘的任何文件使用 Intune 加密时，在 `IntuneMAMPolicy.h` 中定义的 `isFileEncryptionRequired` API 将通知应用程序。 如果 `isFileEncryptionRequired` 为 true，则应用负责确保使用 `IntuneMAMFile.h`、`IntuneMAMFileProtectionManager.h` 和 `IntuneMAMFDataProtectionManager.h` 中的 API 对应用保存到磁盘的任何文件进行加密。
+
+应用可以通过观察 `IntuneMAMFDataProtectionManager.h` 中定义的 `IntuneMAMDataProtectionDidChangeNotification` 通知对此策略中的更改做出反应。
 
 ## <a name="implement-save-as-and-open-from-controls"></a>实现“另存为”和“打开位置”控件
 
@@ -496,13 +508,14 @@ Intune 允许 IT 管理员指定用户可以登录哪些帐户。 应用可以�
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * IntuneMAMSaveLocationAccountDocument
 
 应用应使用 `isSaveToAllowedForLocation` 中的常量来检查是否可将数据保存到“托管”位置（如 OneDrive for Business）或“个人”。 此外，应用无法确定是“托管”还是“个人”位置时，应使用 API。
 
-如果应用将数据保存到本地设备上的任何位置，应使用 `IntuneMAMSaveLocationLocalDrive` 常数。
+如果应用将数据保存到本地设备上的任何位置，应使用 `IntuneMAMSaveLocationLocalDrive` 常数。 同样，如果应用正在将照片保存为本机照片，应使用 `IntuneMAMSaveLocationCameraRoll` 常量。
 
-如果不知道帐户的目标位置，应传递 `nil`。 `IntuneMAMSaveLocationLocalDrive` 位置应始终与 `nil` 帐户配对。
+如果不知道帐户的目标位置，应传递 `nil`。 `IntuneMAMSaveLocationLocalDrive` 和 `IntuneMAMSaveLocationCameraRoll` 位置应始终与 `nil` 帐户配对。
 
 ### <a name="supported-open-locations"></a>支持的打开位置
 

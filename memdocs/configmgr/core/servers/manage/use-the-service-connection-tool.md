@@ -2,7 +2,7 @@
 title: 服务连接工具
 titleSuffix: Configuration Manager
 description: 了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。
-ms.date: 09/06/2017
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,180 +10,250 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e535653e0f31e186a6bdbde8da77750f2afdfdb0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690295"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946838"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>使用适用于 Configuration Manager 的服务连接工具
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
-当服务连接点处于脱机模式，或当 Configuration Manager 站点系统服务器未连接到 Internet 时，请使用**服务连接工具**。 该工具有助于随时更新网站的 Configuration Manager 最新更新。  
+当服务连接点处于脱机模式时，请使用服务连接工具。 当 Configuration Manager 站点系统服务器未连接到 Internet 时，也可以使用此工具。 该工具有助于随时更新网站的 Configuration Manager 最新更新。
 
-运行时，该工具手动连接到 Configuration Manager 云服务，以上传层次结构的使用情况信息并下载更新。 必须上载使用情况数据才能启用云服务以为你的部署提供正确的更新。  
+运行此工具时，该工具会连接到 Configuration Manager 云服务，以上传层次结构的使用情况信息并下载更新。 必须上传使用情况数据才能启用云服务，进而为你的环境提供正确的更新。
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>使用服务连接工具的先决条件
-以下为先决条件和已知问题。
+## <a name="prerequisites"></a>必备条件
 
-**先决条件：**
+- 站点有一个服务连接点，并将其配置为“脱机按需连接”。
 
-- 已安装服务连接点，并将它设置为“脱机，按需连接”  。  
+- 以管理员身份从命令提示符处运行该工具。 没有用户界面。
 
-- 该工具必须从命令提示符中运行。  
+- 从服务连接点和可以连接到 Internet 的计算机运行该工具。 其中的每台计算机都需要具有 x64 位操作系统，并且具有以下组件：
 
-- 运行该工具的每个计算机（服务连接点计算机以及连接到 Internet 的计算机）必须是 x64 位系统并且必需安装以下软件：  
+  - **Visual C++ Redistributable** x86 和 x64 文件。 默认情况下，Configuration Manager 在托管服务连接点的计算机上安装 x64 版本。 要下载此组件，请参阅[用于 Visual Studio 2013 的 Visual C++ 可再发行组件包](https://www.microsoft.com/download/details.aspx?id=40784)。
 
-  - **Visual C++ Redistributable** x86 和 x64 文件。   默认情况下，Configuration Manager 在托管服务连接点的计算机上安装 x64 版本。  
+  - .NET Framework 4.5.2 或更高版本
 
-    若要下载 Visual C++ 文件的副本，请访问 Microsoft 下载中心的 [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) 。  
+- 用于运行此工具的帐户需要具有以下权限：
 
-  - .NET Framework 4.5.2 或更高版本。  
+  - 在托管服务连接点的计算机上为“本地管理员”
 
-- 用于运行工具的帐户必须：
-  - 在承载服务连接点的计算机上（工具在此计算机上运行）具有**本地管理员** 权限。
-  - 具有对站点数据库的**读取** 权限。  
+  - 具有对站点数据库的读取权限
 
+- 需要通过某种方式在具有 Internet 访问权限的计算机与服务连接点之间传输文件。 例如，有足够的可用空间来存储文件和更新的 U 盘。
 
+## <a name="overview"></a>概述
 
-- 你将需要具有可存储文件和更新的足够可用空间的 U 盘，或需要另一种方法以在服务连接点计算机与有权访问 Internet 的计算机之间传输文件。 （此方案假设你的站点和托管计算机未直接连接到 Internet。）  
+1. **准备**：在服务连接点上运行该工具。 它会将使用情况数据放入指定位置内的 .cab 文件中。 将数据文件复制到具有 Internet 连接的计算机。
 
+2. **连接**：在具有 Internet 连接的计算机上运行此工具。 它会上传使用情况数据，然后下载 Configuration Manager 更新。 将已下载的更新复制到服务连接点。
 
+    可以一次上传多个数据文件，每个数据文件可来自不同的层次结构。 还可以指定代理服务器以及代理服务器的用户。
 
-## <a name="use-the-service-connection-tool"></a>使用服务连接工具  
+3. **导入**：在服务连接点上运行该工具。 它会导入更新，然后将更新添加到站点。 随后可以从 Configuration Manager 控制台查看并[安装这些更新](install-in-console-updates.md)。
 
- 可以在 **%path%/smssetup/tools/ServiceConnectionTool** 文件夹中的 Configuration Manager 安装媒体中找到服务连接工具 (**serviceconnectiontool.exe**)。 始终使用与所用的 Configuration Manager 版本匹配的服务连接工具。
+### <a name="upload-multiple-data-files"></a>上传多个数据文件
 
+- 将从独立的层次结构中导出的所有数据文件放在同一文件夹中。 为每个文件指定一个唯一名称。 如有必要，可以手动重命名它们。
 
- 在此过程中，命令行示例使用了以下文件名和文件夹位置（你不需要使用这些路径和文件名，可以改为使用与你的环境和首选项匹配的其他选择）：  
+- 运行此工具来将数据上传到 Microsoft 时，指定包含数据文件的文件夹。
 
-- 用于存储数据以在服务器之间进行传输的 USB 记忆棒的路径：**D:\USB\\**  
+- 运行该工具来导入数据时，该工具将仅导入该层次结构的数据。
 
-- 包含从你的站点导出的数据的 .cab 文件的名称：**UsageData.cab**  
+### <a name="specify-a-proxy-server"></a>指定代理服务器
 
-- 用于存储 Configuration Manager 的已下载更新以在服务器之间进行传输的空文件夹的名称：**UpdatePacks**  
+如果具有 Internet 连接的计算机需要代理服务器，则该工具支持基本的代理配置。 使用可选参数 -proxyserveruri 和 -proxyusername。  有关详细信息，请参阅[命令行参数](#bkmk_cmd)。
 
-在承载服务连接点的计算机上：  
+### <a name="specify-the-type-of-updates-to-download"></a>指定要下载的更新的类型
 
-- 使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。  
+该工具支持用于控制下载的文件的选项。 默认情况下，工具仅下载对站点版本适用的最新可用更新。 此工具不会下载修补程序。
 
-  默认情况下，你可以在 **%path%\smssetup\tools\ServiceConnectionTool** 文件夹中的 Configuration Manager 安装媒体中找到此工具。 此文件夹中的所有文件必须位于同一个文件夹中，这样服务连接工具才能工作。  
+要修改此行为，请使用以下参数之一更改下载哪些文件：
 
-运行以下命令时，该工具会准备包含使用情况信息的 .cab 文件并将它复制到你指定的位置。 .cab 文件中的数据基于站点配置为收集的诊断使用情况数据的级别。 （请参阅 [Configuration Manager 的诊断和使用情况数据](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)）。  运行以下命令以创建 .cab 文件：  
+- -downloadall：无论站点是哪种版本，均下载所有更新，包括更新和修补程序。
+- -downloadhotfix：无论站点是哪种版本，均下载所有修补程序。
+- -downloadsiteversion：下载版本高于站点版本的更新和修补程序。
 
-- **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    > [!IMPORTANT]
+    > 由于 Configuration Manager 版本 2002 中的已知问题，默认行为不会按预期方式工作。 请使用 -downloadsiteversion 参数下载版本 2002 所需的更新。<!-- 7594517 -->
 
-你还需要将 ServiceConnectionTool 文件夹及其所有内容复制到 U 盘中，或者采用其他方法使它在步骤 3 和 4 即将使用的计算机上可用。  
+有关详细信息，请参阅[命令行参数](#bkmk_cmd)。
 
-### <a name="overview"></a>概述
-#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>使用服务连接工具主要有三个步骤  
+> [!TIP]
+> 该工具通过数据文件确定站点的版本。 若要验证版本，请在 .cab 文件中查找以站点版本命名的文本文件。
 
-1.  **准备**：此步骤在托管服务连接点的计算机上运行。 工具运行时，将使用情况数据放入 .cab 文件中并将其存储在 U 盘上（或指定的替代传输位置）。  
+## <a name="use-the-tool"></a>使用此工具  
 
-2.  **连接**：此步骤中，在连接到 Internet 的远程计算机上运行该工具，以便上传使用情况数据和后续下载更新。  
+服务连接工具位于 Configuration Manager 安装介质的以下路径中：`SMSSETUP\TOOLS\ServiceConnectionTool\ServiceConnectionTool.exe`。 始终使用与所用的 Configuration Manager 版本匹配的服务连接工具。 其中的所有文件必须位于同一个文件夹中，这样服务连接工具才能工作。
 
-3.  **导入**：此步骤在托管服务连接点的计算机上运行。 工具运行时，导入下载的更新并将其添加到站点，然后你就可以从 Configuration Manager 控制台查看和安装这些更新。  
+将 ServiceConnectionTool 文件夹及其所有内容复制到具有 Internet 连接的计算机。
 
-从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
+在此过程中，命令行示例使用了以下文件名和文件夹位置。 你无需使用这些路径和文件名。 可以使用与你的环境和首选项匹配的替代项。
 
-#### <a name="to-upload-multiple-cab-files"></a>上传多个 .cab 文件
-- 将从独立的层次结构中导出的每个 .cab 文件放在同一文件夹中。 每个文件的名称必须是唯一的，如有必要，可以手动重命名。
-- 然后，当运行命令将数据上传到 Microsoft 时，指定包含 .cab 文件的文件夹。 （在更新 1606 之前，每次仅可以从一个层次结构上传数据，并且此工具需要你指定文件夹中的 .cab 文件的名称。）
-- 然后，在层次结构的服务连接点上运行导入任务时，此工具仅自动导入该层次结构的数据。  
+- 服务连接点上的 Configuration Manager 安装媒介源文件的路径：`C:\Source`
 
-#### <a name="to-specify-a-proxy-server"></a>指定代理服务器
-可以使用以下可选参数来指定代理服务器（有关使用这些参数的详细信息可在本主题的命令行参数部分中找到）：
-- **-proxyserveruri [FQDN_of_proxy_server]** 使用此参数指定要用于此连接的代理服务器。
-- **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
+- 用于存储要在计算机之间传输的数据的 U 盘的路径：`D:\USB\`
 
-#### <a name="specify-the-type-of-updates-to-download"></a>指定要下载的更新的类型
-从版本 1706 开始，工具默认下载行为已更改，工具支持用于控制下载的文件的选项。
-- 默认情况下，工具仅下载对站点版本适用的最新可用更新。 不下载修补程序。
+- 从站点导出的数据文件的名称：`UsageData.cab`
 
-要修改此行为，请使用以下参数之一更改下载哪些文件。 
+- 该工具将 Configuration Manager 的已下载更新存储到的空文件夹的名称：`UpdatePacks`
 
-> [!NOTE]
-> 根据工具运行时上传的 .cab 文件中的数据确定站点版本。
->
-> 可以通过查找 .cab 文件内的 SiteVersion  .txt 文件来验证版本。
+### <a name="prepare"></a>准备
 
-- -downloadall  此选项下载所有内容，包括更新和修补程序，而不考虑站点的版本  。
-- -downloadhotfix  此选项下载所有修补程序，而不考虑站点的版本  。
-- -downloadsiteversion  此选项下载版本高于站点版本的更新和修补程序  。
+1. 在托管服务连接点的计算机上，以管理员身份打开命令提示符，并将目录更改为此工具的位置。 例如：
 
-使用 -downloadsiteversion 的示例命令行  ：
-- serviceconnectiontool.exe -connect  -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks 
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
+1. 运行以下命令来准备数据文件：
 
+    `ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
 
+    > [!NOTE]
+    > 如果将同时从多个层次结构上传数据文件，请为每个数据文件指定一个唯一名称。 如有必要，稍后可以重命名文件。
 
-### <a name="to-use-the-service-connection-tool"></a>若要使用服务连接点工具  
+    文件中的数据基于为站点配置的诊断和使用情况数据的级别。 有关详细信息，请参阅[诊断和使用情况数据概述](../../plan-design/diagnostics/diagnostics-and-usage-data.md)。 可以使用该工具将数据导出到 CSV 文件，来查看内容。 有关详细信息，请参阅 [-export](#-export)。
 
-1. 在承载服务连接点的计算机上：  
+1. 该工具完成导出使用情况数据后，将数据文件复制到有权访问 Internet 的计算机。
 
-   - 使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。   
+### <a name="connect"></a>连接
 
-2. 运行以下命令以使工具准备包含使用情况信息的 .cab 文件并将其复制到指定的位置：  
+1. 在具有 Internet 访问权限的计算机上，以管理员身份打开命令提示符，并将目录更改为此工具的位置。 此位置是整个 ServiceConnectionTool 文件夹的副本。 例如：
 
-   - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    `cd D:\USB\ServiceConnectionTool\`
 
-   如果同时上传多个层次结构中的 .cab 文件，则文件夹中的每个 .cab 文件的必须具有一个唯一的名称。 你可以手动重命名添加到该文件夹的文件。
+1. 运行以下命令，以上传数据文件并下载 Configuration Manager 更新：
 
-   如果你想要查看收集并上传到 Configuration Manager 云服务的使用情况信息，请运行以下命令将相同的数据以 .csv 文件导出，然后可以使用像 Excel 之类的应用程序查看该文件：  
+    `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
 
-   - **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+    若要查看更多示例，请参阅[命令行参数](#bkmk_cmd)。
 
-3. 完成准备步骤后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）有权访问 Internet 的计算机。  
+    > [!NOTE]  
+    > 运行此命令行时，可能会看到以下错误：
+    >
+    > “未处理的异常:**System.UnauthorizedAccessException：** 对路径 'C:\Users\jqpublic\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' 的访问被拒绝。”
+    >
+    > 你可以放心忽略此错误。 可关闭错误窗口以继续操作。
 
-4. 在可访问 Internet 的计算机上，使用管理特权打开命令提示符，然后将目录更改为包含工具  **serviceconnectiontool.exe** 的副本以及该文件夹中其他文件的位置。  
+1. 该工具完成下载更新后，将更新复制到服务连接点。
 
-5. 运行以下命令以开始上载使用情况信息和下载 Configuration Manager 更新：  
+### <a name="import"></a>导入
 
-   - **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+1. 在托管服务连接点的计算机上，以管理员身份打开命令提示符，并将目录更改为此工具的位置。 例如：
 
-   有关此命令行的更多示例，请参阅本主题后的[命令行选项](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)部分。
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
-   > [!NOTE]  
-   >  运行该命令行以连接到 Configuration Manager 云服务时，可能会发生如下错误：  
-   >   
-   > - 未处理的异常：System.UnauthorizedAccessException：  
-   >   
-   >      对路径“C:\  
-   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql”的访问被拒绝。  
-   >   
-   > 你可以直接忽略此错误并关闭错误窗口，然后继续。  
+1. 运行以下命令以导入更新：
 
-6. 下载完 Configuration Manager 的更新后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）承载服务连接点的计算机上。  
+    `ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
 
-7. 在承载服务连接点的计算机上，使用管理特权打开命令提示符，将目录更改为包含 **serviceconnectiontool.exe**的位置，然后运行以下命令：  
+1. 导入完成后，关闭命令提示符。 将仅导入适用的层次结构的更新。
 
-   - **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，并选择“更新和维护服务”节点 。 现在即可安装已导入的更新。 有关详细信息，请参阅[安装控制台内部更新](install-in-console-updates.md)。
 
-8. 导入完成后，可以关闭命令提示符。 （仅导入适用的层次结构的更新）。  
+## <a name="log-files"></a>日志文件
 
-9. 打开 Configuration Manager 控制台并导航到“管理”   > “更新和服务”  。 现在即可安装之前导入的更新。 （在版本 1702 之前，“更新和服务”在“管理”   > “云服务”  下。）
+- **ServiceConnectionTool.log**：每次运行服务连接工具时，它都会写入此日志文件。 此日志文件的路径始终与该工具的位置相同。 此日志文件基于所用的参数提供关于工具使用情况的简要详细信息。 每次运行工具时，该工具都将替换现有的任何日志文件。
 
-   有关安装更新的信息，请参阅[为 Configuration Manager 安装控制台内更新](../../../core/servers/manage/install-in-console-updates.md)。  
+- **ConfigMgrSetup.log**：在[连接](#connect)阶段期间，该工具会写入此日志文件，它位于系统驱动器的根处。 此日志文件提供更加详细的信息。 例如，该工具下载哪些文件以及哈希检查是否成功。
 
-## <a name="log-files"></a><a name="bkmk_cmd"></a> 日志文件
+## <a name="command-line-parameters"></a><a name="bkmk_cmd"></a>命令行参数
 
-ServiceConnectionTool.log 
+此部分按字母顺序列出了服务连接工具的所有可用参数。
 
-每次运行服务连接工具时，都将在与名为 ServiceConnectionTool.log  的工具所在的位置相同的位置生成一个日志文件。  此日志文件将只提供有关工具执行的简单详细信息，具体取决于所使用的命令是什么。  每次运行该工具时，都将替换现有日志文件。
+### <a name="-connect"></a>-connect
 
-ConfigMgrSetup.log 
+在[连接](#connect)阶段期间，在具有 Internet 访问权限的计算机上使用它。 此参数将连接到 Configuration Manager 云服务，以上传数据文件并下载更新。
 
-使用工具连接和下载更新时，将在系统驱动器的根目录上生成名为 ConfigMgrSetup.log  的日志文件。  此日志文件将提供更为详细的信息，例如，下载了什么文件、提取了什么文件，以及哈希检查是否成功。
+它需要以下参数：
 
-## <a name="command-line-options"></a><a name="bkmk_cmd"></a> 命令行选项  
-若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  
+- -usagedatasrc：要上传的数据文件的位置
+- -updatepackdest：下载的更新的路径
 
+还可以使用以下可选参数：
 
-|命令行选项|详细信息|  
-|---------------------------|-------------|  
-|**-prepare -usagedatadest [drive:][path][filename.cab]**|此命令会将当前的使用情况数据存储于 .cab 文件中。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例：   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 如果使用 1606 之前的 Configuration Manager 版本，则必须指定 .cab 文件的名称，并且不能使用代理服务器的选项。  支持的命令参数是： <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |此命令连接到 Configuration Manager 云服务以从指定位置上传使用情况数据 .cab 文件并下载可用的更新包和控制台内容。 代理服务器的选项是可选选项。<br /><br /> 在可连接到 Internet 的计算机上以 **本地管理员** 身份运行此命令。<br /><br /> 连接时不使用代理服务器的示例： **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> 连接时使用代理服务器的示例： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 如果使用 1606 之前的版本，则必须为 .cab 文件指定文件名称，并且不能指定代理服务器。 使用以下示例命令行： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [drive:][path]**|此命令会将之前下载的更新包和控制台内容导入到 Configuration Manager 控制台中。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例：  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [drive:][path][filename.csv]**|此命令会将使用情况数据导出为 .csv 文件，然后你可以进行查看。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例： **-export -dest D:\USB\usagedata.csv**|  
+- -proxyserveruri：代理服务器的 FQDN
+- -proxyusername：代理服务器的用户名
+- -downloadall：无论站点是哪种版本，均下载所有内容，包括更新和修补程序。
+- -downloadhotfix：无论站点是哪种版本，均下载所有修补程序。
+- -downloadsiteversion：下载版本高于站点版本的更新和修补程序。
+
+#### <a name="example-of-connect-without-a-proxy-server"></a>不使用代理服务器的连接示例
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks`
+
+#### <a name="example-of-connect-with-a-proxy-server"></a>使用代理服务器的连接示例
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
+
+#### <a name="example-of-connect-to-download-only-site-version-applicable-updates"></a>仅下载站点版本的适用更新的连接示例
+
+`ServiceConnectionTool.exe -connect -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
+
+### <a name="-dest"></a>-dest
+
+带有 -export 参数的必需参数，用于指定要导出的 CSV 文件的路径和文件名。 有关详细信息，请参阅 [-export](#-export)。
+
+### <a name="-downloadall"></a>-downloadall
+
+带有 -connect 参数的可选参数，无论站点是哪种版本，它均会下载所有内容，其中包括更新和修补程序。 有关详细信息，请参阅 [-connect](#connect)。
+
+### <a name="-downloadhotfix"></a>-downloadhotfix
+
+带有 -connect 参数的可选参数，无论站点是哪种版本，它均会只下载所有修补程序。 有关详细信息，请参阅 [-connect](#-connect)。
+
+### <a name="-downloadsiteversion"></a>-downloadsiteversion
+
+带有 -connect 参数的可选参数，它只会下载版本高于站点版本的更新和修补程序。 有关详细信息，请参阅 [-connect](#-connect)。
+
+### <a name="-export"></a>-export
+
+在[准备](#prepare)阶段，使用它将使用情况数据导出到 CSV 文件。 在服务连接点上，以管理员身份运行它。 通过此操作，可以在将使用情况数据上传到 Microsoft 之前查看其内容。 它需要使用 -dest 参数来指定 CSV 文件的位置。
+
+#### <a name="example-of-export"></a>导出示例
+
+`-export -dest D:\USB\usagedata.csv`
+
+### <a name="-import"></a>-import
+
+在[导入](#import)阶段，在服务连接点上使用它将更新导入到站点。 它需要使用 -updatepacksrc 参数来指定下载的更新的位置。
+
+#### <a name="example-of-import"></a>导入示例
+
+`ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
+
+### <a name="-prepare"></a>-prepare
+
+在[准备](#prepare)阶段，在服务连接点上使用它从站点导出使用情况数据。 它需要使用 -usagedatadest 参数来指定导出的数据文件的位置。
+
+#### <a name="example-of-prepare"></a>准备示例
+
+`ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
+
+### <a name="-proxyserveruri"></a>-proxyserveruri
+
+带有 -connect 参数的可选参数，用于指定代理服务器的 FQDN。 有关详细信息，请参阅 [-connect](#-connect)。
+
+### <a name="-proxyusername"></a>-proxyusername
+
+带有 -connect 参数的可选参数，用于指定要通过代理服务器验证的用户名。 有关详细信息，请参阅 [-connect](#-connect)。
+
+### <a name="-updatepackdest"></a>-updatepackdest
+
+带有 -connect 参数的必需参数，用于指定下载的更新的路径。 有关详细信息，请参阅 [-connect](#-connect)。
+
+### <a name="-updatepacksrc"></a>-updatepacksrc
+
+带有 -import 参数的必需参数，用于指定下载的更新的路径。 有关详细信息，请参阅 [-import](#-import)。
+
+### <a name="-usagedatadest"></a>-usagedatadest
+
+带有 -prepare 参数的必需参数，用于指定导出的数据文件的路径和文件名。 有关详细信息，请参阅 [-prepare](#-prepare)。
+
+## <a name="next-steps"></a>后续步骤
+
+[安装控制台内部更新](install-in-console-updates.md)
+
+[如何查看诊断和使用情况数据](../../plan-design/diagnostics/view-diagnostics-and-usage-data.md)

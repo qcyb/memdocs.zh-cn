@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 933810cb079ac405d15a18a26efd07fb69a6e3f1
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984925"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972024"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>在 Intune 中为未注册的设备启用移动威胁防御连接器
 
@@ -33,8 +33,9 @@ ms.locfileid: "83984925"
 > 本文适用于支持应用保护策略的所有移动威胁防御合作伙伴：
 >
 > - Better Mobile（Android、iOS/iPadOS）
-> - Zimperium（Android、iOS/iPadOS）
 > - Lookout for Work（Android、iOS/iPadOS）
+> - Wandera（Android、iOS/iPadOS）
+> - Zimperium（Android、iOS/iPadOS）
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>MTD 应用的经典条件访问策略
 
@@ -52,17 +53,17 @@ MTD 应用的经典条件访问策略：
 
 - 默认情况下，该策略与用于评估的其他条件访问策略不交互。
 
-要查看经典条件访问策略，请转到 [Azure](https://portal.azure.com/#home) 中的“Azure Active Directory” > “条件访问” > “经典策略”    。
+要查看经典条件访问策略，请转到 [Azure](https://portal.azure.com/#home) 中的“Azure Active Directory” > “条件访问” > “经典策略”  。
 
 ## <a name="to-enable-the-mtd-connector"></a>启用 MTD 连接器
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“租户管理”   > “连接器和令牌”   > “移动威胁防御”  。
+2. 选择“租户管理” > “连接器和令牌” > “移动威胁防御”。
 
-3. 在“移动威胁防御”窗格上选择“添加”   。
+3. 在“移动威胁防御”窗格上选择“添加” 。
 
-4. 从下拉列表中选择 MTD 解决方案作为“要设置的移动威胁防御连接器”  。
+4. 从下拉列表中选择 MTD 解决方案作为“要设置的移动威胁防御连接器”。
 
     <!-- ![MTD setup in Intune](PLACEHOLDER, need a new screenshot of this page) -->
 
@@ -74,16 +75,16 @@ MTD 应用的经典条件访问策略：
 
 **应用保护策略设置**
 
-- **将版本 4.4 及更高版本的 Android 设备连接到 *\<MTD 合作伙伴名称>* 以进行应用保护策略评估**：启用此选项时，使用设备威胁级别规则的应用保护策略将评估包括来自此连接器的数据的设备。
+- 将版本 4.4 及更高版本的 Android 设备连接到 \<MTD partner name> 以进行应用保护策略评估：启用此选项时，使用设备威胁级别规则的应用保护策略将评估包括来自此连接器的数据的设备。
 
-- **将 iOS 11 及更高版本设备连接到 *\<MTD 合作伙伴名称>* 以进行应用保护策略评估**：启用此选项时，使用设备威胁级别规则的应用保护策略将评估包括来自此连接器的数据的设备。
+- 将 11 及更高版本的 iOS 设备连接到 \<MTD partner name> 以进行应用保护策略评估：启用此选项时，使用设备威胁级别规则的应用保护策略将评估包括来自此连接器的数据的设备。
 
 **常见的共享设置**
 
 - **合作伙伴无响应之前的天数**：在 Intune 由于连接断开将合作伙伴视为无响应之前的天数。 Intune 将忽略无响应 MTD 合作伙伴的符合性状态。
 
 > [!TIP]
-> 可以从“移动威胁防御”窗格中查看 Intune 和 MTD 合作伙伴之间的“连接状态”和“上次同步”时间   。
+> 可以从“移动威胁防御”窗格中查看 Intune 和 MTD 合作伙伴之间的“连接状态”和“上次同步”时间 。
 
 ## <a name="next-steps"></a>后续步骤
 

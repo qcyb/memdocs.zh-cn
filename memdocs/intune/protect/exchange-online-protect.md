@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8746a6dee0b35dec7886a596d0448874dfb04f16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352015"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022172"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>无需设备管理即可保护 Office 365 Exchange Online
 
@@ -36,7 +36,7 @@ ms.locfileid: "79352015"
 1. [了解条件访问](conditional-access.md)。 
 2. [了解基于应用的条件访问](app-based-conditional-access-intune.md)。
 3. [创建用于 Exchange Online 的基于应用的条件访问策略](app-based-conditional-access-intune-create.md)。
-4. [阻止无法管理的应用](app-modern-authentication-block.md)，尤其是未使用 Azure Active Directory 身份验证库 (ADAL) 的应用。
+4. [阻止无法管理的应用](app-modern-authentication-block.md)，尤其是未使用 Azure Active Directory 身份验证库 (ADAL) 或 Microsoft 身份验证库 (MSAL) 的应用。
 5. （可选）[创建用于 SharePoint Online 的基于应用的条件访问策略](app-based-conditional-access-intune-create.md)。 这些策略会阻止通过无法管理和保护的应用访问公司数据。 这些策略还会限制通过 SharePoint 移动应用进行访问。 
 
 ## <a name="what-to-tell-employees-and-students"></a>应告知员工和学生的事项

@@ -5,7 +5,7 @@ description: 排查并解决本地 Microsoft Intune Exchange Connector 的常见
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350624"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972124"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>解决 Intune Exchange Connector 的常见问题
  
@@ -64,17 +64,17 @@ ms.locfileid: "79350624"
 
    - 帐户 UPN 匹配 SMTP 地址。
 
-3. 自动发现需要一个 DNS 服务器，该服务器具有指向 Exchange 客户端访问服务器的 Autodiscover.SMTPdomain.com（例如 Autodiscover.contoso.com）的 DNS 记录  。 若要检查记录，请指定 FQDN 来代替 Autodiscover.SMTPdomain.com，然后执行以下步骤  ：
+3. 自动发现需要一个 DNS 服务器，该服务器具有指向 Exchange 客户端访问服务器的 Autodiscover.SMTPdomain.com（例如 Autodiscover.contoso.com）的 DNS 记录。 若要检查记录，请指定 FQDN 来代替 Autodiscover.SMTPdomain.com，然后执行以下步骤：
 
-   1. 在命令提示符处，输入 NSLOOKUP  。
+   1. 在命令提示符处，输入 NSLOOKUP。
 
-   2. 输入 Autodiscover.SMTPdomain.com  。 输出应如下图所示：![Nslookup 结果](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
+   2. 输入 Autodiscover.SMTPdomain.com。 输出应如下图所示：![Nslookup 结果](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
    你还可以从 Internet (https://testconnectivity.microsoft.com ) 测试自动发现服务。 或使用 Microsoft Connectivity Analyzer 工具从本地域进行测试。 有关详细信息，请参阅 [Microsoft Connectivity Analyzer 工具](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80))。
 
 
-### <a name="check-autodiscovery"></a>检查自动发现
+### <a name="check-autodiscover"></a>检查自动发现
 
 如果自动发现失败，请尝试以下步骤：
 
@@ -84,7 +84,7 @@ ms.locfileid: "79350624"
 
    1. 确定 EWS URL。 Exchange 的默认 EWS URL 是 `https://<mailServerFQDN>/ews/exchange.asmx`，但你的 URL 可能不同。 请与 Exchange 管理员联系，以验证你的环境 URL 是否正确。
 
-   2. 编辑 *OnPremisesExchangeConnectorServiceConfiguration.xml* 文件。 默认情况下，该文件位于运行 Exchange Connector 的计算机上的 %ProgramData%\Microsoft\Windows Intune Exchange Connector 中  。 在文本编辑器中打开文件，然后更改以下行，以反映环境的 EWS URL： `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. 编辑 *OnPremisesExchangeConnectorServiceConfiguration.xml* 文件。 默认情况下，该文件位于运行 Exchange Connector 的计算机上的 %ProgramData%\Microsoft\Windows Intune Exchange Connector 中。 在文本编辑器中打开文件，然后更改以下行，以反映环境的 EWS URL： `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. 保存文件，然后重启计算机或 Microsoft Intune Exchange Connector 服务。
 

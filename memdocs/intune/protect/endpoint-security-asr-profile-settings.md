@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431691"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022392"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 终结点安全的攻击面减少策略设置
 
@@ -114,7 +114,7 @@ ms.locfileid: "83431691"
   - **未配置**（默认）
   - **是** - 配置 Windows 网络隔离策略。  
   
-  设置为“配置”时，可以配置以下设置。
+  设置为“是”时，可以配置以下设置。
 
   - **IP 范围**  
     展开下拉列表，选择“添加”，然后依次指定下层地址和上层地址 。
@@ -186,9 +186,9 @@ ms.locfileid: "83431691"
 - **阻止用户忽略 SmartScreen 警告**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  此设置需要启用“对应用和文件强制实施 SmartScreen”设置。
-  - **未配置**（默认）- 设置将还原为 Windows 默认设置，即允许用户重写。
-  - **是** - - SmartScreen 将不会显示让用户忽略警告并运行应用的选项。 将显示警告，但用户将无法绕过它。
+  - **未配置**（默认）- 用户可以忽略针对文件和恶意应用的 SmartScreen 警告。
+  - **是** - 启用 SmartScreen，且用户无法绕过针对文件或恶意应用的警告。
+
 
 - **启用 Windows SmartScreen**  
   CSP：[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)

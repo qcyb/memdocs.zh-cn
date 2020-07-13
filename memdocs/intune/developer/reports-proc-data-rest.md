@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864950"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022409"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>使用 REST 客户端从 Intune 数据仓库 API 获取数据
 
@@ -41,37 +41,28 @@ ms.locfileid: "83864950"
 
 在 Azure 中创建本机应用。 此本机应用即客户端应用。 本地客户端请求凭据时，在本地计算机上运行的客户端将引用 Intune 数据仓库 API。
 
-1. 登录到租户的 Azure 门户。 选择“Azure Active Directory” > “应用注册”，打开“应用注册”窗格  。
-2. 选择“新建应用注册”。
-3. 键入应用详细信息。
-    1. 在“名称”中键入易于理解的名称，例如 Intune 数据仓库客户端。
-    2. 对于“应用程序类型”，选择“本机” 。
-    3. 在“登录 URL”中键入一个 URL。 登录 URL 因具体方案不同而有所不同，但是如果计划使用 Postman，请键入 `https://www.getpostman.com/oauth2/callback`。 向 Azure AD 进行身份验证时，将针对客户端身份验证步骤使用回调。
-4. 选择“创建”。
-
-     ![Intune 数据仓库客户端应用](./media/reports-proc-data-rest/reports-get_rest_data_client_overview.png)
-
-5. 将此应用的“应用程序 ID”记下来。 下一部分中将用到此 ID。
+1. 登录到 [Azure Active Directory 管理中心](https://aad.portal.azure.com/)。
+2. 选择“Azure Active Directory” > “应用注册”，打开“应用注册”窗格  。
+3. 选择“新建应用注册”。
+4. 键入应用详细信息。
+    1. 在“名称”中键入易记名称，例如“Intune 数据仓库客户端”。
+    2. 对于“支持的帐户类型”，请选择“仅此组织目录中的帐户(仅 Microsoft - 单租户)” 。
+    3. 键入“重定向 URI”的 URL。 重定向 URI 因具体方案不同而有所不同，但是如果计划使用 Postman，请键入 `https://www.getpostman.com/oauth2/callback`。 向 Azure AD 进行身份验证时，将针对客户端身份验证步骤使用回调。
+5. 选择“注册”。
+6. 记下此应用的“应用程序(客户端) ID”。 下一部分中将用到此 ID。
 
 ## <a name="grant-the-client-app-access-to-the-microsoft-intune-api"></a>授予该客户端应用访问 Microsoft Intune API 的权限
 
 现在便有了一个在 Azure 中定义的应用。 授予从本机应用访问 Microsoft Intune API 的权限。
 
-1. 选择本机应用。 使用类似于 Intune 数据仓库客户端的名称命名该应用。
-2. 从“设置”窗格中选择“所需权限” 
-3. 在“所需权限”窗格中选择“添加” 。
-4. 选择“选择 API”。
-5. 搜索 Web 应用名称。 其名称为“Microsoft Intune API”。
-6. 在列表中选择该应用。
-7. 选择“选择”。
-8. 勾选“委派的权限”框，以添加“从 Microsoft Intune 获取数据仓库信息” 。
-
-    ![启用访问 - Microsoft Intune API](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
-
-9. 选择“选择”。
-10. 选择“完成”。
-11. 在“所需权限”窗格中，根据情况选择“授予权限”。 此操作将授予对当前目录中的所有帐户的访问权限。 将不再为租户中的每位用户显示同意对话框。 有关详细信息，请参阅[将应用程序与 Azure Active Directory 集成](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)。
-12. 选择“是”。
+1. 登录到 [Azure Active Directory 管理中心](https://aad.portal.azure.com/)。
+2. 选择“Azure Active Directory” > “应用注册”，打开“应用注册”窗格  。
+3. 选择需要授予访问权限的应用。 使用类似于 Intune 数据仓库客户端的名称命名该应用。
+4. 选择“API 权限” > “添加权限” 。
+5. 找到并选择 Intune API。 其名称为“Microsoft Intune API”。
+6. 选择“委派的权限”框，然后单击“从 Microsoft Intune 获取数据仓库信息”框 。
+7. 单击“添加权限”。
+8. （可选）在“已配置权限”窗格中选择“为 Microsoft 授予管理员同意”，然后选择“是” 。 此操作将授予对当前目录中的所有帐户的访问权限。 将不再为租户中的每位用户显示同意对话框。 有关详细信息，请参阅[将应用程序与 Azure Active Directory 集成](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)。
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>使用 Postman 从 Microsoft Intune API 获取数据
 
@@ -95,9 +86,9 @@ ms.locfileid: "83864950"
 
 你还需要终结点。 要获取数据仓库终结点，将需要自定义源 URL。 可从“数据仓库”窗格中获取 OData 终结点。
 
-1. 登录到 [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)。
-3. 选择“Microsoft Intune - 概述”边栏选项卡右侧“其他任务”下的数据仓库链接，打开“Intune 数据仓库”窗格。
-4. 从“使用第三方报表服务”中复制自定义源 URL。 它看上去应类似于：`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
+1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
+3. 通过选择“报告” > “数据仓库”来打开“数据仓库”窗格  。
+4. 复制“报告服务的 OData 源”下的自定义源 URL。 它看上去应类似于：`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 终结点的格式如下所示：`https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
@@ -149,13 +140,13 @@ ms.locfileid: "83864950"
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>创建 REST 客户端 (C#) 以从 Intune 数据仓库获取数据
 
-下面的示例包含一个简单的 REST 客户端。 该代码使用 .Net 库中的 httpClient .Net 类。 客户端获得 Azure AD 凭据后，会构造一个 GET REST 调用，以检索数据仓库 API 中的日期实体。
+下面的示例包含一个简单的 REST 客户端。 该代码使用 .Net 库中的 httpClient .NET 类。 客户端获得 Azure AD 凭据后，会构造一个 GET REST 调用，以检索数据仓库 API 中的日期实体。
 
 > [!Note]  
 > 可在 [GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs) 上访问以下代码示例。 请访问 GitHub 存储库，了解有关该示例的最新更改和更新。
 
 1. 打开“Microsoft Visual Studio”。
-2. 选择“文件” > “新建项目” 。 展开“Visual C#”，然后选择“控制台应用 (.Net Framework)” 。
+2. 选择“文件” > “新建项目” 。 展开“Visual C#”，然后选择“控制台应用(.NET Framework)” 。
 3. 将项目命名为 `IntuneDataWarehouseSamples`，浏览到要保存该项目的位置，然后选择“确定”。
 4. 在解决方案资源管理器中右键单击该解决方案的名称，然后选择“管理用于解决方案的 NuGet 包...”。 选择“浏览”，然后在搜索框中键入 `Microsoft.IdentityModel.Clients.ActiveDirectory`。
 5. 选择该包，选择“管理用于解决方案的包”下的“IntuneDataWarehouseSamples”项目，然后选择“安装” 。

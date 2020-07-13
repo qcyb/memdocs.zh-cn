@@ -2,7 +2,7 @@
 title: Internet 访问要求
 titleSuffix: Configuration Manager
 description: 了解允许使用 Configuration Manager 功能的完整功能的 Internet 终结点。
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,17 +10,25 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819944"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137355"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
 某些 Configuration Manager 功能依赖 Internet 连接来获取完整功能。 如果组织使用防火墙或代理设备限制与 Internet 的网络通信，请确保允许使用这些终结点。
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager 将以下 Microsoft URL 转发服务用于了整个产品：
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+即使以下各节中未明确地列出它们，也应始终允许这些终结点。
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a>服务连接点
 
@@ -276,6 +284,14 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 ## <a name="endpoint-analytics"></a>终结点分析
 
 有关终结点分析所需终结点的详细信息，请参阅[终结点分析代理配置](../../../../analytics/troubleshoot.md#bkmk_endpoints)。
+
+## <a name="asset-intelligence"></a>资产智能
+
+<!-- memdocs#470 -->
+如果使用[资产智能](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)，则允许以下终结点，以便服务执行同步：
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
 
 ## <a name="microsoft-public-ip-addresses"></a>Microsoft 公共 IP 地址
 

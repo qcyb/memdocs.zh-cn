@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989978"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022324"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>有关 MAM 和应用保护的常见问题
 
@@ -80,7 +80,7 @@ Intune MAM 支持两种配置：
 Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS/iPadOS（Obj-C、Swift）、Xamarin、Xamarin.Forms 平台生成的应用的支持。 虽然某些客户已成功将 Intune SDK 与 React Native 和 NativeScript 等其他平台集成，但我们不会使用受支持平台之外的任何方式为应用开发人员提供明确的指导或插件。
 
 **Intune APP SDK 是否支持 Microsoft 身份验证库 (MSAL)？**<br></br>
-Intune App SDK 可以使用 Azure Active Directory 身份验证库或 Microsoft 身份验证库进行身份验证和条件启动。 它还依赖于 ADAL/MSAL 向 MAM 服务注册用户标识，用于不含设备注册方案的管理。
+Intune App SDK 可以使用 Microsoft 身份验证库进行身份验证和条件启动。 它还依赖 MSAL 向 MAM 服务注册用户标识，用于不含设备注册方案的管理。
 
 **使用 [Outlook 移动应用](https://products.office.com/outlook)有什么其他要求？**
 

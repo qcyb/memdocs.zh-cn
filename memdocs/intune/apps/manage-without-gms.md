@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7955afb2aef88e3787546843cc477bce22369a4d
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074786"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022375"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>如何在无法访问 Google 移动服务的环境中使用 Intune
 
@@ -31,13 +31,13 @@ Microsoft Intune 在管理 Android 设备时使用 Google 移动服务 (GMS) 与
 
 ## <a name="install-the-intune-company-portal-app-without-access-to-the-google-play-store"></a>在无法访问 Google Play 商店的情况下安装 Intune 公司门户应用 
 
-### <a name="for-users-outside-of-mainland-china"></a>对于中国大陆以外的用户 
+### <a name="for-users-outside-of-peoples-republic-of-china"></a>面向中华人民共和国以外的用户
 
 如果无法访问 Google Play，Android 设备可以下载并旁加载 [面向 Android 的 Microsoft Intune 公司门户](https://www.microsoft.com/en-us/download/details.aspx?id=49140)应用。 以这种方式进行安装，应用不会自动接收更新或修复程序。 请务必定期手动更新和修补应用。 
 
-### <a name="for-users-in-mainland-china"></a>对于中国大陆用户 
+### <a name="for-users-in-peoples-republic-of-china"></a>面向中华人民共和国的用户
 
-由于目前在中国大陆无法访问 Google Play 商店，因此 Android 设备必须从中国的应用市场获取应用。 有关详细信息，请参阅[在中国大陆安装公司门户应用](../user-help/install-company-portal-android-china.md)。
+由于目前在中华人民共和国无法访问 Google Play 商店，因此 Android 设备必须从中国的应用市场获取应用。 有关详细信息，请参阅[在中华人民共和国安装公司门户应用](../user-help/install-company-portal-android-china.md)。
 
 ## <a name="limitations-of-intune-device-administrator-management-when-gms-is-unavailable"></a>无法访问 GMS 时的 Intune 设备管理员管理限制 
 
@@ -47,9 +47,9 @@ Microsoft Intune 在管理 Android 设备时使用 Google 移动服务 (GMS) 与
 
 | 方案  | 功能  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 设备合规性策略  | 在创建或编辑面向 Android 设备管理员的合规性策略时，“Google Play 保护机制”  下列出的所有选项都不可用。  |
-| 应用保护策略（条件启动）  | “SafetyNet 设备证明”  和“要求对应用进行威胁扫描”  设备条件无法用于条件启动。  |
-| 客户端应用  | 类型为“Android”  的应用不可用。 请改用业务线应用  来部署和管理应用。  |
+| 设备合规性策略  | 在创建或编辑面向 Android 设备管理员的合规性策略时，“Google Play 保护机制”下列出的所有选项都不可用。  |
+| 应用保护策略（条件启动）  | “SafetyNet 设备证明”和“要求对应用进行威胁扫描”设备条件无法用于条件启动。  |
+| 客户端应用  | 类型为“Android”的应用不可用。 请改用业务线应用来部署和管理应用。  |
 | 移动威胁防御  | 请与你的 MTD 供应商合作，以了解他们的解决方案是否与 Intune 集成、是否可用于相应区域以及是否依赖 GMS。  |
 
 ### <a name="some-tasks-may-be-delayed"></a>有些任务可能会延迟 
@@ -60,19 +60,19 @@ Microsoft Intune 在管理 Android 设备时使用 Google 移动服务 (GMS) 与
 
 以下任务最长可能需要 8 小时才能完成： 
 
-Intune 控制台  ：
+Intune 控制台：
 - 完全擦除
 - 选择性擦除
 - 新的或更新的应用部署
 - 远程锁定
 - 密码重置
 
-面向 Android 的 Intune 公司门户应用  ：
+面向 Android 的 Intune 公司门户应用：
 - 远程设备删除
 - 设备重置
 - 安装可用的业务线应用
 
-Intune 公司门户网站  ：
+Intune 公司门户网站：
 - 设备删除（本地和远程）
 - 设备重置
 - 设备密码重置

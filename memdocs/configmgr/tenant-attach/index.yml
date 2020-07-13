@@ -11,12 +11,12 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 282a213e680231ad1d88323f8a4e34380e58672d
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: 41220354f28671ae62b6f2c788dbe21790c2fa77
+  ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741351"
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86210240"
 landingContent:
 - title: 关于租户附加
   linkLists:
@@ -24,7 +24,11 @@ landingContent:
     links:
     - text: 启用租户附加
       url: device-sync-actions.md
+    - text: 查看 ConfigMgr 客户端详细信息（预览）
+      url: client-details.md
   - linkListType: reference
     links:
-    - text: 租户附加疑难解答
-      url: technical-reference.md
+    - text: 租户附加和设备操作疑难解答
+      url: troubleshoot.md
+    - text: ConfigMgr 客户端详细信息疑难解答（预览）
+      url: troubleshoot-client-details.md
