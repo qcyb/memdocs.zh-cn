@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165713"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239940"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -110,9 +110,7 @@ ms.locfileid: "84165713"
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    可用，有提示    |    提示在所有可能的位置进行注册的默认体验。    |    是    |    是    |    是    |    是    |
 |    可用，无提示    |    用户可以通过当前设备的设备详细信息中的状态或从需要注册的应用来进行注册。    |    否    |    否    |    是    |    是    |
-|    Unavailable    |    用户无法注册。    |    否    |    否    |    否    |    否<sup>(1)</sup>    |
-
-<sup>(1)</sup> **已知问题：** 如果将应用设置为需要注册才能安装，并且将设备注册设置为“不可用”，则 Android 上的公司门户应用仍将指导用户进行注册。 这将很快被删除。
+|    Unavailable    |    用户无法注册。    |    否    |    否    |    否    |    否    |
 
 ### <a name="privacy"></a>隐私
 
@@ -221,7 +219,7 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 
 一些平台和配置不支持自助设备操作。 下表提供了自助服务操作的详细信息：
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| 操作 | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | 停用 | 可用<sup>(1)</sup> | 可用<sup>(9)</sup> | 可用 | 可用<sup>(7)</sup> |
 | 擦除 | 可用 | 可用<sup>(5)</sup><sup>(9)</sup> | NA | 可用<sup>(7)</sup> |

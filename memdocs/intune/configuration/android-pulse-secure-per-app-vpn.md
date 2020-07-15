@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367ac927650ebf08c245b1ff554ad01db3bf3792
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a351255fa0574e9b92d096b3895f9469ed9ced2a
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990162"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137375"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>使用 Microsoft Intune 自定义配置文件为 Android 设备创建每应用 VPN 配置文件
 
 可为由 Intune 管理的 Android 5.0 及更高版本设备创建每应用 VPN 配置文件。 首先，创建使用 Pulse Secure 或 Citrix 连接类型的 VPN 配置文件。 然后，创建将 VPN 配置文件与特定应用关联的自定义配置策略。
 
 > [!NOTE]
-> 若要在 Android 企业设备上使用基于应用的 VPN，也可以使用这些步骤。 但建议为 VPN 客户端应用使用[应用配置策略](../apps/app-configuration-policies-use-android.md)。
+> 若要在 Android 企业设备上使用基于应用的 VPN，也可以使用这些步骤。 但建议为 VPN 客户端应用使用[应用配置策略](../apps/app-configuration-vpn-ae.md)。
 
 将策略分配给 Android 设备或用户组后，用户应启动 Pulse Secure 或 Citrix VPN 客户端。 然后，VPN 客户端将仅允许来自指定应用的流量使用打开的 VPN 连接。
 

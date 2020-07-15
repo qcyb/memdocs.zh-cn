@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: a229b9159c4c3613edc2d718db1fd0931f94cf9f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721901"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240726"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>对分布式 IT 使用基于角色的访问控制 (RBAC) 和范围标记
 
@@ -81,13 +81,11 @@ ms.locfileid: "84721901"
 - 如果租户可以有该对象的多个版本（如角色分配或应用），则可以将作用域标记分配给 Intune 对象类型。
   以下 Intune 对象是此规则的例外，当前不支持作用域标记：
     - Windows ESP 配置文件
-    - 注册限制
     - 公司设备标识符
     - Autopilot 设备
     - 设备符合性位置
     - Jamf 设备
 - 与 VPP 令牌关联的 VPP 应用和电子书继承分配给关联 VPP 令牌的作用域标记。
-- 与 DEP 令牌关联的设备注册程序 (DEP) 设备和 DEP 配置文件继承分配给关联 DEP 令牌的作用域标记。
 - 管理员在 Intune 中创建对象时，分配给该管理员的所有范围标记都将自动分配给新对象。
 - Intune RBAC 不适用于 Azure Active Directory 角色。 因此，无论 Intune 服务管理员和全局管理员角色具有哪些范围标记，它们都对 Intune 具有完整的管理员访问权限。
 - 如果角色分配没有作用域标记，则 IT 管理员可以查看基于 IT 管理员权限的所有对象。 没有作用域标记的管理员实际上拥有所有作用域标记。

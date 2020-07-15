@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093477"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285294"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>使用 Intune 和 Windows Autopilot 部署加入混合 Azure AD 的设备
 可以使用 Intune 和 Windows Autopilot 设置加入混合 Azure Active Directory (Azure AD) 的设备。 为此，请执行本文中的步骤。
@@ -35,7 +35,7 @@ ms.locfileid: "85093477"
 要注册的设备还必须：
 - 运行的是 Windows 10 v1809 或更高版本。
 - 有权访问[遵守记录的 Windows Autopilot 网络要求](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements)的 Internet。
-- 有权访问 Active Directory 域控制器，因此必须连接到组织的网络（可以在其中解析 AD 域和 AD 域控制器的 DNS 记录，并与域控制器通信以对用户进行身份验证。 VPN 连接此时不受支持）。
+- 有权访问 Active Directory 域控制器，因此必须连接到组织的网络（可以在其中解析 AD 域和 AD 域控制器的 DNS 记录，并与域控制器通信以对用户进行身份验证。
 - 能够对尝试加入的域的域控制器执行 ping 操作。
 - 如果使用代理，必须启用并配置 WPAD 代理设置选项。
 - 体验全新体验 (OOBE)。
