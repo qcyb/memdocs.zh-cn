@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/26/2020
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.assetid: 25b3c26e-cf4e-4152-8306-bf4be4af2ad1
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5afca831e2f3cbcda69150adcbbcff996bf99554
-ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.openlocfilehash: 14b571c069fd2484e7e3fd5f2841f6e5884ecc80
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86157801"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502674"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 开发过程中的功能
 
@@ -101,7 +101,7 @@ ms.locfileid: "86157801"
 - 自定义图标、更改屏幕方向，并在锁屏提醒图标上显示应用通知 <!--7414175-->
 - 隐藏“托管设置”入口点 <!--7133328-->
 - 更轻松地访问调试菜单 <!--7133720-->
-- 创建 Wi-Fi 网络的白名单 <!-- 7134873-->
+- 创建 Wi-Fi 网络的允许列表 <!-- 7134873-->
 - 更轻松地访问设备信息 <!-- 7135184-->
 
 有关详细信息，请参阅[便于允许或限制功能的 Android Enterprise 设备设置](../configuration/device-restrictions-android-for-work.md)。
