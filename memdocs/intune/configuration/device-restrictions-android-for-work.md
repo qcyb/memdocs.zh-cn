@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093698"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303464"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置
 
@@ -89,7 +89,7 @@ ms.locfileid: "85093698"
 
 ### <a name="device-experience"></a>设备体验
 
-使用这些设置可在专用设备或完全受管理设备上配置展台样式的体验。 可将设备配置为运行一个应用或运行多个应用。 设备设置为展台模式时，只能使用你添加的应用。
+使用这些设置可在专用设备上配置展台样式的体验，或者可在完全受管理设备上自定义主屏幕体验。 可将设备配置为运行一个应用或运行多个应用。 设备设置为展台模式时，只能使用你添加的应用。
 
 **注册配置文件类型**：选择注册配置文件类型以开始在设备上配置微软桌面或 Microsoft 托管主屏幕。 选项包括：
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973020"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239974"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>为受管理的 iOS/iPadOS 设备添加应用配置策略
 
@@ -193,20 +193,33 @@ DEP（Apple 的设备注册计划）注册与 App Store 版公司门户应用不
 2. 转到“应用” > “应用配置策略”，为公司门户应用创建应用配置策略。
 3. 使用以下 XML 创建应用配置策略。 有关如何创建应用配置策略和输入 XML 数据的详细信息，请参阅[为受管理的 iOS/iPadOS 设备添加应用配置策略](app-configuration-policies-use-ios.md)。
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - 在需要用户关联才能注册的 DEP 设备上使用公司门户：
 
-3. 使用面向所需组的应用配置策略将公司门户部署到设备。 请确保将策略仅部署到已注册 DEP 的设备组。
-4. 告诉最终用户在自动安装公司门户应用后登录到该应用。
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - 在无需用户关联即可注册的 DEP 设备上使用公司门户：
+
+        > [!NOTE]
+        > 将登录到公司门户的用户设置为设备的主要用户。
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. 使用面向所需组的应用配置策略将公司门户部署到设备。 请确保将策略仅部署到已注册 DEP 的设备组。
+5. 告诉最终用户在自动安装公司门户应用后登录到该应用。
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>监视每个设备的 iOS/iPadOS 应用配置状态 
 分配配置策略后，可监视每个受管理设备的 iOS/iPadOS 应用配置状态。   从 Azure 门户的“Microsoft Intune”中，选择“设备” > “所有设备”。 从受管理设备列表中选择特定设备，以显示该设备的窗格。 在该设备的窗格上，选择“应用配置”。  

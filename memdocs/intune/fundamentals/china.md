@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022341"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137392"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune 由世纪互联在中国运营  
 
@@ -39,6 +39,7 @@ Microsoft 不亲自参与该服务的运营。 由世纪互联运营、提供和
 - 由世纪互联运营的 Intune 仅支持独立部署。 目前正在开发对 System Center Configuration Manager 中的共同管理的支持。
 - 不支持从公有云迁移到主权云。 有兴趣迁移到由世纪互联运营的 Intune 的客户必须手动迁移。
 - 目前不支持租户附加功能（无需注册即可将设备同步到 Intune 以支持云控制台方案）。
+- 由世纪互联运营的 Intune 不支持派生凭据。
 - 由世纪互联运营的 Intune 不支持 Intune 代理，因此不支持旧式电脑管理。
 - 通过使用现代 MDM 渠道支持 Windows 10 的管理。
 - 由世纪互联运营的 Intune 不支持本地 Exchange Connector。

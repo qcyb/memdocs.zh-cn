@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 07/08/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,16 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: e849936e7e0686af3377fd4d10182d3a4eb84458
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881533"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137444"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>通过公司门户和 Entrust Datacard 设置 iOS 或 iPadOS 设备
 
-通过 Intune 公司门户应用注册设备，以获取对组织的电子邮件、文件和应用的安全移动访问权限。 注册设备后，它将成为托管设备  。 组织可通过移动设备管理 (MDM) 提供程序（如 Intune）为该设备分配策略和应用。  
+通过 Intune 公司门户应用注册设备，以获取对组织的电子邮件、文件和应用的安全移动访问权限。 注册设备后，它将成为托管设备。 组织可通过移动设备管理 (MDM) 提供程序（如 Intune）为该设备分配策略和应用。  
 
 在注册期间，还需在设备上安装派生凭据。 你的组织可能要求你在访问资源时使用派生凭据作为身份验证方法，或对电子邮件进行签名和加密。 
 
@@ -62,7 +62,7 @@ ms.locfileid: "83881533"
 
 
 ## <a name="enroll-device"></a>注册设备  
-1. 打开移动设备上适用于 iOS/iPadOS 的公司门户应用，并使用你的工作帐户登录。  
+1. 打开移动设备上适用于 iOS/iPadOS 的公司门户应用，并选择用于从其他设备登录的选项。  
 
 2. 记下屏幕代码。  
 
@@ -79,27 +79,27 @@ ms.locfileid: "83881533"
 
     ![设备主屏幕上的公司门户推送通知的示例屏幕截图。](./media/action-required-in-app-intercede.png)  
 
-8. “设置移动智能卡访问权限”屏幕  ：   
+8. “设置移动智能卡访问权限”屏幕：   
     a. 点击指向组织设置说明的链接。 如果你的组织未提供其他说明，你将参阅本文。  
-    b. 点击“开始”  。  
+    b. 点击“开始”。  
 
     ![公司门户的示例屏幕截图，“设置移动智能卡访问权限”屏幕。](./media/smart-card-info-intercede.png)
 
 9. 切换到已启用智能卡的设备并打开 IdentityGuard。 
 10. 找到智能凭据登录区域，然后选择登录按钮。  
-11. 当系统提示你选择证书时，选择你的智能卡凭据。 然后选择“确定”  。 
+11. 当系统提示你选择证书时，选择你的智能卡凭据。 然后选择“确定”。 
 12. 输入智能卡 PIN。  
-13. 系统会要求你从操作列表中进行选择。 选择使你可以注册派生移动智能凭据的操作。 链接或按钮可能会显示“我要注册派生移动智能卡凭据”。   
+13. 系统会要求你从操作列表中进行选择。 选择使你可以注册派生移动智能凭据的操作。 链接或按钮可能会显示“我要注册派生移动智能卡凭据”。  
 14. 选择已成功下载并安装了启用智能凭据的应用程序。 然后继续到下一个屏幕。   
 15. 输入有关派生智能卡凭据的信息。  
-    a. 对于标识名称，请输入任何名称，如 Entrust Derived Cred  。  
-    b. 在下拉菜单中，选择“委托 IdentityGudard 移动智能凭据”  。  
+    a. 对于标识名称，请输入任何名称，如 Entrust Derived Cred。  
+    b. 在下拉菜单中，选择“委托 IdentityGudard 移动智能凭据”。  
     c. 继续到下一个屏幕。 将看到一个 QR 码，下面有一个数字密码。  
 
-16. 返回到你的移动设备。 在“公司门户”>“获取 QR 码”  屏幕上，点击“继续”  。 
+16. 返回到你的移动设备。 在“公司门户”>“获取 QR 码”屏幕上，点击“继续”。 
 
     ![公司门户“获取 QR 码”屏幕的示例屏幕截图。](./media/get-qr-code-intercede.png)  
-17. 点击“使用相机”   > “确定”  。  
+17. 点击“使用相机” > “确定”。  
 
     ![请求获得相机访问权限的公司门户提示的示例屏幕截图。](./media/allow-cp-camera-access-intercede.png)  
 18. 扫描支持智能卡的设备上的 QR 码图像。  

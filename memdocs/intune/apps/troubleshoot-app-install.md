@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270885"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285277"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>排查应用安装问题
 
@@ -119,6 +119,9 @@ ARM64 设备支持的应用类型包括以下各项：
 - 移动 MSI LOB 应用
 - 要求规则为 32 位的 Win32 应用。
 - 如果选择了 32 位或 x86 体系结构，则为 Windows Office 即点即用应用。
+
+> [!NOTE]
+> 为了更好地识别公司门户中的 ARM64 应用程序，请考虑将 ARM64 添加到 ARM64 应用的名称中。 
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>对 Microsoft 应用商店中的应用进行故障排除
 

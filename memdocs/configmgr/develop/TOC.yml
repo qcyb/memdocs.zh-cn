@@ -1,0 +1,998 @@
+- name: Configuration Manager SDK 文档
+  href: index.yml
+- name: 概述
+  items:
+    - name: Configuration Manager SDK 概述
+      href: core/misc/system-center-configuration-manager-sdk.md
+    - name: 隐私信息
+      href: core/misc/privacy/privacy-information.md
+    - name: SDK 的新变化
+      href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+- name: 要求
+  items:
+    - name: 关于 SDK 要求
+      href: core/reqs/about-configuration-manager-sdk-requirements.md
+    - name: 客户端运行时要求
+      href: core/reqs/client-runtime-requirements.md
+    - name: 服务器运行时要求
+      href: core/reqs/server-runtime-requirements.md
+    - name: 客户端开发要求
+      href: core/reqs/client-development-requirements.md
+    - name: 服务器开发要求
+      href: core/reqs/server-development-requirements.md
+    - name: SDK 库和头文件
+      href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
+- name: SDK 示例
+  href: core/understand/configuration-manager-sdk-samples.md
+- name: 编程基础知识
+  items:
+    - name: Configuration Manager 编程入门
+      items:
+        - name: Configuration Manager 编程入门
+          href: core/understand/getting-started-with-configuration-manager-programming.md
+        - name: 体系结构概述
+          href: core/understand/architectural-overview.md
+        - name: WBEMTEST 简介
+          href: core/understand/introduction-to-wbemtest.md
+        - name: 列出、创建、修改和删除操作的简单示例
+          href: core/understand/simple-example-of-list--create--modify--and-delete.md
+    - name: 调用 Configuration Manager 代码片段
+      href: core/understand/calling-code-snippets.md
+    - name: 为站点加密密码或数据
+      href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
+    - name: 错误
+      items:
+        - name: 关于错误
+          href: core/understand/about-configuration-manager-errors.md
+        - name: 使用托管代码处理异步错误
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md
+        - name: 使用托管代码处理异步错误
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-managed-code.md
+        - name: 使用 WMI 处理异步错误
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md
+        - name: 使用 WMI 处理同步错误
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md
+    - name: 对象
+      items:
+        - name: 关于对象
+          items:
+            - name: 对象概述
+              href: core/understand/configuration-manager-objects-overview.md
+            - name: 对象安全性
+              href: core/understand/configuration-manager-object-security.md
+            - name: 嵌入对象
+              href: core/understand/embedded-objects.md
+            - name: 关联类
+              href: core/understand/association-classes.md
+            - name: 日期和时间格式
+              href: core/understand/date-and-time-formats.md
+            - name: 位域属性
+              href: core/understand/configuration-manager-bit-field-properties.md
+            - name: 延迟属性
+              href: core/understand/configuration-manager-lazy-properties.md
+            - name: 扩展 WMI 查询语言
+              href: core/understand/extended-wmi-query-language.md
+            - name: 结果集
+              href: core/understand/result-sets.md
+            - name: 特殊查询
+              href: core/understand/special-queries.md
+        - name: 结合使用对象与托管代码
+          items:
+            - name: 创建对象
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md
+            - name: 读取对象
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md
+            - name: 修改对象
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md
+            - name: 删除对象
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md
+            - name: 执行异步查询
+              href: core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md
+            - name: 执行同步查询
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md
+            - name: 读取延迟属性
+              href: core/understand/how-to-read-lazy-properties-by-using-managed-code.md
+            - name: 调用对象类方法
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md
+        - name: 结合使用对象与 WMI
+          items:
+            - name: 创建对象
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md
+            - name: 读取对象
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md
+            - name: 修改对象
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md
+            - name: 删除对象
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md
+            - name: 执行同步查询
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md
+            - name: 执行异步查询
+              href: core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md
+            - name: 读取延迟属性
+              href: core/understand/how-to-read-lazy-properties-by-using-wmi.md
+            - name: 调用对象类方法
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md
+    - name: 查询
+      items:
+        - name: 关于查询
+          href: core/understand/about-configuration-manager-queries.md
+        - name: 运行查询
+          href: core/understand/how-to-run-a-query.md
+        - name: 创建查询
+          href: core/understand/how-to-create-a-configuration-manager-query.md
+    - name: SEDO
+      items:
+        - name: SEDO 概述
+          href: core/understand/sedo.md
+        - name: 在已启用 SEDO 的对象上获取锁定
+          href: core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md
+        - name: 在已启用 SEDO 的对象上解除锁定
+          href: core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md
+    - name: 计划
+      items:
+        - name: 关于计划
+          href: core/understand/about-configuration-manager-schedules.md
+        - name: 创建计划令牌
+          href: core/understand/how-to-create-a-schedule-token.md
+    - name: 站点控制文件
+      items:
+        - name: 关于站点控制文件
+          href: core/understand/about-the-configuration-manager-site-control-file.md
+        - name: 使用托管代码执行读写操作
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md
+        - name: 使用 WMI 执行读写操作
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
+        - name: 读取站点控制文件嵌入属性列表
+          href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
+        - name: 部署站点系统角色
+          href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
+    - name: 类架构
+      items:
+        - name: 类架构概述
+          href: core/understand/configuration-manager-class-schema.md
+        - name: 日期和时间格式
+          href: core/understand/date-and-time-formats.md
+        - name: 解释位域属性
+          href: core/understand/interpreting-bitfield-properties.md
+        - name: 延迟属性
+          href: core/understand/lazy-properties.md
+        - name: SMS 提供程序字段长度限制
+          href: core/understand/sms-provider-field-length-restrictions.md
+    - name: 数据库架构和视图
+      items:
+        - name: 关于数据库架构
+          items:
+            - name: 架构概述
+              href: core/understand/configuration-manager-schema-overview.md
+            - name: 架构 SQL 视图
+              href: core/understand/configuration-manager-schema-sql-views.md
+            - name: 架构视图映射
+              href: core/understand/configuration-manager-schema-view-mapping.md
+            - name: SQL 视图安全性
+              href: core/understand/sql-view-security.md
+        - name: 使用 SQL Server 查看 Configuration Manager 视图
+          href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
+        - name: 使用 SQL Server 视图创建自定义报告
+          items:
+            - name: 概述
+              href: core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+            - name: SQL Server 视图
+              items:
+                - name: 概述
+                  href: core/understand/sqlviews/sql-server-views-configuration-manager.md
+                - name: 应用程序管理视图
+                  href: core/understand/sqlviews/application-management-views-configuration-manager.md
+                - name: 客户端部署视图
+                  href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
+                - name: 客户端状态视图
+                  href: core/understand/sqlviews/client-status-views-configuration-manager.md
+                - name: 集合视图
+                  href: core/understand/sqlviews/collection-views-configuration-manager.md
+                - name: 符合性设置视图
+                  href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
+                - name: 内容管理视图
+                  href: core/understand/sqlviews/content-management-views-configuration-manager.md
+                - name: 发现视图
+                  href: core/understand/sqlviews/discovery-views-configuration-manager.md
+                - name: Endpoint Protection 视图
+                  href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
+                - name: 清单视图
+                  items:
+                    - name: 清单视图概述
+                      href: core/understand/sqlviews/inventory-views-configuration-manager.md
+                    - name: 硬件清单视图
+                      href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
+                    - name: 软件清单视图
+                      href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
+                    - name: 资产智能视图
+                      href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
+                - name: 迁移视图
+                  href: core/understand/sqlviews/migration-views-configuration-manager.md
+                - name: MDM 视图
+                  href: core/understand/sqlviews/mobile-device-management-views-configuration-manager.md
+                - name: OS 部署视图
+                  href: core/understand/sqlviews/operating-system-deployment-views-configuration-manager.md
+                - name: 电源管理视图
+                  href: core/understand/sqlviews/power-management-views-configuration-manager.md
+                - name: 查询视图
+                  href: core/understand/sqlviews/query-views-configuration-manager.md
+                - name: 报告视图
+                  href: core/understand/sqlviews/reporting-views-configuration-manager.md
+                - name: 架构视图
+                  href: core/understand/sqlviews/schema-views-configuration-manager.md
+                - name: 安全性视图
+                  href: core/understand/sqlviews/security-views-configuration-manager.md
+                - name: 站点管理视图
+                  href: core/understand/sqlviews/site-admin-views-configuration-manager.md
+                - name: 软件计数视图
+                  href: core/understand/sqlviews/software-metering-views-configuration-manager.md
+                - name: 软件更新视图
+                  href: core/understand/sqlviews/software-updates-views-configuration-manager.md
+                - name: 状态和警报视图
+                  href: core/understand/sqlviews/status-alert-views-configuration-manager.md
+                - name: LAN 唤醒视图
+                  href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
+            - name: 使用报告
+              items:
+                - name: 评估现有报告
+                  items:
+                    - name: 评估“所有集合”报告
+                      href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
+                    - name: 评估“计算机信息”报告
+                      href: core/understand/sqlviews/evaluation-computer-information-report-configuration-manager.md
+                - name: 查看报告的 SQL 语句
+                  href: core/understand/sqlviews/how-to-view-sql-statement-configuration-manager-reports.md
+                - name: 修改报告
+                  href: core/understand/sqlviews/how-to-modify-configuration-manager-reports.md
+                - name: 创建报表
+                  href: core/understand/sqlviews/how-to-create-configuration-manager-reports.md
+                - name: 运行报表
+                  href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
+                - name: 练习：创建自定义报告
+                  items:
+                    - name: 练习 1 - 运行现有报告
+                      href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
+                    - name: 练习 2 - 修改现有报告
+                      href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
+                    - name: 练习 3 - 新建报告
+                      href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
+                    - name: 高级练习 1 - 新建符合性设置的报告
+                      href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
+                    - name: 高级练习 1 - 解决方案
+                      href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
+                    - name: 高级练习 2 - 新建硬件清单的报告
+                      href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
+                    - name: 高级练习 2 - 解决方案
+                      href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
+            - name: SQL Server 视图的技术参考
+              items:
+                - name: 使用 SQL 视图的示例查询
+                  items:
+                    - name: 应用程序管理
+                      href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
+                    - name: 客户端部署
+                      href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
+                    - name: 客户端状态
+                      href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
+                    - name: 集合
+                      href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
+                    - name: 符合性设置
+                      href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
+                    - name: 内容管理
+                      href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
+                    - name: 发现
+                      href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
+                    - name: Endpoint Protection
+                      href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
+                    - name: 库存
+                      items:
+                        - name: 硬件清单
+                          href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
+                        - name: 软件清单
+                          href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
+                        - name: 资产智能
+                          href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
+                    - name: MDM
+                      href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
+                    - name: OS 部署
+                      href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
+                    - name: 电源管理
+                      href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
+                    - name: 查询
+                      href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
+                    - name: 安全
+                      href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
+                    - name: 站点管理
+                      href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
+                    - name: 软件计数
+                      href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
+                    - name: 软件更新
+                      href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
+                    - name: 状态和警报
+                      href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
+                    - name: LAN 唤醒
+                      href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
+                - name: Configuration Manager 报告的 SQL Server 参考
+                  items:
+                    - name: 报告的 SQL 语句参考
+                      href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
+                    - name: 使用查询设计器编写报告 SQL 语句
+                      href: core/understand/sqlviews/use-query-designer-write-configuration-manager-report-sql-statements.md
+                    - name: 使用查询设计器创建 SQL 语句
+                      href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
+                - name: SMS 提供程序 WMI 架构参考
+                  items:
+                    - name: 概述
+                      href: core/understand/sqlviews/sms-provider-wmi-schema-reference-configuration-manager.md
+                    - name: 报告的 WMI 命名空间和类
+                      href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
+            - name: Configuration Manager 中的报表列表
+              href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
+    - name: SMS 提供程序
+      items:
+        - name: 关于 SMS 提供程序
+          items:
+            - name: SMS 提供程序基础知识
+              href: core/understand/sms-provider-fundamentals.md
+            - name: WMI 提供程序基础知识
+              href: core/understand/wmi-configuration-manager-provider-fundamentals.md
+            - name: 托管 SMS 提供程序基础知识
+              href: core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md
+            - name: Configuration Manager 上下文限定符
+              href: core/understand/context-qualifiers.md
+            - name: SMS 提供程序字段长度限制
+              href: core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md
+        - name: 使用托管代码连接到 SMS 提供程序
+          href: core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md
+        - name: 使用托管代码添加上下文限定符
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md
+        - name: 使用 WMI 连接到 SMS 提供程序
+          href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
+        - name: 使用 WMI 添加上下文限定符
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
+    - name: 保护 Configuration Manager 应用程序
+      href: core/understand/securing-configuration-manager-applications.md
+- name: 应用程序管理
+  items:
+    - name: 通过脚本部署类型创建应用程序
+      href: apps/how-to-create-an-application-with-the-script-deployment-type.md
+    - name: 应用程序批准流程
+      href: apps/application-approval-process.md
+    - name: 应用程序管理扩展
+      items:
+        - name: 部署类型扩展版本控制
+          href: apps/deployment-type-extension-versioning.md
+        - name: 方案 - 扩展应用程序管理
+          items:
+            - name: 方案概述
+              href: apps/extending-application-management-overview.md
+            - name: 创建自定义 SDK 程序集
+              items:
+                - name: 定义部署技术
+                  href: apps/how-to-define-the-deployment-technology.md
+                - name: 定义托管技术
+                  href: apps/how-to-define-the-hosting-technology.md
+                - name: 定义安装程序技术
+                  href: apps/how-to-define-the-installer-technology.md
+                - name: 定义内容导入程序
+                  href: apps/how-to-define-the-content-importer.md
+                - name: 定义安装程序
+                  href: apps/how-to-define-the-installer.md
+                - name: 定义资源
+                  href: apps/how-to-define-the-resources.md
+            - name: 创建注册 XML 文件
+              items:
+                - name: 定义部署技术注册文件
+                  href: apps/how-to-define-the-deployment-technology-registration-file.md
+                - name: 定义托管技术注册文件
+                  href: apps/how-to-define-the-hosting-technology-registration-file.md
+                - name: 定义安装程序技术注册文件
+                  href: apps/how-to-define-the-installer-technology-registration-file.md
+            - name: 创建 UI 扩展
+              items:
+                - name: 定义 UI 扩展程序集
+                  href: apps/how-to-define-the-ui-extension-assembly.md
+                - name: 定义“创建应用程序”向导 XML 文件
+                  href: apps/how-to-define-the-create-application-wizard-xml-file.md
+                - name: 定义“创建部署类型”向导 XML 文件
+                  href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
+                - name: 定义部署类型属性表 XML 文件
+                  href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
+            - name: 创建客户端文件
+              items:
+                - name: 定义 AppSynclet MOF 文件
+                  href: apps/how-to-define-the-appsynclet-mof-file.md
+                - name: 定义客户端处理程序
+                  href: apps/how-to-define-the-client-side-handler.md
+            - name: 安装应用程序管理扩展
+              items:
+                - name: 创建部署类型扩展文件 (cmdtx)
+                  href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
+                - name: 创建 Windows Installer 文件 (msi)
+                  href: apps/how-to-create-the-windows-installer-file-msi.md
+            - name: 验证应用程序管理扩展
+              href: apps/verifying-the-application-management-extension.md
+- name: 客户端编程
+  items:
+    - name: Configuration Manager 客户端 WMI 编程
+      items:
+        - name: 关于 WMI 编程
+          href: core/clients/programming/about-configuration-manager-wmi-programming.md
+        - name: 使用 System.Management 连接到客户端 WMI 命名空间
+          href: core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md
+        - name: 使用 System.Management 读取 WMI 对象
+          href: core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md
+        - name: 使用 System.Management 执行同步查询
+          href: core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md
+        - name: 使用 System.Management 执行异步查询
+          href: core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md
+        - name: 使用 System.Management 调用 WMI 类方法
+          href: core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md
+    - name: 客户端资源条件
+      href: core/clients/programming/client-resource-conditions.md
+    - name: 应用自定义客户端设置
+      href: core/clients/programming/how-to-apply-custom-client-settings.md
+- name: 集合
+  items:
+    - name: 创建动态集合
+      href: core/clients/collections/how-to-create-a-dynamic-collection.md
+    - name: 创建静态集合
+      href: core/clients/collections/how-to-create-a-static-collection.md
+    - name: 枚举集合成员
+      href: core/clients/collections/how-to-enumerate-the-members-of-a-collection.md
+    - name: 修改集合
+      href: core/clients/collections/how-to-modify-a-collection.md
+    - name: 删除集合
+      href: core/clients/collections/how-to-delete-a-collection.md
+    - name: 获取集合属性
+      href: core/clients/collections/how-to-get-the-properties-of-a-collection.md
+    - name: 启动一次性成员身份评估
+      href: core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md
+- name: 符合性设置
+  items:
+    - name: 设置和配置
+      items:
+        - name: 关于设置和配置
+          href: compliance/about-compliance-settings--dcm--setup-and-configuration.md
+        - name: 启用或禁用符合性设置代理
+          href: compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md
+        - name: 配置默认符合性评估计划
+          href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
+    - name: 配置基线和配置项目
+      items:
+        - name: 关于配置基线和配置项目
+          href: compliance/about-configuration-baselines-and-configuration-items.md
+        - name: 导入配置基线和配置项目
+          href: compliance/how-to-import-configuration-baselines-and-configuration-items.md
+        - name: 导出配置基线和配置项目
+          href: compliance/how-to-export-configuration-baselines-and-configuration-items.md
+        - name: 分配配置基线
+          href: compliance/how-to-assign-configuration-baselines.md
+        - name: 列出配置分配
+          href: compliance/how-to-list-configuration-assignments.md
+    - name: 符合性设置扩展性
+      href: compliance/about-compliance-settings--dcm--extensibility.md
+    - name: 创作配置基线和配置项目
+      items:
+        - name: 关于创作配置基线和配置项目
+          href: compliance/about-authoring-configuration-baselines-and-configuration-items.md
+        - name: 配置基线示例
+          items:
+            - name: 关于配置基线
+              href: compliance/about-configuration-baselines.md
+            - name: 配置基线示例
+              href: compliance/configuration-baseline-example-1.md
+        - name: 应用程序配置项目示例
+          items:
+            - name: 关于应用程序配置项目
+              href: compliance/about-application-configuration-items.md
+            - name: 应用程序配置项目示例 1
+              href: compliance/application-configuration-item-example-1.md
+            - name: 应用程序配置项目示例 2
+              href: compliance/application-configuration-item-example-2.md
+        - name: OS 配置项目示例
+          items:
+            - name: 关于 OS 配置项目
+              href: compliance/about-operating-system-configuration-item-examples.md
+            - name: OS 配置项目示例
+              href: compliance/operating-system-configuration-item-example-1.md
+        - name: 常规配置项目示例
+          items:
+            - name: 关于常规配置项目
+              href: compliance/about-general-configuration-items.md
+            - name: 常规配置项目示例
+              href: compliance/general-configuration-item-example-1.md
+- name: 控制台扩展
+  items:
+    - name: 关于控制台扩展
+      href: core/servers/console/about-configuration-manager-console-extension.md
+    - name: 控制台扩展体系结构
+      href: core/servers/console/console-extension-architecture.md
+    - name: 控制台扩展部署
+      href: core/servers/console/console-extension-deployment.md
+    - name: 控制台操作
+      items:
+        - name: 关于控制台操作
+          items:
+            - name: 操作
+              href: core/servers/console/configuration-manager-actions.md
+            - name: 操作 XML
+              href: core/servers/console/configuration-manager-action-xml.md
+            - name: 条件操作
+              href: core/servers/console/conditional-actions.md
+            - name: 可执行操作
+              href: core/servers/console/executable-action.md
+            - name: ShowDialog 操作
+              href: core/servers/console/showdialog-action.md
+            - name: 报告操作
+              href: core/servers/console/report-action.md
+            - name: AssemblyType 操作
+              href: core/servers/console/assemblytype-action.md
+            - name: 组操作
+              href: core/servers/console/group-action.md
+        - name: 创建操作
+          href: core/servers/console/how-to-create-a-configuration-manager-action.md
+    - name: 控制台窗体
+      items:
+        - name: 关于控制台窗体
+          href: core/servers/console/about-configuration-manager-console-forms.md
+        - name: 创建属性表
+          href: core/servers/console/how-to-create-a-configuration-manager-property-sheet.md
+        - name: 创建属性表的窗体 XML
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md
+        - name: 将属性页添加到现有属性表
+          href: core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md
+        - name: 创建属性表的操作 XML
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md
+        - name: 创建对话框
+          href: core/servers/console/how-to-create-a-configuration-manager-dialog-box.md
+        - name: 创建对话框的窗体 XML
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md
+        - name: 创建对话框的操作 XML
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md
+        - name: 使用传递给窗体的对象
+          href: core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md
+        - name: 将数据绑定到窗体
+          href: core/servers/console/how-to-bind-configuration-manager-data-to-a-form.md
+    - name: 控制台管理类
+      items:
+        - name: 关于控制台管理类
+          href: core/servers/console/about-configuration-manager-console-management-classes.md
+        - name: 控制台管理类 XML
+          href: core/servers/console/console-management-class-xml.md
+    - name: 控制台节点
+      items:
+        - name: 关于控制台节点
+          href: core/servers/console/about-configuration-manager-console-nodes.md
+        - name: 控制台节点 XML
+          href: core/servers/console/console-node-xml.md
+        - name: 控制台 RootNodes 元素
+          href: core/servers/console/console-rootnodes-element.md
+        - name: 控制台 ResourceAssembly 元素
+          href: core/servers/console/console-resourceassembly-element.md
+        - name: 创建控制台节点
+          href: core/servers/console/how-to-create-a-configuration-manager-console-node.md
+        - name: 查找控制台代码 GUID
+          href: core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md
+    - name: 控制台视图
+      items:
+        - name: 关于控制台视图
+          href: core/servers/console/about-configuration-manager-console-views.md
+        - name: 创建自定义视图
+          href: core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md
+        - name: 创建网格视图的节点 XML
+          href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
+- name: 发现
+  items:
+    - name: 配置检测信号发现
+      href: core/servers/configure/how-to-configure-heartbeat-discovery.md
+    - name: 配置网络发现
+      href: core/servers/configure/how-to-configure-network-discovery.md
+    - name: 配置 Active Directory 组发现
+      href: core/servers/configure/how-to-configure-active-directory-group-discovery.md
+    - name: 配置 Active Directory 系统发现
+      href: core/servers/configure/how-to-configure-active-directory-system-discovery.md
+    - name: 配置 Active Directory 用户发现
+      href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
+    - name: 扩展资源发现
+      items:
+        - name: 在资源发现中使用 DDR
+          items:
+            - name: 关于 DDR 属性
+              href: core/servers/configure/about-ddr-properties.md
+            - name: 更新现有资源实例
+              href: core/servers/configure/about-updating-an-existing-resource-instance.md
+            - name: 创建数据发现记录 (DDR)
+              href: core/servers/configure/about-creating-a-data-discovery-record.md
+            - name: 关于资源的唯一标识符值
+              href: core/servers/configure/about-the-unique-identifier-value-for-a-resource.md
+        - name: 获取客户端的唯一标识符值
+          href: core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md
+        - name: 将新属性添加到现有资源类型
+          href: core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md
+        - name: 创建 DDR
+          href: core/servers/configure/how-to-create-a-data-discovery-record.md
+- name: 库存
+  items:
+    - name: 关于清单
+      href: core/clients/inventory/about-configuration-manager-inventory.md
+    - name: 硬件清单
+      items:
+        - name: 启用硬件清单
+          href: core/clients/inventory/how-to-enable-hardware-inventory.md
+        - name: 配置硬件清单设置
+          href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
+        - name: IDMIF 文件的要求
+          href: core/clients/inventory/requirements-of-idmif-files.md
+        - name: 重置硬件清单缓存
+          href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
+    - name: 软件清单
+      items:
+        - name: 启用软件清单
+          href: core/clients/inventory/how-to-enable-software-inventory.md
+        - name: 配置软件清单设置
+          href: core/clients/inventory/how-to-configure-software-inventory-settings.md
+        - name: 重置软件清单缓存
+          href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
+    - name: 导入 MOF 文件以扩展清单
+      href: core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md
+    - name: 启动资产智能同步
+      href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
+- name: MDM 旧客户端
+  items:
+    - name: 配置移动设备客户端代理设置
+      href: mdm/how-to-configure-mobile-device-client-agent-settings.md
+    - name: 为移动设备创建软件分发包、程序和播发
+      href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
+- name: OS 部署
+  items:
+    - name: OS 部署站点角色配置
+      items:
+        - name: 关于 OS 部署站点角色配置
+          href: osd/about-operating-system-deployment-site-role-configuration.md
+        - name: 创建状态迁移点角色
+          href: osd/how-to-create-a-state-migration-point-role.md
+        - name: 删除状态迁移点角色
+          href: osd/how-to-delete-a-state-migration-point-role.md
+        - name: 添加状态迁移点文件夹
+          href: osd/how-to-add-a-state-migration-point-folder.md
+        - name: 设置状态迁移点的仅还原模式
+          href: osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md
+        - name: 设置状态迁移点的删除策略
+          href: osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md
+        - name: 启用已启用 PXE 的分发点角色
+          href: osd/how-to-enable-a-pxe-service-point-role.md
+        - name: 禁用已启用 PXE 的分发点角色
+          href: osd/how-to-disable-a-pxe-service-point-role.md
+        - name: 启用未知计算机支持
+          href: osd/how-to-enable-unknown-computer-support-for-a-pxe-service-point.md
+        - name: 设置对 PXE 请求的响应
+          href: osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md
+        - name: 设置 PXE 响应延迟
+          href: osd/how-to-set-the-response-delay-for-a-pxe-service-point.md
+        - name: 设置对所有网络接口的 PXE 响应
+          href: osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md
+        - name: 设置特定网络接口的 PXE 响应
+          href: osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md
+        - name: 设置 OS 部署品牌信息
+          href: osd/how-to-set-operating-system-deployment-branding-information.md
+    - name: OS 部署任务序列
+      items:
+        - name: 关于任务序列
+          items:
+            - name: 任务序列概述
+              href: osd/operating-system-deployment-task-sequences-overview.md
+            - name: 任务序列对象模型
+              href: osd/operating-system-deployment-task-sequence-object-model.md
+        - name: 创建任务序列
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence.md
+        - name: 创建任务序列包
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-package.md
+        - name: 从任务序列包中读取任务序列
+          href: osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md
+        - name: 枚举可用任务序列
+          href: osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md
+        - name: 添加任务序列操作
+          href: osd/how-to-add-an-operating-system-deployment-task-sequence-action.md
+        - name: 删除任务序列操作
+          href: osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md
+        - name: 将条件添加到任务序列步骤
+          href: osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md
+        - name: 枚举任务序列中的步骤
+          href: osd/how-to-enumerate-the-steps-in-an-operating-system-deployment-task-sequence.md
+        - name: 对任务序列重新排序
+          href: osd/how-to-reorder-an-operating-system-deployment-task-sequence.md
+        - name: 创建任务序列组
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-group.md
+        - name: 将步骤添加到任务系列组
+          href: osd/how-to-add-a-step-to-an-operating-system-deployment-group.md
+        - name: 从任务序列组中删除步骤
+          href: osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md
+        - name: 将步骤移到其他任务序列组
+          href: osd/how-to-move-a-step-to-a-different-task-sequence-group.md
+        - name: 使用任务序列变量
+          href: osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md
+        - name: 设置任务序列变量
+          href: osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md
+    - name: OS 部署计算机管理
+      items:
+        - name: 关于计算机管理
+          href: osd/about-computer-management.md
+        - name: 导入新计算机
+          href: osd/how-to-import-a-new-computer-into-configuration-manager.md
+        - name: 在两台计算机之间建立关联
+          href: osd/how-to-create-an-association-between-two-computers-in-configuration-manager.md
+        - name: 创建集合变量
+          href: osd/how-to-create-a-collection-variable.md
+        - name: 创建计算机变量
+          href: osd/how-to-create-a-computer-variable.md
+        - name: 跟踪 OS 部署迁移
+          href: osd/how-to-track-operating-system-deployment-migrations.md
+    - name: OS 部署映像管理
+      items:
+        - name: 关于映像管理
+          href: osd/about-operating-system-deployment-image-management.md
+        - name: 添加 OS 映像包
+          href: osd/how-to-add-an-operating-system-image-package-in-configuration-manager.md
+        - name: 更新 OS 映像包
+          href: osd/how-to-update-an-operating-system-image-package.md
+        - name: 查看 OS 映像的属性
+          href: osd/how-to-view-the-properties-for-an-operating-system-image.md
+        - name: 从 WIM 文件中添加启动映像
+          href: osd/how-to-add-a-boot-image-from-a-wim-file.md
+        - name: 添加 OS 升级包
+          href: osd/how-to-add-an-operating-system-install-package.md
+        - name: 清除集合的 PXE 播发
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md
+        - name: 清除资源的 PXE 播发
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md
+    - name: OS 部署驱动程序管理
+      items:
+        - name: 关于驱动程序管理
+          href: osd/about-operating-system-deployment-driver-management.md
+        - name: 导入 INF 文件描述的驱动程序
+          href: osd/how-to-import-a-windows-driver-described-by-an-inf-file.md
+        - name: 导入 txtsetup.oem 文件描述的驱动程序
+          href: osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md
+        - name: 创建驱动程序的驱动程序包
+          href: osd/how-to-create-a-driver-package-for-a-windows-driver.md
+        - name: 将驱动程序添加到启动映像
+          href: osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md
+        - name: 从启动映像中删除驱动程序
+          href: osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md
+        - name: 启用或禁用驱动程序
+          href: osd/how-to-enable-or-disable-a-windows-driver.md
+        - name: 删除驱动程序
+          href: osd/how-to-delete-a-windows-driver-from-configuration-manager.md
+        - name: 删除驱动程序包
+          href: osd/how-to-delete-a-driver-package-in-configuration-manager.md
+        - name: 指定驱动程序的受支持平台
+          href: osd/how-to-specify-the-supported-platforms-for-a-driver.md
+        - name: 将类别添加到驱动程序
+          href: osd/how-to-add-a-category-to-a-windows-driver.md
+        - name: 从驱动程序中删除类别
+          href: osd/how-to-remove-a-category-from-a-windows-driver.md
+    - name: 扩展 OS 部署
+      items:
+        - name: 关于 Configuration Manager 自定义操作
+          href: osd/about-configuration-manager-custom-actions.md
+        - name: 关于自定义操作客户端应用程序
+          href: osd/about-configuration-manager-custom-action-client-applications.md
+        - name: 关于自定义操作 MOF 文件
+          href: osd/about-configuration-manager-custom-action-mof-files.md
+        - name: 关于报告自定义操作进度
+          href: osd/about-reporting-configuration-manager-custom-action-progress.md
+        - name: 创建自定义操作控件
+          href: osd/how-to-create-a-configuration-manager-custom-action-control.md
+        - name: 创建自定义操作的 MOF 文件
+          href: osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md
+        - name: 使用自定义操作控件
+          href: osd/how-to-use-a-configuration-manager-custom-action-control.md
+- name: 基于角色的管理
+  items:
+    - name: 基于角色的管理概述
+      href: core/servers/configure/role-based-administration.md
+    - name: 管理用户管理
+      items:
+        - name: 检查用户是否拥有对象的权限
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md
+        - name: 检查用户是否拥有资源的权限
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md
+        - name: 枚举用户或安全组的管理分配
+          href: core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md
+        - name: 新建管理员
+          href: core/servers/configure/how-to-create-a-new-administrator.md
+        - name: 新建安全角色
+          href: core/servers/configure/how-to-create-a-new-security-role.md
+    - name: 安全作用域管理
+      items:
+        - name: 新建安全作用域
+          href: core/servers/configure/how-to-create-a-new-security-scope.md
+        - name: 删除安全作用域
+          href: core/servers/configure/how-to-delete-a-security-scope.md
+        - name: 关联对象与安全作用域
+          href: core/servers/configure/how-to-associate-an-object-with-a-security-scope.md
+        - name: 取消关联对象与安全作用域
+          href: core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md
+- name: 远程工具
+  items:
+    - name: 启用和禁用远程工具
+      href: core/clients/remote-control/how-to-enable-and-disable-remote-tools.md
+    - name: 配置远程工具设置
+      href: core/clients/remote-control/how-to-configure-remote-tools-settings.md
+- name: 软件分发
+  items:
+    - name: 软件分发概述
+      href: core/servers/configure/software-distribution-overview.md
+    - name: 包
+      items:
+        - name: 关于包定义文件
+          href: core/servers/configure/about-package-definition-files.md
+        - name: 创建包
+          href: core/servers/configure/how-to-create-a-package.md
+        - name: 使用包定义文件模板创建包
+          href: core/servers/configure/how-to-create-a-package-by-using-a-package-definition-file-template.md
+        - name: 配置包属性
+          href: core/servers/configure/how-to-configure-package-properties.md
+        - name: 将包配置为使用二进制增量复制
+          href: core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md
+        - name: 删除包
+          href: core/servers/configure/how-to-delete-a-package.md
+        - name: 将包分配到分发点
+          href: core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md
+    - name: 节目
+      items:
+        - name: 关于程序
+          href: core/servers/configure/about-software-distribution-programs.md
+        - name: 创建程序
+          href: core/servers/configure/how-to-create-a-program.md
+        - name: 修改程序属性
+          href: core/servers/configure/how-to-modify-program-properties.md
+        - name: 更改程序的最大运行时间
+          href: core/servers/configure/how-to-change-the-maximum-run-time-for-a-program.md
+        - name: 列出所有程序及其最大运行时间值
+          href: core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md
+        - name: 修改程序的受支持平台
+          href: core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md
+    - name: 部署
+      items:
+        - name: 关于部署
+          href: core/servers/configure/about-software-distribution-deployments.md
+        - name: 创建部署
+          href: core/servers/configure/how-to-create-an-advertisement.md
+        - name: 将部署分配到计算机集合
+          href: core/servers/configure/how-to-assign-an-advertisement-to-a-collection-of-computers.md
+        - name: 修改部署属性
+          href: core/servers/configure/how-to-modify-advertisement-properties.md
+        - name: 配置部署以允许在维护时段外重启
+          href: core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md
+        - name: 配置部署以替代维护时段
+          href: core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md
+    - name: 维护时段
+      items:
+        - name: 关于维护时段
+          href: core/servers/configure/about-maintenance-windows.md
+        - name: 创建维护时段
+          href: core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md
+        - name: 更改维护时段属性
+          href: core/servers/configure/how-to-change-the-maintenance-window-properties-for-a-collection.md
+        - name: 删除维护时段
+          href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
+        - name: 列出特定集合的维护时段和属性
+          href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
+    - name: 设置和配置
+      items:
+        - name: 关于软件分发设置和配置
+          href: core/servers/configure/about-software-distribution-setup-and-configuration.md
+        - name: 启用或禁用播发程序客户端代理
+          href: core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md
+        - name: 配置播发程序客户端代理设置
+          href: core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md
+        - name: 自定义部署品牌信息
+          href: core/servers/configure/how-to-customize-advertisement-branding-information.md
+    - name: LAN 唤醒
+      items:
+        - name: 配置 LAN 唤醒所需的部署
+          href: core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md
+        - name: 启用合作伙伴通知 API
+          href: core/servers/configure/how-to-enable-the-partner-notification-api.md
+    - name: 分发点
+      items:
+        - name: 列出站点的分发点
+          href: core/servers/configure/how-to-list-distribution-points-for-a-site.md
+        - name: 设置按需分发标志
+          href: core/servers/configure/how-to-set-the-distribute-on-demand-flag.md
+- name: 软件计数
+  items:
+    - name: 启用或禁用软件计数
+      href: apps/how-to-enable-or-disable-software-metering.md
+    - name: 配置自动软件计数规则生成
+      href: apps/how-to-configure-automatic-software-metering-rule-generation.md
+    - name: 创建软件计数规则
+      href: apps/how-to-create-a-software-metering-rule.md
+    - name: 删除软件计数规则
+      href: apps/how-to-delete-a-software-metering-rule.md
+    - name: 启用或禁用软件计数规则
+      href: apps/how-to-enable-or-disable-a-software-metering-rule.md
+    - name: 查看文件使用情况摘要信息
+      href: apps/how-to-view-file-usage-summary-information.md
+    - name: 查看每月使用情况摘要信息
+      href: apps/how-to-view-monthly-usage-summary-information.md
+- name: 软件更新
+  items:
+    - name: 设置和配置
+      items:
+        - name: 关于软件更新设置和配置
+          href: sum/about-software-updates-setup-and-configuration.md
+        - name: 配置软件更新点
+          href: sum/how-to-configure-the-software-update-point.md
+        - name: 配置 WSUS 设置
+          href: sum/how-to-configure-the-wsus-settings.md
+        - name: 启用或禁用软件更新客户端代理
+          href: sum/how-to-enable-or-disable-the-software-updates-client-agent.md
+        - name: 设置软件更新品牌信息
+          href: sum/how-to-set-software-updates-branding-information.md
+    - name: 部署
+      items:
+        - name: 关于软件更新部署
+          href: sum/about-software-updates-deployments.md
+        - name: 枚举与特定条件匹配的更新
+          href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md
+        - name: 创建更新列表
+          href: sum/how-to-create-an-update-list.md
+        - name: 创建部署模板
+          href: sum/how-to-create-a-deployment-template.md
+        - name: 创建部署包
+          href: sum/how-to-create-a-deployment-package.md
+        - name: 将更新添加到部署包
+          href: sum/how-to-add-updates-to-a-deployment-package.md
+        - name: 从部署包中删除更新
+          href: sum/how-to-delete-updates-from-a-deployment-package.md
+        - name: 配置和部署更新
+          href: sum/how-to-configure-and-deploy-updates.md
+        - name: 更改部署包源
+          href: sum/how-to-change-the-deployment-package-source.md
+    - name: 同步软件更新点
+      items:
+        - name: 关于同步软件更新点
+          href: sum/about-synchronizing-the-software-update-point.md
+        - name: 同步软件更新点
+          href: sum/how-to-synchronize-with-the-software-update-point.md
+    - name: 配置软件更新以替代维护时段
+      href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
+- name: 状态和摘要生成器
+  items:
+    - name: 关于 Configuration Manager 状态
+      items:
+        - name: 关于状态消息
+          href: core/servers/manage/about-configuration-manager-status-messages.md
+        - name: 关于组件状态消息
+          href: core/servers/manage/about-configuration-manager-component-status-messages.md
+        - name: 关于使用 SMSCSTAT.DLL 创建状态消息
+          href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
+        - name: 关于通过客户端报告状态消息
+          href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
+    - name: 关于摘要生成器
+      items:
+        - name: 关于 Configuration Manager 状态摘要生成器
+          href: core/servers/manage/about-configuration-manager-status-summarizers.md
+        - name: 关于 Configuration Manager 计数间隔
+          href: core/servers/manage/about-configuration-manager-tally-intervals.md
+    - name: 确定站点的运行状况
+      href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
+    - name: 读取站点的计数间隔
+      href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
+    - name: 读取用户定义的状态消息
+      href: core/servers/manage/how-to-read-user-defined-status-messages.md
+    - name: 报告用户定义的状态消息
+      href: core/servers/manage/how-to-report-user-defined-status-messages.md
+    - name: 删除状态消息
+      href: core/servers/manage/how-to-delete-status-messages.md
+    - name: 确定包状态
+      href: core/servers/manage/how-to-determine-package-status.md
+    - name: 确定播发状态
+      href: core/servers/manage/how-to-determine-advertisement-status.md
+- name: Configuration Manager API 参考
+  href: reference/configuration-manager-reference.md
+- name: 管理服务 REST API
+  href: adminservice/index.yml

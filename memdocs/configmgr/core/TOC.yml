@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: 安全最佳方案和隐私信息
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: 隐私声明 – Configuration Manager Cmdlet 库
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: 其他隐私信息
           href: plan-design/security/additional-privacy.md
         - name: 配置安全性

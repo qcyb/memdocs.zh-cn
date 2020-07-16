@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591062"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303447"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Windows 10（及更高版本）设备设置
 
@@ -31,7 +31,7 @@ ms.locfileid: "85591062"
 > [!Note]
 > 并非所有选项在所有版本的 Windows 上都可用。 若要查看受支持的版本，请参阅 [policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider)（策略 CSP）（打开另一个 Microsoft 网站）。
 >  
-> Windows 10 设备限制配置文件中大多数可配置的设置都部署在设备级别。 部署到用户组的策略将对目标用户和随后登录相应设备并有 Intune 许可证的其他任何用户生效。
+> Windows 10 设备限制配置文件中大多数可配置的设置都通过设备组部署在设备级别。 部署到用户组的策略应用于目标用户以及具有 Intune 许可证并登录到该设备的用户。
 
 ## <a name="before-you-begin"></a>在开始之前
 
@@ -1108,7 +1108,7 @@ ms.locfileid: "85591062"
   - **启用**：Microsoft Defender 会检测 PUA，并阻止检测到的项。 这些项目与其他威胁一起显示在历史记录中。
   - **审核**：Microsoft Defender 会检测 PUA，但不执行任何操作。 可以查看有关 Microsoft Defender 将对其采取行动的应用程序的信息。 例如，在事件查看器中搜索 Microsoft Defender 创建的事件。
 
-  有关可能不需要的应用程序的详细信息，请参阅[检测和阻止可能不需要的应用程序](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)。
+  有关可能不需要的应用程序的详细信息，请参阅[检测和阻止可能不需要的应用程序](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)。
 
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

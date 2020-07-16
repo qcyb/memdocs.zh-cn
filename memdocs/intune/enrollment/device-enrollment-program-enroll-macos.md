@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093966"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210363"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>使用 Apple Business Manager 或 Apple School Manager 自动注册 macOS 设备
 
@@ -62,10 +62,9 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>步骤 1。 下载创建令牌所需的 Intune 公钥证书
 
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册”  。 
-> “注册计划令牌” > “添加” 。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌” > “添加”    。
 
-    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![获取注册计划令牌。](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. 选择“我同意”，为 Microsoft 授予向 Apple 发送用户和设备信息的权限。
 
@@ -106,7 +105,7 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 现在，已经安装了令牌，可以为设备创建注册配置文件。 设备注册配置文件定义注册时应用于设备组的设置。
 
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “macOS” > “macOS 注册” > “注册计划令牌”   。
-2. 选择令牌，选择“配置文件”，然后选择“创建配置文件” 。
+2. 选择令牌，选择“配置文件”，然后选择“创建配置文件 > macOS”  。
 
     ![“创建配置文件”的屏幕截图。](./media/device-enrollment-program-enroll-macos/image04.png)
 
@@ -123,13 +122,11 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 
     - 不通过用户关联进行注册 - 为不属于单个用户的设备选择此选项。 为无需访问本地用户数据即可执行任务的设备使用此选项。 公司门户等应用将无法运行。
 
-6. 如果选择“通过用户关联进行注册”，则在“身份验证方法”下选择“设置助理(旧版)”或“使用新式身份验证设置助理”   。
+6. 对于“锁定注册”，请选择是否要为使用此配置文件的设备锁定注册。 选择“是”将禁用 macOS 设置，这些设置允许从“系统偏好设置”菜单或通过“终端”删除管理配置文件  。 注册设备后，除非擦除设备，否则无法更改此设置。
 
-7. 对于“锁定注册”，请选择是否要为使用此配置文件的设备锁定注册。 选择“是”将禁用 macOS 设置，这些设置允许从“系统偏好设置”菜单或通过“终端”删除管理配置文件  。 注册设备后，除非擦除设备，否则无法更改此设置。
+7. 选择“下一步”，转到“设置助理”页面 。
 
-8. 选择“下一步”，转到“设置助理”页面 。
-
-9. 在“设置助理”页上，配置以下配置文件设置：
+8. 在“设置助理”页上，配置以下配置文件设置：
 
     ![设置助理的自定义项。](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -163,9 +160,9 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
     | <strong>屏幕使用时间</strong> | 显示“屏幕使用时间”屏幕。 适用于 macOS 10.15 及更高版本和 iOS/iPadOS 12.0 及更高版本。 |
     | <strong>隐私</strong> | 向用户展示“隐私”屏幕。 适用于 macOS 10.13.4 及更高版本和 iOS/iPadOS 11.3 及更高版本。 |
     
-10. 选择“下一步”，以转到“查看 + 创建”页。
+9. 选择“下一步”，以转到“查看 + 创建”页。
 
-11. 若要保存配置文件，则选择“创建”。
+10. 若要保存配置文件，则选择“创建”。
 
 ## <a name="sync-managed-devices"></a>同步托管设备
 

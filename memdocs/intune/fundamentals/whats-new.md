@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
-ms.topic: conceptual
+ms.date: 07/10/2020
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: c9e65171c0eb723f338e87cdf1f7a99601c0833f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502283"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240723"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -56,8 +56,26 @@ ms.locfileid: "85502283"
 
 <!-- ########################## -->
 
-## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日当周
 
+## <a name="week-of-july-06-2020"></a>2020 年 7 月 6 日当周
+
+### <a name="device-enrollment"></a>设备注册
+
+#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>iOS 公司门户将支持 Apple 的自动设备注册，而无需用户关联<!-- 7282707 --> 
+现在支持在设备上使用 Apple 的自动设备注册来注册 iOS 公司门户，而无需分配的用户。 最终用户可以登录 iOS 公司门户，以在无需设备关联即可注册的 iOS/iPadOS 设备上将自己确立为主要用户。 若要详细了解自动设备注册，请参阅[使用 Apple 的自动设备注册自动注册 iOS/iPadOS 设备](../enrollment/device-enrollment-program-enroll-ios.md)。
+
+### <a name="app-management"></a>应用管理
+
+#### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>更新 Android 上公司门户和 Intune 应用中的设备图标<!-- 6057023 -->
+我们已更新了 Android 设备上公司门户和 Intune 应用中的设备图标，以创建更加新式的外观，并与 Microsoft Fluent Design System 保持一致。 如需相关信息，请参阅[为 iOS/iPadOS 和 macOS 更新公司门户应用中的图标](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-)。 
+
+### <a name="device-management"></a>设备管理
+
+#### <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview---7552762---"></a>租户附加：管理中心中的 ConfigMgr 客户端详细信息（预览）<!-- 7552762 -->
+
+现在可以从 Microsoft Endpoint Manager 管理中心查看 ConfigMgr 客户端详细信息，其中包括集合、边界组成员身份和特定设备的实时客户端信息。 有关详细信息，请参阅[租户附加：管理中心中的 ConfigMgr 客户端详细信息（预览）](../../configmgr/tenant-attach/client-details.md)。
+
+## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日当周
 ### <a name="app-management"></a>应用管理
 
 #### <a name="newly-available-protected-apps-for-intune---7248952---"></a>新提供的适用于 Intune 的受保护应用<!-- 7248952 -->

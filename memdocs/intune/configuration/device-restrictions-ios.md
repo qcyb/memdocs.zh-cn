@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093669"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303430"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 iOS 和 iPadOS 设备设置
 
@@ -161,6 +161,10 @@ ms.locfileid: "85093669"
   - **设备默认值**
   - **数字**：密码只能使用数字，例如 123456789。
   - **字母数字**：包括大写字母、小写字母和数字字符。
+
+  > [!NOTE]
+  > 选择字母数字可能会影响已配对的 Apple Watch。 有关详细信息，请参阅[为 Apple Watch 设置密码限制](https://support.apple.com/HT204953)（将打开 Apple 的网站）。
+
 - **密码中的非字母数字字符数**：输入密码中必须包含的符号字符（如 `#` 或 `@`）数，范围从 1 到 4。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。
 
 - **最短密码长度**：输入密码必须具有的最小长度（介于 4 到 16 个字符之间）。 在用户注册的设备中，输入 4 到 6 个字符的长度。
@@ -414,7 +418,7 @@ ms.locfileid: "85093669"
 - **受限应用类型列表**：创建不允许用户安装或使用的应用的列表。 选项包括：
 
   - **未配置**（默认）：Intune 不会更改或更新此设置。 默认情况下，OS 可能允许访问分配的应用和内置应用。
-  - **禁止的应用**：列出不允许用户安装和运行的应用（未由 Intune 托管）。 不阻止用户安装禁止的应用。 如果用户安装了此列表中的应用，则会在 Intune 中报告。
+  - **禁止的应用**：列出不允许用户安装和运行的应用（未由 Intune 托管）。 不阻止用户安装禁止的应用。 如果用户安装了此列表中的应用，则“带受限应用的设备”（位于“[Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > 设备 > 监视 > 带受限应用的设备”）  报告中将报告该设备。 
   - **允许的应用：** 列出允许用户安装的应用。 为了保持兼容性，用户不得安装其他应用。 系统会自动允许由 Intune 管理的应用，包括公司门户应用。 不会阻止用户安装不在已批准列表中的应用。 但如果有，则会在 Intune 中报告。
 
 若要将应用添加到这些列表，可以：
@@ -619,15 +623,17 @@ ms.locfileid: "85093669"
 
 使用这些设置配置 iOS/iPadOS 设备，使其以自治单应用模式 (ASAM) 运行特定应用。 如果配置了此模式且用户启动了一个已配置的应用，则设备将锁定到该应用。 在用户退出允许的应用前，禁用应用/任务切换。
 
+若要应用 ASAM 配置，用户必须手动打开特定应用。 此任务也适用于公司门户应用。
+
 - 例如，在学校或大学环境中，添加一个允许用户在设备上进行测试的应用。 或者，在用户进行身份验证前，将设备锁定在公司门户应用中。 在用户完成应用操作或你删除此策略时，设备将恢复正常状态。
 
 - 并非所有应用都支持自治单应用模式。 若要将应用置于自治单应用模式，通常需要应用配置策略提供的捆绑 ID 或键值对。 有关详细信息，请参阅 Apple 的 MDM 文档中的[`autonomousSingleAppModePermittedAppIDs`限制](https://developer.apple.com/documentation/devicemanagement/restrictions)。 有关正在配置的应用所需的特定设置的详细信息，请参阅供应商文档。
 
   例如，若要在自治单应用模式下配置 Zoom Room，Zoom 将指示使用 `us.zoom.zpcontroller` 捆绑 ID。 在此实例中，还会在缩放 Web 门户中进行更改。 有关详细信息，请参阅 [Zoom 帮助中心](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM)。
 
-- 在 iOS/iPadOS 设备上，公司门户应用支持 ASAM。 当公司门户应用位于 ASAM 中时，设备将锁定在公司门户应用中，直到用户进行身份验证。 当用户登录到公司门户应用时，他们可以使用设备上的其他应用和”主屏幕”按钮。 当用户注销公司门户应用时，设备将返回到单应用模式，并在公司门户应用上锁定。
+- 在 iOS/iPadOS 设备上，公司门户应用支持 ASAM。 公司门户应用处于 ASAM 时，用户必须手动打开公司门户应用。 然后，在公司门户应用中锁定设备，直至用户进行身份验证。 当用户登录到公司门户应用时，他们可以使用设备上的其他应用和”主屏幕”按钮。 当用户注销公司门户应用时，设备将返回到单应用模式，并在公司门户应用上锁定。
 
-  若要将公司门户应用转换为“登录/注销”应用（启用 ASAM），请在这些设置中输入公司门户应用名称（如 `Microsoft Intune Company Portal`）和捆绑 ID (`com.microsoft.CompanyPortal`)。 分配此配置文件后，必须打开公司门户应用以锁定该应用，以便用户可以登录和注销该应用。
+  若要将公司门户应用转换为“登录/注销”应用（启用 ASAM），请在这些设置中输入公司门户应用名称（如 `Microsoft Intune Company Portal`）和捆绑 ID (`com.microsoft.CompanyPortal`)。 分配此配置文件后，必须打开公司门户应用以锁定该应用，以便用户可以登录和注销该应用。 若要应用 ASAM 配置，用户必须手动打开公司门户应用。
   
   删除设备配置文件并且用户注销后，设备不会在公司门户应用中锁定。
 
