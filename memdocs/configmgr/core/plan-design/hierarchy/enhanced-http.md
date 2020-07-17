@@ -2,7 +2,7 @@
 title: 增强型 HTTP
 titleSuffix: Configuration Manager
 description: 使用新式身份验证来保护客户端通信，而无需 PKI 证书。
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb14830e99600da1b71c516a44d51a0090cdc673
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703565"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239753"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 <!--1356889,1358460-->
 
@@ -88,27 +88,25 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 
 ## <a name="prerequisites"></a>必备条件  
 
-- 针对 HTTP 客户端连接配置的管理点。 在管理点角色属性的“常规”选项卡上设置此选项  。  
+- 针对 HTTP 客户端连接配置的管理点。 在管理点角色属性的“常规”选项卡上设置此选项。  
 
-- 针对 HTTP 客户端连接配置的分发点。 在管理点角色属性的“通信”选项卡上设置此选项  。 请勿启用选项“允许客户端进行匿名连接”  。  
+- 针对 HTTP 客户端连接配置的分发点。 在管理点角色属性的“通信”选项卡上设置此选项。 请勿启用选项“允许客户端进行匿名连接”。  
 
 - 将站点载入 Azure AD 以便进行云管理。  
 
-    - 如果你的站点已满足此先决条件，则需更新 Azure AD 应用程序。 在 Configuration Manager 控制台中，转到“管理”  工作区，展开“云服务”  ，然后选择“Azure Active Directory 租户”  。 选择 Azure AD 租户，再选择“应用程序”窗格中 Web 应用程序，然后选择功能区中的“更新应用程序设置”   。  
-
-- 仅适用于[方案 3](#bkmk_scenario3)  ：运行 Windows 10 版本 1803 或更高版本且已加入 Azure AD 的客户端。 客户端需要此配置来进行 Azure AD 设备身份验证。<!-- SCCMDocs issue 1126 -->
+- 仅适用于[方案 3](#bkmk_scenario3)：运行 Windows 10 版本 1803 或更高版本且已加入 Azure AD 的客户端。 客户端需要此配置来进行 Azure AD 设备身份验证。<!-- SCCMDocs issue 1126 -->
 
 
 ## <a name="configure-the-site"></a>配置站点
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点    。 选择一个站点，然后选择功能区中的“属性”  。  
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点  。 选择一个站点，然后选择功能区中的“属性”。  
 
-2. 切换到“客户端计算机通信”  选项卡。
+2. 切换到“客户端计算机通信”选项卡。
 
     > [!Note]
-    > 从版本 1906 开始，此选项卡称为“通信安全”  。<!-- SCCMDocs#1645 -->  
+    > 从版本 1906 开始，此选项卡称为“通信安全”。<!-- SCCMDocs#1645 -->  
 
-    选择“HTTPS 或 HTTP”  的选项。 然后启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”选项  。
+    选择“HTTPS 或 HTTP”的选项。 然后启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”选项。
 
 > [!Tip]
 > 请等待 30 分钟以便管理点从站点接收并配置新证书。
@@ -116,7 +114,7 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 <!--3798957-->
 从版本 1902 开始，还可以启用管理中心站点的增强型 HTTP。 使用此相同流程，并打开管理中心站点的属性。 此操作仅为管理中心站点上的 SMS 提供程序角色启用增强型 HTTP。 它不是适用于层次结构中所有站点的全局设置。
 
-可以在 Configuration Manager 控制台中查看这些证书。 转到“管理”  工作区，展开“安全”  ，然后选择“证书”  节点。 查找“SMS 发证”  根证书，以及由 SMS 发证根颁发的站点服务器角色证书。
+可以在 Configuration Manager 控制台中查看这些证书。 转到“管理”工作区，展开“安全”，然后选择“证书”节点。 查找“SMS 发证”根证书，以及由 SMS 发证根颁发的站点服务器角色证书。
 
 有关客户端如何使用此配置与管理点和分发点进行通信的详细信息，请参阅[从客户端到站点系统和服务的通信](communications-between-endpoints.md#Planning_Client_to_Site_System)。
 

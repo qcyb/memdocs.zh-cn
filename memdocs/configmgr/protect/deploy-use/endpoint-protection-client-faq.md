@@ -2,7 +2,7 @@
 title: Endpoint Protection 客户端的常见问题
 titleSuffix: Configuration Manager
 description: 获取有关 Windows Defender 和 Endpoint Protection 常见问题的解答。
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0eafa09275220cdf07f837388aa6cb848fbd5e5a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906830"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240280"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 
 此 FAQ 针对其 IT 管理员已将 Windows Defender 或 Endpoint Protection 部署到其托管计算机的计算机用户。 此处的内容可能不适用于其他反恶意软件。 Microsoft System Center Endpoint Protection 管理 Windows 10 上的 Windows Defender。 它还可以部署和管理 Windows 10 之前版本的计算机上的 Endpoint Protection 客户端。 虽然本文对 Windows Defender 进行了介绍，但是其信息也适用于 Endpoint Protection。  
@@ -34,7 +34,6 @@ ms.locfileid: "82906830"
 -   [病毒、间谍软件以及其他可能不需要的软件来自哪里？](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [我是否会在不知情的情况下获取恶意软件？](#can-i-get-malicious-software-without-knowing-it)  
 -   [为什么在安装软件之前查看许可证协议很重要？](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Endpoint Protection 和 Windows Defender 之间的区别是什么？](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Windows Defender 为什么没有检测到 cookie？](#why-doesnt-windows-defender-detect-cookies)  
 -   [如何防止恶意软件？](#how-can-i-prevent-malware)  
 -   [病毒和间谍软件的定义是什么？](#what-are-virus-and-spyware-definitions)  
@@ -77,13 +76,13 @@ ms.locfileid: "82906830"
 即使你未发现任何症状，你的计算机上也可能有恶意软件。 此类型软件可以在你不知情或未经你同意的情况下收集有关你和你的计算机的信息。 为了帮助保护你的隐私和你的计算机，你应该时刻运行 Windows Defender 或 Endpoint Protection。  
 
 ## <a name="how-can-i-find-the-version-of-windows-defender"></a>如何查找 Windows Defender 版本？
- 若要查看在计算机上运行的 Windows Defender 版本，请打开 Windows Defender（单击“开始”  ，然后搜索 **Windows Defender**，单击“设置”  ，然后滚动到 Windows Defender 设置底部可查找**版本信息**。
+ 若要查看在计算机上运行的 Windows Defender 版本，请打开 Windows Defender（单击“开始”，然后搜索 **Windows Defender**，单击“设置”，然后滚动到 Windows Defender 设置底部可查找**版本信息**。
 
 ##  <a name="what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer"></a>如果 Windows Defender 或 Endpoint Protection 在我的计算机上检测到恶意软件，我该怎么办？  
 
  如果 Windows Defender 在你的计算机上检测到恶意软件或可能不需要的软件（使用实时保护监视你的计算机时或运行扫描后），它将通过在屏幕右下角显示通知消息来通知你检测到的项目。  
 
- 通知消息包括“干净计算机”  按钮和“显示详细信息”  链接，让你可以查看有关检测到的项目的其他信息。 单击“显示详细信息”  链接将打开“潜在威胁详细信息”  窗口，从而获取有关检测到的项目的其他信息。 现在，你可选择要应用于此项目的操作，也可单击“干净计算机”  。 如果你需要帮助来确定应用于检测到的项目的操作，请使用 Windows Defender 分配给此项目的警报级别作为指导（有关详细信息，请参阅“了解警报级别”）。  
+ 通知消息包括“干净计算机”  按钮和“显示详细信息”  链接，让你可以查看有关检测到的项目的其他信息。 单击“显示详细信息”  链接将打开“潜在威胁详细信息”  窗口，从而获取有关检测到的项目的其他信息。 现在，你可选择要应用于此项目的操作，也可单击“干净计算机” 。 如果你需要帮助来确定应用于检测到的项目的操作，请使用 Windows Defender 分配给此项目的警报级别作为指导（有关详细信息，请参阅“了解警报级别”）。  
 
  警报级别有助于你选择如何应对病毒、间谍软件和其他潜在有害软件。 当 Windows Defender 建议你删除所有病毒和间谍软件时，并不是所有标记的软件都是恶意的或是不需要的。 当 Windows Defender 在你的计算机上检测到可能不需要的软件时，以下信息可帮助你确定应执行的操作。  
 
@@ -101,13 +100,13 @@ ms.locfileid: "82906830"
 
 要方便快捷地删除 Windows Defender 检测到的所有不需要的或可能有害的项目，请使用“清理计算机”  选项。  
 
-1.  当你看见 Windows Defender 检测到潜在威胁后在通知区域显示的通知消息时，请单击“清理计算机”  。  
+1.  当你看见 Windows Defender 检测到潜在威胁后在通知区域显示的通知消息时，请单击“清理计算机” 。  
 
 2.  Windows Defender 将删除潜在威胁，然后在清理完你的计算机后通知你。  
 
-3.  若要了解有关检测到的威胁的详细信息，请单击“历史记录”  选项卡，然后选择“所有检测到的项目”  。  
+3.  若要了解有关检测到的威胁的详细信息，请单击“历史记录”  选项卡，然后选择“所有检测到的项目” 。  
 
-4.  如果你看不到所有检测到的项目，请单击“查看详细信息”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。
+4.  如果你看不到所有检测到的项目，请单击“查看详细信息” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。
 
 > [!NOTE]  
 >  在清理计算机时，Windows Defender 尽可能只删除文件的受感染部分，而不是整个文件。  
@@ -131,9 +130,6 @@ ms.locfileid: "82906830"
 
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a>为什么在安装软件之前查看许可证协议很重要？  
  访问网站时，不自动同意下载站点提供的任何内容。 如果下载免费软件，如文件共享程序或屏幕保护程序，请仔细阅读许可证协议。 查找提到以下内容的句子：你必须接受来自公司的广告和弹出窗口，或者该软件将发送特定信息给软件发行者。  
-
-##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a>Endpoint Protection 和 Windows Defender 之间的区别是什么？  
- Endpoint Protection 是反恶意软件，这意味着它设计用于检测恶意软件，并帮助保护你的计算机免受各种恶意软件的攻击，包括病毒、间谍软件和其他可能不需要的软件。 Windows Defender 随 Windows 操作系统一起自动安装，是用于检测并停止间谍软件的软件。  
 
 ##  <a name="why-doesnt-windows-defender-detect-cookies"></a>Windows Defender 为什么没有检测到 cookie？  
  Cookie 是网站放在你的计算机上用于存储你和你的首选项信息的小文本文件。 网站使用 cookie 向你提供个性化的体验以及收集有关网站使用的信息。 Windows Defender 不会检测 cookie，因为它不认为这些会威胁到你的隐私或你的计算机的安全性。 大多数 Internet 浏览器程序允许你阻止 cookie。  
@@ -161,9 +157,9 @@ ms.locfileid: "82906830"
 
 1.  单击通知区域中的图标或从“开始”菜单启动来打开 Windows Defender 或 Endpoint Protection 客户端  。  
 
-2.  单击“设置”  ，然后单击“计划扫描”  。  
+2.  单击“设置”，然后单击“计划扫描”。  
 
-3.  请确保已选中 **在运行计划扫描之前检查最新的病毒和间谍软件定义** 复选框，然后单击“保存更改”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
+3.  请确保已选中 **在运行计划扫描之前检查最新的病毒和间谍软件定义** 复选框，然后单击“保存更改” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
 
 ### <a name="to-check-for-new-definitions-manually"></a>手动检查新定义
 
@@ -171,7 +167,7 @@ ms.locfileid: "82906830"
 
 1.  单击通知区域中的图标或从“开始”菜单启动来打开 Windows Defender 或 Endpoint Protection 客户端  。  
 
-2.  要手动检查新定义，请单击“更新”  选项卡，然后单击“更新定义”  。  
+2.  要手动检查新定义，请单击“更新”  选项卡，然后单击“更新定义” 。  
 
 ##  <a name="how-do-i-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection"></a>如何删除或还原 Windows Defender 或 Endpoint Protection 隔离的项目？  
 
@@ -182,15 +178,15 @@ ms.locfileid: "82906830"
 ###  <a name="to-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection"></a>删除或还原 Windows Defender 或 Endpoint Protection 隔离的项目
 
 
-1.  单击“历史记录”  选项卡，选择“隔离的项目”  ，然后选择“隔离的项目”选项  。  
+1.  单击“历史记录”  选项卡，选择“隔离的项目” ，然后选择“隔离的项目”选项  。  
 
 2.  单击“查看详细信息”  来查看所有项目。  
 
-3.  查看每一项，然后针对每一项单击“删除”  或“还原”  。 如果你希望从计算机中删除所有隔离的项目，请单击“全部删除”  。  
+3.  查看每一项，然后针对每一项单击“删除”  或“还原” 。 如果你希望从计算机中删除所有隔离的项目，请单击“全部删除” 。  
 
 ##  <a name="what-is-real-time-protection"></a>什么是实时保护？  
 
- 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会通知你，并将计算机的状态更改为“有风险”  。  
+ 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会通知你，并将计算机的状态更改为“有风险”。  
 
  每当实时保护检测到威胁或潜在威胁时，Windows Defender 会显示一条通知。 你可从以下选项中进行选择：  
 
@@ -200,9 +196,8 @@ ms.locfileid: "82906830"
 
   你可以选择你需要 Windows Defender 监视的软件和设置，但我们建议你打开实时保护，并启用所有实时保护选项。 下表对可用的选项进行了说明。  
 
-|||  
-|-|-|  
 |**实时保护选项**|**目的**|  
+|-|-|  
 |扫描所有下载|此选项可监视下载的文件和程序，包括通过 Windows Internet Explorer 和 Microsoft Outlook ® Express 自动下载的文件，例如 ActiveX® 控件和软件安装程序。 这些文件可通过浏览器自身下载、安装或运行。 恶意软件，包括病毒、间谍软件和其他可能不需要的软件可以包含在这些文件中，并在你不知情的情况下安装。<br /><br /> 使用此实时保护选项，Windows Defender 可以始终监视你的计算机，并检查你可能已下载的任何恶意文件或程序。 此监视功能意味着 Windows Defender 不需要通过要求检查你可能想要下载的任何文件或程序来减慢你的浏览或电子邮件速度。|  
 |监视计算机上的文件和程序活动|此选项是在文件和程序开始在你的计算机上运行时进行监视，然后它会对你发出警报，通知你它们要执行的任何操作和要对它们执行的操作。 这非常重要，因为恶意软件会利用已安装程序的漏洞在你不知情的情况下运行恶意或不需要的软件。 例如，当你启动经常使用的程序时，间谍软件可以在后台运行。 Windows Defender 监视你的程序，并在检测到可疑活动时向你发出警报。|  
 |启用行为监视|此选项可监视传统防病毒检测方法可能检测不到的可疑模式的行为集合。|  
@@ -210,9 +205,9 @@ ms.locfileid: "82906830"
 
 ### <a name="to-turn-off-real-time-protection"></a>要关闭实时保护  
 
-1.  单击“设置”  ，然后单击“实时保护”   
+1.  单击“设置” ，然后单击“实时保护”   
 
-2.  清除你想要关闭的实时保护选项，然后单击“保存更改”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
+2.  清除你想要关闭的实时保护选项，然后单击“保存更改” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
 
 ##  <a name="how-do-i-know-that-windows-defender-or-endpoint-protection-is-running-on-my-computer"></a>如何知道 Windows Defender 或 Endpoint Protection 正在我的计算机上运行？  
 
@@ -240,11 +235,11 @@ ms.locfileid: "82906830"
 
 ### <a name="to-set-up-alerts"></a>要设置警报  
 
-1.  单击“设置”  ，然后单击“实时保护”   
+1.  单击“设置” ，然后单击“实时保护”   
 
 2.  确保选中“打开实时保护(推荐)”  复选框。  
 
-3.  选中你希望运行的实时保护选项旁边的复选框，然后单击“保存更改”  。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
+3.  选中你希望运行的实时保护选项旁边的复选框，然后单击“保存更改” 。 如果系统提示你输入管理员密码或进行确认，请键入密码或确认操作。  
 
 ### <a name="see-also"></a>另请参阅  
  [对 Windows Defender 或 Endpoint Protection 客户端进行故障排除](troubleshoot-endpoint-client.md)   
