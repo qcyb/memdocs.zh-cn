@@ -52,8 +52,6 @@
       items:
         - name: 符合性概述
           href: device-compliance-get-started.md
-        - name: 设备合规性合作伙伴
-          href: device-compliance-partners.md
         - name: 创建策略
           href: create-compliance-policy.md
         - name: 基于位置的符合性
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
           href: advanced-threat-protection.md
+        - name: 防火墙规则迁移
+          href: endpoint-security-firewall-rule-tool.md
         - name: 加密磁盘
           items:
             - name: 管理 BitLocker 策略

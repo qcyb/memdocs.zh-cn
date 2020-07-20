@@ -171,6 +171,7 @@
 
 ## [使用 Intune 公司门户网站](using-the-intune-company-portal-website.md)
 ### [管理应用](manage-apps-cpweb.md)  
+### [存储恢复密钥](store-recovery-key.md)
 ### [获取恢复密钥](get-recovery-key-cpweb.md)
 ### [远程锁定设备](remote-lock-your-device-cpwebsite.md)  
 ### [重命名设备](rename-your-device-cpwebsite.md)  
