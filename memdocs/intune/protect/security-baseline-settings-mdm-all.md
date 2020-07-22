@@ -5,7 +5,7 @@ description: 查看可使用 Microsoft Intune 管理的不同 Windows MDM 安全
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022222"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491297"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>适用于 Intune 的 Windows MDM 安全基线设置
 
@@ -322,7 +322,7 @@ ms.locfileid: "86022222"
 
 - **按设备标识符安装硬件设备**：  
   使用此策略设置可以指定禁止 Windows 安装的设备的即插即用硬件 ID 和兼容 ID 的列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。 如果启用此策略设置，则 Windows 无法安装你所创建的列表中列出了其硬件 ID 或兼容 ID 的设备。 如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。 如果禁用或未配置此策略设置，则设备可以根据其他策略设置来允许或阻止安装和更新。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2066794)
+  [了解详细信息](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **默认值**：阻止安装硬件设备
 
@@ -340,7 +340,7 @@ ms.locfileid: "86022222"
 
 - **按安装程序类安装硬件设备**：  
   使用此策略设置可以指定禁止 Windows 安装的设备驱动程序的设备安装程序类全局唯一标识符 (GUID) 列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。 如果启用此策略设置，则 Windows 无法安装或更新你所创建的列表中列出了其设备安装程序类 GUID 的设备驱动程序。 如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。 如果禁用或未配置此策略设置，则 Windows 可以根据其他策略设置来允许或禁止安装和更新设备。  
-  [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067048)
+  [了解详细信息](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **默认值**：阻止安装硬件设备
 

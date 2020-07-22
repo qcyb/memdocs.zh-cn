@@ -2,7 +2,7 @@
 title: SQL Server AlwaysOn
 titleSuffix: Configuration Manager
 description: 计划将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383149"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384836"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -247,6 +247,9 @@ Configuration Manager 不会验证异步提交副本的状态来确认它是否�
 #### <a name="replica-member-location"></a>副本成员位置
 
 可用性组中的所有副本要么在本地托管，要么全部托管在 Microsoft Azure 上。 不支持包含本地成员或 Azure 中成员的组。
+
+> [!NOTE]
+> 如果使用 Azure 虚拟机承载 SQL 服务器，请启用“浮动 IP”。 有关详细信息，请参阅[为 Azure 虚拟机中的 SQL Server Always On 可用性组配置负载均衡器](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)。<!-- SCCMDocs#1928 -->
 
 Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中设置可用性组，且组处于内部或外部负载均衡器后面时，开放以下默认端口：
 

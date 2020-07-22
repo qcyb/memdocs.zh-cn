@@ -2,7 +2,7 @@
 title: 内容管理基础
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中使用工具和选项管理部署内容。
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590450"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384938"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
@@ -84,7 +85,7 @@ BDR 将用于发送已分发内容更新的网络带宽降至最低。 每次更
 - 块级差异
 - 始终为应用启用
 - 在旧包上可选
-- 如果某个文件已存在于分发点上，并且发生了更改，则站点将使用 BDR 复制块级更改，而不是整个文件。
+- 如果某个文件已存在于分发点上，并且发生了更改，则站点将使用 BDR 复制块级更改，而不是整个文件。 仅当允许对象使用 BDR 时，此行为才适用。<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>增量复制的摘要
 
@@ -219,7 +220,9 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络�
 
 ## <a name="content-source-priority"></a>内容源优先级
 
-当客户端需要内容时，它会向管理点发出内容位置请求。 管理点返回对所请求内容有效的源位置列表。 此列表因具体方案、使用的技术、站点设计、边界组和部署设置而异。 以下列表包含客户端可使用的所有可能的内容源位置，按其优先级排序：  
+当客户端需要内容时，它会向管理点发出内容位置请求。 管理点返回对所请求内容有效的源位置列表。 此列表因具体方案、使用的技术、站点设计、边界组和部署设置而异。 例如，当任务序列运行时，完整的 Configuration Manager 客户端并非始终在运行，因此行为可能会有所不同。<!-- SCCMDocs#1960 -->
+
+以下列表包含 Configuration Manager 客户端可使用的所有可能的内容源位置，按其优先级排序：  
 
 1. 与客户端位于同一台计算机上的分发点
 2. 同一网络子网中的对等源

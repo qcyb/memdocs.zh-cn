@@ -5,17 +5,17 @@ description: 使用自动部署规则 (ADR) 自动部署软件更新。
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709428"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240025"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自动部署软件更新  
 
@@ -197,7 +197,7 @@ ms.locfileid: "83709428"
 
         -  **发送优先级**：指定部署包的发送优先级。 Configuration Manager 在将包发送到分发点时使用此优先级。 部署包按高、中或低这三个优先级顺序进行发送。 具有相同优先级的包按照其创建顺序发送。 如果没有积压工作 (backlog)，则立即处理包，而不考虑优先级。  
 
-        - **启用二进制差异复制**：启用此设置可最大程度减少站点之间的网络流量。 二进制差异复制 (BDR) 仅更新包中已更改的内容，而不是更新整个包内容。 有关详细信息，请参阅[二进制差异复制](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)。  
+        - **启用二进制差异复制**：启用此设置以对部署包使用二进制差异复制。 有关详细信息，请参阅[二进制差异复制](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)。  
 
     - **没有部署包**：自 1806 版本起，无需先下载内容并将其分发到分发点，即可将软件更新部署到设备。 处理非常大的更新内容时，此设置很有用。 希望客户端始终从 Microsoft 更新云服务中获取内容时，也请使用此设置。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。<!--1357933-->  
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b227148a6e16f7c9f8d62cb58eeb628afbd84123
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972141"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872012"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>将 Wandera 移动威胁防御与 Intune 集成  
 
@@ -70,12 +70,10 @@ ms.locfileid: "85972141"
 
    ![接受权限](./media/wandera-mtd-connector-integration/permissions.png)
 
-10. 你将自动返回 RADAR 管理控制台。  如果授权成功，你将在“授予”按钮旁看到一个绿色的勾选标记。
-11. 通过单击相应的“授予”按钮，为其余列出的集成重复同意过程，直到每个集成旁边都有绿色勾选标记。
+9. 你将自动返回 RADAR 管理控制台。  如果授权成功，你将在“授予”按钮旁看到一个绿色的勾选标记。
+10. 通过单击相应的“授予”按钮，为其余列出的集成重复同意过程，直到每个集成旁边都有绿色勾选标记。
 
-    ![同步组](./media/wandera-mtd-connector-integration/sync-group-name.png)
-
-12. 返回到 Intune 控制台，并继续编辑 Wandera MTD Connector。 将所有可用的开关设置为“开”，然后“保存”配置。
+11. 返回到 Intune 控制台，并继续编辑 Wandera MTD Connector。 将所有可用的开关设置为“开”，然后“保存”配置。
 
     ![启用 Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png)
 

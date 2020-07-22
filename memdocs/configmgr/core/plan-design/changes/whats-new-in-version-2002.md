@@ -2,7 +2,7 @@
 title: 2002 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 2002 中引入的更改和新增功能的详细信息。
-ms.date: 06/11/2020
+ms.date: 07/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590433"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422854"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -432,10 +432,7 @@ OneTrace 现在支持可自定义的日志组，与支持中心的功能类似�
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 2002）的更改摘要](https://support.microsoft.com/help/4556203)。
 
-<!--
-The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
-
--->
+从 2020 年 7 月 15 日开始，以下更新汇总 (4560496) 在控制台中可用：[Microsoft Endpoint Configuration Manager 版本 2002 的更新汇总](https://support.microsoft.com/help/4560496)。
 
 <!--
 ### Hotfixes

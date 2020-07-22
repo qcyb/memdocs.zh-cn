@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 06/25/2020
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383132"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384819"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -91,9 +91,10 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 ### <a name="active-baseline-versions"></a>活动基线版本
 
-在基线版本发布后的 1 年内安装此基线版本。 在安装新技术预览版站点时，请使用最新的基准版本。
+在基线版本发布后的 1 年内安装此基线版本。 在安装新技术预览版站点时，请使用最新的基准版本。 以下 Configuration Manager 技术预览分支版本既可用作控制台内更新，也可用作新基线版本：
 
-- **技术预览版 2002**：Configuration Manager 技术预览分支版本 2002 可同时用作控制台内更新和新基线版本。
+- **技术预览版 2007**
+- **技术预览版 2002**
 
 从[评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
 
@@ -116,25 +117,17 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
 
 以下是最新 Configuration Manager 技术预览版中提供的功能：
 
-### <a name="technical-preview-version-2006"></a>技术预览版 2006
+### <a name="technical-preview-version-2007"></a>技术预览版 2007
 
-- [在共同管理的设备上使用公司门户应用](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [通过 CMG 改进可用应用](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranet 客户端可以使用 CMG 软件更新点](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [通过 CMG 改进任务序列](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [针对远程工作者进行优化的管理见解](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [对 VPN 边界类型的改进](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [租户附加：对 Microsoft Endpoint Manager 管理中心中 Configuration Manager 操作的改进](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [对终结点保护策略的 CMG 支持](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [在租户附加加入期间导入以前创建的 Azure AD 应用程序](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [通过按流量计费的连接对客户端升级进行的改进](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [对管理设备重启的改进](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [改进了对 Windows 虚拟桌面的支持](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [指向 Configuration Manager 社区中心项的直接链接](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+- [租户附加：在 Microsoft 终结点管理器管理中心查看硬件清单](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [对客户端数据源仪表板的改进](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [某些控制台区域现在使用固定宽度的字体](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [管理任务序列策略大小](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [对管理中心内设备时间线的改进](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 > [!NOTE]
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。
@@ -151,6 +144,22 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能。 有关详细信息，请参阅[增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
+
+### <a name="technical-preview-version-2006"></a>技术预览版 2006
+
+- [在共同管理的设备上使用公司门户应用](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [通过 CMG 改进可用应用](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranet 客户端可以使用 CMG 软件更新点](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [通过 CMG 改进任务序列](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [针对远程工作者进行优化的管理见解](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [对 VPN 边界类型的改进](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [租户附加：对 Microsoft Endpoint Manager 管理中心中 Configuration Manager 操作的改进](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [对终结点保护策略的 CMG 支持](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [在租户附加加入期间导入以前创建的 Azure AD 应用程序](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [通过按流量计费的连接对客户端升级进行的改进](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [对管理设备重启的改进](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [改进了对 Windows 虚拟桌面的支持](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [指向 Configuration Manager 社区中心项的直接链接](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 ### <a name="technical-preview-version-2005"></a>技术预览版 2005
 

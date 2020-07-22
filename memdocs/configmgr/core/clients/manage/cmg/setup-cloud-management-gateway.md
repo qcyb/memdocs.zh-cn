@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715231"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410856"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -246,6 +246,9 @@ Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate 
 #### <a name="settings"></a>设置
 
 - **证书文件**：更改 CMG 的服务器身份验证证书。 在证书过期之前更新证书时，此选项很有用。  
+
+  > [!NOTE]
+  > 为 CMG 续订服务器身份验证证书时，为证书的公用名 (CN) 指定的 FQDN 区分大小写。  例如，如果当前正在使用的证书的 CN 为 `https://contoso-cmg.contoso.com`，则创建具有同样小写 CN 的新证书。 向导不会接受 CN 为 `https://CONTOSO-CMG.CONTOSO.COM` 的证书。
 
 - **VM 实例**：更改该服务在 Azure 中使用的虚拟机数量。 此设置允许你基于使用情况或成本考虑，以动态方式扩展或缩减该服务。  
 

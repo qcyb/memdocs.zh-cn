@@ -2,7 +2,7 @@
 title: 创建 OS 升级任务序列
 titleSuffix: Configuration Manager
 description: 使用任务序列自动从 Windows 7 或更高版本升级到 Windows 10
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383234"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384886"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>在 Configuration Manager 中创建任务序列来升级操作系统
 
@@ -253,13 +253,17 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    此命令会导致命令提示符退出并生成指定的非零退出代码，任务序列会将这种情况考虑为失败。
+
 1. 在“选项”选项卡上，添加以下条件：
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-此返回代码为 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的等效十进制数，表示不存在任何问题的成功兼容性扫描。 如果“升级评估”步骤成功并返回此代码，任务序列会跳过此步骤。 否则，如果评估步骤返回任何其他返回代码，则此步骤的任务序列将失败，并会从 Windows 安装程序兼容性扫描中返回代码。 有关 _SMSTSOSUpgradeActionReturnCode 的详细信息，请参阅[任务序列变量](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)。
+    这种情况意味着，仅当返回代码不是成功代码时，任务序列才运行此“运行命令行”步骤。
 
-有关详细信息，请参阅[升级操作系统](../understand/task-sequence-steps.md#BKMK_UpgradeOS)。  
+返回代码 `3247440400` 为 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的等效十进制数，表示不存在任何问题的成功兼容性扫描。 如果“升级评估”步骤成功并返回 `3247440400`，则任务序列将跳过此“运行命令行”步骤并继续。 如果评估步骤返回其他任何返回代码，则将运行此“运行命令行”步骤。 因为命令退出并生成非零返回代码，所以任务序列也会失败。 任务序列日志和状态消息包括来自 Windows 安装程序兼容性扫描的返回代码。 有关 _SMSTSOSUpgradeActionReturnCode 的详细信息，请参阅[任务序列变量](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)。
+
+有关详细信息，请参阅[升级操作系统](../understand/task-sequence-steps.md#BKMK_UpgradeOS)任务序列步骤。
 
 ### <a name="convert-from-bios-to-uefi"></a>从 BIOS 转换为 UEFI
 

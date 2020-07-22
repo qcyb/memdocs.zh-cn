@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022358"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437413"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
 
@@ -77,7 +77,7 @@ Microsoft.Intune.MAM.SDK.aar 必须指定为 Android 库引用。 要执行此�
 
 #### <a name="proguard"></a>ProGuard
 
-如果 [ProGuard](http://proguard.sourceforge.net/)（或任何其他收缩/混淆机制）用作一个生成步骤，SDK 则具有必须包含的其他配置规则。 当生成中包含 .AAR 时，我们的规则会自动集成到 proguard 步骤中，并保留必要的类文件。
+如果 [ProGuard](https://www.guardsquare.com/en/products/proguard)（或任何其他收缩/混淆机制）用作一个生成步骤，SDK 则具有必须包含的其他配置规则。 当生成中包含 .AAR 时，我们的规则会自动集成到 proguard 步骤中，并保留必要的类文件。
 
 [Microsoft 身份验证库 (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) 可能有其自己的 ProGuard 限制。 如果应用集成 MSAL，则必须遵循 MSAL 文档中的这些限制。
 

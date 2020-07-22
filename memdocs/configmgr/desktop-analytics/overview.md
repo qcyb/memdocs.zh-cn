@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195644"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411008"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -103,7 +103,7 @@ ms.locfileid: "86195644"
     - 设备还需要具有包含更新汇总 (4500571) 的 Configuration Manager 客户端版本 1902 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](connect-configmgr.md#bkmk_hotfix)。  
 
     > [!Note]  
-    > 桌面分析不支持升级到 Windows 10 长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 即服务概述](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。
+    > 桌面分析不支持以 Windows 10 长期服务频道 (LTSC) 为源或目标的升级。 有关详细信息，请参阅 [Windows 即服务概述](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。
     >
     > 桌面分析专门用于最大程度地支持就地升级方案。 如果需要进行重大更改（例如，从 32 位更改为 64 位体系结构），请使用映像方案。 桌面分析见解对于这些经典 OS 部署方案仍然有用，但你可以忽略特定于就地升级的指南。 有关详细信息，请参阅[使用 Configuration Manager 部署企业操作系统的方案](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)。
 

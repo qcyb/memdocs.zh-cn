@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cb1d4917e94528dc64fa336df8eacc085a4d685c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990145"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461974"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>通过 Microsoft Intune 中的 Zebra Mobility Extensions 来使用和管理 Zebra 设备
 
@@ -117,7 +117,7 @@ Intune 提供丰富的功能，包括管理应用和配置设备设置。 这些
   或者，可以使用 Intune 中的内置功能来获取这些更改，包括：
 
   - 用于[添加](../apps/apps-add.md)、[部署](../apps/apps-deploy.md)、更新和[监视](../apps/apps-monitor.md)应用等的应用管理功能。
-  - 在运行 Android Enterprise 的设备上管理[系统和应用更新](device-restrictions-android-for-work.md#device-owner-only)
+  - 在运行 Android Enterprise 的设备上管理[系统和应用更新](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 
 测试文件后，下一步是使用 Intune 将配置文件部署到设备。
 

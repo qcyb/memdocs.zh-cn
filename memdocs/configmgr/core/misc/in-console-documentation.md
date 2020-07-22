@@ -2,7 +2,7 @@
 title: 控制台中文档
 titleSuffix: Configuration Manager
 description: 本文仅在 Configuration Manager 控制台中显示。
-ms.date: 06/08/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0e38f35f49e827893be5e7763a52dd3b5a901bf7
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353524"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390868"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "85353524"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Microsoft Endpoint Configuration Manager
 
-上次更新时间：*2020 年 6 月 8 日*
+上次更新时间：2020 年 7 月 14 日
 
 此内容可以有助于学习 Configuration Manager 相关知识和为其提供支持。
 
@@ -42,9 +42,10 @@ ms.locfileid: "85353524"
 
 重要文章的特选列表。
 
-- [Microsoft Endpoint Manager 租户附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
-- [桌面分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview)
-- [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview)  
+- [Microsoft Endpoint Manager 租户附加](https://docs.microsoft.com/mem/configmgr/tenant-attach/)
+- [终结点分析](https://docs.microsoft.com/mem/analytics/)
+- [桌面分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/)
+- [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/)  
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
 - [规划 BitLocker 管理](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
 - [Microsoft Edge 管理](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
@@ -55,22 +56,22 @@ ms.locfileid: "85353524"
 
 ## <a name="trending"></a>趋势
 
-2020 年 5 月 1 日至 5 月 31 日期间最热门的文章。
+2020 年 6 月 1 日至 6 月 30 日期间最热门的文章。
 
 | 页面查看次数 | 标题 |
 |------------|-------|
-| 22624 | [规划云管理网关](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 18451 | [2002 版中的新增功能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 17763 | [日志文件引用](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 16718 | [如何在客户端上启用传输层安全性 (TLS) 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 16004 | [用于连接的端口](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 13965 | [启用传输层安全性 (TLS) 1.2 概述](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 13398 | [更新和维护服务](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 13279 | [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 13260 | [软件中心用户指导](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 12624 | [桌面分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 21317 | [规划云管理网关](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19402 | [日志文件引用](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 18826 | [如何在客户端上启用传输层安全性 (TLS) 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 16525 | [启用传输层安全性 (TLS) 1.2 概述](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 16142 | [用于连接的端口](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15834 | [2002 版中的新增功能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 13963 | [什么是 Configuration Manager？](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
+| 13727 | [桌面分析](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13603 | [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 13049 | [软件中心用户指导](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
 
-[Configuration Manager 中心页面](https://docs.microsoft.com/mem/configmgr/)在此时间段期间的页面查看次数为 34,986 次。
+[Configuration Manager 中心页面](https://docs.microsoft.com/mem/configmgr/)在此时间段期间的页面查看次数为 36,220 次。
 
 ## <a name="recently-updated"></a>最近更新
 
@@ -78,16 +79,16 @@ ms.locfileid: "85353524"
 
 | 上次审阅时间 | 标题 |
 |---------------|-------|
-| 2020 年 5 月 29 日 | [技术预览版 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
-| 2020 年 5 月 27 日 | [支持 Windows 10](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
-| 2020 年 5 月 26 日 | [CMPivot 概述](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
-| 2020 年 5 月 26 日 | [租户附加的 CMPivot 概述](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
-| 2020 年 5 月 26 日 | [租户附加的 CMPivot 示例脚本](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
-| 2020 年 5 月 26 日 | [2002 版中的新增功能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 2020 年 5 月 21 日 | [发行说明](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 2020 年 5 月 14 日 | [推荐硬件](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
-| 2020 年 5 月 11 日 | [桌面分析中的资产](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
-| 2020 年 5 月 11 日 | [桌面分析中的新增功能](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
+| 2020/6/29 | [技术预览版 2006](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006) |
+| 2020/6/25 | [安装 Power BI 示例报表](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-sample-reports) |
+| 2020/6/24 | [支持的 SQL Server 版本](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-sql-server-versions) |
+| 2020/6/18 | [管理 Surface 驱动程序更新](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/surface-drivers) |
+| 2020/6/17 | [Microsoft Defender 高级威胁防护](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) |
+| 2020/6/10 | [规划云管理网关](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 2020/6/10 | [软件中心用户指导](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 2020/6/10 | [CMG 常见问题解答](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/cloud-management-gateway-faq) |
+| 2020/6/5 | [集合最佳做法](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/best-practices-for-collections) |
+| 2020/6/5 | [集合评估](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/collection-evaluation) |
 
 ## <a name="troubleshooting-articles"></a>疑难解答文章
 
