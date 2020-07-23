@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989623"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502589"
 ---
 # <a name="app-protection-policies-overview"></a>应用保护策略概述
 
@@ -31,7 +31,7 @@ ms.locfileid: "83989623"
 
 应用保护策略 (APP) 是可确保组织数据在托管应用中保持安全或受到控制的规则。 策略可以是在用户尝试访问或移动“公司”数据时强制执行的规则，或在用户位于应用内时受到禁止或监视的一组操作。 受管理应用是一种自身执行应用保护策略的应用，可由 Intune 管理。
 
-借助移动应用管理 (MAM) 应用保护策略，可以管理和保护应用程序内的组织数据。 通过无需注册的 MAM (MAM-WE)，可以在几乎任何[设备](app-management.md#app-management-capabilities-by-platform)上管理包含敏感数据的工作或学校相关应用，包括自带设备办公 (BYOD) 场景下的个人设备。  许多高效工作型应用，例如 Microsoft Office 应用
+借助移动应用管理 (MAM) 应用保护策略，可以管理和保护应用程序内的组织数据。 通过无需注册的 MAM (MAM-WE)，可以在几乎任何[设备](app-management.md#app-management-capabilities-by-platform)上管理包含敏感数据的工作或学校相关应用，包括自带设备办公 (BYOD) 场景下的个人设备。 许多高效工作型应用，例如 Microsoft Office 应用
 ，都可以通过 Intune MAM 进行管理。 请参阅可供公众使用的 [Microsoft Intune 保护的应用](apps-supported-intune-apps.md)的官方列表。
 
 ## <a name="how-you-can-protect-app-data"></a>如何保护应用数据
@@ -72,7 +72,7 @@ ms.locfileid: "83989623"
 
 将 MDM 与应用保护策略一起使用还有其他优点，公司可以同时使用应用保护策略与 MDM，也可以单独使用应用保护策略。 例如这样一种情况：员工同时使用公司电话和其个人平板电脑。 公司的手机在 MDM 中注册且受应用保护策略保护，而个人设备仅受应用保护策略保护。
 
-如果在不设置设备状态的情况下将 MAM 策略应用于用户，用户将同时在 BYOD 设备和 Intune 托管设备上获得 MAM 策略。 还可以根据托管状态应用 MAM 策略。 因此，在创建应用保护策略时，应在“面向所有应用类型”旁边选择“否”。  然后，执行以下任意操作：
+如果在不设置设备状态的情况下将 MAM 策略应用于用户，用户将同时在 BYOD 设备和 Intune 托管设备上获得 MAM 策略。 还可以根据托管状态应用 MAM 策略。 因此，在创建应用保护策略时，应在“面向所有应用类型”旁边选择“否”。 然后，执行以下任意操作：
 - 将不太严格的 MAM 策略应用于 Intune 托管设备，并将更严格的 MAM 策略应用于未注册 MDM 的设备。
 - 将 MAM 策略仅应用于未注册的设备。
 
@@ -128,7 +128,7 @@ MDM 解决方案通过提供以下功能增值：
 应用保护策略通过提供以下功能增值：
 
 - 帮助防止公司数据泄露到使用者应用和服务
-- 将限制（如“另存为”、“剪贴板”或“PIN”）应用到客户端应用  
+- 将限制（如“另存为”、“剪贴板”或“PIN”）应用到客户端应用
 - 必要时，从应用擦除公司数据而不从设备删除这些应用
 
 ### <a name="data-protection-with-app-for-devices-without-enrollment"></a>采用适用于未注册设备的 APP 保护数据
@@ -313,7 +313,7 @@ MAM 选择性擦除仅删除应用中的公司应用数据。 使用 Intune Azur
 Intune 应用保护要求用户的身份在应用程序与 [Intune SDK](../developer/app-sdk.md) 之间保持一致。 保证此种一致的唯一方法是通过新式身份验证。 在某些情况下应用可能适用于本地配置，但它们既不一致也无法得到保证。
 
 **从托管应用中打开 Web 链接的安全方法**<br>
-IT 管理员可以为 [Microsoft Edge](app-configuration-managed-browser.md)（可使用 Intune 轻松管理的 Web 浏览器）部署和设置应用保护策略。 IT 管理员可以要求 Intune 托管应用中的所有 Web 链接均使用 Managed Browser 应用打开。
+IT 管理员可以为 [Microsoft Edge](manage-microsoft-edge.md)（可使用 Intune 轻松管理的 Web 浏览器）部署和设置应用保护策略。 IT 管理员可以要求 Intune 托管应用中的所有 Web 链接均使用 Managed Browser 应用打开。
 
 ## <a name="app-protection-experience-for-ios-devices"></a>适用于 iOS 设备的应用保护体验
 
@@ -362,7 +362,7 @@ Intune 利用 Google Play 保护 SafetyNet API 添加到我们对未注册设备
 Google Play 保护的 SafetyNet API 检查要求最终用户保持在线状态，至少是在执行“往返”以确定认证结果期间。 如果最终用户为离线状态，IT 管理员仍可通过“已越狱/已获得 root 权限的设备”设置强制执行结果。 不过，如果最终用户长时间离线，“脱机宽限期”值就会发挥作用，在达到计时器值后将阻止所有对工作或学校数据的访问，直至网络访问可用。 同时开启这两个设置就可以通过分层方法来保持最终用户设备正常运行，这在最终用户通过移动设备访问工作或学校数据时非常重要。
 
 ### <a name="google-play-protect-apis-and-google-play-services"></a>Google Play 保护 API 和 Google Play Services
-利用 Google Play 保护 API 的应用保护策略设置需要 Google Play Services 才能运行。 “SafetyNet 设备认证”和“应用威胁扫描”设置都需要 Google 确定的 Google Play Services 版本才能正常运行。  由于这些设置属于安全领域，如果最终用户是这些设置的目标，并且未使用适当版本的 Google Play Services，或者没有 Google Play Services 的访问权限，则将被阻止。
+利用 Google Play 保护 API 的应用保护策略设置需要 Google Play Services 才能运行。 “SafetyNet 设备认证”和“应用威胁扫描”设置都需要 Google 确定的 Google Play Services 版本才能正常运行。 由于这些设置属于安全领域，如果最终用户是这些设置的目标，并且未使用适当版本的 Google Play Services，或者没有 Google Play Services 的访问权限，则将被阻止。
 
 ## <a name="next-steps"></a>后续步骤
 
