@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633282"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462025"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Intune 中终结点安全的磁盘加密策略设置
 
@@ -66,6 +66,11 @@ ms.locfileid: "83633282"
     禁止在用户注销时提示他们启用 FileVault。如果设置为“禁用”，则会禁止在用户注销时提示，而在用户登录时提示。
     - **未配置**（默认）
     - **是** - 禁止在用户注销时向其显示启用 FileVault 的提示。
+
+  - **隐藏恢复密钥**  
+     在加密期间，向 macOS 设备的用户隐藏个人恢复密钥。 磁盘加密后，用户可以使用任何设备通过 Intune 公司门户网站或受支持平台上的公司门户应用查看其个人恢复密钥。
+    - **未配置**（默认）
+    - “是”- 在设备加密期间隐藏个人恢复密钥。
 
 ## <a name="bitlocker"></a>BitLocker
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c910b840d51a1db94702bc8e095255e557246bea
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988190"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491314"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用“擦除”或“停用”操作删除设备，或手动取消注册设备
 
@@ -36,7 +36,7 @@ ms.locfileid: "83988190"
 
 “擦除”操作将设备还原为出厂默认设置  。 如果选择“保留注册状态和用户帐户”  复选框，则保留用户数据。 否则，将删除所有数据、应用和设置。
 
-|擦除操作|保留注册状态和用户帐户 |从 Intune 管理中删除|说明|
+|擦除操作|保留注册状态和用户帐户|从 Intune 管理中删除|说明|
 |:-------------:|:------------:|:------------:|------------|
 |**擦除**| 未选中 | 是 | 擦除所有用户帐户、数据、MDM 策略和设置。 将操作系统重置为其默认状态和设置。|
 |**擦除**| 已选中 | 否 | 擦除所有 MDM 策略。 保留用户帐户和数据。 将用户设置重置回默认设置。 将操作系统重置为其默认状态和设置。|
@@ -69,7 +69,7 @@ ms.locfileid: "83988190"
     |用户配置文件以外的用户数据||
     |用户自动登录|| 
     
-7. “擦除设备，即使设备断电也继续擦除。”  选项可确保不能通过将设备关机来规避擦除操作。 此选项将继续尝试重置设备，直到成功为止。 在一些配置中，此操作可能会使设备[无法重启](troubleshoot-device-actions.md#wipe-action)。        
+7. “擦除设备，即使设备断电也继续擦除。” 选项可确保不能通过将设备关机来规避擦除操作。 此选项将继续尝试重置设备，直到成功为止。 在一些配置中，此操作可能会使设备[无法重启](troubleshoot-device-actions.md#wipe-action)。        
 8. 若要确认擦除，请选择“是”  。
 
 如果设备已打开并连接，“擦除”操作会在 15 分钟内跨所有设备类型进行传播  。
@@ -91,8 +91,7 @@ ms.locfileid: "83988190"
 |Wi-Fi 和 VPN 配置文件设置|删除。|
 |证书配置文件设置|已删除并吊销证书。|
 |管理代理|删除管理配置文件。|
-|电子邮件
-|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
+|电子邮件|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
 |Azure AD 脱离|删除 Azure AD 记录。|
 
 ### <a name="android-device-administrator"></a>Android 设备管理员
@@ -108,8 +107,7 @@ ms.locfileid: "83988190"
 |Wi-Fi 和 VPN 配置文件设置|删除。|删除。|
 |证书配置文件设置|已撤销证书，但未删除。|已删除并吊销证书。|
 |管理代理|撤销设备管理员权限。|撤销设备管理员权限。|
-|电子邮件
-|N/A（Android 设备不支持电子邮件配置文件）|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
+|电子邮件|N/A（Android 设备不支持电子邮件配置文件）|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|
 |Azure AD 脱离|删除 Azure AD 记录。|删除 Azure AD 记录。|
 
 ### <a name="android-enterprise-devices-with-a-work-profile"></a>带工作配置文件的 Android Enterprise 设备
@@ -140,8 +138,7 @@ ms.locfileid: "83988190"
 |设置|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|
 |Wi-Fi 和 VPN 配置文件设置|删除。|删除。|不支持。|删除。|
 |证书配置文件设置|已删除并吊销证书。|已删除并吊销证书。|不支持。|已删除并吊销证书。|
-|电子邮件
-|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。|不支持。|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。 删除由 Intune 预配的邮件帐户。|
+|电子邮件|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。|不支持。|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。 删除由 Intune 预配的邮件帐户。|
 |Azure AD 脱离|不能。|不能。|删除 Azure AD 记录。|删除 Azure AD 记录。|
 
 > [!NOTE]
@@ -164,7 +161,7 @@ ms.locfileid: "83988190"
 2. 选择  “设备” >   “所有设备”>“选择要删除的设备”>“删除”  。
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>使用清理规则自动删除设备
-可配置 Intune 以自动删除看似非活动、过时或无响应的设备。 这些清理规则会持续监控设备清单，以便设备记录保持最新。 以这种方式删除的设备将从 Intune 管理中删除。
+可配置 Intune 以自动删除看似非活动、过时或无响应的设备。 这些清理规则会持续监控设备清单，以便设备记录保持最新。 以这种方式删除的设备将从 Intune 管理中删除。 此设置会影响 Intune 管理的所有设备，而不是仅影响特定设备。
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备”   > “设备清理规则”   > “是”  。
 3. 在“删除这么多天尚未签入的设备”  框中，输入介于 30 和 270 的数字。

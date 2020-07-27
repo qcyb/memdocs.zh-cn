@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303464"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491246"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置
 
@@ -31,9 +31,18 @@ ms.locfileid: "86303464"
 
 [创建设备配置文件](device-restrictions-configure.md)。
 
-## <a name="device-owner-only"></a>仅设备所有者
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>公司拥有的完全托管式专用工作配置文件
 
-这些设置适用于 Intune 控制整个设备的 Android Enterprise 注册类型，如 Android Enterprise 完全托管设备或专用设备。
+这些设置适用于使用 Intune 控制整个设备的 Android Enterprise 注册类型，如 Android Enterprise 公司拥有的完全托管式专用工作配置文件设备。
+
+并非所有注册类型都支持某些设置。 若要查看哪些设置受哪些注册类型支持，请参阅用户界面。 每个设置下都有一个标头，指示哪些注册类型可以使用该设置。
+
+![设置标头。](./media/device-restrictions-android-for-work/setting-headers.png)
+
+某些设置仅在公司拥有的工作配置文件设备的工作配置文件级别适用。 这些设置仍为完全托管式专用设备的应用设备范围。 这些设置在用户界面中用“（工作配置文件级）”描述符进行标记。
+
+![设置标头。](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>常规
 
@@ -115,7 +124,9 @@ ms.locfileid: "86303464"
       >
       > “托管主屏幕”应用不需要位于配置文件中，但需要被添加为应用。 添加“托管主屏幕”应用后，在配置文件中添加的任何其他应用都会在“托管主屏幕”应用中显示为图标 。
       >
-      > 使用多应用展台模式时，拨号器/电话应用程序可能无法正常工作。 
+      > 使用多应用展台模式时，拨号器/电话应用程序可能无法正常工作。
+      >
+      > 如需详细了解托管主屏幕，请参阅[应用多应用展台模式在专用设备上设置 Microsoft 托管主屏幕](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060)。
 
       - **添加**：从列表中选择应用。
 
@@ -123,6 +134,28 @@ ms.locfileid: "86303464"
 
         还可以将其他由组织创建的 [Android 应用](../apps/apps-add-android-for-work.md)和 [Web 应用](../apps/web-app.md)添加到设备。 请确保[将应用分配给为专用设备创建的设备组](../apps/apps-deploy.md)。
 
+      - **文件夹图标**：选择托管主屏幕上显示的文件夹图标的颜色和形状。 选项包括：
+        - 未配置 
+        - 深色主题矩形
+        - 深色主题圆圈
+        - 浅色主题矩形
+        - 浅色主题圆圈
+      - **应用和文件夹图标大小**：选择托管主屏幕上显示的文件夹图标的大小。 选项包括：
+        - 未配置 
+        - 特小型
+        - 小型
+        - 平均值
+        - 大型
+        - 特大型
+
+          根据屏幕大小，实际图标大小可能不同。
+
+      - **屏幕方向**：选择托管主屏幕在设备上显示的方向。 选项包括：
+        - 未配置
+        - 纵向
+        - 横向
+        - 自动旋转
+      - **应用通知徽章**：选择“启用”后可在应用图标上显示新的和未读通知的数量。 设置为“未配置”时，Intune 不会更改或更新此设置。
       - **虚拟主页按钮**：一个软键按钮，它将用户返回到托管主屏幕，使用户可在应用之间切换。 选项包括：
         - **未配置**（默认）：不显示主页按钮。 用户必须使用“后退”按钮以在应用之间切换。
         - **向上轻扫**：当用户在设备上向上轻扫时，显示主页按钮。
@@ -150,7 +183,31 @@ ms.locfileid: "86303464"
         >
         > 新式显示器具有更高的像素密度，并且可以显示等效的 2K/4K 清晰度的图像。
 
+      - **“设置”菜单的快捷方式**：选择“禁用”后可在托管主屏幕上隐藏托管设置快捷方式。 用户仍可向下轻扫来访问设置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，“托管设置”快捷方式显示在设备上。 用户仍可向下轻扫来访问这些设置。
+
+      - **“调试”菜单的快速访问**：此设置控制用户访问“调试”菜单的一些方法。 选项包括：
+
+        - **启用**：用户可以更轻松地访问调试菜单。 具体来说，他们可以向下轻扫，或使用“托管设置”快捷方式。 他们可以一如既往继续选择“后退”按钮 15 次。
+        - **未配置**（默认）：Intune 不会更改或更新此设置。 默认情况下，对“调试”菜单的轻松访问将关闭。 用户必须选择“后退”按钮 15 次才能打开“调试”菜单。
+
+        使用“调试”菜单，用户可以执行以下操作：
+
+        - 查看和上传托管主屏幕日志
+        - 打开 Google 的 Android 设备策略管理器应用
+        - 打开 [Microsoft Intune 应用](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - 退出展台模式
+
       - **Wi-Fi 配置**：若为“启用”，则在托管主屏幕上显示 Wi-Fi 控件，并允许用户将设备连接到不同的 Wi-Fi 网络。 启用此功能还会开启设备的位置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示 Wi-Fi 控件。 它阻止用户在使用托管主屏幕时连接到 Wi-Fi 网络。
+
+        - **Wi-Fi 允许列表**：创建有效的无线网络名称列表，也称为服务集标识符 (SSID)。 托管主屏幕用户只能连接到你输入的 SSID。
+
+          如果留空，Intune 将不会更改或更新此设置。 默认情况下，允许所有可用的 Wi-Fi 网络。
+
+          导入包括有效 SSID 列表的 .csv 文件。
+
+          将当前列表导出到 .csv 列表。
+
+        - **SSID**：你还可以输入托管主屏幕用户可以连接到的 Wi-Fi 网络名称 (SSID)。 确保输入有效 SSID。
 
       - **蓝牙配置**：设置为“启用”时，可在托管的主屏幕上显示蓝牙控件，并允许用户通过蓝牙对设备进行配对。 启用此功能还会开启设备的位置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示蓝牙控件。 它阻止用户在使用托管的主屏幕时配置蓝牙和配对设备。
 
@@ -158,52 +215,51 @@ ms.locfileid: "86303464"
 
       - **媒体音量控制**：设置为“启用”时，可在托管的主屏幕上显示媒体音量控件，并允许用户使用滑块调整设备的媒体音量。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示媒体音量控制。 它阻止用户在使用托管主屏幕时调整设备的媒体音量，除非用户的硬件按钮支持此操作。
 
+      - **快速访问设备信息**：选择“启用”后，用户可以向下轻扫以查看托管主屏幕上的设备信息，如序列号、名称和型号以及 SDK 级别。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，可能不会显示设备信息。
+
       - **屏幕保护模式**：若为“启用”，则当设备锁定或超时时，托管主屏幕上会显示屏幕保护程序。设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会在托管的主屏幕上显示屏幕保护。
 
         启用后，还需配置：
 
-        - **设置自定义屏幕保护图像**：输入自定义 PNG、JPG、JPEG、GIF、BMP、WebP 或 ICOIMAGE 的 URL。 如果未输入 URL，则使用设备的默认图像（如果存在默认图像）。 
-        
+        - **设置自定义屏幕保护图像**：输入自定义 PNG、JPG、JPEG、GIF、BMP、WebP 或 ICOIMAGE 的 URL。 如果未输入 URL，则使用设备的默认图像（如果存在默认图像）。
+
           例如，输入：
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > 任何可转换为位图的文件资源 URL 均受支持。
 
         - **在关闭屏幕之前设备显示屏幕保护程序的秒数**：选择设备显示屏幕保护程序的时长。 请输入一个介于 0 到 9999999 秒之间的值。 默认值 `0` 秒。 当为空或设置为 0 (`0`) 时，屏幕保护程序将处于活动状态，直到用户与设备交互。
         - **在显示屏幕保护之前设备处于非活动状态的秒数**：选择在显示屏幕保护程序之前设备处于空闲状态的时长。 请输入一个介于 1 到 9999999 秒之间的值。 默认值为 `30` 秒。 必须输入一个大于零 (`0`) 的数字。
-        - **启动屏幕保护程序前检测媒体**：若为“启用”（默认值），则当音频或视频在设备上播放时，不会显示屏幕保护程序。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能会显示屏幕保护，即使正在播放音频或视频也是如此。
+        - **启动屏幕保护程序前检测媒体**：若为“启用”（默认值），则当音频或视频在设备上播放时，不会显示屏幕保护程序。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置  。 默认情况下，OS 可能会显示屏幕保护，即使正在播放音频或视频也是如此。
 
 - **完全托管**：在完全托管的设备上配置微软桌面应用。
 
   - **将微软桌面设置为默认桌面**：选择“启用”可将微软桌面设置为主屏幕上的默认桌面。 如果将微软桌面设置为默认桌面，则用户不能使用其他桌面。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，不会强制将微软桌面作为默认桌面。
+  - **配置自定义壁纸**：选择“启用”后，你可以将自己的图像应用为主屏幕壁纸，并选择是否允许用户更改该图像。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，设备将保留其当前壁纸。
+    - **输入壁纸图像的 URL**：输入壁纸图像的 URL。 此图像在设备主屏幕上显示。 例如，输入 `http://www.contoso.com/image.jpg`。 
+    - **允许用户修改壁纸**：选择“启用”后，用户可以更改壁纸图像。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，用户无法更改壁纸。
+  - **启用启动器源**：选择“启用”后将启动启动器源，其中显示日历、文档和最近活动。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，不显示此源。
+    - **允许用户启动/禁用源**：选择“启用”后，用户可以启用或禁用启动器源。 选择“启用”后，仅在首次分配配置文件时强制执行此设置。 任何将来的配置文件分配都不会强制执行此设置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，用户无法更改启动器源设置。
+  - **停靠状态**：通过停靠，用户可以快速访问他们的应用和工具。 选项包括：
+    - **未配置**（默认）：Intune 不会更改或更新此设置。
+    - **显示**：停靠在设备上显示。
+    - **隐藏**：停靠处于隐藏状态。 用户必须向上轻扫才能访问停靠。
+    - **已禁用**：停靠不显示在设备上，并且阻止用户显示它。
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **允许用户更改停靠状态**：选择“启用”后，用户可以显示或隐藏停靠。 选择“启用”后，仅在首次分配配置文件时强制执行此设置。 任何将来的配置文件分配都不会强制执行此设置。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，不允许用户更改设备停靠配置。
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **搜索栏放置**：选择要放置搜索栏的位置。 选项包括：
+    - **未配置**（默认）：Intune 不会更改或更新此设置。
+    - **顶部**：搜索栏显示在设备的顶部。
+    - **底部**：搜索栏显示在设备的底部。
+    - **隐藏**：搜索栏处于隐藏状态。
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>Password
@@ -240,7 +296,7 @@ End of comment -->
 - **擦除设备前的登录失败次数**：输入设备擦除前允许的错误密码数，范围为 4-11 个。 如果为 `0`（零），可能会禁用设备擦除功能。 如果该值为空，Intune 不会更改或更新此设置。
 
   > [!NOTE]
-  > “设备所有者”设备不会收到设置密码的提示。 密码设置操作是强制性操作，需要手动设置密码。 如果设置的密码不满足要求，用于强制执行的策略将显示为失败，直到满足要求为止。
+  > 系统不会提示公司拥有的完全托管式专用工作配置文件设备设置密码。 密码设置操作是强制性操作，需要手动设置密码。 如果设置的密码不满足要求，用于强制执行的策略将显示为失败，直到满足要求为止。
 
 ### <a name="power-settings"></a>电源设置
 
@@ -255,7 +311,7 @@ End of comment -->
 - 帐户更改（仅限专用设备）：设置为“阻止”可阻止用户修改帐户。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能允许用户更新设备上的用户帐户。
 
   > [!NOTE]
-  > 设备所有者（完全托管）设备不支持此设置。 如果你配置了此设置，则此设置将被忽略，且不会产生任何影响。
+  > 这些设置不适用于公司拥有的完全托管式专用工作配置文件设备。 如果你配置了此设置，则此设置将被忽略，且不会产生任何影响。
 
 - **用户可配置凭据**：若为“阻止”，则阻止用户配置分配给设备（甚至包括不与用户帐户关联的设备）的证书。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能允许用户在密钥存储中访问凭据时配置或更改其凭据。
 - **个人 Google 账号**：若为“阻止”，则阻止用户将其个人 Google 帐户添加到其设备。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能允许用户添加其个人 Google 帐户。

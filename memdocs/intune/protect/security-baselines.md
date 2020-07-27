@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a3a9ae0c697cb6cd60f0f9bddce50057bcfcd3a3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988331"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462093"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>使用安全基线在 Intune 中配置 Windows 10 设备
 
@@ -75,12 +75,12 @@ ms.locfileid: "83988331"
 基线的每个新版本实例可以添加或删除设置或引入其他更改。 例如，当新版本的 Windows 10 中提供新 Windows 10 设置时，MDM 安全基线可能会收到包含最新设置的新版本实例。
 
 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的“终结点安全性” > “安全基线”下，你将看到可用基线的列表 。 该列表包括：
-- 基线模板名称
-- 具有使用该基线类型的配置文件数
-- 可用的该基线类型的单独实例（版本）数
-- 上次发布的日期，用于确定最新基线模板版本的发布时间
+- 基线模板名称。
+- 具有使用该基线类型的配置文件数。
+- 可用的该基线类型的单独实例（版本）数。
+- “最新发布”日期，用于确定标识基线模板的最新版本何时可用。
 
-若要查看所使用的基线版本的详细信息，请选择基线以打开它的“概览”窗格，再选择“版本”。 此时，Intune 显示配置文件使用的基线版本的详细信息。 详细信息包括最新和当前的基线版本。 可以选择单个版本以进一步详细了解使用该版本的配置文件。
+要查看有关使用的基准版本的更多详细信息，请选择一种基准类型，例如“MDM 安全基准”，打开其“配置文件”窗格，然后选择“版本” 。 此时，Intune 显示配置文件使用的基线版本的详细信息。 详细信息包括最新和当前的基线版本。 可以选择单个版本以进一步详细了解使用该版本的配置文件。
 
 可以选择[更改给定配置文件使用的基线版本](#change-the-baseline-version-for-a-profile)。 更改版本时，无需创建新的基线配置文件即可充分利用更新的版本。 相反，可以选择基线配置文件，然后使用内置选项将该配置文件的实例版本更改为新实例版本。
 

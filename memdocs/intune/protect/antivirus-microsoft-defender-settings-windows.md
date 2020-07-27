@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 0eae6837ff2ef1d8b2e47118a20d4aa4e6b0f22b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430097"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461277"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 中 Windows 10 Microsoft Defender 防病毒策略的设置
 
@@ -282,6 +282,18 @@ ms.locfileid: "83430097"
   CSP：[SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   指定用于检查签名的时间间隔，从 0 到 24（以小时为单位）。 如果值为零，则不会检查新的签名。 如果值为 2，将每隔两小时检查一次，依此类推。
+
+- **定义用于下载定义更新的文件共享**  
+  CSP：[SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+  管理位置（如 UNC 文件共享）并将其作为获取定义更新的下载源位置。 从一个指定数据源成功下载定义更新后，不会连接到列表中剩余的源。
+
+  你可以“添加”单独的位置，或“导入”位置列表作为 .csv 文件 。
+
+- **定义用于下载定义更新的源的顺序**  
+  CSP：[SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+
+  指定按何种顺序连接你指定的源位置才能获取定义更新。 从一个指定数据源成功下载定义更新后，不会连接列表中剩余的其他源。
 
 ## <a name="user-experience"></a>用户体验
 

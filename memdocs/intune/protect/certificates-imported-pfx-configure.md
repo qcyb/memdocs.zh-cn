@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591113"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461821"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用导入的 PKCS 证书
 
@@ -45,6 +45,7 @@ Intune 支持为以下平台导入 PFX 证书：
 - Android - 设备管理员
 - Android Enterprise - 完全托管
 - Android Enterprise - 工作配置文件
+- Android Enterprise - 公司拥有的工作配置文件
 - iOS/iPadOS
 - macOS
 - Windows 10
@@ -258,7 +259,7 @@ PowerShell 模块提供了使用 Windows 加密创建密钥的方法。 你也�
 
     有关详细信息，请参阅“在 Microsoft Intune 中创建设备配置文件”中的[适用性规则](../configuration/device-profile-create.md#applicability-rules)。
 
-    选择“下一步”。
+    选择“下一步”  。
 
 12. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 

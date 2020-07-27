@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,33 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078237"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871971"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune 中设备策略和配置文件的常见疑问、问题和解决方案
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune 中设备策略和配置文件的常见问题和解答
 
 了解在 Intune 中使用设备配置文件和策略时的常见问题解答。 此外，本文还列出了签入时间间隔，详细说明了冲突等。
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>为什么在对现有 Wi-Fi 配置文件进行密码或通行短语更改时，用户无法获取新的配置文件？
-
-创建企业 Wi-Fi 配置文件、将配置文件部署到组、更改密码并保存配置文件。 配置文件发生更改时，某些用户可能无法获取新的配置文件。
-
-若要缓解此问题，请设置来宾 Wi-Fi。 如果企业 Wi-Fi 失败
-，用户可以连接到来宾 Wi-Fi。 请务必启用任何自动连接设置。 将来宾 Wi-Fi 配置文件部署到所有用户。
-
-一些其他建议：  
-
-- 如果连接到的 Wi-Fi 网络使用密码或通行短语，请确保你能直接连接到 Wi-Fi 路由器。 可使用 iOS/iPadOS 设备进行测试。
-- 在成功连接到 Wi-Fi 终结点（Wi-Fi 路由器）后，请注意所使用的 SSID 和凭据（此值为密码或通行短语）。
-- 在“预共享密钥”字段中输入 SSID 和凭据（密码或通行短语）。 
-- 部署到具有有限用户数的测试组，最好仅限 IT 团队。 
-- 将 iOS/iPadOS 设备同步到 Intune。 如果尚未注册，请先注册。 
-- 再次测试连接到相同的 Wi-Fi 终结点（如先前步骤所述）。
-- 推广至更大的组，并最终遍及组织中的所有预期用户。 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>策略、配置文件或应用分配完成后，设备需要多长时间获取？
 

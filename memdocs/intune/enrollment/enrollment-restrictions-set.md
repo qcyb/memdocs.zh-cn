@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746487"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491195"
 ---
 # <a name="set-enrollment-restrictions"></a>设置注册限制
 
@@ -61,8 +61,8 @@ ms.locfileid: "84746487"
 
 1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制” > “设备类型限制”   。
 2. 在“基本信息”页上，为限制提供名称和可选说明  。
-3. 选择“下一步”，转到“平台设置”页。 
-4. 在“平台”中，对想要此限制允许的平台选择“允许”。 
+3. 选择“下一步”，转到“平台设置”页。
+4. 在“平台”中，对想要此限制允许的平台选择“允许”。
     ![选择平台设置的屏幕截图](./media/enrollment-restrictions-set/choose-platform-settings.png)
 5. 在“版本”中，选择想要允许的平台支持的最低版本和最高版本。 对于 iOS 和 Android，版本限制仅适用于向公司门户注册的设备。
      支持的版本格式包括：
@@ -81,11 +81,11 @@ ms.locfileid: "84746487"
    > [!Note]
    > Windows 10 注册过程中不提供修订号，因此对于实例，如果输入 10.0.17134.100 而设备是 10.0.17134.174，则在注册过程中将阻止该实例。
 
-6. 在“个人拥有”中，对想要允许作为个人拥有的设备的平台选择“允许”。 
+6. 在“个人拥有”中，对想要允许作为个人拥有的设备的平台选择“允许”。
 7. 在“设备制造商”下，输入要阻止的以逗号分隔的制造商列表。
-8. 选择“下一步”，转到“作用域标记”页。 
+8. 选择“下一步”，转到“作用域标记”页。
 9. 在“作用域标记”页上，可选择添加要应用到此限制的作用域标记。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。 使用具有注册限制的作用域标记时，用户只能对具有作用域的策略重新排序。 而且，他们只能对具有作用域的策略位置重新排序。 用户可以看到每个策略的真实优先级编号。 作用域的用户可以判断其策略的相对优先级，即使他们看不到所有其他策略。
-10. 选择“下一步”，转到“分配”页。 
+10. 选择“下一步”，转到“分配”页。
 11. 选择“选择要包含的组”，然后使用搜索框找到想要此限制包含的组。 限制仅适用于它分配到的组。 如果连一个组都没有分配限制，则不会产生任何影响。 然后选取“选择”。 
     ![选择平台设置的屏幕截图](./media/enrollment-restrictions-set/select-groups.png)
 12. 选择“下一步”，以转到“查看 + 创建”页。
@@ -97,12 +97,12 @@ ms.locfileid: "84746487"
 
 1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制” > “设备限制”   。
 2. 在“基本信息”页上，为限制提供名称和可选说明  。
-3. 选择“下一步”，转到“设备限制”页。 
+3. 选择“下一步”，转到“设备限制”页。
 4. 对于“设备限制”，选择用户可以注册的最大设备数量。
     ![选择设备限制的屏幕截图](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. 选择“下一步”，转到“作用域标记”页。 
+5. 选择“下一步”，转到“作用域标记”页。
 6. 在“作用域标记”页上，可选择添加要应用到此限制的作用域标记。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。 使用具有注册限制的作用域标记时，用户只能对具有作用域的策略重新排序。 而且，他们只能对具有作用域的策略位置重新排序。 用户可以看到每个策略的真实优先级编号。 作用域的用户可以判断其策略的相对优先级，即使他们看不到所有其他策略。
-7. 选择“下一步”，转到“分配”页。 
+7. 选择“下一步”，转到“分配”页。
 8. 选择“选择要包含的组”，然后使用搜索框找到想要此限制包含的组。 限制仅适用于它分配到的组。 如果连一个组都没有分配限制，则不会产生任何影响。 然后选取“选择”。 
     ![选择组的屏幕截图](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 9. 选择“下一步”，以转到“查看 + 创建”页。
@@ -132,7 +132,7 @@ ms.locfileid: "84746487"
 
 1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > 选择要更改的限制 >“属性”  。
 2. 选择要更改的设置旁边的“编辑”。
-3. 在“编辑”页上，根据需要进行更改，继续转到“查看 + 保存”页，然后选择“保存”。  
+3. 在“编辑”页上，根据需要进行更改，继续转到“查看 + 保存”页，然后选择“保存”。
 
 
 ## <a name="blocking-personal-android-devices"></a>阻止个人 Android 设备
@@ -164,7 +164,7 @@ ms.locfileid: "84746487"
 
 ## <a name="blocking-personal-iosipados-devices"></a>阻止个人 iOS/iPadOS 设备
 默认情况下，Intune 将 iOS/iPadOS 设备分类为个人拥有的设备。 若要分类为公司拥有的设备，iOS/iPadOS 设备必须满足以下条件之一：
-- 已使用序列号或 IMEI 注册。
+- [已使用序列号注册](corporate-identifiers-add.md)。
 - 已使用自动设备注册（以前称为设备注册计划）注册
 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084953"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462161"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>通过 Intune 使用条件访问的常见方式有哪些？
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 使用 Intune 的条件访问有两种：基于设备的条件访问和基于应用的条件访问。 需要配置相关的符合性策略，以驱动组织中的条件访问符合性。 条件访问通常用于执行以下操作：允许或阻止对 Exchange 的访问、控制网络访问权限、与 Mobile Threat Defense 解决方案集成等。
  
@@ -51,7 +48,7 @@ Intune 提供了设备符合性策略功能，可评估设备的符合性状态�
 - 了解有关 [Azure Active Directory 中通过条件访问使用受支持的浏览器](https://docs.microsoft.com/azure/active-directory/conditional-access/technical-reference#supported-browsers)的详细信息。
 
 > [!NOTE]
-> 在 Android 设备上为 SharePoint Online 或对 Exchange Online 的基于浏览器的访问启用基于设备的访问时，用户必须在注册的设备上打开“启用浏览器访问”选项，如下所示： 
+> 在 Android 设备上为 SharePoint Online 或对 Exchange Online 的基于浏览器的访问启用基于设备的访问时，用户必须在注册的设备上打开“启用浏览器访问”选项，如下所示：
 > 1. 启动“公司门户应用”  。
 > 2. 从三个点 (…) 或硬件菜单按钮转到“设置”  页。
 > 3. 按“启用浏览器访问”  按钮。 
@@ -113,34 +110,44 @@ Intune 与移动威胁防护供应商合作提供安全性解决方案，以检�
 
 设备不满足设置的条件时，指导最终用户完成设备注册流程，以修复导致设备不符合的问题。
 
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Exchange 内部部署工作的条件性访问方式
+> [!NOTE]
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)。 使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
+>
+> 如果你的环境中设置了 Exchange Connector，则仍支持 Intune 租户使用该连接器，并且有权继续访问支持其配置的 UI。 有关更多详细信息，请参阅[安装 Exchange 内部部署连接器](../protect/exchange-connector-install.md)。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
+>
+> 混合新式身份验证提供的功能之前 Intune Exchange Connector 也曾提供：设备标识到其 Exchange 记录的映射。  现在，此映射发生在你在 Intune 中进行的配置之外，或者要求 Intune 连接器桥接 Intune 和 Exchange。 使用 HMA，不再要求使用“Intune”特定配置（连接器）。
 
-本地 Exchange 条件访问的工作原理不同于基于 Azure 条件访问的策略。 要安装 Intune Exchange 本地连接器，以直接与 Exchange Server 交互。 Intune Exchange 连接器将拉取存在于 Exchange 服务器上的全部 Exchange Active Sync (EAS) 记录，因此，Intune 可以使用这些 EAS 记录并将其映射到 Intune 设备记录。 这些记录都是通过 Intune 注册和识别的设备。 此过程将允许或阻止电子邮件访问。
 
-如果 EAS 记录是新的，并且 Intune 不能识别，则 Intune 会发出一个 cmdlet 命令（发音为“command-let”），来指示 Exchange Server 阻止访问电子邮件。 下面是有关此流程工作方式的更多详细信息：
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
-![使用 CA 流程图的 Exchange 内部部署](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
+#### How conditional access for Exchange on-premises works
 
-1. 用户尝试访问托管在 Exchange 内部部署 2010 SP1 或更高版本上的公司电子邮件。
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
-2. 如果设备不受 Intune 管理，它将无法访问电子邮件。 Intune 会将阻止通知发送到 EAS 客户端。
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
-3. EAS 收到阻止通知后，将设备移至隔离区域，并发送包含修正步骤（其中包含链接）的隔离电子邮件，以便用户可以注册自己的设备。
+![Exchange on-premises with CA flow-chart](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
 
-4. 发生工作区加入流程，这是 Intune 托管设备的第一步。
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
 
-5. 设备已注册 Intune。
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
 
-6. Intune 将 EAS 记录映射到设备记录，并保存设备符合性状态。
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
 
-7. Azure AD 设备注册过程已注册 EAS 客户端 ID，此过程创建了 Intune 设备记录和 EAS 客户端 ID 之间的关系。
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
 
-8. Azure AD 设备注册会保存设备状态信息。
+5. The device gets enrolled into Intune.
 
-9. 如果用户满足条件访问策略，Intune 会通过 Intune Exchange 连接器发出 cmdlet，允许邮箱进行同步。
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-10. Exchange Server 会将通知发送到 EAS 客户端，以便用户可以访问电子邮件。
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
+-->
 
 #### <a name="whats-the-intune-role"></a>什么是 Intune 角色？
 
@@ -158,7 +165,5 @@ Exchange Server 提供了 API 和基础结构，可将设备移至隔离区域�
 [如何在 Azure Active Directory 中配置条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [设置基于应用的条件访问策略](app-based-conditional-access-intune-create.md)
-
-[如何使用 Intune 安装本地 Exchange 连接器](exchange-connector-install.md)。
 
 [如何为本地 Exchange 创建条件访问策略](conditional-access-exchange-create.md)

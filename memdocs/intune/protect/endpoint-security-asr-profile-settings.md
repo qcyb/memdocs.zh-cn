@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022392"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461600"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 终结点安全的攻击面减少策略设置
 
@@ -188,7 +188,6 @@ ms.locfileid: "86022392"
 
   - **未配置**（默认）- 用户可以忽略针对文件和恶意应用的 SmartScreen 警告。
   - **是** - 启用 SmartScreen，且用户无法绕过针对文件或恶意应用的警告。
-
 
 - **启用 Windows SmartScreen**  
   CSP：[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -385,7 +384,65 @@ ms.locfileid: "86022392"
 
   - **未配置**（默认）- 设置将还原为客户端默认设置，即扫描可移动驱动器，但用户可以禁用此扫描。
   - **是** - 在完全扫描期间，会扫描可移动驱动器（例如 U 盘）。
-  
+
+- **阻止直接内存访问**  
+  CSP：[DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)
+
+  只在启用了 BitLocker 或设备加密时才执行此策略设置。
+
+  - **未配置**（默认）
+  - “是”- 阻止所有热插拔 PCI 下游端口的直接内存访问 (DMA)，直到用户登录 Windows。 用户登录后，Windows 会枚举连接到热插拔 PCI 端口的 PCI 设备。 用户每次锁定计算机都会阻止无子设备的热插拔 PCI 端口进行 DMA，直到用户再次登录。 解锁机器时已经枚举的设备将继续起作用，直到拔出插头为止。
+
+- **与内核 DMA 保护不兼容的外部设备的枚举**  
+  CSP：[DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  此策略可针对支持 DMA 的外部设备提供额外的安全保障。 它让用户能够更好地控制与 DMA 重新映射/设备内存隔离和沙盒不兼容但支持 DMA 的外部设备的枚举。
+
+  仅当内核 DMA 保护受到支持且已由系统固件启用时，此策略才有效。 内核 DMA 保护是一项平台功能，在制造时系统必须支持该功能。 要检查系统是否支持内核 DMA 保护，查看 MSINFO32.exe 的“摘要”页中的“内核 DMA 保护”字段。
+
+  - 未配置（默认）
+  - 全部阻止
+  - 全部允许
+
+- **阻止蓝牙连接**  
+  CSP：[Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **未配置**（默认）
+  - “是”- 阻止与设备进行蓝牙连接。
+
+- **阻止蓝牙可发现性**  
+  CSP：[Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **未配置**（默认）
+  - “是”- 防止其他启用蓝牙的设备发现该设备。
+
+- **阻止蓝牙预配对**  
+  CSP：[Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+
+  - **未配置**（默认）
+  - “是”- 阻止特定的蓝牙设备自动与主机设备配对。
+
+- **阻止蓝牙广告**  
+  CSP：[Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+  - **未配置**（默认）
+  - “是”- 阻止设备发送蓝牙广告。  
+
+- **阻止蓝牙近端连接**  
+  CSP：[Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) 阻止用户使用 Swift Pair 和其他基于邻近的场景
+
+  - **未配置**（默认）
+  - “是”- 阻止设备用户使用 Swift Pair 和其他基于邻近的场景。  
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+
+- **蓝牙允许的服务**  
+  CSP：[Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)  
+  有关服务列表的更多详细信息，请参阅 [ServicesAllowedList 使用指南](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
+
+  - “添加”- 将允许的蓝牙服务和配置文件指定为十六进制字符串，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`。
+  - “导入”- 导入一个 .csv 文件，该文件包含一个蓝牙服务和配置文件列表作为十六进制字符串，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+
 ## <a name="exploit-protection-profile"></a>Exploit Protection 配置文件
 
 ### <a name="exploit-protection"></a>Exploit Protection

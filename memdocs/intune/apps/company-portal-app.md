@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239940"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461957"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -158,6 +158,17 @@ ms.locfileid: "86239940"
 > [!NOTE]
 > 这些操作可用于限制公司门户网站应用和网站中的设备操作，并且不实施任何设备限制策略。 若要限制用户从设置中执行恢复出厂设置或 MDM 删除，必须配置设备限制策略。 
 
+## <a name="opening-web-company-portal-applications"></a>打开 Web 公司门户应用程序
+对于 Web 公司门户应用程序，如果最终用户安装了公司门户应用程序，则最终用户将看到一个对话框，询问他们在浏览器外部打开应用程序时希望采用哪种打开方式。 如果应用不在公司门户的路径中，则公司门户将打开主页。 如果应用位于路径中，则公司门户将打开特定应用。 
+
+选择公司门户时，当 URI 路径为以下选项之一时，用户将被定向到应用程序中的相应页面：
+
+- `/apps` - Web 公司门户将打开列出所有应用的应用页面。
+- `/apps/[appID]` - Web 公司门户将打开相应应用的详细信息页面。
+- URI 路径不同或出现意外 -“Web 公司门户”主页将显示。
+
+如果用户未安装公司门户应用，则用户将转到 Web 公司门户。
+
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>公司门户的 iOS/iPadOS 设备派生凭据
 
 Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作，支持个人身份验证 (PIV) 和公共访问卡 (CAC) 派生凭据。 最终用户将在注册 iOS/iPadOS 设备后执行其他步骤，以在公司门户应用程序中验证其身份。 首先为租户设置凭据提供商，然后令使用派生凭据的配置文件面向用户或设备，从而为用户启用派生凭据。
@@ -206,7 +217,7 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 可用的自助服务设备操作包括以下各项：
 
 - **停用** - 从 Intune 管理范围中删除设备。 在公司门户应用和网站中，它显示为“删除”。
-- **擦除** - 此操作会启动设备重置。 在公司门户网站中，它显示为“重置”，在 iOS/iPadOS 公司门户应用中显示为“恢复出厂设置”。 
+- **擦除** - 此操作会启动设备重置。 在公司门户网站中，它显示为“重置”，在 iOS/iPadOS 公司门户应用中显示为“恢复出厂设置”。
 - **重命名** - 此操作将更改公司门户向用户显示的设备名称。 它不会更改本地设备名称，仅更改公司门户中的列表。
 - **同步** - 此操作会使用 Intune 服务启动设备签入。 在公司门户中，它显示为“检查状态”。
 - **远程锁定** - 锁定设备，需要提供用于解锁的 PIN。
@@ -227,7 +238,7 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 | 同步 | 可用 | 可用 | 可用 | 可用 |
 | 远程锁定 | 仅限 Windows Phone | 可用 | 可用 | 可用 |
 | 重置密码 | 仅限 Windows Phone | 可用<sup>(8)</sup> | NA | 可用<sup>(6)</sup> |
-| 密钥恢复 | NA | NA | 可用<sup>(2)</sup> | NA |
+| 密钥恢复 | 不可用 | 不可用 | 可用<sup>(2)</sup> | NA |
 
 <sup>(1)</sup> 加入 Azure AD 的 Windows 设备始终禁用“停用”。<br>
 <sup>(2)</sup> 仅可通过 Web 门户使用用于 MacOS 的“密钥恢复”。<br>

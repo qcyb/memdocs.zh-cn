@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531734"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891524"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中创建和分配 SCEP 证书配置文件
 
@@ -40,15 +40,15 @@ ms.locfileid: "84531734"
    - **平台**：选择设备平台。
    - **配置文件**：选择“SCEP 证书”
 
-     对于 Android Enterprise 平台，配置文件类型分为以下两类：“仅限设备所有者”和“仅限工作配置文件”。 确保为所管理的设备选择正确的 SCEP 证书配置文件。  
+     对于 Android Enterprise 平台，配置文件类型分为以下两类：“公司拥有的完全托管式专用工作配置文件”和“仅限工作配置文件”  。 确保为所管理的设备选择正确的 SCEP 证书配置文件。  
 
-     “仅限设备所有者”配置文件的 SCEP 证书配置文件具有以下限制：
+     公司拥有的完全托管式专用工作配置文件的 SCEP 证书配置文件配置文件具有以下限制：
 
       1. 在“监视”下，证书报表不可用于设备所有者 SCEP 证书配置文件。
 
       2. 不能使用 Intune 撤销由 SCEP 证书配置文件为设备所有者预配的证书。 可以通过外部进程或直接通过证书颁发机构来实现撤销。
 
-      3. 对于 Android 企业专用设备，SCEP 证书配置文件仅支持 Wi-Fi 网络配置和身份验证。  Android 企业专用设备上的 SCEP 证书配置文件不支持 VPN 或应用身份验证。
+      3. 对于 Android Enterprise 专用设备，SCEP 证书配置文件支持 Wi-Fi 网络配置、VPN 以及身份验证。 Android Enterprise 专用设备上的 SCEP 证书配置文件不支持应用身份验证。
 
 4. 选择“创建”。
 
@@ -71,6 +71,9 @@ ms.locfileid: "84531734"
 
        “设备”适用于无用户设备的情况（如展台）或 Windows 设备。 在 Windows 设备上，证书位于本地计算机证书存储中。
 
+     > [!NOTE]
+     > 在 macOS 上，使用 SCEP 进行预配的证书始终放置在设备的系统密钥链（系统存储）中。
+ 
    - **使用者名称格式**：
 
      选择 Intune 如何自动创建证书请求中的使用者名称。 使用者名称格式的选项取决于所选的证书类型，即“用户”或“设备” 。
@@ -112,7 +115,7 @@ ms.locfileid: "84531734"
 
          该示例包含使用者名称格式，其中除了不仅使用了 CN 和 E 变量，还使用了组织单元、组织、位置、省/直辖市/自治区和国家/地区值的字符串。 [CertStrToName 函数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)介绍此函数及其支持的字符串。
          
-         \* 对于 Android 仅设备所有者配置文件，CN={{UserPrincipalName}} 设置将不起作用。 Android 仅设备所有者配置文件可用于没有用户的设备，所以此配置文件将无法获取用户的用户主体名称。 如果确实需要对包含用户的设备使用此选项，可以使用如下解决方法：CN={{UserName}}\@contoso.com - 它提供你手动添加的用户名和域，例如 janedoe@contoso.com
+         \* 对于 Android 公司拥有的完全托管式专用工作配置文件，CN={{UserPrincipalName}} 设置将不起作用。 Android 公司拥有的完全托管式专用工作配置文件可用于没有用户的设备，因此此配置文件将无法获取用户的用户主体名称。 如果确实需要对包含用户的设备使用此选项，可以使用如下解决方法：CN={{UserName}}\@contoso.com - 它提供你手动添加的用户名和域，例如 janedoe@contoso.com
 
       - **“设备”证书类型**
 
@@ -246,7 +249,7 @@ ms.locfileid: "84531734"
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
-    选择“下一步”。
+    选择“下一步”  。
 
 11. （仅适用于 Windows 10）在“适用性规则”中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195712"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461413"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 中前几个月的新增功能
 
@@ -174,7 +174,7 @@ Intune 现在支持使用 [Windows 10 功能更新部署](../protect/windows-upd
 #### <a name="updated-single-sign-on-experience-for-apps-and-websites-on-your-ios-ipados-and-macos-devices---4999578----"></a>更新了 iOS、iPadOS 和 macOS 设备上的应用和网站的单一登录体验<!-- 4999578  -->
 Intune 添加了更多适用于 iOS、iPadOS 和 macOS 设备的单一登录 (SSO) 设置。 现在可以配置组织或标志提供者编写的重定向 SSO 应用扩展。 使用这些设置来为使用新式身份验证方法（如 OAuth 和 SAML2）的应用和网站配置无缝单一登录体验。 
 
-这些新设置扩展了 SSO 应用扩展和 Apple 内置 Kerberos 扩展的旧设置（“设备” > “设备配置” > “配置文件” > “创建配置文件” >  为平台类型选择“iOS/iPadOS”或“macOS”> 为配置文件类型选择“设备功能”）。   
+这些新设置扩展了 SSO 应用扩展和 Apple 内置 Kerberos 扩展的旧设置（“设备” > “设备配置” > “配置文件” > “创建配置文件” >  为平台类型选择“iOS/iPadOS”或“macOS”> 为配置文件类型选择“设备功能”）。 
 
 转到 [iOS 上的 SSO](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) 和 [macOS 上的 SSO](../configuration/macos-device-features-settings.md#single-sign-on-app-extension)，可查看可配置的 SSO 应用扩展设置的完整范围。
 
@@ -184,7 +184,7 @@ Intune 添加了更多适用于 iOS、iPadOS 和 macOS 设备的单一登录 (SS
 - macOS
 
 #### <a name="we-have-updated-two-device-restriction-settings-for-ios-and-ipados-devices-to-correct-their-behavior---5701352------"></a>我们更新了针对 iOS 和 iPadOS 设备的两个设备限制设置，以更正这些设备的行为<!-- 5701352    -->
-对于 iOS 设备，你可以创建设备限制配置文件来“允许无线 PKI 更新”和“阻止 USB 受限模式” （“设备” > “设备配置” > “配置文件” > “创建配置文件” >  为平台选择“iOS/iPadOS”> 为配置文件类型选择“设备限制”）。  在此版本之前，以下设置的 UI 设置和说明均不正确，现已更正。 自此版本开始，这些设置的行为如下所示：
+对于 iOS 设备，你可以创建设备限制配置文件来“允许无线 PKI 更新”和“阻止 USB 受限模式” （“设备” > “设备配置” > “配置文件” > “创建配置文件” >  为平台选择“iOS/iPadOS”> 为配置文件类型选择“设备限制”）。 在此版本之前，以下设置的 UI 设置和说明均不正确，现已更正。 自此版本开始，这些设置的行为如下所示：
 
 **阻止无线 PKI 更新**：**阻止**：若设备未连接计算机，将阻止用户收到软件更新。 **未配置**（默认设置）：设备无需连接计算机，即可收到软件更新。
 - 之前，你可以将此设置配置如下：**允许**：你的用户无需将设备连接到计算机，即可收到软件更新。
@@ -198,7 +198,7 @@ Intune 添加了更多适用于 iOS、iPadOS 和 macOS 设备的单一登录 (SS
 - iOS/iPadOS
 
 #### <a name="block-users-from-configuring-certificate-credentials-in-the-managed-keystore-on-android-enterprise-device-owner-devices---3311998---"></a>阻止用户在 Android Enterprise 设备所有者设备的托管密钥存储中配置证书凭据<!-- 3311998 -->
-在 Android Enterprise 设备所有者上，你可以配置一个新设置，来阻止用户在托管密钥存储中配置证书凭据（“设备配置” > “配置文件” > “创建配置文件” > “Android Enterprise”（针对平台）>“仅设备所有者”>“设备限制”（针对配置文件类型）>“用户和帐户”）。  
+在 Android Enterprise 设备所有者上，你可以配置一个新设置，来阻止用户在托管密钥存储中配置证书凭据（“设备配置” > “配置文件” > “创建配置文件” > “Android Enterprise”（针对平台）>“仅设备所有者”>“设备限制”（针对配置文件类型）>“用户和帐户”）。
 
 #### <a name="new-microsoft-endpoint-configuration-manager-co-management-licensing--5027281--"></a>新的 Microsoft Endpoint Configuration Manager 共同管理许可<!--5027281-->
 拥有软件保障的 Configuration Manager 客户在不购买额外的 Intune 共同管理许可证的情况下可获得适用于 Windows 10 电脑的 Intune 共同管理。 客户不再需要为其最终用户分配单独的 Intune/EMS 许可证以共同管理 Windows 10。
@@ -801,7 +801,7 @@ Apple 的 iOS 13.1 版本包括用户注册，它是一种新的 iOS 设备轻�
     - 将 SCEP 证书链接到 DO 电子邮件配置文件以进行身份验证（通过 AppConfig）
 - Android Enterprise 设备支持系统应用。 在 Intune 中，通过选择“客户端应用” > “应用” > “添加”来添加 Android Enterprise 系统应用。 在“应用类型”列表中，选择“Android Enterprise 系统应用”。 有关详细信息，请参阅[将 Android Enterprise 系统应用添加到 Microsoft Intune](../apps/apps-ae-system.md)。 <!-- 4062195 -->
 - 在“设备合规性” > “Android Enterprise” > “设备所有者”中，你可以创建用于设置 Google SafetyNet 证明级别的合规性策略。   <!-- 4631425 -->
-- 在 Android Enterprise 完全托管设备上，支持移动威胁防御提供程序。 在“设备合规性” > “Android Enterprise” > “设备所有者”中，可以选择可接受的威胁级别。 <!-- 4631440 --> [使用 Intune 将设备标记为符合或不符合的 Android Enterprise 设置](../protect/compliance-policy-create-android-for-work.md#device-owner)会列出当前设置。
+- 在 Android Enterprise 完全托管设备上，支持移动威胁防御提供程序。 在“设备合规性” > “Android Enterprise” > “设备所有者”中，可以选择可接受的威胁级别。 <!-- 4631440 --> [使用 Intune 将设备标记为符合或不符合的 Android Enterprise 设置](../protect/compliance-policy-create-android-for-work.md)会列出当前设置。
 - 在 Android Enterprise 完全托管的设备上，现在可以通过应用配置策略配置 Microsoft Launcher 应用，以便在完全托管的设备上实现标准化的最终用户体验。 Microsoft Launcher 应用可用于个性化 Android 设备。 将该应用与 Microsoft 帐户或工作/学校帐户结合使用，可以访问个性化源中的日历、文档和最近活动。 <!-- 5334044 -->
 
 有了此更新，我们很高兴地宣布 Intune 对 Android Enterprise 完全托管的支持现已正式发布。
@@ -833,7 +833,7 @@ Intune 现在支持管理 iPadOS 和 iOS 13.1 设备。 有关详细信息，请
 在 OS 驱动器恢复（通过使用 bootmgr 或 WinRE）和固定数据驱动器上的恢复密码解锁后，此设置启动客户端驱动的恢复密码刷新。 此设置将刷新使用的特定恢复密码，而卷上的其他未使用的密码仍保持不变。 有关详细信息，请参阅 BitLocker CSP 文档 [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)。
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Windows Defender 防病毒的篡改防护<!-- 4705448        -->
-使用 Intune 管理 Windows Defender 防病毒的篡改防护。 当将设备配置文件用于 Windows 10 终结点保护时，你将在 Microsoft Defender 安全中心组中找到[篡改防护设置](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center)。 你可以将“篡改防护”设置为“启用”以开启篡改防护限制，设置为“禁用”以关闭限制，或者设置为“未配置”以保持设备的当前配置。  
+使用 Intune 管理 Windows Defender 防病毒的篡改防护。 当将设备配置文件用于 Windows 10 终结点保护时，你将在 Microsoft Defender 安全中心组中找到[篡改防护设置](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center)。 你可以将“篡改防护”设置为“启用”以开启篡改防护限制，设置为“禁用”以关闭限制，或者设置为“未配置”以保持设备的当前配置  。  
 
 有关篡改防护的详细信息，请参阅 Windows 文档中的[篡改防护防止安全设置更改](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection)。
 
@@ -1608,7 +1608,7 @@ Android 设备上的 Intune 应用保护策略 (APP) 现在使用符合 FIPS 140
 V1.0 在 1808 版本首次引入后，它在某些重要方面与 beta 版 API 有所不同。 在 1903 版本中，这些更改将在 beta 版 API 中体现。 如果有使用 beta 版 API 的重要报表，我们强烈建议将这些报表切换到 V1.0 以避免中断性变更。 有关详细信息，请参阅 [Intune 数据仓库 API 的更改日志](../developer/reports-changelog.md#1903-part-2)。
 
 #### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>监控安全基线状态（公共预览版） <!-- 3082047 --> 
-我们向安全基线的监控添加了[每个类别的视图](../protect/security-baselines-monitor.md#per-category-view)（安全基线仍为预览版）。 （安全基线仍为预览版）。 每个类别的视图显示基线中的每个类别以及属于该类别的每个状态组的设备百分比。 现可查看与各个类别不匹配、配置错误或不适用的设备数量。
+我们向安全基线的监控添加了[每个类别的视图](../protect/security-baselines-monitor.md)（安全基线仍为预览版）。 （安全基线仍为预览版）。 每个类别的视图显示基线中的每个类别以及属于该类别的每个状态组的设备百分比。 现可查看与各个类别不匹配、配置错误或不适用的设备数量。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>基于角色的访问控制
@@ -1628,7 +1628,7 @@ V1.0 在 1808 版本首次引入后，它在某些重要方面与 beta 版 API �
 Microsoft Visio Pro for Office 365 现在称为 Microsoft Visio Online 计划 2 。  有关 Microsoft Visio 的详细信息，请参阅 [Visio Online 计划 2](https://products.office.com/visio/visio-online-plan-2)。 有关适用于 Windows 10 设备的 Office 365 应用的详细信息，请参阅[使用 Microsoft Intune 将 Office 365 应用分配给 Windows 10 设备](../apps/apps-add-office365.md)。
 
 #### <a name="intune-app-protection-policy-app-character-limit-setting---3291302----"></a>Intune 应用保护策略 (APP) 字符限制设置<!-- 3291302  -->
-Intune 管理员可以指定 Intune APP“限制使用其他应用剪切、复制和粘贴”策略设置的例外情况。  管理员可以指定可能会从托管应用中剪切或复制的字符数。 此设置允许将指定数量的字符共享到任何应用，而不受“限制使用其他应用剪切、复制和粘贴”设置的限制。 请注意，适用于 Android 的 Intune 公司门户应用版本需要 5.0.4364.0 或更高版本。 有关详细信息，请参阅 [iOS 数据保护](../apps/app-protection-policy-settings-ios.md#data-protection)、[Android 数据保护](../apps/app-protection-policy-settings-android.md#data-protection)和[查看客户端应用保护日志](../apps/app-protection-policy-settings-log.md#app-protection-policy-settings)。
+Intune 管理员可以指定 Intune APP“限制使用其他应用剪切、复制和粘贴”策略设置的例外情况。  管理员可以指定可能会从托管应用中剪切或复制的字符数。 此设置允许将指定数量的字符共享到任何应用，而不受“限制使用其他应用剪切、复制和粘贴”设置的限制。 请注意，适用于 Android 的 Intune 公司门户应用版本需要 5.0.4364.0 或更高版本。 有关详细信息，请参阅 [iOS 数据保护](../apps/app-protection-policy-settings-ios.md#data-protection)、[Android 数据保护](../apps/app-protection-policy-settings-android.md#data-protection)和[查看客户端应用保护日志](../apps/app-protection-policy-settings-log.md)。
 
 #### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment---3192477-----"></a>用于进行 Office ProPlus 部署的 Office 部署工具 (ODT) XML<!-- 3192477   -->
 在 Intune 管理控制台中创建 Office Pro Plus 实例时，将能够提供 Office 部署工具 (ODT) XML。 如果现有的 Intune UI 选项无法满足需求，这将允许进行更多自定义。 有关详细信息，请参阅[使用 Microsoft Intune 将 Office 365 应用分配到 Windows 10 设备](../apps/apps-add-office365.md)以及 [Office 部署工具的配置选项](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)。
@@ -1952,7 +1952,7 @@ Intune 中的管理模板（“设备配置” > “管理模板”）当前为�
 
 - 管理模板包括大约 300 个可在 Intune 中托管的设置。 以前，这些设置仅存在于组策略编辑器中。
 - 管理模板现已推出公共预览版。
-- 管理模板从“设备配置” > “管理模板”移动到“设备配置” > “配置文件” > “创建配置文件”> 在“平台”中，选择“Windows 10 及更高版本” > 在“配置文件类型”中，选择“管理模板”。        
+- 管理模板从“设备配置” > “管理模板”移动到“设备配置” > “配置文件” > “创建配置文件”> 在“平台”中，选择“Windows 10 及更高版本” > 在“配置文件类型”中，选择“管理模板”。
 - 已启用报告
 
 有关此功能的更多信息，请转到[用于配置组策略设置的 Windows 10 模板](../configuration/administrative-templates-windows.md)。
@@ -1986,7 +1986,7 @@ Intune 中的管理模板（“设备配置” > “管理模板”）当前为�
 
 #### <a name="new-windows-10-update-settings--2626030--2512994----"></a>新的 Windows 10 更新设置<!--2626030  2512994  -->
 对于 [Windows 10 更新通道](../protect/windows-update-for-business-configure.md)，可以配置：
-- **自动更新行为** - 使用新选项“重置为默认值”，在运行“2018 年 10 月更新”的 Windows 10 计算机上还原初始的自动更新设置 
+- **自动更新行为** - 使用新选项“重置为默认值”，在运行“2018 年 10 月更新”的 Windows 10 计算机上还原初始的自动更新设置
 - **阻止用户暂停 Windows 更新** - 配置新的软件更新设置，使你能够阻止或允许用户通过其计算机的“设置”暂停更新安装。
 
 #### <a name="ios-email-profiles-can-use-smime-signing-and-encryption---2662949---"></a>iOS 电子邮件配置文件可以使用 S/MIME 签名和加密<!-- 2662949 -->
@@ -2398,7 +2398,7 @@ Windows LOB 应用的文件扩展名现在包括 .msi、.appx、.appxbundle、.m
 Intune 中的 PowerShell 脚本可应用于 AAD 设备安全组。
 
 #### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>适用于 Android、Android 企业版的新的“所需密码类型”默认设置<!-- 2649963 -->
-创建新的符合性策略时（“Intune” > “设备符合性” > “策略” > “创建策略” > > Android 或 Android Enterprise 平台 >“系统安全性”），所需密码类型的默认值会更改：      
+创建新的符合性策略时（“Intune” > “设备符合性” > “策略” > “创建策略” > > Android 或 Android Enterprise 平台 >“系统安全性”），所需密码类型的默认值会更改：
 
 更改自：设备默认设置：最少数字
 
@@ -3590,7 +3590,7 @@ IT 管理员还可以自定义用户接收的通知。 例如，你可以配置�
 
 #### <a name="new-ios-device-action-----1424701---"></a>新的 iOS 设备操作  <!-- 1424701 -->
 
-现在可以关闭 iOS 10.3 监管的设备。 此操作会立即关闭设备，而不会向最终用户发出警告。  当你在“设备”工作负载中选择设备时，可以在设备属性中找到“关闭（仅监督）”操作。
+现在可以关闭 iOS 10.3 监管的设备。 此操作会立即关闭设备，而不会向最终用户发出警告。 当你在“设备”工作负载中选择设备时，可以在设备属性中找到“关闭（仅监督）”操作。
 
 #### <a name="disallow-datetime-changes-to-samsung-knox-devices---1468103---"></a>禁止对 Samsung Knox 设备更改日期/时间<!-- 1468103 -->
 
@@ -3905,7 +3905,7 @@ Intune 管理扩展允许你在 Intune 中上传 PowerShell 脚本以在 Windows
 #### <a name="two-additional-settings-for-windows-defender-antivirus---1338409---"></a>Windows Defender 防病毒软件的两个其他设置<!-- 1338409 -->  
 **文件阻止级别**
 
-| | |
+| 设置 | 详细信息 |
 |---|---|
 | 未配置 | “未配置”使用 Windows Defender 防病毒软件的默认阻止级别，并提供强大的检测功能而不会增加检测出合法文件的风险。 |
 | 高 | “高”级别执行级别较高的检测。
@@ -3917,7 +3917,7 @@ Intune 管理扩展允许你在 Intune 中上传 PowerShell 脚本以在 Windows
 
 **云扫描文件的超时延长**  
 
-| | |
+| 设置 | 详情 |
 |--|--|
 | 秒数 (0 - 50) | 指定等待云返回结果时，Windows Defender 防病毒软件应阻止文件的最长时间。 默认值为 10 秒：此处指定的任意额外时间（最多 50 秒）都将与这 10 秒相加。 大多数情况下，扫描所需的时间远少于最大值。 延长时间可使云对可疑文件进行全面调查。 建议启用此设置，并至少指定 20 秒的延长时间。 |
 
@@ -4261,7 +4261,7 @@ Intune 现在支持按操作系统版本号限制 iOS 和 Android 注册。 在�
 #### <a name="restrict-android-ios-and-macos-device-personally-owned-device-enrollment----1333272--1333275-1245709---"></a>限制 Android、iOS 和 macOS 设备的个人私有设备注册 <!-- 1333272,  1333275, 1245709 -->
 Intune 可通过将企业设备 IMEI 号码列入允许列表来限制个人设备注册。 Intune 现已使用设备序列号将此功能扩展到 iOS、Android 和 macOS。 通过将序列号上传到 Intune，可将设备预声明为企业所有的设备。 使用注册限制，可以阻止私人拥有的设备 (BYOD)，仅允许企业所有的设备进行注册。 详细了解[设备注册限制](../enrollment/enrollment-restrictions-set.md)。
 
-若要导入序列号，请转至“设备注册” > “公司设备标识符”，单击“添加”，然后上传一个 CSV 文件（无标头，含两列，分别是序列号和详细信息，如 IMEI 号）。 若要限制私人拥有的设备，请转到“设备注册” > “注册限制” 。 在“设备类型限制”下，选择“默认”，然后选择“平台配置”。   可以针对 iOS、Android 和 macOS“允许”或“阻止”私人拥有的设备。 
+若要导入序列号，请转至“设备注册” > “公司设备标识符”，单击“添加”，然后上传一个 CSV 文件（无标头，含两列，分别是序列号和详细信息，如 IMEI 号）。 若要限制私人拥有的设备，请转到“设备注册” > “注册限制” 。 在“设备类型限制”下，选择“默认”，然后选择“平台配置”。 可以针对 iOS、Android 和 macOS“允许”或“阻止”私人拥有的设备。
 
 
 #### <a name="new-device-action-to-force-devices-to-sync-with-intune---711369---"></a>用于强制设备与 Intune 同步的新设备操作<!-- 711369 -->

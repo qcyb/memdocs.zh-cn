@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988824"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461430"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中创建符合性策略
 
@@ -75,7 +75,7 @@ ms.locfileid: "83988824"
    - *Windows 10 及更高版本*
 
     对于“Android Enterprise”，还可以选择一种“策略类型”：
-     - Android 设备所有者合规性策略
+     - Android 公司拥有的完全托管式专用工作配置文件策略
      - Android 工作配置文件合规性策略
 
     然后，选择“创建”以打开“创建策略”配置窗口。

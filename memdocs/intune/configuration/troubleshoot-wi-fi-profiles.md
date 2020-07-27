@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987845"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872046"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune 中的 Wi-Fi 设备配置文件疑难解答
 
@@ -157,7 +157,7 @@ ms.locfileid: "83987845"
 
 1. 打开“事件查看器”  应用。
 2. 在“视图”  菜单上，选择“显示分析和调试日志”  。
-3. 展开“应用程序和服务日志”   > “Microsoft”   > “Windows”   > “DeviceManagement-Enterprise-Diagnostic-Provider”   > “管理员” 
+3. 展开“应用程序和服务日志”   > “Microsoft”   > “Windows”   > “DeviceManagement-Enterprise-Diagnostic-Provider”   > “管理员”
 
 输出类似于以下日志：
 
@@ -177,7 +177,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## <a name="common-issues"></a>常见问题
 
-### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>问题 1：Wi-Fi 配置文件未部署到设备
+### <a name="the-wi-fi-profile-isnt-deployed-to-the-device"></a>Wi-Fi 配置文件未部署到设备
 
 - 确认将 Wi-Fi 配置文件分配给了正确的组：
 
@@ -248,7 +248,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     如果日志中出现错误，请复制错误的时间戳并取消筛选日志。 然后，将“查找”选项与时间戳结合使用，查看错误发生之前的情况。
 
-### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>问题 2：将 Wi-Fi 配置文件部署到设备，但设备无法连接到网络
+### <a name="the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>将 Wi-Fi 配置文件部署到设备，但设备无法连接到网络
 
 通常情况下，此问题由 Intune 之外的事项引起。 以下任务可以帮助你了解和解决连接问题：
 
@@ -256,6 +256,23 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
   如果可以连接，请查看手动连接中的证书属性。 然后，更新具有相同证书属性的 Intune Wi-Fi 配置文件。
 - 连接错误通常记录在 Radius 服务器日志中。 例如，它应显示设备是否尝试与 Wi-Fi 配置文件相连接。
+
+### <a name="users-dont-get-new-profile-after-changing-password-on-existing-profile"></a>更改现有配置文件的密码后，用户不会获得新的配置文件
+
+创建企业 Wi-Fi 配置文件、将配置文件部署到组、更改密码并保存配置文件。 配置文件发生更改时，某些用户可能无法获取新的配置文件。
+
+若要缓解此问题，请设置来宾 Wi-Fi。 如果企业 Wi-Fi 失败
+，用户可以连接到来宾 Wi-Fi。 请务必启用任何自动连接设置。 将来宾 Wi-Fi 配置文件部署到所有用户。
+
+一些其他建议：  
+
+- 如果连接到的 Wi-Fi 网络使用密码或通行短语，请确保你能直接连接到 Wi-Fi 路由器。 可使用 iOS/iPadOS 设备进行测试。
+- 在成功连接到 Wi-Fi 终结点（Wi-Fi 路由器）后，请注意所使用的 SSID 和凭据（此值为密码或通行短语）。
+- 在“预共享密钥”字段中输入 SSID 和凭据（密码或通行短语）。 
+- 部署到具有有限用户数的测试组，最好仅限 IT 团队。 
+- 将 iOS/iPadOS 设备同步到 Intune。 如果尚未注册，请先注册。 
+- 再次测试连接到相同的 Wi-Fi 终结点（如先前步骤所述）。
+- 推广至更大的组，并最终遍及组织中的所有预期用户。 
 
 ## <a name="need-more-help"></a>需要更多帮助
 

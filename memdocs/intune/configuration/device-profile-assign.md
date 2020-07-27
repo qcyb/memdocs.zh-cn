@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989021"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565676"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中分配用户和设备配置文件
 
@@ -90,6 +90,8 @@ ms.locfileid: "83989021"
 ### <a name="user-groups"></a>用户组
 
 应用于用户组的配置文件设置始终随附于用户，并在登录到多个设备时随附于用户。 通常用户有很多设备，如 Surface Pro 用于办公，iOS/iPadOS 设备用于处理私事。 而且，通常人们可以从这些设备访问电子邮件和其他组织资源。
+
+遵循这一常规规则：如果功能属于用户（如电子邮件或用户证书），则分配给用户组。
 
 例如：
 

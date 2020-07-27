@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: aa70da636d619a52c0ec8591a43e85e11ff7f9f2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973054"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410889"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>将适用于 iOS 和 Android 的 Microsoft Edge 与 Microsoft Intune 结合使用来管理 Web 访问
 
@@ -137,7 +137,7 @@ Microsoft Edge 支持以下配置设置：
 通过这些设置，可以将适用于 iOS 和 Android 的 Microsoft Edge 的新标签页自定义为：显示组织徽标和品牌颜色作为标签页背景。
 
 若要上传组织徽标和品牌颜色，请先完成以下步骤：
-1. 在 [Microsoft Endpoint Manager](https://endpoint.microsoft.com) 中，导航到“租户管理” -> “自定义” -> “公司标识品牌”************。
+1. 在 [Microsoft Endpoint Manager](https://endpoint.microsoft.com) 中，导航到“租户管理” -> “自定义” -> “公司标识品牌”。
 2. 若要设置品牌的徽标，请在“在标头中显示”旁边选择“仅限组织徽标”。 建议使用透明背景徽标。
 3. 要设置品牌的背景色，请选择“主题色”。 适用于 iOS 和 Android 的 Microsoft Edge 在新标签页上应用了较浅的颜色底纹，这可确保页面具有更高的可读性。
 
@@ -436,7 +436,7 @@ Microsoft Edge 支持以下配置设置：
 2. 在地址框中键入 `about:intunehelp`。
 3. 适用于 iOS 和 Android 的 Microsoft Edge 会启动故障排除模式。
 
-对于应用日志中存储的设置列表，请参阅[在 Managed Browser 中查看应用保护日志](app-protection-policy-settings-log.md)。
+对于应用日志中存储的设置列表，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)。
 
 若要了解如何在 Android 设备上查看日志，请参阅[通过电子邮件将日志发送给 IT 管理员](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)。
 

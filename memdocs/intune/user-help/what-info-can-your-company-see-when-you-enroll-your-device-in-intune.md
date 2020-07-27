@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: bc3ff7b10d3b0ae5779db26fae711bc335c8ec62
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107318"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461668"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>在我注册自己的设备时，我的组织可以看到哪些信息？
 
@@ -38,13 +38,14 @@ ms.locfileid: "85107318"
 - 密码
 - 图片，包括照片应用中的照片或本机照片
 - 文件
+- 公司拥有的工作配置文件设备、应用程序以及个人配置文件中的数据。 
 
 **你的组织始终可以看到的内容：**
 
 - 设备型号（如 Google Pixel）
 - 设备制造商（如 Microsoft）
 - 操作系统和版本，如 iOS 12.0.1
-- 应用清单和应用名称（如 Microsoft Word）。 在个人设备上，组织只能看到托管应用清单。 在公司拥有的设备上，组织可以查看所有应用广告资源。
+- 应用清单和应用名称（如 Microsoft Word）。 在个人设备上，组织只能看到托管应用清单。 对于公司拥有的完全托管设备和专用设备，你的组织可以查看所有应用清单。 对于公司拥有的工作配置文件设备，你的组织只能查看工作配置文件中的应用清单。
 - 设备所有者
 - 设备名称
 - 设备序列号

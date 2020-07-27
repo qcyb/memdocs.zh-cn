@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune 中的 Windows 10 VPN 设置 - Azure | Microsoft Docs
-description: 了解和浏览 Microsoft Intune 中可用的 VPN 设置、其用途及其执行的操作，包括流量规则、条件性访问，以及适用于 Windows 10 和 Windows Holographic for Business 设备的 DNS 与代理设置。
+description: 了解并阅读 Microsoft Intune 中所有可用的 VPN 设置，以及这些设置的用途和功能。 请参阅适用于 Windows 10 和 Windows Holographic for Business 设备的流量规则、条件访问、DNS 和代理设置。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429489"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461346"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>使用 Intune 添加 VPN 连接的 Windows 10 和 Windows Holographic 设备
 
-可以使用 Microsoft Intune 为设备添加和配置 VPN 连接。 本文列出和介绍了创建虚拟专用网络 (VPN) 时常用的设置和功能。 这些 VPN 设置和功能可在推送或部署到设备的 Intune 中的设备配置文件中使用。
+可以使用 Microsoft Intune 为设备添加和配置 VPN 连接。 本文列出并介绍了创建虚拟专用网络 (VPN) 时的常见设置和功能。 这些 VPN 设置和功能可在推送或部署到设备的 Intune 中的设备配置文件中使用。
 
 作为移动设备管理 (MDM) 解决方案的一部分，使用这些设置允许或禁用的功能包括使用 VPN 供应商、启用 Always On、使用 DNS、添加代理等。
 
@@ -65,16 +65,69 @@ ms.locfileid: "83429489"
   - **L2TP**
   - **PPTP**
 
-  选择 VPN 连接类型时，还可能要求你进行以下设置：  
+  选择 VPN 连接类型时，还可能要求你进行以下设置：
+
   - **Always On**：选择“启用”可在发生下列事件时自动连接到 VPN 连接：
     - 用户登录其设备
     - 设备上的网络发生更改
     - 设备屏幕在关闭后重新打开
 
-  - **身份验证方法**：选择希望用户如何向 VPN 服务器进行身份验证。 使用证书可提供增强的功能，如“零接触”体验、按需 VPN 和按应用 VPN。
+    若要使用 IKEv2 等设备隧道连接，请启用此设置。
+
+  - **身份验证方法**：选择希望用户如何向 VPN 服务器进行身份验证。 选项包括：
+    - **用户名和密码**：要求用户输入他们的域用户名和密码进行身份验证，如 `user@contoso.com` 或 `contoso\user`。
+    - **证书**：选择现有用户客户端证书配置文件，以对用户进行身份验证。 此选项提供增强的功能，如“零接触”体验、按需 VPN 和每应用 VPN。
+
+      若要使用 Intune 创建证书配置文件，请参阅[使用证书进行身份验证](../protect/certificates-configure.md)。
+
+    - **计算机证书**（仅限 IKEv2）：选择现有设备客户端证书配置文件，以对设备进行身份验证。
+
+      如果使用[设备隧道连接](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)，则必须选择此选项。
+
+      若要使用 Intune 创建证书配置文件，请参阅[使用证书进行身份验证](../protect/certificates-configure.md)。
+
+    - **EAP**（仅限 IKEv2）：选择现有的可扩展身份验证协议 (EAP) 客户端证书配置文件进行身份验证。 在“EAP XML”设置中输入身份验证参数。
   - **每次登录时记住凭据**：选择缓存身份验证凭据。
   - **自定义 XML**：输入配置 VPN 连接的任何自定义 XML 命令。
-  - **EAP Xml**：输入配置 VPN 连接的任何 EAP XML 命令
+  - **EAP XML**：输入用于配置 VPN 连接的任何 EAP XML 命令。 有关详细信息，请参阅 [EAP 配置](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration)。
+
+  - **设备隧道**（仅限 IKEv2）：选择“启用”后可自动将设备连接到 VPN，无需任何任何用户交互或登录。 此设置适用于加入 Azure Active Directory (AD) 的电脑。
+
+    若要使用此功能，需要满足以下要求：
+
+    - “连接类型”设置设置为“IKEv2” 。
+    - “Always On”设置设置为“启用” 。
+    - “身份验证方法”设置设置为“计算机证书” 。
+
+    为已启用设备隧道的每个设备仅分配一个配置文件。
+
+  **IKE 安全性关联参数**（仅限 IKEv2）：这些加密设置用于 IKEv2 连接的 IKE 安全性关联协商（也称为 `main mode` 或 `phase 1`）。 这些设置必须与 VPN 服务器设置匹配。 如果设置不匹配，VPN 配置文件将不会连接。
+
+  - **加密算法**：选择 VPN 服务器上使用的加密算法。 例如，如果 VPN 服务器使用 AES 128 位，请从列表中选择“AES-128”。
+
+    设置为“未配置”时，Intune 不会更改或更新此设置。
+
+  - **完整性检查算法**：选择 VPN 服务器上使用的完整性算法。 例如，如果 VPN 服务器使用 SHA1-96，请从列表中选择“SHA1-96”。
+
+    设置为“未配置”时，Intune 不会更改或更新此设置。
+
+  - **Diffie-Hellman 组**：选择 VPN 服务器上使用的 Diffie-hellman 计算组。 例如，如果 VPN 服务器使用 Group2（1024 位），请从列表中选择“2”。
+
+    设置为“未配置”时，Intune 不会更改或更新此设置。
+
+  **子安全性关联参数**（仅限 IKEv2）：这些加密设置用于 IKEv2 连接的子安全性关联协商（也称为 `quick mode` 或 `phase 2`）。 这些设置必须与 VPN 服务器设置匹配。 如果设置不匹配，VPN 配置文件将不会连接。
+
+  - **密码转换算法**：选择 VPN 服务器上使用的算法。 例如，如果 VPN 服务器使用 AES-CBC 128 位，请从列表中选择“CBC-AES-128”。
+
+    设置为“未配置”时，Intune 不会更改或更新此设置。
+
+  - **身份验证转换算法**：选择 VPN 服务器上使用的算法。 例如，如果 VPN 服务器使用 AES-GCM 128 位，请从列表中选择“GCM-AES-128”。
+
+    设置为“未配置”时，Intune 不会更改或更新此设置。
+
+  - **完美前向保密 (PFS) 组**：选择 VPN 服务器上使用的完美前向保密 (PFS) 的 Diffie-hellman 计算组。 例如，如果 VPN 服务器使用 Group2（1024 位），请从列表中选择“2”。
+
+    设置为“未配置”时，Intune 不会更改或更新此设置。
 
 ### <a name="pulse-secure-example"></a>Pulse Secure 示例
 

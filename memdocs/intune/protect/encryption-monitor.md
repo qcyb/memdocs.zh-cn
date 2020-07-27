@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989648"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460461"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>使用 Intune 监视设备加密
 
@@ -118,7 +118,7 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
 
   - 设备已加密。 设备用户必须解密设备才能继续操作。
 
-    *请考虑以下事项：Intune 无法在已加密的设备上设置 FileVault。相反，用户必须手动解密其设备，然后才能通过设备配置策略和 Intune 对其进行管理*。
+    *请考虑以下事项：Intune 无法在已加密的设备上设置 FileVault。但是，在设备收到启动 FileVault 的策略后，用户可以[上传其个人恢复密钥启动 Intune 以便在该设备上管理加密](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices)。此外，不建议用户在通过 Intune 加密前手动解密其设备，因为这一操作会让设备在一段时间内处于未加密状态。*
 
   - FileVault 需要用户在 macOS Catalina 及更高版本中批准其管理配置文件。
 
@@ -174,7 +174,7 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
 有关管理恢复密钥的详细信息，请参阅 Intune 文档中的以下内容：
 
 macOS FileVault：
-- [检索个人恢复密钥](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [检索个人恢复密钥](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [轮换恢复密钥](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [恢复恢复密钥](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

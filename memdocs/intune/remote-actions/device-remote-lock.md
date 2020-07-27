@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107340"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462042"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>使用 Intune 远程锁定设备
 
@@ -35,7 +35,9 @@ ms.locfileid: "85107340"
 
 - Android
 - Android 企业展台设备
-- Android 企业工作配置文件设备
+- Android Enterprise 工作配置文件设备
+- Android Enterprise 完全托管设备
+- Android Enterprise 公司拥有的工作配置文件设备
 - iOS
 - macOS
 - Windows 10 移动版
@@ -45,7 +47,7 @@ ms.locfileid: "85107340"
 - Windows 10 桌面版
 
 > [!NOTE]
-> 对于 macOS 设备，请设置一个 6 位数的恢复 PIN。 设备锁定时，“设备概述”会显示 PIN，直到发送另一个设备操作。 请确保记下该 PIN，因为它仅在远程锁定命令发送后 30 天内可用。 30 天后，Intune 将不再具有该 PIN。 此外，不要对同一设备再次启动此命令，直至使用原始 PIN 来成功解锁设备。 应发送此命令，记下 PIN，在使用它成功进入 macOS 设备之前，不再将此命令发送到同一设备。  
+> 对于 macOS 设备，请设置一个 6 位数的恢复 PIN。 设备锁定时，“设备概述”会显示 PIN，直到发送另一个设备操作。 请确保记下该 PIN，因为它仅在远程锁定命令发送后 30 天内可用。 30 天后，Intune 将不再具有该 PIN。 此外，如果再次为同一设备启动此命令，而原始 PIN 尚未成功用于解锁设备，则会在报告中看到失败状态。 应仅发送此命令一次，记下 PIN，在使用它成功进入 macOS 设备之前，不再尝试将此命令发送到同一设备。
 
 
 ## <a name="remote-lock-a-device"></a>远程锁定设备

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2017
+ms.date: 07/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f29cc024b34736a0a6d759179af70ceb51e12ea1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2169abf9955446d6299a64c7ce2ae03723faa792
+ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881107"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447970"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>打开 Windows Defender 以访问公司资源
 
@@ -41,12 +41,12 @@ ms.locfileid: "83881107"
 
 ## <a name="turn-on-real-time-protection"></a>启用实时保护
 
-要确保实时保护已开启，请转到“开始”并搜索“Windows Defender 安全中心”以进行检查   。 选择“病毒和威胁防护设置”，并确认“实时保护”和“云提供的保护”都已切换到“开”     。 如果未显示这些选项，请执行以下操作启用它们：
+转到“开始”并搜索“Windows 安全性”，检查并确保已启用“实时保护” 。 选择“病毒和威胁防护设置”，并确认“实时保护”和“云提供的保护”都已切换到“开”     。 如果未显示这些选项，请执行以下操作启用它们：
 
 1. 在“开始”中，打开“控制面板”   。
 2. 打开“管理工具” > “编辑组策略”。 这将在一个新窗口中打开“本地组策略编辑器”  。
-3. 打开“计算机配置” > “管理模板” > “Windows 组件” > “Windows Defender 安全中心” > “病毒和威胁防护”。
-4. 打开“病毒和威胁防护区域”设置，并将其设置为“禁用”   。
+3. 打开“计算机配置” > “管理模板” > “Windows 组件” > “Windows 安全性” > “病毒和威胁防护”    。
+4. 打开“隐藏病毒和威胁防护区域”，并将其设置为“禁用” 。
 
 ## <a name="update-your-antivirus-definitions"></a>更新防病毒定义
 

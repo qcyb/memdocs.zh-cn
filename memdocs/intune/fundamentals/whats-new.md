@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9e65171c0eb723f338e87cdf1f7a99601c0833f
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240723"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891541"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -51,24 +51,211 @@ ms.locfileid: "86240723"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+### Role-based access control
 ### Scripts
 
 
 <!-- ########################## -->
+## <a name="week-of-july-13-2020--2007-service-release"></a>2020 年 7 月 13 日当周（2007 服务版本）
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>应用管理
 
-## <a name="week-of-july-06-2020"></a>2020 年 7 月 6 日当周
+#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Win32 应用安装通知和公司门户<!-- 7485945  -->
+最终用户现在能够决定 [Microsoft Intune Web 公司门户](https://portal.manage.microsoft.com/)中显示的应用程序应该是由公司门户应用打开，还是由公司门户网站打开。 仅当最终用户已安装公司门户应用，且在浏览器之外启动了 Web 公司门户应用程序时，此选项才可用。 
 
+#### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange 内部部署连接器支持<!-- 7138486  -->
+自 2007 年（7 月）版本开始，Intune 便从 Intune 服务中删除了对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些客户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) 来保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
+
+#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>在无需注册即可受管理的 iOS 和 Android Enterprise 设备上为 Outlook 启用 S/MIME<!-- 6517155  -->
+你现在能够在无需注册即可受管理的 iOS 和 Android Enterprise 设备上使用设备的应用配置策略为 Outlook 启用 S/MIME。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“应用” > “应用配置策略” > “添加” > “托管应用”。 此外，还可以选择是否允许用户在 Outlook 中更改此设置。 有关 S/MIME 的一般信息，请参阅[在 Intune 中对电子邮件进行签名和加密的 S/MIME 概述](../protect/certificates-s-mime-encryption-sign.md)。 有关 Outlook 配置设置的详细信息，请参阅 [Microsoft Outlook 配置设置](../apps/app-configuration-policies-outlook.md)和[为受管理应用添加应用配置策略（无需设备注册）](../apps/app-configuration-policies-managed-app.md)。 有关 Microsoft Exchange 特定 S/MIME 信息，请参阅 [S/MIME 方案](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios)和[配置密钥 - S/MIME 设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>设备配置
+
+#### <a name="new-vpn-settings-for-windows-10-and-newer-devices---6602122-----"></a>使用 Windows 10 及更高版本的设备的新 VPN 设置<!-- 6602122   -->
+
+使用 IKEv2 连接类型创建 VPN 配置文件时，可以配置新设置（“设备” > “配置文件” > “创建配置文件” >  针对平台选择“Windows 10 和更高版本”> 针对配置文件选择“VPN”>“基础 VPN”）：
+
+- 设备隧道：允许设备自动连接到 VPN，无需任何用户交互（包括用户登录）。 此功能要求你启用“始终可用”，并使用“计算机证书”作为身份验证方法。
+- 加密套件设置：配置用于保护 IKE 和子安全关联的算法，它们允许你匹配客户端和服务器设置。
+
+若要查看可配置的设置，请转到[使用 Intune 添加 VPN 连接的Windows 设备设置](../configuration/vpn-settings-windows-10.md)。
+
+适用于：
+
+- Windows 10 及更高版本
+
+#### <a name="configure-more-microsoft-launcher-settings-in-a-device-restrictions-profile-on-android-enterprise-devices-cobo---6285001----"></a>在 Android Enterprise 设备 (COBO) 上的设备限制配置文件中配置更多微软桌面设置<!-- 6285001  -->
+
+在 Android Enterprise 完全托管设备上，可以将使用设备限制配置文件配置更多微软桌面设置（“设备” > “配置文件” > “创建配置文件” >  针对平台选择“Android Enterprise”>“仅设备所有者” > “设备限制” > “设备体验” > “完全托管”）       。 
+
+若要查看这些设置，请转到[用于允许或限制功能的 Android Enterprise 设备设置](../configuration/device-restrictions-android-for-work.md#device-experience)。
+
+还可以使用[应用配置文件](../apps/configure-microsoft-launcher.md)配置微软桌面设置。
+
+适用于：
+
+- Android Enterprise 设备所有者完全托管的设备 (COBO)
+
+#### <a name="new-features-for-managed-home-screen-on-android-enterprise-device-owner-dedicated-devices-cosu---7414175-7133328-7133720-7134873-7135184---idstaged---"></a>新增了针对 Android Enterprise 设备所有者专用设备 (COSU) 上托管主屏幕的功能<!-- 7414175 7133328 7133720 7134873 7135184   idstaged -->
+
+在 Android Enterprise 设备上，管理员可以使用设备配置文件在使用多应用展台模式的专用设备上自定义托管主屏幕（依次选择“设备” > “配置文件” > “创建配置文件” > “Android Enterprise”（作为平台）>“仅限设备所有者” > “设备限制”（作为配置文件）>“设备体验” > “专用设备” > “多应用”）        。
+
+具体而言，你可以：
+
+- 自定义图标、更改屏幕方向，并在锁屏提醒图标上显示应用通知 <!--7414175-->
+- 隐藏“托管设置”快捷方式 <!--7133328-->
+- 更轻松地访问调试菜单 <!--7133720-->
+- 创建 Wi-Fi 网络的允许列表 <!-- 7134873-->
+- 更轻松地访问设备信息 <!-- 7135184-->
+
+有关详细信息，请参阅[用于允许或限制功能的 Android Enterprise 设备设置](../configuration/device-restrictions-android-for-work.md)和[此博客](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060)。
+
+适用于：
+
+- Android Enterprise 设备所有者专用设备 (COSU)
+
+#### <a name="administrative-templates-updated-for-microsoft-edge-84--7722068--"></a>为 Microsoft Edge 84 更新的管理模板<!--7722068-->
+已更新可用于 Microsoft Edge 的 ADMX 设置。 最终用户现在可以配置和部署 Microsoft Edge 84 中添加的新 ADMX 设置。 有关详细信息，请参阅 [Microsoft Edge 84 发行说明](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#policy-updates)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>设备注册
 
-#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>iOS 公司门户将支持 Apple 的自动设备注册，而无需用户关联<!-- 7282707 --> 
-现在支持在设备上使用 Apple 的自动设备注册来注册 iOS 公司门户，而无需分配的用户。 最终用户可以登录 iOS 公司门户，以在无需设备关联即可注册的 iOS/iPadOS 设备上将自己确立为主要用户。 若要详细了解自动设备注册，请参阅[使用 Apple 的自动设备注册自动注册 iOS/iPadOS 设备](../enrollment/device-enrollment-program-enroll-ios.md)。
+#### <a name="corporate-owned-personally-enabled-devices-preview--4442275----"></a>由个人启用的企业拥有设备（预览）<!--4442275  -->
+Intune 现在支持 Android Enterprise 企业拥有设备，其中包含适用于 OS 版本 Android 8 及更高版本的工作配置文件。 包含工作配置文件的企业拥有设备是 Android Enterprise 解决方案集中的企业管理方案之一。 此方案适用于供企业和个人使用的单用户设备。 这种由个人启用的企业拥有 (COPE) 设备方案：
 
+- 提供工作和个人配置文件容器化
+- 为管理员提供设备级控制
+- 保证最终用户的个人数据和应用程序一直私密化
+
+第一个公共预览版将包括正式发布版中包含的一小部分功能。 其他功能将滚动添加。 第一个预览版中将提供的功能包括：
+
+- 注册：管理员可以使用不会到期的唯一令牌创建多个注册配置文件。 设备注册可通过 NFC、令牌输入、QR 码、零接触或 Knox 移动注册来完成。
+- 设备配置：现有完全受管理的专用设备设置的子集。
+- 设备符合性：目前可用于完全受管理设备的符合性策略。
+- 设备操作：删除设备（恢复出厂设置）、重新启动设备和锁定设备。  
+- 应用管理：应用分配、应用配置和关联的报告功能 
+- 条件性访问
+
+有关包含工作配置文件的企业拥有预览的详细信息，请参阅[支持博客](https://techcommunity.microsoft.com/t5/intune-customer-success/microsoft-announces-public-preview-for-android-enterprise/ba-p/1524325)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>设备管理
+
+#### <a name="updates-to-the-remote-lock-action-for-macos-devices--7032805-----"></a>更新 macOS 设备的远程锁定操作<!--7032805   -->
+对 macOS 设备远程锁定操作的更改包括：
+- 恢复 PIN 会在删除前 30 天（而不是 7 天）显示。
+- 如果管理员打开了另一个浏览器，并尝试从不同的标签页或浏览器再次触发命令，那么 Intune 会允许命令完成。 不过，报告状态会设置为“失败”，而不是生成新的 PIN。
+- 如果上一个远程锁定命令仍处于挂起状态，或如果设备尚未签回，则不允许管理员发出另一个远程锁定命令。
+这些更改旨在防止正确的 PIN 在多个远程锁定命令后被覆盖。
+
+#### <a name="device-actions-report-differentiates-between-wipe-and-protected-wipe--7118901---"></a>设备操作报告可区分擦除和受保护擦除<!--7118901 -->
+设备操作报告现在可区分擦除和受保护擦除操作。 若要查看报告，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “监视器” > “设备操作”（在“其他”下）   。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>设备安全性
+
+#### <a name="microsoft-defender-firewall-rule-migration-tool-preview---6423187-----"></a>Microsoft Defender 防火墙规则迁移工具（预览版）<!-- 6423187   -->
+作为公共预览版，我们正在开发基于 PowerShell 的工具来迁移 Microsoft Defender 防火墙规则。 当你安装并运行此工具时，它会自动为 Intune 创建基于当前配置的 Windows 10 客户端的终结点安全防火墙规则策略。 有关详细信息，请参阅[终结点安全防火墙规则迁移工具概述](../protect/endpoint-security-firewall-rule-tool.md)。
+
+#### <a name="endpoint-detection-and-response-policy-for-onboarding-tenant-attached-devices-to-mdatp-is-generally-available---7303816-----"></a>用于将“租户附加”设备加入到 MDATP 的终结点检测和响应策略现已正式发布<!-- 7303816   -->
+作为 Intune 中的终结点安全性的一部分，[与由 Configuration Manager 管理的设备一起使用的终结点检测和响应 (EDR) 策略](../protect/endpoint-security-edr-policy.md)不再处于预览状态，现已正式发布 。
+
+若要将 EDR 策略与来自受支持版本的 Configuration Manager 的设备一起使用，请配置 [Configuration Manager 的租户附加](../../configmgr/tenant-attach/device-sync-actions.md)。 完成租户附加配置后，可部署 EDR 策略以将由 Configuration Manager 管理的设备加入到 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP)。
+
+#### <a name="bluetooth-settings-are-available-in-device-control-profiles-for-endpoint-security-attack-surface-reduction-policy---7032084-----"></a>蓝牙设置在终结点安全性“攻击面减少”策略的设备控制配置文件中可用 <!--7032084   -->
+为实现终结点安全性“攻击面减少”策略，我们已将用于管理 Windows 10 设备上蓝牙的设置添加到[设备控制配置文件](../protect/endpoint-security-asr-profile-settings.md#device-control-profile)。  这些设置与可用于设备配置的设备限制配置文件中的设置相同。
+
+#### <a name="manage-source-locations-for-definition-updates-with-endpoint-security-antivirus-policy-for-windows-10-devices---6347801-----"></a>使用 Windows 10 设备的终结点安全防病毒策略管理定义更新的源位置<!-- 6347801   -->  
+我们已将两个新设置添加到 [Windows 10 设备终结点安全性防病毒策略](../protect/antivirus-microsoft-defender-settings-windows.md#updates)的“更新”类别，这些设置有助于你管理设备获取更新定义的方式：
+
+- 定义用于下载定义更新的文件共享
+- 定义用于下载定义更新的源的顺序
+
+有了这两个新设置，你便可以将 UNC 文件共享添加为定义更新的下载源位置，并定义联系不同源位置的顺序。
+
+#### <a name="improved-security-baselines-node---7433136------"></a>改进了安全基线节点<!-- 7433136    -->
+我们进行了一些更改，以提高 Microsoft Endpoint Manager 管理中心中的[安全基线节点](../protect/security-baselines.md)的可用性。 现在，当你深入到“终结点安全性” > “安全基线”，然后选择一种安全基线类型（如 MDM 安全基线）时，“配置文件”窗格将一并显示  。 在“配置文件”窗格中，可查看为该基线类型创建的配置文件。  先前，控制台显示“概述”窗格，其中包含聚合数据汇总，此数据汇总并不总是与在单个配置文件报表中找到的详细信息一致。
+
+保持不变，从“配置文件”窗格中，你可以选择要深入查看的配置文件，以查看配置文件属性以及位于“监视”下的各种报表。  同样，在与“配置文件”相同的级别上，你仍可以选择“版本”以查看已部署的各版本配置文件类型。 当你进一步查看某一版本时，你还将获得对报表的访问权限（其类似于配置文件报表）。 
+
+#### <a name="derived-credentials-support-for-windows---4886090-----"></a>Windows 的派生凭据支持<!-- 4886090   -->
+你现在可以将派生凭据与 Windows 设备结合使用。 这将扩展对现有 iOS/iPadOS 和 Android 的支持，且将可用于相同的派生凭据提供程序：
+- Entrust Datacard
+- Intercede
+- DISA Purebred
+
+对 Windows 的支持包括使用派生凭据对 Wi-Fi 或 VPN 配置文件进行身份验证。 对于 Windows 设备，派生凭据发出自你使用的派生凭据提供程序提供的客户端应用。
+
+#### <a name="manage-filevault-encryption-for-devices-that-were-encrypted-by-the-device-user-and-not-by-intune--5239424----"></a>管理由设备用户而非 Intune 加密的设备的 FileVault 加密<!--5239424  -->
+Intune 现在可以[承担对由设备用户而非 Intune 策略加密的 macOS 设备上的 FileVault 磁盘加密的管理](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices)。  此方案要求：
+- 设备能够从启用 FileVault 的 Intune 接收磁盘加密策略。
+- 设备用户能够使用公司门户网站将其加密设备的个人恢复密钥上传到 Intune。 若要上传密钥，他们需为其加密的 macOS 设备选择“存储恢复密钥”选项。
+
+用户上传其恢复密钥后，Intune 会轮换密钥以确认密钥有效。 Intune 现在可以像使用策略直接加密设备一样管理密钥和加密。 如果用户需要恢复其设备，则可以使用以下位置中的任何设备访问恢复密钥：   
+- 公司门户网站
+- 适用于 iOS/iPadOS 的公司门户应用 
+- 适用于 Android 的公司门户应用
+- Intune 应用
+
+#### <a name="hide-the-personal-recovery-key-from-a-device-user-during-macos-filevault-disk-encryption----5475632--"></a>在 macOS FileVault 磁盘加密期间向设备用户隐藏个人恢复密钥<!--  5475632-->
+使用终结点安全性策略配置 macOS FileVault 磁盘加密时，请使用[隐藏恢复密钥](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault)设置，以防止在对设备进行加密时向设备用户显示个人恢复密钥。 通过在加密期间隐藏密钥，你可以确保它的安全性，因为用户在等待设备加密时无法将密钥记录下来。 
+
+稍后，如果需要恢复，用户可以随时使用任何设备通过 Intune 公司门户网站、iOS/iPadOS 公司门户、Android 公司门户或 Intune 应用来查看其个人恢复密钥。
+
+#### <a name="improved-view-of-security-baseline-details-for-devices---5536846----"></a>改进了设备的安全基线详细信息视图<!-- 5536846  -->
+你现在可以深入到设备的详细信息，以查看适用于该设备的安全基线的设置详细信息。 这些设置显示在简单的平直列表中，其中包括设置类别、设置名称和状态。 有关详细信息，请参阅[查看每个设备的终结点安全配置](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>监视和故障排除
+
+#### <a name="device-compliance-logs-now-in-english--6014904----"></a>设备符合性日志现在采用英语<!--6014904  -->
+Intune DeviceComplianceOrg 记录先前仅包含 ComplianceState、OwnerType 和 DeviceHealthThreatLevel 的枚举。 现在，这些日志的列中包含英文信息。
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="role-based-access-control"></a>基于角色的访问控制
+
+#### <a name="assign-profile-and-update-profile-permission-changes--7177586-idready-wnready-wnstaged--"></a>“分配配置文件”和“更新配置文件”权限更改<!--7177586 idready wnready wnstaged-->
+基于角色的访问控制权限已针对自动设备注册流的“分配”配置文件和“更新”配置文件进行了更改：
+
+分配配置文件：具有此权限的管理员还可以把配置文件分配给令牌并将一个默认配置文件分配给一个令牌，以实现自动设备注册。
+
+更新配置文件：具有此权限的管理员只能为自动设备注册更新现有的配置文件。
+
+若要查看这些角色，请转到“[Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)” > “租户管理” > “角色” > “所有角色” > “创建” > “权限” > “角色”     。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="scripting"></a>脚本编写
+
+#### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>其他 Data Warehouse v1.0 属性<!-- 6125732 wnready -->
+通过 Intune Data Warehouse v1.0，可以使用其他属性。 以下属性现在通过 [devices](../developer/reports-ref-devices.md#devices) 实体公开：
+- `ethernetMacAddress` - 此设备的唯一网络标识符。
+- `office365Version` - 设备上安装的 Office 365 版本。
+
+以下属性现在通过 [devicePropertyHistories](../developer/reports-ref-devices.md#devicepropertyhistories) 实体公开：
+- `physicalMemoryInBytes` - 物理内存（以字节为单位）。
+- `totalStorageSpaceInBytes` - 总存储容量（以字节为单位）。
+
+有关详细信息，请参阅 [Microsoft Intune 数据仓库 API](../developer/reports-nav-intune-data-warehouse.md)。
+
+<!-- ########################## -->
+## <a name="week-of-july-06-2020"></a>2020 年 7 月 6 日当周
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>应用管理
 
 #### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>更新 Android 上公司门户和 Intune 应用中的设备图标<!-- 6057023 -->
 我们已更新了 Android 设备上公司门户和 Intune 应用中的设备图标，以创建更加新式的外观，并与 Microsoft Fluent Design System 保持一致。 如需相关信息，请参阅[为 iOS/iPadOS 和 macOS 更新公司门户应用中的图标](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-)。 
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>设备注册
+
+#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>iOS 公司门户将支持 Apple 的自动设备注册，而无需用户关联<!-- 7282707 --> 
+现在支持在设备上使用 Apple 的自动设备注册来注册 iOS 公司门户，而无需分配的用户。 最终用户可以登录 iOS 公司门户，以在无需设备关联即可注册的 iOS/iPadOS 设备上将自己确立为主要用户。 若要详细了解自动设备注册，请参阅[使用 Apple 的自动设备注册自动注册 iOS/iPadOS 设备](../enrollment/device-enrollment-program-enroll-ios.md)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>设备管理
 
 #### <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview---7552762---"></a>租户附加：管理中心中的 ConfigMgr 客户端详细信息（预览）<!-- 7552762 -->
@@ -76,6 +263,8 @@ ms.locfileid: "86240723"
 现在可以从 Microsoft Endpoint Manager 管理中心查看 ConfigMgr 客户端详细信息，其中包括集合、边界组成员身份和特定设备的实时客户端信息。 有关详细信息，请参阅[租户附加：管理中心中的 ConfigMgr 客户端详细信息（预览）](../../configmgr/tenant-attach/client-details.md)。
 
 ## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日当周
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>应用管理
 
 #### <a name="newly-available-protected-apps-for-intune---7248952---"></a>新提供的适用于 Intune 的受保护应用<!-- 7248952 -->
@@ -87,6 +276,7 @@ ms.locfileid: "86240723"
 
 有关受保护应用的详细信息，请参阅[受 Microsoft Intune 保护的应用](../apps/apps-supported-intune-apps.md)。
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="monitor-and-troubleshoot"></a>监视和故障排除
 
 #### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>使用终结点分析来提高用户工作效率并降低 IT 支持成本<!-- 5653063 --> 
@@ -95,13 +285,14 @@ ms.locfileid: "86240723"
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>使用脚本包主动修正最终用户设备问题<!-- 5933328 -->
 你可以在最终用户设备上创建和运行脚本包，以主动查找和修复组织中的主要支持问题。 部署脚本包将有助于减少支持调用。 选择自行创建脚本包，也可部署我们编写并在我们的环境中使用的某个脚本包，以减少支持工单。 借助 Intune，可查看已部署脚本包的状态，并监视检测和修正结果。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“报表” > “终结点分析” > “主动修正”  。 有关详细信息，请参阅[主动修正](https://aka.ms/uea_prs)。
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>设备安全性
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>在面向 Android 的合规性策略中使用 Microsoft Defender ATP<!-- 4425686  -->
 
 现在你可以使用 Intune [将 Android 设备载入到 Microsoft Defender 高级威胁防护](../protect/advanced-threat-protection.md#onboard-android-devices)。 载入注册的设备后，面向 Android 的合规性策略可以使用来自 Microsoft Defender ATP 的威胁级别信号。 这些信号与先前可以用于 Windows 10 设备的信号相同。
 
-#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>配置面向 Android 设备的 Defender ATP Web 保护<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>配置面向 Android 设备的 Defender ATP Web 保护<!-- 6185563  -->
 
 当使用面向 Android 设备的 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 时，可以[配置 Microsoft Defender ATP Web 保护](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)以禁用钓鱼网站扫描功能，或阻止扫描使用 VPN。
 
@@ -110,6 +301,7 @@ ms.locfileid: "86240723"
 - Android 设备管理员 - 使用自定义 OMA-URI 设置禁用 Web 保护功能，或仅在扫描期间禁用 VPN。
 - Android 企业工作配置文件 - 使用应用配置文件和配置设计器禁用所有 Web 保护功能。
 
+<!-- ########################## -->
 ## <a name="week-of-june-15-2020--2006-service-release"></a>2020 年 6 月 15 日当周（2006 服务版本）
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -609,7 +801,7 @@ Intune 用户体验允许将同一个 VPN 配置文件中的多个按需 VPN 规
 以前，无法删除默认配置文件；也就是说，无法删除与之关联的自动设备注册令牌。 现在，可以在以下情况下删除此令牌：
 - 未向令牌分配任何设备
 - 有默认配置文件。为此，请依次删除默认配置文件和关联的令牌。
-有关详细信息，请参阅[从 Intune 中删除 ADE 令牌](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-ade-token-from-intune)。
+有关详细信息，请参阅[从 Intune 中删除 ADE 令牌](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-automated-device-enrollment-token-from-intune)。
 
 #### <a name="scaled-up-support-for-apple-automated-device-enrollment-and-apple-configurator-2-devices-profiles-and-tokens--3542402---"></a>Apple 自动设备注册和 Apple Configurator 2 的设备、配置文件和令牌纵向扩展支持<!--3542402 -->
 为了帮助分散的 IT 部门和组织，Intune 现在最多支持每令牌 1,000 个注册配置文件，每 Intune 帐户 2,000 个自动设备注册（旧称为“DEP”）令牌，以及每令牌 75,000 台设备。 对于每注册配置文件的设备数没有特定限制，只要低于每令牌的最大设备数。
@@ -851,7 +1043,7 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 #### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-----"></a>指导用户从 Android 设备管理员管理转到工作配置文件管理<!--5857738   -->
 我们将发布 Android 设备管理员平台的新合规性性设置。 通过此设置，你可以将通过设备管理员管理的设备设为不合规。
 
-在这些不合规的设备上，用户将在“更新设备设置”页上看到“转到新设备管理设置”消息。  如果用户点击“解决”按钮，则会被引导完成以下操作：
+在这些不合规的设备上，用户将在“更新设备设置”页上看到“转到新设备管理设置”消息。 如果用户点击“解决”按钮，则会被引导完成以下操作：
 
 1. 从设备管理员管理取消注册
 2. 在工作配置文件管理中注册

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 479dd1fede23c902d7be0f38ad0f16aa9f4917cf
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989128"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565515"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>将 Jamf Pro 与 Intune 集成以实现合规
 
@@ -102,7 +102,7 @@ ms.locfileid: "83989128"
 
 9. 在“请求获取 API 权限”  页上，选择“Intune”  ，然后选择“应用程序权限”  。 仅选中 update_device_attributes 对应的复选框，然后保存新权限  。
 
-10. 接下来，选择“API 权限”页左上角的“向 \<的租户> 授予管理员同意权限”，向此应用授予管理员同意权限   。 你可能需要在新窗口中对你的帐户重新进行身份验证，并按照提示授予应用程序访问权限。  
+10. 接下来，通过在“API 权限”页面的左上方为 _\<your tenant>_ 选择“授权管理员同意”，为此应用授予管理员同意 。 你可能需要在新窗口中对你的帐户重新进行身份验证，并按照提示授予应用程序访问权限。  
 
 11. 通过单击页面顶部的“刷新”按钮来刷新页面  。 确认是否针对 update_device_attributes 权限授予了管理员同意  。 
 
@@ -110,10 +110,10 @@ ms.locfileid: "83989128"
 
    ![成功的权限](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   将完成 Azure AD 中的应用注册过程。
+将完成 Azure AD 中的应用注册过程。
 
-    > [!NOTE]
-    > 如果客户端密码过期，则必须在 Azure 中创建一个新的客户端密码，然后更新 Jamf Pro 中的条件访问数据。 Azure 允许同时具有旧密钥和新密钥，以防止服务中断。
+> [!NOTE]
+> 如果客户端密码过期，则必须在 Azure 中创建一个新的客户端密码，然后更新 Jamf Pro 中的条件访问数据。 Azure 允许同时具有旧密钥和新密钥，以防止服务中断。
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>启用 Intune 以与 Jamf Pro 集成
 

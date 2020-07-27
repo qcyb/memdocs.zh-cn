@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990264"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565614"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>在 Intune 中创建 VPN 配置文件以连接到 VPN 服务器
 
@@ -49,6 +49,7 @@ ms.locfileid: "83990264"
 - Check Point Capsule VPN
   - Android 设备管理员
   - Android 企业工作配置文件
+  - Android Enterprise 完全托管和公司拥有的工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -58,7 +59,7 @@ ms.locfileid: "83990264"
 - Cisco AnyConnect
   - Android 设备管理员
   - Android 企业工作配置文件
-  - Android Enterprise 设备所有者（完全托管）
+  - Android Enterprise 完全托管和公司拥有的工作配置文件
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ ms.locfileid: "83990264"
 
 - Citrix SSO
   - Android 设备管理员
-  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
-  - Android Enterprise 设备所有者（完全托管）：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise 完全托管和公司拥有的工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -81,7 +82,7 @@ ms.locfileid: "83990264"
 - F5 Access
   - Android 设备管理员
   - Android 企业工作配置文件
-  - Android Enterprise 设备所有者（完全托管）
+  - Android Enterprise 完全托管和公司拥有的工作配置文件
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -96,7 +97,8 @@ ms.locfileid: "83990264"
   - Windows 10
 
 - 帕洛阿尔托网络全局保护
-  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise 完全托管和公司拥有的工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -106,7 +108,7 @@ ms.locfileid: "83990264"
 - 脉冲安全
   - Android 设备管理员
   - Android 企业工作配置文件
-  - Android Enterprise 设备所有者（完全托管）
+  - Android Enterprise 完全托管和公司拥有的工作配置文件
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -115,6 +117,7 @@ ms.locfileid: "83990264"
 - SonicWall Mobile Connect
   - Android 设备管理员
   - Android 企业工作配置文件
+  - Android Enterprise 完全托管和公司拥有的工作配置文件
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -122,7 +125,8 @@ ms.locfileid: "83990264"
   - Windows Phone 8.1
 
 - Zscaler
-  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise 完全托管和公司拥有的工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ ms.locfileid: "83990264"
 
     - **平台**：选择设备平台。 选项包括：
       - **Android 设备管理员**
-      - “Android Enterprise” > “仅设备所有者”
-      - “Android Enterprise” > “仅工作配置文件”
+      - **Android Enterprise** > **公司拥有的完全托管式专用工作配置文件**
+      - **Android Enterprise** > **工作配置文件**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 及更高版本**
@@ -151,7 +155,7 @@ ms.locfileid: "83990264"
     - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 VPN 配置文件”。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”。
+6. 选择“下一步”  。
 7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，进行详细设置：
 
     - [Android 设备管理员](vpn-settings-android.md)
@@ -169,7 +173,7 @@ ms.locfileid: "83990264"
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”。
+    选择“下一步”  。
 
 11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 

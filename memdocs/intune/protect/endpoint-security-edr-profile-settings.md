@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: dd53ec47435ba9dc416d2b152719b393d1647f90
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823990"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460410"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Intune 中的终结点安全终结点检测和响应策略设置
 
@@ -33,9 +33,7 @@ ms.locfileid: "83823990"
   - 配置文件：终结点检测和响应 (MDM)
 
 - **Windows 10 和 Windows Server**：使用此平台可将策略部署到由 Configuration Manager 管理的设备。
-  - 配置文件：终结点检测和响应 (ConfigMgr)（预览）
-  
-  此平台和配置文件以提供公共预览版。
+  - 配置文件：**终结点检测和响应 (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>终结点检测和响应 (MDM)
 
@@ -70,7 +68,7 @@ ms.locfileid: "83823990"
   - **未配置**（默认）
   - **是** - 提高 Microsoft Defender 高级威胁防护遥测报告频率。
 
-## <a name="endpoint-detection-and-response-configmgr-preview"></a>终结点检测和响应 (ConfigMgr)（预览）
+## <a name="endpoint-detection-and-response-configmgr"></a>终结点检测和响应 (ConfigMgr)
 
 **终结点检测和响应**：
 

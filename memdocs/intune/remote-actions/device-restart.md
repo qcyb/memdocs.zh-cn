@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e95ceb3aabf4e97d020c52983deea683646fa85d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 45317cc9c43f4f25f0adc043ce784a7b3dc4b9fd
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983134"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461770"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>使用 Intune 远程重启设备
 
@@ -34,20 +34,22 @@ ms.locfileid: "83983134"
 
 - Windows - Windows 8.1 及更高版本支持
 - Windows Phone - Windows Phone 8.1 及更高版本支持
-- Android 展台设备 - Android 7.0 及更高版本支持
+- Android Enterprise 专用设备 - 在 Android 7.0 及更高版本上受支持
+- Android Enterprise 完全托管设备 - 在 Android 6.0 及更高版本上受支持
+- Android Enterprise 公司拥有的工作配置文件设备 - 在 Android 8.0 及更高版本上受支持
 - iOS/iPadOS - 支持
 
     > [!Note]  
-    > 此命令需要受监督的设备和“设备锁定”访问权限  。 设备会立即重启。 密码锁定的 iOS/iPadOS 设备重启后不会重新加入 Wi-Fi 网络。 重启后，设备可能无法与服务器进行通信。
+    > 此命令需要受监督的设备和“设备锁定”访问权限。 设备会立即重启。 密码锁定的 iOS/iPadOS 设备重启后不会重新加入 Wi-Fi 网络。 重启后，设备可能无法与服务器进行通信。
 - macOS - 不支持
 - Android 和 Android 工作配置文件设备 - 不支持
 
 ## <a name="restart-a-device"></a>重启设备
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“设备” > “所有设备”。
-4. 在所管理设备的列表中，选择一个设备，然后选择“重启” > “是”。
+3. 选择“设备” > “所有设备” 。
+4. 在所管理设备的列表中，选择一个设备，然后选择“重启” > “是” 。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要查看“重新启动”设备操作的状态，请选择“设备” > “设备操作”。
+- 若要查看“重新启动”设备操作的状态，请选择“设备” > “设备操作”  。

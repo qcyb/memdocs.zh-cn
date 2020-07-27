@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d994960e28deb3e48e4f778b6b496440037052
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ee71bdcf45c4dc99b9c6b3eb889ba373ecadca9
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984742"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461838"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>将 Android Enterprise 系统应用添加到 Microsoft Intune
 
-将应用分配给一个设备或一组用户之前，必须先将应用添加到 Microsoft Intune。 Android Enterprise 设备支持系统应用。 你可以为 [Android Enterprise 专用设备](../enrollment/android-kiosk-enroll.md)或[完全托管设备](../enrollment/android-fully-managed-enroll.md)启用系统应用。
+将应用分配给一个设备或一组用户之前，必须先将应用添加到 Microsoft Intune。 Android Enterprise 设备支持系统应用。 你可以为 [Android Enterprise 专用设备](../enrollment/android-kiosk-enroll.md)、[完全托管设备](../enrollment/android-fully-managed-enroll.md)或 [Android Enterprise 公司拥有的工作配置文件设备](../enrollment/android-corporate-owned-work-profile-enroll.md)启用系统应用。
 
 ## <a name="add-the-app"></a>添加应用
 

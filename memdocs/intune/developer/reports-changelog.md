@@ -6,7 +6,7 @@ keywords: Intune 数据仓库
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165849"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461209"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune 数据仓库 API 的更改日志
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 随时了解 Intune 数据仓库的更新。
+
+## <a name="2007"></a>2007 
+_发布日期：2020 年 7 月_
+
+### <a name="v10-changes"></a>v1.0 更改
+
+下表列出了 Intune 数据仓库中添加到“device”实体的属性。
+
+|    收集                          |    更改     |    说明信息                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    已添加    |    此设备的唯一网络标识符。                                                                                                                                                                                                                                                                     |
+|    office365Version    |    已添加    |    设备上安装的 Office 365 版本。                                                                                                                                                                                                                                                                     |
+
+下表列出了 Intune 数据仓库中添加到 [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) 实体的属性。
+
+|    收集                          |    更改     |    说明信息                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    已添加    |    物理内存（以字节为单位）。                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes    |    已添加    |    总存储容量（以字节为单位）。                                                                                                                                                                                                                                                                     |
 
 ## <a name="2004"></a>2004 
 2020 年 4 月发布

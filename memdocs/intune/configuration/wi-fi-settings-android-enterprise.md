@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086436"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461685"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 Android Enterprise 专用和完全托管设备添加 Wi-Fi 设置
 
@@ -33,14 +33,14 @@ ms.locfileid: "80086436"
 
 [创建设备配置文件](wi-fi-settings-configure.md)。
 
-## <a name="device-owner-only"></a>仅设备所有者
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>公司拥有的完全托管式专用工作配置文件
 
 如果要部署到 Android Enterprise 专用或完全托管设备，请选择此选项。  Android Enterprise 专用和完全托管设备目前支持 SCEP 证书部署，但不支持 PKCS。
 
 ### <a name="basic"></a>基本
 
 - Wi-Fi 类型  ：选择“基本”  。
-- 网络名称  ：输入此 Wi-Fi 连接的名称。 最终用户在浏览其设备的可用 Wi-FI 连接时将看到此名称。 例如，输入 Contoso WiFi  。
+- 网络名称  ：输入此 Wi-Fi 连接的名称。 最终用户在浏览其设备的可用 Wi-Fi 连接时将看到此名称。 例如，输入 Contoso WiFi  。
 - **SSID**：输入“服务集标识符”，它是设备连接到的无线网络的真实名称  。 但是，用户在选择连接时只会看到你已配置的网络名称  。
 - 隐藏网络  ：选择“启用”  以在设备上的可用网络列表中隐藏此网络。 不广播 SSID。 选择“禁用”  以在设备上的可用网络列表中显示此网络。
 - Wi-Fi 类型  ：选择要用于对 Wi-Fi 网络进行身份验证的安全协议。 选项包括：

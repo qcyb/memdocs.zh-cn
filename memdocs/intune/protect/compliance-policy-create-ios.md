@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729260"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871910"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 iOS/iPadOS 设置
 
@@ -40,7 +40,6 @@ ms.locfileid: "82729260"
 [创建合规性策略](create-compliance-policy.md#create-the-policy)。 对于“平台”  ，请选择“iOS/iPadOS”  。
 
 ## <a name="email"></a>电子邮件
-
 
 - **无法在设备上设置电子邮件**  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -61,7 +60,7 @@ ms.locfileid: "82729260"
   - **阻止** - 将已取得 Root 权限（已越狱）的设备标记为不符合。  
 
 - **要求设备不高于设备威胁级别**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   使用此设置将风险评估视为合规性的条件。 选择允许的威胁级别：
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -75,22 +74,22 @@ ms.locfileid: "82729260"
 ### <a name="operating-system-version"></a>操作系统版本  
 
 - **最低操作系统版本**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   设备不满足最低操作系统版本要求时，它将被报告为不符合要求。 将显示一个链接，链接中包含有关如何升级的信息。 最终用户可以选择升级自己的设备。 此后，他们可访问组织资源。
 
 - **最高操作系统版本**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   当设备使用的操作系统版本高于输入的版本时，将阻止对组织资源的访问。 系统会要求最终用户联系其 IT 管理员。 除非将规则更改为允许操作系统版本，否则设备无法访问组织资源。
 
 - **最低 OS 内部版本**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   当 Apple 发布安全更新时，通常会更新内部版本号，而非操作系统版本。 使用此功能可在设备上输入允许的最低内部版本号。
 
-- 最高 OS 内部版本*   
-  支持 iOS 8.0 及更高版本 
+- 最高 OS 内部版本*  
+  支持 iOS 8.0 及更高版本
 
   当 Apple 发布安全更新时，通常会更新内部版本号，而非操作系统版本。 使用此功能可在设备上输入允许的最高内部版本号。
 
@@ -106,18 +105,18 @@ ms.locfileid: "82729260"
   - **必需** - 用户必须输入密码后才能访问其设备。 使用密码的 iOS/iPadOS 设备已加密。
 
 - **简单密码**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   - **未配置**（默认值）  - 用户可创建简单的密码，例如 1234  或 1111  。
-  - **阻止** - 用户无法创建简单密码，如 1234 或 1111。  
+  - **阻止** - 用户无法创建简单密码，如 1234 或 1111。
 
 - **最短密码长度**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   输入密码必须包含的最小位数或最小字符数。
 
 - **所需的密码类型**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   选择密码是应仅包含数值字符，还是应混合使用数字和其他字符（字母数字）   。
 
@@ -127,7 +126,7 @@ ms.locfileid: "82729260"
   设置的数字越大，要求用户创建的密码越复杂。
 
 - **屏幕锁定后要求输入密码前的最大分钟数**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   指定在屏幕锁定后多久，用户必须输入密码才能访问设备。 选项包括默认值“未配置”  、“立即”  和“1 分钟”至“4 小时”之间的值   。
 
@@ -135,12 +134,12 @@ ms.locfileid: "82729260"
   输入设备锁定其屏幕前的空闲时间。 选项包括默认值“未配置”  、“立即”  和“1 分钟”至“15 分钟”之间的值   。
 
 - **密码过期（天数）**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   选择密码过期之前的天数，然后必须创建一个新密码。
 
 - **阻止重用的曾用密码数**  
-  支持 iOS 8.0 及更高版本 
+  支持 iOS 8.0 及更高版本
 
   输入之前使用但无法使用的密码的数量。
 
@@ -150,7 +149,7 @@ ms.locfileid: "82729260"
   可以通过将应用的程序包 ID 添加到策略中来限制应用。 如果某一设备已安装该应用，此设备将标记为不符合要求的设备。
 
   - **应用名称** - 输入一个用户友好名称，帮助识别捆绑 ID。
-  - **应用程序包 ID** - 输入应用提供程序分配的唯一捆绑标识符。 若要查找捆绑 ID，请参阅[如何查找 iOS/iPadOS 应用的捆绑 ID](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app)（打开另一个 Microsoft 网站）。  
+  - **应用程序包 ID** - 输入应用提供程序分配的唯一捆绑标识符。 若要查找捆绑 ID，请参阅 Support.apple.com 上的[本机 iOS 和 iPadOS 应用的捆绑 ID](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web)，或与应用的软件供应商联系。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b0d0bbeb174d8f90d47ea6242ce6bd4be2dcfac6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879659"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491161"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune 中的关于终结点安全性的防病毒策略
 
@@ -40,8 +40,7 @@ Intune 终结点安全性防病毒策略可帮助安全管理员专注于管理�
   - 为了使 Intune 能够管理设备上的防病毒设置，需要在该设备上安装 Microsoft Defender ATP。 请参阅 [适用于 macOS 的 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)（在 Microsoft Defender ATP 文档中）
 
 - **Windows 10 及更高版本**
-  - 为了使 Intune 能够管理设备上的防病毒设置，需要在该设备上安装 Microsoft Defender ATP。 请参阅 Intune 文档中的[适用于 Windows 的 Microsoft Defender ATP](../protect/advanced-threat-protection.md)。
-  - 运行 Windows 10 的所有设备上都安装了 Windows 安全应用，不需要满足额外的先决条件。
+  - 无需其他先决条件。 
 
 ## <a name="antivirus-profiles"></a>防病毒配置文件
 

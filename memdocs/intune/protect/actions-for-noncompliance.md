@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093725"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461855"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>为 Intune 中不符合要求的设备配置操作
 
@@ -58,7 +58,7 @@ ms.locfileid: "85093725"
   以下平台支持此操作：
   - Android：
     - Android 设备管理员
-    - Android Enterprise 设备所有者
+    - Android 公司拥有的完全托管式专用工作配置文件
     - Android Enterprise 工作配置文件
     - Android 企业展台设备
   - iOS/iPadOS

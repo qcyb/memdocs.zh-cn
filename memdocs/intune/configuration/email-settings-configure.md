@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989155"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565642"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 向设备添加电子邮件设置
 
@@ -76,15 +76,35 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
     选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+10. 在“分配”中，选择可以接收配置文件的用户或设备组。 若要了解分配配置文件的详细信息，请参阅 [须知内容](#what-you-need-to-know)（在本文中）。 [分配用户和设备配置文件](device-profile-assign.md)也提供了一些指导。
 
     选择“下一步”。
 
 11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
+## <a name="what-you-need-to-know"></a>须知内容
+
+- 电子邮件配置文件是为注册设备的用户部署的。 为了配置电子邮件配置文件，Intune 会在注册期间使用用户的电子邮件配置文件中的 Azure Active Directory (AD) 属性。
+
+- 适用于 iOS/iPadOS 和 Android 设备的 Microsoft Outlook 不支持电子邮件配置文件。 应为它们部署应用配置策略。 有关详细信息，请参阅 [Outlook 配置设置](../apps/app-configuration-policies-outlook.md)。
+
+  在 Android Enterprise 设备上，使用托管的 Google Play 商店部署 Gmail 或 Nine for Work。 [添加托管 Google Play 应用](../apps/apps-add-android-for-work.md)中列出了相关步骤。
+
+- 电子邮件基于标识和用户设置。 通常会将电子邮件配置文件分配给用户组而非设备组。 注意事项：
+
+  - 如果电子邮件配置文件包括用户证书，则将电子邮件配置文件分配给用户组。 你可能分配了多个用户证书配置文件。 这些配置文件创建了一个配置文件部署链。 将此配置文件链部署到用户组。
+
+    如果此链中的一个配置文件部署到了设备组，则可能会持续提示用户输入密码。
+
+  - 如果没有主要用户或不知道该用户是谁，通常使用设备组。 可能无法将针对设备组（不是用户组）的电子邮件配置文件传递到设备。
+
+    例如，如果你的电子邮件配置文件针对所有 iOS/iPadOS 设备组，请确保所有这些设备都有用户。 如果所有设备都没有用户，则电子邮件配置文件可能不会部署。 然后，限制该配置文件，这可能会丢失某些设备。 如果设备具有主要用户，则部署到设备组应正常工作。
+
+    如需深入了解使用设备组时可能出现的问题，请参阅[电子邮件配置文件的常见问题](troubleshoot-email-profiles-in-microsoft-intune.md)。
+
 ## <a name="remove-an-email-profile"></a>删除电子邮件配置文件
 
-电子邮件配置文件分配给设备组，而不是用户组。 可以通过不同的方式从设备删除电子邮件配置文件，即使设备上只有一个电子邮件配置文件：
+可以通过不同的方式从设备删除电子邮件配置文件，即使设备上只有一个电子邮件配置文件：
 
 - **选项 1**：打开电子邮件配置文件（“设备” > “配置文件” > 选择你的配置文件），然后选择“分配”。 “包含”选项卡将显示已分配配置文件的组。 右键单击“组”，然后单击“删除”。 务必保存你的更改。
 
@@ -96,7 +116,7 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 - **证书**：创建电子邮件配置文件时，选择之前在 Intune 中创建的证书配置文件。 该证书又称为标识证书。 它根据受信任的证书配置文件（或根证书）进行身份验证，以确定用户的设备可以连接。 受信任的证书会分配到对电子邮件连接进行身份验证的计算机。 通常，此计算机是本机邮件服务器。
 
-  如果对电子邮件配置文件使用基于证书的身份验证，请将电子邮件配置文件、证书配置文件和受信任的根配置文件部署到同一组，以确保每台设备都能识别证书颁发机构的合法性。
+  如果对电子邮件配置文件使用基于证书的身份验证，则将电子邮件配置文件、证书配置文件和受信任的根配置文件部署到相同的组。 此部署可确保每台设备都能识别证书颁发机构的合法性。
 
   有关如何在 Intune 中创建和使用证书配置文件的详细信息，请参阅[如何使用 Intune 配置证书](../protect/certificates-configure.md)。
 
@@ -112,7 +132,7 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 
 - **Android Samsung Knox Standard**：基于电子邮件地址检测到现有的重复电子邮件帐户，并使用 Intune 配置文件将其覆盖。 Android 不使用主机名验证配置文件。 请勿在不同主机上使用相同的电子邮件地址创建多个电子邮件配置文件。 配置文件相互覆盖。
 
-- **Android 工作配置文件**：Intune 提供了两个 Android 工作电子邮件配置文件：一个用于 Gmail 应用，另一个用于 Nine Work 应用。 这些应用在 Google Play 商店中提供，并且安装在设备工作配置文件中。 这些应用不会重复创建配置文件。 这两个应用支持到 Exchange 的连接。 要使用电子邮件连接，请将其中某个电子邮件应用部署到用户的设备上。 然后创建相应的电子邮件配置文件并对其进行部署。 可使用 Gmail 和 Nine 电子邮件配置文件，它们将同时适用于“工作配置文件”和“设备所有者”注册类型，包括对这两种电子邮件配置类型使用证书配置文件。 在“工作配置文件”的“设备配置”下创建的任何 Gmail 或 9 个策略将继续应用于设备，没有必要将它们移动到应用配置策略。 Nine Work 等电子邮件应用可能需付费使用。 若有任何问题，请查看应用的许可详细信息或与应用公司联系。 
+- **Android 工作配置文件**：Intune 提供了两个 Android 工作电子邮件配置文件：一个用于 Gmail 应用，另一个用于 Nine Work 应用。 这些应用在 Google Play 商店中提供，并且安装在设备工作配置文件中。 这些应用不会重复创建配置文件。 这两个应用支持到 Exchange 的连接。 要使用电子邮件连接，请将其中某个电子邮件应用部署到用户的设备上。 然后，创建并部署电子邮件配置文件。 可以使用适用于“工作配置文件”和“公司拥有的完全托管式专用工作配置文件”类型的 Gmail 和 Nine 电子邮件配置文件，包括对这两种电子邮件配置类型使用证书文件。 你在设备配置中为工作配置文件创建的任何 Gmail 或 Nine 策略都继续应用于该设备。 无需将它们移至应用配置策略。 Nine Work 等电子邮件应用可能需付费使用。 若有任何问题，请查看应用的许可详细信息或与应用公司联系。
 
 ## <a name="changes-to-assigned-email-profiles"></a>对已分配的电子邮件配置文件的更改
 

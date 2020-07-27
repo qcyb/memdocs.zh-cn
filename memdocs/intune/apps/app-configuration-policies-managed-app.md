@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ed731cdb4efddaedbfcde47acce3fc24d344d80
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b493443a86d7cd1769ce6f66c77acc87063521f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988802"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461634"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>为受管理应用添加应用配置策略（无需设备注册）
 
@@ -39,27 +39,35 @@ ms.locfileid: "83988802"
     - **设备注册类型**：已选择托管应用。
 4. 选择“选择公共应用”  或“选择自定义应用”  以选择要配置的应用。 从已同意并与 Intune 同步的应用列表中选择应用。
 5. 单击“下一步”以显示“设置”页面   。
-6. 对于该应用支持的每个配置设置，请键入“名称”和“值”   。 
+6. “设置页面”提供的选项基于要配置应用进行显示：
 
-   启用了 Intune App SDK 的应用支持键值对形式的配置。 若要详细了解支持哪些键值配置，请参阅每个应用的相关文档。 请注意，可使用将由应用程序生成的数据动态填充的令牌。 有关详细信息，请参阅[为使用令牌配置值](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens)。 有关 Outlook for iOS/iPadOS 应用配置策略设置的相关信息，请参阅[使用 Microsoft Intune 管理 Outlook for iOS/iPadOS 应用配置](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx)。
+    - **常规配置设置** - 对于该应用支持的每个常规配置设置，请键入“名称”和“值” 。 
+ 
+        启用了 Intune App SDK 的应用支持键值对形式的配置。 若要详细了解支持哪些键值配置，请参阅每个应用的相关文档。 请注意，可使用将由应用程序生成的数据动态填充的令牌。 若要删除常规配置设置，请选择省略号 (…)，然后选择“删除” 。 有关详细信息，请参阅[为使用令牌配置值](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens)。 
 
-    若要删除配置，请选择省略号 (…)，然后选择“删除”   。  
+    - **Outlook 配置设置** - Outlook for iOS 和 Outlook for Android 使管理员能够为多个应用内设置自定义默认配置。 有关详细信息，请参阅 [Outlook for iOS 和 Outlook for Android 常规应用配置方案](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios)。
+   
+    - **S/MIME** - 安全多用途 Internet 邮件扩展 (S/MIME) 是一种规范，它让用户能够发送和接收数字签名和加密的电子邮件。
+        - **启用 S/MIME** - 指定是否要在撰写电子邮件时启用 S/MIME 控件。 默认值：“不配置”。
+        - **允许用户更改设置** - 指定是否允许用户更改设置。 必须启用 S/MIME。 默认值：“是”。
+        
+    有关 Outlook 应用配置策略设置的详细信息，请参阅[部署 Outlook for iOS 和 Outlook for Android 应用配置设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
 
-7. 单击“下一步”以显示“分配”页面   。
-8. 单击“选择要包含的组”  。
-9. 在“选择要包含的组”  窗格中选择一个组，然后单击“选择”  。
-10. 单击“选择要排除的组”以显示相关窗格  。
-11. 选择想要排除的组，然后单击“选择”  。
+7. 单击“下一步”以显示“分配”页面 。
+8. 单击“选择要包含的组”。
+9. 在“选择要包含的组”窗格中选择一个组，然后单击“选择”。
+10. 单击“选择要排除的组”以显示相关窗格。
+11. 选择想要排除的组，然后单击“选择”。
 
     >[!NOTE]
     >添加组时，如果给定的分配类型中已包括任何其他组，则在其他包括分配类型中，会预先选定该组且无法更改。 因此，已被使用的组无法用作排除组。
 
-12. 单击“下一步”  以显示“查看 + 创建”页  。
-13. 单击“创建”  ，将应用配置策略添加到 Intune。
+12. 单击“下一步”以显示“查看 + 创建”页。
+13. 单击“创建”，将应用配置策略添加到 Intune。
 
 ## <a name="configuration-values-for-using-tokens"></a>为使用令牌配置值
 
-Intune 可以生成特定令牌，并将其发送至托管的应用程序。 例如，如果应用配置可使用电子邮件设置，则可通过使用令牌添加动态电子邮件。 在“名称”字段键入应用所需名称，然后在“值”字段键入 `\{\{mail\}\}`  。
+Intune 可以生成特定令牌，并将其发送至托管的应用程序。 例如，如果应用配置可使用电子邮件设置，则可通过使用令牌添加动态电子邮件。 在“名称”字段键入应用所需名称，然后在“值”字段键入 `\{\{mail\}\}` 。
 
 Intune 支持在配置设置中使用以下令牌类型。 不支持其他自定义键/值对。
 

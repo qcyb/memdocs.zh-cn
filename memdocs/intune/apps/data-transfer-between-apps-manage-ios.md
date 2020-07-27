@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 771741ed0e07a6373c63dd2e81745fe53adc4242
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236386"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410838"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>如何在 Microsoft Intune 中管理 iOS 应用之间的数据传输
 
 若要帮助保护公司数据，请限制仅在你管理的应用之间进行文件传输。 可以通过以下方式管理 iOS 应用：
 
-- 通过为应用配置应用保护策略来保护工作或学校帐户的组织数据。 我们称之为“策略托管应用”。  请参阅 [all the Intune-managed apps you can manage with app protection policy](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)（所有可使用应用保护策略管理的 Intune 托管应用）
+- 通过为应用配置应用保护策略来保护工作或学校帐户的组织数据。 我们称之为“策略托管应用”。  请参阅[受 Microsoft Intune 保护的应用](apps-supported-intune-apps.md)。
 
 - 通过 iOS 设备管理部署和管理应用需要设备注册移动设备管理 (MDM) 解决方案。 部署的应用可以是“策略托管应用”，也可以是其他 iOS 托管应用。
 
@@ -40,10 +40,10 @@ ms.locfileid: "86236386"
 
 - **不由任何 MDM 解决方案管理的设备：** 可以设置应用保护策略设置，通过“打开方式”或“共享扩展”来控制数据与其他应用程序的共享。  为此，请将“将组织数据发送到其他应用”配置为“具有打开方式/共享筛选的策略托管应用”。  策略托管应用中的“打开方式/共享”行为只会将其他策略托管应用用作共享选项  。 
 
-- **由 MDM 解决方案托管的设备**：对于在 Intune 或第三方 MDM 解决方案中注册的设备，在具有应用保护策略的应用和通过 MDM 部署的其他托管 iOS 应用之间共享的数据由 Intune 应用策略和 iOS“打开方式管理”功能控制。 若要确保使用 MDM 解决方案部署的应用也与 Intune 应用保护策略相关联，请按照下一部分[配置用户 UPN 设置](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)中所述配置用户 UPN 设置。 要指定数据传输到其他应用的方式，请启用“将组织数据发送到其他应用”，然后选择首选的共享级别。 要指定应用从其他应用接收数据的方式，请启用“从其他应用接收数据”，然后选择首选的数据接收级别。 有关如何接收和共享应用数据的详细信息，请参阅[数据重定位设置](app-protection-policy-settings-ios.md#data-protection)。
+- **由 MDM 解决方案托管的设备**：对于在 Intune 或第三方 MDM 解决方案中注册的设备，在具有应用保护策略的应用和通过 MDM 部署的其他托管 iOS 应用之间共享的数据由 Intune 应用策略和 iOS“打开方式管理”功能控制。 若要确保使用 MDM 解决方案部署的应用也与 Intune 应用保护策略相关联，请按照下一部分[配置用户 UPN 设置](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)中所述配置用户 UPN 设置。 若要指定如何允许数据传输到其他“策略托管应用”和 iOS 托管应用，请将“将组织数据发送到其他应用”设置配置为“具有 OS 共享的策略托管应用” 。 要指定应用从其他应用接收数据的方式，请启用“从其他应用接收数据”，然后选择首选的数据接收级别。 有关如何接收和共享应用数据的详细信息，请参阅[数据重定位设置](app-protection-policy-settings-ios.md#data-protection)。
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>为 Microsoft Intune 或第三方 EMM 配置用户 UPN 设置
-需要配置用户 UPN 设置，才能使 Intune 或第三方 EMM 解决方案管理的设备识别已注册用户帐户。 UPN 配置可与从 Intune 中部署的应用保护策略一同使用。 下述过程是配置 UPN 设置的一般流程以及该过程所产生的用户体验：
+对于由 Intune 或第三方 EMM 解决方案管理的设备，配置用户 UPN 设置是必需的，以便在向 iOS 托管应用传输数据时识别发送策略托管应用的已注册用户帐户。 UPN 配置可与从 Intune 中部署的应用保护策略一同使用。 下述过程是配置 UPN 设置的一般流程以及该过程所产生的用户体验：
 
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，为 iOS/iPadOS [创建和分配应用保护策略](app-protection-policies.md)。 根据公司要求配置策略设置，并选择应使用此策略的 iOS 应用。
 
@@ -70,7 +70,7 @@ ms.locfileid: "86236386"
 
 1. 转到 Intune 或第三方 MDM 提供程序的管理控制台。 转到将应用程序配置设置部署到已注册的 iOS 设备的控制台部分。
 
-2. 在“应用程序配置”部分中，输入以下设置：
+2. 在“应用程序配置”部分，为每个策略托管应用输入以下设置，以将数据传输到 iOS 托管应用：
 
    键 = IntuneMAMUPN，值 = <username@company.com>
 
@@ -90,7 +90,7 @@ ms.locfileid: "86236386"
 
 ### <a name="example-2-end-user-experience"></a>示例 2：最终用户体验
 
-使用 OS 共享从策略托管应用共享到其他应用程序 
+使用 OS 共享从策略托管应用共享到其他应用程序
 
 1. 用户在已注册的 iOS 设备上打开 Microsoft OneDrive 应用并登录到其工作帐户。  用户输入的工作帐户必须与你在 Microsoft OneDrive 应用的应用配置设置中指定的帐户 UPN 匹配。
 
@@ -100,7 +100,7 @@ ms.locfileid: "86236386"
 
 4. 数据传输成功，数据现在受 iOS 托管应用中的“打开方式管理”保护。  Intune 应用不适用于非策略托管应用的应用程序。
 
-从 iOS 托管应用共享到包含传入组织数据的策略托管应用  
+从 iOS 托管应用共享到包含传入组织数据的策略托管应用
 
 1. 用户使用托管电子邮件配置文件在已注册的 iOS 设备上打开本机邮件。  
 

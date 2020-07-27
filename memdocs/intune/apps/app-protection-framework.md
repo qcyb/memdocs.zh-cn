@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853564"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410923"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用应用保护策略的数据保护框架 
 
@@ -148,8 +148,10 @@ Microsoft 建议对使用方案进行查看和分类，然后使用针对该级�
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 数据传输 |       将组织数据备份到…  |          阻止  |          iOS/iPadOS、Android  |                  |
 | 数据传输 |       将组织数据发送到其他应用  |          策略托管应用  |          iOS/iPadOS、Android  |          <p>使用 iOS/iPadOS 时，管理员可以将此值配置为“策略托管应用”、“具有 OS 共享的策略托管应用”或“具有‘打开方式/共享’筛选的策略托管应用”。 </p><p>当设备还向 Intune 进行注册时，可以使用“具有 OS 共享的策略托管应用”。 此设置允许将数据传输到其他策略托管应用，以及将文件传输到由 Intune 托管的其他应用。 </p><p>具有“打开方式/共享”筛选功能的策略托管应用会筛选“OS 打开方式/共享”对话框，以仅显示策略托管应用。 </p><p> 有关详细信息，请参阅 [iOS 应用保护策略设置](app-protection-policy-settings-ios.md)。</p> |
+| 数据传输 |       选择要豁免的应用  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | 数据传输 |       保存组织数据的副本  |          阻止  |          iOS/iPadOS、Android  |                  |
 | 数据传输 |       允许用户将副本保存到所选的服务  |          OneDrive for Business、SharePoint Online |          iOS/iPadOS、Android  |                  |
+| 数据传输 |       将电信数据传输到  |          所有应用 |          iOS/iPadOS、Android  |                  |
 | 数据传输 |       限制在应用间进行剪切、复制和粘贴  |          带粘贴的策略托管应用  |          iOS/iPadOS、Android  |                  |
 | 数据传输 |       屏幕捕获和 Google 助手  |          阻止  |          Android  |                  |
 | 功能 |       限制使用其他应用传输 Web 内容  |          Microsoft Edge  |          iOS/iPadOS、Android  |                  |
@@ -173,9 +175,12 @@ Microsoft 建议对使用方案进行查看和分类，然后使用针对该级�
 
 | 设置 | 设置描述 |             值  |             平台        | 注意 |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| 数据传输 |       将电信数据传输到  |          任何由策略管理的拨号应用 |          Android  | 管理员还可以将此设置配置为使用不支持应用保护策略的拨号应用，方法是选择特定拨号应用并提供拨号应用包 ID 和拨号应用名称值  。   |
+| 数据传输 |       将电信数据传输到  |          特定拨号应用 |          iOS/iPadOS  |  |
+| 数据传输 |       拨号应用 URL 方案  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | 在 iOS/iPadOS 上，此值必须替换为所使用的自定义拨号应用的 URL 方案。 如果 URL 方案未知，请联系应用开发人员以获取详细信息。 有关 URL 方案的详细信息，请参阅[为应用定义自定义 URL 方案](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)。|
 | 数据传输 |       从其他应用接收数据  |          策略托管应用  |          iOS/iPadOS、Android         |  |
-| 数据传输 |       第三方键盘  |          阻止  |          iOS/iPadOS        | 在 iOS 上，这会阻止所有第三方键盘在应用中正常工作。  |
-| 数据传输 |       批准的键盘  |          要求  |          Android        | 使用 Android 时，必须选择键盘，才能基于已部署的 Android 设备进行使用。  |
+| 数据传输 |       第三方键盘  |          阻止  |          iOS/iPadOS        | 在 iOS/iPadOS 上，这会阻止所有第三方键盘在应用中正常工作。  |
+| 数据传输 |       批准的键盘  |          要求  |          Android        |  |
 | 数据传输 |       选择待批准的键盘  |          添加/删除键盘  |          Android        | 使用 Android 时，必须选择键盘，才能基于已部署的 Android 设备进行使用。  |
 | 功能 |       打印组织数据  |          阻止  |          iOS/iPadOS、Android         |  |
 

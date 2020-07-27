@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879675"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462059"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 中关于终结点安全性的终结点检测和响应策略
 
@@ -32,9 +32,6 @@ Microsoft Defender ATP 终结点检测和响应功能提供准实时且可操作
 EDR 策略包括特定于平台的配置文件，用于管理 EDR 的设置。 配置文件自动包括用于 Microsoft Defender ATP 的加入包。 加入包用于确定如何配置设备以将其与 Microsoft Defender ATP 结合使用。 加入设备后，可以开始使用该设备的威胁数据。
 
 EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中的设备组，并部署到使用 Configuration Manager 管理的本地设备集合，包括 Windows 服务器。 不同管理路径的 EDR 策略需要不同的加入包。 因此，需要为所管理的不同类型的设备创建单独的 EDR 策略。
-
-> [!TIP]
-> 公共预览版支持使用 Configuration Manager 管理的设备。
 
 在 [Microsoft endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)的“终结点安全性”节点的“管理”下查找用于 EDR 的终结点安全性策略。
 
@@ -74,10 +71,10 @@ EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中
 - 平台：**Windows 10 及更高版本** - Intune 将策略部署到 Azure AD 组中的设备。
 - 配置文件：终结点检测和响应 (MDM)
 
-**Configuration Manager**（预览版） - 使用 Configuration Manager 管理的设备支持以下内容：
+**Configuration Manager** - 使用 Configuration Manager 管理的设备支持以下功能：
 
 - 平台：Windows 10 和 windows Server - Configuration Manager 将策略部署到 Configuration Manager 集合中的设备。
-- 配置文件：终结点检测和响应 (ConfigMgr)（预览）
+- 配置文件：**终结点检测和响应 (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>设置 Configuration Manager 以便支持 EDR 策略
 
@@ -223,7 +220,7 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
    - Configuration Manager - Configuration Manager 将策略部署到 Configuration Manager 集合中的设备。 创建策略时，请选择：
      - 平台：Windows 10 和 Windows Server
-     - 配置文件：终结点检测和响应 (ConfigMgr)（预览）
+     - 配置文件：**终结点检测和响应 (ConfigMgr)**
 
 4. 选择“创建”。
 
@@ -233,7 +230,7 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
    完成配置设置后，选择“下一步”。
 
-7. 此步骤仅适用于“终结点检测和响应(MDM)”配置文件**：  
+7. 此步骤仅适用于“终结点检测和响应(MDM)”配置文件：  
 
    在“作用域标记”页上，选择“选择作用域标记”以打开“选择标记”窗格，将作用域标记分配给配置文件 。
   

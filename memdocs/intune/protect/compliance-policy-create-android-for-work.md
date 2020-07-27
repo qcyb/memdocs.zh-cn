@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: 9897f824bb1bd13c1d12ff0c705b42cea275b9d4
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729244"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462076"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 Android Enterprise 设置
 
@@ -37,20 +37,19 @@ ms.locfileid: "82729244"
 > [!IMPORTANT]
 > 合规性策略还会应用到 Android Enterprise 专用设备。 如果将合规性策略分配给专用设备，则设备可能会显示为“不合规”  。 在专用设备上无法进行条件访问和强制执行合规性策略。 请务必完成任何任务或操作，以确保专用设备符合分配的策略。
 
-
 ## <a name="before-you-begin"></a>在开始之前
 
 [创建合规性策略](create-compliance-policy.md#create-the-policy)。 对于“平台”，选择“Android Enterprise”   。
 
 
-## <a name="device-owner"></a>设备所有者
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>公司拥有的完全托管式专用工作配置文件
 
 ### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
 - **要求设备不超过计算机风险评分**  
 
   为 Microsoft Defender ATP 评估的设备选择允许的最高计算机风险分数。 超过此分数的设备将标记为不合规。
-  - **未配置**（默认） 
+  - **未配置**（默认）
   - **清除**
   - **低**
   - **中等**
@@ -68,15 +67,15 @@ ms.locfileid: "82729244"
   - **高** - 此选项是最不安全的，因为它允许所有威胁级别。 如果将此解决方案仅用作报告目的，则可能有用。
   
 > [!NOTE]
-> 使用应用配置的 Android Enterprise 设备所有者部署支持所有移动威胁防御 (MTD) 提供程序。 请与 MTD 提供商联系，获取支持 Intune 上的 Android Enterprise 设备所有者平台所需的确切配置。
+> 使用应用配置的 Android Enterprise 公司拥有的完全托管式专用工作配置文件部署支持所有移动威胁防御 (MTD) 提供程序。 请与 MTD 提供商联系，获取支持 Intune 上的 Android Enterprise 公司拥有的完全托管式专用工作配置文件平台所需的确切配置。
 
 #### <a name="google-play-protect"></a>Google Play Protect
 
 - **SafetyNet 设备证明**  
   输入必须满足的 [SafetyNet 证明](https://developer.android.com/training/safetynet/attestation.html)级别。 选项包括：
-  - **未配置**（默认）- 不会评估设置的符合性和不符合性。 
-  - 检查基本完整性 
-  - 检查基本完整性和已认证的设备 
+  - **未配置**（默认）- 不会评估设置的符合性和不符合性。
+  - 检查基本完整性
+  - 检查基本完整性和已认证的设备
 
 ### <a name="device-properties"></a>设备属性
 
@@ -100,7 +99,7 @@ ms.locfileid: "82729244"
 ### <a name="system-security"></a>系统安全
 
 - **需要密码才可解锁移动设备**  
-  - **未配置**（默认）- 不会评估此设置的符合性和不符合性。 
+  - **未配置**（默认）- 不会评估此设置的符合性和不符合性。
   - **必需** - 用户必须输入密码后才能访问其设备。
 
 - **所需的密码类型**  
@@ -142,7 +141,7 @@ ms.locfileid: "82729244"
   - **密码到期前的天数**  
     输入必须更改设备密码前，密码的有效天数（介于 1-365 天之间）。 例如，要在 60 天后更改密码，请输入 `60`。 密码到期后，系统会提示用户创建新密码。
 
-    默认情况下，没有配置任何值。 
+    默认情况下，没有配置任何值。
 
   - **用户可重用某个密码前需使用的密码数**  
     输入最近使用的不能重用的密码数（介于 1-24 之间）。 使用此设置限制用户创建以前用过的密码。  
@@ -159,17 +158,17 @@ ms.locfileid: "82729244"
 
 ## <a name="work-profile"></a>工作配置文件
 
-### <a name="microsoft-defender-atp---for-work-profile"></a>Microsoft Defender ATP - 针对工作配置文件 
+### <a name="microsoft-defender-atp---for-work-profile"></a>Microsoft Defender ATP - 针对工作配置文件
 
 - **要求设备不超过计算机风险评分**  
   为 Microsoft Defender ATP 评估的设备选择允许的最高计算机风险分数。 超过此分数的设备将标记为不合规。
-  - **未配置**（默认） 
+  - **未配置**（默认）
   - **清除**
   - **低**
   - **中等**
   - **高**
 
-### <a name="device-health---for-work-profile"></a>设备运行状况 - 针对工作配置文件 
+### <a name="device-health---for-work-profile"></a>设备运行状况 - 针对工作配置文件
 
 - **取得 root 权限的设备**  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -183,7 +182,7 @@ ms.locfileid: "82729244"
   - **中** - 若设备上存在的威胁为低级或中级，则将其评为合规。 如果设备被检测到存在高级威胁，则会被确定为不符合要求。
   - **高** - 此选项是最不安全的，因为它允许所有威胁级别。 如果将此解决方案仅用作报告目的，则可能有用。
 
-#### <a name="google-play-protect---for-work-profile"></a>Google Play 保护机制 - 针对工作配置文件 
+#### <a name="google-play-protect---for-work-profile"></a>Google Play 保护机制 - 针对工作配置文件
 
 - **配置 Google Play Services**  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -195,16 +194,16 @@ ms.locfileid: "82729244"
   
 - **SafetyNet 设备证明**  
   输入必须满足的 [SafetyNet 证明](https://developer.android.com/training/safetynet/attestation.html)级别。 选项包括：
-  - **未配置**（默认）- 不会评估设置的符合性和不符合性。 
-  - 检查基本完整性 
-  - 检查基本完整性和已认证的设备 
+  - **未配置**（默认）- 不会评估设置的符合性和不符合性。
+  - 检查基本完整性
+  - 检查基本完整性和已认证的设备
 
 > [!NOTE]
 > 在 Android Enterprise 设备上，“对应用进行威胁扫描”是一种设备配置策略  。 使用配置策略，管理员可在设备上启用设置。 请参阅 [Android Enterprise 设备限制设置](../configuration/device-restrictions-android-for-work.md)。
 
-### <a name="device-properties---for-work-profile"></a>设备属性 - 针对工作配置文件 
+### <a name="device-properties---for-work-profile"></a>设备属性 - 针对工作配置文件
 
-#### <a name="operating-system-version---for-work-profile"></a>操作系统版本 - 针对工作配置文件 
+#### <a name="operating-system-version---for-work-profile"></a>操作系统版本 - 针对工作配置文件
 
 - **最低操作系统版本**  
 设备不满足最低操作系统版本要求时，它将被报告为不符合要求。 将显示一个链接，链接中包含有关如何升级的信息。 最终用户可以先升级其设备，然后再访问组织资源。
@@ -216,7 +215,7 @@ ms.locfileid: "82729244"
 
   默认情况下，没有配置任何版本  。
 
-### <a name="system-security---for-work-profile"></a>系统安全 - 针对工作配置文件 
+### <a name="system-security---for-work-profile"></a>系统安全 - 针对工作配置文件
 
 - **需要密码才可解锁移动设备**  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -226,7 +225,7 @@ ms.locfileid: "82729244"
 
 - **所需的密码类型**  
   选择密码是应仅包含数值字符，还是应混合使用数字和其他字符。 选项包括：
-  - 设备默认值 
+  - 设备默认值
   - **低安全性生物识别**
   - **至少为数字**（默认值）  ：输入所需的“最短密码长度”（介于 4 到 16 个字符之间）  。
   - **数字复杂度**：输入所需的“最短密码长度”（介于 4 到 16 个字符之间）  。
@@ -248,7 +247,7 @@ ms.locfileid: "82729244"
   - **阻止重用的曾用密码数**  
     输入最近使用的不能重用的密码数。 使用此设置限制用户创建以前用过的密码。
 
-#### <a name="encryption---for-work-profile"></a>加密 - 针对工作配置文件 
+#### <a name="encryption---for-work-profile"></a>加密 - 针对工作配置文件
 
 - **加密设备上的数据存储**  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -256,7 +255,7 @@ ms.locfileid: "82729244"
 
   不必配置此设置，因为 Android Enterprise 设备会强制进行加密。
 
-#### <a name="device-security---for-work-profile"></a>设备安全 - 针对工作配置文件 
+#### <a name="device-security---for-work-profile"></a>设备安全 - 针对工作配置文件
 
 - **阻止来自未知源的应用**  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。

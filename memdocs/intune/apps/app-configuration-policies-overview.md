@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988782"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461651"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune 的应用配置策略
 
@@ -75,15 +75,15 @@ ms.locfileid: "83988782"
 
 ## <a name="android-app-configuration-policies"></a>Android 应用配置策略
 
-对于 Android 应用配置策略，可以在创建应用配置文件前选择设备注册类型。 可以考虑基于注册类型的证书配置文件（“工作配置文件”或“设备所有者配置文件”）。 此更新包括以下内容：
+对于 Android 应用配置策略，可以在创建应用配置文件前选择设备注册类型。 可以考虑基于注册类型的证书配置文件（工作配置文件、公司拥有的完全托管式专用工作配置文件）。 此更新包括以下内容：
 
-1. 如果新建了配置文件，并为设备注册类型选择了“工作配置文件”和“设备所有者配置文件”，则无法关联证书配置文件与应用配置策略。
+1. 如果新建了新配置文件，并为设备注册类型选择了“所有配置文件类型”，则无法关联证书配置文件与应用配置策略。
 2. 如果已创建新的配置文件，并且选择了仅“工作配置文件”，那么可以使用在设备配置下创建的工作配置文件证书策略。
-3. 如果已创建新的配置文件，并且选择了仅“设备所有者”，那么可以使用在设备配置下创建的设备所有者证书策略。 
+3. 如果已创建新的配置文件，并且选择了“仅限公司拥有的完全托管式专用工作配置文件”，那么可以使用在设备配置下创建的“公司拥有的完全托管式专用工作配置文件”证书策略 。 
 4. 如果将 Gmail 或 Nine 配置文件部署到尚没有任何用户的 Android Enterprise 专用设备，则部署将失败，因为 Intune 无法解析用户。
 
 > [!IMPORTANT]
-> 在此功能发布前（2004 年 - 2020 年 4 月版本）创建的且没有与任何证书配置文件关联的现有策略，将默认为设备注册类型选择“工作配置文件”和“设备所有者配置文件”。 另外，在此功能发布前创建的且与证书配置文件关联的现有策略，将默认为设备注册类型只选择“工作配置文件”。
+> 对于在此功能发布前（2004 年 - 2020 年 4 月版本）创建的现有策略，如果没有与任何证书配置文件关联，则将默认为设备注册类型选择“所有配置文件类型”。 另外，在此功能发布前创建的且与证书配置文件关联的现有策略，将默认为设备注册类型只选择“工作配置文件”。
 > 
 > 现有策略不会修正或颁发新证书。
 

@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088456"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461872"
 ---
-# <a name="what-is-device-enrollment"></a>什么是设备注册？
+# <a name="what-is-device-enrollment-in-intune"></a>什么是 Intune 中的设备注册？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune 可让你管理员工的设备和应用，以及他们访问公司数据的方式。 要使用此移动设备管理 (MDM)，必须先在 Intune 服务中注册设备。 设备注册后，系统会向其颁发 MDM 证书。 此证书可用于与 Intune 服务进行通信。
@@ -72,6 +72,8 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |**Android Enterprise 工作配置文件**|**用户通过公司门户启动**| 否 | “是” | 否 | [详细信息](android-work-profile-enroll.md)|
 
 
+&nbsp;
+
 | **企业** | **注册方法** | **需要重置** | **用户关联** | **Locked** | **详细信息**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android 设备管理**|**DEM[ 通过公司门户启动](#device-enrollment-manager)**| 否 | 否 | 否 |[详细信息](device-enrollment-manager-enroll.md)|
@@ -79,7 +81,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |**带有 Zebra Mobility Extensions 的 Android 设备管理**|用户或 [DEM](#device-enrollment-manager) 通过公司门户启动| 否 | 如果用户启动，则为是；如果 [DEM](#device-enrollment-manager) 启动，则为否 | 否 | [详细信息](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise 专用**|**NFC、令牌、QR 代码、Zero Touch**| “是” | 否 | 可通过策略进行配置 | [详细信息](android-kiosk-enroll.md)|
 |**Android Enterprise 完全托管设备**|**NFC、令牌、QR 代码、Zero Touch**| “是” | 是 | 可通过策略进行配置 | [详细信息](android-dedicated-devices-fully-managed-enroll.md)|
-
+|**Android Enterprise 公司拥有的工作配置文件** | **NFC、令牌、QR 代码、Zero Touch** | 是 | 是 | 可通过策略进行配置 | [详细信息](android-corporate-owned-work-profile-enroll.md)|
 
 ## <a name="bring-your-own-device"></a>自带设备办公
 自带设备办公 (BYOD) 指代的设备包括个人拥有的电话、平板电脑和电脑。 用户安装并运行公司门户应用，以注册 BYOD。 此程序可让用户访问电子邮件等公司资源。
@@ -88,7 +90,7 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 [公司拥有的设备 (COD)](corporate-identifiers-add.md) 包括组织拥有并分发给员工的电话、平板电脑和电脑。 COD 注册支持多种方案，例如自动注册、共享设备或预授权注册需求。 管理员或经理注册 COD 的常用方法是使用设备注册管理器 (DEM)。 可以直接通过 Apple 提供的 ADE 工具注册 iOS/iPadOS 设备。 也可识别具有 IMEI 号码的设备并将其标记为“公司拥有”。
 
 ### <a name="device-enrollment-manager"></a>设备注册管理器
-设备注册管理员 (DEM) 是一个特殊的用户帐户，用于注册和管理多个企业拥有的设备。 管理员可安装公司门户并注册多个无用户设备。 这些类型的设备非常适用于销售点或实用工具应用，但是不适用于需要访问电子邮件或公司资源的用户。 了解有关 [DEM](device-enrollment-manager-enroll.md) 的详细信息。
+设备注册管理员 (DEM) 是一个特殊的用户帐户，用于注册和管理多个企业拥有的设备。 此管理器可以安装公司门户和注册多个无用户设备。 这些类型的设备非常适用于销售点或实用工具应用，但是不适用于需要访问电子邮件或公司资源的用户。 详细了解 [DEM](device-enrollment-manager-enroll.md)。
 
 ### <a name="apple-automated-device-enrollment"></a>Apple 自动设备注册
 通过 Apple 自动设备注册 (ADE) 管理，可无线创建策略并将其部署到通过 ADE 购买和管理的 iOS/iPadOS 和 macOS 设备。 用户第一次开启设备并运行设置助理时，将注册设备。 此方法支持 iOS/iPadOS 受监督模式，该模式允许设备配置特定功能。
@@ -99,8 +101,8 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 - [使用设备注册计划注册 iOS/iPadOS 设备](device-enrollment-program-enroll-ios.md)
 
 ### <a name="usb-sa"></a>USB-SA
-IT 管理员可通过 USB 使用 Apple Configurator，手动准备每台公司拥有的设备，以便使用“设置助理”进行注册。 IT 管理员创建注册配置文件并将其导出到 Apple Configurator。 用户收到设备时，系统随后会提示其运行设备助理来注册设备。 此方法支持“iOS 受监督”模式，从而可以使用下列功能  ：
-- 锁定注册
+IT 管理员可通过 USB 使用 Apple Configurator，手动准备每台公司拥有的设备，以便使用“设置助理”进行注册。 IT 管理员创建注册配置文件并将其导出到 Apple Configurator。 用户收到设备时，系统随后会提示其运行设备助理来注册设备。 此方法支持“iOS 受监督”模式，从而可以使用下列功能：
+- 锁定的注册
 - 展台模式以及其他高级配置和限制
 
 了解有关使用“设置助理”注册 iOS/iPadOS Apple Configurator 的详细信息：

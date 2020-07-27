@@ -1,7 +1,7 @@
 ---
-title: 在 Intune 中注册 Android Enterprise 专用设备或完全托管设备
+title: 使用 Intune 注册 Android Enterprise 专用设备、完全托管设备或公司拥有的工作配置文件设备
 titleSuffix: Microsoft Intune
-description: 了解如何在 Intune 中注册 Android Enterprise 专用设备或完全托管设备。
+description: 了解如何使用 Intune 注册 Android Enterprise 专用设备、完全托管设备或公司拥有的工作配置文件设备。
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93cd7c7e852e3d8d8fe576cec66ce7a7020f06b7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990208"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461719"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>注册 Android Enterprise 专用设备或完全托管设备
+# <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>注册 Android Enterprise 专用设备、完全托管设备或公司拥有的工作配置文件设备
 
-在 Intune 中设置好 [Android Enterprise 专用设备](android-kiosk-enroll.md)或[完全托管设备](android-fully-managed-enroll.md)之后，即可注册设备。 专用设备和完全托管设备的 Intune 注册从恢复出厂设置开始。 Android Enterprise 设备的注册方式取决于操作系统。
+在 Intune 中设置好 Android Enterprise [专用设备](android-kiosk-enroll.md)、[完全托管设备](android-fully-managed-enroll.md)或[公司拥有的工作配置文件设备](android-corporate-owned-work-profile-enroll.md)后，即可注册设备。 专用设备和完全托管设备的 Intune 注册从恢复出厂设置开始。 Android Enterprise 设备的注册方式取决于操作系统。
 
 | 注册方法 | 适用于专用设备和完全托管设备的最低 Android OS 版本 |
 | ----- | ----- |

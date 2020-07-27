@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332835"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461583"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用 PKCS 证书
 
@@ -221,7 +221,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 3. 输入以下属性：
    - **平台**：选择设备平台。 选项包括：
      - Android 设备管理员
-     - Android Enterprise > 仅设备所有者
+     - Android Enterprise > 公司拥有的完全托管式专用工作配置文件
      - Android Enterprise > 仅工作配置文件
      - iOS/iPadOS
      - macOS

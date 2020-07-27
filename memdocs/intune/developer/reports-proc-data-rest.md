@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4f00ba5049401c07f5112061172dc3e7cda4f46c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022409"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437355"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>使用 REST 客户端从 Intune 数据仓库 API 获取数据
 
@@ -63,6 +63,7 @@ ms.locfileid: "86022409"
 6. 选择“委派的权限”框，然后单击“从 Microsoft Intune 获取数据仓库信息”框 。
 7. 单击“添加权限”。
 8. （可选）在“已配置权限”窗格中选择“为 Microsoft 授予管理员同意”，然后选择“是” 。 此操作将授予对当前目录中的所有帐户的访问权限。 将不再为租户中的每位用户显示同意对话框。 有关详细信息，请参阅[将应用程序与 Azure Active Directory 集成](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)。
+9. 选择“证书和密码” > “+ 新建客户端密码”并生成新密码 。 请确保将该密码复制到安全的地方，因为你将无法再次访问它。
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>使用 Postman 从 Microsoft Intune API 获取数据
 
@@ -79,6 +80,7 @@ ms.locfileid: "86022409"
 | 身份验证 URL         | 这是用于进行身份验证的 URL。 | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | 访问令牌 URL | 这是用于授予令牌的 URL。                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | 客户端 ID        | 这是在 Azure 中创建本机应用时创建并记下来的 ID。                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| 客户端密码        | 这是在 Azure 中创建本机应用时创建并记下来的 ID。                                                                                               | Ksml3dhDJs+jfK1f8Mwc8                                                          |
 | 作用域（可选） | 空                                                                                                                                                                               | 可以将该字段留空。                                                                     |
 | 授权类型       | 令牌是一个授权代码。                                                                                                                                                  | 授权代码                                                                            |
 
@@ -122,14 +124,18 @@ ms.locfileid: "86022409"
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. 选择“授权代码”，并在本地请求访问令牌。
+11. 添加你在 Azure 中创建的本机应用中生成的“客户端密码”。 它看上去应类似于：  
 
-12. 选择“请求令牌”。
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. 选择“授权代码”作为授权类型。
+
+13. 选择“请求令牌”。
 
     ![访问令牌信息](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. 在 Active AD 授权页面中键入凭据。 Postman 中的令牌列表现包含名为 `Bearer` 的令牌。
-14. 选择“使用令牌”。 标头列表包含授权的新密钥值和值 `Bearer <your-authorization-token>`。
+14. 在 Active AD 授权页面中键入凭据。 Postman 中的令牌列表现包含名为 `Bearer` 的令牌。
+15. 选择“使用令牌”。 标头列表包含授权的新密钥值和值 `Bearer <your-authorization-token>`。
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>使用 Postman 发送终结点调用
 

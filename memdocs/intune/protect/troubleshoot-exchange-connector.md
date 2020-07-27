@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 07/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079121"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462127"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Intune Exchange Connector 疑难解答
 
 本文介绍如何解决与 Intune Exchange Connector 相关的问题。
+
+> [!IMPORTANT]
+>
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)，此外，还删除了将 Exchange Connector 添加到 Intune 的功能。
+>
+> 以前配置和使用 Exchange Connector 的客户继续获得该连接器支持。
+
 
 ## <a name="before-you-start"></a>开始之前
 

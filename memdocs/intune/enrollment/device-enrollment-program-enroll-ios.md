@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240773"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891507"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备
 
@@ -71,7 +71,7 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 - 每 Intune 帐户的最大自动设备注册令牌数：2,000
 - 每令牌的最大自动设备注册设备数：第一次同步的限制为 75,000-80,000 台设备。 Intune 将继续与 ABM 或 ASM 同步，每 12 小时签入一次，以便每次再添加更多设备。 手动同步（每 15 分钟触发一次）还将向 Intune 添加另一批设备。 同步将继续进行，并且设备将继续从 ABM/ASM 大批同步到 Intune。 
 
-## <a name="get-an-apple-ade-token"></a>获取 Apple ADE 令牌
+## <a name="get-an-apple-automated-device-enrollment-token"></a>获取 Apple 自动设备注册令牌
 
 必须先从 Apple 获得 ADE 令牌 (.p7m) 文件，然后才能通过 ADE 注册 iOS/iPadOS 设备。 此令牌允许 Intune 同步有关公司所拥有的 ADE 设备的信息。 还允许 Intune 将注册配置文件上传至 Apple，并向设备分配这些配置文件。
 
@@ -308,7 +308,7 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 >还可以从“Apple 序列号”边栏选项卡将序列号分配给配置文件。
 
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS/iPadOS 注册” > “注册计划令牌”> 从列表中选择令牌   。
-2. 选择“设备”> 在列表中选择设备 >“分配配置文件”。 
+2. 选择“设备”> 在列表中选择设备 >“分配配置文件”。
 3. 在“分配配置文件”下，为设备选择配置文件，然后选择“分配” 。
 
 ### <a name="assign-a-default-profile"></a>分配默认配置文件
@@ -316,14 +316,14 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 可以选择一个默认配置文件，以将其应用于所有使用特定令牌注册的设备。
 
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS/iPadOS 注册” > “注册计划令牌”> 从列表中选择令牌   。
-2. 选择“设置默认配置文件”，在下拉列表中选择配置文件，然后选择“保存”。  此配置文件将应用于所有使用此令牌注册的设备。
+2. 选择“设置默认配置文件”，在下拉列表中选择配置文件，然后选择“保存”。 此配置文件将应用于所有使用此令牌注册的设备。
 
 ## <a name="distribute-devices"></a>分发设备
 你已启用 Apple 和 Intune 之间的管理和同步，并分配了配置文件以允许 ADE 设备注册。 现在可以将设备分配给用户。 具有用户关联的设备需要每个用户都分配有 Intune 许可证。 没有用户关联的设备需要设备许可证。 已激活设备只有在擦除后，才能应用注册配置文件。
 
 请参阅[通过设备注册计划在 Intune 中注册 iOS/iPadOS 设备](../user-help/enroll-your-device-dep-ios.md)。
 
-## <a name="renew-an-ade-token"></a>续订 ADE 令牌  
+## <a name="renew-an-automated-device-enrollment-token"></a>续订自动设备注册令牌  
 
 > [!NOTE]
 > 除了每年续订一次 ADE 令牌之外，还需要在以下情况下在 Intune 和 Apple Business Manager 中续订注册计划令牌：托管的 Apple ID 密码对在 Apple Business Manager 中设置令牌的用户或离开 Apple Business Manager 组织的用户发生更改。
@@ -347,7 +347,7 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 9. 选择“续订令牌”。 你将看到令牌已续订的确认消息。   
     ![确认消息屏幕截图。](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## <a name="delete-an-ade-token-from-intune"></a>从 Intune 中删除 ADE 令牌
+## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>从 Intune 中删除自动设备注册令牌
 
 只要满足以下条件，即可从 Intune 中删除注册配置文件令牌：
 - 未向令牌分配任何设备

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383200"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491178"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用证书进行身份验证
 
@@ -109,6 +109,9 @@ SCEP 证书配置文件直接引用受信任的证书配置文件。 PKCS 证书
 > 为平台 Windows 10 及更高版本创建的受信任的根配置文件在 Microsoft Endpoint Manager 管理中心内显示为平台 Windows 8.1 及更高版本的配置文件。 
 >
 > 这是受信任的证书配置文件的已知平台显示问题。 虽然配置文件显示的平台为 Windows 8.1 及更高版本，但它适用于 Windows 10 及更高版本。
+
+> [!NOTE]
+> Intune 中的“受信任证书”配置文件只能用于传递根证书或中间证书。 部署此类证书的目的是建立一个信任链。 Microsoft 不支持使用受信任的证书配置文件来传送根证书或中间证书以外的证书。 在 Intune 门户中选择受信任的证书配置文件时，可能会禁止你导入不被视为根证书或中间证书的证书。 即使你可以使用此配置文件类型导入和部署不是根证书或中间证书的证书，你也可能会在 iOS 和 Android 等不同平台之间遇到意外结果。
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>要创建“可信证书”配置文件
 

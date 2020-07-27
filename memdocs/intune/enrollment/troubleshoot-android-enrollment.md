@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79363325"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461243"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>对 Microsoft Intune 中的 Android Enterprise 设备问题进行故障排除
 
@@ -76,6 +76,8 @@ Samsung 开始在 Android 8.0 及更高版本设备上强制执行此限制。 M
 
 ### <a name="wipe-factory-reset-option-isnt-available-for-work-profile-enrolled-device"></a>擦除（恢复出厂设置）选项不适用于已注册工作配置文件的设备
 这是预期行为。 在工作配置文件方案中，MDM 提供商无法完全控制设备。 唯一可用的选项是“停用”（删除公司数据），此选项将删除整个工作配置文件及其所有内容。
+
+[Android 公司私有工作配置文件设备](android-corporate-owned-work-profile-enroll.md)支持擦除。
 
 ### <a name="is-device-passcode-reset-supported"></a>是否支持设备密码重置？
 对于已注册工作配置文件的设备，仅可在以下情况下重置 Android 8.0 或更高版本设备上的工作配置文件密码：

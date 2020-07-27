@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239974"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410957"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>为受管理的 iOS/iPadOS 设备添加应用配置策略
 
@@ -117,7 +117,8 @@ Microsoft Intune 提供对应用而言唯一的配置设置。 可对已注册�
    > 以下应用处理上述应用配置，并且仅允许组织帐户：
    > - iOS 版 Microsoft Edge（44.8.7 和更高版本）
    > - iOS 版 OneDrive（10.34 和更高版本）
-   > - iOS 版 Outlook（2.99.0 或更高版本）
+   > - iOS 版 Outlook（2.99.0 和更高版本）
+   > - iOS 版 Teams（2.0.15 和更高版本）
 
 ## <a name="enter-xml-data"></a>输入 XML 数据
 
@@ -222,7 +223,7 @@ DEP（Apple 的设备注册计划）注册与 App Store 版公司门户应用不
 5. 告诉最终用户在自动安装公司门户应用后登录到该应用。
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>监视每个设备的 iOS/iPadOS 应用配置状态 
-分配配置策略后，可监视每个受管理设备的 iOS/iPadOS 应用配置状态。   从 Azure 门户的“Microsoft Intune”中，选择“设备” > “所有设备”。 从受管理设备列表中选择特定设备，以显示该设备的窗格。 在该设备的窗格上，选择“应用配置”。  
+分配配置策略后，可监视每个受管理设备的 iOS/iPadOS 应用配置状态。 从 Azure 门户的“Microsoft Intune”中，选择“设备” > “所有设备”。 从受管理设备列表中选择特定设备，以显示该设备的窗格。 在该设备的窗格上，选择“应用配置”。  
 
 ## <a name="additional-information"></a>其他信息
 

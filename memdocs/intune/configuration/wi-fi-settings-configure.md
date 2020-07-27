@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 25b07dcbb76f6d4a8aae964d0123a880d179784e
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985497"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871927"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>在 Microsoft Intune 中添加和使用设备上的 Wi-Fi 设置
 
@@ -68,7 +68,7 @@ Wi-Fi 配置文件支持以下设备平台：
 
       > [!TIP]
       >
-      > - 对于作为专用设备（展台）运行的 Android Enterprise 设备，依次选择“仅设备所有者” > “Wi-Fi”。
+      > - 对于作为专用设备（展台）运行的 Android Enterprise 设备，请选择“公司拥有的完全托管式专用工作配置文件” > “Wi-Fi”  。
       > - 对于 Windows 8.1 及更高版本，可以选择“Wi-Fi 导入” 。 此选项允许你以之前从其他设备导出的 XML 文件形式导入 Wi-Fi 设置。
 
 4. 选择“创建”。
@@ -101,9 +101,8 @@ Wi-Fi 配置文件支持以下设备平台：
 > [!TIP]
 > 如果对 Wi-Fi 配置文件使用基于证书的身份验证，请将 Wi-Fi 配置文件、证书配置文件和受信任的根配置文件部署到同一组，以确保每台设备都能识别证书颁发机构的合法性。  有关详细信息，请参阅[如何使用 Microsoft Intune 配置证书](../protect/certificates-configure.md)。
 
-
 ## <a name="next-steps"></a>后续步骤
 
-配置文件已创建，但未执行任何操作。 下一步是[分配此配置文件](device-profile-assign.md)，并[监视配置文件状态](device-profile-monitor.md)。
+配置文件已创建，但可能不会执行任何操作。 下一步是[分配此配置文件](device-profile-assign.md)，并[监视配置文件状态](device-profile-monitor.md)。
 
 [Intune 中的 Wi-Fi 配置文件有问题](troubleshoot-wi-fi-profiles.md)。

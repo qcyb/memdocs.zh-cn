@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,18 +18,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990308"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462229"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>配置 Intune 的 Exchange 本地访问权限
 
 本文介绍如何基于设备符合性配置本地 Exchange 的条件访问。
 
 如果你具有 Exchange Online Dedicated 环境并需要确定其采用的是新配置还是旧配置，请与帐户管理员联系。 若要控制对本地 Exchange 或旧版 Exchange Online Dedicated 环境的电子邮件访问，请在 Intune 中配置本地 Exchange 的条件访问。
+
+> [!IMPORTANT]
+> 本文中的信息适用于支持使用 Exchange Connector 的客户。
+>
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)。  如果你的环境中设置了 Exchange Connector，则仍支持 Intune 租户使用该连接器，并且有权继续访问支持其配置的 UI。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
+>
+> 使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
 
 ## <a name="before-you-begin"></a>在开始之前
 

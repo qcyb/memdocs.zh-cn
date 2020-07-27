@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3a390243f00a7f3f27f3fed92a08e26ff4335f
-ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.openlocfilehash: 52db7848f4e6fb3f8ce33dbf13ad5da46bcd1e27
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86157835"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410940"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS 应用保护策略设置
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "86157835"
 | 设置 | 如何使用 | 默认值 |
 |------|----------|-------|
 | **将组织数据备份到 iTunes 和 iCloud 备份** | 选择“阻止”，阻止此应用将工作或学校数据备份到 iTunes 和 iCloud。 选择“允许”，允许此应用将工作或学校数据备份到 iTunes 和 iCloud。 | **允许**  |
-| 将组织数据发送到其他应用 | 指定哪些应用可从此应用接收数据： <ul><li>**所有应用**：允许传输到任何应用。 接收应用能够读取和编辑数据。</li><li>**无**：不允许将数据传输到任何应用，包括其他策略托管应用。 如果用户执行托管的打开位置功能并传输文档，则数据将被加密且不可读。</li><li> **策略托管应用**：仅允许传输到其他策略托管应用。 <p><p>**注意:** _用户可以在允许共享到非托管应用的未注册设备或已注册设备上，通过打开位置或共享扩展将内容传输到非托管应用。传输的数据由 Intune 加密，非托管应用无法读取。_</li><li>**具有 OS 共享功能的策略托管应用**：仅允许将数据传输到其他策略托管应用，以及将文件传输到已注册设备上的其他 MDM 托管应用。 <p><p>**注意:** “具有 OS 共享功能的策略托管应用”值仅适用于 MDM 注册设备 _。如果此设置针对未注册设备上的用户，则会应用“策略托管应用”值的行为。用户可以通过打开位置或共享扩展将未加密的内容传输到 iOS MDM allowOpenFromManagedtoUnmanaged 设置允许的任何应用程序。有关此 iOS/iPadOS MDM 设置的详细信息，请参阅 https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf 。_<p><p></li><li>**具有“打开方式/共享”筛选功能的策略托管应用**：仅允许传输到其他策略托管应用，并筛选 OS“打开方式/共享”对话框，以仅显示策略托管应用。 若要配置“打开方式/共享”对话框的筛选，充当文件/文档源的应用和可打开此文件/文档的应用均需具有用于 iOS 8.1.1 版本或更高版本的 Intune SDK。 <p><p>**注意:** _如果应用支持 Intune 专用数据类型，则用户可以通过打开方式或共享扩展将内容传输到非托管应用。传输的数据由 Intune 加密，非托管应用无法读取。_</li></ul><br>此外，当设置为“策略托管应用”或“无”时，Spotlight 搜索（启用在应用内搜索数据）和 Siri 快捷方式 iOS 功能会受到阻止。 <p><p>此策略也适用于 iOS/iPadOS 通用链接。 通用 Web 链接由“在 Intune Managed Browser 中打开应用链接”策略设置托管。 <p> 默认情况下，Intune 允许向一些豁免应用和服务传输数据。 此外，如果需要允许将数据传输到不支持 Intune APP 的应用，则可以创建自己的豁免项目。 有关详细信息，请参阅[数据传输豁免](#data-transfer-exemptions)。 | **所有应用** |
+| 将组织数据发送到其他应用 | 指定哪些应用可从此应用接收数据： <ul><li>**所有应用**：允许传输到任何应用。 接收应用能够读取和编辑数据。</li><li>**无**：不允许将数据传输到任何应用，包括其他策略托管应用。 如果用户执行托管的打开位置功能并传输文档，则数据将被加密且不可读。</li><li> **策略托管应用**：仅允许传输到其他策略托管应用。 <p><p>**注意:** _用户可以在允许共享到非托管应用的未注册设备或已注册设备上，通过打开位置或共享扩展将内容传输到非托管应用。传输的数据由 Intune 加密，非托管应用无法读取。_</li><li>**具有 OS 共享功能的策略托管应用**：仅允许将数据传输到其他策略托管应用，以及将文件传输到已注册设备上的其他 MDM 托管应用。 <p><p>**注意:** “具有 OS 共享功能的策略托管应用”值仅适用于 MDM 注册设备 _。如果此设置针对未注册设备上的用户，则会应用“策略托管应用”值的行为。如果发送应用已配置 IntuneMAMUPN，则用户将能够通过打开或共享扩展来将未加密的内容传输到 iOS MDM allowOpenFromManagedtoUnmanaged 设置所允许的任何应用程序；有关详细信息，请参阅[如何使用 Microsoft Intune 管理 iOS 应用之间的数据传输](data-transfer-between-apps-manage-ios.md)。有关此 iOS/iPadOS MDM 设置的详细信息，请参阅 https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf 。_<p><p></li><li>**具有“打开方式/共享”筛选功能的策略托管应用**：仅允许传输到其他策略托管应用，并筛选 OS“打开方式/共享”对话框，以仅显示策略托管应用。 若要配置“打开方式/共享”对话框的筛选，充当文件/文档源的应用和可打开此文件/文档的应用均需具有用于 iOS 8.1.1 版本或更高版本的 Intune SDK。 <p><p>**注意:** _如果应用支持 Intune 专用数据类型，则用户可以通过打开方式或共享扩展将内容传输到非托管应用。传输的数据由 Intune 加密，非托管应用无法读取。_</li></ul><br>此外，当设置为“策略托管应用”或“无”时，Spotlight 搜索（启用在应用内搜索数据）和 Siri 快捷方式 iOS 功能会受到阻止。 <p><p>此策略也适用于 iOS/iPadOS 通用链接。 通用 Web 链接由“在 Intune Managed Browser 中打开应用链接”策略设置托管。 <p> 默认情况下，Intune 允许向一些豁免应用和服务传输数据。 此外，如果需要允许将数据传输到不支持 Intune APP 的应用，则可以创建自己的豁免项目。 有关详细信息，请参阅[数据传输豁免](#data-transfer-exemptions)。 | **所有应用** |
 | <ul><ui>**选择要豁免的应用** | 为上一选项选择“策略托管应用”时，此选项才可用。   |   |
 | <ul><ui>**保存组织数据的副本** | 选择“阻止”，在此应用中禁用使用“另存为”选项。 如果想要允许使用“另存为”，请选择“允许”。 <br><br>**注意:** *Microsoft Excel、OneNote、Outlook、PowerPoint 和 Word 支持此设置。它还可以受第三方和 LOB 应用支持*。 <br><br> 如果设置为“阻止”，可以配置以下设置“允许用户将副本保存到所选的服务” 。   | <br><br> **允许**   |
-| <ul><ui><ul><ui>**允许用户将副本保存到所选的服务** | 用户可以保存到所选的服务（OneDrive for Business、SharePoint 和本地存储）中。 将阻止所有其他服务。| **未选择任何项**  |
+| <ul><ui><ul><ui>**允许用户将副本保存到所选的服务** | 用户可以保存到所选的服务（OneDrive for Business、SharePoint 和本地存储）中。 将阻止所有其他服务。 OneDrive for business：可以将文件保存到 OneDrive for business 和 SharePoint Online。 SharePoint：可以将文件保存到本地 SharePoint。 本地存储：可以将文件保存到本地存储。| **未选择任何项**  |
 |<ul><ui>**将电信数据传输到** | 通常，当用户在应用中选择超链接的电话号码时，会打开一个拨号应用，预填充了该电话号码并随时可供拨打。 对于此设置，选择当从策略托管的应用启动电话号码时要如何处理此类型的内容传输：<ul><li>**无，不在应用之间传输此数据**：如果检测到电话号码，不传输通信数据。</li><li>**特定拨号应用**：当检测到电话号码时，允许特定的拨号应用启动联系人。</li><li>**任何拨号应用**：当检测到电话号码时，允许使用任何拨号应用启动联系人。</li></ul>| **任何拨号应用** |  
 |<ul><ui><ul><ui>**拨号器应用 URL 方案** | 选择任何拨号应用后，必须提供用于在 iOS 设备上启动拨号应用的拨号应用 URL 方案。 有关详细信息，请参阅有关[电话链接](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/PhoneLinks/PhoneLinks.html#//apple_ref/doc/uid/TP40007899-CH6-SW1)的 Apple 文档。 | **空** |
 | **从其他应用接收数据** | 指定哪些应用可将数据传输到此应用： <ul><li>**所有应用**：允许从任何应用传输的数据。</li><li>**无**：不允许从任何应用传输数据，包括其他策略托管应用。</li><li>**策略托管应用**：仅允许从其他策略托管应用进行传输。</li><li>**所有包含传入组织数据的应用**：允许从任何应用传输的数据。 将所有不带用户标识的传入数据视为组织中的数据。 该数据将使用由 `IntuneMAMUPN` 设置定义的 MDM 注册用户标识进行标记。<p><p>**注意:** “所有包含传入组织数据的应用”值仅适用于 MDM 注册设备 _。如果此设置针对未注册设备上的用户，则会应用“任何应用”值的行为_。</li></ul> Intune 可能会允许从一些豁免应用和服务传输数据。 有关应用和服务的完整列表，请参阅[数据传输豁免](#data-transfer-exemptions)。 非注册 iOS/iPadOS 设备上已启用多标识 MAM 的应用程序会忽略此策略，并允许所有传入数据。<br><br> | **所有应用**    |
@@ -87,7 +87,7 @@ ms.locfileid: "86157835"
 |------|----------|-------|
 | **需要 PIN 才能进行访问** | 选择“需要”，要求使用 PIN 才能使用此应用。 用户首次在工作或学校环境中运行应用时，将提示其设置此 PIN。 无论在联机或脱机情况下工作，PIN 始终有效。    <br><br> 可以使用“需要 PIN 才能进行访问”部分下提供的设置配置 PIN 强度。   | **需要** |
 | <ul><ui> PIN 类型 | 在访问应用了应用保护策略的应用之前，为数值或密码类型 PIN 设置要求。 数值要求只涉及数字，而密码则可采用至少 1 个字母或至少 1 个特殊字符进行定义。  <br><br> **注意:** *要配置密码类型，应用需具有 Intune SDK 版本 7.1.12 或更高版本。数值类型没有任何 Intune SDK 版本限制。允许的特殊字符包括 iOS/iPadOS 英语键盘上的特殊字符和符号*。  | **数字**  |
-| <ul><ui> **简单 PIN** | 选择“允许”，允许用户使用 1234、1111、abcd 或 aaaa 等简单的 PIN 序列。 选择“阻止”，阻止用户使用简单的序列。 在 3 个字符滑动窗口中检查简单的序列。 如果配置了“阻止”，则不会接受 1235 或 1112 作为由最终用户设置的 PIN，但允许采用 1122。 <br><br>**注意**：如果配置了密码类型 PIN，并且“允许使用简单 PIN”已设置为“是”，用户在其 PIN 中则需要至少 1 个字母或至少 1 个特殊字符 *。如果配置了密码类型 PIN，并且“允许简单 PIN”已设置为“否”，用户在其 PIN 中则需要至少 1 个数字和 1 个字母以及至少 1 个特殊字符 *。   |**允许**  |
+| <ul><ui> **简单 PIN** | 选择“允许”，允许用户使用 1234、1111、abcd 或 aaaa 等简单的 PIN 序列。 选择“阻止”，阻止用户使用简单的序列。 在 3 个字符滑动窗口中检查简单的序列。 如果配置了“阻止”，则不会接受 1235 或 1112 作为由最终用户设置的 PIN，但允许采用 1122。 <br><br>**注意**：如果配置了密码类型 PIN，并且“允许使用简单 PIN”已设置为“是”，用户在其 PIN 中则需要至少 1 个字母或至少 1 个特殊字符 *。如果配置了密码类型 PIN，并且“允许简单 PIN”已设置为“否”，用户在其 PIN 中则需要至少 1 个数字和 1 个字母以及至少 1 个特殊字符* 。   |**允许**  |
 | <ul><ui> **选择最小 PIN 长度** | 指定 PIN 序列必须包含的最小位数。  | **4**  |
 | <ul><ui> **使用 Touch ID，而不是 PIN 进行访问 (iOS 8 +)** | 选择“允许”，允许用户使用 [Touch ID](https://support.apple.com/HT201371) 而非 PIN 进行应用访问。    | **允许**  |
 |<ul><ui><ul><ui>**超时后使用 PIN 覆盖 Touch ID**|  要使用此设置，请选择“需要”，然后配置非活动超时。  |**需要**  |

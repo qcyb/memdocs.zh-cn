@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95c4397a6f8a7c11d14cabfb9e38ee44b54fa5d1
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531751"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405811"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件访问疑难解答
 本文介绍了在你的用户无法访问受条件访问保护的资源时应采取的措施，以及在用户可访问受保护资源但应遭阻止时应采取的措施。
