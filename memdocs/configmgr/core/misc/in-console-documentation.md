@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390868"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891456"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ ms.locfileid: "86390868"
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
 
-2020 年 5 月 16 日至 6 月 22 日期间新增或更新的支持文章。
+2020 年 5 月 16 日至 7 月 17 日期间新增或更新的支持文章。
 
+- [KB 4560496：Microsoft Endpoint Configuration Manager 版本 2002 的更新汇总](https://support.microsoft.com/help/4560496)
+- [KB 4569513：在尝试编辑更新应用程序目录表时出现“未找到”错误](https://support.microsoft.com/help/4569513)
+- [KB 4574419：Microsoft Endpoint Configuration Manager 管理中心内的超时错误](https://support.microsoft.com/help/4574416)
 - [KB 4564442 在具有 BIOS 类型固件的计算机上使用 Microsoft Deployment Toolkit 进行 Windows 10 部署失败](https://support.microsoft.com/help/4564442)
 - [KB 4563473 Configuration Manager 版本 2002 租户附加问题的更新汇总](https://support.microsoft.com/help/4563473)
 - [KB 4567007 更新到 Configuration Manager 当前分支版本 2002 后，PXE 启动失败或任务序列延迟](https://support.microsoft.com/help/4567007)
