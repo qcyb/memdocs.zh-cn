@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022205"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462212"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>在 Microsoft Intune 中推动最终用户采用条件访问
 
@@ -67,7 +67,7 @@ ms.locfileid: "86022205"
 
 - [在 Azure Active Directory 中配置条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [使用 Intune 安装本地 Exchange 连接器](../protect/exchange-connector-install.md)
+- [配置新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 - [创建用于 Exchange Online 的基于应用的条件访问策略](../protect/app-based-conditional-access-intune-create.md)
 

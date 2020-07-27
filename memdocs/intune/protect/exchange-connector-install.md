@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990845"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462179"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>设置本地 Intune Exchange 连接器
 
-为了帮助保护对 Exchange 的访问，Intune 依赖于一个称为 Microsoft Intune Exchange 连接器的本地组件。 在 Intune 控制台的某些位置，此连接器也称为“Exchange ActiveSync 本地连接器”  。
+> [!IMPORTANT]
+> 本文中的信息适用于支持使用 Exchange Connector 的客户。
+>
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)。  如果你的环境中设置了 Exchange Connector，则仍支持 Intune 租户使用该连接器，并且有权继续访问支持其配置的 UI。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
+>
+>使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
+
+为了帮助保护对 Exchange 的访问，Intune 依赖于一个称为 Microsoft Intune Exchange 连接器的本地组件。 在 Intune 控制台的某些位置，此连接器也称为“Exchange ActiveSync 本地连接器”。
+
+> [!IMPORTANT]
+> 从 2007 年（7 月）版本开始，Intune 便已从 Intune 服务中删除对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些租户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)，以保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
 
 本文中的信息可帮助你安装和监视 Intune Exchange 连接器。 可结合使用此连接器与[条件访问策略](conditional-access-exchange-create.md)，以允许或阻止对 Exchange 本地邮箱的访问。
 
@@ -35,7 +45,7 @@ ms.locfileid: "83990845"
 
 设备尝试访问本地 Exchange Server 时，Exchange 连接器会将 Exchange Server 中的 Exchange ActiveSync (EAS) 记录映射到 Intune 记录，以确保设备使用 Intune 注册且符合设备策略。 根据条件访问策略，可以允许或阻止设备。 如需了解更多详情，请参阅[结合使用 Intune 和条件访问的常见方式有哪些？](conditional-access-intune-common-ways-use.md)
 
-“发现”和“允许和阻止”操作都是使用标准 Exchange PowerShell cmdlet 完成的   。 这些操作使用初始安装 Exchange 连接器时提供的服务帐户。
+“发现”和“允许和阻止”操作都是使用标准 Exchange PowerShell cmdlet 完成的 。 这些操作使用初始安装 Exchange 连接器时提供的服务帐户。
 
 Intune 支持每个订阅安装多个 Intune Exchange 连接器。 如果有多个本地 Exchange 组织，则可以为其设置单独的连接器。 但是，每个 Exchange 组织只能安装一个连接器。  
 
@@ -45,6 +55,35 @@ Intune 支持每个订阅安装多个 Intune Exchange 连接器。 如果有多�
 2. 在本地 Exchange 组织的计算机上安装和配置 Exchange 连接器。
 3. 验证 Exchange 连接。
 4. 针对要连接到 Intune 的其他每个 Exchange 组织，请重复这些步骤。
+
+## <a name="how-conditional-access-for-exchange-on-premises-works"></a>Exchange 内部部署工作的条件性访问方式
+
+本地 Exchange 条件访问的工作原理不同于基于 Azure 条件访问的策略。 要安装 Intune Exchange 本地连接器，以直接与 Exchange Server 交互。 Intune Exchange 连接器将拉取存在于 Exchange 服务器上的全部 Exchange Active Sync (EAS) 记录，因此，Intune 可以使用这些 EAS 记录并将其映射到 Intune 设备记录。 这些记录都是通过 Intune 注册和识别的设备。 此过程将允许或阻止电子邮件访问。
+
+如果 EAS 记录是新的，并且 Intune 不能识别，则 Intune 会发出一个 cmdlet 命令（发音为“command-let”），来指示 Exchange Server 阻止访问电子邮件。 下面是有关此流程工作方式的更多详细信息：
+
+> [!div class="mx-imgBorder"]
+> ![使用 CA 流程图的 Exchange 内部部署](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. 用户尝试访问托管在 Exchange 内部部署 2010 SP1 或更高版本上的公司电子邮件。
+
+2. 如果设备不受 Intune 管理，它将无法访问电子邮件。 Intune 会将阻止通知发送到 EAS 客户端。
+
+3. EAS 收到阻止通知后，将设备移至隔离区域，并发送包含修正步骤（其中包含链接）的隔离电子邮件，以便用户可以注册自己的设备。
+
+4. 发生工作区加入流程，这是 Intune 托管设备的第一步。
+
+5. 设备已注册 Intune。
+
+6. Intune 将 EAS 记录映射到设备记录，并保存设备符合性状态。
+
+7. Azure AD 设备注册过程已注册 EAS 客户端 ID，此过程创建了 Intune 设备记录和 EAS 客户端 ID 之间的关系。
+
+8. Azure AD 设备注册会保存设备状态信息。
+
+9. 如果用户满足条件访问策略，Intune 会通过 Intune Exchange 连接器发出 cmdlet，允许邮箱进行同步。
+
+10. Exchange Server 会将通知发送到 EAS 客户端，以便用户可以访问电子邮件。
 
 ## <a name="intune-exchange-connector-requirements"></a>Intune Exchange 连接器的要求
 
@@ -85,29 +124,29 @@ Intune 支持每个订阅安装多个 Intune Exchange 连接器。 如果有多�
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。  使用属于本地 Exchange Server 中的管理员且具有使用 Exchange Server 的许可证的帐户。
 
-2. 选择“租户管理” > “Exchange 访问”   。
+2. 选择“租户管理” > “Exchange 访问” 。
 
-3. 在“设置”下，选择“Exchange ActiveSync 本地连接器”，然后选择“添加”    。
+3. 在“设置”下，选择“Exchange ActiveSync 本地连接器”，然后选择“添加”  。
 
    > [!div class="mx-imgBorder"]
    > ![添加 Exchange ActiveSync 本地连接器](./media/exchange-connector-install/add-connector.png)
 
-4. 在“添加连接器”页上，选择“下载本地连接器”   。 Intune Exchange 连接器位于可以打开或保存的压缩 (.zip) 文件夹中。 在“文件下载”  对话框中，选择“保存”  以将压缩的文件夹存储到安全位置中。
+4. 在“添加连接器”页上，选择“下载本地连接器” 。 Intune Exchange 连接器位于可以打开或保存的压缩 (.zip) 文件夹中。 在“文件下载”对话框中，选择“保存”以将压缩的文件夹存储到安全位置中。
 
 ## <a name="install-and-configure-the-intune-exchange-connector"></a>安装和配置 Intune Exchange 连接器
 
 按照以下步骤安装 Intune Exchange 连接器。 如果有多个 Exchange 组织，请为每个要设置的 Exchange 连接器重复这些步骤。
 
-1. 在支持 Intune Exchange 连接器的操作系统上，将“Exchange_Connector_Setup.zip”中的文件提取到安全位置  。
+1. 在支持 Intune Exchange 连接器的操作系统上，将“Exchange_Connector_Setup.zip”中的文件提取到安全位置。
    > [!IMPORTANT]
-   > 请勿重命名或移动 Exchange_Connector_Setup  文件夹中的文件。 这些更改将导致连接器安装失败。
+   > 请勿重命名或移动 Exchange_Connector_Setup 文件夹中的文件。 这些更改将导致连接器安装失败。
 
-2. 提取文件后，打开提取的文件夹并双击“Exchange_Connector_Setup.exe”，以安装连接器  。
+2. 提取文件后，打开提取的文件夹并双击“Exchange_Connector_Setup.exe”，以安装连接器。
 
    > [!IMPORTANT]
-   > 如果目标文件夹不是安全位置，则在完成安装本地连接器后删除证书文件“MicrosoftIntune.accountcert”  。
+   > 如果目标文件夹不是安全位置，则在完成安装本地连接器后删除证书文件“MicrosoftIntune.accountcert”。
 
-3. 在“Microsoft Intune Exchange Connector”  对话框中，选择“本地 Microsoft Exchange Server”  或“托管 Microsoft Exchange Server”  。
+3. 在“Microsoft Intune Exchange Connector”对话框中，选择“本地 Microsoft Exchange Server” 或“托管 Microsoft Exchange Server”。
 
    ![显示选择 Exchange Server 类型的位置的图像](./media/exchange-connector-install/intune-sa-exchange-connector-config.png)
 
@@ -117,32 +156,32 @@ Intune 支持每个订阅安装多个 Intune Exchange 连接器。 如果有多�
 
    1. 打开 Outlook for Office 365。
 
-   2. 选择左上角的 **?** 图标 ，然后选择“关于”  。
+   2. 选择左上角的 **?** 图标 ，然后选择“关于”。
 
    3. 找到“POP 外部服务器”  值。
 
-   4. 选择“代理服务器”  以指定托管 Exchange 服务器的代理服务器设置。
+   4. 选择“代理服务器”以指定托管 Exchange 服务器的代理服务器设置。
 
-       1. 选择“同步移动设备信息时使用代理服务器”  。
+       1. 选择“同步移动设备信息时使用代理服务器” 。
 
        1. 输入要用于访问服务器的 **代理服务器名称** 和 **端口号** 。
 
-       1. 如果必须提供用户凭据来访问代理服务器，请选择“使用凭据连接到代理服务器”  。 然后输入“域\用户”  和“密码”  。
+       1. 如果必须提供用户凭据来访问代理服务器，请选择“使用凭据连接到代理服务器”。 然后输入“域\用户”和“密码”。
 
-       1. 选择“确定”  。
+       1. 选择“确定”。
 
-4. 在“用户(域\用户)”  和“密码”  字段中，输入用于连接到 Exchange Server 的凭据。 指定的帐户必须具有使用 Intune 的许可证。
+4. 在“用户(域\用户)”和“密码”字段中，输入用于连接到 Exchange Server 的凭据。 指定的帐户必须具有使用 Intune 的许可证。
 
 5. 提供凭据，将通知发送到用户的 Exchange Server 邮箱。 此用户可专用于通知。 通知用户需要 Exchange 邮箱才能通过电子邮件发送通知。 可使用 Intune 中的条件访问策略配置这些通知。
 
    确保在 Exchange CAS 上配置自动发现服务和 Exchange Web 服务。 有关详细信息，请参阅[客户端访问服务器](https://technet.microsoft.com/library/dd298114.aspx)。
 
-6. 在“密码”  字段中提供此帐户的密码，使 Intune 能够访问 Exchange Server。
+6. 在“密码”字段中提供此帐户的密码，使 Intune 能够访问 Exchange Server。
 
    > [!NOTE]
    > 用于登录租户的帐户必须至少是 Intune 服务管理员。 如果没有此管理员帐户，则会导致连接失败，并出现错误“远程服务器返回错误:(400) 错误请求。”
 
-7. 选择“连接”  。
+7. 选择“连接”。
 
    > [!NOTE]
    > 可能需要几分钟时间才能配置该连接。
@@ -170,11 +209,11 @@ Intune 支持每个订阅有多个 Intune Exchange 连接器。 对于拥有多�
 
 默认情况下，发现其他 CAS 是启用的。 如果需要关闭故障转移：
 
-1. 在安装 Exchange 连接器的服务器上，请转到 %ProgramData%\Microsoft\Windows Intune Exchange Connector  。
+1. 在安装 Exchange 连接器的服务器上，请转到 %ProgramData%\Microsoft\Windows Intune Exchange Connector。
 
-2. 使用文本编辑器打开“OnPremisesExchangeConnectorServiceConfiguration.xml”  。
+2. 使用文本编辑器打开“OnPremisesExchangeConnectorServiceConfiguration.xml”。
 
-3. 将 \<IsCasFailoverEnabled>true\</IsCasFailoverEnabled>  更改为 \<IsCasFailoverEnabled>false\</IsCasFailoverEnabled>  。
+3. 将“\<IsCasFailoverEnabled>true\</IsCasFailoverEnabled>”改为“\<IsCasFailoverEnabled>false\</IsCasFailoverEnabled>” 。
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>优化 Exchange 连接器的性能（可选）
 
@@ -186,13 +225,13 @@ Exchange ActiveSync 支持 5,000 台或更多设备时，可以配置可选设�
 
 若要提高 Exchange 连接器的性能，请执行以下操作：
 
-1. 在安装了连接器的服务器上，打开连接器的安装目录。  默认位置是 C:\ProgramData\Microsoft\Windows Intune Exchange Connector  。
+1. 在安装了连接器的服务器上，打开连接器的安装目录。  默认位置是 C:\ProgramData\Microsoft\Windows Intune Exchange Connector。
 
-2. 编辑文件 OnPremisesExchangeConnectorServiceConfiguration.xml  。
+2. 编辑文件 OnPremisesExchangeConnectorServiceConfiguration.xml。
 
-3. 找到“EnableParallelCommandSupport”并将值设置为“true”   ：
+3. 找到“EnableParallelCommandSupport”并将值设置为“true” ：
 
-   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+   true\<EnableParallelCommandSupport>\</EnableParallelCommandSupport>
 
 4. 保存文件，然后重启 Microsoft Intune Exchange 连接器服务。
 
@@ -202,12 +241,12 @@ Exchange ActiveSync 支持 5,000 台或更多设备时，可以配置可选设�
 
 1. 若要安装新的连接器，请按照[安装和配置 Exchange 连接器](#install-and-configure-the-intune-exchange-connector)部分中的步骤进行操作。
 
-2. 系统出现提示时，请选择“替换”以安装新的连接器  。
+2. 系统出现提示时，请选择“替换”以安装新的连接器。
    ![替换连接器的配置警告](./media/exchange-connector-install/prompt-to-replace.png)
 
 3. 继续[安装和配置 Intune Exchange 连接器](#install-and-configure-the-intune-exchange-connector)部分中的步骤，然后再次登录到 Intune。
 
-4. 在最后一个窗口中，选择“关闭”  以完成安装。
+4. 在最后一个窗口中，选择“关闭”以完成安装。
    ![完成安装](./media/exchange-connector-install/successful-reinstall.png)
 
 ## <a name="monitor-an-exchange-connector"></a>监视 Exchange 连接器
@@ -216,11 +255,11 @@ Exchange ActiveSync 支持 5,000 台或更多设备时，可以配置可选设�
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“租户管理” > “Exchange 访问”   。
+2. 选择“租户管理” > “Exchange 访问” 。
 
-3. 选择“Exchange ActiveSync 本地连接器”，然后选择要查看的连接器  。
+3. 选择“Exchange ActiveSync 本地连接器”，然后选择要查看的连接器。
 
-4. 控制台显示所选连接器的详细信息，可在其中查看“状态”  以及上次成功同步的日期和时间。
+4. 控制台显示所选连接器的详细信息，可在其中查看“状态”以及上次成功同步的日期和时间。
 
 除控制台中的状态之外，还可以使用[用于 Exchange 连接器和 Intune 的 System Center Operations Manager 管理包](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True)。 在需要进行问题故障排除时，管理包可提供监视 Exchange 连接器的多种方法。
 
@@ -228,15 +267,15 @@ Exchange ActiveSync 支持 5,000 台或更多设备时，可以配置可选设�
 
 Intune Exchange 连接器会定期自动同步 EAS 和 Intune 设备记录。 如果设备的符合性状态发生更改，则自动同步过程会定期更新记录，以便阻止或允许设备访问。
 
-- 定期执行“快速同步”，每天执行若干次  。 快速同步会检索自上次同步以来发生更改的 Intune 许可用户和本地 Exchange 条件访问目标用户的设备信息。
+- 定期执行“快速同步”，每天执行若干次。 快速同步会检索自上次同步以来发生更改的 Intune 许可用户和本地 Exchange 条件访问目标用户的设备信息。
 
-- 默认情况下，每天进行一次“完全同步”  。 完全同步会检索所有 Intune 许可用户和本地 Exchange 条件访问目标用户的设备信息。 完全同步还会检索 Exchange Server 信息，并确保 Azure 门户中 Intune 指定的配置已在 Exchange Server 上更新。
+- 默认情况下，每天进行一次“完全同步”。 完全同步会检索所有 Intune 许可用户和本地 Exchange 条件访问目标用户的设备信息。 完全同步还会检索 Exchange Server 信息，并确保 Azure 门户中 Intune 指定的配置已在 Exchange Server 上更新。
 
-可以使用 Intune 仪表板上的“快速同步”或“完全同步”选项强制连接器运行同步   ：
+可以使用 Intune 仪表板上的“快速同步”或“完全同步”选项强制连接器运行同步 ：
 
    1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-   2. 选择“租户管理”   > “Exchange 访问”   >  “Exchange ActiveSync 本地连接器”  。
+   2. 选择“租户管理” > “Exchange 访问” >  “Exchange ActiveSync 本地连接器”。
 
    3. 选择要同步的连接器，然后选择“快速同步”或“完全同步”。
 
