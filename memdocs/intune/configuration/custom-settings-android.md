@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264101"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262772"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>在 Microsoft Intune 中使用适用于 Android 设备的自定义设置
 
@@ -35,7 +35,7 @@ Android 自定义配置文件使用开放移动联盟统一资源标识符 (OMA-
 - [创建具有预共享密钥的 Wi-Fi 配置文件](/intune/wi-fi-profile-shared-key)
 - [创建每应用 VPN 配置文件](/intune/android-pulse-secure-per-app-vpn)
 - [允许和阻止适用于 Samsung Knox 标准版设备的应用](/intune/samsung-knox-apps-allow-block)
-- [在适用于 Android 的 Microsoft Defender 高级威胁防护中配置 Web 保护](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
+- [在适用于 Android 的 Microsoft Defender 高级威胁防护中配置 Web 保护](../protect/advanced-threat-protection-manage-android.md)
 
 >[!IMPORTANT]
 > 自定义配置文件中仅可配置列出的设置。 Android 设备不公开可配置的 OMA-URI 设置的完整列表。 如需查看更多设置，请在 [Intune Uservoice 网站](https://microsoftintune.uservoice.com/forums/291681-ideas)投票支持其他设置。

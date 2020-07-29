@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891541"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262874"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -290,11 +290,11 @@ Intune DeviceComplianceOrg 记录先前仅包含 ComplianceState、OwnerType 和
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>在面向 Android 的合规性策略中使用 Microsoft Defender ATP<!-- 4425686  -->
 
-现在你可以使用 Intune [将 Android 设备载入到 Microsoft Defender 高级威胁防护](../protect/advanced-threat-protection.md#onboard-android-devices)。 载入注册的设备后，面向 Android 的合规性策略可以使用来自 Microsoft Defender ATP 的威胁级别信号。 这些信号与先前可以用于 Windows 10 设备的信号相同。
+现在你可以使用 Intune [将 Android 设备载入到 Microsoft Defender 高级威胁防护](../protect/advanced-threat-protection-configure.md#onboard-devices)。 载入注册的设备后，面向 Android 的合规性策略可以使用来自 Microsoft Defender ATP 的威胁级别信号。 这些信号与先前可以用于 Windows 10 设备的信号相同。
 
 #### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>配置面向 Android 设备的 Defender ATP Web 保护<!-- 6185563  -->
 
-当使用面向 Android 设备的 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 时，可以[配置 Microsoft Defender ATP Web 保护](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)以禁用钓鱼网站扫描功能，或阻止扫描使用 VPN。
+当使用面向 Android 设备的 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 时，可以[配置 Microsoft Defender ATP Web 保护](../protect/advanced-threat-protection-manage-android.md)以禁用钓鱼网站扫描功能，或阻止扫描使用 VPN。
 
 根据 Android 设备注册 Intune 的方式，可用选项如下：
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 0c1029c4641d9ff07bf4254427cb08dfa583b5f8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461413"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262602"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 中前几个月的新增功能
 
@@ -2570,7 +2570,7 @@ Microsoft 365 的承诺之一是简化管理，多年来我们整合了后端 Mi
 适用于：最新的 [Windows 预览体验](https://docs.microsoft.com/windows-insider/at-work-pro/)版本（预览版）。
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Windows Defender ATP 配置包自动添加到配置文件<!-- 2144658 -->
-在 Intune 中使用[高级威胁防护和加入](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile)设备时，需要提前下载配置包并将其添加到配置文件。 通过此次更新，Intune 可自动从 Windows Defender 安全中心获取该包，并将其添加到配置文件。
+在 Intune 中使用[高级威胁防护和加入](../protect/advanced-threat-protection-configure.md#onboard-devices)设备时，需要提前下载配置包并将其添加到配置文件。 通过此次更新，Intune 可自动从 Windows Defender 安全中心获取该包，并将其添加到配置文件。
 适用于 Windows 10 和更高版本。
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>要求用户在设备设置过程中进行连接<!--2311457-->

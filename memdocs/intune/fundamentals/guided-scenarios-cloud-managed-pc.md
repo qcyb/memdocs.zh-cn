@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264033"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262755"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>引导式方案 - 云托管的新式桌面
 
@@ -47,7 +47,7 @@ ms.locfileid: "85264033"
 
 ## <a name="step-1---introduction"></a>步骤 1 - 简介
 
-使用此引导式方案，你将设置测试用户，在 Intune 中注册设备，并使用 Intune 建议的设置以及 Windows 10 和 Microsoft 365 应用版部署该设备。 如果选择[在 Intune 中启用此保护](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)，则还将为设备配置 Microsoft Defender 高级威胁防护。 设置的用户和注册的设备将被添加到一个新的安全组中，并且将使用推荐设置进行配置，以便提高安全性和生产力。
+使用此引导式方案，你将设置测试用户，在 Intune 中注册设备，并使用 Intune 建议的设置以及 Windows 10 和 Microsoft 365 应用版部署该设备。 如果选择[在 Intune 中启用此保护](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune)，则还将为设备配置 Microsoft Defender 高级威胁防护。 设置的用户和注册的设备将被添加到一个新的安全组中，并且将使用推荐设置进行配置，以便提高安全性和生产力。
 
 ### <a name="what-you-will-need-to-continue"></a>需要继续执行的操作
 
@@ -127,5 +127,5 @@ Windows Autopilot 自动配置新设备，这样用户就可以在无需 IT 人�
 
 ## <a name="next-steps"></a>后续步骤
 
-- 如果使用的是 Microsoft Defender 高级威胁检测，请创建 [Intune 符合性策略](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level)以要求 Defender 威胁分析满足符合性要求。
-- 如果设备不满足 Intune 符合性，请创建[基于设备的条件访问策略](../protect/advanced-threat-protection.md#create-a-conditional-access-policy)以阻止访问。
+- 如果使用的是 Microsoft Defender 高级威胁检测，请创建 [Intune 符合性策略](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level)以要求 Defender 威胁分析满足符合性要求。
+- 如果设备不满足 Intune 符合性，请创建[基于设备的条件访问策略](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy)以阻止访问。

@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093363"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262041"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Microsoft Intune App SDK for Android 开发人员测试指南
 
 用于 Android 的 Microsoft Intune App SDK 测试指南旨在帮助测试 Intune 托管的 Android 应用。
 
 ## <a name="demo-tenant-setup"></a>演示租户设置
-如果还没有公司租户，可以使用或不使用预生成数据创建演示租户。 必须注册为 [Microsoft 合作伙伴](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft)才能访问 Microsoft CDX。 创建新帐户：
+如果还没有公司租户，可以使用或不使用预生成数据创建演示租户。 必须注册为 [Microsoft 合作伙伴](https://partner.microsoft.com/business-opportunities/why-microsoft)才能访问 Microsoft CDX。 创建新帐户：
 1. 导航到 [Microsoft CDX 租户创建网站](https://cdx.transform.microsoft.com/my-tenants/create-tenant)并创建 Microsoft 365 企业版租户。
 2. [设置 Intune](../fundamentals/setup-steps.md) 以启用移动设备管理 (MDM)。
 3. [创建用户](../fundamentals/users-add.md)。
