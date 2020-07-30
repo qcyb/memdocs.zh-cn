@@ -90,7 +90,15 @@
             - name: 帐户保护
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
-          href: advanced-threat-protection.md
+          items:
+            - name: Microsoft Defender ATP
+              href: advanced-threat-protection.md
+            - name: 配置 Defender ATP
+              href: advanced-threat-protection-configure.md
+            - name: Android Web 保护
+              href: advanced-threat-protection-manage-android.md
+            - name: 监视 Defender ATP
+              href: advanced-threat-protection-monitor.md
         - name: 防火墙规则迁移
           href: endpoint-security-firewall-rule-tool.md
         - name: 加密磁盘
