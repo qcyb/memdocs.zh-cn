@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec80e0cde433f21474a53acf66dbef5ddca206bc
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502640"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262704"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Microsoft Intune 中的 Android 应用保护策略设置
 本文介绍适用于 Android 设备的应用保护策略设置。 可在 Azure 门户的“设置”窗格中为应用保护策略[配置](app-protection-policies.md)所述的策略设置。
@@ -136,6 +136,7 @@ ms.locfileid: "85502640"
 | **最大 PIN 尝试次数** | 指定用户在执行配置操作之前必须成功输入其 PIN 的尝试次数。 此策略设置格式支持正整数。 *操作*包括： <br><ul><li>**重置 PIN** - 用户必须重置其 PIN。</li></ul> <ul><li>**擦除数据** - 从设备中擦除与应用程序关联的用户帐户。  </li></ul> </li></ul> 默认值 = 5 |
 | **脱机宽限期** | MAM 应用可以脱机运行的分钟数。 指定重新检查应用访问要求之前的时间（以分钟为单位）。 *操作*包括： <br><ul><li>**阻止访问（分钟数）** - MAM 应用可以脱机运行的分钟数。 指定重新检查应用访问要求之前的时间（以分钟为单位）。 此期限到期后，该应用需要对 Azure Active Directory (Azure AD) 进行用户身份验证，以便该应用可以继续运行。 <br><br>此策略设置格式支持正整数。 <br><br>默认值 = 720 分钟（12 小时） </li></ul> <ul><li>**擦除数据（天数）** - 经过数天（由管理员定义）的脱机运行后，应用会要求用户连接到网络并重新进行身份验证。 如果用户身份验证成功，则可继续访问其数据，且将重置脱机时间间隔。  如果用户未能通过身份验证，则应用会对用户帐户和数据执行选择性擦除。 有关详细信息，请参阅[如何仅擦除 Intune 托管应用中的企业数据](apps-selective-wipe.md)。</li></ul> 此策略设置格式支持正整数。 <br><br>  默认值 = 90 天 </li></ul> <br><br>  此项可以出现多次，每个实例支持不同的操作。 |   
 | **已越狱/获得 root 权限的设备** |此设置没有可设置的值。 *操作*包括： <br><ul><li>**阻止访问** - 阻止在已越狱或已取得 root 权限的设备上运行此应用。 用户仍能够将此应用用于个人任务，但必须使用其他设备才能访问此应用中的工作或学校数据。</li></ul> <ul><li>**擦除数据** - 从设备中擦除与应用程序关联的用户帐户。  </li></ul> |
+| 已禁用帐户 | 此设置没有可设置的值。 *操作*包括： <br><ul><li>阻止访问 - 确认用户已在 Azure Active Directory 中禁用后，该应用会阻止访问工作数据或学校数据。</li></ul> <ul><li>擦除数据 - 确认用户已在 Azure Active Directory 中禁用后，该应用将执行用户帐户和数据的选择性擦除。 </li></ul> |
 | **最低 OS 版本** | 指定要使用此应用所需的最低 Android 操作系统版本。 *操作*包括： <br><ul><li>**警告** - 如果设备上的 Android 版本不符合此要求，用户将看到一个通知。 可忽略此通知。  </li></ul> <ul><li>**阻止访问** - 如果设备上的 Android 版本不符合此要求，将阻止用户访问。</li></ul> <ul><li>**擦除数据** - 从设备中擦除与应用程序关联的用户帐户。  </li></ul> </li></ul>此策略设置格式支持 major.minor、major.minor.build 或 major.minor.build.revision。 |
 | **最低应用版本** | 指定最低操作系统值的值。 *操作*包括： <br><ul><li>**警告** - 如果设备上的应用版本不符合此要求，用户将会看到一个通知。 可忽略此通知。</li></ul> <ul><li>**阻止访问** - 如果设备上的应用版本不符合此要求，用户将会看到一个通知。 </li></ul> <ul><li>**擦除数据** - 从设备中擦除与应用程序关联的用户帐户。 </li></ul> </li></ul> 由于应用之间通常拥有不同的版本控制方案，因此，请创建针对一个应用的一个最低应用版本策略（例如 Outlook 版本策略）。<br><br> 此项可以出现多次，每个实例支持不同的操作。<br><br> 此策略设置格式支持 major.minor、major.minor.build 或 major.minor.build.revision。<br><br> 此外，还可以配置最终用户可获取更新业务线 (LOB) 应用版本的位置。 最终用户将在“最低应用版本”条件启动对话框中看到此项，系统将提示最终用户更新到 LOB 应用的最低版本。 在 Android 上，此功能使用公司门户。 若要配置最终用户应更新 LOB 应用的位置，应用需要使用键 `com.microsoft.intune.myappstore` 发送给它的托管[应用配置策略](app-configuration-policies-managed-app.md)。 发送的值将定义最终用户从哪个应用商店中下载应用。 如果应用是通过公司门户部署的，则值必须为 `CompanyPortal`。 对于任何其他应用商店，必须输入完整的 URL。 |
 | **最低修补程序版本** | 要求设备具有由 Google 发布的最低 Android 安全修补程序。  <br><ul><li>**警告** - 如果设备上的 Android 版本不符合此要求，用户将看到一个通知。 可忽略此通知。  </li></ul> <ul><li>**阻止访问** - 如果设备上的 Android 版本不符合此要求，将阻止用户访问。</li></ul> <ul><li>**擦除数据** - 从设备中擦除与应用程序关联的用户帐户。  </li></ul></li></ul> 此策略设置支持日期格式 YYYY-MM-DD。 |

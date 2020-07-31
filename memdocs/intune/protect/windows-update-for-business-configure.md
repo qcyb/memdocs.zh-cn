@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989380"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946654"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>在 Intune 中管理 Windows 10 软件更新
 
@@ -54,18 +54,18 @@ Intune 提供以下策略类型来管理更新：
   - Windows Holographic for Business
 
     Windows Holographic for Business 支持 Windows 更新的一部分设置，包括：
-    - 自动更新行为 
-    - Microsoft 产品更新 
+    - 自动更新行为
+    - Microsoft 产品更新
     - **服务频道**：支持“半年频道”  和“半年频道(定向)”  选项。 有关详细信息，请参阅[管理 Windows Holographic](../fundamentals/windows-holographic-for-business.md)。
 
   > [!NOTE]
   > **不支持的版本**：
   > - Windows 10 移动版  
-  > - Windows 10 企业版 LTSC。 适用于企业的 Windows 更新 (WUfB) 当前不支持“长期服务频道”版本。  计划使用备用修补方法，如 WSUS 或 Configuration Manager。
+  > - Windows 10 企业版 LTSC。 适用于企业的 Windows 更新 (WUfB) 当前不支持“长期服务频道”版本。 计划使用备用修补方法，如 WSUS 或 Configuration Manager。
 
 - 在 Windows 设备上，“反馈和诊断”   > “诊断和使用情况数据”  必须设置为“基本”  、“增强”  或“完整”  。
 
-  可以为 Windows 10 设备手动配置“诊断和使用情况数据”，也可以使用适用于 Windows 10 及更高版本的 Intune 设备限制配置文件。  若使用设备限制配置文件，请至少将“共享使用情况数据”的[设备限制设置](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry)设置为“基本”。   为 Windows 10 或更高版本配置设备限制策略时，可在“报告和遥测”类别中找到此设置。 
+  可以为 Windows 10 设备手动配置“诊断和使用情况数据”，也可以使用适用于 Windows 10 及更高版本的 Intune 设备限制配置文件。 若使用设备限制配置文件，请至少将“共享使用情况数据”的[设备限制设置](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry)设置为“基本”。 为 Windows 10 或更高版本配置设备限制策略时，可在“报告和遥测”类别中找到此设置。
 
   有关设备配置文件的详细信息，请参阅[配置设备限制设置](../configuration/device-restrictions-configure.md)。
 
@@ -221,6 +221,8 @@ Intune 管理员可以使用“卸载”  来卸载（回滚）活动更新通�
   - 更新通道的功能更新必须为运行状态  。 这些更新不能暂停。
 
 - 在 Autopilot 开箱即用体验 (OOBE) 期间，不能应用 Windows 10 功能更新策略，这些策略仅在设备完成预配（通常为一天）后第一次进行 Windows 更新扫描时应用。
+
+- 虽然 Windows 10 功能更新仍在公共预览版中，但当与 Configuration Manager 和 Intune 共同管理设备时，存在功能更新策略可能不会立即生效的限制，从而导致设备更新到比 Intune 中配置的更高版本的功能更新。 此限制将被删除，并进一步更新 Configuration Manager。
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>创建和分配 Windows 10 功能更新
 

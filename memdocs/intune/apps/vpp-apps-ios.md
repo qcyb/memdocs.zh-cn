@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9012cf55bcd74ab0786c3d961bc60914f9ade04e
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 89f6c1d4498151eed87cf90ae24d0cc7a846d3f7
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093319"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262551"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理通过 Apple Volume Purchase Program 购买的 iOS 和 macOS 应用
 
@@ -177,7 +177,7 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 <!-- 820870 -->  
 若要撤销适用于给定 VPP 令牌的所有 VPP 应用的许可证，必须首先撤销所有与令牌相关联的应用许可证，然后删除令牌。
 
-## <a name="renewing-app-licenses"></a>续订应用许可证
+## <a name="renewing-vpp-tokens"></a>续订 VPP 令牌
 
 可以通过从 [Apple Business Manager](https://business.apple.com/) 或 [Apple School Manager](https://school.apple.com/) 下载新的令牌并更新 Intune 中的现有令牌来续订 Apple VPP 令牌。 
 

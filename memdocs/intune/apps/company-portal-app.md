@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461957"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365536"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -178,9 +178,9 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 
 有关 iOS/iPadOS 设备派生凭据的详细信息，请参阅[在 Microsoft Intune 中使用派生凭据](../protect/derived-credentials.md)。
 
-## <a name="dark-mode-for-iosipados-company-portal"></a>适用于 iOS/iPadOS 公司门户的深色模式
+## <a name="dark-mode-for-the-company-portal"></a>适用于公司门户的深色模式
 
-深色模式适用于 iOS/iPadOS 公司门户。 用户可以下载应用、管理其设备，并根据设备设置在所选的配色方案中获取 IT 支持。 iOS/iPadOS 公司门户将自动与最终用户的设备设置匹配，自动应用深色或浅色模式。
+深色模式适用于 iOS/iPadOS、macOS 和 Windows 公司门户。 用户可以下载应用、管理其设备，并根据设备设置在所选的配色方案中获取 IT 支持。 iOS/iPadOS、macOS 和 Windows 公司门户将自动与最终用户的设备设置匹配，自动应用深色或浅色模式。
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Windows 公司门户键盘快捷方式
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973071"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438631"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>使用 Configuration Manager 管理 Surface 驱动程序
 
@@ -162,4 +162,4 @@ ms.locfileid: "84973071"
 
 - [Surface 和 System Center Configuration Manager 的注意事项](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Surface 更新历史记录](https://support.microsoft.com/help/4036283/surface-surface-update-history)
-- [下载适用于 Surface 设备的最新固件和驱动程序](https://docs.microsoft.com/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices)
+- [下载适用于 Surface 设备的最新固件和驱动程序](/surface/manage-surface-driver-and-firmware-updates)

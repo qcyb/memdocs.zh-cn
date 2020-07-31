@@ -6,7 +6,7 @@ keywords: Intune 数据仓库
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270984"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262568"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>使用 Power BI 连接到数据仓库
 
@@ -52,6 +52,9 @@ ms.locfileid: "84270984"
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>使用 Power BI Intune 符合性数据仓库应用加载数据和报表
 
 Power BI [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用包含租户信息和一组基于数据仓库数据模型的预置报表。
+
+> [!NOTE]
+> Azure 政府云环境不支持 Power BI Intune 合规性数据仓库应用。
 
 1. 导航到 [Intune 符合性（数据仓库）](https://aka.ms/intune/datawarehouseapi/getpowerbiapp)应用的“AppSource”页以开始安装过程。
 2. 单击“立即获取”按钮，然后单击“继续” 。

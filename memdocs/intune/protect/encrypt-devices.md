@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989668"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334617"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>在 Intune 中管理适用于 Windows 10 的 BitLocker 策略
 
@@ -168,11 +168,11 @@ Intune 提供了对 BitLocker 的 Azure AD 边栏选项卡的访问权限，以�
 
 - 设备必须运行 Windows 10 版本 1909 或更高版本
 
-- Azure AD 加入和混合加入的设备必须启用密码轮转支持：
+- 已加入 Azure AD 和混合加入的设备必须通过 BitLocker 策略配置启用对密钥轮换的支持：
 
-  - 客户端驱动的恢复密码轮转
-
-  此设置位于“Windows 加密”下，是 Windows 10 终结点保护设备配置策略的一部分。
+  - 将“客户端驱动的恢复密码轮换”配置为“在已加入 Azure AD 的设备上启用轮换”或“在已加入 Azure AD 和混合加入的设备上启用轮换” 
+  - 将“将 BitLocker 恢复信息保存到 Azure Active Directory”配置为“启用”
+  - 将“启用 BitLocker 之前在 Azure Active Directory 中存储恢复信息”配置为“必需”
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>BitLocker 恢复密码轮转
 

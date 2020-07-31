@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461855"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262670"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>为 Intune 中不符合要求的设备配置操作
 
@@ -147,8 +147,12 @@ ms.locfileid: "86461855"
 
 5. 在“查看 + 创建”下，查看你的配置以确保通知消息模板已准备就绪可供使用。 选择“创建”以成功创建通知。
 
-> [!NOTE]
-> 你还可以选择之前创建的现有通知模板，并选择“编辑”来编辑其信息以更新模板。
+### <a name="view-and-edit-notifications"></a>查看和编辑通知
+
+已创建的通知在“合规性策略” > “通知”页中提供。  从此页中，可以选择要查看其配置的通知，并执行以下操作：
+
+- 选择“发送预览电子邮件”将通知电子邮件的预览发送到已用于登录 Intune 的帐户。 
+- 为“基本”或“作用域标签”选择“编辑”以进行更改。 
 
 ## <a name="add-actions-for-noncompliance"></a>添加针对非符合性的操作
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565614"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365417"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>在 Intune 中创建 VPN 配置文件以连接到 VPN 服务器
 
 虚拟专用网络 (VPN) 可让用户安全远程访问你的组织网络。 设备使用 VPN 连接配置文件来启动与 VPN 服务器的连接。 Microsoft Intune 中的“VPN 配置文件”将 VPN 设置分配到你组织中的用户和设备。 使用这些设置，用户能够轻松安全地连接到你的组织网络。
 
 例如，你希望用连接到组织网络上的文件共享所需的设置来配置所有 iOS/iPadOS 设备。 创建包含这些设置的 VPN 配置文件。 然后，将此配置文件分配到拥有 iOS/iPadOS 设备的所有用户。 用户能在可用网络的列表中看到 VPN 连接，并可以轻松连接。
+
+> [!NOTE]
+> iOS/iPadOS 和 macOS 的用户注册仅支持[每应用 VPN](vpn-setting-configure-per-app.md)。
 
 > [!NOTE]
 > 可使用 [Intune 自定义配置策略](custom-settings-configure.md)为以下平台创建 VPN 配置文件：
@@ -166,14 +169,14 @@ ms.locfileid: "86565614"
     - [Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
-8. 选择“下一步”。
+8. 选择“下一步”  。
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
     选择“下一步”。
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
 11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 

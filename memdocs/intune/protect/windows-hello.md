@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531887"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262857"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>将 Windows Hello 企业版与 Microsoft Intune 集成  
 
@@ -32,13 +32,21 @@ Hello 企业版是使用 Active Directory 或 Azure Active Directory 帐户取�
 
 Intune 与 Hello for Business 集成的两种方式：
 
-- **租户级**：可在“设备注册”下创建 Intune 策略。 此策略面向整个组织（租户级）。 它支持 Windows AutoPilot 全新体验 (OOBE)，并在设备注册时应用。
-- **各个组**：可以将管理 Windows Hello 企业版的策略部署到已注册 Intune 的设备上。    可以管理 Windows Hello 的策略类型包括设备配置下创建的标识保护配置文件、各种安全基线，以及终结点安全帐户保护配置文件。 这些配置文件类型面向分配的用户或设备，并在签入过程中应用。
+- 租户范围（本文）：可在“设备注册”下创建 Intune 策略。 此策略面向整个组织（租户级）。 它支持 Windows AutoPilot 全新体验 (OOBE)，并在设备注册时应用。
+- **各个组**：对于之前已向 Intune 注册的设备，请使用设备配置[保护](../protect/identity-protection-configure.md)配置文件，以便为 Windows Hello 企业版配置设备。 标识保护配置文件面向分配的用户或设备，并在签入过程中应用。
 
-使用本文创建面向整个组织的默认 Windows Hello 企业版策略。 要创建应用于选择用户和设备组的标识保护配置文件，请参阅[配置标识保护配置文件](identity-protection-configure.md)。  
+此外，Intune 还支持以下策略类型，以管理 Windows Hello 企业版的某些设置：
+
+- [安全基线](../protect/security-baselines.md)。 以下基线包括适用于 Windows Hello 企业版的设置：
+  - [Microsoft Defender 高级威胁防护基线设置](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Windows MDM 安全基线设置](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- 终结点安全性[帐户保护](../protect/endpoint-security-account-protection-policy.md)策略。 查看[帐户保护设置](../protect/endpoint-security-account-protection-profile-settings.md#account-protection)。
+
+本文的其余部分重点介绍如何创建面向整个组织的默认 Windows Hello 企业版策略。
 
 > [!IMPORTANT]
 > 在周年更新前的 Windows 10 桌面版和移动版中，可以设置两种不同的 PIN，用于对资源进行身份验证：
+>
 > - **设备 PIN** 用于解锁设备并连接到云资源。
 > - 工作 PIN 用于访问用户个人设备 (BYOD) 上的 Azure AD 资源。
 > 
@@ -53,7 +61,7 @@ Intune 与 Hello for Business 集成的两种方式：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 转到“设备” >  “注册” > “注册设备” > “Windows 注册” > “Windows Hello 企业版”。     将打开“Windows Hello 企业版”窗格。
+2. 转到“设备” >  “注册” > “注册设备” > “Windows 注册” > “Windows Hello 企业版”。 将打开“Windows Hello 企业版”窗格。
 
 3. 从以下“配置 Windows Hello 企业版”选项中选择：
 

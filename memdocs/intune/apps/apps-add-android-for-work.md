@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461940"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262653"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备
 
@@ -122,6 +122,8 @@ Intune 将自动向 Intune 管理控制台添加四个常见的与 Android Enter
 5. 在Google Play 窗口中选择“专用应用”  （位于“锁定”  图标旁边）。 
 6. 单击右下角的“+”  按钮以添加新应用。
 7. 添加一个应用“标题”  ，然后单击“上传 APK”  添加 APK 应用包。
+   > [!NOTE]
+   > 应用的包名称在 Google Play 中必须是全局唯一的（在企业或 Google Play 开发人员帐户中不是唯一的）。 否则，你将收到“上传具有不同包名称的新 APK 文件”错误。
 8. 单击 **“创建”** 。
 9. 如果已完成添加应用，则关闭“托管的 Google Play”窗格。
 10. 单击“同步应用”  窗格上的“同步”  ，以与托管 Google Play 服务同步。 

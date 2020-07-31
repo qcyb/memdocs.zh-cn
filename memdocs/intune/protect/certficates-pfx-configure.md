@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461583"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946637"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用 PKCS 证书
 
@@ -59,7 +59,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 - Microsoft Intune 证书连接器（亦称为“NDES 证书连接器”）：  
   在 Intune 门户中，转到“设备配置” > “证书连接器” > “添加”，然后按照“为 PKCS #12 安装连接器的步骤”操作  。 使用门户中的下载链接开始下载证书连接器安装程序 NDESConnectorSetup.exe。  
 
-  Intune 支持每个租户最多拥有 100 个此连接器实例。 连接器的每个实例都必须位于单独的 Windows 服务器上。 可以将此连接器的实例与 Microsoft Intune PFX 证书连接器的实例安装在同一服务器上。 使用多个连接器时，连接器基础结构支持高可用性和负载均衡，因为所有可用连接器实例都可以处理 PKCS 证书请求。 
+  Intune 支持每个租户最多拥有 100 个此连接器实例。 连接器的每个实例都必须位于单独的 Windows 服务器上。 可以将此连接器的实例与 Microsoft Intune PFX 证书连接器的实例安装在同一服务器上。 使用多个连接器时，连接器基础结构支持冗余和负载均衡，因为任何可用连接器实例都可以处理 PKCS 证书请求。 
 
   连接器处理用于身份验证或 S/MIME 电子邮件签名的 PKCS 证书请求。
 
@@ -68,9 +68,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 - **Microsoft Intune 的 PFX 证书连接器**：  
   如果计划使用 S/MIME 电子邮件加密，请使用 Intune 门户下载支持 PFX 证书导入的 PFX 证书连接器。  转到“设备配置” > “证书连接器” > “添加”，然后按照“为导入的 PFX 证书安装连接器的步骤”操作  。 使用门户中的下载链接开始下载安装程序 PfxCertificateConnectorBootstrapper.exe。
 
-  每个 Intune 租户都支持此连接器的一个实例。 可以将此连接器的实例与 Microsoft Intune 证书连接器的实例安装在同一服务器上。
-
-  该连接器处理导入 Intune 中的 PFX 文件的请求，以便为特定用户进行 S/MIME 电子邮件加密。  
+  该连接器处理导入 Intune 中的 PFX 文件的请求，以便为特定用户进行 S/MIME 电子邮件加密。 可以将此连接器的实例与 Microsoft Intune 证书连接器的实例安装在同一服务器上。 
 
   新版本可用时，此连接器可自动更新。 要使用更新功能，必须：
   - 在服务器上安装 Microsoft Intune 的 PFX 证书连接器。  
@@ -187,7 +185,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的受信任证书配置文件”。
    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”。
+6. 选择“下一步”  。
 
 7. 在“配置设置”中，指定之前导出的 .cer 文件根 CA 证书。
 
@@ -196,7 +194,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 
    ![创建配置文件并上传受信任的证书](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-8. 选择“下一步”。
+8. 选择“下一步”  。
 
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
@@ -236,7 +234,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 PKCS 配置文件”。
    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”。
+6. 选择“下一步”  。
 7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台进行详细设置：-Android 设备管理员 -Android Enterprise -iOS/iPadOS -Windows 10
    
    |设置     | 平台     | 详细信息   |
@@ -254,13 +252,13 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
    |**允许所有应用访问私钥** |<ul><li>macOS  |请将其设置为“启用”，以使为关联的 Mac 设备配置的应用可以访问 PKCS 证书私钥。 <br><br> 有关此设置的详细信息，请参阅 Apple 开发人员文档中[配置文件参考](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)中的 AllowAllAppsAccess 证书有效负载部分。 |
    |**根证书**             |<ul><li>Android 设备管理员 </li><li>Android Enterprise（设备所有者、工作配置文件） |选择以前分配的根 CA 证书配置文件。 |
 
-8. 选择“下一步”。
+8. 选择“下一步”  。
 
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
    选择“下一步”。
 
-10. 在“分配”中，选择将接收配置文件的用户或组。 计划将此证书配置文件部署到接收受信任证书配置文件的相同组。有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的用户或组。 计划将此证书配置文件部署到接收受信任的证书配置文件的相同组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
     选择“下一步”。
 

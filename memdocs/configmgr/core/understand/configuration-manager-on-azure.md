@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c9d398d7fddab61014547fc0f8f64cd180e58ab6
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078492"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438575"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 
@@ -84,7 +84,7 @@ ms.locfileid: "82078492"
 
 ## <a name="performance"></a>性能
 ### <a name="what-factors-affect-performance-in-this-scenario"></a>此方案中，哪些因素会影响性能？
-[Azure VM 大小和类型](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs)、Azure VM 磁盘（建议使用高级存储，尤其是对于 SQL Server）、网络延迟和速度是最重要的几个方面。
+[Azure VM 大小和类型](/azure/virtual-machines/sizes)、Azure VM 磁盘（建议使用高级存储，尤其是对于 SQL Server）、网络延迟和速度是最重要的几个方面。
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>可否提供有关 Azure 虚拟机的详细信息？应使用何种大小的虚拟机？
 一般情况下，计算能力（CPU 和内存）需满足[用于 Configuration Manager 的推荐硬件](../plan-design/configs/recommended-hardware.md)。 但常规计算机硬件与 Azure VM 之间有些区别，尤其涉及到这些虚拟机使用的磁盘时。  使用的虚拟机的大小取决于环境的规模，这里有一些建议：
@@ -157,7 +157,7 @@ ms.locfileid: "82078492"
 **基础知识：** https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM 计算机类型：**
-- Azure 计算机大小： https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- Azure 计算机大小： https://docs.microsoft.com/azure/virtual-machines/sizes  
 - VM 定价： https://azure.microsoft.com/pricing/details/virtual-machines/  
 - 存储定价： https://azure.microsoft.com/pricing/details/storage/
 
@@ -169,7 +169,7 @@ ms.locfileid: "82078492"
 
 **可用性：**
 - Azure IaaS 运行时间 SLA： https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- 可用性集说明： https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- 可用性集说明： https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **连接性：**
 - Express Route 与Azure VPN： https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
