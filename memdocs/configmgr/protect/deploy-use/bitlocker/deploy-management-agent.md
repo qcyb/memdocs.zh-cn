@@ -2,7 +2,7 @@
 title: 部署 BitLocker 管理
 titleSuffix: Configuration Manager
 description: 将 BitLocker 管理代理部署到 Configuration Manager 客户端，并将恢复服务部署到管理点
-ms.date: 04/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715690"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262823"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -179,7 +179,13 @@ Configuration Manager 将恢复信息存储在站点数据库中。 如果没有
 
 - BitLocker 管理设置与 MBAM 组策略设置是完全兼容的。 如果设备接收组策略设置和 Configuration Manager 策略，请配置它们以进行匹配。
 
+  > [!NOTE]
+  > 如果存在独立 MBAM 的组策略设置，则它将替代 Configuration Manager 尝试的等效设置。 独立 MBAM 使用域组策略，而 Configuration Manager 为 BitLocker 管理设置本地策略。 域策略将替代本地 Configuration Manager BitLocker 管理策略。 如果独立 MBAM 域组策略与 Configuration Manager 策略不匹配，Configuration Manager BitLocker 管理将会失败。 例如，如果域组策略为密钥恢复服务设置了独立的 MBAM 服务器，则 Configuration Manager BitLocker 管理不能为管理点设置相同的设置。 此行为将导致客户端不会向管理点上的 Configuration Manager BitLocker 管理密钥恢复服务报告其恢复密钥。
+
 - Configuration Manager 不实现所有 MBAM 组策略设置。 如果在组策略中配置其他设置，则 Configuration Manager 客户端上的 BitLocker 管理代理将遵循这些设置。
+
+  > [!IMPORTANT]
+  > 请勿为 Configuration Manager BitLocker 管理已指定的设置设置组策略。 仅为 Configuration Manager BitLocker 管理中当前不存在的设置设置组策略。 Configuration Manager 版本 2002 具有独立 MBAM 的功能奇偶一致性。 在 Configuration Manager 版本 2002 及更高版本中，在大多数情况下，应该没有理由设置域组策略来配置 BitLocker 策略。 若要防止出现冲突和问题，请避免对 BitLocker 使用组策略。 通过 Configuration Manager BitLocker 管理策略来配置所有设置。
 
 ### <a name="tpm-password-hash"></a>TPM 密码哈希
 

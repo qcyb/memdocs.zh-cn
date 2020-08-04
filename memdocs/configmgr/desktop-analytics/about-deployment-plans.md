@@ -2,7 +2,7 @@
 title: 桌面分析中的部署计划
 titleSuffix: Configuration Manager
 description: 了解桌面分析中的部署计划。
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268481"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400709"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>关于桌面分析中的部署计划
 
@@ -47,6 +47,8 @@ ms.locfileid: "83268481"
 默认情况下，桌面分析每日刷新部署计划数据。 在部署计划中所做的任何更改（例如，将重要性分配给应用或选择要在试点中包含的设备）需要多达 24 小时才能完成处理。 若要加快此过程，可请求按需进行数据刷新。 有关详细信息，请参阅[桌面分析常见问题](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)。  
 
 将桌面分析连接到 Configuration Manager 后，在部署计划中选择集合。 此集成使你能够根据桌面分析数据将 Windows 部署到集合。
+
+部署计划支持面向三个最新的 Windows 10 版本。 桌面分析将在新版 Windows 10 推出后的 45天内添加相应支持。 此时，服务也将删除最早的版本。 你将无法使用面向最早版本的任何部署计划。 如果你有面向桌面分析中最早支持版本的任何持续部署计划，请在新版 Windows 10 推出后的 45 天内完成部署。
 
 ## <a name="readiness-rules"></a>就绪规则
 

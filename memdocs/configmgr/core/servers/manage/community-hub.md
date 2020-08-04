@@ -2,7 +2,7 @@
 title: 社区中心和 GitHub
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中启用和使用社区中心
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262075"
 ---
 # <a name="community-hub-and-github"></a>社区中心和 GitHub
 <!--3555935, 3555936-->
@@ -44,16 +44,13 @@ ms.locfileid: "86236403"
       - Windows Server 不受支持，因此需要在与站点服务器不同的 Windows 10 设备上安装 Configuration Manager 控制台。
    - 登录的用户帐户不能是内置管理员帐户
 
-- 若要下载报告，必须在要将报告导入到的站点上启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”选项。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
-   1. 转到“管理” > “站点配置” > “站点”。
-   1. 选择一个站点，然后选择功能区中的“属性”。
-   1. 在“通信安全”选项卡上，选择“将 Configuration Manager 生成的证书用于 HTTP 站点系统”选项。
+- Configuration Manager 中的[管理服务](../../../develop/adminservice/set-up.md)需要进行设置才能正常运行。
 
 - 如果组织使用防火墙或代理设备限制与 Internet 的网络通信，你必须允许 Configuration Manager 控制台访问 Internet 终结点。 有关详细信息，请参阅 [Internet 访问要求](../../plan-design/network/internet-endpoints.md#community-hub)。
 
 ## <a name="permissions"></a>权限
 
-- 若要导入脚本：需要 SMS_Scripts 类的“创建”权限。 
+- 若要导入脚本：需要 SMS_Scripts 类的“创建”权限。
 - 若要导入报告：需要完全权限管理员安全角色。
 
 

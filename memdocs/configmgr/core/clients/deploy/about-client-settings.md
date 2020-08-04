@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347162"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365502"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -328,6 +328,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 若要宽限用户更多时间（超过截止时间）来安装所需的应用程序或软件更新部署，请设置此选项的值。 此宽限期适用于计算机延期关闭以及用户需要安装大量应用程序或更新部署的情况。 例如，如果用户休假回来，客户端安装的应用程序部署已过期，而需要等待很长时间，此设置将有所帮助。
 
 设置介于 0 和 120 小时之间的宽限期。 将此设置和“根据用户偏好延迟此强制部署”的部署属性结合使用。 有关详细信息，请参阅[部署应用程序](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)。
+
+
+### <a name="enable-endpoint-analytics-data-collection"></a>启用终结点分析数据收集
+
+在客户端上启用本地数据收集以上传到终结点分析。 若要配置用于本地数据收集的设备，请设置为“是”。 若要禁用本地数据收集，请设置为“否”。 有关详细信息，请参阅[向终结点分析注册 Configuration Manager 设备](../../../../analytics/enroll-configmgr.md)。
 
 ## <a name="computer-restart"></a>计算机重启
 

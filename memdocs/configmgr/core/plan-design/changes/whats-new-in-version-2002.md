@@ -2,7 +2,7 @@
 title: 2002 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 2002 中引入的更改和新增功能的详细信息。
-ms.date: 07/15/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422854"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262109"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -434,16 +434,17 @@ OneTrace 现在支持可自定义的日志组，与支持中心的功能类似�
 
 从 2020 年 7 月 15 日开始，以下更新汇总 (4560496) 在控制台中可用：[Microsoft Endpoint Configuration Manager 版本 2002 的更新汇总](https://support.microsoft.com/help/4560496)。
 
-<!--
-### Hotfixes
+### <a name="hotfixes"></a>修补程序
 
-The following additional hotfixes are available to address specific issues:
+以下附加修补程序可用于解决特定问题：
 
-| ID | Title | Date | In-console |
+| ID | 标题 | 日期 | 控制台内部 |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4575339](https://support.microsoft.com/help/4575339) | 设备在 Microsoft Endpoint Configuration Manager 管理中心出现两次 | 2020 年 7 月 23 日 | 否 |
+| [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet 在 Configuration Manager 版本 2002 中失败 | 2020 年 7 月 24 日 | 否 |
 
-> [!NOTE]  
+<!--
+> [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 

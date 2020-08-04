@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422821"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438615"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>如何在 Configuration Manager 中创建集合
 
@@ -234,6 +234,7 @@ Azure AD 同步每五分钟执行一次。 这是一个单向过程，从 Config
 - 与 Azure AD 集成以实现[云管理](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Azure Active Directory 用户发现](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - 已启用 HTTPS 或[增强型 HTTP](../../../plan-design/hierarchy/enhanced-http.md) 的管理点
+- 访问“所有系统”集合
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>在 Azure AD 中创建组和设置所有者
 
@@ -255,7 +256,7 @@ Azure AD 同步每五分钟执行一次。 这是一个单向过程，从 Config
 
 1. 在 Configuration Manager 控制台中，转到“资产和符合性” > “概览” > “设备集合”  。
 1. 右键单击要同步的集合，然后单击“属性”。 
-1. 在“AAD 组同步”选项卡中，单击“添加”。
+1. 在“云同步”选项卡中，单击“添加” 。
 1. 从下拉菜单中，选择在其中创建了 Azure AD 组的“租户”。
 1. 在“名称开头为”字段中键入搜索条件，然后单击“搜索”。
   - 如果系统提示你登录，请使用指定为 Azure AD 组的所有者的标识。

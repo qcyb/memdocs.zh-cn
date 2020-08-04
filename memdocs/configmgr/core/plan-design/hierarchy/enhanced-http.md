@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239753"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262092"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
@@ -53,10 +53,10 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 ### <a name="scenario-1-client-to-management-point"></a><a name="bkmk_scenario1"></a> 方案 1：客户端到管理点
 
 <!--1356889-->
-[已加入 Azure Active Directory (Azure AD) 的设备](/azure/active-directory/devices/concept-azure-ad-join)能够与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。
+如果为站点启用了增强型 HTTP，则[已加入 Azure Active Directory (Azure AD) 的设备](/azure/active-directory/devices/concept-azure-ad-join)和具有 [Configuration Manager 颁发的令牌](../../clients/deploy/deploy-clients-cmg-token.md)的设备可以与为 HTTP 配置的管理点通信。 启用增强型 HTTP 后，站点服务器会为管理点生成证书，使其能够通过安全通道进行通信。
 
 > [!Note]  
-> 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个已启用 HTTPS 的管理点，用于通过云管理网关进行通信的已加入 Azure AD 的客户端。 有关详细信息，请参阅[为管理点启用 HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps)。  
+> 此方案不需要使用启用了 HTTPS 的管理点，但作为一种使用增强型 HTTP 的替代方法，也受到了支持。 有关使用启用了 HTTPS 的管理点的详细信息，请参阅[为 HTTPS 启用管理点](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps)。  
 
 ### <a name="scenario-2-client-to-distribution-point"></a><a name="bkmk_scenario2"></a> 方案 2：客户端到分发点
 
