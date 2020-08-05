@@ -56,6 +56,8 @@
               href: deploy-use/endpoint-antimalware-policies.md
             - name: 配置客户端
               href: deploy-use/endpoint-protection-configure-client.md
+            - name: 如何在独立客户端上配置 Endpoint Protection
+              href: deploy-use/endpoint-protection-configure-standalone-client.md
         - name: Windows 防火墙策略
           href: deploy-use/create-windows-firewall-policies.md
         - name: Microsoft Defender 高级威胁防护
