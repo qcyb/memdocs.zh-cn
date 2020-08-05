@@ -56,10 +56,6 @@
           href: windows-bulk-enroll.md
         - name: 注册状态页
           href: windows-enrollment-status.md
-        - name: Windows AutoPilot Deployment 计划
-          href: enrollment-autopilot.md
-        - name: 使用 Autopilot 的混合 Azure AD
-          href: windows-autopilot-hybrid.md
         - name: 为 Intune AD 连接器配置代理
           href: autopilot-hybrid-connector-proxy.md
     - name: 设置 Android 注册
