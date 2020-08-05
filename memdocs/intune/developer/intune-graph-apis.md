@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088541"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438647"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>如何使用 Azure AD 访问 Microsoft Graph Intune API
 
@@ -351,11 +351,11 @@ __读取 Microsoft Intune 配置__ | DeviceManagementServiceConfig.Read.All
   > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 
-    1. 右键单击解决方案资源管理器。
-    2. 选择“管理 NuGet 程序包...” &gt;“浏览”。
-    3. 选择 `Microsoft.IdentityModel.Clients.ActiveDirectory`，然后选择“安装”。
+   1. 右键单击解决方案资源管理器。
+   2. 选择“管理 NuGet 程序包...” &gt;“浏览”。
+   3. 选择 `Microsoft.IdentityModel.Clients.ActiveDirectory`，然后选择“安装”。
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. 在 Program.cs 顶部添加以下语句：
 
@@ -447,7 +447,7 @@ namespace IntuneGraphExample
 
 ### <a name="authenticate-azure-ad-powershell"></a>验证 Azure AD (PowerShell)
 
-以下 PowerShell 脚本使用 AzureAD PowerShell 模块进行身份验证。  要了解详细信息，请参阅 [Azure Active Directory PowerShell 版本 2](https://docs.microsoft.com/powershell/azure/install-adv2?view=azureadps-2.0) 和 [Intune PowerShell 示例](https://github.com/microsoftgraph/powershell-intune-samples)。
+以下 PowerShell 脚本使用 AzureAD PowerShell 模块进行身份验证。  要了解详细信息，请参阅 [Azure Active Directory PowerShell 版本 2](/powershell/azure/active-directory/install-adv2) 和 [Intune PowerShell 示例](https://github.com/microsoftgraph/powershell-intune-samples)。
 
 在此示例中，更新 `$clientID` 的值以匹配有效的应用程序 ID。
 
