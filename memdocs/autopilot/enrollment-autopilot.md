@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0db9c917bef2a28451ef3b74310f826f97f0dba9
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ce002acf118fb39712f8195247f556b01faa830f
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756165"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865517"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>使用 Windows Autopilot 在 Intune 中注册 Windows 设备
 
@@ -84,9 +84,9 @@ Windows Autopilot 简化了 Intune 中的设备注册。 生成和维护自定�
 3. 如果在上一步中选择“已分配”作为“成员资格类型”，请选择“组”边栏选项卡中的“成员”，并将 Autopilot 设备添加到组中   。
     尚未注册的 Autopilot 设备使用设备序列号作为名称。
 4. 如果选择“动态设备”作为“成员资格类型”，请选择“组”边栏选项卡中的“动态设备成员”，并在“高级规则”框中键入以下任意代码。 这些规则仅收集 Autopilot 设备，因为它们的目标是仅由 Autopilot 设备拥有的属性。 创建基于非 Autopilot 属性的组不能保证组中包含的设备实际上已注册到 Autopilot。
-    - 若要创建包括所有 Autopilot 设备的组，请键入：`(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Intune 的组标记字段映射到 Azure AD 设备上的 OrderID 属性。 若要创建包括所有具有特定组标记（Azure AD 设备 OrderID）的所有 Autopilot 设备的组，必须键入：`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-    - 若要创建包括所有具有特定采购订单 ID 的 Autopilot 设备的组，请键入：`(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
+    - 若要创建包括所有 Autopilot 设备的组，请键入：`(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
+    - Intune 的组标记字段映射到 Azure AD 设备上的 OrderID 属性。 若要创建包括所有具有特定组标记（Azure AD 设备 OrderID）的所有 Autopilot 设备的组，必须键入：`(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
+    - 若要创建包括所有具有特定采购订单 ID 的 Autopilot 设备的组，请键入：`(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
     
     在“高级规则”框中添加代码后，，选择“保存”。
 5. 选择“创建”。  
