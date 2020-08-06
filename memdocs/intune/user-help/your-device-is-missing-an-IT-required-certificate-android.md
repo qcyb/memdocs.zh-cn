@@ -1,5 +1,5 @@
 ---
-title: 设备缺少证书 | Microsoft Docs
+title: 安装缺少的所需证书
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1cd3309ebe05d48fd2b28988ffc09702901c470a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 162a5c2ff02a762578fb6f52b60b6ff404862329
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881064"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546702"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>安装组织所需的但缺少的证书  
 
@@ -44,7 +44,7 @@ ms.locfileid: "83881064"
 
 1. 在公司门户应用中，将鼠标移到右侧角并选择菜单。  
 2. 选择“设置”  。  
-3. 选择“启用浏览器访问”旁边的“启用”   。  
+3. 选择“启用浏览器访问”旁边的“启用” 。  
 4. 在“设备管理员”屏幕上，选择“激活”  。 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>通过 Web 搜索标识并下载缺少的证书

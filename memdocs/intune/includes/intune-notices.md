@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
+ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84637546"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87507272"
 ---
 本文中的通知提供了重要信息，可以帮助你为未来的 Intune 更改和功能做好准备。
 
@@ -75,6 +75,9 @@ Android 设备管理员管理在 Android 2.2 中作为一种管理 Android 设�
 - 设置“最短密码长度”
 - 设置“密码到期前的天数”
 - 设置“阻止重用的曾用密码数”
+
+
+![Android 合规性策略页的屏幕截图](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### <a name="additional-impacts-based-on-android-os-version"></a>基于 Android OS 版本的其他影响
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b55c8cced4e559655018b36843e1599cc6e2d1bf
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262731"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443833"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 开发过程中的功能
 
@@ -66,8 +66,8 @@ ms.locfileid: "87262731"
 ### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707----"></a>iOS 公司门户将支持 Apple 的自动设备注册，而无需用户关联<!-- 7282707  --> 
 将支持在设备上使用 Apple 的自动设备注册来注册 iOS 公司门户，而无需分配的用户。 最终用户可以登录 iOS 公司门户，以在无需设备关联即可注册的 iOS/iPadOS 设备上将自己确立为主要用户。 若要详细了解自动设备注册，请参阅[使用 Apple 的自动设备注册自动注册 iOS/iPadOS 设备](../enrollment/device-enrollment-program-enroll-ios.md)。
 
-### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>公司门户现已开始支持 Configuration Manager 应用程序<!-- 4297660 -->
-公司门户现在支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 此支持有助于管理员整合不同的最终用户门户体验。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal)。
+### <a name="the-windows-company-portal-adds-configuration-manager-application-support---4297660---"></a>Windows 公司门户现已开始支持 Configuration Manager 应用程序<!-- 4297660 -->
+Windows 公司门户现在支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在 Windows 公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 此支持有助于管理员整合不同的最终用户门户体验。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal)。
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>设备配置
@@ -156,9 +156,6 @@ Intune 设备详细信息日志将在“报告” > “Log Analytics”中提供
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>租户附加：从管理中心运行脚本<!--7220536, CM6234688 -->
 你将能够将 Configuration Manager 本地[运行脚本](../../configmgr/apps/deploy-use/create-deploy-scripts.md)这一强大功能引入到 Microsoft Endpoint Manager 管理中心。 允许其他角色（如支持人员）针对单个 Configuration Manager 托管设备从云中运行 PowerShell 脚本。 它提供了 PowerShell 脚本的所有传统优势，这些优势已由 Configuration Manager 管理员定义并批准进入这个新环境。 有关详细信息，请参阅 [Configuration Manager 技术预览版 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts)。 
 
-### <a name="new-merge-logic-for-windows-10-devices--179048--"></a>适用于 Windows 10 设备的新合并逻辑<!--179048-->
-现在，如果客户对设备重置映像，然后重新注册该设备，则该设备的多条记录将显示在 Microsoft Endpoint Manager 管理控制台中。 新的合并逻辑正在开发中，用于合并 Windows 10 设备上的此类重复记录。
-
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>将软件更新部署到 macOS 设备 <!-- 3194876 -->
 你将能够把软件更新部署到 macOS 设备组。 此功能包括关键更新、固件更新、配置文件更新和其他更新。 你将能够在下一次设备签入时发送更新，或选择每周计划在你设置的时间范围内外部署更新。 当你想要在非标准工作时间更新设备时，或者当支持人员已满员时，这会很有帮助。 你还将获得所有已部署更新的 macOS 设备的详细报告。 可以按设备向下钻取报告，以查看特定更新的状态。
 
@@ -202,7 +199,7 @@ Microsoft Defender ATP 中的威胁和漏洞管理 (TVM) 发现设备上配置�
 ### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119----"></a>终结点安全性防病毒策略排除项的更改<!--5583940, 6018119  -->
 我们引入了两项更改，用于管理配置为终结点安全性防病毒策略一部分的 Microsoft Defender 防病毒排除项列表。 （“终结点安全性” > “防病毒” > “创建策略” > “Windows 10 及更高版本”[针对平台]）。 这两项更改有助于防止策略之间发生冲突，并且存在冲突的现有策略将不再与排除项列表冲突：
 
-- 首先，我们要为 Windows 10 及更高版本添加新的配置文件类型：Microsoft Defender 防病毒排除项。  这一新的配置文件类型仅包括指定 Defender 进程列表的设置、文件扩展名以及不希望 Microsoft Defender 扫描的文件夹。    这可以通过将排除项列表与其他策略配置分离来帮助简化排除项列表的管理。
+- 首先，我们要为 Windows 10 及更高版本添加新的配置文件类型：Microsoft Defender 防病毒排除项。  这一新的配置文件类型仅包括指定 Defender 进程列表的设置、文件扩展名以及不希望 Microsoft Defender 扫描的文件夹。 这可以通过将排除项列表与其他策略配置分离来帮助简化排除项列表的管理。
 - 第二项更改是，根据应用于特定用户或设备的单个策略，在不同配置文件中定义的排除项列表将合并为每个设备或用户的单个排除项列表。 例如，如果针对具有三个不同策略的用户，则这三个策略中的排除项列表将合并为 Microsoft Defender 防病毒排除项的单一超集，然后将其应用于用户。 此合并包括正在添加的新配置文件类型的排除项列表，以及在 Microsoft Defender 防病毒配置文件中配置的任何现有策略的排除项列表。
 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461532"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443817"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>使用 Microsoft Intune 将应用分配到组
 
@@ -32,7 +32,7 @@ ms.locfileid: "86461532"
 向 Microsoft Intune [添加应用](apps-add.md)后，可将应用分配给用户和设备。 值得注意的是，无论设备是否由 Intune 管理，都可以将应用分配到设备。
 
 > [!NOTE]
-> 设备组不支持可用部署意图，仅用户组支持。
+> 仅当面向 Android Enterprise 完全托管设备 (COBO) 和 Android Enterprise 企业所有且支持个人 (COPE) 设备时，设备组才支持可用部署意向 。
 
 下表列出了用于将应用分配到用户和设备的各种选项：
 

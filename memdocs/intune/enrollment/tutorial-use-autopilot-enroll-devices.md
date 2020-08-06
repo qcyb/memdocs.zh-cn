@@ -19,16 +19,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326898"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546837"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>教程：使用 Autopilot 在 Intune 中注册 Windows 设备
 
-Windows Autopilot 简化了设备注册。 使用 Microsoft Intune 和 Autopilot 就可向最终用户提供全新设备，而无需生成、维护和应用自定义操作系统映像。
+[Windows Autopilot](../../autopilot/index.yml) 简化了设备注册。 使用 Microsoft Intune 和 Autopilot 就可向最终用户提供全新设备，而无需生成、维护和应用自定义操作系统映像。
 
 在本教程中，你将学习如何执行以下操作：
 > [!div class="checklist"]
@@ -127,6 +127,6 @@ Windows Autopilot 简化了设备注册。 使用 Microsoft Intune 和 Autopilot
 可以找到有关 Windows Autopilot 可用的其他选项的更多信息。
 
 > [!div class="nextstepaction"]
-> [深入介绍 Autopilot 注册的文章](enrollment-autopilot.md)
+> [深入介绍 Autopilot 注册的文章](../../autopilot/enrollment-autopilot.md)
 
 

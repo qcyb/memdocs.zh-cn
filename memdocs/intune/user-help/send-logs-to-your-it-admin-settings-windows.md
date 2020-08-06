@@ -1,5 +1,5 @@
 ---
-title: 将 Windows 10 设备的日志发送给公司支持人员 | Microsoft Docs
+title: 使用适用于 Windows 的“设置”应用发送日志
 description: 将 Windows 10 1511 设备注册到 Intune
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ef75b3a678c60fd2683feb269210d70baed9c46a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ae7fd722918d6d88d96b0c2114dd6c9dd49fc
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881965"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546719"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>通过 Windows 10 的“设置”应用将日志发送给公司支持人员
 

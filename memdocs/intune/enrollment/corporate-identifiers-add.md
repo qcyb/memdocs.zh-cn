@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491110"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473672"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>将设备标识为“公司自有”
 
@@ -52,7 +52,10 @@ ms.locfileid: "86491110"
 | Windows | 支持 (Windows Phone) | 不支持 |
 | iOS/macOS | 不支持（请参阅下列重要事项）  | 支持 |
 | 设备管理员托管的 Android OS v10 | 不支持 | 不支持 |
-| 其他 Android | 不支持 | 支持 |
+| Android Enterprise 工作配置文件 | 不支持 | 支持 |
+| Android Enterprise 完全托管设备 | 不支持 | 支持 |
+| Android Enterprise 专用设备 | 不支持 | 不支持 |
+| Android Enterprise 公司拥有的工作配置文件 | 不支持 | 支持 |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ ms.locfileid: "86491110"
 若要创建列表，请创建没有标题的两列逗号分隔值 (.csv) 列表。 在左列添加 14 位 IMEI 或序列号，在右列添加详细信息。 仅可在单个 .csv 文件中导入一种类型的 ID、IMEI 或序列号。 详细信息限制为 128 个字符，且仅用于管理。 在设备上不显示详细信息。 当前限制为每个 .csv 文件 5,000 行。
 
 **上传含序列号的 .csv 文件** - 创建两列不带标头的逗号分隔值 (.csv) 列表，并将列表限制为每个 .csv 文件 5,000 台设备或 5 MB。
-
-|||
-|-|-|
-|&lt;ID #1&gt;|&lt;Device #1 Details&gt;|
-|&lt;ID #2&gt;|&lt;Device #2 Details&gt;|
 
 在文本编辑器中查看该 .csv 文件时，该文件显示为：
 
@@ -87,7 +85,7 @@ ms.locfileid: "86491110"
 
 1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “企业设备标识符” > “添加” > “上传 CSV 文件”      。
 
-2. 在“添加标识符”  边栏选项卡中，指定标识符类型：“IMEI”  或“序列号”  。
+2. 在“添加标识符”边栏选项卡中，指定标识符类型：“IMEI”或“序列号”。
 
 3. 单击文件夹图标并指定要导入的列表的路径。 导航到 .csv 文件，然后选择“添加”  。 
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b91751e9879d06b40bdd9518926759da2331115f
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334088"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758255"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>移动应用程序管理故障排除
 
@@ -59,7 +59,7 @@ ms.locfileid: "79334088"
 平台 | 方案 | 说明 |
 ---| --- | --- |
 iOS | 即使将数据传输策略设置为“仅托管应用”  或“无应用”  ，最终用户也可使用 iOS/iPadOS 共享扩展在非托管应用中打开工作或学校数据。 这样不会泄漏数据吗？ | 在不管理设备的情况下，Intune 应用保护策略不能控制 iOS/iPadOS 共享扩展。 因此，**Intune 会在应用外共享“企业”数据前先加密数据**。 可通过尝试在管理的应用外打开“公司”文件对此进行验证。 该文件应该已加密，且无法在管理的应用外打开。
-iOS | 为什么最终用户会收到安装 Microsoft Authenticator 应用的提示  | 在应用基于应用的条件访问时，需要按提示这样做，请参阅[需要批准的客户端应用](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access)。
+iOS | 为什么最终用户会收到安装 Microsoft Authenticator 应用的提示 | 在应用基于应用的条件访问时，需要按提示这样做，请参阅[需要批准的客户端应用](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access)。
 Android | 为什么即使使用不需设备注册的 MAM 应用保护，最终用户也**需要安装公司门户应用**？  | 在 Android 上，应用保护的许多功能都内置于公司门户应用中。 **虽然始终需要公司门户应用，但无需设备注册**。 对于不需注册的应用保护，最终用户只需在设备上安装公司门户应用即可。
 iOS/Android | 应用保护策略不适用于 Outlook 应用中的草稿电子邮件 | 由于 Outlook 同时支持公司和个人环境，因此不会对草稿电子邮件强制执行 MAM。
 iOS/Android | 应用保护策略不适用于 WXP 中的新文档（Word、Excel、PowerPoint） | 由于 WXP 同时支持公司和个人环境，因此它不会对新文档执行 MAM，除非这些文档被保存在诸如 OneDrive 之类的已标识公司位置中。

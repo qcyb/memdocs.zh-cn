@@ -1,5 +1,5 @@
 ---
-title: 将 Windows 10 设备的日志发送给公司支持人员 | Microsoft Docs
+title: 使用 Windows 版公司门户应用发送日志
 description: 使用电子邮件发送错误并记录详细信息以帮助公司支持人员修复应用问题
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b2adca8ed11148e80967c231f79f33b18bb3b113
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1212dae09da7f4420913d18adc404db266f70c45
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881981"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546736"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>通过适用于 Windows 的公司门户使用电子邮件将有关问题发送给公司支持人员
 

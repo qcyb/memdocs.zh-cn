@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491195"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443906"
 ---
 # <a name="set-enrollment-restrictions"></a>设置注册限制
 
@@ -175,6 +175,10 @@ ms.locfileid: "86491195"
 创建限制时，将其添加到默认值正上方的列表中。
 
 设备注册同时包括设备类型和设备限制的默认限制。 这两个限制应用于所有用户，除非由更高优先级的限制替代。
+
+>[!NOTE]
+>用户受注册限制约束。 在非用户驱动的注册场景（例如 Windows Autopilot 自部署模式或白手套预配）中，仅实施默认优先级限制（针对“所有用户”）。
+
 
 可更改任何非默认限制的优先级。
 

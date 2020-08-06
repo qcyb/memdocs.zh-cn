@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262874"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546803"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -54,6 +54,14 @@ ms.locfileid: "87262874"
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## <a name="week-of-july-27-2020"></a>2020 年 7 月 27 日当周
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>监视和故障排除
+
+#### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI 合规性报告模板 V2.0<!-- 636958 -->
+借助 Power BI 模板应用，Power BI 合作伙伴无需编码或只需少量编码即可构建 Power BI 应用，并将其部署到任何 Power BI 客户。 管理员能将 Power BI 合规性报告模板的版本从 V1.0 更新到 V2.0。 V2.0 包含改进的设计，以及模板中显示的计算和数据的更改。 有关详细信息，请参阅[使用 Power BI 连接到数据仓库](../developer/reports-proc-get-a-link-powerbi.md)和[更新模板应用](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app)。 此外，请参阅博客文章[宣布推出针对 Intune 数据仓库的新版本 PowerBI 合规性报告](https://aka.ms/new_compliance_report)。
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>2020 年 7 月 13 日当周（2007 服务版本）
@@ -67,8 +75,8 @@ ms.locfileid: "87262874"
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange 内部部署连接器支持<!-- 7138486  -->
 自 2007 年（7 月）版本开始，Intune 便从 Intune 服务中删除了对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些客户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) 来保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
 
-#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>在无需注册即可受管理的 iOS 和 Android Enterprise 设备上为 Outlook 启用 S/MIME<!-- 6517155  -->
-你现在能够在无需注册即可受管理的 iOS 和 Android Enterprise 设备上使用设备的应用配置策略为 Outlook 启用 S/MIME。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“应用” > “应用配置策略” > “添加” > “托管应用”。 此外，还可以选择是否允许用户在 Outlook 中更改此设置。 有关 S/MIME 的一般信息，请参阅[在 Intune 中对电子邮件进行签名和加密的 S/MIME 概述](../protect/certificates-s-mime-encryption-sign.md)。 有关 Outlook 配置设置的详细信息，请参阅 [Microsoft Outlook 配置设置](../apps/app-configuration-policies-outlook.md)和[为受管理应用添加应用配置策略（无需设备注册）](../apps/app-configuration-policies-managed-app.md)。 有关 Microsoft Exchange 特定 S/MIME 信息，请参阅 [S/MIME 方案](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios)和[配置密钥 - S/MIME 设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings)。
+#### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>无需注册即可在 iOS 和 Android 设备上启用 S/MIME for Outlook<!-- 6517155 -->
+你现在能够使用托管应用的应用配置策略在 iOS 和 Android 设备上启用 S/MIME for Outlook。 这可实现策略交付，无论设备注册状态如何都是如此。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“应用” > “应用配置策略” > “添加” > “托管应用”。 此外，还可以选择是否允许用户在 Outlook 中更改此设置。 但是，如果要将 S/MIME 证书自动部署到适用于 iOS 和 Android 的 Outlook，则必须注册设备。 有关 S/MIME 的一般信息，请参阅[在 Intune 中对电子邮件进行签名和加密的 S/MIME 概述](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign)。 有关 Outlook 配置设置的详细信息，请参阅 [Microsoft Outlook 配置设置](../apps/app-configuration-policies-outlook.md)和[为受管理应用添加应用配置策略（无需设备注册）](../apps/app-configuration-policies-managed-app.md)。 有关适用于 iOS 和 Android 的 Outlook S/MIME 的信息，请参阅 [S/MIME 方案](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios)和[配置密钥 - S/MIME 设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings)。 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>设备配置

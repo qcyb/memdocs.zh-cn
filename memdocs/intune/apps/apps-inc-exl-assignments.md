@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8bbeb0c3db963e858230ce9a45f45f976bbfbbef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984295"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443886"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>在 Microsoft Intune 中包括和排除应用分配
 
@@ -88,7 +88,12 @@ ms.locfileid: "83984295"
 
 在进行组分配时，已分配的组不可修改。 若想选择当前不可用的组，先从应用的已分配列表中删除应用。
 
-要编辑分配，请在应用的“分配”列表中，选择包含想要更改的特定分配的行即可编辑分配  。 还可以选择行尾的省略号 (…) 并选择“删除”即可删除分配   。 要更改“分配”列表的视图，请按“分配类型”或按“包括/排除”分组    。
+要编辑分配，请在应用的“分配”列表中，选择包含想要更改的特定分配的行即可编辑分配  。 还可以选择行尾的省略号 (…) 并选择“删除”即可删除分配   。 
+
+> [!NOTE]
+> 删除组分配不会删除相关应用。 已安装的应用将保留在设备上。  
+
+要更改“分配”列表的视图，请按“分配类型”或按“包括/排除”分组  。
 
 ![Intune 应用分配 - 完成](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
