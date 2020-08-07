@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905828"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526026"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager Technical Preview 1601 中的功能
 
@@ -130,8 +130,8 @@ ms.locfileid: "82905828"
 
 ### <a name="icons-for-client-status"></a>客户端状态图标  
 
-|||  
-|-|-|  
+| 图标 | 描述 |
+| ---- | ----------- |
 |![客户端的联机状态图标](media/online-status-icon.png)|客户端处于联机状态。|  
 |![客户端的脱机状态图标](media/offline-status-icon.png)|客户端处于脱机状态。|  
 |![客户端的未知状态图标](media/unknown-status-icon.png)|客户端状态未知。|  

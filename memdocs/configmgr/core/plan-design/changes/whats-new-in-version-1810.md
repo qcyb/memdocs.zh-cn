@@ -2,7 +2,7 @@
 title: 1810 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1810 版中引入的更改和新功能的详细信息。
-ms.date: 04/23/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f08b7449b4232d55c4be6227d23965231aa7a273
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906248"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546444"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -237,7 +237,7 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 <!--3607717, fka 1358333-->
 Windows 10 版本 1809 或更高版本现在随附[用于现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)。 此新功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。
 
-有关详细信息，请参阅[面向现有设备的 Windows Autopilot](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md)。
+有关详细信息，请参阅[面向现有设备的 Windows Autopilot](../../../../autopilot/existing-devices.md)。
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>指定用于为脱机 OS 映像提供服务的驱动器

@@ -5,17 +5,17 @@ description: 了解如何准备 Windows 10 基于 Internet 的设备进行共同
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776882"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546410"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
@@ -25,7 +25,7 @@ ms.locfileid: "84776882"
 
 对于新的 Windows 10 设备，可以使用 Autopilot 服务来配置全新体验 (OOBE)。 此过程包括将设备联接 Azure AD 并在 Intune 中注册设备。  
 
-有关详细信息，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot)。
+有关详细信息，请参阅 [Windows Autopilot 概述](../../autopilot/windows-autopilot.md)。
 
 若要将设备配置为在其联接 Azure AD 时自动注册到 Intune，请参阅 [将 Windows 设备注册到 Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll)。  
 
@@ -46,9 +46,9 @@ ms.locfileid: "84776882"
 ### <a name="autopilot-for-existing-devices"></a>面向现有设备的 Autopilot
 <!--1358333-->
 
-Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)。 此功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。
+Windows 10 版本 1809 或更高版本中提供了[面向现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)。 此功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](../../autopilot/user-driven.md)预配 Windows 7 设备。
 
-有关详细信息，请参阅[面向现有设备任务序列的 Windows Autopilot](../osd/deploy-use/windows-autopilot-for-existing-devices.md)。
+有关详细信息，请参阅[面向现有设备任务序列的 Windows Autopilot](../../autopilot/existing-devices.md)。
 
 ## <a name="install-the-configuration-manager-client"></a>安装 Configuration Manager 客户端
 

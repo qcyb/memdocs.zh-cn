@@ -2,7 +2,7 @@
 title: 任务序列步骤
 titleSuffix: Configuration Manager
 description: 了解可添加到 Configuration Manager 任务序列的步骤。
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353592"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546614"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -1599,7 +1599,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 <!--SCCMDocs-pr issue 2695-->
 此选项指示 Sysprep 关闭计算机，代替其默认重启行为。
 
-[适用于现有设备的 Windows Autopilot](../deploy-use/windows-autopilot-for-existing-devices.md) 任务序列将此步骤与此选项配合使用。
+[适用于现有设备的 Windows Autopilot](../../../autopilot/existing-devices.md) 任务序列将此步骤与此选项配合使用。
 
 - 如果想要任务序列刷新设备，然后立即开始适用于 Autopilot 的 OOBE，请禁用此选项。  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427944"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912292"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager 版本 1702 中的新增功能
 
@@ -271,9 +271,8 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 
 现在可以将已授权的应用程序部署到设备以及用户。 根据应用对设备授权的支持能力，合适的许可证将在部署时按以下方式声明：
 
-|||||
-|-|-|-|-|
-|Configuration Manager 版本|应用是否支持设备授权？|部署集合类型|已声明的许可证|
+| Configuration Manager 版本 | 应用是否支持设备授权？ | 部署集合类型 | 已声明的许可证 |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |早于 1702|是|用户|用户许可证|
 |早于 1702|否|用户|用户许可证|
 |早于 1702|是|设备|用户许可证|

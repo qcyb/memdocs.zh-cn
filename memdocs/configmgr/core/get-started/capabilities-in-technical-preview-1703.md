@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428412"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526009"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager Technical Preview 1703 中的功能
 
@@ -31,9 +31,8 @@ ms.locfileid: "83428412"
 
 现在可以将已授权的应用程序部署到设备以及用户。 根据应用对设备授权的支持能力，合适的许可证将在部署时按以下方式声明：
 
-|||||
-|-|-|-|-|
-|Configuration Manager 版本|应用是否支持设备授权？|部署集合类型|已声明的许可证|
+| Configuration Manager 版本 | 应用是否支持设备授权？ | 部署集合类型 | 已声明的许可证 |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |早于 1702|是|用户|用户许可证|
 |早于 1702|否|用户|用户许可证|
 |早于 1702|是|设备|用户许可证|
