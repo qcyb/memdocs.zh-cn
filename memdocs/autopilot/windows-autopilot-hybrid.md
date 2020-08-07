@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 08/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf8754adfb16e6d166a3ad1ad1b5fdde11e207ab
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ed3a554ee374df1513a07fa2365e147f34d787f0
+ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756119"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87953523"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>使用 Intune 和 Windows Autopilot 部署加入混合 Azure AD 的设备
 可以使用 Intune 和 Windows Autopilot 设置加入混合 Azure Active Directory (Azure AD) 的设备。 为此，请执行本文中的步骤。
@@ -40,7 +40,6 @@ ms.locfileid: "87756119"
 - 如果使用代理，必须启用并配置 WPAD 代理设置选项。
 - 体验全新体验 (OOBE)。
 - 使用在 OOBE 中 Azure Active Directory 支持的身份验证类型。
-
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>设置 Windows 10 自动注册
 
@@ -86,7 +85,7 @@ ms.locfileid: "87756119"
 
     ![“Active Directory 对象类型”窗格](./media/windows-autopilot-hybrid/only-following-objects.png)
     
-1. 选择“下一步”。
+1. 选择“下一步”  。
 
 1. 在“权限”下，选择“完全控制”复选框 。  
     此操作将选择所有其他选项。
@@ -98,6 +97,9 @@ ms.locfileid: "87756119"
 ## <a name="install-the-intune-connector"></a>安装 Intune Connector
 
 用于 Active Directory 的 Intune 连接器必须安装在运行 Windows Server 2016 或更高版本的计算机上。 计算机还必须能够访问 Internet 和 Active Directory。 若要增加规模并提高可用性，可在环境中安装多个连接器。 建议在未运行任何其他 Intune 连接器的服务器上安装连接器。  请注意，每个连接器都必须能够在你希望支持的任何域中创建计算机对象。
+
+> [!NOTE]
+> 如果你的组织有多个域，但你安装了多个 Intune 连接器，则必须使用能够在所有域中创建计算机对象的服务帐户，即使你计划仅为特定域实现混合 Azure AD 联接也是如此。 如果这些是不受信任的域，则必须从不希望使用 Windows Autopilot 的域中卸载连接器。 否则，在多个域中具有多个连接器，所有连接器都必须能够在所有域中创建计算机对象。
 
 Intune 连接器需要与 [Intune 相同的终结点](../intune/fundamentals/intune-endpoints.md)。
 
@@ -178,12 +180,12 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “Windows” > “Windows 注册” > “部署配置文件” > “创建配置文件”。
 2. 在“基本信息”页上，键入名称和可选说明  。
 3. 如果希望已分配组中的所有设备自动转换为 Autopilot，请把“将所有目标设备转换为 Autopilot”设置为“是” 。 已分配组中的所有公司拥有的非 Autopilot 设备都将注册 Autopilot 部署服务。 个人拥有的设备不会转换为 Autopilot。 等待 48 小时来处理注册。 取消注册设备并重置后，Autopilot 将对其进行注册。 以这种方式注册设备后，禁用此选项或删除配置文件分配将不会从 Autopilot 部署服务中删除该设备。 必须改为[直接删除该设备](enrollment-autopilot.md#delete-autopilot-devices)。
-4. 选择“**下一步**”。
+4. 选择“下一步”  。
 5. 在“全新体验 (OOBE)”页上，对于“部署模式”，选择“用户驱动”。
 6. 在“加入到 Azure AD 时的身份”框中，选择“已加入混合 Azure AD” 。
 7.  如果是在利用 VPN 支持的组织网络中部署设备，请将“跳过域连接检查”选项设置为“是”。  有关其他信息，请参阅[具有 VPN 支持的混合 Azure Active Directory 联接的用户驱动模式](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support)。
 8. 根据需要，在“全新体验 (OOBE)”上配置剩余选项。
-9. 选择“**下一步**”。
+9. 选择“下一步”  。
 10. 在“作用域标记”页上，为此配置文件选择“[作用域标记](../intune/fundamentals/scope-tags.md)”。
 11. 选择“下一步”。
 12. 在“分配”页上，选择“要包括的组”> 搜索并选择“设备组”>“选择”。
