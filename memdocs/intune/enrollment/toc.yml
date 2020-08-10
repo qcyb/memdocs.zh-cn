@@ -121,6 +121,8 @@
       items:
         - name: 自动设备注册
           href: device-enrollment-program-enroll-macos.md
+        - name: macOS 设备直接许可登记表
+          href: device-enrollment-direct-enroll-macos.md
     - name: 不完整的注册报表
       href: enrollment-report-company-portal-abandon.md
     - name: 注册疑难解答
