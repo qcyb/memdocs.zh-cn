@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 400f3e228562dde3e4d61a4d314c174080dab597
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: fc892a4372aa7d72f294ddf93f811d641ca961b5
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756378"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051421"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>将设备添加到 Windows Autopilot
 
@@ -112,6 +112,7 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 从现有设备中捕获到硬件 Id 后，可以通过多种方式上传它们。 请参阅每个可用机制的详细文档。
 
 -   [Microsoft Intune](enrollment-autopilot.md)。  这是适用于所有客户的首选机制。
+    - Microsoft 终结点管理器管理中心用于 Intune 设备注册。
 -   [合作伙伴中心](https://msdn.microsoft.com/partner-center/autopilot)。  CSP 合作伙伴使用此方法代表客户注册设备。
 -   [Microsoft 365 商业版 & Office 365 管理员](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)。 这通常由小型和中型企业使用， (使用 Microsoft 365 商业版管理其设备的 Smb) 。
 -   [适用于企业的 Microsoft Store](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  可能已在使用 MSfB 管理应用和设置。
@@ -175,7 +176,7 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 - [向客户帐户添加设备](https://docs.microsoft.com/partner-center/autopilot)
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 使用 Windows Autopilot 部署新设备时，需要执行以下步骤：
 
