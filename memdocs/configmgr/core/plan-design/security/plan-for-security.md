@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110145"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525992"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -160,9 +160,11 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 3.  该证书有效、没有被吊销，并且尚未过期。 有效性检查还验证私钥是否可访问。  
 
-4.  证书具有客户端身份验证功能，或者已发放给计算机名。  
+4.  证书具有客户端身份验证功能。
 
-5.  证书具有最长有效期。  
+5.  证书使用者名称将本地计算机名称作为子字符串包含在内。  
+
+6.  证书具有最长有效期。  
 
 可使用下列机制将客户端配置为使用证书颁发者列表：  
 
@@ -208,7 +210,10 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 |2.5.4.12|T 或 Title|标题|  
 |2.5.4.42|G 或 GN 或 GivenName|给定名称|  
 |2.5.4.43|I 或 Initials|缩写|  
-|2.5.29.17|（没有值）|使用者可选名称|  
+|2.5.29.17|（没有值）|使用者可选名称| 
+
+  > [!NOTE]
+  > 如果配置上述任意一种备用证书选择方法，则证书使用者名称不需要包含本地计算机名称。
 
 如果应用了选择条件之后找到了多个合适的证书，则可以替代默认配置以选择有效期最长的证书，并改为指定不选择证书。 在此情况下，客户端将无法使用 PKI 证书与 IIS 站点系统通信。 客户端将向分配的回退状态点发送一则错误消息，警告你证书选择失败，以便可更改或改进证书选择条件。 客户端行为则取决于失败的连接是通过 HTTPS 还是 HTTP 进行的。  
 

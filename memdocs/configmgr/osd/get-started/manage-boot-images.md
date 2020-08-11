@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732867"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912374"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>使用 Configuration Manager 管理启动映像
 
@@ -80,8 +80,8 @@ Configuration Manager 提供两个默认启动映像：一种用于支持 x86 �
 
 在站点安装过程中，Configuration Manager 会自动添加 Windows ADK 支持版本中基于 WinPE 版本的启动映像。 根据 Configuration Manager 的版本，可以添加 Windows ADK 支持版本中基于不同 WinPE 版本的启动映像。 如果尝试添加包含不受支持的 WinPE 版本的启动映像，则会发生错误。 以下列表中是当前支持的 Windows ADK 和 WinPE 版本：
 
-|  |  |
-|---------|---------|
+| Windows 类型 | 支持的版本 |
+|--------------|--------------------|
 | Windows ADK 版本 | 适用于 Windows 10 的 Windows ADK |
 | 可从 Configuration Manager 控制台自定义的启动映像的 Windows PE 版本 | Windows PE 10 |
 | 不可从 Configuration Manager 控制台自定义的启动映像的受支持 Windows PE 版本 | - Windows PE 3.1<sup>[注释 1](#bkmk_note1)</sup> <br> - Windows PE 5 |

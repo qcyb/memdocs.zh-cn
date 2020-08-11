@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438615"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865483"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>如何在 Configuration Manager 中创建集合
 
@@ -171,9 +171,8 @@ ms.locfileid: "87438615"
 
 - **编辑查询语句**：打开“查询语句属性”对话框，可以在其中编写用作集合规则的查询。 若要详细了解查询，请参阅[查询简介](../../../servers/manage/introduction-to-queries.md)。  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > 在“常规”选项卡上，选中复选框以省略重复行 (select distinct) 可能会导致返回更少的行和更快的结果。
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a>设备类别规则
 

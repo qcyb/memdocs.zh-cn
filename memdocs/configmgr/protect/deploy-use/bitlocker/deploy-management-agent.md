@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ba72e9accb7cbc5a7dc1149c6c9d947cb3e0692b
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262823"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526077"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -131,6 +131,10 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 1. 选择“确定”部署策略。
 
 可以为同一策略创建多个部署。 若要查看有关每个部署的其他信息，请在“BitLocker 管理”节点中选择策略，然后在详细信息窗格中切换到“部署”选项卡 。
+
+> [!IMPORTANT]
+> 如果远程桌面协议连接处于活动状态，则 MBAM 客户端不会启动 BitLocker 驱动器加密操作。 在 BitLocker 驱动器加密开始之前，必须关闭所有远程控制台连接，并且用户必须登录到物理控制台会话。
+
 
 ## <a name="monitor"></a>监视
 
