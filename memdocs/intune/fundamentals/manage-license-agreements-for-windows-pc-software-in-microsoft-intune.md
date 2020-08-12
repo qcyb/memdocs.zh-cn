@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 080b7237eb95ba729e4152e646ff8de7466309a0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077880"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912281"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>在 Microsoft Intune 中管理 Windows PC 软件的许可协议
 
@@ -178,10 +178,8 @@ Intune 批量许可协议提供通过 Microsoft 批量许可协议购买的软�
 ## <a name="manage-license-agreements"></a>管理许可协议
 软件许可协议可以添加到许可证组中。 你可以使用许可证组，以采用适合于组织逻辑的单位对许可协议加以组织。 此外，还可以删除以前创建的许可协议。
 
-
-|                            |                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            任务            |                                                                                                                                                                                 详细信息                                                                                                                                                                                  |
+| 任务 | 详细信息 |
+| ---- | ------- |
 |   创建许可证组   |                                                            在“许可证”工作区的“概述”页上，选择“任务”菜单中的“创建许可证组”。 <strong>注意:</strong>最多总共可以创建 500 个许可证组。                                                             |
 |   重命名许可证组   |                                                                                                      在“许可证”工作区中，选择一个许可证组，然后从“任务”菜单中选择“编辑许可证组”。                                                                                                       |
 |   删除许可证组   |                                 在“许可证”工作区中，选择一个许可证组，然后从“任务”菜单中选择“删除许可证组”。 <strong>提示：</strong>删除的组中包含的所有许可证都会移动到“未分配的协议”许可证组中。                                 |

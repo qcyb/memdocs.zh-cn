@@ -14,12 +14,18 @@
           href: understand/find-help.md
         - name: 如何使用文档
           href: understand/use-docs.md
-        - name: 如何使用控制台
-          href: servers/manage/admin-console.md
         - name: 辅助功能
           href: understand/accessibility-features.md
         - name: 软件中心用户指南
           href: understand/software-center.md
+    - name: 如何使用控制台
+      items:
+        - name: 如何使用控制台
+          href: servers/manage/admin-console.md
+        - name: 控制台通知
+          href: servers/manage/admin-console-notifications.md
+        - name: 控制台更改和提示
+          href: servers/manage/admin-console-tips.md
     - name: 基础知识
       items:
         - name: Configuration Manager 基础知识
@@ -76,6 +82,8 @@
           href: plan-design/changes/features-and-capabilities.md
         - name: 增量版本中的新增功能
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: 2006 版中的新增功能
+          href: plan-design/changes/whats-new-in-version-2006.md
         - name: 2002 版中的新增功能
           href: plan-design/changes/whats-new-in-version-2002.md
         - name: 1910 版中的新增功能
@@ -84,8 +92,6 @@
           href: plan-design/changes/whats-new-in-version-1906.md
         - name: 1902 版中的新增功能
           href: plan-design/changes/whats-new-in-version-1902.md
-        - name: 1810 版中的新增功能
-          href: plan-design/changes/whats-new-in-version-1810.md
         - name: 自 Configuration Manager 2012 以来的更改内容
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: 已删除和已弃用的项
@@ -212,6 +218,8 @@
           items:
             - name: 级别概述
               href: plan-design/diagnostics/levels-overview.md
+            - name: 版本 2006 相关数据
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
             - name: 版本 2002 相关数据
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
             - name: 版本 1910 相关数据
@@ -220,8 +228,6 @@
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
             - name: 版本 1902 相关数据
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-            - name: 版本 1810 相关数据
-              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
         - name: 常见问题解答 (FAQ)
           href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Configuration Manager 安全和隐私
@@ -470,6 +476,8 @@
           href: servers/manage/cmpivot-overview.md
         - name: 使用 CMPivot
           href: servers/manage/cmpivot.md
+        - name: CMPivot 更改
+          href: servers/manage/cmpivot-changes.md
         - name: CMPivot 疑难解答
           href: servers/manage/cmpivot-tsg.md
     - name: 维护任务
@@ -512,6 +520,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: 使用修补程序安装程序
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: 用于安装更新 2006 的清单
+          href: servers/manage/checklist-for-installing-update-2006.md
         - name: 用于安装更新 2002 的清单
           href: servers/manage/checklist-for-installing-update-2002.md
         - name: 用于安装更新 1910 的清单
@@ -520,8 +530,6 @@
           href: servers/manage/checklist-for-installing-update-1906.md
         - name: 用于安装更新 1902 的清单
           href: servers/manage/checklist-for-installing-update-1902.md
-        - name: 用于安装更新 1810 的清单
-          href: servers/manage/checklist-for-installing-update-1810.md
         - name: 当前分支版本支持
           href: servers/manage/current-branch-versions-supported.md
     - name: 备份和恢复

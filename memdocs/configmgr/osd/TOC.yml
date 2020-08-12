@@ -24,22 +24,6 @@
           href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
         - name: 替换现有计算机和传输设置
           href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
-    - name: 部署企业版操作系统的方法
-      items:
-        - name: OS 部署方法
-          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
-        - name: 使用 PXE 通过网络部署 Windows
-          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
-        - name: 使用软件中心通过网络部署 Windows
-          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
-        - name: 使用可启动媒体通过网络部署 Windows
-          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
-        - name: 使用独立媒体部署 Windows，而不使用网络
-          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
-        - name: 使用多播通过网络来部署 Windows
-          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
-        - name: 为工厂中的 OEM 或本地仓库创建映像
-          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
     - name: OS 部署的安全和隐私
       href: plan-design/security-and-privacy-for-operating-system-deployment.md
     - name: 规划 OS 部署互操作性
@@ -78,6 +62,26 @@
       href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
 - name: 部署和使用
   items:
+    - name: 部署企业版操作系统的方法
+      items:
+        - name: OS 部署方法
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: 使用 PXE 通过网络部署 Windows
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: 使用软件中心通过网络部署 Windows
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: 使用可启动媒体通过网络部署 Windows
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: 使用独立媒体部署 Windows，而不使用网络
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: 使用多播通过网络来部署 Windows
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: 为工厂中的 OEM 或本地仓库创建映像
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+        - name: 创建非 OS 部署的任务序列
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+        - name: 部署 Windows To Go
+          href: deploy-use/deploy-windows-to-go.md
     - name: 管理和创建任务序列
       href: deploy-use/manage-task-sequences-to-automate-tasks.md
     - name: 创建任务序列来自动执行任务
@@ -94,8 +98,6 @@
           href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
         - name: 创建自定义任务序列
           href: deploy-use/create-a-custom-task-sequence.md
-        - name: 创建非 OS 部署的任务序列
-          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
     - name: 部署任务序列
       href: deploy-use/deploy-a-task-sequence.md
     - name: 创建分阶段部署
@@ -104,8 +106,6 @@
       href: deploy-use/manage-monitor-phased-deployments.md
     - name: 将 Windows 作为一项服务来管理
       href: deploy-use/manage-windows-as-a-service.md
-    - name: 部署 Windows To Go
-      href: deploy-use/deploy-windows-to-go.md
     - name: 监视 OS 部署
       href: deploy-use/monitor-operating-system-deployments.md
     - name: 调试任务序列

@@ -32,7 +32,7 @@
       items:
         - name: 从断开连接的软件更新点中同步软件更新
           href: get-started/synchronize-software-updates-disconnected.md
-        - name: 从断开连接的软件更新点同步 Office 365 更新
+        - name: 从断开连接的软件更新点同步 Microsoft 365 应用更新
           href: get-started/synchronize-office-updates-disconnected.md
 - name: 部署和使用
   items:
@@ -62,7 +62,7 @@
       href: deploy-use/service-a-server-group.md
     - name: Office 365 客户端管理仪表板
       href: deploy-use/office-365-dashboard.md
-    - name: 管理 Office 365 ProPlus 更新
+    - name: 管理 Microsoft 365 应用更新
       href: deploy-use/manage-office-365-proplus-updates.md
     - name: 优化 Windows 10 更新传递
       href: deploy-use/optimize-windows-10-update-delivery.md

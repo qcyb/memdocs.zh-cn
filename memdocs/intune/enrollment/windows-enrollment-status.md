@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093456"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051574"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>设置注册状态页
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093456"
  
 注册状态页 (ESP) 显示注册新设备后以及新用户登录该设备时的预配过程。  这使 IT 管理员能够选择性地阻止对设备的访问，直到设备完全预配，同时向用户提供有关预配过程中剩余任务的信息。
 
-ESP 可以作为任何 [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 预配方案的一部分使用，也可以作为 Azure AD 联接的默认开箱即用体验 (OOBE) 的一部分与 Windows Autopilot 分开使用，对首次登录设备的任何新用户也适用。
+ESP 可以作为任何 [Windows Autopilot](../../autopilot/index.yml) 预配方案的一部分使用，也可以作为 Azure AD 联接的默认开箱即用体验 (OOBE) 的一部分与 Windows Autopilot 分开使用，对首次登录设备的任何新用户也适用。
 
 可以创建具有不同配置的多个注册状态页配置文件，以指定以下内容：
 

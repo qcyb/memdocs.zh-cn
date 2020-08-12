@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443833"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048015"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 开发过程中的功能
 
@@ -125,9 +125,6 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 
 适用于：
 - iOS/iPadOS
-
-### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>改进适用于 Android 的公司门户应用中的“更新设备设置”页面以显示说明<!-- 7414768 -->
-在 Android 设备上的公司门户应用中，“更新设备设置”页面列出了用户需要更新以符合要求的设置。 我们已改进了用户体验，以便默认展开列出的设置，以显示说明和“解决”按钮（如果适用）。 以前，它们默认为折叠。 这一新的默认行为会减少单击次数，因此用户可以更快地解决问题。
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->

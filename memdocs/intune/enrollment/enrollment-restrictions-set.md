@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443906"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051649"
 ---
 # <a name="set-enrollment-restrictions"></a>设置注册限制
 
@@ -147,7 +147,7 @@ ms.locfileid: "87443906"
 - 注册用户使用的是[设备注册管理员帐户]( device-enrollment-manager-enroll.md)。
 - 设备通过 [Windows Autopilot](enrollment-autopilot.md) 进行注册。
 - 该设备已在 Windows Autopilot 中注册，但不是 Windows 设置中的仅 MDM 注册选项。
-- 设备的 IMEI 号在“设备注册” > “[公司设备标识符](corporate-identifiers-add.md)”中列出 。 （不支持 Windows Phone 8.1。）
+- 设备的 IMEI 号在“设备注册” > “[公司设备标识符](corporate-identifiers-add.md)”中列出 。
 - 设备通过[批量预配包](windows-bulk-enroll.md)进行注册。
 - 设备通过 GPO 或[从 Configuration Manager 自动注册以执行共同管理](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)进行注册。
  

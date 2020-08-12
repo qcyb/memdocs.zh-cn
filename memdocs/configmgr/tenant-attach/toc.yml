@@ -6,6 +6,8 @@
       href: device-sync-actions.md
     - name: 客户端详细信息（预览）
       href: client-details.md
+    - name: 安装应用程序（预览）
+      href: applications.md
 - name: 用于租户附加设备的 CMPivot（预览）
   items:
     - name: CMPivot 概述
@@ -18,3 +20,5 @@
       href: troubleshoot.md
     - name: 客户端详细信息（预览）
       href: troubleshoot-client-details.md
+    - name: 应用程序安装（预览）
+      href: troubleshoot-applications.md

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e74817c21f7869fdfdabcc2947766b5af9dea335
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 26b3af529fddb2c6d3515a365be9e8204fe02312
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365485"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815440"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 iOS 和 iPadOS 设备添加 VPN 设置
 
@@ -31,7 +31,7 @@ Microsoft Intune 包含许多可以部署到 iOS/iPadOS 设备的 VPN 设置。 
 [创建设备配置文件](vpn-settings-configure.md)。
 
 > [!NOTE]
-> 这些设置适用于除用户注册以外的所有注册类型。 用户注册限于[每应用 VPN](/vpn-setting-configure-per-app.md)。 有关注册类型的详细信息，请参阅 [iOS/iPadOS 注册](../enrollment/ios-enroll.md)。
+> 这些设置适用于除用户注册以外的所有注册类型。 用户注册限于[每应用 VPN](https://docs.microsoft.com/mem/intune/configuration/vpn-setting-configure-per-app)。 有关注册类型的详细信息，请参阅 [iOS/iPadOS 注册](../enrollment/ios-enroll.md)。
 
 ## <a name="connection-type"></a>连接类型
 

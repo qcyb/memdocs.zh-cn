@@ -484,6 +484,8 @@
                   href: core/clients/client-classes/iprogressui--showerrordialog-method.md
                 - name: IProgressUI ShowMessage 方法
                   href: core/clients/client-classes/iprogressui--showmessage-method.md
+                - name: IProgressUI ShowMessageEx 方法
+                  href: core/clients/client-classes/iprogressui--showmessageex-method.md
                 - name: IProgressUI ShowRebootDialog 方法
                   href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
                 - name: IProgressUI ShowSwapMediaDialog 方法
@@ -1609,6 +1611,8 @@
           href: osd/sms_tasksequence_prepareosaction-server-wmi-class.md
         - name: SMS_TaskSequence_PrepareSMSClientAction 服务器 WMI 类
           href: osd/sms_tasksequence_preparesmsclientaction-server-wmi-class.md
+        - name: SMS_TaskSequence_PrestartCheckAction 服务器 WMI 类
+          href: osd/sms_tasksequence_prestartcheckaction-server-wmi-class.md
         - name: SMS_TaskSequence_RebootAction 服务器 WMI 类
           href: osd/sms_tasksequence_rebootaction-server-wmi-class.md
         - name: SMS_TaskSequence_Reference 服务器 WMI 类
@@ -1623,6 +1627,8 @@
           href: osd/sms_tasksequence_restoreuserstateaction-server-wmi-class.md
         - name: SMS_TaskSequence_RunCommandLineAction 服务器 WMI 类
           href: osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RunPowerShellScriptAction 服务器 WMI 类
+          href: osd/sms_tasksequence_runpowershellscriptaction-server-wmi-class.md
         - name: SMS_TaskSequence_SetupWindowsAndSMSAction 服务器 WMI 类
           href: osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md
         - name: SMS_TaskSequence_SetVariableAction 服务器 WMI 类

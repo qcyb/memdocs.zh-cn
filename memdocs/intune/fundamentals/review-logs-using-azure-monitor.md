@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990770"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912531"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>使用 Intune 将日志数据发送到存储、事件中心或 Log Analytics（预览版）
 
@@ -139,18 +139,18 @@ Microsoft Intune 包含可提供环境信息的内置日志：
 
 **包含 100,000 个用户的审核日志**
 
-| | |
-|---|---|
-|每天事件数| 150 万|
-|估计的每月数据量| 90GB|
+| 类别 | 值 |
+| -------- | ----- |
+|每日事件数| 150 万|
+|估计的每月数据量| 90 GB|
 |估计的每月成本（美元）| $1.93|
 |估计的每年成本（美元）| $23.12|
 
 **包含 1,000 个用户的审核日志**
 
-| | |
-|---|---|
-|每天事件数| 15,000|
+| 类别 | 值 |
+| -------- | ----- |
+|每日事件数| 15,000|
 |估计的每月数据量| 900 MB|
 |估计的每月成本（美元）| $0.02|
 |估计的每年成本（美元）| $0.24|
@@ -161,35 +161,35 @@ Microsoft Intune 包含可提供环境信息的内置日志：
 
 例如，对于超过 100,000 个用户的大租户，每秒通常发生大约 18 个事件。 这相当于每五分钟发生 5,400 个事件（300 秒 × 18 个事件）。 每个事件的审核日志大约为 2KB。 这就相当于 10.8MB 数据。 因此，在五分钟时间间隔内，有 43 条消息发送到事件中心。
 
-下表包含美国西部基本事件中心的每月估算成本，具体视事件数据量而异。 若要估算预期的日志数据量，请使用[事件中心定价计算器](https://azure.microsoft.com/pricing/details/event-hubs/)。
+下表包含的内容是根据事件数据的量对“美国西部”区域一个基本事件中心进行的每月成本估算。 若要估算预期的日志数据量，请使用[事件中心定价计算器](https://azure.microsoft.com/pricing/details/event-hubs/)。
 
 **包含 100,000 个用户的审核日志**
 
-| | |
-|---|---|
+| 类别 | 值 |
+| -------- | ----- |
 |每秒事件数| 18|
-|每五分钟发生的事件数| 5,400|
-|每个时间间隔内的数据量| 10.8MB|
-|每个时间间隔内的消息数| 43|
-|每月的消息数| 371,520|
+|每五分钟时间间隔的事件数| 5,400|
+|每个时间间隔的数据量| 10.8 MB|
+|每个时间间隔的消息数| 43|
+|每月消息数| 371,520|
 |估计的每月成本（美元）| $10.83|
 
 **包含 1,000 个用户的审核日志**
 
-| | |
-|---|---|
+| 类别 | 值 |
+| -------- | ----- |
 |每秒事件数|0.1 |
-|每五分钟发生的事件数| 52|
-|每个时间间隔内的数据量|104KB |
-|每个时间间隔内的消息数|1 |
-|每月的消息数|8,640 |
+|每五分钟时间间隔的事件数| 52|
+|每个时间间隔的数据量|104 KB |
+|每个时间间隔的消息数|1 |
+|每月消息数|8,640 |
 |估计的每月成本（美元）|$10.80 |
 
-### <a name="log-analytics-cost-considerations"></a>Log Analytics 成本考虑因素
+### <a name="log-analytics-cost-considerations"></a>Log Analytics 成本注意事项
 
-若要查看与管理 Log Analytics 工作区相关的成本，请参阅[通过控制 Log Analytics 中的数据量和保留期来管理成本](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage)。
+若要查看与管理 Log Analytics 工作区相关的成本，请参阅[通过在 Log Analytics 中控制数据量和保留期管理成本](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage)。
 
-## <a name="frequently-asked-questions"></a>常见问题解答
+## <a name="frequently-asked-questions"></a>常见问题
 
 查看常见问题解答，并了解 Azure Monitor 中 Intune 日志的所有已知问题。
 
@@ -215,19 +215,19 @@ Microsoft Intune 包含可提供环境信息的内置日志：
 
 ### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>将数据流式传输到事件中心的成本是多少？
 
-流式传输成本具体视每分钟收到的消息数而定。 若要详细了解如何计算成本和根据消息数估算成本，请参阅（本文中的）[活动日志的事件中心消息](#event-hub-messages-for-activity-logs)。
+流式传输费用取决于每分钟收到的消息数。 若要详细了解如何计算成本和根据消息数估算成本，请参阅（本文中的）[活动日志的事件中心消息](#event-hub-messages-for-activity-logs)。
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>如何将 Intune 审核日志与我的 SIEM 系统集成？
 
-结合使用 Azure Monitor 与事件中心，将日志流式传输到 SIEM 系统。 首先，[将日志流式传输到事件中心](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)。 然后，通过已配置的事件中心[设置 SIEM 工具](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)。 
+将 Azure Monitor 与事件中心配合使用，以将日志流式传输到 SIEM 系统。 首先，[将日志流式传输到事件中心](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)。 然后，通过已配置的事件中心[设置 SIEM 工具](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)。 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>目前支持哪些 SIEM 工具？
 
-目前，[Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)、QRadar 和 [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory)（打开新网站）支持 Azure Monitor。 若要详细了解连接器工作原理，请参阅[将 Azure 监视数据流式传输到事件中心以供外部工具使用](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs)。
+目前，[Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)、QRadar 和 [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory)（打开新网站）支持 Azure Monitor。 若要详细了解连接器的工作方式，请参阅[将 Azure 监视数据流式传输到事件中心供外部工具使用](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs)。
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>我能否在不使用外部 SIEM 工具的情况下访问事件中心内的数据？
 
-是。 若要从自定义应用访问这些日志，可使用[事件中心 API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph)。
+是的。 若要通过自定义应用程序来访问日志，可以使用[事件中心 API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph)。
 
 ### <a name="what-data-is-stored"></a>存储什么数据？
 

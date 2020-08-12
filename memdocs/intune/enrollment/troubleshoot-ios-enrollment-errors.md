@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093352"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865466"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 中的 iOS/iPadOS 设备注册问题疑难解答
 
@@ -109,8 +109,9 @@ ms.locfileid: "85093352"
 1. 从设备中删除公司门户应用。
 2. 从 **App Store** 下载并安装 **Microsoft Intune 公司门户**应用。
 3. 重新注册设备。
- > [!NOTE]
-    > 如果用户尝试注册的设备数目超过配置允许的设备注册数，也会出现此错误。 如果这些步骤不能解决问题，请按照以下“已达到设备上限”的解决方法步骤操作。
+
+> [!NOTE]
+> 如果用户尝试注册的设备数目超过配置允许的设备注册数，也会出现此错误。 如果这些步骤不能解决问题，请按照以下“已达到设备上限”的解决方法步骤操作。
 
 ### <a name="device-cap-reached"></a>已达到设备上限
 
@@ -186,7 +187,7 @@ ms.locfileid: "85093352"
 
 当你打开一台分配有注册配置文件且受 ADE 管理的设备时，注册将会失败，并且你会收到以下错误消息：
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection
