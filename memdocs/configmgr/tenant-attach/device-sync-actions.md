@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager 租户附加
 titleSuffix: Configuration Manager
 description: 将 Configuration Manager 设备上传到云服务，并从管理中心执行操作。
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,22 +10,22 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210300"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127539"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft 终结点管理器租户附加：设备同步和设备操作
 <!--3555758 live 3/4/2020-->
-适用范围：Configuration Manager (Current Branch)
+适用范围：  Configuration Manager (Current Branch)
 
 Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 Microsoft 将 Configuration Manager 和 Intune 组合为单个控制台，称为“Microsoft Endpoint Manager 管理中心”。
 
 从 Configuration Manager 版本2002开始，你可以将 Configuration Manager 设备上传到云服务，并从管理中心的 "**设备**" 边栏选项卡中执行操作。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 在应用此更改时作为*全局管理员*登录的帐户。 有关详细信息，请参阅[Azure Active Directory (Azure AD) 管理员角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)。
    - 载入在 Azure AD 租户中创建第三方应用和第一方服务主体。
@@ -38,88 +38,98 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
 
 ## <a name="internet-endpoints"></a>Internet 终结点
 
-- `https://aka.ms/configmgrgateway`
-- `https://*.manage.microsoft.com` <!--7424742-->
+[!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload"></a>启用设备上传
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>启用共同管理时启用设备上传
 
-- 如果当前已启用共同管理，请[编辑共同管理属性](#bkmk_edit)以启用设备上传。
-- 如果尚未启用共同管理，请[使用 "**配置共同管理**" 向导](#bkmk_config)来启用设备上传。
-   - 你可以上传设备，而无需为共同管理启用自动注册或将工作负荷切换到 Intune。
-- "**客户端**" 列中包含 **"是"** 的 Configuration Manager 管理的所有设备都将上传。 如果需要，可以将上传限制为单个设备集合。
+如果当前已启用共同管理，则将使用共同管理属性来启用设备上传。 如果尚未启用共同管理，请[使用 "**配置共同管理**" 向导](#bkmk_config)来改为启用设备上传。
 
-### <a name="edit-co-management-properties-to-enable-device-upload"></a><a name="bkmk_edit"></a>编辑共同管理属性以启用设备上传
-
-如果当前已启用共同管理，请编辑共同管理属性，以使用以下说明启用设备上传：
+如果已启用共同管理，请使用以下说明编辑共同管理属性以启用设备上传：
 
 1. 在 Configuration Manager 管理控制台中，转到“管理” > “概述” > “云服务” > “共同管理”   。
-1. 右键单击共同管理设置，然后选择“属性”。
-1. 在“配置上传”选项卡中，选择“上传到 Microsoft Endpoint Manager 管理中心” 。 单击“应用” 。
+1. 在功能区中，选择共同管理生产策略的 "**属性**"。
+1. 在“配置上传”选项卡中，选择“上传到 Microsoft Endpoint Manager 管理中心” 。 选择“应用”。
    - 设备上传的默认设置是“我所有由 Microsoft Endpoint Configuration Manager 管理的设备”。 如果需要，可以将上传限制为单个设备集合。
 1. 如果你还想要深入了解[终结点分析](../../analytics/overview.md)中的最终用户体验，请选中 "为已**上传到 Microsoft 终结点管理器的设备启用终结点分析**" 选项。
 
    [![将设备上传到 Microsoft 终结点管理器管理中心](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. 出现提示时，请使用全局管理员帐户登录。
-1. 单击“是”接受“创建 AAD 应用程序”通知 。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册以促进同步。
-1. 完成更改后，单击“确定”退出共同管理属性。
+1. 选择 **"是"** 以接受**创建 AAD 应用程序**通知。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册以促进同步。
+1. 完成更改后，请选择 **"确定"** 退出共同管理的属性。
 
 
-### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>使用 "配置共同管理" 向导来启用设备上传
-如果尚未启用共同管理，请使用 "**配置共同管理**" 向导来启用设备上传。 你可以上传设备，而无需为共同管理启用自动注册或将工作负荷切换到 Intune。 使用以下说明启用设备上传：
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>在未启用共同管理的情况启用设备上传
+
+如果尚未启用共同管理，请使用 "**配置共同管理**" 向导来启用设备上传。 你可以上传设备，而无需为共同管理启用自动注册或将工作负荷切换到 Intune。 "**客户端**" 列中包含 **"是"** 的 Configuration Manager 管理的所有设备都将上传。 如果需要，可以将上传限制为单个设备集合。 如果已在你的环境中启用共同管理，则[编辑共同管理属性](#bkmk_edit)以启用设备上传。
+
+如果未启用共同管理，请使用下面的说明来启用设备上传：
 
 1. 在 Configuration Manager 管理控制台中，转到“管理” > “概述” > “云服务” > “共同管理”   。
-1. 在功能区中，单击“配置共同管理”打开向导。
-1. 在“租户加入”页面上，为环境选择“AzurePublicCloud” 。 不支持 Azure 政府云。
-1. 单击“登录”。 使用全局管理员帐户登录。
+1. 在功能区中，选择 "**配置共同管理**" 以打开向导。
+1. 在“租户加入”页面上，为环境选择“AzurePublicCloud” 。 不支持 azure 政府云和 Azure 中国世纪互联。
+1. 选择“登录”。 使用全局管理员帐户登录。
 1. 请确保在 "**租户加入**" 页上选择了 "**上传到 Microsoft 终结点管理器管理中心**" 选项。
    - 如果你不想立即启用共同管理，请确保 "**为共同管理启用自动客户端注册**" 选项未选中。 如果确实要启用共同管理，请选择选项。
    - 如果启用共同管理和设备上传，则会在向导中提供附加页面以完成。 有关详细信息，请参阅[启用共同管理](../comanage/how-to-enable.md)。
 
    [![共同管理配置向导](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. 单击“下一步”，然后单击“是”接受“创建 AAD 应用程序”通知  。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册以促进同步。
+1. 选择 "**下一步**"，然后单击 **"是"** 以接受**创建 AAD 应用程序**通知。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册以促进同步。
+     - 或者，你可以在从2006版) 开始的租户附加载入 (中导入以前创建的 Azure AD 应用程序。 有关详细信息，请参阅[导入先前创建的 Azure AD 应用程序](#bkmk_aad_app)部分。
 1. 在 "**配置上传**" 页上，为**Microsoft 终结点管理的所有设备**选择建议的设备上传设置 Configuration Manager。 如果需要，可以将上传限制为单个设备集合。
 1. 如果你还想要深入了解[终结点分析](../../analytics/overview.md)中的最终用户体验，请选中 "为已**上传到 Microsoft 终结点管理器的设备启用终结点分析**" 选项
-1. 单击“摘要”查看所选内容，然后单击“下一步” 。
-1. 完成向导后，单击“关闭”。  
-
-
-## <a name="review-your-upload"></a><a name="bkmk_review"></a>查看上传
-
-1. 从**CMGatewaySyncUploadWorker.log** &lt; ConfigMgr 安装目录中打开 CMGatewaySyncUploadWorker> \logs
-1. 下一次同步时间由类似于的日志条目记录 `Next run time will be at approximately: 02/28/2020 16:35:31` 。
-1. 对于设备上传，查找类似于的日志条目 `Batching N records` 。 **N**是上传到云的设备数。 
-1. 每隔15分钟就会发生更改。 上传更改后，可能需要额外5到10分钟的时间，客户端更改才会显示在**Microsoft 终结点管理器管理中心**。
+1. 选择 "**摘要**" 以查看你的选择，然后选择 "**下一步**"。
+1. 向导完成后，选择 "**关闭**"。  
 
 ## <a name="perform-device-actions"></a>执行设备操作
 
 1. 在浏览器中，导航到`endpoint.microsoft.com`
 1. 选择 "**设备**"，然后选择 "**所有设备**" 查看已上传的设备。 你将在 "已上传设备" 的 "**管理者**" 列中看到**ConfigMgr** 。
    [![Microsoft 终结点管理器管理中心中的所有设备](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
-1. 单击设备以加载其 "**概述**" 页。
-1. 单击下列任一操作：
+1. 选择要加载其 "**概述**" 页的设备。
+1. 选择以下任一操作：
    - **同步计算机策略**
    - **同步用户策略**
    - **应用评估周期**
 
    [![Microsoft 终结点管理器管理中心中的设备概述](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="known-issues"></a>已知问题
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>导入以前创建的 Azure AD 应用程序 (可选) 
+<!--6479246-->
+*2006版中引入的 () *
 
-### <a name="specific-devices-dont-synchronize"></a>特定设备不同步
+在[新的载入](#bkmk_config)过程中，管理员可以在载入到租户时指定先前创建的应用程序。 不要在多个层次结构中共享或重复使用 Azure AD 应用程序。 如果有多个层次结构，请为每个层次结构创建单独的 Azure AD 应用程序。
 
-<!--7099564-->
-Configuration Manager 客户端的特定设备可能不会上载到服务中。
+从“共同管理配置向导”的“正在加入租户”页面中，选择“(可选)导入单独的 Web 应用，将 Configuration Manager 客户端数据同步到 Microsoft Endpoint Manager 管理中心”。   此选项将提示你指定 Azure AD 应用的以下信息：
 
-**受影响的设备：** 如果设备是为分发点功能及其客户端代理使用相同 PKI 证书的分发点，则该设备不会包含在租户附加设备同步中。
+- Azure AD 租户名称
+- Azure AD 租户 ID
+- 应用程序名称
+- 客户端 ID
+- 密钥
+- 密钥到期日期
+- 应用 ID URI
 
-**行为：** 当在进行 "在使用时" 阶段执行租户附加时，将首次执行完全同步。 后续同步周期是增量同步。 对受影响设备的任何更新都将导致从同步中删除设备。
+### <a name="azure-ad-application-permissions-and-configuration"></a>Azure AD 应用程序权限和配置
 
-## <a name="log-files"></a>日志文件
-使用位于服务连接点上的以下日志：
+在载入到租户时使用以前创建的应用程序需要以下权限：
 
-- **CMGatewaySyncUploadWorker**
-- **CMGatewayNotificationWorker**
+- Configuration Manager 微服务权限：
+   - CmCollectionData。读取
+   - CmCollectionData
+
+- Microsoft Graph 权限：
+   - Directory. Read. 所有[应用程序权限](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
+   - Directory. Read. 所有[委派的目录权限](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+
+- 确保为 Azure AD 应用程序选择 "为**租户授予管理员许可**"。 有关详细信息，请参阅[在应用注册中授予管理员许可](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent)。
+
+- 导入的应用程序需要配置如下：
+   - 仅为**此组织目录中的帐户**注册。 有关详细信息，请参阅[更改可访问应用程序的人员](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)。
+   -  具有有效的应用程序 ID URI 和密钥
+
+
 
 ## <a name="next-steps"></a>后续步骤
 
-有关租户附加日志文件的详细信息，请参阅[租户附加故障排除](troubleshoot.md)。
+- [将 Configuration Manager 设备注册到终结点分析](../../analytics/enroll-configmgr.md#bkmk_cm_enroll)
+- 有关租户附加日志文件的信息，请参阅[租户附加故障排除](troubleshoot.md)。
