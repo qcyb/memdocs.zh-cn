@@ -135,7 +135,6 @@
 #### [Windows 注册入门](windows-enrollment-company-portal.md)
 #### [注册 Windows 10 设备](enroll-windows-10-device.md)
 #### [注册 Windows 8.1 或 Windows RT 8.1 设备](enroll-your-w81-or-rt81-windows.md)
-#### [注册Windows Phone 8.1 设备](enroll-your-wp81-windows.md)
 ### [加密设备](encrypt-your-device-windows.md)
 ### [设置或更改设备密码](set-or-change-your-password-windows.md)
 ### [从 Intune 删除设备](unenroll-your-device-from-intune-windows.md)
