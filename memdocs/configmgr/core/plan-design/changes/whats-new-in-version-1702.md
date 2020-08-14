@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912292"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129063"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager 版本 1702 中的新增功能
 
@@ -121,7 +121,7 @@ Configuration Manager Current Branch 的更新 1702 作为控制台内更新提�
 可以使用 OMS 连接器连接到 Microsoft Azure Government 云中的 OMS Log Analytics。 这要求你在安装 OMS 连接器前修改配置文件，以将连接器与 Government 云结合使用。 有关详细信息，请参阅[将 OMS 连接器与 Azure Government 云结合使用](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)。
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>将软件更新点添加到边界组。
-从版本 1702 开始，客户端使用边界组查找新的软件更新点，并在其当前软件更新点不再可用时回退并查找新的软件更新点。 可以向不同的边界组添加各个软件更新点，以控制客户端可以找到哪些服务器。 有关详细信息，请参阅[配置边界组](../../servers/deploy/configure/boundary-groups.md)主题中的[软件更新点](../../servers/deploy/configure/boundary-groups.md#software-update-points)。
+从版本 1702 开始，客户端使用边界组查找新的软件更新点，并在其当前软件更新点不再可用时回退并查找新的软件更新点。 可以向不同的边界组添加各个软件更新点，以控制客户端可以找到哪些服务器。 有关详细信息，请参阅[配置边界组](../../servers/deploy/configure/boundary-groups.md)主题中的[软件更新点](../../servers/deploy/configure/boundary-groups.md#bkmk_sup)。
 
 
 <!-- ## Migration  -->
@@ -221,7 +221,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 ## <a name="software-updates"></a>软件更新
 
 ### <a name="deploy-office-365-apps-to-clients"></a>将 Office 365 应用部署到客户端
-从版本 1702 起，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 ProPlus 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)。
+从版本 1702 起，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 ProPlus 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)。
 
 > [!IMPORTANT]
 > 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”  。 有关详细信息，请参阅[关于客户端设置](../../clients/deploy/about-client-settings.md)。

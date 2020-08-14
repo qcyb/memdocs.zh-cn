@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461821"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048100"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用导入的 PKCS 证书
 
@@ -56,7 +56,8 @@ Intune 支持为以下平台导入 PFX 证书：
 
 - **Microsoft Intune 的 PFX 证书连接器**：
 
-  每个 Intune 租户都支持此连接器的一个实例。 可以将此连接器的实例与 Microsoft Intune 证书连接器的实例安装在同一服务器上。
+  每个 Intune 租户都支持此连接器的多个实例。 确保每个连接器都有权访问用于对已上传的 PFX 文件的密码进行加密的私钥。
+  可以将此连接器的实例与 Microsoft Intune 证书连接器的实例安装在同一服务器上。
 
   该连接器处理导入 Intune 中的 PFX 文件的请求，以便为特定用户进行 S/MIME 电子邮件加密。
 
@@ -259,7 +260,7 @@ PowerShell 模块提供了使用 Windows 加密创建密钥的方法。 你也�
 
     有关详细信息，请参阅“在 Microsoft Intune 中创建设备配置文件”中的[适用性规则](../configuration/device-profile-create.md#applicability-rules)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
 12. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 

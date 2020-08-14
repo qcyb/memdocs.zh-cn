@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078781"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126750"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager Technical Preview 1706 中的功能
 
@@ -72,7 +72,7 @@ ms.locfileid: "82078781"
   - 此循环将一直持续下去，直到客户端连接到可以使用的软件更新点。
   - 在客户端找到软件更新点后，当满足每个相邻边界组的回退时间时，会将其他服务器添加到可用服务器池中。
 
-有关详细信息，请参阅 Current Branch 的边界组主题中的[软件更新点](../servers/deploy/configure/boundary-groups.md#software-update-points)。
+有关详细信息，请参阅 Current Branch 的边界组主题中的[软件更新点](../servers/deploy/configure/boundary-groups.md#bkmk_sup)。
 
 
 ## <a name="site-server-role-high-availability"></a>站点服务器角色的高可用性

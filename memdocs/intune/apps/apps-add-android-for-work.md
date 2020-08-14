@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262653"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821625"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备
 
@@ -175,8 +175,8 @@ Web 链接将使用 Microsoft Edge 或你选择部署的任何其他浏览器应
 如果已从商店批准了应用，但未在“应用”工作负荷中看到该应用，则按照如下所示的步骤强制立即同步  ：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
-3. 选择“应用”   > “租户管理”   > “连接器和令牌”   > “托管的 Google Play”  。
-5. 在“托管的 Google Play”窗格中，选择“刷新”   。  
+3. 选择“租户管理” > “连接器和令牌” > “托管的 Google Play”  。
+5. 在“托管的 Google Play”窗格中，选择“同步” 。  
     该页会更新上次同步的时间和状态。
 6. 在 Microsoft 终结点管理器管理中心中，选择“应用”   > “所有应用”  。  
     系统会显示最新可用的托管的 Google Play 应用。

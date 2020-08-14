@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 41c80ee092e61f016c02e66690cf7f3601f89618
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f72415900067793d41b0e6086cf3ee0c78e9ee85
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882546"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865646"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>解决 Zimperium zIPS 发现的威胁
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-ios"></a>解决 Zimperium zIPS 在 iOS 上发现的威胁
 
 Zimperium zIPS 是一项移动威胁防御服务，可识别 iOS 设备上的潜在威胁。 这些威胁将被报告到公司门户应用，并显示为未解决的非符合性问题。 如果设备被识别为非符合性设备，则可能无法：
 

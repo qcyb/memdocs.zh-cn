@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 69178f9ac1c1acb1ee2a2931c88a55a0784435b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708015"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128267"
 ---
 # <a name="troubleshoot-cmpivot"></a>CMPivot 故障排除
 
@@ -27,7 +27,7 @@ CMPivot 是一种工具，它提供对环境中设备实时状态的访问。 CM
 
 在 Configuration Manager 版本 1902 及更高版本中，可以在层次结构中从管理中心站点 (CAS) 运行 CMPivot。 主站点仍可处理与客户端的通信。
 
-从 CAS 运行 CMPivot 时，它使用高速消息订阅通道与主站点通信。 CMPivot 不在站点之间使用标准 SQL 复制。 若是远程 SQL Server 实例或 SQL 提供程序，或使用 SQL Server Always On，将获得 CMPivot“双跃点方案”。 有关如何为“双跃点方案”定义约束委派的信息，请参阅[自版本 1902 起的版本中的 CMPivot](cmpivot.md#bkmk_cmpivot1902)。
+从 CAS 运行 CMPivot 时，它使用高速消息订阅通道与主站点通信。 CMPivot 不在站点之间使用标准 SQL 复制。 若是远程 SQL Server 实例或 SQL 提供程序，或使用 SQL Server Always On，将获得 CMPivot“双跃点方案”。 有关如何为“双跃点方案”定义约束委派的信息，请参阅[自版本 1902 起的版本中的 CMPivot](cmpivot-changes.md#bkmk_cmpivot1902)。
 
 >[!IMPORTANT]
 > 排除 CMPivot 故障时，启用管理点 (MP) 的详细日志记录以及站点服务器的 SMS_MESSAGE_PROCESSING_ENGINE，以获取更多信息。 此外，若客户端的输出超过 80 KB，则启用 MP 的详细日志记录以及站点服务器的 SMS_STATE_SYSTEM 组件。 有关如何启用详细日志记录的信息，请参阅[站点服务器日志记录选项](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site)。
@@ -45,7 +45,7 @@ CMPivot 是一种工具，它提供对环境中设备实时状态的访问。 CM
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` 是 CMPivot 的脚本 Guid。 也可以从 [CMPivot 审核状态消息](cmpivot.md#cmpivot-audit-status-messages)查看此 GUID。
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` 是 CMPivot 的脚本 Guid。 也可以从 [CMPivot 审核状态消息](cmpivot-changes.md#cmpivot-audit-status-messages)查看此 GUID。
 
 接下来，在 CMPivot 窗口中查找 ID。 此 ID 为 `ClientOperationID`。
 

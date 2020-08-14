@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880942"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047965"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>已注册设备的设备密码要求
 
@@ -89,13 +89,15 @@ ms.locfileid: "83880942"
 | 密码已过期。 | 设置新密码。 组织要求你在指定的天数后更改密码。 |
 | 密码最近已使用过。 | 请选择一个以前未用过的密码。 组织要求经过一定时间后才能重复使用密码。 |
 
-## <a name="next-steps"></a>后续步骤
+## <a name="update-password-passcode-pin"></a>更新密码、PIN
 
-请参阅以下文章，创建或更改设备密码或 PIN。  
+以下文章逐步介绍如何更改设备的密码或 PIN。 有关最新说明，请参阅设备制造商提供的帮助文档。 
 
 - [设置 Windows 10 设备密码](set-or-change-your-password-windows.md)  
 - [设置 iOS 设备密码](set-or-change-your-passcode-ios.md)  
 - [设置 Android 设备的 PIN 或密码](set-your-pin-or-password-android.md)  
+
+## <a name="next-steps"></a>后续步骤
 
 仍需帮助？ 请与支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
 

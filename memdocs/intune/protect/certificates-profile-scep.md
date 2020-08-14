@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/21/2020
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891524"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048083"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中创建和分配 SCEP 证书配置文件
 
@@ -315,6 +315,8 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 > [!NOTE]
 > - 在 iOS/iPadOS 设备上，当 SCEP 证书配置文件或 PKCS 证书配置文件与其他配置文件（如 Wi-Fi 或 VPN 配置文件）相关联，设备将收到其他每个配置文件的证书。 这会使 iOS/iPadOS 设备拥有 SCEP 或 PKCS 证书请求提供的多个证书。 
+> 
+>   SCEP 提供的每个证书都是唯一的。 由 PKCS 提供的证书是相同的，但看上去不同，因为在管理配置文件中每个配置文件实例均以单独的一行表示。
 > - 在 iOS 13 和 macOS 10.15 中，还需要考虑一些[额外的安全要求（已被 Apple 记录在案）](https://support.apple.com/HT210176)。  
 
 

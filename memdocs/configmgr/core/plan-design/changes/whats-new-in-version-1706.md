@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904696"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129012"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager 1706 版中的新增功能
 
@@ -78,7 +78,7 @@ Version 1706 drops support for the following products:
 - 独立于回退配置，客户端会尝试访问它使用了 120 分钟的最后一个软件更新点。 在 120 分钟无法访问该服务器后，客户端将检查其池中可用的软件更新点，以便找到一个新的软件更新点。
 - 如果在两个小时内无法连接到其原始服务器，则客户端会切换到一个短循环，以联系新的软件更新点。 这意味着，如果客户端无法连接到新的服务器，它就会从自己的可用服务器池中快速选择下一个服务器，并尝试进行连接。
 
-有关详细信息，请参阅 Current Branch 的边界组主题中的[软件更新点](../../servers/deploy/configure/boundary-groups.md#software-update-points)。
+有关详细信息，请参阅 Current Branch 的边界组主题中的[软件更新点](../../servers/deploy/configure/boundary-groups.md#bkmk_sup)。
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Azure AD 与 Configuration Manager 集成
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -228,7 +228,7 @@ Version 1706 drops support for the following products:
 有关详细信息，请参阅[在 Windows 10 中与适用于企业的 Windows 更新集成](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies)。
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>改进了 Office 365 更新的用户通知
-已进行了改进，在客户端安装 Office 365 更新时利用 Office 即点即用用户体验。 这包括弹出通知、应用内通知以及倒计时体验。 有关详细信息，请参阅 [Office 365 更新的重启行为和客户端通知](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)
+已进行了改进，在客户端安装 Office 365 更新时利用 Office 即点即用用户体验。 这包括弹出通知、应用内通知以及倒计时体验。 有关详细信息，请参阅 [Office 365 更新的重启行为和客户端通知](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## <a name="reporting"></a>报表
 

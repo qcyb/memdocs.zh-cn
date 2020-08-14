@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905178"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126784"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -240,7 +240,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
  尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
 1. 在 Configuration Manager 控制台中，转到“软件库”工作区，然后选择“Office 365 客户端管理”节点   。
-2. 在仪表板中单击“Office 365 安装程序”磁贴以启动 Office 365 客户端安装向导  。 有关详细信息，请参阅[部署 Office 365 应用](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)。
+2. 在仪表板中单击“Office 365 安装程序”磁贴以启动 Office 365 客户端安装向导  。 有关详细信息，请参阅[部署 Office 365 应用](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 3. 在“Office 设置”页上，单击“转到 Office 网页”   。 使用联机 Office 自定义工具为此部署指定设置。 
 4. 完成后单击右上角的“提交”  。 完成 Office 365 客户端安装向导。
 

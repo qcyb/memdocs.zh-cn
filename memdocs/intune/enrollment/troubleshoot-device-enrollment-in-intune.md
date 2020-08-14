@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093494"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865816"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune 设备注册疑难解答
 
@@ -226,7 +226,7 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 4. 选择“证书路径”选项卡，查看证书的父证书。
 5. 在每个父证书上，选择“查看证书”。
 6. 选择“详细信息” > “复制到文件...” 。
-7. 按照向导提示操作，将父证书的公钥导出或保存到所选的文件位置。
+7. 按照向导提示操作，将父证书的公钥导出或保存由你选择的文件位置。
 8. 右键单击“证书” > “所有任务” > “导入”。
 9. 按照向导提示操作，将一个或多个父证书导入“Local Computer\Personal\Certificates”。
 10. 重启 AD FS 服务器。
@@ -291,7 +291,9 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 
 注册具有用户关联的 ADE 设备要求启用 WS-Trust 1.3 用户名/混合终结点以请求用户令牌。 默认情况下，Active Directory 启用此终结点。 若要获取已启用的终结点列表，请使用 Get-AdfsEndpoint PowerShell cmdlet 查找 trust/13/UsernameMixed 终结点。 例如：
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 有关详细信息，请参阅 [Get-AdfsEndpoint 文档](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
 
@@ -423,7 +425,7 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |未将客户端计算机上的时钟设置为正确的时间。|确保将客户端计算机上的时钟和时区设置为正确的时间和时区。|
 |0x80240438、0x80CF0438、0x80CF402C|无法连接到 Intune 服务。 检查客户端代理设置。|验证 Intune 是否支持客户端计算机上的代理配置。 验证客户端计算机是否可访问 Internet。|
-|0x80240438，0x80CF0438|未配置 Internet Explorer 和本地系统中的代理设置。|无法连接到 Intune 服务。 检查客户端代理设置。验证 Intune 是否支持客户端计算机上的代理配置。 验证客户端计算机是否可访问 Internet。|
+|0x80240438，0x80CF0438|未配置 Internet Explorer 和本地系统中的代理设置。|无法连接到 Intune 服务。 检查客户端代理设置。 验证 Intune 是否支持客户端计算机上的代理配置。 验证客户端计算机是否可访问 Internet。|
 |0x80043001、0x80CF3001、0x80043004、0x80CF3004|注册程序包过期。|从“管理”工作区中下载并安装最新的客户端软件包。|
 |0x80043002、0x80CF3002|帐户处于维护模式。|当帐户处于维护模式时，便无法注册新客户端计算机。 若要查看帐户设置，请登录到你的帐户。|
 |0x80043003、0x80CF3003|帐户被删除。|验证你的帐户和 Intune 订阅是否仍处于活动状态。 若要查看帐户设置，请登录到你的帐户。|

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 39d68f7cec9cdd4baef84d07d7284f6407f659c5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531394"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048049"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>使用 Android 工作配置文件注册设备
 
-注册个人 Android 设备，以访问工作或学校电子邮件、应用和其他数据。 在注册过程中，将设置 Android 工作配置文件。 此配置文件将设备上的个人数据与工作数据分开。 组织管理工作配置文件，该配置文件包含工作文件和数据。 公司支持人员无法管理设备上的个人数据。  
+注册个人 Android 设备，以访问工作或学校电子邮件、应用和其他数据。 注册期间将设置 Android 工作配置文件，用于分隔设备上的个人数据和工作数据。 如果你需要执行此类型的设置，你的组织将通过其首选的通信渠道或 Intune 公司门户应用通知你。 
+
+配置文件设置好后，你的组织将管理其工作端，这只包含工作文件和工作数据。 公司支持人员无法管理设备上的个人数据。  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 

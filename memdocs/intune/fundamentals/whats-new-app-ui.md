@@ -1,12 +1,12 @@
 ---
-title: Intune 最终用户应用的 UI 更新
+title: Intune 最终用户应用的 UI 更新 | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: 了解 Microsoft Intune 中针对最终用户设备上可用的应用所做的 UI 更改。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740856"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048151"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 最终用户应用的 UI 更新
 
@@ -34,6 +34,13 @@ ms.locfileid: "84740856"
 
 如果你是员工或学生，请务必查看屏幕截图和公司门户帮助文档的链接。 有关如何使用公司门户应用的详细信息，请参阅[公司门户用户帮助文档](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)。  
 
+## <a name="week-of-august-10-2020"></a>2020 年 8 月 10 日当周
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>改进适用于 Android 的公司门户应用中的“更新设备设置”页面以显示说明<!-- 7414768 -->
+
+在 Android 设备上的公司门户应用中，“更新设备设置”页面列出了需要更新以符合要求的设置。 用户展开问题以查看详细信息，并且可以看到“解决”按钮。
+
+此用户体验已得到改进。 默认展开列出的设置，以显示说明和“解决”按钮（如果适用）。 以前，默认将问题折叠起来。 这一新的默认行为会减少单击次数，因此用户可以更快地解决问题。
 
 ## <a name="week-of-june-8-2020"></a>2020 年 6 月 8 日当周 
 

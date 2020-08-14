@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7667cf1d62040c4435f41ffbe377452d3666a3ec
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85343062"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110675"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>对 Microsoft Intune 中的 PKCS 证书部署进行故障排除
 
@@ -129,6 +129,19 @@ ms.locfileid: "85343062"
 在设备上，打开“事件查看器” > “应用程序和服务日志” > “Microsoft” > “Windows” > “DeviceManagement-Enterprise-Diagnostics-Provider”
 
 ![Windows 事件日志](../protect/media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+
+## <a name="antivirus-exclusions"></a>防病毒排除项
+
+出现以下情况时，请考虑在托管 NDES 或证书连接器的服务器上添加防病毒排除项：
+
+- 证书请求到达服务器或 Intune 证书连接器，但未得到成功处理 
+- 颁发证书的速度缓慢
+
+下面是你可能排除的位置的示例：
+
+- %program_files%\Microsoft Intune\PfxRequest
+- %program_files%\Microsoft Intune\CertificateRequestStatus
+- %program_files%\Microsoft Intune\CertificateRevocationStatus
 
 ## <a name="common-errors"></a>常见错误
 

@@ -5,18 +5,18 @@ description: 了解 1806 版 Configuration Manager 在每个级别收集的特�
 ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e47d9ac210d4af25070c6a9cd4b710c383370f54
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: e1f10f291619ecf6ff3d5b997046f035c02bf7e7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506292"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128655"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>1806 的诊断和使用情况数据
 

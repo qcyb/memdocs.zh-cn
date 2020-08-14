@@ -5,17 +5,17 @@ description: 如何在 Configuration Manager 中使用用户自助服务门户�
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 88e0ad46-7f0c-4f5c-9b48-54773c23768d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda719aed4d70cd9783d158e17d546b698497997
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ad1f79bb439e0a426229680960092a5f0d8fb3c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699685"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129233"
 ---
 # <a name="bitlocker-self-service-portal"></a>BitLocker 自助服务门户
 
@@ -44,15 +44,15 @@ BitLocker 可在下列情况下锁定设备：
 
 1. 阅读并接受通知。
 
-1. 在“恢复密钥 ID”字段中，输入 BitLocker 恢复密钥 ID 的前 8 位数  。 如果它与多个密钥匹配，则输入全部的 32 位数。
+1. 在“恢复密钥 ID”字段中，输入 BitLocker 恢复密钥 ID 的前 8 位数。 如果它与多个密钥匹配，则输入全部的 32 位数。
 
-1. 为此请求的“原因”选择下列某个选项  ：
+1. 为此请求的“原因”选择下列某个选项：
 
     - BIOS/TPM 已更改
     - 归档的操作系统已修改
     - PIN/密码已丢失
 
-1. 选择“获取密钥”  。 自助服务门户会显示 48 位数的 BitLocker 恢复密钥  。
+1. 选择“获取密钥”。 自助服务门户会显示 48 位数的 BitLocker 恢复密钥。
 
 1. 在计算机上的 BitLocker 恢复屏幕输入此 48 位代码。
 

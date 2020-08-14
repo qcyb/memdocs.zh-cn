@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 605d31f2f7a32c9344ca1e24fc3f78da57fb46a0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5a4f96b260a9e534dac5345510f16e142e694456
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877145"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865969"
 ---
-# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>解决 Symantec Endpoint Protection Mobile 发现的威胁
+# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile-on-ios"></a>解决 Symantec Endpoint Protection Mobile 在 iOS 上发现的威胁
 
 Symantec Endpoint Protection (SEP) Mobile 是一项移动威胁防御服务，可识别 Android 设备上的潜在威胁。 这些威胁将被报告到公司门户应用，并显示为未解决的非符合性问题。 如果设备被识别为非符合性设备，则可能无法：
 

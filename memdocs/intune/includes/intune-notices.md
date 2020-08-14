@@ -4,27 +4,24 @@ description: 包含文件
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/30/2020
+ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
-ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
+ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87507272"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051616"
 ---
 本文中的通知提供了重要信息，可以帮助你为未来的 Intune 更改和功能做好准备。
 
-### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Microsoft Intune 对 Windows 10 移动版的支持即将结束<!--3544938-->
-Microsoft 对 Windows 10 移动版的主流支持已于 2019 年 12 月结束。 如本支持声明所述，Windows 10 移动版用户将不再有资格从 Microsoft 接收新的安全更新、非安全修补程序、免费的辅助支持选项或联机技术内容更新。 基于对移动 OS 的全面支持，Microsoft Intune 现在将于 2020 年 8 月 10 日结束对 Windows 10 移动版应用的公司门户和 Windows 10 移动版操作系统的支持。
+### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune 终止对 Windows Phone 8.1 和 Windows 10 移动版的支持<!-- 3544938, 3544909 -->
+Microsoft 对 Windows Phone 8.1 的主要支持于 2017 年 7 月结束，外延支持于 2019 年 6 月结束。 自 2017 年 10 月以来，针对 Windows Phone 8.1 的公司门户应用一直处于支持模式。 此外，Microsoft Intune 已于 2020 年 2 月 20 日结束对 Windows Phone 8.1 的支持。 
 
-#### <a name="how-does-this-affect-me"></a>这对我有何影响？
-如果贵组织中已部署 Windows 10 移动版设备，那么从现在到 2020 年 8 月 10 日，你可以注册新设备、添加或删除策略和应用，或更新任何管理设置。 8 月 10 日之后，我们将停止新的注册，并最终从 Intune UI 中删除 Windows 10 移动版管理。 设备将不再签入 Intune 服务，我们将删除设备和策略数据。  
+Microsoft 对 Windows 10 移动版的主流支持已于 2019 年 12 月结束。 如本支持声明所述，Windows 10 移动版用户将不再有资格从 Microsoft 接收新的安全更新、非安全修补程序、免费的辅助支持选项或联机技术内容更新。 基于对移动 OS 的全面支持，Microsoft Intune 于 2020 年 8 月 10 日结束对 Windows 10 移动版应用的公司门户和 Windows 10 移动版操作系统的支持。
 
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
-你可以查看 Intune 报告，了解可能受影响的设备或用户。 转到“设备” > “所有设备”，并按“OS”进行筛选。 你可以添加附加列，帮助确定你的组织中哪些人员的设备正在运行 Windows 10 移动版。 要求最终用户升级其设备或停止使用这些设备进行公司访问。
-
+自 8 月 10 日起，Windows Phone 8.1 和 Windows 10 移动版设备的注册将失败，并且从 Intune UI 中删除了 Windows 移动版配置文件类型。 已注册的设备将不再签入 Intune 服务，我们将删除设备和策略数据。
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>停止支持旧版 PC 管理
 

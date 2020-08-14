@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 08/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c90e25469927bc4fc435ad4cbd36e09b1cf0a3af
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b862a65ca087c5dbd0c47baf7af9cf369caac9e4
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262636"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912566"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS 应用保护策略设置
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "87262636"
 | <ul><ui>**选择要豁免的应用** | 为上一选项选择“策略托管应用”时，此选项才可用。   |   |
 | <ul><ui>**保存组织数据的副本** | 选择“阻止”，在此应用中禁用使用“另存为”选项。 如果想要允许使用“另存为”，请选择“允许”。 <br><br>**注意:** *Microsoft Excel、OneNote、Outlook、PowerPoint 和 Word 支持此设置。它还可以受第三方和 LOB 应用支持*。 <br><br> 如果设置为“阻止”，可以配置以下设置“允许用户将副本保存到所选的服务” 。   | <br><br> **允许**   |
 | <ul><ui><ul><ui>**允许用户将副本保存到所选的服务** | 用户可以保存到所选的服务（OneDrive for Business、SharePoint 和本地存储）中。 将阻止所有其他服务。 OneDrive for business：可以将文件保存到 OneDrive for business 和 SharePoint Online。 SharePoint：可以将文件保存到本地 SharePoint。 本地存储：可以将文件保存到本地存储。| **未选择任何项**  |
-|<ul><ui>**将电信数据传输到** | 通常，当用户在应用中选择超链接的电话号码时，会打开一个拨号应用，预填充了该电话号码并随时可供拨打。 对于此设置，选择当从策略托管的应用启动电话号码时要如何处理此类型的内容传输：<ul><li>**无，不在应用之间传输此数据**：如果检测到电话号码，不传输通信数据。</li><li>**特定拨号应用**：当检测到电话号码时，允许特定的拨号应用启动联系人。</li><li>**任何拨号应用**：当检测到电话号码时，允许使用任何拨号应用启动联系人。</li></ul>| **任何拨号应用** |  
+|<ul><ui>**将电信数据传输到** | 通常，当用户在应用中选择超链接的电话号码时，会打开一个拨号应用，预填充了该电话号码并随时可供拨打。 对于此设置，选择当从策略托管的应用启动电话号码时要如何处理此类型的内容传输：<ul><li>**无，不在应用之间传输此数据**：如果检测到电话号码，不传输通信数据。</li><li>**特定拨号应用**：当检测到电话号码时，允许特定的拨号应用启动联系人。</li><li>**任何拨号应用**：当检测到电话号码时，允许使用任何拨号应用启动联系人。</li></ul> <p>**注意**：*此设置需要 Intune SDK 12.7.0 及更高版本。如果你的应用依赖于拨号器功能，并且没有使用正确的 Intune SDK 版本，解决方法是考虑将“tel;telprompt”添加为数据传输豁免。应用支持正确的 Intune SDK 版本后，请删除该豁免。*| **任何拨号应用** |  
 |<ul><ui><ul><ui>**拨号器应用 URL 方案** | 选择任何拨号应用后，必须提供用于在 iOS 设备上启动拨号应用的拨号应用 URL 方案。 有关详细信息，请参阅有关[电话链接](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/PhoneLinks/PhoneLinks.html#//apple_ref/doc/uid/TP40007899-CH6-SW1)的 Apple 文档。 | **空** |
 | **从其他应用接收数据** | 指定哪些应用可将数据传输到此应用： <ul><li>**所有应用**：允许从任何应用传输的数据。</li><li>**无**：不允许从任何应用传输数据，包括其他策略托管应用。</li><li>**策略托管应用**：仅允许从其他策略托管应用进行传输。</li><li>**所有包含传入组织数据的应用**：允许从任何应用传输的数据。 将所有不带用户标识的传入数据视为组织中的数据。 该数据将使用由 `IntuneMAMUPN` 设置定义的 MDM 注册用户标识进行标记。<p><p>**注意:** “所有包含传入组织数据的应用”值仅适用于 MDM 注册设备 _。如果此设置针对未注册设备上的用户，则会应用“任何应用”值的行为_。</li></ul> Intune 可能会允许从一些豁免应用和服务传输数据。 有关应用和服务的完整列表，请参阅[数据传输豁免](#data-transfer-exemptions)。 非注册 iOS/iPadOS 设备上已启用多标识 MAM 的应用程序会忽略此策略，并允许所有传入数据。<br><br> | **所有应用**    |
 | **限制在其他应用间进行剪切、复制和粘贴** | 指定剪切、复制和粘贴操作何时可用于此应用。 选择： <ul><li>**阻止**：不允许在此应用和任何其他应用间进行剪切、复制和粘贴操作。</li><li>**策略托管应用**：允许在此应用和其他策略托管应用间进行剪切、复制和粘贴操作。</li><li>**带粘贴的策略托管应用**：允许在此应用和其他策略托管应用间进行剪切或复制。 允许将任何应用中的数据粘贴到此应用。</li><li>**任何应用**：不限制从此应用和对此应用进行剪切、复制和粘贴。</ul> | **任何应用**   |
@@ -80,6 +80,8 @@ ms.locfileid: "87262636"
 | <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
 | <code>calshow</code> | 本机日历 |
 
+> [!IMPORTANT]
+> 2020 年 6 月 15 日之前创建的应用保护策略将 tel 和 telprompt URL 方案作为默认数据传输豁免的一部分 。 这些 URL 方案允许管理的应用启动拨号器。 应用保护策略设置“将电信数据传输到”已替换此功能。 管理员应从数据传输豁免中删除 tel;telprompt; 并依赖于应用保护策略设置，前提是启动拨号器功能的管理的应用包括 Intune SDK 12.7.0 或更高版本。
 
 ## <a name="access-requirements"></a>访问要求
 

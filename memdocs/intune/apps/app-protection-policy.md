@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502589"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997980"
 ---
 # <a name="app-protection-policies-overview"></a>应用保护策略概述
 
@@ -324,6 +324,11 @@ Intune 应用保护策略允许将应用访问权限控制在仅限 Intune 许�
   
 ### <a name="ios-share-extension"></a>iOS 共享扩展
 即使将数据传输策略设置为“仅托管应用”或“无应用”，也可使用 iOS/iPadOS 共享扩展在非托管应用中打开工作或学校数据 。 在不管理设备的情况下，Intune 应用保护策略不能控制 iOS/iPadOS 共享扩展。 因此，Intune _**会在对“公司”数据进行应用外共享之前对其进行加密**_。 可以通过在托管应用外部打开“公司”文件来验证此加密行为。 该文件应进行加密，且无法在托管应用外打开。
+
+### <a name="universal-links-support"></a>通用链接支持
+默认情况下，Intune 应用保护策略将阻止访问未经授权的应用程序内容。 iOS/iPadOS 中提供了使用[通用链接](https://developer.apple.com/ios/universal-links/)打开特定内容或应用程序的功能。 
+
+用户可在 Safari 中访问应用的通用链接并选择“在新选项卡中打开”或“打开”，通过这种方式来禁用这些链接： 。 若要通过 Intune 应用保护策略使用通用链接，需要重新启用通用链接。 最终用户在长按相应链接后，需要在 Safari 中执行“在  <应用名称> 中打开”操作。 这会提示任何其他受保护的应用将所有通用链接路由到设备上受保护的应用程序。
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>适用于同一组应用和用户的多个 Intune 应用保护访问设置
 当用户尝试从公司帐户访问目标应用时，系统将在最终用户设备上按特定顺序应用 Intune 应用访问保护策略。 通常先访问擦除，然后是块，再是可取消的警告。 例如，如果适用于特定用户/应用，则先应用阻止用户访问的最低 iOS/iPadOS 操作系统设置，再应用警告用户更新其 iOS/iPadOS 版本的最低 iOS/iPadOS 操作系统设置。 因此，如果 IT 管理员将最低 iOS 操作系统配置为 11.0.0.0 并将最低 iOS 操作系统（仅限警告）配置为 11.1.0.0，则当尝试访问该应用的设备具有 iOS 10 时，系统将基于更严格的最低 iOS 操作系统版本设置阻止最终用户的访问。

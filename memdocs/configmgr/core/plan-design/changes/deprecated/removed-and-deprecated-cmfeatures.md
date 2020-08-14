@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905064"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129046"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -31,7 +31,6 @@ ms.locfileid: "82905064"
 
 |功能|首次宣布弃用|支持&nbsp;删除|
 |-----------|---|--------------|
-| 用于设备注册和安全更新的桌面分析选项“查看最新数据”  。<!-- 7080949 --> 有关详细信息，请参阅[数据延迟](../../../../desktop-analytics/troubleshooting.md#data-latency)。|2020 年 5 月|2020 年 7 月|
 |共享 Azure 内容的实现已更改。 使用启用了内容的云管理网关。 将来无法创建传统的云分发点。|2019 年 2 月|TBD<sup>[备注 1](#bkmk_note1)</sup>|
 |适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)。|2018 年 11 月|TBD<sup>[备注 1](#bkmk_note1)</sup>|
 
@@ -45,6 +44,7 @@ ms.locfileid: "82905064"
 
 |功能|首次宣布弃用|支持&nbsp;删除|  
 |-----------|---|--------------|  
+| 用于设备注册和安全更新的桌面分析选项“查看最新数据”  。<!-- 7080949 --> 有关详细信息，请参阅[数据延迟](../../../../desktop-analytics/troubleshooting.md#data-latency)。|2020 年 5 月|2020 年 7 月|
 | Windows Analytics 和升级就绪情况集成。 有关详细信息，请参阅 [KB 4521815：Windows Analytics 将于 2020 年 1 月 31 日停用](https://support.microsoft.com/help/4521815/windows-analytics-retirement)。 | 2019 年 10 月 14 日 | 2020 年 1 月 31 日 |
 | 用于条件访问合规性策略的设备运行状况证明评估 <!--1235616 aka 3608202--> 有关详细信息，请参阅[混合 MDM 出了什么问题](../../../../mdm/understand/what-happened-to-hybrid.md)。| 2019 年 7 月 3 日 | 版本 1910 |
 | Configuration Manager 公司门户应用 | 2019 年 5 月 21 日 | 版本 1910 |

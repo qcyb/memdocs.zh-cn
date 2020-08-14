@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 0d7122942fe6a1455518b56159b48a11a2519d3e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815457"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127288"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>教程：为基于 Internet 的新设备启用共同管理
 
@@ -367,13 +367,9 @@ Azure 配置、站点系统角色和客户端设置配置就绪后，可以配�
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>从版本 1906 开始启用共同管理
 
-若要从 Configuration Manager 版本 1906 开始启用共同管理，请按照以下说明操作：
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>在版本 1902 及更早版本中启用共同管理
-
-若要为 Configuration Manager 版本 1902 及更早版本启用共同管理，请按照以下说明操作：
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

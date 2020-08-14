@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758357"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912547"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>将适用于 iOS 和 Android 的 Microsoft Edge 与 Microsoft Intune 结合使用来管理 Web 访问
 
@@ -114,7 +114,7 @@ SSO 要求设备通过 Microsoft Authenticator 应用（iOS 设备）或 Intune 
 
 ## <a name="general-app-configuration-scenarios"></a>常规应用配置方案
 
-适用于 iOS 和 Android 的 Microsoft Edge 使管理员能够为多个应用内设置自定义默认配置。 此功能当前仅在以下情况下提供：适用于 iOS 和 Android 的 Microsoft Edge 具有应用于工作或学校帐户的 Intune 应用保护策略，且该帐户已登录到该应用。
+适用于 iOS 和 Android 的 Microsoft Edge 使管理员能够为多个应用内设置自定义默认配置。 此功能当前仅在以下情况下提供：适用于 iOS 和 Android 的 Microsoft Edge 具有应用于工作或学校帐户（该帐户已登录到应用）的 Intune 应用保护策略，并且策略设置是通过托管应用的应用配置策略交付的。
 
 > [!IMPORTANT]
 > 适用于 Android 的 Microsoft Edge 不支持托管的 Google Play 中可用的 Chromium 设置。
@@ -246,12 +246,12 @@ Microsoft Edge 支持以下配置设置：
 |    Key    |    值    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    “true”：为适用于 Android 的 Microsoft Edge 启用展台模式<br>“false”（默认）：禁用展台模式    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    “true”：在展台模式下显示地址栏<br> “false”（默认）：在展台模式下隐藏地址栏    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    “true”：在展台模式下显示底部操作栏<br> “false”（默认）：在展台模式下隐藏底部操作栏    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    “true”：在展台模式下显示地址栏<br> “false”（默认）：在启用展台模式时隐藏地址栏    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    “true”：在展台模式下显示底部操作栏<br> “false”（默认）：在启用展台模式时隐藏底部操作栏    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>数据保护应用配置方案
 
-当 Microsoft Endpoint Manager 管理适用于 iOS 和 Android 的 Microsoft Edge，且 Intune 应用保护策略已应用于已登录该应用的工作或学校帐户时，适用于 iOS 和 Android 的 Microsoft Edge 支持针对以下数据保护设置的应用配置策略：
+当 Microsoft Endpoint Manager 管理适用于 iOS 和 Android 的 Microsoft Edge，Intune 应用保护策略已应用于已登录该应用的工作或学校帐户，并且策略设置通过托管应用的应用配置策略交付时，适用于 iOS 和 Android 的 Microsoft Edge 支持针对以下数据保护设置的应用配置策略：
 
 - 管理帐户同步
 - 管理受限网站

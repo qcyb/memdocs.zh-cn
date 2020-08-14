@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882408"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048032"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>设置 iOS 设备对公司资源的访问  
 
@@ -35,12 +35,12 @@ ms.locfileid: "83882408"
 > [!NOTE]
 > 我们不会出于任何原因向任何第三方出售我们服务收集的任何数据。  
 
-若要持续拥有从设备访问工作或学校信息的权限，则需要配置设备以匹配组织的首选设置。 本文介绍如何使用公司门户注册设备并维护组织的设置要求。  
+若要持续拥有从设备访问工作或学校信息的权限，则需要配置设备以匹配组织的首选设置。 本文介绍如何使用公司门户注册设备并符合访问要求。  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> 如果想要在邮件应用中访问公司电子邮件，但收到托管设备的提示，那么通过本文你将了解如何解决该问题。 按照下面的说明，获取对 iOS 设备上的电子邮件和其他公司资源的访问权限。  
+> 如果你试图在邮件应用中访问工作电子邮件，并收到了托管设备的提示，那么通过本文你将了解如何解决该问题。 按照下面的说明，有助于重新获取对 iOS 设备上的电子邮件和其他工作资源的访问权限。  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>公司门户应用的作用  
@@ -56,13 +56,17 @@ ms.locfileid: "83882408"
 
 要了解有关注册的详细信息，请参阅[安装公司门户应用并注册设备后会发生什么情况？](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)。  
 
+## <a name="prerequisties"></a>先决条件  
+
+* 转到 App Store 下载并在设备上安装 [Intune 公司门户应用](install-and-sign-in-to-the-intune-company-portal-app-ios.md)。 
+* 保持 Wi-Fi 连接，直到完成所有步骤。
+* 有权访问设备上的 Safari Web 浏览器。
+
 ## <a name="enroll-your-ios-device"></a>注册 iOS 设备  
 
-转到 App Store 下载并在设备上安装 [Intune 公司门户应用](install-and-sign-in-to-the-intune-company-portal-app-ios.md)。 还需要维护 Wi-Fi 连接，并可以在注册期间访问 Safari。 
+如果在注册期间暂停超过几分钟，可能会导致公司门户应用关闭或停止设置。 如果发生这种情况，请重新打开该应用，然后重试。  
 
-如果在注册期间暂停超过几分钟，可能会导致应用关闭或设置结束。 如果发生这种情况，请打开公司门户应用，然后重试。  
-
-1. 打开公司门户并使用工作或学校帐户登录。  
+1. 打开公司门户应用并使用工作或学校帐户登录。  
 
 2. 当系统提示接收公司门户通知时，请点击“允许”  。 例如，如果需要更新设备设置，公司门户会使用通知来提醒你。  
 

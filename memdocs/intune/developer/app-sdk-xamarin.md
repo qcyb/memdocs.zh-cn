@@ -5,7 +5,7 @@ keywords: sdk、Xamarin、intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13b2c69a0bf4e031717847b700e60e873fbda157
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262840"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912312"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin Bindings
 
@@ -56,9 +56,9 @@ ms.locfileid: "87262840"
 
 查看[许可条款](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf)。 打印并保留一份许可条款，以留作记录。 下载和使用 Intune App SDK Xamarin Bindings 即表示你同意这些许可条款。 如果不接受这些条款，请不要使用此软件。
 
-Intune SDK 依赖于 [Active Directory 身份验证库 (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) 实现它的[身份验证](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)和条件启动方案，这需要使用 [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) 配置应用。 
+Intune SDK 依靠使用 [Microsoft 身份验证库 (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) 进行[身份验证](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)和条件启动，这需要使用 [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) 配置应用。 
 
-如果应用程序已配置为使用 ADAL 或 MSAL，并且拥有其自己的自定义客户端 ID 用于使用 Azure Active Directory 进行身份验证，请务必按以下步骤操作，将 Xamarin 应用权限授予 Intune 移动应用程序管理 (MAM) 服务。 请使用 [Intune SDK 入门指南](app-sdk-get-started.md)的[向 Intune 应用保护服务提供应用访问权限](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)一节中的说明。
+如果应用程序已配置为使用 MSAL，并且拥有其自己的自定义客户端 ID 用于使用 Azure Active Directory 进行身份验证，请务必按以下步骤操作，将 Xamarin 应用权限授予 Intune 移动应用管理 (MAM) 服务。 请使用 [Intune SDK 入门指南](app-sdk-get-started.md)的[向 Intune 应用保护服务提供应用访问权限](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)一节中的说明。
 
 ## <a name="security-considerations"></a>安全注意事项
 
@@ -83,7 +83,7 @@ Intune SDK 依赖于 [Active Directory 身份验证库 (ADAL)](https://azure.mic
       using Microsoft.Intune.MAM;
       ```
 
-4. 若要开始接收应用保护策略，必须在 Intune MAM 服务中注册应用。 如果应用不使用 [Azure Active Directory 身份验证库](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (ADAL) 或 [Microsoft 身份验证库](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) 对用户进行身份验证，且希望由 Intune SDK 处理身份验证，应用应将用户的 UPN 提供给 IntuneMAMEnrollmentManager 的 LoginAndEnrollAccount 方法：
+4. 若要开始接收应用保护策略，必须在 Intune MAM 服务中注册应用。 如果应用不使用 [Microsoft 身份验证库](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) 对用户进行身份验证，且你希望由 Intune SDK 处理身份验证，则你的应用应将用户的 UPN 提供给 IntuneMAMEnrollmentManager 的 LoginAndEnrollAccount 方法：
 
       ```csharp
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
@@ -91,7 +91,7 @@ Intune SDK 依赖于 [Active Directory 身份验证库 (ADAL)](https://azure.mic
 
       如果用户的 UPN 在调用时未知，则应用可能会传入 null。 在这种情况下，系统将提示用户输入他们的电子邮件地址和密码。
       
-      如果应用已使用 ADAL 或 MSAL 对用户进行身份验证，则可以在应用和 Intune SDK 之间配置单一登录 (SSO) 体验。 首先，需要将 Intune SDK 使用的默认 AAD 设置替代为应用的这些设置。 可通过应用 Info.plist 中的 IntuneMAMSettings 字典执行此操作，如 [Intune App SDK for iOS 开发人员指南](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk)中所述。也可通过 IntuneMAMSettings 类的 AAD 替代属性在代码中执行此操作。 对于 ADAL 设置是静态的应用，建议使用 Info.plist 方法；对于在运行时确定这些值的应用，建议使用替代属性。 配置所有 SSO 设置后，应用应在成功通过身份验证后向 IntuneMAMEnrollmentManager 的 RegisterAndEnrollAccount 方法提供用户的 UPN：
+      如果应用已使用 MSAL 对用户进行身份验证，则可以在应用和 Intune SDK 之间配置单一登录 (SSO) 体验。 首先，需要将 Intune SDK 使用的默认 AAD 设置替代为应用的这些设置。 可通过应用 Info.plist 中的 IntuneMAMSettings 字典执行此操作，如 [Intune App SDK for iOS 开发人员指南](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk)中所述。也可通过 IntuneMAMSettings 类的 AAD 替代属性在代码中执行此操作。 对于 MSAL 设置是静态的应用程序，建议使用 Info.plist 方法；对于在运行时确定这些值的应用程序，建议使用替代属性。 配置所有 SSO 设置后，应用应在成功通过身份验证后向 IntuneMAMEnrollmentManager 的 RegisterAndEnrollAccount 方法提供用户的 UPN：
 
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);

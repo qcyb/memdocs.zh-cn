@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 225006df484d0e65d6a78960d96a7fc70f251991
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 38f5b4ba6d243af74462046c243de34dc5cd8544
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878122"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866037"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>解决 Lookout for Work 发现的威胁  
+# <a name="resolve-a-threat-found-by-lookout-for-work-on-android"></a>解决 Lookout for Work 在 Android 上发现的威胁
 
 Lookout for Work 应用是一项移动威胁防御服务，可识别 Android 设备上的潜在威胁。 这些威胁将被报告到公司门户应用，并在其中显示为未解决的非符合性问题。 只要存在这些威胁，就可能无法：
 

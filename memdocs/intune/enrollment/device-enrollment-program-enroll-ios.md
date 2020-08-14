@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891507"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051666"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备
 
@@ -328,23 +328,28 @@ Intune 已拥有管理设备的权限，现在可以将 Intune 与 Apple 同步�
 > [!NOTE]
 > 除了每年续订一次 ADE 令牌之外，还需要在以下情况下在 Intune 和 Apple Business Manager 中续订注册计划令牌：托管的 Apple ID 密码对在 Apple Business Manager 中设置令牌的用户或离开 Apple Business Manager 组织的用户发生更改。
 
-1. 转到 business.apple.com。  
-2. 在“管理服务器”下，选择与想要续订的令牌文件相关的 MDM 服务器。
-3. 选择“生成新令牌”。
+1. 转到 business.apple.com。
+2. 单击“设置”（左下角）
+3. 在 MDM 服务器下，选择与想要续订的 ADE/DEP 令牌关联的 MDM 服务器。 ****
+4. 单击“下载令牌”。
 
     ![生成新令牌的屏幕截图。](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. 选择“服务器令牌”。  
-5. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS/iPadOS 注册” > “注册计划令牌”> 选择令牌   。
+5. 在出现提示时，选择“下载服务器标记”
+> [!NOTE]
+> 如果不打算续订令牌（如提示中所述），请勿单击“下载服务器令牌”，此操作将使 Intune（或任何其他相关的 MDM 解决方案）当前使用的令牌失效。 如果已下载了令牌，请确保在续订令牌之前继续执行后续步骤。
+
+6. 下载令牌后，在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS/iPadOS 注册” > “注册计划令牌”> 选择令牌   。
     ![注册程序令牌屏幕截图](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. 选择“续订令牌”，然后输入用于创建原始令牌的 Apple ID。  
+7. 选择“续订令牌”，然后输入用于创建原始令牌的 Apple ID（如果未自动填充）。  
     ![生成新令牌的屏幕截图。](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. 选择“下一步”，转到“作用域标记”页，并根据需要分配作用域标记 。
+8. 上传新下载的令牌。
 
-8. 选择“下一步”并上传新下载的令牌。  
-9. 选择“续订令牌”。 你将看到令牌已续订的确认消息。   
+9. 选择“下一步”，转到“作用域标记”页，并根据需要分配作用域标记 。
+
+10. 选择“续订令牌”。 你将看到令牌已续订的确认消息。   
     ![确认消息屏幕截图。](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>从 Intune 中删除自动设备注册令牌

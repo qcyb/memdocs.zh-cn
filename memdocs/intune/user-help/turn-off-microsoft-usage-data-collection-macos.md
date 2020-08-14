@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c3254fb6e02bedd416f370f4cadcc16cab87d85
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7eeb784f8deaf1cf74866e90aabaee99554faa8d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881164"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865833"
 ---
-# <a name="how-to-turn-off-microsoft-data-collection"></a>如何关闭 Microsoft 数据收集
+# <a name="how-to-turn-off-microsoft-data-collection-for-macos-devices"></a>如何为 macOS 设备关闭 Microsoft 数据收集
 
 Microsoft 会自动收集我们产品和服务的某些相关数据。 这样做可以提高我们产品（包括公司门户应用）的可靠性和性能。 即使此数据采用匿名方式进行收集，某些用户也可能会不适应。 公司支持人员无权控制此数据的收集，也不能更改你对此设置的选择。
 

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461600"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048066"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 终结点安全的攻击面减少策略设置
 
@@ -181,10 +181,10 @@ ms.locfileid: "86461600"
   - **强制使用组件和应用商店应用**
   - **审核组件和应用商店应用**
   - **强制使用组件、应用商店应用和 Smartlocker**
-  - **审核组件、应用商店应用和 Smartlocker**
+  - **审核组件、应用商店应用和 Smartlocker** CSP：[AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 - **阻止用户忽略 SmartScreen 警告**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP：[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **未配置**（默认）- 用户可以忽略针对文件和恶意应用的 SmartScreen 警告。
   - **是** - 启用 SmartScreen，且用户无法绕过针对文件或恶意应用的警告。

@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7ce384a835bbc4b8d990bbd3ebf93b812647aa1d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9ef18bc6554f5db364eaf320c66da12e7a5ffe7d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882238"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866156"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>解决 SandBlast Mobile Protect 发现的威胁
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-ios"></a>解决 SandBlast Mobile Protect 在 iOS 上发现的威胁
 
 SandBlast Mobile Protect 是一项移动威胁防御服务，可识别和评估 iOS 设备上的潜在威胁。 然后，它将报告威胁，以便你可在公司门户应用中查看。 威胁在应用中显示为未解决的非符合性问题。 只要存在这些威胁，就可能无法：   
 

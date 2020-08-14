@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 06e6b170667d16afa699706e2349e01710a0dc6e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 27a251a4f0bacd41d5cbf2e69d194b01c0a93def
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880892"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866241"
 ---
-# <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>尝试注册时需要对设备进行标识
+# <a name="youre-asked-to-identify-your-macos-device-during-enrollment"></a>在注册过程中，系统会要求你对 macOS 设备进行标识
 
 如果尝试在 Intune 中注册 macOS 设备时显示要求标识设备的屏幕，说明设备中至少有一个已使用公司门户应用以外的方法注册并分配到帐户。 为了使公司门户应用正常工作，必须确认你使用的设备是否已在 Intune 中完成注册。
 

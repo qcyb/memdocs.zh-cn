@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 617c6b89bfc52d926e2ddb422c36db39edec6908
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093043"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912401"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什么是 Microsoft Intune 应用管理？
 
@@ -52,8 +52,8 @@ Intune MAM 支持两种配置：
 
 Intune 提供各种功能，用于在设备上获取所需的应用，以便在其中运行。 下表提供了有关应用管理功能的摘要。
 
-|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| 应用管理功能 | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
 | 向设备和用户添加和分配应用 | 是 | 是 | 是 | 是 | 是 |
 | 将应用分配到未注册 Intune 的设备 | 是 | 是 | 否 | 否 | 否 |
 | 使用应用配置策略来控制应用的启动行为 | 是 | 是 | 否 | 否 | 否 |

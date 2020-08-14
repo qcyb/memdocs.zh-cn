@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216529"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110726"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 设备的批量注册
 
@@ -100,4 +100,4 @@ Azure AD 用户是这些设备上的标准用户并接收分配的 Intune 策略
 如果未使用开放网络，则必须使用[设备级证书](../protect/certificates-configure.md)来启动连接。 批量注册的设备无法使用面向用户的证书来访问网络。 
 
 ### <a name="conditional-access"></a>条件性访问
-条件访问不适用于使用批量注册登记的 Windows 设备。
+条件访问不适用于使用批量注册方式注册的 Windows 设备（Windows 10 1803+ 除外）。

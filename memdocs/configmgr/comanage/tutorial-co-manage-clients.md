@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268073"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127335"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>教程：为现有 Configuration Manager 客户端启用共同管理
 
@@ -169,13 +169,9 @@ ms.locfileid: "83268073"
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>从版本 1906 开始启用共同管理
 
-若要从 Configuration Manager 版本 1906 开始启用共同管理，请按照以下说明操作：
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>在版本 1902 及更早版本中启用共同管理
-
-若要为 Configuration Manager 版本 1902 及更早版本启用共同管理，请按照以下说明操作：
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

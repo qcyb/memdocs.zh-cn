@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546803"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051617"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -55,6 +55,15 @@ ms.locfileid: "87546803"
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>2020 年 8 月 10 日当周
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>设备管理
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>租户附加：从管理中心安装应用程序 <!-- IN7220536 CM6024389-->
+现在可以通过 Microsoft Endpoint Manager 管理中心为租户附加的设备实时启动应用程序安装。 有关详细信息，请参阅[租户附加：从管理中心安装应用程序](../../configmgr/tenant-attach/applications.md)中的说明进行操作。
+
+<!-- ########################## -->
 ## <a name="week-of-july-27-2020"></a>2020 年 7 月 27 日当周
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -68,9 +77,6 @@ ms.locfileid: "87546803"
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>应用管理
-
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Win32 应用安装通知和公司门户<!-- 7485945  -->
-最终用户现在能够决定 [Microsoft Intune Web 公司门户](https://portal.manage.microsoft.com/)中显示的应用程序应该是由公司门户应用打开，还是由公司门户网站打开。 仅当最终用户已安装公司门户应用，且在浏览器之外启动了 Web 公司门户应用程序时，此选项才可用。 
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange 内部部署连接器支持<!-- 7138486  -->
 自 2007 年（7 月）版本开始，Intune 便从 Intune 服务中删除了对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些客户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) 来保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
