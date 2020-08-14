@@ -1,21 +1,21 @@
 ---
-title: '自定义启动映像 '
+title: 自定义启动映像
 titleSuffix: Configuration Manager
 description: 了解使用 Configuration Manager 或部署映像服务和管理 (DISM) 命令行工具自定义启动映像的几种方式。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906883"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124555"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>使用 Configuration Manager 自定义启动映像
 

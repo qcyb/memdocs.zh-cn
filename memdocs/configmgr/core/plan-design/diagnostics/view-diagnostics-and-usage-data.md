@@ -5,17 +5,17 @@ description: 查看诊断和使用情况数据，确保 Configuration Manager �
 ms.date: 12/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 993a3549ddca4c2b5ae1dbbfc0346f28b9c3083e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a11b5779eca41ed25a8e53e555f91b596452e51b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692735"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128563"
 ---
 # <a name="how-to-view-diagnostics-and-usage-data-for-configuration-manager"></a>如何查看 Configuration Manager 的诊断和使用情况数据
 

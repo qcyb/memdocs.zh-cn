@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879056"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128910"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1910 中的新增功能
 
@@ -98,19 +98,19 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 <!--3197353-->
 我们新增了对 CMPivot 引擎的一些重要优化。 现在可以将更多处理内容推送到 ConfigMgr 客户端。 这些优化大大减少了运行 CMPivot 查询所需的网络和服务器 CPU 负载。 通过这些优化，现在可以实时筛选千兆字节的客户端数据。 
 
-有关详细信息，请参阅 [CMPivot 引擎的优化](../../servers/manage/cmpivot.md#bkmk_optimization)。
+有关详细信息，请参阅 [CMPivot 引擎的优化](../../servers/manage/cmpivot-changes.md#bkmk_optimization)。
 
 ### <a name="additional-cmpivot-entities-and-enhancements"></a>其他 CMPivot 实体和增强功能
 <!--5410930-->
 我们添加了一些新的 CMPivot 实体和实体增强功能，以帮助进行故障排除和搜寻。 我们包含了以下要查询的实体：
 
-- Windows 事件日志 ([WinEvent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- 文件内容 ([FileContent](../../servers/manage/cmpivot.md#bkmk_File))
-- 由进程加载的 DLL ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Azure Active Directory 信息 ([AADStatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- Endpoint Protection 状态 ([EPStatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Windows 事件日志 ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- 文件内容 ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
+- 由进程加载的 DLL ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Azure Active Directory 信息 ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Endpoint Protection 状态 ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-此版本还包括 CMPivot 的多个[其他增强功能](../../servers/manage/cmpivot.md#bkmk_Other)。 有关详细信息，请参阅[从版本 1910 开始的 CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1910)。
+此版本还包括 CMPivot 的多个[其他增强功能](../../servers/manage/cmpivot-changes.md#bkmk_Other)。 有关详细信息，请参阅[从版本 1910 开始的 CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910)。
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>内容管理
 

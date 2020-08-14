@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702335"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128944"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -296,7 +296,7 @@ Microsoft Edge 浏览器符合性设置策略添加了以下三个 Windows Defen
 <!--1358149-->
 现在 Office 自定义工具在 Configuration Manager 控制台中于 Office 365 安装程序集成。 为 Office 365 创建部署时，可动态配置最新的 Office 可管理性设置。 Microsoft 在发布 Office 365 的新版本时更新 Office 自定义工具。 通过此集成，当 Office 365 中的新可管理性设置可用时，你便可以立即使用。 
 
-有关详细信息，请参阅[部署 Office 365 应用](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)。
+有关详细信息，请参阅[部署 Office 365 应用](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>支持新的 Windows 应用包格式
@@ -546,7 +546,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 右键单击资产，并选择“复制”  。 此操作将选定的资产复制为包含完整详细信息的逗号分隔列表。 键盘快捷方式 CTRL + C 也适用于这些视图   。 
 
-有关详细信息，请参阅 [1806 版中的控制台改进](../../servers/manage/admin-console.md#copy-details-in-monitoring-views)。
+有关详细信息，请参阅 [1806 版中的控制台改进](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views)。
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Surface 仪表板的改进
@@ -568,7 +568,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 <!--1358202-->
 现在，“资产和符合性”  工作区的“设备”  节点默认显示“当前已登录用户”  列。 它还会显示任何特定于集合的设备列表。 此值与[客户端状态](../../clients/manage/monitor-clients.md#bkmk_indStatus)同步保持最新。 当用户注销时，客户端会清除此值。 如果没有用户登录，则值为空。 
 
-有关详细信息，请参阅 [1806 版中的控制台改进](../../servers/manage/admin-console.md#view-users-for-a-device)。
+有关详细信息，请参阅 [1806 版中的控制台改进](../../servers/manage/admin-console-tips.md#view-users-for-a-device)。
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台提交反馈  
@@ -576,7 +576,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 发送笑脸！ 现在可以就你的体验直接告知 Configuration Manager 团队。 从 Configuration Manager 控制台发送反馈很简单。 我们希望听到你的所有反馈：表扬、问题和建议。 在 Configuration Manager 控制台中，单击功能区上方右上角的笑脸按钮。 该反馈将直接提交给 Configuration Manager 的 Microsoft 产品团队。 虽然仍然支持使用 Windows 10 反馈中心，但最好使用控制台内部的反馈机制。  
 
-有关详细信息，请参阅 [1806 版中的控制台改进](../../servers/manage/admin-console.md#send-feedback)和[产品反馈](../../understand/find-help.md#BKMK_1806Feedback)。
+有关详细信息，请参阅 [1806 版中的控制台改进](../../servers/manage/admin-console-tips.md#send-feedback)和[产品反馈](../../understand/find-help.md#BKMK_1806Feedback)。
 
 
 
