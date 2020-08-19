@@ -1,7 +1,19 @@
-- name: 配置管理器
-  tocHref: /azure/azure-monitor/
-  topicHref: /sccm/index
+- name: Docs
+  tocHref: /
+  topicHref: /
   items:
-    - name: 核心基础结构
-      tocHref: /azure/azure-monitor/platform/
-      topicHref: /sccm/core/understand/introduction
+    - name: 企业移动性 + 安全性
+      tocHref: /enterprise-mobility-security/
+      topicHref: /enterprise-mobility-security/
+      items:
+        - name: Microsoft Endpoint Manager
+          tocHref: /Azure/
+          topicHref: /mem/
+          items:
+            - name: 配置管理器
+              tocHref: /azure/azure-monitor/
+              topicHref: /mem/configmgr/index
+              items:
+                - name: 核心基础结构
+                  tocHref: /azure/azure-monitor/platform/
+                  topicHref: /mem/configmgr/core/index

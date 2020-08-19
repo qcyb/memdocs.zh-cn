@@ -35,9 +35,9 @@
         - name: 导入 PFX 证书配置文件
           href: deploy-use/import-pfx-certificate-profiles.md
         - name: Wi-Fi 配置文件
-          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
         - name: VPN 配置文件
-          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
 - name: Exchange Server 连接器
   items:
     - name: 使用 Exchange 管理设备

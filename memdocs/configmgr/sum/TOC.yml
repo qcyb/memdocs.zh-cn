@@ -48,12 +48,12 @@
         - name: 自动部署软件更新
           href: deploy-use/automatically-deploy-software-updates.md
         - name: 创建分阶段部署
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: 监视软件更新
       href: deploy-use/monitor-software-updates.md
       items:
         - name: 管理和监视分阶段部署
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: 软件更新维护
       href: deploy-use/software-updates-maintenance.md
     - name: 业务流程组

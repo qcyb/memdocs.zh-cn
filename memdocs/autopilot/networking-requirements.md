@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 24566a248017caa29fb286c59161fd1ea2ad9e3c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253301"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590901"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Windows Autopilot 网络连接要求
 
@@ -65,7 +65,7 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 如果无法发送诊断数据，Autopilot 进程仍将继续。 但是，依赖于诊断数据的服务（如 Windows Analytics）将不起作用。
 <tr><td><b>网络连接状态指示器 (NCSI) <b><td>Windows 必须能够知道设备可以访问 internet。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator">网络连接状态指示器 (NCSI) </a>。
 
-必须通过 DNS 来解析<a href="http://www.msftconnecttest.com">www.msftconnecttest.com</a> ，并可通过 HTTP 访问。
+<code>www.msftconnecttest.com</code> 必须可通过 DNS 解析，并可通过 HTTP 访问。
 <tr><td><b>Windows Notification Services (WNS) <b><td>此服务使 Windows 能够接收来自应用和服务的通知。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>。<br>
 
 如果 WNS 服务不可用，则在没有通知的情况下，Autopilot 进程仍将继续。
@@ -76,9 +76,11 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 <tr><td><b>Office 365<b><td>在 Intune 设备配置过程中，可能需要安装适用于企业的 Microsoft 365 应用。 有关详细信息，请参阅 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 url 和 IP 地址范围</a>。 本文包含所有 Office 服务、DNS 名称和 IP 地址。 它还包括与上面列出的服务重叠的 Azure AD 和其他服务。
 <tr><td><b>证书吊销列表 (Crl) <b><td>其中某些服务还需要检查证书吊销列表 (CRL) 来确定服务中使用的证书。有关完整列表，请参阅 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">office 365 url 和 IP 地址范围</a> 和 <a href="https://aka.ms/o365chains">Office 365 证书链</a>。
 <tr><td><b>混合 Azure AD 加入<b><td>设备可以 Azure AD 联接的混合。 计算机应位于企业网络上，以便混合 Azure AD 加入工作。 查看<a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot 用户驱动模式下</a>的详细信息
-<tr><td><b>Autopilot 自助部署模式和 Autopilot 白色手套<b><td>固件 TPM 设备仅由 Intel、AMD 或 Qualcomm 提供，在引导时不包括所有所需的证书，并且必须能够在第一次使用时从制造商检索它们。 具有独立 TPM 芯片的设备 (包括任何其他制造商提供的设备) 附带预安装这些证书。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM 建议</a>。 对于每个固件 TPM 提供程序，请确保可以访问这些 Url，以便成功请求证书： 
+<tr><td><b>Autopilot 自助部署模式和 Autopilot 白色手套<b><td>固件 TPM 设备仅由 Intel、AMD 或 Qualcomm 提供，在引导时不包括所有所需的证书，并且必须能够在第一次使用时从制造商检索它们。 具有独立 TPM 芯片的设备 (包括任何其他制造商提供的设备) 附带预安装这些证书。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM 建议</a>。 对于每个固件 TPM 提供程序，请确保可以访问这些 Url，以便成功请求证书：
 
- <br>Intel- https://ekop.intel.com/ekcertservice <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1 <br>采用 https://ftpm.amd.com/pki/aia
+ <br>媒体 <code>https://ekop.intel.com/ekcertservice</code>
+ <br>Qualcomm <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
+ <br>采用 <code>https://ftpm.amd.com/pki/aia</code>
 
 </table>
 
