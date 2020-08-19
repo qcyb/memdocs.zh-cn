@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: ac0b8d5262e774902dc79dace5c94e49002e2569
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252000"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559549"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>用于白手套部署的 Windows Autopilot
 
@@ -34,9 +34,7 @@ Windows Autopilot 还可以提供一个 <I>白色的手套</I> 服务，帮助�
 
  ![OEM](images/wg02.png)
 
-白色手套部署使用 Windows 10 1903 版及更高版本中 Microsoft Intune。 此类部署构建在现有 Windows Autopilot [用户驱动的方案](user-driven.md) 之上，同时支持这两种方案的用户驱动模式方案：
-- Azure Active Directory 联接
--  Azure Active Directory 联接
+白色手套部署使用 Windows 10 1903 版及更高版本中 Microsoft Intune。 此类部署建立在现有 Windows Autopilot [用户驱动的方案](user-driven.md) 之上，并支持 Azure Active Directory 联接和混合 Azure Active Directory 联接设备的用户驱动模式方案。
 
 ## <a name="prerequisites"></a>先决条件
 
