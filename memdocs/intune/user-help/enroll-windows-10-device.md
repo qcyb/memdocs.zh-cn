@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881503"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179581"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>使用 Intune 公司门户注册 Windows 10 设备
 
@@ -37,7 +37,7 @@ ms.locfileid: "83881503"
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>注册使用 Windows 10 1607 版及更高版本的设备 
 以下步骤介绍如何注册在 Windows 10 1607 版及更高版本上运行的设备。  
 
-1. 转到“开始”  。 如果使用的是 Windows 10 移动版设备，请继续访问“所有应用”列表  。
+1. 转到“开始”  。 
 
 2. 打开“设置”应用  。 如果应用列表中没有随时可用的应用，请转到搜索栏，然后键入“settings”。
 
@@ -72,7 +72,7 @@ ms.locfileid: "83881503"
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>注册使用 Windows 10 1511 版及更早版本的设备  
 以下步骤介绍如何注册在 Windows 10 1511 版及更早版本上运行的设备。  
 
-1. 转到“开始”  。 如果使用的是 Windows 10 移动版设备，请继续访问“所有应用”列表  。
+1. 转到“开始”  。 
 
 2. 打开“设置”应用  。 如果应用列表中没有随时可用的应用，请转到搜索栏，然后键入“settings”。
 

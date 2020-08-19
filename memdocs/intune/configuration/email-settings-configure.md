@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565642"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145991"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 向设备添加电子邮件设置
 
@@ -34,8 +34,7 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
 - Android Enterprise
 - iOS 11.0 及更高版本
 - iPadOS 13.0 及更高版本
-- Windows Phone 8.1 及更高版本
-- Windows 10（桌面版）和 Windows 10 移动版
+- Windows 10（桌面版）
 
 本文介绍如何在 Microsoft Intune 中创建电子邮件配置文件。 此外，还包括指向不同平台的链接，以获得更具体的设置。
 
@@ -51,7 +50,6 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **Windows 10 及更高版本**
-        - **Windows Phone 8.1**
 
     - **配置文件**：选择“电子邮件”。
 
@@ -69,7 +67,6 @@ Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组
     - [Android Enterprise](email-settings-android-enterprise.md)
     - [iOS/iPadOS](email-settings-ios.md)
     - [Windows 10](email-settings-windows-10.md)
-    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. 选择“下一步”。
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。

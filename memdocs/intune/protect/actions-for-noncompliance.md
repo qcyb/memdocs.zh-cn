@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262670"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252769"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>为 Intune 中不符合要求的设备配置操作
 
@@ -63,8 +63,6 @@ ms.locfileid: "87262670"
     - Android 企业展台设备
   - iOS/iPadOS
   - macOS
-  - Windows 10 移动版
-  - Windows Phone 8.1 及更高版本
 
 - **停用不符合要求的设备**：此操作将从设备中删除所有公司数据并从 Intune 管理中删除设备。 为防止意外擦除设备，此操作支持的最短计划时间为 30 天。
 
@@ -75,8 +73,6 @@ ms.locfileid: "87262670"
     - Android Enterprise 工作配置文件
   - iOS/iPadOS
   - macOS
-  - Windows 10 移动版
-  - Windows Phone 8.1 及更高版本
 
   了解有关[停用设备](../remote-actions/devices-wipe.md#retire)的详细信息。
 

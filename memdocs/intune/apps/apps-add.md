@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2020
-ms.topic: how-to
+ms.date: 08/12/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428629"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252803"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>将应用添加到 Microsoft Intune 
 
@@ -54,7 +54,6 @@ Intune 支持多种不同的应用类型。 为每种应用类型提供的可用
 | Android 应用商店应用  | 应用商店应用  | 选择“Android”作为“应用类型”，然后输入应用的 Google Play 应用商店 URL 。 |
 | Android Enterprise 应用  | 应用商店应用  | 选择“Android”作为“应用类型”，然后输入应用的托管 Google Play 应用商店 URL 。 <sup>1</sup> |
 | iOS/iPadOS 应用商店应用  | 应用商店应用  | 选择“iOS”作为“应用类型”，搜索应用，然后在 Intune 内选择该应用 。 |
-| Windows Phone 8.1 应用商店应用  | 应用商店应用  | 选择“Windows Phone 8.1”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL 。 |
 | Microsoft 应用商店应用  | 应用商店应用  | 选择“Windows”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL 。 |
 | 托管的 Google Play 应用 | 应用商店应用  | 选择“托管 Google Play”作为“应用类型”，搜索应用，再在 Intune 中选择应用。 |
 | 适用于 Windows 10 的 Office 365 应用  | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“Windows 10”作为“应用类型”，然后选择要安装的 Office 365 应用  。  |
@@ -63,7 +62,6 @@ Intune 支持多种不同的应用类型。 为每种应用类型提供的可用
 | 适用于 macOS 的 Microsoft Edge 版本 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“macOS”作为“应用类型”  。 |
 | Android 业务线 (LOB) 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .apk 的 Android 安装文件。  |
 | iOS/iPadOS LOB 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .ipa 的 iOS/iPadOS 安装文件   。  |
-| Windows Phone LOB 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .xap 的 Windows Phone 安装文件   。  |
 | Windows LOB 应用 | LOB 应用 | 选择“业务线”应用作为应用类型，选择“应用包文件”，然后输入扩展名为 .msi、.appx、.appxbundle、.msix 和 .msixbundle 的 Windows 安装文件      。 |
 | 内置 iOS/iPadOS 应用  | 内置应用 | 选择“内置应用”作为“应用类型”，然后从提供的应用列表中选择内置应用 。  |
 | 内置的 Android 应用  | 内置应用 | 选择“内置应用”作为“应用类型”，然后从提供的应用列表中选择内置应用 。  |
@@ -221,8 +219,6 @@ Intune 会根据以下条件自动重新安装、更新或删除所需应用：
 - [iOS LOB 应用](lob-apps-ios.md)
 - [macOS LOB 应用](lob-apps-macos.md)
 - [Web 应用（适用于所有平台）](web-app.md)
-- [Windows Phone 8.1 应用商店应用](store-apps-windows-phone-8-1.md)
-- [Windows Phone LOB 应用](lob-apps-windows-phone.md)
 - [Microsoft Store 应用](store-apps-windows.md)
 - [Windows LOB 应用](lob-apps-windows.md)
 - [适用于 Windows 10 的 Office 365 应用](apps-add-office365.md)

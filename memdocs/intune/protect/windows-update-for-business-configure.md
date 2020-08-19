@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946654"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252565"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>在 Intune 中管理 Windows 10 软件更新
 
@@ -60,7 +60,6 @@ Intune 提供以下策略类型来管理更新：
 
   > [!NOTE]
   > **不支持的版本**：
-  > - Windows 10 移动版  
   > - Windows 10 企业版 LTSC。 适用于企业的 Windows 更新 (WUfB) 当前不支持“长期服务频道”版本。 计划使用备用修补方法，如 WSUS 或 Configuration Manager。
 
 - 在 Windows 设备上，“反馈和诊断”   > “诊断和使用情况数据”  必须设置为“基本”  、“增强”  或“完整”  。

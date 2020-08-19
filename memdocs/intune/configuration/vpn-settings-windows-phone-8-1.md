@@ -5,24 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ROBOTS: NOINDEX
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cf69afb3db3e7250f8bf491efbfb3ff64dc32ec
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: ea08456fd55e03e86dfcec36411825d03652a47d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556296"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146433"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 Windows Phone 8.1 设备添加 VPN 设置
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 本文介绍可用于在运行 Windows Phone 8.1 的设备上配置 VPN 连接的 Intune 设置。 
 

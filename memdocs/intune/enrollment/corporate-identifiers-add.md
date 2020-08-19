@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
-ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
+ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87473672"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252718"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>将设备标识为“公司自有”
 
@@ -49,7 +49,7 @@ ms.locfileid: "87473672"
 
 | 平台 | IMEI 号码 | 序列号 |
 |---|---|---|
-| Windows | 支持 (Windows Phone) | 不支持 |
+| Windows | 不支持 | 不支持 |
 | iOS/macOS | 不支持（请参阅下列重要事项）  | 支持 |
 | 设备管理员托管的 Android OS v10 | 不支持 | 不支持 |
 | Android Enterprise 工作配置文件 | 不支持 | 支持 |

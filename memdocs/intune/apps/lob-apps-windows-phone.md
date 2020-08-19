@@ -6,28 +6,29 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
+ROBOTS: NOINDEX
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b5c12d9e0a3e2eb7ba0f996063c3d3be3d4b6f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 44099301e3c7ca9f92de179dd2ff14b88af55ffc
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990632"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179632"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>将 Windows Phone 业务线应用添加到 Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 使用本文中提供的信息将 Windows Phone 业务线 (LOB) 应用添加到 Microsoft Intune。 LOB 应用是从应用安装文件添加到 Intune 的应用。 此类应用通常在内部编写。 Intune 在用户设备上安装 LOB 应用。 
 

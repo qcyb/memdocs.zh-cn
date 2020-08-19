@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365417"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146484"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>在 Intune 中创建 VPN 配置文件以连接到 VPN 服务器
 
@@ -37,9 +37,7 @@ ms.locfileid: "87365417"
 >
 > * Android 4 及更高版本
 > * 运行 Windows 8.1 和更高版本的已注册设备
-> * Windows Phone 8.1 及更高版本
 > * 运行 Windows 10 桌面版的已注册设备
-> * Windows 10 移动版
 > * Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>VPN 连接类型
@@ -57,7 +55,6 @@ ms.locfileid: "87365417"
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android 设备管理员
@@ -90,7 +87,6 @@ ms.locfileid: "87365417"
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -115,7 +111,6 @@ ms.locfileid: "87365417"
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android 设备管理员
@@ -125,7 +120,6 @@ ms.locfileid: "87365417"
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Android Enterprise 工作配置文件：使用[应用配置策略](../apps/app-configuration-vpn-ae.md)
@@ -149,7 +143,6 @@ ms.locfileid: "87365417"
       - **macOS**
       - **Windows 10 及更高版本**
       - **Windows 8.1 及更高版本**
-      - **Windows Phone 8.1**
     - **配置文件**：选择“VPN”。
 
 4. 选择“创建”。
@@ -158,7 +151,7 @@ ms.locfileid: "87365417"
     - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的 VPN 配置文件”。
     - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”  。
+6. 选择“下一步”。
 7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，进行详细设置：
 
     - [Android 设备管理员](vpn-settings-android.md)
@@ -167,9 +160,8 @@ ms.locfileid: "87365417"
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md)（包括 Windows Holographic for Business）
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
-8. 选择“下一步”  。
+8. 选择“下一步”。
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
     选择“下一步”。

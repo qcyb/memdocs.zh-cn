@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/08/2018
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: dd1a5f5e20e810cfc393417d9a2bb98a2e080fec
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882101"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179318"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>通过 Windows 公司门户使用 iOS 设备
 
@@ -40,15 +40,14 @@ ms.locfileid: "83882101"
 公司门户当前支持运行以下 Windows 版本的设备：
 
 * Windows 10（家庭版、专业版、教育版、S 模式和企业版）
-* Windows Phone 8.1 及更高版本
 * Windows 8.1 RT
-* Windows 8。1
+* Windows 8.1
 
 公司门户中也支持其他版本的 Windows，例如 [Windows 10 全息版](https://www.microsoft.com/hololens)。 但是，本文不介绍这些版本，因为它们用于非常特定的用途。
 
 ## <a name="set-up-your-device-in-the-company-portal"></a>在公司门户中设置设备
 - [将我的 Windows 设备托管在公司门户中](windows-enrollment-company-portal.md)  
-- [对设备进行管托管意味着什么？](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+- [对设备进行管托管意味着什么？](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)**
 - [公司可以在我的设备上看到哪些信息？](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [对设备进行加密](encrypt-your-device-windows.md)
 - [设置或更改设备密码](set-or-change-your-password-windows.md)

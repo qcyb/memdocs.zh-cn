@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461430"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252248"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>在 Microsoft Intune 中创建符合性策略
 
@@ -53,7 +53,6 @@ ms.locfileid: "86461430"
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - 在 Intune 中注册设备（用于查看符合性状态）
 
@@ -70,7 +69,6 @@ ms.locfileid: "86461430"
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
-   - *Windows Phone 8.1*
    - *Windows 8.1 及更高版本*
    - *Windows 10 及更高版本*
 
@@ -89,7 +87,7 @@ ms.locfileid: "86461430"
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
-   - [Windows Phone 8.1、Windows 8.1 及更高版本](compliance-policy-create-windows-8-1.md)
+   - [Windows 8.1 及更高版本](compliance-policy-create-windows-8-1.md)
    - [Windows 10 及更高版本](compliance-policy-create-windows.md)  
 
 6. 在“位置”选项卡上，可以根据设备位置强制实施合规性。 从现有位置进行选择。 如果尚无可用位置，请参阅[使用位置（网络围墙）](use-network-locations.md)提供的指南。
