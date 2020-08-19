@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559549"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614688"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>用于白手套部署的 Windows Autopilot
 
@@ -48,7 +48,7 @@ Windows Autopilot 还可以提供一个 <I>白色的手套</I> 服务，帮助�
 >[!IMPORTANT]
 >因为 OEM 或供应商执行了白色的手套过程，所以这 <u>不需要访问最终用户的本地域基础结构</u>。 这不同于典型的混合 Azure AD 联接方案，因为重新启动设备会被延迟。 设备在连接到域控制器的时间之前是 resealed 的，并且在最终用户对设备进行取消装箱时，联系到域网络。
 
-## <a name="preparation"></a>准备
+## <a name="preparation"></a>准备工作
 
 为手套预配预配的设备是通过正常注册过程为 Autopilot 注册的。 
 
@@ -59,7 +59,7 @@ Windows Autopilot 还可以提供一个 <I>白色的手套</I> 服务，帮助�
 
 如果无法完成这些方案，则 Windows Autopilot for 白色手套部署也将不会成功，因为它基于这些方案进行构建。
 
-在开始预配服务设备中的手套过程之前，必须使用 rIntune 帐户配置附加的 Autopilot 配置文件设置：
+在预配服务设备中开始使用白色手套过程之前，必须使用 Intune 帐户配置附加的 Autopilot 配置文件设置：
 
  ![允许白色手套](images/allow-white-glove-oobe.png)
 
