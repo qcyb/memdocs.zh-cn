@@ -38,11 +38,17 @@
 #### [修复与 Samsung Knox 相关的常见问题](samsung-knox-errors-android.md)
 #### [更新设备以安装 Outlook](update-device-outlook-android.md)
 
-#### 日志记录
-##### [启用详细日志记录](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [上传日志和通过电子邮件发送日志](send-logs-to-your-it-admin-by-email-android.md)
-##### [使用 USB 线缆发送日志](send-logs-to-your-it-admin-using-cable-android.md)
-##### [将错误发送给 Microsoft](send-logs-to-microsoft-android.md)
+### 日志记录
+#### [启用详细日志记录](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+#### [上传日志和通过电子邮件发送日志](send-logs-to-your-it-admin-by-email-android.md)
+#### [使用 USB 线缆发送日志](send-logs-to-your-it-admin-using-cable-android.md)
+#### [将错误发送给 Microsoft](send-logs-to-microsoft-android.md)
+
+### 解决 MTD 应用中的威胁  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)  
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)    
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ### 操作系统问题
 #### [更新设备](you-need-to-update-your-android-device.md)
@@ -55,16 +61,6 @@
 #### [不支持的安全修补程序](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [具有加密错误的设备](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### “移动威胁防御”应用 
-#### [安装 Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
-#### [安装 Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
-#### [安装 SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
-#### [安装 Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
-#### [解决威胁](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-##### [使用 Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
-##### [使用 Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
-##### [使用 SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
-##### [使用 Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [使用 iOS 设备](using-your-iOS-device-with-intune.md)
 ### [iOS 设备重置的影响](effects-of-device-reset-company-portal-ios.md)
@@ -99,16 +95,12 @@
 #### [更新设备以安装 Outlook](update-device-outlook-ios.md)
 #### [目前不支持我的 iOS 版本](your-ios-version-isnt-yet-supported.md)
 
-### “移动威胁防御”应用
-#### [安装 Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-#### [安装 Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
-#### [安装 SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
-#### [安装 Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
-#### [解决威胁](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
-##### [使用 Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
-##### [使用 Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
-##### [使用 SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
-##### [使用 Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+### 解决 MTD 应用中的威胁  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)  
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)    
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)    
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+
 
 ## 使用 macOS 设备
 ### [注册 macOS 设备会发生什么情况？](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)

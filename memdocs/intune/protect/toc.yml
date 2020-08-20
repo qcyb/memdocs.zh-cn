@@ -60,6 +60,8 @@
           href: actions-for-noncompliance.md
         - name: 监视设备符合性
           href: compliance-policy-monitor.md
+        - name: 设备合规性合作伙伴
+          href: device-compliance-partners.md
     - name: 终结点安全
       href: endpoint-security.md
       items:
