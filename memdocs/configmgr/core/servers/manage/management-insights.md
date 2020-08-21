@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3d65c83d0a9fd009fa21a3b9e623145f87cc9498
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: de3c75982e19e6183260a2a5f99f65b9c785d27f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128099"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700508"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 中的管理见解
 
@@ -54,7 +54,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 若要查看详细信息，请依次选择见解和“更多详细信息”。
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>操作
 
 站点每周重新评估一次管理见解的适用性。 若要手动重新评估见解，请右键单击见解，然后选择“重新评估”。
 
@@ -131,7 +131,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - 启用云管理网关：云管理网关 (CMG) 提供了一种通过 Internet 管理 Configuration Manager 客户端的简单方法。 通过在 Microsoft Azure 中将 CMG 部署为云服务，可以继续管理在 Internet 上漫游的客户端并向其提供内容。 有了 CMG，就不需要向 Internet 公开其他任何本地基础结构。 有关详细信息，请参阅 [CMG 规划](../../clients/manage/cmg/plan-cloud-management-gateway.md)。<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
-- **将设备启用为加入混合 Azure Active Directory**：使用已建立 Azure AD 联接的设备，用户可以使用自己的域凭据来登录，同时确保设备符合组织的安全性和符合性标准。 有关详细信息，请参阅 [Azure AD 混合标识设计注意事项](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview)。<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
+- **将设备启用为加入混合 Azure Active Directory**：使用已建立 Azure AD 联接的设备，用户可以使用自己的域凭据来登录，同时确保设备符合组织的安全性和符合性标准。 有关详细信息，请参阅 [Azure AD 混合标识设计注意事项](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview)。<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
 - 没有正确 HTTPS 配置的站点：自版本 2002 起，此见解列出层次结构中未正确配置 HTTPS 的站点。 此配置可防止站点[将集合成员资格结果同步到 Azure AD 组](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)。 这可能导致 Azure AD 同步无法上传所有设备。 可能无法正常管理这些客户端。<!--6268489--> 配置[增强型 HTTP](../../plan-design/hierarchy/enhanced-http.md)，或至少为 HTTPS 启用一个管理点。 如果你已为站点配置了 HTTPS 通信，此见解就不会出现。<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
@@ -162,7 +162,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 <!--3607758-->
 
-从版本 2002 开始，此组由 Microsoft Premier Field Engineering 提供。 这些见解只是 Microsoft 顶级支持在[服务中心](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments)提供的众多检查中的一个例子。
+从版本 2002 开始，此组由 Microsoft Premier Field Engineering 提供。 这些见解只是 Microsoft 顶级支持在[服务中心](/services-hub/health/getting_started_with_on_demand_assessments)提供的众多检查中的一个例子。
 
 - **Active Directory 安全组发现配置为过于频繁地运行**：通常不需要将 Active Directory 安全组发现配置为以高于每三小时一次的频率运行。 更频繁的配置可能对 Active Directory、网络和 Configuration Manager 的性能造成负面影响。 启用增量同步，而不使用完全同步计划。 有关详细信息，请参阅 [Active Directory 组发现](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup)。<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -182,7 +182,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **将所有站点更新到同一版本**：在层次结构中使用同一版本的 Configuration Manager。 此配置可保证所有站点都提供相同的功能。 同一层次结构中不同版本的站点会引入互操作性方案。 Configuration Manager 的更高版本包括新功能，并可解决已知问题。 有关详细信息，请参阅[不同版本之间的互操作性](../../plan-design/hierarchy/interoperability-between-different-versions.md)。<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
-若要详细了解这些见解，请参阅 [Configuration Manager 管理见解的修正步骤](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr)。
+若要详细了解这些见解，请参阅 [Configuration Manager 管理见解的修正步骤](/services-hub/health/remediation-steps-configmgr)。
 
 > [!TIP]
 > 如果你已经是 Microsoft 统一支持或 Microsoft 高级支持的客户，请登录到[服务中心](https://serviceshub.microsoft.com/assessments/)以获取其他按需评估。
