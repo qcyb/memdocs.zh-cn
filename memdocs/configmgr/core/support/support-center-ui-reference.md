@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701335"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699443"
 ---
 # <a name="support-center-user-interface-reference"></a>支持中心用户界面引用
 
@@ -585,16 +585,16 @@ Support Center 查看器工具的“配置”  选项卡提供以下视图，这
 此视图显示支持中心的“客户端”选项卡上显示的相同信息  。
 
 #### <a name="operating-system"></a>操作系统
-客户端操作系统的详细信息。 它使用 [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) 类。
+客户端操作系统的详细信息。 它使用 [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) 类。
 
 #### <a name="computer"></a>计算机
-客户端计算机的详细信息。 它使用 [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) 类。
+客户端计算机的详细信息。 它使用 [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) 类。
 
 #### <a name="services"></a>服务
-客户端计算机上运行的服务的详细信息。 它使用 [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service) 类。
+客户端计算机上运行的服务的详细信息。 它使用 [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service) 类。
 
 #### <a name="network-adapters"></a>网络适配器
-客户端计算机上安装的网络适配器的详细信息。 它使用 [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) 类。
+客户端计算机上安装的网络适配器的详细信息。 它使用 [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) 类。
 
 
 ### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a>“日志”选项卡

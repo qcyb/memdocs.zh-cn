@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 5250d3296df19c454f55ed166e998f8c940c98db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997960"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700781"
 ---
 # <a name="desktop-analytics-data-privacy"></a>桌面分析数据隐私
 
 桌面分析致力于围绕以下原则保护客户数据隐私：
 
-- **透明度：** 我们会全面记录 Windows 诊断事件。 与贵公司的安全性和合规性团队一起查看它们。 Windows 诊断数据查看器可用于查看从给定设备发送的诊断数据。 有关详细信息，请参阅[诊断数据查看器概述](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview)。  
+- **透明度：** 我们会全面记录 Windows 诊断事件。 与贵公司的安全性和合规性团队一起查看它们。 Windows 诊断数据查看器可用于查看从给定设备发送的诊断数据。 有关详细信息，请参阅[诊断数据查看器概述](/windows/configuration/diagnostic-data-viewer-overview)。  
 
 - **控制：** 可以控制要与 Microsoft 共享的诊断数据级别。 Windows 10 版本 1709 添加了一项新策略，可将增强的诊断数据限制为桌面分析所需的最小量。  
 
@@ -30,7 +30,7 @@ ms.locfileid: "87997960"
 
 - **信任：** 桌面分析支持 Microsoft [隐私声明](https://privacy.microsoft.com/privacystatement)和[联机服务条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)。  
 
-有关详细信息，请参阅 [Microsoft 依照 GDPR 充当处理者的 Windows 服务](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr)。<!-- 5353168 -->
+有关详细信息，请参阅 [Microsoft 依照 GDPR 充当处理者的 Windows 服务](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr)。<!-- 5353168 -->
 
 ## <a name="data-flow"></a>数据流
 
@@ -57,7 +57,7 @@ ms.locfileid: "87997960"
 
 3. 设备将诊断数据发送到适用于 Windows 的 Microsoft 诊断数据管理服务。 所有诊断数据都通过 HTTPS 进行加密，并在从设备传输到此服务时使用证书固定。 Microsoft 数据管理服务在美国托管。
 
-      - 应用程序故障、内核错误、无响应的应用程序和其他特定于应用程序的问题使用 Windows 错误报告 API 向 Microsoft 发送应用程序特定的问题报告。 有关此数据流的特定详细信息，请参阅[使用 WER](https://docs.microsoft.com/windows/win32/wer/using-wer)。
+      - 应用程序故障、内核错误、无响应的应用程序和其他特定于应用程序的问题使用 Windows 错误报告 API 向 Microsoft 发送应用程序特定的问题报告。 有关此数据流的特定详细信息，请参阅[使用 WER](/windows/win32/wer/using-wer)。
       
 4. Microsoft 每天都会生成一个以 IT 为中心的见解快照。 此快照合并了来自 Windows 的诊断数据与已注册设备的输入信息。 此过程发生在暂时存储中，仅供桌面分析使用。 暂时存储托管于美国的 Microsoft 数据中心。 所有数据都通过 SSL (HTTPS) 加密通道发送。 快照按商业 ID 进行隔离。  
 
@@ -71,23 +71,23 @@ ms.locfileid: "87997960"
 
 相关隐私方面的详细信息，请参阅以下文章：
 
-- [Windows 10 和 GDPR：面向 IT 决策者的信息](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 和 GDPR：面向 IT 决策者的信息](/windows/privacy/gdpr-it-guidance)  
 
-- [配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [配置组织中的 Windows 诊断数据](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Windows 7、Windows 8 和 Windows 8.1 评估程序诊断数据事件与字段](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)。  
+- [Windows 7、Windows 8 和 Windows 8.1 评估程序诊断数据事件与字段](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)。  
 
-- [Windows 10 版本 1809 基本级别 Windows 诊断事件与字段](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Windows 10 版本 1809 基本级别 Windows 诊断事件与字段](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [桌面分析所使用的 Windows 10 版本 1709 增强的诊断数据事件与字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [桌面分析所使用的 Windows 10 版本 1709 增强的诊断数据事件与字段](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [Windows 安装程序错误报告](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [Windows 安装程序错误报告](/windows/deployment/upgrade/windows-error-reporting)
 
-- [诊断数据查看器概述](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [诊断数据查看器概述](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [许可条款和文档](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Log Analytics 数据安全性](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Log Analytics 数据安全性](/azure/azure-monitor/platform/data-security)
 
 - [Microsoft Azure 数据中心的安全和隐私](https://azure.microsoft.com/global-infrastructure/)  
 

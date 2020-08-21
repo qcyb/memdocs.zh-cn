@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353456"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700763"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for modern desktop 停用常见问题
 
@@ -49,10 +49,10 @@ ms.locfileid: "85353456"
 
 “Ready for modern desktop”目录列出了在运行 Windows 10 和 Office 365 ProPlus 的商业设备上受支持且已在使用的软件解决方案。 该目录可帮助 IT 经理考虑最新版本的 Windows 10 和 Office 365 的部署。
 
-IT 经理提供的反馈是，他们希望这些见解与他们已经用来进行部署计划的工具集成在一起。 在 Configuration Manager 中使用[桌面分析](https://aka.ms/dadocs)和 [Office 365 ProPlus 就绪功能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)来计划和管理 Windows 10 和 Office 365 ProPlus 升级项目。 
+IT 经理提供的反馈是，他们希望这些见解与他们已经用来进行部署计划的工具集成在一起。 在 Configuration Manager 中使用[桌面分析](https://aka.ms/dadocs)和 [Office 365 ProPlus 就绪功能](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)来计划和管理 Windows 10 和 Office 365 ProPlus 升级项目。 
 
 > [!Note]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 ### <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -114,12 +114,12 @@ Microsoft 将软件供应商提供的支持声明与它们从商业设备接收�
 
 通过开发人员中心使用运行状况和指标报表评估解决方案的性能： 
 
-- [Windows 应用商店](https://docs.microsoft.com/windows/uwp/publish/health-report)
-- [桌面](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-- [Office 外接程序](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
+- [Windows 应用商店](/windows/uwp/publish/health-report)
+- [桌面](/windows/desktop/appxpkg/windows-desktop-application-program)
+- [Office 外接程序](/office/dev/store/update-unpublish-and-view-metrics) 
 
 ### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>如何为 Windows 10 和 Office 365 ProPlus 开发兼容的资产？
 
 确保你的桌面应用程序现在与 Windows 10 兼容，并在将来保持与 Windows 10 兼容。 有关详细信息，请参阅[面向开发人员的应用程序兼容性](https://developer.microsoft.com/windows/desktop/app-compatibility)。
 
-如果为 Office 365 ProPlus 开发解决方案，请参阅 [Office 中的 COM、VSTO 和 VBA 外接程序开发最佳做法](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)。
+如果为 Office 365 ProPlus 开发解决方案，请参阅 [Office 中的 COM、VSTO 和 VBA 外接程序开发最佳做法](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)。

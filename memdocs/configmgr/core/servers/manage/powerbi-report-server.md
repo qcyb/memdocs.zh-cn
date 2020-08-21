@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814901"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699579"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>与 Power BI 报表服务器集成
 
@@ -23,13 +23,13 @@ ms.locfileid: "84814901"
 
 <!--3721603-->
 
-从版本 2002 开始，可以将 [Power BI 报表服务器](https://docs.microsoft.com/power-bi/report-server/get-started)与 Configuration Manager 报告集成。 这种集成提供了现代可视化效果和更好的性能。 它为 Power BI 报表添加了控制台支持，这与 SQL Server Reporting Services 中已存在的报表类似。
+从版本 2002 开始，可以将 [Power BI 报表服务器](/power-bi/report-server/get-started)与 Configuration Manager 报告集成。 这种集成提供了现代可视化效果和更好的性能。 它为 Power BI 报表添加了控制台支持，这与 SQL Server Reporting Services 中已存在的报表类似。
 
 保存 Power BI Desktop 报表文件 (.PBIX) 并将它们部署到 Power BI 报表服务器。 此过程与 SQL Server Reporting Services 报表文件 (.RDL) 类似。 你还可以直接从 Configuration Manager 控制台启动浏览器中的报表。
 
 ## <a name="prerequisites"></a>必备条件
 
-- Power BI 报表服务器许可证。 有关详细信息，请参阅 [Power BI 报表服务器许可](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server)。
+- Power BI 报表服务器许可证。 有关详细信息，请参阅 [Power BI 报表服务器许可](/power-bi/report-server/get-started#licensing-power-bi-report-server)。
 
 - 下载 [Microsoft Power BI 报表服务器 - 2019 年 9 月版](https://www.microsoft.com/download/details.aspx?id=57270)或更高版本。
 
@@ -40,7 +40,7 @@ ms.locfileid: "84814901"
 
     > [!IMPORTANT]
     > - 只使用 [Microsoft 下载中心](https://www.microsoft.com/download/)的 Power BI Desktop 版本，不要使用 Microsoft Store 中的版本。
-    > - 只使用[声明已“针对 Power BI 报表服务器进行了优化”的 Power BI Desktop](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop) 版本。
+    > - 只使用[声明已“针对 Power BI 报表服务器进行了优化”的 Power BI Desktop](/power-bi/report-server/install-powerbi-desktop) 版本。
 
 - Power BI 集成使用相同的基于角色的管理进行报告。
     > [!NOTE]
@@ -54,7 +54,7 @@ ms.locfileid: "84814901"
 
 仅当站点中已有 Reporting Services 点时，才使用此过程。 请在同一服务器上执行此过程的所有步骤：
 
-1. 在报表服务器 Configuration Manager 中，备份“加密密钥” 。 有关详细信息，请参阅 [SSRS 加密密钥 - 备份和还原加密密钥](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys)。
+1. 在报表服务器 Configuration Manager 中，备份“加密密钥” 。 有关详细信息，请参阅 [SSRS 加密密钥 - 备份和还原加密密钥](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys)。
 
     > [!WARNING]
     > 如果跳过此步骤，将无法访问 SQL Server Reporting Services 中的任何自定义报表。

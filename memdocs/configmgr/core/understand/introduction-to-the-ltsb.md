@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906103"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699358"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Configuration Manager 的 Long-Term Servicing Branch 简介
 
@@ -26,7 +26,7 @@ Configuration Manager 的 Long-Term Servicing Branch (LTSB) 是单独分支，�
 LTSB 是在 Configuration Manager 版本 1606 基础之上构建而成，与 Configuration Manager 的 Current Branch 相比，它减少了功能。
 
 > [!TIP]   
-> Configuration Manager LTSB 与 System Center suite 长期服务渠道 (LTSC) 无关。 有关详细信息，请参阅 [System Center 发行选项概述](https://docs.microsoft.com/system-center/ltsc-and-sac-overview)。
+> Configuration Manager LTSB 与 System Center suite 长期服务渠道 (LTSC) 无关。 有关详细信息，请参阅 [System Center 发行选项概述](/system-center/ltsc-and-sac-overview)。
 
 ## <a name="features-that-arent-available"></a>不可用的功能
 
@@ -53,7 +53,7 @@ Configuration Manager 的 Current Branch 支持以下功能，但使用 LTSB 时
 
 ## <a name="find-ltsb-documentation"></a>查找 LTSB 文档
 
-LTSB 是在 Current Branch 版本 1606 基础之上构建而成。 使用 [Current Branch 文档](https://docs.microsoft.com/mem/configmgr/)，其中包含 LTSB 专属注意事项和限制。 以下文章中标识了这些注意事项和限制：
+LTSB 是在 Current Branch 版本 1606 基础之上构建而成。 使用 [Current Branch 文档](../../index.yml)，其中包含 LTSB 专属注意事项和限制。 以下文章中标识了这些注意事项和限制：
 
 - [安装 LTSB](install-the-ltsb.md)
 - [将 LTSB 升级到 Current Branch](convert-to-current-branch.md)

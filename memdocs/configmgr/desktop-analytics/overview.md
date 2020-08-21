@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411008"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700782"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -69,22 +69,22 @@ ms.locfileid: "86411008"
 
 ### <a name="technical"></a>技术条件
 
-- 有效的全局 Azure 订阅，以及[全局管理员](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)权限。 不支持 [Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)。  
+- 有效的全局 Azure 订阅，以及[全局管理员](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)权限。 不支持 [Microsoft 帐户](/windows/security/identity-protection/access-control/microsoft-accounts)。  
 
     > [!IMPORTANT]
-    > 桌面分析是 Azure 全球版中托管的一项 Windows 服务，它利用 Windows 诊断数据。 尽管桌面分析是适用于美国政府客户的 Azure 全球服务，但它不符合[美国政府社区合规性 (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) 属性。 有关 Microsoft 产品和服务的符合性服务/产品列表，请参阅 [Microsoft 信任中心](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)。 桌面分析不适用于 GCC High 或美国国防部 (DOD) 客户。 不支持使用 Azure 政府订阅来托管桌面分析工作区。
+    > 桌面分析是 Azure 全球版中托管的一项 Windows 服务，它利用 Windows 诊断数据。 尽管桌面分析是适用于美国政府客户的 Azure 全球服务，但它不符合[美国政府社区合规性 (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) 属性。 有关 Microsoft 产品和服务的符合性服务/产品列表，请参阅 [Microsoft 信任中心](/microsoft-365/compliance/offering-home?view=o365-worldwide)。 桌面分析不适用于 GCC High 或美国国防部 (DOD) 客户。 不支持使用 Azure 政府订阅来托管桌面分析工作区。
 
     - 设置工作区的工作区所有者权限，以及以下角色 ：  
 
-      - [**桌面分析管理员**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色。
+      - [**桌面分析管理员**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色。
 
-      - 资源组上的 [**Log Analytics 参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor)和[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)，可使用现有工作区或在现有资源组中创建新工作区。
+      - 资源组上的 [**Log Analytics 参与者**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor)和[**用户访问管理员**](/azure/role-based-access-control/built-in-roles#user-access-administrator)，可使用现有工作区或在现有资源组中创建新工作区。
 
-      - 订阅上的[**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[**参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)和[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)权限，可在新资源组中创建工作区。  
+      - 订阅上的[**所有者**](/azure/role-based-access-control/built-in-roles#owner)或[**参与者**](/azure/role-based-access-control/built-in-roles#contributor)和[**用户访问管理员**](/azure/role-based-access-control/built-in-roles#user-access-administrator)权限，可在新资源组中创建工作区。  
 
     - 要在载入后访问门户，你需要：
 
-      - 创建的 Log Analytics 工作区的[桌面分析管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色和[所有者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)或[参与者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)权限。
+      - 创建的 Log Analytics 工作区的[桌面分析管理员](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)角色和[所有者](/azure/role-based-access-control/built-in-roles#owner)或[参与者](/azure/role-based-access-control/built-in-roles#contributor)权限。
 
 - 包含更新汇总 (4500571) 的 Configuration Manager 版本 1902 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](connect-configmgr.md#bkmk_hotfix)。  
 
@@ -103,7 +103,7 @@ ms.locfileid: "86411008"
     - 设备还需要具有包含更新汇总 (4500571) 的 Configuration Manager 客户端版本 1902 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](connect-configmgr.md#bkmk_hotfix)。  
 
     > [!Note]  
-    > 桌面分析不支持以 Windows 10 长期服务频道 (LTSC) 为源或目标的升级。 有关详细信息，请参阅 [Windows 即服务概述](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。
+    > 桌面分析不支持以 Windows 10 长期服务频道 (LTSC) 为源或目标的升级。 有关详细信息，请参阅 [Windows 即服务概述](/windows/deployment/update/waas-overview#long-term-servicing-channel)。
     >
     > 桌面分析专门用于最大程度地支持就地升级方案。 如果需要进行重大更改（例如，从 32 位更改为 64 位体系结构），请使用映像方案。 桌面分析见解对于这些经典 OS 部署方案仍然有用，但你可以忽略特定于就地升级的指南。 有关详细信息，请参阅[使用 Configuration Manager 部署企业操作系统的方案](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)。
 
@@ -139,7 +139,7 @@ ms.locfileid: "86411008"
   - Windows 虚拟桌面访问 E3 或 E5  
 
 > [!NOTE]
-> 除了许可订阅的成本之外，在 Azure Log Analytics 内使用桌面分析无需额外费用。 桌面分析引入的数据类型无需任何 Log Analytics 数据引入和保留费用。 作为非计费数据类型，此数据也不受任何 Log Analytics 每日数据引入上限的限制。 有关详细信息，请参阅 [Log Analytics 使用情况和成本](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)。
+> 除了许可订阅的成本之外，在 Azure Log Analytics 内使用桌面分析无需额外费用。 桌面分析引入的数据类型无需任何 Log Analytics 数据引入和保留费用。 作为非计费数据类型，此数据也不受任何 Log Analytics 每日数据引入上限的限制。 有关详细信息，请参阅 [Log Analytics 使用情况和成本](/azure/azure-monitor/platform/manage-cost-storage)。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -10,12 +10,12 @@ ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e08833a5ef560a0f958fe68b4ade0d4717dffc73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0b082ae578052a92c0afacd3d1f62fdb2e21bd6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703515"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699528"
 ---
 # <a name="prerequisites-for-reporting-in-configuration-manager"></a>Configuration Manager 中报表的先决条件
 
@@ -31,7 +31,7 @@ Configuration Manager 中的报表具有以下依赖关系：
 
 必须先安装和配置 SQL Server Reporting Services，然后才能在 Configuration Manager 中使用报表。
 
-有关规划和部署 Reporting Services 的详细信息，请参阅[安装 SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services)。
+有关规划和部署 Reporting Services 的详细信息，请参阅[安装 SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services)。
 
 在 64 位 SQL Server 安装的默认实例或命名实例上安装 Reporting Services 数据库。 将 SQL Server 实例与站点系统服务器并置，或在远程计算机上对其进行配置。
 

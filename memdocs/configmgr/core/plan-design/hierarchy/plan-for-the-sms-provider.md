@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692755"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700157"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序
 
@@ -165,7 +165,7 @@ SMS 提供程序还通过 HTTPS 提供 API 互操作性访问权限，这称为*
 
 - **证书身份验证**：要求使用由受信任的 PKI 证书颁发机构颁发的有效证书进行身份验证。 你没有在 Configuration Manager 中配置此证书。 Configuration Manager 要求管理员使用 PKI 登录到 Windows.  
 
-- **Windows Hello 企业版身份验证**：要求使用与设备关联并采用生物识别或 PIN 的强双因素身份验证进行身份验证。 有关详细信息，请参阅 [Windows Hello 企业版](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)。  
+- **Windows Hello 企业版身份验证**：要求使用与设备关联并采用生物识别或 PIN 的强双因素身份验证进行身份验证。 有关详细信息，请参阅 [Windows Hello 企业版](/windows/security/identity-protection/hello-for-business/hello-identity-verification)。  
 
 ### <a name="exclusions"></a>排除项
 

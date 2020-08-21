@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128910"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700293"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1910 中的新增功能
 
@@ -42,10 +42,10 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 
 以下 Microsoft 管理解决方案现已成为 Microsoft Endpoint Manager 品牌的一部分：
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [桌面分析](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - [设备管理管理员控制台](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)中的其他功能
 
 有关详细信息，请参阅以下 Microsoft 公司副总裁 Brad Anderson 发布的关于 Microsoft 365 的帖子：
@@ -346,7 +346,7 @@ Configuration Manager 控制台中提供了“客户端诊断”的新设备操�
 
 ## <a name="other-updates"></a>其他更新
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1910 发行说明](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps)。
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1910 发行说明](/powershell/sccm/1910-release-notes?view=sccm-ps)。
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_1910)。
 

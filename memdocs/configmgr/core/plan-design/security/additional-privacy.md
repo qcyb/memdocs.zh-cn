@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906575"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699783"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>关于 Configuration Manager 隐私的其他信息
 
@@ -47,7 +47,7 @@ Configuration Manager 仅从站点 SQL Server 数据库收集数据，而不会�
 
 Log Analytics 连接器同步数据，例如从 Configuration Manager 到 Azure 云服务的集合。 管理员配置此功能后，Azure 订阅 ID 和密钥会存储在 Configuration Manager 数据库中。 Azure Active Directory 客户端密钥和 Azure 工作区共享的密钥均存储在本地 Configuration Manager 数据库中。 Configuration Manager 和 Azure 之间的所有通信均使用 HTTPS。 除随机化诊断和使用情况数据之外，不会向 Microsoft 提供有关集合的任何其他信息。 
 
-有关 Log Analytics 收集的信息的详细信息，请参阅 [Log analytics 数据安全](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security)。
+有关 Log Analytics 收集的信息的详细信息，请参阅 [Log analytics 数据安全](/azure/log-analytics/log-analytics-data-security)。
 
 
 

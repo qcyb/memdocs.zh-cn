@@ -9,12 +9,12 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e32956d2ca9385c22e9073cfa2665e1f61b3ebd3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078628"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700695"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>使用安装向导安装 Configuration Manager 站点
 
@@ -37,7 +37,7 @@ ms.locfileid: "82078628"
 >   - [Microsoft Endpoint Configuration Manager - macOS 客户端（64 位）](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [适用于 UNIX 和 Linux 的客户端](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**发行说明**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**阅读文档**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**阅读文档**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **获取安装帮助**：[TechNet 论坛：Configuration Manager (Current Branch) – 站点和客户端部署](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager 社区**：[System Center 社区：如何参与](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Configuration Manager 主页**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
@@ -418,4 +418,4 @@ ms.locfileid: "82078628"
 2. 选择要安装的辅助站点，然后在功能区中选择“显示安装状态”  。  
 
     > [!TIP]  
-    > 同时安装多个辅助站点时，必备组件检查程序一次针对一个站点运行。 必须在完成一个站点检查后才可开始检查下一站点。  
+    > 同时安装多个辅助站点时，必备组件检查程序一次针对一个站点运行。 必须在完成一个站点检查后才可开始检查下一站点。

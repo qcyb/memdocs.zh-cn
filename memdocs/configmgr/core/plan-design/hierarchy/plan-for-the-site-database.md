@@ -10,12 +10,12 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a32f0a59a0b3ce3ad864fecf61fe7281b8ebbdd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 068511c5b3b0c15eb355c484b241a76d9dd512e2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704415"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700174"
 ---
 # <a name="plan-for-the-site-database-for-configuration-manager"></a>为 Configuration Manager 规划站点数据库
 
@@ -31,7 +31,7 @@ ms.locfileid: "81704415"
 
 -  若要使用非 SQL 可用性组，数据库恢复模式必须设置为“简单”  
 
-有关 SQL 恢复模式的更多信息，请参阅[恢复模式 (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)。
+有关 SQL 恢复模式的更多信息，请参阅[恢复模式 (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server)。
 
 以下 SQL Server 配置可以用于承载站点数据库：  
 
@@ -61,4 +61,4 @@ ms.locfileid: "81704415"
 -   当站点数据库与站点服务器并存时，你无法为站点数据库服务器使用群集 SQL Server。  
 
 
-通常，站点系统服务器仅支持来自单个 Configuration Manager 站点的站点系统角色。 但是，可在运行 SQL Server 的群集/非群集服务器上使用不同的 SQL Server 实例，用于托管来自不同 Configuration Manager 站点的数据库。 为了支持不同站点中的数据库，你必须将 SQL Server 的每个实例配置为使用唯一端口进行通信。  
+通常，站点系统服务器仅支持来自单个 Configuration Manager 站点的站点系统角色。 但是，可在运行 SQL Server 的群集/非群集服务器上使用不同的 SQL Server 实例，用于托管来自不同 Configuration Manager 站点的数据库。 为了支持不同站点中的数据库，你必须将 SQL Server 的每个实例配置为使用唯一端口进行通信。

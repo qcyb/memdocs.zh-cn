@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706315"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699987"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Configuration Manager 中的证书配置文件简介
 
@@ -59,11 +59,11 @@ ms.locfileid: "81706315"
 
 ## <a name="requirements"></a>要求
 
-若要部署使用 SCEP 的证书配置文件，请在站点系统服务器上安装证书注册点。 此外还要在运行 Windows Server 2012 R2 或更高版本的服务器上，为 NDES 安装策略模块（Configuration Manager 策略模块）。 此服务器需要 Active Directory 证书服务角色。 它还需要可供需要证书的设备访问的有效 NDES。 如果设备需要从 Internet 注册证书，那么 NDES 服务器必须可以从 Internet 访问。 例如，若要安全地启用从 Internet 到 NDES 服务器的流量，可以使用 [Azure 应用程序代理](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)。
+若要部署使用 SCEP 的证书配置文件，请在站点系统服务器上安装证书注册点。 此外还要在运行 Windows Server 2012 R2 或更高版本的服务器上，为 NDES 安装策略模块（Configuration Manager 策略模块）。 此服务器需要 Active Directory 证书服务角色。 它还需要可供需要证书的设备访问的有效 NDES。 如果设备需要从 Internet 注册证书，那么 NDES 服务器必须可以从 Internet 访问。 例如，若要安全地启用从 Internet 到 NDES 服务器的流量，可以使用 [Azure 应用程序代理](/azure/active-directory/manage-apps/application-proxy)。
 
 PFX 证书还需要一个证书注册点。 此外，请指定证书的证书颁发机构 (CA) 和相关访问凭据。 可以将 Microsoft 或 Entrust 指定为证书颁发机构。  
 
-有关 NDES 如何支持策略模块以便 Configuration Manager 可以部署证书的详细信息，请参阅[结合使用策略模块和网络设备注册服务](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\))。
+有关 NDES 如何支持策略模块以便 Configuration Manager 可以部署证书的详细信息，请参阅[结合使用策略模块和网络设备注册服务](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\))。
 
 Configuration Manager 支持将证书部署到不同设备类型和操作系统上的不同证书存储，具体取决于要求。 支持下列设备和操作系统：  
 

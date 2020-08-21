@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 21bb81e9851ab80d7807df337a67005e5b6b292a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815406"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699647"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Configuration Manager 中报表的操作和维护
 
@@ -33,7 +33,7 @@ Configuration Manager 将其报表存储在 SQL Server Reporting Services 中。
 运行报表时，它以本地操作系统的语言显示报表标题、描述和类别。 有关详细信息，请参阅[报表语言](configuring-reporting.md#-languages-for-reports)。
 
 > [!NOTE]  
-> 报表管理器是基于 Web 的报表访问和管理工具。 你可以使用它来通过 HTTPS 连接管理单个报表服务器实例。 使用报表管理器执行操作任务：查看报表、修改报表属性以及管理关联的报表订阅。 本文提供在报表管理器中查看报表和修改报表属性的步骤。 有关报表管理器中的其他选项的详细信息，请参阅[什么是报表管理器？](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
+> 报表管理器是基于 Web 的报表访问和管理工具。 你可以使用它来通过 HTTPS 连接管理单个报表服务器实例。 使用报表管理器执行操作任务：查看报表、修改报表属性以及管理关联的报表订阅。 本文提供在报表管理器中查看报表和修改报表属性的步骤。 有关报表管理器中的其他选项的详细信息，请参阅[什么是报表管理器？](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 使用以下过程运行 Configuration Manager 报表。
 
@@ -261,7 +261,7 @@ Reporting Services 可以采用不同的文件格式呈现报表。 例如，MHT
 在创建报表订阅以通过电子邮件传递报表时，Reporting Services 会向你配置的收件人发送电子邮件。 电子邮件将报表作为附件包含其中。 报表服务器不验证电子邮件地址，也不从电子邮件服务器获取它们。 可以将报表通过电子邮件发送到组织内部或外部的任何有效的电子邮件帐户。
 
 > [!NOTE]
-> 若要启用“电子邮件”订阅选项，需要在 Reporting Services 中配置电子邮件设置  。 有关详细信息，请参阅 [Reporting Services 中的电子邮件传递](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services)。
+> 若要启用“电子邮件”订阅选项，需要在 Reporting Services 中配置电子邮件设置  。 有关详细信息，请参阅 [Reporting Services 中的电子邮件传递](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services)。
 
 可以选择下列一个或全部两个电子邮件传递选项：
 

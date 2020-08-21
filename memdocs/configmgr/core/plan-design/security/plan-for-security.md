@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fa5ebf25de0f695661b18c4379c080dad42cf08
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0cdb14d282cbfa93655d6678b12b5f0837a225aa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128488"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699273"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -404,7 +404,7 @@ Configuration Manager 与 Azure Active Directory (Azure AD) 集成，使站点�
 
 - [桌面分析](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - [社区中心](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
@@ -416,7 +416,7 @@ Configuration Manager 与 Azure Active Directory (Azure AD) 集成，使站点�
 有关将站点连接到 Azure AD 的详细信息，请参阅[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)。
 
 
-有关 Azure AD 的详细信息，请参阅 [Azure Active Directory 文档](https://docs.microsoft.com/azure/active-directory/)。
+有关 Azure AD 的详细信息，请参阅 [Azure Active Directory 文档](/azure/active-directory/)。
 
 
 
@@ -448,5 +448,4 @@ Configuration Manager 与 Azure Active Directory (Azure AD) 集成，使站点�
 
 - [加密控制技术参考](cryptographic-controls-technical-reference.md)  
 
-- [PKI 证书要求](../network/pki-certificate-requirements.md)  
-
+- [PKI 证书要求](../network/pki-certificate-requirements.md)

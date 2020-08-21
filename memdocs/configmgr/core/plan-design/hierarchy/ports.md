@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b75ebe7e768080a1239e817c514b634cdcf64179
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 2495c0d7b5b19b5d6f7741d3b28b6a9a0e213fc3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587166"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700140"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
@@ -759,7 +759,7 @@ SQL Server 托管多个站点中的数据库时，每个数据库必须使用独
 
 若在 SQL Server 上启用基于主机的防火墙，请将其配置为允许正确的端口。 另请在与 SQL Server 通信的计算机之间配置网络防火墙。  
 
-有关如何将 SQL Server 配置为使用特定端口的示例，请参阅[将服务器配置为侦听特定的 TCP 端口](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)。  
+有关如何将 SQL Server 配置为使用特定端口的示例，请参阅[将服务器配置为侦听特定的 TCP 端口](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)。  
 
 ### <a name="discovery-and-publishing"></a><a name="bkmk_discovery"> </a>发现和发布
 

@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301429"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699511"
 ---
 # <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
@@ -181,7 +181,7 @@ ms.locfileid: "84301429"
     在 Configuration Manager 之外使用某种方法还原站点数据库之后，运行安装程序并选择此选项以完成站点数据库恢复。  
 
     > [!NOTE]  
-    > 如果使用 DPM 备份站点数据库，请使用 DPM 过程将站点数据库还原到指定位置，然后继续在 Configuration Manager 中进行还原过程。 有关 DPM 的详细信息，请参阅 [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) 文档库。  
+    > 如果使用 DPM 备份站点数据库，请使用 DPM 过程将站点数据库还原到指定位置，然后继续在 Configuration Manager 中进行还原过程。 有关 DPM 的详细信息，请参阅 [Data Protection Manager](/system-center/dpm) 文档库。  
 
 - 在层次结构中，还原主站点数据库时，恢复过程会从 CAS 检索上次备份后对站点数据库所做的任何更改。 还原 CAS 时，恢复过程会从引用主站点检索这些更改。 恢复独立主站点的站点数据库时，将会丢失上次备份之后所做的站点更改。  
 
@@ -193,7 +193,7 @@ ms.locfileid: "84301429"
 
 Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 利用更改跟踪，Configuration Manager 可以查询有关在上一个时间点之后对数据库表所做的更改的信息。 保持期指定更改跟踪信息将保留多长时间。 默认情况下，站点数据库被配置为具有 5 天保持期。 恢复站点数据库时，恢复过程在备份处于保持期内或保持期外这两种情况下会以不同方式继续进行。 例如，如果 SQL 服务器出现故障，并且上次备份是在 7 天之前，则它不在保持期范围内。
 
-有关 SQL Server 更改跟踪内部机制的详细信息，请参阅以下 SQL Server 团队的博客文章：[Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1)（更改跟踪清除 - 第 1 部分）和 [Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2)（更改跟踪清除 - 第 2 部分）。
+有关 SQL Server 更改跟踪内部机制的详细信息，请参阅以下 SQL Server 团队的博客文章：[Change Tracking Cleanup - part 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1)（更改跟踪清除 - 第 1 部分）和 [Change Tracking Cleanup - part 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2)（更改跟踪清除 - 第 2 部分）。
 
 ### <a name="reinitialization-of-site-or-global-data"></a>重新初始化站点或全局数据
 
@@ -378,7 +378,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 ### <a name="recover-custom-reports"></a>恢复自定义报表
 
-某些客户在 SQL Server Reporting Services 中创建自定义报表。 当此组件发生故障时，需从报表服务器的备份中恢复报表。 有关在 Reporting Services 中还原自定义报表的详细信息，请参阅 [Reporting Services 的备份和还原操作](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)。
+某些客户在 SQL Server Reporting Services 中创建自定义报表。 当此组件发生故障时，需从报表服务器的备份中恢复报表。 有关在 Reporting Services 中还原自定义报表的详细信息，请参阅 [Reporting Services 的备份和还原操作](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)。
 
 ### <a name="recover-content-files"></a>恢复内容文件
 
@@ -410,7 +410,7 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>重新生成分发点的证书
 
-还原站点后，distmgr.log 可能会列出一个或多个分发点的以下条目：`Failed to decrypt cert PFX data`。 此条目表示站点无法解密分发点证书数据。 要解决此问题，需重新生成或重新导入受影响分发点的证书。 使用 [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet。
+还原站点后，distmgr.log 可能会列出一个或多个分发点的以下条目：`Failed to decrypt cert PFX data`。 此条目表示站点无法解密分发点证书数据。 要解决此问题，需重新生成或重新导入受影响分发点的证书。 使用 [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet。
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>更新用于基于云的分发点的证书
 

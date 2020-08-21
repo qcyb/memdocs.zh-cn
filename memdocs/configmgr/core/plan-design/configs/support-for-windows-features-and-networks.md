@@ -10,12 +10,12 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e8e65571a3902661176ca3840690c159faef416
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4f9266668a488b6331857bf860d874a48161fcd0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688585"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700208"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>对 Configuration Manager 中的 Windows 功能和网络的支持
 
@@ -49,11 +49,11 @@ ms.locfileid: "81688585"
 - 必须针对 BranchCache 分布式缓存模式配置可支持 BranchCache 的客户端。  
 - 必须启用用于 BITS 客户端设置的 OS 设置以支持 BranchCache。  
 
-有关信息，请参阅 Windows 文档中的[为客户端配置 BranchCache](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache)。
+有关信息，请参阅 Windows 文档中的[为客户端配置 BranchCache](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache)。
 
 默认情况下，Windows 的所有 Configuration Manager 支持版本均支持 BranchCache。
 
-有关详细信息，请参阅 Windows Server 文档中的 [BranchCache for Windows](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache)。  
+有关详细信息，请参阅 Windows Server 文档中的 [BranchCache for Windows](/windows-server/networking/branchcache/branchcache)。  
 
 ## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> 工作组中的计算机  
 
@@ -75,7 +75,7 @@ Configuration Manager 在 Windows Server 2012 或更高版本上支持将重复�
 
 - Configuration Manager 团队博客上的 [Configuration Manager 分发点和 Windows Server 2012 重复数据删除](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385)
 
-- Windows Server 文档中的[重复数据删除概述](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview)
+- Windows Server 文档中的[重复数据删除概述](/windows-server/storage/data-deduplication/overview)
 
 ## <a name="directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 
@@ -129,4 +129,4 @@ Configuration Manager 与在安装了 Configuration Manager 组件的 OS 版本�
 
      此外，在启用了 SIS 的卷上不支持 Configuration Manager 客户端的缓存。  
 
-- **可移动磁盘驱动器**：Configuration Manager 不支持在可移动磁盘驱动器上安装 Configuration Manager 站点系统或客户端。  
+- **可移动磁盘驱动器**：Configuration Manager 不支持在可移动磁盘驱动器上安装 Configuration Manager 站点系统或客户端。

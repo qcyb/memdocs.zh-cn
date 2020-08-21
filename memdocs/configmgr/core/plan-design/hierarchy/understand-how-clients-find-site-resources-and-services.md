@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268991"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700106"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>了解客户端如何查找 Configuration Manager 的站点资源和服务
 
@@ -62,7 +62,7 @@ Configuration Manager 客户端使用名为“服务定位”的进程来查找�
 
 可使用首选管理点。 首选管理点是客户端的已分配站点中的管理点，它与客户端用于查找站点系统服务器的边界组相关联。 首选管理点作为站点系统服务器与边界组相关联，其关联方式与分发点或状态迁移点与边界组的关联方式类似。 如果为层次结构启用首选管理点，则当客户端从其已分配站点使用管理点时，它将在从其分配的站点使用其他管理点之前尝试使用首选管理点。  
 
-还可使用[管理点相关性](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3)博客中的信息来配置管理点相关性。 管理点相关性重写已分配管理点的默认行为，并使客户端能够使用一个或多个特定管理点。  
+还可使用[管理点相关性](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3)博客中的信息来配置管理点相关性。 管理点相关性重写已分配管理点的默认行为，并使客户端能够使用一个或多个特定管理点。  
 
 每当客户端需要联系管理点时，它就会检查 MP 列表，该列表本地存储在 Windows Management Instrumentation (WMI) 中。 安装客户端后，客户端会创建一个初始 MP 列表。 然后客户端会使用层次结构中有关每个管理点的详细信息定期更新该列表。  
 
@@ -244,4 +244,4 @@ Configuration Manager 支持服务定位记录的 RFC 2782。 这些记录格式
 
 默认情况下，主站点在站点上将针对 HTTP 配置的第一个管理点和针对 HTTPS 配置的第一个管理点发布到 WINS。  
 
-如果你不希望客户端在 WINS 中找到 HTTP 管理点，则使用 CCMSetup.exe Client.msi 属性 **SMSDIRECTORYLOOKUP=NOWINS**配置客户端。  
+如果你不希望客户端在 WINS 中找到 HTTP 管理点，则使用 CCMSetup.exe Client.msi 属性 **SMSDIRECTORYLOOKUP=NOWINS**配置客户端。

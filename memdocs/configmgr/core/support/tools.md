@@ -10,12 +10,12 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e308a54ee9636a7781667823e7b7f98ae6f25c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb2529dbbe923a5035f0b7586dab696cd6fc917e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701265"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699409"
 ---
 # <a name="configuration-manager-tools"></a>Configuration Manager 工具
 
@@ -25,7 +25,7 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 
 从 Configuration Manager 版本 1806 开始，这些工具包含在站点服务器上的 `CD.Latest\SMSSETUP\Tools` 文件夹中。 无需进行其他安装。<!--1357145--> 将这些版本的工具与 Configuration Manager 版本 1806 及更高版本一起使用。
 
-所有在[客户端和设备支持的操作系统](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)中列为受支持客户端的 Windows 操作系统均支持使用这些工具。
+所有在[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)中列为受支持客户端的 Windows 操作系统均支持使用这些工具。
 
 > [!Note]  
 > 仍可从 Microsoft 下载中心获取 [System Center 2012 R2 Configuration Manager 工具包](https://www.microsoft.com/download/details.aspx?id=50012)。 对于 Configuration Manager 版本 1806 及更高版本，在站点服务器上的 CD.Latest 文件夹中使用这些版本的工具。 有些工具之前位于工具包中，但不包括在版本 1806 中。 不再支持这些旧工具。
@@ -82,17 +82,17 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 
 - [支持中心](support-center.md)：进行故障排除时，请从客户端收集信息以便于分析。
 
-    从版本 1906 开始，OneTrace  是一个带有支持中心的新日志查看器。 它的工作方式与 CMTrace 类似，同时进行了一些改进。 有关详细信息，请参阅[支持中心 OneTrace](support-center-onetrace.md)。
+    从版本 1906 开始，OneTrace 是一个带有支持中心的新日志查看器。 它的工作方式与 CMTrace 类似，同时进行了一些改进。 有关详细信息，请参阅[支持中心 OneTrace](support-center-onetrace.md)。
 
 - [将本地站点扩展并迁移到 Microsoft Azure](azure-migration-tool.md)：帮助你以编程方式为 Configuration Manager 创建 Azure 虚拟机 (VM)。 <!--3556022--> 
 
-- [内容库清理工具](../plan-design/hierarchy/content-library-cleanup-tool.md)：使用 `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` 中的 ContentLibraryCleanup.exe 来从分发点删除孤立的内容  。  
+- [内容库清理工具](../plan-design/hierarchy/content-library-cleanup-tool.md)：使用 `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` 中的 ContentLibraryCleanup.exe 来从分发点删除孤立的内容****。  
 
-- [层次结构维护工具](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md)：使用站点服务器上 `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` 共享文件夹中的 Preinst.exe 将命令传送到层次结构管理器组件  。  
+- [层次结构维护工具](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md)：使用站点服务器上 `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` 共享文件夹中的 Preinst.exe 将命令传送到层次结构管理器组件****。  
 
-- [更新重置工具](../servers/manage/update-reset-tool.md)：在控制台中更新出现下载或复制问题时，可使用 `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` 中的 CMUpdateReset.exe 修复这些问题  。  
+- [更新重置工具](../servers/manage/update-reset-tool.md)：在控制台中更新出现下载或复制问题时，可使用 `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` 中的 CMUpdateReset.exe 修复这些问题****。  
 
-- [服务连接工具](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md)：服务连接点处于脱机状态时，可使用 `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` 中的 ServiceConnectionTool.exe 使站点保持最新状态  。   
+- [服务连接工具](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md)：服务连接点处于脱机状态时，可使用 `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` 中的 ServiceConnectionTool.exe 使站点保持最新状态****。   
 
 - [Microsoft Deployment Toolkit (MDT)](../../mdt/use-the-mdt.md)：一系列工具、流程和指南，用于自动执行桌面和服务器 OS 部署。
 

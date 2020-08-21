@@ -10,12 +10,12 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c3be302ecefad36d7be8617a4cc9354db1b685
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 99e02c190e02a5e017fe2c3f41682ad1624b6051
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906062"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699341"
 ---
 # <a name="what-is-configuration-manager"></a>什么是 Configuration Manager？
 
@@ -29,10 +29,10 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 
 以下 Microsoft 管理解决方案现已成为 Microsoft Endpoint Manager  品牌的一部分：
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [桌面分析](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - [设备管理管理员控制台](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)中的其他功能
 
 有关详细信息，请参阅 [Microsoft Endpoint Configuration Manager 常见问题解答](microsoft-endpoint-manager-faq.md)。
@@ -110,4 +110,4 @@ Configuration Manager 也可使用：
 - [Configuration Manager 的特性和功能](../plan-design/changes/features-and-capabilities.md)  
 - [选择设备管理解决方案](../plan-design/choose-a-device-management-solution.md)  
 - [通过构建自己的实验室环境来评估 Configuration Manager](../get-started/set-up-your-lab.md)
-- [查找使用 Configuration Manager 的帮助](find-help.md)  
+- [查找使用 Configuration Manager 的帮助](find-help.md)

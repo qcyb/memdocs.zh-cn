@@ -4,12 +4,12 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 12/13/2019
-ms.openlocfilehash: b21365d0c355adab6819e13537c1b25316583ec2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0f91860ad591e20c6f199e098a8c957f50294386
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704085"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88704344"
 ---
 <!-- ## Update and configure the .NET Framework to support TLS 1.2 Note: the heading in in the 2 articles (enable-tls-1-2-client & enable-tls-1-2-server) to better facilitate linking. -->
 
@@ -23,14 +23,14 @@ ms.locfileid: "81704085"
 
 - NET Framework 4.6.2 及更高版本支持 TLS 1.1 和 TLS 1.2。 确认注册表设置，但无需额外更改。
 
-- 更新 NET Framework 4.6 和更低版本以支持 TLS 1.1 和 TLS 1.2。 有关详细信息，请参阅 [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)。
+- 更新 NET Framework 4.6 和更低版本以支持 TLS 1.1 和 TLS 1.2。 有关详细信息，请参阅 [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)。
 
 - 如果在 Windows 8.1 或 Windows Server 2012 上使用 .NET Framework 4.5.1 或 4.5.2，也可从[下载中心](https://www.microsoft.com/download/details.aspx?id=42883)获取相关更新和详细信息。
 
 
 ### <a name="configure-for-strong-cryptography"></a>配置强加密
 
-将 .NET Framework 配置为支持强加密。 将 `SchUseStrongCrypto` 注册表设置设置为 `DWORD:00000001`。 此值将禁用 RC4 流密码，并需要重新启动。 若要了解有关此设置的详细信息，请参阅 [Microsoft 安全公告 296038](https://docs.microsoft.com/security-updates/SecurityAdvisories/2015/2960358)。
+将 .NET Framework 配置为支持强加密。 将 `SchUseStrongCrypto` 注册表设置设置为 `DWORD:00000001`。 此值将禁用 RC4 流密码，并需要重新启动。 若要了解有关此设置的详细信息，请参阅 [Microsoft 安全公告 296038](/security-updates/SecurityAdvisories/2015/2960358)。
 
 请务必在跨网络与启用了 TLS 1.2 的系统通信的所有计算机上设置以下注册表项。 例如 Configuration Manager 客户端、未在站点服务器安装的远程站点系统角色，以及站点服务器本身。
 
@@ -57,4 +57,4 @@ ms.locfileid: "81704085"
 ```
 
 > [!Note]  
-> `SchUseStrongCrypto` 设置允许 .NET 使用 TLS 1.1 和 TLS 1.2。 `SystemDefaultTlsVersions` 设置允许 .NET 使用操作系统配置。 有关详细信息，请参阅 [.NET Framework 中的传输层安全性 (TLS) 最佳做法](https://docs.microsoft.com/dotnet/framework/network-programming/tls)。
+> `SchUseStrongCrypto` 设置允许 .NET 使用 TLS 1.1 和 TLS 1.2。 `SystemDefaultTlsVersions` 设置允许 .NET 使用操作系统配置。 有关详细信息，请参阅 [.NET Framework 中的传输层安全性 (TLS) 最佳做法](/dotnet/framework/network-programming/tls)。

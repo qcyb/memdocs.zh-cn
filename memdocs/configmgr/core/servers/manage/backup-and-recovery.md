@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d766a172f934e27398ec2633ef0ec23ba4ade5e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906476"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700678"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
@@ -47,7 +47,7 @@ ms.locfileid: "82906476"
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>使用 Data Protection Manager 来备份站点数据库
 可以使用 System Center Data Protection Manager (DPM) 备份 Configuration Manager 站点数据库。
 
-在 DPM 中为站点数据库计算机创建一个新保护组。 在创建新保护组向导的“选择组成员”  页上，从数据源列表中选择 SMS 编写器服务。 然后选择站点数据库作为适当的成员。 有关使用 DPM 的详细信息，请参阅 [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) 文档库。  
+在 DPM 中为站点数据库计算机创建一个新保护组。 在创建新保护组向导的“选择组成员”  页上，从数据源列表中选择 SMS 编写器服务。 然后选择站点数据库作为适当的成员。 有关使用 DPM 的详细信息，请参阅 [Data Protection Manager](/system-center/dpm) 文档库。  
 
 > [!IMPORTANT]  
 >  对于使用命名实例的 SQL Server 群集，Configuration Manager 不支持 DPM 备份。 它支持使用默认 SQL Server 实例的 SQL Server 群集上的 DPM 备份。  
@@ -144,7 +144,7 @@ AfterBackup.bat 文件可以让你在每个备份操作结束时存档备份快�
 如果不存在 AfterBackup.bat 文件，则备份任务会跳过该文件，并且不会对备份操作产生影响。 要验证备份任务是否成功运行了此脚本，请转到“监视”工作区的“组件状态”节点，并查看 SMS_SITE_BACKUP 的状态消息    。 如果任务成功启动了 AfterBackup.bat 命令文件，则将看到消息 ID 5040  。  
 
 > [!TIP]  
->  要使用 AfterBackup.bat 存档站点服务器备份文件，必须在批处理文件中使用复制命令工具。 其中一个此类工具是 Windows Server 中的 [Robocopy ](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy)。 例如，使用以下命令创建 AfterBackup.bat 文件：`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  要使用 AfterBackup.bat 存档站点服务器备份文件，必须在批处理文件中使用复制命令工具。 其中一个此类工具是 Windows Server 中的 [Robocopy ](/windows-server/administration/windows-commands/robocopy)。 例如，使用以下命令创建 AfterBackup.bat 文件：`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
 尽管 AfterBackup.bat 的预期用途是将备份快照存档，但你可以创建 AfterBackup.bat 文件以在每个备份操作结束时运行其他任务。  
 
@@ -165,7 +165,7 @@ AfterBackup.bat 文件可以让你在每个备份操作结束时存档备份快�
 > [!IMPORTANT]  
 >  将 Configuration Manager 升级到较新版本时，预定义的报表可能被新报表覆盖。 如果修改预定义报表，请确保备份该报表，然后在 Reporting Services 中将其还原。  
 
-有关在 Reporting Services 中备份自定义报表的详细信息，请参阅 [Reporting Services 的备份和还原操作](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)。  
+有关在 Reporting Services 中备份自定义报表的详细信息，请参阅 [Reporting Services 的备份和还原操作](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)。  
 
 ### <a name="back-up-content-files"></a>备份内容文件  
 Configuration Manager 中的内容库是存储所有软件部署的所有内容文件的位置。 内容库位于站点服务器和每个分发点上。 备份站点服务器维护任务不备份内容库或包源文件。 当站点服务器失败时，有关内容库的信息会被还原到站点数据库，但必须还原内容库和包源文件。  
@@ -231,9 +231,9 @@ SMS 编写器的编写器 ID 为：03ba67dd-dc6d-4729-a038-251f7018463b  。
 SMS 编写器服务必须采用本地系统帐户运行。  
 
 ### <a name="volume-shadow-copy-service"></a>卷影复制服务  
-VSS 是一组 COM API，它实现一个框架，以允许在系统上的应用程序继续写入卷时执行所有卷备份。 VSS 提供一个一致的接口，在用于更新磁盘上的数据的用户应用程序（SMS 编写器服务）和用于备份应用程序的用户应用程序（备份管理器服务）之间实现协作。 有关详细信息，请参阅[卷影复制服务](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)。  
+VSS 是一组 COM API，它实现一个框架，以允许在系统上的应用程序继续写入卷时执行所有卷备份。 VSS 提供一个一致的接口，在用于更新磁盘上的数据的用户应用程序（SMS 编写器服务）和用于备份应用程序的用户应用程序（备份管理器服务）之间实现协作。 有关详细信息，请参阅[卷影复制服务](/windows-server/storage/file-server/volume-shadow-copy-service)。  
 
 
 
 ## <a name="next-steps"></a>后续步骤
-创建备份后，使用该备份练习[站点恢复](recover-sites.md)。 此练习可以帮助你在需要依赖它之前熟悉恢复过程。 它还可以帮助确认备份是否成功用于其预期用途。  
+创建备份后，使用该备份练习[站点恢复](recover-sites.md)。 此练习可以帮助你在需要依赖它之前熟悉恢复过程。 它还可以帮助确认备份是否成功用于其预期用途。

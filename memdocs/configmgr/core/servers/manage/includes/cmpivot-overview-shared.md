@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381037"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88703102"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>查询
 
-查询可以用于搜索术语、识别趋势、分析模式，以及提供基于数据的许多其他见解。 CMPivot 使用 [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) 数据流模型的子集处理表格表达式语句。 表格表达式语句的典型结构是客户端实体和表格数据运算符（如筛选器和投影）的组合。 组合用管道字符 (|) 表示，为语句提供了一种规则形式，从左到右直观显示表格数据流。 每个运算符都“从管道”接受一个表格数据集，从运算符正文接受其他输入（包括其他表格数据集），然后向其后的下一个运算符发出表格数据集，如下所示：`entity | operator1 | operator2 | ...`
+查询可以用于搜索术语、识别趋势、分析模式，以及提供基于数据的许多其他见解。 CMPivot 使用 [Azure Log Analytics](/azure/kusto/query) 数据流模型的子集处理表格表达式语句。 表格表达式语句的典型结构是客户端实体和表格数据运算符（如筛选器和投影）的组合。 组合用管道字符 (|) 表示，为语句提供了一种规则形式，从左到右直观显示表格数据流。 每个运算符都“从管道”接受一个表格数据集，从运算符正文接受其他输入（包括其他表格数据集），然后向其后的下一个运算符发出表格数据集，如下所示：`entity | operator1 | operator2 | ...`
 
 在下面的示例中，实体是 `CCMRecentlyUsedApplications`（对最近使用的应用程序的引用），运算符为 where（根据某些因记录而异的谓词，从其输入中筛选出记录）：
 

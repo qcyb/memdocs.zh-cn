@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d15252c3b3c93c7e90e517c502c4c3dd2dfcf20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906147"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700038"
 ---
 # <a name="create-queries-in-configuration-manager"></a>在 Configuration Manager 中创建查询
 
@@ -49,9 +49,9 @@ ms.locfileid: "82906147"
     > [!TIP]  
     > 可以参阅下面的参考文档，它们有助于你构造自己的 WQL 查询：  
     >   
-    > -   [WQL (SQL for WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
-    > -   [WHERE 子句](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
-    > -   [WQL 运算符：](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
+    > -   [WQL (SQL for WMI)](/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [WHERE 子句](/windows/win32/wmisdk/where-clause)  
+    > -   [WQL 运算符：](/windows/win32/wmisdk/wql-operators)  
 
 8.  在“&lt;查询名称\> 语句属性”对话框中的“条件”选项卡中，指定用于优化查询结果的条件   。 例如，可以只返回包含站点代码 XYZ  的资源。 可以配置多个查询条件。  
 

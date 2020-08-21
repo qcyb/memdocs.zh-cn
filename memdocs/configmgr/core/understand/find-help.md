@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: 4ae2d837179e3b661bfbfa68d1db429674e20de5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343178"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699392"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>查找使用 Configuration Manager 的帮助
 
@@ -37,7 +37,7 @@ ms.locfileid: "83343178"
 
 ##  <a name="product-documentation"></a><a name="bkmk_Info"></a> 产品文档  
 
-若要访问最新的产品文档，请从[库索引](https://docs.microsoft.com/sccm/)开始。  
+若要访问最新的产品文档，请从[库索引](/sccm/)开始。  
 
 <a name="BKMK_SearchTips"></a>  
 

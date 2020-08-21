@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904072"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700089"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Configuration Manager 的架构扩展
 
@@ -25,7 +25,7 @@ ms.locfileid: "82904072"
 
 -   建议扩展 Active Directory 架构，但这不是必需的。  
 
-在 [扩展 Active Directory 架构](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema)之前，你应该熟悉 Active Directory 域服务并熟悉 [修改 Active Directory 架构](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))。  
+在 [扩展 Active Directory 架构](/sccm/core/plan-design/network/extend-the-active-directory-schema)之前，你应该熟悉 Active Directory 域服务并熟悉 [修改 Active Directory 架构](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))。  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>扩展 Configuration Manager 的 Active Directory 架构时的注意事项  
 
@@ -142,4 +142,4 @@ ms.locfileid: "82904072"
 > - 特性：cn=MS-SMS-Site-Boundaries  
 >   -   类：cn=MS-SMS-Server-Locator-Point  
 
-你可以通过查看 Configuration Manager 安装介质的“\SMSSETUP\BIN\x64”文件夹中的“ConfigMgr_ad_schema.LDF”文件来确保前面的列是最新内容   。  
+你可以通过查看 Configuration Manager 安装介质的“\SMSSETUP\BIN\x64”文件夹中的“ConfigMgr_ad_schema.LDF”文件来确保前面的列是最新内容   。

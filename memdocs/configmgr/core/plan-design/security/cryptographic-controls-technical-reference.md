@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 4ff86d203fc35167b5e35f81f171e7c00e468f3a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353439"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699290"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -260,5 +260,4 @@ Configuration Manager 还使用客户端身份验证证书将状态消息从分�
 - 禁用 SSL 3.0、TLS 1.0 和 TLS 1.1 
 - 重新排序与 TLS 相关的密码套件 
 
-有关详细信息，请参阅[如何限制使用特定的加密算法和 Schannel.dll 中的协议](https://support.microsoft.com/help/245030/)以及 [Prioritizing Schannel Cipher Suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites)（以优先顺序排列 Schannel 密码套件）。 这些操作不会影响 Configuration Manager 的功能。
-
+有关详细信息，请参阅[如何限制使用特定的加密算法和 Schannel.dll 中的协议](https://support.microsoft.com/help/245030/)以及 [Prioritizing Schannel Cipher Suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites)（以优先顺序排列 Schannel 密码套件）。 这些操作不会影响 Configuration Manager 的功能。

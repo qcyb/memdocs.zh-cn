@@ -10,12 +10,12 @@ ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 00f07e20c24ea9bb7d06b18f300e0206696c5e20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d5f0c9127cc5c5819368eb0454d7bc63546ccc1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707935"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699494"
 ---
 # <a name="extend-and-migrate-on-premises-site-to-microsoft-azure"></a>将本地站点扩展并迁移到 Microsoft Azure
 
@@ -68,7 +68,7 @@ Microsoft.KeyVault/vaults/deploy/action <br>
 Microsoft.KeyVault/vaults/read <br>
 
 
-有关权限和分配角色的详细信息，请参阅[使用 RBAC 管理对 Azure 资源的访问](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal)。
+有关权限和分配角色的详细信息，请参阅[使用 RBAC 管理对 Azure 资源的访问](/azure/role-based-access-control/role-assignments-portal)。
 
 ## <a name="run-the-tool"></a>运行该工具
 
@@ -105,15 +105,15 @@ Microsoft.KeyVault/vaults/read <br>
     |**子网**|选择要使用的子网。 如果需要创建新的子网，请使用 [Azure 门户](https://portal.azure.com)。|
     |**计算机名**|在 Azure 中输入被动站点服务器 VM 的名称。 它与 [Azure 门户](https://portal.azure.com)中显示的名称相同。|
     |**本地管理员用户名**|输入 Azure VM 在加入域之前创建的本地管理用户的名称。|
-    |**本地管理员密码**|本地管理员用户的密码。 若要在 Azure 部署过程中保护密码，请在 [Azure 密钥保管库](https://docs.microsoft.com/azure/key-vault/key-vault-overview)中将密码存储为机密。 然后，使用此处的参考。 如果需要，请从 [Azure 门户](https://portal.azure.com)创建一个新的。|
+    |**本地管理员密码**|本地管理员用户的密码。 若要在 Azure 部署过程中保护密码，请在 [Azure 密钥保管库](/azure/key-vault/key-vault-overview)中将密码存储为机密。 然后，使用此处的参考。 如果需要，请从 [Azure 门户](https://portal.azure.com)创建一个新的。|
     |**域 FQDN**|要加入的 Active Directory 域的完全限定域名。 默认情况下，该工具从当前计算机中获取此值。|
     |**域用户名**|允许加入域的域用户的名称。 默认情况下，该工具使用当前已登录用户的名称。|
-    |**域密码**|要加入域的域用户的密码。 选择“开始”后，该工具将对其进行验证  。 若要在 Azure 部署过程中保护密码，请在 [Azure 密钥保管库](https://docs.microsoft.com/azure/key-vault/key-vault-overview)中将密码存储为机密。 然后，使用此处的参考。 如果需要，请从 [Azure 门户](https://portal.azure.com)创建一个新的。|
+    |**域密码**|要加入域的域用户的密码。 选择“开始”后，该工具将对其进行验证  。 若要在 Azure 部署过程中保护密码，请在 [Azure 密钥保管库](/azure/key-vault/key-vault-overview)中将密码存储为机密。 然后，使用此处的参考。 如果需要，请从 [Azure 门户](https://portal.azure.com)创建一个新的。|
     |**域 DNS IP**|用于加入域。 默认情况下，该工具从当前计算机中获取当前 DNS。|
     |**类型**|只读。 它显示“被动站点服务器”作为类型  。|
 
     > [!IMPORTANT]
-    > 默认情况下，虚拟机的“使用现有 Windows Server 许可证”  设置为“否”  。 如果要通过软件保障使用本地 Windows Server 许可证，请在配置虚拟机后在 [Azure 门户](https://portal.azure.com)中配置此设置。 有关详细信息，请参阅 [Windows Server 的 Azure 混合权益](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit)。
+    > 默认情况下，虚拟机的“使用现有 Windows Server 许可证”  设置为“否”  。 如果要通过软件保障使用本地 Windows Server 许可证，请在配置虚拟机后在 [Azure 门户](https://portal.azure.com)中配置此设置。 有关详细信息，请参阅 [Windows Server 的 Azure 混合权益](/windows-server/get-started/azure-hybrid-benefit)。
 
 1. 若要开始预配 Azure VM，请选择“开始”  。 若要监视部署状态，请切换到工具中的“Azure 中的部署”选项卡  。 若要获取最新状态，请选择“刷新部署状态”  。
 

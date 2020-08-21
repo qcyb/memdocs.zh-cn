@@ -10,12 +10,12 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d36e29f0f915c0f2a35070c667525853e5981564
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 877345e64045530193a4cdd735cdd399235b90c7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702265"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700259"
 ---
 # <a name="choose-a-device-management-solution"></a>选择设备管理解决方案
 
@@ -44,11 +44,11 @@ Microsoft 提供用于管理电脑、服务器和设备的不同解决方案。 
 
 有关详细信息，请参阅下列文章：
 
-- [什么是 Azure Stack？](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
-- [什么是 Windows 管理中心？](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
-- [什么是 Virtual Machine Manager？](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure 管理产品](https://docs.microsoft.com/azure/)
-- [什么是 Windows 虚拟桌面？](https://docs.microsoft.com/azure/virtual-desktop/overview)
+- [什么是 Azure Stack？](/azure-stack/operator/azure-stack-overview)
+- [什么是 Windows 管理中心？](/windows-server/manage/windows-admin-center/understand/what-is)
+- [什么是 Virtual Machine Manager？](/system-center/vmm/overview)
+- [Azure 管理产品](/azure/)
+- [什么是 Windows 虚拟桌面？](/azure/virtual-desktop/overview)
 
 有关 Configuration Manager 和 Intune 解决方案的详细信息，请继续阅读下一节。
 
@@ -108,9 +108,9 @@ Microsoft 提供用于管理电脑、服务器和设备的不同解决方案。 
 关于支持平台的完整列表，请参阅以下文章：
 
 - [Configuration Manager 的客户端和设备支持的操作系统](configs/supported-operating-systems-for-clients-and-devices.md)
-- [Intune 支持的配置](https://docs.microsoft.com/intune/supported-devices-browsers)
+- [Intune 支持的配置](/intune/supported-devices-browsers)
 
-Microsoft 建议使用 Intune 来管理 Android、iOS 和 Windows 10 移动设备。 有关更多信息，请参阅[什么是 Microsoft Intune？](https://docs.microsoft.com/intune/what-is-intune)。
+Microsoft 建议使用 Intune 来管理 Android、iOS 和 Windows 10 移动设备。 有关更多信息，请参阅[什么是 Microsoft Intune？](/intune/what-is-intune)。
 
 ### <a name="compare-solutions-by-management-functionality"></a><a name="bkmk_comp2"></a>根据管理功能比较解决方案  
 

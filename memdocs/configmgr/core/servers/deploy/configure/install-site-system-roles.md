@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 102d07f29b9addd1f2c37dd741db09e972cd5802
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701655"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700525"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>为 Configuration Manager 安装站点系统角色
 
@@ -56,7 +56,7 @@ Configuration Manager 使用**站点系统安装帐户**来安装角色。 在�
 1. 完成向导。 可能会显示针对特定角色的其他页面。 有关详细信息，请参阅[站点系统角色的配置选项](configuration-options-for-site-system-roles.md)。
 
 > [!TIP]
-> Windows PowerShell cmdlet **New-CMSiteSystemServer** 执行与此过程相同的功能。 有关详细信息，请参阅 [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)。
+> Windows PowerShell cmdlet **New-CMSiteSystemServer** 执行与此过程相同的功能。 有关详细信息，请参阅 [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)。
 
 ## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> 在新站点系统服务器上安装角色
 
@@ -76,7 +76,7 @@ Configuration Manager 使用**站点系统安装帐户**来安装角色。 在�
 1. 完成向导。 可能会显示针对特定角色的其他页面。 有关详细信息，请参阅[站点系统角色的配置选项](configuration-options-for-site-system-roles.md)。
 
 > [!TIP]
-> Windows PowerShell cmdlet **New-CMSiteSystemServer** 执行与此过程相同的功能。 有关详细信息，请参阅 [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)。
+> Windows PowerShell cmdlet **New-CMSiteSystemServer** 执行与此过程相同的功能。 有关详细信息，请参阅 [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8c5cc09b7c2723a5dbdd1030cb0053ae75b1ff22
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906134"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699460"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>使用修补程序安装程序为 Configuration Manager 安装更新
 
@@ -207,7 +207,7 @@ Updates Publisher 的目录名为“SCUPCatalog.cab”，它位于运行更新�
 > [!IMPORTANT]  
 > 在创建 SCUPCatalog.cab 时，使用了安装更新捆绑的站点服务器的特定路径，因此，无法在其他站点服务器上使用该文件。  
 
-在向导完成之后，可以将该目录导入到 Updates Publisher，然后使用 Configuration Manager 软件更新来部署更新。 有关 Updates Publisher 的信息，请参阅 [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))。  
+在向导完成之后，可以将该目录导入到 Updates Publisher，然后使用 Configuration Manager 软件更新来部署更新。 有关 Updates Publisher 的信息，请参阅 [Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))。  
 
 使用下列过程将 SCUPCatalog.cab 文件导入到更新发布服务器，然后发布更新。  
 
@@ -261,4 +261,4 @@ Updates Publisher 的目录名为“SCUPCatalog.cab”，它位于运行更新�
 > [!NOTE]  
 > 若要更新站点数据库，请将更新部署到该站点的站点服务器。  
 
-有关如何创建集合的信息，请参阅[如何创建集合](../../../core/clients/manage/collections/create-collections.md)。  
+有关如何创建集合的信息，请参阅[如何创建集合](../../../core/clients/manage/collections/create-collections.md)。

@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f9aff29d2773c4994272317d5fcd486b83cba8d7
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 0dcd519a7703b5de94f779dc5dbe48aa0d34a3bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210173"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700457"
 ---
 # <a name="windows-defender-application-control-management-with-configuration-manager"></a>使用 Configuration Manager 管理 Windows Defender 应用程序控制
 
@@ -26,7 +26,7 @@ Windows Defender 应用程序控制旨在保护电脑免受恶意软件和其他
 
 Windows Defender 应用程序控制是基于软件的安全层，它将强制执行允许在电脑上运行的软件的显式列表。 应用程序控制本身没有任何硬件或固件先决条件。 通过 Configuration Manager 部署的 应用程序策略在满足本文列出的最低 Windows 版本和 SKU 要求的目标集合中的电脑上启用策略。 或者，可以选择通过合格硬件上的组策略对通过 Configuration Manager 部署的应用程序控制策略启用基于虚拟机监控程序的保护。
 
-若要详细了解 Windows Defender 应用程序控制，请阅读 [Windows Defender 应用程序控制部署指南](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)。
+若要详细了解 Windows Defender 应用程序控制，请阅读 [Windows Defender 应用程序控制部署指南](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)。
 
    > [!NOTE]
    > - 从 Windows 10（版本 1709）开始，可配置的代码完整性策略称为 Windows Defender 应用程序控制。
@@ -131,7 +131,7 @@ After the policy is processed on a client PC, a restart is scheduled on that cli
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -153,6 +153,3 @@ You can let locked-down devices run software with a good reputation as determine
 ## <a name="next-steps"></a>后续步骤
 
  [管理反恶意软件策略和防火墙设置](endpoint-antimalware-firewall.md)
-
-
-

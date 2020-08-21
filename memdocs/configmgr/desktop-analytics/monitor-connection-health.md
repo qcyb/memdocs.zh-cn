@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746555"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700831"
 ---
 # <a name="monitor-connection-health"></a>监视器连接运行状况
 
@@ -334,7 +334,7 @@ Start-Service -Name dps
 <!--1004-->
 如果此检查不成功，则用户在设备上选择了较低版本的 Windows 诊断数据。 它也可能由冲突的组策略对象引起。 有关详细信息，请参阅 [Windows 设置](enroll-devices.md#windows-settings)。
 
-根据你的业务需求，可以通过组策略禁用用户选择。 使用此设置**配置遥测选择加入设置用户界面**。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)。
+根据你的业务需求，可以通过组策略禁用用户选择。 使用此设置**配置遥测选择加入设置用户界面**。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)。
 
 ### <a name="check-user-proxy"></a>检查用户代理
 
@@ -455,7 +455,7 @@ Microsoft 使用唯一商业 ID 将设备中的信息映射到桌面分析工作
 
 确保未禁用“Microsoft 帐户登录助手”服务。 启动类型应为“手动（触发器启动）”。
 
-若要禁用最终用户 Microsoft 帐户访问权限，请使用策略设置，而不是阻止此终结点。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。
+若要禁用最终用户 Microsoft 帐户访问权限，请使用策略设置，而不是阻止此终结点。 有关详细信息，请参阅[企业中的 Microsoft 帐户](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Windows 诊断数据选择加入
 

@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4d57be201274c347e5dcd492734b2141c64d579b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904017"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700004"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Configuration Manager 的运行状况证明
 
 适用范围：  Configuration Manager (Current Branch)
 
-管理员可以在 Configuration Manager 控制台中查看 [Windows 10 设备运行状况证明](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices)的状态。  设备运行状况证明让管理员能够确保客户端计算机启用以下可信 BIOS、TPM 和启动软件配置：  
+管理员可以在 Configuration Manager 控制台中查看 [Windows 10 设备运行状况证明](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices)的状态。  设备运行状况证明让管理员能够确保客户端计算机启用以下可信 BIOS、TPM 和启动软件配置：  
 
 -   开机初期启动的反恶意软件 - 开机初期启动的反恶意软件 (ELAM) 可在启动时以及第三方驱动程序初始化之前保护计算机。 [如何打开 ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker - Windows BitLocker 驱动器加密是使你可以对存储在 Windows 操作系统卷上的所有数据进行加密的软件。  [如何打开 Bitlocker](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   安全启动 - 安全启动是电脑行业成员开发的一种安全标准，用于帮助确保电脑仅使用受电脑制造商信任的软件进行启动。 [详细了解安全启动](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
--   代码完整性 - 代码完整性是一种功能，它通过在每次将驱动程序或系统文件加载到内存时验证其完整性来提高操作系统的安全性。 [了解代码完整性](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
+-   安全启动 - 安全启动是电脑行业成员开发的一种安全标准，用于帮助确保电脑仅使用受电脑制造商信任的软件进行启动。 [详细了解安全启动](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   代码完整性 - 代码完整性是一种功能，它通过在每次将驱动程序或系统文件加载到内存时验证其完整性来提高操作系统的安全性。 [了解代码完整性](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 此功能仅供由 Configuration Manager 管理的电脑和本地资源以及 Microsoft Intune 管理的移动设备使用。 管理员可以指定是通过云还是本地基础结构进行报告。 借助本地设备运行状况证明监视，管理员可以监视客户端 PC 而无需访问 Internet。
 
@@ -34,7 +34,7 @@ ms.locfileid: "82904017"
 
  **要求：**  
 
--   运行 Windows 10 版本 1607 或 Windows Server 2016 版本 1607 的客户端设备，并[启用了设备运行状况证明](https://docs.microsoft.com/windows-server/security/device-health-attestation)。
+-   运行 Windows 10 版本 1607 或 Windows Server 2016 版本 1607 的客户端设备，并[启用了设备运行状况证明](/windows-server/security/device-health-attestation)。
 -   启用了 TPM 1.2 或 TPM 2 的设备。
 -   使用云管理时，Configuration Manager 客户端代理和使用 has.spserv.microsoft.com（端口 443）运行状况证明服务的管理点（云管理）之间的通信  。 位于本地时，客户端须能够与启用了设备运行状况证明的管理点进行通信。
 

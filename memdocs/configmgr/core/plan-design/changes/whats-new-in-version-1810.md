@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128961"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699834"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -236,7 +236,7 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>针对现有设备的 Windows Autopilot 的任务序列支持
 
 <!--3607717, fka 1358333-->
-Windows 10 版本 1809 或更高版本现在随附[用于现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)。 此新功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。
+Windows 10 版本 1809 或更高版本现在随附[用于现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)。 此新功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。
 
 有关详细信息，请参阅[面向现有设备的 Windows Autopilot](../../../../autopilot/existing-devices.md)。
 
@@ -287,7 +287,7 @@ Windows 10 版本 1809 或更高版本现在随附[用于现有设备的 Windows
 <!--1358146-->
 创建软件更新的分阶段部署。 通过分阶段部署，可以根据可自定义条件和组进行协调安排，有序推出软件。
 
-有关详细信息，请参阅[创建分阶段部署](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)。
+有关详细信息，请参阅[创建分阶段部署](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)。
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>软件更新的维护时段的改进
@@ -427,7 +427,7 @@ SMS 提供程序显示为角色，其中包含允许通过云管理网关进行�
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1810）的更改摘要](https://support.microsoft.com/help/4482169)。
 
-若要详细了解对用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1810 版发行说明](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps)。
+若要详细了解对用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1810 版发行说明](/powershell/sccm/1810-release-notes?view=sccm-ps)。
 
 从 2019 年 3 月 25 日开始，以下更新汇总 (4488598) 在控制台中可用：[Configuration Manager Current Branch 版本 1810 更新汇总 2](https://support.microsoft.com/help/4488598)。 它将替换先前的更新汇总 KB 4486457。
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: a6e406d55524caca71bf75b087c9fd78a470c939
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556024"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699375"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager 的辅助功能
 
@@ -28,7 +28,7 @@ Configuration Manager 包含可供所有人访问的功能。
 > [!Note]  
 > 从版本 1902 开始，若要改进 Configuration Manager 控制台的辅助功能，请在运行控制台的计算机上将 .NET 更新到版本 4.7 或更高版本。 <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> 有关在 .NET 4.7.1 和 4.7.2 上所做的辅助功能更改的详细信息，请参阅 [.NET Framework 辅助功能的新增功能](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility)。  
+> 有关在 .NET 4.7.1 和 4.7.2 上所做的辅助功能更改的详细信息，请参阅 [.NET Framework 辅助功能的新增功能](/dotnet/framework/whats-new/whats-new-in-accessibility)。  
 
 
 
@@ -98,5 +98,4 @@ Configuration Manager 包含可供所有人访问的功能。
 - [软件中心用户指导](software-center.md)
 
 > [!NOTE]  
-> 本文章中的信息可能仅适用于在美国获得 Microsoft 产品许可的用户。 如果在美国以外的国家/地区获得本产品，可以使用软件包附带的子公司信息卡或访问 [Microsoft 辅助功能网站](https://www.microsoft.com/accessibility/)，获取 Microsoft 支持服务的联系信息。 可与你所在地的子公司联系，了解本节中描述的产品和服务的类型在你所在地区是否可用。 有关辅助功能的信息还提供了其他语言的版本，其中包括日语和法语。  
-
+> 本文章中的信息可能仅适用于在美国获得 Microsoft 产品许可的用户。 如果在美国以外的国家/地区获得本产品，可以使用软件包附带的子公司信息卡或访问 [Microsoft 辅助功能网站](https://www.microsoft.com/accessibility/)，获取 Microsoft 支持服务的联系信息。 可与你所在地的子公司联系，了解本节中描述的产品和服务的类型在你所在地区是否可用。 有关辅助功能的信息还提供了其他语言的版本，其中包括日语和法语。

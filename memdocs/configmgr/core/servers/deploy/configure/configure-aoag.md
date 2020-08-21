@@ -10,12 +10,12 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 12753b3800b3b304bd13c992b57d22bf9e1bfad8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2e85b36d0caeb6ceb99f56220e271774dc0db0f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704795"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699239"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 
@@ -45,7 +45,7 @@ ms.locfileid: "81704795"
     ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
     ```
 
-    可用性组仅支持“完整”备份模型。 有关详细信息，请参阅[查看或更改数据库的恢复模式](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。
+    可用性组仅支持“完整”备份模型。 有关详细信息，请参阅[查看或更改数据库的恢复模式](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。
 
 3. 使用 SQL Server 创建站点数据库的完整备份。 选择下列选项之一：
 
@@ -55,13 +55,13 @@ ms.locfileid: "81704795"
 
     有关详细信息，请参阅 SQL Server 文档中的以下文章：
 
-    - [创建完整数据库备份](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
-    - [使用 SSMS 还原数据库备份](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+    - [创建完整数据库备份](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+    - [使用 SSMS 还原数据库备份](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
     > [!NOTE]  
     > 如果计划从可用性组移动到现有副本上的独立组，请先从可用性组中删除数据库。
 
-4. 在将托管组的初始主要副本的服务器上，使用[新建可用性组向导](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)创建可用性组。 在向导中：
+4. 在将托管组的初始主要副本的服务器上，使用[新建可用性组向导](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)创建可用性组。 在向导中：
 
     - 在“选择数据库”  页上，为你的 Configuration Manager 站点选择数据库。  
 
@@ -82,7 +82,7 @@ ms.locfileid: "81704795"
 
     2. 运行[验证脚本](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites)，以确认正确配置了每个副本上的站点数据库。
 
-    3. 如果有必要在次要副本上设置配置，则先将主要副本手动故障转移到次要副本，然后再继续。 只能配置主要副本的数据库。 有关详细信息，请参阅 SQL Server 文档中的[执行可用性组的计划手动故障转移](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server)。
+    3. 如果有必要在次要副本上设置配置，则先将主要副本手动故障转移到次要副本，然后再继续。 只能配置主要副本的数据库。 有关详细信息，请参阅 SQL Server 文档中的[执行可用性组的计划手动故障转移](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server)。
 
 6. 所有副本都满足要求后，可用性组即可与 Configuration Manager 一起使用。
 
@@ -121,7 +121,7 @@ ms.locfileid: "81704795"
 
 1. 使用 SQL Server 过程添加次要副本。
 
-    1. [将次要副本添加到 Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
+    1. [将次要副本添加到 Always On 可用性组](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
 
     1. 在 SQL Management Studio 中监视状态。 等待可用性组完全恢复正常运行。
 
@@ -137,7 +137,7 @@ Configuration Manager 安装程序使用 SQL 数据库移动操作，并确保�
 
 从版本 1906 开始，可以使用 Configuration Manager 安装程序删除副本成员。 使用同一过程[添加新的同步副本成员](#bkmk_sync-add)。
 
-有关如何在版本 1902 或更早版本中手动执行此过程的详细信息，请参阅[从可用性组中删除次要副本](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)。  
+有关如何在版本 1902 或更早版本中手动执行此过程的详细信息，请参阅[从可用性组中删除次要副本](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)。  
 
 
 ## <a name="asynchronous-replicas"></a><a name="bkmk_async"></a> 异步副本
@@ -146,7 +146,7 @@ Configuration Manager 安装程序使用 SQL 数据库移动操作，并确保�
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>配置异步提交副本
 
-有关详细信息，请参阅[将次要副本添加到可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
+有关详细信息，请参阅[将次要副本添加到可用性组](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>使用异步副本恢复站点
 
@@ -163,14 +163,14 @@ Configuration Manager 安装程序使用 SQL 数据库移动操作，并确保�
 
 1. 使用以下命令停止 Configuration Manager 站点：`preinst.exe /stopsite`。 有关详细信息，请参阅[层次结构维护工具](../../manage/hierarchy-maintenance-tool-preinst.exe.md)。
 
-2. 使用 SQL Server 创建主要副本中站点数据库的完整备份。 有关详细信息，请参阅[创建完整数据库备份](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)。
+2. 使用 SQL Server 创建主要副本中站点数据库的完整备份。 有关详细信息，请参阅[创建完整数据库备份](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)。
 
-3. 使用 SQL Server 将站点数据库备份还原到将托管站点数据库的服务器。 有关详细信息，请参阅[使用 SSMS 还原数据库备份](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。
+3. 使用 SQL Server 将站点数据库备份还原到将托管站点数据库的服务器。 有关详细信息，请参阅[使用 SSMS 还原数据库备份](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。
 
     > [!Note]  
     > 如果可用性组的主要副本服务器将托管站点数据库的单个实例，则跳过此步骤。
 
-4. 在将托管站点数据库的服务器上，将站点数据库备份模型从“完整”  更改为“简单”  。 有关详细信息，请参阅[查看或更改数据库的恢复模式](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。
+4. 在将托管站点数据库的服务器上，将站点数据库备份模型从“完整”  更改为“简单”  。 有关详细信息，请参阅[查看或更改数据库的恢复模式](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。
 
 5. 从 Configuration Manager 站点安装文件夹 `\BIN\X64\setup.exe` 运行 Configuration Manager 安装程序  。
 
@@ -188,4 +188,4 @@ Configuration Manager 安装程序使用 SQL 数据库移动操作，并确保�
 
 9. 为新的数据库位置提供此信息后，使用常规过程和配置完成安装。 安装完成后，站点将重启并开始使用新的数据库位置。
 
-10. 若要清理原为可用性组成员的服务器，请按照[删除可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)中的指导进行操作。
+10. 若要清理原为可用性组成员的服务器，请按照[删除可用性组](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)中的指导进行操作。

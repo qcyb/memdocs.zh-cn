@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 033c5de1a85ce2fa8b11fe7a187fcc4d5c023931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704295"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699477"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>升级支持 Configuration Manager 的本地基础结构
 
@@ -52,9 +52,9 @@ Configuration Manager 在以下情况中支持托管站点服务器和任何站�
 
 - [Windows Server 升级中心](https://aka.ms/upgradecenter)  
 
-- [适用于 Windows Server 2016 的升级和转换选项](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
+- [适用于 Windows Server 2016 的升级和转换选项](/windows-server/get-started/supported-upgrade-paths)  
 
-- [Windows Server 2012 R2 的升级选项](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
+- [Windows Server 2012 R2 的升级选项](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
 
 ### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a>升级到 Windows Server 2016 或 2019
 
@@ -140,7 +140,7 @@ Configuration Manager 在以下情况中支持托管站点服务器和任何站�
 
 - 在 Windows Server 2012 上：如果安装了 WSUS 角色，请将它从服务器中删除。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。  
 
-- 在 Windows Server 2008 R2 上：升级到 Windows Server 2012 R2 之前，必须从服务器中卸载 WSUS 3.2。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。 有关详细信息，请参阅 [Windows Server 更新服务概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)。  
+- 在 Windows Server 2008 R2 上：升级到 Windows Server 2012 R2 之前，必须从服务器中卸载 WSUS 3.2。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。 有关详细信息，请参阅 [Windows Server 更新服务概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)。  
 
 - 如果升级站点服务器的操作系统，请确保可在站点上正常运行[基于文件的复制](../../plan-design/hierarchy/file-based-replication.md)。 检查所有收件箱在发送站点和接收站点上是否存在积压工作 (backlog)。 如果存在大量停滞或挂起的复制作业，请等待直到清除这些作业。<!-- SCCMDocs#1792 -->
     - 在发送站点上，查看 sender.log  。
@@ -242,15 +242,15 @@ Configuration Manager 支持将 SQL Server 就地升级到以下版本：
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-有关 SQL CE 兼容级别及其设置方法的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)。
+有关 SQL CE 兼容级别及其设置方法的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)。
 
 有关升级 SQL Server 的详细信息，请参阅以下 SQL Server 文章：  
 
-- [升级到 SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+- [升级到 SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [升级到 SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [升级到 SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
-- [升级到 SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [升级到 SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>在站点数据库服务器上升级 SQL Server  
 
@@ -261,4 +261,4 @@ SELECT name, compatibility_level FROM sys.databases
 3. 重新启动 Configuration Manager 服务  
 
 > [!NOTE]  
-> 当将在管理中心站点处使用的 SQL Server 版本从 Standard 升级到 Datacenter 或 Enterprise 时，数据库分区不会更改。 此数据库分区会限制层次结构支持的客户端数量。  
+> 当将在管理中心站点处使用的 SQL Server 版本从 Standard 升级到 Datacenter 或 Enterprise 时，数据库分区不会更改。 此数据库分区会限制层次结构支持的客户端数量。

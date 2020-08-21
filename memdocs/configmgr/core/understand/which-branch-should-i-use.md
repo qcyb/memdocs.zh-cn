@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906007"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700661"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -85,7 +85,7 @@ LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功
 若要将 LTSB 安装为新站点或通过升级受支持的 System Center 2012 Configuration Manager 站点来安装 LTSB，可以使用随附在 System Center 2016 中的版本 1606 [基线介质](../servers/manage/updates.md#bkmk_Baselines)。 可使用基线介质安装运行 Current Branch 版本 1606 的新站点或运行 Long-Term Servicing Branch 的新站点。
 
 > [!TIP]  
-> 若要了解 System Center 2016，请参阅 [System Center 2016 文档](https://docs.microsoft.com/system-center/index)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。  
+> 若要了解 System Center 2016，请参阅 [System Center 2016 文档](/system-center/index)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。  
 >  
 > 若要在批量许可服务中心 (VLSC) 查找 Configuration Manager 版本 1606，请转到 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的“下载和密钥”选项卡，搜索 `System Center 2016`，然后选择“System Center 2016 Datacenter”或“System Center 2016 Standard”    。  
 >  

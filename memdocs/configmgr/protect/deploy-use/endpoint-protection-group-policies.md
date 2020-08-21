@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87819987"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700593"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>使用组策略设置管理以前版本的 Windows 中的 Endpoint Protection
 
@@ -42,7 +42,7 @@ ms.locfileid: "87819987"
     - [本地设备](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> 有关如何使用组策略设置管理 Windows 10、Windows Server 2019 和 Windows Server 2016 中的 Microsoft Defender 防病毒的信息，请参阅[使用组策略设置配置和管理 Microsoft Defender 防病毒](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)。
+> 有关如何使用组策略设置管理 Windows 10、Windows Server 2019 和 Windows Server 2016 中的 Microsoft Defender 防病毒的信息，请参阅[使用组策略设置配置和管理 Microsoft Defender 防病毒](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)。
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>复制 Endpoint Protection 策略定义
 
@@ -75,7 +75,7 @@ ms.locfileid: "87819987"
     
     其中 DC 是域控制器的名称，contoso.com 是你的域。
 
-3. 打开[组策略管理控制台](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11)并在域中创建新的组策略对象 (GPO)，例如 Endpoint Protection。
+3. 打开[组策略管理控制台](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11)并在域中创建新的组策略对象 (GPO)，例如 Endpoint Protection。
 4. 右键单击 Endpoint Protection 的 GPO，然后单击“编辑”。
 5. 在“组策略管理编辑器”中，转到“计算机配置” > “策略” > “管理模板: 策略定义” > “Windows 组件” > “Endpoint Protection”。
 

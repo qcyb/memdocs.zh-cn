@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d4fb94d0ab64cb7c3dc3128c982b0c2b162b22b7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce3420a6e229b5987616c5c0c1c41d50cdc499c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702155"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700344"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -93,7 +93,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-adk"></a>Windows ADK  
@@ -129,7 +129,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ Redistributable
@@ -214,7 +214,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS 配置  
@@ -270,7 +270,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS 配置
@@ -312,7 +312,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -334,7 +334,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS 配置
@@ -446,7 +446,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS 配置
@@ -497,7 +497,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS 配置
@@ -560,7 +560,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS 配置
@@ -592,7 +592,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
@@ -621,7 +621,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ Redistributable
@@ -651,7 +651,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-server-update-services"></a>Windows Server 更新服务  
@@ -690,7 +690,7 @@ ms.locfileid: "81702155"
 
 有关 .NET Framework 版本的详细信息，请参阅以下文章：
 
-- [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework 版本和依赖关系](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [生命周期常见问题解答 - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS 配置
@@ -716,4 +716,3 @@ ms.locfileid: "81702155"
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
 在安装新站点时，Configuration Manager 会自动将 SQL Server Native Client 作为可再发行组件安装。 安装站点后，Configuration Manager 不会升级 SQL Server Native Client。 确保此组件是最新的。 有关详细信息，请参阅[先决条件检查 - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)。
-

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: facfb2be1972933524c7ad632537fc8306939c1c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268141"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700746"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>如何设置桌面分析
 
@@ -39,7 +39,7 @@ ms.locfileid: "83268141"
 
         如果未选择此选项，桌面分析仍会将用户添加为安全组的成员。 “全局管理员”  需要为用户手动分配“桌面分析管理员”  角色。
 
-        有关在 Azure Active Directory 中分配管理员角色权限以及分配给“桌面分析管理员”的权限的详细信息  ，请参阅 [Azure Active Directory 中的管理员角色权限](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
+        有关在 Azure Active Directory 中分配管理员角色权限以及分配给“桌面分析管理员”的权限的详细信息  ，请参阅 [Azure Active Directory 中的管理员角色权限](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
 
     - 桌面分析在 Azure Active Directory 中预先配置“工作区所有者”  安全组，以创建和管理工作区和部署计划。
 
@@ -82,4 +82,4 @@ Azure 门户显示桌面分析主页  。
 
 转到下一篇文章，了解如何将 Configuration Manager 与桌面分析连接。
 > [!div class="nextstepaction"]  
-> [连接 Configuration Manager](connect-configmgr.md)  
+> [连接 Configuration Manager](connect-configmgr.md)

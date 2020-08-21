@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: bda64f11d5d2ee9498ce69224ec9a52efc0df902
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383166"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700327"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
@@ -63,9 +63,9 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 - Configuration Manager 支持你使用的 SQL Server 版本。
 - Microsoft 仍支持你使用的 SQL Server 版本。
-- SQL Server 支持在两个 SQL Server 版本之间进行复制。 有关详细信息，请参阅 [SQL Server 复制向后兼容性](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)。
+- SQL Server 支持在两个 SQL Server 版本之间进行复制。 有关详细信息，请参阅 [SQL Server 复制向后兼容性](/sql/relational-databases/replication/replication-backward-compatibility)。
 
-对于 SQL Server 2016 和更早版本，对每个 SQL 版本和 Service Pack 的支持均遵循 [Microsoft 生命周期策略](https://aka.ms/sqllifecycle)。 对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 从 SQL Server 2017 开始，将不会发布 Service Pack，因为它遵循[新式服务模型](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)。 SQL Server 团队建议在累积更新发布时进行持续的[主动安装](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)。
+对于 SQL Server 2016 和更早版本，对每个 SQL 版本和 Service Pack 的支持均遵循 [Microsoft 生命周期策略](https://aka.ms/sqllifecycle)。 对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 从 SQL Server 2017 开始，将不会发布 Service Pack，因为它遵循[新式服务模型](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)。 SQL Server 团队建议在累积更新发布时进行持续的[主动安装](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)。
 
 除非另行指定，否则 Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果添加了对新 SQL Server 版本的支持，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。
 
@@ -74,7 +74,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019：Standard、Enterprise
 
-自 Configuration Manager 版本 1910 起，可以将此版本与累积更新 5 (CU5) 或更高版本结合使用，但前提是累积更新版本受到 SQL 生命周期支持。 CU5 是 SQL Server 2019 的最低要求，因为它解决了[标量 UDF 内联](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)问题。
+自 Configuration Manager 版本 1910 起，可以将此版本与累积更新 5 (CU5) 或更高版本结合使用，但前提是累积更新版本受到 SQL 生命周期支持。 CU5 是 SQL Server 2019 的最低要求，因为它解决了[标量 UDF 内联](/sql/relational-databases/user-defined-functions/scalar-udf-inlining)问题。
 
 此版本的 SQL 可用于以下站点：
 
@@ -85,13 +85,13 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 <!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -187,7 +187,7 @@ Configuration Manager 需要 64 位版本的 SQL Server 以托管站点数据库
 
 ### <a name="database-compatibility-level"></a>数据库兼容性级别
 
-Configuration Manager 要求站点数据库的兼容性级别不低于 Configuration Manager 版本支持的最低 SQL Server 版本。 例如，从版本 1702 开始，需要有高于或等于 110 的[数据库兼容性级别](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)。 <!-- SMS.506266-->
+Configuration Manager 要求站点数据库的兼容性级别不低于 Configuration Manager 版本支持的最低 SQL Server 版本。 例如，从版本 1702 开始，需要有高于或等于 110 的[数据库兼容性级别](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)。 <!-- SMS.506266-->
 
 ### <a name="sql-server-features"></a>SQL Server 功能
 
@@ -205,7 +205,7 @@ Configuration Manager 需要“Windows 身份验证”来验证与数据库的�
 
 ### <a name="sql-server-memory"></a>SQL Server 内存
 
-使用 SQL Server Management Studio 保留用于 SQL Server 的内存。 在“服务器内存选项”下设置“最小服务器内存” 。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
+使用 SQL Server Management Studio 保留用于 SQL Server 的内存。 在“服务器内存选项”下设置“最小服务器内存” 。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
 
 - **对于作为站点服务器安装在同一计算机上的数据库服务器**：将用于 SQL Server 的内存限制为，可用的可寻址系统内存的 50% 到 80%。  
 
@@ -219,11 +219,11 @@ Configuration Manager 需要“Windows 身份验证”来验证与数据库的�
 
 ### <a name="sql-nested-triggers"></a>SQL 嵌套触发器
 
-必须启用 SQL 嵌套触发器。 有关详细信息，请参阅[配置嵌套触发器服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
+必须启用 SQL 嵌套触发器。 有关详细信息，请参阅[配置嵌套触发器服务器配置选项](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
 
 ### <a name="sql-server-clr-integration"></a>SQL Server CLR 集成
 
-站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 此选项在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)  
+站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 此选项在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)  
 
 ### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
 
@@ -231,7 +231,7 @@ Configuration Manager 需要“Windows 身份验证”来验证与数据库的�
 
 ### <a name="trustworthy-setting"></a>可信设置
 
-Configuration Manager 会自动启用 SQL [可信数据库属性](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)。 Configuration Manager 要求此属性为“打开”。
+Configuration Manager 会自动启用 SQL [可信数据库属性](/sql/relational-databases/security/trustworthy-database-property)。 Configuration Manager 要求此属性为“打开”。
 
 ## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> SQL Server 可选配置
 
@@ -255,7 +255,7 @@ Configuration Manager 会自动启用 SQL [可信数据库属性](https://docs.m
 
 有关站点数据库 SPN 的信息，请参阅[管理站点数据库服务器的 SPN](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN)。  
 
-有关如何更改 SQL Server 服务使用的帐户的信息，请参阅 [SCM 服务 - 更改服务启动帐户](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account)。  
+有关如何更改 SQL Server 服务使用的帐户的信息，请参阅 [SCM 服务 - 更改服务启动帐户](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account)。  
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services
 
@@ -290,7 +290,7 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 
 如果在运行 SQL Server 的计算机上启用防火墙，请确保将防火墙配置为不阻止你的部署使用的端口，以及位于与 SQL Server 通信的计算机之间的网络上任何位置处的端口。  
 
-有关如何将 SQL Server 配置为使用特定端口的示例，请参阅[将服务器配置为侦听特定的 TCP 端口](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)。  
+有关如何将 SQL Server 配置为使用特定端口的示例，请参阅[将服务器配置为侦听特定的 TCP 端口](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)。  
 
 ## <a name="upgrade-options-for-sql-server"></a>SQL Server 的升级选项
 

@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 92bf86225cf869622fd4b496fd3e8e852b651a70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aae6db43a03f524773cad4c26ff11817da02a323
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694355"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699664"
 ---
 # <a name="modify-your-configuration-manager-infrastructure"></a>修改 Configuration Manager 的基础结构
 
@@ -195,11 +195,11 @@ SMS 提供程序为一个或多个 Configuration Manager 控制台提供管理�
 
 - 使用域本地用户帐户运行服务时，请手动注册 SPN。 SPN 允许 SQL 客户端和其他站点系统通过 Kerberos 进行身份验证。 若未进行 Kerberos 身份验证，与数据库的通信可能失败。
 
-有关 SPN 和 Kerberos 连接的详细信息，请参阅[为 Kerberos 连接注册服务主体名称](https://docs.microsoft.com/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections)。
+有关 SPN 和 Kerberos 连接的详细信息，请参阅[为 Kerberos 连接注册服务主体名称](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections)。
 
 通过使用 **Setspn** 工具为站点数据库服务器的 SQL Server 服务帐户注册 SPN。 在与 SQL Server 处于同一域中的计算机上，以域管理员身份运行 Setspn。
 
-以下过程是如何为 SQL Server 服务帐户管理 SPN 的示例。 有关 Setspn 的详细信息，请参阅 [Setspn 概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\))。
+以下过程是如何为 SQL Server 服务帐户管理 SPN 的示例。 有关 Setspn 的详细信息，请参阅 [Setspn 概述](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\))。
 
 ### <a name="manually-create-a-domain-user-spn-for-the-sql-server-service-account"></a>手动为 SQL Server 服务帐户创建域用户 SPN
 

@@ -10,12 +10,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d9d7cea7e5653b338a3eb4adb01d9fded99035e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1334603bcf60ea3eb8c3d18b73d511570cdc5d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704055"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699732"
 ---
 # <a name="how-to-enable-tls-12"></a>如何启用 TLS 1.2
 
@@ -86,7 +86,7 @@ Configuration Manager 基本上会在 5 方面使用 TLS 1.2 等加密协议：
 
 ### <a name="what-determines-which-encryption-protocol-is-used"></a>所用加密协议由什么决定？
 
-HTTPS 将始终在加密对话中协商客户端和服务器均支持的最高协议版本。 建立连接后，客户端会立即向服务器发送消息，告知其最高可用协议版本。 如果服务器也支持该版本，它将使用该版本发送消息。 这个经协商的版本会用于连接。 如果服务器不支持客户端提议的版本，服务器消息将制定它可用的最高版本。 有关 TLS 握手协议的详细信息，请参阅[使用 TLS 建立安全会话](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls)。
+HTTPS 将始终在加密对话中协商客户端和服务器均支持的最高协议版本。 建立连接后，客户端会立即向服务器发送消息，告知其最高可用协议版本。 如果服务器也支持该版本，它将使用该版本发送消息。 这个经协商的版本会用于连接。 如果服务器不支持客户端提议的版本，服务器消息将制定它可用的最高版本。 有关 TLS 握手协议的详细信息，请参阅[使用 TLS 建立安全会话](/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls)。
 
 ### <a name="what-determines-which-protocol-version-the-client-and-server-can-use"></a>客户端和服务器可使用的协议版本由什么确定？
 
@@ -103,7 +103,7 @@ HTTPS 将始终在加密对话中协商客户端和服务器均支持的最高�
 ## <a name="additional-resources"></a>其他资源
 
 - [加密控制技术参考](cryptographic-controls-technical-reference.md)
-- [.NET Framework 中的传输层安全性 (TLS) 最佳做法](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [.NET Framework 中的传输层安全性 (TLS) 最佳做法](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244：支持 Microsoft SQL Server 的 TLS 1.2](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 
 ## <a name="next-steps"></a>后续步骤
