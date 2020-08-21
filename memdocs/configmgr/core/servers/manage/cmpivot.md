@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e2a90e8c481fba834cbd1b6b1f5233572e4b17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128319"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700576"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -90,7 +90,7 @@ CMPivot 需要以下权限：
 
      - 单击其中一个实体将其添加到查询字符串。  
 
-     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用 [Kusto 查询语言 (KQL)](https://docs.microsoft.com/azure/kusto/query/)。  
+     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用 [Kusto 查询语言 (KQL)](/azure/kusto/query/)。  
 
 3. 打开 CMPivot 窗口，查看来自客户端的结果。 关闭 CMPivot 窗口时，会话已完成。
    - 如果已发送查询，客户端仍会向服务器发送状况消息响应。  
@@ -123,7 +123,7 @@ CMPivot 窗口包含以下元素：
 
 5. 通过查询窗格，可以在集合中生成或键入要在客户端上运行的查询。  
 
-    - CMPivot 使用 [Kusto 查询语言 (KQL)](https://docs.microsoft.com/azure/kusto/query/) 子集。  
+    - CMPivot 使用 [Kusto 查询语言 (KQL)](/azure/kusto/query/) 子集。  
 
     - 在查询窗格中剪切、复制或粘贴内容。  
     <!-- markdownlint-disable MD038 -->
@@ -272,5 +272,3 @@ CMPivot 使用 Configuration Manager“快速通道”向客户端发送查询�
 - [对 CMPivot 的更改](cmpivot-changes.md)
 - [CMPivot 疑难解答](cmpivot-tsg.md)
 - [创建并运行 PowerShell 脚本](../../../apps/deploy-use/create-deploy-scripts.md)
-
-

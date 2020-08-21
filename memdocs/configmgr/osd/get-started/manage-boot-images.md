@@ -10,18 +10,18 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124535"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697630"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>使用 Configuration Manager 管理启动映像
 
 适用范围：Configuration Manager (Current Branch)
 
-Configuration Manager 中的一个启动映像是在 OS 部署过程中使用的 [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) 映像。 启动映像用于在 WinPE 中启动计算机。 此最小 OS 包含有限的组件和服务。 Configuration Manager 使用 WinPE 准备用于安装 Windows 的目标计算机。
+Configuration Manager 中的一个启动映像是在 OS 部署过程中使用的 [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) 映像。 启动映像用于在 WinPE 中启动计算机。 此最小 OS 包含有限的组件和服务。 Configuration Manager 使用 WinPE 准备用于安装 Windows 的目标计算机。
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>默认启动映像
 
@@ -94,7 +94,7 @@ Configuration Manager 提供两个默认启动映像：一种用于支持 x86 �
 
 - [自定义启动映像](customize-boot-images.md)
 - [支持 Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [DISM 支持的平台](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [DISM 支持的平台](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -206,11 +206,11 @@ Configuration Manager 提供两个默认启动映像：一种用于支持 x86 �
 - **在 WinPE 中设置默认键盘布局**： <!--4910348-->从版本 1910 开始，为启动映像部署默认键盘布局。 如果选择 zh-cn 以外的其他语言，Configuration Manager 仍会在可用输入区域设置中包含 zh-cn。 在设备上，初始键盘布局为选定的区域设置，但用户可以将设备切换为 zh-cn（如果需要）。
 
 > [!Tip]
-> 使用 [CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 从脚本配置这些设置。
+> 使用 [CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 从脚本配置这些设置。
 
 #### <a name="optional-components"></a>可选组件
 
-在“可选组件”选项卡上，指定要添加到 Windows PE 上以便与 Configuration Manager 一起使用的组件。 有关可用的可选组件的详细信息，请参阅 [WinPE:Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)（WinPE：添加包（可选组件参考））。  
+在“可选组件”选项卡上，指定要添加到 Windows PE 上以便与 Configuration Manager 一起使用的组件。 有关可用的可选组件的详细信息，请参阅 [WinPE:Add packages (Optional Components Reference)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)（WinPE：添加包（可选组件参考））。  
 
 以下组件是 Configuration Manager 的必备组件，并且始终添加到启动映像：
 
@@ -303,4 +303,4 @@ Configuration Manager 提供两个默认启动映像：一种用于支持 x86 �
 
 1. 在更新启动映像之前，请验证相应的任务序列资源文件 (tsres.dll) 是否位于站点服务器上相应的语言文件夹中。 例如，英语资源文件位于下列位置：`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. 将作为预启动命令一部分的 SMSTSLanguageFolder 环境变量设置为相应的语言 ID。 必须使用十进制而不是十六进制格式来指定语言 ID。 例如，若要将语言 ID 设置为英语，应为文件夹名称指定十进制值 1033 而不是十六进制值 00000409。  
+2. 将作为预启动命令一部分的 SMSTSLanguageFolder 环境变量设置为相应的语言 ID。 必须使用十进制而不是十六进制格式来指定语言 ID。 例如，若要将语言 ID 设置为英语，应为文件夹名称指定十进制值 1033 而不是十六进制值 00000409。

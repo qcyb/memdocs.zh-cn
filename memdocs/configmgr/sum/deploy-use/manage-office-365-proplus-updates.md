@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: d2a7f5ec31359cdd1a69bad3204d5119f8998e92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129165"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696168"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>使用 Configuration Manager 管理 Microsoft 365 Apps
 
 适用范围：Configuration Manager (Current Branch)
 
 > [!Note]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 使用 Configuration Manager，可以通过下列方式管理 Microsoft 365 Apps：
 
@@ -40,7 +40,7 @@ ms.locfileid: "88129165"
 若要查阅 Microsoft 365 Apps 客户端信息，并开始执行一些 Microsoft 365 Apps 管理操作，请使用[“Office 365 客户端管理”仪表板](office-365-dashboard.md)。
 
 ## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a> 部署 Microsoft 365 Apps
-在“Office 365 客户端管理”仪表板中启动 Microsoft 365 Apps 安装程序，以执行 Microsoft 365 Apps 初始安装。 使用此向导，可以配置 Microsoft 365 Apps 安装设置、从 Office 内容分发网络 (CDN) 下载文件，并能为这些文件创建和部署脚本应用程序。 除非在客户端上安装了 Microsoft 365 Apps，并且运行 [Microsoft 365 Apps 自动更新任务](https://docs.microsoft.com/deployoffice/overview-update-process-microsoft-365-apps)，否则 Microsoft 365 Apps 更新不适用。 出于测试目的，可以手动运行更新任务。
+在“Office 365 客户端管理”仪表板中启动 Microsoft 365 Apps 安装程序，以执行 Microsoft 365 Apps 初始安装。 使用此向导，可以配置 Microsoft 365 Apps 安装设置、从 Office 内容分发网络 (CDN) 下载文件，并能为这些文件创建和部署脚本应用程序。 除非在客户端上安装了 Microsoft 365 Apps，并且运行 [Microsoft 365 Apps 自动更新任务](/deployoffice/overview-update-process-microsoft-365-apps)，否则 Microsoft 365 Apps 更新不适用。 出于测试目的，可以手动运行更新任务。
 
 对于旧版 Configuration Manager，必须按照以下步骤操作，才能在客户端上首次安装 Microsoft 365 Apps：
 - 下载 Office 部署工具 (ODT)
@@ -76,7 +76,7 @@ ms.locfileid: "88129165"
 
     如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 必须采用 \\server\share\filename.XML 形式指定位置  。
     > [!IMPORTANT]    
-    > XML 配置文件必须只包含 [Office 2016 支持的语言](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)。
+    > XML 配置文件必须只包含 [Office 2016 支持的语言](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)。
 
 5. 在“客户端产品”页上，选择你使用的 Microsoft 365 Apps 套件。 选择想要包括的应用程序。 选择应包括的其他任何产品，然后单击“下一步”。
 6. 在“客户端设置”页上，选择要包括的设置，然后单击“下一步”。
@@ -126,7 +126,7 @@ ms.locfileid: "88129165"
 
 > [!NOTE]  
 >
-> 如果 Microsoft 365 Apps 是最近安装的，有可能更新通道还没有设置，具体视它的安装方式而定。 在这种情况下，已部署的更新将被检测为不适用。 在安装 Microsoft 365 Apps 时，会创建一个[计划性自动更新任务](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus)。 在这种情况下，此任务需要至少运行一次，以设置更新通道并使更新检测为适用。
+> 如果 Microsoft 365 Apps 是最近安装的，有可能更新通道还没有设置，具体视它的安装方式而定。 在这种情况下，已部署的更新将被检测为不适用。 在安装 Microsoft 365 Apps 时，会创建一个[计划性自动更新任务](/deployoffice/overview-of-the-update-process-for-office-365-proplus)。 在这种情况下，此任务需要至少运行一次，以设置更新通道并使更新检测为适用。
 >
 > 如果最近安装了 Microsoft 365 Apps，并且没有检测到已部署的更新，出于测试目的，可以手动启动 Office 自动更新任务，然后在客户端上启动[软件更新部署评估周期](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process)。 有关如何在任务序列中执行此操作的说明，请参阅[在任务序列中更新 Microsoft 365 Apps](manage-office-365-proplus-updates.md#bkmk_ts)。
 
@@ -151,7 +151,7 @@ ms.locfileid: "88129165"
 >- 如果用户在截止时间之前安装了 Microsoft 365 Apps 更新，Configuration Manager 会在到达截止时间时验证是否已安装更新。 如果在设备上未检测到更新，则会安装更新。 
 >- 在下载更新之前，应用内通知栏不会显示于正在运行的应用中。 下载更新后，应用内通知仅为新打开的应用显示。
 >- 对于由服务时段触发或计划在非营业时间进行的 Microsoft 365 Apps 更新，则可能会在没有通知的情况下强制关闭正在运行的 Office 应用来安装更新。 
->- 有关详细信息，请参阅 [Microsoft 365 Apps 的最终用户更新通知](https://docs.microsoft.com/deployoffice/end-user-update-notifications-microsoft-365-apps)
+>- 有关详细信息，请参阅 [Microsoft 365 Apps 的最终用户更新通知](/deployoffice/end-user-update-notifications-microsoft-365-apps)
 
 
 ## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a> 添加 Microsoft 365 Apps 更新下载语言
@@ -243,12 +243,12 @@ ms.locfileid: "88129165"
 |当前频道(预览)|每月频道(定向)|
 |Beta 版本频道|预览体验成员|
 
-有关如何修改 ADR 的详细信息，请参阅[自动部署软件更新](automatically-deploy-software-updates.md)。 有关名称变更的详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。
+有关如何修改 ADR 的详细信息，请参阅[自动部署软件更新](automatically-deploy-software-updates.md)。 有关名称变更的详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。
 
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>在让 Microsoft 365 Apps 客户端能够从 Configuration Manager 接收更新后，更改更新通道
 
-部署 Microsoft 365 Apps 之后，可以使用组策略或 Office 部署工具 (ODT) 来更改更新通道。 例如，可以将设备从“半年频道”移动到“半年频道(定向)”。 更改通道时，Office 会自动更新，而无需重新安装或下载完整版本。 有关详细信息，请参阅[为组织中的设备更改 Microsoft 365 Apps 更新通道](https://docs.microsoft.com//deployoffice/change-update-channels)。
+部署 Microsoft 365 Apps 之后，可以使用组策略或 Office 部署工具 (ODT) 来更改更新通道。 例如，可以将设备从“半年频道”移动到“半年频道(定向)”。 更改通道时，Office 会自动更新，而无需重新安装或下载完整版本。 有关详细信息，请参阅[为组织中的设备更改 Microsoft 365 Apps 更新通道](//deployoffice/change-update-channels)。
 
 
 ## <a name="next-steps"></a>后续步骤

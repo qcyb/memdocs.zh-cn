@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129148"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697256"
 ---
 # <a name="set-up-bitlocker-portals"></a>设置 BitLocker 门户
 
@@ -70,7 +70,7 @@ ms.locfileid: "88129148"
 - 管理和监视网站：`https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Microsoft 建议但不要求使用 HTTPS。 有关详细信息，请参阅[如何在 IIS 上设置 SSL](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)。
+> Microsoft 建议但不要求使用 HTTPS。 有关详细信息，请参阅[如何在 IIS 上设置 SSL](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)。
 
 ## <a name="script-usage"></a>脚本使用情况
 

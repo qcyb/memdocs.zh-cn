@@ -10,12 +10,12 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1fcae4d520b1e81d0ef3470cd12ee68488b4f589
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1c5ef6d4a17623428f299ff9df676dcba49e7f0c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125520"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698144"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>创建非 OS 部署的任务序列
 
@@ -32,7 +32,7 @@ Configuration Manager 中的任务序列用于自动在环境中执行不同类�
 
 - [设置配置](../../compliance/understand/ensure-device-compliance.md)
 
-另外，还可以考虑使用诸如 [Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) 和 [Service Management Automation](https://docs.microsoft.com/system-center/sma/) 等其他 Microsoft System Center 自动化技术。  
+另外，还可以考虑使用诸如 [Orchestrator](/system-center/orchestrator/) 和 [Service Management Automation](/system-center/sma/) 等其他 Microsoft System Center 自动化技术。  
 
 任务序列的强大功能在于其灵活性以及使用方式。 它们可以配置客户端设置、分发软件、更新驱动程序、编辑用户状态以及执行与 OS 部署无关的其他任务。 你可以创建自定义任务序列以添加任意数量的任务。 Configuration Manager 中支持使用非 OS 部署的自定义任务序列。 但是，如果任务序列导致不必要或不一致的结果，请设法简化操作：
 

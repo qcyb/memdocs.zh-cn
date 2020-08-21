@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3f49d7d001de07a7d3d6a7bdbb5f9ff90de018c9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127740"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699868"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自动部署软件更新  
 
@@ -49,7 +49,7 @@ ms.locfileid: "88127740"
 
          - “Office 365 客户端更新”模板提供了在部署 Microsoft 365 Apps 客户端更新时使用的通用设置。
              > [!Note]
-             > 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 从 2020 年 6 月 9 日开始，如果 ADR 依赖于“Title”属性，则需要对它进行编辑。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` 是新标题的示例。 有关针对标题更改修改 ADR 的详细信息，请参阅 [Microsoft 365 应用的更新通道](manage-office-365-proplus-updates.md#bkmk_channel)。 有关名称变更的详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。
+             > 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 从 2020 年 6 月 9 日开始，如果 ADR 依赖于“Title”属性，则需要对它进行编辑。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` 是新标题的示例。 有关针对标题更改修改 ADR 的详细信息，请参阅 [Microsoft 365 应用的更新通道](manage-office-365-proplus-updates.md#bkmk_channel)。 有关名称变更的详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。
 
          - “SCEP 和 Windows Defender 防病毒更新”模板提供了在部署 Endpoint Protection 定义更新时使用的常用设置。  
 
@@ -244,7 +244,7 @@ ms.locfileid: "88127740"
      - 警报
      - 下载设置  
 
-此外可以使用 Windows PowerShell cmdlet 以编程方式添加部署。 有关使用此方法的完整说明，请参阅 [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment)。
+此外可以使用 Windows PowerShell cmdlet 以编程方式添加部署。 有关使用此方法的完整说明，请参阅 [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment)。
 
 有关部署过程的详细信息，请参阅 [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess)。
 

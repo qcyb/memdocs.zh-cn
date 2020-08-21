@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f5b9addd35dd3e9252c1b988de4bb006e9a5bc0d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127267"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694961"
 ---
 # <a name="conditional-access-with-co-management"></a>启用共同管理的条件访问
 
@@ -108,12 +108,11 @@ Intune 还可与 Cisco ISE、Aruba Clear Pass 和 Citrix NetScaler 等合作伙�
 
 有关使用条件访问的详细信息，请参阅以下文章： 
 
-- [Azure AD 中的条件访问](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Azure AD 中的条件访问](/azure/active-directory/conditional-access/overview)  
 
-- [Intune 设备符合性策略](https://docs.microsoft.com/intune/device-compliance)  
+- [Intune 设备符合性策略](/intune/device-compliance)  
 
-- [基于应用的 Intune 条件访问](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [基于应用的 Intune 条件访问](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> 条件访问功能对于已联接混合 Azure AD 的设备是现成可用的。 这些功能包括多重身份验证和混合 Azure AD 联接访问控制。 具有此特性是因为它们基于 Azure AD 属性。 若要利用 Intune 和 Configuration Manager 中基于配置的评估，请启用共同管理。 通过此配置，可直接从 Intune 对符合要求的设备实现访问控制。 它还提供 Intune 的符合性策略评估功能。  
-
+> 条件访问功能对于已联接混合 Azure AD 的设备是现成可用的。 这些功能包括多重身份验证和混合 Azure AD 联接访问控制。 具有此特性是因为它们基于 Azure AD 属性。 若要利用 Intune 和 Configuration Manager 中基于配置的评估，请启用共同管理。 通过此配置，可直接从 Intune 对符合要求的设备实现访问控制。 它还提供 Intune 的符合性策略评估功能。

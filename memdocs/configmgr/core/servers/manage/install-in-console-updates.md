@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f22a28c173c980bdf598a5afc8a969a86ec96cc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128080"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699766"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
@@ -411,7 +411,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 - [Surface 驱动程序更新](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [云管理网关](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [PFX 创建](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
-- [Azure Log Analytics 连接器](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Azure Log Analytics 连接器](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Windows Defender 攻击防护策略](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [适用于 Windows 10 的 VPN](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [维护群集感知集合（服务器组）](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
@@ -436,4 +436,4 @@ Current Branch 包含预发行功能，用于生产环境中的早期测试。 �
 
     如果认为已拥有所需的配置和缺失更新的先决条件，则确认服务连接点是否处于联机模式。 然后，使用“更新和维护服务”节点的“检查更新”选项强制执行检查。 如果服务连接点处于脱机模式，请使用服务连接工具手动与云服务同步。  
 
-- 对于在 Configuration Manager 控制台中查看更新，你的帐户缺少正确的基于角色的管理权限。 有关详细信息，请参阅[用于管理更新的权限](#assign-permissions-to-view-and-manage-updates-and-features)。  
+- 对于在 Configuration Manager 控制台中查看更新，你的帐户缺少正确的基于角色的管理权限。 有关详细信息，请参阅[用于管理更新的权限](#assign-permissions-to-view-and-manage-updates-and-features)。

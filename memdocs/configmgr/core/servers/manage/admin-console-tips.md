@@ -10,12 +10,12 @@ ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f46c283bd533d67387ab0abac35e7625438addc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a0a434f013da48d660efa78f5e2cdca6ced0826d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129506"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700712"
 ---
 # <a name="configuration-manager-console-changes-and-tips"></a>Configuration Manager 控制台变更和提示
 
@@ -186,7 +186,7 @@ ms.locfileid: "88129506"
 1. 此操作将转到“设备”下的临时节点，可以在其中查看需要更新的设备。 还可对节点执行操作，例如从列表创建新集合。
 
 > [!NOTE]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 ### <a name="maximize-the-browse-registry-window"></a>将浏览注册表窗口最大化
 

@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128927"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700361"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -349,9 +349,9 @@ Configuration Manager 现在支持从层次结构中的管理中心站点运行 
 <!--3556021-->
 使用 Configuration Manager 将 Windows 已知文件夹移动到 OneDrive for Business。 这些文件夹包括桌面、文档和图片。 若要简化 Windows 10 升级过程，请先将这些设置部署到 Windows 7 客户端，然后部署任务序列。
 
-有关此 OneDrive for Business 功能的详细信息，请参阅[将 Windows 已知文件夹重定向并移动到 OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders)。
+有关此 OneDrive for Business 功能的详细信息，请参阅[将 Windows 已知文件夹重定向并移动到 OneDrive](/onedrive/redirect-known-folders)。
 
-首先，[找到你的 Office 365 租户 ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)。 然后部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](https://docs.microsoft.com/onedrive/deploy-on-windows)。  
+首先，[找到你的 Office 365 租户 ID](/onedrive/find-your-office-365-tenant-id)。 然后部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](/onedrive/deploy-on-windows)。  
 
 若要创建和部署 OneDrive for Business 配置文件，在 Configuration Manager 控制台中，转到“资产和符合性”  工作区。 展开“符合性设置”  ，然后选择“OneDrive for Business 配置文件”  节点。  
 
@@ -479,7 +479,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1902）的更改摘要](https://support.microsoft.com/help/4498910)。
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1902 发行说明](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps)。
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1902 发行说明](/powershell/sccm/1902-release-notes?view=sccm-ps)。
 
 从 2019 年 6 月 17 日开始，以下更新汇总 (4500571) 在控制台中可用：[Configuration Manager Current Branch（版本 1902）更新汇总](https://support.microsoft.com/help/4500571)。
 

@@ -10,12 +10,12 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 49e0f5e1dff466e62cdba0def917dd34510e48ee
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125723"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696763"
 ---
 # <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> 从已断开连接的软件更新点同步 Microsoft 365 Apps 更新
 
@@ -24,7 +24,7 @@ ms.locfileid: "88125723"
 自 Configuration Manager 版本 2002 起，可以使用工具将连接到 Internet 的 WSUS 服务器中的 Microsoft 365 Apps 更新导入到已断开连接的 Configuration Manager 环境中。 以前，当你在已断开连接的环境中导出和导入更新的软件的元数据时，无法部署 Microsoft 365 Apps 更新。 Microsoft 365 Apps 更新需要从 Office API 和 Office CDN 下载的其他元数据，这对于已断开连接的环境是不可能的。
 
 > [!Note]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -51,7 +51,7 @@ ms.locfileid: "88125723"
 1. 当同步完成时，拒绝你不希望使用 Configuration Manager 部署的任何 Microsoft 365 Apps 更新。 不需要批准 Microsoft 365 Apps 更新，即可下载它们。  
    - 在 WSUS 中拒绝不需要的 Microsoft 365 Apps 更新不会阻止在 WsusUtil.exe 导出期间导出它们，但会阻止 OfflineUpdateExporter 工具下载它们的内容。
    - OfflineUpdateExporter 工具为你下载 Microsoft 365 Apps 更新。 如果要导出其他产品的更新，则这些产品仍需获得批准以便下载。
-    - [在 WSUS 中新建更新视图](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus)，以便在 WSUS 中轻松查看和拒绝不需要的 Microsoft 365 Apps 更新。
+    - [在 WSUS 中新建更新视图](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus)，以便在 WSUS 中轻松查看和拒绝不需要的 Microsoft 365 Apps 更新。
 1. 如果要批准其他产品更新以便下载和导出，请等待内容下载完成，然后再运行 WsusUtil.exe 导出并复制 WSUSContent 文件夹的内容。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)
 
 ## <a name="exporting-the-microsoft-365-apps-updates"></a>导出 Microsoft 365 Apps 更新

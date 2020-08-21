@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124135"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697341"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -803,7 +803,7 @@ MAC 地址，用于匹配物理网络适配器的设置。
 
 要使用此变量，在“应用驱动程序包”步骤上，启用设置“使用递归选项通过运行 DISM 来安装驱动程序包”。
 
-有关详细信息，请参阅 [Windows 10 DISM 命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)。
+有关详细信息，请参阅 [Windows 10 DISM 命令行选项](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)。
 
 ### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 

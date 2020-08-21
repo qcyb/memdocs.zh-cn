@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128978"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698708"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -87,7 +87,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 
 - 从安装程序添加新的同步副本<!--3127336-->：现在可以将新的次要副本节点添加到现有 SQL Always On 可用性组。 使用 Configuration Manager 安装程序来进行此更改，而不使用手动过程。 有关详细信息，请参阅[配置 SQL Server Always On 可用性组](../../servers/deploy/configure/configure-aoag.md#bkmk_sync)。
 
-- 多子网故障转移<!-- SCCMDocs-pr#3734 -->：现在可以在 SQL Server 中启用 [MultiSubnetFailover 连接字符串关键字](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)。 你还需要手动配置站点服务器。 有关详细信息，请参阅[多子网故障转移](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)先决条件。
+- 多子网故障转移<!-- SCCMDocs-pr#3734 -->：现在可以在 SQL Server 中启用 [MultiSubnetFailover 连接字符串关键字](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)。 你还需要手动配置站点服务器。 有关详细信息，请参阅[多子网故障转移](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)先决条件。
 
 - 对分布式视图的支持<!-- SCCMDocs-pr#3792 -->：站点数据库可以托管在 SQL Server Always On 可用性组上，并且可以启用数据库复制链接来使用[分布式视图](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep)。
 
@@ -198,7 +198,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 ### <a name="support-for-windows-virtual-desktop"></a>对 Windows 虚拟桌面的支持
 
 <!--3556025-->
-[Windows 虚拟桌面](https://docs.microsoft.com/azure/virtual-desktop/)是 Microsoft Azure 和 Microsoft 365 的一项预览功能。 现可使用 Configuration Manager 来管理在 Azure 中运行 Windows 的虚拟设备。
+[Windows 虚拟桌面](/azure/virtual-desktop/)是 Microsoft Azure 和 Microsoft 365 的一项预览功能。 现可使用 Configuration Manager 来管理在 Azure 中运行 Windows 的虚拟设备。
 
 与终端服务器类似，这些虚拟设备支持多个并发的活动用户会话。 为帮助提高客户端性能，Configuration Manager 现在任何可支持多个用户会话的设备上禁用了用户策略。 即使启用用户策略，客户端任何设备（包括 Windows 虚拟桌面和终端服务器）上也会默认禁用这些用户策略。
 
@@ -622,7 +622,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1906）的更改摘要](https://support.microsoft.com/help/4514258)。
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1906 发行说明](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps)。
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1906 发行说明](/powershell/sccm/1906-release-notes?view=sccm-ps)。
 
 以下更新汇总 (4517869) 于 2019 年 10 月 1 日起在控制台中提供：[Configuration Manager 当前分支版本 1906 的更新汇总](https://support.microsoft.com/help/4517869)。
 

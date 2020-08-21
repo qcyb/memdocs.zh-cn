@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128063"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699698"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager 中的报表简介
 
@@ -39,7 +39,7 @@ Configuration Manager 将 SQL Server Reporting Services 用作其主要报表解
 
 - 以不同种类的常用格式导出报表。  
 
-有关详细信息，请参阅[什么是 SQL Server Reporting Services (SSRS)？](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+有关详细信息，请参阅[什么是 SQL Server Reporting Services (SSRS)？](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
 
 ## <a name="power-bi-report-server"></a>Power BI 报表服务器
 
@@ -47,7 +47,7 @@ Configuration Manager 将 SQL Server Reporting Services 用作其主要报表解
 
 从版本 2002 开始，将 Power BI 报表服务器与 Configuration Manager 报告集成。 这种集成提供了现代可视化效果和更好的性能。 它为 Power BI 报表添加了控制台支持，这与 SQL Server Reporting Services 中已存在的报表类似。 有关详细信息，请参阅[与 Power BI 报表服务器集成](powerbi-report-server.md)。
 
-Power BI 报表服务器是本地报表服务器，包含用于显示和管理报表的 Web 门户。 它包含可创建 Power BI 报表、分页报表、移动报表和 KPI 的工具。 有关详细信息，请参阅[什么是 Power BI 报表服务器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
+Power BI 报表服务器是本地报表服务器，包含用于显示和管理报表的 Web 门户。 它包含可创建 Power BI 报表、分页报表、移动报表和 KPI 的工具。 有关详细信息，请参阅[什么是 Power BI 报表服务器？](/power-bi/report-server/get-started)。
 
 ## <a name="reporting-services-point"></a>Reporting Services 点
 

@@ -10,22 +10,22 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca7d81ba112c9eb79fb8bcfff96fb213b87b44c3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127165"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694808"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive for Business 配置文件
 
-从 Configuration Manager 1902 版开始，可以创建 OneDrive for Business 配置文件用来将 Windows 已知文件夹移动到 OneDrive for Business。 这些文件夹包括桌面、文档和图片。 在每个配置文件中，可以指定用于移动 Windows 已知文件夹的设置。 有关 OneDrive for Business 的详细信息，请参阅[将 Windows 已知文件夹重定向并移动到 OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders)。 <!--3556021-->
+从 Configuration Manager 1902 版开始，可以创建 OneDrive for Business 配置文件用来将 Windows 已知文件夹移动到 OneDrive for Business。 这些文件夹包括桌面、文档和图片。 在每个配置文件中，可以指定用于移动 Windows 已知文件夹的设置。 有关 OneDrive for Business 的详细信息，请参阅[将 Windows 已知文件夹重定向并移动到 OneDrive](/onedrive/redirect-known-folders)。 <!--3556021-->
 
 ## <a name="prerequisites"></a>必备条件
 
-- [查找你的 Microsoft 365 租户 ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [查找你的 Microsoft 365 租户 ID](/onedrive/find-your-office-365-tenant-id)  
 
-- 部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](https://docs.microsoft.com/onedrive/deploy-on-windows)。  
+- 部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](/onedrive/deploy-on-windows)。  
 
 ## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a>将 Windows 已知文件夹移动到 OneDrive
 <!--3556021-->

@@ -10,12 +10,12 @@ ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 41c0d08c5f445cd6d643542cfaa646bc2d89de76
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 13312c20edbda290daaa0d51908adeb7ab4a6860
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128419"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700055"
 ---
 # <a name="define-network-locations-as-boundaries-for-configuration-manager"></a>将网络位置定义为 Configuration Manager 的边界
 
@@ -59,7 +59,7 @@ Active Directory 站点边界不适用于纯 Azure Active Directory (Azure AD) �
 > [!TIP]
 > 运行以下 Windows 命令可以查看设备的当前 Active Directory 站点：`nltest /dsgetsite`。
 >
-> 若要确定客户端是否是云域加入客户端，请运行以下 Windows 命令：`dsregcmd /status`。 有关详细信息，请参阅 [dsregcmd 命令 - 设备状态](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd)。
+> 若要确定客户端是否是云域加入客户端，请运行以下 Windows 命令：`dsregcmd /status`。 有关详细信息，请参阅 [dsregcmd 命令 - 设备状态](/azure/active-directory/devices/troubleshoot-device-dsregcmd)。
 
 ### <a name="ipv6-prefix"></a>IPv6 前缀
 

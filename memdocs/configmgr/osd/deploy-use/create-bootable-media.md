@@ -10,12 +10,12 @@ ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e18c5e9e029900e10cebfb8e7bcdee29fd928ba
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a3ec1476a9b5374eb91d147e2b22fd0f669d6251
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125400"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698038"
 ---
 # <a name="create-bootable-media"></a>创建可启动媒体
 
@@ -128,7 +128,7 @@ Configuration Manager 中的可启动媒体包含启动映像、可选的预启�
 
         - Configuration Manager 将名为 `MediaLabel.txt` 的文本文件写入媒体的根目录。 默认情况下，该文件包含一行文本：`label=Configuration Manager`。 如果自定义媒体标签，则此行使用你的自定义标签而不是默认值。
 
-    - **在媒体上加入 autorun.inf 文件**<!-- 4090666 -->：从版本 1906 开始，默认情况下，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 有关 Windows 的 AutoRun 功能的详细信息，请参阅 [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay)（创建启用 AutoRun 的 CD-ROM 应用程序）。 如果情况仍然需要，请选择此选项以加入该文件。
+    - **在媒体上加入 autorun.inf 文件**<!-- 4090666 -->：从版本 1906 开始，默认情况下，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 有关 Windows 的 AutoRun 功能的详细信息，请参阅 [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay)（创建启用 AutoRun 的 CD-ROM 应用程序）。 如果情况仍然需要，请选择此选项以加入该文件。
 
 1. 在“安全”**** 页上，指定以下选项：
 
@@ -200,4 +200,4 @@ Configuration Manager 中的可启动媒体包含启动映像、可选的预启�
 
 ## <a name="next-steps"></a>后续步骤
 
-[使用可启动媒体通过网络部署 Windows](use-bootable-media-to-deploy-windows-over-the-network.md)  
+[使用可启动媒体通过网络部署 Windows](use-bootable-media-to-deploy-windows-over-the-network.md)

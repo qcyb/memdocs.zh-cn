@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128893"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700559"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -426,7 +426,7 @@ OneTrace 现在支持可自定义的日志组，与支持中心的功能类似�
 - [CMPivot 独立应用](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [适用于共同托管设备的客户端应用](../../../comanage/workloads.md#client-apps)（以前称为适用于共同托管设备的移动应用）<!-- 1357892/3600959 -->
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 2002 发行说明](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps)。
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 2002 发行说明](/powershell/sccm/2002-release-notes?view=sccm-ps)。
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_2002)。
 
@@ -442,7 +442,7 @@ OneTrace 现在支持可自定义的日志组，与支持中心的功能类似�
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | 设备在 Microsoft Endpoint Configuration Manager 管理中心出现两次 | 2020 年 7 月 23 日 | 否 |
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet 在 Configuration Manager 版本 2002 中失败 | 2020 年 7 月 24 日 | 否 |
-| [4576782](https://support.microsoft.com/help/4576782) | 在 Microsoft Endpoint Manager 管理中心内，“应用程序”边栏选项卡超时 | 2020 年 8 月11 日 | 否 |
+| [4576782](https://support.microsoft.com/help/4576782) | 在 Microsoft Endpoint Manager 管理中心内，“应用程序”边栏选项卡超时 | 2020 年 8 月 11 日 | 否 |
 
 <!--
 > [!NOTE]

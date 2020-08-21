@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126927"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692836"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -105,10 +105,10 @@ CMG 部署和操作包括以下组件：
 ### <a name="azure-resource-manager"></a>Azure 资源管理器
 
 <!-- 1324735 -->
-使用 Azure 资源管理器部署创建 CMG。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+使用 Azure 资源管理器部署创建 CMG。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
 > [!NOTE]
-> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)。
+> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)。
 
 从 Configuration Manager 版本 1902 起，Azure 资源管理器是云管理网关的新实例的唯一部署机制。 现有部署将继续使用。<!-- 3605704 -->
 
@@ -216,7 +216,7 @@ Configuration Manager 的 Azure 云管理服务支持多个租户。 多个 Conf
 
 - 使用网络负载均衡器的软件更新点不适用于 CMG。 <!--505311-->  
 
-- 使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 计划中可用的 Azure 服务](https://docs.microsoft.com/partner-center/azure-plan-available)。
+- 使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 计划中可用的 Azure 服务](/partner-center/azure-plan-available)。
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager 功能支持
 
@@ -268,7 +268,7 @@ Configuration Manager 的 Azure 云管理服务支持多个租户。 多个 Conf
 
 - 将站点和客户端更新到版本 2006。
 
-- 使用共同管理功能，并将 [Endpoint Protection 工作负载](../../../../comanage/workloads.md#endpoint-protection)切换到 Intune，从云端管理 [Microsoft Defender 防病毒](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)。
+- 使用共同管理功能，并将 [Endpoint Protection 工作负载](../../../../comanage/workloads.md#endpoint-protection)切换到 Intune，从云端管理 [Microsoft Defender 防病毒](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)。
 
 - 使用[配置项](../../../../compliance/deploy-use/create-configuration-items.md)而不是本机[反恶意软件策略](../../../../protect/deploy-use/endpoint-antimalware-policies.md)功能来应用 Endpoint Protection 策略。
 
@@ -325,7 +325,7 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 
 - CMG 也可以是向客户端提供内容的云分发点。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](setup-cloud-management-gateway.md#modify-a-cmg)。<!--1358651-->  
 
-- CMG 使用 Azure 本地冗余存储 (LRS)。 有关详细信息，请参阅[本地冗余存储](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs)。  
+- CMG 使用 Azure 本地冗余存储 (LRS)。 有关详细信息，请参阅[本地冗余存储](/azure/storage/common/storage-redundancy-lrs)。  
 
 ### <a name="other-costs"></a>其他成本
 

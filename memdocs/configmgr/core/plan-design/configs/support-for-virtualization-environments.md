@@ -10,12 +10,12 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7d774d620916f3d735a3545db5fe1e41988731d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4d2977fc34e9c398e9e266cbc9b223ea74a1dd18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126675"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700225"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Configuration Manager 支持虚拟化环境
 
@@ -37,7 +37,7 @@ Configuration Manager 支持在受支持的操作系统上安装客户端和站�
 <a name="bkmk_note1"></a>
 
 > [!NOTE]
-> Configuration Manager 不支持[嵌套虚拟化](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)，这是 Windows Server 2016 的新增功能。
+> Configuration Manager 不支持[嵌套虚拟化](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)，这是 Windows Server 2016 的新增功能。
 
 ### <a name="virtualization-environment-support"></a>虚拟化环境支持
 
@@ -70,7 +70,7 @@ Configuration Manager 可以在 Azure 中的 VM 上运行，就像它在数据�
 
 ## <a name="windows-virtual-desktop"></a>Windows 虚拟桌面
 
-[Windows 虚拟桌面](https://docs.microsoft.com/azure/virtual-desktop/)是在 Microsoft Azure 上运行的桌面和应用虚拟化服务。 从版本 1906 开始，可以使用 Configuration Manager 管理在 Azure 中运行 Windows 的这些虚拟设备。 有关详细信息，请参阅[客户端和设备支持的操作系统](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop)。
+[Windows 虚拟桌面](/azure/virtual-desktop/)是在 Microsoft Azure 上运行的桌面和应用虚拟化服务。 从版本 1906 开始，可以使用 Configuration Manager 管理在 Azure 中运行 Windows 的这些虚拟设备。 有关详细信息，请参阅[客户端和设备支持的操作系统](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop)。
 
 ## <a name="next-steps"></a>后续步骤
 

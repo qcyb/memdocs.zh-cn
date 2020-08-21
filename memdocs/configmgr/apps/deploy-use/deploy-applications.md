@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c2fcd583e860273e2fbfc9fcda1e08053336345
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a4afb066a5f07ff2347bc64b7811c2f09f3bd548
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127506"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590928"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>使用 Configuration Manager 部署应用程序
 
@@ -180,9 +180,9 @@ ms.locfileid: "88127506"
 
 有关详细信息，请参阅下列文章：  
 
-- [创建分阶段部署](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [创建分阶段部署](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [管理和监视分阶段部署](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [管理和监视分阶段部署](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 ## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a> 删除部署
 

@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126438"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692668"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -89,11 +89,11 @@ Configuration Manager 将以下 Microsoft URL 转发服务用于了整个产品�
 
 ## <a name="co-management"></a>共同管理
 
-如果将 Windows 10 设备注册到 Microsoft Intune 以进行共同管理，请确保这些设备可以访问 Intune 所需的终结点。 有关详细信息，请参阅 [Microsoft Intune 的终结点](https://docs.microsoft.com/intune/intune-endpoints)。
+如果将 Windows 10 设备注册到 Microsoft Intune 以进行共同管理，请确保这些设备可以访问 Intune 所需的终结点。 有关详细信息，请参阅 [Microsoft Intune 的终结点](/intune/intune-endpoints)。
 
 ## <a name="microsoft-store-for-business"></a>适用于企业的 Microsoft Store
 
-如果将 Configuration Manager 与[适用于企业的 Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) 集成，请确保服务连接点和目标设备能够访问云服务。 有关详细信息，请参阅[适用于企业的 Microsoft Store 代理配置](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)。
+如果将 Configuration Manager 与[适用于企业的 Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) 集成，请确保服务连接点和目标设备能够访问云服务。 有关详细信息，请参阅[适用于企业的 Microsoft Store 代理配置](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)。
 
 ## <a name="delivery-optimization"></a>传递优化
 
@@ -103,7 +103,7 @@ Configuration Manager 将以下 Microsoft URL 转发服务用于了整个产品�
 
 有关详细信息，请参阅下列文章：
 
-- [传递优化常见问题解答](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [传递优化常见问题解答](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Configuration Manager 中内容管理的基本概念](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Configuration Manager 中的 Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md)
 
@@ -225,7 +225,7 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 ## <a name="manage-microsoft-365-apps"></a>管理 Microsoft 365 Apps
 
 > [!NOTE]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 如果使用 Configuration Manager 部署和更新 Microsoft 365 企业应用版，请允许以下终结点：
 

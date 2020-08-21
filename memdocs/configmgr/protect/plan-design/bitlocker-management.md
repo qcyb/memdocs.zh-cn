@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129291"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699953"
 ---
 # <a name="plan-for-bitlocker-management"></a>规划 BitLocker 管理
 
@@ -28,7 +28,7 @@ ms.locfileid: "88129291"
 > [!NOTE]
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](../../core/servers/manage/install-in-console-updates.md#bkmk_options)。  
 
-更多详细信息，请参阅 [BitLocker 概述](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)。
+更多详细信息，请参阅 [BitLocker 概述](/windows/security/information-protection/bitlocker/bitlocker-overview)。
 
 > [!TIP]
 > 若要使用 Microsoft Endpoint Manager 云服务管理共同管理的 Windows 10 设备上的加密，请将 [Endpoint Protection 工作负载](../../comanage/workloads.md#endpoint-protection)切换为 Intune。 有关使用 Intune 的详细信息，请参阅 [Windows 加密](/intune/protect/endpoint-protection-windows-10#windows-encryption)。
@@ -94,7 +94,7 @@ Configuration Manager 为 BitLocker 驱动器加密提供以下管理功能：
     > [!NOTE]
     > 请仅使用主站点数据库安装自助门户以及管理和监视网站。 在层次结构中，为每个主站点安装这些网站。
 
-- 在将承载自助服务门户的 Web 服务器上，先安装 [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) 和 .NET Framework 3.5 功能，然后再开始安装过程。 在门户安装过程中，将自动安装其他必需的 Windows 服务器角色和功能。
+- 在将承载自助服务门户的 Web 服务器上，先安装 [Microsoft ASP.NET MVC 4.0](/aspnet/mvc/mvc4) 和 .NET Framework 3.5 功能，然后再开始安装过程。 在门户安装过程中，将自动安装其他必需的 Windows 服务器角色和功能。
 
 - 运行门户安装程序脚本的用户帐户需要站点数据库服务器上的 SQL sysadmin 权限。 在安装过程中，该脚本将设置 Web 服务器计算机帐户的登录名、用户和 SQL 角色权限。 安装自助门户和 Administration and Monitoring 网站后，可以从系统管理员角色中删除此用户帐户。
 

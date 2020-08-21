@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d00edbfc30a87660adc65758dc9fbcb9113197f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125793"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700644"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>桌面分析的组策略设置
 
@@ -37,10 +37,10 @@ Configuration Manager 在以下一个或两个注册表项中设置 Windows 策�
 | 策略 | 路径 | 适用范围 | 值 |
 |--------|------|------------|-------|
 | **CommercialId** | 本地 | 所有 Windows 版本 | 为了让设备显示在桌面分析中，请使用组织的商业 ID 对其进行配置。 |
-| **AllowTelemetry**  | GPO | Windows 10 | 为“基本”（“必需”）诊断数据设置“`1`”，为“增强”诊断数据设置“`2`”，或为“完整”（“可选”）诊断数据设置“`3`”。 桌面分析至少需要基本诊断数据。 Microsoft 建议对桌面分析使用“可选(受限)”（“增强(受限)”）级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization)。 |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 版本 1803 及更高版本 | 此设置仅在 AllowTelemetry 设置为 `2` 时适用。 它将发送给 Microsoft 的增强诊断数据事件限制为仅限桌面分析所需的那些事件。 有关详细信息，请参阅 [通过限制增强诊断数据策略收集的 Windows 10 诊断数据事件和字段](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)。 |
+| **AllowTelemetry**  | GPO | Windows 10 | 为“基本”（“必需”）诊断数据设置“`1`”，为“增强”诊断数据设置“`2`”，或为“完整”（“可选”）诊断数据设置“`3`”。 桌面分析至少需要基本诊断数据。 Microsoft 建议对桌面分析使用“可选(受限)”（“增强(受限)”）级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](/windows/configuration/configure-windows-diagnostic-data-in-your-organization)。 |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 版本 1803 及更高版本 | 此设置仅在 AllowTelemetry 设置为 `2` 时适用。 它将发送给 Microsoft 的增强诊断数据事件限制为仅限桌面分析所需的那些事件。 有关详细信息，请参阅 [通过限制增强诊断数据策略收集的 Windows 10 诊断数据事件和字段](/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)。 |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10 版本 1803 及更高版本 | 允许设备发送设备名。 默认情况下，不会将设备名称发送给 Microsoft。 如果不发送设备名称，它将在桌面分析中显示为“未知”。 有关详细信息，请参阅[设备名称](enroll-devices.md#device-name)。 |
-| **CommercialDataOptIn** | 本地 | Windows 8.1 及更早版本 | 桌面分析需要值为 `1`。 有关详细信息，请参阅 [Windows 7 上的商业数据选择加入](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))。 |
+| **CommercialDataOptIn** | 本地 | Windows 8.1 及更早版本 | 桌面分析需要值为 `1`。 有关详细信息，请参阅 [Windows 7 上的商业数据选择加入](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))。 |
 | **RequestAllAppraiserVersions** | 两者 | Windows 8.1 及更早版本 | 桌面分析需要值为 `1` 才能使数据收集正常工作。 |
 | **DisableEnterpriseAuthProxy** | GPO | 所有 Windows 版本 | 如果你的环境需要一个经用户身份验证的代理来对 Internet 访问进行 Windows 集成身份验证，则桌面分析需要值为 `0` 才能使数据收集正常工作。 有关详细信息，请参阅[代理服务器身份验证](enable-data-sharing.md#proxy-server-authentication)。 |
 
@@ -103,6 +103,6 @@ Configuration Manager 或桌面分析不需要这些组策略设置。 你可以
 | 显示名称 | 注册表值 | 在桌面分析中注册的设备上的效果 |
 |--------------|----------------|-------------------------------------------------|
 | **配置遥测选择加入更改通知** | DisableTelemetryOptInChangeNotification | 从 Windows 10 版本 1803 开始，Windows 会在诊断数据级别发生更改时通知用户。 使用此策略可禁用通知。 |
-| **配置遥测选择加入设置用户界面** | DisableTelemetryOptInSettingsUx | 配置诊断数据级别时，请设置设备的上限。 从 Windows 10 版本 1803 开始，用户可以设置较低的级别。 使用此策略防止用户更改诊断级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)。 |
+| **配置遥测选择加入设置用户界面** | DisableTelemetryOptInSettingsUx | 配置诊断数据级别时，请设置设备的上限。 从 Windows 10 版本 1803 开始，用户可以设置较低的级别。 使用此策略防止用户更改诊断级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)。 |
 | **禁止删除诊断数据** | DisableDeviceDelete | 从 Windows 10 版本 1809 开始，用户可以从“诊断和反馈”设置页删除诊断数据。 使用此策略以防止删除 Microsoft 从设备收集的诊断数据。 |
 | **禁用诊断数据查看器** | DisableDiagnosticDataViewer | 从 Windows 10 版本 1809 开始，用户可以从“诊断和反馈”设置页启用并打开诊断数据查看器。 使用此策略以禁用 Windows 设置中的诊断数据查看器，并阻止其显示 Microsoft 从设备收集的诊断数据。|

@@ -2,7 +2,7 @@
 title: 2006 版中的新增功能
 titleSuffix: Configuration Manager
 description: 详细了解 Configuration Manager Current Branch 版本 2006 中引入的更改和新功能。
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179335"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700276"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2006 的新变化
 
@@ -27,11 +27,8 @@ ms.locfileid: "88179335"
 
 若要利用 Configuration Manager 的新功能，更新站点后，还请将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
+> 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Endpoint Manager 租户附加
 
@@ -92,6 +89,14 @@ Intranet 客户端现在可以在分配到边界组后访问 CMG 软件更新点
 
 ## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>云附加管理
 
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a> 在共同管理的设备上使用公司门户应用
+
+<!--CMADO-3601237,INADO-4297660-->
+
+公司门户现在是 Microsoft Endpoint Manager 的跨平台应用门户体验。 通过将共同管理的设备配置为同时使用公司门户，你可以在所有设备上提供一致的用户体验。
+
+有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](../../../comanage/company-portal.md)。
+
 ### <a name="use-microsoft-azure-china-21vianet-for-co-management"></a>使用 Microsoft Azure 中国世纪互联进行共同管理
 <!--7133238-->
 在启用共同管理时，现在可以选择“Azure 中国云”作为 Azure 环境。 有关详细信息，请参阅[如何启用共同管理](../../../comanage/how-to-enable.md)。
@@ -119,9 +124,9 @@ Intranet 客户端现在可以在分配到边界组后访问 CMG 软件更新点
 
 | 版本 2006 及更高版本 | 版本 2002 及更低版本 |
 |---------|---------|
-| 必需 | 基本版 |
+| 必选 | 基本 |
 | 可选(受限) | 增强(受限) |
-| 空值 | 增强版 |
+| 不适用 | 增强版 |
 | 可选 | 完全 |
 
 如果你之前在“增强”级别配置过任何设备，那么当你升级到版本 2006 时，这些设备将恢复为“可选(受限)”。 然后，它们将向 Microsoft 发送更少的数据。 此更改应该不会影响桌面分析中显示的内容。
@@ -324,7 +329,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-若要详细了解 Configuration Manager 的 Windows PowerShell cmdlet 更改，请参阅 [PowerShell 版本 2006 发行说明](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps)。
+若要详细了解 Configuration Manager 的 Windows PowerShell cmdlet 更改，请参阅 [PowerShell 版本 2006 发行说明](/powershell/sccm/2006-release-notes?view=sccm-ps)。
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_2006)。
 

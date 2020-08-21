@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128522"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699324"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache
 
@@ -61,7 +61,7 @@ ms.locfileid: "88128522"
 
   - 在端口 80 上启用默认网站
 
-  - 请勿预安装 IIS [应用程序请求路由](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) 功能。 Connected Cache 安装 ARR 并配置其设置。 Microsoft 不能保证 Connected Cache 的 ARR 配置不会与服务器上同时使用此功能的其他应用程序发生冲突。
+  - 请勿预安装 IIS [应用程序请求路由](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) 功能。 Connected Cache 安装 ARR 并配置其设置。 Microsoft 不能保证 Connected Cache 的 ARR 配置不会与服务器上同时使用此功能的其他应用程序发生冲突。
 
   - 分发点需要具有 Internet 连接才能访问 Microsoft 云。 特定 URL 可以基于特定于云的内容而不同。 确保还允许终结点进行传递优化。 有关详细信息，请参阅 [Internet 访问要求](../network/internet-endpoints.md)。
 
@@ -136,7 +136,7 @@ ms.locfileid: "88128522"
   - 客户端应用：Microsoft Store 应用和更新
   - Endpoint Protection：Windows Defender 定义更新
 
-在 Windows 10 版本 1809 或更高版本中，使用 Get-DeliveryOptimizationStatus Windows PowerShell cmdlet 验证此操作。 在 cmdlet 输出中，查看 BytesFromCacheServer 值。 有关详细信息，请参阅[监视传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)。
+在 Windows 10 版本 1809 或更高版本中，使用 Get-DeliveryOptimizationStatus Windows PowerShell cmdlet 验证此操作。 在 cmdlet 输出中，查看 BytesFromCacheServer 值。 有关详细信息，请参阅[监视传递优化](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)。
 
 如果缓存服务器返回任何 HTTP 故障，则传递优化客户端退回到原始云源。
 
@@ -184,7 +184,7 @@ ms.locfileid: "88128522"
 
 - 此功能仅支持 Intune Win32 应用类型。
 
-  - 在 Intune 中创建和分配（部署）新应用来实现此目的。 （在 Intune 版本 1811 之前创建的应用无效。）有关详细信息，请参阅 [Intune Win32 应用管理](https://docs.microsoft.com/intune/apps/apps-win32-app-management)。
+  - 在 Intune 中创建和分配（部署）新应用来实现此目的。 （在 Intune 版本 1811 之前创建的应用无效。）有关详细信息，请参阅 [Intune Win32 应用管理](/intune/apps/apps-win32-app-management)。
 
   - 此应用至少需要 100 MB。
   

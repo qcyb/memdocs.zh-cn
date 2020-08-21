@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127648"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699800"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>集成适用于企业的 Windows 更新
 
@@ -24,7 +24,7 @@ ms.locfileid: "88127648"
 当基于 Windows 10 的设备直接连接到 Windows 更新 (WU) 服务时，适用于企业的 Windows 更新 (WUfB) 能够让组织中的这些设备始终具有最新的安全防御和 Windows 功能。 Configuration Manager 能够区分使用 WUfB 和 WSUS 来获取软件更新的 Windows 10 计算机。  
 
 > [!WARNING]
-> 如果设备使用共同管理，并且你已将 [Windows 更新策略](../../comanage/workloads.md#windows-update-policies)移动到 Intune，设备将获得 [Intune 中适用于企业的 Windows 更新策略](https://docs.microsoft.com/intune/windows-update-for-business-configure)。
+> 如果设备使用共同管理，并且你已将 [Windows 更新策略](../../comanage/workloads.md#windows-update-policies)移动到 Intune，设备将获得 [Intune 中适用于企业的 Windows 更新策略](/intune/windows-update-for-business-configure)。
 > - 如果 Configuration Manager 客户端仍安装在共同管理的设备上，则累积更新和功能更新的设置由 Intune 管理。 但是，如果已在[客户端设置](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates)  中启用第三方修补，则该修补仍由 Configuration Manager 管理。  
 
  当 Configuration Manager 客户端配置为从 WU 接收更新后（其中包括 WUfB 或 Windows 预览体验成员），一些 Configuration Manager 功能将不再可用：  
@@ -52,7 +52,7 @@ ms.locfileid: "88127648"
 
 - 运行 Windows 10 桌面专业版或 Windows 10 企业版的版本 1511 或更高版本的客户端
 
-- 部署了[Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) ，并且客户端使用 WUfB 来获取 Windows 10 更新和升级。  
+- 部署了[Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) ，并且客户端使用 WUfB 来获取 Windows 10 更新和升级。  
 
 ### <a name="to-identify-clients-that-use-wufb"></a>标识使用 WUfB 的客户端  
 
@@ -74,7 +74,7 @@ ms.locfileid: "88127648"
 
 > [!NOTE]
 > 从 Configuration Manager 1802 版开始，可以为 Windows 预览体验设置延迟策略。 <!--507201-->  
-有关 Windows 预览体验计划的详细信息，请参阅 [Windows 预览体验计划企业版入门](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)。
+有关 Windows 预览体验计划的详细信息，请参阅 [Windows 预览体验计划企业版入门](/windows/deployment/update/waas-windows-insider-for-business)。
 
 ### <a name="prerequisites-for-deferral-policies"></a>延迟策略的先决条件
 

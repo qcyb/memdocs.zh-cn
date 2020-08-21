@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: ca735cde1da5d563b9a7772fdaa55834e307312e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2ae953f6fb01f42c8140407c551ddeb3a9f39c70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125930"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692667"
 ---
 ### <a name="server-connectivity-endpoints"></a>服务器连接终结点
 
@@ -42,15 +42,15 @@ ms.locfileid: "88125930"
 |-------|-----------|-----------|
 | 1 | `https://settings-win.data.microsoft.com` | 启用兼容性更新以将数据发送到 Microsoft。 |
 | 2 | `http://adl.windows.com` | 允许兼容性更新以从 Microsoft 接收最新的兼容性数据。 |
-| 3 | `https://watson.telemetry.microsoft.com` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1803 或更低版本中监视部署运行状况。 |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 版本 1809 或更高版本中的设备运行状况报告所必需的。 |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [联机崩溃分析 (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis)。 Windows 10 版本 1809 或更高版本中的设备运行状况报告所必需的。 |
-| 12 | `https://oca.telemetry.microsoft.com`  | [联机崩溃分析 (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis)。 需要在 Windows 10 版本 1803 或更低版本中监视部署运行状况。 |
-| 13 | `https://login.live.com` | 需要为桌面分析提供更可靠的设备标识。 <br> <br>若要禁用最终用户 Microsoft 帐户访问权限，请使用策略设置，而不是阻止此终结点。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。 |
+| 3 | `https://watson.telemetry.microsoft.com` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1803 或更低版本中监视部署运行状况。 |
+| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 Windows 10 版本 1809 或更高版本中的设备运行状况报告所必需的。 |
+| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
+| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
+| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
+| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
+| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
+| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
+| 11 | `https://kmwatsonc.events.data.microsoft.com` | [联机崩溃分析 (OCA)](/windows/win32/dxtecharts/crash-dump-analysis)。 Windows 10 版本 1809 或更高版本中的设备运行状况报告所必需的。 |
+| 12 | `https://oca.telemetry.microsoft.com`  | [联机崩溃分析 (OCA)](/windows/win32/dxtecharts/crash-dump-analysis)。 需要在 Windows 10 版本 1803 或更低版本中监视部署运行状况。 |
+| 13 | `https://login.live.com` | 需要为桌面分析提供更可靠的设备标识。 <br> <br>若要禁用最终用户 Microsoft 帐户访问权限，请使用策略设置，而不是阻止此终结点。 有关详细信息，请参阅[企业中的 Microsoft 帐户](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。 |
 | 14 | `https://v20.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 |

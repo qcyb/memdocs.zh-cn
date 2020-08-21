@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128842"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700310"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
@@ -44,7 +44,7 @@ Configuration Manager 支持在 Windows 和 macOS 计算机上安装客户端软
 #### <a name="windows-virtual-desktop"></a>Windows 虚拟桌面
 
 <!--3556025-->
-[Windows 虚拟桌面](https://docs.microsoft.com/azure/virtual-desktop/)是在 Microsoft Azure 上运行的桌面和应用虚拟化服务。 从版本 1906 开始，可以使用 Configuration Manager 管理在 Azure 中运行 Windows 的这些虚拟设备。
+[Windows 虚拟桌面](/azure/virtual-desktop/)是在 Microsoft Azure 上运行的桌面和应用虚拟化服务。 从版本 1906 开始，可以使用 Configuration Manager 管理在 Azure 中运行 Windows 的这些虚拟设备。
 
 与终端服务器类似，其中某些虚拟设备支持多个并发的活动用户会话。 为帮助提高客户端性能，Configuration Manager 现在任何可支持多个用户会话的设备上禁用了用户策略。 即使启用用户策略，客户端上的这些设备（包括 Windows 10 企业版多会话和终端服务器）也会默认禁用这些用户策略。
 
@@ -106,7 +106,7 @@ Configuration Manager 测试并支持 Windows Server Datacenter 版本，但没�
 
 #### <a name="note-2"></a><a name="bkmk_note2"></a>注释 2
 
-若要支持[客户端请求安装](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)，请添加文件和存储服务服务器角色的文件服务器服务。 若要详细了解如何在服务器核心上安装 Windows 功能，请参阅[使用 Windows PowerShell cmdlet 安装角色、角色服务和功能](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)。  
+若要支持[客户端请求安装](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)，请添加文件和存储服务服务器角色的文件服务器服务。 若要详细了解如何在服务器核心上安装 Windows 功能，请参阅[使用 Windows PowerShell cmdlet 安装角色、角色服务和功能](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)。  
 
 #### <a name="note-3"></a><a name="bkmk_note3"></a>注释 3
 
@@ -135,7 +135,7 @@ Configuration Manager 测试并支持 Windows Server Datacenter 版本，但没�
 - **Windows 10 企业版**（x86、x64）  
 
 - **Windows 10 IoT 企业版**（x86、x64）  
-    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)。<!--SCCMDocs issue 560-->  
+    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](/windows/iot-core/windows-iot-enterprise)。<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8.1 Industry**（x86、x64）
 
@@ -335,7 +335,7 @@ Configuration Manager 提供内置功能来管理本地移动设备，无需安�
 - **Windows 10 Pro Enterprise**（x86、x64）  
 
 - **Windows 10 IoT 企业版**（x86、x64）  
-    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)。<!--SCCMDocs issue 560-->  
+    此版本包括长期服务频道 (LTSC)。 有关详细信息，请参阅 [Windows 10 IoT 企业版概述](/windows/iot-core/windows-iot-enterprise)。<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT 移动企业版**  
 

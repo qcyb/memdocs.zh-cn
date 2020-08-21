@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7013ae10de753cbcb664771bd30dc51b259aa390
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123930"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697545"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>如何使用 Configuration Manager 中的任务序列变量
 
@@ -167,7 +167,7 @@ ms.locfileid: "88123930"
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    若要详细了解此 cmdlet，请参阅 [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture)。 若要详细了解两字母 ISO 语言名称，请参阅 [ISO 639-1 代码列表](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)。
+    若要详细了解此 cmdlet，请参阅 [Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture)。 若要详细了解两字母 ISO 语言名称，请参阅 [ISO 639-1 代码列表](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)。
 
 1. 对于“输出到任务序列变量”选项，指定“`CurrentOSLanguage`”。
 

@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e35a66c05a09455b3f2aded3d81daa2ccd5eff0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126733"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700242"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -91,7 +91,7 @@ Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 不支持
 
 从 Configuration Manager 版本 1906 开始，可以[更新和维护 Windows 预览体验成员](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB)版本。 此功能旨在为客户提供便利。 在此功能工作期间，对它的支持是最佳支持。 若此功能停止工作，Configuration Manager 无法提供它的修补程序。  
 
-若要提供 Windows 预览体验人员的反馈，请使用[反馈中心](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback)。
+若要提供 Windows 预览体验人员的反馈，请使用[反馈中心](/windows-insider/at-work-pro/wip-4-biz-feedback)。
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
@@ -99,7 +99,7 @@ Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 不支持
 
 - [OS 部署的基础架构要求](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
-- [下载适用于 Windows 10 的 Windows ADK](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
+- [下载适用于 Windows 10 的 Windows ADK](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > 从 Windows 10 版本 1809 开始，Windows PE 是单独的安装程序。 但是功能上没有任何区别。
@@ -118,7 +118,7 @@ Configuration Manager 在 Windows 10 ARM64 设备上支持客户端。 不支持
 
 |Key|
 |--|
-| ![支持](media/green_check.png) = **支持** <br/> 此表仅显示与 Configuration Manager 版本相关的 Windows ADK 可支持性。 Microsoft 建议使用与要部署的 Windows 版本匹配的 Windows ADK。 部署最新的 Windows 10 版本时，请使用最新的 Windows ADK 版本。 最新的 Windows ADK 版本可能支持部署较低的 OS 版本，如 Windows 8.1。<!-- SCCMDocs issue 1229 --> 有关 Windows ADK 组件支持能力的详细信息，请参阅 [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)（DISM 支持的平台）和 [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)（USMT 要求）。 |
+| ![支持](media/green_check.png) = **支持** <br/> 此表仅显示与 Configuration Manager 版本相关的 Windows ADK 可支持性。 Microsoft 建议使用与要部署的 Windows 版本匹配的 Windows ADK。 部署最新的 Windows 10 版本时，请使用最新的 Windows ADK 版本。 最新的 Windows ADK 版本可能支持部署较低的 OS 版本，如 Windows 8.1。<!-- SCCMDocs issue 1229 --> 有关 Windows ADK 组件支持能力的详细信息，请参阅 [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms)（DISM 支持的平台）和 [USMT requirements](/windows/deployment/usmt/usmt-requirements#bkmk-1)（USMT 要求）。 |
 | ![Backwards compatible](media/blue_compat.png)  = 后向兼容 <br/> 此组合未经测试，但应该适用。 我们会记录任何已知问题或注意事项。 |
 | ![不支持](media/Red_X.png) = **不支持** |
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 999d8441e8c97f0a4b7ad4a92c8175300dcc4ead
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125931"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696440"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>启用桌面分析的数据共享
 
@@ -31,7 +31,7 @@ ms.locfileid: "88125931"
 > [!IMPORTANT]
 > 在大多数情况下，仅使用 Configuration Manager 来配置这些设置。 也不要在域组策略对象中应用这些设置。 有关详细信息，请参阅[冲突解决](enroll-devices.md#conflict-resolution)。
 
-桌面分析的基本功能在“必需”[诊断数据级别](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)可用。 如果没有在 Configuration Manager 中配置“可选(受限)”级别，则无法使用以下桌面分析功能：
+桌面分析的基本功能在“必需”[诊断数据级别](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)可用。 如果没有在 Configuration Manager 中配置“可选(受限)”级别，则无法使用以下桌面分析功能：
 
 - 应用使用情况
 - [其他 App Insights](compat-assessment.md#additional-insights)
@@ -51,14 +51,14 @@ Microsoft 建议为桌面分析启用“可选(受限)”诊断数据级别，�
 >
 > | 版本 2006 及更高版本 | 版本 2002 及更低版本 |
 > |---------|---------|
-> | 必需 | 基本版 |
+> | 必选 | 基本 |
 > | 可选(受限) | 增强(受限) |
-> | 空值 | 增强版 |
+> | 不适用 | 增强版 |
 > | 可选 | 完全 |
 >
 > 如果你之前在“增强”级别配置过任何设备，那么当你升级到版本 2006 时，这些设备将恢复为“可选(受限)”。 然后，它们将向 Microsoft 发送更少的数据。 此更改应该不会影响桌面分析中显示的内容。
 
-若要详细了解使用“可选(受限)”与 Microsoft 共享的诊断数据，请参阅 [Windows 10 增强的诊断数据事件和字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
+若要详细了解使用“可选(受限)”与 Microsoft 共享的诊断数据，请参阅 [Windows 10 增强的诊断数据事件和字段](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
 
 > [!IMPORTANT]
 > Microsoft 坚定地承诺提供用于让你自己控制隐私的工具和资源。 因此，尽管桌面分析支持 Windows 8.1 设备，但 Microsoft 不会从欧洲国家/地区（EEA 和瑞士）的 Windows 8.1 设备中收集 Windows 诊断数据。
@@ -67,9 +67,9 @@ Microsoft 建议为桌面分析启用“可选(受限)”诊断数据级别，�
 
 以下文章也可让你更好地了解 Windows 诊断数据级别：
 
-- [Windows 10 和 GDPR：面向 IT 决策者的信息](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 和 GDPR：面向 IT 决策者的信息](/windows/privacy/gdpr-it-guidance)  
 
-- [配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [配置组织中的 Windows 诊断数据](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!NOTE]
 > 配置为发送“可选(受限)”诊断数据的客户端将在初始完全扫描完成后向 Microsoft 云发送大约 2MB 的数据。 每日增量在 250-400 KB 之间变化。
@@ -111,7 +111,7 @@ Microsoft 建议为桌面分析启用“可选(受限)”诊断数据级别，�
 - 确保用户拥有访问诊断数据终结点的代理权限。 此选项要求设备具有拥有代理权限的控制台用户，因此无法将此方法用于无外设设备。
 
 > [!IMPORTANT]
-> 用户代理身份验证方法与使用 Microsoft Defender 高级威胁防护不兼容。 出现此行为是因为，此身份验证依赖于设置为 `0` 的 DisableEnterpriseAuthProxy 注册表项，而 Microsoft Defender ATP 要求将其设置为 `1`。 有关详细信息，请参阅[在 Microsoft Defender ATP 中配置计算机代理和 Internet 连接设置](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)。
+> 用户代理身份验证方法与使用 Microsoft Defender 高级威胁防护不兼容。 出现此行为是因为，此身份验证依赖于设置为 `0` 的 DisableEnterpriseAuthProxy 注册表项，而 Microsoft Defender ATP 要求将其设置为 `1`。 有关详细信息，请参阅[在 Microsoft Defender ATP 中配置计算机代理和 Internet 连接设置](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)。
 
 ### <a name="device-proxy-authentication"></a>设备代理身份验证
 
@@ -137,4 +137,4 @@ Microsoft 建议为桌面分析启用“可选(受限)”诊断数据级别，�
 
   - 路由的连接，或使用网络地址转换 (NAT) 的连接
 
-- 配置代理服务器以允许 Active Directory 中的计算机帐户访问诊断数据终结点。 此配置要求代理服务器支持 Windows 集成身份验证。  
+- 配置代理服务器以允许 Active Directory 中的计算机帐户访问诊断数据终结点。 此配置要求代理服务器支持 Windows 集成身份验证。

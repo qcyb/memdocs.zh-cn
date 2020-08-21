@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123585"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696712"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
@@ -220,7 +220,7 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 
 在满足 WSUS 的最低要求且具备 Configuration Manager 站点系统支持的配置的站点系统上安装软件更新点角色。  
 
--   要详细了解针对 Windows Server WSUS 服务器角色的最低要求，请参阅[查看注意事项和系统要求](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements)。  
+-   要详细了解针对 Windows Server WSUS 服务器角色的最低要求，请参阅[查看注意事项和系统要求](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements)。  
 
 -   有关 Configuration Manager 站点系统支持的配置的详细信息，请参阅[站点和站点系统先决条件](../../core/plan-design/configs/site-and-site-system-prerequisites.md)。  
 
@@ -235,7 +235,7 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 
 -   添加“NT AUTHORITY\SYSTEM”帐户作为 WSUS 数据库 (SUSDB) 的用户  。 配置最低限度的 webService 数据库角色成员身份。  
   
-要详细了解如何在 Windows Server 上安装 WSUS，请参阅[安装 WSUS 服务器角色](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role)。  
+要详细了解如何在 Windows Server 上安装 WSUS，请参阅[安装 WSUS 服务器角色](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role)。  
 
 在主站点上安装多个软件更新点时，请为同一 Active Directory 林中的每个软件更新点使用同一 WSUS 数据库。 在客户端切换到新的软件更新点时，共享同一个数据库可提高性能。 有关详细信息，请参阅[为软件更新点使用共享的 WSUS 数据库](software-updates-best-practices.md#bkmk_shared-susdb)。  
 

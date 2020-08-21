@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125859"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700814"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -73,7 +73,7 @@ ms.locfileid: "88125859"
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>我能否将桌面分析用于 Windows 10 LTSC？
 
-桌面分析不支持 Windows 10 长期服务频道 (LTSC) 设备。 有关详细信息，请参阅 [Windows 即服务概述](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)。
+桌面分析不支持 Windows 10 长期服务频道 (LTSC) 设备。 有关详细信息，请参阅 [Windows 即服务概述](/windows/deployment/update/waas-overview#long-term-servicing-channel)。
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>我能否减少在桌面分析门户中刷新数据所需的时间？
 
@@ -106,7 +106,7 @@ ms.locfileid: "88125859"
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>我能否将更新符合性和桌面分析一起使用？
 
-是。 若目前在 Azure 门户中使用了[更新符合性](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started)，现在及 2020 年 1 月以后可以继续使用。
+是。 若目前在 Azure 门户中使用了[更新符合性](/windows/deployment/update/update-compliance-get-started)，现在及 2020 年 1 月以后可以继续使用。
 
 有关详细信息，请参阅 [KB 4521815：Windows Analytics 将于 2020 年 1 月 31 日停用](https://support.microsoft.com/help/4521815/windows-analytics-retirement)。
 

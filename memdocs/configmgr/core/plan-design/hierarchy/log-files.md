@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126420"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700542"
 ---
 # <a name="log-file-reference"></a>日志文件引用
 
@@ -784,7 +784,7 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |MP_ClientIDManager.log|记录管理点对任务序列从 PXE 或启动媒体中发起的客户端 ID 请求的响应。|站点系统服务器|  
 |MP_DriverManager.log|记录管理点对“自动应用驱动程序”任务序列操作请求的响应。|站点系统服务器|  
 |OfflineServicingMgr.log|记录针对操作系统 Windows 映像格式 (WIM) 文件的脱机维护计划和更新应用操作的详细信息。|站点系统服务器|  
-|Setupact.log|记录有关 Windows Sysprep 和安装日志的详细信息。 有关详细信息，请参阅[日志文件](https://docs.microsoft.com/windows/deployment/upgrade/log-files)。|客户端|  
+|Setupact.log|记录有关 Windows Sysprep 和安装日志的详细信息。 有关详细信息，请参阅[日志文件](/windows/deployment/upgrade/log-files)。|客户端|  
 |Setupapi.log|记录有关 Windows Sysprep 和安装日志的详细信息。|客户端|  
 |Setuperr.log|记录有关 Windows Sysprep 和安装日志的详细信息。|客户端|  
 |smpisapi.log|记录有关客户端状态捕获和还原操作的详细信息以及阈值信息。|客户端|  
@@ -894,7 +894,7 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |DISM.log|使用 DISM 记录所有操作。 如有必要，DISM.log 将指向 CBS.log 以提供更多详细信息。|客户端|
 |setupact.log|在 Windows 安装过程中发生的大多数错误的主日志文件。 该日志文件位于 %windir%\$Windows.~BT\sources\panther 文件夹。|客户端|
 
-有关详细信息，请参阅[在线服务相关的日志文件](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)。
+有关详细信息，请参阅[在线服务相关的日志文件](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)。
 
 ### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Windows 更新代理
 
@@ -904,7 +904,7 @@ Configuration Manager 客户端上的日志文件位于以下目录中：`%WinDi
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|记录有关的详细信息，涉及到 Windows 更新代理何时连接到 WSUS 服务器并为符合性评估检索软件更新，以及代理组件是否有更新。|客户端|  
 
-有关详细信息，请参阅 [Windows 更新日志文件](https://docs.microsoft.com/windows/deployment/update/windows-update-logs)。
+有关详细信息，请参阅 [Windows 更新日志文件](/windows/deployment/update/windows-update-logs)。
 
 ### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> WSUS 服务器
 

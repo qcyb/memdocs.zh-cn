@@ -10,12 +10,12 @@ ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129182"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697290"
 ---
 # <a name="encrypt-recovery-data"></a>加密恢复数据
 
@@ -203,9 +203,9 @@ else select 0
 
 有关这些 SQL 命令的详细信息，请参阅以下文章：
 
-- [SQL Server 和数据库加密密钥](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [创建证书](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [备份证书](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [创建主密钥](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [备份主密钥](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [授予证书权限](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [SQL Server 和数据库加密密钥](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [创建证书](/sql/t-sql/statements/create-certificate-transact-sql)
+- [备份证书](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [创建主密钥](/sql/t-sql/statements/create-master-key-transact-sql)
+- [备份主密钥](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [授予证书权限](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

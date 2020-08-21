@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125740"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694255"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试点
 
@@ -32,7 +32,7 @@ ms.locfileid: "88125740"
 
 如果没有 Azure 订阅，请在开始之前创建一个[免费帐户](https://azure.microsoft.com/free)。 正确配置后，使用桌面分析不会产生任何 Azure 费用。
 
-桌面分析使用 Azure 订阅中的 Log Analytics 工作区。 工作区实质上是包括帐户信息以及该帐户的简单配置信息的容器。 有关详细信息，请参阅[管理工作区](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)。
+桌面分析使用 Azure 订阅中的 Log Analytics 工作区。 工作区实质上是包括帐户信息以及该帐户的简单配置信息的容器。 有关详细信息，请参阅[管理工作区](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json)。
 
 
 
@@ -102,7 +102,7 @@ ms.locfileid: "88125740"
 
         如果未选择此选项，桌面分析仍会将用户添加为安全组的成员。 “全局管理员”需要为用户手动分配“桌面分析管理员”角色。  
 
-        有关在 Azure Active Directory 中分配管理员角色权限以及分配给“桌面分析管理员”的权限的详细信息，请参阅 [Azure Active Directory 中的管理员角色权限](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
+        有关在 Azure Active Directory 中分配管理员角色权限以及分配给“桌面分析管理员”的权限的详细信息，请参阅 [Azure Active Directory 中的管理员角色权限](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
 
     - 桌面分析在 Azure Active Directory 中预先配置“工作区所有者”安全组，以创建和管理工作区和部署计划。 
 
@@ -339,7 +339,7 @@ Configuration Manager 会在创建连接的 60 分钟内同步集合。 在桌�
     - **产品密钥**：指定要安装的 OS 的 Windows 产品密钥。 请指定编码的批量许可证密钥或标准产品密钥。 如果使用标准产品密钥，请用短划线 (-) 将每五个字符分隔为一组。 例如：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX。 在对批量许可证版本进行升级时，则可能不需要产品密钥。  
 
         > [!Note]  
-        > 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。
+        > 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](/windows-server/get-started/kmsclientkeys)。
 
 6. 在“包括更新”页上，选择“下一步”以不安装任何软件更新。  
 

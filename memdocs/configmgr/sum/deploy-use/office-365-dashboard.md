@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bae995b0704e2b2774d5f002cbf907777a3edcf0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129353"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697035"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365 客户端管理仪表板
 
 适用范围：  Configuration Manager (Current Branch)
 
 > [!Note]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
 
 自 Configuration Manager 版本 1802 起，可以在“Office 365 客户端管理”仪表板中审阅 Microsoft 365 Apps 客户端信息。 选中图形部分时，Office 365 客户端管理仪表板会显示相关设备的列表。 <!--1357281 -->
 
@@ -59,7 +59,7 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 
 自版本 1910 起，需要为 Microsoft 365 Apps 启用数据收集，以便在“Office 365 专业增强版(试点)和运行状况”仪表板中填充信息。 数据存储在 Configuration Manager 站点数据库中，不会发送给 Microsoft。
 
-此数据不同于[从 Microsoft 365 Apps 发送到 Microsoft 的诊断数据](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)中介绍的诊断数据。
+此数据不同于[从 Microsoft 365 Apps 发送到 Microsoft 的诊断数据](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)中介绍的诊断数据。
 
 可以使用组策略或编辑注册表来启用数据收集功能。
 
@@ -67,7 +67,7 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 
 1. 下载最新的[来自 Microsoft 下载中心的管理模板文件](https://www.microsoft.com/download/details.aspx?id=49030)。
 2. 启用 `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard` 下方的“启用遥测数据收集功能”策略设置  。
-    - 或者，通过 [Office 云策略服务](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service)应用策略设置。
+    - 或者，通过 [Office 云策略服务](/DeployOffice/overview-office-cloud-policy-service)应用策略设置。
     - Office 遥测仪表板也使用该策略设置，但无需为该数据收集功能部署该仪表板。
 
 #### <a name="enable-data-collection-from-the-registry"></a>通过注册表启用数据收集功能
@@ -105,7 +105,7 @@ Office 365 客户端管理仪表板包含新磁贴“Office 365 专业增强版�
 
 - 在客户端设置中启用硬件清单。 有关详细信息，请参阅[先决条件](#prerequisites)部分。  
 
-- 设备需要连接到 Office 内容分发网络 (CDN) 才能下载加载项就绪情况文件。 有关详细信息，请参阅[内容分发网络](https://docs.microsoft.com/office365/enterprise/content-delivery-networks)。 如果设备无法下载此文件，说明加载项状态为“需要审核”  。  
+- 设备需要连接到 Office 内容分发网络 (CDN) 才能下载加载项就绪情况文件。 有关详细信息，请参阅[内容分发网络](/office365/enterprise/content-delivery-networks)。 如果设备无法下载此文件，说明加载项状态为“需要审核”  。  
 
     > [!Note]  
     > 此功能没有数据发送给 Microsoft。  

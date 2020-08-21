@@ -10,12 +10,12 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6df9238cd81f14a64a42c45136c778357acb89c4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1d79edb5ad1a60c5876163281ec5c1d1c17eff0a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126944"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692802"
 ---
 # <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>在虚拟桌面基础结构 (VDI) 中管理 Configuration Manager 客户端
 
@@ -41,7 +41,7 @@ Configuration Manager 将个人 VM 视为物理计算机。 可以在 VM 映像�
 
 你不会为单个远程桌面会话安装 Configuration Manager 客户端。 在托管远程桌面服务的服务器上安装一次。 可以在远程桌面服务服务器上使用所有 Configuration Manager 客户端功能。
 
-有关详细信息，请参阅[欢迎使用远程桌面服务](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds)。
+有关详细信息，请参阅[欢迎使用远程桌面服务](/windows-server/remote/remote-desktop-services/welcome-to-rds)。
 
 ## <a name="pooled-vms"></a>共用 VM
 

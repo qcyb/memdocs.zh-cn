@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7cb0a2c71a3ea326348b87d6b34e3109a8ef9f20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128471"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700123"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -39,10 +39,10 @@ ms.locfileid: "88128471"
 
   - [应用审批电子邮件通知](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics 连接器**：[连接到 Azure 日志分析](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)。 将集合数据同步到 Log Analytics。  
+- **Log Analytics 连接器**：[连接到 Azure 日志分析](/azure/azure-monitor/platform/collect-sccm)。 将集合数据同步到 Log Analytics。  
 
     > [!Note]  
-    > 本文引用 Log Analytics 连接器（以前称为“OMS 连接器”）。 没有任何功能区别。 有关详细信息，请参阅 [Azure 管理 - 监视](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics)。  
+    > 本文引用 Log Analytics 连接器（以前称为“OMS 连接器”）。 没有任何功能区别。 有关详细信息，请参阅 [Azure 管理 - 监视](/azure/azure-monitor/terminology#log-analytics)。  
 
 - **适用于企业的 Microsoft Store**：连接到[适用于企业的 Microsoft Store](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)。 为组织获取可使用 Configuration Manager 部署的 Microsoft Store 应用。  
 
@@ -78,10 +78,10 @@ ms.locfileid: "88128471"
 
 有关 Azure 应用的详细信息，请从以下文章开始阅读：
 
-- [Azure 应用服务中的身份验证和授权](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Web 应用概述](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Azure 应用服务中的身份验证和授权](/azure/app-service/app-service-authentication-overview)
+- [Web 应用概述](/azure/app-service-web/app-service-web-overview)
 - [在 Azure AD 中注册应用程序的基本知识](/azure/active-directory/develop/authentication-scenarios)  
-- [用 Azure Active Directory 租户注册应用程序](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [用 Azure Active Directory 租户注册应用程序](/azure/active-directory/active-directory-app-registration)
 
 ## <a name="before-you-begin"></a>在开始之前
 
@@ -93,7 +93,7 @@ ms.locfileid: "88128471"
 
 部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。
 
-在 Log Analytics 连接器时，在包含相关工作区的资源组上授予新注册的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在 Azure 门户的“添加用户”区域中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 Log Analytics 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
+在 Log Analytics 连接器时，在包含相关工作区的资源组上授予新注册的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在 Azure 门户的“添加用户”区域中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 Log Analytics 权限](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
 
 ## <a name="start-the-azure-services-wizard"></a>开始使用 Azure 服务向导
 
@@ -174,7 +174,7 @@ ms.locfileid: "88128471"
 选择“确定”以在 Azure AD 中创建 Web 应用，并关闭“创建服务器应用程序”对话框。 此操作会返回至[服务器应用对话框](#server-app-dialog)。
 
 > [!NOTE]
-> 如果定义了 Azure AD 条件访问策略并应用于所有云应用 - 必须从此策略中排除创建的服务器应用程序。 有关如何排除特定应用的详细信息，请参阅 [Azure AD 条件访问文档](https://docs.microsoft.com/azure/active-directory/conditional-access/)。
+> 如果定义了 Azure AD 条件访问策略并应用于所有云应用 - 必须从此策略中排除创建的服务器应用程序。 有关如何排除特定应用的详细信息，请参阅 [Azure AD 条件访问文档](/azure/active-directory/conditional-access/)。
 
 ### <a name="native-client-app"></a>本机客户端应用
 
@@ -222,7 +222,7 @@ ms.locfileid: "88128471"
 
 - “云管理”服务，“发现”页：[配置 Azure AD 用户发现](configure-discovery-methods.md#azureaadisc)  
 
-- “Log Analytics 连接器”服务，“配置”页：[配置到 Log Analytics 的连接](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- “Log Analytics 连接器”服务，“配置”页：[配置到 Log Analytics 的连接](/azure/azure-monitor/platform/collect-sccm)  
 
 - “适用于企业的 Microsoft Store”服务，“配置”页：[配置适用于企业的 Microsoft Store 同步](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 

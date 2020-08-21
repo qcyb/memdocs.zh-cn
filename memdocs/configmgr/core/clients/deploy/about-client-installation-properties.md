@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc2cc22dc4edeacc00e521233eda383314b0b92
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127012"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693431"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>关于 Configuration Manager 中的客户端安装参数和属性
 
@@ -323,7 +323,7 @@ CCMSetup.exe 命令提供以下返回代码。 若要进行故障排除，请查
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-指定 Azure Active Directory (Azure AD) 客户端应用标识符。 在为云管理[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)时，需创建或导入客户端应用。 Azure 管理员可从 Azure 门户获取该属性的值。 有关详细信息，请参阅[获取应用程序 ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 对于 AADCLIENTAPPID 属性，此应用程序 ID 用于“本机”类型应用程序 。
+指定 Azure Active Directory (Azure AD) 客户端应用标识符。 在为云管理[配置 Azure 服务](../../servers/deploy/configure/azure-services-wizard.md)时，需创建或导入客户端应用。 Azure 管理员可从 Azure 门户获取该属性的值。 有关详细信息，请参阅[获取应用程序 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 对于 AADCLIENTAPPID 属性，此应用程序 ID 用于“本机”类型应用程序 。
 
 示例：`ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -344,7 +344,7 @@ Azure 管理员可从 Azure 门户获取该属性的值。 在“Azure Active Di
 - 在“设备状态”部分中，找到 TenantId 值。 例如 `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
-  > Azure 管理员还可在 Azure 门户中获取此值。 有关详细信息，请参阅[获取租户 ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
+  > Azure 管理员还可在 Azure 门户中获取此值。 有关详细信息，请参阅[获取租户 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
 
 示例：`ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -793,4 +793,4 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 |2.5.4.12|T 或 Title|标题|  
 |2.5.4.42|G 或 GN 或 GivenName|给定名称|  
 |2.5.4.43|I 或 Initials|缩写|  
-|2.5.29.17|（没有值）|使用者可选名称|  
+|2.5.29.17|（没有值）|使用者可选名称|

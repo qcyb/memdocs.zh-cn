@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129131"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693329"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -40,7 +40,7 @@ ms.locfileid: "88129131"
 
   - 与 [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) 集成以实现**云管理**。 不需要 Azure AD 用户发现。 要将站点与 Azure AD 集成以使用 Azure 资源管理器部署 CMG，你需要全局管理员。
 
-  - 必须在 Azure 订阅中注册 Microsoft.ClassicCompute & Microsoft.Storage 资源提供程序 。 有关详细信息，请参阅 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)。
+  - 必须在 Azure 订阅中注册 Microsoft.ClassicCompute & Microsoft.Storage 资源提供程序 。 有关详细信息，请参阅 [Azure 资源管理器](/azure/azure-resource-manager/resource-manager-supported-services)。
 
   - 订阅所有者需要登录才能部署 CMG。
 
@@ -207,7 +207,7 @@ Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate 
 
 对于选项 1 和 2，在运行 ccmsetup.exe 时使用 /mp 参数来指定 CMG 的 URL。 有关详细信息，请参阅[关于客户端安装参数和属性](../../deploy/about-client-installation-properties.md#mp)。
 
-对于选项 3，自 Configuration Manager 版本 2002 起，可以使用批量注册令牌在未连接到 Intranet 的系统中安装客户端。 若要详细了解这种方法，请参阅[创建批量注册令牌](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)。
+对于选项 3，自 Configuration Manager 版本 2002 起，可以使用批量注册令牌在未连接到 Intranet 的系统中安装客户端。 若要详细了解这种方法，请参阅[创建批量注册令牌](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token)。
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>为外部客户端配置 CMG
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aaba31a8a017f75338cf4d6dee3c2f2d80d7e377
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128995"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698514"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager 1802 版中的新增功能
 
@@ -267,7 +267,7 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Windows Autopilot 设备信息报表
 <!-- 1351442 -->
-Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备的解决方案。 有关详细信息，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。 一种向 Windows Autopilot 注册现有设备的方法是，将设备信息上传到适用于企业和适用于教育的 Microsoft Store。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 通过“硬件 - 常规”  报表节点中的新报表“Windows Autopilot 设备信息”  收集和报告此设备信息。 有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](../../../comanage/how-to-prepare-Win10.md#windows-autopilot)，以准备进行共同管理。
+Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备的解决方案。 有关详细信息，请参阅 [Windows Autopilot 概述](/windows/deployment/windows-autopilot/windows-10-autopilot)。 一种向 Windows Autopilot 注册现有设备的方法是，将设备信息上传到适用于企业和适用于教育的 Microsoft Store。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 通过“硬件 - 常规”  报表节点中的新报表“Windows Autopilot 设备信息”  收集和报告此设备信息。 有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](../../../comanage/how-to-prepare-Win10.md#windows-autopilot)，以准备进行共同管理。
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>特定集合的 Windows 10 维护服务详细信息报表
 <!--1357653-->
@@ -287,7 +287,7 @@ Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备�
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>对 Configuration Manager 的 Windows Defender 攻击防护策略的改进
 <!-- 1356220 -->
-在 Configuration Manager 中，为 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction)添加了有关[攻击面减少](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR)和[受控文件夹访问权限](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA)组件的其他策略设置。
+在 Configuration Manager 中，为 [Windows Defender 攻击防护](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction)添加了有关[攻击面减少](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR)和[受控文件夹访问权限](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA)组件的其他策略设置。
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Windows Defender 应用程序防护的新主机交互设置
 <!-- 1356256 -->
