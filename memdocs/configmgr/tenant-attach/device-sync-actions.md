@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251858"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700399"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft 终结点管理器租户附加：设备同步和设备操作
 <!--3555758 live 3/4/2020-->
@@ -27,7 +27,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
 
 ## <a name="prerequisites"></a>先决条件
 
-- 在应用此更改时作为 *全局管理员* 登录的帐户。 有关详细信息，请参阅 [Azure Active Directory (Azure AD) 管理员角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)。
+- 在应用此更改时作为 *全局管理员* 登录的帐户。 有关详细信息，请参阅 [Azure Active Directory (Azure AD) 管理员角色](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)。
    - 载入在 Azure AD 租户中创建第三方应用和第一方服务主体。
 - Azure 公有云环境。
 - 触发设备操作的用户帐户具有以下先决条件：
@@ -118,13 +118,13 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
    - CmCollectionData
 
 - Microsoft Graph 权限：
-   - Directory. Read. 所有 [应用程序权限](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Directory. Read. 所有 [委派的目录权限](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Directory. Read. 所有 [应用程序权限](/graph/permissions-reference#application-permissions)
+   - Directory. Read. 所有 [委派的目录权限](/graph/permissions-reference#directory-permissions)
 
-- 确保为 Azure AD 应用程序选择 "为 **租户授予管理员许可** "。 有关详细信息，请参阅 [在应用注册中授予管理员许可](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent)。
+- 确保为 Azure AD 应用程序选择 "为 **租户授予管理员许可** "。 有关详细信息，请参阅 [在应用注册中授予管理员许可](/azure/active-directory/manage-apps/grant-admin-consent)。
 
 - 导入的应用程序需要配置如下：
-   - 仅为 **此组织目录中的帐户**注册。 有关详细信息，请参阅 [更改可访问应用程序的人员](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)。
+   - 仅为 **此组织目录中的帐户**注册。 有关详细信息，请参阅 [更改可访问应用程序的人员](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)。
    -  具有有效的应用程序 ID URI 和密钥
 
 
