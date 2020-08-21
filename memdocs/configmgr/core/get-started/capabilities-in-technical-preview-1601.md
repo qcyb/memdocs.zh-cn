@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526026"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695811"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager Technical Preview 1601 中的功能
 
@@ -75,11 +75,11 @@ ms.locfileid: "87526026"
 
     -   Microsoft Intune 订阅。 应在 Configuration Manager 控制台中配置 Microsoft Intune 订阅。  
 
-    -   [Azure AD 自动注册的先决条件](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   [Azure AD 自动注册的先决条件](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1)。  
 
     要使用该选项，你必须在 Configuration Manager 中创建具有以下所述特定规则的合规性策略，并在 Intune 控制台中设置条件访问策略。  此外，为确保仅允许合规的电脑访问，必须将 Windows 电脑要求设置为“设备必须合规”  选项。 下面是适用于 Configuration Manager 管理的电脑的合规性策略规则。  
 
-    -   **需要在 Azure ActiveDirectory 中注册：** 此规则会检查用户的设备是否已加入 Azure AD；如果未加入，则它会在 Azure AD 中自动注册。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   **需要在 Azure ActiveDirectory 中注册：** 此规则会检查用户的设备是否已加入 Azure AD；如果未加入，则它会在 Azure AD 中自动注册。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1)。  
 
     -   **在晚于特定天数的截止日期之前安装所有必需的更新：** 此规则会检查用户的设备是否在截止日期及你指定的宽限期内具有所有必备更新（参见“所需的自动更新”规则），并自动安装所有挂起的必备更新  。  
 
@@ -213,4 +213,4 @@ ms.locfileid: "87526026"
 
  要查看这些新设置，请在“创建配置项目”  向导的配置项目“设备设置”  页面中选择“展台模式 - Samsung KNOX”  。  
 
- 有关详细信息，请参阅[如何为没使用 Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)。  
+ 有关详细信息，请参阅[如何为没使用 Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)。

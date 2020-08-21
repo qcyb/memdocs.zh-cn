@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4604b6d2c0396b9192c031264cffef8b8641d557
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906717"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696675"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Configuration Manager 中的软件更新的先决条件
 
@@ -95,7 +95,7 @@ ms.locfileid: "82906717"
 
 ### <a name="historical-information-about-kb-3095113"></a>关于 KB 3095113 的历史信息
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) 于 2015 年 10 月[作为修补程序发布](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113)，添加了对 Windows 10 升级到 WSUS 的操作的支持。 借助此更新，WSUS 可在 Windows 10 的“升级”分类中同步和分发更新  。
+ [KB 3095113](https://support.microsoft.com/kb/3095113) 于 2015 年 10 月[作为修补程序发布](/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113)，添加了对 Windows 10 升级到 WSUS 的操作的支持。 借助此更新，WSUS 可在 Windows 10 的“升级”分类中同步和分发更新  。
 
 如果未先安装 [KB 3095113](https://support.microsoft.com/kb/3095113) 就同步任何升级，则会使用不可用数据填充 WSUS 数据库 (SUSDB)。 必须先清除该数据，才能正确部署升级。 无法使用“下载软件更新”向导来下载此状态中的 Windows 10 升级。
 
@@ -115,13 +115,13 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-过去，当发生这些错误时，会通过执行修改后的 [WSUS 解决步骤](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)来解决它们。 由于这些步骤与不执行安装 KB 3159706 后所需的手动步骤的解决方案类似，因此我们在下一部分，将这两套步骤结合在了一个解决方案中：
+过去，当发生这些错误时，会通过执行修改后的 [WSUS 解决步骤](/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)来解决它们。 由于这些步骤与不执行安装 KB 3159706 后所需的手动步骤的解决方案类似，因此我们在下一部分，将这两套步骤结合在了一个解决方案中：
 
 - [在安装 KB 3095113 或 KB 3159706 之前从同步升级中恢复](#bkmk_fix-upgrades)。
 
 ### <a name="historical-information-about-kb-3159706"></a>关于 KB 3159706 的历史信息
 
-KB 3148812 最初发布于 2016 年 4 月，它使 WSUS 能够以本机方式解密升级 Windows 10 包时所用的 .esd 文件。 [KB 3148812 给某些客户造成了一些问题](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues)，而它已被 [KB 3159706](https://support.microsoft.com/help/3159706) 取代。 需要在你的所有软件更新点和站点服务器上安装 KB 3159706，然后你才能为 Windows 10 版本 1607 及更高版本的设备提供服务。 但是，如果你不知道到 KB 在安装后需要手动操作，则可能会出现问题：
+KB 3148812 最初发布于 2016 年 4 月，它使 WSUS 能够以本机方式解密升级 Windows 10 包时所用的 .esd 文件。 [KB 3148812 给某些客户造成了一些问题](/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues)，而它已被 [KB 3159706](https://support.microsoft.com/help/3159706) 取代。 需要在你的所有软件更新点和站点服务器上安装 KB 3159706，然后你才能为 Windows 10 版本 1607 及更高版本的设备提供服务。 但是，如果你不知道到 KB 在安装后需要手动操作，则可能会出现问题：
 
 1. 从提升的命令提示符运行 `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`。
 1. 在所有 WSUS 服务器上重启 WSUS 服务。
@@ -138,13 +138,13 @@ KB 3148812 最初发布于 2016 年 4 月，它使 WSUS 能够以本机方式解
 1. 在 WSUS 和 Configuration Manager 中禁用“升级”分类  。 在按照这些说明操作之前，你不希望进行同步。  
    - 在顶级站点的软件更新点组件属性中取消选中“升级”分类  。
      - 有关详细信息，请参阅[配置分类和产品](../get-started/configure-classifications-and-products.md)。
-   - 在[“选项”页面](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations)上的“产品和分类”下取消选择 WSUS 的“升级”分类，或者使用以管理员身份运行的 PowerShell ISE    。
+   - 在[“选项”页面](/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations)上的“产品和分类”下取消选择 WSUS 的“升级”分类，或者使用以管理员身份运行的 PowerShell ISE    。
       ```PowerShell
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - 如果在多个 WSUS 服务器之间共享 WSUS 数据库，则只需对每个数据库取消勾选“升级”一次  。  
 1. 在每个 WSUS 服务器上，从提升的命令提示符处运行：`"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`。 然后，在所有 WSUS 服务器上重启 WSUS 服务。
-   -  WSUS 会将数据库置于[单用户模式](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode)下，然后会检查是否需要维护。 维护操作是否运行由检查结果而定。 然后，数据库会恢复到多用户模式。 
+   -  WSUS 会将数据库置于[单用户模式](/sql/relational-databases/databases/set-a-database-to-single-user-mode)下，然后会检查是否需要维护。 维护操作是否运行由检查结果而定。 然后，数据库会恢复到多用户模式。 
    - 如果在多个 WSUS 服务器之间共享 WSUS 数据库，则只需对每个数据库执行一次此维护。
 1. 使用以管理员身份运行的 PowerShell ISE 从每个 WSUS 数据库删除所有 Windows 10 升级。
    ```PowerShell

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3871b51c85d0474c4bea2da24fc5a2f31d02f59f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c37fab775cdb90667ff1bc9f77dbbcaa1864b6f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702935"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696780"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP 个人预览版说明
 
@@ -159,7 +159,7 @@ MUUrl 属性应为 `https://sws.update.microsoft.com` 。 若要更改它，请�
 
 ### <a name="updates-available-during-preview"></a>在预览期间可用的更新
 
-有关 Microsoft 发布的所有 Windows 10 更新的详细信息，请参阅 [ Windows 10 发布信息](https://docs.microsoft.com/windows/release-information/)。
+有关 Microsoft 发布的所有 Windows 10 更新的详细信息，请参阅 [ Windows 10 发布信息](/windows/release-information/)。
 
 #### <a name="cumulative-updates-to-test"></a>要测试的累积更新
 

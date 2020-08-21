@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 7dc3ef2ceb22f1c15c96127c593965ea31bdd7eb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614082"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696814"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
@@ -129,7 +129,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 ### <a name="prerequisites"></a>必备条件
 
 - 为[软件更新管理](../plan-design/plan-for-software-updates.md)配置的 Configuration Manager 版本 1906 或更高版本。
-- 运行 [Windows 预览体验计划预览版版本](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started)的 Windows 10 设备。
+- 运行 [Windows 预览体验计划预览版版本](/windows-insider/at-work-pro/wip-4-biz-get-started)的 Windows 10 设备。
 - 包含 Windows 预览体验计划设备的集合。
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>启用 Windows 预览体验计划升级和更新
@@ -160,7 +160,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 - 存在许可条款，部署时必须接受条款才能安装。
 - 请考虑使用[客户端设置中的线程优先级](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)。
 - 动态更新会直接通过 Microsoft 更新自动安装最新累积更新等关键更新。 此行为始于 Windows 10 版本 1903 的功能更新。 
-  - 可以显式[禁用客户端设置中的动态更新](../../core/clients/deploy/about-client-settings.md#bkmk_du)或采用 [setupconfig.ini 文件](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)。 
+  - 可以显式[禁用客户端设置中的动态更新](../../core/clients/deploy/about-client-settings.md#bkmk_du)或采用 [setupconfig.ini 文件](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)。 
   - 有关详细信息，请参阅 [Windows 10 动态更新](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)博客文章。
 
 有关如何部署升级的详细信息，请参阅[管理 Windows 即服务](../../osd/deploy-use/manage-windows-as-a-service.md)。
@@ -168,7 +168,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 ### <a name="keeping-insider-devices-up-to-date"></a>使预览体验成员设备保持最新
 
-Windows 预览体验计划的累积更新将可适用于 WSUS，经扩展后可适用于 Configuration Manager。 这些累积更新的发布频率与 Windows 10 版本 1903 累积更新的发布频率相似。 Windows 预览体验计划累积更新位于“Windows 预览体验计划预发行版”产品类别中，并归类为“安全更新程序”或“更新”  。 可以按常规软件更新流程（如按[自动部署规则](../deploy-use/automatically-deploy-software-updates.md)或[分阶段部署](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)）部署 Windows 预览体验计划的累积更新。
+Windows 预览体验计划的累积更新将可适用于 WSUS，经扩展后可适用于 Configuration Manager。 这些累积更新的发布频率与 Windows 10 版本 1903 累积更新的发布频率相似。 Windows 预览体验计划累积更新位于“Windows 预览体验计划预发行版”产品类别中，并归类为“安全更新程序”或“更新”  。 可以按常规软件更新流程（如按[自动部署规则](../deploy-use/automatically-deploy-software-updates.md)或[分阶段部署](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)）部署 Windows 预览体验计划的累积更新。
 
 ## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> 扩展的安全更新和 Configuration Manager
 

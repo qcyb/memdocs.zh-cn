@@ -10,20 +10,20 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc43258e65752e7371c9baadf61598aac820062
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125094"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697987"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>管理和监视分阶段部署
 
 本文介绍如何管理和监视分阶段部署。 管理任务包括手动开始下一阶段、暂停或恢复某一阶段。 
 
 首先，需要创建分阶段部署： 
-- [应用程序](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [软件更新](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [应用程序](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [软件更新](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [任务序列](create-phased-deployment-for-task-sequence.md)  
 
 
@@ -79,7 +79,7 @@ ms.locfileid: "88125094"
 4. 选择分阶段部署，并单击功能区中的“暂停”或“恢复”   。 
 
 > [!NOTE]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 产品和文档中使用的是旧名称。 
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 产品和文档中使用的是旧名称。 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 
@@ -128,4 +128,3 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 例如，以下属性用于与上面显示的成功标准磁贴相同的阶段，其中标准为 65％：  
 ![阶段属性上的阶段设置选项卡](media/phase-properties-phase-settings.png)
-

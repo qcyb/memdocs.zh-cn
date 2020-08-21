@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943784"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698950"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先决条件检查列表
 
@@ -279,7 +279,7 @@ Configuration Manager 辅助站点服务器上已安装或启用 .NET Framework 
 
 SQL Server 实例配置为使用 SQL_Latin1_General_CP1_CI_AS 排序规则  。
 
-如果已安装 Configuration Manager 站点数据库，则此检查也适用于数据库。 有关更改 SQL Server 实例和数据库排序规则的信息，请参阅 [SQL 排序规则及 unicode 支持](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)。
+如果已安装 Configuration Manager 站点数据库，则此检查也适用于数据库。 有关更改 SQL Server 实例和数据库排序规则的信息，请参阅 [SQL 排序规则及 unicode 支持](/sql/relational-databases/collations/collation-and-unicode-support)。
 
 如果使用的是中文操作系统且需要 GB18030 支持，则此检查不适用。 有关启用 GB18030 支持的详细信息，请参阅[国际支持](../../../plan-design/hierarchy/international-support.md)。
 
@@ -379,7 +379,7 @@ Configuration Manager 不支持网络 (NLB) 上的软件更新点或硬件负载
 <!-- SCCMDocs-pr#3899 -->
 适用范围：  站点数据库服务器
 
-从版本 1906 开始，使用 SQL Server Always On 时，需要使用相同的[种子设定模式](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)配置可用性组副本。
+从版本 1906 开始，使用 SQL Server Always On 时，需要使用相同的[种子设定模式](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)配置可用性组副本。
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>SQL 可用性组副本必须正常运行
 
@@ -741,7 +741,7 @@ Configuration Manager 不需要 Active Directory 架构扩展来安装站点服�
 
 从版本 1810 开始，将检查站点数据库是否有 SQL 更改跟踪数据积压工作 (backlog)。<!--SCCMDocs-pr issue 3023-->  
 
-可通过在站点数据库中运行诊断存储过程来手动验证此检查。 首先，为站点数据库创建[诊断连接](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)。 最简单的方法是使用 SQL Server Management Studio 的数据库引擎查询编辑器，并连接到 `admin:<instance name>`。
+可通过在站点数据库中运行诊断存储过程来手动验证此检查。 首先，为站点数据库创建[诊断连接](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)。 最简单的方法是使用 SQL Server Management Studio 的数据库引擎查询编辑器，并连接到 `admin:<instance name>`。
 
 在专用管理员连接查询窗口中，运行以下命令：
 
@@ -804,7 +804,7 @@ Configuration Manager 对以下站点系统角色使用 SQL Server Native Client
 
 SQL Server 至少为管理中心站点和主站点保留 8 GB 的内存，并至少为辅助站点保留 4 GB 的内存。
 
-有关详细信息，请参阅[如何使用 SQL Server Management Studio 配置内存选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-)。
+有关详细信息，请参阅[如何使用 SQL Server Management Studio 配置内存选项](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-)。
 
 > [!NOTE]  
 > 此检查不适用于辅助站点上的 SQL Server Express。 此版本仅限制为保留 1 GB 内存。  
@@ -849,7 +849,7 @@ SQL Server 至少为管理中心站点和主站点保留 8 GB 的内存，并至
 
 主站点服务器或 Configuration Manager 控制台计算机上已安装 WinRM 1.1 以运行带外管理控制台。
 
-WinRM 自动与所有当前支持的 Windows 版本一起安装。 有关详细信息，请参阅 [Windows 远程管理的安装和配置](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)。
+WinRM 自动与所有当前支持的 Windows 版本一起安装。 有关详细信息，请参阅 [Windows 远程管理的安装和配置](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)。
 
 ### <a name="wsus-on-site-server"></a>站点服务器上的 WSUS
 
@@ -857,4 +857,4 @@ WinRM 自动与所有当前支持的 Windows 版本一起安装。 有关详细�
 
 站点服务器上安装了受支持的 Windows Server Update Services (WSUS) 版本。
 
-在不是站点服务器上的服务器使用软件更新点时，必须在站点服务器上安装 WSUS 管理控制台。 有关 WSUS 的详细信息，请参阅 [Windows Server 更新服务](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)。
+在不是站点服务器上的服务器使用软件更新点时，必须在站点服务器上安装 WSUS 管理控制台。 有关 WSUS 的详细信息，请参阅 [Windows Server 更新服务](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)。

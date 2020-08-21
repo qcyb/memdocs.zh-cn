@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c0b4942e8a6e81477814e24281e0d9e3752c5f90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438631"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696865"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>使用 Configuration Manager 管理 Surface 驱动程序
 
@@ -154,12 +154,12 @@ ms.locfileid: "87438631"
 
 ### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>需要哪些替代方法来部署 Surface 驱动程序和固件更新？
 
-有关如何通过备用通道部署 Surface 驱动程序和固件更新的信息，请参阅[管理 Surface 驱动程序和固件更新](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates)。 如果要下载 .msi 或 .exe 文件，然后通过传统软件部署通道进行部署，请参阅[使用 Configuration Manager 持续更新 Surface 固件](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager)。
+有关如何通过备用通道部署 Surface 驱动程序和固件更新的信息，请参阅[管理 Surface 驱动程序和固件更新](/surface/manage-surface-driver-and-firmware-updates)。 如果要下载 .msi 或 .exe 文件，然后通过传统软件部署通道进行部署，请参阅[使用 Configuration Manager 持续更新 Surface 固件](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager)。
 
 ## <a name="next-steps"></a>后续步骤
 
 有关 Surface 驱动程序的详细信息，请参阅以下文章：
 
-- [Surface 和 System Center Configuration Manager 的注意事项](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
+- [Surface 和 System Center Configuration Manager 的注意事项](/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Surface 更新历史记录](https://support.microsoft.com/help/4036283/surface-surface-update-history)
 - [下载适用于 Surface 设备的最新固件和驱动程序](/surface/manage-surface-driver-and-firmware-updates)

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 112a1fe4a47cce330593d34da7ce8d9180457497
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268515"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698899"
 ---
 # <a name="get-support-for-desktop-analytics"></a>获取桌面分析支持
 
@@ -31,7 +31,7 @@ Microsoft 对桌面分析提供全球技术、售前、帐单和订阅支持。 
 
 ## <a name="help-and-support"></a>帮助和支持
 
-要请求桌面分析相关的帮助，请使用门户中“疑难解答 + 支持”下的“帮助和支持”选项   。 该操作会提交桌面分析在线支持票证。 若要创建和管理支持事件，你的帐户必须具有包含 **microsoft.office365.supportTickets/tickets/manage** 操作的 Azure Active Directory (Azure AD) 角色。 有关详情，请参阅 [Azure AD 中的管理员角色](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。
+要请求桌面分析相关的帮助，请使用门户中“疑难解答 + 支持”下的“帮助和支持”选项   。 该操作会提交桌面分析在线支持票证。 若要创建和管理支持事件，你的帐户必须具有包含 **microsoft.office365.supportTickets/tickets/manage** 操作的 Azure Active Directory (Azure AD) 角色。 有关详情，请参阅 [Azure AD 中的管理员角色](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。
 
 如果问题更广泛地适用于 Configuration Manager 而不只是分析，则转到[Microsoft 支持](https://aka.ms/cmcbsupport)开启新的支持请求。 使用**桌面分析门户**类别。
 

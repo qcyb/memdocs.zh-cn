@@ -10,16 +10,16 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777018"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698480"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
-适用范围：Configuration Manager (Current Branch)
+适用范围：  Configuration Manager (Current Branch)
 
 使用以下信息来标识 Configuration Manager 中使用的 Windows 组、帐户和 SQL 对象及其使用方式和任何要求。  
 
@@ -553,7 +553,7 @@ Configuration Manager 安装程序会自动将此帐户添加到 [SMS 管理员]
 > [!NOTE]  
 > 源站点帐户和[源站点数据库帐户](#source-site-database-account)均在 Configuration Manager 控制台“管理”工作区的“帐户”的节点中被标识为“迁移管理器”  。  
 
-有关详细信息，请参阅[在层次结构之间迁移数据](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)。
+有关详细信息，请参阅[在层次结构之间迁移数据](/sccm/core/migration/migrate-data-between-hierarchies)。
 
 
 ### <a name="source-site-database-account"></a>源站点数据库帐户  
@@ -569,7 +569,7 @@ Configuration Manager 安装程序会自动将此帐户添加到 [SMS 管理员]
 > [!NOTE]  
 > 源站点帐户和[源站点数据库帐户](#source-site-database-account)均在 Configuration Manager 控制台“管理”工作区的“帐户”的节点中被标识为“迁移管理器”  。  
 
-有关详细信息，请参阅[在层次结构之间迁移数据](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)。
+有关详细信息，请参阅[在层次结构之间迁移数据](/sccm/core/migration/migrate-data-between-hierarchies)。
 
 
 ### <a name="task-sequence-domain-join-account"></a>任务序列域加入帐户 

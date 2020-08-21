@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268889"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699069"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>桌面分析中的兼容性评估
 
@@ -180,13 +180,13 @@ Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分
 
 #### <a name="16-bit-apps"></a>16 位应用
 
-从应用程序中删除所有 16 位组件，然后替换为 32 位或 64 位等效组件。 有关详细信息，请参阅 [Windows Vista 和 Windows Server 2008 开发人员案例：应用程序兼容性指南](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\))。
+从应用程序中删除所有 16 位组件，然后替换为 32 位或 64 位等效组件。 有关详细信息，请参阅 [Windows Vista 和 Windows Server 2008 开发人员案例：应用程序兼容性指南](/previous-versions/aa480152\(v=msdn.10\))。
 
 另一个选项是在 Windows 10 上启用 NT 虚拟 DOS 机 (NTVDM) 以获得支持。
 
 #### <a name="requires-admin-privileges"></a>需要管理员权限
 
-此应用要求用户拥有设备的管理访问权限。 针对这些需要管理员权限的应用使用应用清单。 有关详细信息，请参阅[创建和嵌入应用程序清单](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\))。
+此应用要求用户拥有设备的管理访问权限。 针对这些需要管理员权限的应用使用应用清单。 有关详细信息，请参阅[创建和嵌入应用程序清单](/previous-versions/bb756929\(v=msdn.10\))。
 
 桌面分析建议将此应用进行试点测试以发现任何回归。
 
@@ -196,7 +196,7 @@ Windows 兼容性数据通过防护措施对一些应用和驱动程序进行分
 
 #### <a name="not-dpi-aware"></a>非 DPI 感知
 
-此应用在 Windows 10 上可能会出现高级屏幕分辨率显示问题。 使用应用清单以避免出现任何高 DPI 分辨率问题。 有关详细信息，请参阅[应用程序清单](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)。
+此应用在 Windows 10 上可能会出现高级屏幕分辨率显示问题。 使用应用清单以避免出现任何高 DPI 分辨率问题。 有关详细信息，请参阅[应用程序清单](/windows/desktop/SbsCs/application-manifests)。
 
 桌面分析建议将此应用进行试点测试以发现任何回归。
 
@@ -220,13 +220,13 @@ Windows 10 不支持 .NET Framework 版本1.0。 版本 1.1 在 Windows 10 上�
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-Windows 10 上支持 .NET 2.0 和 3.5 框架。 你可能需要启用此 Windows 功能。 有关更多信息，请参阅[在 Windows 10 上安装 .NET Framework 3.5](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10)。
+Windows 10 上支持 .NET 2.0 和 3.5 框架。 你可能需要启用此 Windows 功能。 有关更多信息，请参阅[在 Windows 10 上安装 .NET Framework 3.5](/dotnet/framework/install/dotnet-35-windows-10)。
 
 #### <a name="ui-access"></a>UI 访问
 
 具有 UI 访问权限的应用程序可以绕过用户界面控制级别，以将输入驱动到桌面上具有更高权限的窗口。 仅对用户界面辅助技术应用程序使用此设置。
 
-如果未在应用中使用辅助功能，则在应用清单中将 UI 访问标志设置为“false”。 有关详细信息，请参阅[创建和嵌入应用程序清单](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\))。
+如果未在应用中使用辅助功能，则在应用清单中将 UI 访问标志设置为“false”。 有关详细信息，请参阅[创建和嵌入应用程序清单](/previous-versions/bb756929\(v=msdn.10\))。
 
 桌面分析建议将此应用进行试点测试以发现任何回归。
 
@@ -245,4 +245,4 @@ Windows 10 上支持 .NET 2.0 和 3.5 框架。 你可能需要启用此 Windows
 
 ## <a name="see-also"></a>另请参阅
 
-适用于 Windows 10 的 FastTrack 中心权益提供**桌面应用保证**的访问权限。 此权益是一项旨在解决 Windows 10 和 Microsoft 365 企业应用版兼容性问题的新服务。 有关详细信息，请参阅[桌面应用保证](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure)。
+适用于 Windows 10 的 FastTrack 中心权益提供**桌面应用保证**的访问权限。 此权益是一项旨在解决 Windows 10 和 Microsoft 365 企业应用版兼容性问题的新服务。 有关详细信息，请参阅[桌面应用保证](/fasttrack/win-10-desktop-app-assure)。

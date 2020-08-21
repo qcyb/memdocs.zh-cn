@@ -10,12 +10,12 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 159afbf2c5aae9516fc5244ee06a2aa484290c20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f1ea48887f89cf06ed4b41d0de0dfc24e9d508
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705765"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697120"
 ---
 # <a name="create-certificate-profiles"></a>创建证书配置文件
 
@@ -114,7 +114,7 @@ ms.locfileid: "81705765"
 
   - **安装到受信任的平台模块(TPM)，否则失败**：将密钥安装到 TPM。 如果 TPM 模块不存在，则安装将失败。  
 
-  - **安装到 Windows Hello 企业版，否则失败**：此选项适用于 Windows 10 设备。 它允许你将证书存储在受多重身份验证保护的 Windows Hello 商业版商店中。 有关详细信息，请参阅 [Windows Hello 企业版](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)。
+  - **安装到 Windows Hello 企业版，否则失败**：此选项适用于 Windows 10 设备。 它允许你将证书存储在受多重身份验证保护的 Windows Hello 商业版商店中。 有关详细信息，请参阅 [Windows Hello 企业版](/windows/security/identity-protection/hello-for-business/hello-identity-verification)。
 
     > [!NOTE]  
     > 此选项不支持对“证书属性”页面上的“增强型密钥使用”使用智能卡登录。

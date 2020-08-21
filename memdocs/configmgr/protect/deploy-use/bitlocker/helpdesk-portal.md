@@ -10,12 +10,12 @@ ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf9301e4fcb279b7d79a6f6c3d0a90ab3d15e277
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129250"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697307"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>BitLocker 管理和监视网站
 
@@ -48,7 +48,7 @@ BitLocker 管理和监视网站是 BitLocker 驱动器加密的管理界面。 �
 
 如果用户输入不正确 PIN 的次数太多，可能会锁定 TPM。 用户在 TPM 锁定之前可以输入的不正确 PIN 的次数因制造商而异。 从管理和监视网站的“管理 TPM”  区域中，访问集中式密钥恢复数据系统。
 
-若要详细了解 TPM 所有权，请参阅[配置 MBAM 以托管 TPM 并存储 OwnerAuth 密码](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm)。
+若要详细了解 TPM 所有权，请参阅[配置 MBAM 以托管 TPM 并存储 OwnerAuth 密码](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm)。
 
 > [!NOTE]
 > 自 Windows 10 版本 1607 起，Windows 不会在预配 TPM 时保留 TPM 所有者密码。
@@ -159,7 +159,7 @@ BitLocker 管理和监视网站是 BitLocker 驱动器加密的管理界面。 �
 
 如果移动的驱动器配置为使用原始计算机上的 TPM 芯片，请完成以下步骤。 否则，恢复过程已完成。
 
-1. 解除锁定驱动器后，在 WinRE 模式下启动计算机。 在 WinRE 中打开命令提示符，并运行 `manage-bde` 命令来解密驱动器。 此工具是唯一一种不采用原始 TPM 芯片而删除 TPM + PIN 保护的方法  。 有关此命令的详细信息，[请参阅 ](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde)Manage-bde。
+1. 解除锁定驱动器后，在 WinRE 模式下启动计算机。 在 WinRE 中打开命令提示符，并运行 `manage-bde` 命令来解密驱动器。 此工具是唯一一种不采用原始 TPM 芯片而删除 TPM + PIN 保护的方法  。 有关此命令的详细信息，[请参阅 ](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde)Manage-bde。
 
 1. 完成后，正常启动计算机。 Configuration Manager 会强制执行 BitLocker 策略，以使用新计算机的 TPM 及 PIN 对驱动器进行加密。
 
@@ -184,7 +184,7 @@ BitLocker 管理和监视网站是 BitLocker 驱动器加密的管理界面。 �
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-有关此命令的详细信息，请参阅 [Repair-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde)。
+有关此命令的详细信息，请参阅 [Repair-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde)。
 
 ## <a name="reports"></a>报表
 

@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124879"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697902"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>管理 BIOS 转换为 UEFI 所采用的任务序列步骤
 
@@ -91,7 +91,7 @@ Windows 10 包括一个简单的转换工具，MBR2GPT。 它自动化了对启�
     > [!TIP]
     > 你也可以选择在 Windows PE 中运行 MBR2GPT.EXE 工具，而不是在完整的 OS 中运行。 添加以下步骤：在运行 MBR2GPT.EXE 工具的步骤前以 Windows PE 模式重启计算机。 然后从命令行删除“/AllowFullOS”选项。
 
-    有关该工具和可用选项的详细信息，请参阅 [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)。
+    有关该工具和可用选项的详细信息，请参阅 [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt)。
 
     1. 添加以下步骤：运行可将固件从 BIOS 转换为 UEFI 的 OEM 工具。 此步骤通常为“运行命令行”，其中包含运行 OEM 工具的命令行。
 

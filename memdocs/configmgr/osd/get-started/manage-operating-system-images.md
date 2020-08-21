@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124281"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697647"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 映像
 
@@ -89,7 +89,7 @@ Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱�
 
 5. 完成向导。  
 
-有关与此控制台向导的等效 PowerShell cmdlet，请参阅 [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps)。
+有关与此控制台向导的等效 PowerShell cmdlet，请参阅 [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps)。
 
 接下来，将 OS 映像分发到分发点。  
 
@@ -122,4 +122,4 @@ Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱�
 
          如果选择“仅通过多播传输此包”，则还必须将任务序列部署选项制定为“运行的任务序列需要时从本地下载内容”   。 有关详细信息，请参阅 [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md)。  
 
-5. 选择“确定”以保存设置并关闭映像属性  。  
+5. 选择“确定”以保存设置并关闭映像属性  。

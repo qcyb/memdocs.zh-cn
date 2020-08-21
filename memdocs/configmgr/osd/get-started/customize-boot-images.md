@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124555"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697783"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>使用 Configuration Manager 自定义启动映像
 
@@ -49,7 +49,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 - **WinPE WDS 工具**：安装 Windows 部署服务工具。  
 
-  有可供添加的其他 Windows PE 程序包。 有关可以添加到启动映像的可选组件的详细信息，请参阅 [WinPE：Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)（WinPE：添加包（可选组件参考））。
+  有可供添加的其他 Windows PE 程序包。 有关可以添加到启动映像的可选组件的详细信息，请参阅 [WinPE：Add packages (Optional Components Reference)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)（WinPE：添加包（可选组件参考））。
 
 > [!NOTE]
 >从包含所添加的工具的自定义启动映射启动到 WinPE 时，可以从 WinPE 打开命令提示符并输入工具的文件名以运行它。 这些工具的位置会自动添加到路径变量。 仅当在“自定义”  选项卡上的启动映像属性中选择了“启用命令支持(仅限测试)”  时，才能添加命令提示符。
@@ -72,7 +72,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
     其中 C:\WinPEWAIK 是包含启动映像的文件夹，C:\WinPEMount 是安装文件夹。  
 
    > [!NOTE]
-   >  有关详细信息，请参阅 [DISM（部署映像服务和管理）参考](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)。
+   >  有关详细信息，请参阅 [DISM（部署映像服务和管理）参考](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)。
 
 5. 安装启动映像之后，请使用 DISM 将可选组件添加到启动映像中。 在 Windows PE 5 中，64 位可选组件位于 <*Installation path*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs。  
 
@@ -108,7 +108,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  有关可以添加到启动映像的可选组件的详细信息，请参阅 [Windows PE 可选组件参考](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)。
+   >  有关可以添加到启动映像的可选组件的详细信息，请参阅 [Windows PE 可选组件参考](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)。
 
 6. 需要时使用 DISM 将特定驱动程序添加到启动映像中。 请键入下列命令以将驱动程序添加到启动映像中：  
 
@@ -194,7 +194,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
     其中 C:\WinPEWAIK 是包含启动映像的文件夹，C:\WinPEMount 是安装文件夹。  
 
    > [!NOTE]
-   > 有关详细信息，请参阅 [DISM（部署映像服务和管理）参考](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)。
+   > 有关详细信息，请参阅 [DISM（部署映像服务和管理）参考](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)。
 
 5. 安装启动映像之后，请使用 DISM 将可选组件添加到启动映像中。 例如，在 Windows PE 3.1 中，可选组件位于安装路径 <*InstallationPath*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\中。  
 
@@ -224,7 +224,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  有关可以添加到启动映像的不同程序包的详细信息，请参阅[将程序包添加到 Windows PE 映像中](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10))。
+   >  有关可以添加到启动映像的不同程序包的详细信息，请参阅[将程序包添加到 Windows PE 映像中](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10))。
 
 6. 需要时使用 DISM 将特定驱动程序添加到启动映像中。 如果需要，请键入下列命令以将驱动程序添加到启动映像中：  
 
@@ -290,4 +290,4 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
     3.  单击在步骤 3 中标识的启动映像。  
 
-    4.  在“主页”  选项卡上的“部署”  组中，单击“更新分发点”  。  
+    4.  在“主页”  选项卡上的“部署”  组中，单击“更新分发点”  。

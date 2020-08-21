@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906442"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698916"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 
@@ -72,7 +72,7 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 - Windows Server 2012 的服务器核心安装 (x64)（注释 2）
 
 **（注释 1）** Configuration Manager 支持数据中心版本，但未经认证。  
-**（注释 2）** 若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件和存储服务服务器角色的文件服务器角色服务。 有关在 Server Core 计算机上安装 Windows 功能的详细信息，请参阅[在 Server Core 服务器上安装服务器角色和功能](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))。
+**（注释 2）** 若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件和存储服务服务器角色的文件服务器角色服务。 有关在 Server Core 计算机上安装 Windows 功能的详细信息，请参阅[在 Server Core 服务器上安装服务器角色和功能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))。
 
 ### <a name="windows-embedded"></a>Windows Embedded
 可以在设备上安装客户端软件，使用 LTSB 管理以下 Windows Embedded 设备。  有关详细信息，请参阅[规划对 Windows Embedded 设备的客户端部署](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。

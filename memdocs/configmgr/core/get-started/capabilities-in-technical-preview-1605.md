@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1836a4c7d08547405dad08d7e60eb108d0dfd00f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905739"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695709"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Configuration Manager Technical Preview 1605 中的功能
 
@@ -168,8 +168,8 @@ ms.locfileid: "82905739"
 ##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>企业数据保护 (EDP)  
  你可创建配置项目来部署企业数据保护 (EDP) 策略，包括选择受保护的应用、EDP 保护级别和在网络上查找企业数据的方法。 有关 EDP 的详细信息，请参阅下列主题：  
 
-- [使用 Windows 信息保护 (WIP) 保护企业数据](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [使用 Configuration Manager 创建和部署 Windows 信息保护 (WIP) 策略](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [使用 Windows 信息保护 (WIP) 保护企业数据](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [使用 Configuration Manager 创建和部署 Windows 信息保护 (WIP) 策略](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 
 ##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a>最终用户可从公司门户安装应用  
@@ -463,4 +463,4 @@ ms.locfileid: "82905739"
 
      单击“下一步”  。  
 
-4. 查看文件导入的结果。 以前导入的 IMEI 或序列号会将其详细信息更新为新的详细信息。  单击“下一步”  继续，或单击“返回”  保存更新后的详细信息，然后完成向导。  
+4. 查看文件导入的结果。 以前导入的 IMEI 或序列号会将其详细信息更新为新的详细信息。  单击“下一步”  继续，或单击“返回”  保存更新后的详细信息，然后完成向导。

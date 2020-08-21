@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125179"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697970"
 ---
 # <a name="create-stand-alone-media"></a>创建独立媒体
 
@@ -140,7 +140,7 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
 
         - Configuration Manager 将名为 `MediaLabel.txt` 的文本文件写入媒体的根目录。 默认情况下，该文件包含一行文本：`label=Configuration Manager`。 如果自定义媒体标签，则此行使用你的自定义标签而不是默认值。  
 
-    - **在媒体上加入 autorun.inf 文件**<!-- 4090666 -->：从版本 1906 开始，默认情况下，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 有关 Windows 的 AutoRun 功能的详细信息，请参阅 [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay)（创建启用 AutoRun 的 CD-ROM 应用程序）。 如果情况仍然需要，请选择此选项以加入该文件。  
+    - **在媒体上加入 autorun.inf 文件**<!-- 4090666 -->：从版本 1906 开始，默认情况下，Configuration Manager 不会添加 autorun.inf 文件。 反恶意软件通常会阻止此文件。 有关 Windows 的 AutoRun 功能的详细信息，请参阅 [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay)（创建启用 AutoRun 的 CD-ROM 应用程序）。 如果情况仍然需要，请选择此选项以加入该文件。  
 
 5. 在“安全”  页上，指定以下选项：
 
@@ -151,7 +151,7 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
         >
         > 在独立媒体上，只会加密任务序列步骤及其变量。 不会加密媒体的其余内容。 请勿在任务序列脚本中包含任何敏感信息。 请使用任务序列变量来存储和提供所有敏感信息。  
 
-    - **选择此独立媒体的有效日期范围**：在媒体上设置可选的开始日期和到期日期。 默认情况下，此设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于到期时间，则独立介质不会启动。 也可通过使用 [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet 启用这些选项。  
+    - **选择此独立媒体的有效日期范围**：在媒体上设置可选的开始日期和到期日期。 默认情况下，此设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于到期时间，则独立介质不会启动。 也可通过使用 [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet 启用这些选项。  
 
 6. 在“独立 CD/DVD”  页上，选择用于部署 OS 的任务序列。 还可以仅选择那些与启动映像关联的任务序列。 验证任务序列引用的内容的列表。  
 

@@ -10,12 +10,12 @@ ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aa7f95e18775862427254839a2aab2c229e31057
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123895"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697324"
 ---
 # <a name="customize-the-self-service-portal"></a>自定义自助服务门户
 
@@ -128,7 +128,7 @@ ms.locfileid: "88123895"
 
 1. 在 `Self Service Website` 应用程序路径中，为支持的每种语言创建 `<language>` 文件夹。 例如，`es-es` 代表西班牙语（西班牙）。 默认情况下，完整路径为 `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es`。
 
-    有关你可使用的有效语言代码的列表，请参阅[ National Language Support (NLS) API Reference（区域语言支持 (NLS) API 参考）](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers)。
+    有关你可使用的有效语言代码的列表，请参阅[ National Language Support (NLS) API Reference（区域语言支持 (NLS) API 参考）](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers)。
 
     > [!TIP]
     > 语言文件夹的名称也可以是中性语言名称。 例如，es  代表西班牙语，不像 es-es  代表西班牙语（西班牙）和 es-ar  代表西班牙语（阿根廷）。 如果用户将浏览器设置为“es-es”  ，但此语言没有对应的语言文件夹，Web 服务器会以递归方式检查父区域设置文件夹 (es  )。 （父区域设置是在 .NET 中定义。）例如，`Self Service Website\es\Notice.txt`。 此递归回退模拟的是 .NET 资源加载规则。

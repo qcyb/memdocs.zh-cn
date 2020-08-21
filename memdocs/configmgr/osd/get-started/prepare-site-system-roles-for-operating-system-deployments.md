@@ -10,12 +10,12 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1beec2f5ef7b6da9f1f093300ec6c2b239e7396e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5d9331ce452e40944e4a9b363773d254a32f2c58
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708795"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697477"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>使用 Configuration Manager 准备 OS 部署的站点系统角色
 
@@ -116,7 +116,7 @@ Configuration Manager 不会将站点服务器与集合中的其他目标计算�
 
 要在操作系统部署期间捕获和还原用户状态，请使用指向 USMT 源文件的用户状态迁移工具 (USMT) 包。 Configuration Manager 将在 Configuration Manager 控制台的“软件库”   > “应用程序管理”   > “包”  中自动创建此包。 Configuration Manager 使用 USMT 10 从一个 OS 捕获用户状态，然后将其还原到另一个 OS。 适用于 Windows 10 的 Windows 评估和部署工具包 (Windows ADK) 包含 USMT 10。
 
-有关 USMT 10 的不同迁移方案的说明，请参阅 Windows 文档中的[常见迁移方案](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)。  
+有关 USMT 10 的不同迁移方案的说明，请参阅 Windows 文档中的[常见迁移方案](/windows/deployment/usmt/usmt-common-migration-scenarios)。  
 
 
 ### <a name="retention-policy"></a>保留策略  
@@ -156,4 +156,4 @@ Configuration Manager 不会将站点服务器与集合中的其他目标计算�
 
 -   状态迁移点是否仅响应还原用户状态数据的请求。 如果启用此选项，则无法使用状态迁移点来存储用户状态数据。  
 
-有关安装站点系统角色的步骤，请参阅[添加站点系统角色](../../core/servers/deploy/configure/add-site-system-roles.md)。  
+有关安装站点系统角色的步骤，请参阅[添加站点系统角色](../../core/servers/deploy/configure/add-site-system-roles.md)。

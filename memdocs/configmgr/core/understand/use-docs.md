@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: aca3322c245fa22a7c87f30e328833d8a8a128bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746505"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699035"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>如何使用 Configuration Manager 文档
 
@@ -61,7 +61,7 @@ ms.locfileid: "84746505"
 
 ## <a name="feedback"></a><a name="bkmk_docfeedback"></a> 反馈
 
-选择任意文章右上方的“反馈”链接，转到底部的“反馈”部分。 此部分与 GitHub 问题集成。 有关与 GitHub 问题集成的详细信息，请参阅[文档平台博客文章](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)。
+选择任意文章右上方的“反馈”链接，转到底部的“反馈”部分。 此部分与 GitHub 问题集成。 有关与 GitHub 问题集成的详细信息，请参阅[文档平台博客文章](/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
 若要分享有关 Configuration Manager 产品本身的反馈，请选择“产品反馈”。 有关详细信息，请参阅[产品反馈](find-help.md#product-feedback)。
 
@@ -93,11 +93,11 @@ ms.locfileid: "84746505"
 
 若要在文档库中的内容更改时接收通知，请使用以下步骤：
 
-1. 使用[文档搜索](https://docs.microsoft.com/search/index?scope=ConfigMgr)查找一篇文章或一组文章。 例如：
+1. 使用[文档搜索](/search/index?scope=ConfigMgr)查找一篇文章或一组文章。 例如：
 
-    - 按标题[“故障排除的日志文件 - Configuration Manager (Log files for troubleshooting - Configuration Manager)”](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)搜索单篇文章
+    - 按标题[“故障排除的日志文件 - Configuration Manager (Log files for troubleshooting - Configuration Manager)”](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22)搜索单篇文章
 
-    - 搜索有关 [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr) 的任何文章
+    - 搜索有关 [SQL](/search/index?scope=ConfigMgr&search=SQL) 的任何文章
 
 2. 在右上角选择“RSS”链接。
 
@@ -108,7 +108,7 @@ ms.locfileid: "84746505"
 
 ## <a name="contribute"></a><a name="bkmk_contribute"></a> 参与
 
-与 docs.microsoft.com 上的大多数内容一样，Configuration Manager 文档库在 GitHub 上也是使用开放源代码编写的。 此库接受并鼓励社区参与。 有关如何参与的详细信息，请参阅[参与者指南](https://docs.microsoft.com/contribute)。 唯一的先决条件是创建 [GitHub 帐户](https://github.com/join)。
+与 docs.microsoft.com 上的大多数内容一样，Configuration Manager 文档库在 GitHub 上也是使用开放源代码编写的。 此库接受并鼓励社区参与。 有关如何参与的详细信息，请参阅[参与者指南](/contribute)。 唯一的先决条件是创建 [GitHub 帐户](https://github.com/join)。
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>参与编辑 SCCM 文档的基本步骤
 
@@ -116,7 +116,7 @@ ms.locfileid: "84746505"
 
 2. 若要编辑源文件，请选择铅笔图标。
 
-3. 在 Markdown 源中进行更改。 有关详细信息，请参阅 [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference)（如何使用 Markdown 编写文档）。
+3. 在 Markdown 源中进行更改。 有关详细信息，请参阅 [How to use Markdown for writing Docs](/contribute/markdown-reference)（如何使用 Markdown 编写文档）。
 
 4. 在“建议文件更改”部分中，输入描述已更改内容的公开提交评论。 然后选择“建议文件更改”。
 
@@ -148,7 +148,7 @@ ms.locfileid: "84746505"
 
 - 不要使用大型拉取请求来制造惊喜。 相反，请[提出问题](#bkmk_docfeedback)并开始讨论。 然后，在你投入大量时间之前，我们会就某个方向表示同意。
 
-- 阅读 [Microsoft 风格指南](https://aka.ms/MicrosoftStyle)。 了解[有关 Microsoft 风格和语态的前 10 个提示](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)。
+- 阅读 [Microsoft 风格指南](https://aka.ms/MicrosoftStyle)。 了解[有关 Microsoft 风格和语态的前 10 个提示](/style-guide/top-10-tips-style-voice)。
 
 - 使用[拉取请求模板](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md)作为工作的起始点。
 
@@ -160,7 +160,7 @@ ms.locfileid: "84746505"
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft 终结点管理器的文档整合
 
-为了更好地支持 Intune 和 Configuration Manager 的组合方案，它们的文档库已合并到 [Microsoft Endpoint Manager 站点](https://docs.microsoft.com/mem)上。 Intune 文档现在位于 [docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune)，Configuration Manager 文档现在位于 [docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr)。 如果你仍在使用旧的 URL，它会自动重定向，因此你无需进行任何更改就能读到此内容。
+为了更好地支持 Intune 和 Configuration Manager 的组合方案，它们的文档库已合并到 [Microsoft Endpoint Manager 站点](/mem)上。 Intune 文档现在位于 [docs.microsoft.com/mem/intune](../../../intune/index.yml)，Configuration Manager 文档现在位于 [docs.microsoft.com/mem/configmgr](../../index.yml)。 如果你仍在使用旧的 URL，它会自动重定向，因此你无需进行任何更改就能读到此内容。
 
 如果向文章提供反馈或做出贡献，则需要进行一些更改：
 

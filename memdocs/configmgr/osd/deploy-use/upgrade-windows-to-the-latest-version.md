@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eb7e2e5c564263c7172d70ec33bb33c0dd73409c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124767"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697817"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>使用 Configuration Manager 将 Windows 升级到最新版本
 
@@ -55,7 +55,7 @@ ms.locfileid: "88124767"
 - Windows 8.1
 - 旧版 Windows 10。 例如，可以将 1809 版本的 Windows 10 升级到 1903 版本的 Windows 10。  
 
-有关详细信息，请参阅 [Windows 10 升级路径](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths)。
+有关详细信息，请参阅 [Windows 10 升级路径](/windows/deployment/upgrade/windows-10-upgrade-paths)。
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -64,7 +64,7 @@ ms.locfileid: "88124767"
 - 旧版 Windows Server 2016
 - 旧版 Windows Server 2019
 
-若要详细了解 Windows Server 支持的升级路径，请参阅 [Windows Server 2016 支持的升级路径](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)和 [Windows Server 升级中心](https://aka.ms/upgradecenter)。
+若要详细了解 Windows Server 支持的升级路径，请参阅 [Windows Server 2016 支持的升级路径](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)和 [Windows Server 升级中心](https://aka.ms/upgradecenter)。
 
 
 ## <a name="plan"></a><a name="BKMK_Plan"></a> 计划  
@@ -125,4 +125,4 @@ Windows 10 升级包包含在目标计算机上升级操作系统所必需的源
 
 ## <a name="monitor"></a>监视  
 
-若要监视任务序列部署以升级操作系统，请参阅[监视操作系统部署](monitor-operating-system-deployments.md)。  
+若要监视任务序列部署以升级操作系统，请参阅[监视操作系统部署](monitor-operating-system-deployments.md)。

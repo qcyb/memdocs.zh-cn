@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: e647672b02c0122709b3c80fc012ed1fb82b1519
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343110"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696423"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Configuration Manager 管理点的数据库副本
 
@@ -57,7 +57,7 @@ Configuration Manager 主站点可以使用数据库副本来减少管理点在�
 
     -   站点数据库必须 **发布** 数据库副本，且每个远程数据库副本服务器必须 **订阅** 已发布的数据。  
 
-    -   承载站点数据库和承载数据库副本的这两个 SQL Server 均必须配置为支持 2 GB 的“最大文本替换大小”  。 有关如何为 SQL Server 2012 配置此项的示例，请参阅 [Configure the max text repl size Server Configuration Option（配置最大文本替换大小服务器配置选项）](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15)。  
+    -   承载站点数据库和承载数据库副本的这两个 SQL Server 均必须配置为支持 2 GB 的“最大文本替换大小”  。 有关如何为 SQL Server 2012 配置此项的示例，请参阅 [Configure the max text repl size Server Configuration Option（配置最大文本替换大小服务器配置选项）](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15)。  
 
 -   **自签名证书：** 若要配置数据库副本，必须在数据库副本服务器上创建自签名证书，并将此证书提供给将使用该数据库副本服务器的每个管理点。  
 
@@ -174,7 +174,7 @@ Configuration Manager 主站点可以使用数据库副本来减少管理点在�
         -   如果 SQL Server 代理使用其他帐户运行，请选择“在以下 Windows 帐户下运行” ，然后配置该帐户。 你可以指定 Windows 帐户或某个 SQL Server 帐户。  
 
         > [!IMPORTANT]  
-        >  你必须以请求订阅的形式向运行分发代理的帐户授予对发布者的权限。 有关配置这些权限的信息，请参阅[分发代理安全性](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)。  
+        >  你必须以请求订阅的形式向运行分发代理的帐户授予对发布者的权限。 有关配置这些权限的信息，请参阅[分发代理安全性](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)。  
 
       - 对于“连接到分发服务器” ，请选择“通过模拟进程帐户” 。  
 
@@ -459,7 +459,7 @@ Configuration Manager 主站点可以使用数据库副本来减少管理点在�
 -   对于使用此脚本配置的每个后续数据库副本，请更新证书的友好名称。  若要如此，请编辑行 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** 并将 **ConfigMgr SQL Server Identification Certificate** 替换为新名称，如  **ConfigMgr SQL Server Identification Certificate1**。  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> 管理数据库副本配置  
- 在站点上使用数据库副本时，请使用下列部分中的信息对卸载数据库副本、卸载使用数据库副本的站点或将站点数据库转移到新安装 SQL Server 的过程进行补充。 在使用下列部分中的信息删除发布时，请使用有关为用于数据库副本的 SQL Server 版本删除事务复制的指引。 有关详细信息，请参阅[删除发布](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)。  
+ 在站点上使用数据库副本时，请使用下列部分中的信息对卸载数据库副本、卸载使用数据库副本的站点或将站点数据库转移到新安装 SQL Server 的过程进行补充。 在使用下列部分中的信息删除发布时，请使用有关为用于数据库副本的 SQL Server 版本删除事务复制的指引。 有关详细信息，请参阅[删除发布](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)。  
 
 > [!NOTE]  
 >  还原为数据库副本配置的站点数据库之后，你必须重新配置每个数据库副本（从而重新创建发布和订阅），然后才能使用数据库副本。  
@@ -507,4 +507,4 @@ Configuration Manager 主站点可以使用数据库副本来减少管理点在�
 
 4.  在站点数据库服务器上重新创建数据库副本的发布。 有关详情，请参阅本主题中的 [第 1 步 - 配置站点数据库服务器以发布数据库副本](#BKMK_DBReplica_ConfigSiteDB) 。  
 
-5.  在每个数据库副本服务器上重新创建数据库副本的订阅。 有关详情，请参阅本主题中的 [第 2 步 – 配置数据库副本服务器](#BKMK_DBReplica_ConfigSrv) 。  
+5.  在每个数据库副本服务器上重新创建数据库副本的订阅。 有关详情，请参阅本主题中的 [第 2 步 – 配置数据库副本服务器](#BKMK_DBReplica_ConfigSrv) 。

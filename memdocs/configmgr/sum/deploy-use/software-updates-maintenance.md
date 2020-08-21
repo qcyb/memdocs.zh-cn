@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 560b432bb90f99207fd15bc07e7aff98ffd59ebf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703005"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696899"
 ---
 # <a name="software-updates-maintenance"></a>软件更新维护
 
@@ -130,11 +130,11 @@ CAS、主站点和辅助站点上不运行以下“WSUS 服务器清理向导”
 
 如果 WSUS 数据库位于远程 SQL Server 中，则可能需要在 SQL 中添加用于创建索引的权限。 用于连接到 WSUS 数据库和创建索引的帐户可能会有所不同。 如果指定[软件更新点属性中的 WSUS 服务器连接帐户](../get-started/install-a-software-update-point.md#wsus-server-connection-account)，请确保该连接帐户具有 SQL 权限。 如果未指定 WSUS 服务器连接帐户，则站点服务器的计算机帐户需要 SQL 权限。
 
-- 必须对表或视图拥有 `ALTER` 权限，才能创建索引。 帐户必须是 `sysadmin` 固定服务器角色的成员，或是 `db_ddladmin` 和 `db_owner` 固定数据库角色的成员。 若要详细了解如何创建索引和权限，请参阅 [CREATE INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions)。
-- 必须向帐户授予 `CONNECT SQL` 服务器权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)。
+- 必须对表或视图拥有 `ALTER` 权限，才能创建索引。 帐户必须是 `sysadmin` 固定服务器角色的成员，或是 `db_ddladmin` 和 `db_owner` 固定数据库角色的成员。 若要详细了解如何创建索引和权限，请参阅 [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions)。
+- 必须向帐户授予 `CONNECT SQL` 服务器权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)。
 
 > [!NOTE]  
->  如果 WSUS 数据库位于使用非默认端口的远程 SQL Server 上，可能无法添加索引。 在这种情况下，可以[使用 SQL Server Configuration Manager 创建服务器别名](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017)。 在别名已添加且 Configuration Manager 可以连接到 WSUS 数据库后，索引便会添加。
+>  如果 WSUS 数据库位于使用非默认端口的远程 SQL Server 上，可能无法添加索引。 在这种情况下，可以[使用 SQL Server Configuration Manager 创建服务器别名](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017)。 在别名已添加且 Configuration Manager 可以连接到 WSUS 数据库后，索引便会添加。
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>从 WSUS 数据库中删除过时的更新
 
@@ -150,8 +150,8 @@ CAS、主站点和辅助站点上不运行以下“WSUS 服务器清理向导”
 
 当 WSUS 数据库位于远程 SQL 服务器上时，站点服务器的计算机帐户需要拥有以下 SQL 权限：
 
-- `db_datareader` 和 `db_datawriter` 固定数据库角色。 有关详细信息，请参阅[数据库级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles)。
-- 必须向站点服务器的计算机帐户授予 `CONNECT SQL` 服务器权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)。
+- `db_datareader` 和 `db_datawriter` 固定数据库角色。 有关详细信息，请参阅[数据库级别角色](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles)。
+- 必须向站点服务器的计算机帐户授予 `CONNECT SQL` 服务器权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)。
 
 #### <a name="wsus-cleanup-wizard"></a>WSUS 清理向导
 

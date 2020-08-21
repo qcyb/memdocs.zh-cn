@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c92423316f83841875aed2493442881bc3a1d74
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821591"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695760"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
@@ -110,7 +110,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 有关详细信息，请参阅下列文章：
 
 - [共同管理先决条件](../../comanage/overview.md#prerequisites)
-- [Windows Autopilot 要求](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Windows Autopilot 要求](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 - [桌面分析先决条件](../../desktop-analytics/overview.md#prerequisites)
 - [租户附加先决条件](../../tenant-attach/device-sync-actions.md#prerequisites)
 - [终结点分析许可先决条件](../../../analytics/overview.md#licensing-prerequisites)

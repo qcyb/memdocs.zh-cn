@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438582"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699222"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -76,13 +76,13 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 每个 SQL Server 实例可以在域用户帐户（服务帐户）或非域帐户下运行。 组中的每个副本可以具有不同的配置。
 
-- 使用具有最低权限的帐户。 有关详细信息，请参阅 [SQL Server 安装的安全注意事项](https://docs.microsoft.com/sql/sql-server/install/security-considerations-for-a-sql-server-installation)。  
+- 使用具有最低权限的帐户。 有关详细信息，请参阅 [SQL Server 安装的安全注意事项](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)。  
 
-- 有关配置服务帐户和 SQL Server 权限的详细信息，请参阅[配置 Windows 服务帐户和权限](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)。  
+- 有关配置服务帐户和 SQL Server 权限的详细信息，请参阅[配置 Windows 服务帐户和权限](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)。  
 
-- 要使用非域帐户，必须使用证书。 有关详细信息，请参阅[使用数据库镜像端点证书 (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)。  
+- 要使用非域帐户，必须使用证书。 有关详细信息，请参阅[使用数据库镜像端点证书 (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)。  
 
-- 有关详细信息，请参阅[为 AlwaysOn 可用性组创建数据库镜像终结点](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)。  
+- 有关详细信息，请参阅[为 AlwaysOn 可用性组创建数据库镜像终结点](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)。  
 
 
 ### <a name="database"></a>数据库
@@ -104,7 +104,7 @@ Configuration Manager 支持在以下位置使用可用性组：
     GO
     ```
 
-    有关详细信息，请参阅 [CLR 集成](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling)。  
+    有关详细信息，请参阅 [CLR 集成](/sql/relational-databases/clr-integration/clr-integration-enabling)。  
 
 - 将“最大文本复制大小”设置为 `2147483647`：  
 
@@ -120,7 +120,7 @@ Configuration Manager 支持在以下位置使用可用性组：
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
-    有关详细信息，请参阅[可信数据库属性](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)。
+    有关详细信息，请参阅[可信数据库属性](/sql/relational-databases/security/trustworthy-database-property)。
 
 - 启用“Service Broker”：  
 
@@ -217,9 +217,9 @@ Configuration Manager 支持在以下位置使用可用性组：
 - 可以使用异步提交副本来恢复同步副本。 有关详细信息，请参阅[站点数据库恢复选项](../../manage/recover-sites.md#site-database-recovery-options)。  
 
     > [!Warning]  
-    > Configuration Manager 不支持*故障转移*使用异步提交副本作为站点数据库。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)。  
+    > Configuration Manager 不支持*故障转移*使用异步提交副本作为站点数据库。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)。  
 
-Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新状态。 使用异步提交副本作为站点数据库可能会将站点和数据的完整性置于危险之中。 根据设计，此副本可能不会同步。 有关详细信息，请参阅 [SQL Server AlwaysOn 可用性组概述](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。
+Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新状态。 使用异步提交副本作为站点数据库可能会将站点和数据的完整性置于危险之中。 根据设计，此副本可能不会同步。 有关详细信息，请参阅 [SQL Server AlwaysOn 可用性组概述](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。
 
 每个副本成员都必须进行以下配置：
 
@@ -239,17 +239,17 @@ Configuration Manager 不会验证异步提交副本的状态来确认它是否�
     > - 运行 Configuration Manager 安装程序以指定在可用性组中使用站点数据库。  
     > - 安装任何 Configuration Manager 更新。 （不仅仅是安装适用于站点数据库的更新）。  
 
-- 所有成员都需要相同的[种子设定模式](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)。<!-- SCCMDocs-pr#3899 --> Configuration Manager 安装程序包括先决条件检查，以便在通过安装或恢复创建数据库时验证此配置。
+- 所有成员都需要相同的[种子设定模式](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)。<!-- SCCMDocs-pr#3899 --> Configuration Manager 安装程序包括先决条件检查，以便在通过安装或恢复创建数据库时验证此配置。
 
     > [!Note]  
-    > 当安装程序创建数据库并配置自动种子设定时，可用性组必须具有创建数据库的权限。 此要求适用于新数据库或恢复。 有关详细信息，请参阅[次要副本的自动种子设定](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security)。<!-- SCCMDocs-pr#3900 -->
+    > 当安装程序创建数据库并配置自动种子设定时，可用性组必须具有创建数据库的权限。 此要求适用于新数据库或恢复。 有关详细信息，请参阅[次要副本的自动种子设定](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security)。<!-- SCCMDocs-pr#3900 -->
 
 #### <a name="replica-member-location"></a>副本成员位置
 
 可用性组中的所有副本要么在本地托管，要么全部托管在 Microsoft Azure 上。 不支持包含本地成员或 Azure 中成员的组。
 
 > [!NOTE]
-> 如果使用 Azure 虚拟机承载 SQL 服务器，请启用“浮动 IP”。 有关详细信息，请参阅[为 Azure 虚拟机中的 SQL Server Always On 可用性组配置负载均衡器](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)。<!-- SCCMDocs#1928 -->
+> 如果使用 Azure 虚拟机承载 SQL 服务器，请启用“浮动 IP”。 有关详细信息，请参阅[为 Azure 虚拟机中的 SQL Server Always On 可用性组配置负载均衡器](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)。<!-- SCCMDocs#1928 -->
 
 Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中设置可用性组，且组处于内部或外部负载均衡器后面时，开放以下默认端口：
 
@@ -263,11 +263,11 @@ Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中�
 
 可以为这些配置使用自定义端口。 在可用性组中的所有副本上，在终结点处使用相同的自定义端口。
 
-要使 SQL 在站点之间复制数据，请为 Azure 负载均衡器中的每个端口创建负载均衡规则。 有关详细信息，请参阅[为内部负载均衡器配置高可用性端口](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports)。<!-- MEMDocs#252 -->
+要使 SQL 在站点之间复制数据，请为 Azure 负载均衡器中的每个端口创建负载均衡规则。 有关详细信息，请参阅[为内部负载均衡器配置高可用性端口](/azure/load-balancer/load-balancer-configure-ha-ports)。<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>侦听器
 
-此可用性组必须具有至少一个“可用组侦听器”。 将 Configuration Manager 配置为使用可用性组中的站点数据库时，将使用此侦听器的虚拟名称。 尽管可用性组可以包含多个侦听器，但 Configuration Manager 只能使用其中一个。 有关详细信息，请参阅[创建或配置 SQL Server 可用性组侦听器](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)。
+此可用性组必须具有至少一个“可用组侦听器”。 将 Configuration Manager 配置为使用可用性组中的站点数据库时，将使用此侦听器的虚拟名称。 尽管可用性组可以包含多个侦听器，但 Configuration Manager 只能使用其中一个。 有关详细信息，请参阅[创建或配置 SQL Server 可用性组侦听器](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)。
 
 #### <a name="file-paths"></a>文件路径
 
@@ -294,7 +294,7 @@ Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中�
 #### <a name="multi-subnet-failover"></a>多子网故障转移
 
 <!-- SCCMDocs-pr#3734 -->
-从版本 1906 开始，可以在 SQL Server 中启用 [MultiSubnetFailover 连接字符串关键字](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)。 还需要手动将以下值添加到站点服务器上的 Windows 注册表：
+从版本 1906 开始，可以在 SQL Server 中启用 [MultiSubnetFailover 连接字符串关键字](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)。 还需要手动将以下值添加到站点服务器上的 Windows 注册表：
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -315,11 +315,11 @@ MSF Enabled : 1 (DWORD)
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>不受支持的 SQL Server 选项和配置
 
-- **基本可用性组**：随着 SQL Server 2016 Standard 版本的推出，Basic 可用性组不支持对次要副本的读取访问。 配置需要此访问权限。 有关详细信息，请参阅 [Basic SQL Server 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)。  
+- **基本可用性组**：随着 SQL Server 2016 Standard 版本的推出，Basic 可用性组不支持对次要副本的读取访问。 配置需要此访问权限。 有关详细信息，请参阅 [Basic SQL Server 可用性组](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)。  
 
-- **故障转移群集实例**：与 Configuration Manager 一起使用的副本不支持故障转移群集实例。 有关详细信息，请参阅 [SQL Server AlwaysOn 故障转移群集实例](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)。  
+- **故障转移群集实例**：与 Configuration Manager 一起使用的副本不支持故障转移群集实例。 有关详细信息，请参阅 [SQL Server AlwaysOn 故障转移群集实例](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)。  
 
-- **MultiSubnetFailover**：在版本 1902 和更早版本中，不支持在多子网配置中将可用性组与 Configuration Manager 结合使用。 还不能使用 [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) 关键字连接字符串。
+- **MultiSubnetFailover**：在版本 1902 和更早版本中，不支持在多子网配置中将可用性组与 Configuration Manager 结合使用。 还不能使用 [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) 关键字连接字符串。
 
     若要支持此配置，请将 Configuration Manager 更新到版本 1906 或更高版本。 有关详细信息，请参阅[多子网故障转移](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)先决条件。
 
@@ -382,7 +382,7 @@ SQL Server Always On 可用性组中的 Configuration Manager 不支持以下数
 
 ### <a name="transaction-log"></a>事务日志  
 
-将站点数据库的恢复模型设置为“完整”。 此配置是在可用性组中使用 Configuration Manager 的必要设置。 计划监视和维护站点数据库事务日志的大小。 在完整恢复模型下，在进行数据库或事务日志的完整备份后，才对事务进行强化。 有关详细信息，请参阅 [SQL Server 数据库的备份与还原](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)。
+将站点数据库的恢复模型设置为“完整”。 此配置是在可用性组中使用 Configuration Manager 的必要设置。 计划监视和维护站点数据库事务日志的大小。 在完整恢复模型下，在进行数据库或事务日志的完整备份后，才对事务进行强化。 有关详细信息，请参阅 [SQL Server 数据库的备份与还原](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)。
 
 
 ## <a name="changes-for-site-recovery"></a>站点恢复的更改

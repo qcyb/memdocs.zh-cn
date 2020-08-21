@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125451"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698089"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>在 Configuration Manager 中创建任务序列来升级操作系统
 
@@ -66,7 +66,7 @@ ms.locfileid: "88125451"
     - **产品密钥**：指定要安装的 OS 的 Windows 产品密钥。 请指定编码的批量许可证密钥或标准产品密钥。 如果使用标准产品密钥，请用短划线 (`-`) 将每五个字符分隔为一组。 例如： `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`。 在对批量许可证版本进行升级时，则可能不需要产品密钥。  
 
         > [!Note]  
-        > 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。
+        > 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](/windows-server/get-started/kmsclientkeys)。
 
     - **忽略任何不重要的兼容性消息**：如果要升级到 Windows Server 2016，请选择此设置。 如果不选择此设置，则任务序列无法完成，因为 Windows 安装程序正等待用户在“Windows 应用兼容性”对话框上选择“确认”。  
 
@@ -217,7 +217,7 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 
 若要运行其他诊断工具，请在此组中添加步骤。 请自动运行这些工具，以便在出现故障后立即收集系统中的其他信息。  
 
-其中一个工具是 Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可获取有关 Windows 10 升级失败原因的详细信息。  
+其中一个工具是 Windows [SetupDiag](/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可获取有关 Windows 10 升级失败原因的详细信息。  
 
 - 在 Configuration Manager 中，[创建工具包](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program)。  
 
@@ -225,13 +225,13 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> 始终使用最新版本的 SetupDiag 来实现最新功能，并修复已知问题。 有关详细信息，请参阅 [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)。
+> 始终使用最新版本的 SetupDiag 来实现最新功能，并修复已知问题。 有关详细信息，请参阅 [SetupDiag](/windows/deployment/upgrade/setupdiag)。
 
 ## <a name="additional-recommendations"></a>其他建议
 
 ### <a name="windows-documentation"></a>Windows 文档
 
-查看 Windows 文档，以[解决 Windows 10 升级错误](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)。 本文还包含了关于升级过程的详细信息。  
+查看 Windows 文档，以[解决 Windows 10 升级错误](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)。 本文还包含了关于升级过程的详细信息。  
 
 ### <a name="check-minimum-disk-space"></a>检查最小磁盘空间
 
@@ -272,12 +272,12 @@ Windows 10 就地升级的默认任务序列模板包括在升级过程后要添
 ### <a name="manage-bitlocker"></a>管理 BitLocker
 
 <!--SCCMDocs issue #494-->
-如果使用 BitLocker 磁盘加密，则在默认情况下 Windows 安装程序会在升级期间自动将它暂停。 从 Windows 10 版本 1803 开始，Windows 安装程序包括了 `/BitLocker` 命令行参数，以便控制此行为。 如果安全要求需要磁盘加密全程保持活动状态，请使用“准备升级”组中的 OSDSetupAdditionalUpgradeOptions [任务序列变量](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)来包含 `/BitLocker TryKeepActive`。 有关详细信息，请参阅 [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)。
+如果使用 BitLocker 磁盘加密，则在默认情况下 Windows 安装程序会在升级期间自动将它暂停。 从 Windows 10 版本 1803 开始，Windows 安装程序包括了 `/BitLocker` 命令行参数，以便控制此行为。 如果安全要求需要磁盘加密全程保持活动状态，请使用“准备升级”组中的 OSDSetupAdditionalUpgradeOptions [任务序列变量](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)来包含 `/BitLocker TryKeepActive`。 有关详细信息，请参阅 [Windows 安装程序命令行选项](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)。
 
 ### <a name="remove-default-apps"></a>删除默认应用
 
 <!--SCCMDocs issue #526-->
-部分客户删除了 Windows 10 中默认预配的应用。 例如，必应天气应用或 Microsoft Solitaire Collection。 在某些情况下，这些应用会在 Windows 10 后重新出现。 有关详细信息，请参阅[如何从 Windows 10 中彻底删除应用](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update)。
+部分客户删除了 Windows 10 中默认预配的应用。 例如，必应天气应用或 Microsoft Solitaire Collection。 在某些情况下，这些应用会在 Windows 10 后重新出现。 有关详细信息，请参阅[如何从 Windows 10 中彻底删除应用](/windows/application-management/remove-provisioned-apps-during-update)。
 
 向“准备升级”组中的任务序列添加“运行命令行”步骤 。 指定类似以下示例的命令行：
 

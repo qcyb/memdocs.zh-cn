@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cc05ae5a9be6c437fab60f8c4c5a45d61e8c3e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127335"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694876"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>教程：为现有 Configuration Manager 客户端启用共同管理
 
@@ -50,7 +50,7 @@ ms.locfileid: "88127335"
 
 如果环境中尚不存在，在学习本教程期间，你将：
 
-- 在本地 Active Directory 和 Azure Active Directory (AD) 租户之间配置 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation)。
+- 在本地 Active Directory 和 Azure Active Directory (AD) 租户之间配置 [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation)。
 
 > [!TIP]
 > 不再需要向用户购买和分配单独的 Intune 或 EMS 许可证。 有关详细信息，请参阅[产品和许可常见问题解答](../core/understand/product-and-licensing-faq.md#bkmk_mem)。
@@ -78,10 +78,10 @@ ms.locfileid: "88127335"
 >
 > 有关混合 Azure AD 的详细信息，请先参阅 Azure Active Directory 文档中的以下文章：
 >
-> - [规划 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [规划混合 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [控制设备的混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [为联盟域配置混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [规划 Azure AD 联接实现](/azure/active-directory/devices/azureadjoin-plan)
+> - [规划混合 Azure AD 联接实现](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [控制设备的混合 Azure AD 联接](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [为联盟域配置混合 Azure AD 联接](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### <a name="set-up-azure-ad-connect"></a>设置 Azure AD Connect
 
@@ -92,7 +92,7 @@ ms.locfileid: "88127335"
 若要配置 Azure AD Connect，需要 Azure AD 的全局管理员凭据。  
 
 > [!TIP]  
-> 以下过程不应被视为是设置 Azure AD Connect 的权威方法，但在这里提供此方法旨在帮助简化在 Intune 和 Configuration Manager 之间配置共同管理的过程。 有关此过程的权威内容和与设置 Azure AD 相关的过程，请参阅 Azure AD 文档中的[为托管域配置混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)。  
+> 以下过程不应被视为是设置 Azure AD Connect 的权威方法，但在这里提供此方法旨在帮助简化在 Intune 和 Configuration Manager 之间配置共同管理的过程。 有关此过程的权威内容和与设置 Azure AD 相关的过程，请参阅 Azure AD 文档中的[为托管域配置混合 Azure AD 联接](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)。  
 
 #### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>使用 Azure AD Connect 配置混合 Azure AD 联接
 
@@ -107,7 +107,7 @@ ms.locfileid: "88127335"
    可以选择支持 Windows 下层加入域的设备的选项，但请记住，仅 Windows 10 支持设备的共同管理。
 8. 在“SCP’页上，对于想要 Azure AD Connect 配置服务连接点 (SCP) 的每个本地林，执行以下步骤，然后选择“下一步”：  
    1. 选择林。  
-   2. 选择身份验证服务。  如果具有联盟域，选择 AD FS 服务器，除非贵组织具有专门的 Windows 10 客户端且已配置计算机/设备同步或组织正在使用 [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)。  
+   2. 选择身份验证服务。  如果具有联盟域，选择 AD FS 服务器，除非贵组织具有专门的 Windows 10 客户端且已配置计算机/设备同步或组织正在使用 [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso)。  
    3. 单击“添加”以输入企业管理员凭据。  
 9. 如果有托管域，则跳过此步骤。  
 
@@ -115,7 +115,7 @@ ms.locfileid: "88127335"
 10. 在“已准备好进行配置”页上，选择“配置”。
 11. 在“配置完成”页上，选择“退出”。
 
-如果在完成已加入域的 Windows 设备的混合 Azure AD 联接时遇到问题，请参阅[针对 Windows 当前设备混合 Azure AD 联接的故障排除](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)。
+如果在完成已加入域的 Windows 设备的混合 Azure AD 联接时遇到问题，请参阅[针对 Windows 当前设备混合 Azure AD 联接的故障排除](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)。
 
 ## <a name="configure-client-settings-to-direct-clients-to-register-with-azure-ad"></a>配置客户端设置，以引导客户端注册 Azure AD
 
@@ -155,7 +155,7 @@ ms.locfileid: "88127335"
     > [!NOTE]
     > 部分租户无需配置这些选项。<!-- SCCMDocs#1230 -->
     >
-    > “Microsoft Intune”是为 Azure AD 配置 MDM 应用的方式。 “Microsoft Intune 注册”是在应用适用于 iOS 和 Android 注册的多重身份验证策略时创建的特定 Azure AD 应用。 有关详细信息，请参阅[对 Intune 设备注册要求多重身份验证](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication)。
+    > “Microsoft Intune”是为 Azure AD 配置 MDM 应用的方式。 “Microsoft Intune 注册”是在应用适用于 iOS 和 Android 注册的多重身份验证策略时创建的特定 Azure AD 应用。 有关详细信息，请参阅[对 Intune 设备注册要求多重身份验证](/intune/enrollment/multi-factor-authentication)。
 
 5. 对于 MDM 用户范围，选择“全部”，然后选择“保存”。  
 

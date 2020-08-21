@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1845b381d8b37fed3a785475e961cd39c54cf42d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d9dcefe942309ad57c823ec669b7aa6630974fa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125264"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698021"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>使用 Configuration Manager 创建分阶段部署
 
@@ -122,7 +122,7 @@ Include a timeline diagram
 6. 在“摘要”选项卡上确认选择，然后选择“下一步”完成向导   。  
 
 > [!NOTE]
-> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 产品和文档中使用的是旧名称。  
+> 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 产品和文档中使用的是旧名称。  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>使用手动配置的阶段创建分阶段部署
 <!--1358148--> 
@@ -187,7 +187,7 @@ Include a timeline diagram
 ## <a name="next-steps"></a>后续步骤
 
 管理和监视分阶段部署：
-- [应用程序](manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
-- [软件更新](manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [应用程序](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [软件更新](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [任务序列](manage-monitor-phased-deployments.md)  
 

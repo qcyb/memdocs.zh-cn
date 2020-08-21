@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701605"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695998"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
 
@@ -76,7 +76,7 @@ ms.locfileid: "81701605"
    -   对于证书颁发机构 (CA) 证书：将证书添加到“受信任的发布者”证书存储中  。
 
    > [!NOTE]
-   > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”  组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10))。
+   > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”  组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略](/previous-versions/bb530967(v=technet.10))。
 
 
 

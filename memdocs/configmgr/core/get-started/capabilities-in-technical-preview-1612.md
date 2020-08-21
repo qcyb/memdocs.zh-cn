@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705405"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693023"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Configuration Manager Technical Preview 1612 中的功能
 
@@ -185,7 +185,7 @@ ms.locfileid: "81705405"
 2. 接下来，输入包含所需命令行开关和可选开关的命令行。
 
 **已知问题** 运行该工具时，当任何程序包或部署失败或正在进行时，可能会返回以下错误：
--  *System.InvalidOperationException：无法立即清理此内容库，因为包 \<packageID> 未完全安装。*
+-  *System.InvalidOperationException：由于程序包 \<packageID> 未完全安装，因此无法清理此内容库。*
 
  解决方法：无。 当内容正在进行处理或部署失败时，该工具无法可靠地识别孤立的文件。 因此，该工具将不允许你清理内容，直到该问题解决。
 
@@ -201,7 +201,7 @@ ms.locfileid: "81705405"
 | **/dp &lt;distribution point FQDN>**  | **必需** </br> 指定要清理的分发点的完全限定域名 (FQDN)。 </br></br> 例如：***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;primary site FQDN>**       | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的 FQDN，或父级主站点的 FQDN。 </br></br> 例如：***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的站点代码，或父级主站点的站点代码。</br></br> 例如：***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log \<日志文件目录>**       |**可选** </br> 指定放置日志文件的目录。 此目录可以是本地驱动器，或者位于网络共享上。</br></br> 如果不使用此开关，日志文件会自动放在用户临时文件夹中。</br></br> 本地驱动器的示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>网络共享的示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+| **/log \<log file directory>**       |**可选** </br> 指定放置日志文件的目录。 此目录可以是本地驱动器，或者位于网络共享上。</br></br> 如果不使用此开关，日志文件会自动放在用户临时文件夹中。</br></br> 本地驱动器的示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>网络共享的示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>控制台中搜索功能的改进
@@ -317,4 +317,4 @@ Azure Active Directory (AD) 载入会创建一个其他云服务使用的 Config
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>更改为配置多重身份验证以进行设备注册
 
-现在，可为在 Azure 门户中进行设备注册设置多重身份验证 (MFA)，Configuration Manager 控制台中已删除 MFA 选项。 有关设置注册 MFA 的详细信息，请参阅 [Microsoft Intune 主题](/mem/intune/enrollment/multi-factor-authentication)。
+现在，可为在 Azure 门户中进行设备注册设置多重身份验证 (MFA)，Configuration Manager 控制台中已删除 MFA 选项。 有关设置注册 MFA 的详细信息，请参阅 [Microsoft Intune 主题](../../../intune/enrollment/multi-factor-authentication.md)。

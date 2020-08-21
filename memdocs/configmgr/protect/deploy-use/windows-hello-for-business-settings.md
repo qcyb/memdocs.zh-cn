@@ -10,12 +10,12 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c60f30e306c6ff52849cfcdd4696d67a7d26f395
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4c8029cdda80d327cbed2a4c60c71ff1811e4723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706215"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698691"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager 中的 Windows Hello 企业版设置
 
@@ -31,7 +31,7 @@ Configuration Manager 与 Windows Hello 企业版集成。 （此功能旧称为
 >
 > 对于共同管理的设备，不妨将[“资源访问策略”  工作负荷](../../comanage/workloads.md#resource-access-policies)迁移到 Intune 中。 然后，使用 Intune 策略来管理这些证书。 有关详细信息，请参阅[如何切换工作负载](../../comanage/how-to-switch-workloads.md)。
 
-有关详细信息，请参阅 [Windows Hello 企业版](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)。
+有关详细信息，请参阅 [Windows Hello 企业版](/windows/security/identity-protection/hello-for-business/hello-identity-verification)。
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](../../core/servers/manage/install-in-console-updates.md#bkmk_options)。<!--505213-->  

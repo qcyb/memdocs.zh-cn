@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905678"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695590"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager Technical Preview 1606 中的功能
 
@@ -80,9 +80,9 @@ ms.locfileid: "82905678"
 
 “设备保护”是 Windows 10 的一种功能，它使用硬件和软件功能严格控制什么可以在设备上运行。
 
-有关详细信息，请参阅[设备防护简介](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)。
+有关详细信息，请参阅[设备防护简介](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)。
 
-在此版本中，Configuration Manager 可与“设备保护”和 [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) 进行互操作，以便当通过 Configuration Manager 部署的可执行文件和 DLL 文件从托管安装程序到来时自动变为受信任，这意味着将允许它们在目标设备上运行，而其他软件将不允许运行，除非由其他 AppLocker 规则明确允许运行。  
+在此版本中，Configuration Manager 可与“设备保护”和 [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) 进行互操作，以便当通过 Configuration Manager 部署的可执行文件和 DLL 文件从托管安装程序到来时自动变为受信任，这意味着将允许它们在目标设备上运行，而其他软件将不允许运行，除非由其他 AppLocker 规则明确允许运行。  
 
 目前，无法从 Configuration Manager 控制台中配置此功能。 若要配置该策略，需要在每个客户端上配置注册表项并在客户端上配置 Windows 服务。
 完成此操作后，请配置 AppLocker 策略文件。 配置策略文件后，可以将其部署到任何兼容的客户端设备。
@@ -95,9 +95,9 @@ ms.locfileid: "82905678"
 
 有关详细信息，请参阅下列文章：
 
-- [设备保护简介](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [设备保护简介](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Microsoft Defender 应用程序控制部署过程的规划和入门](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Microsoft Defender 应用程序控制部署过程的规划和入门](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>本地移动设备管理的多个设备管理点  
   借助 Technical Preview 1606，本地移动设备管理 (MDM) 可支持Windows 10 周年更新中的新功能，该功能会自动将已注册设备配置为具有多个可供使用的设备管理点。 此功能允许设备在其正常使用的设备管理点不可用时回退到另一个设备管理点。 此功能仅适用于安装了 Windows 10 周年更新的电脑。  
@@ -170,8 +170,8 @@ ms.locfileid: "82905678"
 #### <a name="upload-the-management-certificate-to-azure"></a>将管理证书上传到 Azure
 
 Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云代理服务。 有关如何上传管理证书的详细信息和说明，请参阅 Azure 文档中的以下文章：
-- [Azure 云服务证书概述](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [上传 Azure Management API 管理证书](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/)。
+- [Azure 云服务证书概述](/azure/cloud-services/cloud-services-certs-create)
+- [上传 Azure Management API 管理证书](/previous-versions/azure/azure-api-management-certs)。
 
 请确保复制与管理证书关联的订阅 ID。 需要使用此 ID 在 Configuration Manager 控制台中配置云代理服务。
 

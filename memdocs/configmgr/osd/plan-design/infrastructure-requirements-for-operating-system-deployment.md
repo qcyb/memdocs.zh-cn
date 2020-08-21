@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f34c803cb2b43a2c69cee4c16f5029474e318eb2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9bb07bd2b82a9411bc527d04a9a64a0bb6e12f8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709335"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697664"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration Manager 中的 OS 部署的基础结构要求
 
@@ -33,9 +33,9 @@ Windows 评估和部署工具包 (ADK) 是一组工具和文档，为 Windows �
 
 有关详细信息，请参阅下列文章：  
 
-- [面向 IT 专业人员的适用于 Windows 10 方案的 Windows ADK](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [面向 IT 专业人员的适用于 Windows 10 方案的 Windows ADK](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [下载适用于 Windows 10 的 Windows ADK](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [下载适用于 Windows 10 的 Windows ADK](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > 确保同时下载**适用于 Windows 10 的 Windows ADK** 和**适用于 ADK 的 Windows PE 加载项**。
@@ -79,7 +79,7 @@ Configuration Manager 使用包含 USMT 10 源文件的 USMT 包在 OS 部署过
 
 有关详细信息，请参阅下列文章：  
 
-- [USMT 10 的常见迁移方案](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [USMT 10 的常见迁移方案](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [管理用户状态](../get-started/manage-user-state.md)  
 

@@ -10,12 +10,12 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124357"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697579"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>在 Configuration Manager 中管理用户状态
 
@@ -27,7 +27,7 @@ ms.locfileid: "88124357"
 
 - 在更新部署中，你希望在同一台计算机上捕获和还原用户状态。  
 
-操作系统安装完成后，Configuration Manager 使用用户状态迁移工具 (USMT) 10.0 来管理从源计算机到目标计算机的用户状态数据迁移。 有关 USMT 10.0 常见迁移方案的详细信息，请参阅  [常见迁移方案](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)。
+操作系统安装完成后，Configuration Manager 使用用户状态迁移工具 (USMT) 10.0 来管理从源计算机到目标计算机的用户状态数据迁移。 有关 USMT 10.0 常见迁移方案的详细信息，请参阅  [常见迁移方案](/windows/deployment/usmt/usmt-common-migration-scenarios)。
 
 使用以下部分可帮助你捕获和还原用户数据。
 
@@ -129,4 +129,4 @@ ms.locfileid: "88124357"
 
 ## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> 在操作系统部署失败时还原用户状态数据
 
-如果操作系统部署失败，请使用 USMT 10.0 LoadState 功能检索在部署过程中捕获的用户状态数据。 这包括存储在状态迁移点上的数据，或者以本地方式保存在目标计算机上的数据。 有关此 USMT 功能的详细信息，请参阅 [LoadState 语法](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax)。
+如果操作系统部署失败，请使用 USMT 10.0 LoadState 功能检索在部署过程中捕获的用户状态数据。 这包括存储在状态迁移点上的数据，或者以本地方式保存在目标计算机上的数据。 有关此 USMT 功能的详细信息，请参阅 [LoadState 语法](/windows/deployment/usmt/usmt-loadstate-syntax)。

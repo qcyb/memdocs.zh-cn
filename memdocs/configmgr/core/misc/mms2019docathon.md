@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701205"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695573"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -51,7 +51,7 @@ ms.locfileid: "81701205"
 
 - Microsoft 员工需要执行的一次性步骤略多，贡献流程也略有不同  
 
-有关详细信息，请参阅 docs.microsoft.com 贡献者指南中的 [GitHub 帐户设置](https://docs.microsoft.com/contribute/get-started-setup-github)。
+有关详细信息，请参阅 docs.microsoft.com 贡献者指南中的 [GitHub 帐户设置](/contribute/get-started-setup-github)。
 
 ## <a name="scope"></a>范围
 
@@ -68,7 +68,7 @@ ms.locfileid: "81701205"
 了解有关[如何提交问题](../understand/use-docs.md#bkmk_docfeedback)和[如何参与贡献](../understand/use-docs.md#bkmk_contribute)的信息。 可以通过 GitHub 浏览器体验完成最基本的更改。  
 
 > [!Note]  
-> 如果你有兴趣了解如何使用 git 和 VSCode 完成更复杂的工作流，请参阅[安装内容创作工具](https://docs.microsoft.com/contribute/get-started-setup-tools)。 和/或向 Aaron/Erik 寻求帮助。 例如，如果要执行以下操作，需要使用更复杂的工作流：
+> 如果你有兴趣了解如何使用 git 和 VSCode 完成更复杂的工作流，请参阅[安装内容创作工具](/contribute/get-started-setup-tools)。 和/或向 Aaron/Erik 寻求帮助。 例如，如果要执行以下操作，需要使用更复杂的工作流：
 >
 > - 创建新文章
 > - 添加图像
@@ -134,13 +134,13 @@ ms.locfileid: "81701205"
 
 - [Microsoft 风格](https://aka.ms/MicrosoftStyle)
 
-    - [快速启动](https://docs.microsoft.com/contribute/style-quick-start)
+    - [快速启动](/contribute/style-quick-start)
 
-    - [有关 Microsoft 风格和语态的十大提示](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [有关 Microsoft 风格和语态的十大提示](/style-guide/top-10-tips-style-voice)
 
-- [贡献者指南](https://docs.microsoft.com/contribute)
+- [贡献者指南](/contribute)
 
-- [如何使用 Markdown 撰写文档](https://docs.microsoft.com/contribute/markdown-reference)
+- [如何使用 Markdown 撰写文档](/contribute/markdown-reference)
 
 ## <a name="official-rules"></a>官方规则
 
@@ -166,7 +166,7 @@ Microsoft 云 + AI 开发人员关系内容及了解 MMS 2019 Docathon 活动官
 
 5. 如何参赛
 
-    要创建参赛作品，请对以下 GitHub 存储库中的文章提交编辑内容：IntuneDocs、SCCMDocs 和 sccm-docs-powershell-ref。有关提交流程的详细信息，请参阅[如何参与贡献](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute)。
+    要创建参赛作品，请对以下 GitHub 存储库中的文章提交编辑内容：IntuneDocs、SCCMDocs 和 sccm-docs-powershell-ref。有关提交流程的详细信息，请参阅[如何参与贡献](/sccm/core/understand/use-docs#bkmk_contribute)。
 
     要提交参赛作品，请在 GitHub 上提交一个拉取请求。
 

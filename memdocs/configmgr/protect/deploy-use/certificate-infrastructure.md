@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210105"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697239"
 ---
 # <a name="configure-certificate-infrastructure"></a>配置证书基础结构
 
@@ -34,7 +34,7 @@ ms.locfileid: "82210105"
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>安装和配置网络设备注册服务及依赖关系  
 
-1. 在运行 Windows Server 2012 R2 的服务器上，安装和配置用于 Active Directory 证书服务服务器角色的网络设备注册服务角色服务。 有关详细信息，请参阅[网络设备注册服务指南](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。
+1. 在运行 Windows Server 2012 R2 的服务器上，安装和配置用于 Active Directory 证书服务服务器角色的网络设备注册服务角色服务。 有关详细信息，请参阅[网络设备注册服务指南](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。
 
 2. 检查并在必要时修改网络设备注册服务所使用的证书模板的安全权限：  
 
@@ -44,7 +44,7 @@ ms.locfileid: "82210105"
 
    -   对于网络设备注册服务应用程序池使用的 SCEP 服务帐户：“读取”和“注册”权限   。  
 
-        此项要求并不特定于 Configuration Manager，但却是配置网络设备注册服务过程的一部分。 有关详细信息，请参阅[网络设备注册服务指南](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。  
+        此项要求并不特定于 Configuration Manager，但却是配置网络设备注册服务过程的一部分。 有关详细信息，请参阅[网络设备注册服务指南](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))。  
 
    > [!TIP]  
    >  若要确定网络设备注册服务所使用的证书模板，请在运行网络设备注册服务的服务器上查看下列注册表项：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP。  
@@ -79,7 +79,7 @@ ms.locfileid: "82210105"
 
    - **最大查询字符串(字节)** ：**65534**  
 
-     要详细了解这些设置及其配置方式，请参阅 [IIIS 请求限制](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)。
+     要详细了解这些设置及其配置方式，请参阅 [IIIS 请求限制](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)。
 
 7. 如果希望能够请求有效期比所使用的证书模板短的证书：对于企业 CA，默认情况下会禁用此配置。 若要对企业 CA 启用此选项，请使用 certutil 命令行工具，然后通过使用下列命令停止并重启证书服务：  
 
@@ -89,7 +89,7 @@ ms.locfileid: "82210105"
 
    3. **net start certsvc**  
 
-      有关详细信息，请参阅[证书服务工具和设置](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))。
+      有关详细信息，请参阅[证书服务工具和设置](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))。
 
 8. 验证网络设备注册服务是否正常工作，例如使用以下链接进行验证：`https://server.contoso.com/certsrv/mscep/mscep.dll`。 你应会看到内置的网络设备注册服务网页。 此网页说明服务是什么，并且说明了网络设备使用该 URL 来提交证书请求。  
 
@@ -201,4 +201,4 @@ ms.locfileid: "82210105"
    如果想要卸载 Configuration Manager 策略模块，请使用控制面板中的“程序和功能”  。 
 
  
-现在已经完成了配置步骤，你已经准备好通过创建和部署证书配置文件为用户和设备部署证书。 有关如何创建证书配置文件的详细信息，请参阅[如何创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。  
+现在已经完成了配置步骤，你已经准备好通过创建和部署证书配置文件为用户和设备部署证书。 有关如何创建证书配置文件的详细信息，请参阅[如何创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。

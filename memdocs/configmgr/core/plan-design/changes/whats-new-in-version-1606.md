@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590467"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698582"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager 版本 1606 中的新增功能
 
@@ -86,7 +86,7 @@ Configuration Manager 控制台中的更新和维护服务节点更改如下：
 Configuration Manager 控制台中的管理更改如下：
 ### <a name="oms-connector"></a>OMS 连接器
 
-现在，可以将 Configuration Manager 作为集合从 Configuration Manager 连接到 [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/)。 这使得 Configuration Manager 部署中的数据（例如集合）在 OMS 中可见。 有关详细信息，请参阅此处的[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)。
+现在，可以将 Configuration Manager 作为集合从 Configuration Manager 连接到 [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview)。 这使得 Configuration Manager 部署中的数据（例如集合）在 OMS 中可见。 有关详细信息，请参阅此处的[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm)。
 
 OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使用更新中的预发行功能](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)。
 

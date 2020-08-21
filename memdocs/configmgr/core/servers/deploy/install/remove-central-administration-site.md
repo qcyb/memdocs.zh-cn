@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 5a1d9d4ce8cdd19efb440d4d73fafdc96a514bcd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613972"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699154"
 ---
 # <a name="remove-the-central-administration-site"></a>删除管理中心站点
 
@@ -141,7 +141,7 @@ ms.locfileid: "84613972"
 
   - 重新创建 [OS 部署介质](../../../../osd/deploy-use/create-task-sequence-media.md)。
 
-- 如果将 Configuration Manager 与 [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context) 连接，则需要重置连接。 解决任何问题的第一步是[续订密钥](../configure/azure-services-wizard.md#bkmk_renew)。 如果这无法解决问题，请重新创建连接。<!-- 5584635 -->
+- 如果将 Configuration Manager 与 [Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context) 连接，则需要重置连接。 解决任何问题的第一步是[续订密钥](../configure/azure-services-wizard.md#bkmk_renew)。 如果这无法解决问题，请重新创建连接。<!-- 5584635 -->
 
 - 在版本 2002 中，如果启用了 Surface 驱动程序的同步，请在删除 CAS 之后重新配置此功能。 有关详细信息，请参阅 [Microsoft Surface 驱动程序和固件更新](../../../../sum/deploy-use/surface-drivers.md)。<!-- 5728727 -->
 
