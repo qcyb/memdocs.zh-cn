@@ -2,20 +2,20 @@
 title: 客户端安装参数和属性
 titleSuffix: Configuration Manager
 description: 了解用于安装 Configuration Manager 客户端的 ccmsetup 命令行参数和属性。
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1de2cd1645687740986cc62514dbc990461cbbf6
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240569"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127012"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>关于 Configuration Manager 中的客户端安装参数和属性
 
@@ -36,9 +36,9 @@ CCMSetup.exe 命令从管理点或源位置下载所需的文件以安装客户�
 > [!NOTE]
 > 不能直接安装 client.msi。  
 
-CCMSetup.exe 提供了可自定义安装的命令行参数。 参数以斜杠 (`/`) 作为前缀，按照约定为小写。 在必要时，使用一个冒号 (`:`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [CCMSetup.exe 命令行参数](#ccmsetupexe-command-line-parameters)。
+CCMSetup.exe 提供了可自定义安装的命令行参数。 参数以斜线 (`/`) 作为前缀，通常是小写的。 在必要时，使用一个冒号 (`:`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [CCMSetup.exe 命令行参数](#ccmsetupexe-command-line-parameters)。
 
-还可在 CCMSetup.exe 命令行中指定属性来修改 client.msi 的行为。按照约定属性均采用大写。 使用等于号 (`=`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [Client.msi 属性](#clientMsiProps)。
+还可以在 CCMSetup.exe 命令行处提供属性来修改 client.msi 的行为。 属性按惯例是大写的。 使用等于号 (`=`) 紧跟值来指定参数的值。 有关详细信息，请参阅 [Client.msi 属性](#clientMsiProps)。
 
 > [!IMPORTANT]  
 > 指定 client.msi 的属性之前，先指定 CCMSetup 参数。  
@@ -76,16 +76,100 @@ CCMSetup.exe 及支持文件位于 Configuration Manager 安装文件夹内“Cl
 
 示例：`ccmsetup.exe /?`
 
-### <a name="source"></a>/source
+### <a name="allowmetered"></a>/AllowMetered
 
-指定文件下载位置。 使用本地路径或 UNC 路径。 设备使用服务器消息块 (SMB) 协议下载文件。 若要使用“/source”，用于客户端安装的 Windows 用户帐户需要具有对该位置的“读取”权限 。
+<!--6976145-->
 
-若要详细了解 ccmsetup 如何下载内容，请参阅[边界组 - 客户端安装](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)。 如果你同时使用 /mp 和 /source 参数，还可以参阅这篇文章中包含的 ccmsetup 行为详细信息。
+自版本 2006 起，使用此参数来控制客户端在按流量计费的网络上的行为。 此参数不接受任何值。 如果针对 ccmsetup 允许客户端在按流量计费的网络上进行通信，该客户端将下载内容、向站点注册并下载初始策略。 其他客户端通信都将遵循该策略中的客户端设置配置。 有关详细信息，请参阅[关于客户端设置](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections)。
 
-> [!TIP]  
-> 可在命令行上多次使用 /source 参数，以指定备用下载位置。  
+如果你在现有设备上重新安装客户端，它会使用以下优先级来确定其配置：
 
-示例：`ccmsetup.exe /source:"\\server\share"`
+1. 现有本地客户端策略
+1. 存储在 Windows 注册表中的最后一个命令行
+1. ccmsetup 命令行上的参数
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+此参数指定当你启用[自动客户端升级](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)时是否将自动升级客户端。
+
+支持的值：
+
+- `TRUE`：客户端不会自动升级
+- `FALSE`：客户端自动升级（默认）
+
+例如：  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+有关详细信息，请参阅[扩展互操作性客户端](../../understand/interoperability-client.md)。
+
+> [!NOTE]  
+> 使用 /AlwaysExcludeUpgrade 参数时，自动升级仍会运行。 但是，当 CCMSetup 运行以执行升级时，它会注意到 /AlwaysExcludeUpgrade 参数已设置，并且将在 ccmsetup.log 中记录以下行： 
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup 随后会立即退出，而不会执行升级。
+
+### <a name="bitspriority"></a>/BITSPriority
+
+当设备通过 HTTP 连接下载客户端安装文件时，请使用此参数指定下载优先级。 指定以下可能的值之一：
+
+- `FOREGROUND`
+
+- `HIGH`
+
+- `NORMAL`（默认值）
+
+- `LOW`
+
+示例：`ccmsetup.exe /BITSPriority:HIGH`
+
+### <a name="config"></a>/config
+
+此参数指定列出客户端安装属性的文本文件。
+
+- 如果 CCMSetup 作为服务运行，请将此文件放入 CCMSetup 系统文件夹：`%Windir%\Ccmsetup`。
+
+- 如果指定 [/noservice](#noservice) 参数，请将此文件与 CCMSetup.exe 放在同一文件夹中。
+
+示例：`CCMSetup.exe /config:"configuration file name.txt"`
+
+若要提供正确的文件格式，请使用站点服务器上 Configuration Manager 安装目录中 `\bin\<platform>` 文件夹中的“mobileclienttemplate.tcf”文件。 此文件也包含有关各个部分及其使用方式的注释。 指定 `[Client Install]` 部分中的客户端安装属性，其后紧跟下列文本 `Install=INSTALL=ALL`。
+
+示例 `[Client Install]` 部分条目：`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+
+### <a name="downloadtimeout"></a>/downloadtimeout
+
+如果 CCMSetup 未能下载客户端安装文件，则此参数指定最大超时时间（以分钟为单位）。 此超时时间之后，CCMSetup 将停止尝试下载安装文件。 默认值为 1440 分钟（一天）。
+
+使用 [/retry](#retry) 参数指定重试尝试之间的间隔。
+
+示例：`ccmsetup.exe /downloadtimeout:100`
+
+### <a name="excludefeatures"></a>/ExcludeFeatures
+
+此参数指定 CCMSetup.exe 不安装指定的功能。
+
+示例：`CCMSetup.exe /ExcludeFeatures:ClientUI` 不在客户端上安装软件中心。  
+
+> [!NOTE]  
+> `ClientUI` 是 /ExcludeFeatures 参数唯一支持的值。
+
+### <a name="forceinstall"></a>/forceinstall
+
+指定 CCMSetup.exe 卸载任何现有客户端，并安装新客户端。  
+
+### <a name="forcereboot"></a>/forcereboot
+
+如果需要完成安装，请使用此参数强制计算机重启。 如果未指定此参数，则 CCMSetup 会在需要重启时退出。 然后在下一次手动重启后继续。
+
+示例：`CCMSetup.exe /forcereboot`
+
+### <a name="logon"></a>/logon
+
+如果已安装客户端的任何版本，该参数会指定应停止客户端安装。  
+
+示例：`ccmsetup.exe /logon`  
 
 ### <a name="mp"></a>/mp
 
@@ -123,6 +207,18 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 > [!Important]
 > 为 /mp 参数指定云管理网关的 URL 时，它必须以 `https://` 开头。
 
+### <a name="nocrlcheck"></a>/NoCRLCheck
+
+指定客户端在使用 PKI 证书通过 HTTPS 进行通信时应不检查证书吊销列表 (CRL)。 如果未指定此参数，客户端会在建立 HTTPS 连接之前检查 CRL。 有关客户端 CRL 检查的详细信息，请参阅 [PKI 证书吊销的规划](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)。
+
+示例：`CCMSetup.exe /UsePKICert /NoCRLCheck`  
+
+### <a name="noservice"></a>/noservice
+
+此参数阻止 CCMSetup 作为服务运行的默认行为。 当 CCMSetup 作为服务运行时，它在计算机的本地系统帐户的上下文中运行。 此帐户可能没有足够权限访问安装所需的网络资源。 借助 **/noservice**，CCMSetup.exe 将在你用于启动安装过程的用户帐户的上下文中运行。
+
+示例：`ccmsetup.exe /noservice`  
+
 ### <a name="regtoken"></a>/regtoken
 
 <!--5686290-->
@@ -146,12 +242,6 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 
 示例：`ccmsetup.exe /retry:20`  
 
-### <a name="noservice"></a>/noservice
-
-此参数阻止 CCMSetup 作为服务运行的默认行为。 当 CCMSetup 作为服务运行时，它在计算机的本地系统帐户的上下文中运行。 此帐户可能没有足够权限访问安装所需的网络资源。 借助 **/noservice**，CCMSetup.exe 将在你用于启动安装过程的用户帐户的上下文中运行。
-
-示例：`ccmsetup.exe /noservice`  
-
 ### <a name="service"></a>/service
 
 指定 CCMSetup 应作为使用本地系统帐户的服务运行。  
@@ -160,77 +250,6 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 > 如果使用脚本来运行带 /service 参数的 CCMSetup.exe，CCMSetup.exe 将在服务启动后退出。 它可能无法正确报告脚本的安装详细信息。
 
 示例：`ccmsetup.exe /service`  
-
-### <a name="uninstall"></a>/uninstall
-
-使用此参数卸载 Configuration Manager 客户端。 有关详细信息，请参阅[卸载客户端](../manage/manage-clients.md#BKMK_UninstalClient)。
-
-示例：`ccmsetup.exe /uninstall`  
-
-### <a name="logon"></a>/logon
-
-如果已安装客户端的任何版本，该参数会指定应停止客户端安装。  
-
-示例：`ccmsetup.exe /logon`  
-
-### <a name="forcereboot"></a>/forcereboot
-
-如果需要完成安装，请使用此参数强制计算机重启。 如果未指定此参数，则 CCMSetup 会在需要重启时退出。 然后在下一次手动重启后继续。
-
-示例：`CCMSetup.exe /forcereboot`
-
-### <a name="bitspriority"></a>/BITSPriority
-
-当设备通过 HTTP 连接下载客户端安装文件时，请使用此参数指定下载优先级。 指定以下可能的值之一：
-
-- `FOREGROUND`
-
-- `HIGH`
-
-- `NORMAL`（默认值）
-
-- `LOW`
-
-示例：`ccmsetup.exe /BITSPriority:HIGH`
-
-### <a name="downloadtimeout"></a>/downloadtimeout
-
-如果 CCMSetup 未能下载客户端安装文件，则此参数指定最大超时时间（以分钟为单位）。 此超时时间之后，CCMSetup 将停止尝试下载安装文件。 默认值为 1440 分钟（一天）。
-
-使用 [/retry](#retry) 参数指定重试尝试之间的间隔。
-
-示例：`ccmsetup.exe /downloadtimeout:100`
-
-### <a name="usepkicert"></a>/UsePKICert
-
-为客户端指定此参数以使用 PKI 客户端身份验证证书。 如果不包含此参数，或客户端找不到有效证书，则它会使用带自签名证书的 HTTP 连接。
-
-示例：`CCMSetup.exe /UsePKICert`  
-
-> [!NOTE]
-> 在某些情况下，不必指定此参数，但仍可使用客户端证书。 例如，基于客户端推送和软件更新的客户端安装。 手动安装客户端时使用此参数，并对已启用 HTTPS 的管理点使用 /mp 参数。
->
-> 安装客户端进行仅限 Internet 的通信时，也请指定此参数。 将 CCMALWAYSINF=1 属性与基于 Internet 的管理点 (CCMHOSTNAME) 和站点代码 (SMSSITECODE) 的属性一起使用  。 若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
-
-### <a name="nocrlcheck"></a>/NoCRLCheck
-
-指定客户端在使用 PKI 证书通过 HTTPS 进行通信时应不检查证书吊销列表 (CRL)。 如果未指定此参数，客户端会在建立 HTTPS 连接之前检查 CRL。 有关客户端 CRL 检查的详细信息，请参阅 [PKI 证书吊销的规划](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)。
-
-示例：`CCMSetup.exe /UsePKICert /NoCRLCheck`  
-
-### <a name="config"></a>/config
-
-此参数指定列出客户端安装属性的文本文件。
-
-- 如果 CCMSetup 作为服务运行，请将此文件放入 CCMSetup 系统文件夹：`%Windir%\Ccmsetup`。
-
-- 如果指定 [/noservice](#noservice) 参数，请将此文件与 CCMSetup.exe 放在同一文件夹中。
-
-示例：`CCMSetup.exe /config:"configuration file name.txt"`
-
-若要提供正确的文件格式，请使用站点服务器上 Configuration Manager 安装目录中 `\bin\<platform>` 文件夹中的“mobileclienttemplate.tcf”文件。 此文件也包含有关各个部分及其使用方式的注释。 指定 `[Client Install]` 部分中的客户端安装属性，其后紧跟下列文本 `Install=INSTALL=ALL`。
-
-示例 `[Client Install]` 部分条目：`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/skipprereq
 
@@ -244,40 +263,33 @@ FQDN 的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`
 
 有关客户端先决条件的详细信息，请参阅 [Windows 客户端先决条件](prerequisites-for-deploying-clients-to-windows-computers.md)。
 
-### <a name="forceinstall"></a>/forceinstall
+### <a name="source"></a>/source
 
-指定 CCMSetup.exe 卸载任何现有客户端，并安装新客户端。  
+指定文件下载位置。 使用本地路径或 UNC 路径。 设备使用服务器消息块 (SMB) 协议下载文件。 若要使用“/source”，用于客户端安装的 Windows 用户帐户需要具有对该位置的“读取”权限 。
 
-### <a name="excludefeatures"></a>/ExcludeFeatures
+若要详细了解 ccmsetup 如何下载内容，请参阅[边界组 - 客户端安装](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)。 如果你同时使用 /mp 和 /source 参数，还可以参阅这篇文章中包含的 ccmsetup 行为详细信息。
 
-此参数指定 CCMSetup.exe 不安装指定的功能。
+> [!TIP]  
+> 可在命令行上多次使用 /source 参数，以指定备用下载位置。  
 
-示例：`CCMSetup.exe /ExcludeFeatures:ClientUI` 不在客户端上安装软件中心。  
+示例：`ccmsetup.exe /source:"\\server\share"`
 
-> [!NOTE]  
-> `ClientUI` 是 /ExcludeFeatures 参数唯一支持的值。
+### <a name="uninstall"></a>/uninstall
 
-### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+使用此参数卸载 Configuration Manager 客户端。 有关详细信息，请参阅[卸载客户端](../manage/manage-clients.md#BKMK_UninstalClient)。
 
-此参数指定当你启用[自动客户端升级](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)时是否将自动升级客户端。
+示例：`ccmsetup.exe /uninstall`  
 
-支持的值：
+### <a name="usepkicert"></a>/UsePKICert
 
-- `TRUE`：客户端不会自动升级
-- `FALSE`：客户端自动升级（默认）
+为客户端指定此参数以使用 PKI 客户端身份验证证书。 如果不包含此参数，或客户端找不到有效证书，则它会使用带自签名证书的 HTTP 连接。
 
-例如：  
+示例：`CCMSetup.exe /UsePKICert`  
 
-`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
-
-有关详细信息，请参阅[扩展互操作性客户端](../../understand/interoperability-client.md)。
-
-> [!NOTE]  
-> 使用 /AlwaysExcludeUpgrade 参数时，自动升级仍会运行。 但是，当 CCMSetup 运行以执行升级时，它会注意到 /AlwaysExcludeUpgrade 参数已设置，并且将在 ccmsetup.log 中记录以下行： 
+> [!NOTE]
+> 在某些情况下，不必指定此参数，但仍可使用客户端证书。 例如，基于客户端推送和软件更新的客户端安装。 手动安装客户端时使用此参数，并对已启用 HTTPS 的管理点使用 /mp 参数。
 >
-> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
->
-> CCMSetup 随后会立即退出，而不会执行升级。
+> 安装客户端进行仅限 Internet 的通信时，也请指定此参数。 将 CCMALWAYSINF=1 属性与基于 Internet 的管理点 (CCMHOSTNAME) 和站点代码 (SMSSITECODE) 的属性一起使用  。 若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe 返回代码
 

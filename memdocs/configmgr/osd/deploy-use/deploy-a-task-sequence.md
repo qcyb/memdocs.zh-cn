@@ -2,20 +2,20 @@
 title: 部署任务序列
 titleSuffix: Configuration Manager
 description: 使用此信息将任务序列部署到集合中的计算机。
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fea9088a11310aedc95d2fdbeacdb98650eef361
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455139"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125196"
 ---
 # <a name="deploy-a-task-sequence"></a>部署任务序列
 
@@ -146,9 +146,21 @@ ms.locfileid: "84455139"
 
     - **Windows Embedded 设备的写入筛选器处理**：此设置控制通过写入筛选器启用的 Windows Embedded 设备的安装行为。 选择此选项可在安装截止时间或维护时段提交更改。 选择此选项后需要重启，然后所作更改才能保留在设备上。 否则，应用程序将安装到临时覆盖，并稍后提交。 将任务序列部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。  
 
-    - **允许任务序列针对 Internet 上的客户端运行**：指定是否允许在基于 Internet 的客户端上运行任务序列。 此设置不支持需要启动媒体的操作，例如安装操作系统。 请将此选项仅用于一般软件安装或在标准 OS 中运行操作的基于通用脚本的任务序列。  
+    - **允许任务序列针对 Internet 上的客户端运行**：指定是否允许在基于 Internet 的客户端上运行任务序列。
 
-        - 此设置支持通过云管理网关从 Windows 10 就地升级任务序列部署到基于 Internet 的客户端。 有关详细信息，请参阅[通过 CMG 部署 Windows 10 就地升级](#deploy-windows-10-in-place-upgrade-via-cmg)。  
+        在通过云管理网关 (CMG) 将 Windows 10 就地升级任务序列部署到基于 Internet 的客户端时，支持此设置。 有关详细信息，请参阅[通过 CMG 部署 Windows 10 就地升级](#deploy-windows-10-in-place-upgrade-via-cmg)。
+
+        自版本 2006 起，可以将包含启动映像的任务序列部署到通过 CMG 通信的设备上。 用户需要从软件中心启动任务序列。<!--6997525-->
+
+        > [!NOTE]
+        > 当已建立 Azure Active Directory (Azure AD) 联接的客户端运行 OS 部署任务序列时，新 OS 中的客户端不会自动建立 Azure AD 联接。 即使没有建立 Azure AD 联接，客户端仍是受管理的。
+        >
+        > 在已建立 Azure AD 联接或使用基于令牌的身份验证的基于 Internet 的客户端上运行 OS 部署任务序列时，需要在[安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤中指定 CCMHOSTNAME 属性。
+
+        在版本 2002 及更低版本中，需要启动介质的操作无法与此设置相配合。 请将此选项仅用于一般软件安装或在标准 OS 中运行操作的基于通用脚本的任务序列。
+
+        > [!NOTE]
+        > 对于所有基于 Internet 的任务序列方案，请从软件中心启动任务序列。 这些方案不支持 Windows PE、PXE 或任务序列介质。
 
 8. 在“警报”页上，为此任务序列部署指定所需的警报设置。  
 

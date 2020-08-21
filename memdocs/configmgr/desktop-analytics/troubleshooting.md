@@ -2,7 +2,7 @@
 title: 桌面分析故障排除
 titleSuffix: Configuration Manager
 description: 帮助解决桌面分析问题的技术详细信息。
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828969"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089939"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>桌面分析故障排除
 
@@ -72,6 +73,9 @@ ms.locfileid: "85828969"
 如果需要在完成设置后预配这些应用，请转到“连接服务”窗格。 选择“为用户和应用配置访问权限”并预配应用。  
 
 - **适用于 Configuration Manager 的 Azure AD 应用**。 如果在完成设置后需要预配或解决连接问题，请参阅[为 Configuration Manager 创建和导入应用](#create-and-import-app-for-configuration-manager)。 此应用需要在“Configuration Manager 服务”API 上“写入 CM 集合数据”和“读取 CM 集合数据” 。  
+
+    > [!NOTE]
+    > 桌面分析支持多个 Configuration Manager 层次结构向一个 Azure AD 租户报告。<!-- 4814075 --> 如果环境中有多个配置了相同商业 ID 的层次结构，那么若要共享 Azure AD 租户和桌面分析实例，请对每个层次结构使用[不同的应用](connect-configmgr.md#bkmk_connect)。
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>为 Configuration Manager 创建并导入应用
 

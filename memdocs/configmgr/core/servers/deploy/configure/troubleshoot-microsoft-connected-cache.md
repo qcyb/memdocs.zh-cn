@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878102"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126352"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache 疑难解答
 
@@ -223,7 +223,7 @@ DO 缓存服务器添加以下重写规则：
 根据组织的更新要求，每个 DO 缓存服务器所需的磁盘空间可能会有所不同。 100 GB 的空间应该足以缓存以下内容：
 
 - 功能更新
-- 两到三个月的质量和 Office 更新
+- 两到三个月的质量和 Microsoft 365 Apps 更新
 - Microsoft Intune 应用和 Windows 收件箱应用
 
 DO 缓存服务器不应消耗太多系统内存或处理器时间。 安装 DO 缓存服务器后，如果发现了重要的进程或内存资源消耗，请分析 IIS 和 ARR 日志文件。

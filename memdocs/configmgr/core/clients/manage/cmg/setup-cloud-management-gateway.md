@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410856"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129131"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -141,7 +141,7 @@ CMG 连接点是与 CMG 通信的站点系统角色。 若要添加 CMG 连接�
 
 若要排查 CMG 服务运行状况问题，请使用 **CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。 有关详细信息，请参阅[日志文件](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)。
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>为 CMG 通信配置面向客户端的角色
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a> 为面向客户端的角色配置 CMG 流量
 
 配置管理点和软件更新点站点系统以接受 CMG 通信。 在主站点上，针对为基于 Internet 的客户端提供服务的所有管理点和软件更新点执行以下过程。  
 
@@ -158,7 +158,7 @@ CMG 连接点是与 CMG 通信的站点系统角色。 若要添加 CMG 连接�
 为其他管理点（酌情而定）和所有软件更新点重复这些步骤。
 
 ## <a name="configure-boundary-groups"></a>配置边界组
-
+ 
 <!--3640932-->
 从版本 1902 开始，可以将 CMG 与边界组关联。 此配置允许客户端根据边界组关系默认或回退到 CMG 以进行客户端通信。
 

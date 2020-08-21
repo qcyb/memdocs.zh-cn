@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268855"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125995"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>如何将 Configuration Manager 与桌面分析连接
 
@@ -84,40 +84,43 @@ ms.locfileid: "83268855"
 
     - **商业 ID**：此值应自动填充你的组织 ID。 如果未填充，请确保将代理服务器配置为允许所有必需的[终结点](enable-data-sharing.md#endpoints)，然后再继续。 或者，从[桌面分析门户](monitor-connection-health.md#bkmk_ViewCommercialID)中手动检索商业 ID。
 
-    - **Windows 10 诊断数据级别**：至少选择“基本”  。 请参阅[诊断数据级别](enable-data-sharing.md#diagnostic-data-levels)
-  
-    - **允许诊断数据中含有设备名称**：选择“启用” 
+    - Windows 10 诊断数据级别：至少选择“必需”。 有关详细信息，请参阅[诊断数据级别](enable-data-sharing.md#diagnostic-data-levels)。
+
+        > [!TIP]
+        > 在 Configuration Manager 版本 2002 及更低版本中，此值称为“基本”。<!-- 7363467 -->
+
+    - **允许诊断数据中含有设备名称**：选择“启用”
 
         > [!NOTE]
         > 从 Windows 10 版本 1803 开始，默认情况下，不会将设备名称发送给 Microsoft。 如果不发送设备名称，它将在桌面分析中显示为“未知”。 此行为可能会导致难以识别和评估设备。
 
-   选择“下一步”  。 “可用功能”  页显示了根据上一页的诊断数据设置提供的桌面分析功能。 选择“下一步”  继续操作，或者选择“上一步”  进行更改。
+   选择“下一步”。 “可用功能”页显示了根据上一页的诊断数据设置提供的桌面分析功能。 选择“下一步”**** 继续操作，或者选择“上一步”**** 进行更改。
 
     ![Azure 服务向导中的可用功能页示例](media/available-functionality.png)
 
 <a name="bkmk_Collections"></a>
 
-8. 在“集合”  页上，配置下列设置：
+8. 在“集合”页上，配置下列设置：
 
-    - **显示名称**：桌面分析门户使用此名称显示此 Configuration Manager 连接。 用它来区分不同的层次结构和确定单独的层次结构中的集合。 使用“测试实验室”或“生产”等术语轻松区分环境中的多个层次结构   。
+    - **显示名称**：桌面分析门户使用此名称显示此 Configuration Manager 连接。 用它来区分不同的层次结构和确定单独的层次结构中的集合。 使用“测试实验室”或“生产”等术语轻松区分环境中的多个层次结构 。
 
     - **目标集合**：此集合包括 Configuration Manager 使用你的商业 ID 和诊断数据设置配置的所有设备。 它是 Configuration Manager 连接到桌面分析服务的完整设备集。
 
-    - **目标集合中的设备使用经用户身份验证的代理进行出站通信**：默认情况下，此值为“否”  。 如果你的环境需要，请设置为“是”  。
+    - **目标集合中的设备使用经用户身份验证的代理进行出站通信**：默认情况下，此值为“否”。 如果你的环境需要，请设置为“是”。
 
-    - **选择要与桌面分析同步的特定集合**：选择“添加”  以包括“目标集合”  层次结构中的其他集合。 这些集合可在桌面分析门户中用于按照部署计划分组。 确保包括试点和试点排除集合。  <!-- 4097528 -->
+    - **选择要与桌面分析同步的特定集合**：选择“添加”以包括“目标集合”层次结构中的其他集合。 这些集合可在桌面分析门户中用于按照部署计划分组。 确保包括试点和试点排除集合。  <!-- 4097528 -->
 
         > [!TIP]
-        > “选择集合”窗口仅显示受“目标集合”  限制的集合。
+        > “选择集合”窗口仅显示受“目标集合”**** 限制的集合。
         >
         > 在下面的示例中，选择“CollectionA”作为目标集合。 然后，当添加其他集合时，你将看到 CollectionA、CollectionB 和 CollectionC。 不能添加 CollectionD。
         >
-        > - CollectionA：受“所有系统”  集合的限制
+        > - CollectionA：受“所有系统”**** 集合的限制
         >     - CollectionB：受 CollectionA 的限制
         >         - CollectionC：受 CollectionB 的限制
-        > - CollectionD：受“所有系统”  集合的限制
+        > - CollectionD：受“所有系统”**** 集合的限制
         >
-        > 要管理桌面分析门户中可用的集合以按部署计划进行分组，请在 Configuration Manager 控制台中转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点    。 选择与桌面分析 Azure 服务相关的条目，并更新“桌面分析集合”页面中的设置   。
+        > 要管理桌面分析门户中可用的集合以按部署计划进行分组，请在 Configuration Manager 控制台中转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点************。 选择与桌面分析 Azure 服务相关的条目，并更新“桌面分析集合”页面中的设置********。
 
         > [!IMPORTANT]
         > 这些集合在其成员身份更改时会继续同步。 例如，你的目标集合使用具有 Windows 7 成员身份规则的集合。 当这些设备升级到 Windows 10，并且 Configuration Manager 评估集合成员身份时，这些设备将退出集合和桌面分析。
@@ -128,11 +131,11 @@ Configuration Manager 创建设置策略以配置目标集合中的设备。 此
 
 ## <a name="monitor-connection-health"></a><a name="bkmk_monitor"></a> 监视连接运行状况
 
-监视桌面分析的设备配置。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“桌面分析服务”节点，然后选择“连接运行状况”仪表板    。
+监视桌面分析的设备配置。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“桌面分析服务”节点，然后选择“连接运行状况”仪表板  。
 
 有关详细信息，请参阅[监视连接运行状况](monitor-connection-health.md)。
 
-Configuration Manager 会在创建连接的 60 分钟内同步集合。 在桌面分析门户中，转到“全局试点”，并查看 Configuration Manager 设备集合  。
+Configuration Manager 会在创建连接的 60 分钟内同步集合。 在桌面分析门户中，转到“全局试点”，并查看 Configuration Manager 设备集合。
 
 > [!NOTE]
 > Configuration Manager 与桌面分析的连接依赖于服务连接点。 对此站点系统角色所做的任何更改都可能会影响与云服务的同步。 有关详细信息，请参阅[关于服务连接点](../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_move)。

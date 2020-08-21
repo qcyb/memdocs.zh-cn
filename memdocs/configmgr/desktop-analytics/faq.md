@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429819"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125859"
 ---
 # <a name="desktop-analytics-faq"></a>桌面分析常见问题解答
 
@@ -126,7 +126,7 @@ ms.locfileid: "83429819"
 #### <a name="upgrade-readiness"></a>Upgrade Readiness
 
 - Internet Explorer 站点发现数据
-- Office 加载项见解（现在[可从 Configuration Manager 获取](#bkmk_office)）
+- Microsoft 365 Apps 加载项见解（现在[可以在 Configuration Manager 中查看](#bkmk_office)）
 - 反馈中心见解
 
 #### <a name="update-compliance"></a>更新符合性
@@ -151,9 +151,9 @@ ms.locfileid: "83429819"
 
 ## <a name="other"></a>其他
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a> 我能否将桌面分析用于 Office 365 ProPlus 升级？
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> 我能否将桌面分析用于我的 Microsoft 365 Apps 升级？
 
-不能，桌面分析主要针对 Windows。 Microsoft 与许多客户密切合作开发出了桌面分析。 客户反馈表示，桌面分析提高了他们的能力，使他们能够自信地管理 Windows 部署。 此外，他们还表示希望提高 [Office 365 ProPlus 就绪情况](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)与 Configuration Manager 和 Intune 中的 Office 管理工具的集成程度。 在重点关注桌面分析的 Windows 方案的同时，Microsoft 会继续向这些领域投资。
+不能，桌面分析主要针对 Windows。 Microsoft 与许多客户密切合作开发出了桌面分析。 客户反馈表示，桌面分析提高了他们的能力，使他们能够自信地管理 Windows 部署。 此外，他们还表示希望[“Microsoft 365 Apps 就绪情况”](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)与 Configuration Manager 和 Intune 中的 Microsoft 365 Apps 管理工具更紧密地集成在一起。 在重点关注桌面分析的 Windows 方案的同时，Microsoft 会继续向这些领域投资。
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>如何提供关于桌面分析的反馈？
 

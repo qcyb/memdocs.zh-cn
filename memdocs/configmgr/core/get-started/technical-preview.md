@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 07/14/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384819"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129114"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -94,7 +94,6 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 在基线版本发布后的 1 年内安装此基线版本。 在安装新技术预览版站点时，请使用最新的基准版本。 以下 Configuration Manager 技术预览分支版本既可用作控制台内更新，也可用作新基线版本：
 
 - **技术预览版 2007**
-- **技术预览版 2002**
 
 从[评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
 
@@ -121,13 +120,15 @@ bullet format:
 
 以下是最新 Configuration Manager 技术预览版中提供的功能：
 
-### <a name="technical-preview-version-2007"></a>技术预览版 2007
+### <a name="technical-preview-version-2008"></a>技术预览版 2008
 
-- [租户附加：在 Microsoft 终结点管理器管理中心查看硬件清单](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
-- [对客户端数据源仪表板的改进](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
-- [某些控制台区域现在使用固定宽度的字体](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
-- [管理任务序列策略大小](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
-- [对管理中心内设备时间线的改进](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+- [集合查询预览](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [分析功能更新的 SetupDiag 错误](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [监视方案运行状况](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [集合评估查看器](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [在控制台中查看任务序列大小](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [“删除收集的旧诊断文件”任务](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [将对象导入到当前文件夹中](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 > [!NOTE]
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。
@@ -140,68 +141,18 @@ Each month, add features from the list above to a new H3 section at the top of t
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
 
-以下是自当前分支版本 2002 以来早期 Configuration Manager 技术预览版发布的功能：
+以下是随自当前分支版本 2006 以来旧版 Configuration Manager 技术预览分支一起发布的功能：
 
 > [!TIP]
 > 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能。 有关详细信息，请参阅[增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
 
-### <a name="technical-preview-version-2006"></a>技术预览版 2006
+### <a name="technical-preview-version-2007"></a>技术预览版 2007
 
-- [在共同管理的设备上使用公司门户应用](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [通过 CMG 改进可用应用](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranet 客户端可以使用 CMG 软件更新点](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [通过 CMG 改进任务序列](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [针对远程工作者进行优化的管理见解](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [对 VPN 边界类型的改进](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [租户附加：对 Microsoft Endpoint Manager 管理中心中 Configuration Manager 操作的改进](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [对终结点保护策略的 CMG 支持](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [在租户附加加入期间导入以前创建的 Azure AD 应用程序](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [通过按流量计费的连接对客户端升级进行的改进](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [对管理设备重启的改进](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [改进了对 Windows 虚拟桌面的支持](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [指向 Configuration Manager 社区中心项的直接链接](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
-
-### <a name="technical-preview-version-2005"></a>技术预览版 2005
-
-- [租户附加：管理中心内的设备时间线](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
-- [租户附加：从管理中心安装应用程序](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
-- [租户附加：管理中心的 CMPivot](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
-- [租户附加：从管理中心运行脚本](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
-- [VPN 边界类型](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
-- [软件中心的 Azure AD 身份验证](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
-- [使用按流量计费的连接来安装和升级客户端](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
-- [任务序列媒体对基于云的内容的支持](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
-- [云管理网关 cmdlet 的改进](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
-- [社区中心和 GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
-- [Microsoft 365 企业应用版](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
-- [向 Microsoft 报告安装和升级失败](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
-- [Azure AD 应用密钥过期通知](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
-- [BitLocker 任务序列步骤的改进](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
-- [内容库清理工具的改进](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
-- [Windows 10 就地升级期间删除命令提示符](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-### <a name="technical-preview-version-2004"></a>技术预览版 2004
-
-- [Microsoft Endpoint Manager 租户附加：ConfigMgr 客户端详细信息](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [来自 Microsoft 的通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [从控制台复制发现数据](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [对 CMPivot 的改进](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [支持 PowerShell 版本 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [格式化磁盘并分区的任务序列步骤改进](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [操作系统部署的管理见解规则](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [任务序列部署类型的 PowerShell cmdlet](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
-
-### <a name="technical-preview-version-2003"></a>技术预览版 2003
-
-- [通过 Microsoft Endpoint Manager 控制台将 Configuration Manager 客户端加入 Microsoft Defender ATP](2020/technical-preview-2003.md#bkmk_atp) <!--5691658-->
-- [跟踪配置项目修正](2020/technical-preview-2003.md#bkmk_track) <!--4261411 in 2002-->
-- [显示设备的边界组](2020/technical-preview-2003.md#bkmk_boundary) <!--6521835 in 2002-->
-- [新反馈向导](2020/technical-preview-2003.md#bkmk_feedback) <!--3180826-->
-- [对 Microsoft Edge 管理仪表板的改进](2020/technical-preview-2003.md#bkmk_edge) <!--5907383-->
-- [对 CMPivot 的改进](2020/technical-preview-2003.md#bkmk_cmpivot) <!--6518631-->
-- [针对发送给 Microsoft 的反馈的查询](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
-- [任务序列进度的新 SDK 方法](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
-- [对 OS 部署的改进](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
+- [租户附加：在 Microsoft 终结点管理器管理中心查看硬件清单](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [对客户端数据源仪表板的改进](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [某些控制台区域现在使用固定宽度的字体](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [管理任务序列策略大小](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [对管理中心内设备时间线的改进](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 ## <a name="features-in-previous-technical-previews"></a>旧版技术预览版中的功能
 
@@ -215,16 +166,25 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 功能        | 技术预览版 |
 |----------------|---------------------------|
+| 在共同管理的设备上使用公司门户应用 <!--3601237--> | [技术预览版 2006](2020/technical-preview-2006.md#bkmk_portal) |
+| 通过 CMG 改进可用应用 <!--7033501--> | [技术预览版 2006](2020/technical-preview-2006.md#bkmk_availapp) |
+| 租户附加：对 Microsoft Endpoint Manager 管理中心中 Configuration Manager 操作的改进 <!--7518897--> | [技术预览版 2006](2020/technical-preview-2006.md#bkmk_apps) |
+| 租户附加：管理中心内的设备时间线 <!--7141381--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_timeline) |
+| 租户附加：从管理中心安装应用程序 <!--6024389--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_apps) |
+| 租户附加：管理中心的 CMPivot <!--6024392--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
+| 租户附加：从管理中心运行脚本 <!--6234688--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_scripts) |
+| 云管理网关 cmdlet 的改进 <!--6978300--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
+| 向 Microsoft 报告安装和升级失败 <!--5622909--> | [技术预览版 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |
+| 内容库清理工具的改进 <!--6887878--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_content) |
+| 从控制台复制发现数据 <!--6890051--> | [技术预览版 2004](2020/technical-preview-2004.md#bkmk_copydisco) |
+| 支持 PowerShell 版本 7 <!--6023299--> | [技术预览版 2004](2020/technical-preview-2004.md#bkmk_pwsh7) |
+| 新反馈向导 <!--3180826--> | [技术预览版 2003](2020/technical-preview-2003.md#bkmk_feedback) |
+| 针对发送给 Microsoft 的反馈的查询 <!--6488450--> | [技术预览版 2003](2020/technical-preview-2003.md#bkmk_smile) |
 | 将文件附加到反馈 <!--3556011--> | [技术预览版 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | 对已启用多播的分发点的改进 <!--3785535--> | [技术预览版 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | 分阶段部署模板 <!--4961086--> | [技术预览版 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | 使用云管理网关随时随地进行远程控制 <!--4575930--> | [技术预览版 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) |
-| 对社区中心的改进 <!--3555935--> | [技术预览版 1906](2019/technical-preview-1906.md#bkmk_hub) |
-| 对社区中心的改进 <!--4224401--> | [技术预览版 1905](2019/technical-preview-1905.md#bkmk_hub) |
-| 社区中心和 GitHub <!--3555935--> | [Tech Preview 1904](2019/technical-preview-1904.md#community-hub-and-github) |
 | 云服务成本估算器 <!--3555774--> | [Tech Preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
-| 从社区中心下载报表 <!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
-| 社区中心 <!--3556020, fka 1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | 基于客户端的 PXE 响应者服务 <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE 网络启动对 IPv6 的支持 <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | 使用 Azure Active Directory <!--3607315, fka 1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |

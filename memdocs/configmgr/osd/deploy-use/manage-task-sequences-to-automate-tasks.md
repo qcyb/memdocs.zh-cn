@@ -2,19 +2,20 @@
 title: 管理任务序列
 titleSuffix: Configuration Manager
 description: 创建、编辑、部署、导入和导出任务序列，在环境中管理任务并自动执行任务。
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591028"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125059"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>管理任务序列来自动执行任务
 
@@ -39,6 +40,30 @@ ms.locfileid: "85591028"
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a>编辑  
 
 通过添加或删除步骤、添加或删除组或者更改步骤的顺序来修改任务序列。 有关详细信息，请参阅[使用任务序列编辑器](../understand/task-sequence-editor.md)。
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a> 减少任务序列策略的大小
+
+<!--6982275-->
+当任务序列策略的大小超出 32 MB 时，客户端将无法处理此大型策略。 因而客户端将无法运行任务序列部署。
+
+存储在站点数据库中的任务序列的大小较小，但如果过大，仍可能会导致问题。 当客户端处理整个任务序列策略时，扩展的大小可能导致 32 MB 以上的问题。
+
+自版本 2006 起，若要检查客户端上是否有 32-MB 任务序列策略大小，请使用[管理见解](../../core/servers/manage/management-insights.md#operating-system-deployment)。
+
+若要帮助减少任务序列部署策略的总大小，请执行以下操作：
+
+- 将功能段分隔到子任务序列，并使用[运行任务序列](../understand/task-sequence-steps.md#child-task-sequence)步骤。 每个任务序列的策略大小限制分别为 32 MB。
+
+    > [!NOTE]
+    > 减少任务序列中的步骤和组的总数，对策略大小影响甚微。 通常策略中每个步骤的大小为几 KB。 将各个步骤组移到子任务序列的效果更好。
+
+- 部署与任务序列面向同一个集合时，减少其中的软件更新数量。
+
+- 通过程序包引用脚本，而不要在[运行 PowerShell 脚本](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)步骤中输入脚本。
+
+- 任务序列环境运行时，对它的大小限制为 8 KB。 检查自定义任务序列变量的使用情况，这也会影响策略大小。
+
+- 最后一个方法是，将复杂动态任务序列拆分为单独的任务序列，其中包含到不同集合的各种部署。
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a> 软件中心属性
 

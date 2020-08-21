@@ -2,20 +2,20 @@
 title: 任务序列变量引用
 titleSuffix: Configuration Manager
 description: 了解用于控制和自定义 Configuration Manager 任务序列的变量。
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429835"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124135"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -372,6 +372,13 @@ ms.locfileid: "83429835"
 适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
 
 这是一个只读变量，用于指示“网络适配器已连接”检查返回的是 true (`1`) 还是 false (`0`)。 如果未启用该检查，此只读变量的值将为空。
+
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a> _TS_CRUEFI
+
+*自版本 2006 起* <!--6452769-->
+适用于[检查准备情况](task-sequence-steps.md#BKMK_CheckReadiness)步骤。
+
+“计算机是否处于 UEFI 模式”的只读变量，返回 BIOS (`0`) 或 UEFI (`1`)。 如果未启用该检查，此只读变量的值将为空。
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 

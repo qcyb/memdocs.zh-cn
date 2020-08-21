@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700045"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129417"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>用于 Configuration Manager 中的软件更新的图标
 
@@ -59,7 +59,7 @@ ms.locfileid: "81700045"
 
 - 提高（如果批准安装软件更新，则由客户端安装的）软件更新文件包的效率。 例如，被取代的软件更新可能包含不再与修补程序或新软件更新现在支持的操作系统相关的文件，因此这些文件未包括在取代软件更新的文件包中。  
 
-- 换句话说，产品的较新版本不再适用于产品的较旧版本或配置。 如果进行了修改来扩展语言支持，则软件更新还可能取代其他软件更新。 例如，稍后对 Microsoft Office 的产品更新进行的修订可能会删除对较旧操作系统的支持，但会在初始软件更新版本中添加对新语言的额外支持。  
+- 换句话说，产品的较新版本不再适用于产品的较旧版本或配置。 如果进行了修改来扩展语言支持，则软件更新还可能取代其他软件更新。 例如，稍后对 Microsoft 365 Apps 产品更新进行的修订可能会删除对旧操作系统的支持，但会在最初的软件更新版本中添加对新语言的额外支持。  
 
   在“软件更新点组件”属性的“取代规则”选项卡上，你可以指定管理取代的软件更新的方式。 有关详细信息，请参阅 [取代规则](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
 

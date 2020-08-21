@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8bfd535c93cb9f1dcfc42705f3cce61874dfe226
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709315"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127648"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>集成适用于企业的 Windows 更新
 
@@ -38,7 +38,7 @@ ms.locfileid: "81709315"
 
 - 基于更新符合性状态的 Defender 的总体 Endpoint Protection 报告不会返回准确的结果，因为缺少扫描数据。  
 
-- Configuration Manager 无法将 Microsoft 更新（如 Office、IE 和 Visual Studio）部署到连接 WUfB 以接收更新的客户端。  
+- Configuration Manager 无法将 Microsoft 更新（如 Microsoft 365 Apps、IE 和 Visual Studio）部署到已连接到 WUfB 来接收更新的客户端。  
 
 - Configuration Manager 仍可将发布到 WSUS 并通过 Configuration Manager 管理的第三方更新部署到连接 WUfB 以接收更新的客户端。 如果不需要在连接到 WUfB 的客户端上安装任何第三方更新，则禁用名为[在客户端上启用软件更新](../../core/clients/deploy/about-client-settings.md#software-updates)的客户端设置。
 

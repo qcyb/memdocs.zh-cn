@@ -2,20 +2,20 @@
 title: 服务连接工具
 titleSuffix: Configuration Manager
 description: 了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946838"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126080"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>使用适用于 Configuration Manager 的服务连接工具
 
@@ -78,7 +78,7 @@ ms.locfileid: "85946838"
 - -downloadsiteversion：下载版本高于站点版本的更新和修补程序。
 
     > [!IMPORTANT]
-    > 由于 Configuration Manager 版本 2002 中的已知问题，默认行为不会按预期方式工作。 请使用 -downloadsiteversion 参数下载版本 2002 所需的更新。<!-- 7594517 -->
+    > 由于 Configuration Manager 版本 2002 中的已知问题，默认行为不会按预期方式工作。 更新到版本 2006，或使用 -downloadsiteversion 参数下载版本 2002 所需的更新。<!-- 7594517 -->
 
 有关详细信息，请参阅[命令行参数](#bkmk_cmd)。
 

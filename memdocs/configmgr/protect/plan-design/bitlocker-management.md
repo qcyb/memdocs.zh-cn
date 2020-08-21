@@ -2,7 +2,7 @@
 title: 规划 BitLocker 管理
 titleSuffix: Configuration Manager
 description: 规划如何使用 Configuration Manager 管理 BitLocker 驱动器加密
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531462"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129291"
 ---
 # <a name="plan-for-bitlocker-management"></a>规划 BitLocker 管理
 
@@ -25,7 +25,7 @@ ms.locfileid: "84531462"
 
 从版本 1910 开始，请使用 Configuration Manager 管理已加入 Active Directory 的本地 Windows 客户端的 BitLocker 驱动器加密 (BDE)。 不支持加入 Azure Active Directory 的客户端或工作组客户端。 它提供了可代替 Microsoft BitLocker Administration and Monitoring (MBAM) 的完整 BitLocker 生命周期管理。
 
-> [!Note]  
+> [!NOTE]
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](../../core/servers/manage/install-in-console-updates.md#bkmk_options)。  
 
 更多详细信息，请参阅 [BitLocker 概述](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)。
@@ -81,6 +81,8 @@ Configuration Manager 为 BitLocker 驱动器加密提供以下管理功能：
   - 配置 HTTPS 管理点。 该选项适用于 Configuration Manager 版本 1910 或 2002。
 
   有关详细信息，请参阅[加密恢复数据](../deploy-use/bitlocker/encrypt-recovery-data.md)。
+
+- 虽然 BitLocker 恢复服务安装在使用数据库副本的管理点上，但客户端无法托管恢复密钥。 这样，BitLocker 就不会对驱动器进行加密。 若要使用恢复服务，至少需要一个不在副本配置中的管理点。 在所有使用数据库副本的管理点上，禁用 BitLocker 恢复服务。<!-- 7813149 -->
 
 - 若要使用 BitLocker 管理报表，请安装 Reporting Services 点站点系统角色。 有关详细信息，请参阅[配置报表](../../core/servers/manage/configuring-reporting.md)。
 

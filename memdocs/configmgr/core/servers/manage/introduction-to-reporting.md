@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694545"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128063"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager 中的报表简介
 
@@ -124,7 +124,7 @@ Reporting Services 中的报表订阅是一个定期请求，此请求用于请�
 
  报表生成器安装会为 20 多种语言添加支持。 运行报表生成器时，它会以本地计算机的操作系统的语言来显示数据。 如果报表生成器不支持该语言，则会用英语显示数据。 报表生成器支持 SQL Server Reporting Services 的所有功能，包括以下功能：
 
-- 提供一个直观的报表创作环境，其外观与 Microsoft Office 的外观类似。  
+- 提供了直观的报表创作环境，其外观类似于 Microsoft 365 Apps。  
 
 - 提供了 SQL Server 报表定义语言 (RDL) 的灵活报表布局。  
 

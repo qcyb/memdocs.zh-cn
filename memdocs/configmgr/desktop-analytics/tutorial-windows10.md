@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422828"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125740"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>教程：将 Windows 10 部署到试点
 
@@ -56,7 +56,7 @@ ms.locfileid: "86422828"
 
     - 包含更新汇总 (4500571) 的 Configuration Manager 客户端版本 1902 或更高版本  
 
-- 业务审批，在试点设备上将 Windows 诊断数据级别配置为“增强(受限)”  
+- 在试点设备上将“Windows 诊断数据级别”配置为“可选(受限)”的业务批准  
 
     有关详细信息，请参阅[桌面分析隐私](privacy.md)。
 
@@ -193,7 +193,7 @@ ms.locfileid: "86422828"
 
     - **商业 ID**：此值应自动填充你的组织 ID。  
 
-    - **Windows 10 诊断数据级别**：至少选择“增强(受限)”。  
+    - Windows 10 诊断数据级别：至少选择“可选(受限)”  
 
     - **允许诊断数据中含有设备名称**：选择“启用”  
   

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153465"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125793"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>桌面分析的组策略设置
 
@@ -37,7 +37,7 @@ Configuration Manager 在以下一个或两个注册表项中设置 Windows 策�
 | 策略 | 路径 | 适用范围 | 值 |
 |--------|------|------------|-------|
 | **CommercialId** | 本地 | 所有 Windows 版本 | 为了让设备显示在桌面分析中，请使用组织的商业 ID 对其进行配置。 |
-| **AllowTelemetry**  | GPO | Windows 10 | 将 `1` 设为“基本”，将 `2` 设为“增强”，或将 `3` 设为“完整”诊断数据。 桌面分析至少需要基本诊断数据。 Microsoft 建议在桌面分析中使用增强（受限）级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization)。 |
+| **AllowTelemetry**  | GPO | Windows 10 | 为“基本”（“必需”）诊断数据设置“`1`”，为“增强”诊断数据设置“`2`”，或为“完整”（“可选”）诊断数据设置“`3`”。 桌面分析至少需要基本诊断数据。 Microsoft 建议对桌面分析使用“可选(受限)”（“增强(受限)”）级别。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization)。 |
 | **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 版本 1803 及更高版本 | 此设置仅在 AllowTelemetry 设置为 `2` 时适用。 它将发送给 Microsoft 的增强诊断数据事件限制为仅限桌面分析所需的那些事件。 有关详细信息，请参阅 [通过限制增强诊断数据策略收集的 Windows 10 诊断数据事件和字段](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)。 |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10 版本 1803 及更高版本 | 允许设备发送设备名。 默认情况下，不会将设备名称发送给 Microsoft。 如果不发送设备名称，它将在桌面分析中显示为“未知”。 有关详细信息，请参阅[设备名称](enroll-devices.md#device-name)。 |
 | **CommercialDataOptIn** | 本地 | Windows 8.1 及更早版本 | 桌面分析需要值为 `1`。 有关详细信息，请参阅 [Windows 7 上的商业数据选择加入](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))。 |
@@ -62,7 +62,7 @@ Windows Analytics 还通过升级就绪情况脚本设置以下策略：
 
 一般情况下，使用 Configuration Manager 集合来定位桌面分析设置和注册。 使用直接成员身份或查询来包括或排除集合中的设备。 有关详细信息，请参阅[如何创建集合](../core/clients/manage/collections/create-collections.md)。
 
-Configuration Manager 在目标集合上配置商业 ID 和诊断数据设置。 如果需要为不同的设备组配置不同的诊断数据设置，请使用组策略设置来替代 Configuration Manager 设置。 例如，你需要为某些设备设置“增强（受限）”级别，并为其他设备设置“基本”级别 。 某些设备可能具有不同的[代理服务器身份验证](enable-data-sharing.md#proxy-server-authentication)设置。
+Configuration Manager 在目标集合上配置商业 ID 和诊断数据设置。 如果需要为不同的设备组配置不同的诊断数据设置，请使用组策略设置来替代 Configuration Manager 设置。 例如，需要为一些设备设置“可选(受限)”级别，并为另一些设备设置“必需”级别。 某些设备可能具有不同的[代理服务器身份验证](enable-data-sharing.md#proxy-server-authentication)设置。
 
 相关组策略设置位于以下路径：“计算机配置” > “管理模板” > “Windows 组件” > “数据集合和预览版本”   。
 

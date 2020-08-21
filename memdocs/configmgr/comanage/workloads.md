@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842217"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127216"
 ---
 # <a name="co-management-workloads"></a>共同管理工作负载
 
@@ -104,7 +104,7 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 
 <!--1357841-->
 
-此工作负载管理共同管理的设备上的 Office 365 应用。
+此工作负荷管理共同管理的设备上的 Microsoft 365 Apps。
 
 - 移动工作负荷后，此应用将显示在设备上的“公司门户”中   
 

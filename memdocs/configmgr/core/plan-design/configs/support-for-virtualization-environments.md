@@ -2,7 +2,7 @@
 title: 支持虚拟化
 titleSuffix: Configuration Manager
 description: 在虚拟化环境中安装 Configuration Manager 客户端和站点系统角色的要求。
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2e266373667efebccdb84fe743f66beeaa5a0e88
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f7d774d620916f3d735a3545db5fe1e41988731d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688545"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126675"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Configuration Manager 支持虚拟化环境
 
 适用范围：  Configuration Manager (Current Branch)
 
-Configuration Manager 支持在受支持的操作系统上安装客户端和站点系统角色，这些操作系统在本文的虚拟化环境中作为虚拟机运行。 即使虚拟机主机（虚拟化环境）不被支持作为客户端或站点服务器，这种支持仍存在。  
+Configuration Manager 支持在受支持的操作系统上安装客户端和站点系统角色，这些操作系统在某些虚拟化环境中作为虚拟机 (VM) 运行。 即使不支持虚拟主机（虚拟化环境）作为客户端或站点服务器，也存在这种支持。
 
-例如，使用 Microsoft Hyper-V Server 2012 托管运行 Windows Server 2012 的虚拟机。 可以在运行 Windows Server 2012 的虚拟机上安装客户端或站点系统角色。 无法在运行 Microsoft Hyper-V Server 2012 的主机上安装客户端。  
+例如，使用 Microsoft Hyper-V Server 2016 来托管运行 Windows Server 2019 的 VM。 可以在运行 Windows Server 2019 的 VM 上安装客户端或站点系统角色。 无法在运行 Microsoft Hyper-V Server 2016 的主机上安装客户端。
 
 ## <a name="virtualization-environments"></a>虚拟化环境
 
@@ -34,40 +34,44 @@ Configuration Manager 支持在受支持的操作系统上安装客户端和站�
 - Microsoft Hyper-V Server 2012  
 - Windows Server 2012  
 
-### <a name="note-1-nested-virtualization"></a><a name="bkmk_note1"></a> 注释 1：嵌套虚拟化
+<a name="bkmk_note1"></a>
 
-Configuration Manager 不支持[嵌套虚拟化](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)，这是 Windows Server 2016 的新增功能。
+> [!NOTE]
+> Configuration Manager 不支持[嵌套虚拟化](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)，这是 Windows Server 2016 的新增功能。
 
 ### <a name="virtualization-environment-support"></a>虚拟化环境支持
 
-每台虚拟计算机都需要与物理 Configuration Manager 计算机相同或 更多的硬件和软件要求。  
+每台虚拟计算机都需要与物理 Configuration Manager 计算机相同或 更多的硬件和软件要求。
 
-若要验证 Configuration Manager 是否支持虚拟化环境，请使用服务器虚拟化验证计划。 其中包括联机的“虚拟化计划支持策略向导”。 有关详细信息，请参阅 [Windows 服务器虚拟化验证计划](https://www.windowsservercatalog.com/svvp.aspx)。  
+若要验证 Configuration Manager 是否支持虚拟化环境，请使用服务器虚拟化验证计划。 其中包括联机的“虚拟化计划支持策略向导”。 有关详细信息，请参阅 [Windows 服务器虚拟化验证计划](https://www.windowsservercatalog.com/svvp.aspx)。
 
-> [!NOTE]  
-> Configuration Manager 不支持在 Mac 计算机上运行的虚拟 PC 或虚拟服务器来宾操作系统。  
+Configuration Manager 无法管理脱机的 VM。 主计算机上的 Configuration Manager 客户端无法管理脱机的 VM 映像。 例如，它无法安装软件更新或收集硬件清单。
 
-Configuration Manager 无法管理处于脱机状态的虚拟机。 既无法更新脱机虚拟机映像，也无法使用主计算机上的 Configuration Manager 客户端来收集清单。  
+通常，Configuration Manager 不会特别考虑 VM。 例如，如果你停止一个 VM，并且没有保存它的状态，Configuration Manager 可能无法确定是否必须重新安装软件更新。
 
-未提供虚拟机的特别注意事项。 例如，如果虚拟机停止并重启，但没有保存更新应用到的虚拟机的状态，Configuration Manager 可能无法确定是否需要将更新重新应用到虚拟机映像。  
+为了帮助在支持多个用户会话的虚拟环境中提高 Configuration Manager 客户端性能，它在默认情况下禁用了用户策略。 自版本 1910 起，可以在此方案中启用用户策略。 有关详细信息，请参阅[关于客户端设置 - 为多个用户会话启用用户策略](../../clients/deploy/about-client-settings.md#enable-user-policy-for-multiple-user-sessions)。
 
-##  <a name="microsoft-azure-virtual-machines"></a><a name="bkmk_Azure"></a> Microsoft Azure 虚拟机  
+## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a> Microsoft Azure VM
 
-Configuration Manager 可以在 Azure 中的虚拟机上运行，就像在数据中心内本地运行一样。 在以下方案中，请结合使用 Configuration Manager 与 Azure 虚拟机：  
+Configuration Manager 可以在 Azure 中的 VM 上运行，就像它在数据中心内本地运行一样。 在以下方案中，将 Configuration Manager 用于 Azure VM：
 
-- **方案 1**：在 Azure 虚拟机中运行 Configuration Manager。 使用它来管理其他 Azure 虚拟机上的客户端。  
+- **方案 1**：在 Azure VM 中运行 Configuration Manager。 使用它来管理其他 Azure VM 上的客户端。
 
-- **方案 2**：在 Azure 虚拟机中运行 Configuration Manager。 使用它来管理不在 Azure 上运行的客户端。  
+- **方案 2**：在 Azure VM 中运行 Configuration Manager。 使用它来管理不在 Azure 上运行的客户端。
 
-- **方案 3**：在 Azure 虚拟机中运行不同的 Configuration Manager 站点系统角色。 在本地数据中心内运行其他角色（已正确连接到 Azure）。  
+- **方案 3**：在 Azure VM 中运行不同的 Configuration Manager 站点系统角色。 在本地数据中心内运行其他角色（已正确连接到 Azure）。
 
-如果相同的网络 Configuration Manager 要求、受支持的配置和硬件要求适用于在本地安装它，这些要求也适用于在 Azure 虚拟机中进行安装。  
+对于网络、受支持的配置和硬件的 Configuration Manager 要求也适用于 Azure VM。
 
 有关详细信息，请参阅 [Azure 上的 Configuration Manager](../../understand/configuration-manager-on-azure.md)。
 
-> [!IMPORTANT]  
-> Configuration Manager 站点和在 Azure 虚拟机中运行的客户端与本地安装遵循相同的许可证要求。  
+> [!IMPORTANT]
+> 在 Azure VM 中运行的 Configuration Manager 站点和客户端与本地安装遵循相同的许可证要求。
 
 ## <a name="windows-virtual-desktop"></a>Windows 虚拟桌面
 
-[Windows 虚拟桌面](https://docs.microsoft.com/azure/virtual-desktop/)是 Microsoft Azure 和 Microsoft 365 的一项预览功能。 从版本 1906 开始，可以使用 Configuration Manager 管理在 Azure 中运行 Windows 的这些虚拟设备。 有关详细信息，请参阅[客户端和设备支持的操作系统](supported-operating-systems-for-clients-and-devices.md)。
+[Windows 虚拟桌面](https://docs.microsoft.com/azure/virtual-desktop/)是在 Microsoft Azure 上运行的桌面和应用虚拟化服务。 从版本 1906 开始，可以使用 Configuration Manager 管理在 Azure 中运行 Windows 的这些虚拟设备。 有关详细信息，请参阅[客户端和设备支持的操作系统](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop)。
+
+## <a name="next-steps"></a>后续步骤
+
+[在虚拟桌面基础结构 (VDI) 中管理 Configuration Manager 客户端](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)

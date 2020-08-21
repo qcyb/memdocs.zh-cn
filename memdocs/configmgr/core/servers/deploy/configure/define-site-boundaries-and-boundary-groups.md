@@ -2,7 +2,7 @@
 title: 使用边界和边界组
 titleSuffix: Configuration Manager
 description: 使用边界和边界组为你所管理的设备定义网络位置和可访问的站点系统。
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b1a6bb6ff9fdffad65db884fe8c3b68d3fc3263
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 385dc1b2f542c964b52515e755a9202ee951bc5c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690895"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126369"
 ---
 # <a name="define-site-boundaries-and-boundary-groups"></a>定义站点边界和边界组
 
@@ -29,12 +29,13 @@ Configuration Manager 中的边界用于定义 Intranet 上的网络位置。  �
 - Active Directory 站点名称  
 - IPv6 前缀  
 - IP 地址范围  
+- VPN（自版本 2006 起）
 
 Intranet 上的客户端评估其当前网络位置，然后使用该信息确定它们所属的边界组。  
 
 客户端使用边界组以：  
 
-- **查找分配的站点：** 边界组使客户端能够为客户端分配找到主站点。 此行为也称为“自动站点分配”。   
+- **查找分配的站点：** 边界组使客户端能够为客户端分配找到主站点。 此行为也称为“自动站点分配”。**  
 
 - **查找可以使用的某些站点系统角色：** 将边界组与某些站点系统角色关联。 然后站点向客户端提供边界组中的站点系统的列表。 客户端使用这些站点系统执行查找内容或附近的管理点等操作。  
 
@@ -57,7 +58,7 @@ Intranet 上的客户端评估其当前网络位置，然后使用该信息确�
 
 - 每个边界组可与站点分配的不同主站点相关联  
 
-- 如果边界属于两个拥有不同站点分配的不同边界组的成员，客户端将随机选择一个站点来联接。 此行为可能不会联接你希望客户端联接的站点。 此配置称为重叠边界。   
+- 如果边界属于两个拥有不同站点分配的不同边界组的成员，客户端将随机选择一个站点来联接。 此行为可能不会联接你希望客户端联接的站点。 此配置称为重叠边界。  
 
     重叠边界不会妨碍内容位置。 它可以成为为客户端提供额外可用资源或内容位置的有用配置。  
 

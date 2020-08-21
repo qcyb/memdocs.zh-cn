@@ -2,7 +2,7 @@
 title: 支持的客户端和设备
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 在客户端和设备上支持的操作系统版本。
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904538"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128842"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
@@ -58,6 +58,16 @@ Configuration Manager 支持在 Windows 和 macOS 计算机上安装客户端软
 
 > [!Note]  
 > 不能对运行 Windows 10 企业版多会话的客户端使用共同管理。 <!-- SCCMDocs-pr#3950 -->
+
+自版本 2006 起，包含要求规则或适用性列表的对象上的受支持 OS 版本列表中有“Windows 10 企业版多会话”平台。<!--6527576-->
+
+> [!NOTE]
+> 如果之前选择了顶层 Windows 10 平台，则此操作会自动选择所有子平台。 不会自动选择此新平台。 如果要添加“Windows 10 企业版多会话”，请在列表中手动将其选中。
+
+有关详细信息，请参阅以下文章：
+
+- [对虚拟化环境的支持](support-for-virtualization-environments.md)
+- [在虚拟桌面基础结构 (VDI) 中管理 Configuration Manager 客户端](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>受支持的服务器 OS 版本
 
@@ -151,8 +161,8 @@ Configuration Manager 测试并支持 Windows Server Datacenter 版本，但没�
 
 - Windows CE 7.0（ARM 和 x86 处理器）  
 
-    > [!Note]
-    > 对 Configuration Manager 中 Windows CE 7.0 的支持已弃用。 有关详细信息，请参阅 [Configuration Manager 客户端已删除和已弃用的项](../changes/deprecated/removed-and-deprecated-client.md)。
+    > [!IMPORTANT]
+    > Configuration Manager 版本 2006 不再支持将 Windows CE 7.0 用作客户端。 已在[版本 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated) 中宣布了弃用。
 
 #### <a name="supported-languages-include"></a>支持的语言包括
 
@@ -335,9 +345,8 @@ Configuration Manager 提供内置功能来管理本地移动设备，无需安�
 
 - **Windows 10 移动企业版**  
 
-    > [!Note]
-    > Configuration Manager 对 Windows 10 移动版和 Windows 10 移动企业版的支持已弃用。 有关详细信息，请参阅 [Configuration Manager 客户端已删除和已弃用的项](../changes/deprecated/removed-and-deprecated-client.md)。
-
+    > [!IMPORTANT]
+    > Configuration Manager 版本 2006 不再支持将 Windows 10 移动版和 Windows 10 移动企业版用作客户端。 已在[版本 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated) 中宣布了弃用。
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Exchange Server 连接器  
 

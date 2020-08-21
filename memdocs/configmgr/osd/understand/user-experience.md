@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703215"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124078"
 ---
 # <a name="user-experiences-for-os-deployment"></a>操作系统部署的用户体验
 
@@ -146,12 +146,11 @@ optional vs required
 
 - 显式禁用的步骤。 禁用的步骤不会在任务序列期间运行。
 
-    > [!NOTE]
-    > 已禁用组中的已启用步骤仍包括在总数中。
+- 自版本 2006 起，它不会对已禁用组中的已启用步骤进行计数。<!--6448412--> 在版本 2002 中，已禁用组中的已启用步骤仍包含在总计数中。
 
 ## <a name="task-sequence-error"></a>任务序列错误
 
-如果任务序列失败，它会显示“任务序列错误”窗口  。
+如果任务序列失败，它会显示“任务序列错误”窗口。
 
 ![任务序列错误窗口示例](media/task-sequence-error.png)
 

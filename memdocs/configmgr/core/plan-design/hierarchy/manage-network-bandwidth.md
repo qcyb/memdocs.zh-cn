@@ -10,12 +10,12 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ee7d00f3b5c98528d9999b83b07aa393b72e36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df3188e827623db8faa0b27be2fe282031e9fa50
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704155"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126386"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>管理用于内容的网络带宽
 为帮助管理用于 Configuration Manager 内容管理过程的网络带宽，可以使用内置控件进行计划和限制。 也可以使用预留内容。 以下几部分详细说明了这些选项。
@@ -61,7 +61,7 @@ ms.locfileid: "81704155"
 
     -   **在将包分配到分发点时自动下载内容**：如果包较小，并且计划和限制设置为内容分发提供了足够的控制，请使用此选项。  
 
-    -   **仅下载对分发点所做的内容更改**：如果预期包中内容的未来更新通常比初始包小，请使用此选项。 例如，可以预留 Microsoft Office 等应用程序，因为初始包大小超过 700 MB 并且太大而无法通过网络发送。 但是，对此包的内容更新可能小于 10 MB 并且容许通过网络进行分发。 另一个示例可能是驱动程序包，其中初始包较大，但逐渐添加到包中的驱动程序可能较小。  
+    -   **仅下载对分发点所做的内容更改**：如果预期包中内容的未来更新通常比初始包小，请使用此选项。 例如，可以预留 Microsoft 365 Apps 等应用程序，因为初始包太大（超过 700MB），无法通过网络发送。 但是，对此包的内容更新可能小于 10 MB 并且容许通过网络进行分发。 另一个示例可能是驱动程序包，其中初始包较大，但逐渐添加到包中的驱动程序可能较小。  
 
     -   **手动将此包中的内容复制到分发点**：如果具有较大的包（其中包含诸如操作系统之类的内容），并且决不想使用网络将内容分发到分发点，请使用此选项。 如果选择此选项，则必须在分发点上预留内容。  
 

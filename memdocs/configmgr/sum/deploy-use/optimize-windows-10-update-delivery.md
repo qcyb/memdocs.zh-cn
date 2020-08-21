@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267784"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129308"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>使用 Configuration Manager 优化 Windows 10 更新传递
 
@@ -70,7 +70,7 @@ Configuration Manager 支持许多对等技术，包括：
 > [!IMPORTANT]
 > - 必须启用（默认情况）且不能绕过传递优化。 有关详细信息，请参阅 [Windows 传递优化参考](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference)。
 > - 针对增量内容更改[软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#software-updates)时，请验证[传递优化客户端设置](../../core/clients/deploy/about-client-settings.md#delivery-optimization)。
-> - 如果 Office COM 已启用，则不能将传递优化用于 Office 365 客户端更新。 Configuration Manager 使用 Office COM 来管理 Office 365 客户端更新。 你可以取消注册 Office COM，从而允许对 Office 365 更新使用传递优化。 在 Office COM 禁用后，Office 365 软件更新由默认 Office 自动更新 2.0 计划任务进行管理。 也就是说，配置管理器不命令或监视 Office 365 更新的安装过程。 Configuration Manager 会继续收集硬件清单中的信息，以便在控制台中填充 Office 365 客户端管理仪表板。 若要了解如何取消注册 Office COM，请参阅[启用 office 365 客户端以从 OFFICE CDN（而不是 Configuration Manager）接收更新](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)。
+> - 如果 Office COM 已启用，则无法将传递优化用于 Microsoft 365 Apps 客户端更新。 Configuration Manager 使用 Office COM 来管理 Microsoft 365 Apps 客户端更新。 可以通过取消注册 Office COM 来允许将传递优化用于 Microsoft 365 Apps 更新。 在 Office COM 被禁用后，Microsoft 365 Apps 软件更新由默认 Office 自动更新 2.0 计划性任务进行管理。 也就是说，Configuration Manager 不会命令或监视 Microsoft 365 Apps 更新的安装过程。 Configuration Manager 会继续收集硬件清单中的信息，以便在控制台中填充 Office 365 客户端管理仪表板。 若要了解如何取消注册 Office COM，请参阅[启用 office 365 客户端以从 OFFICE CDN（而不是 Configuration Manager）接收更新](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)。
 > - 如果对内容存储使用 CMG，且[客户端设置](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)“下载增量内容(若有)”已启用，那么第三方更新的内容不会下载到客户端。 <!--6598587-->
 
 
@@ -98,8 +98,8 @@ Configuration Manager 支持许多对等技术，包括：
 |---------|---------|---------|---------|
 | 支持跨子网 | 是 | 是 | 否 |
 | 带宽限制 | 是（本机） | 是（通过 BITS） | 是（通过 BITS） |
-| 支持部分内容 | 是，适用于此列的下一行中列出的所有受支持的内容类型。 | 仅限 Office 365 和快速更新 | 是，适用于此列的下一行中列出的所有受支持的内容类型。 |
-| 支持的内容类型 | **通过 ConfigMgr：** </br> -快速更新 </br> -所有 Windows 更新（自版本 1910 起）。 不包括 Office 更新。</br> </br> **通过 Microsoft 云：**</br> - Windows 和安全更新</br> - 驱动程序</br> - Windows 应用商店应用</br> - 适用于企业的 Windows 应用商店应用 | 所有 ConfigMgr 内容类型，包括在 [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) 中下载的映像 | 所有 ConfigMgr 内容类型，映像除外 |
+| 支持部分内容 | 是，适用于此列的下一行中列出的所有受支持的内容类型。 | 只适用于 Microsoft 365 Apps 和快速更新 | 是，适用于此列的下一行中列出的所有受支持的内容类型。 |
+| 支持的内容类型 | **通过 ConfigMgr：** </br> -快速更新 </br> -所有 Windows 更新（自版本 1910 起）。 这不包括 Microsoft 365 Apps 更新。</br> </br> **通过 Microsoft 云：**</br> - Windows 和安全更新</br> - 驱动程序</br> - Windows 应用商店应用</br> - 适用于企业的 Windows 应用商店应用 | 所有 ConfigMgr 内容类型，包括在 [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) 中下载的映像 | 所有 ConfigMgr 内容类型，映像除外 |
 | 控制磁盘上的缓存大小 | 是 | 是 | 是 |
 | 发现对等源 | 自动 | 手动（客户端代理设置） | 自动 |
 | 对等发现 | 通过传递优化云服务（需要 Internet 访问） | 通过管理点（基于客户端边界组） | 多播 |

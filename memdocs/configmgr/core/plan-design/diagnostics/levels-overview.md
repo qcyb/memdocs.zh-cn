@@ -2,7 +2,7 @@
 title: 诊断使用情况数据的级别
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 收集的诊断和使用情况数据的级别
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9de63280786d620229c7d408f09ef2fe583e231d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d27e4a2f82de75cde853f3ce95c98ea8a12c465
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703795"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126498"
 ---
 # <a name="levels-of-diagnostic-usage-data"></a>诊断使用情况数据的级别
 
@@ -63,11 +63,11 @@ Microsoft 建议使用此级别，因为它提供了最少的数据来改进产�
 
 以下文章详细介绍了每个受支持版本的 Configuration Manager 在每个级别上收集的特定数据：
 
+- [版本 2006 收集的诊断和使用情况数据](levels-of-diagnostic-usage-data-collection-2006.md)
 - [2002 的诊断和使用情况数据](levels-of-diagnostic-usage-data-collection-2002.md)
 - [1910 的诊断和使用情况数据](levels-of-diagnostic-usage-data-collection-1910.md)
 - [1906 的诊断和使用情况数据](levels-of-diagnostic-usage-data-collection-1906.md)
 - [1902 的诊断和使用情况数据](levels-of-diagnostic-usage-data-collection-1902.md)
-- [1810 的诊断和使用情况数据](levels-of-diagnostic-usage-data-collection-1810.md)
 
 ## <a name="next-steps"></a>后续步骤
 

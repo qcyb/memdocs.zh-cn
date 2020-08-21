@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4972f6e8689ad44dbd1a19adcde104cd5f59038c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702395"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128927"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -121,7 +121,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 <!--3610960-->
 Configuration Manager 现在支持从层次结构中的管理中心站点运行 CMPivot。 主站点仍可处理与客户端的通信。 从管理中心站点运行 CMPivot 时，它将通过高速消息订阅通道与主站点通信。 该通信不依赖于站点之间的标准 SQL 复制。
 
-有关详细信息，请参阅[使用 CMPivot 获得实时数据](../../servers/manage/cmpivot.md#bkmk_cmpivot1902)。
+有关详细信息，请参阅[使用 CMPivot 获得实时数据](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902)。
 
 ### <a name="edit-or-copy-powershell-scripts"></a>编辑或复制 PowerShell 脚本
 
@@ -413,7 +413,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 - “监视”  工作区的“部署”  节点中，视图按整数值排序
 - 移动警告以获得大量结果
 
-有关详细信息，请参阅[使用 Configuration Manager 控制台](../../servers/manage/admin-console.md#tips)。
+有关详细信息，请参阅 [Configuration Manager 控制台提示](../../servers/manage/admin-console-tips.md)。
 
 ### <a name="configuration-manager-console-notifications"></a>Configuration Manager 控制台通知
 
@@ -425,7 +425,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 此通知位于功能区下方控制台窗口顶部的栏。 Configuration Manager 更新可用时，它将替换以前的体验。 这些控制台内通知仍显示关键信息，但不会干扰你在控制台中的工作。 不能消除重要通知。 控制台在标题栏的新通知区域中显示所有通知。
 
-有关详细信息，请参阅[使用 Configuration Manager 控制台](../../servers/manage/admin-console.md)。
+有关详细信息，请参阅 [Configuration Manager 控制台通知](../../servers/manage/admin-console-notifications.md)。
 
 ### <a name="confirmation-of-console-feedback"></a>确认控制台反馈
 
@@ -453,7 +453,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 <!--3600878-->
 现在可以在 Configuration Manager 控制台的设备视图中搜索 MAC 地址。 此属性在 OS 部署管理员排查基于 PXE 部署的问题时很有用。 查看设备列表时，请向视图添加“MAC 地址”列  。 使用搜索字段添加“MAC 地址”搜索条件  。
 
-有关详细信息，请参阅[使用 Configuration Manager 控制台](../../servers/manage/admin-console.md#tips)。
+有关详细信息，请参阅 [Configuration Manager 控制台提示](../../servers/manage/admin-console-tips.md)。
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>使用 .NET 4.7 以改进控制台的辅助功能
 

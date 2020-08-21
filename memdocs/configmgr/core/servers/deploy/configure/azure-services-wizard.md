@@ -2,20 +2,20 @@
 title: 配置 Azure 服务
 titleSuffix: Configuration Manager
 description: 通过云管理、适用于企业的 Microsoft Store 以及 Log Analytics 等 Azure 服务连接 Configuration Manager 环境。
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715316"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128471"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -229,6 +229,17 @@ ms.locfileid: "84715316"
 最后，通过“摘要”页、“进度”页和“完成”页完成 Azure 服务向导。 已在 Configuration Manager 中完成一项 Azure 服务的配置。 重复执行此过程以配置其他 Azure 服务。
 
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> 续订密钥
+
+需要在 Azure AD 应用密钥的有效期结束之前续订密钥。 如果你让密钥过期，那么 Configuration Manager 就无法使用 Azure AD 进行身份验证，进而导致已连接的 Azure 服务停止运行。
+
+自版本 2006 起，Configuration Manager 控制台对以下情况显示通知：<!--6386392-->
+
+- 一个或多个 Azure AD 应用密钥即将过期时
+- 一个或多个 Azure AD 应用密钥已过期时
+
+若要缓解这两种情况，请续订密钥。
+
+若要详细了解如何与这些通知进行交互，请参阅 [Configuration Manager 控制台通知](../../manage/admin-console-notifications.md)。
 
 ### <a name="renew-key-for-created-app"></a>续订已创建应用的密钥
 

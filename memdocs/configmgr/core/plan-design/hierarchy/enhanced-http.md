@@ -2,7 +2,7 @@
 title: 增强型 HTTP
 titleSuffix: Configuration Manager
 description: 使用新式身份验证来保护客户端通信，而无需 PKI 证书。
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262092"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997908"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
@@ -118,6 +118,11 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 
 有关客户端如何使用此配置与管理点和分发点进行通信的详细信息，请参阅[从客户端到站点系统和服务的通信](communications-between-endpoints.md#Planning_Client_to_Site_System)。
 
+## <a name="validate-the-certificate"></a>验证证书
+
+如果你启用增强型 HTTP，站点服务器会生成名为“SMS 角色 SSL 证书”的自签名证书。 此证书由根“SMS 颁发”证书颁发。 管理点将此证书添加到与端口 443 绑定的 IIS 默认网站。
+
+若要查看配置的状态，请查阅 mpcontrol.log。
 
 ## <a name="see-also"></a>另请参阅
 

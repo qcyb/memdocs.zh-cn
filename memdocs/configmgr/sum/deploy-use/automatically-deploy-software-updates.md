@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240025"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127740"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自动部署软件更新  
 
@@ -47,7 +47,7 @@ ms.locfileid: "86240025"
 
          - “周二补丁日”模板提供在逐月部署软件更新时常用的设置。  
 
-         - “Office 365 客户端更新”模板提供了在部署 Office 365 专业增强版客户端更新时使用的常用设置。
+         - “Office 365 客户端更新”模板提供了在部署 Microsoft 365 Apps 客户端更新时使用的通用设置。
              > [!Note]
              > 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 从 2020 年 6 月 9 日开始，如果 ADR 依赖于“Title”属性，则需要对它进行编辑。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` 是新标题的示例。 有关针对标题更改修改 ADR 的详细信息，请参阅 [Microsoft 365 应用的更新通道](manage-office-365-proplus-updates.md#bkmk_channel)。 有关名称变更的详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。
 
@@ -199,7 +199,7 @@ ms.locfileid: "86240025"
 
         - **启用二进制差异复制**：启用此设置以对部署包使用二进制差异复制。 有关详细信息，请参阅[二进制差异复制](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)。  
 
-    - **没有部署包**：自 1806 版本起，无需先下载内容并将其分发到分发点，即可将软件更新部署到设备。 处理非常大的更新内容时，此设置很有用。 希望客户端始终从 Microsoft 更新云服务中获取内容时，也请使用此设置。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。<!--1357933-->  
+    - **没有部署包**：自 1806 版本起，无需先下载内容并将其分发到分发点，即可将软件更新部署到设备。 处理非常大的更新内容时，此设置很有用。 希望客户端始终从 Microsoft 更新云服务中获取内容时，也请使用此设置。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理支持的任何更新类型，包括 Windows 和 Microsoft 365 Apps 更新。<!--1357933-->  
 
         > [!Note]  
         > 选择此选项并应用设置后，将无法再更改它。 其他选项将灰显。<!--SCCMDocs-pr issue 3003-->  

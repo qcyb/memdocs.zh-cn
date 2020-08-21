@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268532"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125825"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>桌面分析中的运行状况监视
 
@@ -27,7 +27,7 @@ ms.locfileid: "83268532"
 ![桌面分析的监视运行状况页的屏幕截图](media/monitor-health.png)
 
 > [!NOTE]  
-> 桌面分析仅从提供可用作分母的使用情况数据的设备收集运行状况数据。 这意味着不包含运行 Windows 7 和 Windows 10 的设备，这些设备未设置为在“增强(受限)”级别共享诊断数据。 如果将 10% 以上运行 Windows 10 的设备设置为在“增强(受限)”级别以外的级别上共享诊断数据，则“监视运行状况”页将在标题区域显示警告  。  
+> 桌面分析仅从提供可用作分母的使用情况数据的设备收集运行状况数据。 也就是说，不包括运行 Windows 7 和 Windows 10 且没有被设置为在“可选(受限)”级别共享诊断数据的设备。 如果超过 10% 的运行 Windows 10 的设备被设置为在非“可选(受限)”级别上共享诊断数据，则“监视运行状况”页在横幅区域中显示警告。  
 
 若要查看有关特定应用的详细信息，请在列表中选中它。
 

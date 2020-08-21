@@ -2,7 +2,7 @@
 title: 如何使用任务序列变量
 titleSuffix: Configuration Manager
 description: 了解如何使用 Configuration Manager 任务序列中的变量。
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022256"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123930"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>如何使用 Configuration Manager 中的任务序列变量
 
@@ -78,7 +78,7 @@ ms.locfileid: "86022256"
 
 - 任务序列变量名称不能以空格开头或结尾。 此外还不能有嵌入空格。 变量名称开头或结尾的任何空格会被任务序列忽略。  
 
-对于可以创建的任务序列变量数量没有设定限制。 但是，变量数受任务序列环境大小的限制。 任务序列环境的总大小限制为 32 MB。  
+对于可以创建的任务序列变量数量没有设定限制。 但是，变量数受任务序列环境大小的限制。 任务序列环境的总大小上限为 8KB。 有关详细信息，请参阅[减少任务序列策略的大小](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize)。
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a> 只读变量
 
@@ -190,10 +190,10 @@ ms.locfileid: "86022256"
 
 例如，设备 XYZ 是集合 ABC 的成员。 将 MyVariable 分配到集合 ABC，值为 1。 同时将 MyVariable 分配到设备 XYZ，值为 2。 分配给 XYZ 的变量优先于分配给集合 ABC 的变量。 当具有此变量的任务序列在 XYZ 上运行时，MyVariable 的值为 2。
 
-可以隐藏特定于设备和特定于集合的变量，以便它们在 Configuration Manager 控制台中不可见。 使用选项“不要在 Configuration Manager 控制台中显示此值”时，控制台中不显示该变量的值。 但在变量运行时，任务序列仍可使用该变量。 如果不想再隐藏这些变量，请先删除它们。 然后重新定义变量，而无需选择选项来隐藏它们。  
+可以隐藏特定于设备和特定于集合的变量，以便它们在 Configuration Manager 控制台中不可见。 使用选项“不要在 Configuration Manager 控制台中显示此值”时，控制台中不显示该变量的值。 任务序列日志文件 (smsts.log) 或任务序列调试器也不会显示变量值。 但在变量运行时，任务序列仍可使用该变量。 如果不想再隐藏这些变量，请先删除它们。 然后重新定义变量，而无需选择选项来隐藏它们。  
 
 > [!WARNING]  
-> “不要在 Configuration Manager 控制台中显示此值”设置仅适用于 Configuration Manager 控制台。 变量的值仍会显示在任务序列日志文件 (smsts.log) 中。
+> 如果你将变量添加在“运行命令行”步骤的命令行中，则任务序列日志文件会显示包含变量值的完整命令行。 为了防止可能的敏感数据显示在日志文件中，请将任务序列变量“OSDDoNotLogCommand”设置为 `TRUE`。
 
 可以在主站点或管理中心站点上管理因设备而异的变量。 Configuration Manager 不支持一台设备具有 1,000 个以上的已分配变量。  
 

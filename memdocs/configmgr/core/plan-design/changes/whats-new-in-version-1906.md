@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879093"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128978"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -149,7 +149,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 
 对于 CMPivot，你现在有更多的算术运算符和聚合器，还可以添加查询联接（例如可以同时使用注册表和文件）。
 
-有关详细信息，请参阅 [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906)。
+有关详细信息，请参阅 [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906)。
 
 ### <a name="cmpivot-standalone"></a>CMPivot 独立应用
 
@@ -171,7 +171,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
 - 在集合上运行 CMPivot
 - 读取清单报表
 
-有关详细信息，请参阅 [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906)。
+有关详细信息，请参阅 [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906)。
 
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>内容管理
@@ -505,7 +505,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
    - “软件库” > “Windows 10 维护服务” > “所有 Windows 10 更新”  
    - “软件库” > “Office 365 客户端管理” > “Office 365 更新”  
 
-有关详细信息，请参阅[监视软件更新](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[管理 Windows 即服务](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)和[管理 Office 365 专业增强版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates)。
+有关详细信息，请参阅[监视软件更新](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[管理 Windows 即服务](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)和[管理 Office 365 专业增强版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a>Office 管理
@@ -538,7 +538,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 现在可以在文件夹上设置安全作用域。 如果有权访问文件夹中的对象，但无权访问文件夹，则无法查看对象。 同样，如果有权访问文件夹，但无权访问该文件夹中的对象，则无法查看对象。 右键单击文件夹，选择“设置安全作用域”，然后选择要应用的安全作用域。
 
-有关详细信息，请参阅[使用 Configuration Manager 控制台](../../servers/manage/admin-console.md#tips)和[配置基于角色的管理](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)。
+有关详细信息，请参阅 [Configuration Manager 控制台提示](../../servers/manage/admin-console-tips.md)和[配置基于角色的管理](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)。
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>将 SMBIOS GUID 列添加到设备和设备集合节点
 

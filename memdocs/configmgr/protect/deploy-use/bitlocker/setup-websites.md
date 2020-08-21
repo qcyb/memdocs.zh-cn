@@ -2,20 +2,20 @@
 title: 设置 BitLocker 门户
 titleSuffix: Configuration Manager
 description: 安装用于自助服务门户以及管理和监视网站的 BitLocker 管理组件。
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715673"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129148"
 ---
 # <a name="set-up-bitlocker-portals"></a>设置 BitLocker 门户
 
@@ -31,9 +31,46 @@ ms.locfileid: "84715673"
 可以在安装了 IIS 的现有站点服务器或站点系统服务器上安装这些门户，也可以使用独立 Web 服务器来托管它们。
 
 > [!NOTE]
-> 请仅使用主站点数据库安装自助门户以及管理和监视网站。 在层次结构中，为每个主站点安装这些网站。
+> 自版本 2006 起，可以在管理中心站点安装 BitLocker 自助服务门户以及管理和监视网站。<!-- 5925693 -->
+>
+> 在版本 2002 及更低版本中，只安装自助服务门户以及包含主站点数据库的管理和监视网站。 在层次结构中，为每个主站点安装这些网站。
 
 开始前，请先确认是否满足这些组件的[先决条件](../../plan-design/bitlocker-management.md#prerequisites)。
+
+## <a name="run-the-script"></a>运行脚本
+
+在目标 Web 服务器上，执行以下操作：
+
+> [!NOTE]
+> 可能需要多次运行脚本，具体视站点设计而定。 例如，在管理点上运行脚本，以安装管理和监视网站。 然后，在独立 Web 服务器上再次运行它，以安装自助服务门户。
+
+1. 将站点服务器上 Configuration Manager 安装文件夹内 `SMSSETUP\BIN\X64` 中的以下文件复制到目标服务器上的本地文件夹：
+
+    - `MBAMWebSite.cab`
+    - `MBAMWebSiteInstaller.ps1`
+
+1. 以管理员身份运行 PowerShell，然后运行如下命令行的脚本：
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
+    ```
+
+    例如，
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
+    ```
+
+    > [!IMPORTANT]
+    > 此示例命令行使用所有可能参数来展示它们的用法。 请根据你环境中的要求来调整你的使用。
+
+安装完成后，通过以下 URL 访问门户：
+
+- 自助服务门户：`https://webserver.contoso.com/SelfService`
+- 管理和监视网站：`https://webserver.contoso.com/HelpDesk`
+
+> [!NOTE]
+> Microsoft 建议但不要求使用 HTTPS。 有关详细信息，请参阅[如何在 IIS 上设置 SSL](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)。
 
 ## <a name="script-usage"></a>脚本使用情况
 
@@ -71,42 +108,6 @@ ms.locfileid: "84715673"
 - `-InstallDirectory`：脚本将在其中安装 Web 应用程序文件的路径。 默认情况下，此路径为 `C:\inetpub`。 使用此参数前，请创建自定义目录。
 
 - `-Uninstall`：在以前安装了 BitLocker 管理支持/自助服务 Web 门户站点的 Web 服务器上卸载这些站点。
-
-
-## <a name="run-the-script"></a>运行脚本
-
-在目标 Web 服务器上，执行以下操作：
-
-> [!NOTE]
-> 可能需要多次运行脚本，具体视站点设计而定。 例如，在管理点上运行脚本，以安装管理和监视网站。 然后，在独立 Web 服务器上再次运行它，以安装自助服务门户。
-
-1. 将站点服务器上 Configuration Manager 安装文件夹内 `SMSSETUP\BIN\X64` 中的以下文件复制到目标服务器上的本地文件夹：
-
-    - `MBAMWebSite.cab`
-    - `MBAMWebSiteInstaller.ps1`
-
-1. 以管理员身份运行 PowerShell，然后运行如下命令行的脚本：
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
-    ```
-
-    例如，
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
-    ```
-
-    > [!IMPORTANT]
-    > 此示例命令行使用所有可能参数来展示它们的用法。 请根据你环境中的要求来调整你的使用。
-
-安装完成后，通过以下 URL 访问门户：
-
-- 自助服务门户：`https://webserver.contoso.com/SelfService`
-- 管理和监视网站：`https://webserver.contoso.com/HelpDesk`
-
-> [!NOTE]
-> Microsoft 建议但不要求使用 HTTPS。 有关详细信息，请参阅[如何在 IIS 上设置 SSL](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)。
 
 ## <a name="verify"></a>验证
 

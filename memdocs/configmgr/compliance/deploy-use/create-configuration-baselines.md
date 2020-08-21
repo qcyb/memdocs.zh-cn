@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240467"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127131"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>创建 Configuration Manager 中的配置基线
 
@@ -49,11 +49,11 @@ Configuration Manager 中的配置基线包含预定义的配置项目，还可�
 
 4. “配置数据”  列表将显示此配置基线中包含的所有配置项目或配置基线。 单击“添加”  可向列表中添加新配置项目或配置基线。 可以选择下列项目:  
 
-   - <bpt id="p1">**</bpt>Configuration Items<ept id="p1">**</ept>  
+   - ****  
 
    - **软件更新**  
 
-   - <bpt id="p1">**</bpt>Configuration Baselines<ept id="p1">**</ept>  
+   - ****  
      > [!IMPORTANT]
      > 必须将每个配置基线限制为不超过 1000 个软件更新。
 5. 使用“更改目的”列表来指定在“配置数据”列表中已选择的配置项目的行为   。 可以选择下列项目：  
@@ -84,7 +84,7 @@ Configuration Manager 中的配置基线包含预定义的配置项目，还可�
 <!--3608345-->
 （从版本 1910 中引入） 
 
-自版本 1910 开始，可以将自定义配置基线评估添加为合规性策略评估规则。 创建或编辑配置基线时，有一个选项“将此基线作为合规性策略的一部分进行评估”  。 添加或编辑合规性策略规则时，有一个名为“在合规性策略评估中包含配置的基线”的条件  。 对于共同管理的设备，当你配置 Intune 以将 Configuration Manager 合规性评估结果作为总体合规性状态的一部分时，此信息将发送到 Azure AD。 然后，你可以使用它对 Office 365 资源进行条件访问。 有关详细信息，请参阅[启用共同管理的条件访问](../../comanage/quickstart-conditional-access.md)。
+自版本 1910 开始，可以将自定义配置基线评估添加为合规性策略评估规则。 创建或编辑配置基线时，有一个选项“将此基线作为合规性策略的一部分进行评估”  。 添加或编辑合规性策略规则时，有一个名为“在合规性策略评估中包含配置的基线”的条件  。 对于共同管理的设备，当你配置 Intune 以将 Configuration Manager 合规性评估结果作为总体合规性状态的一部分时，此信息将发送到 Azure AD。 然后，可以使用它对 Microsoft 365 Apps 资源进行条件访问。 有关详细信息，请参阅[启用共同管理的条件访问](../../comanage/quickstart-conditional-access.md)。
 
 若要将自定义配置基线包含在合规性策略评估中，请执行以下操作：
 

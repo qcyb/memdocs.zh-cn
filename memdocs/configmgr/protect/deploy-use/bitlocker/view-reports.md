@@ -2,20 +2,20 @@
 title: 查看 BitLocker 报表
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中的 BitLocker 管理报表
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d10717f980922e1f6d1fca9224e288b4df709da2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7c44ec9a9ed91d8543fedbdd5fba191b3989da19
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699615"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129200"
 ---
 # <a name="view-bitlocker-reports"></a>查看 BitLocker 报表
 
@@ -49,7 +49,7 @@ ms.locfileid: "81699615"
 
 使用此报告收集特定于计算机的信息。 它提供有关操作系统 (OS) 驱动器以及任何固定数据驱动器的详细加密信息。 要查看每个驱动器的详细信息，请展开“计算机名”项。 它还指示应用于计算机上每种驱动器类型的策略。
 
-[![BitLocker 计算机符合性报表示例屏幕截图](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
+:::image type="content" source="media/bitlocker-computer-compliance.png" alt-text="BitLocker 计算机符合性报表的示例屏幕截图" lightbox="media/bitlocker-computer-compliance.png":::
 
 还可以使用此报表来确定丢失或被盗计算机的最后已知 BitLocker 加密状态。 Configuration Manager 根据所部署的 BitLocker 策略确定设备的符合性。 尝试确定设备的 BitLocker 加密状态之前，请先验证已部署到其中的策略。
 
@@ -100,7 +100,7 @@ ms.locfileid: "81699615"
 
 - 按驱动器类型进行的相容性状态分发
 
-[![BitLocker 企业相容性仪表板 示例屏幕截图](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-dashboard.png" alt-text="BitLocker 企业相容性仪表板 示例屏幕截图" lightbox="media/bitlocker-enterprise-compliance-dashboard.png":::
 
 ### <a name="compliance-status-distribution"></a>相容性状态分发
 
@@ -148,7 +148,7 @@ ms.locfileid: "81699615"
 
 此报表显示有关整个组织中部署了 BitLocker 管理策略的计算机集合的总体 BitLocker 符合性信息。
 
-[![BitLocker 企业相容性详细信息 示例屏幕截图](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-details.png" alt-text="BitLocker 企业相容性详细信息 示例屏幕截图" lightbox="media/bitlocker-enterprise-compliance-details.png":::
 
 |列名称|说明|
 |--- |--- |
@@ -180,7 +180,7 @@ ms.locfileid: "81699615"
 
 使用此报表显示整个组织的 BitLocker 符合性情况。 它还显示了部署了 BitLocker 管理策略的单个计算机的符合性。
 
-[![BitLocker 企业相容性摘要 示例屏幕截图](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-summary.png" alt-text="BitLocker 企业相容性摘要 示例屏幕截图" lightbox="media/bitlocker-enterprise-compliance-summary.png":::
 
 |列名称|说明|
 |--- |--- |
@@ -199,9 +199,7 @@ ms.locfileid: "81699615"
 ## <a name="recovery-audit-report"></a><a name="bkmk-audit"></a>恢复审核报告
 
 > [!NOTE]
-> 还可从 [BitLocker 管理和监视网站](helpdesk-portal.md#reports)获取此报表。
->
-> 若要在 Configuration Manager 控制台中查看此报告，请转到“监视”工作区  。 在导航窗格中，依次展开“报表”节点、“报表”，然后展开“BitLocker 管理”文件夹    。 为本地化版本的报表选择子文件夹，例如“en-us”  。
+> 自版本 2002 起，只能从 [BitLocker 管理和监视网站](helpdesk-portal.md#reports)获取此报表。<!-- 7629549 -->
 
 使用此报告审核已请求对 BitLocker 恢复密钥进行访问的用户。 可根据以下条件进行筛选：
 
@@ -210,15 +208,15 @@ ms.locfileid: "81699615"
 - 请求的特定类型的密钥：恢复密钥密码、恢复密钥 ID 或 TPM 密码哈希
 - 日期范围，在此期间会发生检索
 
-[![BitLocker 恢复审核报表的示例屏幕截图](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+:::image type="content" source="media/bitlocker-recovery-audit-report.png" alt-text="BitLocker 恢复审核报表的示例屏幕截图" lightbox="media/bitlocker-recovery-audit-report.png":::
 
 |列&nbsp;名称|说明|
 |----------------|----|
 |请求日期和时间|最终用户或支持人员用户请求密钥的日期和时间。|
-|审核请求源|发出请求的站点。 有效值为“自助服务门户”或“支持人员”   。|
-|请求结果|请求的状态。 有效值为“成功”或“失败”   。|
-|支持人员用户|请求密钥的管理用户。 如果支持管理员在未指定用户名的情况下恢复密钥，则“最终用户”字段为空  。 标准支持人员用户必须指定将在此字段中显示的用户名。 对于通过自助服务门户进行的恢复，此字段和“最终用户”字段将显示发出请求的用户的名称  。|
+|审核请求源|发出请求的站点。 有效值为“自助服务门户”或“支持人员” 。|
+|请求结果|请求的状态。 有效值为“成功”或“失败” 。|
+|支持人员用户|请求密钥的管理用户。 如果支持管理员在未指定用户名的情况下恢复密钥，则“最终用户”字段为空。 标准支持人员用户必须指定将在此字段中显示的用户名。 对于通过自助服务门户进行的恢复，此字段和“最终用户”字段将显示发出请求的用户的名称。|
 |最终用户|请求密钥检索的用户的名称。|
-|计算机|恢复的计算机的名称。|
-|键类型|用户请求的密钥类型。 三种密钥类型为：<br/><br/>-  恢复密钥密码：用于在恢复模式下恢复计算机 <br/>- 恢复密钥 ID：用于在恢复模式下恢复另一个用户的计算机 <br/>-  TPM 密码哈希：用于恢复具有锁定的 TPM 的计算机 |
+|Computer|恢复的计算机的名称。|
+|密钥类型|用户请求的密钥类型。 三种密钥类型为：<br/><br/>-  恢复密钥密码：用于在恢复模式下恢复计算机<br/>- 恢复密钥 ID：用于在恢复模式下恢复另一个用户的计算机****<br/>-  TPM 密码哈希：用于恢复具有锁定的 TPM 的计算机|
 |原因说明|用户为何基于其在表单中选择的选项来请求指定的密钥类型。|

@@ -2,7 +2,7 @@
 title: 日志文件引用
 titleSuffix: Configuration Manager
 description: Configuration Manager 客户端、服务器和依赖组件的所有日志文件的引用。
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210337"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126420"
 ---
 # <a name="log-file-reference"></a>日志文件引用
 
@@ -331,6 +331,7 @@ ms.locfileid: "86210337"
 |sitestat.log|记录所有站点系统的监视进程的可用性和磁盘空间。|站点服务器|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| 记录 Azure Active Directory (Azure AD) 用户和用户组发现的日志文件。 在 1910 及更低版本中，它还记录了将集合成员结果同步到 Azure AD 的情况。| 站点服务器|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|用于同步来自适用于企业的 Microsoft Store 的应用的组件的日志文件。|站点服务器|
+|SMS_DataEngine.log|管理见解的日志文件。|站点服务器|
 |SMS_ISVUPDATES_SYNCAGENT.log| 用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。|
 |SMS_OrchestrationGroup.log| 业务流程组的日志文件|站点服务器|
 |SMS_PhasedDeployment.log| 分阶段部署的日志文件|Configuration Manager 层次结构中的顶层站点|
@@ -350,7 +351,7 @@ ms.locfileid: "86210337"
 |statesys.log|记录对状态系统消息的处理。|站点服务器|  
 |statmgr.log|记录将所有状态消息写入到数据库的操作。|站点服务器|  
 |swmproc.log|记录对计数文件和设置的处理。|站点服务器|
-|UXAnalyticsUploadWorker.log|记录将数据上传到终结点分析服务的过程。|站点服务器|   
+|UXAnalyticsUploadWorker.log|记录将数据上传到终结点分析服务的过程。|站点服务器|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> 站点服务器安装
 

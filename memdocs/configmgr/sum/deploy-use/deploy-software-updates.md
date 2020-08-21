@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110417"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127665"
 ---
 # <a name="deploy-software-updates"></a>部署软件更新  
 
@@ -70,7 +70,7 @@ ms.locfileid: "82110417"
 
 > [!Note]
 > - 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
-> - 手动部署 Office 365 客户端更新时，请在“软件库”工作区的“Office 365 客户端管理”下的“Office 365 更新”节点中找到它们    。 
+> - 手动部署 Microsoft 365 Apps 客户端更新时，请在“软件库”工作区的“Office 365 客户端管理”下的“Office 365 更新”节点中查找它们。 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> 自动部署软件更新
 

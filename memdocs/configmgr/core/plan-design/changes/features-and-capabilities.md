@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706395"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129029"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Configuration Manager 的特性和功能
 
@@ -49,7 +49,7 @@ ms.locfileid: "81706395"
 
 ## <a name="application-management"></a>应用程序管理
 
-帮助你创建、管理、部署和监视一系列你管理的不同设备的应用程序。 从 Configuration Manager 控制台部署、更新和管理 Office 365。 此外，Configuration Manager 还与适用于企业和教育的 Microsoft Store 集成，以提供基于云的应用。 有关详细信息，请参阅[应用程序管理简介](../../../apps/understand/introduction-to-application-management.md)。
+帮助你创建、管理、部署和监视一系列你管理的不同设备的应用程序。 在 Configuration Manager 控制台中部署、更新和管理 Microsoft 365 Apps。 此外，Configuration Manager 还与适用于企业和教育的 Microsoft Store 集成，以提供基于云的应用。 有关详细信息，请参阅[应用程序管理简介](../../../apps/understand/introduction-to-application-management.md)。
 
 ## <a name="os-deployment"></a>OS 部署
 

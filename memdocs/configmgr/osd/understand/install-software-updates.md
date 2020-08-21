@@ -5,17 +5,17 @@ description: 使用 Configuration Manager 任务序列步骤“安装软件更�
 ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6528e979222bc6ecea2a57a003ff5266b5c096c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c5fdc15ba05786c25361c394bc0aa8dc305d666
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703305"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124247"
 ---
 # <a name="install-software-updates"></a>安装软件更新
 
@@ -104,7 +104,7 @@ dism /Unmount-Image /MountDir:C:\Mountdir /Commit
 
 - 手动选择更新
 - 增加了将映像分发到分发点的时间
-- 仅支持基于 CBS 的更新。 无法应用 Office 更新
+- 仅支持基于 CBS 的更新。 它无法应用 Microsoft 365 Apps 更新
 
 > [!Tip]  
 > 可以使用 PowerShell 自动选择软件更新。 使用 [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet 获取更新列表。 然后，使用 [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet 创建离线维护计划。 以下示例介绍了一种自动执行此操作的方法：

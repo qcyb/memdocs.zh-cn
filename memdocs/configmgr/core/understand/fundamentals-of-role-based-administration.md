@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 62faf2fd736f9751e8b33e821cb814f527a1197c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c39d3380212debe97c2d2f33de6a98fecfb8402e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707085"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126046"
 ---
 # <a name="fundamentals-of-role-based-administration-for-configuration-manager"></a>Configuration Manager 的基于角色的管理基础
 
@@ -27,7 +27,7 @@ ms.locfileid: "81707085"
 
 - *安全角色*将分配给管理用户，并为这些用户（或用户组）提供不同 Configuration Manager 对象的权限。 例如创建或更改客户端设置的权限。  
 
-- *管理作用域*用于对管理用户负责管理的对象的特定实例进行分组，如安装 Microsoft Office 2010 的应用程序。  
+- 安全作用域用于对管理用户负责管理的对象的特定实例进行分组，如安装 Microsoft 365 Apps 的应用程序。  
 
 - *集合*用于指定管理用户可管理的用户和设备资源组。  
 

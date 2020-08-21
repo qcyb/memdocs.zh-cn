@@ -10,12 +10,12 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 47d44c96e0ae63504278c58a5838c54648665505
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692305"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127165"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive for Business 配置文件
 
@@ -23,7 +23,7 @@ ms.locfileid: "81692305"
 
 ## <a name="prerequisites"></a>必备条件
 
-- [找到你的 Office 365 租户 ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [查找你的 Microsoft 365 租户 ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
 
 - 部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](https://docs.microsoft.com/onedrive/deploy-on-windows)。  
 
@@ -44,7 +44,7 @@ ms.locfileid: "81692305"
 
 5. 在“设置”  页上：
 
-    1. 指定你的 Office 365 租户 ID。  
+    1. 指定你的 Microsoft 365 租户 ID。  
 
     2. 选择以下选项之一将已知文件夹移动到 OneDrive：  
 

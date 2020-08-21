@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814912"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128522"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache
 
@@ -132,7 +132,7 @@ ms.locfileid: "84814912"
 - 如果启用[适用于企业的 Windows 更新策略](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)：Windows 10 功能和质量更新
 - 对于[共同管理工作负载](../../../comanage/workloads.md)：
   - 适用于企业的 Windows 更新：Windows 10 功能和质量更新
-  - Office 即点即用应用：Office 应用和更新
+  - Office 即点即用应用：Microsoft 365 Apps 和更新
   - 客户端应用：Microsoft Store 应用和更新
   - Endpoint Protection：Windows Defender 定义更新
 

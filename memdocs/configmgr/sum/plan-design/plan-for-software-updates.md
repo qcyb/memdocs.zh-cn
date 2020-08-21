@@ -5,17 +5,17 @@ description: 在 Configuration Manager 生产环境中使用软件更新之前�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: dca6f3e4bf67ac4c947f785016d781e538ee0a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708745"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123585"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
@@ -71,7 +71,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 ###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a> 软件更新点切换  
 
 > [!NOTE]  
-> 客户端使用边界组来查找新的软件更新点。 如果无法再访问其当前软件更新点，则客户端还会使用边界组回退并查找新的更新点。 添加单个软件更新点到不同的边界组，以控制客户端可找到的服务器。 有关详细信息，请参阅[软件更新点](../../core/servers/deploy/configure/boundary-groups.md#software-update-points)。  
+> 客户端使用边界组来查找新的软件更新点。 如果无法再访问其当前软件更新点，则客户端还会使用边界组回退并查找新的更新点。 添加单个软件更新点到不同的边界组，以控制客户端可找到的服务器。 有关详细信息，请参阅[软件更新点](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup)。  
 
 如果某站点上有多个软件更新点，且其中一个更新点失败或不再可用，则客户端将连接到其他软件更新点。 使用该新服务器时，客户端将继续扫描查找最新的软件更新。 首次向客户端分配软件更新点后，除非无法扫描，否则该客户端将一直分配给该软件更新点。  
 
@@ -111,7 +111,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 > [!IMPORTANT]    
 > 切换设备以使用新的服务器时，设备使用回退来查找该新服务器。 客户端在下一个软件更新扫描周期中切换到新的软件更新点。<!-- SCCMDocs#1537 -->
 >
-> 在开始此更改之前，请检查边界组配置，确保软件更新点位于正确的边界组中。 有关详细信息，请参阅[软件更新点](../../core/servers/deploy/configure/boundary-groups.md#software-update-points)。  
+> 在开始此更改之前，请检查边界组配置，确保软件更新点位于正确的边界组中。 有关详细信息，请参阅[软件更新点](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup)。  
 >
 > 切换到新的软件更新点会产生额外的网络流量。 流量大小取决于 WSUS 配置设置，例如同步的分类和产品或使用共享 WSUS 数据库。 如果打算切换多个设备，请考虑在维护时段执行此操作。 客户端使用新的软件更新点进行扫描时，这一时间安排可减少对网络的影响。  
 
@@ -151,7 +151,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 #### <a name="cloud-management-gateway"></a>云管理网关
 在 Microsoft Azure 中创建云管理网关，并至少启用一个本地软件更新点，以允许来自基于 Internet 的客户端的流量。 当客户端漫游到 Internet 上时，会继续针对软件更新点进行扫描。 所有基于 Internet 的客户端都始终从 Microsoft 更新云服务中获取内容。 
 
-有关详细信息，请参阅[云管理网关计划](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)。  
+有关详细信息，请参阅[计划云管理网关](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)和[配置边界组](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup)。  
 
 #### <a name="internet-based-client-management"></a>基于 Internet 的客户端管理
 将软件更新点置于面向 Internet 的网络中，并启用该更新点，以允许来自基于 Internet 的客户端的流量。 当客户端漫游到 Internet上时，它们将切换到此软件更新点进行扫描。 所有基于 Internet 的客户端都始终从 Microsoft 更新云服务中获取内容。
@@ -372,7 +372,7 @@ Configuration Manager 支持同步以下更新类别：
 
 -   提升被取代的更新文件包的效率；如果更新已获准安装，则该文件包安装在客户端上。 例如，在被取代的更新中，某些文件可能不再与修补程序或新更新支持的操作系统相关联。 这些文件不包含在更新的取代文件包中。  
 
--   更新产品的较新版本。 换句话说，它将更新不再适用于产品的较旧版本或配置的版本。 如果进行了修改来扩展语言支持，则更新还可能取代其他更新。 例如，稍后对 Microsoft Office 产品更新进行的修订可能会删除对旧操作系统的支持，但可能会在初始更新版本中添加对新语言的额外支持。  
+-   更新产品的较新版本。 换句话说，它将更新不再适用于产品的较旧版本或配置的版本。 如果进行了修改来扩展语言支持，则更新还可能取代其他更新。 例如，稍后对 Microsoft 365 Apps 产品更新进行的修订可能会删除对旧 OS 的支持，但可能会在最初的更新版本中添加对新语言的额外支持。  
 
 在软件更新点的属性中，指定被取代的软件更新立即过期。 此设置可防止它们被包含在新的部署中。 它还会标记现有部署，指示它们包含一个或多个过期的软件更新。 或者，请指定被取代的软件更新的有效期。 此操作可让你继续部署这些更新。 
 
@@ -461,7 +461,8 @@ Configuration Manager 软件更新存在挂起的重启时，Windows 10 计算�
 
 ## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a> 在服务堆栈更新后评估软件更新
 <!--4639943-->
-从版本 2002 开始，Configuration Manager 可检测服务堆栈更新 (SSU) 是否为包含多个更新的安装的一部分。 检测到 SSU 后，系统会先安装它。 安装 SSU 后，将运行软件更新评估周期以安装剩余更新。 此更改允许在服务堆栈更新后安装相关累积更新。 设备不需要在安装之间重启，你也不需要创建其他维护时段。 仅对非用户启动的安装先安装 SSU。 例如，如果用户从软件中心启动多个更新安装，则可能不会先安装 SSU。
+从版本 2002 开始，Configuration Manager 可检测服务堆栈更新 (SSU) 是否为包含多个更新的安装的一部分。 检测到 SSU 后，系统会先安装它。 安装 SSU 后，将运行软件更新评估周期以安装剩余更新。 此更改允许在服务堆栈更新后安装相关累积更新。 设备不需要在安装之间重启，你也不需要创建其他维护时段。 仅对非用户启动的安装先安装 SSU。 例如，如果用户从软件中心启动多个更新安装，则可能不会先安装 SSU。 当使用 Configuration Manager 版本 2002 时，先安装 SSU 不适用于 Windows Server 操作系统。 <!--7813007-->此功能是在 Configuration Manager 版本 2006 中为 Windows Server 操作系统添加的。
+
 
 
 ## <a name="next-steps"></a>后续步骤

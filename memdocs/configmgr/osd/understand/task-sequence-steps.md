@@ -2,20 +2,20 @@
 title: 任务序列步骤
 titleSuffix: Configuration Manager
 description: 了解可添加到 Configuration Manager 任务序列的步骤。
-ms.date: 07/06/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546614"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124230"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -216,6 +216,9 @@ Windows 应用驱动程序包时，选择此选项可将 `/recurse` 参数添加
 #### <a name="join-a-domain"></a>加入域
 
 选择此选项以将目标计算机加入指定的域。 指定或浏览到域，如 `fabricam.com`。 指定或浏览到组织单位的轻型目录访问协议 (LDAP) 路径。 例如： `LDAP//OU=computers, DC=Fabricam.com, C=com`。  
+
+> [!NOTE]
+> 当已建立 Azure Active Directory (Azure AD) 联接的客户端运行 OS 部署任务序列时，新 OS 中的客户端不会自动建立 Azure AD 联接。 即使没有建立 Azure AD 联接，客户端仍是受管理的。
 
 #### <a name="account"></a>帐户
 
@@ -773,7 +776,6 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 捕获计算机上的时区设置。  
 
 
-
 ## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a>检查准备情况
 
 使用此步骤验证目标计算机是否满足指定的部署先决条件。  
@@ -791,6 +793,8 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 - 网络适配器已连接
   - 网络适配器不是无线网络
 
+自版本 2006 起，此步骤包含“计算机是否处于 UEFI 模式”检查，用于确定设备是否使用 UEFI。<!--6452769-->
+
 > [!IMPORTANT]
 > 若要利用 Configuration Manager 的此项新功能，更新站点后，还请将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
 
@@ -804,14 +808,15 @@ smsts.log 包含所有检查的结果。 如果一个检查失败，则任务序
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)（自版本 2002 起）
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)（自版本 2002 起）
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)（自版本 2002 起）
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)（自版本 2002 起）
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)（自版本 2002 起）
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)（自版本 2002 起）
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)（自版本 2002 起）
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI)（自版本 2006 起）
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)（自版本 2002 起）
 
 ### <a name="cmdlets-for-check-readiness"></a>“检查准备情况”的 cmdlet
 
@@ -869,6 +874,10 @@ smsts.log 包含所有检查的结果。 如果一个检查失败，则任务序
 #### <a name="network-adapter-connected"></a>网络适配器已连接
 
 从版本 2002 开始，验证设备是否具有已连接到网络的网络适配器。 还可以选择依赖关系检查来验证并确保**网络适配器不是无线网络适配器**。
+
+#### <a name="computer-is-in-uefi-mode"></a>计算机是否处于 UEFI 模式
+
+自版本 2006 起，确定是否为设备配置了 UEFI 或 BIOS。
 
 ### <a name="options-for-check-readiness"></a>“检查准备情况”的选项
 
@@ -1054,12 +1063,9 @@ Configuration Manager 向变量名称中添加数字后缀。 例如，指定变
 
 ## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>启用 BitLocker
 
-使用此步骤在硬盘驱动器的至少两个分区上启用 BitLocker 加密。 第一个活动分区包含 Windows 启动代码。 另一个分区包含 OS。 启动分区必须保持为未加密状态。  
+BitLocker 驱动器加密提供磁盘卷内容的低级加密。 使用此步骤在硬盘驱动器的至少两个分区上启用 BitLocker 加密。 第一个活动分区包含 Windows 启动代码。 另一个分区包含 OS。 启动分区必须保持为未加密状态。  
 
-在 Windows PE 中，使用“预设置 BitLocker”步骤可在驱动器上启用 BitLocker。 有关详细信息，请参阅[预设置 BitLocker](#BKMK_PreProvisionBitLocker)。  
-
-> [!NOTE]  
-> BitLocker 驱动器加密提供磁盘卷内容的低级加密。  
+在 Windows PE 中，若要对驱动器启用 BitLocker，请使用[预配 BitLocker](#BKMK_PreProvisionBitLocker) 步骤。
 
 此步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。
 
@@ -1071,7 +1077,9 @@ Configuration Manager 向变量名称中添加数字后缀。 例如，指定变
 - 已激活  
 - 允许的所有权  
 
-此步骤将完成剩余的 TPM 初始化。 余下的步骤无需实际操作或重新启动。 “启用 BitLocker”步骤（如有必要）以透明方式完成下列剩余的 TPM 初始化步骤：  
+自版本 2006 起，对于没有 TPM 或未启用 TPM 的计算机，可以跳过此步骤。 借助新设置，可以更轻松地在无法完全支持 BitLocker 的设备上管理任务序列行为。<!--6995601-->
+
+此步骤将完成剩余的 TPM 初始化。 其余的操作不需要实际存在或重新启动。 “启用 BitLocker”步骤视需要以透明方式完成下列剩余的 TPM 初始化操作：
 
 - 创建认可密钥对  
 - 创建所有者授权值和 Active Directory 的证书，后者必须已扩展为支持此值  
@@ -1118,6 +1126,18 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 要加密特定非 OS 数据驱动器，请选择“特定驱动器”。 然后从列表中选择驱动器。  
 
+#### <a name="disk-encryption-mode"></a>磁盘加密模式
+
+<!--6995601-->
+自版本 2006 起，选择以下加密算法之一：
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+默认情况下或如果未指定，此步骤继续使用 OS 版本的默认加密方法。 如果步骤在不支持指定算法的 Windows 版本上运行，则会回退到 OS 默认值。 在这种情况下，任务序列引擎将发送状态消息 11911。
+
 #### <a name="use-full-disk-encryption"></a>使用全磁盘加密
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1136,6 +1156,10 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 加密大型硬盘时，加密过程可能需要数小时才能完成。 不选择此选项将允许立即处理任务序列。  
 
+#### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>对于没有 TPM 或 未启用 TPM 的计算机跳过此步骤
+
+<!--6995601-->
+自版本 2006 起，选择此选项可以在不包含受支持或已启用的 TPM 的计算机上跳过驱动器加密。 例如，可在将 OS 部署到虚拟机时使用此选项。 默认情况下，在“启用 BitLocker”步骤中禁用了此设置。 如果你启用此设置，且设备没有功能性 TPM，则任务序列引擎会将错误记录到 smsts.log，并发送状态消息 11912。 任务序列将继续执行此步骤。
 
 
 ## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>格式化磁盘并分区
@@ -1174,6 +1198,31 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 #### <a name="disk-number"></a>磁盘编号
 
 要进行格式化的磁盘的物理磁盘编号。 该编号取决于 Windows 磁盘枚举排序。  
+
+#### <a name="variable-name-to-store-disk-number"></a>用于存储磁盘号的变量名称
+
+<!--6610288-->
+
+自版本 2006 起，使用任务序列变量来指定要格式化的目标磁盘。 此变量选项支持具有动态行为的更复杂的任务序列。 例如，自定义脚本可以检测磁盘并根据硬件类型设置变量。 然后，可以使用此步骤的多个实例来配置不同的硬件类型和分区。
+
+如果选择此属性，请输入自定义变量名称。 在任务序列中添加前面的步骤，为物理磁盘将此自定义变量值设为整数值。
+
+以下模拟步骤显示了一个示例：
+
+- **运行 PowerShell 脚本**：用于收集目标磁盘的自定义脚本
+  - 将 `myOSDisk` 设置为 `1`
+  - 将 `myDataDisk` 设置为 `2`
+
+- 为操作系统磁盘“格式化磁盘并分区”  ：指定 `myOSDisk` 变量
+  - 将磁盘 1 配置为系统磁盘
+
+- 为操作数据磁盘“格式化磁盘并分区”  ：指定 `myDataDisk` 变量
+  - 为原始存储配置磁盘 2
+
+此示例的一个变体是为不同的硬件类型使用磁盘号和分区计划。
+
+> [!NOTE]
+> 你仍可以使用现有任务序列变量 **OSDDiskIndex**。 不过，“格式化磁盘并分区”步骤的每个实例都使用相同的索引值。 若要以编程方式为此步骤的多个实例设置磁盘号，请使用此变量属性。
 
 #### <a name="disk-type"></a>磁盘类型
 
@@ -1489,6 +1538,9 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 使用此步骤将目标计算机添加到工作组或域。  
 
+> [!NOTE]
+> 当已建立 Azure Active Directory (Azure AD) 联接的客户端运行 OS 部署任务序列时，新 OS 中的客户端不会自动建立 Azure AD 联接。 即使没有建立 Azure AD 联接，客户端仍是受管理的。
+
 此任务序列步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。
 
 选择任务序列编辑器中的“添加”，选择“常规”，然后选择“加入域或工作组”以添加此步骤。
@@ -1635,6 +1687,18 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 指定要为其启用 BitLocker 的驱动器。 BitLocker 仅加密驱动器上使用的空间。  
 
+#### <a name="disk-encryption-mode"></a>磁盘加密模式
+
+<!--6995601-->
+自版本 2006 起，选择以下加密算法之一：
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+默认情况下或如果未指定，此步骤继续使用 OS 版本的默认加密方法。 如果步骤在不支持指定算法的 Windows 版本上运行，则会回退到 OS 默认值。 在这种情况下，任务序列引擎将发送状态消息 11911。
+
 #### <a name="use-full-disk-encryption"></a>使用全磁盘加密
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1642,7 +1706,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>对于没有 TPM 或 未启用 TPM 的计算机跳过此步骤
 
-选择此选项可跳过针对某类计算机的驱动器加密操作，这类计算机不包含受支持且已启用的 TPM。 例如，可在将 OS 部署到虚拟机时使用此选项。  
+选择此选项可跳过针对某类计算机的驱动器加密操作，这类计算机不包含受支持且已启用的 TPM。 例如，可在将 OS 部署到虚拟机时使用此选项。 默认情况下，在“预配 BitLocker”步骤中启用了此设置。 该步骤将在没有 TPM 或未初始化 TPM 的设备上失败。 自版本 2006 起，如果设备没有功能性 TPM，则任务序列引擎会将警告记录到 smsts.log，并发送状态消息 11912。
 
 
 
@@ -2169,10 +2233,10 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 自版本 1906 起，使用以下 PowerShell cmdlet 管理此步骤：<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 有关详细信息，请参阅 [1906 发行说明 - 新 cmdlet](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets)。
 
@@ -2241,15 +2305,19 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
     指定为规则设置的一个或多个变量，该规则评估为 true，或设置变量而无需使用规则。 选择现有变量或创建自定义变量。  
 
-    - **现有任务序列变量**：从现有任务序列变量的列表中选择一个或多个变量。 不可选择数组变量。  
+  - **现有任务序列变量**：从现有任务序列变量的列表中选择一个或多个变量。 不可选择数组变量。  
 
-    - **自定义任务序列变量**：定义自定义任务序列变量。 你也可指定现有任务序列变量。 此设置有助于指定现有变量数组，如 OSDAdapter，因为变量数组不在现有任务序列变量的列表中。  
+  - **自定义任务序列变量**：定义自定义任务序列变量。 你也可指定现有任务序列变量。 此设置有助于指定现有变量数组，如 OSDAdapter，因为变量数组不在现有任务序列变量的列表中。  
 
-为规则选择变量后，为每个变量提供一个值。 规则评估为 true 时，则变量设置为指定的值。 对于每个变量，可以选择“机密值”  来隐藏该变量的值。 默认情况下，某些现有变量隐藏值，例如 OSDCaptureAccountPassword 变量。  
+为规则选择变量后，为每个变量提供一个值。 规则评估为 true 时，则变量设置为指定的值。 对于每个变量，可以选择“不显示此值”来隐藏变量值。 默认情况下，某些现有变量隐藏值，例如 OSDCaptureAccountPassword 变量。  
 
 > [!IMPORTANT]  
-> 当使用“设置动态变量”步骤导入任务序列时，Configuration Manager 删除标记为“机密值”的所有变量值 。 导入任务序列后请重新输入动态变量的值。  
+> 如果你使用“设置动态变量”步骤导入任务序列，Configuration Manager 会删除所有标记为“不显示此值”的变量值。 导入任务序列后，请重新输入动态变量的值。
 
+如果你使用选项“不显示此值”，变量值就不会显示在任务序列编辑器中。 任务序列日志文件 (smsts.log) 或任务序列调试器也不会显示变量值。 但在变量运行时，任务序列仍可使用该变量。 如果不想再隐藏这些变量，请先删除它们。 然后重新定义变量，而无需选择选项来隐藏它们。  
+
+> [!WARNING]  
+> 如果你将变量添加在“运行命令行”步骤的命令行中，则任务序列日志文件会显示包含变量值的完整命令行。 为了防止可能的敏感数据显示在日志文件中，请将任务序列变量“OSDDoNotLogCommand”设置为 `TRUE`。
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>设置任务序列变量
@@ -2289,8 +2357,13 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 <!--1358330-->
 启用此选项来屏蔽存储在任务序列变量中的敏感数据。 例如，指定密码时。
 
-> [!Note]  
+> [!NOTE]
 > 启用此选项，然后设置任务序列变量的值。 否则，变量值不会按预期设置，这可能会在任务序列运行时导致异常行为。<!--SCCMdocs issue #800-->
+
+如果你使用选项“不显示此值”，变量值就不会显示在任务序列编辑器中。 任务序列日志文件 (smsts.log) 或任务序列调试器也不会显示变量值。 但在变量运行时，任务序列仍可使用该变量。 如果不想再隐藏此变量，请先删除它。 然后，重新定义变量，而无需选择选项来隐藏它。
+
+> [!WARNING]
+> 如果你将变量添加在“运行命令行”步骤的命令行中，则任务序列日志文件会显示包含变量值的完整命令行。 为了防止可能的敏感数据显示在日志文件中，请将任务序列变量“OSDDoNotLogCommand”设置为 `TRUE`。<!-- 6963278 -->
 
 #### <a name="value"></a>值  
 
@@ -2388,6 +2461,8 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 任务序列步骤自动指定站点分配和默认配置。 使用此字段来指定安装客户端时使用的任何其他安装属性。 要输入多个安装属性，请使用空格分隔。  
 
 指定要在客户端安装过程中使用的命令行选项。 例如，输入 `/skipprereq: silverlight.exe` 以通知 CCMSetup.exe 不安装 Microsoft Silverlight 必备组件。 有关 CCMSetup.exe 的可用命令行选项的详细信息，请参阅[关于客户端安装属性](../../core/clients/deploy/about-client-installation-properties.md)。  
+
+在已建立 Azure AD 联接或使用基于令牌的身份验证的基于 Internet 的客户端上运行 OS 部署任务序列时，需要在“安装 Windows 和 ConfigMgr”步骤中指定 [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) 属性。 例如 `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`。
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>“安装 Windows 和 ConfigMgr”的选项
 

@@ -2,20 +2,20 @@
 title: Internet 访问要求
 titleSuffix: Configuration Manager
 description: 了解允许使用 Configuration Manager 功能的完整功能的 Internet 终结点。
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137355"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126438"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -201,8 +201,6 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 有关软件更新的详细信息，请参阅[规划软件更新](../../../sum/plan-design/plan-for-software-updates.md)。
@@ -224,7 +222,7 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>管理 Office 365
+## <a name="manage-microsoft-365-apps"></a>管理 Microsoft 365 Apps
 
 > [!NOTE]
 > 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
@@ -275,15 +273,21 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 
 ## <a name="desktop-analytics"></a>桌面分析
 
-有关桌面分析云服务所需终结点的详细信息，请参阅[启用数据共享](../../../desktop-analytics/enable-data-sharing.md#endpoints)。
+有关详细信息，请参阅[启用数据分享](../../../desktop-analytics/enable-data-sharing.md#endpoints)。
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>租户附加
 
-有关租户附加功能所需终结点的详细信息，请参阅[启用租户附加](../../../tenant-attach/device-sync-actions.md#internet-endpoints)。
+有关详细信息，请参阅[启用租户附加](../../../tenant-attach/device-sync-actions.md)。
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>终结点分析
 
-有关终结点分析所需终结点的详细信息，请参阅[终结点分析代理配置](../../../../analytics/troubleshoot.md#bkmk_endpoints)。
+有关详细信息，请参阅[终结点分析代理配置](../../../../analytics/troubleshoot.md#bkmk_endpoints)。
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>资产智能
 

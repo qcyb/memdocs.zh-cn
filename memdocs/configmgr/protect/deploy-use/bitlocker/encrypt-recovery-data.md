@@ -2,20 +2,20 @@
 title: 加密恢复数据
 titleSuffix: Configuration Manager
 description: 在网络和 Configuration Manager 数据库中加密 BitLocker 恢复密钥、恢复包和 TPM 密码哈希。
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709345"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129182"
 ---
 # <a name="encrypt-recovery-data"></a>加密恢复数据
 
@@ -36,7 +36,7 @@ ms.locfileid: "81709345"
     > [!NOTE]
     > 目前不支持增强型 HTTP。
 
-- 在将数据存储在站点数据库中时，还可以考虑加密此数据。 你可以使用自己的证书和 SQL Server 单元级加密。
+- 在将数据存储在站点数据库中时，还可以考虑加密此数据。 如果你安装了 SQL 证书，Configuration Manager 会用 SQL 加密数据。
 
     如果不希望创建 BitLocker 管理加密证书，请选择加入恢复数据的纯文本存储。 创建 BitLocker 管理策略时，请启用“允许以纯文本格式存储恢复信息”选项  。
 
@@ -77,7 +77,7 @@ ms.locfileid: "81709345"
 
 ### <a name="sql-encryption-certificate"></a>SQL 加密证书
 
-使用此证书启用 BitLocker 恢复数据的 SQL Server 单元级加密。 可以按自己的流程创建和部署 BitLocker 管理加密证书，前提是它满足以下要求：
+对 Configuration Manager 使用此 SQL 证书，以加密站点数据库中的 BitLocker 恢复数据。 可以按自己的流程创建和部署 BitLocker 管理加密证书，前提是它满足以下要求：
 
 - BitLocker 管理加密证书的名称必须是 `BitLockerManagement_CERT`。
 

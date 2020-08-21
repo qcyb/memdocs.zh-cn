@@ -2,7 +2,7 @@
 title: 社区中心和 GitHub
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中启用和使用社区中心
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262075"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128165"
 ---
 # <a name="community-hub-and-github"></a>社区中心和 GitHub
 <!--3555935, 3555936-->
@@ -66,6 +66,37 @@ ms.locfileid: "87262075"
 
 [![从社区中心下载的所有项目](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> 指向社区中心项的直接链接
+<!--4224406-->
+（在版本 2006 中引入）可以使用直接链接轻松转到并引用 Configuration Manager 控制台“社区中心”节点内的项。 此功能的目的是为了更轻松地进行协作，并且能够与同事共享指向社区中心项的链接。 这些深层链接当前仅用于控制台的社区中心节点中的项。
+
+### <a name="prerequisites-for-direct-links"></a>直接链接的先决条件
+
+- Configuration Manager 控制台版本 2006 或更高版本
+- 在打开社区中心链接时，无法使用本地内置管理员帐户。
+
+### <a name="sharing-and-opening-direct-links"></a>共享和打开直接链接
+
+若要共享项，请执行以下操作：
+1. 转到中心内的项，然后选择“共享”。
+1. 粘贴所复制的链接，然后与其他人共享。
+
+若要打开共享的链接，请执行以下操作：
+1. 在安装了 Configuration Manager 控制台的计算机上单击链接。
+   - 例如，使用此链接共享[配置边缘自动更新脚本](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`)。
+1. 出现提示时，选择“启动社区中心”。
+1. 控制台将直接打开到社区中心中的脚本。
+
+## <a name="known-issues"></a><a name="bkmk_known"></a> 已知问题
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>当以其他用户身份运行控制台时，无法访问“社区中心”节点
+<!--7826897-->
+如果你以权限较低的用户身份登录，并选择“以其他用户身份运行”来打开 Configuration Manager 控制台，可能无法访问“社区中心”节点。
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>下载的报表不会从“下载”页中删除
+<!--7851305-->
+如果你从“监视” > “报表”节点中删除了下载的报表，此报表不会从“社区中心” > “你的下载”页中删除，但你无法再次下载此报表。 
 
 ## <a name="next-steps"></a>后续步骤
 

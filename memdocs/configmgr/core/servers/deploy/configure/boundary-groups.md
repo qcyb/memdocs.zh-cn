@@ -2,7 +2,7 @@
 title: 配置边界组
 titleSuffix: Configuration Manager
 description: 通过使用边界组以逻辑方式对称为边界的相关网络位置进行整理，帮助客户端查找站点系统
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 7a925c29b5d186f3ca6f320741f5ca602b0bbb79
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153405"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128386"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>为 Configuration Manager 配置边界组
 
@@ -312,7 +312,7 @@ $component.put()
 - 云分发点
 - Microsoft 更新（在版本 1902 中添加）
 
-## <a name="software-update-points"></a>软件更新点
+## <a name="software-update-points"></a><a name="bkmk_sup"></a> 软件更新点 
 
 客户端使用边界组来查找新的软件更新点。 若要控制客户端可以找到哪些服务器，请将各个软件更新点添加到不同的边界组。
 
@@ -365,6 +365,13 @@ $component.put()
 请查看边界组配置。 确保软件更新点位于正确的边界组后，再开始进行此更改。
 
 有关详细信息，请参阅[将客户端手动切换到新的软件更新点](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs)。
+
+### <a name="intranet-clients-can-use-a-cmg-software-update-point"></a><a name="bkmk_cmg-sup"></a>Intranet 客户端可以使用 CMG 软件更新点
+<!--7102873-->
+自版本 2006 起，Intranet 客户端可以访问 CMG 软件更新点，但前提是 Intranet 客户端已分配到边界组，且在软件更新点上[启用了“允许 Configuration Manager 云管理网关流量”选项](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role)。 在以下情况下，可以允许 Intranet 设备对 CMG 软件更新点进行扫描：
+
+- Internet 计算机连接到 VPN 时，将继续通过 Internet 对 CMG 软件更新点进行扫描。
+- 如果边界组的唯一软件更新点是 CMG 软件更新点，则所有 Intranet 和 Internet 设备将对其进行扫描。
 
 ## <a name="management-points"></a>管理点
 

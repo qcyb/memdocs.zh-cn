@@ -2,7 +2,7 @@
 title: 启用数据共享
 titleSuffix: Configuration Manager
 description: 使用桌面分析共享诊断数据的参考指南。
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795645"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125931"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>启用桌面分析的数据共享
 
@@ -24,32 +24,43 @@ ms.locfileid: "84795645"
 
 ## <a name="diagnostic-data-levels"></a>诊断数据级别
 
-![桌面分析的诊断数据级别关系图](media/diagnostic-data-levels.png)
+:::image type="content" source="media/diagnostic-data-levels.png" alt-text="桌面分析的诊断数据级别关系图":::
 
 将 Configuration Manager 与桌面分析集成时，还可以使用它来管理设备上的诊断数据级别。 为获得最佳体验，请使用 Configuration Manager。
 
-> [!Important]  
+> [!IMPORTANT]
 > 在大多数情况下，仅使用 Configuration Manager 来配置这些设置。 也不要在域组策略对象中应用这些设置。 有关详细信息，请参阅[冲突解决](enroll-devices.md#conflict-resolution)。
 
-桌面分析的基础功能以基本的[诊断数据级别](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)进行工作。 如果未在 Configuration Manager 中配置“增强(受限)”级别，则不会获得桌面分析的以下功能：
+桌面分析的基本功能在“必需”[诊断数据级别](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)可用。 如果没有在 Configuration Manager 中配置“可选(受限)”级别，则无法使用以下桌面分析功能：
 
 - 应用使用情况
 - [其他 App Insights](compat-assessment.md#additional-insights)
 - [部署状态数据](deploy-prod.md#address-deployment-alerts)
 - [运行状况监视数据](health-status-monitoring.md)
 
-Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级别以从中获得最大好处。
+Microsoft 建议为桌面分析启用“可选(受限)”诊断数据级别，以最大化你的受益。
 
-> [!Tip]
-> Configuration Manager 中的“增强(受限)”设置与运行 Windows 10 版本 1709 及更高版本的设备上可用的“将增强的诊断数据限制为 Windows Analytics 要求的最小值”策略设置相同 。
+> [!TIP]
+> Configuration Manager 中的“可选(受限)”设置与运行 Windows 10 版本 1709 及更高版本的设备上可用的“将增强的诊断数据限制为 Windows Analytics 要求的最小值”策略设置相同。
 >
-> 运行 Windows 10 版本 1703 及更低版本、Windows 8.1 或 Windows 7 的设备没有此策略设置。 在 Configuration Manager 中配置“增强(受限)”设置时，这些设备会返回到“基本”级别 。
+> 运行 Windows 10 版本 1703 及更低版本、Windows 8.1 或 Windows 7 的设备没有此策略设置。 如果你在 Configuration Manager 中配置“可选(受限)”设置，这些设备会回退到“必需”级别。
 >
-> 运行 Windows 10 版本 1709 的设备具有此策略设置。 但是，当在 Configuration Manager 中配置“增强(受限)”设置时，这些设备也会返回到“基本”级别 。
+> 运行 Windows 10 版本 1709 的设备具有此策略设置。 不过，如果你在 Configuration Manager 中配置“可选(受限)”设置，这些设备也会回退到“必需”级别。
+>
+> 在 Configuration Manager 版本 2002 及更低版本中，这些设置的名称不同：<!-- 7363467 -->
+>
+> | 版本 2006 及更高版本 | 版本 2002 及更低版本 |
+> |---------|---------|
+> | 必需 | 基本版 |
+> | 可选(受限) | 增强(受限) |
+> | 空值 | 增强版 |
+> | 可选 | 完全 |
+>
+> 如果你之前在“增强”级别配置过任何设备，那么当你升级到版本 2006 时，这些设备将恢复为“可选(受限)”。 然后，它们将向 Microsoft 发送更少的数据。 此更改应该不会影响桌面分析中显示的内容。
 
-有关使用“增强(受限)”与 Microsoft 共享的诊断数据的详细信息，请参阅 [Windows 10 增强的诊断数据事件与字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
+若要详细了解使用“可选(受限)”与 Microsoft 共享的诊断数据，请参阅 [Windows 10 增强的诊断数据事件和字段](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)。
 
-> [!Important]
+> [!IMPORTANT]
 > Microsoft 坚定地承诺提供用于让你自己控制隐私的工具和资源。 因此，尽管桌面分析支持 Windows 8.1 设备，但 Microsoft 不会从欧洲国家/地区（EEA 和瑞士）的 Windows 8.1 设备中收集 Windows 诊断数据。
 
 有关详细信息，请参阅[桌面分析隐私](privacy.md)。
@@ -60,8 +71,8 @@ Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级�
 
 - [配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-> [!Note]  
-> 在初始完全扫描时，配置为限制增强诊断数据的客户端将向 Microsoft 云发送大约 2 MB 的数据。 每日增量在 250-400 KB 之间变化。
+> [!NOTE]
+> 配置为发送“可选(受限)”诊断数据的客户端将在初始完全扫描完成后向 Microsoft 云发送大约 2MB 的数据。 每日增量在 250-400 KB 之间变化。
 >
 > 每日增量扫描发生在上午3:00（设备本地时间）。 某些事件会在一天中的第一个可用时间发送。 这些时间不可配置。
 >
@@ -71,7 +82,7 @@ Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级�
 
 要启用数据共享，请将代理服务器配置为允许以下 Internet 终结点。
 
-> [!Important]  
+> [!IMPORTANT]
 > 对于隐私和数据完整性，Windows 在与诊断数据终结点通信时检查 Microsoft SSL 证书（证书固定）。 无法进行 SSL 拦截和检查。 若要使用桌面分析，请从 SSL 检查中排除这些终结点。<!-- BUG 4647542 -->
 
 从版本 2002 开始，如果 Configuration Manager 站点无法连接到云服务所需的终结点，则会引发严重状态消息 ID 11488。 当无法连接到服务时，SMS_SERVICE_CONNECTOR 组件状态将更改为严重。 在 Configuration Manager 控制台的[“组件状态”](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus)节点中查看详细状态。<!-- 5566763 -->
@@ -79,47 +90,7 @@ Microsoft 建议使用桌面分析来启用“增强(受限)”诊断数据级�
 > [!NOTE]
 > 有关 Microsoft IP 地址范围的详细信息，请参阅 [Microsoft 公共 IP 空间](https://www.microsoft.com/download/details.aspx?id=53602)。 这些地址会定期更新。 服务没有粒度，可以使用这些范围内的任何 IP 地址。
 
-### <a name="server-connectivity-endpoints"></a>服务器连接终结点
-
-服务连接点需要与以下终结点进行通信：
-
-| 终结点  | 函数  |
-|-----------|-----------|
-| `https://aka.ms` | 用于查找服务 |
-| `https://graph.windows.net` | 用于在将层次结构附加到桌面分析时自动检索 CommercialId 等设置（在 Configuration Manager 服务器角色上）。 有关详细信息，请参阅[配置站点系统服务器的代理](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 |
-| `https://*.manage.microsoft.com` | 用于使用桌面分析同步设备集合成员身份、部署计划和设备就绪状态（仅限在 Configuration Manager 服务器角色上）。 有关详细信息，请参阅[配置站点系统服务器的代理](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)。 |
-
-### <a name="user-experience-and-diagnostic-component-endpoints"></a>用户体验和诊断组件终结点
-
-客户端设备需要与以下终结点进行通信：
-
-| 终结点  | 函数  |
-|-----------|-----------|
-| `https://v10c.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行安装了 2018-09 累积更新或更高版本的 Windows 10 版本 1809 或更高版本或版本 1803 的设备使用。 |
-| `https://v10.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行未安装 2018-09 累积更新的 Windows 10 版本 1803 的设备使用。 |
-| `https://v10.vortex-win.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行 Windows 10 版本 1709 或更高版本的设备使用。 |
-| `https://vortex-win.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 由运行 Windows 7 和 Windows 8.1 的设备使用 |
-
-### <a name="client-connectivity-endpoints"></a>客户端连接终结点
-
-客户端设备需要与以下终结点进行通信：
-
-| 索引 | 终结点  | 函数  |
-|-------|-----------|-----------|
-| 1 | `https://settings-win.data.microsoft.com` | 启用兼容性更新以将数据发送到 Microsoft。 |
-| 2 | `http://adl.windows.com` | 允许兼容性更新以从 Microsoft 接收最新的兼容性数据。 |
-| 3 | `https://watson.telemetry.microsoft.com` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1803 或更低版本中监视部署运行状况。 |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 版本 1809 或更高版本中的设备运行状况报告所必需的。 |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows 错误报告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 需要在 Windows 10 版本 1809 或更高版本中监视部署运行状况。 |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [联机崩溃分析 (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis)。 Windows 10 版本 1809 或更高版本中的设备运行状况报告所必需的。 |
-| 12 | `https://oca.telemetry.microsoft.com`  | [联机崩溃分析 (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis)。 需要在 Windows 10 版本 1803 或更低版本中监视部署运行状况。 |
-| 13 | `https://login.live.com` | 需要为桌面分析提供更可靠的设备标识。 <br> <br>若要禁用最终用户 Microsoft 帐户访问权限，请使用策略设置，而不是阻止此终结点。 有关详细信息，请参阅[企业中的 Microsoft 帐户](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)。 |
-| 14 | `https://v20.events.data.microsoft.com` | 已连接的用户体验和诊断组件终结点。 |
+[!INCLUDE [Internet endpoints for Desktop Analytics](../core/plan-design/network/includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="proxy-server-authentication"></a>代理服务器身份验证
 

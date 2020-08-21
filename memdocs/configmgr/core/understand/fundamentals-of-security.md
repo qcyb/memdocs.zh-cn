@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707055"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126063"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Configuration Manager 安全性的基础知识
 
@@ -82,7 +82,7 @@ Configuration Manager 的安全性包括以下层：
 
  管理员将“安全角色”分配给管理用户和组权限  。 权限连接到不同的 Configuration Manager 对象类型，用于创建或更改客户端设置等。 
 
- 管理用户负责管理且特定于“安全作用域”组的实例对象，如安装 Microsoft Office 的应用程序  。 
+ 管理用户负责管理的特定于“安全作用域”组的对象实例，如安装 Microsoft 365 Apps 的应用程序。 
 
  安全角色、安全作用域和集合的组合定义管理用户可以查看和管理的对象。 Configuration Manager 为典型的管理任务安装某些默认安全角色。 创建自己的安全角色来满足特定业务需求。  
 

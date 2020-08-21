@@ -2,7 +2,7 @@
 title: 规划云管理网关
 titleSuffix: Configuration Manager
 description: 规划和设计云管理网关 (CMG)，简化基于 Internet 的客户端管理。
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502249"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126927"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -53,7 +54,7 @@ ms.locfileid: "85502249"
 
 - 通过 Internet 在 Windows 10 设备上安装 Configuration Manager 客户端。 使用 Azure AD 允许设备对 CMG 进行身份验证，以注册和分配客户端。 可手动安装客户端，也可使用其他软件分发方法（如 Microsoft Intune）。  
 
-- 通过共同管理预配新设备。 自动注册现有客户端时，不需要使用 CMG 来实现共同管理。 但新设备需要使用 CMG，其中涉及 Windows AutoPilot、Azure AD、Microsoft Intune 和 Configuration Manager。 有关详细信息，请参阅[共同管理的路径](../../../../comanage/quickstart-paths.md)。
+- 通过共同管理预配新设备。 自动注册现有客户端时，不需要使用 CMG 来实现共同管理。 对于涉及 Windows Autopilot、Azure AD、Microsoft Intune 和 Configuration Manager 的新设备来说，这是必需的。 有关详细信息，请参阅[共同管理的路径](../../../../comanage/quickstart-paths.md)。
 
 ### <a name="specific-use-cases"></a>特定用例
 
@@ -123,6 +124,8 @@ CMG 部署和操作包括以下组件：
 可在 Azure 中创建多个 CMG 服务，并且可创建多个 CMG 连接点。 多个 CMG 连接点提供从 CMG 到本地角色的客户端流量负载均衡。
 
 从版本 1902 开始，可以将 CMG 与边界组关联。 此配置允许客户端根据[边界组关系](../../../servers/deploy/configure/boundary-groups.md)默认或回退到 CMG 以进行客户端通信。 在分支机构和 VPN 方案中，这一行为特别有用。 可以将客户端通信从昂贵且速度缓慢的 WAN 链接中分离出来，转为使用 Microsoft Azure 中更为快速的服务。<!--3640932-->
+
+自版本 2006 起，Intranet 客户端可以在分配到边界组后访问 CMG 软件更新点。 有关详细信息，请参阅[配置边界组](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup)。 <!--7102873-->
 
 > [!NOTE]
 > 基于 Internet 的客户端不属于任何边界组。
@@ -222,7 +225,7 @@ Configuration Manager 的 Azure 云管理服务支持多个租户。 多个 Conf
 |功能  |支持  |
 |---------|---------|
 | 软件更新     | ![支持](media/green_check.png) |
-| Endpoint Protection     | ![支持](media/green_check.png) <sup>[注释 1](#bkmk_note1)</sup> |
+| Endpoint Protection     | ![支持](media/green_check.png) <sup>[备注&nbsp;1](#bkmk_note1)</sup> |
 | 硬件和软件清单     | ![支持](media/green_check.png) |
 | 客户端状态和通知     | ![支持](media/green_check.png) |
 | 运行脚本     | ![支持](media/green_check.png) |
@@ -232,10 +235,11 @@ Configuration Manager 的 Azure 云管理服务支持多个租户。 多个 Conf
 | 客户端安装<br>（带[令牌身份验证](../../deploy/deploy-clients-cmg-token.md)） | ![支持](media/green_check.png) (2002) |
 | 软件分发（以设备为目标）     | ![支持](media/green_check.png) |
 | 软件分发（以用户为目标，必需）<br>（带 Azure AD 集成）     | ![支持](media/green_check.png) |
-| 软件分发（以用户为目标，可用）<br>（[所有要求](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)） | ![支持](media/green_check.png) |
+| 软件分发（以用户为目标，可用）<br>（[所有要求](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)） | ![支持](media/green_check.png) |
 | Windows 10 [就地升级任务序列](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![支持](media/green_check.png) |
-| 不使用启动映像并使用选项部署的任务序列：**启动任务序列之前在本地下载所有内容** | ![支持](media/green_check.png) |
-| 不使用启动映像和[任一下载选项](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg)的任务序列 | ![支持](media/green_check.png) (1910)|
+| 没有启动映像的任务序列，使用选项“在启动任务序列之前在本地下载所有内容”进行部署 | ![支持](media/green_check.png) |
+| 没有启动映像的任务序列，使用[两个下载选项之一](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg)进行部署 | ![支持](media/green_check.png) (1910) |
+| 包含启动映像的任务序列，从软件中心启动 | ![支持](media/green_check.png) (2006) |
 | 任何其他任务序列方案     | ![不支持](media/Red_X.png) |
 | 客户端推送     | ![不支持](media/Red_X.png) |
 | 自动站点分配     | ![不支持](media/Red_X.png) |
@@ -256,12 +260,18 @@ Configuration Manager 的 Azure 云管理服务支持多个租户。 多个 Conf
 |![不支持](media/Red_X.png) = CMG 不支持此功能 |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> 注释 1：支持 Endpoint Protection
+
+自版本 2006 起，通过 CMG 通信的客户端可以立即应用终结点保护策略，而无需与 Active Directory 建立活动连接。<!--4773948-->
+
 <!-- 4350561 -->
-要使已加入域的设备应用 Endpoint Protection 策略，这些设备需要有权访问域。 不常访问内部网络的设备在应用 Endpoint Protection 策略时可能会出现延迟。 如果需要设备在接收 Endpoint Protection 策略后立即应用该策略，请考虑以下选项之一：
+在版本 2002 及更低版本中，域加入设备需要有权访问域，才能应用 Endpoint Protection 策略。 不常访问内部网络的设备在应用 Endpoint Protection 策略时可能会出现延迟。 如果需要设备在接收 Endpoint Protection 策略后立即应用该策略，请考虑以下选项之一：
+
+- 将站点和客户端更新到版本 2006。
 
 - 使用共同管理功能，并将 [Endpoint Protection 工作负载](../../../../comanage/workloads.md#endpoint-protection)切换到 Intune，从云端管理 [Microsoft Defender 防病毒](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)。
 
 - 使用[配置项](../../../../compliance/deploy-use/create-configuration-items.md)而不是本机[反恶意软件策略](../../../../protect/deploy-use/endpoint-antimalware-policies.md)功能来应用 Endpoint Protection 策略。
+
 
 ## <a name="cost"></a>成本
 

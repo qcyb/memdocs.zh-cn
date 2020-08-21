@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764044"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127267"
 ---
 # <a name="conditional-access-with-co-management"></a>启用共同管理的条件访问
 
@@ -81,7 +81,7 @@ For more information, see [Wipro drives mobile productivity with Microsoft cloud
 
 - Nestlé 为超过 150,000 名员工使用基于应用的条件访问  
 
-- 自动化软件公司 Cadence 现在可以确保“只有托管设备才能访问 Office 365 应用（如 Teams）和公司的 Intranet”。 他们还可以让员工“更安全地访问基于云的其他应用，如 Workday 和 Salesforce”。 有关 Cadence 使用 Intune 的更多体验，请参阅 [Cadence 通过 Microsoft 365 中的移动协作工具提高业务处理速度](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365)。
+- 自动化软件公司 Cadence 现在可以确保“只有受管理设备才能访问 Microsoft 365 Apps（如 Teams）和公司的 Intranet”。 他们还可以让员工“更安全地访问基于云的其他应用，如 Workday 和 Salesforce”。 有关 Cadence 使用 Intune 的更多体验，请参阅 [Cadence 通过 Microsoft 365 中的移动协作工具提高业务处理速度](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365)。
 
 Intune 还可与 Cisco ISE、Aruba Clear Pass 和 Citrix NetScaler 等合作伙伴完全集成。 集成了这些合作伙伴后，用户可以根据 Intune 注册和跨这些其他平台的设备符合性状态来维护访问控制。
 

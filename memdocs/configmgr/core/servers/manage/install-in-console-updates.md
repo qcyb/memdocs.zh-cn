@@ -2,7 +2,7 @@
 title: 控制台中更新
 titleSuffix: Configuration Manager
 description: 从 Microsoft 云安装 Configuration Manager 更新
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637663"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128080"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
@@ -96,13 +96,13 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 若要了解开始更新前执行的操作，请查看适用的更新清单：
 
+- [用于安装更新 2006 的清单](checklist-for-installing-update-2006.md)
+
 - [用于安装更新 2002 的清单](checklist-for-installing-update-2002.md)
 
 - [用于安装更新 1910 的清单](checklist-for-installing-update-1910.md)  
 
 - [用于安装更新 1906 的清单](checklist-for-installing-update-1906.md)  
-
-- [用于安装更新 1902 的清单](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a>步骤 2：安装更新之前运行先决条件检查程序  
 
@@ -362,13 +362,13 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 站点更新后，查看更新后清单以寻找适用的版本：  
 
+- [版本 2006 的更新后清单](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [版本 2002 的更新后清单](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [版本 1910 的更新后清单](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [版本 1906 的更新后清单](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [版本 1902 的更新后清单](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a>启用更新中的可选功能  
 
@@ -378,7 +378,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 会自动安装不可选的功能。 该功能不会出现在“功能”节点中。  
 
-> [!Important]  
+> [!IMPORTANT]
 > 在多站点层次结构中，只能从管理中心站点启用可选功能或预发行功能。 此行为确保层次结构中不会出现冲突。 <!--507197-->  
 
 启用新功能或预发行功能时，配置管理器层次结构管理器 (HMAN) 必须在该功能可用之前处理更改。 更改的处理通常是即时的。 根据 HMAN 处理周期，可能最多需要 30 分钟才能完成。 处理更改后，必须重启控制台，才能使用该功能。
@@ -391,19 +391,20 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
 - [社区中心](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [业务流程组](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [任务序列部署类型](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [BitLocker 管理](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [将集合成员身份结果同步到 Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Azure Active Directory 用户组发现](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [应用程序组](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [任务序列调试器](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [包转换管理器](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [适用于共同托管设备的客户端应用](../../../comanage/workloads.md#client-apps)（以前称为适用于共同托管设备的移动应用） <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [第三方软件更新](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [审批每台设备的用户的应用程序请求](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [创建和运行脚本](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
@@ -416,7 +417,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 - [维护群集感知集合（服务器组）](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello 企业版](../../../protect/deploy-use/windows-hello-for-business-settings.md)（以前称为 Passport for Work） <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > 若要详细了解需要同意才能启用的功能，请参阅[预发布功能](pre-release-features.md)。  
 >
 > 若要详细了解仅在技术预览分支中可用的功能，请参阅[技术预览版](../../get-started/technical-preview.md)。

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904654"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128995"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager 1802 版中的新增功能
 
@@ -236,7 +236,7 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
 
 ### <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>在已加入 Azure AD 的设备上，使用软件中心来浏览和安装用户可用的应用程序
 <!-- 1322613 -->
-如果将应用程序以可用的方式部署到用户，则他们现在可以通过 Azure Active Directory (Azure AD) 设备上的软件中心浏览和安装应用程序。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)。
+如果将应用程序以可用的方式部署到用户，则他们现在可以通过 Azure Active Directory (Azure AD) 设备上的软件中心浏览和安装应用程序。 有关详细信息，请参阅[部署用户可用的应用程序](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)。
 
 ### <a name="hide-installed-applications-in-software-center"></a>在软件中心隐藏安装的应用程序
 <!--1357592-->

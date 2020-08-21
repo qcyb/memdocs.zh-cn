@@ -2,20 +2,20 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823956"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126285"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -29,10 +29,10 @@ ms.locfileid: "83823956"
 
 有关不同版本引入的新功能的信息，请参阅以下文章：
 
+- [2006 版中的新增功能](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [2002 版中的新增功能](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [1910 版中的新增功能](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [版本 1906 中的新增功能](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [版本 1902 中的新增功能](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 若要了解桌面分析中的新功能，请参阅[桌面分析的新变化](../../../../desktop-analytics/whats-new.md)。
 
@@ -121,24 +121,15 @@ ms.locfileid: "83823956"
 
 - 将站点配置为增强型 HTTP，并将管理点配置为 HTTP。<!-- 6358851 -->
 
-    若要解决此问题，请配置 HTTPS 管理点。
+    若要解决此问题，请更新到版本 2006。 或者，为管理点配置 HTTPS。
 
 - 你使用用于进行身份验证的批量注册令牌安装并注册了客户端。<!-- 6377921 -->
 
-    若要解决此问题，请使用以下身份验证方法之一进行操作：
+    若要解决此问题，请更新到版本 2006。 或者，使用以下身份验证方法之一：
 
   - 在内部网络上预先注册设备
   - 使用客户端身份验证证书来配置设备
   - 将设备加入 Azure AD
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>提升被动站点服务器之后，默认启动映像包在上一个活动服务器上仍有包源
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-适用范围：Configuration Manager 版本 1810
-
-如果站点服务器处于被动模式（服务器 B），在将其提升为活动模式时，默认启动映像的内容位置将继续引用先前活动的服务器（服务器 A）。 如果服务器 A 出现硬件故障，则无法更新或更改默认启动映像。
-
-此问题没有任何解决方法。
 
 ## <a name="software-updates"></a>软件更新
 
@@ -171,7 +162,7 @@ OS Deployment Manager 内置安全角色具有[分阶段部署](../../../../osd/
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Windows 7 扩展安全更新程序导致它们显示为“无法注册”
 
 <!-- 7283186 -->
-适用范围：Configuration Manager 版本 1902、1906、1910 和 2002
+适用范围：Configuration Manager 版本 2002 及更低版本
 
 Windows 7 的 2020 年 4 月扩展安全更新程序 (ESU) 已将 diagtrack.dll 的最低要求版本从 10586 更改为 10240。 此更改会导致 Windows 7 设备在桌面分析“连接运行状况”仪表板中显示为“无法注册”。 当你向下钻取到此状态的设备视图时，会看到 DiagTrack 服务配置属性显示以下状态：`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 

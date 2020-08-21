@@ -2,7 +2,7 @@
 title: 大小和扩展
 titleSuffix: Configuration Manager
 description: 确定需要用来支持环境中设备的站点系统角色和站点的数量。
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715622"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126692"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>用于 Configuration Manager 的大小和扩展数量
 
@@ -184,6 +184,8 @@ ms.locfileid: "84715622"
 每个 SMS 提供程序的实例支持从多个请求进行同时连接。 对这些连接仅有的限制是 Windows 可用的服务器连接数量，以及服务器上满足连接请求的可用资源。
 
 有关详细信息，请参阅[规划 SMS 提供程序](../hierarchy/plan-for-the-sms-provider.md)。
+
+管理服务是每个 SMS 提供程序实例上的 REST API。 它最多支持 5,000 个请求/秒和 200 个请求/客户端 IP 地址。
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a>站点和层次结构的客户端数量
 

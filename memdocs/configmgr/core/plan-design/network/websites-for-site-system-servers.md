@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701445"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146076"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Configuration Manager 中的站点系统服务器网站
 
@@ -83,7 +83,7 @@ ms.locfileid: "81701445"
 -   在 IIS 中为自定义网站设置的 TCP/IP 端口必须与此站点的客户端请求端口匹配。  
 
 ## <a name="switch-between-default-and-custom-websites"></a>在默认网站和自定义网站之间切换  
-虽然你可随时选中或取消选中在主站点使用自定义网站的复选框（此复选框位于站点“属性”的“常规”选项卡上），但在进行此更改之前请仔细规划。 当此配置更改时，必须卸载主站点和子辅助站点中所有适用的站点系统角色，然后重新安装：  
+尽管你可以随时选中或取消选中关于在主站点使用自定义网站的复选框（此复选框位于站点“属性”的“端口”选项卡上），但在进行此更改之前请仔细计划。 当此配置更改时，必须卸载主站点和子辅助站点中所有适用的站点系统角色，然后重新安装：  
 
 以下角色将 **自动重新安装**：  
 
