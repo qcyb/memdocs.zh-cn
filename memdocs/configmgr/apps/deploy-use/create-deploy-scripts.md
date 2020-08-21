@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605178"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695349"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -205,7 +205,7 @@ Configuration Manager 具有运行 PowerShell 脚本的集成功能。 PowerShel
 
 正则表达式是一种紧凑的编程形式，用于检查一串字符的编码验证。 例如，可以通过将 `[^A-Z]` 放入“RegEx”  字段，来检查“FirstName”  字段中是否缺少大写字母字符。
 
-.NET Framework 支持此对话框的正则表达式处理。 有关使用正则表达式的指南，请参阅 [.NET 正则表达式](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions)和[正则表达式语言](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference)。
+.NET Framework 支持此对话框的正则表达式处理。 有关使用正则表达式的指南，请参阅 [.NET 正则表达式](/dotnet/standard/base-types/regular-expressions)和[正则表达式语言](/dotnet/standard/base-types/regular-expression-language-quick-reference)。
 
 
 ## <a name="script-examples"></a>脚本示例
@@ -294,7 +294,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-output"></a>脚本输出
 
-客户端采用 JSON 格式返回脚本输出，将脚本的结果通过管道传输至 [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet。 JSON 格式会始终如一地返回可读的脚本输出。 对于不以输出形式返回对象的脚本，ConvertTo-Json cmdlet 会将输出转换为客户端返回的简单字符串，而不是返回 JSON。  
+客户端采用 JSON 格式返回脚本输出，将脚本的结果通过管道传输至 [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet。 JSON 格式会始终如一地返回可读的脚本输出。 对于不以输出形式返回对象的脚本，ConvertTo-Json cmdlet 会将输出转换为客户端返回的简单字符串，而不是返回 JSON。  
 
 - 收到未知结果或客户端脱机的脚本不会在图表或数据集中显示。 <!--507179-->
 - 避免返回大型脚本输出，因为它会截断为 4KB。 <!--508488-->
@@ -302,7 +302,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
    ![将枚举对象转换为字符串值](./media/run-scripts/enum-tostring-JSON.png)
 
-可以原始或结构化 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。 如果脚本返回有效的 JSON 格式的文本，或者输出可使用 [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet 转换为 JSON，则以 JSON 输出或原始输出的形式查看详细输出   。 否则，唯一的选择是脚本输出  。
+可以原始或结构化 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。 如果脚本返回有效的 JSON 格式的文本，或者输出可使用 [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet 转换为 JSON，则以 JSON 输出或原始输出的形式查看详细输出   。 否则，唯一的选择是脚本输出  。
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>例如：脚本输出可转换为有效的 JSON
 

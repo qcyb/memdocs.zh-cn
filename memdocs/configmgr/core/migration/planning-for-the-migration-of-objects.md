@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 996cff4b8b333a59b774afb979bbdd89aae536a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905135"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692887"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>规划将 Configuration Manager 对象迁移到 Configuration Manager Current Branch
 
@@ -123,7 +123,7 @@ ms.locfileid: "82905135"
 你可以迁移配置项目和配置基线。  
 
 > [!NOTE]  
->  迁移不支持 Configuration Manager 2007 源层次结构中未解释的配置项目。 你无法将这些配置项目迁移或导入到目标层次结构。 有关未解释的配置项目的详细信息，请参阅 Configuration Manager 2007 文档库的[关于所需的配置管理中的配置项目](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item)主题中的“未解释的配置项目”。  
+>  迁移不支持 Configuration Manager 2007 源层次结构中未解释的配置项目。 你无法将这些配置项目迁移或导入到目标层次结构。 有关未解释的配置项目的详细信息，请参阅 Configuration Manager 2007 文档库的[关于所需的配置管理中的配置项目](/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item)主题中的“未解释的配置项目”。  
 
 可以导入 Configuration Manager 2007 配置包。 导入过程会自动转换配置包以与 Configuration Manager Current Branch 兼容。  
 
@@ -160,4 +160,4 @@ Configuration Manager 不支持迁移报表。 实际上，它使用 SQL Server 
 ##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a>规划软件计数规则自定义的迁移  
  在 Configuration Manager 2007 与 Configuration Manager Current Branch 之间，软件计数并无显著变化。 可以将软件计数规则从支持的源层次结构迁移到目标层次结构。  
 
- 默认情况下，迁移到目标层次结构的软件计数规则不会与目标层次结构中的特定站点关联，而是应用到层次结构中的所有客户端。 若要将软件计数规则应用到特定站点中的客户端，必须在迁移计数规则后编辑它。  
+ 默认情况下，迁移到目标层次结构的软件计数规则不会与目标层次结构中的特定站点关联，而是应用到层次结构中的所有客户端。 若要将软件计数规则应用到特定站点中的客户端，必须在迁移计数规则后编辑它。

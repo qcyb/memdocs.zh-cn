@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: c3f069225ec1af364a8580559ac4019e1bdd5f0f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906645"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693346"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>在 Configuration Manager 中规划 Windows Embedded 设备的客户端部署
 
@@ -46,11 +46,11 @@ ms.locfileid: "82906645"
 
  Configuration Manager 支持管理下列类型的写入筛选器：  
 
-- 基于文件的写入筛选器 (FBWF) – 有关详细信息，请参阅[基于文件的写入筛选器](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5))。  
+- 基于文件的写入筛选器 (FBWF) – 有关详细信息，请参阅[基于文件的写入筛选器](/previous-versions/windows/embedded/aa940926(v=winembedded.5))。  
 
-- 增强型写入筛选器 (EWF) RAM – 有关详细信息，请参阅[增强型写入筛选器](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5))。  
+- 增强型写入筛选器 (EWF) RAM – 有关详细信息，请参阅[增强型写入筛选器](/previous-versions/windows/embedded/ms912906(v=winembedded.5))。  
 
-- 统一写入筛选器 (UWF) – 有关详细信息，请参阅[统一写入筛选器](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter)。  
+- 统一写入筛选器 (UWF) – 有关详细信息，请参阅[统一写入筛选器](/windows-hardware/customize/enterprise/unified-write-filter)。  
 
   当 Windows Embedded 设备处于 EWF RAM 注册模式时，Configuration Manager 不支持写入筛选器操作。  
 

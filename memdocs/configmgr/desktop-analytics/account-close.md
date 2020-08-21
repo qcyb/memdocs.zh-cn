@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b8d22d7f011fb87dc1105fd8447d2e93adc80c6e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268464"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693363"
 ---
 # <a name="how-to-close-your-account"></a>如何关闭帐户
 
@@ -114,9 +114,9 @@ ms.locfileid: "83268464"
 使用以下方法之一设置这些值：
 
 - 组策略（在“计算机配置” > “管理模板” > “Windows 组件” > “数据集合和预览版本”中）     。
-- 移动设备管理 (MDM)，例如 [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- 移动设备管理 (MDM)，例如 [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
-有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)。
+有关详细信息，请参阅[配置组织中的 Windows 诊断数据](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)。
 
 > [!NOTE]  
 > 应用这些更改后，设备会立即停止发送诊断数据。 Microsoft 可能需要 24-48 小时才能停止为您的工作区处理见解。 Microsoft 会在 30 天内或更短时间内从其云服务中删除此数据。

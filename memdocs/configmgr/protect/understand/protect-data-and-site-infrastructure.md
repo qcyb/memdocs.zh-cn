@@ -10,12 +10,12 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 381f9d190b1d73bbbab6142fd9587e881d0870ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a73fff7fd2eb5d630d6047a7da6f131188f06c5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708595"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693482"
 ---
 # <a name="protect-data-and-site-infrastructure"></a>保护数据和站点基础结构
 
@@ -33,7 +33,7 @@ ms.locfileid: "81708595"
   - Microsoft Defender 应用程序控制
 
   > [!TIP]
-  > 若要使用 Microsoft 终结点管理器云服务管理共同管理的 Windows 10 设备上的 Endpoint Protection，请将 [Endpoint Protection 工作负载](../../comanage/workloads.md#endpoint-protection) 切换为 Intune  。 有关详细信息，请参阅 [Microsoft Intune 的 Endpoint Protection](https://docs.microsoft.com/intune/endpoint-protection-windows-10)。
+  > 若要使用 Microsoft 终结点管理器云服务管理共同管理的 Windows 10 设备上的 Endpoint Protection，请将 [Endpoint Protection 工作负载](../../comanage/workloads.md#endpoint-protection) 切换为 Intune  。 有关详细信息，请参阅 [Microsoft Intune 的 Endpoint Protection](/intune/endpoint-protection-windows-10)。
 
 - 使用 BitLocker 驱动器加密 (BDE) 保护本地 Windows 客户端上存储的数据。 Configuration Manager 提供了可代替 Microsoft BitLocker Administration and Monitoring (MBAM) 的完整 BitLocker 生命周期管理。 有关详细信息，请参阅[规划 BitLocker 管理](../plan-design/bitlocker-management.md)。
 
@@ -43,4 +43,4 @@ ms.locfileid: "81708595"
 
 - Wi-Fi 配置文件提供了一组工具和资源，有助于你为组织中的设备管理无线网络设置。 通过部署这些设置，你可以最大程度地减少最终用户连接到无线网络所需执行的工作。 有关详细信息，请参阅 [Wi-Fi 配置文件](../deploy-use/create-wifi-profiles.md)。  
 
-- 为设备预配用户连接到资源所需的证书。 有关详细信息，请参阅[证书配置文件](../deploy-use/introduction-to-certificate-profiles.md)。  
+- 为设备预配用户连接到资源所需的证书。 有关详细信息，请参阅[证书配置文件](../deploy-use/introduction-to-certificate-profiles.md)。

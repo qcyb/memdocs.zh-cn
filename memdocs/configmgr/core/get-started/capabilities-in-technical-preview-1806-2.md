@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905219"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694400"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Configuration Manager Technical Preview 1806.2 中的功能
 
@@ -147,7 +147,7 @@ Steps to workaround, if any.
 <!--1357427-->
 Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和应用程序包 (.msixbundle) 格式。 最新的 [Windows Insider Preview](https://insider.windows.com/) 内部版本当前支持这些格式。
 
-有关 MSIX 的概述，请参阅 [MSIX 详解](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)。
+有关 MSIX 的概述，请参阅 [MSIX 详解](/archive/blogs/sgern/a-closer-look-at-msix)。
 
 有关如何创建新的 MSIX 应用，请参阅 [Insider 内部版本 17682 中引入的 MSIX 支持](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376)。
 
@@ -168,7 +168,7 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 <!--1358204-->
 使用[客户端请求](../clients/deploy/plan/client-installation-methods.md#client-push-installation)方法安装 Configuration Manager 客户端时，站点服务器会创建与客户端的远程连接以开始安装。 从此版本开始，站点可以通过不允许在建立连接之前回退到 NTLM 来要求 Kerberos 相互身份验证。 此增强有助于保护服务器与客户端之间的通信。 
 
-根据你的安全策略，你的环境可能偏好或要求 Kerberos，而不是较旧的 NTLM 身份验证。 有关这些身份验证协议的安全注意事项的详细信息，请参阅[用于限制 NTLM 的 Windows 安全策略设置](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)。
+根据你的安全策略，你的环境可能偏好或要求 Kerberos，而不是较旧的 NTLM 身份验证。 有关这些身份验证协议的安全注意事项的详细信息，请参阅[用于限制 NTLM 的 Windows 安全策略设置](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)。
 
 
 ### <a name="prerequisite"></a>先决条件
@@ -218,7 +218,7 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 
 - [适用于 Windows 10 设备的共同管理](../../comanage/overview.md)  
 
-- [什么是 Microsoft Intune 应用管理？](https://docs.microsoft.com/intune/app-management)  
+- [什么是 Microsoft Intune 应用管理？](/intune/app-management)  
 
 
 
@@ -319,7 +319,7 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 
     - [使用 Azure 资源管理器部署云分发点](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- 客户使用 Windows AutoPilot 预配连接到本地网络上的加入 Azure Active Directory 的设备上的 Windows 10。 要在这些设备上安装或升级 Configuration Manager 客户端，现在不再需要被配置为“允许客户端匿名连接”  的云分发点或本地分发点。 相反，启用站点选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  ，这允许加入云域的客户端与启用本地 HTTP 的分发点进行通信。 有关详细信息，请参阅[已改进安全客户端通信](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)。<!--515854-->  
+- 客户使用 Windows AutoPilot 预配连接到本地网络上的加入 Azure Active Directory 的设备上的 Windows 10。 要在这些设备上安装或升级 Configuration Manager 客户端，现在不再需要被配置为“允许客户端匿名连接”  的云分发点或本地分发点。 相反，启用站点选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”  ，这允许加入云域的客户端与启用本地 HTTP 的分发点进行通信。 有关详细信息，请参阅[已改进安全客户端通信](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)。<!--515854-->  
 
 
 
@@ -338,4 +338,4 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 
 
 ## <a name="next-steps"></a>后续步骤
-有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。    
+有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。

@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 63db181bd145ea2fa14f206e94c521b65f7e7354
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906369"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695148"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>使用 Configuration Manager 部署 App-V 虚拟应用程序
 
@@ -31,7 +31,7 @@ ms.locfileid: "82906369"
 
 -   利用操作系统部署、软件和硬件清单、软件计数和资产智能，可以支持虚拟应用程序  
 
-若要深入了解如何使用 Microsoft Application Virtualization (App-V) 创建和序列化应用程序，请参阅 [Application Virtualization 4 文档](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/)。  
+若要深入了解如何使用 Microsoft Application Virtualization (App-V) 创建和序列化应用程序，请参阅 [Application Virtualization 4 文档](/microsoft-desktop-optimization-pack/appv-v4/)。  
 
 除了创建应用程序的其他 Configuration Manager 要求和过程，在创建和部署虚拟应用程序时还必须考虑以下注意事项：
 
@@ -65,9 +65,9 @@ ms.locfileid: "82906369"
 
 有关 Windows 10 的 App-V 的详细信息，请参阅下列主题：
 
-- [App-V 中的新增功能](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
-- [适用于 Windows 10 的 App-V 入门](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
-- [Upgrading to App-V for Windows 10 from an existing installation](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)（从现有安装产品升级为适用于 Windows 10 的 APP-V）
+- [App-V 中的新增功能](/windows/application-management/app-v/appv-about-appv)
+- [适用于 Windows 10 的 App-V 入门](/windows/application-management/app-v/appv-getting-started)
+- [Upgrading to App-V for Windows 10 from an existing installation](/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)（从现有安装产品升级为适用于 Windows 10 的 APP-V）
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>管理 APP-V 虚拟应用程序的步骤  
  要管理 App-V 虚拟应用程序，请按照以下步骤操作：  
@@ -147,7 +147,7 @@ Configuration Manager 中的 App-V 虚拟环境允许所部署的虚拟应用程
 有关 App-V 动态套件合成的详细信息，请参阅 App-V 文档。  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>将 App-V 4.6 应用程序转换为 App-V 5 应用程序  
-APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用 APP-V 4.6 排序的应用程序。 但是，App-V 5 包含一个包转换工具，可用于转换应用程序。 有关详细信息，请参阅[如何转换在早期版本的 App-V 中创建的包](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v)。  
+APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用 APP-V 4.6 排序的应用程序。 但是，App-V 5 包含一个包转换工具，可用于转换应用程序。 有关详细信息，请参阅[如何转换在早期版本的 App-V 中创建的包](/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v)。  
 
 使用下列步骤将 App-V 4.6 应用程序转换为 App-V 5 应用程序：  
 
@@ -178,7 +178,7 @@ APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用
 
 如果要利用 Configuration Manager 部署 App-V 5 虚拟应用程序，则在你创建 App-V 5 部署类型时，所有三个文件都必须位于相同的文件夹中。 如果文件夹中有多个文件，则 Configuration Manager 将使用最新的文件。  
 
-有关详细信息，请参阅[关于 App-V 5.0 动态配置](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration)。  
+有关详细信息，请参阅[关于 App-V 5.0 动态配置](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration)。  
 
 ##  <a name="app-v-local-interaction"></a>App-V 本地交互  
 在一些应用程序部署方案中，某些应用程序以本地方式安装在客户端计算机上，而另一些应用程序则作为虚拟应用程序部署到相同的客户端计算机上。 默认情况下，以本地方式安装的应用程序无法看到虚拟化的应用程序，也无法直接与它们通信。 这是 App-V 提供的应用程序隔离功能的预期行为。 本地交互是 App-V 客户端的一项功能，可以为每个应用程序启用此功能，以便允许以本地方式安装且便于客户端计算机上运行的应用程序看到虚拟化的应用程序并与其通信。 Configuration Manager 和 App-V 完全支持本地交互。  
@@ -186,7 +186,7 @@ APP-V 4.6 与 APP-V 5 间的应用程序包格式已更改。 不再支持使用
 有关 App-V 本地交互功能的详细信息，请参阅 App-V 文档。  
 
 ##  <a name="app-v-5-shared-content-store"></a>App-V 5 共享内容存储  
-Configuration Manager 支持 App-V 5 共享内容存储功能。 有关详细信息，请参阅 [规划 App-V 5.0 共享内容存储 (SCS)](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs)。  
+Configuration Manager 支持 App-V 5 共享内容存储功能。 有关详细信息，请参阅 [规划 App-V 5.0 共享内容存储 (SCS)](/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs)。  
 
 ##  <a name="monitoring-virtual-applications"></a>监视虚拟应用程序  
 
@@ -206,4 +206,4 @@ Configuration Manager 支持 App-V 5 共享内容存储功能。 有关详细信
 ### <a name="log-files"></a>日志文件  
 Configuration Manager 会在日志文件中记录有关虚拟应用程序部署的信息。 有关虚拟应用程序和 Configuration Manager 应用程序管理所使用的日志文件的信息，请参阅[日志文件](../../core/plan-design/hierarchy/log-files.md)。  
 
-对于 Windows 8.1，请在 C:\ProgramData\Microsoft\Application Virtualization Client 中查找 App-V 客户端的日志。  
+对于 Windows 8.1，请在 C:\ProgramData\Microsoft\Application Virtualization Client 中查找 App-V 客户端的日志。

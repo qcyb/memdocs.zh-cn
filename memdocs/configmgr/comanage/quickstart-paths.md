@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: a685e10ecdb2f6fac8d5634fd932facf52fddcb0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746453"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694944"
 ---
 # <a name="paths-to-co-management"></a>共同管理的路径
 
@@ -34,10 +34,10 @@ ms.locfileid: "84746453"
 
 以下是需要设置的选项：
 - 混合 Azure AD
-    - 以下 [Azure AD 混合标识选项](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin)之一：  
-       - 含[无缝单一登录 (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) 的[密码哈希同步](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization)
-       - 含[无缝单一登录 (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) 的[直通身份验证](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta)
-       - [联合 SSO（含 Active Directory 联合身份验证服务 (AD FS)）](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - 以下 [Azure AD 混合标识选项](/azure/active-directory/hybrid/plan-connect-user-signin)之一：  
+       - 含[无缝单一登录 (SSO)](/azure/active-directory/hybrid/how-to-connect-sso) 的[密码哈希同步](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization)
+       - 含[无缝单一登录 (SSO)](/azure/active-directory/hybrid/how-to-connect-sso) 的[直通身份验证](/azure/active-directory/hybrid/how-to-connect-pta)
+       - [联合 SSO（含 Active Directory 联合身份验证服务 (AD FS)）](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium 许可证
     - 配置混合 Azure AD 联接（选择一个选项）：
@@ -61,4 +61,3 @@ ms.locfileid: "84746453"
 4. [使用 Intune 部署 Configuration Manager 客户端](how-to-prepare-Win10.md)  
 
 有关此方法的教程，请参阅[教程：为基于 Internet 的新设备启用共同管理](tutorial-co-manage-new-devices.md)。
-

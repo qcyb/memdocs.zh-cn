@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: a2e032e2aecfd53dc3a92cfb9c40798b4dcd1db9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715605"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692768"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -258,8 +258,8 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 - *工作组*：设备未加入域或 Azure AD，但具有[客户端身份验证证书](#bkmk_clientauth)。
 - *AD 域加入*：将设备加入本地 Active Directory 域。
-- *Azure AD 加入*：也称为云域加入，将设备加入 Azure AD 租户。 有关详细信息，请参阅[加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)。
-- *混合加入*：将设备加入本地 Active Directory，并向 Azure AD 注册。 有关详细信息，请参阅[已加入混合 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)。
+- *Azure AD 加入*：也称为云域加入，将设备加入 Azure AD 租户。 有关详细信息，请参阅[加入 Azure AD 的设备](/azure/active-directory/devices/concept-azure-ad-join)。
+- *混合加入*：将设备加入本地 Active Directory，并向 Azure AD 注册。 有关详细信息，请参阅[已加入混合 Azure AD 的设备](/azure/active-directory/devices/concept-azure-ad-join-hybrid)。
 - *HTTP*：在管理点属性上，将客户端连接设置为“HTTP”。
 - *HTTPS*：在管理点属性上，将客户端连接设置为“HTTPS”。
 - *E-HTTP*：在站点属性的“通信安全”选项卡上，将站点系统设置设为“HTTPS 或 HTTP”，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。
@@ -282,9 +282,9 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 有关如何上传管理证书的详细信息和说明，请参阅 Azure 文档中的以下文章：
 
-- [云服务和管理证书](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [云服务和管理证书](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [上传 Azure 服务管理证书](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [上传 Azure 服务管理证书](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > 请确保复制与管理证书关联的订阅 ID。 在 Configuration Manager 控制台中创建 CMG 时需使用此证书。
@@ -295,4 +295,4 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 - [有关云管理网关的常见问题解答](cloud-management-gateway-faq.md)  
 
-- [云管理网关的安全和隐私](security-and-privacy-for-cloud-management-gateway.md)  
+- [云管理网关的安全和隐私](security-and-privacy-for-cloud-management-gateway.md)

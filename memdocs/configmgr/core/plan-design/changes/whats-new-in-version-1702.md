@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129063"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692785"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager 版本 1702 中的新增功能
 
@@ -118,7 +118,7 @@ Configuration Manager Current Branch 的更新 1702 作为控制台内更新提�
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>将 OMS 连接器与 Azure Government 云结合使用
-可以使用 OMS 连接器连接到 Microsoft Azure Government 云中的 OMS Log Analytics。 这要求你在安装 OMS 连接器前修改配置文件，以将连接器与 Government 云结合使用。 有关详细信息，请参阅[将 OMS 连接器与 Azure Government 云结合使用](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)。
+可以使用 OMS 连接器连接到 Microsoft Azure Government 云中的 OMS Log Analytics。 这要求你在安装 OMS 连接器前修改配置文件，以将连接器与 Government 云结合使用。 有关详细信息，请参阅[将 OMS 连接器与 Azure Government 云结合使用](/azure/azure-monitor/platform/collect-sccm)。
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>将软件更新点添加到边界组。
 从版本 1702 开始，客户端使用边界组查找新的软件更新点，并在其当前软件更新点不再可用时回退并查找新的软件更新点。 可以向不同的边界组添加各个软件更新点，以控制客户端可以找到哪些服务器。 有关详细信息，请参阅[配置边界组](../../servers/deploy/configure/boundary-groups.md)主题中的[软件更新点](../../servers/deploy/configure/boundary-groups.md#bkmk_sup)。

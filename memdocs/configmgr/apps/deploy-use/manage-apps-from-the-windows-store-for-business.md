@@ -10,16 +10,16 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: a8125f55215fd597d9611723e1d36629850bff44
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643207"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695216"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>使用 Configuration Manager 来管理适用于企业和教育的 Microsoft Store 中的应用
 
-在[适用于企业和教育的 Microsoft Store](https://docs.microsoft.com/microsoft-store/) 中可以为组织查找和获取 Windows 应用。 将适用于企业的 Microsoft Store 连接到 Configuration Manager 时，会同步已获取的应用列表。 在 Configuration Manager 控制台中查看这些应用，并按照部署任何其他应用的方式进行部署。
+在[适用于企业和教育的 Microsoft Store](/microsoft-store/) 中可以为组织查找和获取 Windows 应用。 将适用于企业的 Microsoft Store 连接到 Configuration Manager 时，会同步已获取的应用列表。 在 Configuration Manager 控制台中查看这些应用，并按照部署任何其他应用的方式进行部署。
 
 ## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a>联机和脱机应用
 
@@ -29,7 +29,7 @@ ms.locfileid: "82643207"
 
 - **脱机**：使用此类型的应用能够缓存应用和许可证，以便直接在本地网络中部署。 设备无需连接到适用于企业的 Microsoft Store 或 Internet。
 
-有关详细信息，请参阅[适用于企业和教育的 Microsoft Store 概述](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview)。
+有关详细信息，请参阅[适用于企业和教育的 Microsoft Store 概述](/microsoft-store/microsoft-store-for-business-overview)。
 
 ### <a name="summary-of-capabilities"></a>功能摘要
 
@@ -64,7 +64,7 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 - 本地管理员帐户登录设备时，无法访问适用于企业和教育的 Microsoft Store 应用。  
 
-- 设备必须具有适用于企业和教育的 Microsoft Store 的实时 Internet 连接。 有关包括代理配置在内的详细信息，请参阅[先决条件](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business)。  
+- 设备必须具有适用于企业和教育的 Microsoft Store 的实时 Internet 连接。 有关包括代理配置在内的详细信息，请参阅[先决条件](/microsoft-store/prerequisites-microsoft-store-for-business)。  
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>运行 Windows 10 较早版本的设备的说明
 
@@ -110,17 +110,17 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 将 Configuration Manager 站点连接到 Azure AD 和适用于企业和教育的 Microsoft Store。 有关此流程的详细信息，请参阅[配置 Azure 服务](../../core/servers/deploy/configure/azure-services-wizard.md)。 创建适用于企业的 Microsoft Store 服务的连接  。
 
-确保服务连接点和目标设备可以访问云服务。 有关详细信息，请参阅[适用于企业和教育的 Microsoft Store 的先决条件 - 代理配置](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)。
+确保服务连接点和目标设备可以访问云服务。 有关详细信息，请参阅[适用于企业和教育的 Microsoft Store 的先决条件 - 代理配置](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)。
 
 ### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a>补充信息和配置
 
 在 Azure 服务向导的“应用”页面上，首先配置“Azure环境”和“Web 应用”    。 然后阅读页面底部的“详细信息”部分  。 此信息包括在适用于企业和教育的 Microsoft Store 门户中的以下附加操作：  
 
-- 将 Configuration Manager 配置为存储管理工具。 有关详细信息，请参阅[配置管理提供程序](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business)。  
+- 将 Configuration Manager 配置为存储管理工具。 有关详细信息，请参阅[配置管理提供程序](/microsoft-store/configure-mdm-provider-microsoft-store-for-business)。  
 
-- 启用对脱机许可应用的支持。 有关详细信息，请参阅[分发脱机应用](https://docs.microsoft.com/microsoft-store/distribute-offline-apps)。  
+- 启用对脱机许可应用的支持。 有关详细信息，请参阅[分发脱机应用](/microsoft-store/distribute-offline-apps)。  
 
-- 至少获取一个应用。 有关详细信息，请参阅[查找并获取应用](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview)。  
+- 至少获取一个应用。 有关详细信息，请参阅[查找并获取应用](/microsoft-store/find-and-acquire-apps-overview)。  
 
 在 Azure 服务向导的“配置”页面上，指定以下信息  ：  
 
@@ -161,7 +161,7 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 部署联机应用后，该应用的任何更新都直接来自 Microsoft Store。 此外，Configuration Manager 不会检查联机应用的版本合规性，只是 Windows 会报告应用为已安装。  
 
-使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy)来禁用 Microsoft Store。
+使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy)来禁用 Microsoft Store。
 
 适用于企业和教育的 Microsoft Store 管理员获取脱机应用后，请勿通过应用商店将应用发布给用户。 此配置可确保用户无法联机安装或联机更新。 用户仅通过 Configuration Manager 接收脱机应用更新。
 

@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427723"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692700"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装云分发点
 
@@ -91,7 +91,7 @@ ms.locfileid: "83427723"
 
 - 如果站点服务器具有本地分发点站点系统角色，请将该角色属性中的选项配置为“启用并配置 BranchCache”。 有关详细信息，请参阅[配置分发点](install-and-configure-distribution-points.md#bkmk_config-general)。
 
-- 如果站点服务器没有分发点角色，请在 Windows 中安装 BranchCache 功能。 有关详细信息，请参阅[安装 BranchCache 功能](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)。
+- 如果站点服务器没有分发点角色，请在 Windows 中安装 BranchCache 功能。 有关详细信息，请参阅[安装 BranchCache 功能](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)。
 
 如果已将内容分发到云分发点，然后决定启用 BranchCache，请首先安装该功能。 之后再将内容重新分发到云分发点。
 
@@ -234,7 +234,7 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
 在安装期间为每个云分发点指定阈值，或使用云分发点属性的“警报”选项卡。  
 
 > [!NOTE]  
-> 云分发点的警报视 Azure 提供的使用量统计信息而定，且可能需要最多 24 小时才能变得可用。 有关 Azure 存储分析的详细信息，请参阅[存储分析](https://docs.microsoft.com/rest/api/storageservices/storage-analytics)。  
+> 云分发点的警报视 Azure 提供的使用量统计信息而定，且可能需要最多 24 小时才能变得可用。 有关 Azure 存储分析的详细信息，请参阅[存储分析](/rest/api/storageservices/storage-analytics)。  
 
 在每小时周期中，监视云分发点的主站点从 Azure 下载事务数据。 它将此事务数据存储在站点服务器上的 `CloudDP-<ServiceName>.log` 文件中。 Configuration Manager 会依据每个云分发点的存储和传输配额评估此信息。 在数据传输量达到或超过为警告性警报或关键警报指定的数量时，Configuration Manager 会生成相应的警报。  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-以下示例是上述 PowerShell 脚本中 public_config 变量中引用的示例 diagnostics.wadcfgx 文件 。 有关详细信息，请参阅 [Azure 诊断扩展配置架构](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema)。  
+以下示例是上述 PowerShell 脚本中 public_config 变量中引用的示例 diagnostics.wadcfgx 文件 。 有关详细信息，请参阅 [Azure 诊断扩展配置架构](/azure/monitoring-and-diagnostics/azure-diagnostics-schema)。  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

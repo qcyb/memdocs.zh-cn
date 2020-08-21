@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3cb491ff3bfb10935566c33e321542435d2e0af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078764"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692904"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Configuration Manager Technical Preview 1709 中的功能
 
@@ -113,22 +113,22 @@ ms.locfileid: "82078764"
 符合性策略定义设备必须遵从的规则和设置，以便将设备视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。
 
 #### <a name="windows-update-for-business-policies"></a>适用于企业的 Windows 更新策略
-通过适用于企业的 Windows 更新策略，可以针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，配置延迟策略。 有关详细信息，请参阅[配置适用于企业的 Windows 更新延迟策略](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)。  
+通过适用于企业的 Windows 更新策略，可以针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，配置延迟策略。 有关详细信息，请参阅[配置适用于企业的 Windows 更新延迟策略](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)。  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Azure 上 Intune 中适用于共同管理设备的可用远程操作
 如果为 Windows 10 设备启用了共同管理，在 Azure 上的 Intune 中可以执行以下远程操作：  
-- [恢复出厂设置](https://docs.microsoft.com/intune/devices-wipe#wipe)
-- [选择性擦除](https://docs.microsoft.com/intune/apps-selective-wipe)
-- [删除设备](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [重启设备](https://docs.microsoft.com/intune/device-restart)
-- [全新启动](https://docs.microsoft.com/intune/device-fresh-start)
+- [恢复出厂设置](/intune/devices-wipe#wipe)
+- [选择性擦除](/intune/apps-selective-wipe)
+- [删除设备](/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+- [重启设备](/intune/device-restart)
+- [全新启动](/intune/device-fresh-start)
 
 ### <a name="prepare-intune-for-co-management"></a>准备 Intune 进行共同管理
 将工作负荷从 Configuration Manager 切换到 Intune 之前，在 Intune 中创建所需的配置文件和策略，以确保设备继续受保护。
 可以根据 Configuration Manager 中包含的对象在 Intune 中创建对象。 或者，如果当前策略基于旧式或传统管理，可能需要退后一步，重新思考现代管理需要哪些策略和配置文件。 使用以下资源创建策略和配置文件。    
-<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
-- [适用于企业的 Windows 更新策略](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-- [设备配置文件](https://docs.microsoft.com/intune/device-profile-create)  
+<!-- - [Device compliance policies](/intune/compliance-policy-create-windows)  -->
+- [适用于企业的 Windows 更新策略](/intune/windows-update-for-business-configure)  
+- [设备配置文件](/intune/device-profile-create)  
 
 ### <a name="architectural-overview-for-co-management"></a>共同管理体系结构概述
 下图提供共同管理的体系结构概述，以及它如何适用于现有的配置和 Intune 基础结构。
@@ -185,17 +185,17 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 
 #### <a name="new-windows-10-devices"></a>新的 Windows 10 设备
 对于新的 Windows 10 设备，可以使用 Autopilot 服务来配置全新体验，这包括将设备联接到 AD 和 Azure AD，以及在 Intune 中注册设备。 然后，在 Intune 中创建应用，部署 Configuration Manager 客户端。  
-1. 对新的 Windows 10 设备启用 AutoPilot。 有关详细信息，请参阅 [Windows AutoPilot 概述](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot)。  
-2. 为设备在 Azure AD 中配置自动注册，以自动向 Intune 注册设备。 有关详细信息，请参阅 [针对 Microsoft Intune 注册 Windows 设备](https://docs.microsoft.com/intune/windows-enroll)。
-3. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。   
+1. 对新的 Windows 10 设备启用 AutoPilot。 有关详细信息，请参阅 [Windows AutoPilot 概述](/windows/deployment/windows-10-auto-pilot)。  
+2. 为设备在 Azure AD 中配置自动注册，以自动向 Intune 注册设备。 有关详细信息，请参阅 [针对 Microsoft Intune 注册 Windows 设备](/intune/windows-enroll)。
+3. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>未在 Intune 中注册或不是 Configuration Manager 客户端的 Windows 10 设备
 对于未在 Intune 中注册或不是 Configuration Manager 客户端的 Windows 10 设备，可以使用自动注册在 Intune 中注册设备。 然后，在 Intune 中创建应用，部署 Configuration Manager 客户端。
-1. 为设备在 Azure AD 中配置自动注册，以自动向 Intune 注册设备。 有关详细信息，请参阅 [针对 Microsoft Intune 注册 Windows 设备](https://docs.microsoft.com/intune/windows-enroll)。  
-2. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。
+1. 为设备在 Azure AD 中配置自动注册，以自动向 Intune 注册设备。 有关详细信息，请参阅 [针对 Microsoft Intune 注册 Windows 设备](/intune/windows-enroll)。  
+2. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>在 Intune 中注册的 Windows 10 设备
-对于已在 Intune 中注册的 Windows 10 设备，在 Intune 中创建应用，以部署 Configuration Manager 客户端。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。  
+对于已在 Intune 中注册的 Windows 10 设备，在 Intune 中创建应用，以部署 Configuration Manager 客户端。 执行[使用 Azure AD 安装来自 Internet 的应用](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[用于安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>将 Configuration Manager 工作负荷切换到 Intune
 在上一节中，你准备了 Windows 10 设备进行共同管理。 这些设备现已联接到 AD 和 Azure AD，并且它们已在 Intune 中注册，具有 Configuration Manager 客户端。 你可能仍然具有已联接到 AD 且具有 Configuration Manager 客户端的 Windows 10 设备，但该设备未联接到 Azure AD 或在 Intune 中注册。 以下步骤介绍如何启用共同管理，准备其余的 Windows 10 设备（没有进行 Intune 注册的 Configuration Manager 客户端）进行共同管理，并允许开始将特定的 Configuration Manager 工作负荷切换到 Intune。
@@ -219,4 +219,4 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
 
 ## <a name="see-also"></a>另请参阅
-有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。 
+有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。

@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eab91146ec21bbee888d496012419f47bca4b599
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: ac3bbb7c755be82b171f35442d2dbaf446dfea84
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776967"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695114"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>如何监视 Configuration Manager 中的共同管理
 
@@ -102,8 +102,8 @@ ms.locfileid: "84776967"
 
 | 错误 | 说明 |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | 尚未在 Azure AD 上配置 MDM 注册，或者出现非预期的注册 URL。<br><br>[启用 Windows 10 自动注册](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | 用户许可证处于错误状态，阻止注册<br><br>[向用户分配许可证](https://docs.microsoft.com/intune/licenses-assign) |
+| 2147549183 (0x8000FFFF) | 尚未在 Azure AD 上配置 MDM 注册，或者出现非预期的注册 URL。<br><br>[启用 Windows 10 自动注册](/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | 用户许可证处于错误状态，阻止注册<br><br>[向用户分配许可证](/intune/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | 尝试自动注册到 Intune，但 Azure AD 配置未完全应用。 此问题应该是暂时性的，因为设备会在短时间后重试。 |
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | 用户已取消操作<br><br>如果 MDM 注册需要多重身份验证，并且用户尚未使用受支持的第二因素登录，则 Windows 会向用户显示要注册的 toast 通知。 如果用户未响应 toast 通知，则会发生此错误。 此问题应该是暂时性的，因为 Configuration Manager 将重试并提示用户。 当用户登录 Windows 时应使用多重身份验证。 此外，指示用户预期会发生这一行为，如果出现提示，则采取措施。 |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | 不支持移动设备管理。 检查设备限制。 |
@@ -114,7 +114,7 @@ ms.locfileid: "84776967"
 | 3399548929 | 需要用户登录<br><br>此问题应该是暂时性的。 如果用户在注册任务发生之前快速注销，就会发生该问题。 |
 | 3400073236 | ADAL 安全令牌请求失败。<br><br>检查 Azure AD 配置，并确保用户成功进行身份验证。 |
 | 2149122477 | 泛型 HTTP 问题 |
-| 3400073247 | 仅在联合流中支持集成 ADAL 的 Windows 身份验证<br><br>[规划混合 Azure Active Directory 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | 仅在联合流中支持集成 ADAL 的 Windows 身份验证<br><br>[规划混合 Azure Active Directory 联接实现](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | 找不到服务器或代理。<br><br>如果客户端无法与云通信，此问题应该是暂时性的。 如果它仍然存在，请确保客户端与 Azure 具有一致的连接。 | 
 | 2149056532 | 不支持特定平台或版本<br><br>确保设备满足共同管理的[最低要求](overview.md#windows-10)。 |
 | 2147943568 | 找不到元素<br><br>此问题应该是暂时性的。 如果问题持续出现，请与 Microsoft 支持部门联系。 |
@@ -124,7 +124,7 @@ ms.locfileid: "84776967"
 | 2149134055 | Winhttp 名称未解析<br><br>客户端无法解析服务的名称。 检查 DNS 配置。 |
 | 2149134050 | Internet 超时<br><br>如果客户端无法与云通信，此问题应该是暂时性的。 如果它仍然存在，请确保客户端与 Azure 具有一致的连接。 |
 
-有关详细信息，请参阅 [MDM 注册错误值](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants)。
+有关详细信息，请参阅 [MDM 注册错误值](/windows/desktop/mdmreg/mdm-registration-constants)。
 
 ## <a name="deployment-policies"></a>部署策略
 

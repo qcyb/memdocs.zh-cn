@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: c20f5e883c1b33c90218532dd6ae31f510fd8294
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546410"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695029"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>如何准备基于 Internet 的设备进行共同管理
 
@@ -27,7 +27,7 @@ ms.locfileid: "87546410"
 
 有关详细信息，请参阅 [Windows Autopilot 概述](../../autopilot/windows-autopilot.md)。
 
-若要将设备配置为在其联接 Azure AD 时自动注册到 Intune，请参阅 [将 Windows 设备注册到 Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll)。  
+若要将设备配置为在其联接 Azure AD 时自动注册到 Intune，请参阅 [将 Windows 设备注册到 Microsoft Intune](/intune/windows-enroll)。  
 
 ### <a name="gather-information-from-configuration-manager"></a>收集来自 Configuration Manager 的信息
 
@@ -41,7 +41,7 @@ ms.locfileid: "87546410"
 
 4. 保存该文件后，将数据上传到 Intune。  
 
-有关详细信息，请参阅[在 Intune 中添加设备](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices)。
+有关详细信息，请参阅[在 Intune 中添加设备](/intune/enrollment-autopilot#add-devices)。
 
 ### <a name="autopilot-for-existing-devices"></a>面向现有设备的 Autopilot
 <!--1358333-->

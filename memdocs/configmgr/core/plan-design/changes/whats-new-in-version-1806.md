@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128944"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692632"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -280,9 +280,9 @@ Microsoft Edge 浏览器符合性设置策略添加了以下三个 Windows Defen
 
 有关详细信息，请参阅下列文章：  
 
-- [创建分阶段部署](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [创建分阶段部署](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [管理和监视分阶段部署](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [管理和监视分阶段部署](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>为设备上的所有用户预配 Windows 应用包
@@ -308,7 +308,7 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 
 ### <a name="uninstall-application-on-approval-revocation"></a>在批准撤消时卸载应用程序
 <!--1357891-->
-当你撤消应用程序的批准时，行为已更改。 现在当你拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。 此行为需要启用[可选功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options)“审批每台设备的用户的应用程序请求”  。 
+当你撤消应用程序的批准时，行为已更改。 现在当你拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。 此行为需要启用[可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)“审批每台设备的用户的应用程序请求”  。 
 
 有关详细信息，请参阅[部署应用程序](../../../apps/deploy-use/deploy-applications.md#bkmk_approval)。
 
@@ -348,7 +348,7 @@ Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和�
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>对 Windows 10 就地升级任务序列的改进
 <!--1358500-->
-Windows 10 就地升级的默认任务序列模板现在包括在升级过程失败的情况下要添加的带建议操作的另一个新组。 这些操作有助于进行故障排除。 其中一个工具是 Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可获取有关 Windows 10 升级失败原因的详细信息。 
+Windows 10 就地升级的默认任务序列模板现在包括在升级过程失败的情况下要添加的带建议操作的另一个新组。 这些操作有助于进行故障排除。 其中一个工具是 Windows [SetupDiag](/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可获取有关 Windows 10 升级失败原因的详细信息。 
 
 有关详细信息，请参阅[创建用于升级 OS 的任务序列](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure)。
 
@@ -584,7 +584,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
 
-若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)。
+若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](/powershell/sccm/1806_release_notes?view=sccm-ps)。
 
 以下更新汇总 (4462978) 于 2018 年 10 月 24 日起在控制台中提供：[Configuration Manager Current Branch（版本 1806）更新汇总](https://support.microsoft.com/help/4462978)。
 

@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07c5488b0ea28f37f7f8a07b532c67fb64aad810
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2eea75f39430f1cc38ff994280425ca918eaa432
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694005"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694553"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 Windows 计算机
 
@@ -63,7 +63,7 @@ ms.locfileid: "81694005"
     > [!NOTE]  
     > 如果使用客户端请求安装来安装 Configuration Manager 客户端，站点服务器会与客户端建立远程连接。 从 1806 版开始，站点可以通过不允许在建立连接之前回退到 NTLM 来要求 Kerberos 相互身份验证。 此增强有助于保护服务器与客户端之间的通信。  
     >
-    > 环境可能首选或要求使用 Kerberos，而不是旧 NTLM 身份验证，具体视安全策略而定。 若要详细了解这些身份验证协议的安全注意事项，请参阅[用于限制 NTLM 的 Windows 安全策略设置](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)。  
+    > 环境可能首选或要求使用 Kerberos，而不是旧 NTLM 身份验证，具体视安全策略而定。 若要详细了解这些身份验证协议的安全注意事项，请参阅[用于限制 NTLM 的 Windows 安全策略设置](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)。  
     >
     > 要使用此功能，客户端必须位于信任的 Active Directory 林中。 Windows 中的 Kerberos 依赖 Active Directory 进行相互身份验证。  
 
@@ -326,7 +326,7 @@ Configuration Manager 支持使用登录脚本来安装 Configuration Manager �
     > [!NOTE]  
     > 有关用于使用 Azure AD 身份验证的新式 Windows 10 客户端的示例命令，请参阅[如何准备基于 Internet 的设备以进行共同管理](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)。  
 
-3. [将应用分配](https://docs.microsoft.com/mem/intune/apps/apps-deploy)给一组已注册的 Windows 计算机。  
+3. [将应用分配](../../../../intune/apps/apps-deploy.md)给一组已注册的 Windows 计算机。  
 
 ## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a> OS 映像安装
 
@@ -543,4 +543,4 @@ Configuration Manager 安装介质上提供了名为 `ConfigMgrInstallation.adm`
 
 4. 在“CCMSetup”  框中，输入必需的 CCMSetup 命令行属性。 有关所有 CCMSetup 命令行属性的列表及其用法示例，请参阅[关于客户端安装参数和属性](about-client-installation-properties.md)。  
 
-5. 将 GPO 分配给要通过 Configuration Manager 客户端安装属性设置的计算机。  
+5. 将 GPO 分配给要通过 Configuration Manager 客户端安装属性设置的计算机。

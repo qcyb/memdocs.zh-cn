@@ -10,12 +10,12 @@ ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f22ba6f29e0c85e19ab66d1b052085db5303cc2c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 055d79c56417135e2b08a31bc05a3ca30b5fd581
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690305"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695097"
 ---
 # <a name="third-party-mdm-coexistence-with-configuration-manager"></a>第三方 MDM 与 Configuration Manager 共存
 
@@ -23,12 +23,12 @@ ms.locfileid: "81690305"
 
 在已加入 Azure Active Directory 且运行 Windows 10 版本 1709 或更高版本的设备上，Configuration Manager 客户端可以与第三方 MDM 服务共存。 设备可以是下列两种类型之一：
 
-- 仅限[已联接 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 （此类型有时称为“已加入云域”）  
+- 仅限[已联接 Azure AD](/azure/active-directory/devices/azureadjoin-plan)。 （此类型有时称为“已加入云域”）  
 
-- [混合域加入](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)：设备已加入本地 Active Directory，且已向 Azure Active Directory 注册。  
+- [混合域加入](/azure/active-directory/devices/hybrid-azuread-join-plan)：设备已加入本地 Active Directory，且已向 Azure Active Directory 注册。  
 
 > [!Note]  
-> 它不支持[个人拥有的设备](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)。  
+> 它不支持[个人拥有的设备](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)。  
 
 如果 Configuration Manager 客户端检测到第三方 MDM 服务也在管理设备，它会自动停用 Configuration Manager 中的特定工作负荷。 此行为可便于 MDM 服务接管这些职能。 它还防止客户端上出现冲突设置，冲突设置可能会对设备和用户体验造成不利影响。 在这种情况下，Configuration Manager 中的以下工作负荷会遭停用：
 

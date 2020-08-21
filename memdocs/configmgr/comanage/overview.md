@@ -10,11 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854433"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695046"
 ---
 # <a name="what-is-co-management"></a>什么是共同管理？
 
@@ -101,15 +102,15 @@ ms.locfileid: "85854433"
 
 - Windows 10 设备必须连接到 Azure AD。 它们可以是以下任一类型：  
 
-  - [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)，其中设备已加入到本地 Active Directory 且使用 Azure Active Directory 注册。
+  - [混合 Azure AD 加入](/azure/active-directory/devices/concept-azure-ad-join-hybrid)，其中设备已加入到本地 Active Directory 且使用 Azure Active Directory 注册。
 
-  - 仅限[已联接 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 （此类型有时称为“已加入云域”）<!--SCCMDocs issue 605-->  
+  - 仅限[已联接 Azure AD](/azure/active-directory/devices/azureadjoin-plan)。 （此类型有时称为“已加入云域”）<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [设置 Intune](https://docs.microsoft.com/intune/setup-steps)  
+- [设置 Intune](/intune/setup-steps)  
 
-- [启用 Windows 10 自动注册](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [启用 Windows 10 自动注册](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -128,7 +129,7 @@ ms.locfileid: "85854433"
 | 在 Configuration Manager 中导入 Azure 应用 | Configuration Manager 完全权限管理员<br>无需任何其他的 Azure 角色 |
 | 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员 。<!--SCCMDoc issue 626--> |
 
-要详细了解 Azure 角色，请参阅[了解不同角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)。
+要详细了解 Azure 角色，请参阅[了解不同角色](/azure/role-based-access-control/rbac-and-directory-admin-roles)。
 
 有关 Configuration Manager 角色的详细信息，请参阅[基于角色的管理基础](../core/understand/fundamentals-of-role-based-administration.md)。
 
@@ -166,4 +167,4 @@ ms.locfileid: "85854433"
 
 - [详细了解直接价值并开始使用共同管理](quickstarts.md)  
 
-- [教程：为现有 Configuration Manager 客户端启用共同管理](tutorial-co-manage-clients.md)  
+- [教程：为现有 Configuration Manager 客户端启用共同管理](tutorial-co-manage-clients.md)

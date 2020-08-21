@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526009"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692955"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager Technical Preview 1703 中的功能
 
@@ -82,7 +82,7 @@ Technical preview 1703 引入了**配置 Azure 服务**向导。 此向导提供
 
 - 使用本预览主题中的信息替换 Current Branch 主题[使用 Configuration Manager 管理来自适用于企业的 Microsoft Store 的应用](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)的[设置适用于企业的 Microsoft Store 同步](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup)部分中的配置步骤。
 
-- 有关 Web 应用的详细信息，请参阅 [Azure 应用服务中的身份验证和授权](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)和 [Web 应用概述](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)。
+- 有关 Web 应用的详细信息，请参阅 [Azure 应用服务中的身份验证和授权](/azure/app-service/app-service-authentication-overview)和 [Web 应用概述](/azure/app-service-web/app-service-web-overview)。
 
 ### <a name="prerequisites-and-planning"></a>先决条件和规划
 在 Configuration Manager和适用于企业的 Windows 应用商店之间设置连接时，必须提供保存从应用商店同步的应用内容的文件夹。 若要确保此文件夹是安全的且可将其内容部署到设备，请确保以下权限就位：

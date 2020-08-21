@@ -10,18 +10,18 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212287"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695358"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge 管理
 
 适用范围：Configuration Manager (Current Branch)
 
-全新的 Microsoft Edge 已准备好应用于业务。 从 Configuration Manager 版本 1910 开始，现可为你的用户部署 [Microsoft Edge 版本 77 及更高版本](https://docs.microsoft.com/deployedge/)。 PowerShell 脚本用于安装选定 Edge 版本。 此脚本还为 Edge 禁用自动更新，这样就能使用 Configuration Manager 管理它们。
+全新的 Microsoft Edge 已准备好应用于业务。 从 Configuration Manager 版本 1910 开始，现可为你的用户部署 [Microsoft Edge 版本 77 及更高版本](/deployedge/)。 PowerShell 脚本用于安装选定 Edge 版本。 此脚本还为 Edge 禁用自动更新，这样就能使用 Configuration Manager 管理它们。
 
 ## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a> 部署 Microsoft Edge
 <!--4561024-->
@@ -31,7 +31,7 @@ ms.locfileid: "86212287"
 
 对于目标为 Microsoft Edge 部署的客户端：
 
-- PowerShell [执行策略](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)不能设置为“受限”。
+- PowerShell [执行策略](/powershell/module/microsoft.powershell.core/about/about_execution_policies)不能设置为“受限”。
   - 执行 PowerShell 以执行安装。
 
 - Microsoft Edge 安装程序和 [CMPivot](../../core/servers/manage/cmpivot.md) 通过 Microsoft 代码签名证书进行签名。 如果“受信任的发行者”存储中未列出该证书，则需要添加它。 否则，当 PowerShell 执行策略设置为“AllSigned”时，Microsoft Edge 安装程序和 CMPivot 不会运行。 <!--7585106-->
@@ -47,7 +47,7 @@ ms.locfileid: "86212287"
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager 版本 1910
 
-在版本 1910 中，当部署 Microsoft Edge 时，安装脚本会关闭 Microsoft Edge 的自动更新，因此可通过 Configuration Manager 对其进行管理。 可以使用组策略来更改此行为。 有关详细信息，请参阅[计划 Microsoft Edge 部署](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies)和 [Microsoft Edge 更新策略](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies)。
+在版本 1910 中，当部署 Microsoft Edge 时，安装脚本会关闭 Microsoft Edge 的自动更新，因此可通过 Configuration Manager 对其进行管理。 可以使用组策略来更改此行为。 有关详细信息，请参阅[计划 Microsoft Edge 部署](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies)和 [Microsoft Edge 更新策略](/DeployEdge/microsoft-edge-update-policies)。
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager 版本 2002 及更高版本
 <!--4561024-->

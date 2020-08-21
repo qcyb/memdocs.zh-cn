@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5606d7bb5656fe4616ba416836dab2c04c490cfa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865483"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693295"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>如何在 Configuration Manager 中创建集合
 
@@ -279,9 +279,9 @@ Azure AD 同步每五分钟执行一次。 这是一个单向过程，从 Config
 
 可以使用 PowerShell 来创建和导入集合。 有关详情，请参阅：
 
-* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
-* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](/powershell/module/ConfigurationManager/Import-CMCollection)
 
 ## <a name="next-steps"></a>后续步骤
 

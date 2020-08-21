@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270848"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695182"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 Windows 应用程序
 
@@ -58,7 +58,7 @@ Configuration Manager 在 Windows 10 所有受支持的版本上支持应用预�
 
 Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.msixbundle) 格式。 Windows 10 版本 1809 或更高版本支持这些格式。
 
-- 有关 MSIX 的概述，请参阅 [MSIX 详解](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)。  
+- 有关 MSIX 的概述，请参阅 [MSIX 详解](/archive/blogs/sgern/a-closer-look-at-msix)。  
 
 - 有关如何创建新的 MSIX 应用，请参阅 [Insider 内部版本 17682 中引入的 MSIX 支持](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376)。  
 
@@ -79,7 +79,7 @@ Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.m
 
   - 从 Microsoft Store 安装 [MSIX 打包工具](https://www.microsoft.com/store/productId/9N5LW3JBCXKF)  
 
-  - 安装 [MSIX 打包工具驱动程序](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - 安装 [MSIX 打包工具驱动程序](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 不要在此设备上安装任何其他应用或服务。 此设备是你的参考系统。
 
@@ -104,8 +104,8 @@ Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.m
 
 若要使用此 MSIX 应用，首先需要对其进行数字签名，以便客户端信任此应用。 有关此过程的详细信息，请参阅以下文章：
 
-- [MSIX – MSIX 打包工具 –对 MSIX 程序包进行签名](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
-- [如何使用 SignTool 对应用程序包进行签名](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+- [MSIX – MSIX 打包工具 –对 MSIX 程序包进行签名](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
+- [如何使用 SignTool 对应用程序包进行签名](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 对应用进行签名后，在 Configuration Manager 中的应用程序上创建一个新的部署类型。 有关详细信息，请参阅[为应用程序创建部署类型](../deploy-use/create-applications.md#bkmk_create-dt)。
 
@@ -182,4 +182,4 @@ Windows 10 设备无需旁加载密钥即可安装业务线应用。 但是，�
 
 - 为设备上的所有用户安装每计算机 MSI 包。  
 
-- Configuration Manager 支持应用更新。 每个版本的 MSI 产品代码必须相同。  
+- Configuration Manager 支持应用更新。 每个版本的 MSI 产品代码必须相同。

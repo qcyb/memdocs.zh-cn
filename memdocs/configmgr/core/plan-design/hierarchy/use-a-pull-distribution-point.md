@@ -10,12 +10,12 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c243897a4c52eff04263325b998c4b23d6b3dde4
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 5f0993f6120735f8a614801f9ac14c29870ffefe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166581"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692581"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>结合使用 Configuration Manager 和拉取分发点
 
@@ -151,7 +151,7 @@ ms.locfileid: "82166581"
 > 1. 在源分发点上，设置以下注册表值：`HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
 > 1. 重启源分发点服务器。
 >
-> 然后，拉取分发点应会开始从源下载内容。 要详细了解此注册表项，请参阅 [TLS - SSL 概述 (Schannel SSP)](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview)。<!-- SCCMDocs#1973 -->
+> 然后，拉取分发点应会开始从源下载内容。 要详细了解此注册表项，请参阅 [TLS - SSL 概述 (Schannel SSP)](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview)。<!-- SCCMDocs#1973 -->
 
 ## <a name="see-also"></a>另请参阅  
 

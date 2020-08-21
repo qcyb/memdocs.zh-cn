@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129012"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692819"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager 1706 版中的新增功能
 
@@ -213,7 +213,7 @@ Version 1706 drops support for the following products:
 
 #### <a name="prerequisites"></a>必备条件
 - 所有软件更新点都必须运行 Windows Server 2016。    
-- 这是预发行功能，必须启用它才能使用。 有关详细信息，请参阅[使用更新中的预发行功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
+- 这是预发行功能，必须启用它才能使用。 有关详细信息，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
 
 #### <a name="to-manage-surface-driver-updates"></a>管理 Surface 驱动程序更新
 

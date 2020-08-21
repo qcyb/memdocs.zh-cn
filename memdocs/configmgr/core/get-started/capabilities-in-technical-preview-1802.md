@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 1f8af5975d623161e05e168192ee102bd0d072dc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428188"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694383"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Configuration Manager Technical Preview 1802 中的功能
 
@@ -56,7 +56,7 @@ ms.locfileid: "83428188"
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>配置 Windows 传递优化以使用 Configuration Manager 边界组
 <!-- 1324696 -->
-使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从此版本开始，配置传递优化以在对等方之间共享内容时使用边界组。 新的客户端设置将边界组标识符用作客户端上的传递优化组标识符。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有所需内容的对等方。 
+使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从此版本开始，配置传递优化以在对等方之间共享内容时使用边界组。 新的客户端设置将边界组标识符用作客户端上的传递优化组标识符。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有所需内容的对等方。 
 
 ### <a name="prerequisites"></a>必备条件
 - 传递优化仅可用于 Windows 10 客户端
@@ -68,7 +68,7 @@ ms.locfileid: "83428188"
 2. 选择新的“传递优化”  组。
 3. 启用设置“将配置管理器边界组用于交付优化组 ID”  。
 
-有关详细信息，请参阅[传递优化选项](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization)中的“组”  传递模式选项。
+有关详细信息，请参阅[传递优化选项](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization)中的“组”  传递模式选项。
 
 
 
@@ -96,16 +96,16 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
 - **删除不兼容的应用程序**：在此组中添加步骤，删除任何与此版本的 Windows 10 不兼容的应用程序。 卸载应用程序的方法不同。 如果应用程序使用 Windows Installer，则从应用程序的 Windows Installer 部署类型属性上的“程序”  选项卡中复制“卸载程序”  命令行。 然后在此组中添加“运行命令行”  步骤，并附加卸载程序命令行。 例如： </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **删除不兼容的驱动程序**：在此组中添加步骤，删除任何与此版本的 Windows 10 不兼容的驱动程序。
 - **删除/暂停第三方安全程序**：在此组中添加步骤，删除或暂停防病毒程序等第三方安全程序。
-   - 如果你使用的是第三方磁盘加密程序，则可以为 Windows 安装程序的加密驱动程序提供 /ReflectDrivers [命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)  。 在此组的任务序列中添加[设置任务序列变量](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)步骤。 将任务序列变量设置为“OSDSetupAdditionalUpgradeOptions”  。 将值设置为“/ReflectDriver”  ，并附加驱动程序的路径。 此[任务序列操作变量](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)附加了任务序列使用的 Windows 安装程序命令行。 请联系你的软件供应商，以获得有关此进程的任何其他指导。
+   - 如果你使用的是第三方磁盘加密程序，则可以为 Windows 安装程序的加密驱动程序提供 /ReflectDrivers [命令行选项](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)  。 在此组的任务序列中添加[设置任务序列变量](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)步骤。 将任务序列变量设置为“OSDSetupAdditionalUpgradeOptions”  。 将值设置为“/ReflectDriver”  ，并附加驱动程序的路径。 此[任务序列操作变量](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)附加了任务序列使用的 Windows 安装程序命令行。 请联系你的软件供应商，以获得有关此进程的任何其他指导。
 
 ### <a name="new-groups-under-post-processing"></a>“后处理”  下的新组
 - **应用基于设置的驱动程序**：在此组中添加步骤，从包中安装基于设置的驱动程序(.exe)。
 - **安装/启用第三方安全程序**：在此组中添加步骤，安装或启用防病毒程序等第三方安全程序。 
-- **设置 Windows 默认应用和关联**：在此组中添加步骤，设置 Windows 默认应用和文件关联。 首先要准备一台具备所需应用关联的参考计算机。 然后运行以下导出命令行： </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>将 XML 文件添加到包。 然后在此组中添加[运行命令行](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 指定包含 XML 文件的包，然后指定以下命令行： </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 有关详细信息，请参阅[导出或导入默认的应用关联](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)。
-- **应用自定义项和个性化设置**：在此组中添加步骤，应用整理程序组等“开始”菜单自定义项。 有关详细信息，请参阅[自定义“开始”屏幕](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen)。
+- **设置 Windows 默认应用和关联**：在此组中添加步骤，设置 Windows 默认应用和文件关联。 首先要准备一台具备所需应用关联的参考计算机。 然后运行以下导出命令行： </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>将 XML 文件添加到包。 然后在此组中添加[运行命令行](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 指定包含 XML 文件的包，然后指定以下命令行： </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 有关详细信息，请参阅[导出或导入默认的应用关联](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)。
+- **应用自定义项和个性化设置**：在此组中添加步骤，应用整理程序组等“开始”菜单自定义项。 有关详细信息，请参阅[自定义“开始”屏幕](/windows-hardware/manufacture/desktop/customize-the-start-screen)。
 
 ### <a name="additional-recommendations"></a>其他建议
-- 查看 Windows 文档，以[解决 Windows 10 升级错误](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)。 本文还包含了关于升级过程的详细信息。
+- 查看 Windows 文档，以[解决 Windows 10 升级错误](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)。 本文还包含了关于升级过程的详细信息。
 - 在默认的“检查准备情况”  步骤中，启用“确保最小可用磁盘空间 (MB)”  。 对于 32 位 OS 升级包，将值设置为至少 16384  (16 GB)，对于 64 位设置为至少 20480  (20 GB)。 
 - 使用 SMSTSDownloadRetryCount [内置任务序列变量](../../osd/understand/task-sequence-variables.md)重试下载策略  。 当前在默认情况下，客户端重试两次；此变量设置为二 (2)。 如果客户端未连接到有线公司网络，额外的重试将帮助客户端获得策略。 使用该变量不会产生负面的副作用，如果不能下载策略，则会导致延迟失败。<!-- 501016 --> 此外，也可以增加“SMSTSDownloadRetryDelay”  变量的值（默认值为 15 秒）。
 - 执行内联兼容性评估。 
@@ -227,14 +227,14 @@ Configuration Manager (Current Branch) 版本 1710 支持[加密：下一代 (CN
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>云管理网关支持 Azure 资源管理器
 <!-- 1324735 -->
-在创建[云管理网关](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) 实例时，向导现提供选项来创建“Azure 资源管理器部署”  。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+在创建[云管理网关](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) 实例时，向导现提供选项来创建“Azure 资源管理器部署”  。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
 CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”  选项。 若要简化资源的部署和管理，我们建议为所有新的 CMG 实例使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有 CMG 实例。
 
 Configuration Manager 不会将现有经典 CMG 实例迁移到 Azure 资源管理器部署模型。 使用 Azure 资源管理器部署创建新的 CMG 实例，然后删除经典 CMG 实例。 
 
 > [!IMPORTANT]
-> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
+> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
 
 ### <a name="prerequisites"></a>必备条件
 - 与 [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md) 集成。 不需要 Azure AD 用户发现。
@@ -300,7 +300,7 @@ Configuration Manager 不会将现有经典 CMG 实例迁移到 Azure 资源管�
 
 ## <a name="report-on-windows-autopilot-device-information"></a>关于 Windows AutoPilot 设备信息的报表
 <!-- 1351442 -->
-Windows AutoPilot 是以现代方式载入和配置新 Windows 10 设备的一种解决方案。 有关详细信息，请参阅 [Windows AutoPilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。 向 Windows AutoPilot 注册现有设备的一种方法是，将设备信息上传到 Microsoft Store 商业版和教育版。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 收集和报告此设备信息。 
+Windows AutoPilot 是以现代方式载入和配置新 Windows 10 设备的一种解决方案。 有关详细信息，请参阅 [Windows AutoPilot 概述](/windows/deployment/windows-autopilot/windows-10-autopilot)。 向 Windows AutoPilot 注册现有设备的一种方法是，将设备信息上传到 Microsoft Store 商业版和教育版。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 收集和报告此设备信息。 
 
 ### <a name="prerequisites"></a>必备条件
 - 此设备信息仅适用于 Windows 10 版本 1703 及更高版本上的客户端
@@ -311,13 +311,13 @@ Windows AutoPilot 是以现代方式载入和配置新 Windows 10 设备的一�
 1. 在 Configuration Manager 控制台中的“监视”  工作区中，展开“报告”  节点，展开“报表”  ，然后选择“硬件 - 常规”  节点。
 2. 运行新的报表“Windows AutoPilot 设备信息”  并查看结果。 
 3. 在报表查看器中，单击“导出”  图标，并选择“CSV （逗号分隔）”  选项。
-4. 在保存该文件后，将数据上传到 Microsoft Store 商业版和教育版。 有关详细信息，请参阅[在 Microsoft Store 商业版和教育版中添加设备](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile)。 
+4. 在保存该文件后，将数据上传到 Microsoft Store 商业版和教育版。 有关详细信息，请参阅[在 Microsoft Store 商业版和教育版中添加设备](/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile)。 
 
 
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>对 Configuration Manager 的 Windows Defender 攻击防护策略的改进
 <!-- 1356220 -->
-在 Configuration Manager 中，为 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)添加了有关攻击面减少和受控文件夹访问权限组件的其他策略设置。
+在 Configuration Manager 中，为 [Windows Defender 攻击防护](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)添加了有关攻击面减少和受控文件夹访问权限组件的其他策略设置。
 
 **受控文件夹访问权限的新设置**<br/>
 配置受控文件夹访问权限时，有两个附加选项：“仅阻止磁盘扇区”和“仅审核磁盘扇区”   。 这两个设置允许仅为引导扇区启用受控文件夹访问权限，而不启用对特定文件夹或默认受保护文件夹的保护。 
@@ -334,18 +334,18 @@ Windows AutoPilot 是以现代方式载入和配置新 Windows 10 设备的一�
 <!-- 1357310 -->
 对于在 Windows 10 客户端上使用 [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web 浏览器的客户，现在可以创建 Configuration Manager 符合性设置策略，以配置多个 Microsoft Edge 设置。 此策略当前包括以下设置：
 -  将 Microsoft Edge 浏览器设置为默认浏览器：将 Web 浏览器的 Windows 10 默认应用设置配置为 Microsoft Edge
-- **允许地址栏下拉列表**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [AllowAddressBarDropdown 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)。
-- **允许在 Microsoft 浏览器之间同步收藏夹**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [SyncFavoritesBetweenIEAndMicrosoftEdge 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)。
-- **允许在退出时清除浏览数据**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [ClearBrowsingDataOnExit 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)。
-- **允许使用 Do Not Track 标头**：有关详细信息，请参阅 [AllowDoNotTrack 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)。
-- **允许自动填充**：有关详细信息，请参阅 [AllowAutofill 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)。
-- **允许使用 Cookie**：有关详细信息，请参阅 [AllowCookies 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)。
-- **允许使用弹出窗口阻止程序**：有关详细信息，请参阅 [AllowPopups 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)。
-- **允许在地址栏中显示搜索建议**：有关详细信息，请参阅 [AllowSearchSuggestionsinAddressBar 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)。
-- **允许将 Intranet 流量发送到 Internet Explorer**：有关详细信息，请参阅 [SendIntranetTraffictoInternetExplorer 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)。
-- **允许使用密码管理器**：有关详细信息，请参阅 [AllowPasswordManager 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)。
-- **允许使用开发人员工具**：有关详细信息，请参阅 [AllowDeveloperTools 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)。
-- **允许使用扩展**：有关详细信息，请参阅 [AllowExtensions 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)。
+- **允许地址栏下拉列表**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [AllowAddressBarDropdown 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)。
+- **允许在 Microsoft 浏览器之间同步收藏夹**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [SyncFavoritesBetweenIEAndMicrosoftEdge 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)。
+- **允许在退出时清除浏览数据**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [ClearBrowsingDataOnExit 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)。
+- **允许使用 Do Not Track 标头**：有关详细信息，请参阅 [AllowDoNotTrack 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)。
+- **允许自动填充**：有关详细信息，请参阅 [AllowAutofill 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)。
+- **允许使用 Cookie**：有关详细信息，请参阅 [AllowCookies 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)。
+- **允许使用弹出窗口阻止程序**：有关详细信息，请参阅 [AllowPopups 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)。
+- **允许在地址栏中显示搜索建议**：有关详细信息，请参阅 [AllowSearchSuggestionsinAddressBar 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)。
+- **允许将 Intranet 流量发送到 Internet Explorer**：有关详细信息，请参阅 [SendIntranetTraffictoInternetExplorer 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)。
+- **允许使用密码管理器**：有关详细信息，请参阅 [AllowPasswordManager 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)。
+- **允许使用开发人员工具**：有关详细信息，请参阅 [AllowDeveloperTools 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)。
+- **允许使用扩展**：有关详细信息，请参阅 [AllowExtensions 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)。
 
 ### <a name="prerequisites"></a>必备条件
 - 已加入 Azure Active Directory 的 Windows 10 客户端。 
@@ -424,4 +424,4 @@ Windows AutoPilot 是以现代方式载入和配置新 Windows 10 设备的一�
 
 
 ## <a name="next-steps"></a>后续步骤
-有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。    
+有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。

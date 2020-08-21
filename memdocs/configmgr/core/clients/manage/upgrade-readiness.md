@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: 18d8b66a7b9f5ad889645cbc8e48ebcbfe6550a9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6d9bd7aabb36895160ba8aa740c28155105e196a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696315"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693397"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>将升级就绪情况与 Configuration Manager 集成
 
@@ -60,15 +60,15 @@ ms.locfileid: "81696315"
 使用以下方法之一设置这些值：
 
 - 组策略（在“计算机配置” > “管理模板” > “Windows 组件” > “数据集合和预览版本”中）     。
-- 移动设备管理 (MDM)，例如 [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- 移动设备管理 (MDM)，例如 [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
-有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)。
+有关详细信息，请参阅[配置组织中的 Windows 诊断数据](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)。
 
 > [!NOTE]  
 > 应用这些更改后，设备会立即停止发送诊断数据。 Microsoft 可能需要 24-48 小时才能停止为您的工作区处理见解。 Microsoft 会在 30 天内或更短时间内从其云服务中删除此数据。
 
 <!--
-Upgrade Readiness is a part of [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
+Upgrade Readiness is a part of [Windows Analytics](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). It allows you to assess and analyze the readiness of devices in your environment for an upgrade to Windows 10. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager console. Then use this data to create collections, and target devices for upgrade or remediation.
 
 
 
@@ -82,14 +82,14 @@ Upgrade Readiness relies on Windows Analytics data. In order for Upgrade Readine
 
 - For clients running Windows 7 or 8.1:  
 
-    - Install the updates as described in [Get started with Upgrade Readiness](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-get-started)  
+    - Install the updates as described in [Get started with Upgrade Readiness](/windows/deployment/upgrade/upgrade-readiness-get-started)  
 
     - Enable Windows Analytics client settings  
 
 Configure these settings using Configuration Manager client settings. For more information, see [Use Windows Analytics](monitor-windows-analytics.md).
 
 > [!NOTE]  
-> Deploying the correct prerequisite updates and configuring client settings should be sufficient in most environments. If you encounter issues with Upgrade Readiness not receiving data from devices in your environment, then some of these issues may be addressed by using the [Upgrade Readiness deployment script](https://docs.microsoft.com/windows/deployment/upgrade/upgrade-readiness-deployment-script). 
+> Deploying the correct prerequisite updates and configuring client settings should be sufficient in most environments. If you encounter issues with Upgrade Readiness not receiving data from devices in your environment, then some of these issues may be addressed by using the [Upgrade Readiness deployment script](/windows/deployment/upgrade/upgrade-readiness-deployment-script). 
 
 
 
@@ -108,7 +108,7 @@ The Azure services wizard uses this app registration to allow Configuration Mana
 > 
 > This process is the same as when providing Configuration Manager with permissions to Log Analytics. These steps must be completed before the app registration is imported into Configuration Manager with the *Azure services wizard*.
 > 
-> For more information, see [Connect Configuration Manager to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm).
+> For more information, see [Connect Configuration Manager to Log Analytics](/azure/log-analytics/log-analytics-sccm).
 
 
 ### Use the Azure Wizard to create the connection
@@ -152,4 +152,4 @@ After you've integrated Upgrade Readiness with Configuration Manager, you can vi
 
 - [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)  
 - [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)  
-- [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)  
+- [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)

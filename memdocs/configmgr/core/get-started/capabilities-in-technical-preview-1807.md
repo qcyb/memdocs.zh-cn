@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905203"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694366"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager 技术预览版 1807 中的功能 
 
@@ -73,7 +73,7 @@ Steps to workaround, if any.
 
 社区  工作区还包括以下节点：
 
-- **文档**：显示 Configuration Manager [文档库](https://docs.microsoft.com/sccm/)  
+- **文档**：显示 Configuration Manager [文档库](/sccm/)  
 
 - **反馈**：显示 Configuration Manager [UserVoice 站点](https://configurationmanager.uservoice.com/)  
 
@@ -82,7 +82,7 @@ Steps to workaround, if any.
 
 - 在客户端 OS 上使用 Configuration Manager 控制台。  
 
-    - 或者（但不建议）：在服务器操作系统上，禁用 [Internet Explorer：增强的安全配置](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))。
+    - 或者（但不建议）：在服务器操作系统上，禁用 [Internet Explorer：增强的安全配置](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))。
 
 - 带有控制台的计算机需要 Internet 访问权限，并连接到以下站点：  
     - `https://aka.ms`  
@@ -121,7 +121,7 @@ Steps to workaround, if any.
 ## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> 来自 Intune 的共同管理的设备同步活动
 <!--1358565-->
 
-在 Configuration Manager 控制台中显示共同管理的设备是否通过 Microsoft Intune 处于活动状态。 此状态基于来自 [Intune 数据仓库](https://docs.microsoft.com/intune/reports-nav-create-intune-reports)的数据。 Configuration Manager 控制台中的“客户端状态”  仪表板显示“使用 Intune 的非活动客户端”  。 此新类别适用于通过 Configuration Manager 处于非活动状态但在过去一周内与 Intune 服务同步的共同管理设备。
+在 Configuration Manager 控制台中显示共同管理的设备是否通过 Microsoft Intune 处于活动状态。 此状态基于来自 [Intune 数据仓库](/intune/reports-nav-create-intune-reports)的数据。 Configuration Manager 控制台中的“客户端状态”  仪表板显示“使用 Intune 的非活动客户端”  。 此新类别适用于通过 Configuration Manager 处于非活动状态但在过去一周内与 Intune 服务同步的共同管理设备。
 
 
 ### <a name="try-it-out"></a>试试看！

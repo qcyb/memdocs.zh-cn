@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 57eb9bbaed39ec463afc00d12202a9829729a086
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: deededfe18275837ae93859c4075837eac870c35
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240540"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694774"
 ---
 # <a name="configure-microsoft-edge-legacy-settings-in-configuration-manager"></a>在 Configuration Manager 中配置 Microsoft Edge 旧版设置
 
@@ -27,11 +27,11 @@ ms.locfileid: "86240540"
 适用范围：Configuration Manager (Current Branch)
 
 <!-- 1357310 -->
-对于在 Windows 10 客户端上使用 [Microsoft Edge 旧版](https://docs.microsoft.com/microsoft-edge/deploy/) Web 浏览器的客户，请创建 Configuration Manager 合规性策略，以配置浏览器设置。
+对于在 Windows 10 客户端上使用 [Microsoft Edge 旧版](/microsoft-edge/deploy/) Web 浏览器的客户，请创建 Configuration Manager 合规性策略，以配置浏览器设置。
 
 此策略仅适用于 Windows 10 版本 1703 或更高版本以及 Microsoft Edge 旧版 45 及更早版本中的客户端。 <!--511552-->
 
-若要详细了解如何通过 Configuration Manager 管理 Microsoft Edge 版本 77 或更高版本，请参阅[部署 Microsoft Edge 版本 77 及更高版本](../../apps/deploy-use/deploy-edge.md)。 有关为 Microsoft Edge 版本 77 或更高版本配置策略的详细信息，请参阅 [Microsoft Edge - 策略](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies)。
+若要详细了解如何通过 Configuration Manager 管理 Microsoft Edge 版本 77 或更高版本，请参阅[部署 Microsoft Edge 版本 77 及更高版本](../../apps/deploy-use/deploy-edge.md)。 有关为 Microsoft Edge 版本 77 或更高版本配置策略的详细信息，请参阅 [Microsoft Edge - 策略](/DeployEdge/microsoft-edge-policies)。
 
 ## <a name="policy-settings"></a>策略设置
 
@@ -39,42 +39,42 @@ ms.locfileid: "86240540"
 
 - 将 Microsoft Edge 浏览器设置为默认浏览器：将 Web 浏览器的 Windows 10 默认应用设置配置为 Microsoft Edge
 
-- **允许使用地址栏下拉列表**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [AllowAddressBarDropdown 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)。
+- **允许使用地址栏下拉列表**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [AllowAddressBarDropdown 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)。
 
-- **允许在 Microsoft 浏览器之间同步收藏夹**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [SyncFavoritesBetweenIEAndMicrosoftEdge 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)。
+- **允许在 Microsoft 浏览器之间同步收藏夹**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [SyncFavoritesBetweenIEAndMicrosoftEdge 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)。
 
-- **允许在退出时清除浏览数据**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [ClearBrowsingDataOnExit 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)。
+- **允许在退出时清除浏览数据**：需要 Windows 10 版本 1703 或更高版本。 有关详细信息，请参阅 [ClearBrowsingDataOnExit 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)。
 
-- **允许使用 Do Not Track 标头**：有关详细信息，请参阅 [AllowDoNotTrack 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)。
+- **允许使用 Do Not Track 标头**：有关详细信息，请参阅 [AllowDoNotTrack 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)。
 
-- **允许自动填充**：有关详细信息，请参阅 [AllowAutofill 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)。
+- **允许自动填充**：有关详细信息，请参阅 [AllowAutofill 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)。
 
-- **允许使用 Cookie**：有关详细信息，请参阅 [AllowCookies 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)。
+- **允许使用 Cookie**：有关详细信息，请参阅 [AllowCookies 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)。
 
-- **允许使用弹出窗口阻止程序**：有关详细信息，请参阅 [AllowPopups 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)。
+- **允许使用弹出窗口阻止程序**：有关详细信息，请参阅 [AllowPopups 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)。
 
-- **允许在地址栏中显示搜索建议**：有关详细信息，请参阅 [AllowSearchSuggestionsinAddressBar 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)。
+- **允许在地址栏中显示搜索建议**：有关详细信息，请参阅 [AllowSearchSuggestionsinAddressBar 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)。
 
-- **允许将 Intranet 流量发送到 Internet Explorer**：有关详细信息，请参阅 [SendIntranetTraffictoInternetExplorer 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)。
+- **允许将 Intranet 流量发送到 Internet Explorer**：有关详细信息，请参阅 [SendIntranetTraffictoInternetExplorer 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)。
 
-- **允许使用密码管理器**：有关详细信息，请参阅 [AllowPasswordManager 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)。
+- **允许使用密码管理器**：有关详细信息，请参阅 [AllowPasswordManager 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)。
 
-- **允许使用开发人员工具**：有关详细信息，请参阅 [AllowDeveloperTools 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)。
+- **允许使用开发人员工具**：有关详细信息，请参阅 [AllowDeveloperTools 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)。
 
-- **允许使用扩展**：有关详细信息，请参阅 [AllowExtensions 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)。
+- **允许使用扩展**：有关详细信息，请参阅 [AllowExtensions 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)。
 
 > [!TIP]
-> 有关使用组策略配置这些设置和其他设置的详细信息，请参阅 [Microsoft Edge 旧版组策略](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/)。
+> 有关使用组策略配置这些设置和其他设置的详细信息，请参阅 [Microsoft Edge 旧版组策略](/microsoft-edge/deploy/group-policies/)。
 
 ### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge-legacy"></a>为 Microsoft Edge 旧版配置 Windows Defender SmartScreen 设置
 <!--1353701-->
-此策略为 [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) 添加了 3 个设置。 该策略现在包含“SmartScreen 设置”页上的以下附加设置：
+此策略为 [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) 添加了 3 个设置。 该策略现在包含“SmartScreen 设置”页上的以下附加设置：
 
-- **允许 SmartScreen**：指定是否允许 Windows Defender SmartScreen。 有关详细信息，请参阅 [AllowSmartScreen 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
+- **允许 SmartScreen**：指定是否允许 Windows Defender SmartScreen。 有关详细信息，请参阅 [AllowSmartScreen 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
 
-- **用户可以替代站点的 SmartScreen 提示**：指定用户是否可替代有关潜在恶意网站的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅 [PreventSmartScreenPromptOverride 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
+- **用户可以替代站点的 SmartScreen 提示**：指定用户是否可替代有关潜在恶意网站的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅 [PreventSmartScreenPromptOverride 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
 
-- **用户可以替代文件的 SmartScreen 提示**：指定用户是否可替代有关下载未经认证文件的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅[PreventSmartScreenPromptOverrideForFiles 浏览器策略](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
+- **用户可以替代文件的 SmartScreen 提示**：指定用户是否可替代有关下载未经认证文件的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅[PreventSmartScreenPromptOverrideForFiles 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
 
 ## <a name="create-the-browser-profile"></a>创建浏览器配置文件
 

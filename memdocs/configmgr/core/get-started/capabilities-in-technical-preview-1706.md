@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8c3624f9fc903395b36846170ff3552f32db59dd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126750"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692938"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager Technical Preview 1706 中的功能
 
@@ -104,7 +104,7 @@ ms.locfileid: "88126750"
 
 - 将运行被动模式站点服务器的计算机：
 
-    - 必须满足[安装主站点的先决条件](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)。
+    - 必须满足[安装主站点的先决条件](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)。
 
     - 使用与主动模式站点服务器的版本相匹配的源文件进行安装。
 
@@ -261,7 +261,7 @@ ms.locfileid: "88126750"
 
 **必备条件**
 - 若要添加连接，Configuration Manager 环境必须先在[联机模式](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)下配置[服务连接点](../servers/deploy/configure/about-the-service-connection-point.md)。 将连接添加到环境时，它还会在运行此站点系统角色的计算机上安装 Microsoft Monitoring Agent。
-- 将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具，并获得[来自此注册的客户端 ID](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
+- 将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具，并获得[来自此注册的客户端 ID](/azure/active-directory/develop/quickstart-register-app)。
 - 在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥。
 - 在 Azure 门户中，向已注册的 Web 应用提供访问 OMS 的权限。
 

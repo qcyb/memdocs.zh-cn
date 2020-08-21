@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: af90154b848ddcd7cbff21917ef122ab10585098
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: 15b58b841ca87cf2b5e04c98dfd35c487c941e78
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663857"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693312"
 ---
 # <a name="collection-evaluation-in-configuration-manager"></a>Configuration Manager 中的集合评估
 
@@ -27,7 +27,7 @@ Configuration Manager 根据你定义的集合规则使用集合评估更新集�
 
 ## <a name="evaluation-process"></a>评估过程
 
-当集合计算器创建、更改和删除集合时，[colleval.log](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) 会进行记录。
+当集合计算器创建、更改和删除集合时，[colleval.log](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs) 会进行记录。
 
 在高级别中，每个集合评估和更新均执行以下步骤：
 
@@ -105,5 +105,5 @@ Configuration Manager 生成两种类型的评估关系图，即“增量”或�
 ## <a name="next-steps"></a>后续步骤
 - [如何创建集合](create-collections.md)
 - [集合的最佳实践](best-practices-for-collections.md)
-- [集合评估查看器](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer)
+- [集合评估查看器](../../../support/ceviewer.md)
 - 在 TechEd 澳大利亚举办的 [ConfigMgrDogs 故障排除 ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) 大会

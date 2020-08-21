@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: 920f3c9aabcdec1242a6f5e5fc8e6b65c5cc0b53
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390834"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694604"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>使用 Configuration Manager 将 Windows 设备升级到新版本
 
@@ -35,7 +35,7 @@ ms.locfileid: "86390834"
 
 开始将设备升级为最新版本之前，请先查看以下先决条件：  
 
-- 针对 Windows 10 桌面版：使用该策略的所有目标设备上的新版 Windows 的有效产品密钥。 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。 <!--496871-->  
+- 针对 Windows 10 桌面版：使用该策略的所有目标设备上的新版 Windows 的有效产品密钥。 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](/windows-server/get-started/kmsclientkeys)。 <!--496871-->  
 
 - 针对 Windows 10 移动版：Microsoft 批量许可服务中心 (VLSC) 的 XML 许可证文件。 此文件包含在使用该策略的所有目标设备上的新版 Windows 的许可信息。 下载 Windows 10 移动企业版的 ISO 文件，该文件中包含许可 XML。<!-- SCCMDocs#2033 -->
 
@@ -89,16 +89,16 @@ ms.locfileid: "86390834"
 
 这些错误并不表示部署失败。 在目标设备上验证是否已成功运行升级。
 
-客户端在评估目标策略后，会在两小时内应用升级。 [某些版本的 Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades) 此时可能需要重新启动。 请务必通知要将策略部署到的所有用户，或者进行策略计划，使其在用户工作时间外运行。
+客户端在评估目标策略后，会在两小时内应用升级。 [某些版本的 Windows](/windows/deployment/upgrade/windows-10-edition-upgrades) 此时可能需要重新启动。 请务必通知要将策略部署到的所有用户，或者进行策略计划，使其在用户工作时间外运行。
 
-如果客户端上的 DcmWmiProvider.log 中出现以下错误，请检查对激活方案使用的密钥是否正确。 有关详细信息，请参阅[准备工作](#before-you-start)部分。 如果使用密钥管理服务 (KMS) 进行激活，请务必使用 [KMS 客户端安装密钥](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。  <!-- 496871 -->
+如果客户端上的 DcmWmiProvider.log 中出现以下错误，请检查对激活方案使用的密钥是否正确。 有关详细信息，请参阅[准备工作](#before-you-start)部分。 如果使用密钥管理服务 (KMS) 进行激活，请务必使用 [KMS 客户端安装密钥](/windows-server/get-started/kmsclientkeys)。  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
 
 ## <a name="see-also"></a>另请参阅
 
-- [批量激活规划](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [批量激活规划](/windows/deployment/volume-activation/plan-for-volume-activation-client)
 
-- [Windows 10 版本升级](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+- [Windows 10 版本升级](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [使用 Microsoft Intune 在设备上升级 Windows 10 版本或切出 S 模式](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
+- [使用 Microsoft Intune 在设备上升级 Windows 10 版本或切出 S 模式](/intune/edition-upgrade-configure-windows-10)

@@ -10,16 +10,16 @@ ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e11a6130fb9f7d86b7d3377cc4120d4e61c43d2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d41a0806a33ac627eceaafab54c73c31ea013365
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691195"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694825"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>升级 Windows 10 以进行共同管理
 
-在努力使组织加入共同管理时，进行升级对于某些客户而言是极大的挑战。 共同管理需要安装 [Windows 10 版本 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) 或更高版本。 更新 Windows 并配置自动注册后，客户端将被自动注册到共同管理。
+在努力使组织加入共同管理时，进行升级对于某些客户而言是极大的挑战。 共同管理需要安装 [Windows 10 版本 1709](/windows/whats-new/whats-new-windows-10-version-1709) 或更高版本。 更新 Windows 并配置自动注册后，客户端将被自动注册到共同管理。
 
 在以下视频中，高级项目经理 Rob York 和产品营销经理 Locky Ainley 将介绍并演示如何升级到 Windows 10 以进行共同管理：
 
@@ -31,7 +31,7 @@ ms.locfileid: "81691195"
 
 与其他平台改进功能中，Windows 10 版本 1709 及更高版本支持自动注册。 此行为使设备在联接 Azure Active Directory (Azure AD) 时能被自动注册到 Intune。 
 
-有关详细信息，请参阅[启用 Windows 10 自动注册](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)。
+有关详细信息，请参阅[启用 Windows 10 自动注册](/intune/windows-enroll#enable-windows-10-automatic-enrollment)。
 
 
 ## <a name="how-to-do-it"></a>操作说明
@@ -61,5 +61,4 @@ Microsoft IT 已将 Windows 10 部署到 Microsoft 的 96,000 名分布式用户
 
 在此过程中，如果在任意时间点需要获得 Windows 10 升级的相关帮助，请转到 [Microsoft FastTrack](https://Microsoft.com/FastTrack/)，登录并请求协助。 
 
-有关详细信息，请参阅[从 FastTrack 获取帮助](quickstart-fasttrack.md)。 
-
+有关详细信息，请参阅[从 FastTrack 获取帮助](quickstart-fasttrack.md)。

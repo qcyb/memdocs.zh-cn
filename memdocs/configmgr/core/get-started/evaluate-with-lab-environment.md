@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694595"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692870"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>通过构建自己的实验室环境来评估 Configuration Manager
 
@@ -48,7 +48,7 @@ ms.locfileid: "81694595"
  构建此实验室，你将获得一个用于工作的功能性环境。 但是，此环境不会针对系统性能、硬盘空间管理和 SQL Server 存储等因素进行优化。  
 
 ##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a> 构建实验室前的推荐读物  
- [Configuration Manager 文档](https://docs.microsoft.com/sccm/)中提供了大量内容。 建议用户在开始构建实验室前，阅读此库的以下主题：  
+ [Configuration Manager 文档](/sccm/)中提供了大量内容。 建议用户在开始构建实验室前，阅读此库的以下主题：  
 
 -   在 [Configuration Manager 简介](../../core/understand/introduction.md)中，可以了解 Configuration Manager 控制台、最终用户门户和示例方案的核心概念。  
 
@@ -60,4 +60,4 @@ ms.locfileid: "81694595"
 
 -   在[内容管理的概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)中，可以了解内容管理。  
 
--   在[了解客户端如何为 Configuration Manager 查找站点资源和服务](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)中，可以了解如何成功支持部署中的所有日常任务。  
+-   在[了解客户端如何为 Configuration Manager 查找站点资源和服务](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)中，可以了解如何成功支持部署中的所有日常任务。

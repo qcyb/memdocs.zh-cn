@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: e15f8511464b6d8b8486bb874a256df1c375e31b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454998"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694570"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
@@ -40,7 +40,7 @@ ms.locfileid: "84454998"
 
   - 已登录用户必须是 Azure AD 标识。
 
-  - 如果用户是联合标识或同步标识，请配置 Configuration Manager [Active Directory 用户发现](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)和 [Azure AD 用户发现](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)。 若要详细了解混合标识，请参阅[定义混合标识采用策略](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->
+  - 如果用户是联合标识或同步标识，请配置 Configuration Manager [Active Directory 用户发现](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)和 [Azure AD 用户发现](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)。 若要详细了解混合标识，请参阅[定义混合标识采用策略](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy)。<!--497750-->
 
 - 除了管理点站点系统角色的[现有先决条件](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq)，还需在此服务器上启用“ASP.NET 4.5”。 包括启用 ASP.NET 4.5 时自动选择的任何其他选项。  
 
@@ -70,13 +70,13 @@ ms.locfileid: "84454998"
     - **在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备**：设置为“是”或“否” 。 默认设置为“是”。 这也是 Windows 10 1709 版中的默认行为。
 
         > [!TIP]
-        > 混合加入的设备加入本地 Active Directory 域并向 Azure AD 注册。 有关详细信息，请参阅[已加入混合 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)。<!-- MEMDocs#325 -->
+        > 混合加入的设备加入本地 Active Directory 域并向 Azure AD 注册。 有关详细信息，请参阅[已加入混合 Azure AD 的设备](/azure/active-directory/devices/concept-azure-ad-join-hybrid)。<!-- MEMDocs#325 -->
 
     - **允许客户端使用云管理网关**：设置为“是”（默认）或“否” 。  
 
 2. 将客户端设置部署到所需的设备集合。 不要将这些设置部署到用户集合。
 
-若要确认设备已混合加入，请在命令提示符中运行 `dsregcmd.exe /status`。 如果设备已加入 Azure AD 或已混合加入，结果中的“AzureAdjoined”字段会显示“YES” 。 有关详细信息，请参阅 [dsregcmd 命令 - 设备状态](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd)。
+若要确认设备已混合加入，请在命令提示符中运行 `dsregcmd.exe /status`。 如果设备已加入 Azure AD 或已混合加入，结果中的“AzureAdjoined”字段会显示“YES” 。 有关详细信息，请参阅 [dsregcmd 命令 - 设备状态](/azure/active-directory/devices/troubleshoot-device-dsregcmd)。
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>使用 Azure AD 标识安装并注册客户端
 

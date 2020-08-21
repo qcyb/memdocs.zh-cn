@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129046"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694248"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -80,7 +80,7 @@ ms.locfileid: "88129046"
 
 Configuration Manager 已不再支持网络访问保护。 该功能已在 Windows Server 2012 R2 中弃用并从 Windows 10 中删除。  
 
-有关网络访问保护备选方案，请参阅 *网络策略和访问服务概述* 的 [已弃用功能](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11))部分。
+有关网络访问保护备选方案，请参阅 *网络策略和访问服务概述* 的 [已弃用功能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11))部分。
 
 ## <a name="see-also"></a>另请参阅
 

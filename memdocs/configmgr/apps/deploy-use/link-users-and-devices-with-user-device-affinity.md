@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689265"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695233"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>在 Configuration Manager 中将用户和设备与用户设备相关性相链接
 
@@ -162,4 +162,4 @@ Configuration Manager 从 Windows 事件日志中读取有关用户登录事件�
 
 ## <a name="next-steps"></a>后续步骤
 
-也可以使用 Microsoft Intune 来查找注册设备的主要用户。 有关详细信息，请参阅 Intune 文档中的[查找 Intune 设备的主要用户](https://docs.microsoft.com/intune/find-primary-user)。
+也可以使用 Microsoft Intune 来查找注册设备的主要用户。 有关详细信息，请参阅 Intune 文档中的[查找 Intune 设备的主要用户](/intune/find-primary-user)。

@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b488e0953648b42baa59dc347b0bc942bac291fe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987713"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692564"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>在 Configuration Manager 中使用云分发点
 
@@ -89,7 +89,7 @@ ms.locfileid: "83987713"
 ### <a name="azure-resource-manager"></a>Azure 资源管理器
 
 <!--1322209-->
-从版本 1806 起，使用 Azure 资源管理器部署来创建云分发点。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+从版本 1806 起，使用 Azure 资源管理器部署来创建云分发点。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
 > [!Note]  
 > 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的云发分点部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
@@ -244,9 +244,9 @@ Configuration Manager 包括用于帮助控制成本和监视数据访问的以�
 
 - 根据部署模型，云分发点使用以下标准 BLOB 存储：  
 
-    - Azure 资源管理器部署使用 Azure 本地冗余存储 (LRS)。 此更改可降低存储帐户的成本。 经典部署不使用 GRS 的其他功能。 有关详细信息，请参阅[本地冗余存储](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs)。  
+    - Azure 资源管理器部署使用 Azure 本地冗余存储 (LRS)。 此更改可降低存储帐户的成本。 经典部署不使用 GRS 的其他功能。 有关详细信息，请参阅[本地冗余存储](/azure/storage/common/storage-redundancy-lrs)。  
 
-    - Configuration Manager 版本 1810 或更早版本的经典部署使用 Azure 异地冗余存储 (GRS)。 有关详细信息，请参阅[异地冗余存储](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs)。  
+    - Configuration Manager 版本 1810 或更早版本的经典部署使用 Azure 异地冗余存储 (GRS)。 有关详细信息，请参阅[异地冗余存储](/azure/storage/common/storage-redundancy-grs)。  
 
 #### <a name="other-costs"></a>其他成本
 
@@ -375,11 +375,11 @@ Azure 存储服务对于单个文件支持每秒 500 个请求。 单个云分�
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>我需要维护 Azure 虚拟机吗？
 
-不需要维护。 云分发点的设计使用 Azure 平台即服务 (PaaS)。 通过使用你提供的订阅，Configuration Manager 可创建必要的 VM、存储和网络。 Azure 可保护和更新虚拟机。 与基础结构即服务 (IaaS) 一样，这些 VM 不是本地环境的一部分。 云分发点是将 Configuration Manager 环境扩展到云端的 PaaS。 有关详细信息，请参阅 [PaaS 云服务模型的安全优势](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)。  
+不需要维护。 云分发点的设计使用 Azure 平台即服务 (PaaS)。 通过使用你提供的订阅，Configuration Manager 可创建必要的 VM、存储和网络。 Azure 可保护和更新虚拟机。 与基础结构即服务 (IaaS) 一样，这些 VM 不是本地环境的一部分。 云分发点是将 Configuration Manager 环境扩展到云端的 PaaS。 有关详细信息，请参阅 [PaaS 云服务模型的安全优势](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)。  
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>云分发点是否使用 Azure CDN？
 
-Azure 内容分发网络 (CDN) 是一种全球解决方案，可通过在全球各地具有战略意义的物理节点上缓存内容，快速提供高带宽内容。 有关详细信息，请参阅[什么是 Azure CDN？](https://docs.microsoft.com/azure/cdn/cdn-overview)。
+Azure 内容分发网络 (CDN) 是一种全球解决方案，可通过在全球各地具有战略意义的物理节点上缓存内容，快速提供高带宽内容。 有关详细信息，请参阅[什么是 Azure CDN？](/azure/cdn/cdn-overview)。
 
 Configuration Manager 云分发点当前不支持 Azure CDN。
 

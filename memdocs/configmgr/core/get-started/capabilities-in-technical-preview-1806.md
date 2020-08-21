@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126784"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694417"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -81,10 +81,10 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
     > [!Tip]  
     > 软件更新点需要 HTTPS，因为它是用于处理签名证书的 WSUS API 的必需。 客户端也无需启用 HTTPS。 有关在 WSUS 上启用 HTTPS 的详细信息，请参阅以下文章获取帮助：  
-    > - [使用安全套接字层协议保护 WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS 支持博客文章](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [使用安全套接字层协议保护 WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS 支持博客文章](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- 软件更新点上有足够的磁盘空间供 WSUSContent 文件夹存储第三方软件更新的源二进制内容。 所需的存储空间根据供应商、更新类型和发布用于部署的特定更新而有所不同。 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 WSUS 支持团队博客文章 [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)（如何更改 WSUS 在本地存储更新的位置）。  
+- 软件更新点上有足够的磁盘空间供 WSUSContent 文件夹存储第三方软件更新的源二进制内容。 所需的存储空间根据供应商、更新类型和发布用于部署的特定更新而有所不同。 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 WSUS 支持团队博客文章 [How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)（如何更改 WSUS 在本地存储更新的位置）。  
 
 - 启用和部署“软件更新”  组中的客户端设置 [“启用第三方软件更新”](../clients/deploy/about-client-settings.md#enable-third-party-software-updates)。  
 
@@ -354,4 +354,4 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="next-steps"></a>后续步骤
-有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。    
+有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。

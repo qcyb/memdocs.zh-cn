@@ -10,12 +10,12 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ee640a70eea9f2e8470e852409911d28e542bc2
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: b1bc72a3691e4a6f47c29a5a91ef11c92f0f7e7c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663361"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693278"
 ---
 # <a name="best-practices-for-collections-in-configuration-manager"></a>Configuration Manager 中的集合最佳实践
 
@@ -96,7 +96,7 @@ Configuration Manager 中的包含和排除集合规则使引用集合比编写�
 
 ## <a name="use-ceviewer-to-monitor-collection-evaluation"></a>使用 CEViewer 监视集合评估
 
-可以使用[集合评估查看器 (CEViewer)](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) 来监视正在评估的集合的数量，以及更新每个集合所需的时间。 CEViewer 位于站点服务器上的 CD.Latest 文件夹中。
+可以使用[集合评估查看器 (CEViewer)](../../../support/ceviewer.md) 来监视正在评估的集合的数量，以及更新每个集合所需的时间。 CEViewer 位于站点服务器上的 CD.Latest 文件夹中。
 
 若要使用 SQL 手动执行类似的检查，可以使用以下查询：
 
@@ -111,5 +111,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

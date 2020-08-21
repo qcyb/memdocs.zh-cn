@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e408bbe7ea88d70c5a9d02368c2d820584cae2b8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905324"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694434"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Configuration Manager Technical Preview 1710 中的功能
 
@@ -97,17 +97,17 @@ PowerShell 脚本部署首次在 Technical Preview[ Tech Preview 1706](capabilit
 
 从 Configuration Manager 控制台中可以获得攻击防护策略部署的符合性数据。
 
-有关攻击防护和特定组件及规则的详细信息，请参阅 Windows 文档库中的 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)。
+有关攻击防护和特定组件及规则的详细信息，请参阅 Windows 文档库中的 [Windows Defender 攻击防护](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)。
 
 ### <a name="prerequisites"></a>必备条件
 托管的设备必须运行 Windows 10 1709 Fall Creators Update 或更高版本并满足以下要求，具体要取决于配置的组件和规则：
 
 |攻击防护组件 |其他先决条件|
 |------------------------|------------------------|
-| 攻击面减少  | 设备必须启用 [Windows Defender AV 实时保护]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)。  |
-| 受控文件夹访问权限  | 设备必须启用 [Windows Defender AV 实时保护]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)。   |
+| 攻击面减少  | 设备必须启用 [Windows Defender AV 实时保护]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)。  |
+| 受控文件夹访问权限  | 设备必须启用 [Windows Defender AV 实时保护]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)。   |
 | Exploit Protection  | 无  |
-| 网络保护  |  设备必须启用 [Windows Defender AV 实时保护]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)。  |
+| 网络保护  |  设备必须启用 [Windows Defender AV 实时保护]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)。  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>创建攻击防护策略  <!--1355468 -->
 1. 在 Configuration Manager 控制台中，转到“资产和符合性”   > “Endpoint Protection”  ，然后单击“Windows Defender 攻击防护”  。
@@ -125,7 +125,7 @@ PowerShell 脚本部署首次在 Technical Preview[ Tech Preview 1706](capabilit
 
 ## <a name="limited-support-for-cng-certificates"></a>对 CNG 证书的有限支持
 <!-- 1356191 -->
-从此版本开始，现在可以使用[加密 API：下一代加密技术 (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) 证书模板用于以下方案：
+从此版本开始，现在可以使用[加密 API：下一代加密技术 (CNG)](/windows/win32/seccng/cng-features) 证书模板用于以下方案：
 
 - 客户端注册和与 HTTPS 管理点的通信。   
 - 使用 HTTPS 分发点的软件分发和应用程序部署。   
@@ -210,7 +210,7 @@ PowerShell 脚本部署首次在 Technical Preview[ Tech Preview 1706](capabilit
     > [!NOTE]
     > Windows 10 电脑仅在客户端上存储一个网络隔离列表。 在此版本中，可以创建两种网络隔离列表（一种从 Windows 信息保护创建，另一种从 Windows Defender 应用程序防护创建），并将其部署到客户端。 如果部署两个策略，两个网络隔离列表必须匹配。 如果部署的列表与该客户端不匹配，则部署会失败。
 
-    要详细了解如何指定网络定义，可参阅 [Windows 信息保护文档]（[使用 Windows 信息保护 (WIP) 来保护企业数据](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)）。
+    要详细了解如何指定网络定义，可参阅 [Windows 信息保护文档]（[使用 Windows 信息保护 (WIP) 来保护企业数据](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)）。
 
 6. 结束后，完成向导操作，并将策略部署到一个或多个 Windows 10 设备。
 
@@ -219,4 +219,4 @@ PowerShell 脚本部署首次在 Technical Preview[ Tech Preview 1706](capabilit
 若要了解有关 Windows Defender 应用程序防护的详细信息，请参阅[这篇博客文章](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)。 此外，若要详细了解 Windows Defender 应用程序防护独立模式，请参阅[这篇博客文章](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)。
 
 ## <a name="next-steps"></a>后续步骤
-有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。    
+有关安装和更新技术预览版分支的信息，请参阅 [Configuration Manager 的 Technical Preview](technical-preview.md)。

@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e53c61052b8ee1b217a5268e8877dc4f4415f477
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823973"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692615"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>在 Configuration Manager 中配置报表
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services 是基于服务器的报表平台，它为各种�
 
 运行报表时，Reporting Services 组件连接到 Configuration Manager 站点数据库，以检索数据。  
 
-在 Configuration Manager 站点中安装 Reporting Services 点之前，请在目标站点系统上安装和配置 SQL Server Reporting Services。 有关详细信息，请参阅[安装 SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services)。  
+在 Configuration Manager 站点中安装 Reporting Services 点之前，请在目标站点系统上安装和配置 SQL Server Reporting Services。 有关详细信息，请参阅[安装 SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services)。  
 
 ### <a name="verify-sql-server-reporting-services-installation"></a>验证 SQL Server Reporting Services 安装
 
@@ -241,7 +241,7 @@ Configuration Manager 安装 Reporting Services 点时，会在 Reporting Servic
 可以使用许多选项在 SQL Server Reporting Services 中创作报表。 在 Configuration Manager 控制台中创建或编辑报表时，Configuration Manage 将打开报表生成器以用作创作环境。 无论如何创作 Configuration Manager 报表，均需一个自签名证书以便向站点数据库服务器进行服务器身份验证。
 
 > [!NOTE]  
-> 若要详细了解如何使用 SQL Server Reporting Services 创作报表，请参阅[报表生成器创作环境](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs)。  
+> 若要详细了解如何使用 SQL Server Reporting Services 创作报表，请参阅[报表生成器创作环境](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs)。  
 
 Configuration Manager 会将证书自动安装在站点服务器和任何 SMS 提供程序角色上。 当 Configuration Manager 控制台从其中一台服务器中运行时，可以直接通过该控制台创建或编辑报表。
 

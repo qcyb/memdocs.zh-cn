@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f7085b7ee6f0f723c9bcf9d10cb85b03f990a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3ceb036180d002956eb0f62348ad317dfce6e7e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689065"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695131"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>在 Configuration Manager 中管理应用程序的安全和隐私
 
@@ -182,7 +182,7 @@ Configuration Manager 客户端版本 1710 和早期版本需安装 Microsoft Si
 
 如果将“允许 Silverlight 应用程序在提升的信任模式下运行”设置设为“否”，则客户端不会删除 Microsoft 签名证书   。  
 
-若要深入了解 Silverlight 中受信任的应用程序，请参阅[受信任的应用程序](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\))。  
+若要深入了解 Silverlight 中受信任的应用程序，请参阅[受信任的应用程序](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\))。  
 
 
 ## <a name="privacy-information-for-application-management"></a>应用程序管理的隐私信息  
@@ -239,4 +239,4 @@ Configuration Manager 收集有关应用程序的诊断和使用情况数据，M
 
 - 应用程序目录允许 Configuration Manager 管理员发布任何应用程序或程序或脚本，以供用户运行。 Configuration Manager 无法控制在目录中发布的程序或脚本的类型以及它们传输的信息类型。  
 
-- Configuration Manager 可能会在客户端和应用程序目录站点系统角色之间传输信息。 该信息可能会标识计算机和登录帐户。 除非将这些站点系统角色配置为要求客户端使用 HTTPS 进行通信，否则，在客户端和服务器之间传输的信息并未加密。  
+- Configuration Manager 可能会在客户端和应用程序目录站点系统角色之间传输信息。 该信息可能会标识计算机和登录帐户。 除非将这些站点系统角色配置为要求客户端使用 HTTPS 进行通信，否则，在客户端和服务器之间传输的信息并未加密。

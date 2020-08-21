@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3352f8aa719e93210124d164d89791214eb20bf5
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 15c1be9ed388356e17f8591123114dccf7bcd612
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905866"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695199"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Configuration Manager 应用程序的管理任务
 
@@ -40,7 +40,7 @@ ms.locfileid: "82905866"
 |**更新统计信息**|更新在“监视”  工作区的“部署”  节点中显示的、有关此应用程序的部署的信息。<br /><br /> 请参阅[从 Configuration Manager 控制台监视应用程序](../../apps/deploy-use/monitor-applications-from-the-console.md)。|  
 |**恢复**|恢复以前使用“停用”  管理任务停用的应用程序。|  
 |<bpt id="p1">**</bpt>Retire<ept id="p1">**</ept>|在停用某应用程序时，它不能再用于部署，但不会删除此应用程序及其部署。 也不会删除在客户端计算机上安装的此应用程序的现有副本。 将在 60 天后从 Configuration Manager 中删除对应用程序的任何修订。 但是，不会删除此应用程序的任何已安装的副本。<br /><br /> 若要删除应用程序，必须先停用应用程序，删除所有部署，删除其他部署对该应用程序的引用，然后删除该应用程序的所有修订版本。<br /><br /> 请参阅[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**导出**|打开“导出应用程序向导”  ，它可让你将所选的应用程序导出为 .zip 文件，然后可以将其存档或安装到另一个站点上。 如果选择导出应用程序内容，则会创建一个包含此内容的文件夹。<br /><br /> 还可以导出应用程序依赖关系、取代关系和条件以及应用程序及其依赖关系的内容。<br /><br /> Windows PowerShell cmdlet **Export-CMApplication** 执行相同的功能。 有关详细信息，请参阅 [Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps)。|  
+|**导出**|打开“导出应用程序向导”  ，它可让你将所选的应用程序导出为 .zip 文件，然后可以将其存档或安装到另一个站点上。 如果选择导出应用程序内容，则会创建一个包含此内容的文件夹。<br /><br /> 还可以导出应用程序依赖关系、取代关系和条件以及应用程序及其依赖关系的内容。<br /><br /> Windows PowerShell cmdlet **Export-CMApplication** 执行相同的功能。 有关详细信息，请参阅 [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps)。|  
 |**删除**|删除当前所选的应用程序。<br /><br /> 在下列情况下无法删除某应用程序：其他应用程序依赖它，它具有活动的部署，或者它具有依赖的任务序列。|  
 |**模拟部署**|打开“模拟应用程序部署向导”  ，在其中你无需安装或卸载应用程序就能测试将应用程序部署到计算机的结果。<br /><br /> 请参阅[模拟应用程序部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
 |**部署**|打开“部署软件向导”  ，在其中你可以将所选的应用程序部署到层次结构中的一组计算机。<br /><br /> 请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  
@@ -56,4 +56,4 @@ ms.locfileid: "82905866"
 |**提高优先级**|提高所选部署类型的优先级。 部署类型按次序接受评估。 在某种部署类型符合指定的要求时，将会运行它，之后不会评估优先级列表上的其他部署类型。|  
 |**降低优先级**|降低所选部署类型的优先级。|  
 |**删除**|删除所选的部署类型。<br><br>如果另一个应用程序中的部署类型正在引用某部署类型，则无法删除此部署类型。<br>若要删除某部署类型，则必须删除在其他部署类型中包含的、此部署类型的全部依赖关系。<br>此外，如果任何应用程序包含的部署类型引用了要删除的部署类型，则还必须删除这些应用程序以前的修订版本。|  
-|**更新内容**|刷新所选部署类型的内容。<br /><br /> 在为包含虚拟应用程序的部署类型启动此向导时，会启动“更新内容向导”  。 通过该向导可更改所选虚拟应用程序的发布选项和要求规则。 有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。<br /><br /> 在刷新部署类型的内容时，会创建此应用程序的新的修订版本。 这可能会导致用新的应用程序来更新客户端设备。|  
+|**更新内容**|刷新所选部署类型的内容。<br /><br /> 在为包含虚拟应用程序的部署类型启动此向导时，会启动“更新内容向导”  。 通过该向导可更改所选虚拟应用程序的发布选项和要求规则。 有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。<br /><br /> 在刷新部署类型的内容时，会创建此应用程序的新的修订版本。 这可能会导致用新的应用程序来更新客户端设备。|

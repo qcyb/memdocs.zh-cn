@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127876"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693516"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker 设置参考
 
@@ -119,7 +119,7 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 > [!NOTE]
 > 如果驱动器已加密，并且禁用此设置，BitLocker 将解密驱动器。  
 
-如果设备没有[受信任的平台模块 (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node)，请使用选项“没有兼容的 TPM 时允许 BitLocker (需要密码)”。 即使设备没有 TPM，此设置也允许 BitLocker 加密 OS 驱动器。 如果允许使用此选项，则 Windows 会提示用户指定 BitLocker 密码。
+如果设备没有[受信任的平台模块 (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node)，请使用选项“没有兼容的 TPM 时允许 BitLocker (需要密码)”。 即使设备没有 TPM，此设置也允许 BitLocker 加密 OS 驱动器。 如果允许使用此选项，则 Windows 会提示用户指定 BitLocker 密码。
 
 在具有兼容的 TPM 的设备上，可以在启动时使用两种类型的身份验证方法，以便为加密的数据提供额外的保护。 在计算机启动时，它只能使用 TPM 进行身份验证，或者它还可能要求输入个人标识号 (PIN)。 配置下列设置：
 

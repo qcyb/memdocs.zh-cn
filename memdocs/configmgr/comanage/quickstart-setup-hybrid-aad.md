@@ -10,12 +10,12 @@ ms.assetid: 27dd26d1-e99c-4431-b2f8-60406394b6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8e2f7bbb51c72fa3d0f2a36e8a5419552d468b4c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405303b3988e8c853ba30e8fb6d620d782b0474e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691215"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694893"
 ---
 # <a name="set-up-hybrid-azure-ad-for-co-management"></a>设置混合 Azure AD 以进行共同管理
 
@@ -26,8 +26,8 @@ ms.locfileid: "81691215"
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
 
 混合 Azure AD 联接过程会自动将已加入域的本地设备注册到 Azure AD。 有关此过程的详细信息，请参阅以下文章：
-- [Azure Active Directory 中的设备管理简介](https://docs.microsoft.com/azure/active-directory/device-management-introduction) 
-- [如何规划混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Azure Active Directory 中的设备管理简介](/azure/active-directory/device-management-introduction) 
+- [如何规划混合 Azure AD 联接](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
 混合 Azure AD 联接是共同管理的一个重要基础方面。 某些客户可能在实现这一过程中遇到阻碍，例如：
 - 组织使用第三方标识解决方案 
@@ -41,14 +41,14 @@ ms.locfileid: "81691215"
 在创建要保护的标识时，设备类似于用户。 若要在任何位置随时保护设备的标识，需要将该设备的标识引入 Azure AD。
 
 根据使用的域类型，可以通过两种主要方法来实现。 为以下任一域类型配置混合 Azure AD 联接：  
-- [联盟域](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
-- [托管域](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
+- [联盟域](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+- [托管域](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
 
 上述两种方法提供了最佳体验。 有关更多详细信息，包括完整的手动操作过程，请参阅以下文章：
-- [手动配置已联接混合 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
-- [混合 Azure AD 的 ADFS 传递身份验证](https://docs.microsoft.com/windows-server/identity/ad-fs/ad-fs-overview)，其中包括 Azure AD 发现  
+- [手动配置已联接混合 Azure AD 的设备](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+- [混合 Azure AD 的 ADFS 传递身份验证](/windows-server/identity/ad-fs/ad-fs-overview)，其中包括 Azure AD 发现  
 
-有关故障排除指南，请参阅 [Windows 10 混合 Azure AD 联接故障排除指南](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)。
+有关故障排除指南，请参阅 [Windows 10 混合 Azure AD 联接故障排除指南](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)。
 
 
 
@@ -66,5 +66,4 @@ ms.locfileid: "81691215"
 
 如果在这一过程中的任何时候需要获得有关设置 Azure AD 的帮助，请转到 [Microsoft FastTrack](https://Microsoft.com/FastTrack/)，登录并请求协助。 
 
-有关详细信息，请参阅[从 FastTrack 获取帮助](quickstart-fasttrack.md)。 
-
+有关详细信息，请参阅[从 FastTrack 获取帮助](quickstart-fasttrack.md)。

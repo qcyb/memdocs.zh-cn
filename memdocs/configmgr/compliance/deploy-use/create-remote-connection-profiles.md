@@ -10,12 +10,12 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1434d7802eb1ed68cb0a575778bdae1e5e99c9ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240110"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694740"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Configuration Manager 中的远程连接配置文件
 
@@ -35,7 +35,7 @@ Configuration Manager 会在客户端上创建“远程电脑连接”安全组 
 
 ### <a name="external-dependencies"></a>外部依赖关系  
 
-- 如果要允许用户连接 Internet，则必须安装和配置远程桌面网关服务器。 有关如何安装和配置远程桌面网关服务器的详细信息，请参阅[远程桌面服务器 - 从任意位置访问](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)。
+- 如果要允许用户连接 Internet，则必须安装和配置远程桌面网关服务器。 有关如何安装和配置远程桌面网关服务器的详细信息，请参阅[远程桌面服务器 - 从任意位置访问](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)。
 
 - 如果客户端运行基于主机的防火墙，该防火墙必须启用 mstsc.exe 程序。 在配置远程连接配置文件时，请启用“对 Windows 域和专用网络上的连接允许 Windows 防火墙例外”设置  。 此设置允许 Configuration Manager 自动配置 Windows 防火墙。
 
@@ -83,7 +83,7 @@ Configuration Manager 会在客户端上创建“远程电脑连接”安全组 
         - 除段之间的句点 (`.`) 和端口前的冒号 (`:`) 以外，允许使用的其他特殊字符为破折号 (`–`) 和下划线 (`_`)。
         - Configuration Manager 不支持使用此值的国际化域名。
 
-    - **只允许通过网络级别身份验证运行远程桌面的计算机中的连接**：默认启用，此设置能提升连接的安全级别。 有关详细信息，请参阅[授予远程桌面访问权限](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication)。
+    - **只允许通过网络级别身份验证运行远程桌面的计算机中的连接**：默认启用，此设置能提升连接的安全级别。 有关详细信息，请参阅[授予远程桌面访问权限](/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication)。
 
     - 启用以下连接设置：
 
@@ -162,4 +162,4 @@ Configuration Manager 中包括内置报表，可用于监视有关远程连接�
 > [!IMPORTANT]  
 > 在符合性设置报表中使用参数“设备筛选器”和“用户筛选器”时，请使用通配符 (`%`)   。  
 
-有关如何在 Configuration Manager 中配置报表的详细信息，请参阅[报表简介](../../core/servers/manage/introduction-to-reporting.md)。  
+有关如何在 Configuration Manager 中配置报表的详细信息，请参阅[报表简介](../../core/servers/manage/introduction-to-reporting.md)。

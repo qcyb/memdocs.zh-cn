@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01b6587d1d223675fdc240c20913e21854d55821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701115"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695505"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Configuration Manager 的联机文档
 
@@ -26,7 +26,7 @@ ms.locfileid: "81701115"
 
 ### <a name="online-documentation"></a>联机文档
 
-在 [docs.microsoft.com/configmgr](https://docs.microsoft.com/configmgr) 上查看 Configuration Manager Current Branch 联机文档：  
+在 [docs.microsoft.com/configmgr](/configmgr) 上查看 Configuration Manager Current Branch 联机文档：  
 
 - [Configuration Manager 简介](../understand/introduction.md)  
 
@@ -76,33 +76,33 @@ ms.locfileid: "81701115"
 
 查看以下位置的联机文档：  
 
-- [System Center 2012 Configuration Manager 入门](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
+- [System Center 2012 Configuration Manager 入门](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager 的站点管理](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [System Center 2012 Configuration Manager 的站点管理](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
-- [在 System Center 2012 Configuration Manager 中迁移层次结构](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
+- [在 System Center 2012 Configuration Manager 中迁移层次结构](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 
-- [部署 System Center 2012 Configuration Manager 的客户端](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
+- [部署 System Center 2012 Configuration Manager 的客户端](/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
 
-- [在 System Center 2012 Configuration Manager 中部署软件和操作系统](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
+- [在 System Center 2012 Configuration Manager 中部署软件和操作系统](/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager 中的资产和合规性](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
+- [System Center 2012 Configuration Manager 中的资产和合规性](/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager 的安全和隐私](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
+- [System Center 2012 Configuration Manager 的安全和隐私](/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
 
-- [Scenarios and Solutions Using System Center 2012 Configuration Manager（使用 System Center 2012 Configuration Manager 的方案和解决方案）（使用 System Center 2012 Configuration Manager 的方案和解决方案）](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
+- [Scenarios and Solutions Using System Center 2012 Configuration Manager（使用 System Center 2012 Configuration Manager 的方案和解决方案）（使用 System Center 2012 Configuration Manager 的方案和解决方案）](/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
 
 ### <a name="release-notes-and-technical-publications"></a>发行说明和技术出版物
 
 发行说明和技术出版物对 Configuration Manager 指南进行补充。 发行说明包含产品文档中未提供的信息，该信息是成功安装 Configuration Manager 所必需的。 技术出版物提供了支持 Configuration Manager 的附加信息。  
 
-- [System Center 2012 Configuration Manager 的发行说明](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
+- [System Center 2012 Configuration Manager 的发行说明](/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager 的技术出版物](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
+- [System Center 2012 Configuration Manager 的技术出版物](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
 ### <a name="accessibility"></a>辅助功能
 
-有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅 [Configuration Manager 的辅助功能](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))。
+有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅 [Configuration Manager 的辅助功能](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))。
 
 ### <a name="downloadable-documentation"></a>可下载文档
 

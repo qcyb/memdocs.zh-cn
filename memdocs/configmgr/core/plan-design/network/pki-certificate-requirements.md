@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: df0b632ccf7939bdc897d4a456f0e6cacc7a1760
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: ff364dc248519d0027ce96fe43f4f3f6cf373e68
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525942"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692734"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Configuration Manager 的 PKI 证书要求
 
@@ -23,7 +23,7 @@ ms.locfileid: "87525942"
 
 以下各个表列出了 Configuration Manager 可能需要的公钥基础结构 (PKI) 证书。 此信息假定用户对 PKI 证书有着基本了解。 有关详细信息，请参阅 [Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构](example-deployment-of-pki-certificates.md)。
 
-有关 Active Directory 证书服务的更多信息，请参阅 [Active Directory 证书服务概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))。
+有关 Active Directory 证书服务的更多信息，请参阅 [Active Directory 证书服务概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))。
 
 有关使用加密 API 的信息：用于 Configuration Manager 的下一代加密技术 (CNG) 证书，请参阅 [CNG 证书概述](cng-certificates-overview.md)。
 

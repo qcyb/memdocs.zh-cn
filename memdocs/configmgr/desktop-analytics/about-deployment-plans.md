@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400709"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693380"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>关于桌面分析中的部署计划
 
@@ -70,7 +70,7 @@ ms.locfileid: "87400709"
 
 由于以下原因之一，Windows 升级决定替换设备：
 
-- 它未通过 Windows 10 要求的处理器检查。 有关详细信息，请参阅[最低硬件要求](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)。
+- 它未通过 Windows 10 要求的处理器检查。 有关详细信息，请参阅[最低硬件要求](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)。
 - 它包含 BIOS 块
 - 它没有足够的内存
 - 系统上的启动关键组件中有驱动程序被阻止
@@ -132,4 +132,4 @@ Windows 升级决策受阻可能由以下原因引起：
 
 - [了解安全和功能更新](about-updates.md)  
 
-- [创建部署计划](create-deployment-plans.md)  
+- [创建部署计划](create-deployment-plans.md)

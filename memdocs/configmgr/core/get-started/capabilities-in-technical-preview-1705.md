@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905467"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692921"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager Technical Preview 1705 中的功能
 
@@ -121,12 +121,12 @@ ms.locfileid: "82905467"
 
 - 此版本不支持故障转移后使用异步提交副本作为站点数据库。
   > [!CAUTION]  
-  > 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。  
+  > 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。  
 
 - 可以在可用性组中使用与所用 SQL Server 版本支持的数量和类型相同的副本。   （先前支持限制为两个同步提交副本。）
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>配置异步提交副本
-若要将异步副本添加到[与 Configuration Manager 配合使用的可用性组](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)，则不需要运行配置同步副本所需的配置脚本。 （这是因为不支持将该异步副本用作站点数据库。）有关详细信息，请参阅[将次要副本添加到可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)。
+若要将异步副本添加到[与 Configuration Manager 配合使用的可用性组](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)，则不需要运行配置同步副本所需的配置脚本。 （这是因为不支持将该异步副本用作站点数据库。）有关详细信息，请参阅[将次要副本添加到可用性组](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>使用异步副本恢复站点
 使用异步副本恢复站点数据库之前，必须停止活动主站点，防止到站点数据库的其他写入。 停止站点后，可以使用异步副本替代[手动恢复的数据库](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)。
@@ -246,7 +246,7 @@ ms.locfileid: "82905467"
 在开始之前，请确保客户端安装源文件已本地存储在用于安装此客户端的设备上。
 然后，使用[如何将客户端部署到 Windows 计算机](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)中的说明，使用以下安装命令行（将示例中的值替换为你自己的值）：
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
+ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<code>https://contososerver</code>****
 
 - **/NoCrlCheck**：如果管理点或云管理网关使用非公共服务器证书，则客户端可能无法访问 CRL 位置。
 - **/Source**：本地文件夹： 客户端安装文件位置。
@@ -254,7 +254,7 @@ ms.locfileid: "82905467"
 - **SMSMP**：查找管理点的名称，管理点可位于 Intranet 上。
 - **SMSSiteCode**：Configuration Manager 站点的站点代码。
 - AADTENANTID、AADTENANTNAME   ：链接到 Configuration Manager 的 Azure AD 租户的 ID 和名称。 可以通过从加入 Azure AD 的设备上的命令提示符处运行 dsregcmd.exe /status 找到上述内容。
-- **AADCLIENTAPPID**：Azure AD 客户端应用 ID。 有关查找此内容的帮助，请参阅[使用门户创建可访问资源的 Azure Active Directory 应用程序和服务主体](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
+- **AADCLIENTAPPID**：Azure AD 客户端应用 ID。 有关查找此内容的帮助，请参阅[使用门户创建可访问资源的 Azure Active Directory 应用程序和服务主体](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
 - **AADResourceUri**：载入的 Azure AD 服务器应用的标识符 URI。
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>使用 Azure 服务向导配置与 OMS 的连接
@@ -265,7 +265,7 @@ ms.locfileid: "82905467"
 -   Configuration Manager 连接到 OMS 以实现 Log Analytics 或升级就绪情况等功能。
 
 ### <a name="prerequisites-for-the-oms-connector"></a>OMS 连接器的先决条件
-配置与 OMS 的连接的先决条件与 [Current Branch 版本 1702 中记录的](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)先决条件并无任何区别。 此处重复了该信息：  
+配置与 OMS 的连接的先决条件与 [Current Branch 版本 1702 中记录的](/azure/azure-monitor/platform/collect-sccm)先决条件并无任何区别。 此处重复了该信息：  
 
 -   向 OMS 提供 Configuration Manager 权限。
 

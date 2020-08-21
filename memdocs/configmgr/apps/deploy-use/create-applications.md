@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240331"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695284"
 ---
 # <a name="create-applications-in-configuration-manager"></a>在 Configuration Manager 中创建应用程序
 
@@ -688,7 +688,7 @@ Configuration Manager 在安装部署类型之前验证设备上的这些要求�
 新应用程序会出现在“应用程序”节点中。  
 
 > [!TIP]  
-> Windows PowerShell cmdlet **Import-CMApplication** 具有与此过程相同的功能。 有关详细信息，请参阅 [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps)。  
+> Windows PowerShell cmdlet **Import-CMApplication** 具有与此过程相同的功能。 有关详细信息，请参阅 [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps)。  
 
 有关如何导出应用程序的详细信息，请参阅[应用程序的管理任务](management-tasks-applications.md)。
 

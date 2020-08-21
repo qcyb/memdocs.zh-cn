@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905852"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694502"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager Technical Preview 1511 中的功能
 
@@ -34,7 +34,7 @@ ms.locfileid: "82905852"
 
 -   Windows 10 桌面专业版或 Windows 10 企业版的版本 1511 或更高版本  
 
--   要通过 [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)进行管理的计算机。  
+-   要通过 [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb)进行管理的计算机。  
 
 ### <a name="try-it-out"></a>试试看！  
  尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
@@ -67,7 +67,7 @@ ms.locfileid: "82905852"
 
 4. 可以使用控制台中监视或报告来验证 Office 365 更新的符合性。  
 
-   有关详细步骤，请参阅[使用 Configuration Manager 技术预览版管理 Office 365 客户端更新](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)。  
+   有关详细步骤，请参阅[使用 Configuration Manager 技术预览版管理 Office 365 客户端更新](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)。  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>支持 SQL Server AlwaysOn，实现数据库的高度可用性  
  Configuration Manager 现在支持使用 SQL Server AlwaysOn 可用性组托管站点数据库。  在安装新站点时，可以指示安装程序使用可用性组，而不是普通的 SQL Server 实例。  
@@ -110,7 +110,7 @@ ms.locfileid: "82905852"
  使用以下步骤来首先创建和配置可用性组，然后安装一个使用该可用性组的新 Configuration Manager 站点。  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>创建一个 SQL Server AlwaysOn 可用性组  
-创建 [SQL Server 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15)的过程记录在 SQL Server 文档库中。  创建可用性组时，确保满足使用 Configuration Manager 的以下要求：  
+创建 [SQL Server 可用性组](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15)的过程记录在 SQL Server 文档库中。  创建可用性组时，确保满足使用 Configuration Manager 的以下要求：  
 
 -   最多包含三个成员：  
 
@@ -202,4 +202,4 @@ ms.locfileid: "82905852"
 
 1.  将[软件更新部署](../../sum/deploy-use/deploy-software-updates.md)到服务器群集集合。  
 
-2.  [监视软件更新部署](../../sum/deploy-use/monitor-software-updates.md)。  
+2.  [监视软件更新部署](../../sum/deploy-use/monitor-software-updates.md)。

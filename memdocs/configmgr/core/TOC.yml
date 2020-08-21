@@ -750,7 +750,7 @@
         - name: 如何管理 Linux 和 UNIX 客户端
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
         - name: 将数据同步到 Azure Monitor
-          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context'
+          href: /azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context
         - name: 维护 Mac 客户端
           href: clients/manage/maintain-mac-clients.md
         - name: Surface 设备仪表板

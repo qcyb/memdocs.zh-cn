@@ -10,19 +10,20 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbf7dd3e35db8d2020e96e2511017e43863f724e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5feaf05a6829d902b1d8dcbe57722dfce410de6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85613449"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693533"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender 高级威胁防护
 
 适用范围：Configuration Manager (Current Branch)
 
-Endpoint Protection 可帮助管理和监视 [Microsoft Defender 高级威胁防护 (ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)（之前称为 Windows Defender ATP）。 Microsoft Defender ATP 可帮助企业检测和调查其网络上的高级攻击并作出应对。 Configuration Manager 策略可帮助加入和监视 Windows 10 客户端。
+Endpoint Protection 可帮助管理和监视 [Microsoft Defender 高级威胁防护 (ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)（之前称为 Windows Defender ATP）。 Microsoft Defender ATP 可帮助企业检测和调查其网络上的高级攻击并作出应对。 Configuration Manager 策略可帮助加入和监视 Windows 10 客户端。
 
-Microsoft Defender ATP 是 [Microsoft Defender 安全中心](https://securitycenter.windows.com)提供的一项服务。 通过添加和部署客户端加入配置文件，Configuration Manager 可监视部署状态和 Microsoft Defender ATP 代理运行状况。 可在运行 Configuration Manager 客户端的电脑上或[由 Microsoft Intune 托管](https://docs.microsoft.com/intune/protect/advanced-threat-protection)的电脑上使用 Microsoft Defender ATP。
+Microsoft Defender ATP 是 [Microsoft Defender 安全中心](https://securitycenter.windows.com)提供的一项服务。 通过添加和部署客户端加入配置文件，Configuration Manager 可监视部署状态和 Microsoft Defender ATP 代理运行状况。 可在运行 Configuration Manager 客户端的电脑上或[由 Microsoft Intune 托管](/intune/protect/advanced-threat-protection)的电脑上使用 Microsoft Defender ATP。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -219,6 +220,6 @@ Microsoft Defender ATP 是 [Microsoft Defender 安全中心](https://securitycen
 
 ## <a name="next-steps"></a>后续步骤
 
-- [Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender 高级威胁防护](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Microsoft Defender 高级威胁防护加入问题疑难解答](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Microsoft Defender 高级威胁防护加入问题疑难解答](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

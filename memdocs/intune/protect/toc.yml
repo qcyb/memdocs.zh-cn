@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: 合规性策略设置 - Windows 8.1
           href: compliance-policy-create-windows-8-1.md
-        - name: 合规性策略设置 - Windows Phone 8.1
-          href: compliance-policy-create-windows-8-1.md
     - name: 终结点安全策略设置
       items:
         - name: 防病毒策略设置

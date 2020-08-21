@@ -10,12 +10,12 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: ea1965d6cae90808156957be1c9634e4c1631aa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406691"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694519"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 实验室
 
@@ -66,7 +66,7 @@ ms.locfileid: "83406691"
 
         - **管理员用户名**：VM 上具有管理权限的用户的名称。 使用此用户登录 VM。  
 
-        - **管理员密码**：密码必须满足 Azure 复杂性要求。 有关详细信息，请参阅 [adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile)。  
+        - **管理员密码**：密码必须满足 Azure 复杂性要求。 有关详细信息，请参阅 [adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile)。  
 
     > [!Important]  
     > 以下设置是 Azure 所必需的。 使用默认值。 请勿更改这些值。  
@@ -86,7 +86,7 @@ Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状
 
 若要查看配置脚本的状态，请连接到 `<prefix>PS1` 服务器，并查看以下文件：`%windir%\TEMP\ProvisionScript\PS1.json`。 如果它显示所有步骤已完成，则该过程已完成。
 
-若要连接到 VM，首先从 Azure 门户获取每个 VM 的公共 IP 地址。 当连接到 VM 时，域名为 `contoso.com`。 使用部署模板中指定的凭据。 有关详细信息，请参阅[如何连接并登录到运行 Windows 的 Azure 虚拟机](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)。
+若要连接到 VM，首先从 Azure 门户获取每个 VM 的公共 IP 地址。 当连接到 VM 时，域名为 `contoso.com`。 使用部署模板中指定的凭据。 有关详细信息，请参阅[如何连接并登录到运行 Windows 的 Azure 虚拟机](/azure/virtual-machines/windows/connect-logon)。
 
 
 

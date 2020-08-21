@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4ddae3e4c4cf31cb05376bfa437d722f16652fad
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705135"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692972"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Configuration Manager Technical Preview 1707 中的功能
 
@@ -85,7 +85,7 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 3. 在“主页”  选项卡的“创建”  组中，单击“创建 Windows Defender 应用程序防护策略”  。
 4. 将此博客文章用作参考，可以浏览和配置可用的设置来试用此功能。
 5. 在此版本中，我们在向导中添加了新的“网络定义”页面  。 在此页上，可指定公司标识并定义企业网络边界。<br>Windows 10 电脑仅在客户端上存储一个网络隔离列表。 在此版本中，可以创建两种网络隔离列表（一种从 Windows 信息保护创建，另一种从 Windows Defender 应用程序防护创建），并将其部署到客户端。 如果部署两个策略，两个网络隔离列表必须匹配。 如果部署的列表与该客户端不匹配，则部署会失败。
-可在 [Windows 信息保护文档](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)中找到有关如何指定网络定义的详细信息。
+可在 [Windows 信息保护文档](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)中找到有关如何指定网络定义的详细信息。
 
 6. 结束后，完成向导操作，并将策略部署到一个或多个 Windows 10 设备。
 

@@ -10,12 +10,12 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: ade07cf23807d340ee5e0c7955a042a44f9031c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 9589b9e542c9d323ab7a23af169725c1a54bfb70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240433"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694757"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>创建 Windows 10 设备的配置项目
 
@@ -140,9 +140,9 @@ Configuration Manager Windows 信息保护配置项目会管理以下各项：
   
 要了解如何使用 Configuration Manager 来配置 WIP，请参阅：
 
-- [使用 Windows 信息保护 (WIP) 保护企业数据](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [使用 Configuration Manager 创建和部署 Windows 信息保护 (WIP) 策略](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
-- [使用 Windows 信息保护 (WIP) 时的限制](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+- [使用 Windows 信息保护 (WIP) 保护企业数据](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [使用 Configuration Manager 创建和部署 Windows 信息保护 (WIP) 策略](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [使用 Windows 信息保护 (WIP) 时的限制](/windows/security/information-protection/windows-information-protection/limitations-with-wip)
 
 ## <a name="see-also"></a>另请参阅  
 [为使用 Configuration Manager 客户端管理的设备配置项目](../../compliance/deploy-use/create-configuration-items.md)
