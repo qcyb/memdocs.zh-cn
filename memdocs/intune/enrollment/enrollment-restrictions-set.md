@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051649"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252435"
 ---
 # <a name="set-enrollment-restrictions"></a>设置注册限制
 
@@ -47,11 +47,10 @@ ms.locfileid: "88051649"
   - iOS/iPadOS
   - macOS
   - Windows
-  - Windows Mobile
-- 适用于 iOS/iPadOS、Android 设备管理员、Android Enterprise 工作配置文件、Windows 和 Windows Mobile 的平台操作系统版本。 （仅可使用 Windows 10 版本。 如果允许 Windows 8.1，请将此处留空。）
+- 适用于 iOS/iPadOS、Android 设备管理员、Android Enterprise 工作配置文件和 Windows 的平台操作系统版本。
   - 最低版本。
   - 最高版本。
-- 限制[个人拥有的设备](device-enrollment.md#bring-your-own-device)（仅限 iOS、Android 设备管理员、Android Enterprise 工作配置文件、macOS、Windows 和 Windows Mobile）。
+- 限制[个人拥有的设备](device-enrollment.md#bring-your-own-device)（仅限 iOS、Android 设备管理员、Android Enterprise 工作配置文件、macOS 和 Windows）。
 
 ## <a name="default-restrictions"></a>默认限制
 
@@ -86,7 +85,7 @@ ms.locfileid: "88051649"
 8. 选择“下一步”，转到“作用域标记”页。
 9. 在“作用域标记”页上，可选择添加要应用到此限制的作用域标记。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。 使用具有注册限制的作用域标记时，用户只能对具有作用域的策略重新排序。 而且，他们只能对具有作用域的策略位置重新排序。 用户可以看到每个策略的真实优先级编号。 作用域的用户可以判断其策略的相对优先级，即使他们看不到所有其他策略。
 10. 选择“下一步”，转到“分配”页。
-11. 选择“选择要包含的组”，然后使用搜索框找到想要此限制包含的组。 限制仅适用于它分配到的组。 如果连一个组都没有分配限制，则不会产生任何影响。 然后选取“选择”。 
+11. 选择“选择要包含的组”，然后使用搜索框找到想要此限制包含的组。 限制仅适用于它分配到的组。 如果连一个组都没有分配限制，则不会产生任何影响。 然后选取“选择”  。 
     ![选择平台设置的屏幕截图](./media/enrollment-restrictions-set/select-groups.png)
 12. 选择“下一步”，以转到“查看 + 创建”页。
 13. 选择“创建”以创建限制。
@@ -103,7 +102,7 @@ ms.locfileid: "88051649"
 5. 选择“下一步”，转到“作用域标记”页。
 6. 在“作用域标记”页上，可选择添加要应用到此限制的作用域标记。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。 使用具有注册限制的作用域标记时，用户只能对具有作用域的策略重新排序。 而且，他们只能对具有作用域的策略位置重新排序。 用户可以看到每个策略的真实优先级编号。 作用域的用户可以判断其策略的相对优先级，即使他们看不到所有其他策略。
 7. 选择“下一步”，转到“分配”页。
-8. 选择“选择要包含的组”，然后使用搜索框找到想要此限制包含的组。 限制仅适用于它分配到的组。 如果连一个组都没有分配限制，则不会产生任何影响。 然后选取“选择”。 
+8. 选择“选择要包含的组”，然后使用搜索框找到想要此限制包含的组。 限制仅适用于它分配到的组。 如果连一个组都没有分配限制，则不会产生任何影响。 然后选取“选择”  。 
     ![选择组的屏幕截图](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 9. 选择“下一步”，以转到“查看 + 创建”页。
 10. 选择“创建”以创建限制。

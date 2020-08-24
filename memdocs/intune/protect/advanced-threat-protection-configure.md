@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e19315f07d803e2aab53b3724fde85f1975c0c5
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264512"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179513"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>在 Intune 中配置 Microsoft Defender ATP
 
@@ -92,10 +92,10 @@ ms.locfileid: "87264512"
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备” > “配置文件” > “创建配置文件”。
-3. 输入“名称”和“描述”。
-4. 在“平台”中，选择“Windows 10 及更高版本”
-5. 对于“配置文件类型”，请选择“Microsoft Defender ATP (Windows 10 桌面版)”。
-6. 配置设置：
+3. 在“平台”中，选择“Windows 10 及更高版本”
+4. 对于“配置文件类型”，请选择“Microsoft Defender ATP (Windows 10 桌面版)”，然后选择“创建”。
+5. 在“基本信息”页上，输入配置文件的“名称”和“说明”（可选） ，然后选择“下一步”。
+6. 在“配置设置”页面上，配置下列设置：
 
    - Microsoft Defender ATP 客户端配置包类型：选择“载入”将配置包添加到配置文件。 选择“卸载”，从配置文件中删除配置包。
   
@@ -107,8 +107,14 @@ ms.locfileid: "87264512"
 
      有关这些 Microsoft Defender ATP 设置的详细信息，请参阅[使用 Microsoft Endpoint Configuration Manager 载入 Windows 10 计算机](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm)。
 
-7. 选择“确定”，然后“创建”保存更改，此操作将创建配置文件 。
-8. [将设备配置文件分配给](../configuration/device-profile-assign.md)希望使用 Microsoft Defender ATP 进行评估的设备。
+7. 选择“下一步”以打开“作用域标记”页。 作用域标记是可选的。 选择“下一步”继续操作。
+
+8. 在“分配”页上，选择将接收此配置文件的组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
+
+   选择“下一步”。
+
+9. 完成后，在“查看 + 创建”页上，选择“创建” 。 为创建的配置文件选择策略类型时，新配置文件将显示在列表中。
+ 选择“确定”，然后“创建”保存更改，此操作将创建配置文件。
 
 ### <a name="onboard-android-devices"></a>载入 Android 设备
 

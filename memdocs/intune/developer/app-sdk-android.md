@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501161"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
 
@@ -1184,7 +1184,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 | `AUTHORIZATION_NEEDED` | 此结果表示应用的已注册 `MAMServiceAuthenticationCallback` 实例未提供令牌或提供的令牌无效。  如有可能，应用应获取有效的令牌并调用 `updateToken()`。 |
 | `NOT_LICENSED` | 用户未获得 Intune 许可，或尝试联系 Intune MAM 服务失败。  应用应继续处于不受托管的（普通）状态下，用户不会被阻止。  将定期重试注册，以防用户将来获得许可。 |
 | `ENROLLMENT_SUCCEEDED` | 注册尝试成功，或者用户已注册。  在成功注册的情况下，将在此通知之前发送策略刷新通知。  应允许对企业数据进行访问。 |
-| `ENROLLMENT_FAILED` | 注册尝试失败。  设备日志中提供了进一步的详细信息。  在此状态下，不应允许应用访问企业数据，因为先前已确定用户已获得 Intune 许可。|
+| `ENROLLMENT_FAILED` | 注册尝试失败。  设备日志中提供了进一步的详细信息。  在此状态下，不应允许应用访问企业数据，因为先前已确定用户已获得 Intune 许可。 所有应用都应确保公司数据访问未经授权，直到应用获得“enrollment_succeeded”。|
 | `WRONG_USER` | 每个设备只能有一个用户能够在 MAM 服务中注册应用。 此结果表明，已为其交付此结果的用户（第二个用户）以 MAM 策略作为目标，但是其他用户已注册。 由于无法为第二位用户强制执行 MAM 策略，应用不得允许访问此用户的数据（可以从应用中删除该用户），除非/直到稍后该用户的注册成功为止。 在提供此 `WRONG_USER` 结果的同时，MAM 将提示你选择删除现有帐户。 如果人类用户的回答是肯定的，那么确实有可能在不久之后注册第二个用户。 只要第二个用户保持注册状态，MAM 就会定期重试注册。 |
 | `UNENROLLMENT_SUCCEEDED` | 取消注册已成功。|
 | `UNENROLLMENT_FAILED` | 取消注册请求失败。  设备日志中提供了进一步的详细信息。 通常情况下，只要应用传递了有效的（既不为 null 也不为空）UPN，就不会发生这种情况。 应用无法直接、可靠地进行修正。 如果在注销有效 UPN 时收到此值，请将其作为 bug 报告给 Intune MAM 团队。|

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262857"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252514"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>将 Windows Hello 企业版与 Microsoft Intune 集成  
 
@@ -45,17 +45,15 @@ Intune 与 Hello for Business 集成的两种方式：
 本文的其余部分重点介绍如何创建面向整个组织的默认 Windows Hello 企业版策略。
 
 > [!IMPORTANT]
-> 在周年更新前的 Windows 10 桌面版和移动版中，可以设置两种不同的 PIN，用于对资源进行身份验证：
+> 在周年更新前，可以设置两种不同的 PIN，用于对资源进行身份验证：
 >
 > - **设备 PIN** 用于解锁设备并连接到云资源。
 > - 工作 PIN 用于访问用户个人设备 (BYOD) 上的 Azure AD 资源。
-> 
+>
 > 在周年更新中，这两个 PIN 合并为一个设备 PIN。
 > 设置用于控制设备 PIN 的任何 Intune 配置策略，以及所配置的任何 Windows Hello 企业版策略，现在都会设置这一新的 PIN 值。
-> 如果已设置这两个策略类型以控制 PIN，则 Windows Hello 企业版策略同时适用于 Windows 10 桌面和移动设备。
+> 如果已设置这两个策略类型以控制 PIN，则将应用 Windows Hello 企业版策略。
 > 为确保解决策略冲突并正确应用 PIN 策略，请更新 Windows Hello 企业版策略以在配置策略中匹配该设置，并要求用户在公司门户应用中同步他们的设备。
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>创建 Windows Hello for Business 策略
 
@@ -65,13 +63,13 @@ Intune 与 Hello for Business 集成的两种方式：
 
 3. 从以下“配置 Windows Hello 企业版”选项中选择：
 
-     - “启用”。 如果想要配置 Windows Hello 企业版设置，请选择此设置。  当选择“启用”时，Windows Hello 的其他设置将变为可见，且可为设备进行配置。
+   - “启用”。 如果想要配置 Windows Hello 企业版设置，请选择此设置。  当选择“启用”时，Windows Hello 的其他设置将变为可见，且可为设备进行配置。
 
-    - “禁用”。 如果不想在设备注册过程中启用 Windows Hello 企业版，请选择此选项。 禁用时，用户无法预配 Windows Hello 企业版（在已加入 Azure Active Directory 的手机上除外，这些手机上可能需要预配）。 如果设置为“禁用”用，即使此策略不启用 Windows Hello 企业版，仍可为 Windows Hello 企业版配置后续设置。
+   - “禁用”。 如果不想在设备注册过程中启用 Windows Hello 企业版，请选择此选项。 禁用后，用户无法预配 Windows Hello 企业版。 如果设置为“禁用”用，即使此策略不启用 Windows Hello 企业版，仍可为 Windows Hello 企业版配置后续设置。
 
-    - “不配置”。 如果不想使用 Intune 来控制 Windows Hello 企业版设置，请选择此设置。 Windows 10 设备上的任何现有 Windows Hello 企业版设置不会更改。 窗格中的所有其他设置将不可用。
+   - “不配置”。 如果不想使用 Intune 来控制 Windows Hello 企业版设置，请选择此设置。 Windows 10 设备上的任何现有 Windows Hello 企业版设置不会更改。 窗格中的所有其他设置将不可用。
 
-4. 如果在上一步中选择了“启用”，请配置应用于所有已注册 Windows 10 和 Windows 10 移动版设备的必需设置。 配置这些设置后，选择“保存”。
+4. 如果在上一步中选择了“启用”，请配置应用于所有已注册 Windows 10 设备的必需设置。 配置这些设置后，选择“保存”。
 
    - **使用受信任的平台模块(TPM)** ：
 

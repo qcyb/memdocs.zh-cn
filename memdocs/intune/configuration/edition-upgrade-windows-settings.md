@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8d050139ae017f5800670518a41d75fba469ceac
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429658"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146467"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Intune 中用于升级版本或启用 S 模式的 Windows 10（及更高版本）设备设置
 
@@ -40,7 +40,7 @@ Microsoft Intune 包含许多有助于管理和保护设备的设置。 本文�
 
 - **要升级到的版本**：选择要升级到的 Windows 10 版本。 将该策略针对的设备升级到所选版本。
 - **产品密钥**：输入从 Microsoft 收到的产品密钥。 创建包含产品密钥的策略后，无法更新该密钥，并出于安全原因隐藏该密钥。 要更改产品密钥，请再次输入完整密钥。
-- **许可证文件**：对于 Windows 10 Holographic for Business 或 Windows 10 移动版，请选择“浏览”，以选择从 Microsoft 收到的许可证文件。 此许可证文件包含要将设备升级到的版本的许可证信息。
+- **许可证文件**：对于 Windows 10 Holographic for Business，请选择“浏览”，以选择从 Microsoft 收到的许可证文件。 此许可证文件包含要将设备升级到的版本的许可证信息。
 
 ## <a name="mode-switch"></a>模式切换
 

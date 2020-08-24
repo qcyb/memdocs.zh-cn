@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912401"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252299"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什么是 Microsoft Intune 应用管理？
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 IT 管理员可以使用 Microsoft Intune 来管理公司员工使用的客户端应用。 除了此功能外，还可管理设备和保护数据。 管理员的首要任务之一是，确保最终用户能够访问他们在执行工作时所需的应用。 这个目标很有挑战性，因为：
 - 有众多的设备平台和应用类型。
@@ -45,29 +42,30 @@ MAM 允许你在应用程序中管理和保护组织的数据。 通过无需注
 ，都可以通过 Intune MAM 进行管理。 请参阅可供公众使用的 [Microsoft Intune 保护的应用](apps-supported-intune-apps.md)的官方列表。
 
 Intune MAM 支持两种配置：
-- **Intune MDM + MAM**：IT 管理员仅可在已进行 Intune 移动设备管理 (MDM) 注册的设备上使用 MAM 和应用保护策略管理应用。 若要使用 MDM + MAM 管理应用，	客户应使用 Azure 门户 https://portal.azure.com 中的 Intune 控制台。
-- **无需设备注册的 MAM**：无需设备注册的 MAM 或 MAM-WE 使 IT 管理员可以在未进行 Intune MDM 注册的设备上使用 MAM 和应用保护策略管理应用。 这意味着可以在进行了第三方 EMM 提供程序注册的设备上通过 Intune 管理应用。 若要使用 MAM-WE 管理应用，客户应使用 https://portal.azure.com 上的 Azure 门户中的 Intune 控制台。 此外，可以在已注册第三方企业移动性管理 (EMM) 提供程序或完全未注册 MDM 的设备上通过 Intune 管理应用。 有关 BYOD 和 Microsoft EMS 的详细信息，请参阅[用于通过 Microsoft 企业移动性 + 安全性 (EMS) 启用 BYOD 的技术决策](../fundamentals/byod-technology-decisions.md)。
+
+- **Intune MDM + MAM**：IT 管理员仅可在已进行 Intune 移动设备管理 (MDM) 注册的设备上使用 MAM 和应用保护策略管理应用。 若要使用 MDM + MAM 管理应用，客户应使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中的 Intune。
+- **无需设备注册的 MAM**：无需设备注册的 MAM 或 MAM-WE 使 IT 管理员可以在未进行 Intune MDM 注册的设备上使用 MAM 和应用保护策略管理应用。 这意味着可以在进行了第三方 EMM 提供程序注册的设备上通过 Intune 管理应用。 若要使用 MAM-WE 管理应用，客户应使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中的 Intune。 此外，可以在已注册第三方企业移动性管理 (EMM) 提供程序或完全未注册 MDM 的设备上通过 Intune 管理应用。 有关 BYOD 和 Microsoft EMS 的详细信息，请参阅[用于通过 Microsoft 企业移动性 + 安全性 (EMS) 启用 BYOD 的技术决策](../fundamentals/byod-technology-decisions.md)。
 
 ## <a name="app-management-capabilities-by-platform"></a>按平台分类的应用管理功能
 
 Intune 提供各种功能，用于在设备上获取所需的应用，以便在其中运行。 下表提供了有关应用管理功能的摘要。
 
-| 应用管理功能 | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| 向设备和用户添加和分配应用 | 是 | 是 | 是 | 是 | 是 |
-| 将应用分配到未注册 Intune 的设备 | 是 | 是 | 否 | 否 | 否 |
-| 使用应用配置策略来控制应用的启动行为 | 是 | 是 | 否 | 否 | 否 |
-| 使用移动应用预配策略续订过期应用 | 否 | 是 | 否 | 否 | 否 |
-| 使用应用保护策略来保护应用中的公司数据 | 是 | 是 | 否 | 否 <sup>1</sup> | 否 |
-| 仅从已安装应用中删除公司数据（应用选择性擦除） | 是 | 是 | 否 | 是 | 是 |
-| 监视应用分配 | 是 | 是 | 是 | 是 | 是 |
-| 分配和跟踪从应用商店批量购买的应用 | 否 | 否 | 否 | 是 | 否 |
-| 强制在设备上安装的应用（必需）<sup>2</sup> | 是 | 是 | 是 | 是 | 是 |
-| 从公司门户的设备上进行可选安装（可用安装） | 是 <sup>3</sup> | 是 | 是 | 是 | 是 |
-| 安装 Web 版应用快捷方式（Web 链接） | 是 <sup>4</sup> | 是 | 是 | 是 | 是 |
-| 内部（业务线）应用 | 是 | 是 | 是 | 是 | 否 |
-| 来自应用商店的应用 | 是 | 是 | 否 | 是 | 是 |
-| 更新应用 | 是 | 是 | 否 | 是 | 是 |
+| 应用管理功能 | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| 向设备和用户添加和分配应用 | 是 | 是 | 是 | 是 |
+| 将应用分配到未注册 Intune 的设备 | 是 | 是 | 否 | 否 |  |
+| 使用应用配置策略来控制应用的启动行为 | 是 | 是 | 否 | 否 |
+| 使用移动应用预配策略续订过期应用 | 否 | 是 | 否 | 否 |
+| 使用应用保护策略来保护应用中的公司数据 | 是 | 是 | 否 | 否 <sup>1</sup> |
+| 仅从已安装应用中删除公司数据（应用选择性擦除） | 是 | 是 | 否 | 是 |
+| 监视应用分配 | 是 | 是 | 是 | 是 |
+| 分配和跟踪从应用商店批量购买的应用 | 否 | 否 | 否 | 是 |
+| 强制在设备上安装的应用（必需）<sup>2</sup> | 是 | 是 | 是 | 是 |
+| 从公司门户的设备上进行可选安装（可用安装） | 是 <sup>3</sup> | 是 | 是 | 是 |
+| 安装 Web 版应用快捷方式（Web 链接） | 是 <sup>4</sup> | 是 | 是 | 是 |
+| 内部（业务线）应用 | 是 | 是 | 是 | 是 |
+| 来自应用商店的应用 | 是 | 是 | 否 | 是 |
+| 更新应用 | 是 | 是 | 否 | 是 |
 
 <sup>1</sup>请考虑使用 [Windows 信息保护](../protect/windows-information-protection-configure.md)来保护运行 Windows 10 的设备上的应用。<br>
 <sup>2</sup> 仅适用于由 Intune 管理的设备。<br>
@@ -115,13 +113,15 @@ iOS 应用包含一个预配配置文件和一个证书签名的代码。 证书
 ### <a name="try-the-interactive-guide"></a>尝试交互式指南
 [使用 Microsoft Endpoint Manager 管理并保护移动和桌面应用程序](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)交互式指南将引导您浏览 Microsoft Endpoint Manager 管理中心，并展示如何管理在 Intune 中注册的设备、使用策略强制实现合规性以及保护组织的数据。</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## <a name="additional-information"></a>其他信息
 控制台中的以下各项提供与应用相关的功能：
 - **适用于企业的 Microsoft Store**：设置到适用于企业的 Microsoft 应用商店的集成。 然后，可将购买的应用程序同步到 Intune，对其进行分配，并跟踪许可证使用情况。 有关详细信息，请参阅[适用于企业的 Microsoft Store 批量采购的应用](windows-store-for-business.md)。
 - **Windows 企业证书**：应用或查看用于将业务线应用分发到托管 Windows 设备的代码签名证书的状态。
-- **Windows Symantec 证书**：应用或查看将 XAP 和 WP8.x appx 文件分配到 Windows 10 移动设备所需的 Symantec 代码签名证书的状态。
+- **Windows Symantec 证书**：应用或查看 Symantec 代码签名证书的状态。
 - **Windows 旁加载密钥**：添加 Windows 旁加载密钥，可用于将应用直接安装到设备，而无需从 Windows 应用商店发布和下载应用。 有关详细信息，请参阅[旁加载 Windows 应用](app-sideload-windows.md)。
 - Apple VPP 令牌  ：应用并查看 iOS/iPadOS 批量采购计划 (VPP) 许可证。 有关详细信息，请参阅[批量购买的 iOS/iPadOS 应用](vpp-apps-ios.md)。
 - 托管的 Google Play  ：托管 Google Play 是 Google 的企业应用商店，并且是适用于 Android Enterprise 的应用程序的唯一供应商。 有关详细信息，请参阅[使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备](apps-add-android-for-work.md)。

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988416"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146331"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>使用 Microsoft Intune 在设备上升级 Windows 10 版本或切出 S 模式
 
@@ -50,7 +50,7 @@ ms.locfileid: "83988416"
 升级设备前，请务必符合以下先决条件：
 
 - 用于在该策略针对的所有设备上安装已更新 Windows 版本的有效产品密钥（适用于 Windows 10 桌面版）。 你可以使用多激活密钥 (MAK) 或密钥管理服务器 (KMS) 密钥。
-- 对于 Windows 10 移动版和 Windows 10 全息版，可使用 Microsoft 许可证文件。 此许可证文件包含，在使用策略定目标到的所有设备上安装已更新版本所需的授权信息。
+- 对于 Windows 10 全息版，可使用 Microsoft 许可证文件。 此许可证文件包含，在使用策略定目标到的所有设备上安装已更新版本所需的授权信息。
 - 分配策略的 Windows 10 设备将在 Microsoft Intune 中注册。 无法将版本升级策略用于运行 Intune 电脑客户端软件的电脑。
 
 ## <a name="supported-upgrade-paths"></a>支持的升级路径
@@ -70,7 +70,6 @@ ms.locfileid: "83988416"
 | Windows 10 核心版 | Windows 10 教育版 <br/>Windows 10 企业版 <br/>Windows 10 专业教育版 | 
 | Windows 10 核心板 N | Windows 10 教育版 N <br/>Windows 10 企业版 N <br/>Windows 10 专业教育版 N | 
 | Windows 10 全息版 | Windows 10 Holographic for Business |
-| Windows 10 移动版 | Windows 10 移动企业版 |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 

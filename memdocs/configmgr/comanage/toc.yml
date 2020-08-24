@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: 将工作负载切换到 Intune
       href: how-to-switch-workloads.md
+    - name: 公司门户中的应用
+      href: company-portal.md
     - name: 监视共同管理
       href: how-to-monitor.md

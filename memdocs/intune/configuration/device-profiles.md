@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093182"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146314"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中使用设备配置文件的设备应用功能和设置
 
@@ -59,7 +59,6 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 及更高版本
 
@@ -73,7 +72,6 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>传递优化
 
@@ -155,7 +153,6 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 - Android 设备管理员
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8.1
 - Windows 10 及更高版本
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
@@ -187,7 +184,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="identity-protection"></a>标识保护
 
-[标识保护](../protect/identity-protection-configure.md)控制 Windows 10 和 Windows 10 移动版设备上的 Windows Hello 企业版体验。 配置这些设置，使 Windows Hello 企业版可供用户和设备使用，以及指定设备 PIN 和手势的要求。  
+[标识保护](../protect/identity-protection-configure.md)控制 Windows 10 设备上的 Windows Hello 企业版体验。 配置这些设置，使 Windows Hello 企业版可供用户和设备使用，以及指定设备 PIN 和手势的要求。  
 
 此功能支持：  
 
@@ -278,7 +275,6 @@ macOS 设备上的[首选项文件](preference-file-settings-macos.md)包括有�
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 及更高版本
 

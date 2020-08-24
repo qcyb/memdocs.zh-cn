@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048083"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559532"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中创建和分配 SCEP 证书配置文件
 
@@ -211,13 +211,15 @@ ms.locfileid: "88048083"
 
    - **哈希算法**：
 
-     （适用对象：Android、Android Enterprise、Windows Phone 8.1、Windows 8.1 和更高版本以及 Windows 10 和更高版本。）
+     （适用对象：Android、Android Enterprise、Windows 8.1 和更高版本以及 Windows 10 和更高版本）
 
      选择要与此证书一起使用的可用哈希算法类型之一。 选择连接设备支持的最高级别安全性。
 
    - **根证书**：
 
      选择受信任的证书配置文件，该配置文件是之前被配置并分配给此 SCEP 证书配置文件的适用用户和设备。 受信任的证书配置文件用于预配具有受信任的根 CA 证书的用户和设备。 有关受信任证书配置文件的信息，请参阅“在 Intune 中使用证书进行身份验证”中的[导出受信任的 CA 证书](certificates-configure.md#export-the-trusted-root-ca-certificate)和[创建受信任的证书配置文件](certificates-configure.md#create-trusted-certificate-profiles)。 如果具有根证书颁发机构和证书发证机构，请选择验证证书发证机构的受信任的根证书配置文件。
+     > [!NOTE]
+     > 在 iOS/iPadOS 设备上，如果具有根证书颁发机构和证书发证机构，请选择验证根证书颁发机构的受信任的根证书配置文件。 
 
    - **扩展密钥用法**：
 
@@ -249,7 +251,7 @@ ms.locfileid: "88048083"
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
-    选择“下一步”  。
+    选择“下一步”。
 
 11. （仅适用于 Windows 10）在“适用性规则”中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
 

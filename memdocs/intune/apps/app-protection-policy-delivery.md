@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8318e6dc364d0dfbf38ac278938018b80f703b58
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40d8e62e73e67d7db1978500d77118dfb1257748
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342031"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217582"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>了解应用保护策略交付时间安排
 
@@ -36,7 +36,7 @@ ms.locfileid: "79342031"
 |    用户状态    |    应用保护行为     |    重试间隔（查看注释）    |    为什么会出现此情况？    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |    租户未载入    |    等待下一个重试间隔。  用户的应用保护未处于激活状态。    |    24 小时    |    未设置 Intune 租户时发生。    |
-|    用户未获授权     |    等待下一个重试间隔。  用户的应用保护未处于激活状态。     |    12 小时 - 在 Android 设备上，该间隔的设置需要 Intune APP SDK 版本 5.6.0 或更高版本。 否则，Andriod 设备的间隔为 24 小时。   |    未向用户授权 Intune 时发生。    |
+|    用户未获授权     |    等待下一个重试间隔。  用户的应用保护未处于激活状态。     |    12 小时 - 在 Android 设备上，该间隔的设置需要 Intune APP SDK 版本 5.6.0 或更高版本。 否则，Android 设备的间隔为 24 小时。   |    未向用户授权 Intune 时发生。    |
 |    用户未分配应用保护策略    |    等待下一个重试间隔。  用户的应用保护未处于激活状态。    |    12 小时        |    未向用户分配应用设置时发生。    |
 |    用户分配的应用保护策略，但未在应用保护策略 (APP) 中定义应用   |    等待下一个重试间隔。  用户的应用保护未处于激活状态。    |    12 小时        |    未将应用添加到 APP 时发生。    |
 |    用户已成功注册 Intune MAM    |    已按策略设置应用应用保护。    基于重试间隔进行更新    |    已基于用户负载定义 Intune 服务。    通常为 30 分钟。     |    在用户已成功注册 Intune 服务以获取 MAM 配置时发生。    |

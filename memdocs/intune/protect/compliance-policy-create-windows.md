@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437338"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559488"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 Windows 10 及更高版本设置
 
@@ -47,7 +47,9 @@ ms.locfileid: "86437338"
    Windows BitLocker 驱动器加密可以加密所有存储在 Windows 操作系统卷上的数据。 BitLocker 使用受信任的平台模块 (TPM) 来帮助保护 Windows 操作系统和用户数据。 此外，它还有助于确认计算机不被篡改，即使它处于无人参与、丢失或被盗状态，也不例外。 如果计算机装有兼容的 TPM，BitLocker 将使用该 TPM 锁定用于保护数据的加密密钥。 因此，仅当 TPM 验证计算机状态后，才能访问密钥。  
 
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
-  - **必需** - 当系统关闭或休眠时，设备能够保护存储在驱动器上的数据免受未经授权的访问。  
+  - **必需** - 当系统关闭或休眠时，设备能够保护存储在驱动器上的数据免受未经授权的访问。
+  
+  [设备 HealthAttestation CSP - BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
 
 - **需要在设备上启用安全启动**：  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
@@ -107,6 +109,9 @@ ms.locfileid: "86437338"
 
     例如，要求所有软件更新都安装在设备上。 在 Configuration Manager 中，此要求具有“已安装”状态。 如果设备上的任意计划处于未知状态，此设备在 Intune 中不符合要求。
 
+  > [!NOTE]
+  > 将共同管理的符合性工作负载设置为“Configuration Manager”时，仅使用“要求设备符合 Configuration Manager 中的符合性”。 如果将此设置与设置为“Intune”的符合性工作负载一起使用，则可能会影响总体符合性评估。
+
 ## <a name="system-security"></a>系统安全
 
 ### <a name="password"></a>Password
@@ -163,6 +168,8 @@ ms.locfileid: "86437338"
   此设置适用于设备上的所有驱动器。
   - **未配置**（默认） 
   - **必需** - 使用“必需”加密设备上的数据存储。 
+  
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > 设备上的数据存储加密设置通常会检查设备上是否存在加密  。 为获取更可靠的加密设置，请考虑使用“需要 BitLocker”，它利用 Windows 设备运行状况证明来验证 TPM 级别的 Bitlocker 状态  。
@@ -182,7 +189,7 @@ ms.locfileid: "86437338"
   - **未配置**（默认）  - Intune 不检查设备的 TPM 芯片版本。
   - **需要** - Intune 检查 TPM 芯片版本是否符合要求。 如果 TPM 芯片版本大于 0（零），则设备符合要求  。 如果设备上没有 TPM 版本，则设备不符合要求。
 
-  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion node](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **防病毒**：  
   - **未配置**（默认）- Intune 不会检查设备上安装的任何防病毒软件解决方案。 
@@ -214,7 +221,7 @@ ms.locfileid: "86437338"
   - **未配置**（默认）  - Intune 不强制执行任何要求。
   - **需要** - 强制 Microsoft Defender 安全智能的版本为最新版本。
 
-  [Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
   
   有关详细信息，请参阅 [Microsoft Defender 防病毒和其他 Microsoft 反恶意软件的安全智能更新](https://www.microsoft.com/en-us/wdsi/defenderupdates)。
 
@@ -222,7 +229,7 @@ ms.locfileid: "86437338"
   - **未配置**（默认）  - Intune 不控制此功能，也不更改现有设置。
   - **需要** - 启用实时保护，该保护会扫描恶意软件、间谍软件和其他不需要的软件。  
 
-  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [策略 CSP - Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 

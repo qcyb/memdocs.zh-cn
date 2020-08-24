@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
-ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
+ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506584"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252616"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Windows 10（及更高版本）设置，用于保护使用 Intune 的设备
 
@@ -453,13 +453,16 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   
   如果 Windows 加密开启时另一种加密方法处于活动状态，设备可能会变得不稳定。  
 
-- **加密存储卡（仅限移动设备）**  
-  *此设置仅适用于 Windows 10 移动设备。*  
-  **默认值**：未配置  
-  BitLocker CSP：[RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+<!-- Support Deprecated for Windows 10 Mobile as of August 2020
 
-  - 选择“需要”可对设备使用的任何可移动存储卡进行加密  。  
-  - **未配置** - 不需要存储卡加密，也不会提示用户开启它。  
+- **Encrypt storage card (mobile only)**  
+  *This setting only applies to Windows 10 mobile.*  
+  **Default**: Not configured  
+  BitLocker CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+
+  - **Require** to encrypt any removable storage cards used by the device.  
+  - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
+-->
 
 ### <a name="bitlocker-base-settings"></a>BitLocker 基本设置  
 
@@ -642,7 +645,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     **默认值**：未配置  
 
     - **启用** - 将 BitLocker 恢复信息存储到 Azure Active Directory (Azure AD)。  
-    - **未配置** - 不将 BitLocker 恢复信息存储在 AAD 中。  
+    - 未配置 - 不将 BitLocker 恢复信息存储在 Azure AD 中。  
 
   - **存储到 Azure Active Directory 的 BitLocker 恢复信息**  
     **默认值**：备份恢复密码和密钥包  
@@ -739,7 +742,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
     **默认值**：未配置  
 
     - **启用** - 将 BitLocker 恢复信息存储到 Azure Active Directory (Azure AD)。  
-    - **未配置** - 不将 BitLocker 恢复信息存储在 AAD 中。
+    - 未配置 - 不将 BitLocker 恢复信息存储在 Azure AD 中。
 
   - **存储到 Azure Active Directory 的 BitLocker 恢复信息**  
     **默认值**：备份恢复密码和密钥包  
@@ -925,12 +928,12 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 > [!IMPORTANT]  
 > 为了能够正确安装和执行 LOB Win32 应用，反恶意软件设置应不扫描以下目录：  
 > **在 X64 客户端计算机上**：  
-> C:\Program Files (x86)\Microsoft Intune Management Extension\Content   
-> C:\windows\IMECache   
+> C:\Program Files (x86)\Microsoft Intune Management Extension\Content  
+> C:\windows\IMECache  
 >  
 > **在 X86 客户端计算机上**：  
-> C:\Program Files\Microsoft Intune Management Extension\Content   
-> C:\windows\IMECache   
+> C:\Program Files\Microsoft Intune Management Extension\Content  
+> C:\windows\IMECache  
 >
 > 有关详细信息，请参阅[针对运行当前受支持的 Windows 版本的企业计算机的病毒扫描建议](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)。
 

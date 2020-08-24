@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33464c6e0abff9f28e18f9bf6a82e2601dbf115f
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400726"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251966"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用证书进行身份验证
 
@@ -80,12 +80,12 @@ ms.locfileid: "87400726"
 | 平台              | 受信任的证书配置文件 | PKCS 证书配置文件 | SCEP 证书配置文件 | PKCS 导入的证书配置文件  |
 |--|--|--|--|---|
 | Android 设备管理员 | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png)|  ![支持](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - 完全托管（设备所有者）   | ![支持](./media/certificates-configure/green-check.png) |   | ![支持](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> - 专用（设备所有者）   | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png)  |   |
+| Android Enterprise <br> - 完全托管（设备所有者）   | ![支持](./media/certificates-configure/green-check.png) |   | ![支持](./media/certificates-configure/green-check.png) |  ![支持](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - 专用（设备所有者）   | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png)|
+| Android Enterprise <br> - 公司拥有的工作配置文件   | ![支持](./media/certificates-configure/green-check.png)  |  | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> - 工作配置文件    | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) |
 | macOS                 | ![支持](./media/certificates-configure/green-check.png) |  ![支持](./media/certificates-configure/green-check.png) |![支持](./media/certificates-configure/green-check.png)|![支持](./media/certificates-configure/green-check.png)|
-| Windows Phone 8.1     |![支持](./media/certificates-configure/green-check.png)  |  | ![支持](./media/certificates-configure/green-check.png)| ![支持](./media/certificates-configure/green-check.png) |
 | Windows 8.1 及更高版本 |![支持](./media/certificates-configure/green-check.png)  |  |![支持](./media/certificates-configure/green-check.png) |   |
 | Windows 10 及更高版本  | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) |
 

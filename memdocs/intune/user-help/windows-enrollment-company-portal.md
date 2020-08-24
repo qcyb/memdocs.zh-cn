@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881402"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179462"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Intune 公司门户中的 Windows 设备注册  
 
@@ -75,10 +75,8 @@ ms.locfileid: "83881402"
     * __1607 或更高版本__：使用[“设置” > “使用工作或学校帐户”路由](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)注册设备。   
     * __1511 或更早版本__：使用[“设置” > “帐户路由”](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)注册设备。  
 
-## <a name="enroll-non-windows-10-devices"></a>注册非 Windows 10 设备  
-可参阅以下文章，通过公司门户网站注册其他受支持的 Windows 设备：   
-* [Windows 8.1 或 Windows RT 8.1 设备](enroll-your-W81-or-rt81-windows.md)  
-* [Windows Phone 8.1 设备](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>注册其他 Windows 设备  
+可以通过公司门户网站注册 [Windows 8.1 或 Windows RT 8.1 设备](enroll-your-W81-or-rt81-windows.md)。 
 
 ## <a name="it-administrator-support"></a>IT 管理员支持  
 如果你是 IT 管理员且在注册设备时遇到问题，请参阅 [Microsoft Intune 中的 Windows 设备注册问题疑难解答](https://support.microsoft.com/help/4469913)。 本文列出了常见错误、错误原因及其解决方法步骤。  
@@ -91,4 +89,4 @@ ms.locfileid: "83881402"
 * [在 Intune 中注册设备时会发生什么情况](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
 * [在我注册自己的设备时，我的组织可以看到哪些信息？](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
-需要帮助吗? 请与公司支持人员联系。 请[转到公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)，查找组织的 IT 人员联系信息。  
+需要帮助? 请与公司支持人员联系。 请[转到公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)，查找组织的 IT 人员联系信息。  

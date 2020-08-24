@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462229"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252752"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>配置 Intune 的 Exchange 本地访问权限
 
@@ -69,14 +69,13 @@ ms.locfileid: "86462229"
 
 ### <a name="support-for-mobile-devices"></a>对移动设备的支持
 
-- **Windows Phone 8.1 及更高版本** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
+- Windows Phone - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 - **iOS/iPadOS 的本机电子邮件应用** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 - **EAS 邮件客户端（如 Android 4 或更高版本上的 Gmail）** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 
 - **Android 设备管理员上的 EAS 邮件客户端** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 
 - **Android 工作配置文件设备上的 EAS 邮件客户端**- Android 工作配置文件设备上仅支持 Gmail 和 Nine Work for Android Enterprise 。 为了使条件访问适用于 Android 工作配置文件，必须为 Gmail 或 Nine Work for Android Enterprise 应用部署电子邮件配置文件，还要将这些应用部署为必需的安装 。 部署应用后，可以设置基于设备的条件访问。
-
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>为 Android 工作配置文件设备设置条件访问
 

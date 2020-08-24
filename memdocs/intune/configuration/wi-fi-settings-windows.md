@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092871"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217630"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>在 Intune 中添加适用于 Windows 10 及更高版本设备的 Wi-Fi 设置
 
@@ -101,12 +101,14 @@ ms.locfileid: "85092871"
   - **超时前应经历的最长身份验证时间**：输入在对网络进行身份验证之前，可以等待的最长秒数，范围为 1-120 秒。
   - **允许 Windows 提示用户提供其他身份验证凭据**：选择“是”，则允许 Windows 系统提示用户在身份验证方法需要时提供其他凭据。 选择“否”，则隐藏这些提示。
 
-- **启用 Pairwise Master Key (PMK) 缓存**：选择“是”，则缓存用于身份验证的 PMK。 此缓存通常可以加快完成对网络的身份验证。 选择“否”，则在每次连接到 Wi-Fi 网络时强制进行身份验证握手。
+- **启用 Pairwise Master Key (PMK) 缓存**：选择“是”，则缓存用于身份验证的 PMK。 此缓存通常可以加快完成对网络的身份验证。 选择“否”，则在每次连接到 Wi-Fi 网络时强制进行身份验证握手。 若要使用“启用预身份验证”设置，请选择“是”。
 
   - **PMK 在缓存中存储的最长时间**：输入 Pairwise Master Key (PMK) 在缓存中存储的分钟数，范围为 5-1440 分钟。
   - **缓存中存储的最大 PMK 数目**：输入缓存中存储的密钥数，范围为 1-255 个。
 
 - **启用预身份验证**：预身份验证允许配置文件在连接之前对配置文件中网络的所有访问点进行身份验证。 在接入点之间移动时，预身份验证可以加快重新连接用户或设备的速度。 选择“是”，则配置文件对范围内此网络中的所有接入点进行身份验证。 选择“否”，则要求用户或设备对每个接入点单独进行身份验证。
+
+  若要使用此设置，请将“启用成对主密钥 (PMK) 缓存”设置为“是”。
 
   - **预身份验证尝试次数上限**：输入尝试进行预身份验证的次数，范围为 1-16 次。
 

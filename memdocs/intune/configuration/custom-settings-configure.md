@@ -1,11 +1,11 @@
 ---
 title: 在 Microsoft Intune 中使用自定义设备设置 - Azure | Microsoft Docs
-description: 添加或创建配置文件，以便通过 Microsoft Intune 使用适用于 Windows Phone、Windows 8.1、Windows 10 及更高版本、Android 设备管理员、Android Enterprise、macOS 和 iOS/iPadOS 设备的自定义设置。
+description: 添加或创建配置文件，以便通过 Microsoft Intune 使用适用于 Windows 8.1、Windows 10 及更高版本、Android 设备管理员、Android Enterprise、macOS 和 iOS/iPadOS 设备的自定义设置。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: aaa0deaf2c6332965f40ae02a47b7541cf2f9e8e
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990099"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146399"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>使用 Intune 中的自定义设置创建配置文件
 
@@ -45,7 +45,6 @@ Microsoft Intune 含有许多内置设置，用于控制设备上的不同功能
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 及更高版本**
-        - **Windows Phone 8.1**
 
     - **配置文件**：选择“自定义”。
 
@@ -65,7 +64,6 @@ Microsoft Intune 含有许多内置设置，用于控制设备上的不同功能
     - [macOS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. 选择“下一步”。
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。

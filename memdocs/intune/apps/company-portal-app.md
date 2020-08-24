@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758340"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179547"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -232,18 +232,16 @@ Intune 与凭据提供商 DISA Purebred、Entrust Datacard 和 Intercede 合作�
 
 一些平台和配置不支持自助设备操作。 下表提供了自助服务操作的详细信息：
 
-| 操作 | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| 操作 | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | 停用 | 可用<sup>(1)</sup> | 可用<sup>(9)</sup> | 可用 | 可用<sup>(7)</sup> |
 | 擦除 | 可用 | 可用<sup>(5)</sup><sup>(9)</sup> | NA | 可用<sup>(7)</sup> |
 | 重命名<sup>(4)</sup> | 可用 | 可用 | 可用 | 可用 |
 | 同步 | 可用 | 可用 | 可用 | 可用 |
-| 远程锁定 | 仅限 Windows Phone | 可用 | 可用 | 可用 |
-| 重置密码 | 仅限 Windows Phone | 可用<sup>(8)</sup> | NA | 可用<sup>(6)</sup> |
-| 密钥恢复 | 不可用 | NA | 可用<sup>(2)</sup> | NA |
+| 密钥恢复 | NA | NA | 可用<sup>(2)</sup> | NA |
 
 <sup>(1)</sup> 加入 Azure AD 的 Windows 设备始终禁用“停用”。<br>
-<sup>(2)</sup> 仅可通过 Web 门户使用用于 MacOS 的“密钥恢复”。<br>
+<sup>(2)</sup> 仅可通过 Web 门户使用用于 macOS 的“密钥恢复”。<br>
 <sup>(3)</sup> 使用设备注册管理器时，将禁用所有的远程操作。<br>
 <sup>(4)</sup>“重命名”仅更改公司门户应用或 Web 门户中的设备名称，不会更改设备上的名称。<br>
 <sup>(5)</sup>“擦除”在用户注册的 iOS/iPadOS 设备上不可用。<br>

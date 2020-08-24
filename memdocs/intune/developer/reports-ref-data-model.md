@@ -6,7 +6,7 @@ keywords: Intune 数据仓库
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db6feb746aa7177f56ff6e87565d67e207d4d9ef
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 1fb6ec17ce058247529ab1e51d50d876e4c97408
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165441"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252667"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune 数据库仓库数据模型
 
@@ -60,6 +60,9 @@ Intune 数据仓库每天对数据进行采样，呈现不断变化的移动设�
 ## <a name="time-daily-snapshots"></a>时间：每日快照
 
 仓库在 Intune 数据的下游。 Intune 在午夜 UTC 拍摄每日快照，并将快照存储在仓库中。 保存快照的持续时间因事实数据表而异。 有些事实数据表可能保存 7 天，有些 30 天，有些甚至更长。
+
+> [!NOTE]
+> 数据仓库不同步 Jamf 设备。 有关 Jamf 的详细信息，请参阅[对 Jamf Pro 与 Microsoft Intune 的集成进行故障排除](..\protect\troubleshoot-jamf.md)和 [JAMF Pro 向 Intune 发送的数据](..\protect\data-jamf-sends-to-intune.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

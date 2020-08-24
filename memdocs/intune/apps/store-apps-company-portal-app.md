@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983938"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179530"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>使用 Microsoft Intune 添加 Windows 10 公司门户应用
 
@@ -71,7 +71,7 @@ ms.locfileid: "83983938"
 
 ## <a name="frequently-asked-questions"></a>常见问题解答 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>如果用户已从 Microsoft Store 安装旧版公司门户应用，那么如何更新其设备上的应用？
-如果你的用户已从 Microsoft Store 安装 Windows 8.1 或 Windows Phone 8.1 公司门户应用，则他们的应用会自动更新到最新版本，你或你的用户无需执行任何操作。 如果未更新，则要求用户确认他们是否在设备上启用了 Microsoft Store 应用的自动更新。   
+如果你的用户已从 Microsoft Store 安装 Windows 8.1 公司门户应用，则他们的应用会自动更新到最新版本，你或你的用户无需执行任何操作。 如果未更新，则要求用户确认他们是否在设备上启用了 Microsoft Store 应用的自动更新。   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>如何将我的旁加载 Windows 8.1 公司门户应用升级到 Windows 10 公司门户应用？
 我们推荐的迁移途径是通过将分配操作设置为“卸载”，以删除 Windows 8.1 公司门户应用的分配  。 选择此设置后，可使用任何前面讨论的选项来分配 Windows 10 公司门户应用。  
@@ -80,8 +80,8 @@ ms.locfileid: "83983938"
 
 如果需要旁加载应用，并且使用 Symantec 代码签名证书签名并分配了 Windows 8.1 公司门户应用，请按照下一节内容中的步骤进行操作。
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>如何将已签名和旁加载的 Windows Phone 8.1 公司门户应用或 Windows 8.1 公司门户应用升级到 Windows 10 公司门户应用？
-我们推荐的迁移路径是通过将分配操作设置为“卸载”，以删除 Windows Phone 8.1 公司门户应用或 Windows 8.1 公司门户应用的现有分配  。 选择此设置后，可正常分配 Windows 10 公司门户应用。  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>如何将我的已签名和旁加载 Windows 8.1 公司门户应用升级到 Windows 10 公司门户应用？
+我们推荐的迁移途径是通过将分配操作设置为“卸载”，以删除 Windows 8.1 公司门户应用的现有分配。 选择此设置后，可正常分配 Windows 10 公司门户应用。  
 
 否则，Windows 10 公司门户应用必须进行相应更新和签名，以确保遵循升级路径。  
 
@@ -99,7 +99,7 @@ ms.locfileid: "83983938"
 |---|---|
 | InputWin10AppxBundle  |  源 appxbundle 文件的路径。 |
 | OutputWin10AppxBundle | 已签名的 appxbundle 文件 Win81Appx 的输出路径。 
-| Win81Appx  | Windows 8.1 或 Windows Phone 8.1 公司门户 (.APPX) 文件的路径。 |
+| Win81Appx  | Windows 8.1 公司门户 (.APPX) 文件的路径。 |
 | PfxFilePath  |  Symantec 企业移动代码签名证书 (.PFX) 文件的路径。  |
 | PfxPassword  | Symantec 企业移动代码签名证书的密码。 |
 | PublisherId | 企业的发布者 ID。 如果不存在，则使用 Symantec 企业移动代码签名证书的“使用者”字段。 |

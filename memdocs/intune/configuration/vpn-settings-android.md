@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 13d1f65ab9164c20923fa7293b19bc707718d6a7
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086558"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146382"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>用于在 Intune 中配置 VPN 的 Android 设备设置
 
@@ -64,4 +64,4 @@ ms.locfileid: "80086558"
 
 [分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
-另外，还可以为 [Android Enterprise](vpn-settings-android-enterprise.md)、[iOS/iPadOS](vpn-settings-ios.md)、[macOS](vpn-settings-macos.md)、[Windows 10 和更高版本](vpn-settings-windows-10.md)、[Windows 8.1](vpn-settings-windows-8-1.md) 和 [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md) 设备创建 VPN 配置文件。
+另外，还可以为 [Android Enterprise](vpn-settings-android-enterprise.md)、[iOS/iPadOS](vpn-settings-ios.md)、[macOS](vpn-settings-macos.md)、[Windows 10 和更高版本](vpn-settings-windows-10.md)和 [Windows 8.1](vpn-settings-windows-8-1.md) 设备创建 VPN 配置文件。

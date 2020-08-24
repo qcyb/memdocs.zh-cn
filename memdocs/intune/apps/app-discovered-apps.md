@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988717"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512727"
 ---
 # <a name="intune-discovered-apps"></a>Intune 发现的应用
 
@@ -57,7 +57,6 @@ Intune 还提供租户中单个设备的已发现应用的列表。
 | Windows 10（Win32 应用）注意事项：[必须在设备上安装 Intune 管理扩展](intune-management-extension.md) | 不适用 | 设备上已安装 MSI 的应用 | 自设备注册时间起每隔 24 小时刷新一次 |
 | Windows 10（现代应用） | 仅限托管现代应用 | 设备上安装的所有现代应用 | 自设备注册时间起每隔 7 天刷新一次 |
 | Windows 8.1 | 仅托管应用 | 仅托管应用 | 自设备注册时间起每隔 7 天刷新一次 |
-| Windows Phone 8 | 仅托管应用 | 仅托管应用 | 自设备注册时间起每隔 7 天刷新一次 |
 | Windows RT | 仅托管应用 | 仅托管应用 | 自设备注册时间起每隔 7 天刷新一次 |
 | iOS/iPadOS | 仅托管应用 | 设备上安装的所有应用 | 自设备注册时间起每隔 7 天刷新一次 |
 | macOS | 仅托管应用 | 设备上安装的所有应用 | 自设备注册时间起每隔 7 天刷新一次 |
@@ -65,7 +64,7 @@ Intune 还提供租户中单个设备的已发现应用的列表。
 | Android Enterprise | 仅托管应用 | 仅工作配置文件中安装的应用 | 自设备注册时间起每隔 7 天刷新一次 |
 
 > [!NOTE]
-> - 如 Configuration Manager 中的应用管理工作负载所示，Windows 10 混合 Azure AD 联接设备当前不会按上述计划通过 Intune 管理扩展 (IME) 收集应用清单。 若要缓解此问题，请将 Configuration Manager 中的应用管理工作负载切换到 Intune，以便在设备上安装 IME（Win32 清单和 PowerShell 部署需要 IME）。 请注意，此行为的任何更改或更新均在[开发中的功能](../fundamentals/in-development.md)和/或[新增功能](../fundamentals/whats-new.md)中公布。
+> - 如 Configuration Manager 中的[客户端应用](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps)工作负载所示，Windows 10 共同托管设备当前不会按上述计划通过 Intune 管理扩展 (IME) 收集应用清单。 若要缓解此问题，请将 Configuration Manager 中的[客户端应用](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps)工作负载切换到 Intune，以便在设备上安装 IME（Win32 清单和 PowerShell 部署需要 IME）。 请注意，此行为的任何更改或更新均在[开发中的功能](../fundamentals/in-development.md)和/或[新增功能](../fundamentals/whats-new.md)中公布。
 > - 在 2019 年 11 月之前注册的个人拥有的 macOS 设备会继续显示设备上安装的所有应用，直到设备再次注册。
 > - Android Enterprise 完全托管和专用设备不显示发现的应用。
 

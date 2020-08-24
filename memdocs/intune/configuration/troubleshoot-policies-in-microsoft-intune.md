@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301378"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146501"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>在 Intune 中对策略和配置文件进行故障排除
 
@@ -144,7 +144,7 @@ Windows Phone 设备不允许使用 MDM 或 EAS 设置安全策略后降低其�
 
 例如，在 Windows 8.1 中，在桌面上从右轻扫，以打开“超级按钮”栏。 选择“设置” > “控制面板” > “用户帐户”  。 在左侧，选择“重置安全策略”链接，然后选择“重置策略”。
 
-可能需要先停用并重新注册其他平台（如 Android、iOS/iPadOS 和 Windows Phone 8.1），然后才能应用限制较少的策略。
+可能需要先停用并重新注册其他平台（如 Android 和 iOS/iPadOS），然后才能应用限制较少的策略。
 
 [设备注册疑难解答](../enrollment/troubleshoot-device-enrollment-in-intune.md)可能是很好的资源。
 

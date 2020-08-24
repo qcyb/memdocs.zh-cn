@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270933"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179479"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 中的 Windows 10 设备上使用 PowerShell 脚本
 
-使用 Microsoft Intune 管理扩展在 Intune 中上传 PowerShell 脚本，以在 Windows 10 设备上运行。 管理扩展增强了 Windows 10 移动设备管理 (MDM)，以便更轻松地采用新式管理。
+使用 Microsoft Intune 管理扩展在 Intune 中上传 PowerShell 脚本，以在 Windows 10 设备上运行。 管理扩展增强了 Windows 设备管理 (MDM)，以便更轻松地采用新式管理。
 
 此功能适用于：
 

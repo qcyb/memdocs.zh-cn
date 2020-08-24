@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501178"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>将适用于 iOS 和 Android 的 Microsoft Edge 与 Microsoft Intune 结合使用来管理 Web 访问
 
@@ -40,7 +40,7 @@ iOS 12.0 及更高版本支持适用于 iOS 的 Microsoft Edge。 Android 5 及�
 > 如果需要在受保护的浏览器中打开 iOS 设备上的新 Web 剪辑（固定的 Web 应用），则将在适用于 iOS 和 Android 的 Microsoft Edge（而不是在 Intune Managed Browser 中）打开它们。 对于较旧的 iOS Web 剪辑，必须重定向这些 Web 剪辑，以确保它们在适用于 iOS 和 Android 的 Microsoft Edge 而不是 Managed Browser 中打开。
 
 ## <a name="apply-conditional-access"></a>应用条件访问
-组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Microsoft Edge 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
+组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Edge 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
 
 1. 参照[场景 2：浏览器应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies)，这允许使用适用于 iOS 和 Android 的 Microsoft Edge，但阻止其他移动设备 Web 浏览器连接到 Office 365 终结点。
 

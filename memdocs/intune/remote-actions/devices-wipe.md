@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491314"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252333"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用“擦除”或“停用”操作删除设备，或手动取消注册设备
 
@@ -132,14 +132,14 @@ ms.locfileid: "86491314"
 
 ### <a name="windows"></a>Windows
 
-|数据类型|Windows 8.1 (MDM) 和 Windows RT 8.1|Windows RT|Windows Phone 8.1 和 Windows Phone 8|Windows 10|
+|数据类型|Windows 8.1 (MDM) 和 Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Intune 安装的公司应用和关联数据|对于受 EFS 保护的文件，会撤销密钥。 用户无法打开文件。|未删除公司应用。|卸载最初通过公司门户安装的应用。 删除公司应用数据。|卸载应用。 删除旁加载密钥。<br>对于 Windows 10 版本 1709（创意者更新）及更高版本，不会删除 Microsoft 365 应用版。 在未注册设备上不会卸载已安装 Intune 管理扩展的 Win32 应用。 管理员可利用分配排除避免向 BYOD 设备提供 Win32 应用。|
-|设置|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|
-|Wi-Fi 和 VPN 配置文件设置|删除。|删除。|不支持。|删除。|
-|证书配置文件设置|已删除并吊销证书。|已删除并吊销证书。|不支持。|已删除并吊销证书。|
-|电子邮件|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。|不支持。|删除通过 Intune 预配的电子邮件配置文件。 删除设备上缓存的电子邮件。|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。 删除由 Intune 预配的邮件帐户。|
-|Azure AD 脱离|不能。|不能。|删除 Azure AD 记录。|删除 Azure AD 记录。|
+|Intune 安装的公司应用和关联数据|对于受 EFS 保护的文件，会撤销密钥。 用户无法打开文件。|未删除公司应用。|卸载应用。 删除旁加载密钥。<br>对于 Windows 10 版本 1709（创意者更新）及更高版本，不会删除 Microsoft 365 应用版。 在未注册设备上不会卸载已安装 Intune 管理扩展的 Win32 应用。 管理员可利用分配排除避免向 BYOD 设备提供 Win32 应用。|
+|设置|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|不再强制实施通过 Intune 策略设置的配置。 用户可以更改设置。|
+|Wi-Fi 和 VPN 配置文件设置|删除。|删除。|删除。|
+|证书配置文件设置|已删除并吊销证书。|已删除并吊销证书。|已删除并吊销证书。|
+|电子邮件|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。|不支持。|删除已启用 EFS 的电子邮件。 这包括适用于 Windows 的邮件应用中的电子邮件和附件。 删除由 Intune 预配的邮件帐户。|
+|Azure AD 脱离|不能。|不能。|删除 Azure AD 记录。|
 
 > [!NOTE]
 > 对于在初始安装过程 (OOBE) 中加入 Azure AD 的 Windows 10 设备，停用命令将从设备中删除所有 Azure AD 帐户。 按照[在安全模式下启动电脑](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode)中的步骤，以本地管理员身份登录，重新获得对用户本地数据的访问权限。 
@@ -167,7 +167,8 @@ ms.locfileid: "86491314"
 3. 在“删除这么多天尚未签入的设备”  框中，输入介于 30 和 270 的数字。
 4. 选择 **“保存”** 。
 
-
+> [!NOTE]
+> 设备清理规则不适用于 Android Enterprise 场景，如[完全托管](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll)、[专用](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)和[公司拥有的工作配置文件](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)。 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>从 Azure Active Directory 门户删除设备
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048066"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146025"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 终结点安全的攻击面减少策略设置
 
@@ -177,11 +177,14 @@ ms.locfileid: "88048066"
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender 应用程序控制
 
 - **App Locker 应用程序控件**  
+  CSP：[AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
   - **未配置**（默认）
   - **强制使用组件和应用商店应用**
   - **审核组件和应用商店应用**
   - **强制使用组件、应用商店应用和 Smartlocker**
-  - **审核组件、应用商店应用和 Smartlocker** CSP：[AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  - **审核组件、应用商店应用和 Smartlocker**
+   
 
 - **阻止用户忽略 SmartScreen 警告**  
   CSP：[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)

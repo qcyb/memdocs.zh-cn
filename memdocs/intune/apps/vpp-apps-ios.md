@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912588"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217206"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理通过 Apple Volume Purchase Program 购买的 iOS 和 macOS 应用
 
@@ -94,24 +94,30 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“租户管理” > “连接器和令牌” > “Apple VPP 令牌”。
-3. 在 VPP 令牌列表窗格中，选择“创建”。
-4. 在“创建 VPP 令牌”窗格中，指定下列信息：
-    - **VPP 令牌文件** - 如果尚未注册，请注册 Apple Business Manager 或 Apple School Manager。 注册后，为你的帐户下载 Apple VPP 令牌，并在此处选择它。
-    - **Apple ID** - 输入与上传的令牌关联的帐户的托管 Apple ID。
-    - **控制另一个 MDM 的令牌** - 将此选项设置为“是”以允许将令牌从另一个 MDM 解决方案重新分配给 Intune。
-    - **令牌名称** - 用于设置令牌名称的管理字段。
-    - **国家/地区** - 选择 VPP 国家/地区应用商店。  Intune 将同步指定 VPP 国家/地区应用商店中所有区域设置对应的 VPP 应用。
+3. 在 VPP 令牌列表窗格中，选择“创建”。 将显示“创建 VPP 令牌”进程。 创建 VPP 令牌时使用了四个页面。 第一个是“基本”。
+4. 在“基本信息”**** 页上，指定下列信息：
+   - **令牌名称** - 用于设置令牌名称的管理字段。
+   - **Apple ID** - 输入与上传的令牌关联的帐户的托管 Apple ID。
+   - **VPP 令牌文件** - 如果尚未注册，请注册 Apple Business Manager 或 Apple School Manager。 注册后，为你的帐户下载 Apple VPP 令牌，并在此处选择它。
+5. 单击“下一步”以显示“设置”页面 。
+6. 在“设置”页上，指定以下信息：
+   - **控制另一个 MDM 的令牌** - 将此选项设置为“是”以允许将令牌从另一个 MDM 解决方案重新分配给 Intune。
+   - **国家/地区** - 选择 VPP 国家/地区应用商店。  Intune 将同步指定 VPP 国家/地区应用商店中所有区域设置对应的 VPP 应用。
+
         > [!WARNING]  
         > 对于使用此令牌创建的应用，更改国家/地区将更新应用元数据，并在下次与 Apple 服务同步时存储 App Store URL。 如果应用未在新的国家/地区应用商店中提供，则不会更新该应用。
 
-    - **VPP 帐户类型** - 从“企业版”或“教育版”中进行选择。
-    - **自动应用更新** - 从“关”切换为“开”以启用或停用自动更新 。 启用后，Intune 将在应用商店内检测 VPP 应用更新，并在设备进行签入时自动将这些更新推送到设备中。
+   - **VPP 帐户类型** - 从“企业版”或“教育版”中进行选择。
+   - **自动应用更新** - 从“关”切换为“开”以启用或停用自动更新 。 启用后，Intune 将在应用商店内检测 VPP 应用更新，并在设备进行签入时自动将这些更新推送到设备中。
 
         > [!NOTE]
         > Apple VPP 应用的自动应用更新将针对“必需”和“可用”安装意向进行自动更新 。 对于通过“可用”安装意向部署的应用，自动更新会为 IT 管理员生成状态信息，提示该应用有可用的新版本。 选择应用，选择“设备安装状态”，然后选中“状态详细信息”，即可查看此状态消息。  
 
     - **我授权 Microsoft 向 Apple 发送用户和设备信息。** - 必须选择“我同意”才能继续。 若要查看 Microsoft 向 Apple 发送的数据，请参阅 [Intune 向 Apple 发送的数据](../protect/data-intune-sends-to-apple.md)。
-5. 完成后，选择“创建”。 该令牌显示在“令牌列表”窗格中。
+7. 单击“下一步”  以显示“作用域标记”  页面。
+8. 单击“选择作用域标记”  可以选择为应用添加作用域标记。 有关详细信息，请参阅[对分布式 IT 使用基于角色的访问控制 (RBAC) 和作用域标记](../fundamentals/scope-tags.md)。
+9. 单击“下一步”以显示“查看 + 创建”页。 查看为 VPP 令牌输入的值和设置。
+10. 完成后，单击“创建”。**** 该令牌显示在“令牌列表”窗格中。
 
 ## <a name="synchronize-a-vpp-token"></a>同步 VPP 令牌
 
@@ -141,8 +147,8 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 
 | # | 方案                                | 邀请到 Apple VPP 计划                              | 应用安装提示 | Apple ID 提示 |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | BYOD - 用户已获许可（非用户注册设备）                             | 是                                                                                               | 是                                           | 是                                 |
-| 2 | Corp - 用户已获许可（不受监督的设备）     | 是                                                                                               | 是                                           | 是                                 |
+| 1 | BYOD - 用户已获许可（非用户注册设备）                             | 是                                                                                               | Y                                           | 是                                 |
+| 2 | Corp - 用户已获许可（不受监督的设备）     | 是                                                                                               | Y                                           | 是                                 |
 | 3 | Corp - 用户已获许可（受监督的设备）         | 是                                                                                               | N                                           | 是                                 |
 | 4 | BYOD - 设备已获许可                           | N                                                                                               | Y                                           | N                                 |
 | 5 | CORP - 设备已获许可（不受监督的设备）                           | N                                                                                               | Y                                           | N                                 |

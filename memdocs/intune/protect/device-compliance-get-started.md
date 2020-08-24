@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088320"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252786"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>通过符合性策略为使用 Intune 管理的设备设置规则
 
@@ -31,9 +31,7 @@ Intune 中的符合性策略：
 
 - 定义用户和设备符合要求所必须满足的规则和设置。
 - 包括适用于不合规设备的操作。 针对非符合性的操作可能会提醒用户注意不符合要求的情况，并保护不合规设备上的数据。
-- 可以[与条件访问结合使用](#integrate-with-conditional-access)来阻止不符合规则且已标记为不合规的用户和设备。
-
-  条件访问还可以处理你通过第三方移动设备管理合作伙伴管理的设备中的符合性状态数据。 要启用此功能，需要将合作伙伴的支持同时添加到 Azure AD 和 Intune。 有关详细信息，请参阅“添加设备符合性合作伙伴的支持”。 
+- 可与[条件访问结合使用](#integrate-with-conditional-access)，进而阻止不符合规则的用户和设备。
 
 Intune 中的符合性策略由两部分组成：
 
@@ -126,7 +124,6 @@ Intune 设备符合性策略：
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
   - [Windows 8.1 及更高版本](compliance-policy-create-windows-8-1.md)
   - [Windows 10 及更高版本](compliance-policy-create-windows.md)
 
@@ -163,13 +160,13 @@ Intune 有一个设备符合性仪表板，你可用它来监视设备的符合�
 
 |**策略设置**| **平台** |
 | --- | ----|
-| **PIN 或密码配置** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离  <br>  <br>- **iOS 8.0 及更高版本**：已修正<br>- **macOS 10.11 及更高版本**：已修正  <br>  <br>- **Windows 8.1 及更高版本**：已修正<br>- **Windows Phone 8.1 及更高版本**：已修正|
-| **设备加密** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离<br><br>- **iOS 8.0 及更高版本**：已修正（通过设置 PIN）<br>- **macOS 10.11 及更高版本**：已修正（通过设置 PIN）<br><br>- **Windows 8.1 及更高版本**：“不适用”<br>- **Windows Phone 8.1 及更高版本**：已修正 |
-| **已越狱或取得 root 权限的设备** | - **Android 4.0 及更高版本**：已隔离（非设置）<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离（非设置）<br>- **Android Enterprise**：已隔离（非设置）<br><br>- **iOS 8.0 及更高版本**：已隔离（非设置）<br>- **macOS 10.11 及更高版本**：“不适用”<br><br>- **Windows 8.1 及更高版本**：“不适用”<br>- **Windows Phone 8.1 及更高版本**：“不适用” |
-| **电子邮件配置文件** | - **Android 4.0 及更高版本**：“不适用”<br>- **Samsung Knox 标准版 4.0 及更高版本**：“不适用”<br>- **Android Enterprise**：“不适用”<br><br>- **iOS 8.0 及更高版本**：已隔离<br>- **macOS 10.11 及更高版本**：已隔离<br><br>- **Windows 8.1 及更高版本**：“不适用”<br>- **Windows Phone 8.1 及更高版本**：“不适用” |
-| **最低操作系统版本** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离<br><br>- **iOS 8.0 及更高版本**：已隔离<br>- **macOS 10.11 及更高版本**：已隔离<br><br>- **Windows 8.1 及更高版本**：已隔离<br>- **Windows Phone 8.1 及更高版本**：已隔离 |
-| **最高操作系统版本** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离<br><br>- **iOS 8.0 及更高版本**：已隔离<br>- **macOS 10.11 及更高版本**：已隔离<br><br>- **Windows 8.1 及更高版本**：已隔离<br>- **Windows Phone 8.1 及更高版本**：已隔离 |
-| **Windows 运行状况证明** | - **Android 4.0 及更高版本**：“不适用”<br>- **Samsung Knox 标准版 4.0 及更高版本**：“不适用”<br>- **Android Enterprise**：“不适用”<br><br>- **iOS 8.0 及更高版本**：“不适用”<br>- **macOS 10.11 及更高版本**：“不适用”<br><br>- **Windows 10 和 Windows 10 移动版**：已隔离<br>- **Windows 8.1 及更高版本**：已隔离<br>- **Windows Phone 8.1 及更高版本**：“不适用” |
+| **PIN 或密码配置** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离  <br>  <br>- **iOS 8.0 及更高版本**：已修正<br>- **macOS 10.11 及更高版本**：已修正  <br>  <br>- **Windows 8.1 及更高版本**：已修正|
+| **设备加密** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离<br><br>- **iOS 8.0 及更高版本**：已修正（通过设置 PIN）<br>- **macOS 10.11 及更高版本**：已修正（通过设置 PIN）<br><br>- **Windows 8.1 及更高版本**：“不适用”|
+| **已越狱或取得 root 权限的设备** | - **Android 4.0 及更高版本**：已隔离（非设置）<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离（非设置）<br>- **Android Enterprise**：已隔离（非设置）<br><br>- **iOS 8.0 及更高版本**：已隔离（非设置）<br>- **macOS 10.11 及更高版本**：“不适用”<br><br>- **Windows 8.1 及更高版本**：“不适用” |
+| **电子邮件配置文件** | - **Android 4.0 及更高版本**：“不适用”<br>- **Samsung Knox 标准版 4.0 及更高版本**：“不适用”<br>- **Android Enterprise**：“不适用”<br><br>- **iOS 8.0 及更高版本**：已隔离<br>- **macOS 10.11 及更高版本**：已隔离<br><br>- **Windows 8.1 及更高版本**：“不适用” |
+| **最低操作系统版本** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离<br><br>- **iOS 8.0 及更高版本**：已隔离<br>- **macOS 10.11 及更高版本**：已隔离<br><br>- **Windows 8.1 及更高版本**：已隔离|
+| **最高操作系统版本** | - **Android 4.0 及更高版本**：已隔离<br>- **Samsung Knox 标准版 4.0 及更高版本**：已隔离<br>- **Android Enterprise**：已隔离<br><br>- **iOS 8.0 及更高版本**：已隔离<br>- **macOS 10.11 及更高版本**：已隔离<br><br>- **Windows 8.1 及更高版本**：已隔离 |
+| **Windows 运行状况证明** | - **Android 4.0 及更高版本**：“不适用”<br>- **Samsung Knox 标准版 4.0 及更高版本**：“不适用”<br>- **Android Enterprise**：“不适用”<br><br>- **iOS 8.0 及更高版本**：“不适用”<br>- **macOS 10.11 及更高版本**：“不适用”<br><br>- Windows 10：已隔离<br>- **Windows 8.1 及更高版本**：已隔离 |
 
 ---------------------------
 

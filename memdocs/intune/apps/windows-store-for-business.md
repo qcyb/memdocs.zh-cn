@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed7852a5aaf09a99823035d12bf2aa9139c1c02
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5be1c4fd42d27386b4fdc51cac6167625432491f
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990227"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559559"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理从适用于企业的 Microsoft Store 批量采购的应用
 
@@ -53,7 +53,7 @@ ms.locfileid: "83990227"
 - 已注册的设备必须使用 Windows 10 的 1511 版本或更高版本。
 
 > [!NOTE]
-> 如果禁用受管理设备上的 Store（通过策略或组策略手动进行），将无法安装联机许可应用。
+> 如果禁用对受管理设备上的 Store（通过策略或组策略手动进行）的访问权限，将无法安装联机许可应用。
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>将适用于企业的 Microsoft 应用商店帐户与 Intune 关联
 
@@ -78,9 +78,10 @@ ms.locfileid: "83990227"
 6. 单击“同步”  ，将从 Microsoft 应用商店购买的应用同步到 Intune。
 
 ## <a name="synchronize-apps"></a>同步应用
+如果已将适用于企业的 Microsoft Store 帐户与 Intune 管理员凭据关联，则可以使用以下步骤手动将适用于企业的 Microsoft Store 应用与 Intune 同步。
 
-1. 选择“租户管理”   > “连接器和令牌”   > “适用于企业的 Microsoft Store”  。
-2. 单击“同步”  ，将从 Microsoft 应用商店购买的应用同步到 Intune。
+1. 选择“租户管理” > “连接器和令牌” > “适用于企业的 Microsoft Store”。
+2. 单击“同步”****，将从 Microsoft 应用商店购买的应用同步到 Intune。
 
 > [!NOTE]
 > 当前不支持具有加密应用包的应用，并且不会将其同步到 Intune。
@@ -92,7 +93,7 @@ ms.locfileid: "83990227"
 脱机应用可面向用户组、设备组或同时具有用户和设备的组。
 可为设备上的特定用户或所有用户安装脱机应用。
 
-分配适用于企业的 Microsoft 应用商店的应用时，安装此应用的每个用户都会使用一个许可证。 如果使用了分配应用的所有可用许可证，则无法再分配任何副本。 请执行下列操作之一：
+分配适用于企业的 Microsoft 应用商店的应用时，安装此应用的每个用户都会使用一个许可证。 如果使用了分配应用的所有可用许可证，则无法再分配任何副本。 请执行以下一项操作：
 
 * 从一些设备上卸载应用。
 * 减小当前分配的范围，仅针对具有足够许可证的用户。
@@ -109,4 +110,4 @@ ms.locfileid: "83990227"
 
 ## <a name="next-steps"></a>后续步骤
 
-* [使用 Microsoft Intune 管理批量购买的应用和书籍](vpp-apps.md)
+* [使用 Microsoft Intune 管理批量采购的应用和书籍](vpp-apps.md)

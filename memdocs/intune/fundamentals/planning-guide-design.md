@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 3/22/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357722"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179564"
 ---
 # <a name="create-a-design"></a>创建设计
 
@@ -311,7 +311,7 @@ Intune 支持公司拥有的设备和个人设备。 如果设备由设备注册
 | **类型** | **配置文件名称** | **设备平台** | **用例** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | 亚洲 Wi-Fi 配置文件 | Android | 公司、BYOD（亚洲地区）|
-| Wi-Fi | 北美 Wi-Fi 配置文件 | Android、iOS/iPadOS、Windows 10 移动版 | 公司、BYOD（北美地区） |
+| Wi-Fi | 北美 Wi-Fi 配置文件 | Android、iOS/iPadOS | 公司、BYOD（北美地区） |
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定 Wi-Fi 配置文件需求。
 
@@ -323,7 +323,7 @@ VPN 配置文件让用户可以安全地从远程位置访问网络。 Intune �
 
 | **类型** | **配置文件名称** | **设备平台** | **用例** |
 |:---:|:---:|:---:|:---:|
-| VPN | VPN Cisco AnyConnect 配置文件 | Android、iOS/iPadOS、Windows 10 移动版 | 公司、BYOD（北美和德国）|
+| VPN | VPN Cisco AnyConnect 配置文件 | Android、iOS/iPadOS | 公司、BYOD（北美和德国）|
 | VPN | 脉冲安全 | Android | 公司、BYOD（亚洲地区） |
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定 VPN 配置文件需求。
@@ -374,7 +374,7 @@ VPN 配置文件让用户可以安全地从远程位置访问网络。 Intune �
 | **应用程序** | **目的** | **平台** | **用例** | **应用保护策略** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | 可用 | iOS | 公司 - 高级管理人员 | 不能越狱，加密文件 |                                                         
-| Word | 可用 | iOS/iPadOS、Android - Samsung Knox、非 Knox、Windows 10 移动版 | 公司、BYOD | 不能越狱，加密文件 |                                                         
+| Word | 可用 | iOS/iPadOS、Android - Samsung Knox、非 Knox | 公司、BYOD | 不能越狱，加密文件 |                                                         
 
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定应用配置策略需求。
@@ -388,7 +388,7 @@ VPN 配置文件让用户可以安全地从远程位置访问网络。 Intune �
 
 | **策略名称** | **设备平台** | **设置** | **目标组** |
 |:---:|:---:|:---:|:---:|
-| 合规性策略 | iOS/iPadOS、Android - Samsung Knox、非 Knox、Windows 10 移动版 | PIN - 必需，不能越狱 | 公司、BYOD |
+| 合规性策略 | iOS/iPadOS、Android - Samsung Knox、非 Knox | PIN - 必需，不能越狱 | 公司、BYOD |
 
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定符合性策略需求。

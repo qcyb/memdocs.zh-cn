@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 99e4e037faf5253f92b4907f9b8746dbd58038eb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087028"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146059"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune 中用于配置电子邮件、身份验证和同步的 Android Enterprise 设备设置
 
@@ -61,4 +61,4 @@ Intune 管理员可以为工作配置文件中的 Android Enterprise 设备创�
 
 [分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
-还可以为 [Android Samsung Knox](email-settings-android.md)、[iOS/iPadOS](email-settings-ios.md)、[Windows 10 及更高版本](email-settings-windows-10.md)和 [Windows Phone 8.1](email-settings-windows-phone-8-1.md) 设备创建电子邮件配置文件。
+还可以为 [Android Samsung Knox](email-settings-android.md)、[iOS/iPadOS](email-settings-ios.md) 和 [Windows 10 及更高版本](email-settings-windows-10.md)设备创建电子邮件配置文件。

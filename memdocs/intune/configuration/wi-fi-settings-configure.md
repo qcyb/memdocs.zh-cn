@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25b07dcbb76f6d4a8aae964d0123a880d179784e
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: a92abc89dca291cd42a66c284bee5f1f4007836b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871927"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145872"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>在 Microsoft Intune 中添加和使用设备上的 Wi-Fi 设置
 
@@ -44,7 +44,7 @@ Wi-Fi 配置文件支持以下设备平台：
 - iOS 11.0 及更高版本
 - iPadOS 13.0 及更高版本
 - macOS X 10.12 及更高版本
-- Windows 10 及更高版本、Windows 10 移动版和 Windows Holographic for Business
+- Windows 10 及更高版本和 Windows Holographic for Business
 
 > [!NOTE]
 > 对于运行 Windows 8.1 的设备，你可以导入之前从另一台设备导出的 Wi-Fi 配置。

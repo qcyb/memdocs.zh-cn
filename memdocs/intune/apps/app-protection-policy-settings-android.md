@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262704"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252146"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Microsoft Intune 中的 Android 应用保护策略设置
 本文介绍适用于 Android 设备的应用保护策略设置。 可在 Azure 门户的“设置”窗格中为应用保护策略[配置](app-protection-policies.md)所述的策略设置。
@@ -127,7 +127,7 @@ ms.locfileid: "87262704"
 
 
 ## <a name="conditional-launch"></a>条件启动
-配置条件启动设置以设置访问保护策略的登录安全要求。 
+配置条件启动设置以设置应用保护策略的登录安全要求。 
 
 默认情况下，向多个设置提供已预配置的值和操作。 可以删除“最小 OS 版本”等某些设置。 此外，还可以从“选择一个”下拉列表中选择其他设置。 
 
