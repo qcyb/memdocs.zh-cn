@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 73b8111cbada129997cec965ca685f1ef22b1f3a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705305"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693006"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Configuration Manager Technical Preview 1702 中的功能
 
@@ -76,7 +76,7 @@ ms.locfileid: "81705305"
 - 在加入到 Azure AD 的 Azure VM 上运行的 Configuration Manager 站点。
 - 在同一 Azure AD 环境中运行的 Configuration Manager 客户端。
 
-若要配置 Azure AD 域服务，请参阅 [Azure AD 域服务入门](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)。
+若要配置 Azure AD 域服务，请参阅 [Azure AD 域服务入门](/azure/active-directory-domain-services/create-instance)。
 
 ### <a name="discover-resources"></a>发现资源
 设置 Configuration Manager 以在 Azure AD 中运行后，可以使用以下 Active Directory 发现方法搜索 Azure AD 寻找资源：  
@@ -101,7 +101,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 有关 Azure AD 的详细信息，请参阅以下内容：  
 - azure.microsoft.com 上的 [Azure Active Directory 域服务](https://azure.microsoft.com/services/active-directory-ds)。
-- docs.microsoft.com 上的 [Active Directory 域服务文档](https://docs.microsoft.com/azure/active-directory-domain-services)。
+- docs.microsoft.com 上的 [Active Directory 域服务文档](/azure/active-directory-domain-services)。
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>条件性访问设备符合性策略改进
 
@@ -204,7 +204,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>在安装应用程序之前检查运行的可执行文件
 
-在部署类型的\<部署类型名称>“属性”对话框中，现在可以在“安装行为”选项卡上指定一个或多个可执行文件（如果运行此类文件，将阻止安装部署类型）   。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
+在部署类型的 \<deployment type name>“属性”对话框中，现在可以在“安装行为”选项卡上指定一个或多个可执行文件（如果运行此类文件，将阻止安装部署类型）。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。
 
 ### <a name="try-it-out"></a>试试看。
 
@@ -226,12 +226,12 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 对于 iOS 设备，可以将 PFX 证书配置文件与电子邮件配置文件相关联，然后启用 S/MIME 加密。  然后在 iOS 的本机电子邮件客户端中启用 S/MIME，并将正确的 S/MIME 加密证书与其关联。
 
-有关 Configuration Manager 中的证书的详细信息，请参阅[证书配置文件简介]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles)。
+有关 Configuration Manager 中的证书的详细信息，请参阅[证书配置文件简介]( /sccm/protect/deploy-use/introduction-to-certificate-profiles)。
 
 
 ## <a name="new-compliance-settings-for-ios-devices"></a>iOS 设备的新符合性设置
 
-我们添加了许多新设置，可以用于 iOS 设备的配置项目中。 这些设置之前存在于 Microsoft Intune 的独立配置中，现在结合使用 Intune 和 Configuration Manager 时可以使用这些设置。 如果需要有关这些设置的帮助，请参阅 [Microsoft Intune 中的 iOS 策略设置](/mem/intune/configuration/device-restrictions-ios)。
+我们添加了许多新设置，可以用于 iOS 设备的配置项目中。 这些设置之前存在于 Microsoft Intune 的独立配置中，现在结合使用 Intune 和 Configuration Manager 时可以使用这些设置。 如果需要有关这些设置的帮助，请参阅 [Microsoft Intune 中的 iOS 策略设置](../../../intune/configuration/device-restrictions-ios.md)。
 
 - **将数据从托管应用同步到 iCloud**
 - **提交以继续其他设备上的活动**
@@ -347,7 +347,7 @@ Android for Work 具有配置项的两个设置组：
 #### <a name="perform-selective-wipe"></a>执行选择性擦除
 只能选择性擦除注册为 Android for Work 的设备，因为你只管理工作配置文件。 这可防止擦除个人配置文件。 在 Android for Work 设备上执行选择性擦除将删除工作配置文件（包括所有应用和数据）并注销设备。
 
-若要选择性擦除 Android for Work 设备，请在 Configuration Manager 控制台中使用[选择性擦除过程](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)。
+若要选择性擦除 Android for Work 设备，请在 Configuration Manager 控制台中使用[选择性擦除过程](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)。
 
 #### <a name="known-issues-for-android-for-work"></a>Android for Work 的已知问题
 **在 Android for Work 电子邮件配置文件中配置同步计划将导致无法部署它们**：Android for Work 电子邮件配置文件的 ConfigMgr UI 中的其中一个选项就是“计划”。 在其他平台上，这将使管理员可以配置一个计划，以将电子邮件和其他电子邮件帐户数据同步到移动设备（计划将被部署到该移动设备）。 但是，它不适用于 Android for Work 电子邮件配置文件，并选择“未配置”之外的任何选项将导致配置文件不会部署到任何设备。

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905706"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695675"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager Technical Preview 1609 中的功能
 
@@ -91,7 +91,7 @@ Upgrade Analytics 使你能够评估和分析设备的准备情况以及与 Wind
 
 我们添加了许多新设置，你可以在配置项目中将这些设置用于各种设备平台。
 这些设置之前存在于 Microsoft Intune 的独立配置中，现在结合使用 Intune 和 Configuration Manager 时可以使用这些设置。
-如果需要有关任何这些设置的帮助，请打开[使用 Microsoft Intune 策略管理设备上的设置和功能](/mem/intune/configuration/device-profiles)，然后选择所需的平台设置副标题。
+如果需要有关任何这些设置的帮助，请打开[使用 Microsoft Intune 策略管理设备上的设置和功能](../../../intune/configuration/device-profiles.md)，然后选择所需的平台设置副标题。
 
 
 ### <a name="new-settings-for-android-devices"></a>适用于 Android 设备的新设置
@@ -317,8 +317,8 @@ Upgrade Analytics 使你能够评估和分析设备的准备情况以及与 Wind
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>将现有边界组更新到新模型
 安装版本 1609 并更新网站时，将自动进行以下配置。 这些配置旨在确保当前的回退行为保持可用，直到配置了新边界组和关系。  
-- 站点中不受保护的分发点将添加到该站点的默认站点边界组 \<sitecode>  边界组。
-- 副本由每个现有的边界组组成，这些边界组包含配置为慢速连接的站点服务器。 新组的名称为 ***\<original boundary group name>-Slow-Tmp***：  
+- 站点中不受保护的分发点将添加到该站点的“Default-Site-Boundary-Group\<sitecode>”边界组。
+- 副本由每个现有的边界组组成，这些边界组包含配置为慢速连接的站点服务器。 新组的名称为“\<original boundary group name>-Slow-Tmp”：  
   -   包含快速连接的站点系统会保留在原始边界组中。
   -   包含慢速连接的站点系统副本将添加到边界组副本中。 配置为慢速的原始站点系统仍处于原始边界组中，以便保持向后兼容性，但不从该边界组使用它。
   -   此边界组副本不具有与之相关联的边界。 但是，已在原始组和将回退时间设置为 0 的新边界组副本之间创建回退链接。
@@ -347,7 +347,7 @@ Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 �
 - Office 365 客户端版本
 - Office 365 客户端语言
 - Office 365 客户端通道     
-有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](https://docs.microsoft.com/deployoffice/overview-update-channels)。
+有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](/deployoffice/overview-update-channels)。
 - 已在可用产品集中选择 Office 365 客户端的自动部署规则。
 
 你可以对仪表板执行以下操作：

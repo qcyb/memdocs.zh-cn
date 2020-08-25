@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f16a5736d0bebbcb4f3b03989c6983cd55ac8f54
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129308"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696984"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>使用 Configuration Manager 优化 Windows 10 更新传递
 
@@ -49,12 +49,12 @@ Configuration Manager 支持许多对等技术，包括：
 
 ### <a name="windows-delivery-optimization"></a>Windows 传递优化
 
-[传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是 Windows 10 中内置的主要下载技术和对等分发方法。 Windows 10 客户端可以从下载相同更新的本地网络上的其他设备获取内容。 使用 [Windows 传递优化选项](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options)，你可以配置客户端以进行分组。 此分组允许组织标识可能满足对等请求的最佳候选设备。 传递优化显著降低了用于使设备保持最新的总体带宽，同时缩短了下载时间。
+[传递优化](/windows/deployment/update/waas-delivery-optimization)是 Windows 10 中内置的主要下载技术和对等分发方法。 Windows 10 客户端可以从下载相同更新的本地网络上的其他设备获取内容。 使用 [Windows 传递优化选项](/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options)，你可以配置客户端以进行分组。 此分组允许组织标识可能满足对等请求的最佳候选设备。 传递优化显著降低了用于使设备保持最新的总体带宽，同时缩短了下载时间。
 
 > [!NOTE]  
-> 传递优化是一种云托管解决方案。 要利用其对等功能，需具有对传递优化云服务的 Internet 访问。 有关所需的 Internet 终结点的信息，请参阅[有关传递优化的常见问题](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。 
+> 传递优化是一种云托管解决方案。 要利用其对等功能，需具有对传递优化云服务的 Internet 访问。 有关所需的 Internet 终结点的信息，请参阅[有关传递优化的常见问题](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。 
 
-为获得最佳结果，你可能需要将传递优化[下载模式](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode)设置为组 (2) 并定义组 ID。 在组模式下，对等可以跨属于同一组的设备之间的内部子网，包括远程办公室中的设备。 使用[组 ID 选项](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)创建独立于域和 AD DS 站点的自己的自定义组。 对于希望通过传递优化实现最佳带宽优化的大多数组织，建议使用组下载模式。
+为获得最佳结果，你可能需要将传递优化[下载模式](/windows/deployment/update/waas-delivery-optimization-reference#download-mode)设置为组 (2) 并定义组 ID。 在组模式下，对等可以跨属于同一组的设备之间的内部子网，包括远程办公室中的设备。 使用[组 ID 选项](/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)创建独立于域和 AD DS 站点的自己的自定义组。 对于希望通过传递优化实现最佳带宽优化的大多数组织，建议使用组下载模式。
 
 当客户端在不同网络中漫游时，手动配置这些组 ID 很有挑战性。 Configuration Manager 版本 1802 添加了一项新功能，即通过[将边界组与传递优化集成](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)来简化此过程的管理。 当唤醒某个客户端后，它会与其管理点进行通信以获取策略，并提供其网络和边界组信息。 Configuration Manager 为每个边界组创建唯一 ID。 该站点使用客户端的位置信息，通过 Configuration Manager 边界 ID 自动配置客户端的传递优化组 ID。 当客户端漫游到其他边界组时，它会与其管理点进行通信，并使用新的边界组 ID 自动重新配置。 通过此集成，传递优化可以利用 Configuration Manager 边界组信息查找从中下载更新的对等。
 
@@ -66,13 +66,22 @@ Configuration Manager 支持许多对等技术，包括：
 
 - “在有可用内容时，允许客户端下载增量内容”设置为“是” 。
 - “客户端用于接收增量内容请求的端口”设置为 8005（默认值）或自定义端口号。
-
+ 
 > [!IMPORTANT]
-> - 必须启用（默认情况）且不能绕过传递优化。 有关详细信息，请参阅 [Windows 传递优化参考](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference)。
+> - 必须启用（默认情况）且不能绕过传递优化。 有关详细信息，请参阅 [Windows 传递优化参考](/windows/deployment/update/waas-delivery-optimization-reference)。
 > - 针对增量内容更改[软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#software-updates)时，请验证[传递优化客户端设置](../../core/clients/deploy/about-client-settings.md#delivery-optimization)。
-> - 如果 Office COM 已启用，则无法将传递优化用于 Microsoft 365 Apps 客户端更新。 Configuration Manager 使用 Office COM 来管理 Microsoft 365 Apps 客户端更新。 可以通过取消注册 Office COM 来允许将传递优化用于 Microsoft 365 Apps 更新。 在 Office COM 被禁用后，Microsoft 365 Apps 软件更新由默认 Office 自动更新 2.0 计划性任务进行管理。 也就是说，Configuration Manager 不会命令或监视 Microsoft 365 Apps 更新的安装过程。 Configuration Manager 会继续收集硬件清单中的信息，以便在控制台中填充 Office 365 客户端管理仪表板。 若要了解如何取消注册 Office COM，请参阅[启用 office 365 客户端以从 OFFICE CDN（而不是 Configuration Manager）接收更新](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)。
+> - 如果 Office COM 已启用，则无法将传递优化用于 Microsoft 365 Apps 客户端更新。 Configuration Manager 使用 Office COM 来管理 Microsoft 365 Apps 客户端更新。 可以通过取消注册 Office COM 来允许将传递优化用于 Microsoft 365 Apps 更新。 在 Office COM 被禁用后，Microsoft 365 Apps 软件更新由默认 Office 自动更新 2.0 计划性任务进行管理。 也就是说，Configuration Manager 不会命令或监视 Microsoft 365 Apps 更新的安装过程。 Configuration Manager 会继续收集硬件清单中的信息，以便在控制台中填充 Office 365 客户端管理仪表板。 若要了解如何取消注册 Office COM，请参阅[启用 office 365 客户端以从 OFFICE CDN（而不是 Configuration Manager）接收更新](/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)。
 > - 如果对内容存储使用 CMG，且[客户端设置](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)“下载增量内容(若有)”已启用，那么第三方更新的内容不会下载到客户端。 <!--6598587-->
 
+#### <a name="configuration-recommendations-for-clients-downloading-delta-content"></a>关于客户端下载增量内容的配置建议
+<!--7913814-->
+如果在客户端上为软件更新内容启用了“允许客户端在有可用增量内容时进行下载”[客户端设置](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)，则[分发点回退](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback)行为存在一些限制。 为确保这些客户端可以正确下载软件更新内容，建议采用以下配置：
+
+- 确保客户端位于边界组中，并且存在有与该边界组相关联的所需内容的可靠分发点。
+- 部署软件更新，并为能够直接从 Internet 下载的客户端启用 Microsoft 更新回退。
+   - 此回退行为的部署设置为“如果软件更新在当前、相邻或站点边界组中的分发点上不可用，则从 Microsoft 更新下载内容”（在“下载设置”页中可以找到）。 有关详细信息，请参阅[部署软件更新](manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group)。
+
+如果上述任一选项都不可行，可以在客户端设置中禁用“允许客户端在有可用增量内容时进行下载”以允许回退功能。 在这种情况下，不会利用传递优化对等互连，因为客户端将不会使用增量通道。
 
 ### <a name="configuration-manager-peer-cache"></a>Configuration Manager 对等缓存
 
@@ -83,7 +92,7 @@ Configuration Manager 支持许多对等技术，包括：
 
 
 ### <a name="windows-branchcache"></a>Windows BranchCache
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) 是 Windows 中的带宽优化技术。 每个客户端都具有缓存，并用作内容的备用源。 同一网络上的设备可以请求此内容。 [Configuration Manager 可以使用 BranchCache](../../core/plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache) 以允许对等方互相提供内容，而不必总是联系分发点。 使用 BranchCache，文件缓存在每个单独的客户端上，其他客户端可以根据需要检索它们。 这种方法分发缓存而不是进行单点检索。 此行为可节省大量带宽，同时减少客户端接收所请求内容的时间。
+[BranchCache](/windows-server/networking/branchcache/branchcache) 是 Windows 中的带宽优化技术。 每个客户端都具有缓存，并用作内容的备用源。 同一网络上的设备可以请求此内容。 [Configuration Manager 可以使用 BranchCache](../../core/plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache) 以允许对等方互相提供内容，而不必总是联系分发点。 使用 BranchCache，文件缓存在每个单独的客户端上，其他客户端可以根据需要检索它们。 这种方法分发缓存而不是进行单点检索。 此行为可节省大量带宽，同时减少客户端接收所请求内容的时间。
 
 
 
@@ -113,7 +122,7 @@ Configuration Manager 支持许多对等技术，包括：
 
 Microsoft 建议根据需要使用带有快速安装文件和对等缓存技术的 Configuration Manager 优化 Windows 10 质量更新传递。 此方法应该可以解决与 Windows 10 设备下载大量内容以安装质量更新相关的挑战。 此外，还建议通过每月部署质量更新来使 Windows 10 设备保持最新。 这种做法减少了设备每月所需的质量更新内容的增量。 减少此内容增量会导致从分发点或对等源下载较少的内容。 
 
-由于快速安装文件的性质，其内容比传统自包含文件大得多。 这会导致从 Windows 更新服务到 Configuration Manager 站点服务器的更新下载时间变长。 站点服务器和分发点所需的磁盘空间也会增加。 下载和分发质量更新所需的总时间可能会更长。 但是，在 Windows 10 设备下载和安装质量更新期间设备端优势应显而易见。 有关详细信息，请参阅[使用快速安装文件](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)?#using-express-installation-files)。
+由于快速安装文件的性质，其内容比传统自包含文件大得多。 这会导致从 Windows 更新服务到 Configuration Manager 站点服务器的更新下载时间变长。 站点服务器和分发点所需的磁盘空间也会增加。 下载和分发质量更新所需的总时间可能会更长。 但是，在 Windows 10 设备下载和安装质量更新期间设备端优势应显而易见。 有关详细信息，请参阅[使用快速安装文件](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)#using-express-installation-files)。
 
 如果较大更新的服务器端权衡是采用快速支持的阻止程序，但设备端优势对你的业务和环境至关重要，Microsoft 建议通过 Configuration Manager 使用[适用于企业的 Windows 更新](integrate-windows-update-for-business-windows-10.md)。 适用于企业的 Windows 更新提供了快速更新的所有优势，无需在整个环境中下载、存储和分发快速安装文件。 客户端直接从 Windows 更新服务下载内容，因此仍可使用传递优化。
 
@@ -162,11 +171,11 @@ Windows 更新代理 (WUA) 首先请求快速内容。 如果无法安装快速�
 
 
 #### <a name="is-there-any-way-to-see-how-much-content-is-downloaded-from-peers-using-delivery-optimization"></a>有没有办法查看使用传递优化从对等下载了多少内容？
-Windows 10 版本 1703（及更高版本）包括两个新的 PowerShell cmdlet：Get-DeliveryOptimizationPerfSnap 和 Get-DeliveryOptimizationStatus。 这些 cmdlet 可以更深入地了解传递优化和缓存使用情况。 有关详细信息，请参阅[适用于 Windows 10 更新的传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network)
+Windows 10 版本 1703（及更高版本）包括两个新的 PowerShell cmdlet：Get-DeliveryOptimizationPerfSnap 和 Get-DeliveryOptimizationStatus。 这些 cmdlet 可以更深入地了解传递优化和缓存使用情况。 有关详细信息，请参阅[适用于 Windows 10 更新的传递优化](/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network)
 
 
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>客户端如何通过网络与传递优化进行通信？
-有关防火墙的网络端口、代理要求和主机名的详细信息，请参阅[传递优化常见问题解答](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。
+有关防火墙的网络端口、代理要求和主机名的详细信息，请参阅[传递优化常见问题解答](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。
 
 ## <a name="log-files"></a>日志文件
 

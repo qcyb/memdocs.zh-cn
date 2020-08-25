@@ -2,7 +2,7 @@
 title: 规划软件中心
 titleSuffix: Configuration Manager
 description: 确定你希望为用户配置软件中心和打造软件中心品牌并实现与 Configuration Manager 交互的方式。
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 802dbaa4188199e555a5cc0143ed599ad454e27e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127352"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695165"
 ---
 # <a name="plan-for-software-center"></a>规划软件中心
 
@@ -43,6 +43,8 @@ ms.locfileid: "88127352"
 - 自版本 1906 起，最多可以向软件中心添加五个自定义选项卡。 有关详细信息，请参阅[软件中心客户端设置](../../core/clients/deploy/about-client-settings.md#software-center)。 <!--4063773-->
 
 - 用户可以在软件中心内配置用户设备相关性。 有关详细信息，请参阅[将用户和设备与用户设备相关性进行链接](../deploy-use/link-users-and-devices-with-user-device-affinity.md)。
+
+- 从版本 2006 开始，可以配置共同管理的设备，以便将公司门户同时用于 Intune 和 Configuration Manager 应用。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](../../comanage/company-portal.md)。<!--CMADO-3601237,INADO-4297660-->
 
 > [!IMPORTANT]
 > 若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
@@ -138,7 +140,10 @@ Configuration Manager 根据以下属性应用自定义软件中心品牌：
 
 3. “计算机代理”**** 组中的“组织名称”**** 客户端设置。 有关详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [软件中心用户指导](../../core/understand/software-center.md)
+
 - [规划和配置应用程序管理](plan-for-and-configure-application-management.md)
+
+- [在共同管理的设备上使用公司门户应用](../../comanage/company-portal.md)

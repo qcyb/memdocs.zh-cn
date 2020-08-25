@@ -2,7 +2,7 @@
 title: 基于令牌的 CMG 身份验证
 titleSuffix: Configuration Manager
 description: 在内部网络上注册客户端以获得唯一令牌，或为基于 Internet 的设备创建批量注册令牌。
-ms.date: 06/10/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 55997c9185a221d105aa8ad40bbb14021463d07b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715656"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512693"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>为云管理网关进行基于令牌的身份验证
 
@@ -25,13 +25,13 @@ ms.locfileid: "84715656"
 
 云管理网关 (CMG) 支持许多类型的客户端，但是即使使用[增强的 HTTP](../../plan-design/hierarchy/enhanced-http.md)，这些客户端也需要[客户端身份验证证书](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway)。 如果客户端不经常连接到内部网络、无法加入 Azure Active Directory (Azure AD) 且无法安装 PKI 颁发的证书的基于 Internet，则在其上预配此证书要求可能非常困难。
 
-为了克服这些挑战，从版本 2002 开始，Configuration Manager 通过以下方法扩展其设备支持：
+为了克服这些问题，从版本 2002 开始，Configuration Manager 通过向设备颁发自己的身份验证令牌来扩展其设备支持。 若要充分利用此功能，更新站点后，还请将客户端更新到最新版本。 只有当客户端版本也是最新版本时，完整的方案才起作用。 如有必要，请确保[将新的客户端版本提升为生产版本](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production)。
 
-- 在内部网络上注册以获得唯一令牌
+ 客户端最初使用以下两种方式之一注册这些令牌：
 
-- 为基于 Internet 的设备创建批量注册令牌
+- 内部网络
 
-若要充分利用此功能，更新站点后，还请将客户端更新到最新版本。 只有当客户端版本也是最新版本时，完整的方案才起作用。 如有必要，请确保[将新的客户端版本提升为生产版本](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production)。
+- 批量注册
 
 Configuration Manager 客户端与管理点一起管理此令牌，因此不存在操作系统版本依赖关系。 此功能适用于任何[受支持的客户端 OS 版本](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md)。
 
@@ -40,15 +40,20 @@ Configuration Manager 客户端与管理点一起管理此令牌，因此不存�
 >
 > Microsoft 建议将设备加入 Azure AD。 基于 Internet 的设备可以使用 Azure AD 向 Configuration Manager 进行身份验证。 无论设备是在 Internet 上还是连接到内部网络，它都同时支持设备和用户方案。 有关详细信息，请参阅[使用 Azure AD 标识安装和注册客户端](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)。
 
-## <a name="register-on-the-internal-network"></a>在内部网络上注册
+## <a name="internal-network-registration"></a>内部网络注册
 
-此方法要求客户端先注册到内部网络上的管理点。 通常在客户端安装后注册客户端。 管理点为客户端提供唯一令牌，显示该客户端正在使用自签名证书。 客户端漫游到 Internet 时，为了与 CMG 进行通信，它会将其自签名证书与管理点颁发的令牌配对。 客户端每月续订一次令牌，有效期为 90 天。
+此方法要求客户端先注册到内部网络上的管理点。 通常在客户端安装后注册客户端。 管理点为客户端提供唯一令牌，显示该客户端正在使用自签名证书。 客户端漫游到 Internet 时，为了与 CMG 进行通信，它会将其自签名证书与管理点颁发的令牌配对。
 
 站点默认启用此行为。
 
-## <a name="create-a-bulk-registration-token"></a>创建批量注册令牌
+## <a name="bulk-registration-token"></a>批量注册令牌
 
 如果无法在内部网络上安装和注册客户端，可以创建批量注册令牌。 客户端安装在基于 Internet 的设备上并通过 CMG 进行注册时，使用此令牌。 批量注册令牌的有效期较短，且不会存储在客户端或站点上。 批量注册令牌允许客户端生成与其自签名证书配对的唯一令牌，使客户端能够向 CMG 进行身份验证。
+
+> [!NOTE]
+> 不要将批量注册令牌与 Configuration Manager 向单个客户端颁发的那些令牌混淆。 通过批量注册令牌，客户端可以进行初始安装并与站点通信。 这个初始通信的时间足以让站点向客户端颁发自己的唯一客户端身份验证令牌。 然后，客户端将自己的身份验证令牌用于它在 Internet 上与站点的所有通信。 除了初始注册之外，客户端不使用或存储批量注册令牌。
+
+若要创建在基于 Internet 的设备上安装客户端期间使用的批量注册令牌，请完成以下操作：
 
 1. 使用本地管理员权限登录到层次结构中的顶级站点服务器。
 
@@ -140,6 +145,12 @@ Rotating internet management point, new management point [1] is: https://CONTOSO
 2. 展开“安全性”，选择“证书”节点，然后选择要阻止的批量注册令牌 。
 
 3. 在功能区栏的“主页”选项卡中或通过右键单击上下文菜单，选择“阻止” 。 若要取消阻止先前阻止的批量注册令牌，请选择“取消阻止”操作。
+
+## <a name="token-renewal"></a>令牌续订
+
+客户端每月续订一次其唯一的、由 Configuration Manager 颁发的令牌，其有效期为 90 天。 客户端在续订其令牌时不需要连接到内部网络。 只要该令牌仍然有效，就可以使用 CMG 连接到站点。 如果 90 天内未续订令牌，则客户端必须直接连接到内部网络上的管理点才能接收新令牌。
+
+不能续订批量注册令牌。 批量注册令牌过期后，使用 CMG 为基于 Internet 的设备注册生成一个新令牌。
 
 ## <a name="see-also"></a>另请参阅
 

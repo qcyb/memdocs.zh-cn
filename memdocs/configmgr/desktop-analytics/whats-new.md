@@ -2,7 +2,7 @@
 title: 桌面分析中的新增功能
 titleSuffix: Configuration Manager
 description: 桌面分析云服务最近每月发布的新功能摘要。
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819962"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614753"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
 
@@ -26,6 +27,18 @@ ms.locfileid: "85819962"
 
 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="august-2020"></a>2020 年 8 月
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>默认情况下，从 Configuration Manager 部署的应用很重要
+
+<!-- 4859763 -->
+
+对于桌面分析确定要纳入试验部署的设备而言，应用的“重要性”配置至关重要。 管理员需要手动配置桌面分析中所有应用的重要性。 只有在验证试点后，才能继续进行生产部署。
+
+现在，对于使用 Configuration Manager 部署的任何应用，默认情况下，桌面分析会自动将其配置为“重要”。 这种行为可以让你更快速地在环境中配置应用，以便加快生产部署进程。
+
+有关详细信息，请参阅[资产 - 应用](about-assets.md#apps)。
 
 ## <a name="july-2020"></a>2020 年 7 月
 

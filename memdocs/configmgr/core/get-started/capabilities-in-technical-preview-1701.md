@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a9d0beeee1e00315a913adfc5dde6bd69f75cd6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076197"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692989"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Configuration Manager Technical Preview 1701 中的功能
 
@@ -116,7 +116,7 @@ ms.locfileid: "82076197"
      &lt;/setting>
 
    - **编辑后：**      
-     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value&gt;https://management.usgovcloudapi.net/&lt;/value&gt;  
      &lt;/setting>
 
    将设置名称 FairFaxAuthorityResource 的值更改为等于“<https://login.microsoftonline.com/>” 
@@ -125,9 +125,9 @@ ms.locfileid: "82076197"
      &lt;value>&lt;/value>
 
    - **编辑后：** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-     &lt;value><https://login.microsoftonline.com/&lt;/value>>
+     &lt;value&gt;[https://login.microsoftonline.com](https://login.microsoftonline.com)&lt; /value&gt;
 
-2. 保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
+2. 保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
 
 3. OMS 连接器安装后，使用任何连接到站点的控制台时，可使用与政府云的连接。
 

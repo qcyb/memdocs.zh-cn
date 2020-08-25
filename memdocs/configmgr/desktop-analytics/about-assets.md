@@ -2,7 +2,7 @@
 title: 桌面分析中的资产
 titleSuffix: Configuration Manager
 description: 了解桌面分析中的设备、驱动程序和应用。
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: d4328aee2bc08054fbeaa7147ceed30fe61b61a7
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107293"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614812"
 ---
 # <a name="assets-in-desktop-analytics"></a>桌面分析中的资产
 
@@ -42,6 +42,9 @@ ms.locfileid: "85107293"
 
 “值得注意的”应用安装在超过 2% 的已注册设备上。
 
+> [!TIP]
+> 对于特定的部署计划，可以配置此值。 在部署计划属性的“就绪情况规则”中，将值指定为“为应用定义低安装计数阈值”。
+
 “应用版本详细信息”设置默认处于禁用状态，所以此选项卡合并了具有相同名称和发布者的应用的所有版本。<!-- 5542186 --> 此默认行为有助于减少所显示的应用总数，进而有助于减少对应用进行注释所需的工作量。 “值得注意的应用”磁贴中的应用计数也反映了此设置。 例如，它没有列出数百个 Microsoft Edge 实例，而是列出所有版本的一个实例。 可以对所有版本只做一次决策。 如需对特定应用版本做出决策，请启用此设置。 还可以在使用部署计划时配置此设置。 有关详细信息，请参阅[计划资产](about-deployment-plans.md#plan-assets)。
 
 从列表中选择应用，然后选择“编辑”。 此操作显示应用的详细信息。 选择“重要性”下拉菜单，并设置一个值。 你还可以分配“所有者”。 如果进行了任何更改，请选择“保存”。
@@ -53,6 +56,9 @@ ms.locfileid: "85107293"
 - 忽略
 - 未评审
 - 不重要<!-- 3587232 -->
+
+> [!NOTE]
+> 如果使用 Configuration Manager 部署了应用，则在默认情况下，桌面分析会自动将其配置为“重要”。 这种行为可以让你更快速地在环境中配置应用，以便加快生产部署进程。<!-- 4859763 -->
 
 当“应用版本详细信息”设置处于禁用状态时，“应用详细信息”窗格显示它合并的应用版本和语言的数量。 你保存的对应用详细信息的任何更改会应用于所有版本。 例如，设置“重要性”或“所有者”。 有些值会显示“多个”，这表示在所有版本中没有一个一致的值。
 

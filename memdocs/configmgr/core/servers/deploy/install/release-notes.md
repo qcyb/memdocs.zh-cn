@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126285"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512642"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -112,6 +112,20 @@ ms.locfileid: "88126285"
 若要解决此问题，请在 `AdminConsole\bin` 目录中创建名为 `scripts` 的文件夹。 将文件从本地化文件夹复制到新创建的 `scripts` 文件夹。 复制文件后，部署 Microsoft Edge 版本 77 及更高版本。
 
 ## <a name="os-deployment"></a>OS 部署
+
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>部署任务序列时出现客户端策略错误
+
+<!-- 7970134 -->
+
+适用范围：Configuration Manager 版本 2006 早期更新通道
+
+当你将任务序列部署到客户端时，所需的任务序列不会在截止时间安装，并且可用的任务序列不会显示在软件中心中。 你将看到状态消息 10803，其说明类似于以下错误消息：
+
+客户端下载策略失败。数据传输服务返回“BITS 错误:服务器的响应无效。服务器未遵循定义的协议。(-2145386469)。
+
+当你将管理点配置为 HTTPS，并且设备使用 Configuration Manager 客户端版本 1906 或更低版本时，会出现此问题。
+
+若要解决此问题，请将设备上的 Configuration Manager 客户端更新到 1910 或更高版本。
 
 ### <a name="task-sequences-cant-run-over-cmg"></a>任务序列无法通过 CMG 运行
 

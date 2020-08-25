@@ -2,7 +2,7 @@
 title: 版本 2006 的清单
 titleSuffix: Configuration Manager
 description: 了解在更新到 Configuration Manager 版本 2006 之前要执行的操作。
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a3c66863e7768c5ca90151bf85d61aa1e3a0e17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129503"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696457"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>用于安装 Configuration Manager 更新 2006 的清单
 
@@ -81,7 +81,11 @@ Microsoft 对脚本进行数字签名，并将其捆绑到签名的自解压可�
 
 若要选择加入早期更新圈，请执行以下操作：
 
-1. 打开 Windows PowerShell 并以管理员身份运行****
+1. 以管理员身份打开 Windows PowerShell 版本 5 会话
+
+    > [!IMPORTANT]
+    > Configuration Manager Current Branch 当前不支持 PowerShell 版本 7。 如果已安装 PowerShell 版本 7，仍可使用 PowerShell 版本 5。 有关详细信息，请参阅[并行使用 PowerShell 7 和 Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51)。
+
 1. 使用以下语法来运行 EnableEarlyUpdateRing2006.ps1 脚本：
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`

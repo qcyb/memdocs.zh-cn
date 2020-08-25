@@ -2,7 +2,7 @@
 title: 安装 Power BI 示例报表
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中安装 Power BI 示例报表
-ms.date: 08/12/2020
+ms.date: 08/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 450c76617cf12a3201aa990c90843cb2e0f0edee
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 025788a4ed4a26123f24ec667348eae97821295e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179427"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699681"
 ---
 # <a name="install-power-bi-sample-reports"></a>安装 Power BI 示例报表
 <!--5679791-->
 适用范围：Configuration Manager (Current Branch)
 
-从版本 2002 开始，可以将 [Power BI 报表服务器](https://docs.microsoft.com/power-bi/report-server/get-started)与 Configuration Manager 报告集成。 有一些示例报表可供下载，你可以安装在 Configuration Manager 中。 本文介绍如何在 Configuration Manager 中安装 Power BI 示例报表。
+从版本 2002 开始，可以将 [Power BI 报表服务器](/power-bi/report-server/get-started)与 Configuration Manager 报告集成。 有一些示例报表可供下载，你可以安装在 Configuration Manager 中。 本文介绍如何在 Configuration Manager 中安装 Power BI 示例报表。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -34,7 +34,7 @@ ms.locfileid: "88179427"
     > [!IMPORTANT]
     > 只使用从 [Microsoft 下载中心](https://www.microsoft.com/download/)获取的 Power BI Desktop 版本。 不要使用从 Microsoft Store 获取的版本。
     >
-    > 只使用[更适合 Power BI 报表服务器](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop)的 Power BI Desktop 版本。
+    > 只使用[更适合 Power BI 报表服务器](/power-bi/report-server/install-powerbi-desktop)的 Power BI Desktop 版本。
 
 ## <a name="download-the-sample-reports"></a>下载示例报表
 
@@ -64,9 +64,14 @@ ms.locfileid: "88179427"
 
 1. 出现提示时，指定 Configuration Manager 数据库名称和数据库服务器名称，然后选择“加载”。
 
-    在加载或应用数据模型时，如果出现任何错误，请忽略。
-
     :::image type="content" source="media/sample-report-database.png" alt-text="指定数据库和数据库服务器名称" lightbox="media/sample-report-database.png":::
+
+    > [!NOTE]
+    > 在加载或应用数据模型时，如果出现任何错误，请忽略。 例如，如果看到以下错误：“不支持在 DirectQuery 模式下从多个数据库连接到表”，请选择“关闭”。 然后刷新数据源设置：
+    >
+    > 1. 在 Power BI Desktop 的功能区中，选择“编辑查询”，然后选择“数据源设置”。
+    > 1. 选择“更改源”，确认服务器和数据库名称，然后选择“确定”。
+    > 1. 关闭“数据源设置”窗口，然后选择“更改应用”。
 
 1. 加载报表数据时，选择“文件” > “另存为”，然后选择“Power BI 报表服务器”。
 

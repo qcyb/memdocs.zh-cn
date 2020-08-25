@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126995"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693414"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -167,7 +167,7 @@ Windows 计算机上的 Configuration Manager 客户端缓存会存储用于安�
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备
 
-配置 Azure Active Directory 支持混合联接时，Configuration Manager 会针对此功能配置 Windows 10 设备。 有关详细信息，请参阅[如何配置混合 Azure Active Directory 联接设备](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)。
+配置 Azure Active Directory 支持混合联接时，Configuration Manager 会针对此功能配置 Windows 10 设备。 有关详细信息，请参阅[如何配置混合 Azure Active Directory 联接设备](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)。
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>允许客户端使用云管理网关
 
@@ -341,11 +341,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 ## <a name="delivery-optimization"></a>传递优化
 
 <!-- 1324696 -->
-使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 配置传递优化以在对等方之间共享内容时使用边界组。
+使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 配置传递优化以在对等方之间共享内容时使用边界组。
 
 > [!Note]
 > - 传递优化仅可用于 Windows 10 客户端。
-> - 要利用其对等功能，需具有对传递优化云服务的 Internet 访问。 有关所需的 Internet 终结点的信息，请参阅[有关传递优化的常见问题](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。
+> - 要利用其对等功能，需具有对传递优化云服务的 Internet 访问。 有关所需的 Internet 终结点的信息，请参阅[有关传递优化的常见问题](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)。
 > - 将 CMG 用于内容存储时，如果“在有可用内容时下载增量内容”[客户端设置](#allow-clients-to-download-delta-content-when-available)已启用，则第三方更新内容不会下载到客户端。 <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>将 Configuration Manager 边界组用于交付优化组 ID
@@ -641,6 +641,17 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ## <a name="software-center"></a>软件中心
 
+### <a name="select-the-user-portal"></a>选择用户门户
+
+<!--CMADO-3601237,INADO-4297660-->
+从版本 2006 开始，如果将公司门户部署到共同管理的设备，请将此设置配置为“公司门户”。 此设置可确保用户仅接收来自公司门户的通知。
+
+如果将公司门户安装在共同管理的设备上，但将此设置配置为“软件中心”，用户将看到来自这两个门户的通知。 这种体验可能会让用户感到困惑。
+
+如果更改公司门户的客户端设置，那么，当用户选择 Configuration Manager 通知时，它将启动公司门户。 如果通知的场景是公司门户不支持的，则选择通知会启动软件中心。
+
+公司门户的行为取决于你的共同管理工作负载配置。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](../../../comanage/company-portal.md)。
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>选择这些新设置来指定公司信息
 
 将此选项设置为“是”，然后指定以下设置来打造组织的软件中心：
@@ -927,11 +938,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 - **常规**：Windows 安装程序使用更多系统资源，更新更快。 它使用更多的处理器时间，因此总安装时间更短，但用户的服务中断时间更长。  
 
-    - 使用 `/Priority Normal` [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)在设备上配置 setupconfig.ini 文件。
+    - 使用 `/Priority Normal` [Windows 安装程序命令行选项](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)在设备上配置 setupconfig.ini 文件。
 
 - **低**：可继续使用设备，而它在后台进行下载和更新。 总安装时间更长，但用户的服务中断时间更短。 可能需要增加更新最大运行时间以避免在使用此选项时超时。  
 
-    - 从 setupconfig.ini 文件中删除 `/Priority` [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)。
+    - 从 setupconfig.ini 文件中删除 `/Priority` [Windows 安装程序命令行选项](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)。
 
 
 ### <a name="enable-third-party-software-updates"></a>启用第三方软件更新
@@ -940,7 +951,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>启用功能更新的动态更新
 <!--4062619-->
-从 Configuration Manager 版本 1906 开始，可以配置 [Windows 10 动态更新](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)。 动态更新通过指示客户端从 Internet 下载这些更新，在 Windows 安装过程中安装语言包、按需功能、驱动程序和累积更新。 如果将此设置设置为“是”或“否”，Configuration Manager 将修改功能更新安装期间使用的 [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) 文件 。
+从 Configuration Manager 版本 1906 开始，可以配置 [Windows 10 动态更新](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)。 动态更新通过指示客户端从 Internet 下载这些更新，在 Windows 安装过程中安装语言包、按需功能、驱动程序和累积更新。 如果将此设置设置为“是”或“否”，Configuration Manager 将修改功能更新安装期间使用的 [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) 文件 。
 
 - **未配置** - 默认值。 未更改 setupconfig 文件。
   - 默认情况下，在所有受支持的 Windows 10 版本上启用动态更新。

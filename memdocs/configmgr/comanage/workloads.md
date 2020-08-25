@@ -5,17 +5,17 @@ description: 了解可以从 Configuration Manager 切换到 Microsoft Intune �
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127216"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694859"
 ---
 # <a name="co-management-workloads"></a>共同管理工作负载
 
@@ -43,19 +43,19 @@ ms.locfileid: "88127216"
 
 符合性策略定义设备必须遵从的规则和设置，以便将设备视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。 自 Configuration Manager 版本 1910 开始，可以将自定义配置基线评估添加为合规性策略评估规则。 有关详细信息，请参阅[将自定义配置基线包含在合规性策略评估中](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)。
 
-有关 Intune 功能的详细信息，请参阅[设备符合性策略](https://docs.microsoft.com/intune/device-compliance-get-started)。  
+有关 Intune 功能的详细信息，请参阅[设备符合性策略](/intune/device-compliance-get-started)。  
 
 ## <a name="windows-update-policies"></a>Windows 更新策略
 
 通过适用于企业的 Windows 更新策略，可以针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，配置延迟策略。
 
-有关 Intune 功能的详细信息，请参阅[配置适用于企业的 Windows 更新延迟策略](https://docs.microsoft.com/intune/windows-update-for-business-configure)。  
+有关 Intune 功能的详细信息，请参阅[配置适用于企业的 Windows 更新延迟策略](/intune/windows-update-for-business-configure)。  
 
 ## <a name="resource-access-policies"></a>资源访问策略
 
 资源访问策略在设备上配置 VPN、Wi-Fi、电子邮件以及证书设置。
 
-有关 Intune 功能的详细信息，请参阅[部署资源访问配置文件](https://docs.microsoft.com/intune/device-profiles)。
+有关 Intune 功能的详细信息，请参阅[部署资源访问配置文件](/intune/device-profiles)。
 
 > [!Note]  
 > 资源访问工作负载也是设备配置的一部分。 切换[设备配置](#device-configuration)工作负载时，这些策略由 Intune 托管。
@@ -76,7 +76,7 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 - Windows Defender 安全中心  
 - Windows Defender 高级威胁防护（现称为 Microsoft Defender 威胁防护）
 
-有关 Intune 功能的详细信息，请参阅 [Microsoft Intune 的 Endpoint Protection](https://docs.microsoft.com/intune/endpoint-protection-windows-10)。
+有关 Intune 功能的详细信息，请参阅 [Microsoft Intune 的 Endpoint Protection](/intune/endpoint-protection-windows-10)。
 
 > [!Note]  
 > 在切换此工作负载时，Configuration Manager 策略将保留在设备上，直到 Intune 策略覆盖它们。 此行为可确保设备在过渡期间仍具有保护策略。
@@ -95,7 +95,7 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 
 即使设备配置颁发机构是 Intune，你仍可将 Configuration Manager 中的设置部署到共同托管的设备。 此异常可用于配置组织需要但在 Intune 中尚不可用的设置。 在 [Configuration Manager 配置基线](../compliance/deploy-use/create-configuration-baselines.md)上指定此异常。 创建基线时，启用“即使是共同托管客户端也要始终应用此基线”选项  。 稍后，可以在现有基线属性的“常规”  选项卡上进行更改。  
 
-有关 Intune 功能的详细信息，请参阅[在 Microsoft Intune 中创建设备配置文件](https://docs.microsoft.com/intune/device-profile-create)。  
+有关 Intune 功能的详细信息，请参阅[在 Microsoft Intune 中创建设备配置文件](/intune/device-profile-create)。  
 
 > [!NOTE]
 > 切换设备配置工作负载时，它还包括“Windows 信息保护”功能策略，但其未包含在 Endpoint Protection 工作负载中。<!-- 4184095 -->
@@ -112,7 +112,7 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 
 - 存在一个新的全局条件，即“Office 365 应用程序是否在设备上由 Intune 进行托管”  。 默认情况下将此条件作为一项要求添加到新的 Office 365 应用程序。 如果在转换此工作负荷时，共同托管客户端不满足应用程序的要求。 则不会安装通过 Configuration Manager 部署的 Office 365。  
 
-有关 Intune 功能的详细信息，请参阅[将 Office 365 应用分配给具有 Microsoft Intune 的 Windows 10 设备](https://docs.microsoft.com/intune/apps-add-office365)。
+有关 Intune 功能的详细信息，请参阅[将 Office 365 应用分配给具有 Microsoft Intune 的 Windows 10 设备](/intune/apps-add-office365)。
 
 ## <a name="client-apps"></a>客户端应用
 
@@ -120,7 +120,7 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 
 使用 Intune 在共同管理的 Windows 10 设备上管理客户端应用和 PowerShell 脚本。 转移此工作负荷之后，任何从 Intune 部署的可用应用在公司门户中也变得可用。 从 Configuration Manager 部署的应用在软件中心可用。
 
-有关 Intune 功能的详细信息，请参阅[什么是 Microsoft Intune 应用管理？](https://docs.microsoft.com/intune/app-management)。
+有关 Intune 功能的详细信息，请参阅[什么是 Microsoft Intune 应用管理？](/intune/app-management)。
 
 > [!Tip]  
 > 此功能在版本 1806 中作为[预发行功能](../core/servers/manage/pre-release-features.md)首次引入。 从版本 2002 开始，此功能不再属于预发行功能。  
@@ -131,9 +131,10 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 
 ## <a name="diagram-for-app-workloads"></a>应用工作负载的关系图
 
-![共同管理应用工作负载的关系图](media/co-management-apps.svg)
+:::image type="content" source="media/co-management-apps.svg" alt-text="共同管理应用工作负载的关系图" lightbox="media/co-management-apps.svg":::
 
-[以完整尺寸查看关系图](media/co-management-apps.svg)
+> [!TIP]
+> 从版本 2006 开始，可以将公司门户配置为同时显示 Configuration Manager 应用。 如果改变此应用门户的体验，就会改变上图中所述的行为。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](company-portal.md)。<!--CMADO-3601237,INADO-4297660-->
 
 ## <a name="known-issues"></a>已知问题
 
@@ -147,11 +148,13 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
+
 1. 打开提升的命令提示符来转到 `ConfigSecurityPolicy.exe`。 通常，该可执行文件位于下列目录之一：
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft Security Client
+
 1. 从命令提示符处，传入 xml 文件以清理策略。 例如，`ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`。  
 
 ## <a name="next-steps"></a>后续步骤
 
-[如何切换工作负载](how-to-switch-workloads.md)  
+[如何切换工作负载](how-to-switch-workloads.md)

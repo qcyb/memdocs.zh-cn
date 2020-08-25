@@ -10,29 +10,29 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1189f8c89215bc228c533a88f38f5ae59b6855ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3fb7559f624afdb16ef228c61331387c163fbd54
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454930"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697103"
 ---
 # <a name="create-and-deploy-microsoft-defender-application-guard-policy"></a>创建和部署 Microsoft Defender 应用程序防护策略
 
 适用范围：Configuration Manager (Current Branch)
 <!-- 1351960 -->  
-可以使用 Configuration Manager Endpoint Potection 创建和部署 [Microsoft Defender 应用程序防护（应用程序防护）](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)策略。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
+可以使用 Configuration Manager Endpoint Potection 创建和部署 [Microsoft Defender 应用程序防护（应用程序防护）](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)策略。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
 
 ## <a name="prerequisites"></a>必备条件
 
-若要创建和部署 Microsoft Defender 应用程序防护策略，必须使用 Windows 10 Fall Creator Update (1709)。 必须使用[网络隔离策略](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings)配置要部署此策略的 Windows 10 设备。 有关详细信息，请参阅 [Microsoft Defender 应用程序防护概述](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)。
+若要创建和部署 Microsoft Defender 应用程序防护策略，必须使用 Windows 10 Fall Creator Update (1709)。 必须使用[网络隔离策略](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings)配置要部署此策略的 Windows 10 设备。 有关详细信息，请参阅 [Microsoft Defender 应用程序防护概述](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)。
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>若要创建策略，并浏览可用设置，请执行以下操作：
 
 1. 在 Configuration Manager 控制台中，选择“资产和符合性”。
 2. 在“资产和符合性”工作区中，选择“概述” > “终结点保护” > “Windows Defender 应用程序防护”。
 3. 在“主页”选项卡的“创建”组中，单击“创建 Windows Defender 应用程序防护策略”。
-4. 将此[文章](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)用作参考，浏览和配置可用的设置。 使用 Configuration Manager，可以设置某些策略设置：
+4. 将此[文章](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)用作参考，浏览和配置可用的设置。 使用 Configuration Manager，可以设置某些策略设置：
    - [主机交互设置](#bkmk_HIS)
    - [应用程序行为](#bkmk_ABS)
    - [文件管理](#bkmk_FM)
@@ -44,7 +44,7 @@ ms.locfileid: "84454930"
     >  - 一个来自 Windows 信息保护
     >  - 一个来自 Microsoft Defender 应用程序防护
     >
-    > 如果部署两个策略，两个网络隔离列表必须匹配。 如果部署的列表与同一个客户端不匹配，则部署失败。 有关详细信息，请参阅 [Windows 信息保护文档](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)。
+    > 如果部署两个策略，两个网络隔离列表必须匹配。 如果部署的列表与同一个客户端不匹配，则部署失败。 有关详细信息，请参阅 [Windows 信息保护文档](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)。
 
 6. 结束后，完成向导操作，并将策略部署到一个或多个 Windows 10 1709 设备。
 
@@ -78,7 +78,7 @@ ms.locfileid: "84454930"
 
 ### <a name="file-management"></a><a name="bkmk_FM"></a> 文件管理
 <!--3555858-->
-自 Configuration Manager 版本 1906 起，推出了一项策略设置，允许用户信任通常在应用程序防护中打开的文件。 成功完成后，文件将在主机设备上打开，而不是在应用程序防护中打开。 有关应用程序防护策略的详细信息，请参阅[配置 Microsoft Defender 应用程序防护策略设置](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)。
+自 Configuration Manager 版本 1906 起，推出了一项策略设置，允许用户信任通常在应用程序防护中打开的文件。 成功完成后，文件将在主机设备上打开，而不是在应用程序防护中打开。 有关应用程序防护策略的详细信息，请参阅[配置 Microsoft Defender 应用程序防护策略设置](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)。
 
 - 允许用户信任在 Windows Defender 应用程序防护中打开的文件 - 可便于用户将文件标记为“受信任”。 受信任的文件在主机（而不是应用程序防护）中打开。 适用于 Windows 10 版本 1809 或更高版本的客户端。
   - **禁止：** 不允许用户将文件标记为可信（默认）。
@@ -103,5 +103,5 @@ ms.locfileid: "84454930"
 ## <a name="next-steps"></a>后续步骤
 
 有关 Microsoft Defender 应用程序防护的详细信息，请参阅
- - [Microsoft Defender 应用程序防护概述](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)。
-- [Microsoft Defender 应用程序防护常见问题解答](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard)。
+ - [Microsoft Defender 应用程序防护概述](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)。
+- [Microsoft Defender 应用程序防护常见问题解答](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard)。
