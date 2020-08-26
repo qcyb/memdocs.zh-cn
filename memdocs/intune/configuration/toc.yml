@@ -51,7 +51,7 @@
           displayName: 'psk, oma-uri, eap'
         - name: Wi-Fi 疑难解答
           href: troubleshoot-wi-fi-profiles.md
-    - name: Windows 上的管理模板
+    - name: 管理模板
       displayName: 'admx, gpo, group policy'
       items:
         - name: 创建管理模板
