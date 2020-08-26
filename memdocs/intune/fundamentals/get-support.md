@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093151"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820657"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>如何获取对 Microsoft Intune 的支持
 
@@ -83,8 +83,6 @@ Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为
 
     > [!div class="mx-imgBorder"]
     > ![确认管理类型](./media/get-support/confirm-management-selection.png)
-
-  - 如果从“故障排除和支持” > “帮助和支持”中打开“帮助和支持”，则不会在“帮助和支持”下方看到你选择的管理类型。
 
   - 如果你进一步导航到其他任何节点（如“设备”、“应用”或“用户”），然后选择“帮助和支持”，将不会出现“选择管理类型”选项，在“帮助和支持”下也不会显示所选类型    。 假设已选择“Intune”。 但不需要在 Intune 页面上操作，请使用“?” 选项，然后就可以选择其他管理类型了。
 

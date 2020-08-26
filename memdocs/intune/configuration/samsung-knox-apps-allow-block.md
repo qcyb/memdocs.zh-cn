@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e558d0fe2f6112f522420d51cad4943e819b4fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3ee2e89dcfd7ab963dae3b14b5e7d53daaa07ff4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360712"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695981"
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>在 Microsoft Intune 中使用自定义策略以允许和阻止在 Samsung Knox 标准设备上运行应用 
 
@@ -38,7 +38,7 @@ ms.locfileid: "79360712"
 2. 选择“设备”   > “配置文件”   > “创建配置文件”  。
 3. 输入以下设置：
 
-    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，将配置文件命名为“Windows Phone 自定义配置文件”就很不错  。
+    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，将配置文件命名为“Android 自定义配置文件”就很不错。
     - **描述**：输入包含设置概述以及其他所有重要详细信息的说明。
     - **平台**：选择“Android”  。
     - **配置文件类型**：选择“自定义”  。

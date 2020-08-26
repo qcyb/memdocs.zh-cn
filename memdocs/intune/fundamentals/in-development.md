@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d443cb784c19956f52347a10f4123c622ab82a8
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048015"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820049"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 开发过程中的功能
 
@@ -72,9 +72,6 @@ Windows 公司门户现在支持 Configuration Manager 应用程序。 借助此
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>设备配置
 
-### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>从第三方 MDM 合作伙伴设置设备合规状态<!-- 6361689   -->
-拥有第三方 MDM 解决方案的 Microsoft 365 客户将能够通过与 Microsoft Intune 设备合规性服务的集成，为 iOS 和 Android 上的 Microsoft 365 应用强制实施条件访问策略。 第三方 MDM 供应商将利用 Intune 设备合规性服务向 Intune 发送设备合规性数据。 然后，Intune 将评估以确定设备是否受信任，并在 Azure AD 中设置条件访问属性。  客户将需要从 Microsoft Endpoint Manager 管理中心或 Azure AD 门户设置 Azure AD 条件访问策略。
-
 ### <a name="create-pkcs-certificate-profiles-for-android-enterprise-fully-managed-devices-cobo---4839686---"></a>为 Android Enterprise 完全托管设备创建 PKCS 证书配置文件 (COBO)<!-- 4839686 -->
 你可以创建 PKCS 证书配置文件，以便将证书部署到 Android Enterprise 设备所有者和工作配置文件设备（“设备” > “配置文件” > “创建配置文件” > “Android Enterprise”>“仅限设备所有者”，或“Android Enterprise”>“仅限工作配置文件”[针对平台]>“PKCS”[针对配置文件]）。
 
@@ -84,47 +81,6 @@ Windows 公司门户现在支持 Configuration Manager 应用程序。 借助此
 
 适用于：
 - Android Enterprise 完全托管 (COBO)
-
-### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631---"></a>将 NetMotion 用作 iOS/iPadOS 和 macOS 设备的 VPN 连接类型<!-- 1333631 -->
-创建 VPN 配置文件时，NetMotion 将作为 VPN 连接类型（“设备” > “设备配置” > “创建配置文件” > “iOS/iPadOS”或“macOS”[针对平台] >“VPN”[针对配置文件] >“NetMotion”[针对连接类型]）。
-
-有关 Intune 中 VPN 配置文件的详细信息，请参阅[创建 VPN 配置文件以连接到 VPN 服务器](../configuration/vpn-settings-configure.md)。
-
-适用于：
-- iOS/iPadOS
-- macOS
-
-### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024---"></a>适用于 Windows 10 Wi-Fi 配置文件的更受保护的可扩展身份验证协议 (PEAP) 选项<!-- 3805024 -->
-在 Windows 10 设备上，可以使用可扩展身份验证协议 (EAP) 创建 Wi-Fi 配置文件来验证 Wi-Fi 连接（“设备” > “配置文件” > “创建配置文件” > “Windows 10 及更高版本”[针对平台] >“Wi-Fi”[针对配置文件] >“Enterprise”）。 选择“受保护的 EAP (PEAP)”时，可以使用新的设置：
-
-- 在 PEAP 阶段 1 中执行服务器验证：在 PEAP 协商阶段 1 中，设备将验证证书，并验证服务器。
-  - 在 PEAP 阶段 1 中禁止提示用户验证服务器：在 PEAP 协商阶段 1，未显示询问为受信任的证书颁发机构授权新 PEAP 服务器的用户提示。
-- 需要加密绑定：阻止在 PEAP 协商期间连接到不使用加密绑定的 PEAP 服务器。
-
-若要查看当前可配置的设置，请转到[添加适用于 Windows 10 及更高版本设备的 Wi-Fi 设置](../configuration/wi-fi-settings-windows.md)。
-
-适用于： 
-- Windows 10 及更高版本
-
-### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576---"></a>配置 macOS Microsoft 企业 SSO 插件<!-- 5627576 -->
-Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让 macOS 10.15 以上的用户能够获取对支持 Apple SSO 功能的 Microsoft 应用、组织应用和网站的访问权限，并使用 Azure AD 通过一次登录进行身份验证。 在 Microsoft 企业 SSO 插件版本中，可以配置包含新的 Microsoft Azure AD 应用扩展类型的 SSO 扩展（“设备” > “配置文件” > “创建配置文件” > “macOS”[针对平台] >“设备功能”[针对配置文件] >“单一登录应用扩展”）>“SSO 应用扩展类型”>“Microsoft Azure AD”）。
-
-若要实现具有 Microsoft Azure AD SSO 应用扩展类型的 SSO，用户需要在其 macOS 设备上安装公司门户应用并登录。 
-
-有关 macOS SSO 应用扩展的详细信息，请参阅[单一登录应用扩展](../configuration/device-features-configure.md#single-sign-on-app-extension)。
-
-适用于：
-- macOS 10.15 及更高版本
-
-### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991---"></a>在具有 Microsoft 企业 SSO 插件的更多 iOS/iPadOS 应用上使用 SSO 应用扩展<!-- 7369991 -->
-[适用于 Apple 设备的 Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)可用于支持 SSO 应用扩展的所有应用。 在 Intune 中，此功能表示该插件适用于不使用适用于 Apple 设备的 Microsoft 身份验证库 (MSAL) 的移动 iOS/iPadOS 应用。 这些应用无需使用 MSAL，但需要使用 Azure AD 终结点进行身份验证。
-
-若要将 iOS/iPadOS 应用配置为使用 SSO 和插件，在 iOS/iPadOS 配置文件中添加应用捆绑包标识符（“设备” > “配置文件” > “创建配置文件” > “iOS/iPadOS”[针对平台] >“设备功能”[针对配置文件] >“单一登录应用扩展” > “Microsoft Azure AD”[针对 SSO 应用扩展类型] >“应用捆绑包 ID”）。
-
-若要查看可配置的当前 SSO 应用扩展设置，请参阅[单一登录应用扩展](../configuration/ios-device-features-settings.md#single-sign-on-app-extension)。
-
-适用于：
-- iOS/iPadOS
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
@@ -155,9 +111,6 @@ Intune 设备详细信息日志将在“报告” > “Log Analytics”中提供
 
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>将软件更新部署到 macOS 设备 <!-- 3194876 -->
 你将能够把软件更新部署到 macOS 设备组。 此功能包括关键更新、固件更新、配置文件更新和其他更新。 你将能够在下一次设备签入时发送更新，或选择每周计划在你设置的时间范围内外部署更新。 当你想要在非标准工作时间更新设备时，或者当支持人员已满员时，这会很有帮助。 你还将获得所有已部署更新的 macOS 设备的详细报告。 可以按设备向下钻取报告，以查看特定更新的状态。
-
-### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322---"></a>删除 Apple VPP 令牌之前撤销的关联许可证<!--6195322 -->
-在将来的更新中，当你在 Microsoft Endpoint Manager 中删除 Apple VPP 令牌时，与该令牌关联的所有 Intune 分配的许可证将在删除之前自动撤销。
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -192,13 +145,6 @@ Microsoft Defender ATP 中的威胁和漏洞管理 (TVM) 发现设备上配置�
 不久，Microsoft Defender ATP 可能会引发具有漏洞详细信息的 Endpoint Manager 安全任务（“Endpoint Manager” > “终结点安全性” > “安全任务”），并显示受影响的设备。 IT 管理员可以接受安全任务，并部署所需的配置。 
 
 有关安全任务的详细信息，请参阅[使用 Intune 修正由 Microsoft Defender ATP 标识的漏洞](../protect/atp-manage-vulnerabilities.md)。
-
-### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119----"></a>终结点安全性防病毒策略排除项的更改<!--5583940, 6018119  -->
-我们引入了两项更改，用于管理配置为终结点安全性防病毒策略一部分的 Microsoft Defender 防病毒排除项列表。 （“终结点安全性” > “防病毒” > “创建策略” > “Windows 10 及更高版本”[针对平台]）。 这两项更改有助于防止策略之间发生冲突，并且存在冲突的现有策略将不再与排除项列表冲突：
-
-- 首先，我们要为 Windows 10 及更高版本添加新的配置文件类型：Microsoft Defender 防病毒排除项。  这一新的配置文件类型仅包括指定 Defender 进程列表的设置、文件扩展名以及不希望 Microsoft Defender 扫描的文件夹。 这可以通过将排除项列表与其他策略配置分离来帮助简化排除项列表的管理。
-- 第二项更改是，根据应用于特定用户或设备的单个策略，在不同配置文件中定义的排除项列表将合并为每个设备或用户的单个排除项列表。 例如，如果针对具有三个不同策略的用户，则这三个策略中的排除项列表将合并为 Microsoft Defender 防病毒排除项的单一超集，然后将其应用于用户。 此合并包括正在添加的新配置文件类型的排除项列表，以及在 Microsoft Defender 防病毒配置文件中配置的任何现有策略的排除项列表。
-
 
 
 <!-- ***********************************************-->

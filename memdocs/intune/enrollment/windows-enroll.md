@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988908"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820589"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>设置 Windows 设备的注册
 
@@ -123,7 +123,7 @@ Azure Active Directory 具有不同的 CNAME，适用于 iOS/iPadOS、Android �
 
 | 类型 | 主机名 | 指向 | TTL |
 | --- | --- | --- | --- |
-| 名称 | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 小时|
+| CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 小时|
 
 有关设备注册的详细信息，请参阅[使用 Azure 门户管理设备标识](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 

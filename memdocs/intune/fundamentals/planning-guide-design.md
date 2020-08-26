@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179564"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663236"
 ---
 # <a name="create-a-design"></a>创建设计
 
@@ -296,8 +296,8 @@ Intune 支持公司拥有的设备和个人设备。 如果设备由设备注册
 
 | **类型** | **配置文件名称** | **设备平台** | **用例** |   
 |:---:|:---:|:---:|:---:|
-| 根 CA | 企业根 CA | Android、iOS/iPadOS、Windows 移动版 | 公司、BYOD  |                                                           
-| SCEP | 用户证书 | Android、iOS/iPadOS、Windows 移动版 | 公司、BYOD |                                                           
+| 根 CA | 企业根 CA | Android、iOS/iPadOS | 公司、BYOD  |                                                           
+| SCEP | 用户证书 | Android、iOS/iPadOS | 公司、BYOD |                                                           
 
 
 可[下载以上表格的模板](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)来确定证书配置文件需求。
