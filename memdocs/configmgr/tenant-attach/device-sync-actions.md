@@ -10,16 +10,16 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bac86ca5a74d35b64e211936806ef1735f4e0eea
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700399"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970458"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft 终结点管理器租户附加：设备同步和设备操作
 <!--3555758 live 3/4/2020-->
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 Microsoft 将 Configuration Manager 和 Intune 组合为单个控制台，称为“Microsoft Endpoint Manager 管理中心”。
 
@@ -39,6 +39,8 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 M
 ## <a name="internet-endpoints"></a>Internet 终结点
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
+
+服务连接点与这些终结点建立了长时间的传出连接。 验证用于服务连接点的代理未超时传出连接的速度。 建议在3分钟内连接到这些 internet 终结点。 <!--7820969-->
 
 ## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> 启用共同管理时启用设备上传
 
