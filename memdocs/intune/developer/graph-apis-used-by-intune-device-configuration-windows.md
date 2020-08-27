@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 737301d8171cd123224017a32c03db8365f4a90c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eb30db6043a1b2f02db8baa93f324fa38449769c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364742"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915647"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Intune 使用的图形 API 以及匹配的 Windows 10 CSP
 
-Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/resources/intune-graph-overview)（打开另一个文档站点）配置运行 Windows 10 和更高版本的设备（**Intune** > **设备配置**）。 图形 API 使用配置服务提供程序（Csp）来读取、设置、更改和/或删除设备上的配置设置。
+Microsoft Intune 使用[图形 API 实体](/graph/api/resources/intune-graph-overview) (打开另一个文档站点) ，以配置**Intune**  >  运行 Windows 10 和更高版本 (Intune**设备配置**) 的设备。 图形 API 使用配置服务提供程序 (Csp) 读取、设置、更改和/或删除设备上的配置设置。
 
 此列表适用于：
 
@@ -37,23 +37,23 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ## <a name="windows-10-csps"></a>Windows 10 Csp
 
-有关 Windows 10 配置服务提供程序的详细信息，请参阅[配置服务提供程序参考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)（打开其他文档站点）。
+有关 Windows 10 配置服务提供程序的详细信息，请参阅 [配置服务提供程序参考](/windows/client-management/mdm/configuration-service-provider-reference) (打开另一文档网站) 。
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>将属性图形 API 到 CSP 映射
 
 以下列表显示了 Microsoft Intune 用于 Windows 10 设备配置的大部分图形 API 实体。 它还显示相应的 Windows 10 CSP 和偏移 URI。
 
-若要查看 Windows 10 的版本，请使用 Windows 10[配置服务提供商参考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)（打开其他文档站点）。
+若要查看 Windows 10 版本的应用，请使用 Windows 10 [配置服务提供程序参考](/windows/client-management/mdm/configuration-service-provider-reference) (打开其他文档站点) 。
 
-### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
+### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration 
 **CSP**：./Device/Vendor/MSFT/WindowsLicensing  
 **偏移 URI**：/UpgradeEditionWithLicense
 
-### <a name="editionupgradeconfigurationlicensetype"></a>EditionUpgradeConfiguration.LicenseType 
+### <a name="editionupgradeconfigurationlicensetype"></a>EditionUpgradeConfiguration. LicenseType 
 **CSP**：./Device/Vendor/MSFT/WindowsLicensing  
 **偏移 URI**：/LicenseKeyType
 
-### <a name="editionupgradeconfigurationproductkey"></a>EditionUpgradeConfiguration.ProductKey 
+### <a name="editionupgradeconfigurationproductkey"></a>EditionUpgradeConfiguration. ProductKey 
 **CSP**：./Device/Vendor/MSFT/WindowsLicensing  
 **偏移 URI**：/UpgradeEditionWithProductKey
 
@@ -65,7 +65,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 **CSP**：./Vendor/MSFT/SharedPC  
 **OFFSET URI**：/DeletionPolicy、/DiskLevelCaching、/InactiveThreshold、/DiskLevelDeletion
 
-### <a name="sharedpcconfigurationaccountmanagerpolicy-windows-holographic-for-business-edition-targeted-devices"></a>SharedPCConfiguration. AccountManagerPolicy （Windows 全息 for Business edition 目标设备） 
+### <a name="sharedpcconfigurationaccountmanagerpolicy-windows-holographic-for-business-edition-targeted-devices"></a>SharedPCConfiguration. AccountManagerPolicy (Windows 全息 for Business edition 目标设备)  
 **CSP**：./Vendor/MSFT/AccountManagement  
 **OFFSET URI**：/DeletionPolicy、/StorageCapacityStartDeletion、/StorageCapacityStopDeletion、/ProfileInactivityThreshold
 
@@ -93,7 +93,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 **CSP**：./Vendor/MSFT/SharedPC  
 **偏移 URI**：/SignInOnResume
 
-### <a name="sharedpcconfigurationenabled"></a>SharedPCConfiguration.Enabled 
+### <a name="sharedpcconfigurationenabled"></a>SharedPCConfiguration 已启用 
 **CSP**：./Vendor/MSFT/SharedPC  
 **偏移 URI**：/EnableSharedPCMode
 
@@ -109,7 +109,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 **CSP**：./Vendor/MSFT/SharedPC  
 **偏移 URI**：/KioskModeAUMID
 
-### <a name="sharedpcconfigurationlocalstorage"></a>SharedPCConfiguration.LocalStorage 
+### <a name="sharedpcconfigurationlocalstorage"></a>SharedPCConfiguration. LocalStorage 
 **CSP**：./Vendor/MSFT/SharedPC  
 **偏移 URI**：/RestrictLocalStorage
 
@@ -258,7 +258,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderEmailContentExecutionType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
 **CSP**：./DEVICE/VENDOR/MSFT/POLICY **Offset URI**：/Config/ExploitGuard/ExploitProtectionSettings
@@ -283,7 +283,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunchtype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunchType
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocess"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcess 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -291,7 +291,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcessType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjection"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjection 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -299,7 +299,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjectionType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType 
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、 
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32imports"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32Imports 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -307,11 +307,11 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32importstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32ImportsType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdefenderpreventcredentialstealingtype"></a>Windows10EndpointProtectionConfiguration.DefenderPreventCredentialStealingType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdefenderprocesscreation"></a>Windows10EndpointProtectionConfiguration.DefenderProcessCreation 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -331,7 +331,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptDownloadedPayloadExecutionType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocode"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCode 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -339,7 +339,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocodetype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCodeType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
 **CSP**：./DEVICE/VENDOR/MSFT/POLICY **Offset URI**：/Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
@@ -414,7 +414,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedUSBProcessType 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES （CSP/Configuration 需要图形属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/DefenderUntrustedUSBProcessType
+**偏移 URI**：/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/Configuration 需要 Graph 属性： Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、windows10endpointprotection/defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection/defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection、defenderUntrustedUSBProcessType、、
 
 ### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -565,7 +565,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerauthenticationlevel"></a>Windows10EndpointProtectionConfiguration.LanManagerAuthenticationLevel 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_LANManagerAuthenticationLevel
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ LANManagerAuthenticationLevel
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationdisableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration.LanManagerWorkstationDisableInsecureGuestLogons 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -577,195 +577,195 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratoraccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorAccountName 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_RenameAdministratorAccount
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ RenameAdministratorAccount
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratorelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorElevationPromptBehavior
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForAdministrators
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ BehaviorOfTheElevationPromptForAdministrators
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowanonymousenumerationofsamaccountsandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowpku2uauthenticationrequests"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowPKU2UAuthenticationRequests 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_AllowPKU2UAuthenticationRequests
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ AllowPKU2UAuthenticationRequests
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanager"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanagerhelperbool"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowsystemtobeshutdownwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Shutdown\_AllowSystemToBeShutDownWithoutHavingToLogOn
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Shutdown \_ AllowSystemToBeShutDownWithoutHavingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationElevation 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_AllowUIAccessApplicationsToPromptForElevation
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ AllowUIAccessApplicationsToPromptForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationsforsecurelocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowundockwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUndockWithoutHavingToLogon 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices\_AllowUndockWithoutHavingToLogon
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices \_ AllowUndockWithoutHavingToLogon
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockmicrosoftaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockMicrosoftAccounts 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_BlockMicrosoftAccounts
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ BlockMicrosoftAccounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremotelogonwithblankpassword"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteLogonWithBlankPassword 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremoteopticaldriveaccess"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteOpticalDriveAccess 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices\_RestrictCDROMAccessToLocallyLoggedOnUserOnly
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices \_ RestrictCDROMAccessToLocallyLoggedOnUserOnly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockusersinstallingprinterdrivers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockUsersInstallingPrinterDrivers 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices\_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices \_ PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclearvirtualmemorypagefile"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClearVirtualMemoryPageFile 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Shutdown\_ClearVirtualMemoryPageFile
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Shutdown \_ ClearVirtualMemoryPageFile
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientDigitallySignCommunicationsAlways 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsAlways
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ DigitallySignCommunicationsAlways
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientsendunencryptedpasswordtothirdpartysmbservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_SendUnencryptedPasswordToThirdPartySMBServers
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ SendUnencryptedPasswordToThirdPartySMBServers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdetectapplicationinstallationsandpromptforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_DetectApplicationInstallationsAndPromptForElevation
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ DetectApplicationInstallationsAndPromptForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableAdministratorAccount 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_EnableAdministratorAccountStatus
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ EnableAdministratorAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableclientdigitallysigncommunicationsifserveragrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsIfServerAgrees
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ DigitallySignCommunicationsIfServerAgrees
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableGuestAccount 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ EnableGuestAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsAlways
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer \_ DigitallySignCommunicationsAlways
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsifclientagrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsIfClientAgrees
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer \_ DigitallySignCommunicationsIfClientAgrees
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotallowanonymousenumerationofsamaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSAMAccounts
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSAMAccounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotrequirectrlaltdel"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotRequireCtrlAltDel 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotRequireCTRLALTDEL
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotRequireCTRLALTDEL
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotstorelanmanagerhashvalueonnextpasswordchange"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_DoNotStoreLANManagerHashValueOnNextPasswordChange
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ DoNotStoreLANManagerHashValueOnNextPasswordChange
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableAdministratorAccount 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_EnableAdministratorAccountStatus
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ EnableAdministratorAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableGuestAccount 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ EnableGuestAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsformatandejectofremovablemediaalloweduser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices\_AllowedToFormatAndEjectRemovableMedia
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Devices \_ AllowedToFormatAndEjectRemovableMedia
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsguestaccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsGuestAccountName 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts\_RenameGuestAccount
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/Accounts \_ RenameGuestAccount
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshidelastsignedinuser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideLastSignedInUser 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayLastSignedIn
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotDisplayLastSignedIn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshideusernameatsignin"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideUsernameAtSignIn 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayUsernameAtSignIn
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotDisplayUsernameAtSignIn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationdisplayedonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationDisplayedOnLockScreen 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DisplayUserInformationWhenTheSessionIsLocked
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationshownonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationShownOnLockScreen 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DisplayUserInformationWhenTheSessionIsLocked
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetext"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageText 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTextForUsersAttemptingToLogOn
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MessageTextForUsersAttemptingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetitle"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageTitle 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTitleForUsersAttemptingToLogOn
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MessageTitleForUsersAttemptingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimit"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimit 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MachineInactivityLimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimitinminutes"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimitInMinutes 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MachineInactivityLimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedclients"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedClients
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ MinimumSessionSecurityForNTLMSSPBasedClients
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedServers
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ MinimumSessionSecurityForNTLMSSPBasedServers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsonlyelevatesignedexecutables"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsOnlyElevateSignedExecutables 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateExecutableFilesThatAreSignedAndValidated
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ OnlyElevateExecutableFilesThatAreSignedAndValidated
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsrestrictanonymousaccesstonamedpipesandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictAnonymousAccessToNamedPipesAndShares
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictAnonymousAccessToNamedPipesAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionssmartcardremovalbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSmartCardRemovalBehavior 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_SmartCardRemovalBehavior
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ SmartCardRemovalBehavior
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsstandarduserelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsStandardUserElevationPromptBehavior 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForStandardUsers
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ BehaviorOfTheElevationPromptForStandardUsers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsswitchtosecuredesktopwhenpromptingforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_SwitchToTheSecureDesktopWhenPromptingForElevation
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ SwitchToTheSecureDesktopWhenPromptingForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmode"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalMode 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_UseAdminApprovalMode
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ UseAdminApprovalMode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmodeforadministrators"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalModeForAdministrators 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_RunAllAdministratorsInAdminApprovalMode
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ RunAllAdministratorsInAdminApprovalMode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsvirtualizefileandregistrywritefailurestoperuserlocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations 
 **CSP**：./Vendor/MSFT/Policy  
-**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl\_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+**偏移 URI**：/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ VirtualizeFileAndRegistryWriteFailuresToPerUserLocations
 
 ### <a name="windows10endpointprotectionconfigurationnetworkicmpredirectsoverrideospfgeneratedroutes"></a>Windows10EndpointProtectionConfiguration.NetworkIcmpRedirectsOverrideOspfGeneratedRoutes 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -821,7 +821,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientbasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientBasicAuthentication 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/RemoteManagement/AllowBasicAuthentication\_客户端
+**偏移 URI**：/Config/RemoteManagement/AllowBasicAuthentication \_ 客户端
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientdigestauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientDigestAuthentication 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -829,11 +829,11 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientUnencryptedTraffic 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/RemoteManagement/AllowUnencryptedTraffic\_客户端
+**偏移 URI**：/Config/RemoteManagement/AllowUnencryptedTraffic \_ 客户端
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicebasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceBasicAuthentication 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/RemoteManagement/AllowBasicAuthentication\_服务
+**偏移 URI**：/Config/RemoteManagement/AllowBasicAuthentication \_ 服务
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicestoringrunascredentials"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceStoringRunAsCredentials 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -841,7 +841,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementserviceunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceUnencryptedTraffic 
 **CSP**：./Device/Vendor/MSFT/Policy  
-**偏移 URI**：/Config/RemoteManagement/AllowUnencryptedTraffic\_服务
+**偏移 URI**：/Config/RemoteManagement/AllowUnencryptedTraffic \_ 服务
 
 ### <a name="windows10endpointprotectionconfigurationrpcunauthenticatedclientoptions"></a>Windows10EndpointProtectionConfiguration.RpcUnauthenticatedClientOptions 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -1030,7 +1030,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 **偏移 URI**：/Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
 
 ### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
-**CSP**： n/a 图形 API 仅调用**偏移 URI**： n/a 图形 API 调用
+**CSP**： n/a 图形 API 仅调用 **偏移 URI**： n/a 图形 API 调用
 
 ### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
 **CSP**：./Vendor/MSFT/Policy  
@@ -2697,7 +2697,7 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 **CSP**：./Vendor/MSFT/SurfaceHub  
 **偏移 URI**：/MaintenanceHoursSimple/Hours/Duration
 
-### <a name="windows10teamgeneralconfigurationmaintenancewindowstarttime"></a>Windows10TeamGeneralConfiguration.MaintenanceWindowStartTime 
+### <a name="windows10teamgeneralconfigurationmaintenancewindowstarttime"></a>Windows10TeamGeneralConfiguration. MaintenanceWindowStartTime 
 **CSP**：./Vendor/MSFT/SurfaceHub  
 **偏移 URI**：/MaintenanceHoursSimple/Hours/StartTime
 
@@ -2926,13 +2926,13 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 **偏移 URI**：/Config/Update/PauseFeatureUpdatesStartTime
 
 ### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
-**CSP**：不图形 API 仅限**偏移量 URI**：仅限 n/a-图形 API
+**CSP**：不图形 API 仅限 **偏移量 URI**：仅限 n/a-图形 API
 
 ### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesWillBeRolledBack 
-**CSP**：不图形 API 仅限**偏移量 URI**：仅限 n/a-图形 API
+**CSP**：不图形 API 仅限 **偏移量 URI**：仅限 n/a-图形 API
 
 ### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
-**CSP**：不图形 API 仅限**偏移量 URI**：仅限 n/a-图形 API
+**CSP**：不图形 API 仅限 **偏移量 URI**：仅限 n/a-图形 API
 
 ### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration.InstallationSchedule
 **CSP**：./DEVICE/VENDOR/MSFT/POLICY **Offset URI**：/Config/Update/ActiveHoursStart、/Config/Update/ActiveHoursEnd、/Config/Update/ScheduledInstallDay、/Config/Update/ScheduledInstallTime
@@ -2958,10 +2958,10 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 **偏移 URI**：/Config/Update/PauseQualityUpdatesStartTime
 
 ### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
-**CSP**：不图形 API 仅限**偏移量 URI**：仅限 n/a-图形 API
+**CSP**：不图形 API 仅限 **偏移量 URI**：仅限 n/a-图形 API
 
 ### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
-**CSP**：不图形 API 仅限**偏移量 URI**：仅限 n/a-图形 API
+**CSP**：不图形 API 仅限 **偏移量 URI**：仅限 n/a-图形 API
 
 ### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
 **CSP**：./Device/Vendor/MSFT/Policy  
@@ -2987,4 +2987,4 @@ Microsoft Intune 使用[图形 API 实体](https://docs.microsoft.com/graph/api/
 ## <a name="next-steps"></a>后续步骤
 
 - [设备配置概述](../configuration/device-profiles.md)
-- [配置服务提供程序引用](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)（打开另一个文档站点）
+- [配置服务提供程序参考](/windows/client-management/mdm/configuration-service-provider-reference) (打开其他文档站点) 
