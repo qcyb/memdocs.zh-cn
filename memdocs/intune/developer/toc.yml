@@ -1,6 +1,6 @@
 - name: 开发人员指南
   href: index.yml
-- name: 操作方式指南
+- name: 操作指南
   expanded: true
   items:
     - name: 使用 Intune App SDK 保护应用
@@ -74,6 +74,6 @@
         - name: 使用 Azure AD 访问 Microsoft Graph Intune API
           href: intune-graph-apis.md
         - name: Intune API 参考
-          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+          href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
         - name: 用于配置设备的图形 API
           href: graph-apis-used-by-intune-device-configuration-windows.md
