@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: CMPivot 示例脚本
       href: cmpivot-samples-attached.md
+- name: 租户附加设备的终结点安全（预览）
+  items:
+    - name: 启用终结点安全
+      href: atp-onboard.md
+    - name: 创建和部署终结点安全防病毒策略
+      href: deploy-antivirus-policy.md
+    - name: Microsoft Defender 防病毒策略设置
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: 故障排除
   items:
     - name: 租户附加和设备操作

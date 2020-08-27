@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: 防火墙规则迁移
           href: endpoint-security-firewall-rule-tool.md
+        - name: 租户附加
+          href: tenant-attach-intune.md
         - name: 加密磁盘
           items:
             - name: 管理 BitLocker 策略
@@ -308,8 +310,10 @@
           items:
             - name: macOS Defender 防病毒设置
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: Windows 10 Microsoft Defender 防病毒设置
+            - name: Windows 10 Defender 防病毒设置
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: 租户附加 Defender 防病毒设置
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Windows 安全体验设置
               href: antivirus-security-experience-windows-settings.md
         - name: 磁盘加密配置文件设置
