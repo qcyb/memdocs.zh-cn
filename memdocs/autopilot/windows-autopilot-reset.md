@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 8388febead5953fd6c76e7e40571d3b2e1b91e4d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: e084663527d48c83d42d426792da0bedddd35942
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756109"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907925"
 ---
 # <a name="windows-autopilot-reset"></a>Windows Autopilot 重置
 
@@ -55,7 +55,7 @@ Windows Autopilot Reset 支持两种方案：
 
 **适用于： Windows 10，版本1709及更高版本**
 
-需要 Intune 服务管理员角色才能执行此任务。  有关详细信息，请参阅[添加用户并授予对 Intune 的管理权限](https://docs.microsoft.com/intune/users-add)。
+需要 Intune 服务管理员角色才能执行此任务。  有关详细信息，请参阅[添加用户并授予对 Intune 的管理权限](/intune/users-add)。
 
 IT 管理员可以执行本地 Windows Autopilot Reset，以快速删除个人文件、应用和设置，并随时从锁定屏幕重置 Windows 10 设备，并将原始设置和管理注册 (Azure Active Directory 和设备管理) ，使设备可供使用。 使用本地 Autopilot 重置时，设备将返回到完全配置或已知 IT 批准状态。
 
@@ -66,7 +66,7 @@ IT 管理员可以执行本地 Windows Autopilot Reset，以快速删除个人�
 
 ### <a name="enable-local-windows-autopilot-reset"></a>启用本地 Windows Autopilot 重置
 
-若要启用本地 Windows Autopilot Reset，必须配置**DisableAutomaticReDeploymentCredentials**策略。 [策略 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialproviders)， **CredentialProviders/DisableAutomaticReDeploymentCredentials**中介绍了此策略。 默认情况下，本地 Windows Autopilot 处于禁用状态。 这可确保不会因意外触发本地 Autopilot 重置。
+若要启用本地 Windows Autopilot Reset，必须配置 **DisableAutomaticReDeploymentCredentials** 策略。 [策略 CSP](/windows/client-management/mdm/policy-csp-credentialproviders)， **CredentialProviders/DisableAutomaticReDeploymentCredentials**中介绍了此策略。 默认情况下，本地 Windows Autopilot 处于禁用状态。 这可确保不会因意外触发本地 Autopilot 重置。
 
 你可以使用以下方法之一设置此策略：
 
@@ -77,7 +77,7 @@ IT 管理员可以执行本地 Windows Autopilot Reset，以快速删除个人�
 
 - Windows 配置设计器
 
-    你可以[使用 Windows 配置设计器](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package)将**运行时设置 > 策略 > CredentialProviders > DisableAutomaticReDeploymentCredentials**设置设置为0，然后创建预配包。
+    你可以 [使用 Windows 配置设计器](/windows/configuration/provisioning-packages/provisioning-create-package) 将 **运行时设置 > 策略 > CredentialProviders > DisableAutomaticReDeploymentCredentials** 设置设置为0，然后创建预配包。
 
 - “设置学校电脑”应用
 
@@ -109,21 +109,21 @@ IT 管理员可以执行本地 Windows Autopilot Reset，以快速删除个人�
 
 执行远程 Windows Autopilot 重置时，可以使用 MDM 服务之类的 Microsoft Intune 来启动重置过程，从而使 IT 员工或其他管理员无需访问每台计算机即可启动该过程。
 
-若要为远程 Windows Autopilot Reset 启用设备，该设备必须是 MDM 管理的并且加入到 Azure AD。 使用[Autopilot self 部署模式](self-deploying.md)注册的设备不支持此功能。
+若要为远程 Windows Autopilot Reset 启用设备，该设备必须是 MDM 管理的并且加入到 Azure AD。 使用 [Autopilot self 部署模式](self-deploying.md)注册的设备不支持此功能。
 
 ### <a name="triggering-a-remote-windows-autopilot-reset"></a>触发远程 Windows Autopilot Reset
 
 若要通过 Intune 触发远程 Windows Autopilot 重置，请执行以下步骤：
  
--   在 Intune 控制台中导航到 "**设备**" 选项卡。 
--   在 "**所有设备**" 视图中，选择目标重置设备，然后单击 "**更多**" 以查看设备操作。 
--   选择**Autopilot "重置**" 以启动重置任务。 
+-   在 Intune 控制台中导航到 " **设备** " 选项卡。 
+-   在 " **所有设备** " 视图中，选择目标重置设备，然后单击 " **更多** " 以查看设备操作。 
+-   选择 **Autopilot "重置** " 以启动重置任务。 
 
 >[!NOTE]
 >对于未运行 Windows 10 版本17672或更高版本的设备，Microsoft Intune 中将不会启用 Autopilot Reset 选项。
 
 >[!IMPORTANT]
->Autopilot 重置功能将保持灰显，**除非**使用 Autopilot 重置设备 (使用全新重置或手动 sysprep 设备) 。
+>Autopilot 重置功能将保持灰显， **除非** 使用 Autopilot 重置设备 (使用全新重置或手动 sysprep 设备) 。
 
 重置完成后，设备将再次可供使用。
  
@@ -131,12 +131,12 @@ IT 管理员可以执行本地 Windows Autopilot Reset，以快速删除个人�
 
 ## <a name="troubleshooting"></a>疑难解答
 
-Windows Autopilot Reset 要求在设备上正确配置和启用[Windows 恢复环境 (WinRE) ](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) 。 如果未对其进行配置和启用，则会报告诸如这样的错误 `Error code: ERROR_NOT_SUPPORTED (0x80070032)` 。
+Windows Autopilot Reset 要求在设备上正确配置和启用 [Windows 恢复环境 (WinRE) ](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) 。 如果未对其进行配置和启用，则会报告诸如这样的错误 `Error code: ERROR_NOT_SUPPORTED (0x80070032)` 。
 
-若要确保启用 WinRE，请使用[REAgentC.exe 工具](https://docs.microsoft.com/windows-hardware/manufacture/desktop/reagentc-command-line-options)运行以下命令：
+若要确保启用 WinRE，请使用 [REAgentC.exe 工具](/windows-hardware/manufacture/desktop/reagentc-command-line-options) 运行以下命令：
 
 ```
 reagentc /enable
 ```
 
-如果在启用 WinRE 后 Windows Autopilot 重置失败，或者如果无法启用 WinRE，请联系[Microsoft 支持部门](https://support.microsoft.com)获取帮助。
+如果在启用 WinRE 后 Windows Autopilot 重置失败，或者如果无法启用 WinRE，请联系 [Microsoft 支持部门](https://support.microsoft.com) 获取帮助。

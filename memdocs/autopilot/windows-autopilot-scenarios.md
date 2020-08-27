@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 063d791b4b2373f195625c996c6b4a1667015ad3
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b8b91e25d01a64cfeee601c898c355111b960b7c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756107"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907868"
 ---
 # <a name="windows-autopilot-scenarios-and-capabilities"></a>Windows Autopilot 方案和功能
 
@@ -27,7 +27,7 @@ ms.locfileid: "87756107"
 
 ## <a name="scenarios"></a>方案
 
-Windows Autopilot 支持不断增长的方案列表，旨在支持常见的组织需求。 这些需求取决于组织的类型，并将其进度转移到 Windows 10 并[过渡到新式管理](https://docs.microsoft.com/windows/client-management/manage-windows-10-in-your-organization-modern-management)。
+Windows Autopilot 支持不断增长的方案列表，旨在支持常见的组织需求。 这些需求取决于组织的类型，并将其进度转移到 Windows 10 并 [过渡到新式管理](/windows/client-management/manage-windows-10-in-your-organization-modern-management)。
 
 本指南中介绍了以下 Windows Autopilot 方案：
 
@@ -49,9 +49,9 @@ Windows Autopilot 支持不断增长的方案列表，旨在支持常见的组�
 
 ### <a name="windows-autopilot-is-self-updating-during-oobe"></a>Windows Autopilot 在 OOBE 期间自行更新
 
-从 Windows 10 开始，版本1903、Autopilot 功能和关键更新将在设备连接到网络后，在 OOBE 期间自动开始下载，并在[关键驱动程序和 Windows 零天修补程序 (ZDP) 更新](https://docs.microsoft.com/windows-hardware/customize/desktop/windows-updates-during-oobe)已完成。 用户或 IT 管理员无法选择退出这些 Autopilot 更新，因为 Windows Autopilot 部署需要它们才能正常运行。  Windows 将提醒用户设备正在检查、下载和安装更新。
+从 Windows 10 开始，版本1903、Autopilot 功能和关键更新将在设备连接到网络后，在 OOBE 期间自动开始下载，并在 [关键驱动程序和 Windows 零天修补程序 (ZDP) 更新](/windows-hardware/customize/desktop/windows-updates-during-oobe) 已完成。 用户或 IT 管理员无法选择退出这些 Autopilot 更新，因为 Windows Autopilot 部署需要它们才能正常运行。  Windows 将提醒用户设备正在检查、下载和安装更新。
 
-有关详细信息，请参阅[Windows Autopilot 更新](autopilot-update.md)。
+有关详细信息，请参阅 [Windows Autopilot 更新](autopilot-update.md) 。
 
 ### <a name="cortana-voiceover-and-speech-recognition-during-oobe"></a>OOBE 期间 Cortana voiceover 和语音识别
 
@@ -61,7 +61,7 @@ Windows Autopilot 支持不断增长的方案列表，旨在支持常见的组�
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-键值为 DWORD， **0** = 禁用， **1** = 已启用。
+键值为 DWORD，  **0** = 禁用， **1** = 已启用。
 
 | 值 | 说明 |
 | --- | --- |
@@ -69,11 +69,11 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 | 1 | 已启用 Cortana voiceover |
 | 无值 | 设备将回退到版本的默认行为 |
 
-若要更改此密钥值，请使用 WCD 工具创建，如[此处](https://docs.microsoft.com/windows/configuration/wcd/wcd-oobe#nforce)所述。
+若要更改此密钥值，请使用 WCD 工具创建，如 [此处](/windows/configuration/wcd/wcd-oobe#nforce)所述。
 
 ### <a name="bitlocker-encryption"></a>BitLocker 加密
 
-在 Windows Autopilot 中，你可以将 BitLocker 加密设置配置为在开始自动加密之前应用。 有关详细信息，请参阅[设置适用于 Autopilot 设备的 BitLocker 加密算法](bitlocker.md)
+在 Windows Autopilot 中，你可以将 BitLocker 加密设置配置为在开始自动加密之前应用。 有关详细信息，请参阅 [设置适用于 Autopilot 设备的 BitLocker 加密算法](bitlocker.md)
 
 ## <a name="related-topics"></a>相关主题
 

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: c89731edddd94da99e114cf98c10547c096ebb53
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252010"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907905"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Windows Autopilot 故障排除
 
@@ -115,7 +115,7 @@ Windows 10 版本1803及更高版本添加了事件日志条目。 可以使用 
 
 从 Autopilot 部署服务收到的 Autopilot 配置文件设置存储在设备的注册表中。 此信息可在 **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**上找到。 可用的注册表项包括：
 
-| 值 | 描述 |
+| 值 | 说明 |
 |-------|-------------|
 | AadTenantId | 用户登录到的 Azure AD 租户的 GUID。 如果此条目与用于注册设备的租户不匹配，则用户会收到错误。 |
 | CloudAssignedTenantDomain | 已注册设备的 Azure AD 租户，例如 "contosomn.onmicrosoft.com"。 如果设备未注册到 Autopilot，此值将为空。 |
@@ -126,7 +126,7 @@ Windows 10 版本1803及更高版本添加了事件日志条目。 可以使用 
 
 ### <a name="windows-10-semi-annual-channel-supported-versions"></a>Windows 10 半年频道支持的版本
 
-在运行 [受支持版本](https://docs.microsoft.com/windows/release-information/) 的 Windows 10 半年频道的设备上，可以使用 ETW 跟踪从 Autopilot 和相关组件获取详细信息。 可以使用 Windows 性能分析器或类似工具查看 ETW 跟踪文件。 有关详细信息，请参阅 [高级疑难解答博客](https://blogs.technet.microsoft.com/mniehaus/2017/12/13/troubleshooting-windows-autopilot-level-300400/)。
+在运行 [受支持版本](/windows/release-information/) 的 Windows 10 半年频道的设备上，可以使用 ETW 跟踪从 Autopilot 和相关组件获取详细信息。 可以使用 Windows 性能分析器或类似工具查看 ETW 跟踪文件。 有关详细信息，请参阅 [高级疑难解答博客](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400)。
 
 ## <a name="troubleshooting-azure-ad-join-issues"></a>解决 Azure AD 联接问题
 
@@ -144,7 +144,7 @@ Windows 10 版本1803及更高版本添加了事件日志条目。 可以使用 
 
 通常会在错误页上报告错误代码80180018，其中标题为 "出现错误"。 此错误表示 MDM 注册失败。
 
-如果 Autopilot 重置失败，则错误会出现 **问题。请使用管理员帐户登录，以了解为何要手动重置**，有关详细信息，请参阅 [排查 Autopilot reset 问题](https://docs.microsoft.com/education/windows/autopilot-reset#troubleshoot-autopilot-reset) 。
+如果 Autopilot 重置失败，则错误会出现 **问题。请使用管理员帐户登录，以了解为何要手动重置**，有关详细信息，请参阅 [排查 Autopilot reset 问题](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) 。
 
 ## <a name="profile-download"></a>配置文件下载
 
@@ -162,9 +162,9 @@ Windows 10 版本1803及更高版本添加了事件日志条目。 可以使用 
 - 按 Shift-F10 打开命令提示符。
 - 输入 **shutdown/r/t 0** 立即重新启动，或 **关闭/s/t 0** 立即关闭。
 
-有关详细信息，请参阅 [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)。
+有关详细信息，请参阅 [Windows 安装程序命令行选项](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)。
 
 ## <a name="related-topics"></a>相关主题
 
 [Windows Autopilot-已知问题](known-issues.md)<br>
-[诊断 Windows 10 中的 MDM 故障](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[诊断 Windows 10 中的 MDM 故障](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

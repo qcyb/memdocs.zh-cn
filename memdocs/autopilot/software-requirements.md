@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 5e449505d9d8a15bab50906ea45dd12482cc27ef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 2eb4f23fbe6126c095f049f36b08adac15c1e02c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253298"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907935"
 ---
 # <a name="windows-autopilot-software-requirements"></a>Windows Autopilot 软件要求
 
@@ -34,7 +34,7 @@ Windows Autopilot 取决于 Windows 10、Azure Active Directory 和 MDM 服务�
 
 ## <a name="software-requirements"></a>软件要求
 
-- 需要 Windows 10 半年频道的 [受支持版本](https://docs.microsoft.com/windows/release-information/) 。 还支持 Windows 10 企业版2019长期服务通道 (LTSC) 。
+- 需要 Windows 10 半年频道的 [受支持版本](/windows/release-information/) 。 还支持 Windows 10 企业版2019长期服务通道 (LTSC) 。
 - 支持以下版本：
   - Windows 10 专业版
   - Windows 10 专业教育版
@@ -49,4 +49,3 @@ Windows Autopilot 取决于 Windows 10、Azure Active Directory 和 MDM 服务�
 ## <a name="next-steps"></a>后续步骤
 
 [Windows Autopilot 网络连接要求](networking-requirements.md)
-

@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 911ff589acb5d215931dd4a2e72a05bff760a533
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: c8bf506d0b9c7285087999967dd188122494661d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253302"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907995"
 ---
 # <a name="windows-autopilot-licensing-requirements"></a>Windows Autopilot 许可要求
 
@@ -36,17 +36,16 @@ Windows Autopilot 取决于 Windows 10 和 Azure Active Directory 中提供的�
 - [Microsoft 365 学术 A1、A3 或 A5 订阅](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
 - [Microsoft 365 企业版 E3 或 E5 订阅](https://www.microsoft.com/microsoft-365/enterprise)，其中包括所有 Windows 10、Office 365 和 EM + S 功能 (Azure AD 和 Intune) 。
 - [企业移动性 + 安全性 E3 或 E5 订阅](https://www.microsoft.com/cloud-platform/enterprise-mobility-security)，其中包括所有所需的 Azure AD 和 Intune 功能。
-- [Intune for Education 订阅](https://docs.microsoft.com/intune-education/what-is-intune-for-education)，其中包括所有所需的 Azure AD 和 Intune 功能。
+- [Intune for Education 订阅](/intune-education/what-is-intune-for-education)，其中包括所有所需的 Azure AD 和 Intune 功能。
 - [Azure Active Directory Premium P1 或 P2](https://azure.microsoft.com/services/active-directory/) 和 [Microsoft Intune 订阅](https://www.microsoft.com/cloud-platform/microsoft-intune) (或其他 MDM 服务) 。
 
 > [!NOTE]
-> 即使使用 Microsoft 365 订阅，仍需要向 [用户分配 Intune 许可证](https://docs.microsoft.com/intune/fundamentals/licenses-assign)。
+> 即使使用 Microsoft 365 订阅，仍需要向 [用户分配 Intune 许可证](/intune/fundamentals/licenses-assign)。
 
 此外，还建议使用以下 (但不是必需的) ：
 - [Microsoft 365 适用于企业的应用](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0)，可通过 Intune (或其他 MDM 服务) 轻松部署。
-- [Windows 订阅激活](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-subscription-activation)，将设备从 Windows 10 专业版自动单步执行到 Windows 10 企业版。
+- [Windows 订阅激活](/windows/deployment/windows-10-enterprise-subscription-activation)，将设备从 Windows 10 专业版自动单步执行到 Windows 10 企业版。
 
 **后续步骤**
 
 [Windows Autopilot 配置要求](configuration-requirements.md)
-

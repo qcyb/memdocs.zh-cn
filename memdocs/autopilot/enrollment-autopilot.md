@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce002acf118fb39712f8195247f556b01faa830f
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: d29830b919393c247ed2696eb9e55adc114015aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865517"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908511"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>使用 Windows Autopilot 在 Intune 中注册 Windows 设备
 
@@ -36,13 +36,13 @@ Windows Autopilot 简化了 Intune 中的设备注册。 生成和维护自定�
 - [现有设备的 Autopilot](existing-devices.md) 使你能够轻松地将最新版本的 Windows 10 部署到现有设备
 - [用户驱动的模式](user-driven.md)（适用于传统用户）。
 
-本文介绍如何为 Windows 电脑设置 Autopilot。 有关 Autopilot 和 Hololens 的详细信息，请参阅[适用于 HoloLens 2 的 Windows Autopilot](https://docs.microsoft.com/hololens/hololens2-autopilot)。
+本文介绍如何为 Windows 电脑设置 Autopilot。 有关 Autopilot 和 Hololens 的详细信息，请参阅[适用于 HoloLens 2 的 Windows Autopilot](/hololens/hololens2-autopilot)。
 
 ## <a name="prerequisites"></a>必备条件
 
 - [Intune 订阅](../intune/fundamentals/licenses.md)
 - [已启用 Windows 自动注册](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
-- [Azure Active Directory Premium 订阅](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium 订阅](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>如何获取用于在 Intune 中导入的 CSV
 
@@ -93,7 +93,7 @@ Windows Autopilot 简化了 Intune 中的设备注册。 生成和维护自定�
 
 ## <a name="create-an-autopilot-deployment-profile"></a>创建 Autopilot 部署配置文件
 Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多可创建 350 个配置文件。
-1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，依次选择“设备” > “Windows” > “Windows 注册” > “部署配置文件” > “创建配置文件” > “Windows 电脑”或“HoloLens”      。 本文介绍如何为 Windows 电脑设置 Autopilot。 有关 Autopilot 和 Hololens 的详细信息，请参阅[适用于 HoloLens 2 的 Windows Autopilot](https://docs.microsoft.com/hololens/hololens2-autopilot)。
+1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，依次选择“设备” > “Windows” > “Windows 注册” > “部署配置文件” > “创建配置文件” > “Windows 电脑”或“HoloLens”      。 本文介绍如何为 Windows 电脑设置 Autopilot。 有关 Autopilot 和 Hololens 的详细信息，请参阅[适用于 HoloLens 2 的 Windows Autopilot](/hololens/hololens2-autopilot)。
 2. 在“基本信息”页上，键入名称和可选说明  。
 
     ![“基本信息”页的屏幕截图](media/enrollment-autopilot/create-profile-basics.png)
@@ -114,12 +114,12 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
     - **最终用户许可协议(EULA)** ：（Windows 10 版本 1709 或更高版本）选择是否向用户显示 EULA。
     - **隐私设置**：选择是否向用户显示隐私设置。
     >[!IMPORTANT]
-    >“诊断数据”设置的默认值因 Windows 版本而异。 对于运行 Windows 10 版本 1903 的设备，默认值在全新体验期间设置为“完全”。 有关详细信息，请参阅 [Windows 诊断数据](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
+    >“诊断数据”设置的默认值因 Windows 版本而异。 对于运行 Windows 10 版本 1903 的设备，默认值在全新体验期间设置为“完全”。 有关详细信息，请参阅 [Windows 诊断数据](/windows/privacy/windows-diagnostic-data) <br>
     
-    - **隐藏更改帐户选项（需要 Windows 10 版本 1809 或更高版本）** ：选择“隐藏”可防止在公司登录和域错误页上显示更改帐户选项。 要执行此操作，需[在 Azure Active Directory 中配置公司品牌](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding)。
+    - **隐藏更改帐户选项（需要 Windows 10 版本 1809 或更高版本）** ：选择“隐藏”可防止在公司登录和域错误页上显示更改帐户选项。 要执行此操作，需[在 Azure Active Directory 中配置公司品牌](/azure/active-directory/fundamentals/customize-branding)。
     - **用户帐户类型**：选择用户的帐户类型（“管理员”或“标准”用户 ）。 我们允许联接设备的用户通过加入本地管理员组，从而成为本地管理员。 我们不会将用户作为设备上的默认管理员。
     - **允许 White Glove OOBE**（需要 Windows 10 版本 1903 或更高版本；[其他物理要求](white-glove.md#prerequisites)）：选择“是”以允许 White Glove 支持。
-    - **应用设备名称模板**（需要 Windows 10 版本 1809 或更高版本和 Azure AD 联接类型）：选择“是”可创建模板，以便在注册期间命名设备时使用。 名称长度必须在 15 个字符或以下，可以包含字母、数字和连字符。 名称不能全为数字。 使用 [%SERIAL% 宏](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp)添加特定于硬件的序列号。 或者使用 [%RAND:x% 宏](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp)，添加随机数字字符串，其中 x 等于要添加的位数。 只能为[域加入配置文件](../intune/enrollment/windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)中的混合设备提供前缀。 
+    - **应用设备名称模板**（需要 Windows 10 版本 1809 或更高版本和 Azure AD 联接类型）：选择“是”可创建模板，以便在注册期间命名设备时使用。 名称长度必须在 15 个字符或以下，可以包含字母、数字和连字符。 名称不能全为数字。 使用 [%SERIAL% 宏](/windows/client-management/mdm/accounts-csp)添加特定于硬件的序列号。 或者使用 [%RAND:x% 宏](/windows/client-management/mdm/accounts-csp)，添加随机数字字符串，其中 x 等于要添加的位数。 只能为[域加入配置文件](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)中的混合设备提供前缀。 
     - **语言(区域)** \*：选择要对设备使用的语言。 仅当选择“自部署”作为“部署模式”时，此选项才可用。
     - **自动配置键盘**\*：如果选择了“语言(区域)”，请选择“是”以跳过键盘选择页。 仅当选择“自部署”作为“部署模式”时，此选项才可用。
 8. 选择“下一步”。
@@ -176,7 +176,7 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>将用户分配到特定 Autopilot 设备
 
-可以将用户分配到特定 Autopilot 设备。 进行此分配，进行 Windows 设置时将在[公司品牌](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding)登录页预填充来自 Azure Active Directory 的用户。 它还允许设置自定义问候语名称。 它不会预填充或修改 Windows 登录名。 只有拥有许可证的 Intune 用户才可以用这种方式分配。
+可以将用户分配到特定 Autopilot 设备。 进行此分配，进行 Windows 设置时将在[公司品牌](/azure/active-directory/fundamentals/customize-branding)登录页预填充来自 Azure Active Directory 的用户。 它还允许设置自定义问候语名称。 它不会预填充或修改 Windows 登录名。 只有拥有许可证的 Intune 用户才可以用这种方式分配。
 
 先决条件：配置了 Azure Active Directory 公司门户和 Windows 10 版本 1809 或更高版本。
 
@@ -223,7 +223,7 @@ Autopilot 部署配置文件用于配置 Autopilot 设备。 每个租户最多�
 
 ## <a name="windows-autopilot-for-existing-devices"></a>面向现有设备的 Windows Autopilot
 
-通过 Configuration Manager [使用 Autopilot 为现有设备注册](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)时，可以按交换码 ID 对 Windows 设备进行分组。 交换码 ID 是 Autopilot 配置文件的参数。 [Azure AD 设备属性 enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) 将自动设置为“OfflineAutopilotprofile - \<correlator ID\>”。 如此，即可使用 enrollmentprofileName 属性基于交换码 ID 创建任意 Azure AD 动态组。
+通过 Configuration Manager [使用 Autopilot 为现有设备注册](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)时，可以按交换码 ID 对 Windows 设备进行分组。 交换码 ID 是 Autopilot 配置文件的参数。 [Azure AD 设备属性 enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) 将自动设置为“OfflineAutopilotprofile - \<correlator ID\>”。 如此，即可使用 enrollmentprofileName 属性基于交换码 ID 创建任意 Azure AD 动态组。
 
 >[!WARNING] 
 > 由于在 Intune 中未预先列出交换码 ID，因此设备可能会报告所需的任何交换码 ID。 如果用户创建与 Autopilot 或 Apple ADE 配置文件名称匹配的交换码 ID，设备将基于 enrollmentProfileName 属性添加到任何动态 Azure AD 设备组。 避免此冲突的方法：

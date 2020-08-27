@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b2c9d3b8741fdae30b42aede8f5c7443e35d8bc7
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251956"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907915"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Windows Autopilot 用户驱动模式
 
@@ -41,7 +41,7 @@ Windows Autopilot 用户驱动模式允许配置新的 Windows 10 设备，以�
 
 在全新体验 (OOBE) 的任何其他提示都可以取消;有关可用选项，请参阅 [配置 Autopilot 配置文件](profiles.md) 。
 
-Windows Autopilot 用户驱动模式 Azure Active Directory 和混合 Azure Active Directory 连接的设备支持。 有关这两个联接选项的详细信息，请参阅 [什么是设备标识](https://docs.microsoft.com/azure/active-directory/devices/overview)。
+Windows Autopilot 用户驱动模式 Azure Active Directory 和混合 Azure Active Directory 连接的设备支持。 有关这两个联接选项的详细信息，请参阅 [什么是设备标识](/azure/active-directory/devices/overview)。
 
 用户驱动过程中完成的流程如下所示：
 
@@ -67,7 +67,7 @@ Windows Autopilot 用户驱动模式 Azure Active Directory 和混合 Azure Acti
 
 若要使用 Windows Autopilot 完成用户驱动的部署，请执行以下准备步骤：
 
-1. 请确保将执行用户驱动模式部署的用户可以将设备加入到 Azure Active Directory。 有关详细信息，请参阅 Azure Active Directory 文档中的 " [配置设备设置](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) "。
+1. 请确保将执行用户驱动模式部署的用户可以将设备加入到 Azure Active Directory。 有关详细信息，请参阅 Azure Active Directory 文档中的 " [配置设备设置](/azure/active-directory/device-management-azure-portal#configure-device-settings) "。
 2. 使用所需设置为用户驱动模式创建 Autopilot 配置文件。 在 Microsoft Intune 中，将在创建配置文件时显式选择此模式。 对于业务和合作伙伴中心的 Microsoft Store，用户驱动模式是默认模式，无需选择。
 3. 如果使用 Intune，请在 Azure Active Directory 中创建一个设备组，并将 Autopilot 配置文件分配给该组。
 
@@ -84,7 +84,7 @@ Windows Autopilot 用户驱动模式 Azure Active Directory 和混合 Azure Acti
 
 ## <a name="user-driven-mode-for-hybrid-azure-active-directory-join"></a>混合 Azure Active Directory 联接的用户驱动模式
 
-Windows Autopilot 要求 Azure Active Directory 连接设备。 如果你有本地 Active Directory 环境，则可以将设备加入你的本地域。 要加入设备，你必须将 Autopilot 设备配置为 [混合联接到 Azure Active Directory (Azure AD) ](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)。 
+Windows Autopilot 要求 Azure Active Directory 连接设备。 如果你有本地 Active Directory 环境，则可以将设备加入你的本地域。 要加入设备，你必须将 Autopilot 设备配置为 [混合联接到 Azure Active Directory (Azure AD) ](/azure/active-directory/devices/hybrid-azuread-join-plan)。 
 
 ### <a name="requirements"></a>要求
 
@@ -97,7 +97,7 @@ Windows Autopilot 要求 Azure Active Directory 连接设备。 如果你有本�
 - 设备必须有权访问 Active Directory 域控制器。 它必须连接到组织的网络。 它必须能够解析 AD 域和 AD 域控制器的 DNS 记录。 它必须能够与域控制器进行通信，以便对用户进行身份验证。
 - 设备必须能够访问 Internet，遵循所 [述的 Windows Autopilot 网络要求](networking-requirements.md)。
 - 必须安装 Active Directory 的 Intune 连接器。
- - 注意： Intune 连接器将执行本地 AD join。 因此，用户不需要本地 AD 联接权限。 这假设将连接器 [配置为代表用户执行此操作](https://docs.microsoft.com/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) 。 
+ - 注意： Intune 连接器将执行本地 AD join。 因此，用户不需要本地 AD 联接权限。 这假设将连接器 [配置为代表用户执行此操作](/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) 。 
 - 如果使用代理，必须启用并配置 WPAD 代理设置选项。
 
 **Azure AD 设备加入**：混合 Azure AD 联接过程使用系统上下文来执行设备 Azure AD 加入。 它不受基于用户的 Azure AD 联接权限设置的影响。 默认情况下，所有用户都可以将设备加入 Azure AD。
@@ -145,7 +145,7 @@ Windows Autopilot 要求 Azure Active Directory 连接设备。 如果你有本�
 对于自动连接的 VPN 配置，验证步骤可能会有所不同。
 
 > [!NOTE]
-> Always On VPN 可用于此方案。 有关详细信息，请参阅 [部署 ALWAYS ON VPN](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) 文档。 请注意，Intune 尚未部署所需的每个计算机 VPN 配置文件。 
+> Always On VPN 可用于此方案。 有关详细信息，请参阅 [部署 ALWAYS ON VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) 文档。 请注意，Intune 尚未部署所需的每个计算机 VPN 配置文件。 
 
 若要验证该过程，请确保在 Windows 10 1903 或 Windows 10 1909 上安装了所需的 Windows 10 累积更新。 您可以通过先从下载最新的累积性，在 OOBE 期间手动安装更新 https://catalog.update.microsoft.com 。 执行以下步骤：
 
@@ -163,7 +163,4 @@ Windows Autopilot 要求 Azure Active Directory 连接设备。 如果你有本�
 
 ### <a name="step-by-step-instructions"></a>分步说明
 
-请参阅 [使用 Intune 和 Windows Autopilot 部署混合 Azure AD 加入的设备](https://docs.microsoft.com/intune/windows-autopilot-hybrid)。
-
-
-
+请参阅 [使用 Intune 和 Windows Autopilot 部署混合 Azure AD 加入的设备](/intune/windows-autopilot-hybrid)。

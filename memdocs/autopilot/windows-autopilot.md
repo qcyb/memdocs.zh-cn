@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da15ea9ceae46c9c54858a6be0f724c5d67d22ce
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 8c339e2a55fd8876ce8a144bb72c7c0a37de8346
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252170"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907831"
 ---
 # <a name="overview-of-windows-autopilot"></a>Windows Autopilot 概述
 
@@ -56,7 +56,7 @@ Windows Autopilot 为 IT 用户和最终用户简化了 Windows 设备生命周�
 使用 Windows Autopilot，你可以使用 Windows Autopilot Reset 为新用户快速准备设备。 你还可以在中断/修复方案中使用 "重置" 以快速将设备恢复到业务就绪状态。
 
 借助 Windows Autopilot，你可以：
-* 将设备自动加入到 Azure Active Directory (Azure AD) 或 Active Directory（通过混合 Azure AD 联接）。 有关这两个联接选项之间的差异的详细信息，请参阅 [Azure Active Directory 中的设备管理简介](https://docs.microsoft.com/azure/active-directory/device-management-introduction)。
+* 将设备自动加入到 Azure Active Directory (Azure AD) 或 Active Directory（通过混合 Azure AD 联接）。 有关这两个联接选项之间的差异的详细信息，请参阅 [Azure Active Directory 中的设备管理简介](/azure/active-directory/device-management-introduction)。
 * 自动将设备注册到 MDM 服务（如 Microsoft Intune ([*需要 Azure AD Premium 订阅才能配置*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067)) 。
 * 限制管理员帐户的创建。
 * 根据设备的配置文件创建设备并将其自动分配到配置组。
@@ -72,9 +72,9 @@ Windows Autopilot 为 IT 用户和最终用户简化了 Windows 设备生命周�
 
 ## <a name="requirements"></a>要求
 
-使用 Windows Autopilot 需要 Windows 10 半年频道的 [受支持版本](https://docs.microsoft.com/windows/release-information/) 。 还支持 Windows 10 Enterprise LTSC 2019。 有关详细信息，请参阅 [Windows Autopilot software](software-requirements.md)、 [网络](networking-requirements.md)、 [配置](configuration-requirements.md)和 [许可](licensing-requirements.md) 要求。
+使用 Windows Autopilot 需要 Windows 10 半年频道的 [受支持版本](/windows/release-information/) 。 还支持 Windows 10 Enterprise LTSC 2019。 有关详细信息，请参阅 [Windows Autopilot software](software-requirements.md)、 [网络](networking-requirements.md)、 [配置](configuration-requirements.md)和 [许可](licensing-requirements.md) 要求。
 
 ## <a name="related-topics"></a>相关主题
 
-[使用 Windows Autopilot 在 Intune 中注册 Windows 设备](https://docs.microsoft.com/intune/enrollment-autopilot)<br>
+[使用 Windows Autopilot 在 Intune 中注册 Windows 设备](/intune/enrollment-autopilot)<br>
 [Windows Autopilot 方案和功能](windows-autopilot-scenarios.md)

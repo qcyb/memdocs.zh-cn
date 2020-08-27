@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: d7c92d2e999ffe9a4e503359a81e6422cd24ee30
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4ad59d2891a94147a81450ee3c7157281b24d3df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252020"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908005"
 ---
 # <a name="windows-autopilot---known-issues"></a>Windows Autopilot-已知问题
 
@@ -89,5 +89,5 @@ ms.locfileid: "88252020"
 
 ## <a name="related-topics"></a>相关主题
 
-[诊断 Windows 10 中的 MDM 故障](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[诊断 Windows 10 中的 MDM 故障](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
 [Windows Autopilot 故障排除](troubleshooting.md)

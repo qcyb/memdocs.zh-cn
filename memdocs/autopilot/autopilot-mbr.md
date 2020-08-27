@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 4c8e66e9fb0ac4527f10824332f8ac5ae1646181
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 4ae8ffdf39b7812a869d3a7ef5b5289f46f8369a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756359"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908352"
 ---
 # <a name="windows-autopilot-motherboard-replacement-scenario-guidance"></a>Windows Autopilot 主板更换方案指南
 
@@ -69,11 +69,11 @@ ms.locfileid: "87756359"
 11. 如果先前已将设备分配给用户，请单击 "取消分配用户";如果不是，则此选项将显示为灰色并可忽略
 12. 如果仍选择了未分配的设备，请单击顶部菜单中的 "删除" 按钮以删除此设备
 
-**注意**：这些步骤从 Autopilot 取消注册设备，同时从 Intune 取消注册设备，并从 AAD 脱离设备。  尽管可能只需要从 Autopilot 取消注册设备，但在 Intune 中存在一些需要执行上述所有步骤的方法，这是在设备丢失或无法恢复时，最好的做法是避免在 Autopilot 数据库、Intune 或 AAD 中存在孤立的设备。  如果设备进入不可恢复状态，你可以联系相应的[Microsoft 支持别名](autopilot-support.md)以获得帮助。
+**注意**：这些步骤从 Autopilot 取消注册设备，同时从 Intune 取消注册设备，并从 AAD 脱离设备。  尽管可能只需要从 Autopilot 取消注册设备，但在 Intune 中存在一些需要执行上述所有步骤的方法，这是在设备丢失或无法恢复时，最好的做法是避免在 Autopilot 数据库、Intune 或 AAD 中存在孤立的设备。  如果设备进入不可恢复状态，你可以联系相应的 [Microsoft 支持别名](autopilot-support.md) 以获得帮助。
 
 注销过程需要大约15分钟。  可以通过单击 "同步" 按钮，然后单击 "刷新" 显示，直到设备不再存在。
 
-可在[此处](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-device-group)找到有关从 Intune 注销设备的更多详细信息。
+可在 [此处](/intune/enrollment-autopilot#create-an-autopilot-device-group)找到有关从 Intune 注销设备的更多详细信息。
 
 ### <a name="deregister-from-mpc"></a>从 MPC 取消注册
 
@@ -122,9 +122,9 @@ ms.locfileid: "87756359"
 
 修复技术人员必须登录到已修复的设备，才能捕获新的设备 ID。  假设修复技术人员没有访问客户的登录凭据的权限，则必须按以下步骤重新映像设备，才能获得访问权限：
 
-1. 修复技术人员创建[WinPE 可启动 USB 驱动器](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition)。
+1. 修复技术人员创建 [WinPE 可启动 USB 驱动器](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition)。
 2. 修复技术人员将设备引导到 WinPE。
-3. 修复技术人员将[新的 Windows 映像应用到设备](https://docs.microsoft.com/windows-hardware/manufacture/desktop/work-with-windows-images)。
+3. 修复技术人员将 [新的 Windows 映像应用到设备](/windows-hardware/manufacture/desktop/work-with-windows-images)。
 
     **注意**：理想情况下，应将同一版本的 Windows 重置映像到最初位于设备上的设备上，因此，在设备到达修复时，修复设施和客户之间需要进行某种协调才能捕获此信息。  例如，这可能包括客户将自定义映像发送到 () 的自定义映像。
  
@@ -133,9 +133,9 @@ ms.locfileid: "87756359"
 
 那些可以访问 OA3 工具的修复工具 (是 ADK) 的一部分，它可以使用该工具来捕获4K 硬件哈希 (4K HH) 。
 
-或者，可以通过执行以下步骤，使用[WindowsAutoPilotInfo PowerShell 脚本](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)来捕获 4k HH：
+或者，可以通过执行以下步骤，使用 [WindowsAutoPilotInfo PowerShell 脚本](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) 来捕获 4k HH：
 
-1. 从[PowerShell 库](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)或从命令行安装脚本 (命令行安装如下) 所示。
+1. 从 [PowerShell 库](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) 或从命令行安装脚本 (命令行安装如下) 所示。
 2. 当设备处于完整 OS 或审核模式时，导航到脚本目录并在设备上运行它。 请参阅以下示例。
 
     ```powershell
@@ -148,7 +148,7 @@ ms.locfileid: "87756359"
 
 >如果系统提示你安装 NuGet 程序包，请选择 **"是"**。<br>
 >如果在安装脚本后收到 Get-WindowsAutopilotInfo.ps1 找不到的错误，请验证路径变量中是否存在 C:\Program Files\WindowsPowerShell\Scripts。<br>
->如果安装脚本 cmdlet 失败，请验证是否已将默认 PowerShell 存储库注册 (**register-psrepository**) 或使用**register-psrepository-default-Verbose**注册默认存储库。
+>如果安装脚本 cmdlet 失败，请验证是否已将默认 PowerShell 存储库注册 (**register-psrepository**) 或使用 **register-psrepository-default-Verbose**注册默认存储库。
 
 此脚本创建一个 .csv 文件，其中包含设备信息，包括完整的 4K HH。  保存此文件，以便以后可以访问它。 服务设施将使用此 4K HH 重新注册设备，如下所述。 请确保在保存文件时使用-OutputFile 参数，这样可确保文件格式正确。 不要尝试将命令输出通过管道手动传递给文件。
 
@@ -164,7 +164,7 @@ ms.locfileid: "87756359"
 若要从 Intune 注册 Autopilot 设备，IT 管理员需要：
 1. 登录 Intune。
 2. 导航到 "设备注册" > Windows 注册 > 设备 ">" 导入 "。
-3. 单击 "**导入**" 按钮，上传包含要重新注册的设备的设备 id 的 csv 文件 (设备 id 是此文档前面介绍的 PowerShell 脚本或 OA3 工具捕获的 4k HH) 。
+3. 单击 " **导入** " 按钮，上传包含要重新注册的设备的设备 id 的 csv 文件 (设备 id 是此文档前面介绍的 PowerShell 脚本或 OA3 工具捕获的 4k HH) 。
 
 以下视频概述了如何 (通过 MSfB 重新) 注册设备。<br>
 
@@ -175,7 +175,7 @@ ms.locfileid: "87756359"
 若要从 MPC 重新注册 Autopilot 设备，OEM 或 CSP 将：
 
 1. 登录到 MPC。
-2. 导航到 "客户 > 设备" 页，然后单击 "**添加设备**" 按钮上传 csv 文件。
+2. 导航到 "客户 > 设备" 页，然后单击 " **添加设备** " 按钮上传 csv 文件。
 
 ![device](images/device2.png)<br>
 ![device](images/device3.png)
@@ -194,7 +194,7 @@ ms.locfileid: "87756359"
 
 ![reset](images/reset.png)
 
-不过，由于修复工具缺少用于登录的用户凭据（在这种情况下，他们需要使用其他方法来重置设备的映像，例如[部署映像服务和管理工具](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image)），因此可能无法访问 Windows。
+不过，由于修复工具缺少用于登录的用户凭据（在这种情况下，他们需要使用其他方法来重置设备的映像，例如 [部署映像服务和管理工具](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image)），因此可能无法访问 Windows。
 
 ## <a name="return-the-repaired-device-to-the-customer"></a>将修复的设备返回给客户
 
@@ -217,12 +217,12 @@ ms.locfileid: "87756359"
 - 在捕获新的 4K HH (设备 ID 之前，已修复的设备应在 BIOS 中具有产品密钥 (DPK) preinjected) 
 
 在下表中：<br>
-- 支持的 =**是**：可为 Autopilot 重新启用设备
+- 支持的 = **是**：可为 Autopilot 重新启用设备
 - 支持的 = **No**：无法为 Autopilot 重新启用设备
 
 <table border="1">
 <th>场景<th>支持<th>Microsoft 建议
-<tr><td>通常 (MBR) 的主板更换<td>“是”<td>对于 MBR 方案，建议的操作过程是：
+<tr><td>通常 (MBR) 的主板更换<td>是<td>对于 MBR 方案，建议的操作过程是：
 
 1. 从 Autopilot 程序取消注册 Autopilot 设备
 2. 主板更换
@@ -234,7 +234,7 @@ ms.locfileid: "87756359"
 
 * 如果修复技术人员有权访问客户的登录凭据，则无需重置设备的映像。  从技术上讲，可以成功执行 MBR 和 Autopilot 重新启用，而无需密钥或某些 BIOS 信息 (例如，串行 #、型号名称等 ) ，但这样做只是为了进行测试/教育目的。
 
-<tr><td>如果主板上 (启用了 TPM 芯片，则) 并且只会更换一个内置网卡 () <td>“是”<td>
+<tr><td>如果主板上 (启用了 TPM 芯片，则) 并且只会更换一个内置网卡 () <td>是<td>
 
 1. 取消注册损坏的设备
 2. 更换主板
@@ -247,7 +247,7 @@ ms.locfileid: "87756359"
 9. 已成功启用 Autopilot
 
 <tr><td>如果主板上启用了 TPM 芯片 () 并且第二个网卡 (或未更换为主板的网络接口) <td>否<td>不建议使用此方案，因为它会破坏 Autopilot 体验，因为在 TPM 证明完成后，最终的设备 ID 将不稳定，甚至由于 MAC 地址解析存在歧义，注册可能会产生不正确的结果。
-<tr><td>NIC 卡、HDD 和 WLAN 都在修复之后保持不变的 MBR<td>“是”<td>
+<tr><td>NIC 卡、HDD 和 WLAN 都在修复之后保持不变的 MBR<td>是<td>
 
 1. 取消注册损坏的设备
 2. 将主板 (替换为 BIOS) 中的新的 RDPK preinjected
@@ -261,7 +261,7 @@ ms.locfileid: "87756359"
 
 * 请注意，对于此情况和后续方案，重写旧的设备信息将不包含 TPM 2.0 认可密钥，因为关联的私钥已锁定到 TPM 设备
 
-<tr><td>NIC 卡保持不变，但 HDD 和 WLAN 被替换的 MBR<td>“是”<td>
+<tr><td>NIC 卡保持不变，但 HDD 和 WLAN 被替换的 MBR<td>是<td>
 
 1. 取消注册损坏的设备
 2. 将主板 (替换为 BIOS) 中的新的 RDPK preinjected
@@ -273,7 +273,7 @@ ms.locfileid: "87756359"
 8. 浏览 Autopilot OOBE (customer) 
 9. 已成功启用 Autopilot
 
-<tr><td>NIC 卡和 WLAN 保持不变的 MBR，但会替换 HDD<td>“是”<td>
+<tr><td>NIC 卡和 WLAN 保持不变的 MBR，但会替换 HDD<td>是<td>
 
 1. 取消注册损坏的设备
 2. 将主板 (替换为 BIOS) 中的新的 RDPK preinjected
@@ -285,7 +285,7 @@ ms.locfileid: "87756359"
 8. 浏览 Autopilot OOBE (customer) 
 9. 已成功启用 Autopilot
 
-<tr><td>仅替换为 MB 的 MBR (所有其他部分保持不变) 但新的 MB 是从以前使用的设备中取出的，以前未启用 Autopilot。<td>“是”<td>
+<tr><td>仅替换为 MB 的 MBR (所有其他部分保持不变) 但新的 MB 是从以前使用的设备中取出的，以前未启用 Autopilot。<td>是<td>
 
 1. 取消注册损坏的设备
 2. 将主板 (替换为 BIOS) 中的新的 RDPK preinjected
@@ -297,7 +297,7 @@ ms.locfileid: "87756359"
 8. 浏览 Autopilot OOBE (customer) 
 9. 已成功启用 Autopilot
 
-<tr><td>仅替换为 MB (所有其他部分保持相同的 MBR) 但新的 MB 取自以前使用过 Autopilot 的设备。<td>“是”<td>
+<tr><td>仅替换为 MB (所有其他部分保持相同的 MBR) 但新的 MB 取自以前使用过 Autopilot 的设备。<td>是<td>
 
 1. 取消注册旧设备，将从其获取 MB
 2. 取消注册要修复的已损坏设备 () 
@@ -323,7 +323,7 @@ ms.locfileid: "87756359"
 7. 浏览 Autopilot OOBE (customer) 
 8. Autopilot 无法识别修复的设备
 
-<tr><td>没有 TPM 芯片时的 MBR<td>“是”<td>尽管我们不建议在不使用 TPM 芯片 (的情况下启用 Autopilot 设备（建议对 BitLocker) 使用此功能），但也可以在 "标准用户" 模式 (下启用 Autopilot 设备，而不是在没有 TPM 芯片的自我部署模式) 中启用。  在这种情况下，您可以：
+<tr><td>没有 TPM 芯片时的 MBR<td>是<td>尽管我们不建议在不使用 TPM 芯片 (的情况下启用 Autopilot 设备（建议对 BitLocker) 使用此功能），但也可以在 "标准用户" 模式 (下启用 Autopilot 设备，而不是在没有 TPM 芯片的自我部署模式) 中启用。  在这种情况下，您可以：
 
 1. 取消注册损坏的设备
 2. 更换主板
@@ -335,7 +335,7 @@ ms.locfileid: "87756359"
 8. 浏览 Autopilot OOBE (customer) 
 9. 已成功启用 Autopilot
 
-<tr><td>新的 DPK 在已修复 Autopilot 设备上写入映像，新的 MB 为 MB<td>“是”<td>修复功能会在损坏的设备上替换正常 MB。  MB 不包含 BIOS 中的任何 DPK。  修复设备在 MBR 之后将 DPK 写入映像。  
+<tr><td>新的 DPK 在已修复 Autopilot 设备上写入映像，新的 MB 为 MB<td>是<td>修复功能会在损坏的设备上替换正常 MB。  MB 不包含 BIOS 中的任何 DPK。  修复设备在 MBR 之后将 DPK 写入映像。  
 
 1. 取消注册损坏的设备
 2. 更换主板-BIOS 不包含 DPK 信息
@@ -347,7 +347,7 @@ ms.locfileid: "87756359"
 8. 遍历 Autopilot OOBE
 9. 已成功启用 Autopilot
 
-<tr><td>新的修复产品密钥 (RDPK) <td>“是”<td>将主板用于新的 RDPK preinjected 会导致成功的 Autopilot 翻新情况。 
+<tr><td>新的修复产品密钥 (RDPK) <td>是<td>将主板用于新的 RDPK preinjected 会导致成功的 Autopilot 翻新情况。 
 
 1. 取消注册损坏的设备
 2. 将主板 (替换为 BIOS) 中的新的 RDPK preinjected
@@ -367,7 +367,7 @@ ms.locfileid: "87756359"
 3. 遍历 Autopilot OOBE
 4. 已 (到以前的租户 ID，已成功启用 Autopilot) 
 
-<tr><td>从非 Autopilot 设备到 Autopilot 设备的磁盘替换<td>“是”<td>
+<tr><td>从非 Autopilot 设备到 Autopilot 设备的磁盘替换<td>是<td>
 
 1. 请勿在修复之前取消注册已损坏的设备
 2. 更换损坏设备上的 HDD
@@ -387,8 +387,8 @@ ms.locfileid: "87756359"
 
 <tr><td>非 Microsoft 网卡更换 <td>否<td>无论是从非 Autopilot 设备到 Autopilot 设备、从一个 Autopilot 设备到另一个 Autopilot 设备，还是从 Autopilot 设备到非 Autopilot 设备，都将更换第三方 (未板载) 网卡的情况，这种情况下不建议使用。
 <tr><td>设备修复了三次以上<td>否<td>当设备反复修复时不支持 Autopilot，因此，未替换的任何部分都将与已替换的部分内容相关联，这会使将来难以唯一识别该设备。
-<tr><td>内存替换<td>“是”<td>更换损坏设备上的内存不会对该设备上的 Autopilot 体验产生负面影响。  不需要 de/重新注册。  修复技术人员只需更换内存即可。
-<tr><td>GPU 替换<td>“是”<td>替换损坏设备上的 GPU () 不会对该设备上的 Autopilot 体验产生负面影响。  不需要 de/重新注册。  修复技术人员只需替换 GPU。
+<tr><td>内存替换<td>是<td>更换损坏设备上的内存不会对该设备上的 Autopilot 体验产生负面影响。  不需要 de/重新注册。  修复技术人员只需更换内存即可。
+<tr><td>GPU 替换<td>是<td>替换损坏设备上的 GPU () 不会对该设备上的 Autopilot 体验产生负面影响。  不需要 de/重新注册。  修复技术人员只需替换 GPU。
 </table>
 
 >当清理其他 Autopilot 设备中的部件时，我们建议从 Autopilot 取消注册的设备，对其进行清理，然后永远不会再次将清理的 (设备注册到 AUTOPILOT) ，因为重复使用此方法可能会导致两个活动设备最终具有相同的 ID，因此，不可能区分这两者。
@@ -416,7 +416,7 @@ ms.locfileid: "87756359"
 
 | 问题 | Answer |
 | --- | --- |
-| 如果我们有一种工具，该工具在 MBR 之后将产品信息计划到 BIOS，那么我们是否仍需要提交 CBR 报表，使该设备能够 Autopilot？ | 不是。  如果单元中的工具将所需的最少信息写入到 Autopilot 程序查找来识别设备的 BIOS 中，如本文档前面所述。 |
+| 如果我们有一种工具，该工具在 MBR 之后将产品信息计划到 BIOS，那么我们是否仍需要提交 CBR 报表，使该设备能够 Autopilot？ | 不行。  如果单元中的工具将所需的最少信息写入到 Autopilot 程序查找来识别设备的 BIOS 中，如本文档前面所述。 |
 | 如果只替换部分组件而不是完整的主板，会发生什么情况呢？ | 虽然某些有限修复不会阻止 Autopilot 算法成功地将修复后设备与修复后设备进行匹配，但最好是通过上述 MBR 步骤（甚至只是只需有限修复的设备）来确保100% 的成功。 |
 | 如果客户没有客户的登录凭据，修复技术人员如何获取对损坏设备的访问权限？ | 技术人员必须在修复过程中重新映像设备，并使用其自己的凭据。 |
 

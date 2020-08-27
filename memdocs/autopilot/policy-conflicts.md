@@ -14,12 +14,12 @@ author: mtniehaus
 ms.author: mniehaus
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 432656fc46d9b2a6e9cad6c8c9b7e287afc34b7b
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 23c5c9c0fd025279f1c97b6f19673f9e8b527adb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756146"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907975"
 ---
 # <a name="windows-autopilot---policy-conflicts"></a>Windows Autopilot-策略冲突
 
@@ -32,11 +32,11 @@ ms.locfileid: "87756146"
 <table>
 <th>策略<th>详细信息
 
-<tr><td width="50%">设备限制/<a href="https://docs.microsoft.com/windows/client-management/mdm/devicelock-csp">密码策略</a></td>
-<td>如果某些<a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock">DeviceLock 策略</a>（如最小密码长度和密码复杂性）或任何类似的组策略设置 (包括任何禁用自动登录) 的设备，并且在设备注册状态页 (ESP) 期间重新启动设备，则全新体验 (OOBE) 或用户桌面自动登录可能会意外失败。  对于自动生成密码的展台方案，尤其如此。</td>
+<tr><td width="50%">设备限制/ <a href="https://docs.microsoft.com/windows/client-management/mdm/devicelock-csp">密码策略</a></td>
+<td>如果某些 <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock">DeviceLock 策略</a>（如最小密码长度和密码复杂性）或任何类似的组策略设置 (包括任何禁用自动登录) 的设备，并且在设备注册状态页 (ESP) 期间重新启动设备，则全新体验 (OOBE) 或用户桌面自动登录可能会意外失败。  对于自动生成密码的展台方案，尤其如此。</td>
 
-<tr><td width="50%">Windows 10 安全基线/<a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">管理员提升提示行为</a>
-<br>Windows 10 安全基线/<a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">管理员批准模式</a></td>
+<tr><td width="50%">Windows 10 安全基线/ <a href="/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">管理员提升提示行为</a>
+<br>Windows 10 安全基线/ <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">管理员批准模式</a></td>
 <td>当使用设备注册状态页 (ESP) 修改用户帐户控制 (UAC) 设置时，可能会导致其他 UAC 提示，尤其是在应用这些策略后设备重新启动时，使其生效。  若要解决此问题，可以将策略定向到用户而不是设备，以便以后在此过程中应用。</td>
 
 <tr><td width="50%">设备限制/云和存储/ <a href="https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#cloud-and-storage">Microsoft 帐户登录助手</a></td>

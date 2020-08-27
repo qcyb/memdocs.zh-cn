@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88590901"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907985"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Windows Autopilot 网络连接要求
 
@@ -38,7 +38,7 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 - 需要进行身份验证才能获得 internet 访问权限。 
 
 > [!NOTE]
-> OOBE 期间不支持智能卡和基于证书的身份验证。 有关详细信息，请参阅 [智能卡和基于证书的身份验证](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication)。
+> OOBE 期间不支持智能卡和基于证书的身份验证。 有关详细信息，请参阅 [智能卡和基于证书的身份验证](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication)。
 
 有关每项服务及其具体要求的更多详情，请查看以下详细信息：
 
@@ -53,7 +53,7 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 
 如果 Windows 更新无法访问，则 Autopilot 进程仍将继续，但无法获得关键更新。
 
-<tr><td><b>传递优化<b><td>下载应用和更新时，Autopilot 会与 <a href="https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization">传送优化</a> 服务联系。 此联系人建立了对等共享内容，以便只有几个设备需要从 Internet 下载。
+<tr><td><b>传递优化<b><td>下载应用和更新时，Autopilot 会与 <a href="/windows/deployment/update/waas-delivery-optimization">传送优化</a> 服务联系。 此联系人建立了对等共享内容，以便只有几个设备需要从 Internet 下载。
 - Windows 更新 - Microsoft Store 应用和应用更新 - Office 更新 - Intune Win32 应用<br>
 
 如果无法访问传递优化服务，则 Autopilot 进程仍将继续从云 (进行传递优化下载，无需对等) 。
@@ -69,7 +69,7 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 <tr><td><b>Windows Notification Services (WNS) <b><td>此服务使 Windows 能够接收来自应用和服务的通知。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>。<br>
 
 如果 WNS 服务不可用，则在没有通知的情况下，Autopilot 进程仍将继续。
-<tr><td><b>Microsoft Store，业务 Microsoft Store<b><td>Microsoft Store 中的应用可以推送到设备，通过 Intune (MDM) 触发。在用户首次登录时，可能还需要应用更新和其他应用。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business">商业和教育 Microsoft Store 的先决条件</a> (还包括 Azure AD 和 Windows Notification Services) 。<br>
+<tr><td><b>Microsoft Store，业务 Microsoft Store<b><td>Microsoft Store 中的应用可以推送到设备，通过 Intune (MDM) 触发。在用户首次登录时，可能还需要应用更新和其他应用。 有关详细信息，请参阅 <a href="/microsoft-store/prerequisites-microsoft-store-for-business">商业和教育 Microsoft Store 的先决条件</a> (还包括 Azure AD 和 Windows Notification Services) 。<br>
 
 如果 Microsoft Store 不可访问，则 Autopilot 进程仍将继续运行，而不 Microsoft Store 应用。
 
@@ -87,4 +87,3 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 **后续步骤**
 
 [Windows Autopilot 许可要求](licensing-requirements.md)
-

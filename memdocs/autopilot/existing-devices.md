@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: d37ca65d89ffc37365ae3c71ba0fe0e1f15cf42d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: fc13a3a73e5e043d01bf5c7a3d310c496714caee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756164"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908389"
 ---
 # <a name="windows-autopilot-deployment-for-existing-devices"></a>适用于现有设备的 Windows Autopilot 部署
 
@@ -36,7 +36,7 @@ ms.locfileid: "87756164"
 
 - 当前支持的 Microsoft Endpoint 版本 Configuration Manager 当前分支或 technical preview 分支。 
 - [WINDOWS ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) 1803 或更高版本
-    - 有关 Configuration Manager 支持的详细信息，请参阅[对 Windows 10 ADK 的支持](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
+    - 有关 Configuration Manager 支持的详细信息，请参阅 [对 Windows 10 ADK 的支持](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
 - 分配 Microsoft Intune 许可证
 - Azure Active Directory Premium
 - Windows 10 1809 版或更高版本导入 Configuration Manager 为操作系统映像
@@ -46,13 +46,13 @@ ms.locfileid: "87756164"
 
 ### <a name="configure-the-enrollment-status-page-optional"></a>配置 "注册状态" 页 (可选) 
 
-如果需要，可以使用 Intune 为 Autopilot 设置[注册状态页](enrollment-status.md)。
+如果需要，可以使用 Intune 为 Autopilot 设置 [注册状态页](enrollment-status.md) 。
 
 若要启用和配置 "注册和状态" 页：
 
 1. [在 Azure 门户中打开 Intune](https://aka.ms/intuneportal)。
-2. 访问**Intune > 设备注册 > Windows 注册**并[设置注册状态页](https://docs.microsoft.com/intune/windows-enrollment-status)。 
-3. 访问**Azure Active Directory > 移动 (MDM 和 MAM) >** Microsoft Intune 并[配置自动 mdm 注册](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment)，并为部分或所有用户配置 mdm 用户作用域。 
+2. 访问 **Intune > 设备注册 > Windows 注册** 并 [设置注册状态页](/intune/windows-enrollment-status)。 
+3. 访问 **Azure Active Directory > 移动 (MDM 和 MAM) >** Microsoft Intune 并 [配置自动 mdm 注册](/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) ，并为部分或所有用户配置 mdm 用户作用域。 
 
 请参阅以下示例。
 
@@ -62,7 +62,7 @@ ms.locfileid: "87756164"
 ### <a name="create-the-json-file"></a>创建 JSON 文件 
 
 >[!TIP]
->若要在运行 Windows Server 2012/2012 R2 或 Windows 7/8.1 的计算机上运行以下命令，你必须首先下载并安装[Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616)。
+>若要在运行 Windows Server 2012/2012 R2 或 Windows 7/8.1 的计算机上运行以下命令，你必须首先下载并安装 [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616)。
 
 1. 在连接 Internet 的 Windows 电脑或服务器上，打开提升的 Windows PowerShell 命令窗口
 2. 输入以下行来安装所需的模块
@@ -82,7 +82,7 @@ ms.locfileid: "87756164"
      ```powershell
      Connect-MSGraph
      ```
-     将使用标准 Azure AD 表单请求帐户的用户和密码。 键入用户名和密码，并单击 "**登录**"。 
+     将使用标准 Azure AD 表单请求帐户的用户和密码。 键入用户名和密码，并单击 " **登录**"。 
      <br>请参阅以下示例：
 
      ![Azure AD 身份验证](images/pwd.png)
@@ -137,28 +137,28 @@ ms.locfileid: "87756164"
     ```powershell
     Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON | Out-File c:\Autopilot\AutopilotConfigurationFile.json -Encoding ASCII
     ```
-    **重要说明**：除了将编码为 ASCII/ANSI 外，还必须将文件名命名为**AutopilotConfigurationFile.js** 。 
+    **重要说明**：除了将编码为 ASCII/ANSI 外，还必须将文件名命名为 **AutopilotConfigurationFile.js** 。 
 
-    如果需要，你可以将配置文件保存到文本文件并在记事本中进行编辑。 在记事本中，如果选择 "**另存为**"，则必须选择 "另存为类型：**所有文件**"，然后从 "**编码**" 旁的下拉列表中选择 "ANSI"。 请参阅以下示例。
+    如果需要，你可以将配置文件保存到文本文件并在记事本中进行编辑。 在记事本中，如果选择 " **另存为** "，则必须选择 "另存为类型： **所有文件** "，然后从 " **编码**" 旁的下拉列表中选择 "ANSI"。 请参阅以下示例。
 
     ![记事本 JSON](images/notepad.png)
 
     保存该文件后，将该文件移动到一个位置，该位置 Configuration Manager 包源。
 
     >[!IMPORTANT]
-    >可以使用多个 JSON 配置文件文件，但每个文件都必须命名为**AutopilotConfigurationFile.js** ，以便 OOBE 遵循 Autopilot 体验。 文件也必须编码为 ANSI。 <br><br>**使用 Unicode 或 utf-8 编码保存文件，或使用不同的文件名保存该文件将导致 Windows 10 OOBE 不遵循 Autopilot 体验**。<br>
+    >可以使用多个 JSON 配置文件文件，但每个文件都必须命名为 **AutopilotConfigurationFile.js** ，以便 OOBE 遵循 Autopilot 体验。 文件也必须编码为 ANSI。 <br><br>**使用 Unicode 或 utf-8 编码保存文件，或使用不同的文件名保存该文件将导致 Windows 10 OOBE 不遵循 Autopilot 体验**。<br>
 
 
 ### <a name="create-a-package-containing-the-json-file"></a>创建包含 JSON 文件的包
 
-1. 在 Configuration Manager 中，导航到**\Software Library\Overview\Application Management\Packages**
+1. 在 Configuration Manager 中，导航到 **\Software Library\Overview\Application Management\Packages**
 2. 在功能区上，单击 "**创建包**"
-3. 在 "**创建包和程序向导**" 中，输入以下**包**和**程序类型**详细信息：<br>
-    - <u>名称</u>：**用于现有设备配置的 Autopilot**
-    - 选中 "**此包包含源文件**" 复选框
-    - <u>源文件夹</u>：单击 "**浏览**" 并指定包含文件 AutopilotConfigurationFile.js的 UNC 路径。 
+3. 在 " **创建包和程序向导** " 中，输入以下 **包** 和 **程序类型** 详细信息：<br>
+    - <u>名称</u>： **用于现有设备配置的 Autopilot**
+    - 选中 " **此包包含源文件** " 复选框
+    - <u>源文件夹</u>：单击 " **浏览** " 并指定包含文件 AutopilotConfigurationFile.js的 UNC 路径。 
     - 单击 **“确定”**，然后单击 **“下一步”**。
-    - <u>程序类型</u>：**不创建程序**
+    - <u>程序类型</u>： **不创建程序**
 4. 单击**下一步**两次，然后单击**关闭**。
 
 **注意**：如果以后在 Intune 中更改用户驱动的 Autopilot 配置文件设置，则还必须更新 JSON 文件并重新分发关联的 Configuration Manager 包。
@@ -168,9 +168,9 @@ ms.locfileid: "87756164"
 >[!NOTE]
 >还可以选择重复使用现有集合
 
-1. 导航到**\Assets 和 Compliance\Overview\Device 集合**
+1. 导航到 **\Assets 和 Compliance\Overview\Device 集合**
 2. 在功能区上，单击 "**创建**"，然后单击 "**创建设备集合**"
-3. 在 "**创建设备集合向导**" 中输入以下**常规**详细信息：
+3. 在 " **创建设备集合向导** " 中输入以下 **常规** 详细信息：
    - <u>名称</u>： **Autopilot 用于现有设备集合**
    - Comment： (可选) 
    - <u>限制集合</u>：单击 "**浏览**" 并选择 "**所有系统**"
@@ -178,8 +178,8 @@ ms.locfileid: "87756164"
      >[!NOTE]
      >您可以选择为限制集合使用替代集合。 要升级的设备必须在所选集合中运行 ConfigMgr 代理。
 
-4. 单击 "**下一步**"，然后输入以下**成员身份规则**详细信息：
-   - 单击 "**添加规则**"，指定直接或基于查询的集合规则，将目标测试 Windows 7 设备添加到新集合。
+4. 单击 " **下一步**"，然后输入以下 **成员身份规则** 详细信息：
+   - 单击 " **添加规则** "，指定直接或基于查询的集合规则，将目标测试 Windows 7 设备添加到新集合。
    - 例如，如果要擦除并重新加载的计算机的主机名为 PC-01，并且你希望使用 "名称" 作为属性，请单击 "**添加规则" > 直接规则 "> (向导将在" 下一步 "打开 >) ** ，然后在"**值**"旁边输入**PC-01** 。 单击 "**下一步**"，然后选择 "**资源**" 下**的 "PC-01** "。 请参阅以下示例。
 
      ![名为 resource2 的 resource1.resx ](images/pc-01a.png)
@@ -193,118 +193,118 @@ ms.locfileid: "87756164"
 ### <a name="create-an-autopilot-for-existing-devices-task-sequence"></a>为现有设备创建 Autopilot 任务序列
 
 >[!TIP]
->下一过程需要 Windows 10 1803 或更高版本的启动映像。 在 " **Software Library\Overview\Operating Systems\Boot images** " 下的 Configuration Manager 由中查看可用的启动映像，并验证**OS 版本**是否 (Windows 10 版本 1803) 或更高版本。
+>下一过程需要 Windows 10 1803 或更高版本的启动映像。 在 " **Software Library\Overview\Operating Systems\Boot images** " 下的 Configuration Manager 由中查看可用的启动映像，并验证 **OS 版本** 是否 (Windows 10 版本 1803) 或更高版本。
 
-1. 在 Configuration Manager 控制台中，导航到**\Software Library\Overview\Operating Systems\Task 序列**
+1. 在 Configuration Manager 控制台中，导航到 **\Software Library\Overview\Operating Systems\Task 序列**
 2. 在 "主页" 功能区上，单击 "**创建任务序列**"
 3. 选择 "**安装现有的映像包**"，然后单击 "**下一步**"
 4. 在 "创建任务序列向导" 中，输入以下详细信息：
-   - <u>任务序列名称</u>：**适用于现有设备的 Autopilot**
-   - <u>启动映像</u>：单击 "**浏览**" 并选择 Windows 10 启动映像 (1803 或更高版本) 
-   - 单击 "**下一步**"，然后在 "安装 windows" 页上单击 "**浏览**"，并选择 Windows 10**映像包**和**映像索引**版本1803或更高版本。
-   - 选择 "在**安装操作系统之前对目标计算机进行分区和格式化**" 复选框。
-   - 选中或清除 "**配置任务序列以与 BitLocker 一起使用**" 复选框。 这是可选项。
-   - <u>产品密钥</u>和<u>服务器授权模式</u>：根据需要输入产品密钥和服务器授权模式。
+   - <u>任务序列名称</u>： **适用于现有设备的 Autopilot**
+   - <u>启动映像</u>：单击 " **浏览** " 并选择 Windows 10 启动映像 (1803 或更高版本) 
+   - 单击 " **下一步**"，然后在 "安装 windows" 页上单击 " **浏览** "，并选择 Windows 10 **映像包** 和 **映像索引**版本1803或更高版本。
+   - 选择 "在 **安装操作系统之前对目标计算机进行分区和格式化** " 复选框。
+   - 选中或清除 " **配置任务序列以与 BitLocker 一起使用** " 复选框。 该地址为可选。
+   - <u>产品密钥</u> 和 <u>服务器授权模式</u>：根据需要输入产品密钥和服务器授权模式。
    - <u>随机生成本地管理员密码并禁用所有支持平台上的帐户 (建议) </u>：可选。
    - <u>启用帐户并指定本地管理员密码</u>：可选。
-   - 单击 "**下一步**"，然后在 "配置网络" 页上选择 "**加入工作组**"，并指定名称 (Ex： workgroup) **workgroup**。
+   - 单击 " **下一步**"，然后在 "配置网络" 页上选择 " **加入工作组** "，并指定名称 (Ex： workgroup) **workgroup**。
 
      > [!IMPORTANT]
-     > Autopilot for 现有设备任务序列将运行 "**准备 Windows for capture** " 操作，该操作使用系统准备工具 (sysprep) 。 如果目标计算机已加入域，则此操作将失败。
+     > Autopilot for 现有设备任务序列将运行 " **准备 Windows for capture** " 操作，该操作使用系统准备工具 (sysprep) 。 如果目标计算机已加入域，则此操作将失败。
      
      >[!IMPORTANT]
-     > 系统准备工具 (sysprep) 将用/Generalize 参数运行，在 Windows 10 版本1903和1909上，该参数将删除 Autopilot 配置文件，并且计算机将启动到 OOBE 阶段，而不是 Autopilot 阶段。 若要解决此问题，请参阅[Windows Autopilot 的已知问题](known-issues.md)。
+     > 系统准备工具 (sysprep) 将用/Generalize 参数运行，在 Windows 10 版本1903和1909上，该参数将删除 Autopilot 配置文件，并且计算机将启动到 OOBE 阶段，而不是 Autopilot 阶段。 若要解决此问题，请参阅 [Windows Autopilot 的已知问题](known-issues.md)。
 
-5. 单击 "**下一步**"，然后再次单击 "**下一步**" 以接受 "安装 Configuration Manager" 页上的默认设置。
+5. 单击 " **下一步**"，然后再次单击 " **下一步** " 以接受 "安装 Configuration Manager" 页上的默认设置。
 6. 在 "状态迁移" 页上，输入以下详细信息：
-   - 清除 "**捕获用户设置和文件**" 复选框。
-   - 清除 "**捕获网络设置**" 复选框。
-   - 清除 "**捕获 Microsoft Windows 设置**" 复选框。
+   - 清除 " **捕获用户设置和文件** " 复选框。
+   - 清除 " **捕获网络设置** " 复选框。
+   - 清除 " **捕获 Microsoft Windows 设置** " 复选框。
    - 单击“下一步”。
 
      >[!NOTE]
      >由于 Autopilot for 现有设备任务序列在 Windows PE 中完成，因此不支持用户状态迁移 (工具包) 数据迁移，因为无法将用户状态还原到新 OS。  此外，用户状态迁移工具包 (USMT) 不支持 Azure AD 加入的设备。
 
 7. 在 "包括更新" 页上，选择三个可用选项之一。 此选项是可选的。
-8. 在 "安装应用程序" 页上，根据需要添加应用程序。 这是可选项。
-9. 单击 "**下一步**"，确认设置，单击 "**下一步**"，然后单击 "**关闭**"
-10. 右键单击 "Autopilot for 现有设备" 任务序列，然后单击 "**编辑**"。
-11. 在 "**安装操作系统**" 组下的 "任务序列编辑器" 中，单击 "**应用 Windows 设置**" 操作。
-12. 单击 "**添加**"，然后单击 "**新建组**"。
-13. 将组**名称**从 "**新组**" 更改为 "**现有设备的 Autopilot" 配置**。
-14. 单击 "**添加**"，指向 "**常规**"，然后单击 "**运行命令行**"。
-15. 验证 "**运行命令行**" 步骤是否嵌套在 "**适用于现有设备的 Autopilot" 配置**组下。
-16. 更改**名称**以**应用现有设备配置文件的 Autopilot** ，并将以下内容粘贴到 "**命令行**" 文本框中，然后单击 "**应用**"：
+8. 在 "安装应用程序" 页上，根据需要添加应用程序。 该地址为可选。
+9. 单击 " **下一步**"，确认设置，单击 " **下一步**"，然后单击 " **关闭**"
+10. 右键单击 "Autopilot for 现有设备" 任务序列，然后单击 " **编辑**"。
+11. 在 " **安装操作系统** " 组下的 "任务序列编辑器" 中，单击 " **应用 Windows 设置** " 操作。
+12. 单击 " **添加** "，然后单击 " **新建组**"。
+13. 将组 **名称** 从 " **新组** " 更改为 " **现有设备的 Autopilot" 配置**。
+14. 单击 " **添加**"，指向 " **常规**"，然后单击 " **运行命令行**"。
+15. 验证 " **运行命令行** " 步骤是否嵌套在 " **适用于现有设备的 Autopilot" 配置** 组下。
+16. 更改 **名称** 以 **应用现有设备配置文件的 Autopilot** ，并将以下内容粘贴到 " **命令行** " 文本框中，然后单击 " **应用**"：
     ```
     cmd.exe /c xcopy AutopilotConfigurationFile.json %OSDTargetSystemDrive%\windows\provisioning\Autopilot\ /c
     ```
-    -  **AutopilotConfigurationFile.json**必须是前面创建的现有设备包的 Autopilot 中存在的 JSON 文件的名称。
+    -  **AutopilotConfigurationFile.json** 必须是前面创建的现有设备包的 Autopilot 中存在的 JSON 文件的名称。
 
-17. 在 "**为现有设备应用 Autopilot 配置文件**" 步骤中，选中 "**包**" 复选框，然后单击 "**浏览**"。
-18. 选择前面创建**的现有设备配置**包的 Autopilot，然后单击 **"确定"**。 本部分末尾显示了一个示例。
-19. 在 "**设置**" "操作系统" 组下，单击 "**安装 Windows 和 Configuration Manager** " 任务。
-20. 单击 "**添加**"，然后单击 "**新建组**"。
-21. 将**名称**从**新组**更改为**Autopilot 的准备设备**
-22. 验证 Autopilot 组的**Prepare 设备**是否为任务序列中的最后一步。 如有必要，请**使用 "下移**" 按钮。
-23. 选择 "**准备设备以进行 Autopilot** " 组后，单击 "**添加**"，指向 "**映像**"，然后单击 "**准备 ConfigMgr 客户端以便捕获**"。
-24. 单击 "**添加**"，指向 "**映像**"，然后单击 "**准备 Windows 以便捕获**"，添加第二步。 在此步骤中使用以下设置：
-    - <u>自动生成大容量存储驱动程序列表</u>：**未选择**
+17. 在 " **为现有设备应用 Autopilot 配置文件** " 步骤中，选中 " **包** " 复选框，然后单击 " **浏览**"。
+18. 选择前面创建 **的现有设备配置** 包的 Autopilot，然后单击 **"确定"**。 本部分末尾显示了一个示例。
+19. 在 " **设置** " "操作系统" 组下，单击 " **安装 Windows 和 Configuration Manager** " 任务。
+20. 单击 " **添加** "，然后单击 " **新建组**"。
+21. 将 **名称** 从 **新组** 更改为 **Autopilot 的准备设备**
+22. 验证 Autopilot 组的 **Prepare 设备** 是否为任务序列中的最后一步。 如有必要，请 **使用 "下移** " 按钮。
+23. 选择 " **准备设备以进行 Autopilot** " 组后，单击 " **添加**"，指向 " **映像** "，然后单击 " **准备 ConfigMgr 客户端以便捕获**"。
+24. 单击 " **添加**"，指向 " **映像**"，然后单击 " **准备 Windows 以便捕获**"，添加第二步。 在此步骤中使用以下设置：
+    - <u>自动生成大容量存储驱动程序列表</u>： **未选择**
     - 不<u>重置激活标志</u>：**未选择**
-    - <u>运行此操作后关闭计算机</u>：**可选**
+    - <u>运行此操作后关闭计算机</u>： **可选**
 
     ![Autopilot 任务序列](images/ap-ts-1.png)
 
 25. 单击 **"确定"** 关闭任务序列编辑器。
 
 > [!NOTE]
-> 在 Windows 10 1903 和1909上，"**准备 Windows For Capture** " 步骤删除了**AutopilotConfigurationFile.js** 。 有关详细信息和解决方法，请参阅[Windows Autopilot 的已知问题](known-issues.md)。
+> 在 Windows 10 1903 和1909上，"**准备 Windows For Capture** " 步骤删除了**AutopilotConfigurationFile.js** 。 有关详细信息和解决方法，请参阅 [Windows Autopilot 的已知问题](known-issues.md) 。
 
 ### <a name="deploy-content-to-distribution-points"></a>将内容部署到分发点
 
 接下来，请确保将任务序列所需的所有内容部署到分发点。
 
-1. 右键单击 " **Autopilot for 现有设备**" 任务序列，然后单击 "**分发内容**"。
-2. 单击 "**下一步**"，**查看要分发的内容**，然后单击 "**下一步**"。
-3. 在 "指定内容分发" 页面上，单击 "**添加**" 以指定**分发点**或**分发点组**。
+1. 右键单击 " **Autopilot for 现有设备** " 任务序列，然后单击 " **分发内容**"。
+2. 单击 " **下一步**"， **查看要分发的内容**，然后单击 " **下一步**"。
+3. 在 "指定内容分发" 页面上，单击 " **添加** " 以指定 **分发点** 或 **分发点组**。
 4. 在 "添加分发点" 或 "添加分发点组" 向导中，指定将允许在运行任务序列时检索 JSON 文件的内容目标。
-5. 完成指定内容分发后，单击 "**下一步**" 两次，然后单击 "**关闭**"。
+5. 完成指定内容分发后，单击 " **下一步** " 两次，然后单击 " **关闭**"。
 
 ### <a name="deploy-the-os-with-autopilot-task-sequence"></a>通过 Autopilot 任务序列部署 OS
 
-1. 右键单击 " **Autopilot for 现有设备**" 任务序列，然后单击 "**部署**"。
+1. 右键单击 " **Autopilot for 现有设备** " 任务序列，然后单击 " **部署**"。
 2. 在 "部署软件" 向导中，输入以下**常规****设置和部署设置**详细信息：
-    - <u>任务序列</u>： **Autopilot 用于现有设备**。
-    - <u>集合</u>：单击 "**浏览**"，然后选择 "**现有设备的 Autopilot" 集合** (或其他你喜欢) 的集合。
-    - 单击 "**下一步**" 以指定**部署设置**。
-    - <u>操作</u>：**安装**。
-    - <u>目的</u>：**可用**。 您可以选择 "**必需**" 而不是 "**可用**"。 不建议在测试由于的情况下执行此过程，以避免无意中的配置带来的潜在影响。
-    - <u>适用于以下各</u>项：**仅 Configuration Manager 客户端**。 注意：在此处选择与测试上下文相关的选项。 如果目标客户端未安装 Configuration Manager 代理或 Windows，你将需要选择包含 PXE 或启动媒体的选项。
-    - 单击 "**下一步**" 以指定**计划**详细信息。
+    - <u>任务序列</u>：  **Autopilot 用于现有设备**。
+    - <u>集合</u>：单击 " **浏览** "，然后选择 " **现有设备的 Autopilot" 集合** (或其他你喜欢) 的集合。
+    - 单击 " **下一步** " 以指定 **部署设置**。
+    - <u>操作</u>： **安装**。
+    - <u>目的</u>： **可用**。 您可以选择 " **必需** " 而不是 " **可用**"。 不建议在测试由于的情况下执行此过程，以避免无意中的配置带来的潜在影响。
+    - <u>适用于以下各</u>项： **仅 Configuration Manager 客户端**。 注意：在此处选择与测试上下文相关的选项。 如果目标客户端未安装 Configuration Manager 代理或 Windows，你将需要选择包含 PXE 或启动媒体的选项。
+    - 单击 " **下一步** " 以指定 **计划** 详细信息。
     - <u>计划此部署将在何时变为可用</u>：可选
     - <u>计划此部署将在何时过期</u>：可选
-    - 单击 "**下一步**" 以指定**用户体验**详细信息。
+    - 单击 " **下一步** " 以指定 **用户体验** 详细信息。
     - <u>显示任务序列进度</u>：已选择。
     - <u>软件安装</u>：未选择。
     - <u>如果需要完成安装，则系统重新启动 () </u>：未选中。
     - <u>在截止时间或在维护时段内更改提交 (需要重启) </u>：可选。
     - <u>允许对 Internet 上的客户端运行任务序列</u>：可选
-    - 单击 "**下一步**" 以指定**警报**详细信息。
+    - 单击 " **下一步** " 以指定 **警报** 详细信息。
     - <u>当阈值高于以下值时创建部署警报</u>：可选。
-    - 单击 "**下一步**" 以指定**分发点**详细信息。
-    - <u>部署选项</u>：**运行任务序列需要时在本地下载内容**。
+    - 单击 " **下一步** " 以指定 **分发点** 详细信息。
+    - <u>部署选项</u>： **运行任务序列需要时在本地下载内容**。
     - <u>当没有本地分发点可用时，请使用远程分发点</u>：可选。
     - <u>允许客户端使用默认站点边界组中的分发点</u>：可选。
-    - 单击 "**下一步**"，确认设置，单击 "**下一步**"，然后单击 "**关闭**"
+    - 单击 " **下一步**"，确认设置，单击 " **下一步**"，然后单击 " **关闭**"
 
 ### <a name="complete-the-client-installation-process"></a>完成客户端安装过程
 
-1. 打开目标 Windows 7 或 Windows 8.1 客户端计算机上的软件中心。 为此，可以单击 "开始"，然后在 "搜索" 框中键入**software** ，或在 Windows PowerShell 或命令提示符下键入以下内容：
+1. 打开目标 Windows 7 或 Windows 8.1 客户端计算机上的软件中心。 为此，可以单击 "开始"，然后在 "搜索" 框中键入 **software** ，或在 Windows PowerShell 或命令提示符下键入以下内容：
 
     ```
     C:\Windows\CCM\SCClient.exe
     ```
 
-2. 在软件库中，选择 " **Autopilot" 作为 "现有设备**"，然后单击 "**安装**"。 请参阅以下示例：
+2. 在软件库中，选择 " **Autopilot" 作为 "现有设备** "，然后单击 " **安装**"。 请参阅以下示例：
 
     ![名为 resource2 的 resource2 ](images/sc.png) ![](images/sc1.png)
 
@@ -315,14 +315,14 @@ ms.locfileid: "87756164"
  ![ 刷新-3](images/up-3.png)
 
 >[!NOTE]
->如果将设备加入到 Active Directory (混合 Azure AD 联接) ，则需要创建一个针对 "所有设备" 的域加入设备配置配置文件，因为该计算机没有 (的设备对象来执行基于组的目标 Azure Active Directory。  有关详细信息，请参阅[混合 Azure Active Directory 联接的用户驱动模式](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join)。
+>如果将设备加入到 Active Directory (混合 Azure AD 联接) ，则需要创建一个针对 "所有设备" 的域加入设备配置配置文件，因为该计算机没有 (的设备对象来执行基于组的目标 Azure Active Directory。  有关详细信息，请参阅 [混合 Azure Active Directory 联接的用户驱动模式](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join) 。
 
 ### <a name="register-the-device-for-windows-autopilot"></a>为 Windows Autopilot 注册设备
 
-通过 Autopilot 预配的设备仅会在首次启动时接收引导式 OOBE Autopilot 体验。 更新到 Windows 10 后，应注册设备，以确保在发生 PC 重置时持续 Autopilot 体验。 你可以使用 "**将所有目标设备转换为 Autopilot** " 设置为分配的组启用自动注册。 有关详细信息，请参阅[创建 Autopilot 部署配置文件](enrollment-autopilot.md#create-an-autopilot-deployment-profile)。
+通过 Autopilot 预配的设备仅会在首次启动时接收引导式 OOBE Autopilot 体验。 更新到 Windows 10 后，应注册设备，以确保在发生 PC 重置时持续 Autopilot 体验。 你可以使用 " **将所有目标设备转换为 Autopilot** " 设置为分配的组启用自动注册。 有关详细信息，请参阅[创建 Autopilot 部署配置文件](enrollment-autopilot.md#create-an-autopilot-deployment-profile)。
 
-另请参阅向[Windows Autopilot 添加设备](add-devices.md)。
+另请参阅向 [Windows Autopilot 添加设备](add-devices.md)。
 
 ## <a name="speeding-up-the-deployment-process"></a>加速部署过程
 
-若要从部署过程中删除20分钟左右，请参阅 Michael Niehaus 的博客，其中包含有关[加快现有设备的 Windows Autopilot 的](https://blogs.technet.microsoft.com/mniehaus/2018/10/25/speeding-up-windows-autopilot-for-existing-devices/)说明。
+若要从部署过程中删除20分钟左右，请参阅 Michael Niehaus 的博客，其中包含有关 [加快现有设备的 Windows Autopilot 的](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices)说明。
