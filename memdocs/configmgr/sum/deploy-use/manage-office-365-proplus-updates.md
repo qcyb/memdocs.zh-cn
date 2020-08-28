@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e0ef22ec7bc5eb3d6b9ac3800b3e97374421944c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696168"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819790"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>使用 Configuration Manager 管理 Microsoft 365 Apps
 
@@ -248,8 +248,7 @@ ms.locfileid: "88696168"
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>在让 Microsoft 365 Apps 客户端能够从 Configuration Manager 接收更新后，更改更新通道
 
-部署 Microsoft 365 Apps 之后，可以使用组策略或 Office 部署工具 (ODT) 来更改更新通道。 例如，可以将设备从“半年频道”移动到“半年频道(定向)”。 更改通道时，Office 会自动更新，而无需重新安装或下载完整版本。 有关详细信息，请参阅[为组织中的设备更改 Microsoft 365 Apps 更新通道](//deployoffice/change-update-channels)。
-
+部署 Microsoft 365 Apps 之后，可以使用组策略或 Office 部署工具 (ODT) 来更改更新通道。 例如，可以将设备从“半年频道”移动到“半年频道(定向)”。 更改通道时，Office 会自动更新，而无需重新安装或下载完整版本。 有关详细信息，请参阅[为组织中的设备更改 Microsoft 365 Apps 更新通道](https://docs.microsoft.com/deployoffice/change-update-channels)。
 
 ## <a name="next-steps"></a>后续步骤
 

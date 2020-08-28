@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699069"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819739"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>桌面分析中的兼容性评估
 
@@ -245,4 +245,4 @@ Windows 10 上支持 .NET 2.0 和 3.5 框架。 你可能需要启用此 Windows
 
 ## <a name="see-also"></a>另请参阅
 
-适用于 Windows 10 的 FastTrack 中心权益提供**桌面应用保证**的访问权限。 此权益是一项旨在解决 Windows 10 和 Microsoft 365 企业应用版兼容性问题的新服务。 有关详细信息，请参阅[桌面应用保证](/fasttrack/win-10-desktop-app-assure)。
+适用于 Windows 10 的 FastTrack 中心权益提供**桌面应用保证**的访问权限。 此权益是一项旨在解决 Windows 10 和 Microsoft 365 企业应用版兼容性问题的新服务。 有关详细信息，请参阅[桌面应用保证](/fasttrack/win-10-app-assure)。
