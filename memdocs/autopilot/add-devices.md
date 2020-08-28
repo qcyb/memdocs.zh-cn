@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b8737646946e1c575ddb8ebdd26397712c412e20
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c0e4e0b2d440856f24199d89485ac521208964e8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908565"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993231"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>将设备添加到 Windows Autopilot
 
@@ -114,8 +114,8 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 -   [Microsoft Intune](enrollment-autopilot.md)。  这是适用于所有客户的首选机制。
     - Microsoft 终结点管理器管理中心用于 Intune 设备注册。
 -   [合作伙伴中心](https://msdn.microsoft.com/partner-center/autopilot)。  CSP 合作伙伴使用此方法代表客户注册设备。
--   [Microsoft 365 商业版 & Office 365 管理员](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)。 这通常由小型和中型企业使用， (使用 Microsoft 365 商业版管理其设备的 Smb) 。
--   [适用于企业的 Microsoft Store](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  可能已在使用 MSfB 管理应用和设置。
+-   [Microsoft 365 商业版高级](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)。  这通常由小型和中型企业使用， (使用 Microsoft 365 商业版高级管理其设备的 Smb) 。
+-   [适用于企业的 Microsoft Store](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  可能已在使用 MSfB 管理应用和设置。
 
 下面提供每个平台的功能的摘要。<br>
 <br>
@@ -156,7 +156,7 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 </tr>
 
 <tr>
-<td><a href="https://docs.microsoft.com/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 商业版</a></td>
+<td><a href="https://docs.microsoft.com/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 商业高级版</a></td>
 <td>是-1000，最大时间</td>
 <td>是<b><sup>3</sup></b></td>
 <td>4K HH</td>
@@ -176,7 +176,7 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 - [向客户帐户添加设备](/partner-center/autopilot)
 
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 使用 Windows Autopilot 部署新设备时，需要执行以下步骤：
 

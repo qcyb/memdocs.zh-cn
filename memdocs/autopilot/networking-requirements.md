@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1b217f7b299447b53c760cbba85b873d0626d741
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907985"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993747"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Windows Autopilot 网络连接要求
 
@@ -73,7 +73,7 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 
 如果 Microsoft Store 不可访问，则 Autopilot 进程仍将继续运行，而不 Microsoft Store 应用。
 
-<tr><td><b>Office 365<b><td>在 Intune 设备配置过程中，可能需要安装适用于企业的 Microsoft 365 应用。 有关详细信息，请参阅 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 url 和 IP 地址范围</a>。 本文包含所有 Office 服务、DNS 名称和 IP 地址。 它还包括与上面列出的服务重叠的 Azure AD 和其他服务。
+<tr><td><b>Microsoft 365<b><td>在 Intune 设备配置过程中，可能需要安装适用于企业的 Microsoft 365 应用。 有关详细信息，请参阅 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 url 和 IP 地址范围</a>。 本文包含所有 Office 服务、DNS 名称和 IP 地址。 它还包括与上面列出的服务重叠的 Azure AD 和其他服务。
 <tr><td><b>证书吊销列表 (Crl) <b><td>其中某些服务还需要检查证书吊销列表 (CRL) 来确定服务中使用的证书。有关完整列表，请参阅 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">office 365 url 和 IP 地址范围</a> 和 <a href="https://aka.ms/o365chains">Office 365 证书链</a>。
 <tr><td><b>混合 Azure AD 加入<b><td>设备可以 Azure AD 联接的混合。 计算机应位于企业网络上，以便混合 Azure AD 加入工作。 查看<a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot 用户驱动模式下</a>的详细信息
 <tr><td><b>Autopilot 自助部署模式和 Autopilot 白色手套<b><td>固件 TPM 设备仅由 Intel、AMD 或 Qualcomm 提供，在引导时不包括所有所需的证书，并且必须能够在第一次使用时从制造商检索它们。 具有独立 TPM 芯片的设备 (包括任何其他制造商提供的设备) 附带预安装这些证书。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM 建议</a>。 对于每个固件 TPM 提供程序，请确保可以访问这些 Url，以便成功请求证书：

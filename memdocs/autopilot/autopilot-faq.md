@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: bbdea6ed044d7fff82f8da49cfb7b57a47e4677c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: af7b7f3a871683f7b75583292df5cb3d6e5de4c4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908305"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993211"
 ---
 # <a name="windows-autopilot-faq"></a>Windows Autopilot 常见问题
 
@@ -143,13 +143,13 @@ ms.locfileid: "88908305"
 | 如果设备已注册到恶意代理，会发生什么情况？ | 按照设计，Windows Autopilot 不会应用配置文件，直到用户使用 Azure AD 登录过程通过配置的配置文件的匹配租户登录。  例如，如果 badguys.com 注册了 contoso.com 拥有的设备，则在最糟糕的情况下，该用户将被定向到 badguys.com。 用户输入其电子邮件和密码后，将通过 Azure AD 重定向到正确的 Azure AD 身份验证，然后系统会提示用户登录到 contoso.com。 由于 contoso.com 不会将 badguys.com 与租户匹配，因此将不会应用 Windows Autopilot 配置文件，并且将发生常规 Azure AD OOBE。|
 | Windows Autopilot 数据存储在何处？  |Windows Autopilot 数据存储在美国 (US) ，而不是主权云中，即使 Azure AD 租户注册在主权云中时也是如此。 这适用于所有 Windows Autopilot 数据，而不考虑用于部署 Autopilot 的门户。|
 | 为什么 Windows Autopilot 数据存储在美国而不是主权云中？| 不存储客户数据，只是使 Microsoft 能够提供服务的业务数据，因此它适合于数据驻留在美国。 客户随时可以停止订阅服务。 在这种情况下，Microsoft 将删除业务数据。 Autopilot 在任何主权云中当前不受支持。 |
-| 为 Windows Autopilot 注册设备有多少方法|注册设备的方法有六种，具体取决于执行注册的人员： <br><br>1. OEM 直接 API (仅适用于 TVOs)  <br>MPC 使用 MPC API (必须是 CSP)  <br>3. 在 UI (中使用 CSV 文件的手动上传的 MPC 必须是 CSP)  <br>4. 使用 CSV 文件上传的 MSfB <br>5. 使用 CSV 文件上传的 Intune <br>6. 使用 CSV 文件上传 Microsoft 365 商业版门户|
-|有多少种方法可创建 Windows Autopilot 配置文件？|可通过四种方式创建和分配 Windows Autopilot 配置文件： <br><br>1. 通过 MPC (必须是 CSP)  <br>2. 通过 MSfB <br>3. 通过 Intune (或其他 MDM)  <br>4. Microsoft 365 商业版门户 <br><br>Microsoft 建议通过 Intune 创建和分配配置文件。  |
+| 为 Windows Autopilot 注册设备有多少方法|注册设备的方法有六种，具体取决于执行注册的人员： <br><br>1. OEM 直接 API (仅适用于 TVOs)  <br>MPC 使用 MPC API (必须是 CSP)  <br>3. 在 UI (中使用 CSV 文件的手动上传的 MPC 必须是 CSP)  <br>4. 使用 CSV 文件上传的 MSfB <br>5. 使用 CSV 文件上传的 Intune <br>6. 使用 CSV 文件上传 Microsoft 365 商业版高级门户|
+|有多少种方法可创建 Windows Autopilot 配置文件？|可通过四种方式创建和分配 Windows Autopilot 配置文件： <br><br>1. 通过 MPC (必须是 CSP)  <br>2. 通过 MSfB <br>3. 通过 Intune (或其他 MDM)  <br>4. Microsoft 365 商业版 Premium 门户 <br><br>Microsoft 建议通过 Intune 创建和分配配置文件。  |
 | 注册失败的一些常见原因是什么？ |1. 硬件哈希条目损坏或丢失可能导致注册尝试错误 <br>2. CSV 文件中隐藏特殊字符。  <br><br>若要避免此问题，请在创建 CSV 文件后，在记事本中打开它以查找隐藏字符或尾随空格或其他损坏。|
 |  IoT 设备是否支持 Autopilot？ |  IoT Core 设备上不支持 Autopilot，当前没有计划添加此支持。 Windows 10 IoT Enterprise SAC 设备支持 Autopilot。 Autopilot 在 Windows 10 Enterprise LTSC 2019 及更高版本上受支持;它在 LTSC 的早期版本中不受支持。|
 |  所有地区/国家/地区是否支持 Autopilot？ |  Autopilot 仅支持使用全球 Azure 的客户。 全局 Azure 不包含下面列出的三个实体：<br>-Azure 德国 <br>-Azure 中国世纪互联<br>-Azure 政府版<br>因此，如果客户是在全球 Azure 中设置的，则不存在区域限制。 例如，如果 Contoso 使用全球 Azure，但员工在中国工作，则在中国工作的 Contoso 员工将能够使用 Autopilot 来部署设备。 如果 Contoso 使用 Azure 中国世纪互联，Contoso 员工将无法使用 Autopilot。|
 
-## <a name="glossary"></a>术语表
+## <a name="glossary"></a>词汇表
 
 | 术语 | 含义 |
 | --- | --- |
