@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088388"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693499"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune 移动设备管理 (MDM) 生命周期概述
 
@@ -36,7 +36,7 @@ ms.locfileid: "86088388"
 
 将你的设备注册只是第一步。 若要充分利用所有这些 Intune 功能并确保你的设备安全且符合公司标准，你可以从各种策略中选择。 这些策略让你能够几乎配置受管理设备运作方式的方方面面。 例如，对于含有公司数据的设备，用户是否应该有密码？ 你可以要求获得密码。 你有公司 Wi-Fi 吗？ 你可以自动配置它。 以下是可用的配置选项类型：
 
-- [**设备配置**](../configuration/device-profiles.md)。 这些策略让你能够配置所管理设备的特性和功能。 例如，你可以要求在 Windows Phone 上使用密码，或禁用 iPhone 的照相机。
+- [**设备配置**](../configuration/device-profiles.md)。 这些策略让你能够配置所管理设备的特性和功能。 例如，你可以要求在 Android Phone 上使用密码，或禁用 iPhone 的照相机。
 - [**公司资源访问权限**](../configuration/device-profiles.md)。 当你让用户在他们的个人设备上访问他们的工作时，这会给你带来难题。 例如，你怎么确保所有需要访问公司电子邮件的设备是正确配置的呢？ 如何确保用户可以使用 VPN 连接访问公司网络而不用了解很复杂的设置？ Intune 可以自动配置你管理的设备来访问公共公司资源，从而减少这种负担。
 - [**Windows 电脑管理策略（使用 Intune 客户端软件）** ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)。 向 Intune 注册 Windows 电脑会带给你最多的设备管理功能，Intune 将继续支持使用 Intune 客户端软件管理 Windows 电脑。 如果你需要有关可使用电脑执行的一些任务的信息，请从这里开始。
 

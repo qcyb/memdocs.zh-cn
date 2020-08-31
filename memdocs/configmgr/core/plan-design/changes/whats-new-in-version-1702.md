@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5c125bc92c8949384486c7efc03cea122258092e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692785"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993499"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager 版本 1702 中的新增功能
 
@@ -220,11 +220,11 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 
 ## <a name="software-updates"></a>软件更新
 
-### <a name="deploy-office-365-apps-to-clients"></a>将 Office 365 应用部署到客户端
-从版本 1702 起，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 ProPlus 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)。
+### <a name="deploy-microsoft-365-apps-to-clients"></a>将 Microsoft 365 应用版部署到客户端
+从版本 1702 起，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Microsoft 365 应用版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)。
 
 > [!IMPORTANT]
-> 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”  。 有关详细信息，请参阅[关于客户端设置](../../clients/deploy/about-client-settings.md)。
+> 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Microsoft 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”。 有关详细信息，请参阅[关于客户端设置](../../clients/deploy/about-client-settings.md)。
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>管理 Windows 10 更新的快速安装文件
 从版本 1702 起，Configuration Manager 支持 Windows 10 更新的快速安装文件。 如果使用支持版本的 Windows 10，可通过 Configuration Manager 设置只下载本月的 Windows 10 累积更新和上月更新之间的更改。 在没有快速安装文件的情况下，Configuration Manager 每个月都会下载完整的 Windows 10 累积更新（包括先前月份的所有更新）。 使用快速安装文件，所需下载文件更小，在客户端上安装更快速。 有关详细信息，请参阅[管理 Windows 10 更新的快速安装文件](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md)。

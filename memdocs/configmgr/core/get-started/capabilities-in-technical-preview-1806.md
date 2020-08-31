@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 01c482700b56a1835e46cf5d48da75710f380496
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694417"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995392"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager Technical Preview 1806 中的功能
 
@@ -176,14 +176,15 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 
-## <a name="transition-office-365-workload-to-intune-using-co-management"></a>使用共同管理将 Office 365 工作负荷转移到 Intune
+## <a name="transition-microsoft-365-workload-to-intune-using-co-management"></a>使用共同管理将 Microsoft 365 工作负载转移到 Intune
 <!--1357841-->
-现在可以在启用共同管理后，将 Office 365 工作负荷从 Configuration Manager 转移到 Microsoft Intune。 要转移此工作负荷，请转到共同管理属性页并将滚动条从 Configuration Manager 移到“试点”或“全部”。 有关详细信息，请参阅 [Windows 10 设备共同管理](../../comanage/overview.md)。
+现在，在启用共同管理后，可以将 Microsoft 365 工作负载从 Configuration Manager 转移到 Microsoft Intune。 要转移此工作负荷，请转到共同管理属性页并将滚动条从 Configuration Manager 移到“试点”或“全部”。 有关详细信息，请参阅 [Windows 10 设备共同管理](../../comanage/overview.md)。
 
-另外，还有一个新的全局条件，即 Office 365 应用程序是否由 Intune 在设备上进行托管  。 默认情况下将此条件作为一项要求添加到新的 Office 365 应用程序。 当转移此工作负荷时，共同托管客户端不满足应用程序的要求，因此不安装通过 Configuration Manager 部署的 Office 365。
+另外，还有一个新的全局条件，即 Office 365 应用程序是否由 Intune 在设备上进行托管  。 默认情况下将此条件作为一项要求添加到新的 Microsoft 365 应用程序中。 当转移此工作负载时，共同管理的客户端不满足应用程序的要求，因此不安装通过 Configuration Manager 部署的 Microsoft 365。
 
 ### <a name="known-issue"></a>已知问题
-- 转移此工作负荷当前仅适用于 Office 365 部署。 Configuration Manager 继续管理 Office 365 更新。<!--510876--> 要详细了解如何将可能解决方法包含在内，请参阅 Configuration Manager 版本 1802 的发行说明：[更改 Office 365 客户端设置不适用](../servers/deploy/install/release-notes.md)。
+
+- 工作负载转移当前仅适用于 Microsoft 365 部署。 Configuration Manager 继续管理 Microsoft 365 更新。<!--510876--> 要详细了解如何将可能解决方法包含在内，请参阅 Configuration Manager 版本 1802 的发行说明：[更改 Microsoft 365 客户端设置不适用](../servers/deploy/install/release-notes.md)。
 
 
 
@@ -240,7 +241,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
  尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
 1. 在 Configuration Manager 控制台中，转到“软件库”工作区，然后选择“Office 365 客户端管理”节点   。
-2. 在仪表板中单击“Office 365 安装程序”磁贴以启动 Office 365 客户端安装向导  。 有关详细信息，请参阅[部署 Office 365 应用](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
+2. 在仪表板中单击“Office 365 安装程序”磁贴以启动 Office 365 客户端安装向导  。 有关详细信息，请参阅[部署 Microsoft 365 应用版](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 3. 在“Office 设置”页上，单击“转到 Office 网页”   。 使用联机 Office 自定义工具为此部署指定设置。 
 4. 完成后单击右上角的“提交”  。 完成 Office 365 客户端安装向导。
 

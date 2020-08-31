@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698708"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995103"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -94,7 +94,7 @@ Configuration Manager Current Branch 的更新 1906 作为控制台中更新提�
     > [!Note]  
     > 此更改不适用于 SQL Server 群集。
 
-- 站点恢复可以在 SQL Always On 组中重新创建数据库。 此过程适用于手动和自动种子设定。<!-- SCCMDocs-pr#3846 -->
+- Site Recovery 可以在 SQL Always On 组中重新创建数据库。 此过程适用于手动和自动种子设定。<!-- SCCMDocs-pr#3846 -->
 
 - 新安装程序先决条件检查：<!-- SCCMDocs-pr#3899 -->  
 
@@ -505,7 +505,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
    - “软件库” > “Windows 10 维护服务” > “所有 Windows 10 更新”  
    - “软件库” > “Office 365 客户端管理” > “Office 365 更新”  
 
-有关详细信息，请参阅[监视软件更新](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[管理 Windows 即服务](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)和[管理 Office 365 专业增强版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
+有关详细信息，请参阅[监视软件更新](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[管理 Windows 即服务](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)和[管理 Microsoft 365 应用版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a>Office 管理
@@ -514,7 +514,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 <!--4021125-->
 
-为了帮助你确定哪些设备已准备好升级到 Office 365 专业增强版，我们推出了新的就绪情况仪表板。 它包括 Configuration Manager 当前分支版本 1902 中发布的“Office 365 专业增强版升级就绪情况”磁贴。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“Office 365 客户端管理”，再选择“Office 365 专业增强版升级就绪情况”节点。
+为了帮助你确定哪些设备可以升级到 Microsoft 365 企业应用版，我们推出了新的就绪情况仪表板。 它包括 Configuration Manager 当前分支版本 1902 中发布的“Office 365 专业增强版升级就绪情况”磁贴。 在 Configuration Manager 控制台中，转到“软件库”工作区，展开“Office 365 客户端管理”，再选择“Office 365 专业增强版升级就绪情况”节点。
 
 若要详细了解仪表板、先决条件和如何使用此数据，请参阅 [Office 365 专业增强版集成的就绪情况](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash)。
 

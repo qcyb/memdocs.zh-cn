@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179547"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725428"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -45,7 +45,7 @@ ms.locfileid: "88179547"
 | **在标题中显示** | 选择最终用户体验中的标题是应显示“组织徽标和名称”、“仅组织徽标”还是显示“仅组织名称”  。 下面的预览框将只显示徽标，而不显示名称。  |
 | **上传徽标供主题颜色背景使用** | 上传要在所选主题颜色上显示的徽标。 为获得最佳外观，请上传带透明背景的徽标。 可以在设置下方的预览框中看到其外观。<p>最大图像大小：400 x 400 像素<br>最大文件大小： 750 KB<br>文件类型：PNG、JPG 或 JPEG |
 | **上传徽标供白色或浅色背景使用** | 上传要在白色或浅色背景上显示的徽标。 为获得最佳外观，请上传带透明背景的徽标。 可以在设置下方的预览框中看到其在白色背景上的外观。<p>最大图像大小：400 x 400 像素<br>最大文件大小：750 KB<br>文件类型：PNG、JPG 或 JPEG |
-| **上传品牌形象** | 上传体现组织品牌的形像。<p><ul><li>建议图像宽度：1125 像素以上（要求至少为 650 像素）</li><li>最大图像大小：1.3 MB</li><li>文件类型：PNG、JPG 或 JPEG</li><li>它显示在以下位置：</li><ul><li>iOS/iPadOS 公司门户：用户个人资料页面上的背景图像。</li><li>公司门户网站： 用户个人资料页面上的背景图像。</li><li>Android Intune 应用：在抽屉中，并作为用户个人资料页面上的背景图像。</li></ul></ul> |
+| **上传品牌形象** | 上传体现组织品牌的形像。<p><ul><li>建议图像宽度：1125 像素以上（要求至少为 650 像素）</li><li>最大图像大小：1.3 MB</li><li>文件类型：PNG、JPG 或 JPEG</li><li>它显示在以下位置：</li><ul><li>iOS/iPadOS 公司门户：用户个人资料页面上的背景图像。</li><li>Windows 公司门户：用户个人资料页面上的背景图像。</li><li>公司门户网站： 用户个人资料页面上的背景图像。</li><li>Android Intune 应用：在抽屉中，并作为用户个人资料页面上的背景图像。</li></ul></ul> |
 
 > [!NOTE]
 > 用户从公司门户安装 iOS/iPadOS 应用程序时，将收到提示。 iOS/iPadOS 应用链接到应用商店、批量采购计划 (VPP) 或业务线 (LOB) 应用时，将发生此操作。 用户可通过此提示接受操作，或允许管理应用。 此提示将显示公司名称，公司名称不可用时，将显示公司门户。
@@ -110,8 +110,8 @@ ms.locfileid: "88179547"
 
 |    设备注册选项    |    说明    |    清单提示    |    通知    |    设备详细信息状态    |    应用详细信息状态（需要注册的应用）    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    可用，有提示    |    提示在所有可能的位置进行注册的默认体验。    |    是    |    是    |    “是”    |    “是”    |
-|    可用，无提示    |    用户可以通过当前设备的设备详细信息中的状态或从需要注册的应用来进行注册。    |    否    |    No    |    “是”    |    “是”    |
+|    可用，有提示    |    提示在所有可能的位置进行注册的默认体验。    |    是    |    “是”    |    “是”    |    是    |
+|    可用，无提示    |    用户可以通过当前设备的设备详细信息中的状态或从需要注册的应用来进行注册。    |    No    |    否    |    “是”    |    是    |
 |    Unavailable    |    用户无法注册。    |    否    |    否    |    否    |    否    |
 
 ### <a name="privacy"></a>隐私
@@ -133,23 +133,28 @@ ms.locfileid: "88179547"
 
 ### <a name="app-sources"></a>应用源
 
-可选择将在公司门户中显示的其他应用源。 下表提供特定于应用源的配置详细信息：
+可选择将在公司门户中显示的其他应用源。
+
+> [!NOTE]
+> 公司门户支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](/mem/configmgr/comanage/company-portal)。
+
+下表提供特定于应用源的配置详细信息：
 
 | 字段名称 | 最大长度 | 更多信息 |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure AD 企业应用程序 | 不适用 | 选择“隐藏”或“显示”，在公司门户中向每位最终用户显示 Azure AD 企业应用程序  。 有关详细信息，请参阅[应用源设置选项](../apps/company-portal-app.md#app-source-setting-options)。 |
-| Office Online 应用程序 | 不适用 | 选择“隐藏”或“显示”，在公司门户中向每位最终用户显示 Office Online 应用程序  。 有关详细信息，请参阅[应用源设置选项](../apps/company-portal-app.md#app-source-setting-options)。 |
+| Azure AD 企业应用程序 | 不适用 | 选择 **“隐藏”** 或 **“显示”** ，在公司门户中向每位最终用户显示 **Azure AD 企业应用程序**。 有关详细信息，请参阅[应用源设置选项](../apps/company-portal-app.md#app-source-setting-options)。 |
+| Office Online 应用程序 | 不适用 | 选择 **“隐藏”** 或 **“显示”** ，在公司门户中向每位最终用户显示 **Office Online 应用程序**。 有关详细信息，请参阅[应用源设置选项](../apps/company-portal-app.md#app-source-setting-options)。 |
 
 #### <a name="app-source-setting-options"></a>应用源设置选项
 
 > [!NOTE]
 > 公司门户网站首先将支持显示来自其他 Microsoft 服务的应用。
 
-可在公司门户中向每位最终用户隐藏或显示 Azure AD 企业应用程序和 Office Online 应用程序 。 如果选择“显示”，将导致公司门户显示分配给用户的所选 Microsoft 服务的整个应用程序目录。 Azure AD 企业应用程序通过 [Azure 门户](https://portal.azure.com)进行注册和分配。 Office Online 应用程序使用 [M365 管理中心](https://admin.microsoft.com)提供的授权控制进行分配。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“租户管理” > “自定义”，查找此配置设置 。 默认情况下，每个附加的应用源会设置为“隐藏”。 
+可在公司门户中向每位最终用户隐藏或显示 **Azure AD 企业应用程序**和 **Office Online 应用程序**。 如果选择“显示”，将导致公司门户显示分配给用户的所选 Microsoft 服务的整个应用程序目录。 Azure AD 企业应用程序通过 [Azure 门户](https://portal.azure.com)进行注册和分配。 Office Online 应用程序使用 [M365 管理中心](https://admin.microsoft.com)提供的授权控制进行分配。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“租户管理” > “自定义”，查找此配置设置 。 默认情况下，每个附加的应用源会设置为“隐藏”。 
 
 ### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>为公司门户自定义用户自助服务操作
 
-可自定义在公司门户应用和网站中向最终用户显示的可用自助服务设备操作。 为帮助防止发生意外的设备操作，可选择“租户管理” > “自定义”，为公司门户应用配置设置 。 
+可自定义在公司门户应用和网站中向最终用户显示的可用自助服务设备操作。 为帮助防止发生意外的设备操作，可选择“租户管理” > “自定义”，为公司门户应用配置设置 。
 
 提供了以下选项：
 - 隐藏公司 Windows 设备上的“删除”按钮。
@@ -158,7 +163,7 @@ ms.locfileid: "88179547"
 - 隐藏公司 iOS/iPadOS 设备上的“重置”按钮。
 
 > [!NOTE]
-> 这些操作可用于限制公司门户网站应用和网站中的设备操作，并且不实施任何设备限制策略。 若要限制用户从设置中执行恢复出厂设置或 MDM 删除，必须配置设备限制策略。 
+> 这些操作可用于限制公司门户网站应用和网站中的设备操作，并且不实施任何设备限制策略。 若要限制用户从设置中执行恢复出厂设置或 MDM 删除，必须配置设备限制策略。
 
 ## <a name="opening-web-company-portal-applications"></a>打开 Web 公司门户应用程序
 对于 Web 公司门户应用程序，如果最终用户安装了公司门户应用程序，则最终用户将看到一个对话框，询问他们在浏览器外部打开应用程序时希望采用哪种打开方式。 如果应用不在公司门户的路径中，则公司门户将打开主页。 如果应用位于路径中，则公司门户将打开特定应用。 

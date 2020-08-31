@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462059"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820521"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 中关于终结点安全性的终结点检测和响应策略
 
@@ -43,24 +43,11 @@ EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中
 
 - **Microsoft Defender 高级威胁防护租户** - 必须先将 Microsoft Defender ATP 租户和 Microsoft Endpoint Manager 租户（Intune 订阅）集成，才能创建 EDR 策略。 请参阅 Intune 文档中的[使用 Microsoft Defender ATP](advanced-threat-protection.md)。
 
-**支持 Configuration Manager 设备**：
+**对 Configuration Manager 客户端的支持**：
 
-若要支持将 EDR 策略用于 Configuration Manager 设备，Configuration Manager 环境需要以下其他配置。 本文提供了[配置指南](#set-up-configuration-manager-to-support-edr-policy)：
+- **为 Configuration Manager 设备设置租户附加** - 若要支持将 EDR 策略部署到 Configuration Manager 托管的设备，请配置 *“租户附加”* 。 这包含配置 Configuration Manager 设备集合，以支持 Intune 终结点安全策略。
 
-- **2002 版或更高版本的 Configuration Manager** - 网站需要运行 Configuration Manager 2002 或更高版本。
-
-- **安装 Configuration Manager 更新** - 若要在 Configuration Manager 2002 中启用支持，即支持使用在 Microsoft Endpoint Manager 管理中心创建的 EDR 策略，请从 Configuration Manager 控制台中安装以下更新：
-  - Configuration Manager 2002 修补程序 (KB4563473)
-
-- **配置租户附加** - 通过租户附加，可以将设备集合从 Configuration Manager 同步到 Microsoft Endpoint Manager 管理中心。 然后，可以使用管理中心将 EDR 策略部署到这些集合。
-
-  租户附加通常配置为共同管理，但可以独立配置租户附加。
-
-- **同步 Configuration Manager 集合** - 配置租户附加时，可选择要与 Microsoft Endpoint Manager 管理中心同步的 Configuration Manager 设备集合。 还可以稍后返回并修改要同步的设备集合。Configuration Manager 设备的 EDR 策略只能分配给已同步的集合。
-
-  选择要同步的集合后，必须启用它们以便与 Microsoft Defender ATP 结合使用。
-
-- **Azure AD 的权限** - 若要完成租户附加的设置，并配置将与 Microsoft Endpoint Manager 管理中心同步的 Configuration Manager 集合，需要一个对 Azure 订阅具有全局管理员权限的帐户。
+  若要设置租户附加，包括将 Configuration Manager 集合同步到 Microsoft Endpoint Manager 管理中心，并使其可以使用终结点安全策略，请参阅[配置租户附加以支持 Endpoint Protection 策略](../protect/tenant-attach-intune.md)。
 
 ## <a name="edr-profiles"></a>EDR 配置文件
 
@@ -73,7 +60,7 @@ EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中
 
 **Configuration Manager** - 使用 Configuration Manager 管理的设备支持以下功能：
 
-- 平台：Windows 10 和 windows Server - Configuration Manager 将策略部署到 Configuration Manager 集合中的设备。
+- 平台：**Windows 10 和 Windows Server - Configuration Manager (ConfigMgr)** 将策略部署到 Configuration Manager 集合中的设备。
 - 配置文件：**终结点检测和响应 (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>设置 Configuration Manager 以便支持 EDR 策略
@@ -86,8 +73,6 @@ EDR 策略部署到使用 Intune 管理的 Azure Active Directory (Azure AD) 中
 
 1. [为 Configuration Manager 安装更新](#task-1-install-the-update-for-configuration-manager)
 2. [启用租户附加](#task-2-configure-tenant-attach-and-synchronize-collections)  
-3. [选择要同步的集合](#task-3-select-collections-to-synchronize)
-4. [为 Microsoft Defender ATP 启用集合](#task-4-enable-collections-for-microsoft-defender-atp)
 
 > [!TIP]
 > 若要详细了解如何将 Microsoft Defender ATP 与 Configuration Manager 结合使用，请参阅 Configuration Manager 内容中的以下文章：
@@ -111,8 +96,6 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
 ### <a name="task-2-configure-tenant-attach-and-synchronize-collections"></a>任务 2：配置租户附加及同步集合
 
-如果之前已启用共同管理，则已设置好租户附加，可以跳到[任务 3](#task-3-select-collections-to-synchronize)。
-
 通过租户附加，可从 Configuration Manager 部署中指定要与 Microsoft Endpoint Manager 管理中心同步的设备集合。 同步集合后，使用管理中心查看关于这些设备的信息并将 EDR 策略从 Intune 部署到集合。  
 
 有关租户附加方案的详细信息，请参阅 Configuration Manager 内容中的[启用租户附加](../../configmgr/tenant-attach/device-sync-actions.md)。
@@ -129,82 +112,26 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 3. 在“租户加入”页面上，为环境选择“AzurePublicCloud” 。 不支持 Azure 政府云。
    1. 单击“登录”。 使用全局管理员帐户登录。
 
-   2. 确保在“租户加入”页面上选择“上传到 Microsoft Endpoint Manager 管理中心” 。
+对于使用 Intune 管理的设备，支持以下内容：
 
-   3. 取消选中“为共同管理启用自动客户端注册”。
+- 平台：**Windows 10 及更高版本** - Intune 将策略部署到 Azure AD 组中的设备。
+  - 配置文件：终结点检测和响应 (MDM)
 
-      选择此选项后，向导会显示其他页面，用于完成共同管理的设置。 有关详细信息，请参阅 Configuration Manager 内容中的[启用共同管理](../../configmgr/comanage/how-to-enable.md)。
+### <a name="devices-managed-by-configuration-manager-in-preview"></a>Configuration Manager 托管的设备 *（处于预览状态）*
 
-     ![配置租户附加](media/endpoint-security-edr-policy/tenant-onboarding.png)
+使用 Configuration Manager 通过*租户附加*方案管理的设备支持以下功能：
 
-4. 单击“下一步”，然后单击“是”接受“创建 AAD 应用程序”通知  。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册，以促进将集合同步到 Microsoft Endpoint Manager 管理中心。
-
-5. 在“配置上传”页面上，配置要同步的集合。可以将配置限制为一个或多个设备集合，或针对“我所有由 Microsoft Endpoint Configuration Manager 管理的设备”使用推荐的设备上传设置。
-
-6. 单击“摘要”查看所选内容，然后单击“下一步” 。
-
-7. 完成向导后，单击“关闭”。
-
-   现已配置租户附加，并已选择要同步到 Endpoint Manager 管理中心的集合。
-
-#### <a name="enable-tenant-attach-when-you-use-co-management"></a>使用共同管理时启用租户附加
-
-1. 在 Configuration Manager 管理控制台中，转到“管理” > “概述” > “云服务” > “共同管理”   。
-
-2. 右键单击共同管理设置，然后选择“属性”。
-
-3. 在“配置上传”选项卡中，选择“上传到 Microsoft Endpoint Manager 管理中心” 。 单击“应用” 。
-   - 设备上传的默认设置是“我所有由 Microsoft Endpoint Configuration Manager 管理的设备”。 还可以选择将配置限制到一个或多个设备集合。
-
-     ![查看共同管理属性选项卡](media/endpoint-security-edr-policy/configure-upload.png)
-
-4. 出现提示时，请使用全局管理员帐户登录。
-
-5. 单击“是”接受“创建 AAD 应用程序”通知 。 此操作可预配一个服务主体，并创建 Azure AD 应用程序注册以促进同步。
-
-6. 完成更改后，单击“确定”退出共同管理属性。
-
-   现已配置租户附加，并已选择要同步到 Endpoint Manager 管理中心的集合。
-
-### <a name="task-3-select-collections-to-synchronize"></a>任务 3：选择要同步的集合
-
-配置租户附加之后，可以选择要同步的集合。如果尚未同步集合或需要重新配置要同步的集合，可以在 Configuration Manager 控制台中编辑共同管理的属性以执行此操作。
-
-#### <a name="select-collections"></a>选择集合
-
-1. 在 Configuration Manager 管理控制台中，转到“管理” > “概述” > “云服务” > “共同管理”   。
-
-2. 右键单击共同管理设置，然后选择“属性”。
-
-3. 在“配置上传”选项卡中，选择“上传到 Microsoft Endpoint Manager 管理中心” 。 单击“应用” 。
-
-   设备上传的默认设置是“我所有由 Microsoft Endpoint Configuration Manager 管理的设备”。 还可以选择将配置限制到一个或多个设备集合。
-
-### <a name="task-4-enable-collections-for-microsoft-defender-atp"></a>任务 4：为 Microsoft Defender ATP 启用集合
-
-配置要同步到 Microsoft Endpoint Manager 管理中心的集合之后，仍然需要让这些集合有资格加入 Microsoft Defender ATP 和使用其策略。  为此，请在 Configuration Manager 控制台中编辑每个集合的属性。
-
-#### <a name="enable-collections-for-use-with-advanced-threat-protection"></a>使集合能够与高级威胁防护结合使用
-
-1. 在连接到顶层站点的 Configuration Manger 控制台中，右键单击同步到 Microsoft Endpoint Manager 管理中心的设备集合，然后选择“属性”。
-
-2. 在“云同步”选项卡上，启用“使此集合可用于在 Intune 中分配 Microsoft Defender ATP 策略”。
-
-   - 如果 Configuration Manager 层次结构未配置租户附加，则无法选择此选项。
-  
-   ![配置云同步](media/endpoint-security-edr-policy/cloud-sync.png)
-
-3. 选择“确定”保存配置。
-
-   此集合中的设备现在可以接收 Microsoft Defender ATP 策略了。
+- 平台：**Windows 10 和 Windows Server - Configuration Manager (ConfigMgr)** 将策略部署到 Configuration Manager 集合中的设备。
+  - 配置文件：终结点检测和响应 (ConfigMgr)（预览）
 
 ## <a name="create-and-deploy-edr-policies"></a>创建和部署 EDR 策略
 
-如果 Microsoft Defender ATP 订阅与 Intune 集成，可以创建和部署 EDR 策略。 可以创建两种不同类型的 EDR 策略。 一种策略类型适用于通过 MDM 并使用 Intune 管理的设备。 第二种类型适用于使用 Configuration Manager 管理的设备。
+将 Microsoft Defender ATP 订阅与 Intune 集成时，可以创建和部署 EDR 策略。 可以创建两种不同类型的 EDR 策略。 一种策略类型适用于通过 MDM 并使用 Intune 管理的设备。 第二种类型适用于使用 Configuration Manager 管理的设备。
 
-为策略选择了该平台时，在创建新的 EDR 策略时需要选择创建的策略类型。
+通过为策略选择平台，可在配置新的 EDR 策略时选择要创建的策略类型。
 
-将策略部署到由 Configuration Manager 托管的设备之前，需要先在 Microsoft Endpoint Manager 管理中心[将 Configuration Manager 设置为支持 EDR 策略](#set-up-configuration-manager-to-support-edr-policy)。
+将策略部署到由 Configuration Manager 托管的设备之前，需要先在 Microsoft Endpoint Manager 管理中心将 Configuration Manager 设置为支持 EDR 策略。 请参阅[配置租户附加以支持 Endpoint Protection 策略](../protect/tenant-attach-intune.md)。
+
 
 ### <a name="create-edr-policies"></a>创建 EDR 策略
 
@@ -219,7 +146,7 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
      - 配置文件：终结点检测和响应 (MDM)
 
    - Configuration Manager - Configuration Manager 将策略部署到 Configuration Manager 集合中的设备。 创建策略时，请选择：
-     - 平台：Windows 10 和 Windows Server
+     - 平台：**Windows 10 和 Windows Server (ConfigMgr)**
      - 配置文件：**终结点检测和响应 (ConfigMgr)**
 
 4. 选择“创建”。
@@ -255,10 +182,9 @@ Configuration Manager 版本 2002 需要更新，以便支持结合使用从 Mic
 
 - 对于面向 Windows 10 及更高版本 (Intune) 的策略，会显示策略合规性概述。 还可以选择图表以查看接收了策略的设备的列表，并深入了解各个设备的详细信息。
 
-  “具有 ATP 传感器的设备”图表仅显示通过使用 Windows 10 及更高版本配置文件成功加入 Microsoft Defender ATP 的设备 。 若要确保此图表中完整显示你的设备，请将加入配置文件部署到你的所有设备中。 通过外部方法（如组策略或 PowerShell）加入 Microsoft Defender ATP 的设备被视为不具有 ATP 传感器的设备。
+  **“具有 ATP 传感器的设备”** 的图表仅显示通过使用 **Windows 10 及更高版本**配置文件成功加入 Microsoft Defender ATP 的设备。 若要确保此图表中完整显示你的设备，请将加入配置文件部署到你的所有设备中。 通过外部方法（如组策略或 PowerShell）加入 Microsoft Defender ATP 的设备被视为不具有 ATP 传感器的设备。
 
-- 对于面向 Windows 10 和 Windows Server 平台 (Configuration Manager) 的策略，会看到策略合规性概述，但无法深入了解其他详细信息。 此视图的信息有限，因为管理中心从 Configuration Manager 接收到的状态详细信息有限，Configuration Manager 管理 Configuration Manager 设备的策略部署。
-
+- 对于面向**Windows 10 和 Windows Server 平台 (Configuration Manager)** 的策略，会看到策略合规性概述，但无法深入了解其他详细信息。 此视图的信息有限，因为管理中心从 Configuration Manager 接收到的状态详细信息有限，Configuration Manager 管理 Configuration Manager 设备的策略部署。
 
 [查看](endpoint-security-edr-profile-settings.md)可同时为平台和配置文件配置的设置。
 

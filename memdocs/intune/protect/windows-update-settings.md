@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551903"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819705"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune 中的 Windows 更新设置  
 
@@ -179,12 +179,12 @@ ms.locfileid: "83551903"
   - **允许** - 允许设备用户使用 Windows 更新扫描，查找并下载更新并安装功能。
   - **阻止** - 禁止设备用户访问 Windows 更新扫描、下载更新和安装功能。  
 
-- **需要用户批准才能在工作时间之外重启**  
+- **要求用户批准以消除重启通知**  
   **默认值**：未配置  
   Windows 更新 CSP：[Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - 未配置  
-  - **必需** - 要求用户批准在工作时间以外进行设备重启。  
+  - **无** - 在 25 秒后自动消除。
+  - **是** - 需要用户消除。
    
 - **通过可消除的提醒提前提醒用户需要自动重启(小时)**  
   **默认值**：4  
@@ -239,7 +239,7 @@ ms.locfileid: "83551903"
   - **宽限期**  
     **默认值**：“未配置”Windows 更新 CSP：[Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    指定自截止日期起到自动重启之间的最小天数 (2-7)。
+    指定自截止日期起到自动重启之间的最小天数 (0-7)。
 
   - **在截止时间之前自动重启**  
     **默认值**：是，Windows 更新 CSP：[Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

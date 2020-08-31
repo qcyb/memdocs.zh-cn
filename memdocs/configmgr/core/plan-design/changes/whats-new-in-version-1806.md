@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692632"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995001"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -235,7 +235,7 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 
 - **设备配置**<!--1357903-->：借助此工作负载，可以使用 Intune 来部署 MDM 策略，同时继续使用 Configuration Manager 来部署应用。  
 
-- **Office 365**<!--1357841-->：设备不会从 Configuration Manager 安装 Office 365 部署。  
+- **Office 365**<!--1357841-->：设备不会从 Configuration Manager 安装 Microsoft 365 部署。  
 
 - **移动应用**<!--1357892-->：所有从 Intune 部署的应用在公司门户中都可用。 从 Configuration Manager 部署的应用在软件中心可用。 此功能是[预发布功能](../../servers/manage/pre-release-features.md)。  
 
@@ -294,9 +294,9 @@ Microsoft Edge 浏览器符合性设置策略添加了以下三个 Windows Defen
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Office 自定义工具与 Office 365 安装程序集成
 <!--1358149-->
-现在 Office 自定义工具在 Configuration Manager 控制台中于 Office 365 安装程序集成。 为 Office 365 创建部署时，可动态配置最新的 Office 可管理性设置。 Microsoft 在发布 Office 365 的新版本时更新 Office 自定义工具。 通过此集成，当 Office 365 中的新可管理性设置可用时，你便可以立即使用。 
+现在 Office 自定义工具在 Configuration Manager 控制台中于 Office 365 安装程序集成。 为 Microsoft 365 创建部署时，可动态配置最新的 Office 可管理性设置。 Microsoft 在发布 Microsoft 365 的新版本时会更新 Office 自定义工具。 通过此集成，当 Microsoft 365 中的新可管理性设置可用时，你便可以立即使用。 
 
-有关详细信息，请参阅[部署 Office 365 应用](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
+有关详细信息，请参阅[部署 Microsoft 365 应用版](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>支持新的 Windows 应用包格式

@@ -6,7 +6,7 @@ keywords: Intune 数据仓库
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461209"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820028"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune 数据仓库 API 的更改日志
 
@@ -52,6 +52,14 @@ _发布日期：2020 年 7 月_
 
 ## <a name="2004"></a>2004 
 2020 年 4 月发布
+
+### <a name="v10-changes"></a>v1.0 更改
+
+下表列出了 Intune 数据仓库中添加到[“devices”](../developer/intune-data-warehouse-collections.md#devices)实体的属性。
+
+|    收集                          |    更改     |    说明信息                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    已添加    |    Windows 操作系统版本。                                                                                                                                                                                                                                                                     |
 
 ### <a name="beta-changes"></a>beta 版本更改
 

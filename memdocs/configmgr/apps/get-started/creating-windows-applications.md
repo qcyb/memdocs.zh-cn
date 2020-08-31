@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695182"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819620"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 Windows 应用程序
 
@@ -127,6 +127,11 @@ Configuration Manager 支持 Windows 10 应用包 (.msix) 和应用程序包 (.m
 只能在应用上添加非 OS 部署任务序列作为部署类型。 不支持影响较大的 OS 部署或 OS 升级任务序列。 <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 将此部署类型添加到应用时，请在“任务序列”页面上配置其属性。 有关详细信息，请参阅[部署类型“任务序列”选项](../deploy-use/create-applications.md#bkmk_dt-ts)。
+
+从版本 2006 开始，使用以下 Windows PowerShell cmdlet 添加和配置任务序列部署类型：
+
+- Add-CMTaskSequenceDeploymentType 
+- Set-CMTaskSequenceDeploymentType 
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>任务序列部署类型的先决条件
 

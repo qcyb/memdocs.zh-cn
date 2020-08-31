@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252752"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663338"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>配置 Intune 的 Exchange 本地访问权限
 
@@ -69,7 +69,6 @@ ms.locfileid: "88252752"
 
 ### <a name="support-for-mobile-devices"></a>对移动设备的支持
 
-- Windows Phone - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 - **iOS/iPadOS 的本机电子邮件应用** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 - **EAS 邮件客户端（如 Android 4 或更高版本上的 Gmail）** - 若要创建条件访问策略，请参阅[创建条件访问策略](../protect/create-conditional-access-intune.md)
 

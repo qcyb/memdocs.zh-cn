@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880916"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820640"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>从公司门户网站远程锁定设备
 
@@ -35,9 +35,7 @@ ms.locfileid: "83880916"
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 移动版（设备已设置密码）
-* Windows Phone 8.1（设备已设置密码）  
+* Windows 10  
 
 1. 在[公司门户网站](https://portal.manage.microsoft.com)，选择“菜单”按钮 >“设备”   。  
 
@@ -53,6 +51,8 @@ ms.locfileid: "83880916"
 
 4. 显示一条消息，警告即将锁定设备。 点击“远程锁定”进行确认  。
 
+## <a name="check-the-status-of-remote-lock"></a>检查远程锁定的状态
+
 确认后，公司门户将尝试锁定设备。 在此期间将显示“远程锁定挂起”消息。 设备锁定后，状态将显示为“远程锁定成功”。  
 
 该“远程锁定”状态将在以下三个位置中显示：
@@ -66,4 +66,6 @@ ms.locfileid: "83880916"
 
 如果使用“远程锁定”后找到了设备并希望对其进行解锁，则只需输入你的密码。  
 
-仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。
+## <a name="next-steps"></a>后续步骤
+
+是否有疑问或需要帮助？ 请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bc848cd1f6365b5a94c915a00517ca0a4abb8e4a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694366"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995307"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager 技术预览版 1807 中的功能 
 
@@ -42,14 +42,14 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>已知问题 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Office 365 的软件更新问题
+### <a name="issues-with-microsoft-365-software-updates"></a><a name="ki_o365"></a> Microsoft 365 软件更新的问题
 <!--521365-->
-如果使用技术预览分支版本 1806 和 1806.2 管理 Office 365 更新，则它们可能无法在客户端上安装。 
+如果使用技术预览分支版本 1806 和 1806.2 管理 Microsoft 365 更新，则它们可能无法在客户端上安装。 
 
 #### <a name="workaround"></a>解决方法
-- 删除 Office 365 的现有部署包和软件更新组。  
+- 删除 Microsoft 365 的现有部署包和软件更新组。  
 
-- 从 2018 年 7 月 31 日开始，同步 Office 365 软件更新并仅部署最新更新。  
+- 从 2018 年 7 月 31 日开始，同步 Microsoft 365 软件更新并仅部署最新更新。  
 
 
 

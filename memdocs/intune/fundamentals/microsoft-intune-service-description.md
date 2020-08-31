@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune 服务说明
-description: Microsoft Intune 是一项基于云的服务，有助于管理 Windows、iOS/iPadOS、Mac OS X、Android 和 Windows Mobile 设备。
+description: Microsoft Intune 是一项基于云的服务，有助于管理 Windows、iOS/iPadOS、Mac OS X 和 Android 设备。
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -12,16 +12,15 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
-ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f89fc7ffb3059204507a541e19afa2e97424dea5
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078833"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663219"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune 服务说明
 

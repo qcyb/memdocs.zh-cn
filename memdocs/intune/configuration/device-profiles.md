@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune 中的设备功能和设置 - Azure | Microsoft Docs
-description: 不同 Microsoft Intune 设备配置文件的概述。 在 Microsoft 终结点管理器管理中心获取有关功能、限制、电子邮件、WiFi、VPN、教育、证书、升级 Windows 10、BitLocker 和 Microsoft Defender、Windows 信息保护、管理模板，以及自定义设备配置设置的信息。 使用这些配置文件管理和保护公司内的数据和设备。
+description: 不同 Microsoft Intune 设备配置文件的概述。 在 Microsoft Endpoint Manager 管理中心获取有关 GPO、功能、限制、电子邮件、WiFi、VPN、教育、证书、升级 Windows 10、BitLocker 和 Microsoft Defender、Windows 信息保护、管理模板，以及自定义设备配置设置的信息。 使用这些配置文件管理和保护公司内的数据和设备。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146314"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820487"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中使用设备配置文件的设备应用功能和设置
 
@@ -41,9 +41,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="administrative-templates"></a>管理模板
 
-[管理模板](administrative-templates-windows.md)包括数百个可针对 Internet Explorer、Microsoft Edge、OneDrive、远程桌面、Word、Excel 和其他 Office 程序配置的设置。
-
-这些模板为管理员提供了类似于组策略的简化设置视图，但它们是完全基于云的。
+[管理模板](administrative-templates-windows.md)包括数百个可针对 Internet Explorer、Microsoft Edge、OneDrive、远程桌面、Word、Excel 和其他 Office 程序配置的设置。 这些模板为管理员提供了类似于组策略的简化设置视图，但它们是完全基于云的。
 
 此功能支持：
 

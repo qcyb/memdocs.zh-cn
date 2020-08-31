@@ -53,11 +53,11 @@
               href: windows-store-for-business.md
             - name: 托管的 Google Play 应用
               href: apps-add-android-for-work.md
-        - name: Office 365 套件
+        - name: Microsoft 365 套件
           items:
-            - name: 适用于 Windows 10 的 Office 365 应用
+            - name: 适用于 Windows 10 的 Microsoft 365 应用
               href: apps-add-office365.md
-            - name: 适用于 macOS 的 Office 365 应用
+            - name: 适用于 MacOS 的 Microsoft 365 应用
               href: apps-add-office365-macos.md
         - name: Android 企业系统应用
           href: apps-ae-system.md

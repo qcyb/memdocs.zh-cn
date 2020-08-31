@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 60d08d04e2b2cb37dc7751fee0673fa8703d1865
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698916"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994440"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 
@@ -268,7 +268,7 @@ Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供
 -   Exchange Server 2013  
 
 > [!NOTE]
-> LTSB 不支持管理通过联机服务（如 Exchange Online (Office 365)）连接的设备。
+> LTSB 不支持管理通过联机服务（如 Exchange Online (Microsoft 365)）连接的设备。
 
 
 ## <a name="configuration-manager-console"></a>Configuration Manager 控制台

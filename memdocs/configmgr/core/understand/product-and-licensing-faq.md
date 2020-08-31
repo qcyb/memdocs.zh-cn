@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: faf8401e6aa89a60f2acbea8e0d97f9efaf09a84
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695760"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994457"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
@@ -66,7 +66,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 -->
 
 > [!IMPORTANT]
-> [Microsoft 365 商业版](https://www.microsoft.com/microsoft-365/business)计划不包含 Configuration Manager。
+> [Microsoft 365 商业高级版](https://www.microsoft.com/microsoft-365/business)计划不包含 Configuration Manager。
 
 ### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> 哪些内容会随 Microsoft Endpoint Manager 中共同管理的许可而变化？
 
@@ -102,6 +102,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 |软件更新管理|是|是|
 |库存|是|是|
 |应用管理|是|是|
+|远程完全擦除/选择性擦除|是|是|
 |远程协助<br>（需要 TeamViewer 许可证）|是|是|
 |桌面分析<br>（需要 Windows 订阅许可证）|是|不适用|
 |租户附加|是|不适用|

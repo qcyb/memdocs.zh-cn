@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 94166557b07050706401c122b835579762bfa982
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 66be927a75da3027b6ecc5e3873fe8f8e13a9cd6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128825"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994916"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-configuration-manager"></a>Configuration Manager 版本 1511 收集的诊断使用情况数据的级别
 
@@ -221,7 +221,7 @@ Configuration Manager 版本 1511 收集三个级别的诊断和使用情况数�
 
     -   群集修补统计信息  
 
-    -   已部署 Office 365 更新计数  
+    -   部署的 Microsoft 365 更新计数  
 
 -   **SQL/性能数据：**  
 

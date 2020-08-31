@@ -2,7 +2,7 @@
 title: 部署 BitLocker 管理
 titleSuffix: Configuration Manager
 description: 将 BitLocker 管理代理部署到 Configuration Manager 客户端，并将恢复服务部署到管理点
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129267"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819926"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -118,6 +118,8 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 
 在创建多个策略时，可以配置它们的相对优先级。 如果将多个策略部署到一个客户端，系统会根据优先级值来确定其设置。
 
+从版本 2006 开始，可以使用 Windows PowerShell cmdlet 来执行此任务。 有关详细信息，请参阅 [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps)。
+
 ## <a name="deploy-a-policy"></a>部署策略
 
 1. 选择“BitLocker 管理”节点中的现有策略。 在功能区中，选择“部署”。
@@ -135,6 +137,7 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 > [!IMPORTANT]
 > 如果远程桌面协议连接处于活动状态，则 MBAM 客户端不会启动 BitLocker 驱动器加密操作。 在 BitLocker 驱动器加密开始之前，必须关闭所有远程控制台连接，并且用户必须登录到物理控制台会话。
 
+从版本 2006 开始，可以使用 Windows PowerShell cmdlet 来执行此任务。 有关详细信息，请参阅 [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps)。
 
 ## <a name="monitor"></a>监视
 

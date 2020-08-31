@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e1f10f291619ecf6ff3d5b997046f035c02bf7e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 66fc996fe78f0b8171eec61fba277f9d51b0389f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128655"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994644"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>1806 的诊断和使用情况数据
 
@@ -146,7 +146,7 @@ ms.locfileid: "88128655"
 
 - 应用程序目录的不同品牌计数
 
-- 使用仪表板创建的 Office 365 应用程序计数
+- 使用仪表板创建的 Microsoft 365 应用程序计数
 
 - 包（按类型）计数  
 
@@ -412,7 +412,7 @@ ms.locfileid: "88128655"
 
 - 用于活动 Windows 10 服务计划的配置  
 
-- 已部署 Office 365 更新计数  
+- 部署的 Microsoft 365 更新计数  
 
 - 同步的 Microsoft Surface 驱动程序的计数
 

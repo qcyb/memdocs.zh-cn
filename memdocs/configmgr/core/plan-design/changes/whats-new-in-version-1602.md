@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 334397cfa52c90694823107c2144bfbbcbd509ac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698565"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993618"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Configuration Manager 版本 1602 中的新增功能
 
@@ -98,8 +98,8 @@ Configuration Manager 的更新 1602 作为控制台内部更新提供，用于�
 
 ## <a name="software-updates"></a>软件更新  
 
-### <a name="manage-office-365-client-updates"></a>管理 Office 365 客户端更新  
- Configuration Manager 现在能够使用软件更新管理工作流来管理 Office 365 客户端更新。 有关详细信息，请参阅[使用 Configuration Manager 管理 Office 365 ProPlus 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。  
+### <a name="manage-microsoft-365-client-updates"></a>管理 Microsoft 365 客户端更新  
+ Configuration Manager 现在能够使用软件更新管理工作流来管理 Microsoft 365 客户端更新。 有关详细信息，请参阅[使用 Configuration Manager 管理 Office 365 应用更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。  
 
 ## <a name="compliance-settings"></a>符合性设置  
 
@@ -119,7 +119,7 @@ Configuration Manager 的更新 1602 作为控制台内部更新提供，用于�
 
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>基于设备的运行状况限制访问  
- 现可根据运行状况证明服务报告的设备的运行状况，限制对电子邮件和 Office 365 服务的访问。 此外，设备健康状况报告还包括由 Intune 管理的设备。  
+ 现可根据运行状况证明服务报告的设备的运行状况，限制对电子邮件和 Microsoft 365 服务的访问。 此外，设备健康状况报告还包括由 Intune 管理的设备。  
 
  Configuration Manager 控制台中添加了新的合规性规则，该规则允许根据设备的运行状况状态指定应允许还是阻止访问设备。 有关运行状况证明服务及如何在 Intune 中报告设备的运行状况的详细信息，请参阅 [Configuration Manager 的运行状况证明](../../../core/servers/manage/health-attestation.md)。  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d23880def99fd12bffe83efffe9768f94481d07e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904801"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993550"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Configuration Manager 1610 版中的新增功能
 
@@ -183,9 +183,9 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 - Office 365 客户端数
 - Office 365 客户端版本
 - Office 365 客户端语言
-- Office 365 客户端通道     
+- Office 365 客户端通道
 
-有关详细信息，请参阅[管理 Office 365 ProPlus 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
+有关详细信息，请参阅[管理 Microsoft 365 应用版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>管理 BIOS 转换为 UEFI 所采用的任务序列步骤
 现在可以使用新的变量 TSUEFIDrive 自定义操作系统部署任务的序列，以便“重启计算机”  步骤为到 UEFI 的转换在硬盘驱动器上准备 FAT32 分区。 以下过程提供了有关如何创建任务序列步骤以便为 BIOS 到 UEFI 的转换准备硬盘驱动器的示例。 有关详细信息，请参阅[管理 BIOS 转换为 UEFI 所采用的任务序列步骤](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)。

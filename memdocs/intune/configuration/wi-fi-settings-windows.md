@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217630"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820623"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>在 Intune 中添加适用于 Windows 10 及更高版本设备的 Wi-Fi 设置
 
-可以使用特定的 WiFi 设置创建配置文件，然后将此配置文件部署到 Windows 10 及更高版本设备。 Microsoft Intune 提供多种功能，包括对网络进行身份验证，使用预共享密钥等。
+可以使用特定的 WiFi 设置创建配置文件。 然后，将此配置文件部署到 Windows 10 和更高版本的设备上。 Microsoft Intune 提供多种功能，包括对网络进行身份验证，使用预共享密钥等。
 
 本文将说明这些设置。
 
@@ -86,7 +86,7 @@ ms.locfileid: "88217630"
 
     例如，创建“ContosoCorp”Wi-Fi 网络，然后使用此配置文件中的“ContosoCorp” 。 还可以在范围内创建“ContosoGuest”Wi-Fi 网络。 当公司设备在范围内时，你希望它们自动连接到“ContosoCorp”。 在此方案中，将“如果可用，连接到更适合的网络”属性设置为“否” 。
 
-  - **连接到此网络，即使它未广播其 SSID**：选择“是”，则配置文件可自动连接到网络，即使网络处于隐藏状态（即未公开广播其 SSID）。 如果不希望此配置文件连接到隐藏网络，请选择“否”。
+- **连接到此网络，即使它未广播其 SSID**：选择“是”，则配置文件可自动连接到网络，即使网络处于隐藏状态（即未公开广播其 SSID）。 如果不希望此配置文件连接到隐藏网络，请选择“否”。
 
 - **按流量计费的连接限制**：管理员可以选择计算网络流量的方式。 然后，应用程序可根据此设置调整其网络流量行为。 选项包括：
 
@@ -124,19 +124,27 @@ ms.locfileid: "88217630"
     > [!NOTE]
     > 使用 EAP 类型时支持 SCEP 和 PKCS 证书配置文件。
 
-    - **服务器信任**  
+    **服务器信任**  
 
-      **证书服务器名称**：与 EAP 类型 EAP-TLS、EAP-TTLS 或 PEAP 一起使用  。 输入由受信任的证书颁发机构 (CA) 颁发的证书中使用的一个或多个常用名称。 如果输入此信息，则可在用户设备连接到此 Wi-Fi 网络时，绕过该设备上显示的动态信任对话框。  
+    - **证书服务器名称**：与 EAP 类型 EAP-TLS、EAP-TTLS 或 PEAP 一起使用  。 输入由受信任的证书颁发机构 (CA) 颁发的证书中使用的一个或多个常用名称。 如果输入此信息，则可在用户设备连接到此 Wi-Fi 网络时，绕过该设备上显示的动态信任对话框。  
 
-      **用于服务器验证的根证书**：与 EAP 类型 EAP-TLS、EAP-TTLS 或 PEAP 一起使用  。 选择用于对连接进行身份验证的受信任的根证书配置文件。  
+    - **用于服务器验证的根证书**：与 EAP 类型 EAP-TLS、EAP-TTLS 或 PEAP 一起使用  。 选择用于对连接进行身份验证的受信任的根证书配置文件。  
 
-      **标识隐私(外部标识)** ：与 EAP 类型 PEAP 一起使用。 请输入为响应 EAP 标识请求而发送的文本。 此文本可以是任何值。 在身份验证过程中，将首先发送此匿名标识，然后在安全隧道内发送真实标识。  
+    - **标识隐私(外部标识)** ：与 EAP 类型 PEAP 一起使用。 请输入为响应 EAP 标识请求而发送的文本。 此文本可以是任何值。 在身份验证过程中，将首先发送此匿名标识，然后在安全隧道内发送真实标识。  
 
-    - **客户端身份验证**
+    - 在 PEAP 阶段 1 中执行服务器验证：当此项设置为 **“是”** 时，在 PEAP 协商阶段 1 中，设备将验证证书，并验证服务器。 选择 **“否”** 可阻止或防止此验证。 设置为“未配置”时，Intune 不会更改或更新此设置。
 
-      **用于客户端身份验证的客户端证书(身份证书)** ：与 EAP 类型 EAP-TLS 一起使用。 选择用于对连接进行身份验证的证书配置文件。
+      如果选择 **“是”** ，还应配置：
 
-      **身份验证方法**：与 EAP 类型 EAP-TTLS 一起使用。 选择连接的身份验证方法：  
+      在 PEAP 阶段 1 中禁止提示用户验证服务器：当此项设置为 **“是”** 时，在 PEAP 协商阶段 1，未显示询问为受信任的证书颁发机构授权新 PEAP 服务器的用户提示。 选择 **“否”** 可显示提示。 设置为“未配置”时，Intune 不会更改或更新此设置。
+
+    - 需要加密绑定：选择 **“是”** 可阻止在 PEAP 协商期间连接到不使用加密绑定的 PEAP 服务器。 选择 **“否”** 不需要加密绑定。 设置为“未配置”时，Intune 不会更改或更新此设置。
+
+    **客户端身份验证**
+
+    - **用于客户端身份验证的客户端证书(身份证书)** ：与 EAP 类型 EAP-TLS 一起使用。 选择用于对连接进行身份验证的证书配置文件。
+
+    - **身份验证方法**：与 EAP 类型 EAP-TTLS 一起使用。 选择连接的身份验证方法：  
 
       - **证书**：选择要作为标识证书提交给服务器的客户端证书。
       - **用户名和密码**：输入用于身份验证的“非 EAP 方法(内部标识)”方法。 选项包括：
@@ -146,7 +154,7 @@ ms.locfileid: "88217630"
         - **Microsoft CHAP (MS-CHAP)**
         - **Microsoft CHAP 版本 2 (MS-CHAP v2)**
 
-      **标识隐私(外部标识)** ：与 EAP 类型 EAP-TTLS 一起使用。 请输入为响应 EAP 标识请求而发送的文本。 此文本可以是任何值。 在身份验证过程中，将首先发送此匿名标识，然后在安全隧道内发送真实标识。
+    - **标识隐私(外部标识)** ：与 EAP 类型 EAP-TTLS 一起使用。 请输入为响应 EAP 标识请求而发送的文本。 此文本可以是任何值。 在身份验证过程中，将首先发送此匿名标识，然后在安全隧道内发送真实标识。
 
 - **公司代理设置**：选择使用组织内的代理设置。 选项包括：
   - **无**：不配置任何代理设置。
@@ -161,9 +169,9 @@ ms.locfileid: "88217630"
 
 ## <a name="next-steps"></a>后续步骤
 
-配置文件已创建，但未执行任何操作。 下一步，[分配此配置文件](device-profile-assign.md)。
+配置文件已创建，但可能不会执行任何操作。 请务必[分配配置文件](device-profile-assign.md)，并[监视配置文件状态](device-profile-monitor.md)。
 
 ## <a name="more-resources"></a>更多资源
 
-- 请参阅 [Windows 8.1](wi-fi-settings-import-windows-8-1.md) 的可用设置。
-- [Wi-Fi 设置概述](wi-fi-settings-configure.md)，包含其他平台。
+- [Windows 8.1 Wi-fi 设置](wi-fi-settings-import-windows-8-1.md)
+- [Wi-Fi 设置概述](wi-fi-settings-configure.md)，包含其他平台

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9ea860568d7f094588e628955f128e5b8a3aa154
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692972"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995409"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Configuration Manager Technical Preview 1707 中的功能
 
@@ -54,9 +54,9 @@ ms.locfileid: "88692972"
  -  Task 2              
 -->
 
-## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持
+## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>客户端对等缓存支持 Windows 10 和 Microsoft 365 的快速安装文件
 <!-- 1352486 -->
-从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Office 365 的更新文件。 不需要其他配置。
+从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Microsoft 365 的更新文件。 不需要其他配置。
 
 ## <a name="surface-device-dashboard"></a>Surface 仪表板
 <!--1355788-->
@@ -70,7 +70,7 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>配置和部署 Windows Defender 应用程序防护策略
 <!-- 1351960 -->
 
-[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此技术预览版中，我们新增支持使用在配置后部署到集合的 Configuration Manager 符合性设置来配置此功能。 此功能将在 64 位版本的 Windows 10 Fall Creators Update 预览版 (codename:RS3) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
+[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此技术预览版中，我们新增支持使用在配置后部署到集合的 Configuration Manager 符合性设置来配置此功能。 此功能将在 64 位版本的 Windows 10 Fall Creators Update 预览版（代码名称：RS3) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
 
 ### <a name="before-you-start"></a>开始之前
 

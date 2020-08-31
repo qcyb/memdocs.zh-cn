@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695675"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995528"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager Technical Preview 1609 中的功能
 
@@ -347,36 +347,36 @@ Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 �
 - Office 365 客户端版本
 - Office 365 客户端语言
 - Office 365 客户端通道     
-有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](/deployoffice/overview-update-channels)。
+有关详细信息，请参阅 [Microsoft 365 应用版的更新通道概述](https://docs.microsoft.com/deployoffice/overview-update-channels)。
 - 已在可用产品集中选择 Office 365 客户端的自动部署规则。
 
 你可以对仪表板执行以下操作：
 - 在仪表板顶部，使用“集合”  下拉列表设置按特定集合的成员筛选仪表板数据。
-- 在仪表板的右上方，单击“Office 365 安装程序”  以启动 Office 365 客户端安装向导，将 Office 365 应用部署到客户端。 有关详细信息，请参阅[将 Office 365 应用部署到客户端](#deploy-office-365-apps-to-clients)。
-- 在仪表板的中右侧，单击“创建 ADR”  以打开“自动部署规则向导”，创建新的自动部署规则 (ADR)。 若要创建适用于 Office 365 应用的 ADR，请在选择该产品时选择“Office 365 客户端”  。 有关详细信息，请参阅[自动部署软件更新](../../sum/deploy-use/automatically-deploy-software-updates.md)。
+- 在仪表板的右上方，单击“Office 365 安装程序”以启动 Office 365 客户端安装向导，将 Microsoft 365 应用版部署到客户端。 有关详细信息，请参阅[将 Microsoft 365 应用版部署到客户端](#deploy-microsoft-365-apps-to-clients)。
+- 在仪表板的中右侧，单击“创建 ADR”  以打开“自动部署规则向导”，创建新的自动部署规则 (ADR)。 若要创建适用于 Microsoft 365 应用版的 ADR，请在选择该产品时选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](../../sum/deploy-use/automatically-deploy-software-updates.md)。
 - 在仪表板的右下方，单击“创建客户端代理设置”  以打开客户端代理设置。 有关详细信息，请参阅[关于客户端设置](../clients/deploy/about-client-settings.md)。
 
 
 
-有关 Office 365 专业增强版更新的详细信息，请参阅[使用 Configuration Manager 管理 Office 365 专业增强版更新](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
+有关 Microsoft 365 企业应用版更新的详细信息，请参阅[使用 Configuration Manager 管理 Microsoft 365 应用版更新](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
-## <a name="deploy-office-365-apps-to-clients"></a>将 Office 365 应用部署到客户端
-在此版本中，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。
+## <a name="deploy-microsoft-365-apps-to-clients"></a>将 Microsoft 365 应用版部署到客户端
+在此版本中，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Microsoft 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。
 
-### <a name="limitations-of-office-365-deployment"></a>Office 365 部署的限制
+### <a name="limitations-of-microsoft-365-deployment"></a>Microsoft 365 部署的限制
 - 尝试导入 Office 365 应用安装向导中的现有客户端设置 (XML) 时，可能会遇到问题。 你可以手动配置客户端设置，而不会出现问题。
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>将 Office 365 应用部署到客户端
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>将 Microsoft 365 应用版部署到客户端
 1. 在 Configuration Manager 控制台中，导航到“软件库”   > “概述”   > “Office 365 客户端管理”  。
 2. 单击右上方窗格中的“Office 365 安装程序”  。 将打开 Office 365 客户端安装向导。
 3. 在“应用程序设置”  页上，提供应用的名称和说明，输入文件的下载位置，然后单击“下一步”  。 请注意，必须采用 &#92;&#92;*server*&#92;*share* 形式指定位置。
-4. 在“导入客户端设置”  页上，选择是从现有的 XML 配置文件导入 Office 365 客户端设置还是手动指定设置，然后单击“下一步”  。
+4. 在“导入客户端设置”页上，选择是从现有的 XML 配置文件导入 Microsoft 365 客户端设置还是手动指定设置，然后单击“下一步”。
 如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 请注意，必须采用 &#92;&#92;*server*&#92;*share*&#92;*filename*.XML 形式指定位置。
 
     > [!IMPORTANT]
     >尝试导入此技术预览中的现有客户端设置 (XML) 时，可能会遇到问题。
 
-5. 在“客户端产品”  页上，依次选择使用的 Office 365 套件、想要包括的应用程序、应包括的任何其他 Office 产品，然后单击“下一步”  。
+5. 在“客户端产品”页上，依次选择使用的 Microsoft 365 套件、想要包括的应用程序、应包括的任何其他 Office 产品，然后单击“下一步”。
 6. 在“客户端设置”  页上，选择要包括的设置，然后单击“下一步”  。
 7. 在“部署”  页上，选择是否部署该应用程序，然后单击“下一步”  。
 如果选择不部署向导中的包，请跳到步骤 9。
@@ -385,7 +385,7 @@ Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 �
 10. 可以在 Configuration Manager 中从“软件库”   > “概述”   > “应用程序管理”   > “应用程序”  部署或编辑应用程序，就像部署或编辑任何其他应用程序一样。
 
 >[!NOTE]
->部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 若要创建适用于 Office 365 应用的 ADR，请单击“创建 ADR”  ，然后在选择该产品时选择“Office 365 客户端”  。 有关详细信息，请参阅[自动部署软件更新](../../sum/deploy-use/automatically-deploy-software-updates.md)。
+>在部署 Microsoft 365 应用版后，可以创建自动部署规则来维护应用。 若要创建适用于 Microsoft 365 应用版的 ADR，请单击“创建 ADR”，然后在选择该产品时选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](../../sum/deploy-use/automatically-deploy-software-updates.md)。
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>对于 BIOS 到 UEFI 转换的改进
 现在可以使用新的变量 TSUEFIDrive 自定义操作系统部署任务的序列，以便“重启计算机”步骤为到 UEFI 的转换在硬盘驱动器上准备 FAT32 分区。 以下过程提供了有关如何创建任务序列步骤以便为 BIOS 到 UEFI 的转换准备硬盘驱动器的示例。

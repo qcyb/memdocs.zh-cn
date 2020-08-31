@@ -2,7 +2,7 @@
 title: 桌面分析中的新增功能
 titleSuffix: Configuration Manager
 description: 桌面分析云服务最近每月发布的新功能摘要。
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: dd188b80375861cd08784d0574e737bfce7f2d92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614753"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993140"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>桌面分析中的新增功能
 
@@ -39,6 +39,12 @@ ms.locfileid: "88614753"
 现在，对于使用 Configuration Manager 部署的任何应用，默认情况下，桌面分析会自动将其配置为“重要”。 这种行为可以让你更快速地在环境中配置应用，以便加快生产部署进程。
 
 有关详细信息，请参阅[资产 - 应用](about-assets.md#apps)。
+
+<!-- 6049643 -->
+
+### <a name="improved-processing-of-diagnostic-data-during-snapshot-generation"></a>改进了快照生成期间对诊断数据的处理
+
+Microsoft 改进了从桌面分析的注册设备中收集和处理 Windows 诊断数据的方式。 这些改进可以提高每日快照生成的可靠性，并为开发中的新功能做好准备。 正因为此，Microsoft 在部署计划中暂时禁用了“在过去 30 天启动了此应用的设备”的计数。 有关详细信息，请参阅[资产 - 应用](about-assets.md#usage)。
 
 ## <a name="july-2020"></a>2020 年 7 月
 
@@ -66,7 +72,7 @@ ms.locfileid: "88614753"
 
 ### <a name="improvement-to-prerequisites"></a>对必备组件的改进
 
-桌面分析不再要求在 Azure Active Directory (Azure AD) 租户中部署 Office 365 服务。 Azure AD 中的 Office 365 客户端管理员应用现在为桌面分析应用，用于从服务中启用 Configuration Manager 检索信息和状态 。
+桌面分析不再要求在 Azure Active Directory (Azure AD) 租户中部署 Microsoft 365 服务。 Azure AD 中的 Office 365 客户端管理员应用现在为桌面分析应用，用于从服务中启用 Configuration Manager 检索信息和状态 。
 
 ## <a name="may-2020"></a>2020 年 5 月
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692921"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995443"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager Technical Preview 1705 中的功能
 
@@ -136,20 +136,20 @@ ms.locfileid: "88692921"
 停止站点相当于停止站点服务器上后跟 SMS_Executive 服务的站点组件管理器服务 (sitecomp)。
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>改进了 Office 365 更新的用户通知
-已进行了改进，在客户端安装 Office 365 更新时利用 Office 即点即用用户体验。 这包括弹出通知、应用内通知以及倒计时体验。 在此版本之前，在向客户端发送 Office 365 更新时，之前打开的 Office 应用程序会自动关闭而不发出警告。 此更新后，Office 应用程序将不会再意外关闭。
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>改进了 Microsoft 365 更新的用户通知
+已进行了改进，在客户端安装 Microsoft 365 更新时利用 Office 即点即用用户体验。 这包括弹出通知、应用内通知以及倒计时体验。 在此版本之前，在向客户端发送 Microsoft 365 更新时，之前打开的 Office 应用程序会自动关闭而不发出警告。 此更新后，Office 应用程序将不会再意外关闭。
 
 ### <a name="prerequisites"></a>必备条件
-此更新适用于 Office 365 ProPlus 客户端。
+此更新适用于 Microsoft 365 企业应用版客户端。
 
 ### <a name="known-issues"></a>已知问题
-如果客户端是首次评估 Office 365 更新分配，且更新具有在过去计划的截止时间、立即计划的截止时间或在 30 分钟内计划的截止时间，Office 365 用户体验可能会不一致。 例如，客户端可能会收到用于更新的一个 30 分钟倒计时对话框，但实际的强制措施可能会在倒计时结束之前启动。 若要避免此行为，请考虑以下方面的内容：
-- 部署具有截止时间的 Office 365 更新，该截止时间计划比当前时间提前超过 60 分钟。
+如果客户端是首次评估 Microsoft 365 更新分配，且更新具有在过去计划的截止时间、立即计划的截止时间或在 30 分钟内计划的截止时间，Microsoft 365 用户体验可能会不一致。 例如，客户端可能会收到用于更新的一个 30 分钟倒计时对话框，但实际的强制措施可能会在倒计时结束之前启动。 若要避免此行为，请考虑以下方面的内容：
+- 部署具有截止时间的 Microsoft 365 更新，截止时间计划比当前时间至少提前 60 分钟。
 - 配置非营业时间的收集维护时段或配置部署的实施宽限期。
 
 ### <a name="try-it-out"></a>试试看！
 请尝试完成以下任务，然后从功能区的“主页”  选项卡向我们发送“反馈”  ，让我们了解它的工作状况：
-- 将客户端部署到具有以下截止时间的 Office 365 更新，该截止时间设置为比当前时间至少提前 60 分钟的时间。 观察客户端上的新行为。
+- 将 Microsoft 365 更新部署到客户端，并将截止时间设置为比当前时间至少提前 60 分钟。 观察客户端上的新行为。
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>配置和部署 Windows Defender 应用程序防护策略

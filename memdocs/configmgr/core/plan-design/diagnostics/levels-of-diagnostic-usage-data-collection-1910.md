@@ -10,12 +10,12 @@ ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 316cd4b532c248027def1f1cac4dfbe71476b0a4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e1bd8667a1b6a808b0e0cdd645562fafdd24ad95
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128597"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994508"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1910"></a>版本 1910 的诊断和使用情况数据
 
@@ -158,7 +158,7 @@ ms.locfileid: "88128597"
 
 - 应用程序目录的不同品牌计数  
 
-- 使用仪表板创建的 Office 365 应用程序计数  
+- 使用仪表板创建的 Microsoft 365 应用程序计数  
 
 - 包（按类型）计数  
 
@@ -208,7 +208,7 @@ ms.locfileid: "88128597"
 
 - 有关使用应用程序组的聚合统计信息
 
-- 有关 Office 加载项、Office 准备情况工具包使用情况以及具有 Office 365 专业增强版的客户端计数的聚合统计信息
+- 有关 Office 加载项、Office Readiness Toolkit 的使用以及装有 Microsoft 365 企业应用版的客户端计数的聚合统计信息
 
 - ***[新增]*** 有关 Office 外接程序运行状况的聚合统计信息
 
@@ -446,7 +446,7 @@ ms.locfileid: "88128597"
 
 - 用于活动 Windows 10 服务计划的配置  
 
-- 已部署 Office 365 更新计数  
+- 部署的 Microsoft 365 更新计数  
 
 - 同步的 Microsoft Surface 驱动程序的计数  
 

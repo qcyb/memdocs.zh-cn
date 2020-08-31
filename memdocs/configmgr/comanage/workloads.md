@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694859"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995222"
 ---
 # <a name="co-management-workloads"></a>共同管理工作负载
 
@@ -110,9 +110,9 @@ Endpoint Protection 工作负载包括 Windows Defender 反恶意软件保护功
 
 - 除非重启设备，否则 Office 更新可能约在 24 小时后才能显示在客户端上  
 
-- 存在一个新的全局条件，即“Office 365 应用程序是否在设备上由 Intune 进行托管”  。 默认情况下将此条件作为一项要求添加到新的 Office 365 应用程序。 如果在转换此工作负荷时，共同托管客户端不满足应用程序的要求。 则不会安装通过 Configuration Manager 部署的 Office 365。  
+- 存在一个新的全局条件，即“Office 365 应用程序是否在设备上由 Intune 进行托管”  。 默认情况下将此条件作为一项要求添加到新的 Microsoft 365 应用程序中。 如果在转换此工作负荷时，共同托管客户端不满足应用程序的要求。 则不会安装通过 Configuration Manager 部署的 Microsoft 365。  
 
-有关 Intune 功能的详细信息，请参阅[将 Office 365 应用分配给具有 Microsoft Intune 的 Windows 10 设备](/intune/apps-add-office365)。
+有关 Intune 功能的详细信息，请参阅[将 Microsoft 365 应用版分配给具有 Microsoft Intune 的 Windows 10 设备](https://docs.microsoft.com/intune/apps-add-office365)。
 
 ## <a name="client-apps"></a>客户端应用
 

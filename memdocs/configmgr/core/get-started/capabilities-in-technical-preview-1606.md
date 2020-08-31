@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9278e6cb148768e993706fe112bbfd70121cc6b9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695590"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995460"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager Technical Preview 1606 中的功能
 
@@ -215,11 +215,11 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 客户端拥有云代理服务的新位置信息后，请尝试检查已不在内部专用网络上但具有 Internet 访问权限的客户端的状态。 还可以通过后列方式监视云代理服务通信：转到“管理”>“云服务”>“云代理服务”  ，在列表窗格中选择服务，然后查看详细信息窗格中的通信信息。   
 
-## <a name="manage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>在 Configuration Manager 中管理 Office 365 客户端代理  
+## <a name="manage-the-microsoft-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>在 Configuration Manager 中管理 Microsoft 365 客户端代理  
 
-从 Technical Preview 1606 开始，可以使用 Configuration Manager 客户端代理设置而非组策略，来使 Office 365 客户端接收来自 Configuration Manager 的更新。 配置此设置和部署 Office 365 更新后，Configuration Manager 客户端代理将与 Office 365 客户端代理通信，从分发点下载 Office 365 更新并进行安装。 Configuration Manager 还会获取客户端代理设置的清单。
+从 Technical Preview 1606 开始，你可以使用 Configuration Manager 客户端代理设置（而非组策略），使 Microsoft 365 客户端接收来自 Configuration Manager 的更新。 在你配置此设置并部署 Microsoft 365 更新后，Configuration Manager 客户端代理与 Microsoft 365 客户端代理通信，以便从分发点下载 Microsoft 365 更新并安装它们。 Configuration Manager 还会获取客户端代理设置的清单。
 
-有关详细信息，请参阅[管理 Office 365 ProPlus 更新](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
+有关详细信息，请参阅[管理 Microsoft 365 企业应用版更新](../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>设置 Configuration Manager 客户端设置以管理 Office 365 客户端代理
 1.  在 Configuration Manager 控制台中，单击“管理”   > “概述”   > “客户端设置”  。

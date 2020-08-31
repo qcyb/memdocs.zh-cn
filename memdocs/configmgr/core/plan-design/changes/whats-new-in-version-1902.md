@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700361"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995239"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -351,27 +351,27 @@ Configuration Manager 现在支持从层次结构中的管理中心站点运行 
 
 有关此 OneDrive for Business 功能的详细信息，请参阅[将 Windows 已知文件夹重定向并移动到 OneDrive](/onedrive/redirect-known-folders)。
 
-首先，[找到你的 Office 365 租户 ID](/onedrive/find-your-office-365-tenant-id)。 然后部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](/onedrive/deploy-on-windows)。  
+首先，[查找你的 Microsoft 365 租户 ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)。 然后部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](https://docs.microsoft.com/onedrive/deploy-on-windows)。  
 
 若要创建和部署 OneDrive for Business 配置文件，在 Configuration Manager 控制台中，转到“资产和符合性”  工作区。 展开“符合性设置”  ，然后选择“OneDrive for Business 配置文件”  节点。  
 
 有关详细信息，请参阅 [OneDrive for Business 配置文件](../../../compliance/deploy-use/onedrive-profile.md)一文中的“将 Windows 已知文件夹重定向到 OneDrive”部分。
 
-### <a name="integration-for-office-365-proplus-readiness"></a>Office 365 专业增强版集成的就绪情况
+### <a name="integration-for-microsoft-365-apps-for-enterprise-readiness"></a>Microsoft 365 企业应用版集成就绪情况
 
 <!--3735402-->
-使用 Configuration Manager 识别准备升级到 Office 365 专业增强版的设备，且识别的可信度非常高。 通过该集成可以深入了解环境中所用 Office 加载项和宏的任何潜在兼容性问题。 然后使用 Configuration Manager 将 Office 部署到已就绪的设备。
+使用 Configuration Manager 识别准备升级到 Microsoft 365 企业应用版的设备，且识别的可信度非常高。 通过该集成可以深入了解环境中所用 Office 加载项和宏的任何潜在兼容性问题。 然后使用 Configuration Manager 将 Office 部署到已就绪的设备。
 
-现有 Office 365 客户端管理仪表板现在包含新磁贴“Office 365 专业增强版升级就绪情况”  。
+现有 Microsoft 365 客户端管理仪表板现在包含新磁贴“Office 365 专业增强版升级就绪情况”。
 
-有关详细信息，请参阅 [Office 365 客户端管理仪表板](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
+有关详细信息，请参阅 [Microsoft 365 客户端管理仪表板](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
 
-### <a name="additional-languages-for-office-365-updates"></a>Office 365 更新的其他语言
+### <a name="additional-languages-for-microsoft-365-updates"></a>Microsoft 365 更新的其他语言
 
 <!--3555955-->
-Configuration Manager 现在支持 Office 365 客户端更新支持的所有语言。 现在，更新工作流将“Windows 更新”的 38 种语言与“Office 365 客户端更新”的多种语言分开   。
+Configuration Manager 现在支持 Microsoft 365 客户端更新支持的所有语言。 现在，更新工作流将“Windows 更新”的 38 种语言与“Office 365 客户端更新”的多种语言分开   。
 
-有关详细信息，请参阅[管理 Office 365 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)
+有关详细信息，请参阅[管理 Microsoft 365 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>生命周期仪表板上的 Office 产品
 

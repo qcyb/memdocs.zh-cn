@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8396a9713e5ce4b6001aefb55485a908f0e605dd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357657"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663253"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>实现 Microsoft Intune 计划
 
@@ -130,7 +130,7 @@ Intune 支持对 Exchange Online、Exchange 內部部署、SharePoint Online、S
 
 ### <a name="task-13-enroll-devices"></a>任务 13：注册设备
 
-Intune 支持 iOS/iPadOS、Mac OS、Android、Windows 桌面版和 Windows Mobile 设备平台。 根据 Intune 部署用例和要求，适当地注册移动设备平台。
+Intune 支持 iOS/iPadOS、Mac OS、Android 和 Windows 桌面版设备平台。 根据 Intune 部署用例和要求，适当地注册移动设备平台。
 
 - 了解有关[如何注册设备](../enrollment/device-enrollment.md)的详细信息。
 

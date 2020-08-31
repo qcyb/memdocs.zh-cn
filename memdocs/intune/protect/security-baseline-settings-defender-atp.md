@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022173"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663423"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -111,6 +111,9 @@ ms.locfileid: "86022173"
   - **是**（默认）- 移动设备需要加密存储卡。
   - **未配置** - 设置会返回到 OS 默认设置，即不需要存储卡加密。
 
+  > [!NOTE]
+  > 对 [Windows 10 移动版](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) 和 [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) 的支持于 2020 年 8 月结束。
+
 - **对 OS 和固定数据驱动器启用全磁盘加密**  
   CSP：[RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
 
@@ -125,7 +128,7 @@ ms.locfileid: "86022173"
   [BitLocker 组策略设置](https://go.microsoft.com/fwlink/?linkid=2067025)
 
   - **配置**（默认）
-  - 未配置
+  - 未配置 
 
   设置为“配置”时，你可以配置“配置操作系统驱动器的加密方法” 。
 
@@ -145,7 +148,7 @@ ms.locfileid: "86022173"
   [BitLocker 组策略设置](https://go.microsoft.com/fwlink/?linkid=2067018)
 
   - **配置**（默认）
-  - 未配置
+  - 未配置 
 
   设置为“配置”时，你可以配置“阻止对不受 BitLocker 保护的固定数据驱动器的写权限”和“配置固定数据驱动器的加密方法”  。
 
@@ -172,7 +175,7 @@ ms.locfileid: "86022173"
   [BitLocker 组策略设置](https://go.microsoft.com/fwlink/?linkid=2067140)
 
   - **配置**（默认）
-  - 未配置
+  - 未配置 
 
   设置为“配置”时，你可以配置“配置可移动数据驱动器的加密方法”和“阻止对不受 BitLocker 保护的可移动数据驱动器的写权限”  。
 
@@ -182,7 +185,7 @@ ms.locfileid: "86022173"
 
     配置可移动数据驱动器磁盘的加密方法和密码长度。 XTS-AES 128 位是 Windows 默认加密方法和建议的值。
 
-    - 未配置
+    - 未配置 
     - AES 128 位 CBC
     - AES 256 位 CBC（默认）
     - AES 128 位 XTS
@@ -201,19 +204,19 @@ ms.locfileid: "86022173"
   CSP：[Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
   - **是**（默认）- 使用 SmartScreen 防止用户受潜在网络钓鱼诈骗和恶意软件侵袭。
-  - 未配置
+  - 未配置 
 
 - **阻止恶意网站访问**  
   CSP：[Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
 
   - **是**（默认）- 阻止用户忽略 Microsoft Defender SmartScreen 筛选器警告并阻止他们访问该站点。
-  - 未配置
+  - 未配置 
 
 - **阻止下载未经验证的文件**  
   CSP：[Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
 
   - **是**（默认）- 阻止用户忽略 Microsoft Defender SmartScreen 筛选器警告并阻止他们下载未经验证的文件。
-  - 未配置
+  - 未配置 
 
 ## <a name="data-protection"></a>数据保护
 
@@ -223,7 +226,7 @@ ms.locfileid: "86022173"
   只在启用了 BitLocker 或设备加密时才执行此策略设置。
 
   - **是**（默认）- 阻止所有热插拔 PCI 下游端口进行直接内存访问 (DMA)，直到用户登录 Windows。 用户登录后，Windows 会枚举连接到热插拔 PCI 端口的 PCI 设备。 用户每次锁定计算机都会阻止无子设备的热插拔 PCI 端口进行 DMA，直到用户再次登录。 已在计算机解锁时枚举的设备继续工作，直到拔出。
-  - 未配置
+  - 未配置 
 
 ## <a name="device-guard"></a>Device Guard  
 
@@ -243,7 +246,7 @@ ms.locfileid: "86022173"
   
   使用此策略设置可以指定禁止 Windows 安装的设备的即插即用硬件 ID 和兼容 ID 的列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。  如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。
 
-  - 未配置
+  - 未配置 
   - 允许安装硬件设备 - 可根据其他允许或禁止策略设置来安装和更新设备。
   - 阻止安装硬件设备（默认）- 禁止 Windows 安装你所定义的列表中列出了其硬件 ID 或兼容 ID 的设备。
 
@@ -253,7 +256,7 @@ ms.locfileid: "86022173"
 
     仅“按设备标识符安装硬件设备”设置为“阻止安装硬件设备”时，此设置才可用 。
     - **是**
-    - 未配置
+    - 未配置 
 
   - **已阻止的硬件设备标识符**  
     
@@ -266,7 +269,7 @@ ms.locfileid: "86022173"
   
   使用此策略设置可以指定禁止 Windows 安装的设备驱动程序的设备安装程序类全局唯一标识符 (GUID) 列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。 如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。
 
-  - 未配置
+  - 未配置 
   - 允许安装硬件设备 - Windows 可根据其他允许或禁止策略设置来安装和更新设备。
   - 阻止安装硬件设备（默认）- 禁止 Windows 安装你所定义的列表中列出了其安装程序类 GUID 的设备。
 
@@ -276,7 +279,7 @@ ms.locfileid: "86022173"
 
     仅“按设备标识符安装硬件设备”设置为“阻止安装硬件设备”时，此设置才可用 。
     - **是**
-    - 未配置
+    - 未配置 
 
   - **已阻止的硬件设备标识符**
 
@@ -307,7 +310,7 @@ ms.locfileid: "86022173"
   返回或设置 Microsoft Defender 高级威胁防护示例共享配置参数。  
   
   - **是**（默认）
-  - 未配置
+  - 未配置 
 
 - **加快遥测报告频率**  
   CSP：[Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
@@ -315,7 +318,7 @@ ms.locfileid: "86022173"
   提高 Microsoft Defender 高级威胁防护遥测报告频率。  
 
   - **是**（默认）
-  - 未配置
+  - 未配置 
 
 ## <a name="firewall"></a>防火墙
 
@@ -339,7 +342,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
 
    如果不需要 UTF-8，则最初可使用 UTF-8 对预共享密钥进行编码。 之后，设备用户可以选择另一种编码方法。
 
-  - 未配置
+  - 未配置 
   - **无**
   - UTF8（默认）
 
@@ -368,7 +371,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067041)
 
   - **配置**（默认）
-  - 未配置
+  - 未配置 
 
   设置为“配置”时，可以配置以下其他设置。
 
@@ -376,48 +379,48 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     CSP：[/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要针对多播广播的单播响应**  
     CSP：[/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要隐藏模式**  
     CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要出站连接**  
     CSP：[/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已阻止入站通知**  
     CSP：[/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已合并来自组策略的全局端口规则**  
     CSP：[/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已阻止隐藏模式**  
     CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **防火墙已启用**  
     CSP：[/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-    - 未配置
+    - 未配置 
     - **已阻止**
     - 允许（默认）
 
@@ -425,31 +428,31 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     CSP：[/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **未合并来自组策略的连接安全规则**  
     CSP：[/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要传入流量**  
     CSP：[/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **未合并来自组策略的策略规则**  
     CSP：[/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
 - **公共防火墙配置文件**  
   [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
 
   - **配置**（默认）
-  - 未配置
+  - 未配置 
 
   设置为“配置”时，可以配置以下其他设置。
 
@@ -457,54 +460,54 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     CSP：[/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要针对多播广播的单播响应**  
     CSP：[/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要隐藏模式**  
     CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要出站连接**  
     CSP：[/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **未合并来自组策略的已授权的应用程序规则**  
     CSP：[/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已阻止入站通知**  
     CSP：[/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已合并来自组策略的全局端口规则**  
     CSP：[/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已阻止隐藏模式**  
     CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **防火墙已启用**  
     CSP：[/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-    - 未配置
+    - 未配置 
     - **已阻止**
     - 允许（默认）
 
@@ -512,19 +515,19 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     CSP：[/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **需要传入流量**  
     CSP：[/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **未合并来自组策略的策略规则**  
     CSP：[/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
 - **防火墙配置文件域**  
   CSP：[2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
@@ -536,30 +539,30 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     CSP：[/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
     - **是**（默认）
-    - 未配置  
+    - 未配置   
 
   - **已阻止入站通知**  
     CSP：[/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已合并来自组策略的全局端口规则**  
     CSP：[/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **已阻止隐藏模式**  
     CSP：[/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **防火墙已启用**  
     CSP：[/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-    - 未配置
+    - 未配置 
     - **已阻止**
     - 允许（默认）
 
@@ -567,13 +570,13 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
     CSP：[/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
   - **未合并来自组策略的策略规则**  
     CSP：[/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
     - **是**（默认）
-    - 未配置
+    - 未配置 
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
 
@@ -590,7 +593,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   CSP：[Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**是**（默认）
-  - 未配置
+  - 未配置 
 
 - **阻止 Office 通信应用创建子进程**  
   [保护设备免遭攻击](https://go.microsoft.com/fwlink/?linkid=874499)  
@@ -646,7 +649,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   CSP：[Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
   
   - **是**（默认）- 阻止网络检查系统 (NIS) 中的签名检测到的恶意流量。
-  - 未配置
+  - 未配置 
 
 - **扫描所有已下载的文件和附件**  
   CSP：[Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
@@ -670,7 +673,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   CSP：[Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **是**（默认）
-  - 未配置
+  - 未配置 
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
@@ -866,7 +869,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
 - **仅需要应用商店中的应用**  
 
   - **是**（默认）
-  - 未配置
+  - 未配置 
 
 - **启用 Windows SmartScreen**  
   CSP：[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)

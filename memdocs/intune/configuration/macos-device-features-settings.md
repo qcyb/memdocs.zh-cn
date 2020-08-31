@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093552"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819654"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 中的 macOS 设备功能设置
 
@@ -267,6 +267,15 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
 - **SSO 应用扩展类型**：选择 SSO 应用扩展的类型。 选项包括：
 
   - **未配置**：不使用应用扩展。 若要禁用应用扩展，请将 SSO 应用扩展类型切换为“未配置”。
+  - **Microsoft Azure AD**：使用 Microsoft 企业 SSO 插件，它是一个重定向类型的 SSO 应用扩展。 此插件为所有支持 [Apple 企业单一登录](https://developer.apple.com/documentation/authenticationservices)功能的 macOS 应用程序提供 Active Directory 帐户的 SSO。 使用此 SSO 应用扩展类型可在使用 Azure AD 进行身份验证的 Microsoft 应用、组织应用和网站上启用 SSO。
+
+    SSO 插件充当高级身份验证代理，可改进安全性和用户体验。
+
+    > [!IMPORTANT]
+    > 要通过 Microsoft Azure AD SSO 应用扩展类型实现 SSO，请在设备上安装 macOS 公司门户应用。 公司门户应用将 Microsoft 企业 SSO 插件传递到设备。 MDM SSO 应用扩展设置激活插件。 在设备上安装公司门户应用和 SSO 应用扩展配置文件后，用户在设备上输入其凭据登录和建立会话。 该会话可在不同的应用程序中使用，而无需用户再次进行身份验证。
+    >
+    > 有关公司门户应用的详细信息，请参阅[安装公司门户应用并在 Intune 中注册 macOS 设备后会发生什么](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md)。 [下载](https://go.microsoft.com/fwlink/?linkid=853070)公司门户应用
+
   - **重定向**：使用通用的可自定义重定向应用扩展，通过新式身份验证流使用 SSO。 请务必了解组织的应用扩展的扩展和团队 ID。
   - **凭据**：使用通用的可自定义凭据应用扩展，通过质询和响应身份验证流来使用 SSO。 请务必了解组织的 SSO 应用扩展的扩展 ID 和团队 ID。  
   - **Kerberos**：使用 Apple 的内置 Kerberos 扩展，该扩展包含在 macOS Catalina 10.15 和更高版本中。 此选项是“凭据”应用扩展的 Kerberos 特定版本。
@@ -274,14 +283,14 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
   > [!TIP]
   > 使用“重定向”和“凭据”类型，可以添加自己的配置值以传递扩展。 如果你使用的是“凭据”，请考虑使用 Apple 在“Kerberos”类型中提供的内置配置设置。
 
-- **扩展 ID**（“重定向”和“凭据”）：输入可标识 SSO 应用扩展的程序包标识符，如 `com.apple.ssoexample`。
-- **团队 ID**（“重定向”和“凭据”）：输入 SSO 应用扩展的团队标识符。 团队标识符是由 Apple 生成的 10 个字符的字母数字（包含数字和字母）字符串，如 `ABCDE12345`。 
+- **扩展 ID**（“重定向”、“凭据”）：输入可标识 SSO 应用扩展的程序包标识符，如 `com.apple.ssoexample`。
+- **团队 ID**（“重定向”、“凭据”）：输入 SSO 应用扩展的团队标识符。 团队标识符是由 Apple 生成的 10 个字符的字母数字（包含数字和字母）字符串，如 `ABCDE12345`。 
 
   [找到你的团队 ID](https://help.apple.com/developer-account/#/dev55c3c710c)（打开 Apple 网站）提供了详细信息。
 
-- **领域**（“重定向”和“Kerberos”）：输入身份验证领域的名称。 领域名称应为大写形式，如 `CONTOSO.COM`。 通常情况下，你的领域名称与 DNS 域名相同，但全部为大写形式。
+- **领域**（“重定向”、“Kerberos”）：输入身份验证领域的名称。 领域名称应为大写形式，如 `CONTOSO.COM`。 通常情况下，你的领域名称与 DNS 域名相同，但全部为大写形式。
 
-- **域**（“凭据”和“Kerberos”）：输入可通过 SSO 进行身份验证的站点的域名或主机名。 例如，如果你的网站是 `mysite.contoso.com`，则 `mysite` 为主机名，`contoso.com` 为域名。 当用户连接到这些站点中的任何一个时，应用扩展会处理身份验证质询。 通过此身份验证，用户可以使用 Face ID、Touch ID 或 Apple PIN 码/密码登录。
+- **域**（“凭据”、“Kerberos”）：输入可通过 SSO 进行身份验证的站点的域名或主机名。 例如，如果你的网站是 `mysite.contoso.com`，则 `mysite` 为主机名，`contoso.com` 为域名。 当用户连接到这些站点中的任何一个时，应用扩展会处理身份验证质询。 通过此身份验证，用户可以使用 Face ID、Touch ID 或 Apple PIN 码/密码登录。
 
   - 单一登录应用扩展 Intune 配置文件中的所有域都必须是唯一的。 即使使用的是不同类型的 SSO 应用扩展，也不能在任何登录应用扩展配置文件中使用重复的域。
   - 这些域不区分大小写。
@@ -291,7 +300,7 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
   - Intune 单一登录应用扩展配置文件中的所有 URL 都必须是唯一的。 即使使用的是不同类型的 SSO 应用扩展，也不能在任何 SSO 应用扩展配置文件中使用重复的域。
   - URL 必须以 `http://` 或 `https://` 开头。
 
-- **其他配置**（“重定向”和“凭据”）：输入要传递到 SSO 应用扩展的其他扩展特定数据：
+- **其他配置**（Microsoft Azure AD、“重定向”、“凭据”）：输入要传递到 SSO 应用扩展的其他扩展特定数据：
   - **密钥**：输入要添加的项的名称，如 `user name`。
   - **类型**：输入数据的类型。 选项包括：
 
@@ -331,7 +340,13 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
 - **Active Directory 站点代码**（仅用于“Kerberos”）：输入 Kerberos 扩展应使用的 Active Directory 站点的名称。 可能不需要更改此值，因为 Kerberos 扩展可能会自动查找 Active Directory 站点代码。
 - **缓存名称**（仅用于“Kerberos”）：输入 Kerberos 缓存的通用安全服务 (GSS) 名称。 很可能不需要设置此值。  
 - **密码要求消息**（仅用于“Kerberos”）：输入向用户显示的组织密码要求的文本版本。 如果不需要 Active Directory 的密码复杂性要求，或者不输入最小密码长度，则会显示该消息。  
-- **应用程序包 ID**（仅用于“Kerberos”）：添加应用程序包标识符，这些标识符应在设备上使用单一登录。 这些应用有权访问 Kerberos 票证授予票证和身份验证票证。 应用还会针对用户有权访问的服务对用户进行身份验证。
+- **启用共享设备模式**（仅用于 Microsoft Azure AD）：如果要将 Microsoft 企业 SSO 插件部署到已配置支持 Azure AD 共享设备模式功能的 macOS 设备，请选择 **“是”** 。 通过共享模式下的设备，多名用户可以全局方式在支持共享设备模式的应用程序中登录和注销。 设置为“未配置”时，Intune 不会更改或更新此设置。 
+
+  如果设置为 **“是”** ，则将从设备中擦除所有现有的用户帐户。 若要避免数据丢失或阻止恢复出厂设置，请确保了解此设置会如何更改设备。
+
+  有关共享设备模式的详细信息，请参阅[共享设备模式概述](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)。
+
+- **应用捆绑包 ID**（Microsoft Azure AD、Kerberos）：添加应用程序包标识符，这些标识符应在设备上使用单一登录。 这些应用有权访问 Kerberos 票证授予票证和身份验证票证。 应用还会针对用户有权访问的服务对用户进行身份验证。
 - **域领域映射**（仅用于“Kerberos”）：添加应映射到领域的域 DNS 后缀。 当主机的 DNS 名称与领域名称不匹配时，使用此设置。 很可能不需要创建此自定义域到领域的映射。
 - **PKINIT 证书**（仅用于“Kerberos”）：选择可用于 Kerberos 身份验证的初始身份验证 (PKINIT) 证书的公钥加密。 可以从已在 Intune 中添加的 [PKCS](../protect/certficates-pfx-configure.md) 或 [SCEP](../protect/certificates-scep-configure.md) 证书中进行选择。 有关证书的详细信息，请参阅[在 Microsoft Intune 中使用证书进行身份验证](../protect/certificates-configure.md)。
 

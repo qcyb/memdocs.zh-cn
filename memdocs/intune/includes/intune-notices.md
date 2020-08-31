@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051616"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820048"
 ---
 本文中的通知提供了重要信息，可以帮助你为未来的 Intune 更改和功能做好准备。
 
@@ -37,10 +37,10 @@ Microsoft 对 Windows 10 移动版的主流支持已于 2019 年 12 月结束。
 Android 设备管理员管理在 Android 2.2 中作为一种管理 Android 设备的方法发布。 然后从 Android 5 开始，发布了 [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 的更现代的管理框架（适用于能够可靠连接到 Google 移动服务的设备）。 Google 通过在新的 Android 版本中减少对管理的支持来鼓励转移设备管理员管理。
 
 #### <a name="how-does-this-affect-me"></a>这对我有何影响？
-由于 Google 的这些变化，到 2020 年第四季度，受影响的设备管理员管理的设备将不再具有广泛的管理功能。 
+由于 Google 的这些变化，到 2020 年 10 月，受影响的设备管理员管理的设备将不再具有广泛的管理功能。 
 
 > [!NOTE]
-> 这一日期之前被传达为 2020 年第三季度，但根据 [Google 提供的最新信息](https://www.blog.google/products/android-enterprise/da-migration/)，该日期已被删除。
+> 这一日期之前被传达为 2020 年第四季度，但根据 [Google 提供的最新信息](https://www.blog.google/products/android-enterprise/da-migration/)，该日期已被删除。
 
 ##### <a name="device-types-that-will-be-impacted"></a>将受影响的设备类型
 减少对设备管理员的支持会对某些设备产生影响，这些设备通常满足以下所有三个条件：
@@ -96,14 +96,14 @@ Android 设备管理员管理在 Android 2.2 中作为一种管理 Android 设�
 - 对于新注册的设备、新分配的设置和更新的设置，受影响的合规性设置仍将在“更新设备设置”页面上显示为不符合的原因，并且设备将不合规，但在设置应用程序中不会强制执行更严格的密码要求。
 
 #### <a name="cause-of-impact"></a>影响的原因 
-设备将在 2020 年第四季度开始受到影响。 届时，我们将发布一个公司门户应用更新，该更新会将公司门户 API 的目标从级别 28 增加级别 29（[根据 Google 要求](https://www.blog.google/products/android-enterprise/da-migration/)）。 
+设备将在 2020 年 10 月开始受到影响。 届时，我们将发布一个公司门户应用更新，该更新会将公司门户 API 的目标从级别 28 增加级别 29（[根据 Google 要求](https://www.blog.google/products/android-enterprise/da-migration/)）。 
 
 届时，用户完成以下两项操作后，非 Samsung 制造的设备管理员管理的设备将受到影响：
 - 更新到 Android 10 或更高版本。
 - 将公司门户应用更新为面向 API 级别 29 的版本。
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
-为避免在即将到来的 2020 年第四季度出现功能缩减的情况，建议采取如下操作：
+为避免在即将到来的 2020 年 10 月出现功能降低的情况，建议采取如下操作：
 - **新建注册**：将新设备载入 [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理（如果可用）和/或[应用保护策略](../apps/app-protection-policies.md)。 避免将新设备载入设备管理员管理中。 
 - **先前注册的设备**：如果设备管理员管理的设备正在运行 Android 10 或更高版本，或者可以更新到 Android 10 或更高版本（特别是在不是 Samsung 设备的情况下），请将其从设备管理员管理移到 [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理和/或[应用保护策略](../apps/app-protection-policies.md)。 可以利用简化的流[将 Android 设备从设备管理员移到工作配置文件管理](../enrollment/android-move-device-admin-work-profile.md)。
 

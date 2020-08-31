@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700276"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819671"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2006 的新变化
 
@@ -31,6 +31,13 @@ ms.locfileid: "88700276"
 > 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Endpoint Manager 租户附加
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 租户附加：Microsoft Endpoint Manager 管理中心的 Microsoft Defender 防病毒
+<!--4812909-->
+现可在 Microsoft Endpoint Manager 控制台中创建 Microsoft Defender 防病毒策略，并将它们部署到 Configuration Manager 集合。 有关详细说明和可用的设置，请参阅以下文章：
+- [租户附加：从管理中心将 Configuration Manager 客户端加入 Microsoft Defender ATP（预览）](../../../tenant-attach/atp-onboard.md)
+- [租户附加：从管理中心部署终结点安全性防病毒策略（预览）](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Microsoft Intune 中租户附加设备的 Microsoft Defender 防病毒策略的设置](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)。 
 
 ### <a name="install-applications-from-the-admin-center"></a>从管理中心安装应用程序
 <!--7518897, 6024389-->
@@ -124,7 +131,7 @@ Intranet 客户端现在可以在分配到边界组后访问 CMG 软件更新点
 
 | 版本 2006 及更高版本 | 版本 2002 及更低版本 |
 |---------|---------|
-| 必选 | 基本 |
+| 必需 | 基本 |
 | 可选(受限) | 增强(受限) |
 | 不适用 | 增强版 |
 | 可选 | 完全 |

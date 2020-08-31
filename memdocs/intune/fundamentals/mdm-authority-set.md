@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591226"
+ms.locfileid: "88614722"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>设置移动设备管理机构
 
@@ -38,7 +38,7 @@ ms.locfileid: "88591226"
 
 - Office 365 的基本移动性和安全性 - 如果已激活此配置，则会看到 MDM 授权设置为“Office 365”。 如果要开始使用 Intune，则需要购买 Intune 许可证。
 
-- Office 365 的基本移动性和安全性共存 - 如果你已在使用 Office 365 的基本移动性和安全性，则可将 Intune 添加到租户上，然后将管理机构设置为 Intune 或 Office 365 的基本移动性和安全性，以便各个用户可决定使用哪项服务管理其注册了 MDM 的设备。 将基于分配给每个用户的许可证定义用户的管理机构：如果用户只有 Microsoft 365 基本或标准许可证，则其设备将由 Office 365 的基本移动性和安全性进行管理。 如果用户有授权使用 Intune 的许可证，则其设备将由 Intune 管理。 如果向之前由 Office 365 的基本移动性和安全性管理的用户添加授权使用 Intune 的许可证，则其设备将切换到 Intune 管理。 在将用户切换到 Intune 之前，请务必分配 Intune 配置给用户，以替换 Office 365 的基本移动性和安全性，否则其设备将丢失 Office 365 的基本移动性和安全性配置，并且不会从 Intune 接收任何替换信息。
+- **Office 365 的基本移动性和安全性[共存](#coexistence)** - 如果你已在使用 Office 365 的基本移动性和安全性，则可将 Intune 添加到租户上，然后将管理机构设置为 Intune 或 Office 365 的基本移动性和安全性，以便各个用户可决定使用哪项服务管理其注册了 MDM 的设备。 将基于分配给每个用户的许可证定义用户的管理机构：如果用户只有 Microsoft 365 基本或标准许可证，则其设备将由 Office 365 的基本移动性和安全性进行管理。 如果用户有授权使用 Intune 的许可证，则其设备将由 Intune 管理。 如果向之前由 Office 365 的基本移动性和安全性管理的用户添加授权使用 Intune 的许可证，则其设备将切换到 Intune 管理。 在将用户切换到 Intune 之前，请务必分配 Intune 配置给用户，以替换 Office 365 的基本移动性和安全性，否则其设备将丢失 Office 365 的基本移动性和安全性配置，并且不会从 Intune 接收任何替换信息。
 
 ## <a name="set-mdm-authority-to-intune"></a>将 MDM 机构设置为 Intune
 
@@ -85,9 +85,9 @@ ms.locfileid: "88591226"
 ### <a name="preparation"></a>准备工作
 
 在启用与基本移动性和安全性的共存之前，请考虑以下几点：
-- 确保你想要通过 Intune 管理的用户拥有足够的 Intune 许可证。
+- 确保你想要通过 Intune 管理的用户拥有足够的 [Intune 许可证](licenses.md)。
 - 查看哪些用户分配有 Intune 许可证。 启用共存后，任何已分配有 Intune 许可证的用户都可以将其设备切换到 Intune。 若要避免意外的设备切换，我们建议你在启用共存之前不分配任何 Intune 许可证。
-- 创建并部署 Intune 策略来替换最初通过 Office 365 安全与合规门户部署的设备安全策略。 应为希望从基本移动性和安全性转换到 Intune 的任何用户执行此替换。 如果没有为这些用户分配 Intune 策略，则启用共存可能会导致其丢失基本移动性和安全性设置。 这些设置将丢失而不进行替换，如托管电子邮件配置文件。
+- 创建并部署 Intune 策略来替换最初通过 Office 365 安全与合规门户部署的设备安全策略。 应为希望从基本移动性和安全性转换到 Intune 的任何用户执行此替换。 如果没有为这些用户分配 Intune 策略，则启用共存可能会导致其丢失基本移动性和安全性设置。 这些设置将丢失而不进行替换，如托管电子邮件配置文件。 即使将设备安全策略替换为 Intune 策略，在设备移到 Intune 管理后，也可能会提示用户重新对其电子邮件配置文件进行身份验证。
 
 ### <a name="add-intune-mdm-authority"></a>添加 Intune MDM 机构
 

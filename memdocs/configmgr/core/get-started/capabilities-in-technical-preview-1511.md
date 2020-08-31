@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694502"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995477"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager Technical Preview 1511 中的功能
 
@@ -50,24 +50,24 @@ ms.locfileid: "88694502"
 
 5.  通过 WUfB 管理的计算机会在符合性状态中显示“未知”  ，且不会计入总体符合性百分比中。  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a>通过 Configuration Manager 管理 Office 365 专业增强版客户端更新  
- Configuration Manager 现在能够使用 Configuration Manager 软件更新管理工作流来管理 Office 365 客户端更新。    
-当 Microsoft 向 Windows Server 更新服务 (WSUS) 发布新的 Office 365 桌面客户端更新时，如果 Office 365 更新配置为目录同步的一部分，则 Configuration Manager 能够将更新同步到其目录。  Configuration Manager 站点服务器会下载 Office 365 客户端更新并将包分发到 Configuration Manager 分发点。  Configuration Manager 客户端随后会告知 Office 365 桌面客户端在何处获取更新以及何时启动更新安装过程。  
+##  <a name="managing-microsoft-365-apps-for-enterprise-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> 通过 Configuration Manager 管理 Microsoft 365 企业应用版客户端更新  
+Configuration Manager 现在能够使用 Configuration Manager 软件更新管理工作流来管理 Microsoft 365 客户端更新。
+当 Microsoft 向 Windows Server Updates Services (WSUS) 发布新的 Microsoft 365 桌面客户端更新时，如果 Microsoft 365 更新配置为目录同步的一部分，则 Configuration Manager 能够将更新同步到其目录。  Configuration Manager 站点服务器会下载 Microsoft 365 客户端更新并将包分发到 Configuration Manager 分发点。  Configuration Manager 客户端随后会告知 Microsoft 365 桌面客户端在何处获取更新以及何时启动更新安装过程。  
 
 **此方案的先决条件：**  
 
 ### <a name="try-it-out"></a>试试看！  
  尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
 
-1. 可以将 Office 365 更新同步到 Configuration Manager 站点服务器并从 Configuration Manager 控制台查看它们。  
+1. 可以将 Microsoft 365 更新同步到 Configuration Manager 站点服务器并从 Configuration Manager 控制台查看它们。  
 
-2. 可以审批并成功部署 Office 365 更新。  
+2. 可以审批并成功部署 Microsoft 365 更新。  
 
-3. 可以下载并成功将 Office 365 更新部署到客户端。  
+3. 可以下载并成功将 Microsoft 365 更新部署到客户端。  
 
-4. 可以使用控制台中监视或报告来验证 Office 365 更新的符合性。  
+4. 可以使用控制台中监视或报告来验证 Microsoft 365 更新的符合性。  
 
-   有关详细步骤，请参阅[使用 Configuration Manager 技术预览版管理 Office 365 客户端更新](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)。  
+   有关详细步骤，请参阅[使用 Configuration Manager 技术预览版管理 Microsoft 365 客户端更新](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)。  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>支持 SQL Server AlwaysOn，实现数据库的高度可用性  
  Configuration Manager 现在支持使用 SQL Server AlwaysOn 可用性组托管站点数据库。  在安装新站点时，可以指示安装程序使用可用性组，而不是普通的 SQL Server 实例。  

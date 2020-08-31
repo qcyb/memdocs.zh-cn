@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565676"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819994"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中分配用户和设备配置文件
 
-创建一个配置文件，其中包含你输入的所有设置。 下一步是部署配置文件或将其“分配”给 Azure Active Directory (Azure AD) 用户或设备组。 分配后，用户和设备会收到你的配置文件，并且会应用你输入的设置。
+创建一个配置文件，其中包含你输入的所有设置。 下一步是部署配置文件或将其“分配”给用户或设备组。 分配后，用户和设备会收到你的配置文件，并且会应用你输入的设置。
 
 本文演示如何分配配置文件，并介绍有关对配置文件使用作用域标记的一些信息。
 
@@ -39,27 +39,22 @@ ms.locfileid: "86565676"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-确保你拥有适当的角色来分配配置文件。 有关详细信息，请参阅 [Microsoft Intune 的基于角色的访问控制 (RBAC)](../fundamentals/role-based-access-control.md)。
+确保你拥有正确的角色来分配配置文件。 有关详细信息，请参阅 [Microsoft Intune 的基于角色的访问控制 (RBAC)](../fundamentals/role-based-access-control.md)。
 
 ## <a name="assign-a-device-profile"></a>分配设备配置文件
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“设备” > “配置文件”。 此时会列出所有配置文件。
-3. 选择要分配的配置文件，单击“分配”。
-4. 选择“包含”组或“排除”组，然后选择组 。 选择组时，会选择 Azure AD 组。 若要选择多个组，请按住 Ctrl，然后选择组。
+3. 选择要分配的配置文件，单击 **“属性”**  >  **“分配”**  >  **“编辑”** ：
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="在 Microsoft Intune 中从配置文件分配中包括或排除组选项的屏幕截图":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="选择要将配置文件部署到 Microsoft Intune 和 Endpoint Manager 中的用户和组的分配":::
 
-5. 单击“保存”以保存更改。
+4. 依次选择 **“包括的组”** 或 **“排除的组”** 和 **“选择要包括的组”** 。 选择组时，会选择 Azure AD 组。 若要选择多个组，请按住 Ctrl，然后选择组。
 
-### <a name="evaluate-how-many-users-are-targeted"></a>评估所面向的用户数
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="在 Microsoft Intune 和 Endpoint Manager 中分配或部署配置文件时包括或排除用户和组。":::
 
-分配配置文件后，还可以评估受影响的用户数。 此功能计算用户数，不计算设备数。
-
-1. 在管理中心，选择“设备” > “配置文件”。
-2. 选择一个配置文件，依次单击“分配” > “评估”。 随即出现一条消息，显示此配置文件所面向的用户数。
-
-如果“评估”按钮呈灰显状态，请确保配置文件已分配到一个或多个组。
+5. 选择 **“查看 + 保存”** 。 此步骤不会分配配置文件。
+6. 选择“保存”。 保存时，会分配配置文件。 当设备签入 Intune 服务时，你的组将收到配置文件设置。
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>使用作用域标记或适用性规则
 

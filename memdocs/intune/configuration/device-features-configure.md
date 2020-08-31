@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989190"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820572"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>使用 Intune 添加 iOS、iPadOS 或 macOS 设备功能设置
 
@@ -133,7 +133,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 大多数业务线 (LOB) 应用需要某种级别的用户身份验证，才能支持安全性。 在许多情况下，此类身份验证要求用户重复输入相同凭据。 为了提升用户体验，开发人员可以创建使用单一登录 (SSO) 的应用。 使用单一登录减少了用户必须输入凭据的次数。
 
-单一登录配置文件基于 Kerberos。 Kerberos 是一种网络身份验证协议，它使用密钥加密来对客户端-服务器应用程序进行身份验证。 Intune 设置在访问服务器或指定应用时定义 Kerberos 帐户信息，并处理网页和本机应用的 Kerberos 质询。 Apple 建议使用 [Kerberos SSO 应用扩展](#single-sign-on-app-extension)（在本文中）设置，而不是 SSO 设置。  
+单一登录配置文件基于 Kerberos。 Kerberos 是一种网络身份验证协议，它使用密钥加密来对客户端-服务器应用程序进行身份验证。 Intune 设置在访问服务器或特定应用时定义 Kerberos 帐户信息，并处理网页和本机应用的 Kerberos 质询。 Apple 建议使用 [Kerberos SSO 应用扩展](#single-sign-on-app-extension)（在本文中）设置，而不是 SSO 设置。  
 
 若要使用单一登录，请务必确保：
 
@@ -153,7 +153,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 在 Intune 中，使用这些设置配置由组织、标识提供者、Microsoft 或 Apple 创建的 SSO 应用扩展。 SSO 应用扩展将处理对用户的身份验证。 这些设置可配置重定向类型和凭据类型 SSO 应用扩展。
 
-- 重定向类型适用于 OpenID Connect、OAuth 和 SAML2 等新式身份验证协议。 可在 macOS 设备上使用通用的重定向扩展。 对于 iOS/iPadOS 设备，可在 Microsoft 的 Azure AD SSO 扩展（[Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)）和通用重定向扩展之间进行选择。
+- 重定向类型适用于 OpenID Connect、OAuth 和 SAML2 等新式身份验证协议。 可在 Microsoft 的 Azure AD SSO 扩展（[Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)）和通用重定向扩展之间进行选择。
 - 凭据类型适用于质询与响应身份验证流。 可选择通用凭据扩展或者 Apple 提供的 Kerberos 专属凭据扩展。
 
 有关可以在 Intune 中配置的设置列表信息，请参阅 [iOS/iPadOS SSO 应用扩展](ios-device-features-settings.md#single-sign-on-app-extension)和 [macOS SSO 应用扩展](macos-device-features-settings.md#single-sign-on-app-extension)。

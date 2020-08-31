@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217206"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820504"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>如何使用 Microsoft Intune 管理通过 Apple Volume Purchase Program 购买的 iOS 和 macOS 应用
 
@@ -175,7 +175,7 @@ Microsoft Intune 可帮助管理通过此类计划购买的应用，方法为：
 
 ## <a name="deleting-vpp-tokens"></a>删除 VPP 令牌
 <!-- 820879 -->  
-可以使用控制台删除 Apple Volume Purchase Program (VPP) 令牌。 当你有重复的 VPP 令牌实例时，可能需要执行此操作。 删除令牌也将删除任何关联的应用和分配。 但是，删除令牌不会撤销应用许可证或卸载应用。 
+可以使用控制台删除 Apple Volume Purchase Program (VPP) 令牌。 当你有重复的 VPP 令牌实例时，可能需要执行此操作。 删除令牌也将删除任何关联的应用和分配。 删除令牌会撤消关联的应用许可证，但不会卸载应用。  
 
 >[!NOTE]
 >删除令牌后，Intune 不能撤销应用许可证。 

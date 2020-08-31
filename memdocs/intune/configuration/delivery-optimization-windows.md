@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 4d491a3210229d5dd6c74ccaed7f44c4ae4eb83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990053"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820436"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune 中的传递优化设置
 
@@ -54,7 +54,7 @@ ms.locfileid: "83990053"
 
 7. 在“配置设置”页上，定义希望如何下载更新和应用的设置。 要了解可用设置，请参阅 [Intune 的传递优化设置](delivery-optimization-settings.md)。
 
-   完成配置设置后，选择“下一步”。
+   完成配置设置后，选择 **“下一步”** 。
 
 8. 在“作用域(标记)”页上，选择“选择作用域标记”以打开“选择标记”窗格，将作用域标记分配给配置文件 。
   

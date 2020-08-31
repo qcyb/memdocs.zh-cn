@@ -3,12 +3,12 @@ title: Microsoft Endpoint Configuration Manager
 summary: Microsoft 终结点管理器以下组件的官方产品文档：配置管理器、共同管理和桌面分析
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: 81aa3de67b0647764cb94cedd07a19e9c9308ebc
-  ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+  ms.openlocfilehash: de62324e6ac5c78467c15b4cac2d4d38955df6c7
+  ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 08/20/2020
-  ms.locfileid: "88698225"
+  ms.lasthandoff: 08/27/2020
+  ms.locfileid: "88992719"
 highlightedContent:
   items:
   - title: 新增功能
@@ -78,7 +78,7 @@ conceptualContent:
     - text: 设置桌面分析
       url: ./desktop-analytics/set-up.md
       itemType: how-to-guide
-    - text: Office 365 仪表板
+    - text: Microsoft 365 仪表板
       url: ./sum/deploy-use/office-365-dashboard.md
       itemType: learn
     footerLink:
@@ -151,7 +151,7 @@ conceptualContent:
     - text: 优化 Windows 10 更新
       url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
       itemType: learn
-    - text: 更新 Office 365
+    - text: 更新 Microsoft 365
       url: ./sum/deploy-use/manage-office-365-proplus-updates.md
       itemType: how-to-guide
     footerLink:

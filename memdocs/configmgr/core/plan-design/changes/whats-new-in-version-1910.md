@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700293"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993465"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1910 中的新增功能
 
@@ -134,7 +134,7 @@ Microsoft Endpoint Manager 是用于管理所有设备的集成解决方案。 �
 
 现在可以将自定义配置基线评估添加为合规性策略评估规则。 创建或编辑配置基线时，现在可以使用“将此基线作为合规性策略的一部分进行评估”严格。 添加或编辑合规性策略规则时，有一个名为“在合规性策略评估中包含配置的基线”的条件。
 
-对于共同管理的设备，当你配置 Intune 以将 Configuration Manager 合规性评估结果作为总体合规性状态的一部分时，此信息将发送到 Azure Active Directory。 然后，你可以使用它对 Office 365 资源进行条件访问。
+对于共同管理的设备，当你配置 Intune 以将 Configuration Manager 合规性评估结果作为总体合规性状态的一部分时，此信息将发送到 Azure Active Directory。 然后，可以使用它对 Microsoft 365 资源进行条件访问。
 
 有关详细信息，请参阅[将自定义配置基线包含在合规性策略评估中](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)。
 

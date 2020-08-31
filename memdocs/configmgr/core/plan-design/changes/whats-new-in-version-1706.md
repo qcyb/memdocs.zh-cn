@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692819"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993380"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager 1706 版中的新增功能
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>站点基础结构
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>客户端对等缓存支持 Windows 10 和 Microsoft 365 的快速安装文件  
 <!-- 1352486 -->
-从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Office 365 的更新文件。 不需要其他配置来支持此更改。
+从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Microsoft 365 的更新文件。 不需要其他配置来支持此更改。
 
 ### <a name="updates-for-the-data-warehouse"></a>数据仓库更新
 <!-- 1277922 -->
@@ -227,8 +227,8 @@ Version 1706 drops support for the following products:
 
 有关详细信息，请参阅[在 Windows 10 中与适用于企业的 Windows 更新集成](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies)。
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>改进了 Office 365 更新的用户通知
-已进行了改进，在客户端安装 Office 365 更新时利用 Office 即点即用用户体验。 这包括弹出通知、应用内通知以及倒计时体验。 有关详细信息，请参阅 [Office 365 更新的重启行为和客户端通知](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>改进了 Microsoft 365 更新的用户通知
+已进行了改进，在客户端安装 Microsoft 365 更新时利用 Office 即点即用用户体验。 这包括弹出通知、应用内通知以及倒计时体验。 有关详细信息，请参阅 [Microsoft 365 更新的重启行为和客户端通知](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## <a name="reporting"></a>报表
 

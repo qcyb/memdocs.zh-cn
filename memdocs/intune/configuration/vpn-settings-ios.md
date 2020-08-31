@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26b3af529fddb2c6d3515a365be9e8204fe02312
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 29ce01f9544db19757f58695eae624b2ac25995b
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815440"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819909"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 iOS 和 iPadOS 设备添加 VPN 设置
 
@@ -50,6 +50,7 @@ Microsoft Intune 包含许多可以部署到 iOS/iPadOS 设备的 VPN 设置。 
 - **Citrix VPN**
 - **Citrix SSO**
 - **Zscaler**：若要使用条件访问，或允许用户绕过 Zscaler 登录屏幕，必须将 Zscaler Private Access (ZPA) 与 Azure AD 帐户集成。 有关详细步骤，请参阅 [Zscaler 文档](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad)。
+- **NetMotion Mobility**
 - **IKEv2**：[IKEv2 设置](#ikev2-settings)介绍了属性（仅限本文示例）。
 - **自定义 VPN**
 
@@ -104,7 +105,7 @@ Microsoft Intune 包含许多可以部署到 iOS/iPadOS 设备的 VPN 设置。 
 
   - 要删除此设置，请重新创建配置文件，不要选择“我同意”。 然后，重新分配配置文件。
 
-## <a name="ikev2-settings"></a>IKEv2 设置
+### <a name="ikev2-settings"></a>IKEv2 设置
 
 选择“连接类型” > “IKEv2”时，将应用这些设置。
 

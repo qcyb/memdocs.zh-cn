@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3817551c75557a275c98e8c62faef46185438a25
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698582"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993601"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager 版本 1606 中的新增功能
 
@@ -126,10 +126,10 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 
 ## <a name="software-updates"></a>软件更新
 
-### <a name="client-setting-to-manage-the-office-365-client-agent"></a>用于管理 Office 365 客户端代理的客户端设置
-现在可以使用 Configuration Manager 客户端设置来管理 Office 365 客户端代理。 对此进行设置并部署 Office 365 更新后，Configuration Manager 客户端代理与 Office 365 客户端代理协作，从分发点下载并安装 Office 365 更新。
+### <a name="client-setting-to-manage-the-microsoft-365-client-agent"></a>用于管理 Microsoft 365 客户端代理的客户端设置
+现在可以使用 Configuration Manager 客户端设置来管理 Microsoft 365 客户端代理。 对此进行设置并部署 Microsoft 365 更新后，Configuration Manager 客户端代理与 Microsoft 365 客户端代理协作，从分发点下载并安装 Microsoft 365 更新。
 
-有关详细信息，请参阅[使用 Configuration Manager 管理 Office 365 ProPlus 更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
+有关详细信息，请参阅[使用 Configuration Manager 管理 Microsoft 365 应用版更新](../../../sum/deploy-use/manage-office-365-proplus-updates.md)。
 
 ### <a name="manually-switch-clients-to-a-new-software-update-point"></a>手动将客户端切换到新的软件更新点
 现可启用供 Configuration Manager 客户端在活动软件更新点出现问题时切换到新软件更新点的选项。 启用后，客户端将在下次扫描时查找另一个软件更新点。

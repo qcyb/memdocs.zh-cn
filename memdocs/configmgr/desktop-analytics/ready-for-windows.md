@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700763"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995188"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for modern desktop 停用常见问题
 
@@ -45,11 +45,11 @@ ms.locfileid: "88700763"
 
 ### <a name="what-happened-to-the-ready-for-windows-website"></a>Ready for Windows 网站发生了什么情况？
 
-许多客户在获取 Windows 10 和 Office 365 ProPlus 并保持最新状态方面面临着挑战。 主要的挑战是测试应用程序，因为此过程通常需要手动完成。 IT 管理员和应用程序所有者要不断分析现有应用程序并解决出现的任何问题，这需要花费很长时间。
+许多客户在获取 Windows 10 和 Microsoft 365 企业应用版并保持最新状态方面面临着挑战。 主要的挑战是测试应用程序，因为此过程通常需要手动完成。 IT 管理员和应用程序所有者要不断分析现有应用程序并解决出现的任何问题，这需要花费很长时间。
 
-“Ready for modern desktop”目录列出了在运行 Windows 10 和 Office 365 ProPlus 的商业设备上受支持且已在使用的软件解决方案。 该目录可帮助 IT 经理考虑最新版本的 Windows 10 和 Office 365 的部署。
+“Ready for modern desktop”目录列出了在运行 Windows 10 和 Microsoft 365 企业应用版的商业设备上受支持且已在使用的软件解决方案。 该目录可帮助 IT 经理考虑最新版本的 Windows 10 和 Microsoft 365 的部署。
 
-IT 经理提供的反馈是，他们希望这些见解与他们已经用来进行部署计划的工具集成在一起。 在 Configuration Manager 中使用[桌面分析](https://aka.ms/dadocs)和 [Office 365 ProPlus 就绪功能](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)来计划和管理 Windows 10 和 Office 365 ProPlus 升级项目。 
+IT 经理提供的反馈是，他们希望这些见解与他们已经用来进行部署计划的工具集成在一起。 在 Configuration Manager 中使用[桌面分析](https://aka.ms/dadocs)和 [Microsoft 365 应用版就绪功能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)来计划和管理 Windows 10 和 Microsoft 365 企业应用版升级项目。 
 
 > [!Note]
 > 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
@@ -100,11 +100,11 @@ IT 经理提供的反馈是，他们希望这些见解与他们已经用来进�
 
 ### <a name="can-i-still-list-my-software-solution-in-desktop-analytics"></a>我是否仍然可以在桌面分析中列出我的软件解决方案？
 
-发布你的产品适用于 32 位或 64 位 Windows 10 或 Office 365 ProPlus 的支持声明。 若要在桌面分析中展示你的解决方案，请联系你的 Microsoft 联系人。
+发布你的产品适用于 32 位或 64 位 Windows 10 或 Microsoft 365 企业应用版的支持声明。 若要在桌面分析中展示你的解决方案，请联系你的 Microsoft 联系人。
 
 ### <a name="how-can-listing-my-solutions-benefit-me"></a>列出我的解决方案可给我带来哪些好处？
 
-有成千上万的 IT 管理员通过 Configuration Manager 和桌面分析管理数百万台设备。 他们使用这些工具自信地计划并将其组织升级到最新版本的 Windows 10 和 Office 365 ProPlus。 他们还使用它们来制定软件解决方案的购买决策。
+有成千上万的 IT 管理员通过 Configuration Manager 和桌面分析管理数百万台设备。 他们使用这些工具自信地计划并将其组织升级到最新版本的 Windows 10 和 Microsoft 365 企业应用版。 他们还使用它们来制定软件解决方案的购买决策。
 
 Microsoft 将软件供应商提供的支持声明与它们从商业设备接收的采用情况信息集成在一起。 然后，世界各地的组织可在桌面分析和 Office 准备工具中使用此数据。 
 
@@ -118,8 +118,8 @@ Microsoft 将软件供应商提供的支持声明与它们从商业设备接收�
 - [桌面](/windows/desktop/appxpkg/windows-desktop-application-program)
 - [Office 外接程序](/office/dev/store/update-unpublish-and-view-metrics) 
 
-### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>如何为 Windows 10 和 Office 365 ProPlus 开发兼容的资产？
+### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-microsoft-365-apps-for-enterprise"></a>如何为 Windows 10 和 Microsoft 365 企业应用版开发兼容的资产？
 
 确保你的桌面应用程序现在与 Windows 10 兼容，并在将来保持与 Windows 10 兼容。 有关详细信息，请参阅[面向开发人员的应用程序兼容性](https://developer.microsoft.com/windows/desktop/app-compatibility)。
 
-如果为 Office 365 ProPlus 开发解决方案，请参阅 [Office 中的 COM、VSTO 和 VBA 外接程序开发最佳做法](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)。
+如果为 Microsoft 365 企业应用版开发解决方案，请参阅 [Office 中的 COM、VSTO 和 VBA 加载项开发最佳做法](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)。

@@ -2,7 +2,7 @@
 title: BitLocker 设置参考
 titleSuffix: Configuration Manager
 description: Configuration Manager 中可用的所有 BitLocker 管理设置
-ms.date: 04/01/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b52fe5a60899d7e871381d1a34a2360bbe68a36c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693516"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820470"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker 设置参考
 
@@ -56,6 +56,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 - AES 128 位（默认）
 - AES 256 位
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps)。
+
 #### <a name="windows-10-devices"></a>Windows 10 设备
 
 对于 Windows 10 设备，请启用“驱动器加密方法和密码强度(Windows 10)”选项。 然后分别为 OS 驱动器、固定数据驱动器和可移动数据驱动器选择以下加密方法：
@@ -69,6 +71,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 > BitLocker 使用高级加密标准 (AES) 作为自己的加密算法，包含长度为 128 或 256 位的可配置密钥。 在 Windows 10 设备上，AES 加密支持加密块链接 (CBC) 或密码文本窃用 (XTS)。
 >
 > 如果需要在不运行 Windows 10 的设备上使用可移动驱动器，请使用 AES-CBC。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps)。
 
 #### <a name="general-usage-notes-for-drive-encryption-and-cipher-strength"></a>驱动器加密和密码长度的一般使用说明
 
@@ -88,6 +92,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 
 未配置此策略时，BitLocker 会在计算机重新启动时从内存中删除其机密。
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps)。
+
 ### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>验证智能卡证书使用规则符合性
 
 建议的配置：未配置
@@ -95,6 +101,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 将此策略配置为使用基于智能卡证书的 BitLocker 保护。 然后指定证书对象标识符。
 
 未配置此策略时，BitLocker 会使用默认对象标识符 `1.3.6.1.4.1.311.67.1.1` 指定证书。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps)。
 
 ### <a name="organization-unique-identifiers"></a>组织唯一标识符
 
@@ -105,6 +113,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 未配置此策略时，BitLocker 不会使用“标识”字段。
 
 如果组织需要更高安全性度量，请配置“标识”字段。 在所有目标 USB 设备上设置此字段，并使它与此设置保持一致。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps)。
 
 ## <a name="os-drive"></a>OS 驱动器
 
@@ -134,6 +144,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 >
 > - 睡眠时允许待机状态 (S1-S3)(使用电池)
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps)。
+
 ### <a name="allow-enhanced-pins-for-startup"></a>允许增强型启动 PIN
 
 建议的配置：未配置
@@ -149,6 +161,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 
 如果禁用或未配置此策略设置，则 BitLocker 不使用增强型 PIN。
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps)。
+
 ### <a name="operating-system-drive-password-policy"></a>操作系统驱动器密码策略
 
 建议的配置：未配置
@@ -162,6 +176,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 - 可移动操作系统驱动器需要纯 ASCII 密码
 
 如果启用此策略设置，则用户可以配置与你定义的要求相符的密码。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps)。
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>OS 驱动器密码策略的一般使用说明
 
@@ -180,6 +196,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 如果启用或未配置此设置，则在这种情况下，Windows 会刷新平台验证数据。
 
 如果禁用此策略设置，则在这种情况下，Windows 不刷新平台验证数据。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps)。
 
 ### <a name="pre-boot-recovery-message-and-url"></a>预启动恢复消息和 URL
 
@@ -202,6 +220,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 > [!NOTE]
 > 并非所有字符和语言都在预启动中受支持。 首先测试自定义消息或 URL，以确保它可正确显示在预启动 BitLocker 恢复屏幕上。
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps)。
+
 ### <a name="encryption-policy-enforcement-settings-os-drive"></a>加密策略强制执行设置（OS 驱动器）
 
 建议的配置：**Enabled**
@@ -215,6 +235,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 如果禁用或未配置此设置，则 Configuration Manager 不要求用户遵守 BitLocker 策略。
 
 若要立即强制执行策略，请将宽限期设置为 `0`。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps)。
 
 ## <a name="fixed-drive"></a>固定驱动器
 
@@ -234,6 +256,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 
 如果禁用此设置，则用户无法用 BitLocker 保护固定数据驱动器。 如果在 BitLocker 加密固定数据驱动器之后禁用此策略，则 BitLocker 会对固定数据驱动器进行解密。
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps)。
+
 ### <a name="deny-write-access-to-fixed-drives-not-protected-by-bitlocker"></a>拒绝对不受 BitLocker 保护的固定驱动器的写访问
 
 建议的配置：未配置
@@ -248,7 +272,7 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 
 未配置此设置时，Windows 会使用读写访问权限装载所有固定数据驱动器。
 
-<!-- ### Allow access to BitLocker-protected fixed drives from earlier versions of Windows -->
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps)。
 
 ### <a name="fixed-data-drive-password-policy"></a>固定数据驱动器密码策略
 
@@ -269,6 +293,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 如果禁用此设置，则用户无法配置密码。
 
 未配置此策略时，BitLocker 会支持具有默认设置的密码。 默认设置不包括密码复杂性要求，只需要八个字符。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps)。
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>固定数据驱动器密码策略的一般使用说明
 
@@ -291,6 +317,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 如果禁用或未配置此设置，则 Configuration Manager 不要求用户遵守 BitLocker 策略。
 
 若要立即强制执行策略，请将宽限期设置为 `0`。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps)。
 
 ## <a name="removable-drive"></a>可移动驱动器
 
@@ -320,6 +348,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 
 如果禁用此设置，则用户无法在可移动驱动器上使用 BitLocker。
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps)。
+
 ### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>拒绝对不受 BitLocker 保护的可移动驱动器的写访问
 
 建议的配置：未配置
@@ -339,7 +369,7 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 > [!NOTE]
 > 可以使用“系统” > “可移动存储访问”中的组策略设置覆盖此设置。 如果启用组策略设置“可移动磁盘:拒绝写入权限”，则 BitLocker 会忽略此 Configuration Manager 设置。
 
-<!-- ### Allow access to BitLocker-protected removable data drives from earlier versions of Windows -->
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps)。
 
 ### <a name="removable-data-drive-password-policy"></a>可移动数据驱动器密码策略
 
@@ -360,6 +390,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 如果禁用此设置，则用户无法配置密码。
 
 未配置此策略时，BitLocker 会支持具有默认设置的密码。 默认设置不包括密码复杂性要求，只需要八个字符。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps)。
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>可移动数据驱动器密码策略的一般使用说明
 
@@ -384,6 +416,11 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 - 允许以纯文本格式存储恢复信息：如果没有 SQL Server 的 BitLocker 管理加密证书，Configuration Manager 会以纯文本形式存储密钥恢复信息。 有关详细信息，请参阅[加密恢复数据](../../deploy-use/bitlocker/encrypt-recovery-data.md)。
 
 - 客户端检查状态频率（以分钟为单位）：客户端会按配置的频率检查计算机上的 BitLocker 保护策略和状态，还会备份客户端恢复密钥。 默认情况下，Configuration Manager 客户端每 90 分钟更新一次其 BitLocker 恢复信息。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅：
+
+- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
+- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
 
 ### <a name="user-exemption-policy"></a>使用例外策略
 
@@ -410,6 +447,8 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 > [!NOTE]
 > BitLocker 按用户（而不是按计算机）管理免除。 如果多个用户登录到相同计算机并且任何一个用户都未免除，则 BitLocker 会对该计算机进行加密。
 
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps)。
+
 ### <a name="url-for-the-security-policy-link"></a>安全策略链接的 URL
 
 建议的配置：**Enabled**
@@ -419,3 +458,9 @@ Configuration Manager 中的 BitLocker 管理策略包含以下策略组：
 如果启用此设置，请配置安全策略链接 URL。
 
 如果禁用或未配置此设置，则 BitLocker 不显示安全策略链接。
+
+若要详细了解如何在 Windows PowerShell 中创建此策略，请参阅 [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps)。
+
+## <a name="next-steps"></a>后续步骤
+
+如果使用 Windows PowerShell 创建这些策略对象，请使用 [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) cmdlet。 此 cmdlet 会创建一个 BitLocker 管理策略设置对象，其中包含所有指定的策略。 若要将策略设置部署到集合，请使用 [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) cmdlet。

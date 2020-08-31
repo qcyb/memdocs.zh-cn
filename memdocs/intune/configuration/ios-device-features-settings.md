@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814952"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820181"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
@@ -304,7 +304,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
   - **未配置**：Intune 不会更改或更新此设置。 默认情况下，操作系统不会使用应用扩展。 若要禁用应用扩展，可将 SSO 应用扩展类型切换为“未配置”。
   - **Microsoft Azure AD**：使用 Microsoft 企业 SSO 插件，它是一个重定向类型的 SSO 应用扩展。 此插件为所有支持 [Apple 企业单一登录](https://developer.apple.com/documentation/authenticationservices)功能的应用程序提供 Active Directory 帐户的 SSO。 使用此 SSO 应用扩展类型可在使用 Azure AD 进行身份验证的 Microsoft 应用、组织应用和网站上启用 SSO。
 
-    SSO 插件充当高级身份验证代理，可改进安全性和用户体验。 对于之前使用 Microsoft Authenticator 应用进行中转身份验证的所有应用，都将继续获取具有[适用于 Apple 设备的 Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)的 SSO。
+    SSO 插件充当高级身份验证代理，可改进安全性和用户体验。 对于使用 Microsoft Authenticator 应用进行身份验证的所有应用，都将继续获取具有[适用于 Apple 设备的 Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)的 SSO。
 
     > [!IMPORTANT]
     > 要通过 Microsoft Azure AD SSO 应用扩展类型实现 SSO，请先在设备上安装 iOS/iPadOS 版 Microsoft Authenticator 应用。 Authenticator 应用将 Microsoft 企业 SSO 插件传递到设备，MDM SSO 应用扩展设置会激活该插件。 在设备上安装 Authenticator 和 SSO 应用扩展配置文件后，用户必须在设备上输入其凭据才能登录和建立会话。 然后，该会话可在不同的应用程序中使用，而无需用户再次进行身份验证。 有关 Authenticator 的详细信息，请参阅[什么是 Microsoft Authenticator 应用](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)。
@@ -371,7 +371,12 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 - **Active Directory 站点代码**（仅用于“Kerberos”）：输入 Kerberos 扩展应使用的 Active Directory 站点的名称。 可能不需要更改此值，因为 Kerberos 扩展可能会自动查找 Active Directory 站点代码。
 - **缓存名称**（仅用于“Kerberos”）：输入 Kerberos 缓存的通用安全服务 (GSS) 名称。 很可能不需要设置此值。
-- **应用程序包 ID**（仅用于“Kerberos”）：添加应用程序包标识符，这些标识符应在设备上使用单一登录。 这些应用将被授权访问 Kerberos 票证授予票证（身份验证票证），并在用户访问他们有权访问的服务时对其进行身份验证。
+- **应用捆绑包 ID**（Microsoft Azure AD、Kerberos）：输入应通过设备上的扩展获得单一登录的其他应用的捆绑 ID。
+
+  如果你使用的是 Microsoft Azure AD SSO 应用扩展类型，则这些应用将使用 Microsoft 企业 SSO 插件来对用户进行身份验证，而无需登录。 如果你输入的应用捆绑包 ID 不使用任何 Microsoft 库（例如 Microsoft 身份验证库（MSAL）），则它有权使用 Microsoft Azure AD SSO应用扩展。 与 Microsoft 库相比，这些应用可能不会带来相同的无缝体验。 如果是使用 MSAL 身份验证的旧版应用或不使用最新 Microsoft 库的应用，则必须添加到此列表，才能正常使用 Microsoft Azure SSO 应用扩展。  
+
+  如果你使用的是 Kerberos SSO 应用扩展类型，则这些应用将有权访问 Kerberos 票证授予票证（身份验证票证），并在用户访问他们有权访问的服务时对其进行身份验证。
+
 - **域领域映射**（仅用于“Kerberos”）：添加应映射到领域的域 DNS 后缀。 当主机的 DNS 名称与领域名称不匹配时，使用此设置。 很可能不需要创建此自定义域到领域的映射。
 - **PKINIT 证书**（仅用于“Kerberos”）：选择可用于 Kerberos 身份验证的初始身份验证 (PKINIT) 证书的公钥加密。 可以从已在 Intune 中添加的 [PKCS](../protect/certficates-pfx-configure.md) 或 [SCEP](../protect/certificates-scep-configure.md) 证书中进行选择。 有关证书的详细信息，请参阅[在 Microsoft Intune 中使用证书进行身份验证](../protect/certificates-configure.md)。
 

@@ -2,7 +2,7 @@
 title: 配置 LAN 唤醒
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中选择 LAN 唤醒设置。
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127029"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907841"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>如何在 Configuration Manager 中配置 LAN 唤醒
 
@@ -27,7 +27,7 @@ ms.locfileid: "88127029"
 <!--3607710-->
 自 Configuration Manager 1810 起，有一种新方法可用来唤醒休眠计算机。 可以在 Configuration Manager 控制台中唤醒客户端，即使客户端与站点服务器不在同一子网中，也不例外。 如果你需要执行维护或查询设备，则不会受到处于睡眠状态的远程客户端的限制。 站点服务器使用客户端通知通道来标识同一远程子网上已唤醒的其他客户端，然后使用这些客户端发送 LAN 唤醒请求（幻数据包）。 使用客户端通知通道有助于避免可能会导致路由器关闭端口的 MAC 漂移。 可以同时启用新[旧版本](#bkmk_wol-previous)的 LAN 唤醒。
 
-### <a name="limitations"></a>限制
+### <a name="prerequisites-and-limitations"></a>先决条件和限制
 <!--7323898, 7363492-->
 - 目标子网中必须至少有一个客户端处于唤醒状态。
 - 此功能不支持以下网络技术：
@@ -38,6 +38,8 @@ ms.locfileid: "88127029"
 - 仅当你通过“唤醒”  客户端通知向计算机发出通知时，计算机才会唤醒。
     - 若要在最后期限到来时唤醒，使用的是旧版 LAN 唤醒。
     -  如果旧版本未启用，使用“使用 LAN 唤醒来唤醒客户端以执行必需部署”  或“发送唤醒数据包”  设置创建的部署不会发生客户端唤醒。  
+- 不能将 DHCP 租用期限设置为无限期。 <!--8018584-->
+   - 你可能会看到 SleepAgent_&lt;domain\>@SYSTEM_0.log 变得非常大，在 DHCP 租用期限被设置为无限期的环境中，可能会出现广播风暴。  
 
 ### <a name="security-role-permissions"></a>安全角色权限
 

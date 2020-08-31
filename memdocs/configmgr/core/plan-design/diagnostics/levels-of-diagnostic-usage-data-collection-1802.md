@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bae73e89852efbc8e85ba4df7e98eb0452d6b754
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d9fb986285186ce531a43283b002eb88eb9595a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128723"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994712"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-configuration-manager"></a>Configuration Manager 版本 1802 中收集的诊断使用情况数据的级别
 
@@ -144,7 +144,7 @@ Configuration Manager 版本 1802 收集三个级别的诊断和使用情况数�
 
 - 应用程序目录的不同品牌计数
 
-- 使用仪表板创建的 Office 365 应用程序计数
+- 使用仪表板创建的 Microsoft 365 应用程序计数
 
 - 包（按类型）计数  
 
@@ -387,7 +387,7 @@ Configuration Manager 版本 1802 收集三个级别的诊断和使用情况数�
 
 - 用于活动 Windows 10 服务计划的配置  
 
-- 已部署 Office 365 更新计数  
+- 部署的 Microsoft 365 更新计数  
 
 - 同步的 Microsoft Surface 驱动程序的计数
 

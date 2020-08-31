@@ -2,7 +2,7 @@
 title: 创建分阶段部署
 titleSuffix: Configuration Manager
 description: 使用分阶段部署自动将软件推出到多个集合。
-ms.date: 04/21/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -10,59 +10,59 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d9dcefe942309ad57c823ec669b7aa6630974fa8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a14448c03596853be943440c0fab775ee1d19081
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698021"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820419"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>使用 Configuration Manager 创建分阶段部署
 
 适用范围：  Configuration Manager (Current Branch)
 
-分阶段部署可在多个集合中自动协调有序地推出软件。 例如，将软件部署到试点集合，然后根据成功条件自动继续推出。 创建分阶段部署时，既可以使用默认的两个阶段，也可以手动配置多个阶段。 
+分阶段部署可在多个集合中自动协调有序地推出软件。 例如，将软件部署到试点集合，然后根据成功条件自动继续推出。 创建分阶段部署时，既可以使用默认的两个阶段，也可以手动配置多个阶段。
 
 针对以下对象创建分阶段部署：
-- **任务序列**  
-    - 任务序列的分阶段部署不支持 PXE 或介质安装   
-- **应用程序**（从版本 1806 开始） <!--1358147-->  
-- **软件更新**（从版本 1810 开始） <!--1358146-->  
-    - 不能将自动部署规则与分阶段部署配合使用
 
-> [!Tip]  
-> 分阶段部署功能作为[预发行功能](../../core/servers/manage/pre-release-features.md)在版本 1802 中首次引入。 从版本 1806 开始，此功能不再属于预发行功能。<!--1356837-->  
-
-
+- **任务序列**
+  - 任务序列的分阶段部署不支持 PXE 或介质安装
+- **应用程序** <!--1358147-->  
+- **软件更新** <!--1358146-->  
+  - 不能将自动部署规则 (ADR) 与分阶段部署配合使用
 
 ## <a name="prerequisites"></a>必备条件
 
-#### <a name="security-scope"></a>安全作用域
+### <a name="security-scope"></a>安全作用域
+
 任何没有“全部”安全作用域的管理用户都无法查看由分阶段部署创建的部署  。 有关详细信息，请参阅 [安全作用域](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope)。
 
-#### <a name="distribute-content"></a>分发内容
+### <a name="distribute-content"></a>分发内容
+
 在创建分阶段部署前，请将关联内容分发到分发点。<!--518293-->  
 
-- **应用程序**：在控制台中选择目标应用程序，并使用功能区中的“分发内容”操作  。 有关详细信息，请参阅[部署和管理内容](../../core/servers/deploy/configure/deploy-and-manage-content.md)。   
+- **应用程序**：在控制台中选择目标应用程序，并使用功能区中的“分发内容”操作  。 有关详细信息，请参阅[部署和管理内容](../../core/servers/deploy/configure/deploy-and-manage-content.md)。
 
-- **任务序列**：在创建任务序列前，必须创建引用对象，如 OS 升级包。 在创建部署前分发这些对象。 使用每个对象上的“分发内容”操作，或使用任务序列  。 若要查看所有引用内容的状态，请选择任务序列，然后切换到细节窗格中的“引用”选项卡  。 有关详细信息，请参阅[准备进行 OS 部署](../get-started/prepare-for-operating-system-deployment.md)中的特定对象类型。   
+- **任务序列**：在创建任务序列前，必须创建引用对象，如 OS 升级包。 在创建部署前分发这些对象。 使用每个对象上的“分发内容”操作，或使用任务序列  。 若要查看所有引用内容的状态，请选择任务序列，然后切换到细节窗格中的“引用”选项卡  。 有关详细信息，请参阅[准备进行 OS 部署](../get-started/prepare-for-operating-system-deployment.md)中的特定对象类型。
 
 - **软件更新**：创建部署包并分发。 使用“下载软件更新向导”。 有关详细信息，请参阅[下载软件更新](../../sum/deploy-use/download-software-updates.md)。  
 
-
-
 ## <a name="phase-settings"></a><a name="bkmk_settings"></a>阶段设置
 
-这些设置是分阶段部署特有的。 在创建或编辑阶段时配置这些设置，控制分阶段部署过程的计划和行为。 
+这些设置是分阶段部署特有的。 在创建或编辑阶段时配置这些设置，控制分阶段部署过程的计划和行为。
 
+从版本 2002 开始，使用以下 Windows PowerShell cmdlet 手动配置软件更新和任务序列分阶段部署的各个阶段：
 
-#### <a name="criteria-for-success-of-the-first-phase"></a>第一阶段成功的标准  
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
 
-- **部署成功百分比**：指定要确保第一阶段成功，需成功完成部署的设备所占百分比。 默认情况下，此值为 95%。 换而言之，针对此部署，当 95% 的设备的符合性状态都为“成功”时，站点认为第一阶段成功  。 然后，该站点将继续进入第二阶段，并创建下一个集合的软件部署。  
-- **成功部署的设备数**：已在 Configuration Manager 版本 1902 中添加。 指定要确保第一阶段成功，需成功完成部署的设备数。 当集合的大小可变并且你在前进到下一阶段前已有一定数量的设备成功部署时，此选项很有用。 <!--3555946-->
+### <a name="criteria-for-success-of-the-first-phase"></a>第一阶段成功的标准
 
+- **部署成功百分比**：指定要确保第一阶段成功，需成功完成部署的设备所占百分比。 默认情况下，此值为 95%。 换而言之，针对此部署，当 95% 的设备的符合性状态都为“成功”时，站点认为第一阶段成功  。 然后，该站点将继续进入第二阶段，并创建下一个集合的软件部署。
 
-#### <a name="conditions-for-beginning-second-phase-of-deployment-after-success-of-the-first-phase"></a>在第一阶段成功后开始第二阶段部署的条件  
+- **成功部署的设备数**：指定要确保第一阶段成功，需成功完成部署的设备数。 当集合的大小可变并且你在前进到下一阶段前已有一定数量的设备成功部署时，此选项很有用。 <!--3555946-->
+
+### <a name="conditions-for-beginning-second-phase-of-deployment-after-success-of-the-first-phase"></a>在第一阶段成功后开始第二阶段部署的条件  
 
 - **在延迟时间段(以天为单位)后自动开始此阶段**：选择在第一阶段成功后开始第二阶段之前等待的天数。 默认情况下，此值为一天。  
 
@@ -71,38 +71,30 @@ ms.locfileid: "88698021"
     > [!Note]  
     > 此选项不可用于应用程序的分阶段部署。  
 
-
-#### <a name="gradually-make-this-software-available-over-this-period-of-time-in-days"></a>在此时间段内(以天为单位)逐渐提供此软件
+### <a name="gradually-make-this-software-available-over-this-period-of-time-in-days"></a>在此时间段内(以天为单位)逐渐提供此软件
 <!--1358578-->
-从版本 1806 开始，可配置此设置，以便在每个阶段逐步推出软件。 此行为有助于缓解部署问题的风险，降低网络上因向客户端分发内容而导致的负载。 此站点根据每个阶段的配置，逐步提供软件。 相对于使软件可用的时间，一个阶段中的每个客户端都有一个截止时间。 对于一个阶段中的所有客户端，可用时间和截止时间之间的时间窗都是相同的。 此设置的默认值为零，因此默认情况下，部署不受限制。 请勿设置大于 30 的值。<!--SCCMDocs-pr issue 2767--> 
+配置此设置，以便在每个阶段逐步推出软件。 此行为有助于缓解部署问题的风险，降低网络上因向客户端分发内容而导致的负载。 此站点根据每个阶段的配置，逐步提供软件。 相对于使软件可用的时间，一个阶段中的每个客户端都有一个截止时间。 对于一个阶段中的所有客户端，可用时间和截止时间之间的时间窗都是相同的。 此设置的默认值为零，因此默认情况下，部署不受限制。 请勿设置大于 30 的值。<!--SCCMDocs-pr issue 2767-->
 
 ![成功设置的分阶段部署条件](media/phased-deployment-criteria-for-success.png)
 
-#### <a name="configure-the-deadline-behavior-relative-to-when-the-software-is-made-available"></a>配置与软件可用时间相关的截止时间行为  
+### <a name="configure-the-deadline-behavior-relative-to-when-the-software-is-made-available"></a>配置与软件可用时间相关的截止时间行为
 
 - **需要尽快安装**：确定目标设备后立即设置设备上的安装截止时间。  
 
-- **需要在这段时间后进行安装**：将安装截止时间设置为在确定目标设备后的特定天数内安装。 默认情况下，此值为七天。   
-
-
-<!--### Examples
-Include a timeline diagram
--->
-
-
+- **需要在这段时间后进行安装**：将安装截止时间设置为在确定目标设备后的特定天数内安装。 默认情况下，此值为七天。
 
 ## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a>自动创建默认的二阶段部署
 
 1. 在 Configuration Manager 控制台中启动“创建分阶段部署”向导。 此操作因要部署的软件类型而有所不同：  
 
-    - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”，展开“应用程序管理”，然后选择“应用程序”    。 选择现有应用程序，然后选择功能区中的“创建分阶段部署”  。  
+    - **应用程序**：转到“软件库”，展开“应用程序管理”，然后选择“应用程序”  。 选择现有应用程序，然后选择功能区中的“创建分阶段部署”  。  
 
-    - **软件更新**（仅在版本 1810 或更高版本中）：转到“软件库”，展开“软件更新”，然后选择“所有软件更新”    。 选择一个或多个更新，然后选择功能区中的“创建分阶段部署”  。  
+    - 软件更新：转到“软件库”，展开“软件更新”，然后选择“所有软件更新”  。 选择一个或多个更新，然后选择功能区中的“创建分阶段部署”  。  
 
         此操作可用于以下节点的软件更新：  
         - 软件更新  
             - **所有软件更新**  
-            - **软件更新组**   
+            - **软件更新组**
         - Windows 10 服务、所有 Windows 10 更新   
         - Office 365 客户端管理、Office 365 更新   
 
@@ -124,35 +116,40 @@ Include a timeline diagram
 > [!NOTE]
 > 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 产品和文档中使用的是旧名称。  
 
-## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>使用手动配置的阶段创建分阶段部署
-<!--1358148--> 
+从版本 2002 开始，可以使用以下 Windows PowerShell cmdlet 来执行此任务：
 
-从版本 1806 开始，可使用手动配置的任务序列阶段创建分阶段部署。 可从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段  。 
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+
+## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>使用手动配置的阶段创建分阶段部署
+<!--1358148-->
+
+使用手动配置的任务序列阶段创建分阶段部署。 可从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段  。
 
 > [!Note]  
 > 目前无法手动为应用程序创建阶段。 向导会自动为应用程序部署创建两个阶段。
 
-
 1. 为任务序列或软件更新启动“创建分阶段部署”向导。  
 
-2. 在“创建分阶段部署”向导的“常规”页上，为分阶段部署提供名称、说明（可选），并选择“手动配置所有阶段”     。  
+1. 在“创建分阶段部署”向导的“常规”页上，为分阶段部署提供名称、说明（可选），并选择“手动配置所有阶段”     。  
 
-3. 在“创建分阶段部署”向导的“阶段”页中，可进行下列操作  ：  
+1. 在“创建分阶段部署”向导的“阶段”页中，可进行下列操作  ：  
 
-    - 筛选部署阶段列表  。 为“顺序”、“名称”或“集合”列输入匹配的字符串，不区分大小写。 
+    - 筛选部署阶段列表  。 为“顺序”、“名称”或“集合”列输入匹配的字符串，不区分大小写。
 
     - 添加新阶段  ：  
 
         1. 在“添加阶段向导”的“常规”页上，指定该阶段名称，然后浏览到目标“阶段集合”    。 此页面上的其他设置与正常部署任务序列或软件更新时的设置相同。  
 
-        2. 在“添加阶段向导”的“阶段设置”页上，配置计划设置，然后在完成后选择“下一步”   。 有关详细信息，请参阅[设置](#bkmk_settings)。   
+        1. 在“添加阶段向导”的“阶段设置”页上，配置计划设置，然后在完成后选择“下一步”   。 有关详细信息，请参阅[设置](#bkmk_settings)。
 
             > [!Note]  
-            > 无法在第一阶段中编辑阶段设置：“部署成功百分比”  或“成功部署的设备数”  （版本 1902 或更高版本）。 此设置仅适用于具有上一阶段的阶段。  
+            > 无法在第一阶段中编辑阶段设置：“部署成功百分比”或“成功部署的设备数”。 这些设置仅适用于具有上一阶段的阶段。
 
-        3. “添加阶段向导”的“用户体验”和“分发点”页面上的设置与正常部署任务序列或软件更新时的设置相同   。  
+        1. “添加阶段向导”的“用户体验”和“分发点”页面上的设置与正常部署任务序列或软件更新时的设置相同   。  
 
-        4. 查看“摘要”页上的设置，然后完成“添加阶段向导”  。  
+        1. 查看“摘要”页上的设置，然后完成“添加阶段向导”  。  
 
     - **编辑**：此操作将打开选定阶段的“属性”窗口，该窗口中的选项卡与“添加阶段向导”页面上的选项卡相同。  
 
@@ -165,12 +162,16 @@ Include a timeline diagram
 
        > [!Important]  
        > 更改顺序后查看阶段设置。 请确保以下设置仍符合对此分阶段部署的要求：  
-       > 
+       >
        > - 前一阶段成功的标准  
-       > - 在上一阶段成功后开始此阶段部署的条件   
+       > - 在上一阶段成功后开始此阶段部署的条件
 
-5. 选择“下一步”  。 查看“摘要”页上的设置，然后完成“创建分阶段部署”向导  。  
+1. 选择“下一步”  。 查看“摘要”页上的设置，然后完成“创建分阶段部署”向导  。
 
+从版本 2002 开始，可以使用以下 Windows PowerShell cmdlet 来执行此任务：
+
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
 
 创建分阶段部署后，打开其属性进行更改：  
 
@@ -182,12 +183,10 @@ Include a timeline diagram
 
 - 应用程序分阶段部署始终为只读。  
 
-
-
 ## <a name="next-steps"></a>后续步骤
 
 管理和监视分阶段部署：
+
 - [应用程序](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
 - [软件更新](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [任务序列](manage-monitor-phased-deployments.md)  
-

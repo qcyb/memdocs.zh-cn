@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 37e9f68951c3576393e6ed3eb3346847029736c4
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462025"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663202"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Intune 中终结点安全的磁盘加密策略设置
 
@@ -92,6 +92,9 @@ ms.locfileid: "86462025"
   此设置仅适用于 Windows Mobile 和 Mobile Enterprise SKU 设备。
   - **未配置**（默认） - 设置会返回到 OS 默认设置，即不需要存储卡加密。
   - **是** - 移动设备需要加密存储卡。
+
+  > [!NOTE]
+  > 对 [Windows 10 移动版](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) 和 [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) 的支持于 2020 年 8 月结束。
 
 - **隐藏关于第三方加密的提示**  
   CSP：[AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)

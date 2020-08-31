@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: e4772743bc85df54251dc8926c69b9a5afbab559
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022715"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663270"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>使用 Microsoft Intune 防止对公司数据进行未经授权的访问
 
@@ -51,4 +51,4 @@ ms.locfileid: "82022715"
 在后续步骤中，可详细了解增强公司数据保护的其他方式，包括： 
 
 * 了解如何使用 [iOS/iPadOS 和 Android 设备上的 Azure 信息保护](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq)。
-* 对于 Windows Phone 和 Mac 计算机，请参阅 [Microsoft Rights Management 共享应用程序](https://technet.microsoft.com/dn451248)。
+* 对于 Mac 计算机，请参阅 [Microsoft Rights Management 共享应用程序](https://technet.microsoft.com/dn451248)。

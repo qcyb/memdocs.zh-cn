@@ -2,11 +2,11 @@
 
 ## [什么是设备注册？](use-managed-devices-to-get-work-done.md)
 
-## [我的公司可以使用 Intune 看到哪些信息？](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [我的组织可以看到哪些信息？](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [设备密码要求](password-does-not-meet-it-administrator-requirements.md)
 
-## [登录到公司门户](sign-in-to-the-company-portal.md)  
+## [如何访问公司门户](sign-in-to-the-company-portal.md)  
 
 ## [安装移动威胁防御应用](set-up-mobile-threat-defense.md)  
 
@@ -20,7 +20,7 @@
 #### 使用派生的凭据注册
 ##### [注册 Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [注册 Intercede](enroll-android-device-intercede.md)
-##### [注册 Disa Purebred](enroll-android-device-disa-purebred.md)
+##### [注册 DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [移动到新的设备管理设置](move-to-new-device-management-setup.md)
 ### [在设备上使用托管应用](use-managed-apps-on-your-device-android.md)
 ### [加密设备](encrypt-your-device-android.md)
@@ -64,7 +64,6 @@
 
 ## [使用 iOS 设备](using-your-iOS-device-with-intune.md)
 ### [iOS 设备重置的影响](effects-of-device-reset-company-portal-ios.md)
-### [安装和登录到公司门户](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### 注册你的设备
 #### [注册 iOS 设备](enroll-your-device-in-intune-ios.md)
 #### [注册组织提供的 iOS 设备](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [从公司门户应用发送日志](send-logs-to-your-it-admin-cp-windows.md)
 #### [从设备设置应用发送日志](send-logs-to-your-it-admin-settings-windows.md)
 #### [不支持我的 Windows 版本](your-windows-version-isnt-yet-supported.md)
-#### [在我的 Windows 10 设备上安装 Office 365](install-office-windows.md)
+#### [在我的 Windows 10 设备上安装 Office](install-office-windows.md)
 #### [我的设备需要加密](you-need-to-enable-windows-encryption.md)
 #### [设备需要反恶意软件](your-device-needs-antimalware-software.md)
 #### [启用安全启动](you-need-to-enable-secure-boot-windows.md)

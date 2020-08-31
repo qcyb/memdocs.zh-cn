@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f2ba732cfd8f377937a6471b5fc7f0558e19d6f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 52bcff0e8b84b8e5b8a3fbd0a68d322836e91bea
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881770"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725326"
 ---
 # <a name="fix-common-problems-with-your-ios-device"></a>修复 iOS 设备的常见问题
 
@@ -39,4 +39,4 @@ ms.locfileid: "83881770"
 - [需要更新 iOS 设备](you-need-to-update-your-ios-device.md)
 - [目前不支持我的 iOS 版本](your-ios-version-isnt-yet-supported.md)
 - [我需要在我的 iOS 设备上安装移动威胁防御应用](set-up-mobile-threat-defense.md)
-- [我需要解除 iOS 设备上由移动威胁防御应用发现的威胁](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+- [我需要解除 iOS 设备上由移动威胁防御应用发现的威胁](set-up-mobile-threat-defense.md#resolving-a-threat)

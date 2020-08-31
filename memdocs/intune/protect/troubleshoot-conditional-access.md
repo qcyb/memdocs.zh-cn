@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405811"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663372"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件访问疑难解答
 本文介绍了在你的用户无法访问受条件访问保护的资源时应采取的措施，以及在用户可访问受保护资源但应遭阻止时应采取的措施。
@@ -45,7 +45,7 @@ ms.locfileid: "86405811"
 
 - 默认情况下，必须为用户分配设备符合性策略。 这可能取决于“标记未分配符合性策略的设备”设置的配置，该设置可在 Intune 管理门户中的“设备符合性” > “符合性策略设置”下进行配置  。
 
-- 如果用户使用的是设备的本机邮件客户端而不是 Outlook，则必须在设备上激活 Exchange ActiveSync。 此操作在 iOS/iPadOS、Windows Phone 和 Android Knox 设备上自动进行。
+- 如果用户使用的是设备的本机邮件客户端而不是 Outlook，则必须在设备上激活 Exchange ActiveSync。 此操作在 iOS/iPadOS 和 Android Knox 设备上自动进行。
 
 - 对于本地 Exchange，必须正确配置 Intune Exchange Connector。 有关详细信息，请参阅 [Microsoft Intune 中的 Exchange Connector 疑难解答](troubleshoot-exchange-connector.md)。
 
@@ -94,7 +94,7 @@ ms.locfileid: "86405811"
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>设备不符合，但用户未受阻止
 
-- 对于 Windows 电脑，条件访问仅阻止本机电子邮件应用，即启用新式身份验证的 Office 2013 或 Office 2016。 若要在 Windows 电脑上阻止旧版 Outlook 或所有邮件应用，必须按照[为 SharePoint Online 和 Exchange Online 设置 Azure Active Directory 条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)中的说明操作，执行 AAD 设备注册和 Active Directory 联合身份验证服务 (AD FS) 配置。
+- 对于 Windows 电脑，条件访问仅阻止本机电子邮件应用，即启用新式身份验证的 Office 2013 或 Office 2016。 若要在 Windows 电脑上阻止旧版 Outlook 或所有邮件应用，必须按照[为 SharePoint Online 和 Exchange Online 设置 Azure Active Directory 条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)中的说明操作，执行 Azure AD 设备注册和 Active Directory 联合身份验证服务 (AD FS) 配置。
 
 - 如果在 Intune 中有选择地擦除或停用设备，设备可能在停用后几个小时内继续拥有访问权限。 这是因为 Exchange 将缓存访问权限六个小时。 在这种情况下，请考虑保护已停用设备上数据的其他方法。
 

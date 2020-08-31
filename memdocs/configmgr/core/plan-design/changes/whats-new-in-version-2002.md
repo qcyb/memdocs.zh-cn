@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700559"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993329"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -312,13 +312,13 @@ Configuration Manager 现在可检测服务堆栈更新 (SSU) 是否为多个更
 
 有关详细信息，请参阅[规划软件更新](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu)。
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>用于断开连接的软件更新点的 Office 365 更新
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>用于断开连接的软件更新点的 Microsoft 365 更新
 
 <!-- 4065163 -->
 
-可使用新工具将 Office 365 更新从连接了 Internet 的 WSUS 服务器导入到已断开连接的 Configuration Manager 环境中。 以前，当你导出和导入在已断开连接的环境中更新的软件的元数据时，无法部署 Office 365 更新。 Office 365 更新需要从 Office API 和 Office CDN 下载的其他元数据，这对于已断开连接的环境是不可能的。
+可使用新工具将 Microsoft 365 更新从连接了 Internet 的 WSUS 服务器导入到已断开连接的 Configuration Manager 环境中。 以前，当你在已断开连接的环境中导出和导入更新的软件的元数据时，无法部署 Microsoft 365 更新。 Microsoft 365 更新需要从 Office API 和 Office CDN 下载的其他元数据，这对于已断开连接的环境是不可能的。
 
-有关详细信息，请参阅[从断开连接的软件更新点同步 Office 365 更新](../../../sum/get-started/synchronize-office-updates-disconnected.md)。
+有关详细信息，请参阅[从断开连接的软件更新点同步 Microsoft 365 更新](../../../sum/get-started/synchronize-office-updates-disconnected.md)。
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

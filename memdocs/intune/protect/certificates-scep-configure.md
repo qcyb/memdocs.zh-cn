@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166121"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820385"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>配置基础结构以支持在 Intune 中使用 SCEP
 
@@ -34,7 +34,7 @@ Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和�
 
 ## <a name="prerequisites-for-using-scep-for-certificates"></a>使用 SCEP 证书的先决条件
 
-在继续操作之前，请确保[已创建受信任的证书配置文件](certificates-configure.md#export-the-trusted-root-ca-certificate)并将其部署到将使用 SCEP 证书配置文件的设备。 SCEP 证书配置文件直接引用用于通过受信任的根 CA 证书来预配设备的受信任证书配置文件。
+在继续操作之前，请确保*已创建受信任的证书配置文件[并将其部署到将使用 SCEP 证书](certificates-configure.md#export-the-trusted-root-ca-certificate)配置文件*的设备。 SCEP 证书配置文件直接引用用于通过受信任的根 CA 证书来预配设备的受信任证书配置文件。
 
 ### <a name="servers-and-server-roles"></a>服务器和服务器角色
 
@@ -127,7 +127,7 @@ Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和�
 1. 创建 v2 证书模板（具有 Windows 2003 兼容性），用作 SCEP 证书模板。 你可以：
 
    - 使用“证书模板”管理单元创建新的自定义模板。
-   - 复制现有模板（如用户模板）然后更新，将其用作 NDES 模板。
+   - 复制现有模板（如 Web 服务器模板）然后更新，将其用作 NDES 模板。
 
 2. 在模板的指定选项卡上配置以下设置：
 
@@ -215,7 +215,7 @@ Intune 证书连接器要求某个证书的“客户端身份验证”增强型�
 
 [创建 SCEP 证书模板](#create-the-scep-certificate-template)后，可以编辑模板，在“常规”选项卡上查看“有效期” 。
 
-默认情况下，Intune 使用模板中配置的值。 但是，可以将 CA 配置为允许申请者输入其他值，并且可在 Intune 控制台中设置该值。
+默认情况下，Intune 使用模板中配置的值，但是可以将 CA 配置为允许申请者输入其他值，以便可在 Intune 控制台中设置该值。
 
 > [!IMPORTANT]
 > 对于 iOS/iPadOS 和 macOS，请始终使用模板中设置的值。
@@ -303,8 +303,8 @@ Intune 证书连接器要求某个证书的“客户端身份验证”增强型�
 
    2. 配置下列设置：
 
-      - 最大 URL 长度(字节) = 65534
-      - 最大查询字符串(字节) = 65534
+      - 最大 URL 长度(字节) = 65534****
+      - 最大查询字符串(字节) = 65534****
 
    3. 选择“确定”，保存此配置并关闭 IIS 管理器。
 
@@ -314,7 +314,7 @@ Intune 证书连接器要求某个证书的“客户端身份验证”增强型�
 
       以下值设置为 DWORD 值：
 
-      - 名称：MaxFieldLength，十进制值为 65534
+      - 名称：MaxFieldLength****，十进制值为 65534****
       - 名称：MaxRequestBytes，十进制值为 65534
 
 4. 重启托管 NDES服务的服务器。 请勿使用 iisreset；iireset 未完成所需更改。
@@ -327,32 +327,51 @@ Intune 证书连接器要求某个证书的“客户端身份验证”增强型�
   
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>在托管 NDES 服务的服务器上安装和绑定证书
 
+NDES 服务器中有两个配置所需的证书。
+这些证书是**客户端身份验证证书**和**服务器身份验证证书**，如[证书和模板](#certificates-and-templates)部分所述。
+
 > [!TIP]
-> 在以下过程中，如果某个服务器配置为同时满足服务器和客户端身份验证的要求，则可以使用单个证书进行“服务器身份验证”和“客户端身份验证” 。 以下过程的步骤 1 和步骤 3 中描述了用于每种身份验证的条件。
+> 在以下过程中，如果某个服务器配置为同时满足服务器和客户端身份验证的要求，则可以使用单个证书进行“服务器身份验证”和“客户端身份验证” 。
+> “使用者名称”必须满足*客户端身份验证*证书要求。
 
-1. 从内部 CA 或公共 CA 请求“服务器身份验证”证书，然后在服务器上安装该证书。
+- **客户端身份验证证书** 
 
-   如果服务器对单个网络地址使用外部和内部名称，则服务器身份验证证书必须具有：
+   此证书在 Intune 证书连接器安装过程中使用。
 
-   - “使用者名称”（包括外部公共服务器名称）。
-   - “使用者可选名称”（包括内部服务器名称）。
-
-2. 在 IIS 中绑定服务器身份验证证书：
-
-   1. 安装服务器身份验证证书后，打开“IIS 管理器”，然后选择“默认网站” 。 在“操作”窗格中，选择“绑定” 。
-
-   1. 选择“添加”，将“类型”设置为“https”并确认端口为“443”   。
+   请求并安装来自你的内部 CA 或公用证书颁发机构的 **“客户端身份验证”** 证书。
    
-   1. 为“SSL 证书”指定服务器身份验证证书。
-
-3. 在你的 NDES 服务器上，请求并安装来自你的内部 CA 或公用证书颁发机构的“客户端身份验证”证书。
-
-   客户端身份验证证书必须具备以下属性：
+   该证书必须满足以下要求：
 
    - **增强型密钥使用**：此值必须包括“客户端身份验证”。
-   - **使用者名称**：此值必须与安装证书的服务器（NDES 服务器）的 DNS 名称相同。
+   - **使用者名称**：CN（通用名）设置的值必须与安装证书的服务器（NDES 服务器）的 FQDN 相同。
 
-4. 托管 NDES 服务的服务器现已支持 Intune 证书连接器。
+- **服务器身份验证证书**
+
+   此证书在 IIS 中使用。 这是一个简单的 Web 服务器证书，可让客户端信任 NDES URL。
+   
+   1. 从内部 CA 或公共 CA 请求“服务器身份验证”证书，然后在服务器上安装该证书。
+      
+      根据向 Internet 公开 NDES 的情况，要求会有所不同。 
+      
+      一种正确配置是：
+   
+      - **使用者名称**：CN（通用名）设置的值必须与安装证书的服务器（NDES 服务器）的 FQDN 相同。
+      - **使用者可选名称**：为 NDES 响应的每个 URL 设置 DNS 条目，例如内部 FQDN 和外部 URL。
+   
+      > [!NOTE]
+      > 如果使用 Azure AD 应用代理，AAD 应用代理连接器会将外部 URL 发出的请求转换为内部 URL。
+      > 因此，NDES 将只响应定向到内部 URL 的请求，通常为 NDES 服务器的 FQDN。
+      >
+      > 在这种情况下，不需要外部 URL。
+   
+   2. 在 IIS 中绑定服务器身份验证证书：
+
+      1. 安装服务器身份验证证书后，打开“IIS 管理器”，然后选择“默认网站” 。 在“操作”窗格中，选择“绑定” 。
+
+      1. 选择“添加”，将“类型”设置为“https”并确认端口为“443”   。
+   
+      1. 为“SSL 证书”指定服务器身份验证证书。
+
 
 ## <a name="install-the-intune-certificate-connector"></a>安装 Intune 证书连接器
 
@@ -372,7 +391,7 @@ Microsoft Intune 证书连接器安装在运行 NDES 服务的服务器上。 �
 
    1. 确认已安装 .NET 4.5 Framework，因为它是 Intune 证书连接器的必需项。 Windows Server 2012 R2 和更高版本中自动包含 .NET 4.5 Framework。
 
-   2. 运行安装程序 (NDESConnectorSetup.exe)。 安装程序还会安装 NDES 和 IIS 证书注册点 (CRP) Web 服务的策略模块。 CRP Web 服务 CertificateRegistrationSvc 作为 IIS 中的应用程序运行。
+   2. 使用对服务器具有管理权限的帐户运行安装程序 (**NDESConnectorSetup.exe**)。 安装程序还会安装 NDES 和 IIS 证书注册点 (CRP) Web 服务的策略模块。 CRP Web 服务 CertificateRegistrationSvc 作为 IIS 中的应用程序运行。
 
       如果为独立 Intune 安装 NDES，则 CRP 服务会自动随证书连接器一起安装。
 
