@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193811"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89280929"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>将设备添加到 Windows Autopilot
 
@@ -92,7 +92,7 @@ Microsoft 端点 Configuration Manager 自动收集现有 Windows 10 设备的�
 
 ### <a name="collecting-the-hardware-hash-from-existing-devices-using-powershell"></a>使用 PowerShell 从现有设备收集硬件哈希
 
-可以通过 Windows Management Instrumentation (WMI) 获取现有设备的硬件哈希，只要该设备运行的是受支持版本的 Windows 10 半年频道即可。 可以使用 PowerShell 脚本 ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) 获取设备的硬件哈希和序列号。 序列号可用于快速查看硬件哈希所属的设备。
+可以通过 Windows Management Instrumentation (WMI) 获取现有设备的硬件哈希，只要该设备运行的是受支持版本的 Windows 10 半年频道即可。 可以使用 PowerShell 脚本 ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) 获取设备的硬件哈希和序列号。 序列号可用于快速查看硬件哈希所属的设备。
 
 若要使用此脚本，可以使用以下方法之一：
 - 从 PowerShell 库下载并在每台计算机上运行。
@@ -194,7 +194,7 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 - [向客户帐户添加设备](/partner-center/autopilot)
 
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
 
 使用 Windows Autopilot 部署新设备时，需要执行以下步骤：
 
