@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f5299db1c151d3338fb2060246a7d07beb462779
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907915"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193649"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Windows Autopilot 用户驱动模式
 
@@ -90,10 +90,11 @@ Windows Autopilot 要求 Azure Active Directory 连接设备。 如果你有本�
 
 若要使用 Windows Autopilot 执行用户驱动的混合 Azure AD 联接的部署：
 
+- 设备必须运行 Windows 10 版本1809或更高版本。 
 - 必须创建用户驱动模式的 Windows Autopilot 配置文件，并 
  - 在 Autopilot 配置文件中，必须将**混合 Azure AD 联接**指定为 "**联接到 Azure AD** " 下的所选选项。
 - 如果使用 Intune，Azure Active Directory 中的设备组必须与分配给该组的 Windows Autopilot 配置文件存在。
-- 设备必须运行 Windows 10 版本1809或更高版本。
+- 如果使用 intune，请创建并分配域加入配置文件。 域加入配置文件包括本地 Active Directory 域信息
 - 设备必须有权访问 Active Directory 域控制器。 它必须连接到组织的网络。 它必须能够解析 AD 域和 AD 域控制器的 DNS 记录。 它必须能够与域控制器进行通信，以便对用户进行身份验证。
 - 设备必须能够访问 Internet，遵循所 [述的 Windows Autopilot 网络要求](networking-requirements.md)。
 - 必须安装 Active Directory 的 Intune 连接器。
@@ -147,7 +148,7 @@ Windows Autopilot 要求 Azure Active Directory 连接设备。 如果你有本�
 > [!NOTE]
 > Always On VPN 可用于此方案。 有关详细信息，请参阅 [部署 ALWAYS ON VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) 文档。 请注意，Intune 尚未部署所需的每个计算机 VPN 配置文件。 
 
-若要验证该过程，请确保在 Windows 10 1903 或 Windows 10 1909 上安装了所需的 Windows 10 累积更新。 您可以通过先从下载最新的累积性，在 OOBE 期间手动安装更新 https://catalog.update.microsoft.com 。 执行以下步骤：
+若要验证该过程，请确保在 Windows 10 1903 或 Windows 10 1909 上安装了所需的 Windows 10 累积更新。 您可以通过先从下载最新的累积性，在 OOBE 期间手动安装更新 https://catalog.update.microsoft.com 。 执行以下步骤:
 
 1. 按 Shift-F10 打开命令提示符。
 2. 插入包含已下载更新的 USB 密钥。

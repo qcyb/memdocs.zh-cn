@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b3f25f424857d99919450ec1426ee1023bae3aca
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057369"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193811"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>将设备添加到 Windows Autopilot
 
@@ -75,7 +75,7 @@ ms.locfileid: "89057369"
 
 硬件哈希包含有关设备的详细信息：
 - 制造商
-- 模型
+- model
 - 设备序列号
 - 硬盘驱动器序列号
 - 有关 ID 生成时间的详细信息
@@ -130,10 +130,10 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 
 从现有设备中捕获硬件哈希后，可以通过以下任一方式上传它们：
 
-- [Microsoft Intune](enrollment-autopilot.md) 是适用于所有客户的首选机制。
- - Microsoft 终结点管理器管理中心用于 Intune 设备注册。
-- 使用[合作伙伴中心](https://msdn.microsoft.com/partner-center/autopilot)来向客户注册设备。
-- [Microsoft 365 商业版 & Office 365 管理员](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa) 通常由中小型企业使用，)  (使用 Microsoft 365 商业版管理其设备的中小型企业。
+- [Microsoft Intune](enrollment-autopilot.md)。 这是适用于所有客户的首选机制。
+  - Microsoft 终结点管理器管理中心用于 Intune 设备注册。
+- [合作伙伴中心](https://msdn.microsoft.com/partner-center/autopilot)。 CSP 合作伙伴使用此方法代表客户注册设备。
+- [Microsoft 365 商业版 & Office 365 管理员](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)。这通常由小型和中型企业使用， (使用 Microsoft 365 商业版管理其设备的 Smb) 。
 - [适用于企业的 Microsoft Store](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。 可能已在使用 MSfB 管理应用和设置。
 
 下面提供每个平台的功能的摘要。<br>
@@ -194,7 +194,7 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 - [向客户帐户添加设备](/partner-center/autopilot)
 
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>“摘要”
 
 使用 Windows Autopilot 部署新设备时，需要执行以下步骤：
 
