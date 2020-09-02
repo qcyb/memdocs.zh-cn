@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: aafd83f1aa09881c9e7c4196b91798ab0d278a87
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993652"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385329"
 ---
 # <a name="windows-autopilot-requirements"></a>Windows Autopilot 要求
 
@@ -53,7 +53,7 @@ Windows Autopilot 依赖于各种基于 internet 的服务。 若要使 Autopilo
 - 确保 Internet DNS 名称的 DNS 名称解析
 - 允许通过端口 80 (HTTP)、443 (HTTPS) 和 123 (UDP/NTP) 访问所有端口
 
-在具有限制性更强的 Internet 访问权限的环境中，或在获得 internet 访问权限之前需要进行身份验证的环境中，可能需要进行其他配置才能允许对所需服务进行访问。 
+在具有限制性更强的 Internet 访问的环境中，或者对于需要进行身份验证才能获得 internet 访问权限的环境中，可能需要进行其他配置才能访问所需的服务。 
 
 > [!NOTE]
 > OOBE 期间不支持智能卡和基于证书的身份验证。 有关详细信息，请参阅 [智能卡和基于证书的身份验证](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication)。
