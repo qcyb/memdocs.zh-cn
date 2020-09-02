@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: d51f7fd47e876a2e91665fb1a6e72f377de31429
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565693"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916004"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>设置 DigiCert PKI 平台的 Intune 证书连接器
 
@@ -323,7 +323,7 @@ ms.locfileid: "86565693"
 
 ## <a name="troubleshooting"></a>疑难解答
 
-Intune 证书连接器服务日志在 NDES 连接器计算机上的 %ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs 中可用。 打开 [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) 中的日志，然后搜索异常或错误消息。
+Intune 证书连接器服务日志在 NDES 连接器计算机上的 %ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs 中可用。 打开 [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) 中的日志，然后搜索异常或错误消息。
 
 | 问题/错误消息 | 解决方法步骤 |
 | --- | --- |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec48b7037788c8951cd5bc5fcd4206809ca69f6
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d0b9af43c149912d4972e2f79f5e89840823ca94
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531582"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914032"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 将 Microsoft Edge 添加到 macOS 设备
 
@@ -95,6 +95,6 @@ ms.locfileid: "84531582"
 > 当前，Apple 没有提供通过 Intune 在 macOS 设备上卸载 Microsoft Edge 的方法。
 
 ## <a name="next-steps"></a>后续步骤
-- 若要了解如何在 macOS 设备上配置 Microsoft Edge，请参阅[在 macOS 设备上配置 Microsoft Edge](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)。
+- 若要了解如何在 macOS 设备上配置 Microsoft Edge，请参阅[在 macOS 设备上配置 Microsoft Edge](/deployedge/configure-microsoft-edge-on-mac)。
 - 要了解从用户组添加和排除应用分配，请参阅[添加和排除应用分配](apps-inc-exl-assignments.md)。
 - [将应用分配给组](apps-deploy.md)

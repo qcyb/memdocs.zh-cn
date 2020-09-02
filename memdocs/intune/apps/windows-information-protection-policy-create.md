@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88eabe07cadf45644f3e10be338a23454c5d1711
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990281"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911975"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>通过 Intune 创建和部署 Windows 信息保护 (WIP) 策略
 
@@ -52,11 +52,11 @@ ms.locfileid: "83990281"
 必须先配置 MAM 提供程序，然后才可以创建 WIP 策略。 详细了解[如何通过 Intune 配置 MAM 提供程序](app-protection-policies-configure-windows-10.md)。  
 
 > [!IMPORTANT]
-> WIP 不支持多标识，一次只能存在一个托管标识。 有关 WIP 功能和限制的详细信息，请参阅[使用 Windows 信息保护 (WIP) 保护企业数据](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)。
+> WIP 不支持多标识，一次只能存在一个托管标识。 有关 WIP 功能和限制的详细信息，请参阅[使用 Windows 信息保护 (WIP) 保护企业数据](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)。
 
 此外，还需要具有以下许可证和更新：
 
-- [Azure AD 高级版](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)许可证
+- [Azure AD 高级版](/azure/active-directory/active-directory-get-started-premium)许可证
 - [Windows 创意者更新](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -68,7 +68,7 @@ ms.locfileid: "83990281"
 设置组织中的 Intune 后，可以创建特定于 WIP 的策略。
 
 > [!TIP]  
-> 有关为 Intune 创建 WIP 策略的相关信息，包括可用设置及其配置方式，请参阅 Windows 安全文档库中的[使用 Microsoft Intune 的 Azure 门户创建具有 MAM 的 Windows 信息保护 (WIP) 策略](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)。 
+> 有关为 Intune 创建 WIP 策略的相关信息，包括可用设置及其配置方式，请参阅 Windows 安全文档库中的[使用 Microsoft Intune 的 Azure 门户创建具有 MAM 的 Windows 信息保护 (WIP) 策略](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)。 
 
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
@@ -194,4 +194,4 @@ WIP 以无提示的方式运行，并记录不正确的数据共享操作，但�
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 Windows 信息保护的详细信息，请参阅 [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)（使用 Windows 信息保护 (WIP) 保护企业数据）。
+有关 Windows 信息保护的详细信息，请参阅 [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)（使用 Windows 信息保护 (WIP) 保护企业数据）。

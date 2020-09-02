@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7afe3897c040673ad869584e1e8e8f55f4fc08ff
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210363"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911890"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>使用 Apple Business Manager 或 Apple School Manager 自动注册 macOS 设备
 
@@ -109,7 +109,7 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 
     ![“创建配置文件”的屏幕截图。](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. 在“基本信息”页上，输入配置文件的“名称”和“说明”，以便于管理。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 详细了解 [Azure Active Directory 动态组](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
+3. 在“基本信息”页上，输入配置文件的“名称”和“说明”，以便于管理。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 详细了解 [Azure Active Directory 动态组](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。
 
     ![配置文件名称和描述。](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
@@ -118,7 +118,7 @@ Apple Business Manager 注册和 Apple School Manager 均不适用于[设备注�
 5. 选择“下一步”，转到“管理设置”页面 。
 
 6. 对于“用户关联”，选择具有此配置文件的设备是否必须通过已分配的用户进行注册。
-    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户应用获取服务（如安装应用）的设备选择此选项。 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。使用用户关联的 macOS ADE 设备不支持多重身份验证。
+    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户应用获取服务（如安装应用）的设备选择此选项。 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10))。 [了解详细信息](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)。使用用户关联的 macOS ADE 设备不支持多重身份验证。
 
     - 不通过用户关联进行注册 - 为不属于单个用户的设备选择此选项。 为无需访问本地用户数据即可执行任务的设备使用此选项。 公司门户等应用将无法运行。
 

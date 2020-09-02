@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 00d515743f2391d9c232b9ae5d97062a01302c48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093796"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908813"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>通过 Apple Configurator 设置 iOS/iPadOS 设备注册
 
@@ -60,7 +60,7 @@ Apple Configurator 注册方法不能与[设备注册管理器](device-enrollmen
 
 4. 对于“用户关联”，选择具有此配置文件的设备是否必须通过已分配的用户进行注册。
 
-    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 设备必须通过设置助理与某个用户关联，然后才可访问公司数据和电子邮件。 仅设置助理注册支持。 用户关联需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
+    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 设备必须通过设置助理与某个用户关联，然后才可访问公司数据和电子邮件。 仅设置助理注册支持。 用户关联需要 [WS-Trust 1.3 用户名/混合终结点](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10))。 [了解详细信息](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)。
 
     - 不通过用户关联进行注册 - 为不属于单个用户的设备选择此选项。 为无需访问本地用户数据即可执行任务的设备使用此选项。 需要用户隶属关系的应用（包括用于安装业务线应用的公司门户应用）无法运行。 直接注册需要此设置此选项。
 
@@ -171,8 +171,3 @@ Apple Configurator 注册方法不能与[设备注册管理器](device-enrollmen
 6. 在 iOS/iPadOS 设备上，打开“设置”并转到“常规” > “设备管理” > “管理配置文件”   。 确认配置文件安装已列出，并检查 iOS/iPadOS 策略限制和已安装的应用。 策略限制和应用可能需要 10 分钟才会出现在设备上。
 
 7. 分配设备。 iOS/iPadOS 设备现已在 Intune 中注册并已托管。
-
-
-
-
-

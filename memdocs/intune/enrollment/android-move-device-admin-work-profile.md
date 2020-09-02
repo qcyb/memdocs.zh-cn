@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: fb62a7b592b492d4092b7af7ee29b2bfd50c66e8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126509"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915171"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>将 Android 设备从设备管理员转到工作配置文件管理
 
@@ -40,7 +40,7 @@ ms.locfileid: "84126509"
 - 通过[将 Intune 租户帐户连接到 Android Enterprise 帐户](connect-intune-android-enterprise.md)设置 Android 工作配置文件管理。
 - 为要转到 Android 工作配置文件的一组用户[设置 Android Enterprise 工作配置文件注册](android-work-profile-enroll.md)。
 - 考虑增加用户设备限制。 从设备管理员管理中取消注册设备时，可能不会立即删除设备记录。 若要在此期间提供缓冲，可能需要增加设备限制容量，以便用户可以注册工作配置文件管理。
-  - 将 [Azure Active Directory 设备设置](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)配置为每个用户的最大设备数量。
+  - 将 [Azure Active Directory 设备设置](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)配置为每个用户的最大设备数量。
   - 通过设置设备限制调整 [Intune 设备限制](enrollment-restrictions-set.md#create-a-device-limit-restriction)。 
 
 ## <a name="create-device-compliance-policy"></a>创建设备符合性策略

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 544db0c11894967eca71a5b8c2e107e0fab47ef5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e151f45f8b65050496504ecdc95c0084b74e7c2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989006"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915154"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>设置 Android Enterprise 专用设备的 Intune 注册
 
@@ -80,7 +80,7 @@ Intune可帮助将应用和设置部署到 Android Enterprise 专用设备。 �
     - **添加设备位置**enrollmentProfileName
     - 在中间的框中，选择“等于”  。
     - 在最后一个字段中，输入之前创建的注册配置文件名称。
-    有关动态成员身份规则的详细信息，请参阅 [AAD 中的组动态成员身份规则](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)。 
+    有关动态成员身份规则的详细信息，请参阅 [AAD 中的组动态成员身份规则](/azure/active-directory/users-groups-roles/groups-dynamic-membership)。 
 5. 选择“添加查询” > “创建”。
 
 ### <a name="replace-or-remove-tokens"></a>替换或删除令牌

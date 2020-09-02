@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9dca2303d960937a529a902391d6c05539fc9d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 701794ba476f87aaf079e39c834f3e8e3f2c280d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359308"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913879"
 ---
 # <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Windows 设备的 Intune 注册方法功能
 [!INCLUDE[azure_portal](../includes/azure_portal.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "79359308"
 在 Intune 中注册工作人员设备的方法有多种。 每种方法都有不同的最佳做法和功能，如下表所示。
 
 ## <a name="best-practices-by-enrollment-method"></a>不同注册方法对应的最佳做法
-| **Best practices**（最佳做法） | **[已联接 Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[使用 Autopilot 联接 Azure AD（用户驱动模式）](enrollment-autopilot.md)** |**[使用 Autopilot 联接 Azure AD（自部署模式）](enrollment-autopilot.md)** |**[批量](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **Best practices**（最佳做法） | **[已联接 Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[使用 Autopilot 联接 Azure AD（用户驱动模式）](../../autopilot/enrollment-autopilot.md)** |**[使用 Autopilot 联接 Azure AD（自部署模式）](../../autopilot/enrollment-autopilot.md)** |**[批量](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |常用于 EDU 中|![X](./media/enrollment-method-capab/xmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
 |设备可以用作共享设备|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
@@ -39,7 +39,7 @@ ms.locfileid: "79359308"
 
 ## <a name="capabilities-by-enrollment-method"></a>不同注册方法对应的功能
 
-| **功能** | **[已联接 Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[使用 Autopilot 联接 Azure AD（用户驱动模式）](enrollment-autopilot.md)** |**[使用 Autopilot 联接 Azure AD（自部署模式）](enrollment-autopilot.md)** |**[批量](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **功能** | **[已联接 Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[使用 Autopilot 联接 Azure AD（用户驱动模式）](../../autopilot/enrollment-autopilot.md)** |**[使用 Autopilot 联接 Azure AD（自部署模式）](../../autopilot/enrollment-autopilot.md)** |**[批量](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |条件性访问                                      |![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)\*\*|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|
 |用户与设备关联                    |![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|![选中标记](./media/enrollment-method-capab/checkmark.png)|
@@ -60,4 +60,3 @@ ms.locfileid: "79359308"
 ## <a name="next-steps"></a>后续步骤
 
 [设置 Windows 的注册](windows-enroll.md)
-

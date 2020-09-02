@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d5c57dcbe91d18b633831bafde3a0feae997ba76
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262585"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909374"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>使用 Intune 修正由 Microsoft Defender ATP 标识的漏洞
 
 将 Intune 与 Microsoft Defender 高级威胁防护 (ATP) 集成时，可以充分利用 ATP 威胁和漏洞管理 (TVM) 并使用 Intune 修正由 TVM 标识的终结点漏洞。 此集成带来了基于风险的方法来发现漏洞并对其设置优先级，可缩短整个环境的修正响应时间。
 
-[威胁和漏洞管理](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt)属于 [Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection)。
+[威胁和漏洞管理](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt)属于 [Microsoft Defender 高级威胁防护](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection)。
 
 ## <a name="how-integration-works"></a>集成的工作原理
 
@@ -108,4 +108,4 @@ ms.locfileid: "87262585"
 
 查看 Intune [移动威胁防御](mobile-threat-defense.md)。
 
-查看 Microsoft Defender ATP 中的[威胁和漏洞管理仪表板](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights)。
+查看 Microsoft Defender ATP 中的[威胁和漏洞管理仪表板](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights)。

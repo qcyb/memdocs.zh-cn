@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff5c8208cb1ee9357c501a3c457bc346879b241d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819773"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906695"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 中 Windows 10 Microsoft Defender 防病毒策略的设置
 
@@ -36,7 +36,7 @@ ms.locfileid: "88819773"
 设置：
 
 - **启用云提供的保护**  
-  CSP：[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP：[AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   默认情况下，Windows 10 桌面版设备上的 Defender 将有关发现的任何问题的信息发送给 Microsoft。 Microsoft 分析该信息，详细了解影响你和其他客户的问题，并提供改进的解决方案。
 
@@ -45,7 +45,7 @@ ms.locfileid: "88819773"
   - **是** - 已启用云提供的保护。  设备用户无法更改此设置。
 
 - **云提供的保护级别**  
-  CSP：[CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP：[CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   配置 Defender 防病毒在阻止和扫描可疑文件方面的积极程度。
   - **未配置**（默认值）- 默认的 Defender 阻止级别。
@@ -54,7 +54,7 @@ ms.locfileid: "88819773"
   - **零容差** - 阻止所有未知的可执行文件。
 
 - **Defender 云扩展超时(秒)**  
-  CSP：[CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP：[CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender 防病毒会自动阻止可疑文件 10 秒钟，同时扫描云中的这些文件以确保安全性。 最多可以将此超时值增加 50 秒。
 
@@ -70,17 +70,17 @@ ms.locfileid: "88819773"
 对于此组中的每项设置，可以展开设置，选择“添加”，然后为排除项指定一个值。
 
 - **要排除的 Defender 进程**  
-  CSP：[ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP：[ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   指定在扫描期间要忽略的由进程打开的文件列表。 进程本身不会从扫描中排除。
 
 - **要从扫描和实时保护中排除的文件扩展名**  
-  CSP：[ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP：[ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   指定在扫描期间要忽略的文件类型扩展名的列表。
 
 - 要**排除的 Defender 文件和文件夹**  
-  CSP：[ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP：[ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   指定在扫描期间要忽略的文件和目录路径列表。
 
@@ -93,7 +93,7 @@ ms.locfileid: "88819773"
 设置：
 
 - **启用实时保护**  
-  CSP：[AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP：[AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   需要 Windows 10 桌面版设备上的 Defender 使用实时监视功能。
   - **未配置**（默认值）- 设置将还原为系统默认值
@@ -127,7 +127,7 @@ ms.locfileid: "88819773"
   - **是** - 强制使用实时行为监视。 设备用户无法更改此设置。
 
 - **启用网络保护**  
-  CSP：[EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP：[EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   保护使用任何应用的设备用户免于访问 Internet 上的仿冒欺诈邮件、攻击托管站点和恶意内容。 这包括防止第三方浏览器连接到危险站点。
 
@@ -321,14 +321,14 @@ ms.locfileid: "88819773"
   指定用于检查签名的时间间隔，从 0 到 24（以小时为单位）。 如果值为零，则不会检查新的签名。 如果值为 2，将每隔两小时检查一次，依此类推。
 
 - **定义用于下载定义更新的文件共享**  
-  CSP：[SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+  CSP：[SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
   管理位置（如 UNC 文件共享）并将其作为获取定义更新的下载源位置。 从一个指定数据源成功下载定义更新后，不会连接到列表中剩余的源。
 
   你可以“添加”单独的位置，或“导入”位置列表作为 .csv 文件 。
 
 - **定义用于下载定义更新的源的顺序**  
-  CSP：[SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+  CSP：[SignatureUpdateFileSharesSources](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 
   指定按何种顺序连接你指定的源位置才能获取定义更新。 从一个指定数据源成功下载定义更新后，不会连接列表中剩余的其他源。
 
@@ -346,4 +346,3 @@ ms.locfileid: "88819773"
   - **未配置**（默认值）- 设置将还原为客户端默认值（允许 UI 和通知）。
   - **无** - 禁止访问 Defender 用户界面 (UI)，并且已禁止通知。
   - **是**
-

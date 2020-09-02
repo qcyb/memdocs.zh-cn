@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69a694ab9da7987271214bc6919cd3b676f9814e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 82c27aaef1f30e4f021f6370d5c7cf7ce157f3c0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166053"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908847"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>使用 Intune 应用包装工具准备 Android 应用以便使用应用保护策略
 
@@ -99,7 +99,7 @@ ms.locfileid: "84166053"
 | **&lt;CommonParameters&gt;** | （可选）该命令支持常见的 PowerShell 参数，如 verbose 和 debug。 |
 
 
-- 有关常见参数的列表，请参阅 [Microsoft 脚本中心](https://technet.microsoft.com/library/hh847884.aspx)。
+- 有关常见参数的列表，请参阅 [Microsoft 脚本中心](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7)。
 
 - 若要查看该工具的详细使用情况信息，请输入命令：
 

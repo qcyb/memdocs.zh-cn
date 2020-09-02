@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 01df8f50da5b0665c1c29949c1ee2c954e47cc9f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491297"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914882"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>适用于 Intune 的 Windows MDM 安全基线设置
 
@@ -57,7 +57,7 @@ ms.locfileid: "86491297"
 
 ## <a name="above-lock"></a>锁定时
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock)。  
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock)。  
 
 - **阻止显示 toast 通知**：  
   使用此策略设置，可以阻止应用通知显示在锁定屏幕中。 如果启用此策略设置，则锁定屏幕不会显示任何应用通知。 如果禁用或不配置此策略设置，用户可以选择哪些应用在锁定屏幕上显示通知。  
@@ -76,7 +76,7 @@ ms.locfileid: "86491297"
 
 ## <a name="app-runtime"></a>应用运行时
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime)。
 
 - **Windows 应用商店应用的可选 Microsoft 帐户**：  
   使用此策略设置，可以控制：对于需要帐户进行登录的 Windows 应用商店应用，Microsoft 帐户是否可选。 此策略仅影响支持它的 Windows 应用商店应用。 如果启用此策略设置，则通常需要 Microsoft 帐户登录的 Windows 应用商店应用将允许用户改为使用企业帐户登录。 如果禁用或不配置此策略设置，则用户必须使用 Microsoft 帐户登录。  
@@ -86,7 +86,7 @@ ms.locfileid: "86491297"
 
 ## <a name="application-management"></a>应用程序管理
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement)。
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -118,7 +118,7 @@ ms.locfileid: "86491297"
 
 ## <a name="auto-play"></a>自动播放
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - Autoplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - Autoplay](/windows/client-management/mdm/policy-csp-autoplay)。
 
 - **自动播放默认自动运行行为**：  
   此设置影响 Autorun 命令的默认行为。 Autorun 命令存储在 autorun.inf 文件中，可以启动安装程序或其他例程。 如果设置为“启用”，管理员可在运行 Windows Vista 或更高版本的设备上更改默认的自动运行行为。 行为可设置为：a) 彻底禁用自动运行命名，或 b) 还原到早于 Windows Vista 的自动执行自动运行命令的行为。 如果设置为“禁用”或“未配置”，则运行 Windows Vista 或更高版本的设备将提示用户是否应该运行自动运行命令 。  
@@ -140,7 +140,7 @@ ms.locfileid: "86491297"
 
 ## <a name="bitlocker"></a>BitLocker
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - BitLocker](/windows/client-management/mdm/policy-csp-bitlocker)。
 
 - **BitLocker 可移动驱动器策略**：  
   此策略设置用于控制加密方法和密码长度。 此策略的值确定 BitLocker 用于加密的密码强度。 企业可能想要控制加密级别，增强安全性（AES-256 强于 AES-128）。 如果启用此设置，可以为固定的数据驱动器、操作系统驱动器和可移动数据驱动器单独配置加密算法和密钥加密强度。 对于固定的驱动器和操作系统驱动器，建议使用 XTS-AES 算法。 对于可移动驱动器，如果驱动器用于非运行 Windows 10（版本 1511 或更高版本）的其他设备，则应使用 AES-CBC 128 位或 AES-CBC 256 位。 如果驱动器已加密或正在进行加密，更改加密方法不会产生任何影响。 在这些情况下，将忽略此策略设置。  
@@ -193,7 +193,7 @@ ms.locfileid: "86491297"
 
 ## <a name="browser"></a>浏览器
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - Browser](/windows/client-management/mdm/policy-csp-browser)。
 
 - **Microsoft Edge SmartScreen**：  
   默认情况下，Microsoft Edge 使用 Microsoft Defender SmartScreen（已启用）防止用户受潜在网络钓鱼诈骗和恶意软件侵袭。 此外，默认情况下，用户不能禁用（关闭）Microsoft Defender SmartScreen。 启用此策略将关闭 Microsoft Defender SmartScreen，并阻止用户将其打开。 如果想要让用户选择打开或关闭 Microsoft Defender SmartScreen，请勿配置此策略。  
@@ -227,7 +227,7 @@ ms.locfileid: "86491297"
 
 ## <a name="connectivity"></a>连接性
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity)（策略 CSP - Connectivity）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - Connectivity](/windows/client-management/mdm/policy-csp-connectivity)（策略 CSP - Connectivity）。
 
 - **阻止 Web 发布和在线订购向导的 Internet 下载**：  
   此策略设置可指定 Windows 是否应下载 Web 发布和在线订购向导的提供商列表。 这些向导允许用户从提供在线存储和照片打印等服务的公司列表中进行选择。 默认情况下，除了注册表中指定的提供商外，Windows 还会显示从 Windows 网站下载的提供商。 如果启用此设置，Windows 将不会下载提供商，只会显示在本地注册表中缓存的服务提供商。 如果禁用或未配置此设置，则在用户使用 Web 发布或在线订购向导时，将会下载服务提供商列表。 请参阅 Web 发布和在线订购向导的文档了解详细信息，包括有关在注册表中指定服务提供商的详细信息。  
@@ -260,7 +260,7 @@ ms.locfileid: "86491297"
 
 ## <a name="credentials-delegation"></a>凭据委派
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation)（策略 CSP - CredentialsDelegation）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation)（策略 CSP - CredentialsDelegation）。
 
 - **远程主机不可导出的凭据委派**：  
   远程主机允许委派不可导出的凭据。 使用凭据委派功能时，设备将向远程机提供一个可导出版本的凭据，这会使用户面临被位于远程机端的攻击者盗用凭据的风险。 如果启用此策略设置，主机支持“受限管理”或“远程 Credential Guard”模式。 如果禁用或未配置此策略设置，则不支持“受限管理”和“远程 Credential Guard”模式。 用户始终需要将其凭据传递给主机。  
@@ -270,7 +270,7 @@ ms.locfileid: "86491297"
 
 ## <a name="credentials-ui"></a>凭据 UI
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui)（策略 CSP - CredentialsUI）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui)（策略 CSP - CredentialsUI）。
 
 - **枚举管理员**：  
   此策略设置控制当用户尝试提升正在运行的应用程序时是否会显示管理员帐户。 默认情况下，用户尝试提升正在运行的应用程序时，不会显示管理员帐户。 如果启用此策略设置，则会显示电脑上的所有本地管理员帐户，以便用户可以从中选择一个账户并输入正确的密码。 如果禁用此策略设置，则系统始终要求用户在进行提升时键入用户名和密码。  
@@ -280,7 +280,7 @@ ms.locfileid: "86491297"
 
 ## <a name="data-protection"></a>数据保护
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection)（策略 CSP - DataProtection）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - DataProtection](/windows/client-management/mdm/policy-csp-dataprotection)（策略 CSP - DataProtection）。
 
 - **阻止直接内存访问**：  
   此策略设置允许你阻止所有热插拔 PCI 下游端口进行直接内存访问 (DMA)，直到用登录 Windows。 用户登录后，Windows 会枚举连接到热插拔 PCI 端口的 PCI 设备。 用户每次锁定计算机都会阻止无子设备的热插拔 PCI 端口进行 DMA，直到用户再次登录。 已在计算机解锁时枚举的设备继续工作，直到拔出。 只在启用了 BitLocker 或设备加密时才执行此策略设置。  
@@ -290,7 +290,7 @@ ms.locfileid: "86491297"
 
 ## <a name="device-guard"></a>Device Guard
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard)（策略 CSP - DeviceGuard）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard)（策略 CSP - DeviceGuard）。
 
 - **启用 Credential Guard**：  
   此设置可让用户通过基于虚拟化的安全打开 Credential Guard，帮助在下次重启时保护凭据。  
@@ -318,11 +318,11 @@ ms.locfileid: "86491297"
 
 ## <a name="device-installation"></a>设备安装
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation)（策略 CSP - DeviceInstallation）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation)（策略 CSP - DeviceInstallation）。
 
 - **按设备标识符安装硬件设备**：  
   使用此策略设置可以指定禁止 Windows 安装的设备的即插即用硬件 ID 和兼容 ID 的列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。 如果启用此策略设置，则 Windows 无法安装你所创建的列表中列出了其硬件 ID 或兼容 ID 的设备。 如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。 如果禁用或未配置此策略设置，则设备可以根据其他策略设置来允许或阻止安装和更新。  
-  [了解详细信息](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
+  [了解详细信息](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **默认值**：阻止安装硬件设备
 
@@ -340,7 +340,7 @@ ms.locfileid: "86491297"
 
 - **按安装程序类安装硬件设备**：  
   使用此策略设置可以指定禁止 Windows 安装的设备驱动程序的设备安装程序类全局唯一标识符 (GUID) 列表。 此策略设置优先于任何其他允许 Windows 安装设备的策略设置。 如果启用此策略设置，则 Windows 无法安装或更新你所创建的列表中列出了其设备安装程序类 GUID 的设备驱动程序。 如果在某个远程桌面服务器上启用了此策略设置，则此策略设置会影响指定设备从远程桌面客户端到该远程桌面服务器的重定向。 如果禁用或未配置此策略设置，则 Windows 可以根据其他策略设置来允许或禁止安装和更新设备。  
-  [了解详细信息](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
+  [了解详细信息](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **默认值**：阻止安装硬件设备
 
@@ -358,7 +358,7 @@ ms.locfileid: "86491297"
 
 ## <a name="device-lock"></a>设备锁定
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock)（策略 CSP - DeviceLock）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock)（策略 CSP - DeviceLock）。
 
 - **阻止使用摄像头**：  
   禁用“电脑设置”中的锁屏界面摄像头切换开关，并阻止在锁定屏幕上调用摄像头。 默认情况下，用户可以在锁屏界面上启用可用摄像头的调用。 如果启用此设置，用户无法在“电脑设置”中启用或禁用锁屏界面摄像头访问，并且无法在锁屏界面上调用摄像头。  
@@ -436,11 +436,11 @@ ms.locfileid: "86491297"
 
 ## <a name="dma-guard"></a>DMA Guard
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - DmaGuard](/windows/client-management/mdm/policy-csp-dmaguard)。
 
 - **与内核 DMA 保护不兼容的外部设备的枚举**：  
   此策略的目的是为支持外部 DMA 的设备提供额外的安全性。 它让用户能够更好地控制与 DMA 重新映射/设备内存隔离和沙盒不兼容但支持 DMA 的外部设备的枚举。 仅当内核 DMA 保护受到支持且已由系统固件启用时，此策略才有效。 内核 DMA 保护是一项平台功能，它不可通过策略或由最终用户控制。 制造时系统必须支持此功能。 要检查系统是否支持内核 DMA 保护，查看 MSINFO32.exe 的“摘要”页中的“内核 DMA 保护”字段。  
-  [了解详细信息](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  [了解详细信息](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **默认值**：全部阻止
 
@@ -449,7 +449,7 @@ ms.locfileid: "86491297"
 
 ## <a name="event-log-service"></a>事件日志服务
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice)（策略 CSP - EventLogService）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice)（策略 CSP - EventLogService）。
 
 - **安全日志的最大文件大小 (KB)** ：  
   此策略设置指定日志文件的最大大小 (KB)。 如果启用此策略设置，则可将最大日志文件大小配置为 1 MB (1024 KB) 至 2 TB (2147483647 KB) 之间（以千字节递增）。 如果禁用或未配置此策略设置，则日志文件的最大大小会设置为本地配置的值。 本地管理员可以使用“日志属性”对话框更改此值（默认值为 20 MB）。  
@@ -471,7 +471,7 @@ ms.locfileid: "86491297"
 
 ## <a name="experience"></a>体验
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)（策略 CSP - 体验）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - Experience](/windows/client-management/mdm/policy-csp-experience)（策略 CSP - 体验）。
 
 - **阻止 Windows 聚焦**：  
   允许 IT 管理员禁用（阻止）所有 Windows 聚焦功能。 这包括锁屏界面上的 Windows 聚焦、Windows 提示、Microsoft 使用者功能和其他相关功能。  
@@ -495,7 +495,7 @@ ms.locfileid: "86491297"
 
 ## <a name="exploit-guard"></a>攻击防护
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard)（策略 CSP - ExploitGuard）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard)（策略 CSP - ExploitGuard）。
 
 - **上传 XML**：  
   使 IT 管理员能够将表示所需系统和应用程序缓解选项的配置推送到组织中的所有设备。 配置由 XML 表示。 Exploit Protection 有助于保护设备免受利用攻击进行传播的恶意软件的侵袭。 使用 Windows 安全性应用或 PowerShell 来创建一组缓解方案（称为配置）。 然后，可将此配置导出为 XML 文件，并与网络中的多台计算机共享，使其全部拥有相同的一组缓解设置。 此外，还可将现有的 EMET 配置 XML 文件转换为和导入到 Exploit Protection 配置 XML。  
@@ -505,7 +505,7 @@ ms.locfileid: "86491297"
 
 ## <a name="file-explorer"></a>文件资源管理器
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer)。  
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer)。  
 
 - **阻止“数据执行保护”** ：  
   禁用数据执行保护可允许某些旧插件应用程序在不终止资源管理器的情况下正常运行。  
@@ -521,7 +521,7 @@ ms.locfileid: "86491297"
 
 ## <a name="firewall"></a>防火墙
 
-有关详细信息，请参阅 Windows 协议文档中的 [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc)。
+有关详细信息，请参阅 Windows 协议文档中的 [2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc)。
 
 - **防火墙配置文件域**：  
   指定规则所属的配置文件：域、专用、公用。 此值表示连接到域的网络的配置文件。  
@@ -579,7 +579,7 @@ ms.locfileid: "86491297"
 
 ## <a name="internet-explorer"></a>Internet Explorer
 
-有关详细信息，请参阅 Windows 文档[策略 CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer)。
+有关详细信息，请参阅 Windows 文档[策略 CSP - InternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer)。
 
 - **Internet Explorer 限制区域通过脚本更新状态栏**：  
   使用此策略设置，可以控制是否允许脚本在区域中更新状态栏。
@@ -1340,7 +1340,7 @@ ms.locfileid: "86491297"
 
 ## <a name="local-policies-security-options"></a>本地策略安全选项
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)（策略 CSP - LocalPoliciesSecurityOptions）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)（策略 CSP - LocalPoliciesSecurityOptions）。
 
 - **限制对命名管道和共享的匿名访问**：  
   启用该选项后，此安全设置会将对共享和管道的匿名访问限制为以下内容的设置：(1) 可以匿名访问的命名管道 (2) 可以匿名访问的共享。  
@@ -1548,14 +1548,14 @@ ms.locfileid: "86491297"
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender)（策略 CSP - Defender）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)（策略 CSP - Defender）。
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **阻止 Adobe Reader 创建子进程**：  
 此规则通过阻止 Adobe Reader 创建其他进程来防止攻击。 通过社会工程或攻击，恶意软件可以下载并启动其他有效负载并中断 Adobe Reader。 通过阻止由 Adobe Reader 生成子进程，可以防止传播试图将它用作途径的恶意软件。
-[了解详细信息](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+[了解详细信息](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **默认值**：启用
 
@@ -1670,7 +1670,7 @@ ms.locfileid: "86491297"
   **默认值**：启用
 
 - **Defender 可能不需要的应用操作**：  
-  CSP：[Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+  CSP：[Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
   Microsoft Defender 防病毒中的可能不需要的应用程序 (PUA) 保护功能可以识别和阻止在网络中的终结点上下载和安装 PUA。 这些应用程序不被视为病毒、恶意软件或其他类型的威胁，但可能在终结点上执行对性能或使用产生不利影响的操作。 PUA 也指视为信誉不佳的应用程序。 典型 PUA 行为包括：各种类型的软件捆绑，广告注入到 Web 浏览器，检测问题、要求付费修复错误但始终保留在终结点上且不会进行任何更改或优化的驱动程序和注册表优化程序（也称为“流氓防病毒”程序）。 这些应用程序可能会增加网络受到恶意软件感染的风险、增加恶意软件感染的识别难度，而清理这些应用程序也会造成 IT 资源的浪费。
 
@@ -1715,7 +1715,7 @@ ms.locfileid: "86491297"
 
 ## <a name="ms-security-guide"></a>MS 安全指南
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide)（策略 CSP - MSSecurityGuide）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide)（策略 CSP - MSSecurityGuide）。
 
 - **在网络登录时将 UAC 限制应用于本地帐户**：  
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067188)
@@ -1744,7 +1744,7 @@ ms.locfileid: "86491297"
 
 ## <a name="mss-legacy"></a>MSS 旧版
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy)（策略 CSP - MSSLegacy）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy)（策略 CSP - MSSLegacy）。
 
 - **网络 IP 源路由保护级别**：  
   [了解详细信息](https://go.microsoft.com/fwlink/?linkid=2067220)
@@ -1768,7 +1768,7 @@ ms.locfileid: "86491297"
 
 ## <a name="power"></a>电源
 
-有关详细信息，请参阅 Windows 文档中的 [Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power)（策略 CSP - 电源）。
+有关详细信息，请参阅 Windows 文档中的 [Policy CSP - Power](/windows/client-management/mdm/policy-csp-power)（策略 CSP - 电源）。
 
 - **接通电源时需要密码才能唤醒**：  
   此策略设置指定在系统从睡眠状态恢复时是否提示用户输入密码。 如果启用或未配置此策略设置，系统从睡眠状态恢复时将提示用户输入密码。 如果禁用此策略设置，系统从睡眠状态恢复时不会提示用户输入密码。  
@@ -1799,7 +1799,7 @@ ms.locfileid: "86491297"
 
 ## <a name="remote-assistance"></a>远程帮助
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteAssistance](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteAssistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance)。
 
 - **请求的远程协助**：  
   通过此策略设置，可在此计算机上启用或关闭“请求的(寻求)远程协助”。
@@ -1836,7 +1836,7 @@ ms.locfileid: "86491297"
 
 ## <a name="remote-desktop-services"></a>远程桌面服务
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices)。
 
 - **阻止密码保存**：  
   控制是否可以通过远程桌面连接在此计算机上保存密码。 如果启用此设置，将禁用远程桌面连接中的密码保存复选框，并且用户无法保存密码。 当用户使用远程桌面连接打开 RDP 文件并保存其设置时，将删除以前存在于 RDP 文件中的所有密码。 如果禁用此设置，或不对其进行配置，则用户可以使用远程桌面连接保存密码。  
@@ -1878,7 +1878,7 @@ ms.locfileid: "86491297"
 
 ## <a name="remote-management"></a>远程管理
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement)。
 
 - **阻止存储运行方式凭据**：  
   客户端基本身份验证。  
@@ -1918,7 +1918,7 @@ ms.locfileid: "86491297"
 
 ## <a name="remote-procedure-call"></a>远程过程调用
 
-有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall)。
+有关详细信息，请参阅 Windows 文档中的[策略 CSP - RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall)。
 
 - **RPC 未经身份验证的客户端选项**：  
   此策略设置控制 RPC 服务器运行时如何处理连接到 RPC 服务器的未经验证的 RPC 客户端。 此策略设置影响所有 RPC 应用程序。 在域环境中，请谨慎使用此策略设置，因为该策略可能会影响各种功能（包括组策略处理本身）。 恢复对此策略设置的更改可能要求手动干预每个受影响的计算机。 请勿将此策略设置应用于域控制器。 如果禁用此策略设置，则 RPC 服务器运行时在 Windows 客户端上使用“已验证”值，而在支持此策略设置的 Windows Server 版本上使用值“无”。 如果未配置此策略设置，则会禁用该策略设置。 RPC 服务器运行时的行为就如同启用了此策略设置一样，将“已验证”值用于 Windows 客户端，而将“无”值用于支持此策略设置的服务器 SKU。 如果启用此策略设置，则它指导 RPC 服务器运行时限制未经验证的 RPC 客户端连接到计算机上运行的 RPC 服务器。 如果客户端使用命名管道或使用 RPC 安全性与服务器通信，则将该客户端视为已验证的客户端。 特别请求可以由未经验证的客户端访问的 RPC 接口可能在此限制之外，具体取决于为此策略设置选取的值。
@@ -1935,7 +1935,7 @@ ms.locfileid: "86491297"
 
 ## <a name="search"></a>搜索
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search)（策略 CSP - Search）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - Search](/windows/client-management/mdm/policy-csp-search)（策略 CSP - Search）。
 
 - **禁用索引加密项**：  
   允许或不允许项的索引。 此开关适用于 Windows Search 索引器，用于控制是否索引加密项，如受 Windows 信息保护 (WIP) 保护的文件。 启用策略后，即会索引受 WIP 保护的项，且相关元数据存储在未加密位置。 元数据包括文件路径和修改日期等。 禁用策略后，不会索引受 WIP 保护的项，也不会在 Cortana 或文件资源管理器的结果中显示这些项。 如果设备上存在许多受 WIP 保护的媒体文件，可能还会对照片和 Groove 应用产生性能影响。  
@@ -1945,7 +1945,7 @@ ms.locfileid: "86491297"
 
 ## <a name="smart-screen"></a>SmartScreen
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)（策略 CSP - SmartScreen）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen)（策略 CSP - SmartScreen）。
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -1991,7 +1991,7 @@ ms.locfileid: "86491297"
 
 ## <a name="system"></a>System (系统)
 
-有关详细信息，请参阅 Windows 文档 [olicy CSP - System](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system)（策略 CSP - System）。
+有关详细信息，请参阅 Windows 文档 [olicy CSP - System](/windows/client-management/mdm/policy-csp-system)（策略 CSP - System）。
 
 - **系统引导启动驱动程序初始化**：  
   使用此策略设置，可以根据提前启动反恶意软件引导启动驱动程序所确定的分类来指定要初始化哪些引导启动驱动程序。 提前启动反恶意软件引导启动驱动程序可为每个引导启动驱动程序返回以下分类：
@@ -2011,7 +2011,7 @@ ms.locfileid: "86491297"
 
 ## <a name="wi-fi"></a>Wi-Fi
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - Wifi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)（策略 CSP - Wifi）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - Wifi](/windows/client-management/mdm/policy-csp-wifi)（策略 CSP - Wifi）。
 
 - **阻止 Internet 共享**：  
   指定可否在设备上进行 Internet 共享。  
@@ -2027,7 +2027,7 @@ ms.locfileid: "86491297"
 
 ## <a name="windows-connection-manager"></a>Windows 连接管理器
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager)（策略 CSP - WindowsConnectionManager）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager)（策略 CSP - WindowsConnectionManager）。
 
 - **阻止连接到非域网络**：  
   此策略设置阻止计算机同时连接到基于域的网络和并非基于域的网络。 如果启用此策略设置，则计算机可基于以下情况响应自动和手动网络连接尝试：
@@ -2086,7 +2086,7 @@ ms.locfileid: "86491297"
 
 ## <a name="windows-ink-workspace"></a>Windows Ink 工作区
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace)（策略 CSP - WindowsInkWorkspace）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace)（策略 CSP - WindowsInkWorkspace）。
 
 - **墨迹工作区**：  
   指定是否允许用户访问 Ink 工作区。
@@ -2103,7 +2103,7 @@ ms.locfileid: "86491297"
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
-有关详细信息，请参阅 Windows 文档 [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell)（策略 CSP - WindowsPowerShell）。
+有关详细信息，请参阅 Windows 文档 [Policy CSP - WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell)（策略 CSP - WindowsPowerShell）。
 
 - **PowerShell 脚本阻止日志记录**：  
   使用此策略设置，可以将所有的 PowerShell 脚本输入记录到 Microsoft-Windows-PowerShell/Operational 事件日志中。 如果启用此策略设置，则 Windows PowerShell 将记录命令、脚本块、函数和脚本的处理，无论是以交互方式调用还是通过自动方式处理。 如果禁用此策略设置，则将禁止记录 PowerShell 脚本输入。 如果启用脚本块调用日志记录，则 PowerShell 在调用命令、脚本块、函数或脚本启动或停止时还会记录事件。 启用调用日志记录时会生成大量事件日志。 注意：此策略设置存在于组策略编辑器中“计算机配置”和“用户配置”的下方。 “计算机配置”策略设置优先于“用户配置”策略设置。  

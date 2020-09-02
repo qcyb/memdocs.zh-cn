@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a7ce95d5c28b1b85f27fdd0aee74e3148abfb554
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a6984f4e6eafee1f81340f483dc557fdb6091ec9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882274"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910751"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>设备已加密，但应用却指示未加密
 
@@ -51,7 +51,7 @@ ms.locfileid: "83882274"
 
 一些 Android 设备（版本 7.0 及更高版本）会以与某些 Android 平台标准不同的方式加密数据。 这些加密方法将设备信息置于风险之中。 因此，这些设备不受支持。
 
-有关受支持的 Android 设备的非详尽列表，请参阅 [Intune 中受支持的操作系统和浏览器](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices)一文。 如果你的设备未列于其中，请咨询设备制造商或与你的支持人员联系。
+有关受支持的 Android 设备的非详尽列表，请参阅 [Intune 中受支持的操作系统和浏览器](/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices)一文。 如果你的设备未列于其中，请咨询设备制造商或与你的支持人员联系。
 
 > [!Note]
 > Microsoft 将与制造商协作以解决我们在测试中发现的，或用户上报的任何问题。 每当有新的信息可用时，我们会更新本文。
@@ -62,4 +62,4 @@ ms.locfileid: "83882274"
 
 ## <a name="next-steps"></a>后续步骤
 
-仍需帮助？ 请联系公司支持人员（访问[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)获取联系信息），或写邮件给 <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android 团队</a>。  
+仍需帮助？ 请联系公司支持人员（访问[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)获取联系信息），或写邮件给 <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android 团队</a>。

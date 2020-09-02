@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 835105b12da44f34f23c3d1162ced27a7eca6868
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 233ef8ce9c4ebd8ce5efe91715d653feaba2e88a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252531"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909136"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>结合使用 Windows 10 设备上的 Windows Hello 企业版与 Microsoft Intune
 
@@ -56,11 +56,11 @@ Intune 使用“配置文件”创建和自定义这些设置，从而满足组�
 
    - **配置 Windows Hello 企业版**：选择要如何配置 Windows Hello 企业版：
 
-     - **未配置**（默认）：在设备上[预配 Windows Hello 企业版](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)。 在仅向用户分配标识保护配置文件时，设备上下文将默认为“未配置”****。
+     - **未配置**（默认）：在设备上[预配 Windows Hello 企业版](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)。 在仅向用户分配标识保护配置文件时，设备上下文将默认为“未配置”****。
 
      - **已禁用**：如果不想使用 Windows Hello 企业版，请选择此选项。 此选项对所有用户禁用 Windows Hello 企业版。
 
-     - **启用**：选择此选项可以在 Intune 中[预配](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)并配置 Windows Hello 企业版设置。 输入要配置的设置。 有关所有设置及其用途的列表，请参阅[启用 Windows Hello 企业版的 Windows 10 设备设置](identity-protection-windows-settings.md)。
+     - **启用**：选择此选项可以在 Intune 中[预配](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)并配置 Windows Hello 企业版设置。 输入要配置的设置。 有关所有设置及其用途的列表，请参阅[启用 Windows Hello 企业版的 Windows 10 设备设置](identity-protection-windows-settings.md)。
 
    - **使用安全密钥登录**：启用 Windows Hello 安全密钥作为租户中所有 PC 的登录凭据。
 

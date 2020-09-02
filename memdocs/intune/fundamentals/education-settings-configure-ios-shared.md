@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5749ed0e31d9eec661acb2930e4d244b8f383cbc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076129"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913743"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>为共享 iPad 设备配置 Intune 教育设置
 
@@ -59,9 +59,9 @@ SDS 将同步 SIS 中的信息并将其存储在 Azure AD 中。 Azure AD 是帮
 
 ### <a name="find-out-more"></a>查看详细信息
 
-- [详细了解将本地学校数据同步到 Azure AD 的完整体验](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [详细了解将本地学校数据同步到 Azure AD 的完整体验](/azure/active-directory/connect/active-directory-aadconnect)
 - [详细了解 Microsoft 学校数据同步](https://sds.microsoft.com/)
-- [详细了解 Azure Active Directory 中的授权](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [详细了解 Azure Active Directory 中的授权](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
 ## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>步骤 2 - 在 Intune 中创建和分配 iOS/iPadOS 教育配置文件

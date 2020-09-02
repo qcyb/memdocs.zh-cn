@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: b4523db7f2c7bb27542e7cb3e909ece7c93a996f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455236"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915409"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>用于通过 Microsoft 企业移动性 + 安全性 (EMS) 启用 BYOD 的技术决策
 
@@ -33,7 +33,7 @@ ms.locfileid: "84455236"
 * 电子邮件帐户托管在 Exchange Online 中
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>管理设备 (MDM) 的常见原因
-通过在 Exchange Online 上部署[条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)策略，可轻松地让用户在设备管理中注册其设备。 下面是可能需要管理个人设备的原因：
+通过在 Exchange Online 上部署[条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)策略，可轻松地让用户在设备管理中注册其设备。 下面是可能需要管理个人设备的原因：
 
 **WiFi/VPN** - 如果用户需要企业连接配置文件高效工作，可无缝配置此配置文件。
 

@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9e9101a46cac488ef8a80858377cbabac8dc7936
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: d6cb9693f0bafcff22f3fce9d3f972e9eac41b22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881583"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909085"
 ---
 # <a name="remove-your-windows-device-from-management"></a>删除 Intune 对 Windows 设备的管理
 
@@ -57,7 +57,7 @@ ms.locfileid: "83881583"
 
     ![适用于 Windows 的公司门户应用的“主页”示例屏幕截图，其中突出显示了“我的设备”部分。](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. 右键单击或按住某个设备，打开其[上下文菜单](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus)。  
+2. 右键单击或按住某个设备，打开其[上下文菜单](//windows/uwp/design/controls-and-patterns/menus)。  
 
 3. 选择“删除”  。  
 

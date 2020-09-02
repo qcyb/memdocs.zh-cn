@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acd807911dc68c3139e953379a569990c34ac85b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: fa5593486f51d28c33ed280c97f819426be60fa2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989110"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911312"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>将条件访问策略从 Intune 经典门户重新分配到 Azure 门户
 
@@ -203,4 +203,4 @@ ms.locfileid: "83989110"
 
 - [使用 Intune 条件访问的常见方式](conditional-access-intune-common-ways-use.md)
 - [基于应用的 Intune 条件访问](app-based-conditional-access-intune.md)
-- [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Azure Active Directory 中的条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

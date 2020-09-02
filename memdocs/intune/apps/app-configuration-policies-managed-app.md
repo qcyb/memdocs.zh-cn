@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42547885c5f791749517415b325c8c785ec52c13
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 20b5b3de16023ac475cc41a633e5d3ab915a1bd0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051397"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910717"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>为受管理应用添加应用配置策略（无需设备注册）
 
@@ -45,13 +45,13 @@ ms.locfileid: "88051397"
  
         启用了 Intune App SDK 的应用支持键值对形式的配置。 若要详细了解支持哪些键值配置，请参阅每个应用的相关文档。 请注意，可使用将由应用程序生成的数据动态填充的令牌。 若要删除常规配置设置，请选择省略号 (…)，然后选择“删除” 。 有关详细信息，请参阅[为使用令牌配置值](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens)。 
 
-    - **Outlook 配置设置** - Outlook for iOS 和 Outlook for Android 使管理员能够为多个应用内设置自定义默认配置。 有关详细信息，请参阅 [Outlook for iOS 和 Outlook for Android 常规应用配置方案](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios)。
+    - **Outlook 配置设置** - Outlook for iOS 和 Outlook for Android 使管理员能够为多个应用内设置自定义默认配置。 有关详细信息，请参阅 [Outlook for iOS 和 Outlook for Android 常规应用配置方案](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios)。
    
     - **S/MIME** - 安全多用途 Internet 邮件扩展 (S/MIME) 是一种规范，它让用户能够发送和接收数字签名和加密的电子邮件。
         - **启用 S/MIME** - 指定是否要在撰写电子邮件时启用 S/MIME 控件。 默认值：“不配置”。
         - **允许用户更改设置** - 指定是否允许用户更改设置。 必须启用 S/MIME。 默认值：“是”。
         
-    有关 Outlook 应用配置策略设置的详细信息，请参阅[部署 Outlook for iOS 和 Outlook for Android 应用配置设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
+    有关 Outlook 应用配置策略设置的详细信息，请参阅[部署 Outlook for iOS 和 Outlook for Android 应用配置设置](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
 
 7. 单击“下一步”以显示“分配”页面 。
 8. 单击“选择要包含的组”。

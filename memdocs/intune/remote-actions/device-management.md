@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3c1b074e2fa35fa36bfb4f759ef348020c0dbed
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0814fd11b2597c2a78dda70ba560e17fe2b742a1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983224"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914355"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>什么是 Microsoft Intune 设备管理？
 
@@ -43,7 +43,7 @@ ms.locfileid: "83983224"
 
      选择任意设备以[查看有关该设备的详细信息](device-inventory.md)，例如硬件详细信息、已安装的应用、策略等。
 
-   - “Azure AD 设备”显示注册或加入 Azure Active Directory (Azure AD) 的设备列表  。 了解有关 [Azure AD 设备管理](https://docs.microsoft.com/azure/active-directory/device-management-introduction)的详细信息。
+   - “Azure AD 设备”显示注册或加入 Azure Active Directory (Azure AD) 的设备列表  。 了解有关 [Azure AD 设备管理](/azure/active-directory/device-management-introduction)的详细信息。
    - “设备操作”含有在不同设备上执行的远程操作的历史记录，包括操作、操作状态、操作启动者和时间  。
 
      ![监视设备操作的屏幕截图](./media/device-management/monitor-device-actions.png)
@@ -57,7 +57,7 @@ ms.locfileid: "83983224"
 
 - [查看设备清单](device-inventory.md)
 - 运行远程设备操作：
-  - [Autopilot 重置](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Autopilot 重置](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker 密钥轮转](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)（仅限 Windows）
   - [删除](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [禁用激活锁](device-activation-lock-disable.md)（仅限 iOS）
@@ -72,7 +72,7 @@ ms.locfileid: "83983224"
   - [重置密码](device-passcode-reset.md)
   - [重启](device-restart.md)（仅限 Windows）
   - [停用](devices-wipe.md#retire)
-  - [更新 Windows Defender 安全智能](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [更新 Windows Defender 安全智能](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10 PIN 重置](device-windows-pin-reset.md)
   - [擦除](devices-wipe.md#wipe)
   - [发送自定义通知](custom-notifications.md#send-a-custom-notification-to-a-single-device)（Android、iOS/iPadOS）

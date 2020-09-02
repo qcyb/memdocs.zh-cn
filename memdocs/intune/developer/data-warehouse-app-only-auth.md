@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daa4d079d60dc7474e5ba6a140e07a77e25b347d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 28b213ff690dcc745f023f8deb225b0bd6ef9bc1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165968"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908796"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Intune 数据仓库仅应用程序身份验证
 
@@ -31,7 +31,7 @@ ms.locfileid: "84165968"
 
 ## <a name="authorization"></a>授权
 
-Azure Active Directory (Azure AD) 使用 OAuth 2.0 使你能够在你的  Azure  AD  租户中授予对  Web  应用程序和  Web  API  的访问权限。 本指南介绍了如何使用 C# 对应用程序进行身份验证。 OAuth 2.0 规范的第 4.1 节介绍了 OAuth 2.0 授权代码流。 有关详细信息，请参阅[授权使用 OAuth 2.0 和 Azure Active Directory 访问 Web 应用程序](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)。
+Azure Active Directory (Azure AD) 使用 OAuth 2.0 使你能够在你的  Azure  AD  租户中授予对  Web  应用程序和  Web  API  的访问权限。 本指南介绍了如何使用 C# 对应用程序进行身份验证。 OAuth 2.0 规范的第 4.1 节介绍了 OAuth 2.0 授权代码流。 有关详细信息，请参阅[授权使用 OAuth 2.0 和 Azure Active Directory 访问 Web 应用程序](/azure/active-directory/develop/active-directory-protocols-oauth-code)。
 
 
 ## <a name="azure-keyvault"></a>Azure Key Vault
@@ -51,7 +51,7 @@ Azure Active Directory (Azure AD) 使用 OAuth 2.0 使你能够在你的  Azure 
 
     - 应用名称，例如“Intune 仅应用身份验证”  。
     - “应用程序类型”  。 选择“Web 应用/API”  ，以添加一个表示 Web 应用程序和/或 Web API 的应用程序。
-    - 应用程序的“登录 URL”  。 进行身份验证期间用户将自动导航到这个位置。 用户需要证明自己所说的身份。 有关详细信息，请参阅[什么是 Azure Active Directory 的应用程序访问与单一登录？](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)
+    - 应用程序的“登录 URL”  。 进行身份验证期间用户将自动导航到这个位置。 用户需要证明自己所说的身份。 有关详细信息，请参阅[什么是 Azure Active Directory 的应用程序访问与单一登录？](/azure/active-directory/active-directory-appssoaccess-whatis)
 
 7. 单击“创建”边栏选项卡底部的“创建”   。
 
@@ -164,5 +164,4 @@ Azure Active Directory (Azure AD) 使用 OAuth 2.0 使你能够在你的  Azure 
     > 若要查看其他实现代码，请参阅 [Intune 数据仓库代码示例](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp )。
 
 ## <a name="next-steps"></a>后续步骤
-有关 Azure Key Vault 的详细信息，请查看[什么是 Azure Key Vault？](https://docs.microsoft.com/azure/key-vault/key-vault-whatis)
-
+有关 Azure Key Vault 的详细信息，请查看[什么是 Azure Key Vault？](/azure/key-vault/key-vault-whatis)

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 6aff5dfe62c1c44ec22f56c287220b59b98a7536
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546860"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915477"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>在 Intune 中对基于 Windows 10 组策略的自动注册进行故障排除
 
-可以使用组策略为已加入 Active Directory (AD) 域的设备触发对 MDM 的自动注册。 有关此功能的详细信息，请参阅[通过组策略自动注册 Windows 10 设备](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)。
+可以使用组策略为已加入 Active Directory (AD) 域的设备触发对 MDM 的自动注册。 有关此功能的详细信息，请参阅[通过组策略自动注册 Windows 10 设备](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)。
 
 ## <a name="verify-the-configuration"></a>验证配置
 
@@ -37,7 +37,7 @@ ms.locfileid: "87546860"
 
    ![验证 Intune 许可证](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-- 验证是否已为将在 Intune 中注册设备的所有用户启用自动注册。 有关更多信息，请参阅 [Azure AD 和 Microsoft Intune：新门户中的自动 MDM 注册](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)。
+- 验证是否已为将在 Intune 中注册设备的所有用户启用自动注册。 有关更多信息，请参阅 [Azure AD 和 Microsoft Intune：新门户中的自动 MDM 注册](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)。
 
    ![验证自动注册](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -106,7 +106,7 @@ ms.locfileid: "87546860"
 
   若要验证此错误，请查找事件 ID 76 （事件消息：自动注册 MDM：失败(未知 Win32 错误代码: 0x8018002b)）。 此事件表示自动注册失败。
 
-  如需此错误的解决方法，请参阅[Microsoft Intune 中的 Windows 设备注册问题疑难解答](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors)。
+  如需此错误的解决方法，请参阅[Microsoft Intune 中的 Windows 设备注册问题疑难解答](/intune/troubleshoot-windows-enrollment-errors)。
 
 - 注册根本没有触发。 在这种情况下，不记录事件 ID 75 和事件 ID 76。
   

@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb45550f8c38237bebcc54db5531ab244ab10d84
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 6f30b2a3ecac3767da71c999b8920930532b8279
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531513"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915766"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>在 Microsoft Intune 中使用 Windows 设备上的设备固件配置接口配置文件（公共预览版）
 
 使用 Intune 管理 Autopilot 设备时，可以在登录设备之后使用设备固件配置接口 (DFCI) 管理 UEFI (BIOS) 设置。 有关优势、方案和先决条件的概述，请参阅 [ DFCI 概述](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/)。
 
-DFCI [支持 Windows](https://docs.microsoft.com/windows/client-management/mdm/uefi-csp) 将管理命令从 Intune 传递到 UEFI（统一可扩展固件接口）。
+DFCI [支持 Windows](/windows/client-management/mdm/uefi-csp) 将管理命令从 Intune 传递到 UEFI（统一可扩展固件接口）。
 
 在 Intune 中，使用此功能控制 BIOS 设置。 通常固件更能抵抗恶意攻击。 它限制最终用户对 BIOS 的控制权，这在受威胁时非常有效。
 
@@ -45,11 +45,11 @@ DFCI [支持 Windows](https://docs.microsoft.com/windows/client-management/mdm/u
 
 - 设备必须由 [Microsoft 云解决方案提供商 (CSP) 合作伙伴](https://partner.microsoft.com/cloud-solution-provider)注册为 Windows Autopilot，或由 OEM 直接注册。 
 
-  手动注册 Autopilot 的设备（例如[从 csv 文件](../enrollment/enrollment-autopilot.md#add-devices)导入）无法使用 DFCI。 DFCI 管理默认需要通过 OEM 或 Microsoft CSP 合作伙伴注册 Windows Autopilot 来对设备的商业采购进行外部认证。
+  手动注册 Autopilot 的设备（例如[从 csv 文件](../../autopilot/enrollment-autopilot.md#add-devices)导入）无法使用 DFCI。 DFCI 管理默认需要通过 OEM 或 Microsoft CSP 合作伙伴注册 Windows Autopilot 来对设备的商业采购进行外部认证。
 
   注册设备后，其序列号将显示在 Windows Autopilot 设备列表中。
 
-  有关 Autopilot 的详细信息（包括任何要求），请参阅[使用 Windows AutoPilot 在 Intune 中注册 Windows 设备](../enrollment/enrollment-autopilot.md)。
+  有关 Autopilot 的详细信息（包括任何要求），请参阅[使用 Windows AutoPilot 在 Intune 中注册 Windows 设备](../../autopilot/enrollment-autopilot.md)。
 
 ## <a name="create-your-azure-ad-security-groups"></a>创建 Azure AD 安全组
 
@@ -66,7 +66,7 @@ DFCI [支持 Windows](https://docs.microsoft.com/windows/client-management/mdm/u
 
 ### <a name="create-an-autopilot-deployment-profile"></a>创建 Autopilot 部署配置文件
 
-此配置文件设置并预配新设备。 [Autopilot 部署配置文件](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile)列出了创建配置文件所需步骤。
+此配置文件设置并预配新设备。 [Autopilot 部署配置文件](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile)列出了创建配置文件所需步骤。
 
 ### <a name="create-an-enrollment-state-page-profile"></a>创建注册状态页配置文件
 

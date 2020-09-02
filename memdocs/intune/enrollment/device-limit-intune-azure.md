@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 63c9d9e4752e4b0d317667162255e368fc5a099c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864848"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908548"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>分别了解 Intune 和 Azure AD 的设备限制
 
@@ -39,7 +39,7 @@ Intune 设备限制设置了用户可控制的最大设备数（最大设置为 
 
 ## <a name="azure-device-limit-restriction"></a>Azure 设备限制
 
-Azure 设备限制设置了 Azure AD 联接或 Azure AD 注册的最大设备数。 若要设置“每位用户的最大设备数”，请转到“Azure 门户”>“Azure Active Directory” > “设备”  。 有关详细信息，请参阅[配置设备设置](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+Azure 设备限制设置了 Azure AD 联接或 Azure AD 注册的最大设备数。 若要设置“每位用户的最大设备数”，请转到“Azure 门户”>“Azure Active Directory” > “设备”  。 有关详细信息，请参阅[配置设备设置](/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="settings-applied-based-on-user-affinity"></a>基于用户关联应用的设置
 
@@ -114,6 +114,6 @@ Intune 设备限制不适用于以下 Windows 注册类型：
 
 ## <a name="next-steps"></a>后续步骤
 
-- [在 Azure 中创建设备限制。](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [在 Azure 中创建设备限制。](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [在 Azure 中配置设备设置。](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [详细了解注册和联接域。](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [详细了解注册和联接域。](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

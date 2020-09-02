@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6fb5702b7c809c7810004a53d084f19fa94dea9e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f08282fe6bd8675474415290d50c0b07b4e1fc25
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431847"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915052"
 ---
 # <a name="account-protection-policy-for-endpoint-security-in-intune"></a>Intune 中的终结点安全帐户保护策略
 
@@ -30,7 +30,7 @@ ms.locfileid: "83431847"
 - Windows Hello 企业版将电脑和移动设备上的密码替换成了强双重身份验证。
 - Credential Guard 有助于保护你在设备中使用的凭据和密码。
 
-若要了解详细信息，请参阅 Windows 标识和访问管理文档中的[标识和访问管理](https://docs.microsoft.com/windows/security/identity-protection/)。
+若要了解详细信息，请参阅 Windows 标识和访问管理文档中的[标识和访问管理](/windows/security/identity-protection/)。
 
 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)“终结点安全”节点的“管理”下，查找用于帐户保护的终结点安全策略。
 

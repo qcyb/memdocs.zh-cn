@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f920513fbef101c60ea5caa3e8c6659557213ba3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 08586879f3523d1188f18e2d7024f32fae83febc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989211"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911193"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>在使用 Jamf Pro 管理的 Mac 上强制实现符合性
 
@@ -124,5 +124,5 @@ Intune 支持以下两种集成 Jamf Pro 的方法，你可以将它们与本文
 
 ## <a name="next-steps"></a>后续步骤
 
-- [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Azure Active Directory 中的条件访问入门](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Azure Active Directory 中的条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Azure Active Directory 中的条件访问入门](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

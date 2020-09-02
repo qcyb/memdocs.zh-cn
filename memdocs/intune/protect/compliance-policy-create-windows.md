@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 20d3f3967fa77ab90229915afc8b05043004b125
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559488"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909340"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>使用 Intune 将设备标记为符合或不符合的 Windows 10 及更高版本设置
 
@@ -49,14 +49,14 @@ ms.locfileid: "88559488"
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
   - **必需** - 当系统关闭或休眠时，设备能够保护存储在驱动器上的数据免受未经授权的访问。
   
-  [设备 HealthAttestation CSP - BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
+  [设备 HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
 - **需要在设备上启用安全启动**：  
   - **未配置**（默认）- 不会评估此设置的符合性和不符合性  。
   - **必需** - 将系统强制启动为工厂信任的状态。 用于启动设备的核心组件必须具有制造设备的组织所信任的正确加密签名。 UEFI 固件会在允许设备启动前确认签名。 如果有任何文件被篡改，从而破坏了签名，系统将不会启动。
 
   > [!NOTE]
-  > 一些 TPM 1.2 和 2.0 设备支持“需要在设备上启用安全启动”设置  。 对于不支持 TPM 2.0 或更高版本的设备，Intune 中的策略状态显示为“不符合”  。 有关受支持版本的详细信息，请参阅[设备运行状况证明](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation)。
+  > 一些 TPM 1.2 和 2.0 设备支持“需要在设备上启用安全启动”设置  。 对于不支持 TPM 2.0 或更高版本的设备，Intune 中的策略状态显示为“不符合”  。 有关受支持版本的详细信息，请参阅[设备运行状况证明](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation)。
 
 - **要求代码完整性**：  
   代码完整性是一种功能，可用于在每次将驱动器文件或系统文件加载到内存时，验证文件的完整性。
@@ -65,7 +65,7 @@ ms.locfileid: "88559488"
 
 更多资源：
 
-- 有关运行状况证明服务工作方式的详细信息，请参阅[运行状况证明 CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)。
+- 有关运行状况证明服务工作方式的详细信息，请参阅[运行状况证明 CSP](/windows/client-management/mdm/healthattestation-csp)。
 - [支持提示：将设备运行状况证明设置用作 Intune 符合性策略的一部分](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)。
 
 ## <a name="device-properties"></a>设备属性
@@ -140,8 +140,8 @@ ms.locfileid: "88559488"
     > [!TIP]
     > 字母数字密码策略可能会很复杂。 若要了解详细信息，建议管理员阅读 CSP：
     >
-    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
-    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
+    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **最短密码长度**：  
   输入密码必须包含的最小位数或最小字符数。
@@ -169,7 +169,7 @@ ms.locfileid: "88559488"
   - **未配置**（默认） 
   - **必需** - 使用“必需”加密设备上的数据存储。 
   
-   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > 设备上的数据存储加密设置通常会检查设备上是否存在加密  。 为获取更可靠的加密设置，请考虑使用“需要 BitLocker”，它利用 Windows 设备运行状况证明来验证 TPM 级别的 Bitlocker 状态  。
@@ -180,28 +180,28 @@ ms.locfileid: "88559488"
   - **未配置**（默认）  - Intune 不控制 Microsoft Defender 防火墙，也不更改现有设置。
   - **需要** - 打开 Microsoft Defender 防火墙，并阻止用户将其关闭。
 
-  [防火墙 CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+  [防火墙 CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > 如果设备在重启后立即同步，或立即同步从睡眠状态唤醒，则此设置可能会报告为“错误”  。 此方案可能不会影响整体设备合规性状态。 若要重新评估合规性状态，请手动[同步设备](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows)。
+  > 如果设备在重启后立即同步，或立即同步从睡眠状态唤醒，则此设置可能会报告为“错误”  。 此方案可能不会影响整体设备合规性状态。 若要重新评估合规性状态，请手动[同步设备](../user-help/sync-your-device-manually-windows.md)。
 
 - **受信任的平台模块 (TPM)** ：  
   - **未配置**（默认）  - Intune 不检查设备的 TPM 芯片版本。
   - **需要** - Intune 检查 TPM 芯片版本是否符合要求。 如果 TPM 芯片版本大于 0（零），则设备符合要求  。 如果设备上没有 TPM 版本，则设备不符合要求。
 
-  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](/windows/client-management/mdm/devicestatus-csp)
   
 - **防病毒**：  
   - **未配置**（默认）- Intune 不会检查设备上安装的任何防病毒软件解决方案。 
   - **必需** - 使用在 [Windows 安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)注册的防病毒解决方案（如 Symantec 和 Microsoft Defender）来检查符合性。
 
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **反间谍软件**：  
   - **未配置**（默认）- Intune 不会检查设备上安装的任何反间谍软件解决方案。 
   - **必需** - 使用在 [Windows 安全中心](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)注册的反间谍解决方案（如 Symantec 和 Microsoft Defender）来检查符合性。
 
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -221,7 +221,7 @@ ms.locfileid: "88559488"
   - **未配置**（默认）  - Intune 不强制执行任何要求。
   - **需要** - 强制 Microsoft Defender 安全智能的版本为最新版本。
 
-  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](/windows/client-management/mdm/defender-csp)
   
   有关详细信息，请参阅 [Microsoft Defender 防病毒和其他 Microsoft 反恶意软件的安全智能更新](https://www.microsoft.com/en-us/wdsi/defenderupdates)。
 
@@ -229,7 +229,7 @@ ms.locfileid: "88559488"
   - **未配置**（默认）  - Intune 不控制此功能，也不更改现有设置。
   - **需要** - 启用实时保护，该保护会扫描恶意软件、间谍软件和其他不需要的软件。  
 
-  [策略 CSP - Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [策略 CSP - Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -251,7 +251,7 @@ Windows Holographic for Business 使用 Windows 10 及更高版本  的平台。
 
 -  “系统安全” > ”加密”   >   ”设备上的数据存储加密”。
 
-若要对 Microsoft HoloLens 验证设备加密，请参阅[验证设备加密](https://docs.microsoft.com/hololens/security-encryption-data-protection)。
+若要对 Microsoft HoloLens 验证设备加密，请参阅[验证设备加密](/hololens/security-encryption-data-protection)。
 
 ## <a name="surface-hub"></a>Surface Hub
 

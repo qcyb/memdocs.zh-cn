@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7b1a605e456edb525afec306ff594ba7cc3895aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988398"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912723"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>在 Microsoft Intune 中的 Windows 10 设备上使用“参加测验”应用
 
@@ -30,7 +30,7 @@ Intune 中的教育配置文件专为学生在设备上参加测验或考试而�
 
 - Windows 10 及更高版本
 
-在用户登录后，“参加测验”应用自动打开，并显示所输入的测验。 正在参加测验时，无法在设备上运行其他任何应用。 [Windows 10 中的“参加测验”](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)详细介绍了“参加测验”应用。
+在用户登录后，“参加测验”应用自动打开，并显示所输入的测验。 正在参加测验时，无法在设备上运行其他任何应用。 [Windows 10 中的“参加测验”](/education/windows/take-tests-in-windows-10)详细介绍了“参加测验”应用。
 
 本文列出了在 Microsoft Intune 中创建设备配置文件的步骤。 其中还包括了解适用于 Windows 10 设备的教育设置所需的信息。
 

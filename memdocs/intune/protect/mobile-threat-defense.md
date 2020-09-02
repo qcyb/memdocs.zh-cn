@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
-ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
+ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87412335"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906882"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>使用 Intune 的移动威胁防御集成
 
@@ -35,7 +35,7 @@ Intune 可以集成来自移动威胁防御 (MTD) 供应商的数据，作为设
 Intune 可以使用 Intune 应用保护策略将此相同的数据用作未注册设备的源。 因此，管理员可以使用此信息帮助保护[受 Microsoft Intune 保护的应用](../apps/apps-supported-intune-apps.md)中的公司数据，并发出阻止或选择性擦除。
 
 > [!NOTE]
-> 暂不支持移动威胁防御与 Intune GCC High 和 DoD 产品/服务集成。 详细了解 [Microsoft Intune 针对美国政府 GCC High 的支持](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description)。
+> 暂不支持移动威胁防御与 Intune GCC High 和 DoD 产品/服务集成。 详细了解 [Microsoft Intune 针对美国政府 GCC High 的支持](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)。
 
 ## <a name="protect-corporate-resources"></a>保护公司资源
 

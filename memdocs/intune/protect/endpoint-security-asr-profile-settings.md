@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146025"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913454"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 终结点安全的攻击面减少策略设置
 
@@ -177,7 +177,7 @@ ms.locfileid: "88146025"
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender 应用程序控制
 
 - **App Locker 应用程序控件**  
-  CSP：[AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  CSP：[AppLocker](/windows/client-management/mdm/applocker-csp)
 
   - **未配置**（默认）
   - **强制使用组件和应用商店应用**
@@ -397,7 +397,7 @@ ms.locfileid: "88146025"
   - “是”- 阻止所有热插拔 PCI 下游端口的直接内存访问 (DMA)，直到用户登录 Windows。 用户登录后，Windows 会枚举连接到热插拔 PCI 端口的 PCI 设备。 用户每次锁定计算机都会阻止无子设备的热插拔 PCI 端口进行 DMA，直到用户再次登录。 解锁机器时已经枚举的设备将继续起作用，直到拔出插头为止。
 
 - **与内核 DMA 保护不兼容的外部设备的枚举**  
-  CSP：[DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP：[DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   此策略可针对支持 DMA 的外部设备提供额外的安全保障。 它让用户能够更好地控制与 DMA 重新映射/设备内存隔离和沙盒不兼容但支持 DMA 的外部设备的枚举。
 
@@ -408,40 +408,40 @@ ms.locfileid: "88146025"
   - 全部允许
 
 - **阻止蓝牙连接**  
-  CSP：[Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP：[Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **未配置**（默认）
   - “是”- 阻止与设备进行蓝牙连接。
 
 - **阻止蓝牙可发现性**  
-  CSP：[Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP：[Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **未配置**（默认）
   - “是”- 防止其他启用蓝牙的设备发现该设备。
 
 - **阻止蓝牙预配对**  
-  CSP：[Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+  CSP：[Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
   - **未配置**（默认）
   - “是”- 阻止特定的蓝牙设备自动与主机设备配对。
 
 - **阻止蓝牙广告**  
-  CSP：[Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  CSP：[Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **未配置**（默认）
   - “是”- 阻止设备发送蓝牙广告。  
 
 - **阻止蓝牙近端连接**  
-  CSP：[Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) 阻止用户使用 Swift Pair 和其他基于邻近的场景
+  CSP：[Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) 阻止用户使用 Swift Pair 和其他基于邻近的场景
 
   - **未配置**（默认）
   - “是”- 阻止设备用户使用 Swift Pair 和其他基于邻近的场景。  
 
-  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [Bluetooth/AllowPromptedProximalConnections CSP](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **蓝牙允许的服务**  
-  CSP：[Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)  
-  有关服务列表的更多详细信息，请参阅 [ServicesAllowedList 使用指南](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
+  CSP：[Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)  
+  有关服务列表的更多详细信息，请参阅 [ServicesAllowedList 使用指南](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
 
   - “添加”- 将允许的蓝牙服务和配置文件指定为十六进制字符串，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`。
   - “导入”- 导入一个 .csv 文件，该文件包含一个蓝牙服务和配置文件列表作为十六进制字符串，例如 `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`

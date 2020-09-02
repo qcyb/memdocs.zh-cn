@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461787"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914865"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>使用 Microsoft Intune 监视安全基线和配置文件
 
@@ -168,7 +168,7 @@ Windows 10 设备上内置有 MDM 诊断信息报告。 此报告包含默认值
 
   例如，在“已注册的配置源和目标资源”部分或“非托管策略”部分中查找。 这样可能就会知道设置为什么会导致错误或冲突出现。
 
-[在 Windows 10 中诊断 MDM 故障](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)详细介绍了此内置报告。
+[在 Windows 10 中诊断 MDM 故障](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)详细介绍了此内置报告。
 
 > [!TIP]
 >

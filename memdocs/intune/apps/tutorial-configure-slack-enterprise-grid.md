@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5daf488d878881c35db689fae0279c0312eb4c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074769"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915783"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>教程：配置 Slack 以将 Intune 用于 EMM 和应用配置
 
@@ -45,7 +45,7 @@ Slack 是一款可与 Microsoft Intune 结合使用的协作应用。
 此外，还需要具备 [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) 计划。
 
 ## <a name="configure-your-slack-enterprise-grid-plan"></a>配置 Slack Enterprise Grid 计划
-按照 [Slack 指南](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm)为 Slack Enterprise Grid 计划启用 EMM，并[连接 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) 来作为 Grid 计划的标识提供者 (IDP)。
+按照 [Slack 指南](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm)为 Slack Enterprise Grid 计划启用 EMM，并[连接 Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) 来作为 Grid 计划的标识提供者 (IDP)。
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 以全局管理员或 Intune 服务管理员身份登录 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。 如果已创建 Intune 试用版订阅，则用于创建订阅的帐户就是全局管理员。

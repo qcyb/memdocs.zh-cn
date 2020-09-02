@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252333"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906746"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用“擦除”或“停用”操作删除设备，或手动取消注册设备
 
@@ -168,7 +168,7 @@ ms.locfileid: "88252333"
 4. 选择 **“保存”** 。
 
 > [!NOTE]
-> 设备清理规则不适用于 Android Enterprise 场景，如[完全托管](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll)、[专用](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)和[公司拥有的工作配置文件](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)。 
+> 设备清理规则不适用于 Android Enterprise 场景，如[完全托管](../enrollment/android-fully-managed-enroll.md)、[专用](../enrollment/android-kiosk-enroll.md)和[公司拥有的工作配置文件](../enrollment/android-corporate-owned-work-profile-enroll.md)。 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>从 Azure Active Directory 门户删除设备
 
@@ -206,4 +206,3 @@ ms.locfileid: "88252333"
 ## <a name="next-steps"></a>后续步骤
 
 如果要重新注册已删除的设备，请参阅[注册选项](../enrollment/enrollment-options.md)。
-

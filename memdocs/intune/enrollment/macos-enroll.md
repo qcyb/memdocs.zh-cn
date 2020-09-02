@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 7f2b2826e8eaf1cf1c1c8680743b582203199aed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865500"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906831"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>在 Intune 中设置 macOS 设备注册
 
@@ -51,7 +51,7 @@ Intune 可以管理 macOS 设备以允许用户访问公司电子邮件和应用
 - 转到[公司门户网站](https://portal.manage.microsoft.com)或
 - 在 [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) 下载 Mac 公司门户应用。
 
-你还可以向用户发送联机注册步骤的链接：[在 Intune 中注册 macOS 设备](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。
+你还可以向用户发送联机注册步骤的链接：[在 Intune 中注册 macOS 设备](../user-help/enroll-your-device-in-intune-macos-cp.md)。
 
 有关其他最终用户任务的信息，请参阅以下文章：
 
@@ -82,7 +82,7 @@ Intune 可以管理 macOS 设备以允许用户访问公司电子邮件和应用
 
 用户批准的 MDM 注册是一种可用于管理某些安全敏感设置的 macOS 注册类型。 有关详细信息，请参阅 [Apple 的支持文档](https://support.apple.com/HT208019)。  
  
-从 2020 年 6 月起，Intune 中的所有新 macOS MDM 注册（包括不是通过自动设备注册 (ADE) 完成的注册）都视为已获用户批准。  最终用户必须在“系统首选项” > “配置文件”中手动安装管理配置文件，从而为管理配置文件提供批准。 针对 BYOD macOS 用户从公司门户应用自动启动系统首选项。 公司门户应用中提供了[有关安装管理配置文件的说明](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。     
+从 2020 年 6 月起，Intune 中的所有新 macOS MDM 注册（包括不是通过自动设备注册 (ADE) 完成的注册）都视为已获用户批准。  最终用户必须在“系统首选项” > “配置文件”中手动安装管理配置文件，从而为管理配置文件提供批准。 针对 BYOD macOS 用户从公司门户应用自动启动系统首选项。 公司门户应用中提供了[有关安装管理配置文件的说明](../user-help/enroll-your-device-in-intune-macos-cp.md)。     
 
  如果最终用户未在“系统首选项” > “配置文件”中手动提供管理配置文件的批准，则在 2020 年 6 月之前的 BYOD macOS MDM 注册可能未获用户批准。 对于 2020 年 6 月之后的 BYOD 注册，公司门户应用为用户启动“系统首选项”，用户将需要选择“安装”。 若在注册过程中用户未批准该管理配置文件，用户可以转到“系统首选项” > “配置文件”，选择管理配置文件，然后选择“批准”在稍后批准配置文件。
 

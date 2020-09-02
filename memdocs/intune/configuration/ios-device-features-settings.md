@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820181"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908997"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
@@ -304,10 +304,10 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
   - **未配置**：Intune 不会更改或更新此设置。 默认情况下，操作系统不会使用应用扩展。 若要禁用应用扩展，可将 SSO 应用扩展类型切换为“未配置”。
   - **Microsoft Azure AD**：使用 Microsoft 企业 SSO 插件，它是一个重定向类型的 SSO 应用扩展。 此插件为所有支持 [Apple 企业单一登录](https://developer.apple.com/documentation/authenticationservices)功能的应用程序提供 Active Directory 帐户的 SSO。 使用此 SSO 应用扩展类型可在使用 Azure AD 进行身份验证的 Microsoft 应用、组织应用和网站上启用 SSO。
 
-    SSO 插件充当高级身份验证代理，可改进安全性和用户体验。 对于使用 Microsoft Authenticator 应用进行身份验证的所有应用，都将继续获取具有[适用于 Apple 设备的 Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)的 SSO。
+    SSO 插件充当高级身份验证代理，可改进安全性和用户体验。 对于使用 Microsoft Authenticator 应用进行身份验证的所有应用，都将继续获取具有[适用于 Apple 设备的 Microsoft 企业 SSO 插件](/azure/active-directory/develop/apple-sso-plugin)的 SSO。
 
     > [!IMPORTANT]
-    > 要通过 Microsoft Azure AD SSO 应用扩展类型实现 SSO，请先在设备上安装 iOS/iPadOS 版 Microsoft Authenticator 应用。 Authenticator 应用将 Microsoft 企业 SSO 插件传递到设备，MDM SSO 应用扩展设置会激活该插件。 在设备上安装 Authenticator 和 SSO 应用扩展配置文件后，用户必须在设备上输入其凭据才能登录和建立会话。 然后，该会话可在不同的应用程序中使用，而无需用户再次进行身份验证。 有关 Authenticator 的详细信息，请参阅[什么是 Microsoft Authenticator 应用](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)。
+    > 要通过 Microsoft Azure AD SSO 应用扩展类型实现 SSO，请先在设备上安装 iOS/iPadOS 版 Microsoft Authenticator 应用。 Authenticator 应用将 Microsoft 企业 SSO 插件传递到设备，MDM SSO 应用扩展设置会激活该插件。 在设备上安装 Authenticator 和 SSO 应用扩展配置文件后，用户必须在设备上输入其凭据才能登录和建立会话。 然后，该会话可在不同的应用程序中使用，而无需用户再次进行身份验证。 有关 Authenticator 的详细信息，请参阅[什么是 Microsoft Authenticator 应用](/azure/active-directory/user-help/user-help-auth-app-overview)。
 
   - **重定向**：使用通用的可自定义重定向应用扩展，通过新式身份验证流使用 SSO。 确保你知道组织应用扩展的扩展 ID。
   - **凭据**：使用通用的可自定义凭据应用扩展，通过质询和响应身份验证流来使用 SSO。 确保你知道组织应用扩展的扩展 ID。
@@ -318,7 +318,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
 
 - **共享设备模式**（仅用于 Microsoft Azure AD）：如果要将 Microsoft 企业 SSO 插件部署到已配置支持 Azure AD 共享设备模式功能的 iOS/iPadOS 设备，请选择“启用”。 通过共享模式下的设备，多名用户可以全局方式在支持共享设备模式的应用程序中登录和注销。 设置为“未配置”时，Intune 不会更改或更新此设置。 默认情况下，iOS/iPadOS 设备不会在多名用户之间共享。
 
-  要详细了解共享设备模式及其启用方式，请参阅[共享设备模式概述](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)以及[适用于 iOS 设备的共享设备模式](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)。  
+  要详细了解共享设备模式及其启用方式，请参阅[共享设备模式概述](/azure/active-directory/develop/msal-shared-devices)以及[适用于 iOS 设备的共享设备模式](/azure/active-directory/develop/msal-ios-shared-devices)。  
 
   此功能适用于：
   

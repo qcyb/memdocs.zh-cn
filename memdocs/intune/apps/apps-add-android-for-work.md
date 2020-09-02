@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 0f6c70bcfa1bf9d23ff3555498cb199ff032bb34
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821625"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910530"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>使用 Intune 将托管 Google Play 应用添加到 Android Enterprise 设备
 
@@ -183,7 +183,7 @@ Web 链接将使用 Microsoft Edge 或你选择部署的任何其他浏览器应
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>将托管 Google Play 应用分配到 Android Enterprise 工作配置文件和公司拥有的工作配置文件设备
 
-如果应用显示在“应用”  工作负荷窗格的“应用许可证”  节点中，可以将应用分配到用户组，从而[分配应用，就像分配其他任何应用一样](/mem/intune/apps/apps-deploy)。
+如果应用显示在“应用”  工作负荷窗格的“应用许可证”  节点中，可以将应用分配到用户组，从而[分配应用，就像分配其他任何应用一样](./apps-deploy.md)。
 
 分配应用之后，它会安装（或可安装）在用户的目标设备上。 不会要求设备的用户批准此安装。 有关 Android Enterprise 工作配置文件设备的详细信息，请参阅[设置 Android Enterprise 工作配置文件设备的注册](../enrollment/android-work-profile-enroll.md)。 
 

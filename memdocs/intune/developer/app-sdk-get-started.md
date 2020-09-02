@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42362d2c4ccc83718721f5ca314b232274ade46a
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 52dd81efb13bcfcda02c8574e065814f49b5564c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383217"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911839"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Microsoft Intune App SDK 入门
 
@@ -94,9 +94,9 @@ Intune App SDK 支持跨 iOS 或 Android 的类似方案，旨在跨平台为 IT
 
 除了为应用启用应用保护策略外，还需要为应用启用以下策略，这样应用才能正常使用基于 Azure ActiveDirectory (AAD) 应用的条件访问：
 
-* 使用 [Azure ActiveDirectory 身份验证库](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries)构建应用并对其启用 AAD 代理身份验证。
+* 使用 [Azure ActiveDirectory 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries)构建应用并对其启用 AAD 代理身份验证。
 
-* iOS 和 Android 平台上的应用的 [AAD 客户端 ID](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) 必须是唯一的。
+* iOS 和 Android 平台上的应用的 [AAD 客户端 ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) 必须是唯一的。
 
 ## <a name="configure-telemetry-for-your-app"></a>配置应用遥测
 
@@ -108,7 +108,7 @@ Microsoft Intune 收集应用的使用情况统计数据。
 
 * **Intune App SDK for Android**：Intune App SDK for Android 不会控制应用中的数据集合。 默认情况下，公司门户应用会记录遥测数据。 会将此数据发送到 Microsoft Intune。 根据 Microsoft 策略，我们不会收集任何个人身份信息 (PII)。 
 
-  * 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android)。 
+  * 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](../user-help/turn-off-microsoft-usage-data-collection-android.md)。 
 
 ## <a name="line-of-business-app-version-numbers"></a>业务线应用版本号
 

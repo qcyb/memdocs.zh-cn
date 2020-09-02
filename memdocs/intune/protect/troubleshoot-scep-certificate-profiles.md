@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991017"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914729"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>在 Microsoft Intune 中对 SCEP 证书配置文件进行故障排除概述
 
@@ -80,7 +80,7 @@ ms.locfileid: "83991017"
 
 - **NDESConnector_date_time.svclog**：
 
-  此日志显示从 Microsoft Intune 证书连接器到 Intune 云服务的通信。 可使用[服务跟踪查看器工具](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
+  此日志显示从 Microsoft Intune 证书连接器到 Intune 云服务的通信。 可使用[服务跟踪查看器工具](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
 
   相关注册表项：*HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ ms.locfileid: "83991017"
 
 - **CertificateRegistrationPoint_date_time.svclog**：
 
-  此日志显示接收和验证证书请求的 NDES 策略模块。 可使用[服务跟踪查看器工具](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
+  此日志显示接收和验证证书请求的 NDES 策略模块。 可使用[服务跟踪查看器工具](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
 
   位置：在承载 NDES 的服务器上，位置为 %program_files%\Microsoft intune\ndesconnectorsvc\logs\logs 
 
@@ -148,4 +148,4 @@ ms.locfileid: "83991017"
 
 ## <a name="next-steps"></a>后续步骤
 
-查看 [SCEP 证书配置文件部署](troubleshoot-scep-certificate-profile-deployment.md) 
+查看 [SCEP 证书配置文件部署](troubleshoot-scep-certificate-profile-deployment.md)

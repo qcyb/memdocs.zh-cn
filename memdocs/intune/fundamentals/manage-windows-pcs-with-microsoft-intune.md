@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342902"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915885"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>通过 Intune 软件客户端将 Windows 电脑作为计算机进行管理
 
@@ -90,7 +90,7 @@ Intune 最多可支持使用该软件客户端将 7,000 台 Windows 电脑作为
 
 在使用 Intune 客户端软件管理 Windows 电脑时，只能使用“计算机管理”  部分下显示的策略。
 
-Intune 使用与 Windows Server Active Directory 域服务 (AD DS) 组策略对象 (GPO) 执行方式类似的策略来管理 Windows 电脑。 如果使用 Intune 管理 Active Directory 加入域的计算机，请[确保 Intune 策略不与组织中使用的其他 GPO 冲突](resolve-gpo-and-microsoft-intune-policy-conflicts.md)。 请参阅[组策略入门](https://technet.microsoft.com/library/hh147307.aspx)了解详细信息。
+Intune 使用与 Windows Server Active Directory 域服务 (AD DS) 组策略对象 (GPO) 执行方式类似的策略来管理 Windows 电脑。 如果使用 Intune 管理 Active Directory 加入域的计算机，请[确保 Intune 策略不与组织中使用的其他 GPO 冲突](resolve-gpo-and-microsoft-intune-policy-conflicts.md)。 请参阅[组策略入门](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10))了解详细信息。
 
   ![为新的 Windows 电脑策略选择模板](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

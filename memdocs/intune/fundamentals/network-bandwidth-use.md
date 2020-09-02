@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943835"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911482"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune 网络配置要求和带宽
 
@@ -79,7 +79,7 @@ ms.locfileid: "82943835"
 
 借助传递优化，可使用 Intune 来减少 Windows 10 设备下载应用程序和更新时的带宽消耗。 通过使用自组织分布式缓存，可以从传统服务器和备用源（如网络对等）中提取下载内容。
 
-若要查看传递优化支持的 Windows 10 版本和内容类型的完整列表，请参阅 [Windows 10 更新的传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements)一文。
+若要查看传递优化支持的 Windows 10 版本和内容类型的完整列表，请参阅 [Windows 10 更新的传递优化](/windows/deployment/update/waas-delivery-optimization#requirements)一文。
 
 可以将[传递优化设置](../configuration/delivery-optimization-settings.md)为设备配置文件的一部分。
 
@@ -95,7 +95,7 @@ ms.locfileid: "82943835"
 > [!NOTE]
 > 对于 Windows 上的 MDM 管理，只有 OS 的 MobileMSI 应用类型的管理界面可使用 BITS 进行下载。 AppX/MsiX 使用自己的非 BITS 下载堆栈，通过 Intune 代理的 Win32 应用使用传递优化而不是 BITS。
 
-要详细了解 BITS 和 Windows 计算机，请参阅 TechNet 库中的 [后台智能传输服务](https://technet.microsoft.com/library/bb968799.aspx)。
+要详细了解 BITS 和 Windows 计算机，请参阅 TechNet 库中的 [后台智能传输服务](/windows/win32/bits/background-intelligent-transfer-service-portal)。
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>在计算机上使用 BranchCache（需要 Intune 软件客户端）
@@ -111,7 +111,7 @@ Intune 客户端可以使用 BranchCache 来减少广域网 (WAN) 流量。 以�
 
 默认情况下，在计算机上安装 Intune 客户端时，会启用 BranchCache 和分布式缓存模式。 但是，如果组策略已禁用 BranchCache，则 Intune 不会替代该策略，并且 BranchCache 仍保持禁用状态。
 
-如果使用 BranchCache，请与组织中的其他管理员一起协作来管理组策略和 Intune 防火墙策略。 确保他们不会部署禁用 BranchCache 或防火墙例外的策略。 有关 BranchCache 的详细信息，请参阅 [BranchCache 概述](https://technet.microsoft.com/library/hh831696.aspx)。
+如果使用 BranchCache，请与组织中的其他管理员一起协作来管理组策略和 Intune 防火墙策略。 确保他们不会部署禁用 BranchCache 或防火墙例外的策略。 有关 BranchCache 的详细信息，请参阅 [BranchCache 概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))。
 
 
 ## <a name="next-steps"></a>后续步骤

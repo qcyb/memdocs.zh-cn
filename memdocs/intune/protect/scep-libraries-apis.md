@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 03c43adb14c854b89ef914f0b9b30ea2be690a92
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565659"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906780"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>使用 API 将 SCEP 的第三方 CA 添加到 Intune
 
@@ -96,7 +96,7 @@ SCEP 管理解决方案还包括报告。 管理员可以获取有关 SCEP 配�
 
 要获取此数据，SCEP 服务器管理员需登录到 Azure 门户，注册应用程序，为应用程序授予 Microsoft Intune API\SCEP 质询验证权限，为应用程序创建密钥，然后下载应用程序 ID、其密钥和租户 ID  。
 
-有关注册应用程序以及获取 ID 和密钥的指导，请参阅[使用门户创建 AAD 应用程序和服务主体以访问资源](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)。
+有关注册应用程序以及获取 ID 和密钥的指导，请参阅[使用门户创建 AAD 应用程序和服务主体以访问资源](/azure/azure-resource-manager/resource-group-create-service-principal-portal)。
 
 ### <a name="java-library-api"></a>Java 库 API
 
@@ -241,7 +241,7 @@ void SendFailureNotification(
 
 - **transactionId** - SCEP 事务 ID
 - **certificateRequest** - 采用 DER 编码的 PKCS #10 证书请求，该请求通过 Base64 编码成为字符串
-- **hResult** - 最能说明遇到的错误的 Win32 错误代码。 请参阅 [Win32 错误代码](https://msdn.microsoft.com/library/cc231199.aspx)
+- **hResult** - 最能说明遇到的错误的 Win32 错误代码。 请参阅 [Win32 错误代码](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d)
 - **errorDescription** - 遇到的错误的描述
 
 **引发**：

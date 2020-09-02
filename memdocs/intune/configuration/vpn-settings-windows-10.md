@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461346"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915494"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>使用 Intune 添加 VPN 连接的 Windows 10 和 Windows Holographic 设备
 
@@ -82,14 +82,14 @@ ms.locfileid: "86461346"
 
     - **计算机证书**（仅限 IKEv2）：选择现有设备客户端证书配置文件，以对设备进行身份验证。
 
-      如果使用[设备隧道连接](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)，则必须选择此选项。
+      如果使用[设备隧道连接](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)，则必须选择此选项。
 
       若要使用 Intune 创建证书配置文件，请参阅[使用证书进行身份验证](../protect/certificates-configure.md)。
 
     - **EAP**（仅限 IKEv2）：选择现有的可扩展身份验证协议 (EAP) 客户端证书配置文件进行身份验证。 在“EAP XML”设置中输入身份验证参数。
   - **每次登录时记住凭据**：选择缓存身份验证凭据。
   - **自定义 XML**：输入配置 VPN 连接的任何自定义 XML 命令。
-  - **EAP XML**：输入用于配置 VPN 连接的任何 EAP XML 命令。 有关详细信息，请参阅 [EAP 配置](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration)。
+  - **EAP XML**：输入用于配置 VPN 连接的任何 EAP XML 命令。 有关详细信息，请参阅 [EAP 配置](/windows/client-management/mdm/eap-configuration)。
 
   - **设备隧道**（仅限 IKEv2）：选择“启用”后可自动将设备连接到 VPN，无需任何任何用户交互或登录。 此设置适用于加入 Azure Active Directory (AD) 的电脑。
 
@@ -159,7 +159,7 @@ ms.locfileid: "86461346"
 ### <a name="writing-custom-xml"></a>编写自定义 XML
 有关编写自定义 XML 的详细信息，请参阅各制造商的 VPN 文档。
 
-有关创建自定义 EAP XML 的详细信息，请参阅 [EAP configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration)（EAP 配置）。
+有关创建自定义 EAP XML 的详细信息，请参阅 [EAP configuration](/windows/client-management/mdm/eap-configuration)（EAP 配置）。
 
 ## <a name="apps-and-traffic-rules"></a>应用和通信规则
 

@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4a20e1b26df1d07a80d8919f8e59e0d9117f891d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 6c437fbab8dd78540e8a87dd344df48aed307ed1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880265"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912128"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>在管理中注册组织提供的 macOS 设备
 
@@ -36,7 +36,7 @@ ms.locfileid: "83880265"
 
 ## <a name="what-is-apple-dep"></a>什么是 Apple DEP？
 
-组织可以通过“Apple 设备注册计划”(DEP) 购买设备  。 组织可通过 Apple DEP 购买大量的 iOS 或 macOS 设备。 然后，组织可以在其首选的移动设备管理提供程序（例如 Intune）中配置和管理这些设备。 如果你是管理员并想了解有关 Apple DEP 的详细信息，请参阅[使用 Apple 设备注册计划自动注册 macOS 设备](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-macos)。  
+组织可以通过“Apple 设备注册计划”(DEP) 购买设备  。 组织可通过 Apple DEP 购买大量的 iOS 或 macOS 设备。 然后，组织可以在其首选的移动设备管理提供程序（例如 Intune）中配置和管理这些设备。 如果你是管理员并想了解有关 Apple DEP 的详细信息，请参阅[使用 Apple 设备注册计划自动注册 macOS 设备](/intune/enrollment/device-enrollment-program-enroll-macos)。  
 
 ## <a name="get-your-device-managed"></a>托管设备
 

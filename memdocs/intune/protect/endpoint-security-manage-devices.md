@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088524"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914984"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>在 Microsoft Intune 中使用终结点安全功能管理设备
 
-安全管理员可通过 Microsoft Endpoint Manager 管理中心内的“所有设备”视图查看设备并对其进行管理。 此视图会显示 Azure Active Directory (Azure AD) 中所有设备的列表。 其中包括 Intune 托管的设备、Configuration Manager 托管的设备，以及由 Intune 和 Configuration Manager [共同管理](https://docs.microsoft.com/configmgr/comanage/overview)的设备。 与 Azure AD 集成时后，设备可位于云中和本地基础结构中。
+安全管理员可通过 Microsoft Endpoint Manager 管理中心内的“所有设备”视图查看设备并对其进行管理。 此视图会显示 Azure Active Directory (Azure AD) 中所有设备的列表。 其中包括 Intune 托管的设备、Configuration Manager 托管的设备，以及由 Intune 和 Configuration Manager [共同管理](/configmgr/comanage/overview)的设备。 与 Azure AD 集成时后，设备可位于云中和本地基础结构中。
 
  要查找此视图，请打开 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，然后选择“终结点安全” > “所有设备” 。
 
@@ -59,15 +59,13 @@ ms.locfileid: "86088524"
 
     通过 Configuration Manager 管理的设备的符合性状态在 Microsoft Endpoint Manager 管理中心内不可见。
 
-    有关详细信息，请参阅 Configuration Manager 文档中的[启用租户附加](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions)。
+    有关详细信息，请参阅 Configuration Manager 文档中的[启用租户附加](/configmgr/tenant-attach/device-sync-actions)。
 
   - **MDM/ConfigMgr 代理** - 这些设备由 Intune 和 Configuration Manager 共同管理。
 
-    通过共同管理，可[选择不同的共同管理工作负载](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)来确定由 Configuration Manager 或 Intune 管理哪些方面。 这些选项将影响设备应用的策略，还将影响如何向管理中心报告符合性数据。
+    通过共同管理，可[选择不同的共同管理工作负载](/configmgr/comanage/how-to-switch-workloads)来确定由 Configuration Manager 或 Intune 管理哪些方面。 这些选项将影响设备应用的策略，还将影响如何向管理中心报告符合性数据。
 
     例如，可使用 Intune 配置防病毒、防火墙和加密方面的策略。 这些策略类型被视为 Endpoint Protection 的策略。 要让共同管理的设备使用 Intune 策略而不是 Configuration Manager 策略，请将 Endpoint Protection 的共同管理滑块设置为“Intune”或“试点 Intune” 。 如果将滑块设置为 Configuration Manager，则设备将改为使用 Configuration Manager 的策略和设置。
-
-  - **Workspace ONE** - 这些设备由第三方设备符合性合作伙伴 (Workspace ONE) 进行管理。 有关详细信息，请参阅[设备符合性合作伙伴](../protect/device-compliance-partners.md)。
 
 - **符合性**：符合性是根据分配给设备的符合性策略进行评估的。 这些策略的来源以及控制台中显示的信息由设备的托管方式（Intune、Configuration Manager 或共同管理）决定。 要使共同管理的设备报告符合性状态，请将设备符合性的共同管理滑块设置为“Intune”或“试点 Intune”。  
 

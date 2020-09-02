@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ce4795dd060d29b62887fbf5496b2f2706ba954f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351963"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909102"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>在 Intune 中启用 Windows Hello 企业版的 Windows 10 设备设置
 
 本文列出并介绍了可以在 Intune 中的 Windows 10 设备上控制的 Windows Hello 企业版设置。 Intune 管理员可以配置这些设置并将其分配给 Windows 10 设备，作为移动设备管理 (MDM) 解决方案的一部分。 
 
-可以在 WIndows Hello 文档的[配置 Windows Hello 企业版策略设置](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)中找到有关这些设置的其他信息。
+可以在 WIndows Hello 文档的[配置 Windows Hello 企业版策略设置](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)中找到有关这些设置的其他信息。
 
 
 若要详细了解 Intune 中的 Windows Hello 企业版配置文件，请参阅[配置标识保护](identity-protection-configure.md)。
@@ -125,7 +125,7 @@ ms.locfileid: "79351963"
   - **用于本地资源的证书**  
 
     - 启用  - 允许 Windows Hello 企业版使用证书对本地资源进行身份验证。
-    - 未配置  - 阻止 Windows Hello 企业版使用证书对本地资源进行身份验证。 相反，设备使用密钥信任本地身份验证的默认行为  。 有关详细信息，请参阅 Windows Hello 文档中的[用于本地身份验证的用户证书](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication)。  
+    - 未配置  - 阻止 Windows Hello 企业版使用证书对本地资源进行身份验证。 相反，设备使用密钥信任本地身份验证的默认行为  。 有关详细信息，请参阅 Windows Hello 文档中的[用于本地身份验证的用户证书](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication)。  
 
   **默认值**：未配置
 

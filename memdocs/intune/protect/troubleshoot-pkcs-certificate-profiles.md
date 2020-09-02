@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: acc61df344cb4134a863d75fff517047e78d067d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110675"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914780"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>对 Microsoft Intune 中的 PKCS 证书部署进行故障排除
 
@@ -39,7 +39,7 @@ ms.locfileid: "88110675"
 - **证书颁发机构**：“证书颁发机构”计算机的内部 FQDN。 例如，server1.domain.local。
 - 证书颁发机构名称：证书颁发机构 MMC 中显示的证书颁发机构名称。 请在“证书颁发机构(本地)”下查看
 
-可以对 CA 使用 [certutil 命令行程序](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil)，以确认“证书颁发机构”和“证书颁发机构名称”的名称是否正确。
+可以对 CA 使用 [certutil 命令行程序](/windows-server/administration/windows-commands/certutil)，以确认“证书颁发机构”和“证书颁发机构名称”的名称是否正确。
 
 ## <a name="pkcs-communication-overview"></a>PKCS 通信概述
 
@@ -76,7 +76,7 @@ ms.locfileid: "88110675"
 
 - **NDESConnector_date_time.svclog**：
 
-  此日志显示从 Microsoft Intune 证书连接器到 Intune 云服务的通信。 可使用[服务跟踪查看器工具](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
+  此日志显示从 Microsoft Intune 证书连接器到 Intune 云服务的通信。 可使用[服务跟踪查看器工具](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
 
   相关注册表项：*HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -84,7 +84,7 @@ ms.locfileid: "88110675"
 
 - **CertificateRegistrationPoint_date_time.svclog**：
 
-  此日志显示接收和验证证书请求的 NDES 策略模块。 可使用[服务跟踪查看器工具](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
+  此日志显示接收和验证证书请求的 NDES 策略模块。 可使用[服务跟踪查看器工具](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)查看此日志文件。
 
   位置：在承载 NDES 的服务器上，位置为 %program_files%\Microsoft intune\ndesconnectorsvc\logs\logs
 
@@ -217,7 +217,7 @@ IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094015
 
 **解决方法**：
 
-在托管 NDES 连接器的计算机上，手动配置证书注册策略服务器的名称。 若要配置此名称，请使用 [Add-CertificateEnrollmentPolicyServer](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet。
+在托管 NDES 连接器的计算机上，手动配置证书注册策略服务器的名称。 若要配置此名称，请使用 [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet。
 
 ### <a name="the-submission-is-pending"></a>提交被挂起
 

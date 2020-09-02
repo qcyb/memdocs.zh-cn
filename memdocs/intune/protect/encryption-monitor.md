@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460461"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910972"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>使用 Intune 监视设备加密
 
@@ -59,7 +59,7 @@ Microsoft Intune 加密报告是一个集中位置，可便于查看设备加密
     - 版本 1709 或更高版本（商业版、企业版、教育版），或版本 1809 或更高版本（专业版）
     - 设备必须安装有 TPM 芯片
 
-    有关详细信息，请参阅 Windows 文档中的 [BitLocker 配置服务提供商 (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)。
+    有关详细信息，请参阅 Windows 文档中的 [BitLocker 配置服务提供商 (CSP)](/windows/client-management/mdm/bitlocker-csp)。
 
   - **未就绪**：设备不具完备的加密功能，但仍支持加密。 例如，用户可以手动加密 Windows 设备，也可以通过可设置为无需 TPM 即可加密的组策略加密设备。
   - **不适用**：用于对此设备进行分类的信息不足。

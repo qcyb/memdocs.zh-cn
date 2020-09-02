@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878085"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913403"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>公司门户 iOS 设备重置的影响 
 
@@ -42,6 +42,6 @@ ms.locfileid: "83878085"
 
 - 会删除你的工作或学校电子邮件帐户。 会删除未保存的电子邮件。   
 
-设备重置选项不可用于所有 iOS 设备。 如果你是 IT 支持人员，并且要了解有关这些限制的详细信息，请参阅[使用擦除或停用操作删除设备，或手动取消注册设备](https://docs.microsoft.com/intune/devices-wipe)。  
+设备重置选项不可用于所有 iOS 设备。 如果你是 IT 支持人员，并且要了解有关这些限制的详细信息，请参阅[使用擦除或停用操作删除设备，或手动取消注册设备](/intune/devices-wipe)。  
 
 如有疑问，请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252616"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915069"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Windows 10（及更高版本）设置，用于保护使用 Intune 的设备
 
@@ -34,7 +34,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 [创建 Endpoint Protection 设备配置配置文件](endpoint-protection-configure.md)。  
 
-有关配置服务提供商 (CSP) 的详细信息，请参阅[配置服务提供商参考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)。  
+有关配置服务提供商 (CSP) 的详细信息，请参阅[配置服务提供商参考](/windows/client-management/mdm/configuration-service-provider-reference)。  
 
 ## <a name="microsoft-defender-application-guard"></a>Microsoft Defender 应用程序防护  
 
@@ -44,7 +44,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **应用程序防护**  
   **默认值**：未配置  
-   应用程序防护 CSP：[Settings/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   应用程序防护 CSP：[Settings/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **针对 Edge 启用** - 打开此功能，在 Hyper-V 虚拟化浏览容器中打开不受信任的站点。  
   - **未配置** - 可以在设备上打开任何（受信任和不受信任的）站点。  
@@ -63,7 +63,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 - **剪贴板内容**  
   只有将“剪贴板行为”设置为“允许”设置之一时，此设置才可用   。  
   **默认值**：未配置  
-  应用程序防护 CSP：[Settings/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
+  应用程序防护 CSP：[Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   选择允许的剪贴板内容。  
   - 未配置   
@@ -315,19 +315,19 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **方向**   
   **默认值**：未配置  
-  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
+  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Direction](/windows/client-management/mdm/firewall-csp#direction)  
   
   指定此规则应用于“入站”还是“出站”流量   。 当设置为“未配置”时，规则自动应用于出站流量  。  
 
 - **操作**  
   **默认值**：未配置  
-  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Action](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action) 和 [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
+  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Action](/windows/client-management/mdm/firewall-csp#action) 和 [FirewallRules/*FirewallRuleName*/Action/Type](/windows/client-management/mdm/firewall-csp#type)  
 
   选择“允许”或“阻止”   。 当设置为“未配置”时，规则默认为允许流量  。  
 
 - **网络类型**  
   **默认值**：未选择任何项  
-  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
+  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)  
 
   最多选择此规则所属的三种网络类型。 选项包括“域”、“专用”和“公共”    。  如果未选择网络类型，则该规则对于这三种网络类型都适用。  
 
@@ -338,13 +338,13 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
   控制应用或程序的连接。 选择以下选项之一，然后完成其他配置：  
   - **包系列名称** - 指定包系列名称。 若要查找包系列名称，请使用 PowerShell 命令“Get-AppxPackage”  。   
-    防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
+    防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
   - **文件路径** - 必须指定客户端设备上应用的文件路径，该路径可以是绝对路径，也可以是相对路径。 例如：C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.  
-    防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
+    防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **Windows 服务** - 如果是服务而不是发送或接收流量的应用程序，请指定 Windows 服务简称。 若要查找服务的短名称，请使用 PowerShell 命令“Get-Service”  。  
-    防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
+    防火墙 CSP：[FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **所有** - 没有可用的附加配置  。  
 
@@ -354,7 +354,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **本地地址**    
   **默认值**：任何地址  
-  防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+  防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
 
   选择“任何地址”或“指定的地址”   。  
 
@@ -367,7 +367,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **远程地址**  
   **默认值**：任何地址  
-  防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
  
   选择“任何地址”或“指定的地址”   。  
 
@@ -392,21 +392,21 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **协议**  
   **默认值**：任何  
-  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
+  防火墙 CSP：[FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)  
   从以下选项中选择，并完成所有必需的配置：  
   - **所有** - 没有可用的附加配置。  
   - **TCP** - 配置本地端口和远程端口。 两个选项都支持所有端口或指定端口。 使用逗号分隔的列表输入指定端口。  
-    - **本地端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **远程端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **本地端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **远程端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **UDP** - 配置本地端口和远程端口。 两个选项都支持所有端口或指定端口。 使用逗号分隔的列表输入指定端口。  
-    - **本地端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **远程端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **本地端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **远程端口** - 防火墙 CSP：[FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **自定义** - 指定从 0 到 255 的自定义“协议”编号  。  
 
 #### <a name="advanced-configuration"></a>高级配置  
 - **接口类型**  
   **默认值**：未选择任何项  
-  防火墙 CSP：[FirewallRules/*FirewallRuleName*/InterfaceTypes](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
+  防火墙 CSP：[FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)  
 
   选择从以下选项：  
   - **远程访问**  
@@ -483,7 +483,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   - **允许标准用户在 Azure AD 加入期间启用加密**  
     此设置仅适用于加入 Azure Active Directory (Azure ADJ) 的设备，并取决于以前的设置 `Warning for other disk encryption` 。  
     **默认值**：未配置  
-    BitLocker CSP：[AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+    BitLocker CSP：[AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
      - **允许** - 标准用户（非管理员）可以在登录时启用 BitLocker 加密。  
      - **未配置**：仅允许管理员在设备上启用 BitLocker 加密。  
@@ -656,7 +656,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
   - 客户端驱动的恢复密码轮转   
     **默认值**：已为已加入 Azure AD 的设备启用密钥轮换  
-    BitLocker CSP：[ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
+    BitLocker CSP：[ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
     
     如果使用此设置，则在（使用 bootmgr 或 WinRE）进行 OS 驱动器恢复后，将启动客户端驱动的恢复密码轮换。  
 
@@ -780,7 +780,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
  
 ## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender 攻击防护  
 
-使用 [Exploit Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) 管理和减少员工所用应用的受攻击面。  
+使用 [Exploit Protection](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) 管理和减少员工所用应用的受攻击面。  
 
 ### <a name="attack-surface-reduction"></a>攻击面减少  
 
@@ -790,7 +790,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **标记从 Windows 本地安全机构子系统窃取的凭据**  
   **默认值**：未配置  
-  规则：[阻止从 Windows 本地安全机构子系统 (lsass.exe) 中窃取凭据](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  规则：[阻止从 Windows 本地安全机构子系统 (lsass.exe) 中窃取凭据](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   帮助防止操作和应用（通常被寻找漏洞的恶意软件所利用）感染计算机。  
 
@@ -800,7 +800,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **通过 Adobe Reader（beta 版本）创建进程**  
   **默认值**：未配置  
-  规则：[阻止 Adobe Reader 创建子进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
+  规则：[阻止 Adobe Reader 创建子进程](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - 未配置   
   - **启用** - 阻止从 Adobe Reader 创建的子进程。  
@@ -812,7 +812,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **Office 应用插入其他进程（无异常）**  
   **默认值**：未配置  
-  规则：[阻止 Office 应用程序将代码注入其他进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  规则：[阻止 Office 应用程序将代码注入其他进程](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - 未配置   
   - **阻止** - 阻止 Office 应用注入其他进程。  
@@ -820,7 +820,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **Office 应用/宏创建可执行内容**  
   **默认值**：未配置  
-  规则：[阻止 Office 应用程序创建可执行内容](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  规则：[阻止 Office 应用程序创建可执行内容](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - 未配置   
   - **阻止** - 阻止 Office 应用和宏创建可执行内容。  
@@ -828,7 +828,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **Office 应用启动子进程**  
   **默认值**：未配置  
-  规则：[阻止所有 Office 应用程序创建子进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  规则：[阻止所有 Office 应用程序创建子进程](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - 未配置   
   - **阻止** - 阻止 Office 应用启动子进程。  
@@ -836,7 +836,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   
 - **Win32 从 Office 宏代码导入**  
   **默认值**：未配置  
-  规则：[阻止来自 Office 宏的 Win32 API 调用](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  规则：[阻止来自 Office 宏的 Win32 API 调用](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - 未配置   
   - **阻止** - 阻止 Win32 从 Office 的宏代码中导入。  
@@ -844,7 +844,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   
 - **通过 Office 通信产品创建进程**  
   **默认值**：未配置  
-  规则：[阻止 Office 通信应用程序创建子进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
+  规则：[阻止 Office 通信应用程序创建子进程](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - 未配置   
   - **启用** - 阻止通过 Office 通信应用创建子进程。  
@@ -856,7 +856,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **不确定的 js/vbs/ps/宏代码**  
   **默认值**：未配置  
-  规则：[阻止执行可能经过模糊处理的脚本](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
+  规则：[阻止执行可能经过模糊处理的脚本](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - 未配置   
   - **阻止** - 阻止任何不确定的 js/vbs/ps/宏代码。  
@@ -864,7 +864,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **js/vbs 执行从 Internet 下载的有效负载（无异常）**  
   **默认值**：未配置  
-  规则：[阻止 JavaScript 或 VBScript 启动下载的可执行内容](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  规则：[阻止 JavaScript 或 VBScript 启动下载的可执行内容](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - 未配置   
   - **阻止** - 阻止 js/vbs 执行从 Internet 下载的有效负载。  
@@ -872,7 +872,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **来自 PSExec 和 WMI 命令的进程创建**  
   **默认值**：未配置  
-  规则：[阻止来自 PSExec 和 WMI 命令的进程创建](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
+  规则：[阻止来自 PSExec 和 WMI 命令的进程创建](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - 未配置   
   - **阻止** - 阻止来自 PSExec 和 WMI 命令的进程创建。  
@@ -881,7 +881,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **从 USB 运行的不受信任和未签名的进程**  
   **默认值**：未配置  
-  规则：[阻止从 USB 运行不受信任和未签名的进程](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
+  规则：[阻止从 USB 运行不受信任和未签名的进程](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - 未配置   
   - **阻止** - 阻止从 USB 运行的不受信任和未签名的进程。  
@@ -889,7 +889,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
   
 - **不符合普及程度、年龄或信任列表条件的可执行文件**  
   **默认值**：未配置  
-  规则：[阻止运行可执行文件，除非它们符合传播、年龄或受信任列表条件](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  规则：[阻止运行可执行文件，除非它们符合传播、年龄或受信任列表条件](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - 未配置   
   - **阻止** - 阻止可执行文件的运行，除非这些文件符合普及程度、年龄或信任列表条件。  
@@ -901,7 +901,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **执行从电子邮件（webmail/邮件客户端）中删除的可执行内容（exe、dll、ps、js、vbs 等）（无异常）**  
   **默认值**：未配置  
-  规则：[阻止来自电子邮件客户端和 Web 邮件的可执行内容](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
+  规则：[阻止来自电子邮件客户端和 Web 邮件的可执行内容](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - 未配置   
   - **阻止** - 阻止执行从电子邮件（webmail/邮件客户端）中删除的可执行内容（exe、dll、ps、js、vbs 等）。  
@@ -911,7 +911,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 - **高级勒索软件防护**  
   默认：未配置  
-  规则：[启用针对勒索软件的高级防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
+  规则：[启用针对勒索软件的高级防护](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - 未配置   
   - **启用** - 使用激进的勒索软件防护。  
@@ -940,7 +940,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 
 ### <a name="controlled-folder-access"></a>受控文件夹访问权限  
 
-帮助[防止重要数据](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders)受到恶意应用和威胁（如勒索软件）的攻击。  
+帮助[防止重要数据](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders)受到恶意应用和威胁（如勒索软件）的攻击。  
 
 - **文件夹保护**  
   **默认值**：未配置  
@@ -986,7 +986,7 @@ Microsoft Intune 包括许多设置，可帮助保护设备。 本文介绍可�
 - **上传 XML**  
   **默认值**：未配置   
 
-  若要使用 Exploit Protection 来[保护设备免受攻击](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)，请创建包括所需系统和应用程序缓解措施设置的 XML 文件。 可以通过两种方法来创建 XML 文件：  
+  若要使用 Exploit Protection 来[保护设备免受攻击](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)，请创建包括所需系统和应用程序缓解措施设置的 XML 文件。 可以通过两种方法来创建 XML 文件：  
 
   - *PowerShell* - 使用一个或多个 Get-ProcessMitigation、Set-ProcessMitigation 和 ConvertTo-ProcessMitigationPolicy PowerShell cmdlet    。 这些 cmdlet 配置缓解设置并导出它们的 XML 表示形式。  
 
@@ -1043,7 +1043,7 @@ Microsoft Defender Credential Guard 可防止凭据盗窃攻击。 它可隔离�
 
 ## <a name="microsoft-defender-security-center"></a>Microsoft Defender 安全中心  
 
-Microsoft Defender 安全中心作为独立应用或每个单项功能中的进程运行。 它通过“操作中心”显示通知。 它用作收集器或查看状态和为每个功能运行某项配置的一个位置。 有关详细信息，请参阅 [Microsoft Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) 文档。  
+Microsoft Defender 安全中心作为独立应用或每个单项功能中的进程运行。 它通过“操作中心”显示通知。 它用作收集器或查看状态和为每个功能运行某项配置的一个位置。 有关详细信息，请参阅 [Microsoft Defender](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) 文档。  
 
 ### <a name="microsoft-defender-security-center-app-and-notifications"></a>Microsoft Defender 安全中心应用和通知  
 
@@ -1257,7 +1257,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
 - **免登录移除设备**  
   **默认值**：未配置  
-  LocalPoliciesSecurityOptions CSP：[Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
+  LocalPoliciesSecurityOptions CSP：[Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
   - **阻止** - 用户必须登录到设备，并接收移除该设备的权限。
   - **未配置** - 用户可以按下已插接便携设备的物理弹出按钮，从而安全地移除该设备。
@@ -1321,7 +1321,7 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
 - **锁定屏幕上的用户信息**  
   **默认值**：未配置  
-  LocalPoliciesSecurityOptions CSP：[InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
+  LocalPoliciesSecurityOptions CSP：[InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
 
   配置会话锁定时显示的用户信息。 如果未配置，则显示用户显示名称、域和用户名。  
 
@@ -1648,4 +1648,4 @@ Microsoft Defender 安全中心作为独立应用或每个单项功能中的进�
 
 配置文件已创建，但它尚未起到任何作用。 下一步，[分配配置文件](../configuration/device-profile-assign.md)并[监视其状态](../configuration/device-profile-monitor.md)。  
 
-在 [macOS](endpoint-protection-macos.md) 设备上配置 Endpoint Protection 设置。  
+在 [macOS](endpoint-protection-macos.md) 设备上配置 Endpoint Protection 设置。

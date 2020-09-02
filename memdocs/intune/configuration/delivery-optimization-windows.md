@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3ffef32f4f33e79b25145dd4c0257b8a5bcfd32a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820436"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913760"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune 中的传递优化设置
 
@@ -30,7 +30,7 @@ ms.locfileid: "88820436"
 
 要查看 Intune 支持的传递优化设置的列表，请参阅 [Intune 的传递优化设置](delivery-optimization-settings.md)。  
 
-要了解 Windows 10 上的传递优化，请参阅 Windows 文档中的[传递优化更新](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)。  
+要了解 Windows 10 上的传递优化，请参阅 Windows 文档中的[传递优化更新](/windows/deployment/update/waas-delivery-optimization)。  
 
 ## <a name="create-the-profile"></a>创建配置文件
 

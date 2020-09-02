@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556313"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914423"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -74,7 +74,7 @@ ms.locfileid: "83556313"
     - 协商（默认选中）
 
 - 默认 Adobe Flash 设置  
-  CSP：[Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash) 和 [Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+  CSP：[Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash) 和 [Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
   允许配置以下设置，即配置运行 Adobe Flash 插件的行为。  
 
@@ -110,7 +110,7 @@ ms.locfileid: "83556313"
   - 未配置 - Microsoft Edge 默认允许使用用户级本机消息传递主机。
 
 - 允许将密码保存到密码管理器  
-  Microsoft Edge CSP：[Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP：[Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   使 Microsoft Edge 可以保存用户密码。
 
@@ -119,7 +119,7 @@ ms.locfileid: "83556313"
   - 未配置 - 用户可以保存密码，并禁用此功能。
 
 - 阻止绕过适用于站点的 Microsoft Defender SmartScreen 提示  
-  CSP：[Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  CSP：[Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   决定用户能否替代有关潜在恶意网站的 Microsoft Defender SmartScreen 警告。
 
@@ -128,7 +128,7 @@ ms.locfileid: "83556313"
   - 未配置 - 用户可以忽略 Microsoft Defender SmartScreen 警告，并继续访问站点
 
 - 阻止绕过有关下载的 Microsoft Defender SmartScreen 警报  
-  CSP：[Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP：[Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   决定用户能否替代有关未验证下载的 Microsoft Defender SmartScreen 警告。
 
@@ -143,10 +143,10 @@ ms.locfileid: "83556313"
   - 已禁用 - 用户可以选择退出站点隔离。 站点隔离未禁用。
   - 未配置 - 用户可以选择退出站点隔离。 站点隔离未禁用。
 
-  Microsoft Edge 还支持 [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins) 策略，可用于隔离更细化的其他源。  Intune 不支持配置 IsolateOrigins 策略。
+  Microsoft Edge 还支持 [IsolateOrigins](/deployedge/microsoft-edge-policies#isolateorigins) 策略，可用于隔离更细化的其他源。  Intune 不支持配置 IsolateOrigins 策略。
   
 - 配置 Microsoft Defender SmartScreen  
-  CSP：[Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
+  CSP：[Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
   
   Microsoft Defender SmartScreen 提供警告消息，有助于保护用户免受潜在钓鱼式欺诈和恶意软件威胁。 默认情况下，Microsoft Defender SmartScreen 处于开启状态。
   
@@ -166,7 +166,7 @@ ms.locfileid: "83556313"
   此策略仅适用于加入 Microsoft Active Director 域的 Windows 实例，或已注册进行设备管理的 Windows 10 专业版或企业实例。
 
 - 允许用户从 SSL 警报页继续  
-   CSP：[Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+   CSP：[Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   当用户访问具有 SSL 错误的站点时，Microsoft Edge 将显示警告页。
   - 已启用 - 用户可以单击后转到警告页。
@@ -193,7 +193,7 @@ ms.locfileid: "83556313"
 
 - 阻止绕过适用于站点的 Microsoft Defender SmartScreen 提示  
   **默认值**：Enabled  
-  Microsoft Edge CSP：[Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  Microsoft Edge CSP：[Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   此策略设置使你可以决定用户是否可替代有关潜在恶意网站的 Microsoft Defender SmartScreen 警告。 
   - 如果启用此设置，则用户无法忽略 Microsoft Defender SmartScreen 警告，他们会被阻止继续访问站点。 
@@ -213,7 +213,7 @@ ms.locfileid: "83556313"
 
 - 阻止绕过有关下载的 Microsoft Defender SmartScreen 警报  
   **默认值**：Enabled  
-  Microsoft Edge CSP：[Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  Microsoft Edge CSP：[Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   此策略使你可以确定用户是否可以替代有关未验证下载的 Microsoft Defender SmartScreen 警告。
   - 如果启用此策略，则组织中的用户无法忽略 Microsoft Defender SmartScreen 警告，会被阻止完成未经验证的下载。
@@ -221,13 +221,13 @@ ms.locfileid: "83556313"
 
 - 允许用户从 SSL 警报页继续  
   **默认值**：已禁用  
-  Microsoft Edge CSP：[Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+  Microsoft Edge CSP：[Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   当用户访问具有 SSL 错误的站点时，Microsoft Edge 将显示警告页。 如果将此策略设置为“已启用”或“未配置”，则用户可以单击浏览这些警告页面。 当此策略设置为“已禁用”时，用户会被阻止单击浏览任何警告页面。 
 
 - 默认 Adobe Flash 设置  
   **默认值**：Enabled  
-  Microsoft Edge CSP：[Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash) 和 [Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
+  Microsoft Edge CSP：[Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash) 和 [Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
 
   确定未由“PluginsAllowedForUrls”或“PluginsBlockedForUrls”涵盖的网站是否可以自动运行 Adobe Flash 插件。 
 
@@ -264,7 +264,7 @@ ms.locfileid: "83556313"
 
 - 允许将密码保存到密码管理器  
   **默认值**：已禁用  
-  Microsoft Edge CSP：[Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP：[Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   使 Microsoft Edge 可以保存用户密码。
   - 如果启用此策略，则用户可以在 Microsoft Edge 中保存其密码。 下次访问该站点时，Microsoft Edge 会自动输入该密码。
@@ -288,7 +288,7 @@ ms.locfileid: "83556313"
 
 - 配置 Microsoft Defender SmartScreen  
   **默认值**：Enabled  
-  Microsoft Edge CSP：[Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  Microsoft Edge CSP：[Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
   此策略设置使你可以配置是否启用 Microsoft Defender SmartScreen。 Microsoft Defender SmartScreen 提供警告消息，可帮助用户防范潜在网络钓鱼诈骗和恶意软件。
   

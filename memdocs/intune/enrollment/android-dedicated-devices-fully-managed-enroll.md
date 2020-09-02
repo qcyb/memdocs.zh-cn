@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461719"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915239"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>注册 Android Enterprise 专用设备、完全托管设备或公司拥有的工作配置文件设备
 
@@ -35,11 +35,11 @@ ms.locfileid: "86461719"
 | 令牌输入 | 6.0 |
 | QR 码 | 7.0 |
 | Zero Touch  | 8.0<br><br> 参与制造商。 |
-| [Knox 移动注册](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> 仅限 Samsung Knox 2.8 或更高版本设备。 |
+| [Knox 移动注册](./android-samsung-knox-mobile-enroll.md)  | 6.0<br><br> 仅限 Samsung Knox 2.8 或更高版本设备。 |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>使用近场通信 (NFC) 注册
 
-对于支持 NFC 的设备 6 及更高版本，可通过创建特殊格式的 NFC 标记来预配设备。 可使用自己的应用或任何 NFC 标记创建者工具。 有关详细信息，请参阅[使用 Microsoft Intune 进行基于 C 的 Android 企业设备注册](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/)和 [Google 的 Android 管理 API 文档](https://developers.google.com/android/management/provision-device#nfc_method)。
+对于支持 NFC 的设备 6 及更高版本，可通过创建特殊格式的 NFC 标记来预配设备。 可使用自己的应用或任何 NFC 标记创建者工具。 有关详细信息，请参阅[使用 Microsoft Intune 进行基于 C 的 Android 企业设备注册](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune)和 [Google 的 Android 管理 API 文档](https://developers.google.com/android/management/provision-device#nfc_method)。
 
 ## <a name="enroll-by-using-a-token"></a>使用令牌注册
 
@@ -91,9 +91,8 @@ ms.locfileid: "86461719"
 4. 选择“应用”  。
 
 ## <a name="enroll-by-using-knox-mobile-enrollment"></a>使用 Knox 移动注册进行注册
-若要使用 Samsung 的 Knox 移动注册，设备必须运行 Android OS 6 或更高版本以及 Samsung Knox 2.8 或更高版本。 有关详细信息，请参阅 [如何利用 Knox 移动注册自动注册设备](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)。
+若要使用 Samsung 的 Knox 移动注册，设备必须运行 Android OS 6 或更高版本以及 Samsung Knox 2.8 或更高版本。 有关详细信息，请参阅 [如何利用 Knox 移动注册自动注册设备](./android-samsung-knox-mobile-enroll.md)。
 
 ## <a name="next-steps"></a>后续步骤
 - [部署 Android 应用](../apps/apps-deploy.md)
 - [添加 Android 配置策略](../configuration/device-profiles.md)
-

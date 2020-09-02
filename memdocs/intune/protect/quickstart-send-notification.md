@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e986021bb4d575ec3269e97b228cc381e1f2cf72
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079478"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910887"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>快速入门：将通知发送到不符合的设备
 
 本快速入门将使用 Microsoft Intune 向具有不符合要求的设备的员工发送电子邮件通知。
 
-默认情况下，当 Intune 检测到不符合的设备时，会立即将设备标记为不符合。 然后 Azure Active Directory (Azure AD) [条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)阻止设备。 设备不符合要求时，Intune 允许向不符合的设备添加操作，这样可以灵活地决定要执行的操作。 例如，可以在阻止不符合的设备之前为用户提供符合条件的宽限期。
+默认情况下，当 Intune 检测到不符合的设备时，会立即将设备标记为不符合。 然后 Azure Active Directory (Azure AD) [条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)阻止设备。 设备不符合要求时，Intune 允许向不符合的设备添加操作，这样可以灵活地决定要执行的操作。 例如，可以在阻止不符合的设备之前为用户提供符合条件的宽限期。
 
 当设备不符合要求时，可以采取的一项措施是向设备用户发送电子邮件。 此外，还可先自定义电子邮件通知然后再发送。 具体来说，可自定义收件人、主题和邮件正文，包括自定义公司徽标和联系人信息。 Intune 还在电子邮件通知中说明了关于不符合设备的详细信息。
 
@@ -37,7 +37,7 @@ ms.locfileid: "82079478"
 
 ## <a name="prerequisites"></a>必备条件
 
-使用设备符合性策略来阻止设备使用公司资源时，必须设置 Azure AD 条件访问。 如果已完成[创建设备符合性策略](quickstart-set-password-length-android.md)快速入门，则可使用 Azure Active Directory。 有关 Azure AD 的详细信息，请参阅 [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)和[使用 Intune 条件访问的常见方式](../protect/conditional-access-intune-common-ways-use.md)。
+使用设备符合性策略来阻止设备使用公司资源时，必须设置 Azure AD 条件访问。 如果已完成[创建设备符合性策略](quickstart-set-password-length-android.md)快速入门，则可使用 Azure Active Directory。 有关 Azure AD 的详细信息，请参阅 [Azure Active Directory 中的条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)和[使用 Intune 条件访问的常见方式](../protect/conditional-access-intune-common-ways-use.md)。
 
 ## <a name="sign-in-to-intune"></a>登录到 Intune
 

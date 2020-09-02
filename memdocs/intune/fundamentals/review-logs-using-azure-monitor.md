@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: c93f50f7c4b2537ab4dbd1d9462f13434e9c158e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912531"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911516"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>使用 Intune 将日志数据发送到存储、事件中心或 Log Analytics（预览版）
 
@@ -53,9 +53,9 @@ Microsoft Intune 包含可提供环境信息的内置日志：
 
 需要以下服务之一（具体视要将审核日志数据路由到哪里而异）：
 
-* 拥有 ListKeys  权限的 [Azure 存储帐户](https://docs.microsoft.com/azure/storage/common/storage-account-overview)。 建议使用常规存储帐户，而不是 blob 存储帐户。 有关存储定价信息，请参阅 [Azure 存储定价计算器](https://azure.microsoft.com/pricing/calculator/?service=storage)。 
-* 与第三方解决方案集成的 [Azure 事件中心命名空间](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
-* 用于将日志发送到 Log Analytics 的 [Azure Log Analytics 工作区](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace)。
+* 拥有 ListKeys  权限的 [Azure 存储帐户](/azure/storage/common/storage-account-overview)。 建议使用常规存储帐户，而不是 blob 存储帐户。 有关存储定价信息，请参阅 [Azure 存储定价计算器](https://azure.microsoft.com/pricing/calculator/?service=storage)。 
+* 与第三方解决方案集成的 [Azure 事件中心命名空间](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
+* 用于将日志发送到 Log Analytics 的 [Azure Log Analytics 工作区](/azure/azure-monitor/learn/quick-create-workspace)。
 
 ## <a name="send-logs-to-azure-monitor"></a>将日志发送到 Azure Monitor
 
@@ -83,7 +83,7 @@ Microsoft Intune 包含可提供环境信息的内置日志：
         1. 选中此选项，再选择“配置”  。 
         2. 新建工作区，并输入工作区详细信息。 或者，选择列表中的现有工作区，再单击“确定”  。
 
-            [Azure Log Analytics 工作区](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace)详细介绍了这些设置。
+            [Azure Log Analytics 工作区](/azure/azure-monitor/learn/quick-create-workspace)详细介绍了这些设置。
 
     - “日志”   > “审核日志”  ：选中此选项可以将 [Intune 审核日志](monitor-audit-logs.md)发送到存储帐户、事件中心或 Log Analytics。 审核日志显示每个在 Intune 中带来更改的任务的历史记录，其中包括谁在何时执行了任务。
 
@@ -187,7 +187,7 @@ Microsoft Intune 包含可提供环境信息的内置日志：
 
 ### <a name="log-analytics-cost-considerations"></a>Log Analytics 成本注意事项
 
-若要查看与管理 Log Analytics 工作区相关的成本，请参阅[通过在 Log Analytics 中控制数据量和保留期管理成本](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage)。
+若要查看与管理 Log Analytics 工作区相关的成本，请参阅[通过在 Log Analytics 中控制数据量和保留期管理成本](/azure/log-analytics/log-analytics-manage-cost-storage)。
 
 ## <a name="frequently-asked-questions"></a>常见问题
 
@@ -199,7 +199,7 @@ Microsoft Intune 包含可提供环境信息的内置日志：
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>操作执行后，相应的日志何时出现在事件中心内？
 
-日志通常在操作执行后的几分钟内出现在事件中心内。 [什么是 Azure 事件中心？](https://docs.microsoft.com/azure/event-hubs/)提供了详细信息。
+日志通常在操作执行后的几分钟内出现在事件中心内。 [什么是 Azure 事件中心？](/azure/event-hubs/)提供了详细信息。
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>操作执行后，相应的日志何时出现在存储帐户中？
 
@@ -219,22 +219,22 @@ Microsoft Intune 包含可提供环境信息的内置日志：
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>如何将 Intune 审核日志与我的 SIEM 系统集成？
 
-将 Azure Monitor 与事件中心配合使用，以将日志流式传输到 SIEM 系统。 首先，[将日志流式传输到事件中心](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)。 然后，通过已配置的事件中心[设置 SIEM 工具](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)。 
+将 Azure Monitor 与事件中心配合使用，以将日志流式传输到 SIEM 系统。 首先，[将日志流式传输到事件中心](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)。 然后，通过已配置的事件中心[设置 SIEM 工具](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)。 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>目前支持哪些 SIEM 工具？
 
-目前，[Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)、QRadar 和 [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory)（打开新网站）支持 Azure Monitor。 若要详细了解连接器的工作方式，请参阅[将 Azure 监视数据流式传输到事件中心供外部工具使用](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs)。
+目前，[Splunk](/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)、QRadar 和 [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory)（打开新网站）支持 Azure Monitor。 若要详细了解连接器的工作方式，请参阅[将 Azure 监视数据流式传输到事件中心供外部工具使用](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs)。
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>我能否在不使用外部 SIEM 工具的情况下访问事件中心内的数据？
 
-是的。 若要通过自定义应用程序来访问日志，可以使用[事件中心 API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph)。
+是的。 若要通过自定义应用程序来访问日志，可以使用[事件中心 API](/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph)。
 
 ### <a name="what-data-is-stored"></a>存储什么数据？
 
-Intune 不存储通过管道发送的任何数据。 Intune 将数据路由到租户授权的 Azure Monitor 管道。 有关详细信息，请参阅 [Azure Monitor 概述](https://docs.microsoft.com/azure/azure-monitor/overview)。
+Intune 不存储通过管道发送的任何数据。 Intune 将数据路由到租户授权的 Azure Monitor 管道。 有关详细信息，请参阅 [Azure Monitor 概述](/azure/azure-monitor/overview)。
 
 ## <a name="next-steps"></a>后续步骤
 
-* [将活动日志存档到存储帐户](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [将活动日志路由到事件中心](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [将活动日志与 Log Analytics 集成](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [将活动日志存档到存储帐户](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [将活动日志路由到事件中心](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [将活动日志与 Log Analytics 集成](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 849be91ccedab1f97b68b14e5bc2a51bc5a62f19
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871971"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915290"
 ---
 # <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune 中设备策略和配置文件的常见问题和解答
 
@@ -149,7 +149,7 @@ Windows 10 设备上的某些设置可能显示为“不适用”。 发生这�
 - 设置仅适用于较新版本的 Windows，而不适用于设备上的当前操作系统 (OS) 版本。
 - 设置仅适用于特定 Windows 版本或特定 SKU，如家庭版、专业版、企业版和教育版。
 
-若要了解不同设置的版本和 SKU 要求的详细信息，请参阅[配置服务提供程序 (CSP) 参考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)。
+若要了解不同设置的版本和 SKU 要求的详细信息，请参阅[配置服务提供程序 (CSP) 参考](/windows/client-management/mdm/configuration-service-provider-reference)。
 
 ## <a name="next-steps"></a>后续步骤
 

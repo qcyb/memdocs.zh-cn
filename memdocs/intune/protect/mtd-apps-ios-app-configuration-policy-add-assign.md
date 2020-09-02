@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: b487b9f921e40df8730fab235a2ec2c0d3f0f788
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914626"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910853"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>使用 Intune 添加和分配移动威胁防御 (MTD) 应用
 
@@ -45,7 +45,7 @@ ms.locfileid: "85914626"
 
 ## <a name="configure-microsoft-authenticator-for-ios"></a>配置适用于 iOS 的 Microsoft Authenticator
 
-对于 iOS 设备，需要 [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)，这样用户便可让 Azure AD 检查自己的标识。 此外，需要 iOS 应用配置策略，用于设置要与 Intune 配合使用的 MTD iOS 应用。
+对于 iOS 设备，需要 [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)，这样用户便可让 Azure AD 检查自己的标识。 此外，需要 iOS 应用配置策略，用于设置要与 Intune 配合使用的 MTD iOS 应用。
 
 请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md)，查看相关说明。 当配置“应用信息”时，使用此 [Microsoft Authenticator 应用商店 URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)。
 
@@ -197,7 +197,7 @@ Pradeo 在 iOS/iPadOS 上不支持应用程序配置策略。  相反，若要�
     5. 将**委托的权限**添加到应用。
 
     > [!NOTE]
-    > 有关详细信息，请参阅[使用 Azure AD 配置本机客户端应用程序](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application)。
+    > 有关详细信息，请参阅[使用 Azure AD 配置本机客户端应用程序](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application)。
 
   - **添加 Lookout for Work ipa 文件。**
 

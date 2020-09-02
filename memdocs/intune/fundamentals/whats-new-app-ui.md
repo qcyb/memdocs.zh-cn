@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048151"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915001"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune 最终用户应用的 UI 更新
 
@@ -32,7 +32,7 @@ ms.locfileid: "88048151"
 * 提醒学生和员工有关应用和注册方面的更改。
 * 更新组织的文档或帮助台程序。  
 
-如果你是员工或学生，请务必查看屏幕截图和公司门户帮助文档的链接。 有关如何使用公司门户应用的详细信息，请参阅[公司门户用户帮助文档](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)。  
+如果你是员工或学生，请务必查看屏幕截图和公司门户帮助文档的链接。 有关如何使用公司门户应用的详细信息，请参阅[公司门户用户帮助文档](../user-help/use-managed-devices-to-get-work-done.md)。  
 
 ## <a name="week-of-august-10-2020"></a>2020 年 8 月 10 日当周
 
@@ -193,7 +193,7 @@ ms.locfileid: "88048151"
 * 打开“设置”应用以在其设备上安装管理配置文件。  
 * 返回公司门户应用以完成注册。  
 
-要了解更新的注册步骤和屏幕，请参阅[在 Intune 中注册 iOS 设备](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios)。  
+要了解更新的注册步骤和屏幕，请参阅[在 Intune 中注册 iOS 设备](../user-help/enroll-your-device-in-intune-ios.md)。  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>iOS 版公司门户应用的用户体验更新 <!-- 2536024 -->
 适用于 iOS 设备的公司门户应用的主页已经过重新设计。 经此更改后，主页将更好地遵循 iOS UI 模式，更易于查找应用和电子书。  
@@ -217,7 +217,7 @@ Microsoft Intune 管理员可以上传自定义品牌图像，该图像将在 iO
 ## <a name="week-of-august-27-2018"></a>2018 年 8 月 27 日当周  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>公司门户网站的新用户体验更新 <!--2000968 -->  
-我们已根据客户反馈向公司门户网站添加新功能。 可从设备上体验到现有功能和可用性的重大改进。 该网站的各个区域（如设备详细信息、反馈与支持以及设备概述）都采用了全新的现代化快速响应设计。 已更新 [Intune 公司门户网站文档](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website)以体现这些更改。   
+我们已根据客户反馈向公司门户网站添加新功能。 可从设备上体验到现有功能和可用性的重大改进。 该网站的各个区域（如设备详细信息、反馈与支持以及设备概述）都采用了全新的现代化快速响应设计。 已更新 [Intune 公司门户网站文档](../user-help/using-the-intune-company-portal-website.md)以体现这些更改。   
 
 将看到以下更新：  
 
@@ -257,7 +257,7 @@ Microsoft Intune 管理员可以上传自定义品牌图像，该图像将在 iO
 
 ## <a name="week-of-april-23-2018"></a>2018 年 4 月 23 日当周
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>适用于 Windows 10 的公司门户应用中的更新导航视图 <!-- 1195010 -->
-适用于 Windows 10 的 Intune 公司门户应用经已更新 [Fluent Design System 的导航窗格视图](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics)。 在这款应用旁边，你会注意到一个静态、垂直的所有顶级页面列表。 单击任意链接，可以快速查看页面并在其之间进行切换。 这是你将看到的众多更新中的第一个更新，是我们持续不断努力成果的一部分，以便在 Intune 中创造更具适应性、更能感同身受且更为熟悉的体验。 
+适用于 Windows 10 的 Intune 公司门户应用经已更新 [Fluent Design System 的导航窗格视图](/windows/uwp/design/basics/navigation-basics)。 在这款应用旁边，你会注意到一个静态、垂直的所有顶级页面列表。 单击任意链接，可以快速查看页面并在其之间进行切换。 这是你将看到的众多更新中的第一个更新，是我们持续不断努力成果的一部分，以便在 Intune 中创造更具适应性、更能感同身受且更为熟悉的体验。 
 
 ![显示 Fluent 设计导航视图的公司门户应用仪表板的屏幕截图](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 

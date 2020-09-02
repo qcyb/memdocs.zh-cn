@@ -19,12 +19,12 @@ ms.reviewer: annochiva
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 826515026e578cb993bb706fc61dedb4a80fb3e6
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f0a674753ff23fca509bd21e6b52101104a6803f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464973"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910785"
 ---
 # <a name="store-your-personal-filevault-key"></a>存储你的个人 FileVault 密钥 
 
@@ -81,7 +81,7 @@ IT 支持人员会告诉你是否需要上传个人恢复密钥。 如果你组�
 
 ## <a name="it-pro-support"></a>IT 专业支持
 
-如果你是 IT 支持人员，并且想要为 Mac 设备配置和管理 FileVault 加密，请参阅[通过 Intune 对 macOS 使用 FileVault 磁盘加密](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault)。  
+如果你是 IT 支持人员，并且想要为 Mac 设备配置和管理 FileVault 加密，请参阅[通过 Intune 对 macOS 使用 FileVault 磁盘加密](../protect/encrypt-devices-filevault.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -89,4 +89,4 @@ IT 支持人员会告诉你是否需要上传个人恢复密钥。 如果你组�
 
 从公司门户网站了解还可以执行的操作。 若要获取操作列表，请参阅[使用 Intune 公司门户网站](using-the-intune-company-portal-website.md)。  
 
-仍需帮助？ 请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
+仍需帮助？ 请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

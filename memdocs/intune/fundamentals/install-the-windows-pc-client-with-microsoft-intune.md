@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e6806e8d755163d5ae1701ca49ad2daeff464f
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 45b14b74b6bb08b01ad885eaeffb55a86982a176
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865867"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912774"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>在 Windows 电脑上安装 Intune 软件客户端
 
@@ -81,7 +81,7 @@ Intune 客户端软件包含向 Intune 管理注册电脑所必需的最低软�
 
 3. 使用组策略将软件部署到网络上的计算机。
 
-    有关如何使用组策略自动部署软件的详细信息，请参阅[适用于新手的组策略](https://technet.microsoft.com/library/hh147307.aspx)。
+    有关如何使用组策略自动部署软件的详细信息，请参阅[适用于新手的组策略](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10))。
 
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>将客户端软件部署为映像的一部分
 通过使用以下示例过程作为指导，你可以将 Intune 客户端软件作为操作系统映像的一部分部署到计算机：

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 28a867c735a05cfa4a4765534d200b806711f9b5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428991"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913012"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>在 Intune 中使用适用于 Windows 10 设备的自定义设置
 
@@ -36,7 +36,7 @@ ms.locfileid: "83428991"
 
 Windows 10 自定义配置文件使用开放移动联盟统一资源标识符 (OMA-URI) 设置配置不同的功能。 移动设备制造商通常使用这些设置来控制设备上的功能。
 
-Windows 10 提供了许多配置服务提供程序 (CSP) 设置，例如，[策略配置服务提供程序（策略 CSP）](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers)。
+Windows 10 提供了许多配置服务提供程序 (CSP) 设置，例如，[策略配置服务提供程序（策略 CSP）](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers)。
 
 如果正在寻找特定设置，请记住 [Windows 10 设备限制配置文件](device-restrictions-windows-10.md)包含许多内置设置。 因此，可能不需要输入自定义值。
 
@@ -67,11 +67,11 @@ Windows 10 提供了许多配置服务提供程序 (CSP) 设置，例如，[策�
 
 ## <a name="find-the-policies-you-can-configure"></a>查找可以配置的策略
 
-可以在[配置服务提供程序参考](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference)中找到 Windows 10 支持的所有配置服务提供程序 (CSP) 的完整列表。
+可以在[配置服务提供程序参考](/windows/client-management/mdm/configuration-service-provider-reference)中找到 Windows 10 支持的所有配置服务提供程序 (CSP) 的完整列表。
 
-并非所有设置均兼容所有 Windows 10 版本。 [配置服务提供程序参考](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference)中介绍每个 CSP 所支持的版本。
+并非所有设置均兼容所有 Windows 10 版本。 [配置服务提供程序参考](/windows/client-management/mdm/configuration-service-provider-reference)中介绍每个 CSP 所支持的版本。
 
-此外，Intune 并不支持[配置服务提供程序参考](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference)中列出的所有设置。 若要查明 Intune 是否支持所需的设置，请打开针对该设置的文章。 每个设置页面都将显示其支持的操作。 若要使用 Intune，设置必须支持“添加”、“替换”和“获取”操作  。 如果“Get”操作返回的值与“添加”或“替换”操作提供的值不匹配，则 Intune 报告符合性错误  。
+此外，Intune 并不支持[配置服务提供程序参考](/windows/client-management/mdm/configuration-service-provider-reference)中列出的所有设置。 若要查明 Intune 是否支持所需的设置，请打开针对该设置的文章。 每个设置页面都将显示其支持的操作。 若要使用 Intune，设置必须支持“添加”、“替换”和“获取”操作  。 如果“Get”操作返回的值与“添加”或“替换”操作提供的值不匹配，则 Intune 报告符合性错误  。
 
 ## <a name="next-steps"></a>后续步骤
 

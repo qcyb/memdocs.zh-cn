@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d5b80cd7c90b7899e25b14c4cb2de1590530f43a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078834"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910802"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>在 Intune 中排除设备操作故障问题
 
@@ -99,7 +99,7 @@ Microsoft Intune 提供了许多可帮助管理设备的操作。 本文提供�
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>使用擦除操作后，无法重启 Windows 10 设备
 如果你选择“擦除设备，即使设备断电也继续擦除”，则可能会导致这种情况。  如果选择此选项，请注意它可能会阻止某些 Windows 10 设备重新启动。 。
 
-当 Windows 的安装存在严重损坏，使操作系统无法重新安装时，可能会导致这种情况。 在这种情况下，该过程会失败，使系统处于 [Windows 恢复环境]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)中。
+当 Windows 的安装存在严重损坏，使操作系统无法重新安装时，可能会导致这种情况。 在这种情况下，该过程会失败，使系统处于 [Windows 恢复环境]( /windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)中。
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>使用擦除操作后，无法重启 BitLocker 加密设备
 如果你选择“擦除设备，即使设备断电也继续擦除”，则可能会导致这种情况。  如果选择此选项，请注意它可能会阻止某些 Windows 10 设备重新启动。 。

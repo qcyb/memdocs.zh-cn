@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559532"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915579"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>在 Intune 中创建和分配 SCEP 证书配置文件
 
@@ -104,16 +104,16 @@ ms.locfileid: "88559532"
          - **CN={{IMEINumber}}** ：用于标识移动电话的国际移动设备标识 (IMEI)。
          - **CN={{OnPrem_Distinguished_Name}}** ：用逗号分隔的一系列相对可分辨名称，如 CN=Jane Doe、OU=UserAccounts、DC=corp、DC=contoso、DC=com。
 
-           要使用 {{OnPrem_Distinguished_Name}} 变量，请确保使用 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) 将onpremisesdistinguishedname 用户属性与 Azure AD 同步 。
+           要使用 {{OnPrem_Distinguished_Name}} 变量，请确保使用 [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) 将onpremisesdistinguishedname 用户属性与 Azure AD 同步 。
 
          - **CN={{onPremisesSamAccountName}}** ：管理员可以使用 Azure AD 连接到名为 onPremisesSamAccountName 的属性，将 Active Directory 中的 samAccountName 属性同步到 Azure AD。 Intune 可以将该变量替换为证书使用者中的证书颁发请求的一部分。 samAccountName 属性是指用户登录名，该名称用于支持早期版本的 Windows（Windows 2000 之前）中的客户端和服务器。 用户登录名的格式为：DomainName\testUser，或仅 testUser 。
 
-            要使用 {{onPremisesSamAccountName}} 变量，请确保使用 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) 将 onPremisesSamAccountName 用户属性与 Azure AD 同步 。
+            要使用 {{onPremisesSamAccountName}} 变量，请确保使用 [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) 将 onPremisesSamAccountName 用户属性与 Azure AD 同步 。
 
          通过使用这些变量的一个或多个与静态字符串的组合，可以创建一个自定义使用者名称格式，例如：  
          - CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
 
-         该示例包含使用者名称格式，其中除了不仅使用了 CN 和 E 变量，还使用了组织单元、组织、位置、省/直辖市/自治区和国家/地区值的字符串。 [CertStrToName 函数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)介绍此函数及其支持的字符串。
+         该示例包含使用者名称格式，其中除了不仅使用了 CN 和 E 变量，还使用了组织单元、组织、位置、省/直辖市/自治区和国家/地区值的字符串。 [CertStrToName 函数](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea)介绍此函数及其支持的字符串。
          
          \* 对于 Android 公司拥有的完全托管式专用工作配置文件，CN={{UserPrincipalName}} 设置将不起作用。 Android 公司拥有的完全托管式专用工作配置文件可用于没有用户的设备，因此此配置文件将无法获取用户的用户主体名称。 如果确实需要对包含用户的设备使用此选项，可以使用如下解决方法：CN={{UserName}}\@contoso.com - 它提供你手动添加的用户名和域，例如 janedoe@contoso.com
 
@@ -313,7 +313,7 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 - 若要在注册设备后向设备快速发布证书，请将证书配置文件分配给用户组（而不是设备组）。 如果分配到设备组，则需要在设备接收策略前进行完整的设备注册。
 
-- 如果使用 Intune 和 Configuration Manager 的共同管理，请在 Configuration Manager 中将资源访问策略的[工作负载滑块](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)设置为“Intune”或“试点 Intune”。 此设置允许 Windows 10 客户端启动请求证书的过程。
+- 如果使用 Intune 和 Configuration Manager 的共同管理，请在 Configuration Manager 中将资源访问策略的[工作负载滑块](/configmgr/comanage/how-to-switch-workloads)设置为“Intune”或“试点 Intune”。 此设置允许 Windows 10 客户端启动请求证书的过程。
 
 > [!NOTE]
 > - 在 iOS/iPadOS 设备上，当 SCEP 证书配置文件或 PKCS 证书配置文件与其他配置文件（如 Wi-Fi 或 VPN 配置文件）相关联，设备将收到其他每个配置文件的证书。 这会使 iOS/iPadOS 设备拥有 SCEP 或 PKCS 证书请求提供的多个证书。 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: ee05e72a4837ea894c7163551d0ce79a40ed1d82
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972023"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912145"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>将移动威胁防御应用添加到未注册的设备
 
@@ -50,7 +50,7 @@ ms.locfileid: "85972023"
 但是，如果想要通过 Intune 公司门户向最终用户提供应用，请参阅[将 iOS 应用商店应用添加到 Microsoft Intune](../apps/store-apps-ios.md) 的相关说明。 完成“配置应用信息”部分时，请使用此 [Microsoft Authenticator - iOS 应用商店 URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)。 最后，请不要忘记[通过 Intune 将应用分配到组](../apps/apps-deploy.md)。
 
 > [!NOTE]
-> 对于 iOS 设备，需要 [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)，这样用户便可让 Azure AD 检查自己的标识。 Intune 公司门户在 Android 设备上以中转站的方式工作，以便用户能够让 Azure AD 检查自己的标识。
+> 对于 iOS 设备，需要 [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to)，这样用户便可让 Azure AD 检查自己的标识。 Intune 公司门户在 Android 设备上以中转站的方式工作，以便用户能够让 Azure AD 检查自己的标识。
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>通过 Intune 提供移动威胁防御应用（可选）
 

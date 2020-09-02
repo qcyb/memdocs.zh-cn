@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f94fdd6dcad0b1d1e05caa38dbdfd63dd8746013
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077914"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915222"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>在 Azure 中我的 Intune 功能处于哪个位置？
 我们已将 Intune 移动到 Azure 门户，借此机会我们以更有逻辑的方式整理了某些任务。 但每一次改进都需要熟悉新的布局整理。 本参考指南面向非常熟悉经典门户中的 Intune 且想知道如何使用 Azure 门户中的 Intune 完成工作的用户。 如果本文不含你要查找的功能，请在文章末尾处留下评论，以便我们能够更新本文。
@@ -45,7 +45,7 @@ ms.locfileid: "82077914"
 
 
 ## <a name="where-do-i-manage-groups"></a>在哪个位置管理组？
-Azure 门户中 Intune 使用 [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) 管理组。
+Azure 门户中 Intune 使用 [Azure Active Directory (AD)](/azure/active-directory/active-directory-groups-create-azure-portal) 管理组。
 
 ## <a name="where-did-enrollment-rules-go"></a>注册规则在处于哪个位置？
 在经典门户中，可以设置规则来管理新式移动 Windows 和 macOS 设备的 MDM 注册。
@@ -73,7 +73,7 @@ Azure 门户中 Intune 使用 [Azure Active Directory (AD)](https://docs.microso
 ## <a name="where-did-my-conditional-access-policies-go"></a>我的条件访问策略会去向何处？
 在你的租户迁移到 Azure 门户后，还会继续强制执行你租户的条件访问策略。 但是，你无法在 Azure 门户中的 Intune 中查看或修改这些策略。
 
-若要在 Azure 门户中查看和修改条件访问策略，需要从经典门户中删除旧策略。 然后在 Azure 门户中创建策略。 若要详细了解如何迁移条件访问策略，请参阅[在 Azure 门户中迁移经典策略](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration)。 
+若要在 Azure 门户中查看和修改条件访问策略，需要从经典门户中删除旧策略。 然后在 Azure 门户中创建策略。 若要详细了解如何迁移条件访问策略，请参阅[在 Azure 门户中迁移经典策略](/azure/active-directory/active-directory-conditional-access-migration)。 
 
 ## <a name="where-did-my-compliance-policies-go"></a>符合性策略去哪了？
 你的租户迁移到 Azure 门户后，租户的符合性策略将继续强制使用。 但是，你无法在 Azure 门户中的 Intune 中查看或修改这些策略。

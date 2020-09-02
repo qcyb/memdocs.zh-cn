@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66bc3db54ebefe814a14f564abbad42dc226aefe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b3d0ae7f0ec42cef3ba792b5c0bf3c913bb9e63e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988987"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906848"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>用户访问条款和条件
 
@@ -39,7 +39,7 @@ Intune 管理员可以要求用户在使用公司门户之前接受公司的条�
 
 创建公司的条款和条件有两种方法：
 - 通过使用本文中所述的 Intune。
-- 通过使用 [Azure Active Directory 使用条款功能](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou)
+- 通过使用 [Azure Active Directory 使用条款功能](/azure/active-directory/governance/active-directory-tou)
 
 要了解哪种方法最适合你，请参阅博客文章[为组织选择合适的条款解决方案](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409)。 
 

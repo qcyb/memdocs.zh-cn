@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c757688dec9d7c484ec2c71f86177ffbdf3a92d3
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 8cb847410bf04b4d7d8132e2069b6ced1751b921
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871995"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913573"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>使用 SCEP 在 Intune 中添加合作伙伴证书颁发机构
 
@@ -70,7 +70,7 @@ Microsoft 创建了与 Intune 集成的 API。 通过该 API，可验证证书�
 
 要允许第三方 SCEP 服务器使用 Intune 运行自定义质询验证，请在 Azure AD 中创建应用。 此应用对 Intune 授予委托权限以验证 SCEP 请求。
 
-确保具有注册 Azure AD 应用所需的权限。 请参阅 Azure AD 文档中的[所需权限](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)。
+确保具有注册 Azure AD 应用所需的权限。 请参阅 Azure AD 文档中的[所需权限](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)。
 
 #### <a name="create-an-application-in-azure-active-directory"></a>在 Azure Active Directory 中创建应用程序  
 

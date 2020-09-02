@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795663"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906814"
 ---
 # <a name="see-device-details-in-intune"></a>在 Intune 中查看设备详细信息
 
@@ -48,10 +48,10 @@ ms.locfileid: "84795663"
       - [Autopilot 重置](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)（仅限 Windows）
       - [快速扫描](../configuration/device-restrictions-windows-10.md)（仅限 Windows 10）
       - [完全扫描](../configuration/device-restrictions-windows-10.md)（仅限 Windows 10）
-      - [更新 Windows Defender 安全智能](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
-      - [BitLocker 密钥轮换](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [更新 Windows Defender 安全智能](/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
+      - [BitLocker 密钥轮换](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key)
       - [重命名设备](device-rename.md)
-      - [新远程协助会话](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
+      - [新远程协助会话](./teamviewer-support.md)
    - 使用“属性”可以将设备分配到[你创建的设备类别](../enrollment/device-group-mapping.md)，并将设备的所有权更改为个人设备或公司设备。
    - “硬件”包括有关设备的详细信息，例如设备 ID、操作系统和版本、存储空间等详细信息。
    - “发现的应用”列出 Intune 发现的安装在设备上的所有应用以及应用版本。 有关详细信息，请参阅 [Intune 发现的应用](../apps/app-discovered-apps.md)。

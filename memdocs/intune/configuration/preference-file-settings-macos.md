@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 478cce186d5f2943aeb5730acf90c3e875c8b687
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988668"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915307"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 将属性列表文件添加到 macOS 设备
 
@@ -66,7 +66,7 @@ ms.locfileid: "83988668"
 
     - **首选项域名**：输入该程序包 ID，例如 `com.company.application`。 例如，输入 `com.Contoso.applicationName`、`com.Microsoft.Edge` 或 `com.microsoft.wdav`。
 
-      属性列表文件通常用于 Web 浏览器 (Microsoft Edge)、[Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)和自定义应用。 创建首选项域时，还会创建一个程序包 ID。
+      属性列表文件通常用于 Web 浏览器 (Microsoft Edge)、[Microsoft Defender 高级威胁防护](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)和自定义应用。 创建首选项域时，还会创建一个程序包 ID。
 
     - **属性列表文件**：选择与应用关联的属性列表文件。 请确保它是 `.plist` 或 `.xml` 文件。 例如上传 `YourApp-Manifest.plist` 或 `YourApp-Manifest.xml` 文件。
 
@@ -97,4 +97,4 @@ ms.locfileid: "83988668"
 
 [分配配置文件](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
-有关 Microsoft Edge 首选项文件的详细信息，请参阅[配置 macOS 上的 Microsoft Edge 策略设置](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)。
+有关 Microsoft Edge 首选项文件的详细信息，请参阅[配置 macOS 上的 Microsoft Edge 策略设置](/deployedge/configure-microsoft-edge-on-mac)。

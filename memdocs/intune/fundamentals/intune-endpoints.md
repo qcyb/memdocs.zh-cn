@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262534"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912400"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune 网络终结点  
 
@@ -91,7 +91,7 @@ ms.locfileid: "87262534"
 
 ## <a name="windows-push-notification-services-wns"></a>Windows 推送通知服务 (WNS)  
 
-对于使用移动设备管理 (MDM) 管理的由 Intune 管理的 Windows 设备，设备操作和其他即时活动需要使用 Windows 推送通知服务 (WNS)。 有关详细信息，请参阅[允许 Windows 通知流量通过企业防火墙](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)。  
+对于使用移动设备管理 (MDM) 管理的由 Intune 管理的 Windows 设备，设备操作和其他即时活动需要使用 Windows 推送通知服务 (WNS)。 有关详细信息，请参阅[允许 Windows 通知流量通过企业防火墙](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)。  
 
 ## <a name="delivery-optimization-port-requirements"></a>传递优化端口要求  
 
@@ -101,7 +101,7 @@ ms.locfileid: "87262534"
 
 ### <a name="proxy-requirements"></a>代理要求  
 
-若要使用传递优化，必须允许“字节范围”请求。 有关详细信息，请参阅 [Windows 更新的代理要求](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting)。
+若要使用传递优化，必须允许“字节范围”请求。 有关详细信息，请参阅 [Windows 更新的代理要求](/windows/deployment/update/windows-update-troubleshooting)。
 
 ### <a name="firewall-requirements"></a>防火墙要求  
 
@@ -125,10 +125,10 @@ ms.locfileid: "87262534"
 
 ## <a name="android-port-information"></a>Android 端口信息
 
-根据选择管理 Android 设备的方式，你可能需要打开 Google Android Enterprise 端口和/或 Android 推送通知。 有关支持的 Android 管理方法的更多信息，请参阅 [Android 注册文档](https://docs.microsoft.com/mem/intune/enrollment/android-enroll)。 
+根据选择管理 Android 设备的方式，你可能需要打开 Google Android Enterprise 端口和/或 Android 推送通知。 有关支持的 Android 管理方法的更多信息，请参阅 [Android 注册文档](../enrollment/android-enroll.md)。 
 
 > [!NOTE]
-> 由于 Google 移动服务在中国不可用，因此在中国由 Intune 管理的设备无法使用需要 Google 移动服务的功能。 这些功能包括：Google Play 保护机制功能，如 SafetyNet 设备证明、管理 Google Play 商店的应用、Android Enterprise 功能（请参阅 [Google 文档](https://support.google.com/work/android/answer/6270910)）。 此外，Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。
+> 由于 Google 移动服务在中国不可用，因此在中国由 Intune 管理的设备无法使用需要 Google 移动服务的功能。 这些功能包括：Google Play 保护机制功能，如 SafetyNet 设备证明、管理 Google Play 商店的应用、Android Enterprise 功能（请参阅 [Google 文档](https://support.google.com/work/android/answer/6270910)）。 此外，Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -140,4 +140,4 @@ Intune 利用 Google Firebase 云消息传递 (FCM)，让推送通知来触发�
 
 ## <a name="endpoint-analytics"></a>终结点分析
 
-有关终结点分析所需终结点的详细信息，请参阅[终结点分析代理配置](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints)。
+有关终结点分析所需终结点的详细信息，请参阅[终结点分析代理配置](../../analytics/troubleshoot.md#bkmk_endpoints)。

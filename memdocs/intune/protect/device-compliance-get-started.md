@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 0ae39f91c4daa67c40c42022f63137f0b23daf80
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252786"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911057"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>通过符合性策略为使用 Intune 管理的设备设置规则
 
@@ -143,8 +143,8 @@ Intune 有一个设备符合性仪表板，你可用它来监视设备的符合�
 
 在 Azure AD 文档中详细了解条件访问：
 
-- [什么是条件访问](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [什么是设备标识](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+- [什么是条件访问](/azure/active-directory/conditional-access/overview)
+- [什么是设备标识](/azure/active-directory/device-management-introduction)
 
 ### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>不同平台上关于非符合情况和条件访问的参考
 

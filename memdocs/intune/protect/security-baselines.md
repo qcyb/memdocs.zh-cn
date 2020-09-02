@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca22e74469cf84967d4d9630293a2b4e617e3d81
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5a3954057d14aaf24a1a0147d9717cfc01413d51
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698773"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914916"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>使用安全基线在 Intune 中配置 Windows 10 设备
 
@@ -46,7 +46,7 @@ ms.locfileid: "88698773"
 - 如果是第一次使用 Intune，不确定从何处入手，那么使用安全基线会为自己带来优势。 可以快速创建和部署安全配置文件，同时确信自己这样做是在保护组织的资源和数据。
 - 如果当前使用的是组策略，使用这些基线可以更轻松地迁移到 Intune 进行管理。 这些基线内置于 Intune 本机，提供新式管理体验。
 
-若要详细了解此功能，最好参考 [Windows 安全基线](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)资源。 若要详细了解 MDM 以及可以在 Windows 设备上执行哪些操作，最好参考[移动设备管理](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) 资源。
+若要详细了解此功能，最好参考 [Windows 安全基线](/windows/security/threat-protection/windows-security-baselines)资源。 若要详细了解 MDM 以及可以在 Windows 设备上执行哪些操作，最好参考[移动设备管理](/windows/client-management/mdm/) (MDM) 资源。
 
 ## <a name="available-security-baselines"></a>可用的安全基线
 
@@ -62,7 +62,7 @@ ms.locfileid: "88698773"
   - [2020 年 3 月的 Microsoft Defender ATP 基线 - 版本 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > Microsoft Defender ATP 安全基线已针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。  有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
+  > Microsoft Defender ATP 安全基线已针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。  有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
 
 - **Microsoft Edge 基线**
   - [2020 年 4 月的 Microsoft Edge 基线（Microsoft Edge 版本 80 及更高版本）](security-baseline-settings-edge.md?pivots-edge-april-2020)
@@ -253,9 +253,9 @@ Microsoft Endpoint Manager 根据典型组织的不断变化的需求更新内�
 
 ## <a name="co-managed-devices"></a>共同管理的设备
 
-Intune 托管设备上的安全基线类似于使用 Configuration Manager 的共同管理设备。 共同管理设备同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备。 这样一来，可以通过云附加现有 Configuration Manager 投资，以充分发挥 Intune 的优势。 如果使用的是 Configuration Manager，且希望获取云优势，最好参考[共同管理概述](https://docs.microsoft.com/configmgr/comanage/overview)资源。
+Intune 托管设备上的安全基线类似于使用 Configuration Manager 的共同管理设备。 共同管理设备同时使用 Configuration Manager 和 Microsoft Intune 来管理 Windows 10 设备。 这样一来，可以通过云附加现有 Configuration Manager 投资，以充分发挥 Intune 的优势。 如果使用的是 Configuration Manager，且希望获取云优势，最好参考[共同管理概述](/configmgr/comanage/overview)资源。
 
-使用共同管理设备时，必须将“设备配置”工作负载（其设置）切换为“Intune”。 有关详细信息，请参阅[设备配置工作负载](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration)。
+使用共同管理设备时，必须将“设备配置”工作负载（其设置）切换为“Intune”。 有关详细信息，请参阅[设备配置工作负载](/configmgr/comanage/workloads#device-configuration)。
 
 ## <a name="q--a"></a>问与答
 
@@ -273,11 +273,11 @@ Microsoft 安全团队多年来一直与 Windows 开发人员以及安全社区�
 
 ### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Microsoft 安全基线有哪些认证？ 
 
-- Microsoft 多年来一直在发布面向组策略 (GPO) 和[安全性符合性工具包](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10)的安全基线。 许多组织都使用这些基线。 这些基线中的建议是 Microsoft 安全团队与企业客户及外部机构交流得出，包括美国国防部 (DoD)、美国国家标准技术研究所 (NIST) 等。 我们与这些组织共享建议和基线。 这些组织也有他们自己的建议，这些建议与 Microsoft 的建议非常相似。 随着移动设备管理 (MDM) 继续向云发展，Microsoft 为这些组策略基线创建了等效的 MDM 建议。 这些附加基线内置于 Microsoft Intune，其中包括关于遵循（或不遵循）基线的用户、组和设备的符合性报告。
+- Microsoft 多年来一直在发布面向组策略 (GPO) 和[安全性符合性工具包](/windows/security/threat-protection/security-compliance-toolkit-10)的安全基线。 许多组织都使用这些基线。 这些基线中的建议是 Microsoft 安全团队与企业客户及外部机构交流得出，包括美国国防部 (DoD)、美国国家标准技术研究所 (NIST) 等。 我们与这些组织共享建议和基线。 这些组织也有他们自己的建议，这些建议与 Microsoft 的建议非常相似。 随着移动设备管理 (MDM) 继续向云发展，Microsoft 为这些组策略基线创建了等效的 MDM 建议。 这些附加基线内置于 Microsoft Intune，其中包括关于遵循（或不遵循）基线的用户、组和设备的符合性报告。
 
 - 许多客户使用 Intune 基线建议作为起点，再进行自定义，从而满足自己的 IT 和安全需求。 Microsoft 发布的第一个基线是 Windows 10 RS5 MDM 安全基线。 此基线是作为通用基础结构构建，可便于客户最终导入基于 CIS、NIST 和其他标准的其他安全基线。 目前，它适用于 Windows，最终将适用于 iOS/iPadOS 和 Android。
 
-- 使用 Azure Active Directory (AD) 和 Microsoft Intune 从本地 Active Directory 组策略迁移到纯云解决方案是一个过程。 若要获取帮助，可以使用[安全性和符合性工具包](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10)中包含的组策略模板，帮助管理加入了混合 AD 和 Azure AD 的设备。 这些设备可以从云 (Intune) 中获取 MDM 设置，并根据需要从本地域控制器获取组策略设置。
+- 使用 Azure Active Directory (AD) 和 Microsoft Intune 从本地 Active Directory 组策略迁移到纯云解决方案是一个过程。 若要获取帮助，可以使用[安全性和符合性工具包](/windows/security/threat-protection/security-compliance-toolkit-10)中包含的组策略模板，帮助管理加入了混合 AD 和 Azure AD 的设备。 这些设备可以从云 (Intune) 中获取 MDM 设置，并根据需要从本地域控制器获取组策略设置。
 
 ## <a name="next-steps"></a>后续步骤
 

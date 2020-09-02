@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 57a7b232b7391d6b8716d4c2a56d69b44f6c07ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462127"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914746"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Intune Exchange Connector 疑难解答
 
@@ -31,7 +31,7 @@ ms.locfileid: "86462127"
 
 > [!IMPORTANT]
 >
-> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)，此外，还删除了将 Exchange Connector 添加到 Intune 的功能。
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](/office365/enterprise/hybrid-modern-auth-overview) (HMA)，此外，还删除了将 Exchange Connector 添加到 Intune 的功能。
 >
 > 以前配置和使用 Exchange Connector 的客户继续获得该连接器支持。
 
@@ -66,7 +66,7 @@ ms.locfileid: "86462127"
 
 - 托管 Intune Exchange Connector 和 Exchange 客户端访问服务器 (CAS) 的计算机应已加入域且位于同一 LAN 上。 请确保为 Intune Exchange Connector 使用的帐户添加所需的权限。
 
-- 用于检索自动发现设置的通知帐户  。 有关 Exchange 中自动发现的详细信息，请参阅 [Exchange Server 中的自动发现服务](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016)。
+- 用于检索自动发现设置的通知帐户  。 有关 Exchange 中自动发现的详细信息，请参阅 [Exchange Server 中的自动发现服务](/exchange/architecture/client-access/autodiscover?view=exchserver-2016)。
 
 - Intune Exchange Connector 使用通知帐户凭据向 EWS URL 发送“发送通知电子邮件与‘入门’链接（用于在 Intune 中注册）”的请求  。 使用“入门”链接注册是 Android 非 Knox 设备的一项要求  。 否则，条件访问将阻止这些设备。
 
@@ -86,4 +86,4 @@ ms.locfileid: "86462127"
 寻求支持或 Intune 社区的帮助：
 
 - 请参阅[获取支持](../fundamentals/get-support.md)以使用 Intune 控制台帮助排查问题或打开 Microsoft 的支持案例。 
-- 请在 [Microsoft Intune 论坛](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)发布问题。  
+- 请在 [Microsoft Intune 论坛](/answers/products/mem)发布问题。  

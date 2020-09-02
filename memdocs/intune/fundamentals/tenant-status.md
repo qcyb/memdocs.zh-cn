@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690674"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911176"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>使用 Intune 租户状态页面
 
 Microsoft Intune“租户状态”页是一个集中式中心，可在其中查看有关租户的当前信息和重要详细信息。 详细信息包括许可证可用性及其使用、连接器状态以及有关 Intune 服务的重要通信。
 
 > [!TIP]
-> 租户是 Azure Active Directory (Azure AD) 的实例。 Intune 订阅由 Azure AD 租户进行托管。 有关详细信息，请参阅 Azure AD 文档中的[设置租户](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant)。
+> 租户是 Azure Active Directory (Azure AD) 的实例。 Intune 订阅由 Azure AD 租户进行托管。 有关详细信息，请参阅 Azure AD 文档中的[设置租户](/azure/active-directory/develop/quickstart-create-new-tenant)。
 
 若要查看仪表板，请登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，转到“租户管理”，然后选择“租户状态”。
 

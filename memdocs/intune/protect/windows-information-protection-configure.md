@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d127dd8ba455ecb7e10fc94c343d12099a678d5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 008f750fd15caeac8da9397a1c3ff0684cdf28f7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079002"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914661"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>如何在 Microsoft Intune 中配置 Windows 信息保护
 
@@ -38,7 +38,7 @@ ms.locfileid: "82079002"
 > 若要将 Windows 10 公司门户应用与 Windows 信息保护结合使用，必须在“免除”  的 Windows 信息保护模式下添加公司门户应用。 
 
 有关详情，请参阅：
-- [使用 Windows 信息保护来保护企业数据](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)。
-- [使用 Microsoft Intune 经典控制台创建 Windows 信息保护 (WIP) 策略](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
-- [使用 Microsoft Intune Azure 门户创建具有 MDM 的 Windows 信息保护 (WIP) 策略](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
-- [使用 Microsoft Intune Azure 门户创建具有 MAM 的 Windows 信息保护 (WIP) 策略](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)
+- [使用 Windows 信息保护来保护企业数据](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)。
+- [使用 Microsoft Intune 经典控制台创建 Windows 信息保护 (WIP) 策略](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
+- [使用 Microsoft Intune Azure 门户创建具有 MDM 的 Windows 信息保护 (WIP) 策略](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
+- [使用 Microsoft Intune Azure 门户创建具有 MAM 的 Windows 信息保护 (WIP) 策略](/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)

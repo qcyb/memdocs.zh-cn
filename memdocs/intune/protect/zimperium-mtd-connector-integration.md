@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666c8c765f15ddd103727ccf2a7d840cb69bd20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 889706a0fcf0d84abcbdb70b429e507233159254
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989363"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915936"
 ---
 # <a name="integrate-zimperium-with-intune"></a>将 Zimperium 与 Intune 集成
 
@@ -61,7 +61,7 @@ Zimperium 应用授权流程如下：
 
 - 允许 Zimperium 应用使用 Azure AD SSO 登录。
 
-若要详细了解许可和 Azure Active Directory 申请，请参阅 Azure Active Directory 文章 *Azure Active Directory v2.0 终结点中的权限和许可*中的[向目录管理员请求权限](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)。
+若要详细了解许可和 Azure Active Directory 申请，请参阅 Azure Active Directory 文章 *Azure Active Directory v2.0 终结点中的权限和许可*中的[向目录管理员请求权限](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)。
 
 
 ## <a name="to-set-up-zimperium-integration"></a>设置 Zimperium 集成

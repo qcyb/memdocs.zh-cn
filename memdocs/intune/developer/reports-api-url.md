@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0ba25d697bca6d6a6af7aad3565e6c2c70841e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 6b4508c0382b27efba2be9bcdcfa8693784f3e4a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165934"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907120"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune 数据仓库 API 终结点
 
@@ -35,7 +35,7 @@ ms.locfileid: "84165934"
 
 Azure Active Directory (Azure AD) 使用 OAuth 2.0 使你能够在你的  Azure  AD  租户中授予对  Web  应用程序和  Web  API  的访问权限。 本指南介绍如何在不使用任何开源库的情况下发送和接收 HTTP 消息（无语言限制）。 OAuth 2.0 规范的[第 4.1 节](https://tools.ietf.org/html/rfc6749#section-4.1)介绍了 OAuth 2.0 授权代码流。
 
-有关详细信息，请参阅[授权使用 OAuth 2.0 和 Azure Active Directory 访问 Web 应用程序](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)。
+有关详细信息，请参阅[授权使用 OAuth 2.0 和 Azure Active Directory 访问 Web 应用程序](/azure/active-directory/develop/active-directory-protocols-oauth-code)。
 
 ## <a name="api-url-structure"></a>API URL 结构
 

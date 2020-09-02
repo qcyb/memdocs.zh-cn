@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988286"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914848"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>使用 Intune 添加 iOS/iPadOS 软件更新策略
 
@@ -35,7 +35,7 @@ ms.locfileid: "83988286"
 默认情况下，设备会通过 Intune 大约每 8 小时签入一次。 如果通过更新策略提供更新，则该设备会下载该更新。 然后，设备会在下一次在计划配置中签入时安装更新。 尽管更新过程通常不涉及到任何用户交互，但如果设备有密码，则用户必须输入密码才能启动软件更新。 配置文件无法阻止用户手动更新操作系统。 可以阻止用户使用设备配置策略手动更新 OS，以限制软件更新可见性。
 
 > [!NOTE]
-> 如果使用[自治单应用模式 (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam)，则应考虑操作系统更新的影响，因为可能由此产生不良行为。
+> 如果使用[自治单应用模式 (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)，则应考虑操作系统更新的影响，因为可能由此产生不良行为。
 考虑进行测试，评估操作系统更新对你在 ASAM 中运行的应用的影响。
 
 ## <a name="configure-the-policy"></a>配置策略

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 82ee499689a7c7ae85fb72cc4fc9b5f6d5ffc939
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912312"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908864"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin Bindings
 
@@ -56,7 +56,7 @@ ms.locfileid: "87912312"
 
 查看[许可条款](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf)。 打印并保留一份许可条款，以留作记录。 下载和使用 Intune App SDK Xamarin Bindings 即表示你同意这些许可条款。 如果不接受这些条款，请不要使用此软件。
 
-Intune SDK 依靠使用 [Microsoft 身份验证库 (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) 进行[身份验证](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)和条件启动，这需要使用 [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) 配置应用。 
+Intune SDK 依靠使用 [Microsoft 身份验证库 (MSAL)](/azure/active-directory/develop/v2-overview) 进行[身份验证](/azure/active-directory/develop/authentication-vs-authorization)和条件启动，这需要使用 [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) 配置应用。 
 
 如果应用程序已配置为使用 MSAL，并且拥有其自己的自定义客户端 ID 用于使用 Azure Active Directory 进行身份验证，请务必按以下步骤操作，将 Xamarin 应用权限授予 Intune 移动应用管理 (MAM) 服务。 请使用 [Intune SDK 入门指南](app-sdk-get-started.md)的[向 Intune 应用保护服务提供应用访问权限](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)一节中的说明。
 
@@ -69,7 +69,7 @@ Intune SDK 依靠使用 [Microsoft 身份验证库 (MSAL)](https://docs.microsof
   * [MS Intune App SDK NuGet 配置文件](https://www.nuget.org/profiles/msintuneappsdk)
   * [Intune App SDK Xamarin GitHub 存储库](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * 为项目配置 NuGet 配置以信任已签名且未修改的 NuGet 包。
-有关详细信息，请参阅[安装已签名的包](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages)。
+有关详细信息，请参阅[安装已签名的包](/nuget/consume-packages/installing-signed-packages)。
 * 保护包含 Xamarin 应用的输出目录。 考虑为输出使用用户级目录。
 
 
@@ -212,9 +212,9 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 ```
 
 如果未进行替换，则在进行替换之前可能会遇到以下编译错误：
-* [编译器错误 CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239)。 此错误常见于此窗体 ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``。
+* [编译器错误 CS0239](/dotnet/csharp/misc/cs0239)。 此错误常见于此窗体 ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``。
 这是预期结果，因为当重映射器修改 Xamarin 类的继承时，将 `sealed` 某些函数，并添加新的 MAM 变量来替代。
-* [编译器错误 CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507)：此错误常见于此窗体 ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``。 当重映射器更改一些 Xamarin 类的继承时，某些成员函数将更改为 `public`。 如果替代任何这些函数，则还需要将这些替代的访问修饰符更改为 `public`。
+* [编译器错误 CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507)：此错误常见于此窗体 ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``。 当重映射器更改一些 Xamarin 类的继承时，某些成员函数将更改为 `public`。 如果替代任何这些函数，则还需要将这些替代的访问修饰符更改为 `public`。
 
 > [!NOTE]
 > 重映射器重写了 Visual Studio 用于 IntelliSense 自动完成的依赖项。 因此，在为 IntelliSense 添加重映射器时，可能需要重载并重新生成项目，以正确识别更改。
@@ -235,4 +235,4 @@ Intune SDK Xamarin 绑定依赖于设备上存在[公司门户](https://play.goo
 [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps) 上提供了强调 Xamarin.Android 和 Xamarin.Forms 应用中 MAM 功能的示例应用程序。
 
 ## <a name="support"></a>支持
-如果你的组织已经是 Intune 客户，请与 Microsoft 支持代表合作，以开立支持票证，并在 [GitHub 问题页](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)上创建问题。 我们将尽快提供帮助。 
+如果你的组织已经是 Intune 客户，请与 Microsoft 支持代表合作，以开立支持票证，并在 [GitHub 问题页](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)上创建问题。 我们将尽快提供帮助。

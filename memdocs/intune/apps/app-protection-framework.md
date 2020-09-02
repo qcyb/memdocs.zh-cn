@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410923"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913369"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>使用应用保护策略的数据保护框架 
 
@@ -64,7 +64,7 @@ Microsoft 建议对 APP 数据保护框架采用以下部署圈方法：
 Microsoft 建议对使用方案进行查看和分类，然后使用针对该级别的规范性指导配置用户。 与任何框架一样，相应级别中的设置可能需要基于组织的需要进行调整，因为数据保护必须评估威胁环境、风险偏好以及对可用性的影响。  
 
 ### <a name="conditional-access-policies"></a>条件访问策略
-为了确保只有支持应用保护策略的应用才能访问工作或学校帐户数据，必须使用 Azure Active Directory 条件访问策略。 请参阅“方案1：Office 365 应用需要批准的应用和应用保护策略”（位于[需要应用保护策略，才能使用条件访问进行云应用访问](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)中），了解实现特定策略的步骤。
+为了确保只有支持应用保护策略的应用才能访问工作或学校帐户数据，必须使用 Azure Active Directory 条件访问策略。 请参阅“方案1：Office 365 应用需要批准的应用和应用保护策略”（位于[需要应用保护策略，才能使用条件访问进行云应用访问](/azure/active-directory/conditional-access/app-protection-based-conditional-access)中），了解实现特定策略的步骤。
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>要包含在应用保护策略中的应用  
 

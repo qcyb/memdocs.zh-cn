@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986759"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913131"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>使用设备注册管理员帐户在 Intune 中注册设备
 
@@ -49,7 +49,7 @@ ms.locfileid: "83986759"
 
 可以通过以下方法来使用 DEM 帐户注册设备：
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows 设备批量注册](windows-bulk-enroll.md)
 - DEM 通过公司门户启动
 
@@ -77,4 +77,3 @@ ms.locfileid: "83986759"
 
 1. 登录 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，选择“设备” > “注册设备” > “设备注册管理器”    。
 2. 在“设备注册管理员”边栏选项卡上，选择 DEM 用户，然后选择“删除”   。
-

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866122"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915681"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>如何使用 Azure AD 访问 Microsoft Graph Intune API
 
@@ -53,9 +53,9 @@ ms.locfileid: "87866122"
 
 若要了解更多信息，请参阅以下文章：
 
-- [授权使用 OAuth 2.0 和 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code) 访问 Web 应用程序
+- [授权使用 OAuth 2.0 和 Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code) 访问 Web 应用程序
 - [Azure AD 身份验证入门](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [将应用程序与 Azure Active Directory 集成](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [将应用程序与 Azure Active Directory 集成](/azure/active-directory/develop/active-directory-integrating-applications)
 - [了解 OAuth 2.0](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>注册应用以使用 Microsoft Graph API
@@ -80,7 +80,7 @@ ms.locfileid: "87866122"
 
     2. “应用程序类型”和“重定向 URI”值。
 
-        这些信息会因要求的不同而异。 例如，如果你正在使用 Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL)，请将“应用程序类型”设置为 `Native`，将“重定向 URI”设置为 `urn:ietf:wg:oauth:2.0:oob`。
+        这些信息会因要求的不同而异。 例如，如果你正在使用 Azure AD [Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL)，请将“应用程序类型”设置为 `Native`，将“重定向 URI”设置为 `urn:ietf:wg:oauth:2.0:oob`。
 
         > [!NOTE]
         > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
@@ -88,7 +88,7 @@ ms.locfileid: "87866122"
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        要了解详细信息，请参阅 [Azure AD 的身份验证方案息](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)。
+        要了解详细信息，请参阅 [Azure AD 的身份验证方案息](/azure/active-directory/develop/active-directory-authentication-scenarios)。
 
 5. 从应用程序边栏选项卡：
 
@@ -106,7 +106,7 @@ ms.locfileid: "87866122"
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    通过在相关名称的左侧打一个复选标记来选择应用所需的角色。  要了解具体的 Intune 权限范围，请参阅 [Intune 权限范围](#intune-permission-scopes)。  要了解其他 Graph API 权限范围，请参阅 [Microsoft Graph 权限引用](https://developer.microsoft.com/graph/docs/concepts/permissions_reference)。
+    通过在相关名称的左侧打一个复选标记来选择应用所需的角色。  要了解具体的 Intune 权限范围，请参阅 [Intune 权限范围](#intune-permission-scopes)。  要了解其他 Graph API 权限范围，请参阅 [Microsoft Graph 权限引用](/graph/permissions-reference)。
 
     为获得最佳效果，请选择实现应用程序所需的最少角色。
 
@@ -141,8 +141,8 @@ Azure AD 和 Microsoft Graph 使用权限范围来控制对公司资源的访问
 权限范围（也称为 _OAuth 范围_）控制对特定 Intune 实体及其属性的访问权限。 本节总结了 Intune API 功能的权限范围。
 
 若要了解更多信息，请参阅以下内容：
-- [Azure AD 身份验证](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [应用程序权限范围](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Azure AD 身份验证](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [应用程序权限范围](/azure/active-directory/develop/active-directory-v2-scopes)
 
 向 Microsoft Graph 授予权限时，你可以指定以下范围来控制对 Intune 功能的访问权限：下表总结了 Intune API 权限范围。  第一列显示 Azure 门户中显示的功能名称，第二列显示权限范围名称。
 

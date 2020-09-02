@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a83d6301ffe5663abd6025c8f52b2e7a7e0b7982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461176"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911108"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>在 Microsoft Intune 中使用派生凭据
 
@@ -119,8 +119,8 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 查看将与派生凭据协同使用的设备的特定于平台的用户工作流。
 
-- [iOS 和 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
-- [Android Enterprise 完全托管设备](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
+- [iOS 和 iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
+- [Android Enterprise 完全托管设备](../user-help/enroll-android-device-disa-purebred.md)
 
 **关键要求包括**：
 
@@ -138,7 +138,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 查看将与派生凭据协同使用的设备的特定于平台的用户工作流。
 
-- [iOS 和 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS 和 iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
 - [Android Enterprise 完全托管设备](../user-help/enroll-android-device-entrust-datacard.md)
 
 **关键要求包括**：
@@ -156,7 +156,7 @@ Intune 支持每个租户一个派生凭据颁发者。 可以将 Intune 配置�
 
 查看将与派生凭据协同使用的设备的特定于平台的用户工作流。
 
-- [iOS 和 iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [iOS 和 iPadOS](/intune-user-help/enroll-ios-device-intercede)
 - [Android Enterprise 完全托管设备](../user-help/enroll-android-device-intercede.md)
 
 **关键要求包括**：

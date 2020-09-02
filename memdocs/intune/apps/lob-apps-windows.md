@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990624"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913318"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>将 Windows 业务线应用添加到 Microsoft Intune
 
@@ -50,7 +50,7 @@ ms.locfileid: "83990624"
    将显示应用详细信息。
 
     > [!NOTE]
-    > Windows 应用的文件扩展名包括 .msi、.appx、.appxbundle、.msix 和 .msixbundle    。 有关 .msix 的详细信息，请参阅 [MSIX 文档](https://docs.microsoft.com/windows/msix/)和 [MSIX 应用分发](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise)。
+    > Windows 应用的文件扩展名包括 .msi、.appx、.appxbundle、.msix 和 .msixbundle    。 有关 .msix 的详细信息，请参阅 [MSIX 文档](/windows/msix/)和 [MSIX 应用分发](/windows/msix/desktop/managing-your-msix-deployment-enterprise)。
 
 3. 完成后，在“应用包文件”窗格中选择“确定”以添加应用。
 
@@ -62,7 +62,7 @@ ms.locfileid: "83990624"
     - **发布者**：输入应用发布者的名称。
     - 应用安装上下文：选择要与此应用相关联的安装上下文。 对于双模式应用，选择此应用所需的上下文。 对于其他所有应用，此设置是根据包预先选择的，无法进行修改。
     - **忽略应用版本**：如果应用开发人员自动更新应用，则设置为“是”。 此选项仅适用于移动 .msi 应用。
-    - **命令行参数**：（可选）输入要在 .msi 文件运行时应用到该文件的任意命令行参数。  例如 /q。 不要添加 msiexec 命令或参数（如 /i 或 /x），因为它们是自动使用的。 有关详细信息，请参阅[命令行选项](https://docs.microsoft.com/windows/desktop/Msi/command-line-options)。 如果 .MSI 文件需要其他命令行选项，请考虑使用 [Win32 应用管理](app-management.md)。
+    - **命令行参数**：（可选）输入要在 .msi 文件运行时应用到该文件的任意命令行参数。  例如 /q。 不要添加 msiexec 命令或参数（如 /i 或 /x），因为它们是自动使用的。 有关详细信息，请参阅[命令行选项](/windows/desktop/Msi/command-line-options)。 如果 .MSI 文件需要其他命令行选项，请考虑使用 [Win32 应用管理](app-management.md)。
     - **类别**：选择一个或多个内置应用类别，或选择你创建的类别。 “类别”可让用户在浏览公司门户时更轻松地查找应用。
     - **在公司门户中将此应用显示为特色应用**：当用户浏览应用时，在公司门户的主页上突出显示应用。
     - **信息 URL**：（可选）输入包含此应用相关信息的网站的 URL。 此 URL 显示在公司门户中。

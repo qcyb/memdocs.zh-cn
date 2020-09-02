@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 771c1133d10c256d29755ebc146197a6cb35ceee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428978"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914899"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Microsoft Intune 中 BitLocker 策略的故障排除
 
@@ -35,7 +35,7 @@ BitLocker 驱动器加密是 Microsoft Windows 操作系统提供的一项服务
 
 - **设备配置策略** - 创建设备配置文件以管理终结点保护时，某些内置策略选项在 Intune 中可用。 若要查找这些选项，请[创建用于终结点保护的设备配置文件](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings)，选择“Windows 10 及更高版本”作为“平台”，然后选择“Windows 加密”类别作为“设置”。 
 
-   可在此处了解可用选项和功能：[Windows 加密](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)。
+   可在此处了解可用选项和功能：[Windows 加密](/intune/endpoint-protection-windows-10#windows-encryption)。
 
 - **安全基线** - [安全基线](security-baselines.md)是已知的设置和默认值组，相关安全团队建议借助它们来帮助保护 Windows 设备。 不同的基线源（如“MDM 安全基线”或“Microsoft Defender ATP 基线”）可以管理相同的设置以及彼此之间不同的设置 。 它们还可以管理使用设备配置策略进行管理的相同设置。 
 
@@ -43,12 +43,12 @@ BitLocker 驱动器加密是 Microsoft Windows 操作系统提供的一项服务
 
 还可以通过其他方式（如组策略）来管理 BitLocker 设置，或由设备用户进行手动设置。
 
-无论设置如何应用于设备，BitLocker 策略都利用 [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) 在设备上配置加密。 BitLocker CSP 内置于 Windows 中，当 Intune 将 BitLocker 策略部署到分配的设备时，设备上的 BitLocker CSP 将相应的值写入 Windows 注册表，以便策略中的设置生效。
+无论设置如何应用于设备，BitLocker 策略都利用 [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) 在设备上配置加密。 BitLocker CSP 内置于 Windows 中，当 Intune 将 BitLocker 策略部署到分配的设备时，设备上的 BitLocker CSP 将相应的值写入 Windows 注册表，以便策略中的设置生效。
 
 若要了解有关 BitLocker 的详细信息，请参阅以下资源：
 
-- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker 概述和要求常见问题解答](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker 概述和要求常见问题解答](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 现在，你已大致了解这些策略的作用及其工作原理，下面介绍如何验证 BitLocker 设置是否已成功应用于 Windows 客户端。
 
@@ -109,7 +109,7 @@ BitLocker 策略成功部署到设备后，在设备上查看以下注册表项�
 
 ![BitLocker 注册表项](./media/troubleshooting-bitlocker-policies/registry.png)
 
-这些值由 BitLocker CSP 配置。 验证密钥的值是否与 Intune Windows 加密策略的源中指定的设置相匹配。 有关上述每个设置的详细信息，请参阅 [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)。
+这些值由 BitLocker CSP 配置。 验证密钥的值是否与 Intune Windows 加密策略的源中指定的设置相匹配。 有关上述每个设置的详细信息，请参阅 [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)。
 
 > [!NOTE]
 > Windows 事件查看器还将包含与 Bitlocker 相关的各种信息。 其内容过多，无法在此处列出，但搜索 **Bitlocker API** 将为你提供很多有用的信息。
@@ -136,7 +136,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-可参考 [BitLocker CSP 文档](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)来了解每个值的含义。 对于此示例，下图中共享了一个代码片段。
+可参考 [BitLocker CSP 文档](/windows/client-management/mdm/bitlocker-csp)来了解每个值的含义。 对于此示例，下图中共享了一个代码片段。
 
 ![值的用途](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -162,10 +162,10 @@ EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 - **是整个策略部署失败，还是仅某些设置不适用？** 如果你发现只有某些策略设置不适用，请查看以下注意事项：
 
   1. **并非所有 BitLocker 设置在所有 Windows 版本上都受支持**。
-     策略以单个单元的形式向下移动到设备，因此，如果某些设置适用而其他设置不适用，则你可以确信策略本身已被接收。 在这种情况下，可能设备上的 Windows 版本不支持有问题的设置。 有关每项设置的版本要求的详细信息，请参阅 Windows 文档中的 [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)。
+     策略以单个单元的形式向下移动到设备，因此，如果某些设置适用而其他设置不适用，则你可以确信策略本身已被接收。 在这种情况下，可能设备上的 Windows 版本不支持有问题的设置。 有关每项设置的版本要求的详细信息，请参阅 Windows 文档中的 [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)。
 
   2. **并非所有硬件都支持 BitLocker**。
-     即使你使用适当版本的 Windows，基础设备硬件也有可能不符合 BitLocker 加密的要求。 可以在 Windows 文档中找到[BitLocker 的系统要求](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)，但要检查的主要问题是设备是否具有兼容的 TPM 芯片（1.2 或更高版本）和与受信任的计算组 (TCG) 兼容的 BIOS 或 UEFI 固件。
+     即使你使用适当版本的 Windows，基础设备硬件也有可能不符合 BitLocker 加密的要求。 可以在 Windows 文档中找到[BitLocker 的系统要求](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)，但要检查的主要问题是设备是否具有兼容的 TPM 芯片（1.2 或更高版本）和与受信任的计算组 (TCG) 兼容的 BIOS 或 UEFI 固件。
      
 **不会以无提示方式执行 Bitlocker 加密** - 你已配置 Endpoint Protection 策略，并将设置“其他磁盘加密的警告”设置为“阻止”，并且加密向导仍然出现：
 
@@ -209,11 +209,11 @@ EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 
 下面提供了更多资源，可帮助你使用 BitLocker：
 
-- [BitLocker 产品文档](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker 系统要求](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [BitLocker 常见问题解答](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [BitLocker CSP 文档](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Intune Windows 加密策略设置](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [使用 AAD/MDM 的独立于硬件的自动 BitLocker 加密](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [BitLocker 产品文档](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker 系统要求](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [BitLocker 常见问题解答](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [BitLocker CSP 文档](/windows/client-management/mdm/bitlocker-csp)
+- [Intune Windows 加密策略设置](/intune/endpoint-protection-windows-10#windows-encryption)
+- [使用 AAD/MDM 的独立于硬件的自动 BitLocker 加密](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [自动驾驶设备上 BitLocker 加密的 CSP 策略](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [演练通过 Intune 创建和部署 BitLocker 策略](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [演练通过 Intune 创建和部署 BitLocker 策略](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

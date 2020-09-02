@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 55835d5ee8527f54e530da5113f841ed108fa6f5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819994"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915800"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>在 Microsoft Intune 中分配用户和设备配置文件
 
@@ -31,7 +31,7 @@ ms.locfileid: "88819994"
 本文演示如何分配配置文件，并介绍有关对配置文件使用作用域标记的一些信息。
 
 > [!NOTE]  
-> 当配置文件被删除或不再分配给设备时，根据配置文件中设置的不同，可能会执行不同的操作。 这些设置基于 CSP，并且每个 CSP 可以不同地处理配置文件删除。 例如，设置可能会保留现有值，而不会恢复为默认值。 该行为由操作系统中的每个 CSP 控制。 有关 Windows CSP 的列表，请参阅[配置服务提供程序 (CSP) 参考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)。
+> 当配置文件被删除或不再分配给设备时，根据配置文件中设置的不同，可能会执行不同的操作。 这些设置基于 CSP，并且每个 CSP 可以不同地处理配置文件删除。 例如，设置可能会保留现有值，而不会恢复为默认值。 该行为由操作系统中的每个 CSP 控制。 有关 Windows CSP 的列表，请参阅[配置服务提供程序 (CSP) 参考](/windows/client-management/mdm/configuration-service-provider-reference)。
 >
 > 要将设置更改为其他值，请创建新的配置文件，将设置配置为“未配置”，然后分配配置文件。 应用于设备后，用户应该可控制将设置更改为其首选值。
 >

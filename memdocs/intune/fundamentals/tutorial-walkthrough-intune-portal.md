@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355252"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907001"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>教程：Azure 门户中的 Microsoft Intune 演练
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) 包含 100 多项服务，可以帮助你处理各种云计算方案和可能性。 Microsoft Intune 是 Azure 中可用的多种服务之一。 Intune 可帮助你确保公司的设备、应用和数据符合公司的安全要求。 你可以控制设置需要检查哪些需求以及在不满足这些需求时会发生什么情况。 可在 [Azure 门户](https://portal.azure.com)中找到 Microsoft Intune 服务。 了解 Intune 中可用的功能将帮助你完成各种移动设备管理 (MDM) 和移动应用管理 (MAM) 任务。
+[Azure](/learn/modules/welcome-to-azure) 包含 100 多项服务，可以帮助你处理各种云计算方案和可能性。 Microsoft Intune 是 Azure 中可用的多种服务之一。 Intune 可帮助你确保公司的设备、应用和数据符合公司的安全要求。 你可以控制设置需要检查哪些需求以及在不满足这些需求时会发生什么情况。 可在 [Azure 门户](https://portal.azure.com)中找到 Microsoft Intune 服务。 了解 Intune 中可用的功能将帮助你完成各种移动设备管理 (MDM) 和移动应用管理 (MAM) 任务。
 
 在本教程中，你将：
 > [!div class="checklist"]

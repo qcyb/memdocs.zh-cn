@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a61e92265447f8ceced83d493b9397713b67dca6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989794"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909425"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>使用 Intune 设置基于应用的条件访问策略
 
@@ -32,7 +32,7 @@ ms.locfileid: "83989794"
 可以使用基于应用的条件访问策略前，需要将 [Intune 应用保护策略](../apps/app-protection-policies.md)应用于应用。
 
 > [!IMPORTANT]
-> 本文逐步介绍了如何添加基于应用的简单条件访问策略。 可以对其他云应用执行相同的步骤。 有关详细信息，请参阅[计划条件访问部署](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)
+> 本文逐步介绍了如何添加基于应用的简单条件访问策略。 可以对其他云应用执行相同的步骤。 有关详细信息，请参阅[计划条件访问部署](/azure/active-directory/conditional-access/plan-conditional-access)
 
 ## <a name="create-app-based-conditional-access-policies"></a>创建基于应用的条件访问策略
 
@@ -72,4 +72,4 @@ ms.locfileid: "83989794"
 ## <a name="see-also"></a>另请参阅
 
 [使用应用保护策略保护应用数据](../apps/app-protection-policies.md)
-[Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Azure Active Directory 中的条件访问](/azure/active-directory/active-directory-conditional-access)

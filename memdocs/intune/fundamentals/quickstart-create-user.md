@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5c76e276722fb9bab2b5d6fac511f0b22ae1f2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6def2806bc35acf8becbbedfb031af99378711ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79356708"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913828"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-the-user-a-license"></a>快速入门：在 Intune 中创建用户并向用户分配许可证
 
@@ -59,7 +59,7 @@ ms.locfileid: "79356708"
 2. 选择“用户”   > “活动用户”  ，然后选择刚创建的用户。
 3. 选择“许可证和应用”  选项卡。
 4. 在“选择位置”  中，为用户选择一个位置（如果尚未设置）。
-2. 选中“许可证”  部分中的“Intune”  复选框。 如果其他许可证包括 Intune，则可以选择该许可证。 显示的[产品名称](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)用作 Azure 管理中的服务计划。
+2. 选中“许可证”  部分中的“Intune”  复选框。 如果其他许可证包括 Intune，则可以选择该许可证。 显示的[产品名称](/azure/active-directory/users-groups-roles/licensing-service-plan-reference)用作 Azure 管理中的服务计划。
 
     ![选择位置和 Intune 许可证](./media/quickstart-create-user/create-user-03.png)
 

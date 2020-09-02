@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429492"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915698"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Windows 10 及更高版本设置，用于保护使用 Intune 的设备
 
@@ -32,7 +32,7 @@ Windows 10 及更高版本的设备（如 Microsoft Surface），可用于多个
 
 本文列出并介绍用于 Windows 10（及更高版本）设备配置文件的设置。 在 Intune 中创建配置文件时，可以将配置文件部署或分配到贵组织中的设备组。 还可以将此配置文件分配到具有混合设备类型和操作系统版本的设备组。
 
-有关 Intune 中此功能的详细信息，请参阅[控制共享电脑或多用户设备上的访问权限、帐户和电源功能](shared-user-device-settings.md)。 有关 Windows CSP 的详细信息，请参阅 [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp)。
+有关 Intune 中此功能的详细信息，请参阅[控制共享电脑或多用户设备上的访问权限、帐户和电源功能](shared-user-device-settings.md)。 有关 Windows CSP 的详细信息，请参阅 [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp)。
 
 ## <a name="before-your-begin"></a>准备工作
 
@@ -40,7 +40,7 @@ Windows 10 及更高版本的设备（如 Microsoft Surface），可用于多个
 
 ## <a name="shared-multi-user-device-settings"></a>共享的多用户设备设置
 
-这些设置使用 [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp)。
+这些设置使用 [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp)。
 
 - **共享电脑模式**：“启用”会打开共享电脑模式。 在此模式下，一次只能有一位用户登录设备。 第一位用户注销前，其他用户无法登录。设置为“未配置”（默认）时，Intune 不会更改或更新此设置。
 - **来宾帐户**：选择此模式，在登录屏幕上创建来宾选项。 来宾帐户不需要任何用户凭证或身份验证。 此设置在每次使用时会创建新的本地帐户。 选项包括：
@@ -92,10 +92,10 @@ Windows 10 及更高版本的设备（如 Microsoft Surface），可用于多个
   - **启用**：将更严格的推荐设置用于在学校使用的设备。
   - **已禁用**：不使用默认和推荐教育策略。
 
-  有关教育策略作用的详细信息，请参阅[面向教育行业客户的 Windows 10 配置建议](https://docs.microsoft.com/education/windows/configure-windows-for-education)。
+  有关教育策略作用的详细信息，请参阅[面向教育行业客户的 Windows 10 配置建议](/education/windows/configure-windows-for-education)。
 
 > [!TIP]
-> [设置共享或来宾电脑](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc)（打开另一个文档网站）是此 Windows 10 功能的出色资源，包括可在共享模式下设置的概念和组策略。
+> [设置共享或来宾电脑](/windows/configuration/set-up-shared-or-guest-pc)（打开另一个文档网站）是此 Windows 10 功能的出色资源，包括可在共享模式下设置的概念和组策略。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
-ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
+ms.openlocfilehash: 287306a8a583dcb6a9617a2933cecb0223a25df4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86285277"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913097"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>排查应用安装问题
 
@@ -125,7 +125,7 @@ ARM64 设备支持的应用类型包括以下各项：
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>对 Microsoft 应用商店中的应用进行故障排除
 
-[排除 Microsoft 应用商店应用的打包、部署和查询故障](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)主题中的信息有助于解决使用 Intune 或其他方式从 Microsoft 应用商店安装应用时可能会遇到的问题。
+[排除 Microsoft 应用商店应用的打包、部署和查询故障](/windows/win32/appxpkg/troubleshooting)主题中的信息有助于解决使用 Intune 或其他方式从 Microsoft 应用商店安装应用时可能会遇到的问题。
 
 ## <a name="app-troubleshooting-resources"></a>应用疑难解答资源
 - [在 Microsoft 365 应用版部署期间部署 Visio 和 Project](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)

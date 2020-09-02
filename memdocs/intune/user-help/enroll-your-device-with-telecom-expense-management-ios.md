@@ -19,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb1f6ae1ca666a96eca583d2e3be9c565013e7c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1c43d2c4ae7ccda2cd0cf9283586a980eb166d22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881320"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912077"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>在电信费用管理中注册 iOS 设备
 
@@ -39,7 +39,7 @@ ms.locfileid: "83881320"
 ## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>使用 Microsoft 工作或学校帐户注册 Datalert
 
 > [!NOTE]
-> 需要在你的手机上安装并激活 [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) 应用，才能按此方法注册。
+> 需要在你的手机上安装并激活 [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) 应用，才能按此方法注册。
 
 1. 选择“使用 Microsoft 帐户注册”  。
 

@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252565"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915970"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>在 Intune 中管理 Windows 10 软件更新
 
@@ -38,7 +38,7 @@ Intune 提供以下策略类型来管理更新：
 
 将 Windows 10 更新通道和 Windows 10 功能更新的策略分配给设备组。 可以在同一 Intune 环境中同时使用这两种策略类型来管理 Windows 10 设备的软件更新，并创建反映业务需求的更新策略。
 
-有关详细信息，请参阅[使用 Windows Update for Business 更新管理更新](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb)。
+有关详细信息，请参阅[使用 Windows Update for Business 更新管理更新](/windows/deployment/update/waas-manage-updates-wufb)。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -182,7 +182,7 @@ Intune 管理员可以使用“卸载”  来卸载（回滚）活动更新通�
 
   例如，功能更新卸载期为 20 天的更新通道。 在 25 天后，你决定回滚到最新的功能更新并使用“卸载”选项。  在 20 天以前安装了功能更新的设备无法卸载更新，因为它们已删除了作为维护一部分的必需的位。 但是，在 19 天以前仅安装了功能更新的设备可以卸载更新（如果它们在超过 20 天的卸载期前成功签入以接收卸载命令）。
 
-有关 Windows 更新策略的详细信息，请参阅 Windows 客户端管理文档中的[更新 CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp)。
+有关 Windows 更新策略的详细信息，请参阅 Windows 客户端管理文档中的[更新 CSP](/windows/client-management/mdm/update-csp)。
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>卸载最新的 Windows 10 更新
 
@@ -247,7 +247,7 @@ Intune 管理员可以使用“卸载”  来卸载（回滚）活动更新通�
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Windows 10 更新的验证和报告
 
-对于 Windows 10 更新环和 Windows 10 功能更新，请使用 [Intune 符合性报告更新](windows-update-compliance-reports.md)以监视设备的更新状态。 此解决方案在 Azure 订阅中使用[更新符合性](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor)。
+对于 Windows 10 更新环和 Windows 10 功能更新，请使用 [Intune 符合性报告更新](windows-update-compliance-reports.md)以监视设备的更新状态。 此解决方案在 Azure 订阅中使用[更新符合性](/windows/deployment/update/update-compliance-monitor)。
 
 ## <a name="next-steps"></a>后续步骤
 

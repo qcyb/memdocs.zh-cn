@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 5c7a83f07ce9c3da2fa953a3ea0d97e05b928a6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110726"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915460"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows 设备的批量注册
 
@@ -78,7 +78,7 @@ Azure AD 用户是这些设备上的标准用户并接收分配的 Intune 策略
    - 将预配程序包置于 USB 驱动器中，将 USB 驱动器插入要进行批量注册的设备，并在初始设置时应用它
    - 将预配程序包置于网络文件夹中，并在初始设置后应用它
 
-   有关应用配置包的分步说明，请参阅[应用配置包](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package)。
+   有关应用配置包的分步说明，请参阅[应用配置包](/windows/configuration/provisioning-packages/provisioning-apply-package)。
 
 3. 在包得到应用后，设备便会在一分钟内自动重启。
    ![在 Windows 配置设计器应用中指定名称、项目文件夹和说明的屏幕快照](./media/windows-bulk-enroll/bulk-enroll-add.png)

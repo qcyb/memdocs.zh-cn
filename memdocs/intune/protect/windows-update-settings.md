@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 82b85ad64bbb4783cd8ca43817d4446efd771297
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819705"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915953"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune 中的 Windows 更新设置  
 
@@ -34,7 +34,7 @@ ms.locfileid: "88819705"
 
 - 服务频道  
   **默认值**：半年频道  
-  Windows 更新 CSP：[Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
+  Windows 更新 CSP：[Update/BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
   设置设备从中接收 Windows 更新的频道（分支）。 在交付更新前，不同的频道可以使用不同的延迟期。  
 
@@ -48,7 +48,7 @@ ms.locfileid: "88819705"
   - Windows 预览体验计划 - 慢  
   - 发布 Windows 预览体验计划  
 
-  如果选择预览体验计划频道，则 Intune 将自动配置 Windows 更新设置 [Update/ManagePreviewBuilds](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds)，以便此预览体验计划正常运行。  
+  如果选择预览体验计划频道，则 Intune 将自动配置 Windows 更新设置 [Update/ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds)，以便此预览体验计划正常运行。  
 
 
   > [!IMPORTANT]  
@@ -56,21 +56,21 @@ ms.locfileid: "88819705"
  
 - Microsoft 产品更新  
   **默认值**：Allow  
-  Windows 更新 CSP：[Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+  Windows 更新 CSP：[Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **允许** - 选择“允许”以扫描 Microsoft 更新中的应用更新。  
   - **阻止** - 选择“阻止”以禁止扫描应用更新。  
 
 - **Windows 驱动程序**  
   **默认值**：Allow  
-  Windows 更新 CSP：[Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
+  Windows 更新 CSP：[Update/ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
   - **允许** - 选择“允许”以在更新过程中包含 Windows 更新驱动程序。  
   - **阻止** - 选择“阻止”以禁止扫描驱动程序。  
 
 - **质量更新延迟期(天)**  
   **默认值**：0  
-  Windows 更新 CSP：[Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
+  Windows 更新 CSP：[Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
   指定质量更新延迟的天数（从 0 到 30）。 此期限是属于所选的服务频道的任何延迟期以外的期限。 延迟期在设备收到策略时开始。  
 
@@ -78,7 +78,7 @@ ms.locfileid: "88819705"
 
 - **功能更新延迟期(天)**  
   **默认值**：0  
-  Windows 更新 CSP：[Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+  Windows 更新 CSP：[Update/PauseFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
   指定功能更新延迟天数。 此期限是属于所选的服务频道的任何延迟期以外的期限。 延迟期在设备收到策略时开始。  
 
@@ -90,7 +90,7 @@ ms.locfileid: "88819705"
 
 - **设置功能更新卸载期(2 到 60 天)**  
   **默认值**：10  
-  Windows 更新 CSP：[Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
+  Windows 更新 CSP：[Update/ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
   配置无法卸载功能更新的时间。  
 
@@ -104,7 +104,7 @@ ms.locfileid: "88819705"
 
 - 自动更新行为  
   **默认值**：在维护时间自动安装  
-  Windows 更新 CSP：[Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Windows 更新 CSP：[Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
   选择自动更新的安装方式，如有必要，选择重启设备的时间。  
 
@@ -118,11 +118,11 @@ ms.locfileid: "88819705"
 
     - **活动时间开始** - 指定由于更新安装所导致的取消重启的开始时间。  
       **默认值**：上午 8 点  
-      Windows 更新 CSP：[Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Windows 更新 CSP：[Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **活动时间结束** - 指定由于更新安装所导致的取消重启的结束时间。  
       **默认值**：下午 5 点  
-      Windows 更新 CSP：[Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Windows 更新 CSP：[Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **在维护期自动安装和重启** – 自动下载更新，然后在设备未使用或在电池电源上运行时的自动维护期间安装。 需要重启时，设备将在未使用时重启。 （这是非托管设备的默认设置。）  
 
@@ -130,14 +130,14 @@ ms.locfileid: "88819705"
 
     - **活动时间开始** - 指定由于更新安装所导致的取消重启的开始时间。  
       **默认值**：上午 8 点  
-      Windows 更新 CSP：[Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Windows 更新 CSP：[Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **活动时间结束** - 指定由于更新安装所导致的取消重启的结束时间。  
       **默认值**：下午 5 点  
-      Windows 更新 CSP：[Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Windows 更新 CSP：[Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **在计划时间自动安装和重启** - 指定安装日期和时间。 如果未指定，则安装程序将在每天凌晨 3 点运行，随后进行 15 分钟倒计时以执行重启。 登录的用户可以延迟倒计时和重启。   
-  Windows 更新 CSP：[Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Windows 更新 CSP：[Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
     此选项支持其他设置。  
 
@@ -157,7 +157,7 @@ ms.locfileid: "88819705"
 
 - **重启检查**  
   **默认值**：Allow  
-  Windows 更新 CSP：[Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
+  Windows 更新 CSP：[Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
   要在重启设备时跳过这些检查，请选择“跳过”。 
   
@@ -167,28 +167,28 @@ ms.locfileid: "88819705"
 
 - **阻止用户暂停 Windows 更新**  
   **默认值**：Allow  
-  Windows 更新 CSP：[Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
+  Windows 更新 CSP：[Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
   - **允许** - 允许设备用户暂停更新的安装。  
   - **阻止** - 禁止设备用户暂停更新的安装。  
 
 - **阻止用户扫描 Windows 更新**  
   **默认值**：Allow  
-  Windows 更新 CSP：[Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+  Windows 更新 CSP：[Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
   - **允许** - 允许设备用户使用 Windows 更新扫描，查找并下载更新并安装功能。
   - **阻止** - 禁止设备用户访问 Windows 更新扫描、下载更新和安装功能。  
 
 - **要求用户批准以消除重启通知**  
   **默认值**：未配置  
-  Windows 更新 CSP：[Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+  Windows 更新 CSP：[Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
   - **无** - 在 25 秒后自动消除。
   - **是** - 需要用户消除。
    
 - **通过可消除的提醒提前提醒用户需要自动重启(小时)**  
   **默认值**：4  
-  Windows 更新 CSP：[Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
+  Windows 更新 CSP：[Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
   指定在自动重启前提前多久向设备用户显示有关该重启的可消除通知。 支持值 2、4、8、12 或 24  小时。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "88819705"
 
 - **通过永久提醒提前提醒用户需要自动重启(分钟)**  
   **默认值**：15  
-  Windows 更新 CSP：[Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
+  Windows 更新 CSP：[Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
 
   指定自动重启前提前多久向设备用户显示有关该重启的不可消除的警告。 支持值 15、30 或 60 分钟。  
 
@@ -204,7 +204,7 @@ ms.locfileid: "88819705"
 
 - **更改更新通知级别**  
   **默认值**：使用默认 Windows 更新通知  
-  Windows 更新 CSP：[Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+  Windows 更新 CSP：[Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
   指定用户可见的 Windows 更新通知级别。 此设置不控制下载和安装更新的方式和时间。  
 
@@ -226,23 +226,23 @@ ms.locfileid: "88819705"
 
   - **功能更新截止时间**  
     **默认值**：未配置  
-    Windows 更新 CSP：[Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
+    Windows 更新 CSP：[Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     指定用户在其设备上自动安装功能更新前的天数 (2-30)。
 
   - **质量更新截止时间**  
     **默认值**：未配置  
-    Windows 更新 CSP：[Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+    Windows 更新 CSP：[Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     指定用户在其设备上自动安装质量更新前的天数 (2-30)。
 
   - **宽限期**  
-    **默认值**：“未配置”Windows 更新 CSP：[Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **默认值**：“未配置”Windows 更新 CSP：[Update/ConfigureDeadlineGracePeriod]( /windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     指定自截止日期起到自动重启之间的最小天数 (0-7)。
 
   - **在截止时间之前自动重启**  
-    **默认值**：是，Windows 更新 CSP：[Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **默认值**：是，Windows 更新 CSP：[Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     指定设备是否应在截止时间之前自动重启。
     - **是**

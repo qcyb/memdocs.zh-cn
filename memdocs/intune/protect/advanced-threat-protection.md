@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 1420bf03fe236decba0345e299eb5d5893f96c93
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663441"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915103"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>使用 Intune 中的条件访问强制执行 Microsoft Defender ATP 的符合性
 
@@ -51,7 +51,7 @@ Microsoft Defender ATP 适用于运行 Windows 10 或更高版本的设备以及
 Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
 - 在本例中，Microsoft Defender ATP 检测设备是否存在以下情形：执行了异常代码、遇到了进程权限提升、插入了恶意代码，以及发布了可疑的远程 Shell。
-- 基于该设备的这些操作，Microsoft Defender ATP [将该设备分类为高风险](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity)，并在 Microsoft Defender 安全中心门户中包含可疑活动的详细报告。
+- 基于该设备的这些操作，Microsoft Defender ATP [将该设备分类为高风险](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity)，并在 Microsoft Defender 安全中心门户中包含可疑活动的详细报告。
 
 可以将 Microsoft Defender 高级威胁防护 (Microsoft Defender ATP) 和 Microsoft Intune 集成为 Mobile Threat Defense 解决方案。 集成可让你免受安全漏洞的威胁，并帮助限制组织中的漏洞影响。
 
@@ -65,7 +65,7 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
 - 企业移动性 + 安全性 E3 和 Windows E5（或 Microsoft 365 企业版 E5）的许可租户
 - Microsoft Intune 环境，包含同样加入了 Azure AD 的 [Intune 托管的](../enrollment/windows-enroll.md) Windows 10 或 Android 设备
-- [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) 环境将授予你对 Microsoft Defender 安全中心（ATP 门户）的访问权限
+- [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) 环境将授予你对 Microsoft Defender 安全中心（ATP 门户）的访问权限
 
 > [!NOTE]
 > iOS/iPadOS 和 Android Intune 应用保护策略不支持 Microsoft Defender ATP。
@@ -81,5 +81,5 @@ Microsoft Defender ATP 可以帮助解决类似这种情况的安全事件。
 
 有关详细信息，请参阅 Microsoft Defender ATP 文档：
 
-- [Microsoft Defender ATP 条件访问](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP 风险仪表板](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP 条件访问](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP 风险仪表板](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 322e3be8e7421b0c622a8e656a3312791ed7feac
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663423"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913437"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -55,12 +55,12 @@ ms.locfileid: "88663423"
 
 当环境满足使用 [Microsoft Defender 高级威胁防护](advanced-threat-protection.md#prerequisites)的先决条件时，Microsoft Defender 高级威胁防护基线才可用。
 
-此基线针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。 有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
+此基线针对物理设备进行了优化，目前不建议在虚拟机 (VM) 或 VDI 终结点上使用。 某些基线设置可能会影响虚拟化环境中的远程交互式会话。 有关详细信息，请参阅 Windows 文档中的[提高 Microsoft Defender ATP 安全基线的符合性](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)。
 
 
 ## <a name="application-guard"></a>应用程序防护
 
-有关详细信息，请参阅 Windows 文档中的 [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp)。  
+有关详细信息，请参阅 Windows 文档中的 [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp)。  
 
 使用 Microsoft Edge 时，Microsoft Defender 应用程序防护可保护环境免受组织不信任的站点的影响。 用户访问独立网络边界中未列出的站点时，这些站点将在 Hyper-V 虚拟浏览会话中打开。 受信任的站点由网络边界定义。  
 
@@ -89,7 +89,7 @@ ms.locfileid: "88663423"
     - **允许在电脑和浏览器之间进行复制和粘贴** - 不阻止任何内容。
 
 - **Windows 网络隔离策略**  
-  CSP：[策略 CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP：[策略 CSP - NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   指定网络域列表，这些域是应用程序防护将其视为企业站点的云中托管的企业资源
   - 配置（默认）
@@ -102,7 +102,7 @@ ms.locfileid: "88663423"
 
 ## <a name="bitlocker"></a>BitLocker
 
-有关详细信息，请参阅 Windows 文档中的 [BitLocker 组策略设置](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)。
+有关详细信息，请参阅 Windows 文档中的 [BitLocker 组策略设置](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)。
 
 - **需要加密存储卡(仅限移动设备)**  
   CSP：[RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -290,7 +290,7 @@ ms.locfileid: "88663423"
 ## <a name="dma-guard"></a>DMA Guard
 
 - **与内核 DMA 保护不兼容的外部设备的枚举**  
-  CSP：[DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP：[DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   此策略可针对支持 DMA 的外部设备提供额外的安全保障。 它让用户能够更好地控制与 DMA 重新映射/设备内存隔离和沙盒不兼容但支持 DMA 的外部设备的枚举。
   
@@ -302,10 +302,10 @@ ms.locfileid: "88663423"
 
 ## <a name="endpoint-detection-and-response"></a>终结点检测和响应
 
-有关以下设置的详细信息，请参阅 Windows 文档中的 [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP。
+有关以下设置的详细信息，请参阅 Windows 文档中的 [WindowsAdvancedThreatProtection](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP。
 
 - **所有文件的示例共享**  
-  CSP：[Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP：[Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   返回或设置 Microsoft Defender 高级威胁防护示例共享配置参数。  
   
@@ -313,7 +313,7 @@ ms.locfileid: "88663423"
   - 未配置 
 
 - **加快遥测报告频率**  
-  CSP：[Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP：[Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   提高 Microsoft Defender 高级威胁防护遥测报告频率。  
 
@@ -322,7 +322,7 @@ ms.locfileid: "88663423"
 
 ## <a name="firewall"></a>防火墙
 
-有关详细信息，请参阅 Windows 文档中的 [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)（防火墙 CSP）。
+有关详细信息，请参阅 Windows 文档中的 [Firewall CSP](/windows/client-management/mdm/firewall-csp)（防火墙 CSP）。
 
 - **禁用有状态的文件传输协议(FTP)**  
   CSP：[MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
@@ -590,7 +590,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   默认情况下，此时间设置为凌晨 2 点。
 
 - **配置计划扫描的低 CPU 优先级**  
-  CSP：[Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP：[Defender/EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**是**（默认）
   - 未配置 
@@ -630,7 +630,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   配置项在被删除前保留在隔离文件夹中的天数。 默认值为零 (0)，这会导致隔离的文件永远不会被删除。
 
 - **Defender 系统扫描计划**  
-  CSP：[Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP：[Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   计划 Defender 扫描设备的日期。 默认情况下，该扫描为“用户定义”，但可以设置为“每日”、一周中的某一天或“没有计划的扫描” 。
 
@@ -754,7 +754,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   - **未配置** - 客户端将返回到其默认设置，这将禁止对网络文件进行扫描。
   
 - **Defender 可能不需要的应用操作**  
-  CSP：[Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP：[Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   指定潜在有害应用程序 (PUA) 的检测级别。 当正在下载或尝试在设备上安装潜在有害软件时，Defender 会向用户发出警报。
   - **设备默认值**
@@ -762,7 +762,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
   - **审核** - Defender 检测可能不需要的应用程序，但不执行任何操作。 可以通过在事件查看器中搜索 Defender 创建的事件，查看有关 Defender 将对其执行操作的应用程序的信息。
 
 - **启用云提供的保护**  
-  CSP：[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP：[AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   默认情况下，Windows 10 桌面版设备上的 Defender 将有关发现的任何问题的信息发送给 Microsoft。 Microsoft 分析该信息，详细了解影响你和其他客户的问题，并提供改进的解决方案。
 
@@ -879,7 +879,7 @@ CSP：[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=87253
 
 ## <a name="windows-hello-for-business"></a>Windows Hello 企业版
 
-有关详细信息，请参阅 Windows 文档中的 [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp)。
+有关详细信息，请参阅 Windows 文档中的 [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp)。
 
 - **阻止 Windows Hello 企业版**  
 

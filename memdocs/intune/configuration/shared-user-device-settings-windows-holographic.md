@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 88b7f41b873697a7ec34bd1fc2f1098384ab1c18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556279"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915715"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Windows Holographic for Business 设置，用于管理使用 Intune 的共享设备
 
@@ -32,7 +32,7 @@ Windows Holographic for Business 设备（如 Microsoft HoloLens）可以由多�
 
 本文列出并介绍用于 Windows Holographic for Business 设备配置文件的设置。 在 Intune 中创建配置文件时，可以将配置文件部署或分配到贵组织中的设备组。 还可以将此配置文件分配到具有混合设备类型和操作系统版本的设备组。
 
-有关 Intune 中此功能的详细信息，请参阅[控制共享电脑或多用户设备上的访问权限、帐户和电源功能](shared-user-device-settings.md)。 有关 Windows CSP 的详细信息，请参阅 [AccountManagement CSP](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)。
+有关 Intune 中此功能的详细信息，请参阅[控制共享电脑或多用户设备上的访问权限、帐户和电源功能](shared-user-device-settings.md)。 有关 Windows CSP 的详细信息，请参阅 [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp)。
 
 ## <a name="before-your-begin"></a>准备工作
 

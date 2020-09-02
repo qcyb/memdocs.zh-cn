@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820487"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913777"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中使用设备配置文件的设备应用功能和设置
 
@@ -138,7 +138,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 ## <a name="education"></a>教育水平
 
-[教育设置 - Windows 10](education-settings-configure.md) 配置针对 [Windows 参加测验应用](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)的选项。 在配置这些选项时，直到测试完成才可以在设备上运行其他应用。
+[教育设置 - Windows 10](education-settings-configure.md) 配置针对 [Windows 参加测验应用](/education/windows/take-tests-in-windows-10)的选项。 在配置这些选项时，直到测试完成才可以在设备上运行其他应用。
 
 [教育设置 - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) 使用 iOS/iPadOS Classroom 应用来指导学习，并控制课堂中的学生设备。 可以将 iPad 设备配置为多名学生可以共享一台设备。
 
@@ -157,7 +157,7 @@ Microsoft Intune 提供可在组织内的不同设备上启用或禁用的设置
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) 可配置适用于 Windows 10 设备的 BitLocker 和 Microsoft Defender 设置。 还可在 macOS 设备上配置防火墙、网关和其他资源。
 
-若要使用 Microsoft Intune 载入 Microsoft Defender 高级威胁防护 (WDATP)，请参阅[使用移动设备管理 (MDM) 工具配置终结点](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm)。
+若要使用 Microsoft Intune 载入 Microsoft Defender 高级威胁防护 (WDATP)，请参阅[使用移动设备管理 (MDM) 工具配置终结点](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm)。
 
 此功能支持：
 

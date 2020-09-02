@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 398f1cd789d0ea2e2c15349e943c8e29545733e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81681968"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912315"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Intune 经典门户中的新增功能 - 前几个月
 
@@ -345,7 +345,7 @@ __Firefox 不再支持 Silverlight__ <!--VSO TBA-->
 Mozilla 将在 52 版 [Firefox 浏览器](https://www.mozilla.org/firefox)中移除对 Silverlight 的支持，此更新于 2017 年 3 月生效。 因此，无法使用高于 51 版的 Firefox 登录现有 Intune 控制台。 我们建议使用 Internet Explorer 10 或 11，或者 [52 版之前的 Firefox](https://ftp.mozilla.org/pub/firefox/releases/) 访问管理控制台。 Intune 向 Azure 门户的过渡允许其支持多种[新式浏览器](/azure/azure-preview-portal-supported-browsers-devices)，而无需依赖于 Silverlight。
 
 __删除 Exchange Online 移动版收件箱策略__ <!--770687-->
-从 12 月开始，管理员将无法再在 Intune 控制台中查看或配置 Exchange Online (EAS) 移动版邮箱策略。 此更改将在 12 月和 1 月向所有 Intune 租户推出。 所有现有策略将保持配置状态；若要配置新策略，请使用 Exchange 命令行管理程序。 可在[此处](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx)找到详细信息。
+从 12 月开始，管理员将无法再在 Intune 控制台中查看或配置 Exchange Online (EAS) 移动版邮箱策略。 此更改将在 12 月和 1 月向所有 Intune 租户推出。 所有现有策略将保持配置状态；若要配置新策略，请使用 Exchange 命令行管理程序。 可在[此处](/exchange/mobile-device-mailbox-policies-exchange-2013-help)找到详细信息。
 
 __Android 不再支持 Intune AV 播放器、图像查看器和 PDF 查看器应用__ <!--747553-->
 从 2016 年 12 月中旬起，用户将无法继续使用 Intune AV 播放器、图像查看器和 PDF 查看器应用。 这些应用已替换为 Azure 信息保护应用。 可在[此处](/information-protection/rms-client/mobile-app-faq)查找有关 Azure 信息保护应用的详细信息。

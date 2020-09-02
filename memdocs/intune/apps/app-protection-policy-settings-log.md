@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43ebd7a242fbc0b859c7b947b02b330498649296
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 895db60bcd4d484a218289978c2da2d2688b8887
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410857"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910564"
 ---
 # <a name="review-client-app-protection-logs"></a>查看客户端应用保护日志
 
@@ -31,7 +31,7 @@ ms.locfileid: "86410857"
 
 启用和收集日志的过程因平台而异：
 - **iOS/iPadOS 设备** - 使用适用于 iOS/iPadOS 的 Microsoft Edge 收集日志。 有关详细信息，请参阅[使用适用于 iOS 和 Android 的 Microsoft Edge 访问托管的应用日志](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
-- **Windows 10 设备** - 使用“MDMDiag”和事件日志。 请参阅 Windows 客户端管理内容中的[诊断 Windows 10 中的 MDM 故障](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)和博客 [Windows 10 Intune 策略故障排除](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)。
+- **Windows 10 设备** - 使用“MDMDiag”和事件日志。 请参阅 Windows 客户端管理内容中的[诊断 Windows 10 中的 MDM 故障](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)和博客 [Windows 10 Intune 策略故障排除](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures)。
 - **Android 设备** - 使用 Android 版 Microsoft Edge 来收集日志。 有关详细信息，请参阅[使用适用于 iOS 和 Android 的 Microsoft Edge 访问托管的应用日志](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)。
 
   > [!NOTE]

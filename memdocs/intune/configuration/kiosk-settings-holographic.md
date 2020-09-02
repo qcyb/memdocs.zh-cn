@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8127281069ce4209adfc2aec82a93f5a60669307
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093170"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911856"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>使用 Intune 将 Windows Holographic for Business 设备作为展台运行的设置
 
@@ -74,7 +74,7 @@ ms.locfileid: "85093170"
   - **自动登录（Windows 10 版本 1803 及更高版本）** ：在 Windows Holographic for Business 上不支持。
   - **本地用户帐户**：“添加”本地（对设备而言）用户帐户。 输入的帐户会在展台中登录。
   - **Azure AD 用户或组（Windows 10 版本 1803 及更高版本）** ：需要用户凭据才能登录到设备。 选择“添加”以从列表中选择 Azure AD 用户或组。 你可以选择多个用户和组。 选取“选择”，保存所做的更改。
-  - **HoloLens 访问者**：访问者帐户是来宾帐户，不需要任何用户凭据或身份验证，如[共享电脑模式概念](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts)中所述。
+  - **HoloLens 访问者**：访问者帐户是来宾帐户，不需要任何用户凭据或身份验证，如[共享电脑模式概念](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts)中所述。
 
 - **浏览器和应用程序**：添加要在展台设备上运行的应用。 请记住，可以添加多个应用。
 
@@ -84,7 +84,7 @@ ms.locfileid: "85093170"
       - **正常模式(Microsoft Edge 完整版)** ：使用所有浏览功能运行完整版 Microsoft Edge。 会话期间会保存用户数据和状态。
       - **公共浏览(InPrivate)** ：运行多选项卡版本的 Microsoft Edge InPrivate，为全屏模式下运行的展台提供量身定制的体验。
 
-      要详细了解这些选项，请参阅[部署 Microsoft Edge 展台模式](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types)。
+      要详细了解这些选项，请参阅[部署 Microsoft Edge 展台模式](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types)。
 
       > [!NOTE]
       > 此设置会在设备上启用 Microsoft Edge 浏览器。 要配置 Microsoft Edge 专属设置，请创建设备限制配置文件（“设备” > “配置文件” > “创建配置文件” > “Windows 10”（针对平台），再选择“设备限制” > “Microsoft Edge 浏览器”     ）。 [Microsoft Edge 浏览器](device-restrictions-windows-holographic.md#microsoft-edge-browser)列出并介绍了可用的 Holographic for Business 设置。
@@ -97,12 +97,12 @@ ms.locfileid: "85093170"
     - **按 AUMID 添加**：使用此选项可添加收件箱 Windows 应用，如记事本或计算器。 输入以下属性：
 
       - **应用程序名称**：必需。 输入应用程序的名称。
-      - **应用程序用户模型 ID (AUMID)** ：必需。 输入 Windows 应用的应用程序用户模型 ID (AUMID)。 若要获取此 ID，请参阅[查找已安装应用的应用程序用户模型 ID](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app)。
+      - **应用程序用户模型 ID (AUMID)** ：必需。 输入 Windows 应用的应用程序用户模型 ID (AUMID)。 若要获取此 ID，请参阅[查找已安装应用的应用程序用户模型 ID](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app)。
 
     - **自动登录**：可选。 添加应用和浏览器后，选择一个应用或浏览器，以便在用户登录时自动打开。 只会自动启动一个应用或浏览器。
     - **磁贴大小**：必需。 添加应用后，选择“小”、“中”、“宽”或“大”应用磁贴尺寸。
 
-- **使用可选“开始”屏幕布局**：选择“是”，输入一个 XML 文件，用于描述应用在“开始”菜单上的显示方式，包括应用的顺序。 如果在开始菜单中需要更多自定义，请使用此选项。 [自定义和导出开始布局](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens)提供了一些指导，并包含适用于 Windows Holographic for Business 设备的特定 XML 文件。
+- **使用可选“开始”屏幕布局**：选择“是”，输入一个 XML 文件，用于描述应用在“开始”菜单上的显示方式，包括应用的顺序。 如果在开始菜单中需要更多自定义，请使用此选项。 [自定义和导出开始布局](/hololens/hololens-kiosk#start-layout-for-hololens)提供了一些指导，并包含适用于 Windows Holographic for Business 设备的特定 XML 文件。
 
 - **Windows 任务栏**：在 Windows Holographic for Business 上不支持。
 - **允许访问 Downloads 文件夹**：在 Windows Holographic for Business 上不支持。

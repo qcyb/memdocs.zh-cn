@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0a0b1913b200c8316be98cc7df5de4b8d63d0d18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80220160"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911431"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>使用 Microsoft Intune 的基于角色的访问控制 (RBAC)
 
@@ -30,14 +30,14 @@ ms.locfileid: "80220160"
 
 若要创建、编辑或分配角色，你的帐户必须在 Azure AD 中具有以下权限之一：
 - **全局管理员**
-- Intune 服务管理员（也称为 Intune 管理员）  
+- Intune 服务管理员（也称为 Intune 管理员）********
 
 有关 Intune RBAC 的建议和意见，可查看此系列的五个视频，它们展示了示例和演练：[1](https://www.youtube.com/watch?v=5deXLMLcnKY)、[2](https://www.youtube.com/watch?v=38dnMBLuxbQ)、[3](https://www.youtube.com/watch?v=6vqg9cAkMbY)、[4](https://www.youtube.com/watch?v=5yOLajFFMHE)、[5](https://www.youtube.com/watch?v=P5DDvsSF4Wk)。
 
 ## <a name="roles"></a>角色
 角色定义授予分配给该角色的用户的权限集。
 可以使用内置和自定义角色。 内置角色涵盖一些常见的 Intune 方案。 可以使用所需的确切权限集[创建自己的自定义角色](create-custom-role.md)。 一些 Azure Active Directory 角色具有对 Intune 的权限。
-要查看角色，请选择“Intune” > “角色” > “所有角色”> 选择一个角色    。 你将看到以下页面：
+要查看角色，请选择“Intune” > “角色” > “所有角色”> 选择一个角色  。 你将看到以下页面：
 
 - **属性**：角色的名称、说明、类型、分配和作用域标记。 
 - **权限**：列出一组定义该角色具有哪些权限的开关。
@@ -48,8 +48,8 @@ ms.locfileid: "80220160"
 
 - **支持人员操作员**：对用户和设备执行远程任务，并可以将应用或策略分配到用户或设备。
 - **策略和配置文件管理员**：管理符合性策略、配置文件、Apple 注册、企业设备标识符和安全性基线。
-- **只读操作员**：查看用户、设备、注册、配置和应用信息。 无法更改 Intune。
-- **应用管理员**：管理移动应用和托管应用，并可以读取设备信息和查看设备配置文件。
+- 只读操作员：查看用户、设备、注册、配置和应用程序信息****。 无法更改 Intune。
+- **应用程序管理员**：管理移动和托管应用程序，可读取设备信息和查看设备配置文件。
 - **Intune 角色管理员**：管理自定义 Intune 角色，并添加内置 Intune 角色分配。 这是唯一可向管理员分配权限的 Intune 角色。
 - **学校管理员**：管理 [Intune for Education](introduction-intune-education.md) 中的 Windows 10 设备。
 - **终结点安全管理器**：管理安全和合规性功能，例如安全基线、设备合规性、条件访问和 Microsoft Defender ATP。
@@ -60,9 +60,9 @@ ms.locfileid: "80220160"
 ### <a name="azure-active-directory-roles-with-intune-access"></a>具有 Intune 访问权限的 Azure Active Directory 角色
 | Azure Active Directory 角色 | 所有 Intune 数据 | Intune 审核数据 |
 | --- | :---: | :---: |
-| 全局管理员 | 读/写 | 读/写 |
-| Intune 服务管理员 | 读/写 | 读/写 |
-| 条件访问管理 | 无 | 无 |
+| 全局管理员角色 | 读取/写入 | 读取/写入 |
+| Intune 服务管理员 | 读取/写入 | 读取/写入 |
+| 条件访问管理员 | 无 | 无 |
 | 安全管理员 | 只读（终结点安全性节点的完全管理权限） | 只读 |
 | 安全操作员 | 只读 | 只读 |
 | 安全读取者 | 只读 | 只读 |
@@ -71,7 +71,7 @@ ms.locfileid: "80220160"
 | 全局读取者 | 只读 | 只读 |
 
 > [!TIP]
-> Intune 还显示三个 Azure AD 扩展：“用户”  、“组”  和“条件访问”  （使用 Azure AD RBAC 进行控制）。 此外，**用户帐户管理员**仅执行 AAD 用户/组活动，而不具备在 Intune 中执行所有活动的完全权限。 有关详细信息，请参阅 [RBAC 与 Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)。
+> Intune 还显示三个 Azure AD 扩展：“用户”、“组”和“条件访问”（使用 Azure AD RBAC 进行控制）。 此外，**用户帐户管理员**仅执行 AAD 用户/组活动，而不具备在 Intune 中执行所有活动的完全权限。 有关详细信息，请参阅 [RBAC 与 Azure AD](/azure/active-directory/active-directory-assign-admin-roles)。
 
 ## <a name="role-assignments"></a>角色分配
 角色分配定义：
@@ -81,14 +81,14 @@ ms.locfileid: "80220160"
 - 用户可以更改的资源。
 
 可以为用户分配自定义和内置角色。 用户必须有 Intune 许可证，才能分配有 Intune 角色。
-要查看角色分配，请选择“Intune” > “角色” > “所有角色”> 选择一个角色 > 选择分配    。 你将看到以下页面：
+要查看角色分配，请选择“Intune” > “角色” > “所有角色”> 选择一个角色 > 选择分配  。 你将看到以下页面：
 
 - **属性**：分配的名称、说明、角色、成员、作用域和标记。
 - **成员**：列出的 Azure 安全组中的所有用户都有权管理作用域（组）中列出的用户/设备。
 - **作用域(组)** ：这些 Azure 安全组中的所有用户/设备都可以由“成员”中的用户管理。
 - **[作用域(标记)](scope-tags.md)** ：成员中的用户可以查看具有相同作用域标记的资源。
 
-### <a name="multiple-role-assignments"></a>多个角色分配
+### <a name="multiple-role-assignments"></a>多角色分配
 如果用户有多个角色分配、权限和作用域标记，这些角色分配会扩展到不同的对象，如下所示：
 
 - 分配权限和作用域标记仅适用于相应角色的分配作用域（组）中的对象（如策略或应用）。 分配权限和作用域标记不适用于其他角色分配中的对象，除非其他分配专门授予它们。

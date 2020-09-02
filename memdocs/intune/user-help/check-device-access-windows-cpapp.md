@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 24d83e5ada6109caec2f6238df44559909580931
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: af883fc950a878a70bac2f9121967254583a90d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878447"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914440"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>通过适用于 Windows 的公司门户应用检查访问
 
@@ -68,7 +68,7 @@ ms.locfileid: "83878447"
 
     ![适用于 Windows 的公司门户应用的“主页”示例屏幕截图，其中突出显示了“我的设备”部分。](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. 右键单击或按住某个设备，打开其[上下文菜单](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus)。  
+2. 右键单击或按住某个设备，打开其[上下文菜单](//windows/uwp/design/controls-and-patterns/menus)。  
 
     ![适用于 Windows 的公司门户应用的“主页”示例屏幕截图。 设备上下文菜单显示在该页面的“我的设备”部分，其中包括“重命名”、“删除”和“检查访问”操作。](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. 选择“检查访问”  。 应用会将设备与组织的当前要求进行同步并检查，确保设备符合这些要求。 此检查可能需要几分钟时间才能完成。  

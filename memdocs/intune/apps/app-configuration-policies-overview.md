@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7981f661dd345ea80f9ab92debc9657072de1f4e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461651"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907266"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune 的应用配置策略
 
@@ -71,7 +71,7 @@ ms.locfileid: "86461651"
 ![设备注册类型](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> 对于多标识应用（如 Microsoft Outlook），可以考虑用户首选项。 例如，重点收件箱将遵循用户设置，而不会更改配置。 使用其他参数可控制用户是否可以或不可以更改设置。 有关详细信息，请参阅[部署 Outlook for iOS/iPadOS 和 Outlook for Android 应用配置设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
+> 对于多标识应用（如 Microsoft Outlook），可以考虑用户首选项。 例如，重点收件箱将遵循用户设置，而不会更改配置。 使用其他参数可控制用户是否可以或不可以更改设置。 有关详细信息，请参阅[部署 Outlook for iOS/iPadOS 和 Outlook for Android 应用配置设置](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
 
 ## <a name="android-app-configuration-policies"></a>Android 应用配置策略
 
@@ -176,7 +176,7 @@ ms.locfileid: "86461651"
     
 ## <a name="graph-api-support-for-app-configuration"></a>应用配置的图形 API 支持
 
-可使用图形 API 完成应用配置任务。 有关详细信息，请参阅[针对 Graph API 参考 MAM 的配置](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta)。有关 Intune 和 Graph 的详细信息，请参阅[在 Microsoft Graph 中使用 Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta)。
+可使用图形 API 完成应用配置任务。 有关详细信息，请参阅[针对 Graph API 参考 MAM 的配置](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta)。有关 Intune 和 Graph 的详细信息，请参阅[在 Microsoft Graph 中使用 Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-beta)。
 
 ## <a name="troubleshooting"></a>疑难解答
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e388914a489ee52cd9a29102a01c8221e3037775
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: d770ee040044cdaee9e4a717e9ee3045874952b2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865680"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906899"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>向用户分配许可证，以便他们能够在 Intune 中注册设备
 
@@ -47,7 +47,7 @@ ms.locfileid: "87865680"
 
 ## <a name="assign-an-intune-license-by-using-azure-active-directory"></a>使用 Azure Active Directory 分配 Intune 许可证
 
-也可以使用 Azure Active Directory 向用户分配 Intune 许可证。 有关详细信息，请参阅 [Azure Active Directory 中的许可证用户一文](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-group-assignment-azure-portal)。 
+也可以使用 Azure Active Directory 向用户分配 Intune 许可证。 有关详细信息，请参阅 [Azure Active Directory 中的许可证用户一文](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal)。 
 
 ## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>使用“学校数据同步”向 Intune for Education 中的用户分配许可证
 
@@ -76,9 +76,9 @@ ms.locfileid: "87865680"
 - 如果通过 CC# 或转账的方式购买 Intune，则许可证将是基于用户的。
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>使用 PowerShell 来选择性地管理 EMS 用户许可证
-使用 Microsoft 企业移动性 + 安全性（以前称为“企业移动性套件”）的组织中可能会有只需要 Azure Active Directory Premium 或 EMS 包中的 Intune 服务的用户。 你可以使用 [Azure Active Directory PowerShell cmdlet](https://msdn.microsoft.com/library/jj151815.aspx) 分配一个或一部分服务。
+使用 Microsoft 企业移动性 + 安全性（以前称为“企业移动性套件”）的组织中可能会有只需要 Azure Active Directory Premium 或 EMS 包中的 Intune 服务的用户。 你可以使用 [Azure Active Directory PowerShell cmdlet](/previous-versions/azure/jj151815(v=azure.100)) 分配一个或一部分服务。
 
-若要有选择性地为 EMS 服务分配用户许可证，请使用已安装的[用于 Windows PowerShell 的 Azure Active Directory 模块](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule)在计算机上以管理员身份打开 PowerShell。 你可以在本地计算机或 ADFS 服务器上安装 PowerShell。
+若要有选择性地为 EMS 服务分配用户许可证，请使用已安装的[用于 Windows PowerShell 的 Azure Active Directory 模块](/previous-versions/azure/jj151815(v=azure.100)#bkmk_installmodule)在计算机上以管理员身份打开 PowerShell。 你可以在本地计算机或 ADFS 服务器上安装 PowerShell。
 
 必须创建仅应用于所需服务计划的新许可证 SKU 定义。 若要执行此操作，请禁用不想应用的计划。 例如，你可以创建一个不分配 Intune 许可证的许可证 SKU 定义。 若要查看从可用服务的列表，请键入：
 

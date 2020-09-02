@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a82eb416021e86347818c333e74f31318b0661ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461872"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908643"
 ---
 # <a name="what-is-device-enrollment-in-intune"></a>什么是 Intune 中的设备注册？
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -59,16 +59,16 @@ Intune 可让你管理员工的设备和应用，以及他们访问公司数据�
 |**[BYOD](#bring-your-own-device)** | 否 | “是” | 否 | [详细信息](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| 否 |否 |否 |[详细信息](device-enrollment-manager-enroll.md)|
 |**自动注册** | 否 |“是” |否 | [详细信息](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |“是” |“是” |否 | [详细信息](enrollment-autopilot.md)
+|**Autopilot** |“是” |“是” |否 | [详细信息](../../autopilot/enrollment-autopilot.md)
 |**批量注册** |否 |否 |否 | [详细信息](windows-bulk-enroll.md) |
-|**共同管理** |否 |“是” |否 | [详细信息](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |否 |“是” |否 | [详细信息](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**共同管理** |否 |“是” |否 | [详细信息](/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |否 |“是” |否 | [详细信息](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Android 注册方法
 
 | **个人** | **注册方法** | **需要重置** | **用户关联** | **Locked** | **详细信息**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android 设备管理**|**用户通过公司门户启动** | 否 | “是” | 否 | [详细信息](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android 设备管理**|**用户通过公司门户启动** | 否 | “是” | 否 | [详细信息](../user-help/enroll-device-android-company-portal.md)|
 |**Android Enterprise 工作配置文件**|**用户通过公司门户启动**| 否 | “是” | 否 | [详细信息](android-work-profile-enroll.md)|
 
 

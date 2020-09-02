@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc226279ea72a804a0d6ac0fa63f0b9bb90fe7a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 17f039bede5b179b85abd66cc4c1f3b7aaefcb3a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531547"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914168"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>使用 Microsoft Intune 将 Microsoft Defender ATP 添加到 macOS 设备
 
@@ -35,7 +35,7 @@ ms.locfileid: "84531547"
 - 使用 Intune 部署内核扩展。 有关详细信息，请参阅[ Intune 添加 macOS 内核扩展](../configuration/kernel-extensions-overview-macos.md)。
 
 > [!IMPORTANT]
-> 只有在安装 Microsoft Defender ATP 应用之前设备上存在内核扩展时，才能自动批准该扩展。 否则，用户将看到 Mac 上的“系统扩展受阻”的消息，并且必须通过转到“安全首选项”或“系统首选项” > “安全和隐私”，然后选择“允许”才能批准该扩展   。 有关详细信息，请参阅[排查 Microsoft Defender ATP for Mac 中的内核扩展问题](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext)。
+> 只有在安装 Microsoft Defender ATP 应用之前设备上存在内核扩展时，才能自动批准该扩展。 否则，用户将看到 Mac 上的“系统扩展受阻”的消息，并且必须通过转到“安全首选项”或“系统首选项” > “安全和隐私”，然后选择“允许”才能批准该扩展   。 有关详细信息，请参阅[排查 Microsoft Defender ATP for Mac 中的内核扩展问题](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext)。
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>将 Microsoft Defender ATP 添加到 Intune
 可以使用以下步骤将 Microsoft Defender ATP 添加到 Intune：
@@ -80,4 +80,3 @@ ms.locfileid: "84531547"
 - 要了解如何在 Intune 中为终结点安全应用防病毒策略，请参阅 [Intune 中终结点安全的防病毒策略](../protect/endpoint-security-antivirus-policy.md) 
 - 要了解从用户组添加和排除应用分配，请参阅[添加和排除应用分配](apps-inc-exl-assignments.md)。
 - 要了解如何将应用分配给 Intune 中的组，请参阅[将应用分配给组](apps-deploy.md)。
-

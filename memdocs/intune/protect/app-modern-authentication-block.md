@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd8070dd1584beac0744ebfae63aa4fd066fa2bf
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4703288faac219b40fae08c6551425d6f0d5e4f3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022239"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909408"
 ---
 # <a name="block-apps-that-dont-use-modern-authentication-adal"></a>屏蔽不使用新式身份验证 (ADAL) 的应用
 
@@ -41,9 +41,9 @@ ms.locfileid: "86022239"
 ## <a name="additional-information"></a>其他信息
 
 有关 Azure AD 条件访问的详细信息，请参阅以下主题：
-- [什么是 Azure Active Directory 中的条件访问？](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [什么是 Azure Active Directory 中的条件访问？](/azure/active-directory/conditional-access/overview)
 - [基于应用的条件访问的工作方式](app-based-conditional-access-intune.md#how-app-based-conditional-access-works)
-- [为 Azure Active Directory 条件访问设置 SharePoint Online 和 Exchange Online](https://docs.microsoft.com/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
+- [为 Azure Active Directory 条件访问设置 SharePoint Online 和 Exchange Online](/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58e22af70a3cf119cb044a15b40ba581fe6452c
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: 1eb64f8ed2bc67b4800a4583010dea150ade421d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86452841"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914151"
 ---
 # <a name="add-the-macos-company-portal-app"></a>添加 macOS 公司门户应用
 
@@ -40,7 +40,7 @@ ms.locfileid: "86452841"
 > 公司门户应用只能自动安装在使用 Intune 的设备上，而这些设备已通过直接注册或自动设备注册进行了注册。 对于个人设备或手动注册，必须下载并安装公司门户应用才能启动注册。 请参阅[指导用户下载并安装公司门户](#instruct-users-to-download-and-install-company-portal)。
 ## <a name="instruct-users-to-download-and-install-company-portal"></a>指导用户下载并安装公司门户
 
-你可以指导用户下载、安装和登录适用于 macOS 的公司门户。 有关下载、安装和登录公司门户的说明，请参阅 [使用公司门户应用注册 macOS 设备](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。
+你可以指导用户下载、安装和登录适用于 macOS 的公司门户。 有关下载、安装和登录公司门户的说明，请参阅 [使用公司门户应用注册 macOS 设备](../user-help/enroll-your-device-in-intune-macos-cp.md)。
 
 ##  <a name="install-company-portal-for-macos-as-a-macos-lob-app"></a>将适用于 macOS 的公司门户安装为 macOS LOB 应用
 
@@ -66,5 +66,5 @@ ms.locfileid: "86452841"
 > 此脚本在运行时需要 Internet 访问权限，以便下载最新版适用于 macOS 的公司门户。 
 ## <a name="next-steps"></a>后续步骤
 - 如需了解有关分配应用的详细信息，请参阅[将应用分配给组](apps-deploy.md)。
-- 如需深入了解有关配置自动设备注册的信息，请参阅[设备注册程序 - 注册 macOS](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos)。
-- 如需深入了解在 macOS 上配置 Microsoft 自动更新设置的信息，请参阅 [Mac 更新](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates)。
+- 如需深入了解有关配置自动设备注册的信息，请参阅[设备注册程序 - 注册 macOS](../enrollment/device-enrollment-program-enroll-macos.md)。
+- 如需深入了解在 macOS 上配置 Microsoft 自动更新设置的信息，请参阅 [Mac 更新](/windows/security/threat-protection/microsoft-defender-atp/mac-updates)。

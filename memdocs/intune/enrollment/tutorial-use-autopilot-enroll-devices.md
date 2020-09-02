@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 45ec9e0353feffdc6beb068d5b99426a734d7096
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546837"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915426"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>教程：使用 Autopilot 在 Intune 中注册 Windows 设备
 
@@ -40,12 +40,12 @@ ms.locfileid: "87546837"
 
 如果没有 Intune 订阅，请[注册免费试用帐户](../fundamentals/free-trial-sign-up.md)。
 
-有关 Autopilot 优势、方案和先决条件的概述，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。
+有关 Autopilot 优势、方案和先决条件的概述，请参阅 [Windows Autopilot 概述](/windows/deployment/windows-autopilot/windows-10-autopilot)。
 
 
 ## <a name="prerequisites"></a>必备条件
 - [设置 Windows 自动注册](quickstart-setup-auto-enrollment.md)
-- [Azure Active Directory Premium 订阅](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium 订阅](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## <a name="add-devices"></a>添加设备
@@ -128,5 +128,3 @@ ms.locfileid: "87546837"
 
 > [!div class="nextstepaction"]
 > [深入介绍 Autopilot 注册的文章](../../autopilot/enrollment-autopilot.md)
-
-

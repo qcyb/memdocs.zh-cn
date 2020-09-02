@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881465"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915511"
 ---
 # <a name="reset-device-from-company-portal-website"></a>从公司门户网站重置设备
 
@@ -32,7 +32,7 @@ ms.locfileid: "83881465"
 
 重置设备后，它不会再出现在公司门户中。 以前存在的应用和文件将被擦除，设备将还原为其出厂默认设置。 
 
-公司门户中的设备重置并非适用于所有的 iOS 设备。 如果你是 IT 支持人员，并且要了解有关设备重置及其限制的详细信息，请参阅[使用擦除或停用操作删除设备，或手动取消注册设备](https://docs.microsoft.com/intune/devices-wipe)。  
+公司门户中的设备重置并非适用于所有的 iOS 设备。 如果你是 IT 支持人员，并且要了解有关设备重置及其限制的详细信息，请参阅[使用擦除或停用操作删除设备，或手动取消注册设备](/intune/devices-wipe)。  
 
 > [!Note]
 > 此外可以从另一台已注册的设备执行这些步骤。 打开公司门户应用并完成这些步骤，获得类似的重置体验。 

@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: cf74b7b96f51658f50ae8654b0c3a7e364cac63d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820589"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911789"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>设置 Windows 设备的注册
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-本文可帮助 IT 管理员为用户简化 Windows 注册过程。 [设置 Intune](../fundamentals/setup-steps.md) 之后，用户使用其工作或学校帐户进行[登录](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal)即可注册 Windows 设备。  
+本文可帮助 IT 管理员为用户简化 Windows 注册过程。 [设置 Intune](../fundamentals/setup-steps.md) 之后，用户使用其工作或学校帐户进行[登录](../user-help/windows-enrollment-company-portal.md)即可注册 Windows 设备。  
 
 Intune 管理员可通过以下方式简化注册：
 
@@ -39,7 +39,7 @@ Intune 管理员可通过以下方式简化注册：
 
 两个因素决定了简化 Windows 设备注册的方式：
 
-- **是否使用 Azure Active Directory Premium？** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) 随附企业移动性 + 安全性和其他许可计划。
+- **是否使用 Azure Active Directory Premium？** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) 随附企业移动性 + 安全性和其他许可计划。
 - **用户将注册什么版本的 Windows 客户端？** <br>可通过添加工作或学校帐户自动注册 Windows 10 设备。 早期版本必须使用公司门户应用进行注册。
 
 ||**Azure AD Premium**|**其他 AD**|
@@ -125,7 +125,7 @@ Azure Active Directory 具有不同的 CNAME，适用于 iOS/iPadOS、Android �
 | --- | --- | --- | --- |
 | CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 小时|
 
-有关设备注册的详细信息，请参阅[使用 Azure 门户管理设备标识](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+有关设备注册的详细信息，请参阅[使用 Azure 门户管理设备标识](/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Windows 10 自动注册和设备注册
 
