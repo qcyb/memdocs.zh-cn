@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085736"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996276"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Intune 中支持的操作系统和浏览器
 
 设置 Microsoft Intune 之前，请查看所支持的操作系统和浏览器。
 
-若要获取在设备上安装 Intune 方面的帮助，请参阅[使用托管设备完成工作](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)和 [Intune 网络带宽使用情况](network-bandwidth-use.md)。
+若要获取在设备上安装 Intune 方面的帮助，请参阅[使用托管设备完成工作](../user-help/use-managed-devices-to-get-work-done.md)和 [Intune 网络带宽使用情况](network-bandwidth-use.md)。
 
-有关配置服务提供商支持的详细信息，请访问[配置服务提供商参考](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)。
+有关配置服务提供商支持的详细信息，请访问[配置服务提供商参考](/windows/client-management/mdm/configuration-service-provider-reference)。
 
 > [!NOTE]
 > Intune 现在需要 Android 5.x (Lollipop) 或更高版本的应用程序和设备，才能通过用于 Android 的公司门户应用和用于 Android 的 Intune App SDK 来访问公司资源。 此要求不适用于运行 4.4 且基于 Polycom Android 的 Teams 设备。 这些设备将继续受支持。 
@@ -103,7 +103,7 @@ ms.locfileid: "80085736"
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Microsoft 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## <a name="intune-supported-web-browsers"></a>受 Intune 支持的 Web 浏览器
 
@@ -131,6 +131,6 @@ Intune 经典门户仅用于管理向 Intune PC 软件客户端注册的设备 (
 - 启用了 Silverlight 的 Mozilla Firefox（56 版之前的版本）
 
 > [!Note]
-> Intune 经典门户不支持 Microsoft Edge 浏览器和移动浏览器，因为这些浏览器不支持 [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx)。
+> Intune 经典门户不支持 Microsoft Edge 浏览器和移动浏览器，因为这些浏览器不支持 [Microsoft Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838158(v=vs.95))。
 
 只有拥有服务管理员权限或者身份是具有全局管理员角色的租户管理员的用户才能登录到此门户。 要访问管理控制台，你的帐户必须具有使用 Intune 的许可证，并且登录状态为“已允许”  。

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 63400c81ee678a98a83ed17cf192335acf9c047b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2460a132711fb19d12f33bbada23756fc2344cca
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820284"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194240"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune 中的关于终结点安全性的防病毒策略
 
@@ -39,7 +39,7 @@ Intune 终结点安全性防病毒策略可帮助安全管理员专注于管理�
 
 - **macOS**
   - 任何支持的 macOS 版本
-  - 为了使 Intune 能够管理设备上的防病毒设置，需要在该设备上安装 Microsoft Defender ATP。 请参阅 [适用于 macOS 的 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)（在 Microsoft Defender ATP 文档中）
+  - 为了使 Intune 能够管理设备上的防病毒设置，需要在该设备上安装 Microsoft Defender ATP。 请参阅 [适用于 macOS 的 Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)（在 Microsoft Defender ATP 文档中）
 
 - **Windows 10 及更高版本**
   - 无需其他先决条件。
@@ -65,7 +65,7 @@ Intune 终结点安全性防病毒策略可帮助安全管理员专注于管理�
 
   - 配置文件：**防病毒** - 管理适用于 macOS 的[防病毒策略设置](../protect/antivirus-microsoft-defender-settings-macos.md)。
 
-    使用[适用于 Mac 的 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) 时，可以配置防病毒设置并将其部署到托管的 macOS 设备，方式是通过 Intune 而不是使用 `.plist` 文件配置这些设置。
+    使用[适用于 Mac 的 Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) 时，可以配置防病毒设置并将其部署到托管的 macOS 设备，方式是通过 Intune 而不是使用 `.plist` 文件配置这些设置。
 
 **Windows 10**：
 
@@ -77,7 +77,7 @@ Intune 终结点安全性防病毒策略可帮助安全管理员专注于管理�
 
     Microsoft Defender 防病毒配置文件是设备配置策略的设备限制配置文件中防病毒设置的一个独立实例 。
   
-    与设备限制配置文件中的防病毒设置不同，这些设置可用于共同托管的设备。 若要使用这些设置，需要将用于 Endpoint Protection 的[共同管理工作负载滑块](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)设置为 Intune。
+    与设备限制配置文件中的防病毒设置不同，这些设置可用于共同托管的设备。 若要使用这些设置，需要将用于 Endpoint Protection 的[共同管理工作负载滑块](/configmgr/comanage/how-to-switch-workloads)设置为 Intune。
 
   - 配置文件：**Microsoft Defender 防病毒排除项** - 仅管理[防病毒排除项](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions)的策略设置。
   
@@ -117,9 +117,9 @@ Intune 终结点安全性防病毒策略可帮助安全管理员专注于管理�
 
 [Microsoft Defender 防病毒策略](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **要排除的 Defender 进程** - CSP：[Defender/ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **要从扫描和实时保护中排除的文件扩展名** - CSP：[Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **要排除的 Defender 文件和文件夹** - CSP：[Defender/ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **要排除的 Defender 进程** - CSP：[Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **要从扫描和实时保护中排除的文件扩展名** - CSP：[Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **要排除的 Defender 文件和文件夹** - CSP：[Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## <a name="antivirus-policy-reports"></a>防病毒策略报告
 

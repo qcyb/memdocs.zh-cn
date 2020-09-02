@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3bb1d4806271ab40c60f0ad419e4e708d36bbc97
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823489"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194117"
 ---
 # <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Microsoft Intune 中租户附加设备的 Microsoft Defender 防病毒策略的设置。
 
@@ -30,7 +30,7 @@ ms.locfileid: "88823489"
 ## <a name="cloud-protection"></a>云保护
 
 - **启用云提供的保护**  
-  CSP：[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP：[AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   默认情况下，Windows 10 桌面版设备上的 Defender 将有关发现的任何问题的信息发送给 Microsoft。 Microsoft 分析该信息，详细了解影响你和其他客户的问题，并提供改进的解决方案。
 
@@ -39,7 +39,7 @@ ms.locfileid: "88823489"
   - **允许。**  启用 Microsoft Active Protection Service。
 
 - **云提供的保护级别**  
-  CSP：[CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP：[CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   配置 Defender 防病毒在阻止和扫描可疑文件方面的积极程度。
   - **未配置**（默认值）- 默认的 Defender 阻止级别。
@@ -48,7 +48,7 @@ ms.locfileid: "88823489"
   - **零容差** - 阻止所有未知的可执行文件。
 
 - **Defender 云扩展超时(秒)**  
-  CSP：[CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP：[CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender 防病毒会自动阻止可疑文件 10 秒钟，使其可以扫描云中的文件以确保安全性。 使用此设置，最多可以将此超时值增加 50 秒。
 
@@ -57,24 +57,24 @@ ms.locfileid: "88823489"
 对于此组中的每项设置，可以展开设置，选择“添加”，然后为排除项指定一个值。
 
 - **要排除的 Defender 进程**  
-  CSP：[ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP：[ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   指定在扫描期间要忽略的由进程打开的文件列表。 进程本身不会从扫描中排除。
 
 - **要从扫描和实时保护中排除的文件扩展名**  
-  CSP：[ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP：[ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   指定在扫描期间要忽略的文件类型扩展名的列表。
 
 - 要**排除的 Defender 文件和文件夹**  
-  CSP：[ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP：[ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   指定在扫描期间要忽略的文件和目录路径列表。
 
 ## <a name="real-time-protection"></a>实时保护
 
 - **启用实时保护**  
-  CSP：[AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP：[AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   需要 Windows 10 桌面版设备上的 Defender 使用实时监视功能。
   - **未配置**（默认值）- 设置将还原为系统默认值

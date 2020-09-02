@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725428"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194223"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>如何自定义 Intune 公司门户应用、公司门户网站和 Intune 应用
 
@@ -136,7 +136,7 @@ ms.locfileid: "88725428"
 可选择将在公司门户中显示的其他应用源。
 
 > [!NOTE]
-> 公司门户支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](/mem/configmgr/comanage/company-portal)。
+> 公司门户支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](../../configmgr/comanage/company-portal.md)。
 
 下表提供特定于应用源的配置详细信息：
 

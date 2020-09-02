@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb35fdc400c89c64b689f4695a48d201e50fc617
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cea8981b9fdd16e0d8da9dd36445b8fbdfe3d53f
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350650"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193940"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>解决 Intune Exchange Connector 的常见错误
 
@@ -145,4 +145,4 @@ IOS 设备无法在 Intune 中注册，并生成以下某种错误消息：
 
 寻求支持或 Intune 社区的帮助。
 - 请参阅[获取支持](../fundamentals/get-support.md)以使用 Intune 控制台帮助排查问题或打开 Microsoft 的支持案例。 
-- 请在 [Microsoft Intune 论坛](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)发布问题。  
+- 请在 [Microsoft Intune 论坛](/answers/products/mem)发布问题。

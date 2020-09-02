@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: b7486fa6770db03bb47ccf3e069499c02c6d598c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791746"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916038"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>通过 Intune 管理和使用 Windows Holographic 和 HoloLens 设备上的不同设备管理功能
 
-Microsoft Intune 包含许多功能，可帮助管理运行 Windows Holographic for Business 的设备，例如 [Microsoft HoloLens](https://docs.microsoft.com/hololens/)。 使用 Intune，可以确认设备是否符合组织的规则，且可通过添加 VPN 或 WiFi 配置文件来自定义设备。 另一个关键功能是将设备用作 Kiosk，并运行特定的一个或一组应用。
+Microsoft Intune 包含许多功能，可帮助管理运行 Windows Holographic for Business 的设备，例如 [Microsoft HoloLens](/hololens/)。 使用 Intune，可以确认设备是否符合组织的规则，且可通过添加 VPN 或 WiFi 配置文件来自定义设备。 另一个关键功能是将设备用作 Kiosk，并运行特定的一个或一组应用。
 
 本文中的任务可帮助管理、自定义和保护运行 Windows Holographic for Business 的设备，包括软件更新和使用 Windows Hello 企业版。
 
@@ -35,9 +35,9 @@ Microsoft Intune 包含许多功能，可帮助管理运行 Windows Holographic 
 
 Azure Active Directory (AD) 是帮助管理和控制运行 Windows Holographic for Business 的设备的绝佳资源。 使用 Intune 和 Azure AD 可以： 
 
-- **[将设备加入 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** ：在 Azure Active Directory (AD) 中，可以添加工作所有的 Windows 10 设备，包括运行 Windows Holographic for Business 的设备。 Azure AD 可使用此功能来控制设备。 此功能有助于确保用户从满足安全性和符合性标准的设备访问公司资源。
+- **[将设备加入 Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)** ：在 Azure Active Directory (AD) 中，可以添加工作所有的 Windows 10 设备，包括运行 Windows Holographic for Business 的设备。 Azure AD 可使用此功能来控制设备。 此功能有助于确保用户从满足安全性和符合性标准的设备访问公司资源。
 
-  [Azure AD 中的设备管理](https://docs.microsoft.com/azure/active-directory/devices/overview)提供了更多详细信息。
+  [Azure AD 中的设备管理](/azure/active-directory/devices/overview)提供了更多详细信息。
 
 - **[Windows 设备批量注册](../enrollment/windows-bulk-enroll.md)** ：可以将大量新 Windows 设备加入 Azure Active Directory (AD) 和 Intune。 此功能称为批量注册，并使用预配包。 这些包将运行 Windows Holographic for Business 的设备加入到 Azure AD 租户，并在 Intune 中注册它们。
 
@@ -117,7 +117,7 @@ Intune 提供可在组织内的不同设备上启用或禁用的设置和功能�
 
 可通过在 Intune 中创建一个自定义配置文件来配置 OMA-URI（开放移动联盟统一资源标识符）设置。 可使用 OMA-URI 设置来控制 Windows Holographic for Business 设备上的各种功能，例如启用 VPN 或检查 Microsoft 更新上有无更新。
 
-请参阅使用 [Windows Defender 应用程序控制 (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) 允许或阻止在 HoloLens 2 设备上打开应用的[示例](../configuration/custom-profile-hololens.md)。
+请参阅使用 [Windows Defender 应用程序控制 (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp) 允许或阻止在 HoloLens 2 设备上打开应用的[示例](../configuration/custom-profile-hololens.md)。
 
 ### <a name="configure-kiosk-mode"></a>[配置展台模式](../configuration/kiosk-settings-holographic.md)
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680398"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996684"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 macOS 设备设置
 
@@ -176,7 +176,7 @@ ms.locfileid: "84680398"
 ### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>设置适用范围：用户批准的设备注册、自动设备注册
 
 - **应用和进程**：添加应用或进程以配置访问权限。 此外请输入：
-  - **名称**：输入应用或进程的名称。 例如，输入 `Microsoft Remote Desktop` 或 `Microsoft Office 365`。
+  - **名称**：输入应用或进程的名称。 例如，输入 `Microsoft Remote Desktop` 或 `Microsoft 365`。
   
   - **标识符类型**：选项包括：
     - **程序包 ID**：为应用选择此选项。

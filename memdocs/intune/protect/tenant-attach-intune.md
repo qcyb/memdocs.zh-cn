@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d56b06b49846201d6198c1abc81185bf74765ae3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 5c3d5bd14efddc74e1898f374bbaac2aa962ebf7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823469"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193659"
 ---
 # <a name="configure-tenant-attach-to-support-endpoint-security-policies-from-intune"></a>配置租户附加以支持 Intune 中的终结点安全策略
 
@@ -187,4 +187,4 @@ ms.locfileid: "88823469"
 
 - [为*防病毒*和*终结点检测和响应*配置终结点安全策略](endpoint-security-policy.md#create-an-endpoint-security-policy)。
 
-- 阅读 Microsoft Defender ATP 文档，详细了解[终结点检测和响应](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)。
+- 阅读 Microsoft Defender ATP 文档，详细了解[终结点检测和响应](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)。

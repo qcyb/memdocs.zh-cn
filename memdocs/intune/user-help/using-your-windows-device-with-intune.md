@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179318"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057264"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>通过 Windows 公司门户使用 iOS 设备
 
@@ -33,7 +33,7 @@ ms.locfileid: "88179318"
 ## <a name="how-to-get-company-portal"></a>如何获取公司门户
 公司门户提供网站版本，也可以作为应用下载。 若要[访问公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)，请使用工作单位或学校凭据登录。  
 
-有关详细步骤和屏幕截图，请参阅[登录到公司门户](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal)。
+有关详细步骤和屏幕截图，请参阅[登录到公司门户](./sign-in-to-the-company-portal.md)。
 
 ## <a name="supported-versions"></a>支持的版本
 
@@ -67,7 +67,7 @@ ms.locfileid: "88179318"
 * [更新我的 Windows 设备](you-need-to-update-your-windows-device.md)
 * [从公司门户应用发送日志](send-logs-to-your-it-admin-cp-windows.md)
 * [从设备设置应用发送日志](send-logs-to-your-it-admin-settings-windows.md)
-* [在我的 Windows 10 设备上安装 Office 365](install-office-windows.md)
+* [在我的 Windows 10 设备上安装 Office](install-office-windows.md)
 * [我的设备需要加密](you-need-to-enable-windows-encryption.md)
 * [获取反恶意软件](your-device-needs-antimalware-software.md)
 * [启用安全启动](you-need-to-enable-secure-boot-windows.md)

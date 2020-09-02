@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 402285b871db6c3ff18e8f89ec0553a51dab9c13
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 42d77d8424464973f7a0c114193c11c9440664cf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165543"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992953"
 ---
 # <a name="reference-for-application-entities"></a>应用程序实体引用
 
@@ -77,7 +77,7 @@ appType  实体列出了应用的安装源。
 | 3 |iOS 应用商店应用 | iOS 应用商店应用。 |
 | 4 |iOS LOB 应用 | iOS 业务线应用。 |
 | 5 |托管 iOS App Store 应用 (MAM?) | 启用了管理的 iOS APP Store 应用。 |
-| 6 |O365 Pro Plus 套件 | 适用于 Windows 10 的 Microsoft 365 应用版。 |
+| 6 |Microsoft 365 企业应用版 | 适用于 Windows 10 的 Microsoft 365 应用版。 |
 | 7 |Web 应用 | Web 应用。 |
 | 8 |Windows Phone 8.1 应用商店应用 | Windows Phone 8.1 应用商店应用。 |
 | 9 |Windows 应用商店应用 | Windows 应用商店应用。 |

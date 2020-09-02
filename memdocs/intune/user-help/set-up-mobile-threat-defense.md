@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725343"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193906"
 ---
 # <a name="install-mobile-threat-defense-app"></a>安装移动威胁防御应用  
 
@@ -71,7 +71,7 @@ ms.locfileid: "88725343"
 ### <a name="device-registration"></a>设备注册  
 只有设备注册才能确认你的身份，才能将你的学校或工作帐户连接到设备。 如果你的设备未注册，则在安装 MTD 应用之前，系统会自动指导你完成屏幕上的这些步骤。   
 
-有关设备注册的详细信息，请参阅[在组织的网络上注册个人设备](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)。  
+有关设备注册的详细信息，请参阅[在组织的网络上注册个人设备](/azure/active-directory/user-help/user-help-register-device-on-network)。  
 
 ### <a name="ios-setup"></a>iOS 设置  
 这些步骤从**获取访问权限**屏幕上开始，该屏幕在你登录到受保护的应用后会显示。  
@@ -124,9 +124,9 @@ ms.locfileid: "88725343"
 
 ### <a name="share-app-logs-with-it-support"></a>与 IT 支持人员共享应用日志  
 你还可以将应用日志发送给你的 IT 支持人员，为他们提供有关安装失败的更多上下文。  
-* Android 用户：从公司门户[上传并通过电子邮件发送日志](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)。   
+* Android 用户：从公司门户[上传并通过电子邮件发送日志](./send-logs-to-your-it-admin-by-email-android.md)。   
 
-* iOS 设备用户：从适用于 iOS 的 Microsoft Edge [检索并发送日志](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)。  
+* iOS 设备用户：从适用于 iOS 的 Microsoft Edge [检索并发送日志](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)。  
 
 
 ## <a name="next-steps"></a>后续步骤  
@@ -137,4 +137,3 @@ ms.locfileid: "88725343"
 * [在 iOS 设备上使用托管应用](use-managed-apps-on-your-device-ios.md)  
 
 仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。
-
