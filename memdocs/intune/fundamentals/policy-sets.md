@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531634"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909918"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>使用策略集对管理对象集合进行分组
 
@@ -71,7 +71,7 @@ ms.locfileid: "84531634"
 5. 单击“**下一步:** 设备管理”。<br>
    通过“设备管理”页面，可以将设备管理对象添加到策略集，例如[设备配置文件](../configuration/device-profiles.md)和[设备符合性策略](../protect/device-compliance-get-started.md)  。 请确保包含所有关联的对象，例如其他策略、证书和安全基线配置文件。
 6. 单击“**下一步:** 设备注册”。<br>
-   通过“设备注册”页面，可以将设备注册对象添加到策略集，例如[设备类型限制](../enrollment/enrollment-restrictions-set.md)、[Windows Autopilot 部署配置文件](../enrollment/enrollment-autopilot.md)和[注册状态页配置文件](../enrollment/windows-enrollment-status.md)  。
+   通过“设备注册”页面，可以将设备注册对象添加到策略集，例如[设备类型限制](../enrollment/enrollment-restrictions-set.md)、[Windows Autopilot 部署配置文件](../../autopilot/enrollment-autopilot.md)和[注册状态页配置文件](../enrollment/windows-enrollment-status.md)  。
 7. 单击“**下一步:** 分配”。<br>
    通过“分配”页面，可以将策略集分配到用户和设备  。 值得注意的是，无论设备是否由 Intune 管理，都可以将策略集分配到设备。
 8. 单击“**下一步:查看 + 创建**”以查看你为配置文件输入的值。

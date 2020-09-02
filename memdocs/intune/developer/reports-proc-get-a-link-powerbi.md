@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443849"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907746"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>使用 Power BI 连接到数据仓库
 
@@ -42,7 +42,7 @@ ms.locfileid: "87443849"
 还有十分有用的有关注册、符合性、设备配置文件和软件更新的趋势。 示例图表和报表向画布应用便于用户使用的筛选器。 若要使用高级筛选器，请查看 Power BI Desktop 中的“筛选器”窗格。
 
 > [!NOTE]
-> 借助 Power BI 模板应用，Power BI 合作伙伴无需编码或只需少量编码即可构建 Power BI 应用，并将其部署到任何 Power BI 客户。 例如，可以在 v2.0 中使用 Power BI 合规性报告模板。 V2.0 包含改进的设计，以及模板中显示的计算和数据的更改。 有关详细信息，请参阅[更新模板应用](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app)、[Intune 合规性（数据仓库）应用](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)和[什么是 Power BI 模板应用？](https://docs.microsoft.com/power-bi/service-template-apps-overview)
+> 借助 Power BI 模板应用，Power BI 合作伙伴无需编码或只需少量编码即可构建 Power BI 应用，并将其部署到任何 Power BI 客户。 例如，可以在 v2.0 中使用 Power BI 合规性报告模板。 V2.0 包含改进的设计，以及模板中显示的计算和数据的更改。 有关详细信息，请参阅[更新模板应用](/power-bi/service-template-apps-install-distribute#update-a-template-app)、[Intune 合规性（数据仓库）应用](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)和[什么是 Power BI 模板应用？](/power-bi/service-template-apps-overview)
 
 以下步骤介绍如何下载 Power BI 文件以及如何配合使用 Power BI 和 OData 链接。
 

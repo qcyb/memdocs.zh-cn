@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 64e15e05ba7613b8bf2941d00a48c19292fafc90
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693499"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909748"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune 移动设备管理 (MDM) 生命周期概述
 
-用户管理的所有设备都有一个生命周期。 Intune 可帮助管理此生命周期（从注册到配置和保护，再到不再需要时停用设备）。 下面是一个示例：首先需要向 Microsoft Intune 帐户注册你公司购买的 iPad，以便你的公司能够管理它；然后，需要根据你公司的喜好进行配置；然后，用户存储在其中的数据需要受到保护；最后，当不再需要该 iPad 时，必须[停用或擦除](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe)其中的所有敏感数据。
+用户管理的所有设备都有一个生命周期。 Intune 可帮助管理此生命周期（从注册到配置和保护，再到不再需要时停用设备）。 下面是一个示例：首先需要向 Microsoft Intune 帐户注册你公司购买的 iPad，以便你的公司能够管理它；然后，需要根据你公司的喜好进行配置；然后，用户存储在其中的数据需要受到保护；最后，当不再需要该 iPad 时，必须[停用或擦除](../remote-actions/devices-wipe.md)其中的所有敏感数据。
 
 ![设备生命周期](./media/device-lifecycle/device-lifecycle.png "Intune 设备生命周期")
 

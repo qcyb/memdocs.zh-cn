@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051666"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907290"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>通过 Apple 自动设备注册自动注册 iOS/iPadOS 设备
 
@@ -154,7 +154,7 @@ Apple 在 iOS/iPadOS 5 中引入了受监督模式。 可对处于监督模式�
 4. 选择“下一步:设备管理设置”。
 
 5. 对于“用户关联”，选择具有此配置文件的设备是否必须通过已分配的用户进行注册。
-    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 如果使用的是 ADFS，且使用设置助理进行身份验证，则需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)[（了解更多）](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
+    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 如果使用的是 ADFS，且使用设置助理进行身份验证，则需要 [WS-Trust 1.3 用户名/混合终结点](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10))[（了解更多）](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)。
 
     - 不通过用户关联进行注册 - 为不属于单个用户的设备选择此选项。 此选项适用于不访问本地用户数据的设备。 若要使最终用户能够登录到 iOS 公司门户并将自己设置为设备的主要用户，请将 `IntuneUDAUserlessDevice` 密钥发送到托管设备的应用配置策略中的 iOS 公司门户。 请注意，仅会将第一位登录用户设置为主要用户。 第一位用户注销，第二位用户登录时，第一位用户仍是设备的主要用户。 有关详细信息，请参阅[配置公司门户应用，使其支持 iOS 和 iPadOS DEP 设备](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices)。 
 

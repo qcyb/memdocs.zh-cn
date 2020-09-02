@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 106c08b6e988c104858a06ef9843ebcb2e3ae93a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b8ef2832d853ae98da99cfd505adc7799c115a7b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079767"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907712"
 ---
 # <a name="data-apple-sends-to-intune"></a>Apple 发送到 Intune 的数据
 
@@ -33,7 +33,7 @@ ms.locfileid: "82079767"
 
 - [Apple 设备注册计划 (DEP)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple MDM Push Certificate (APNs)](../enrollment/apple-mdm-push-certificate-get.md)
-- [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
+- [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
 - [Apple Volume Purchase Program (VPP)](../apps/vpp-apps-ios.md)
 
 在 Microsoft Intune 可以建立连接之前，必须为每个 Apple 服务创建一个 Apple 帐户。
@@ -108,5 +108,3 @@ ms.locfileid: "82079767"
 
 
 若要停止通过 Microsoft Intune 使用 Apple 服务并删除数据，必须同时禁用 Microsoft Intune Apple 令牌并删除 Apple 帐户。 请参阅 Apple 帐户如何执行帐户管理。
-
-

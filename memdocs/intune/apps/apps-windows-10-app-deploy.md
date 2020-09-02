@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985925"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907797"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>使用 Microsoft Intune 部署 Windows 10 应用 
 
@@ -69,7 +69,7 @@ Microsoft Intune 支持 Windows 10 设备上的各种应用类型和部署方案
 
 ## <a name="microsoft-store-for-business-apps"></a>适用于企业的 Microsoft Store 应用
 
-适用于企业的 Microsoft Store 应用是从适用于企业的 Microsoft Store 管理门户购买的新式应用。 然后会将它们同步到 Microsoft Intune 进行管理。 这些应用可以在线获得许可或离线获得许可。 Microsoft Store 直接管理更新，管理员无需执行其他操作。管理员还可以使用自定义统一资源标识符 (URI) 阻止对特定应用的更新。 有关详细信息，请参阅 [Enterprise 应用管理 - 防止应用自动更新](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates)。 用户还可以禁用设备上所有适用于企业的 Microsoft Store 应用的更新。 
+适用于企业的 Microsoft Store 应用是从适用于企业的 Microsoft Store 管理门户购买的新式应用。 然后会将它们同步到 Microsoft Intune 进行管理。 这些应用可以在线获得许可或离线获得许可。 Microsoft Store 直接管理更新，管理员无需执行其他操作。管理员还可以使用自定义统一资源标识符 (URI) 阻止对特定应用的更新。 有关详细信息，请参阅 [Enterprise 应用管理 - 防止应用自动更新](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates)。 用户还可以禁用设备上所有适用于企业的 Microsoft Store 应用的更新。 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>为适用于企业的 Microsoft Store 应用分类 
 为适用于企业的 Microsoft Store 应用分类： 
@@ -106,7 +106,7 @@ Microsoft Intune 支持 Windows 10 设备上的各种应用类型和部署方案
   - 错误：不能将用户作为设备上下文安装的目标。
 
 > [!IMPORTANT]
-> 与 Autopilot 白色手套预配方案结合使用时，在设备上下文中部署的 LOB 应用和适用于企业的 Microsoft Store 应用不需要面向设备组。 有关详细信息，请参阅 [Windows Autopilot 白色手套部署](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)。
+> 与 Autopilot 白色手套预配方案结合使用时，在设备上下文中部署的 LOB 应用和适用于企业的 Microsoft Store 应用不需要面向设备组。 有关详细信息，请参阅 [Windows Autopilot 白色手套部署](/windows/deployment/windows-autopilot/white-glove)。
 
 > [!Note]
 > 使用特定部署保存应用分配后，无法为该分配更改上下文，新式应用除外。 对于新式应用，可以将上下文从用户上下文更改为设备上下文。 

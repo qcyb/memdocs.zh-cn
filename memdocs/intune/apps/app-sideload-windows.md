@@ -16,19 +16,19 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: fb981563c2d98389f6d1dda4d050e391e9ad5637
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179615"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910462"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>对业务线应用进行签名，以便可以将其部署到具有 Intune 的 Windows 设备
 
 作为 Intune 管理员，可以将业务线 (LOB) 通用应用部署到 Windows 8.1 桌面版或 Windows 10 桌面版和移动版设备，包括公司门户应用。 若要将 .appx  应用部署到 Windows 8.1 桌面版或 Windows 10 桌面版和移动版设备，你可以使用 Windows 设备已信任的公共证书颁发机构颁发的代码签名证书，也可以使用自己的证书颁发机构。
 
  > [!NOTE]
- > Windows 8.1 桌面版需要使用企业策略来启用旁加载或使用旁加载密钥（对于加入域的设备，自动启用）。 有关详细信息，请参阅 [Windows 8 旁加载](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/)。
+ > Windows 8.1 桌面版需要使用企业策略来启用旁加载或使用旁加载密钥（对于加入域的设备，自动启用）。 有关详细信息，请参阅 [Windows 8 旁加载](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet)。
 
 ## <a name="windows-10-sideloading"></a>Windows 10 旁加载
 
@@ -36,11 +36,11 @@ ms.locfileid: "88179615"
 
 - 可以使用企业策略解锁设备以进行旁加载。 Intune 提供名为“受信任的应用安装”的设备配置策略。 对于已经信任用来对 appx 应用进行签名的证书的设备，只需要将此策略设置为 <allow>。
 
-- 不需要 Symantec 电话证书和旁加载许可证密钥。 但是，如果本地证书颁发机构不可用，则可能需要从公共证书颁发机构获取代码签名证书。 有关详细信息，请参阅[代码签名简介](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing)。
+- 不需要 Symantec 电话证书和旁加载许可证密钥。 但是，如果本地证书颁发机构不可用，则可能需要从公共证书颁发机构获取代码签名证书。 有关详细信息，请参阅[代码签名简介](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing)。
 
 ### <a name="code-sign-your-app"></a>对你的应用进行代码签名
 
-第一步是对 appx 包进行代码签名。 有关详细信息，请参阅[如何使用 SignTool 对应用包进行签名](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool)。
+第一步是对 appx 包进行代码签名。 有关详细信息，请参阅[如何使用 SignTool 对应用包进行签名](/windows/uwp/packaging/sign-app-package-using-signtool)。
 
 ### <a name="upload-your-app"></a>上传应用
 
@@ -98,7 +98,7 @@ Windows 8.1 桌面版/Windows 10 桌面版和移动版
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. 返回到 Intune，然后将公司门户作为新的应用上载。 将其作为所需的应用部署到所需的目标用户集。  
 
-有关 Intune 如何处理通用应用的依赖项的详细信息，请参阅[通过 Microsoft Intune MDM 部署具有依赖项的 appxbundle](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/)。  
+有关 Intune 如何处理通用应用的依赖项的详细信息，请参阅[通过 Microsoft Intune MDM 部署具有依赖项的 appxbundle](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm)。  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>如果已从应用商店安装旧版应用，那么如何更新用户设备上的公司门户？
 
@@ -136,4 +136,4 @@ Windows 8.1 桌面版/Windows 10 桌面版和移动版
 |      PublisherId      |      企业的发布者 ID。 如果不存在，则使用 Symantec 企业移动代码签名证书的“使用者”字段。       |
 |        SdkPath        | 适用于 Windows 10 的 Windows SDK 的根文件夹路径。 此参数为可选，默认为 ${env:ProgramFiles(x86)}\Windows Kits\10 |
 
-在运行结束时，该脚本将输出签名版本的 Windows 10 公司门户应用。 然后可以通过 Intune 将签名版应用部署为 LOB 应用，后者会将当前部署的版本升级到此新的应用。  
+在运行结束时，该脚本将输出签名版本的 Windows 10 公司门户应用。 然后可以通过 Intune 将签名版应用部署为 LOB 应用，后者会将当前部署的版本升级到此新的应用。

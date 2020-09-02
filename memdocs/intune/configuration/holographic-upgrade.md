@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d561d2682cf90d5d7075640c260d8f21c8b891b1
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 65a45b13a91671c1de9bcf04f23156d75313285f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556109"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907763"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>将运行 Windows Holographic 的设备升级到 Windows Holographic for Business
 
 Microsoft Intune 包含许多有助于管理和保护设备的设置。 本文列出并介绍了用于将 Windows Holographic 设备升级为 Windows Holographic for Business 的设置。
 
-作为移动设备管理 (MDM) 解决方案的一部分，请使用这些设置升级 Windows Holographic 设备。 对于 Microsoft HoloLens，可以通过购买商业套件来获得升级所需的许可证。 有关详细信息，请参阅[解锁 Windows Holographic for Business 功能](https://docs.microsoft.com/hololens/hololens1-upgrade-enterprise)。
+作为移动设备管理 (MDM) 解决方案的一部分，请使用这些设置升级 Windows Holographic 设备。 对于 Microsoft HoloLens，可以通过购买商业套件来获得升级所需的许可证。 有关详细信息，请参阅[解锁 Windows Holographic for Business 功能](/hololens/hololens1-upgrade-enterprise)。
 
 作为 Intune 管理员，可以创建这些设置，并将它们分配到设备。
 

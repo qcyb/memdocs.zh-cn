@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26bf4910e6745a60634a2b313a37beeb33192d3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9c7300c03ce0ba703f423aa420e9e47534ef2968
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986895"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908677"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>与现有本地代理服务器结合使用
 
 本文介绍如何将适用于 Active Directory 的 Intune 连接器配置为与出站代理服务器结合使用。 这适用于网络环境中已有代理的客户。
 
-默认情况下，适用于 Active Directory 的 Intune 连接器将尝试使用 Web 代理自动发现 (WPAD) 自动定位网络上的代理服务器。 如果已在网络上配置此配置，则可能不需要其他配置。  如果需要进行更改，以下各节介绍如何利用[用于配置代理设置的标准 .NET Framework 功能](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)替代默认设置。  该文档中介绍了其他选项。
+默认情况下，适用于 Active Directory 的 Intune 连接器将尝试使用 Web 代理自动发现 (WPAD) 自动定位网络上的代理服务器。 如果已在网络上配置此配置，则可能不需要其他配置。  如果需要进行更改，以下各节介绍如何利用[用于配置代理设置的标准 .NET Framework 功能](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)替代默认设置。  该文档中介绍了其他选项。
 
-有关连接器工作方式的详细信息，请参阅[了解 Azure AD 应用程序代理连接器](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors)。
+有关连接器工作方式的详细信息，请参阅[了解 Azure AD 应用程序代理连接器](/azure/active-directory/manage-apps/application-proxy-connectors)。
 
 ## <a name="completely-bypass-outbound-proxies"></a>完全绕过出站代理
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 80f49d00f042037d0833df9536d792fda6f9068b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179479"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910360"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>在 Intune 中的 Windows 10 设备上使用 PowerShell 脚本
 
@@ -51,14 +51,14 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
   
 - 加入 Azure Active Directory (AD) 的设备，其中包括：  
   
-  - 已联接混合 Azure AD 的设备：同时加入 Azure Active Directory (AD) 和本地 Active Directory (AD) 的设备。 相关指南请参阅[规划混合 Azure Active Directory 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)。
+  - 已联接混合 Azure AD 的设备：同时加入 Azure Active Directory (AD) 和本地 Active Directory (AD) 的设备。 相关指南请参阅[规划混合 Azure Active Directory 联接实现](/azure/active-directory/devices/hybrid-azuread-join-plan)。
   
   > [!TIP]
-  > 确保设备已[加入](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) Azure AD。 仅在 Azure AD 中[注册](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)的设备不会收到你的脚本。  
+  > 确保设备已[加入](/azure/active-directory/user-help/user-help-join-device-on-network) Azure AD。 仅在 Azure AD 中[注册](/azure/active-directory/user-help/user-help-register-device-on-network)的设备不会收到你的脚本。  
 
 - 在 Intune 中注册的设备，其中包括：
 
-  - 在组策略 (GPO) 中注册的设备。 相关指南请参阅[通过组策略自动注册 Windows 10 设备](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)。
+  - 在组策略 (GPO) 中注册的设备。 相关指南请参阅[通过组策略自动注册 Windows 10 设备](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)。
   
   - 在 Intune 中手动注册的设备，即在下述情况下注册的设备：
   
@@ -70,9 +70,9 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
   - 使用 Configuration Manager 和 Intune 的共同托管设备。 安装 Win32 应用时，请确保将“应用”工作负载设置为“试点 Intune”或“Intune”。 即使将“应用”工作负载设置为“Configuration Manager”，也会运行 PowerShell 脚本。 将 PowerShell 脚本面向设备时，Intune 管理扩展将部署到设备。 但是，如上所述，设备必须是已加入 Azure AD 或混合 Azure AD 的设备，并且必须运行 Windows 10 版本 1607 或更高版本。 若要获取指南，请参阅下列文章： 
   
-    - [什么是共同管理](https://docs.microsoft.com/configmgr/comanage/overview) 
-    - [“客户端应用”工作负载](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
-    - [如何将 Configuration Manager 工作负载切换到 Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
+    - [什么是共同管理](/configmgr/comanage/overview) 
+    - [“客户端应用”工作负载](/configmgr/comanage/workloads#client-apps)
+    - [如何将 Configuration Manager 工作负载切换到 Intune](/configmgr/comanage/how-to-switch-workloads)
   
 > [!NOTE]
 > 要了解如何使用 Window 10 虚拟机，请参阅[将 Windows 10 虚拟机与 Intune 配合使用](../fundamentals/windows-10-virtual-machines.md)。
@@ -169,7 +169,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
 ## <a name="intune-management-extension-logs"></a>Intune 管理扩展日志
 
-客户端计算机上的代理日志通常位于 `\ProgramData\Microsoft\IntuneManagementExtension\Logs`。 可以使用 [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) 查看这些日志文件。
+客户端计算机上的代理日志通常位于 `\ProgramData\Microsoft\IntuneManagementExtension\Logs`。 可以使用 [CMTrace.exe](/configmgr/core/support/cmtrace) 查看这些日志文件。
 
 ![Microsoft Intune 中的屏幕截图或 cmtrace 代理日志示例](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -210,7 +210,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
     > [!TIP]
     > Microsoft Intune 管理扩展是一项在设备上运行的服务，如同服务应用 (services.msc) 中列出中的任何其他服务一样。 设备重启后，此服务可能也会重启，并检查是否随附 Intune 服务分配了任何 PowerShell 脚本。 如果 Microsoft Intune 管理扩展服务设置为“手动”，则设备重启后可能不会重启此服务。
 
-- 确保设备已[加入 Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)。 仅加入你的工作区或组织（在 Azure AD 中[注册](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)）的设备不会收到脚本。
+- 确保设备已[加入 Azure AD](/azure/active-directory/user-help/user-help-join-device-on-network)。 仅加入你的工作区或组织（在 Azure AD 中[注册](/azure/active-directory/user-help/user-help-register-device-on-network)）的设备不会收到脚本。
 - Intune 管理扩展客户端每小时检查一次 Intune 中的脚本或策略是否发生任何更改。
 - 确认 Intune 管理扩展已下载到 `%ProgramFiles(x86)%\Microsoft Intune Management Extension`。
 - 未在 Surface Hub 或 Windows 10 的 S 模式下运行的脚本。
@@ -219,7 +219,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
 - 要隔离脚本问题，可以：
 
-  - 检查设备上的 PowerShell 执行配置。 相关指南请参阅[PowerShell 执行策略](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) 。
+  - 检查设备上的 PowerShell 执行配置。 相关指南请参阅[PowerShell 执行策略](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) 。
   - 使用 Intune 管理扩展运行示例脚本。 例如，创建 `C:\Scripts` 目录，并为每个人提供完全控制权限。 运行以下脚本：
 
     ```powershell
@@ -228,7 +228,7 @@ Intune 管理扩展具有以下先决条件。 满足先决条件后，在向用
 
     如果成功，应创建 output.txt，其中应包括“脚本已运行”文本。
 
-  - 要在不使用 Intune 的情况下测试脚本执行，请在系统帐户中本地使用 [psexec 工具](https://docs.microsoft.com/sysinternals/downloads/psexec)来运行脚本：
+  - 要在不使用 Intune 的情况下测试脚本执行，请在系统帐户中本地使用 [psexec 工具](/sysinternals/downloads/psexec)来运行脚本：
 
     `psexec -i -s`  
     

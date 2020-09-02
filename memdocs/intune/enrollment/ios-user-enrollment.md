@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093774"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907729"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>设置 iOS/iPadOS 和 iPadOS 用户注册（预览版）
 
@@ -46,7 +46,7 @@ ms.locfileid: "85093774"
 
     ![创建 Apple 注册配置文件](./media/ios-user-enrollment/create-profile.png)
 
-2. 在“基本信息”页上，输入配置文件的“名称”和“说明”，以便于管理。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 详细了解 [Azure Active Directory 动态组](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices)。
+2. 在“基本信息”页上，输入配置文件的“名称”和“说明”，以便于管理。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 详细了解 [Azure Active Directory 动态组](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices)。
 
     ![“基本信息”页](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "85093774"
 
     - **设备注册**：此配置文件中的所有用户都将使用设备注册。
     - **用户注册**：此配置文件中的所有用户都将使用用户注册。
-    - **基于用户选择进行确定**：将为此组中的所有用户提供要使用的注册类型。 当用户注册其设备时，他们可以在“我拥有此设备”和“(公司)拥有此设备”之间看到一个可选择的选项。 如果他们选择了前者，设备将使用设备注册进行注册。 如果用户选择“我拥有此设备”，则他们还可以选择保护整个设备或仅保护与工作相关的应用程序和数据。 最终用户选择是否拥有设备确定在其设备上实现哪些注册类型。 此用户选项反映在 Intune 中的“设备所有权”属性中。 若要了解有关用户体验的详细信息，请参阅[设置 iOS/iPadOS 设备对公司资源的访问](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)。
+    - **基于用户选择进行确定**：将为此组中的所有用户提供要使用的注册类型。 当用户注册其设备时，他们可以在“我拥有此设备”和“(公司)拥有此设备”之间看到一个可选择的选项。 如果他们选择了前者，设备将使用设备注册进行注册。 如果用户选择“我拥有此设备”，则他们还可以选择保护整个设备或仅保护与工作相关的应用程序和数据。 最终用户选择是否拥有设备确定在其设备上实现哪些注册类型。 此用户选项反映在 Intune 中的“设备所有权”属性中。 若要了解有关用户体验的详细信息，请参阅[设置 iOS/iPadOS 设备对公司资源的访问](../user-help/enroll-your-device-in-intune-macos-cp.md)。
     
 5. 选择“下一步”。
 
@@ -81,5 +81,3 @@ ms.locfileid: "85093774"
 2. 按你希望应用的顺序拖放列表中的配置文件。
 
 如果任何用户的配置文件之间发生冲突，则会为用户应用较高优先级的配置文件。
-
-

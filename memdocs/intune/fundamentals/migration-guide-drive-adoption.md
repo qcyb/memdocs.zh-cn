@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: ca64791256acbdcd124ee79401d116962671dd71
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462212"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909697"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>在 Microsoft Intune 中推动最终用户采用条件访问
 
@@ -65,9 +65,9 @@ ms.locfileid: "86462212"
 
 选择下列选项之一：
 
-- [在 Azure Active Directory 中配置条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [在 Azure Active Directory 中配置条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [配置新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
+- [配置新式混合身份验证](/office365/enterprise/hybrid-modern-auth-overview)
 
 - [创建用于 Exchange Online 的基于应用的条件访问策略](../protect/app-based-conditional-access-intune-create.md)
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6dae19e466d3d0e88ae07d1c82a63b098439632
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986102"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908609"
 ---
 # <a name="categorize-devices-into-groups"></a>将设备分类到组中
 
@@ -55,7 +55,7 @@ ms.locfileid: "83986102"
 ### <a name="step-2-create-azure-active-directory-security-groups"></a>步骤 2：创建 Active Directory 安全组
 在此步骤中，你将在 Azure 门户中基于设备类别和设备类别名称创建动态组。
 
-若要继续，请参阅 Azure AD 文档中的[使用属性创建高级规则](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects)。
+若要继续，请参阅 Azure AD 文档中的[使用属性创建高级规则](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects)。
 
 按照本部分中的信息可使用 **deviceCategory** 属性创建具有高级规则的设备组。 例如：（device.deviceCategory -eq“从 Azure 门户获取的设备类别名称”）   。
 

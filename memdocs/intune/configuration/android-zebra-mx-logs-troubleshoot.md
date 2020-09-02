@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c8cc44cb614154df1a128ee1f1708a3259f88169
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083845"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910037"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>对 Microsoft Intune 中的 Android Zebra 设备进行故障排除并查看出现的潜在问题
 
@@ -57,7 +57,7 @@ ms.locfileid: "80083845"
 在设备上，日志保存在 `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>通过电子邮件获取日志
-要在通过 Intune 部署配置文件后获取日志，最终用户可以使用设备上的电子邮件应用通过电子邮件向你发送日志。 在 Zebra 设备上，打开公司门户应用，然后[发送日志](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)。 使用发送日志功能还会创建 PowerLift 事件 ID，如需与 Microsoft 支持部门联系，可参考此 ID。
+要在通过 Intune 部署配置文件后获取日志，最终用户可以使用设备上的电子邮件应用通过电子邮件向你发送日志。 在 Zebra 设备上，打开公司门户应用，然后[发送日志](../user-help/send-logs-to-your-it-admin-by-email-android.md)。 使用发送日志功能还会创建 PowerLift 事件 ID，如需与 Microsoft 支持部门联系，可参考此 ID。
 
 ## <a name="read-the-logs"></a>读取日志
 

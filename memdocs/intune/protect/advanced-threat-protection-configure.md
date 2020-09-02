@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: a9c3e456722d0b747a07c3f7040edc2cdf28f264
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179513"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909578"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>在 Intune 中配置 Microsoft Defender ATP
 
@@ -84,9 +84,9 @@ ms.locfileid: "88179513"
 
 在 Intune 和 Microsoft Defender ATP 之间建立连接后，Intune 会接收到来自 Microsoft Defender ATP 的 Microsoft Defender ATP 载入配置包。 使用 Microsoft Defender ATP 的设备配置文件将此配置包部署到 Windows 设备。
 
-配置包将设备配置为与 [Microsoft Defender ATP 服务](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)进行通信以扫描文件和检测威胁。 设备还可配置为根据你创建的合规性策略向 Microsoft Defender ATP 报告设备风险级别。
+配置包将设备配置为与 [Microsoft Defender ATP 服务](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)进行通信以扫描文件和检测威胁。 设备还可配置为根据你创建的合规性策略向 Microsoft Defender ATP 报告设备风险级别。
 
-使用配置包载入设备后，不需要再次执行本操作。 还可以使用[组策略或 Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) 载入设备。
+使用配置包载入设备后，不需要再次执行本操作。 还可以使用[组策略或 Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) 载入设备。
 
 ### <a name="create-the-device-configuration-profile-to-onboard-windows-devices"></a>创建设备配置文件以载入 Windows 设备
 
@@ -105,7 +105,7 @@ ms.locfileid: "88179513"
    - **所有文件的示例共享**：选择“启用”可收集示例，并与 Microsoft Defender ATP 共享示例。 例如，如果看到可疑文件，可以将其提交至 Microsoft Defender ATP 进行深入分析。 选择“未配置”不会向 Microsoft Defender ATP 共享任何示例。
    - **加快遥测报告频率**：对于处于高风险的设备，选择“启用”此设置，可以更频繁地向 Microsoft Defender ATP 服务报告遥测。
 
-     有关这些 Microsoft Defender ATP 设置的详细信息，请参阅[使用 Microsoft Endpoint Configuration Manager 载入 Windows 10 计算机](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm)。
+     有关这些 Microsoft Defender ATP 设置的详细信息，请参阅[使用 Microsoft Endpoint Configuration Manager 载入 Windows 10 计算机](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm)。
 
 7. 选择“下一步”以打开“作用域标记”页。 作用域标记是可选的。 选择“下一步”继续操作。
 
@@ -120,7 +120,7 @@ ms.locfileid: "88179513"
 
 在 Intune 和 Microsoft Defender ATP 之间建立服务到服务连接之后，可以将 Android 设备载入到 Microsoft Defender ATP。 载入将设备配置为与 Defender ATP 进行通信，然后收集有关设备风险级别的数据。
 
-与 Windows 设备不同的是，没有运行 Android 的设备的配置包。 有关适用于 Android 的先决条件和载入说明，请参阅 Microsoft Defender ATP 文档中[适用于 Android 的 Microsoft Defender ATP 概述](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android)。
+与 Windows 设备不同的是，没有运行 Android 的设备的配置包。 有关适用于 Android 的先决条件和载入说明，请参阅 Microsoft Defender ATP 文档中[适用于 Android 的 Microsoft Defender ATP 概述](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android)。
 
 对于运行 Android 的设备，你还可以使用 Intune 策略修改 Android 上 Microsoft Defender ATP。 有关详细信息，请参阅 [Microsoft Defender ATP Web 保护](../protect/advanced-threat-protection-manage-android.md)。
 
@@ -145,7 +145,7 @@ ms.locfileid: "88179513"
   
 5. 在“合规性设置”选项卡上，展开“Microsoft Defender ATP”组并将选项“要求设备不高于计算机风险评分”设置为首选级别  。
 
-   威胁级别分类[由 Microsoft Defender ATP 确定](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue)。
+   威胁级别分类[由 Microsoft Defender ATP 确定](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue)。
 
    - **清除**：此级别是最安全的。 设备不能存在任何威胁，且仍可访问公司资源。 如果发现了任何威胁，设备都会被评估为不符合。 （Microsoft Defender ATP 使用“安全”值。）
    - **低**：如果只有低级别威胁，设备符合策略。 具有中等级别或高级别威胁的设备不符合策略。
@@ -194,5 +194,5 @@ ms.locfileid: "88179513"
 
 有关详细信息，请参阅 Microsoft Defender ATP 文档：
 
-- [Microsoft Defender ATP 条件访问](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP 风险仪表板](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP 条件访问](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP 风险仪表板](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

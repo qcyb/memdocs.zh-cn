@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 923a7c192121530d84ca2034b2ca8a4be3cc32d6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1808743685c6907c11da23f92c5e263860098bea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990755"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909680"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>使用审核日志跟踪和监视 Microsoft Intune 中的事件
 
@@ -65,7 +65,7 @@ ms.locfileid: "83990755"
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>使用 Graph API 检索审核事件
 
-要详细了解如何使用图形 API 获取长达 1 年的审核事件，请参阅[列出 auditEvents](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0)。
+要详细了解如何使用图形 API 获取长达 1 年的审核事件，请参阅[列出 auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0)。
 
 ## <a name="next-steps"></a>后续步骤
 

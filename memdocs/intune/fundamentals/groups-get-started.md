@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82834dc3a7fc60292228acbd62c7c6a8b8a94ee3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075347"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909782"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Azure 门户中的 Microsoft Intune 经典组
 
@@ -47,9 +47,9 @@ Azure AD 安全组支持将所有类型的 Intune 部署到用户和设备。 �
 ## <a name="how-to-get-started"></a>如何开始？
 
 - 阅读以下主题，了解 Azure AD 安全组及其工作原理：
-  - [使用 Azure Active Directory 组管理对资源的访问](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/)。
-  - [在 Azure Active Directory 中管理组](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)。
-  - [使用属性创建高级规则](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)。
+  - [使用 Azure Active Directory 组管理对资源的访问](/azure/active-directory/fundamentals/active-directory-manage-groups)。
+  - [在 Azure Active Directory 中管理组](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)。
+  - [使用属性创建高级规则](/azure/active-directory/users-groups-roles/groups-dynamic-membership)。
 - 确保将需要创建组的管理员添加到 **Intune 服务管理员** Azure AD 角色。 Azure AD 服务管理员角色没有**管理组**权限。
 - 如果 Intune 组使用“排除特定成员”  选项，需确定是否可在不排除项的情况下重新设计这些组，或是否需要高级规则以满足业务需求。
 

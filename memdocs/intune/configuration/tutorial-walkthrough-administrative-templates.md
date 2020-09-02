@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406595"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907888"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>教程：通过云使用 ADMX 模板和 Microsoft Intune 为 Windows 10 相关设备配置组策略
 
@@ -37,7 +37,7 @@ ADMX 模板可用于以下服务：
 - **Office**：在 [Microsoft 365 应用版、Office 2019 和 Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) 中下载。
 - **Windows**：内置于 Windows 10 OS 中。
 
-有关 ADMX 策略的详细信息，请参阅[了解支持 ADMX 的策略](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)。
+有关 ADMX 策略的详细信息，请参阅[了解支持 ADMX 的策略](/windows/client-management/mdm/understanding-admx-backed-policies)。
 
 这些模板内置于 Microsoft Intune 中，可用作管理模板配置文件。 在此配置文件中，你可以配置要包含的设置，然后将此配置文件“分配”给相关设备。
 
@@ -57,7 +57,7 @@ ADMX 模板可用于以下服务：
 
 ## <a name="prerequisites"></a>必备条件
 
-- Microsoft 365 E3 或 E5 订阅，其中包括 Intune 和 Azure Active Directory (AD) Premium。 如果没有 E3 或 E5 订阅，请[免费试用](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide)。
+- Microsoft 365 E3 或 E5 订阅，其中包括 Intune 和 Azure Active Directory (AD) Premium。 如果没有 E3 或 E5 订阅，请[免费试用](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide)。
 
   有关使用不同的 Microsoft 365 许可证可获得的好处的详细信息，请参阅[利用 Microsoft 365 实现企业转型](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans)。
 
@@ -190,10 +190,10 @@ ADMX 模板可用于以下服务：
 
 - 动态组是 Azure AD Premium 中的一项功能。 如果没有安装 Azure AD Premium，则只可以创建已分配的组。 有关动态组的详细信息，请参阅：
 
-  - [Azure Active Directory 中的动态组成员资格（第 1 部分）](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Azure Active Directory 中的动态组成员资格（第 2 部分）](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Azure Active Directory 中的动态组成员资格（第 1 部分）](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Azure Active Directory 中的动态组成员资格（第 2 部分）](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium 包括管理应用和设备时常用的其他服务，包括[多重身份验证 (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) 和[条件访问](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)。
+- Azure AD Premium 包括管理应用和设备时常用的其他服务，包括[多重身份验证 (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) 和[条件访问](/azure/active-directory/conditional-access/overview)。
 
 - 许多管理员询问何时使用用户组以及何时使用设备组。 若要获取相关指南，请参阅[用户组与设备组](device-profile-assign.md#user-groups-vs-device-groups)。
 
@@ -420,7 +420,7 @@ ADMX 模板可用于以下服务：
 > [!div class="mx-imgBorder"]
 > ![在 Microsoft Intune 中创建 OneDrive 管理模板](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-有关 OneDrive 客户端设置的详细信息，请参阅[使用组策略控制 OneDrive 同步客户端设置](https://docs.microsoft.com/onedrive/use-group-policy)。
+有关 OneDrive 客户端设置的详细信息，请参阅[使用组策略控制 OneDrive 同步客户端设置](/onedrive/use-group-policy)。
 
 ### <a name="assign-your-template"></a>分配模板
 
@@ -438,7 +438,7 @@ ADMX 模板可用于以下服务：
 本部分使用以下资源。 我们将在本部分中将安装这些资源。
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [适用于 Intune的 Microsoft Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [适用于 Intune的 Microsoft Graph API](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. 在“管理员计算机”上，以管理员身份打开 Windows PowerShell ：
 
@@ -458,7 +458,7 @@ ADMX 模板可用于以下服务：
 
     3. 输入 `Y` 以更改它。
 
-    PowerShell 的执行策略有助于防止执行恶意脚本。 有关详细信息，请参阅[关于执行策略](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)。
+    PowerShell 的执行策略有助于防止执行恶意脚本。 有关详细信息，请参阅[关于执行策略](/powershell/module/microsoft.powershell.core/about/about_execution_policies)。
 
 3. 输入：`Install-Module -Name Microsoft.Graph.Intune`
 
@@ -581,7 +581,7 @@ ADMX 模板可用于以下服务：
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你更加熟悉了 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，使用查询生成器创建了动态组，并在 Intune 中创建了管理模板来配置 [ADMX 设置](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)。 你还通过 Intune 比较了在本地和在云中使用 ADMX 模板的情况。 意外收获是，你使用 PowerShell cmdlet 创建了管理模板。
+在本教程中，你更加熟悉了 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，使用查询生成器创建了动态组，并在 Intune 中创建了管理模板来配置 [ADMX 设置](/windows/client-management/mdm/understanding-admx-backed-policies)。 你还通过 Intune 比较了在本地和在云中使用 ADMX 模板的情况。 意外收获是，你使用 PowerShell cmdlet 创建了管理模板。
 
 有关 Intune 中的管理模板的详细信息，请参阅：
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: 358d01a968c98262980f8e121d8e7e92e2880c6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512727"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907806"
 ---
 # <a name="intune-discovered-apps"></a>Intune 发现的应用
 
@@ -64,7 +64,7 @@ Intune 还提供租户中单个设备的已发现应用的列表。
 | Android Enterprise | 仅托管应用 | 仅工作配置文件中安装的应用 | 自设备注册时间起每隔 7 天刷新一次 |
 
 > [!NOTE]
-> - 如 Configuration Manager 中的[客户端应用](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps)工作负载所示，Windows 10 共同托管设备当前不会按上述计划通过 Intune 管理扩展 (IME) 收集应用清单。 若要缓解此问题，请将 Configuration Manager 中的[客户端应用](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps)工作负载切换到 Intune，以便在设备上安装 IME（Win32 清单和 PowerShell 部署需要 IME）。 请注意，此行为的任何更改或更新均在[开发中的功能](../fundamentals/in-development.md)和/或[新增功能](../fundamentals/whats-new.md)中公布。
+> - 如 Configuration Manager 中的[客户端应用](../../configmgr/comanage/workloads.md#client-apps)工作负载所示，Windows 10 共同托管设备当前不会按上述计划通过 Intune 管理扩展 (IME) 收集应用清单。 若要缓解此问题，请将 Configuration Manager 中的[客户端应用](../../configmgr/comanage/workloads.md#client-apps)工作负载切换到 Intune，以便在设备上安装 IME（Win32 清单和 PowerShell 部署需要 IME）。 请注意，此行为的任何更改或更新均在[开发中的功能](../fundamentals/in-development.md)和/或[新增功能](../fundamentals/whats-new.md)中公布。
 > - 在 2019 年 11 月之前注册的个人拥有的 macOS 设备会继续显示设备上安装的所有应用，直到设备再次注册。
 > - Android Enterprise 完全托管和专用设备不显示发现的应用。
 

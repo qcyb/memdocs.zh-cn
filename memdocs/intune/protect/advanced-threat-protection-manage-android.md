@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e3b12251117e689f3b4a5456cf20bae3797083a
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 49423d1d1b887aaf3ed3323ff36678bb7319b1ad
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264508"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909459"
 ---
 # <a name="configure-microsoft-defender-atp-on-android-devices-you-manage-with-intune"></a>在通过 Intune 管理的 Android 设备上配置 Microsoft Defender ATP
 
@@ -31,7 +31,7 @@ ms.locfileid: "87264508"
 
 ## <a name="configure-web-protection-on-devices-that-run-android"></a>在运行 Android 的设备上配置 Web 保护
 
-默认情况下，适用于 Android 的 Microsoft Defender ATP 包含并启用了 Web 保护功能。 [Web 保护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview)有助于保护设备免受 Web 威胁，并保护用户免受钓鱼网站攻击。
+默认情况下，适用于 Android 的 Microsoft Defender ATP 包含并启用了 Web 保护功能。 [Web 保护](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview)有助于保护设备免受 Web 威胁，并保护用户免受钓鱼网站攻击。
 
 虽然默认是启用的，但在某些 Android 设备上有正当的理由禁用此保护。 例如，你可以选择仅使用 Microsoft Defender ATP 应用扫描功能，或在 Web 保护扫描到有害 URL 时阻止使用 VPN。
 
@@ -127,5 +127,5 @@ Intune 支持关闭全部或部分 Web 保护功能。 你使用的方法和可�
 
 有关详细信息，请参阅 Microsoft Defender ATP 文档：
 
-- [Microsoft Defender ATP 条件访问](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP 风险仪表板](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP 条件访问](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP 风险仪表板](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

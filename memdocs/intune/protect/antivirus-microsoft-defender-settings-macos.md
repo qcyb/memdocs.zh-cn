@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
-ms.openlocfilehash: 325460e4d487ade7337fc99b8a77fd3182d6cc17
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a75fe5bac4bb99b30e21ec842dcbbe3be83e9e5b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430110"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909442"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Microsoft Intune 中适用于 Mac 的 Microsoft Defender ATP 的设置
 
-查看可以在 Microsoft Intune 中为适用于 Mac 的 Microsoft Defender ATP 的防病毒配置文件设置。 有关这些设置的详细信息，请参阅 Windows 文档中的[适用于 Mac 的 Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)。
+查看可以在 Microsoft Intune 中为适用于 Mac 的 Microsoft Defender ATP 的防病毒配置文件设置。 有关这些设置的详细信息，请参阅 Windows 文档中的[适用于 Mac 的 Microsoft Defender 高级威胁防护](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)。
 
 了解如何在 Intune 中使用[终结点安全策略](../protect/endpoint-security-policy.md)。
 

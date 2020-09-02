@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252769"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909646"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>为 Intune 中不符合要求的设备配置操作
 
@@ -29,7 +29,7 @@ ms.locfileid: "88252769"
 
 ## <a name="overview"></a>概述
 
-默认情况下，每个符合性策略都包括针对不符合性的操作（即“将设备标记为不符合”），计划为零 (0) 天 。 此默认设置使得在 Intune 检测到不符合的设备时，会立即将它标记为“不符合”。 设备标记为不合规后，Azure Active Directory (AD) [条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)会阻止设备。
+默认情况下，每个符合性策略都包括针对不符合性的操作（即“将设备标记为不符合”），计划为零 (0) 天 。 此默认设置使得在 Intune 检测到不符合的设备时，会立即将它标记为“不符合”。 设备标记为不合规后，Azure Active Directory (AD) [条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)会阻止设备。
 
 通过配置针对不符合性的操作，你可灵活决定如何处理不符合的设备以及何时处理。 例如，你可选择不立即阻止设备，并给予用户宽限期以使其符合要求。
 
@@ -107,7 +107,7 @@ ms.locfileid: "88252769"
 
 可在配置设备符合性策略时[添加针对不符合性的操作为](#add-actions-for-noncompliance)，也可稍后通过编辑策略来添加操作。 可向每个策略添加额外的操作来满足你的需求。 请记住，每个符合性策略都自动包含针对不符合性的默认操作（即“将设备标记为不符合”），计划设置为零天。
 
-若要使用设备符合性策略来阻止设备使用公司资源，必须设置 Azure AD 条件访问。 请参阅 [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)或[使用 Intune 条件访问的常见方式](conditional-access-intune-common-ways-use.md)以获取指南。
+若要使用设备符合性策略来阻止设备使用公司资源，必须设置 Azure AD 条件访问。 请参阅 [Azure Active Directory 中的条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)或[使用 Intune 条件访问的常见方式](conditional-access-intune-common-ways-use.md)以获取指南。
 
 要创建设备符合性策略，请查看下面的平台特定指南：
 

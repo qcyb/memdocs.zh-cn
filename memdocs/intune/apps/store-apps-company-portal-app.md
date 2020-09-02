@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179530"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910258"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>使用 Microsoft Intune 添加 Windows 10 公司门户应用
 
@@ -67,7 +67,7 @@ ms.locfileid: "88179530"
 
 11. 将公司门户应用作为所需应用分配到你所选的一组用户或设备。  
 
-有关 Intune 如何处理通用应用的依赖项的详细信息，请参阅 [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/)（通过 Microsoft Intune MDM 部署具有依赖项的 appxbundle）。  
+有关 Intune 如何处理通用应用的依赖项的详细信息，请参阅 [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm)（通过 Microsoft Intune MDM 部署具有依赖项的 appxbundle）。  
 
 ## <a name="frequently-asked-questions"></a>常见问题解答 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>如果用户已从 Microsoft Store 安装旧版公司门户应用，那么如何更新其设备上的应用？
@@ -110,4 +110,3 @@ ms.locfileid: "88179530"
 ## <a name="next-steps"></a>后续步骤
 
 - [将应用分配给组](apps-deploy.md)
-
