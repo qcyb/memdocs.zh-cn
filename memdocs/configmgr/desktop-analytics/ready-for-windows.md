@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995188"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193676"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for modern desktop 停用常见问题
 
@@ -49,7 +49,7 @@ ms.locfileid: "88995188"
 
 “Ready for modern desktop”目录列出了在运行 Windows 10 和 Microsoft 365 企业应用版的商业设备上受支持且已在使用的软件解决方案。 该目录可帮助 IT 经理考虑最新版本的 Windows 10 和 Microsoft 365 的部署。
 
-IT 经理提供的反馈是，他们希望这些见解与他们已经用来进行部署计划的工具集成在一起。 在 Configuration Manager 中使用[桌面分析](https://aka.ms/dadocs)和 [Microsoft 365 应用版就绪功能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)来计划和管理 Windows 10 和 Microsoft 365 企业应用版升级项目。 
+IT 经理提供的反馈是，他们希望这些见解与他们已经用来进行部署计划的工具集成在一起。 在 Configuration Manager 中使用[桌面分析](https://aka.ms/dadocs)和 [Microsoft 365 应用版就绪功能](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)来计划和管理 Windows 10 和 Microsoft 365 企业应用版升级项目。 
 
 > [!Note]
 > 自 2020 年 4 月 21 日起，Office 365 专业增强版已重命名为 Microsoft 365 企业应用版。 有关详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在控制台更新期间，你可能仍会看到 Configuration Manager 控制台和支持文档中引用的是旧名称。
@@ -122,4 +122,4 @@ Microsoft 将软件供应商提供的支持声明与它们从商业设备接收�
 
 确保你的桌面应用程序现在与 Windows 10 兼容，并在将来保持与 Windows 10 兼容。 有关详细信息，请参阅[面向开发人员的应用程序兼容性](https://developer.microsoft.com/windows/desktop/app-compatibility)。
 
-如果为 Microsoft 365 企业应用版开发解决方案，请参阅 [Office 中的 COM、VSTO 和 VBA 加载项开发最佳做法](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)。
+如果为 Microsoft 365 企业应用版开发解决方案，请参阅 [Office 中的 COM、VSTO 和 VBA 加载项开发最佳做法](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)。

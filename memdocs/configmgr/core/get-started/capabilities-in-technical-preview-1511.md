@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995477"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193632"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager Technical Preview 1511 中的功能
 
@@ -67,7 +67,7 @@ Configuration Manager 现在能够使用 Configuration Manager 软件更新管�
 
 4. 可以使用控制台中监视或报告来验证 Microsoft 365 更新的符合性。  
 
-   有关详细步骤，请参阅[使用 Configuration Manager 技术预览版管理 Microsoft 365 客户端更新](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)。  
+   有关详细步骤，请参阅[使用 Configuration Manager 技术预览版管理 Microsoft 365 客户端更新](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)。  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>支持 SQL Server AlwaysOn，实现数据库的高度可用性  
  Configuration Manager 现在支持使用 SQL Server AlwaysOn 可用性组托管站点数据库。  在安装新站点时，可以指示安装程序使用可用性组，而不是普通的 SQL Server 实例。  

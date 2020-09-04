@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129114"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432568"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -166,11 +166,8 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 功能        | 技术预览版 |
 |----------------|---------------------------|
-| 在共同管理的设备上使用公司门户应用 <!--3601237--> | [技术预览版 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | 通过 CMG 改进可用应用 <!--7033501--> | [技术预览版 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| 租户附加：对 Microsoft Endpoint Manager 管理中心中 Configuration Manager 操作的改进 <!--7518897--> | [技术预览版 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | 租户附加：管理中心内的设备时间线 <!--7141381--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| 租户附加：从管理中心安装应用程序 <!--6024389--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | 租户附加：管理中心的 CMPivot <!--6024392--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | 租户附加：从管理中心运行脚本 <!--6234688--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | 云管理网关 cmdlet 的改进 <!--6978300--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |

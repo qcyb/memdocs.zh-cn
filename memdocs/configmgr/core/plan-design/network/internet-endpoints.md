@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a71fcd23977cc105a8d64f59edc45333cbd8c451
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692668"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068229"
 ---
 # <a name="internet-access-requirements"></a>Internet 访问要求
 
@@ -264,12 +264,6 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 - `https://github.com`
 
 - `https://communityhub.microsoft.com`
-
-### <a name="monitoring-workspace-site-hierarchy-node"></a>“监视”工作区、“站点层次结构”节点
-
-如果你使用“地理视图”，则允许访问以下终结点：
-
-- `http://maps.bing.com`
 
 ## <a name="desktop-analytics"></a>桌面分析
 

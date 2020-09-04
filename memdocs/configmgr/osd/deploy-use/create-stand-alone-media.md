@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697970"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068015"
 ---
 # <a name="create-stand-alone-media"></a>创建独立媒体
 
@@ -78,7 +78,7 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
 >
 > 或者，使用自定义[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 在[安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)步骤之后，第一个**安装包**步骤之前执行该步骤。 “运行命令行”  步骤运行以下 WMIC 命令，以便在第一个“安装包”步骤运行之前启用软件分发代理：  
 >
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+> `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>分发与任务序列关联的所有内容
 

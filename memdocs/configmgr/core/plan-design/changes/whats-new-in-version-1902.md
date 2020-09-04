@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995239"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193821"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -351,7 +351,7 @@ Configuration Manager 现在支持从层次结构中的管理中心站点运行 
 
 有关此 OneDrive for Business 功能的详细信息，请参阅[将 Windows 已知文件夹重定向并移动到 OneDrive](/onedrive/redirect-known-folders)。
 
-首先，[查找你的 Microsoft 365 租户 ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)。 然后部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](https://docs.microsoft.com/onedrive/deploy-on-windows)。  
+首先，[查找你的 Microsoft 365 租户 ID](/onedrive/find-your-office-365-tenant-id)。 然后部署 OneDrive 同步客户端版本 18.111.0603.0004 或更高版本。 有关详细信息，请参阅[使用 Configuration Manager 部署 OneDrive 应用](/onedrive/deploy-on-windows)。  
 
 若要创建和部署 OneDrive for Business 配置文件，在 Configuration Manager 控制台中，转到“资产和符合性”  工作区。 展开“符合性设置”  ，然后选择“OneDrive for Business 配置文件”  节点。  
 

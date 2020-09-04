@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2ab05abee2889259cc6c92e9081e4d10e2123923
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995528"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193743"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager Technical Preview 1609 中的功能
 
@@ -347,7 +347,7 @@ Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 �
 - Office 365 客户端版本
 - Office 365 客户端语言
 - Office 365 客户端通道     
-有关详细信息，请参阅 [Microsoft 365 应用版的更新通道概述](https://docs.microsoft.com/deployoffice/overview-update-channels)。
+有关详细信息，请参阅 [Microsoft 365 应用版的更新通道概述](/deployoffice/overview-update-channels)。
 - 已在可用产品集中选择 Office 365 客户端的自动部署规则。
 
 你可以对仪表板执行以下操作：
