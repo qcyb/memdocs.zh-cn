@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262755"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993845"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>引导式方案 - 云托管的新式桌面
 
@@ -55,14 +55,14 @@ ms.locfileid: "87262755"
 
 - 在 Azure Active Directory 中设置测试用户帐户。
 - 创建运行 Windows 10 版本 1903 或更高版本的测试设备。
-- （可选）[使用 Windows Autopilot 注册测试设备](../enrollment/enrollment-autopilot.md#add-devices)。
+- （可选）[使用 Windows Autopilot 注册测试设备](../../autopilot/enrollment-autopilot.md#add-devices)。
 - （可选）允许[为组织的 Azure Active Directory 登录页添加品牌](https://go.microsoft.com/fwlink/?linkid=2102455)。
 
 ## <a name="step-2---user"></a>步骤 2 - 用户
 
 选择要在设备上设置的用户。 此人将是设备的主要用户。
 
-如果要将更多用户或设备添加到此配置，只需将用户和设备添加到由向导生成的 AAD 安全组即可。 与其他引导式方案不同，由于该配置不可自定义，因此无需多次运行向导。 只需将更多用户和设备添加到创建的 AAD 组即可。 完成该向导后，你将能够查看使用部署的建议策略生成的组。
+如果要将更多用户或设备添加到此配置，只需将用户和设备添加到由向导生成的 Azure AD 安全组即可。 与其他引导式方案不同，由于该配置不可自定义，因此无需多次运行向导。 只需将更多用户和设备添加到创建的 Azure AD 组即可。 完成该向导后，你将能够查看使用部署的建议策略生成的组。
 
 ## <a name="step-3---device"></a>步骤 3 - 设备
 
@@ -74,7 +74,7 @@ Windows Autopilot 自动配置新设备，这样用户就可以在无需 IT 人�
 
 ### <a name="option-b--manual-device-enrollment"></a>选项 B - 手动注册设备
 
-用户将在移动设备管理中手动设置并注册其新设备。 完成此方案后，请重置设备并为主要用户提供有关 Windows 设备的注册说明。 有关详细信息，请参阅[在首次运行体验期间将 Windows 10 设备加入 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)。
+用户将在移动设备管理中手动设置并注册其新设备。 完成此方案后，请重置设备并为主要用户提供有关 Windows 设备的注册说明。 有关详细信息，请参阅[在首次运行体验期间将 Windows 10 设备加入 Azure AD](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)。
 
 ## <a name="step-4---review--create"></a>步骤 4 - 查看 + 创建
 
@@ -90,12 +90,12 @@ Windows Autopilot 自动配置新设备，这样用户就可以在无需 IT 人�
         - 为 **Microsoft Intune** 应用设置为 **“全部”** ，或
         - 设置为“部分”。 另外，添加此引导式方案创建的用户组。
 2. 验证所选用户是否能够将设备加入到 Azure Active Directory。
-    - 确保 AAD 加入为：
+    - 确保 Azure AD 加入：
         - 设置为“全部”，或
         - 设置为“部分”。 同时添加此引导式方案创建的用户组。
 3. 在设备上按照以下相关步骤将其加入 Azure AD：
-    - 使用 Autopilot。 有关详细信息，请参阅 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)。
-    - 不使用 Autopilot：有关详细信息，请参阅[在首次运行体验期间将 Windows 10 设备加入 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)。
+    - 使用 Autopilot。 有关详细信息，请参阅 [Windows Autopilot 用户驱动模式](/windows/deployment/windows-autopilot/user-driven)。
+    - 不使用 Autopilot：有关详细信息，请参阅[在首次运行体验期间将 Windows 10 设备加入 Azure AD](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)。
 
 ### <a name="what-happens-when-i-click-deploy"></a>单击“部署”时会发生什么情况？
 用户和设备将被添加到新的安全组。 还将使用 Intune 推荐的设置对用户和设备进行配置，以提高公司或学校的安全性和生产力。 用户将设备加入 Azure AD 后，其他应用和设置将添加到设备中。 若要了解有关这些附加配置的详细信息，请参阅[快速入门：注册 Windows 10 设备](../enrollment/quickstart-enroll-windows-device.md)。
@@ -122,7 +122,7 @@ Windows Autopilot 自动配置新设备，这样用户就可以在无需 IT 人�
 
 用户将设备加入 Azure Active Directory 后，以下配置将应用于该设备：
 
-1. Microsoft 365 应用版将自动安装在云托管的电脑上。 其中包括熟悉的应用程序，包括 Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business 和 Word。 你可以使用这些应用程序连接到 SharePoint Online、Exchange Online 和 Skype for Business Online 等 Office 365 服务。 与 Office 的非订阅版本不同，Microsoft 365 应用版会定期更新，提供新功能。 有关新功能的列表，请参阅 Office 365 中的新增功能。
+1. Microsoft 365 应用版将自动安装在云托管的电脑上。 其中包括熟悉的应用程序，包括 Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business 和 Word。 你可以使用这些应用程序连接到 SharePoint Online、Exchange Online 和 Skype for Business Online 等 Microsoft 365 服务。 与 Office 的非订阅版本不同，Microsoft 365 应用版会定期更新，提供新功能。 有关新功能的列表，请参阅 Microsoft 365 中的新增功能。
 2. Windows 安全基线将安装在云托管的电脑上。 如果已设置 Microsoft Defender 高级威胁防护，则该引导式方案还将配置 Defender 的基线设置。 Defender 高级威胁防护向 Windows 10 安全堆栈提供了新的泄露后保护层。 结合 Windows 10 中内置的客户端技术和强大的云服务，它将有助于检测已越过其他防御措施的威胁。 
 
 ## <a name="next-steps"></a>后续步骤

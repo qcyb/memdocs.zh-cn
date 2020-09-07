@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3d7ba1f42ebffa8580e368d89ea9720e544e0063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137427"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993998"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>设置 Symantec Endpoint Protection Mobile 与 Intune 的集成
 
@@ -138,7 +138,7 @@ SEP Mobile 将运行其移动威胁防御服务的设备与 Azure AD 安全组�
 
     ![显示将 iOS/iPadOS 应用添加到 Active Directory 的图像](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-7. 使用管理目录的 Office 365 帐户的 Azure Active Directory 凭据登录。
+7. 使用管理目录的 Microsoft 365 帐户的 Azure Active Directory 凭据登录。
 
 8. 选择“接受”按钮，将 SEP Mobile iOS/iPadOS 应用添加到 Azure Active Directory。
 

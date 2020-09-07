@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: feabc9f889d0bce83c96df92f8154784e31b84e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079053"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996701"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>教程：保护托管设备上的 Exchange Online 电子邮件
 
@@ -104,11 +104,11 @@ ms.locfileid: "82079053"
 
 1. 在 Intune 中，选择“终结点安全”   > “条件访问”   > “新策略”  。
 
-2. 对于“名称”  ，请输入“Office 365 电子邮件的测试策略”  。
+2. 对于“名称”，请输入“Microsoft 365 电子邮件的测试策略”。
 
 3. 在“分配”  下，选择“用户和组”  。 在“包含”  选项卡上，选择“所有用户”  ，然后选择“完成”  。
 
-4. 在“分配”  下，选择“云应用或操作”  。 因为我们要保护 Office 365 Exchange Online 电子邮件，我们将通过执行以下步骤来进行选择：
+4. 在“分配”  下，选择“云应用或操作”  。 由于我们要保护 Microsoft 365 Exchange Online 电子邮件，我们将按照以下步骤进行选择：
 
    1. 在“包含”  选项卡上，选择“选择应用”  。
 
@@ -162,7 +162,7 @@ ms.locfileid: "82079053"
 
 ## <a name="try-it-out"></a>试试看
 
-使用已创建的策略后，尝试登录到 Office 365 电子邮件的任何 iOS 设备都将需要在 Intune 中注册并使用适用于 iOS/iPadOS 的 Outlook 移动应用。 若要在 iOS 设备上测试此方案，请尝试使用测试租户中用户的凭据登录到 Exchange Online。 系统将提示你注册该设备并安装 Outlook 移动应用。
+使用已创建的策略时，任何尝试登录到 Microsoft 365 电子邮件的 iOS 设备都需要在 Intune 中注册并使用适用于 iOS/iPadOS 的 Outlook 移动应用。 若要在 iOS 设备上测试此方案，请尝试使用测试租户中用户的凭据登录到 Exchange Online。 系统将提示你注册该设备并安装 Outlook 移动应用。
 
 1. 若要在 iPhone 上测试，请转到“设置”   > “密码和帐户”   > “添加帐户”   > “Exchange”  。
 
@@ -189,4 +189,4 @@ ms.locfileid: "82079053"
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，创建了需要在 Intune 中注册 iOS 设备并使用 Outlook 应用访问 Exchange Online 电子邮件的策略。 若要了解如何将 Intune 与条件访问结合使用来保护其他应用和服务（包括适用于 Office 365 Exchange Online 的 Exchange ActiveSync 客户端），请参阅[设置条件访问](conditional-access.md)。
+在本教程中，创建了需要在 Intune 中注册 iOS 设备并使用 Outlook 应用访问 Exchange Online 电子邮件的策略。 若要了解如何将 Intune 与条件访问结合使用来保护其他应用和服务（包括适用于 Microsoft 365 Exchange Online 的 Exchange ActiveSync 客户端），请参阅[设置条件访问](conditional-access.md)。

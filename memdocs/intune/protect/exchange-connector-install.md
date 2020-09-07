@@ -18,26 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9f275254a7b392491d01769db71d42f04c33f2
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 27d123629baa925756f842d13212f9801da13f55
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048117"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996157"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>设置本地 Intune Exchange 连接器
 
 > [!IMPORTANT]
 > 本文中的信息适用于支持使用 Exchange Connector 的客户。
 >
-> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)。  如果你的环境中设置了 Exchange Connector，则仍支持你的 Intune 租户使用该连接器，并且你有权继续访问支持其配置的 UI。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](/office365/enterprise/hybrid-modern-auth-overview) (HMA)。  如果你的环境中设置了 Exchange Connector，则仍支持你的 Intune 租户使用该连接器，并且你有权继续访问支持其配置的 UI。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
 >
 >使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
 
 为了帮助保护对 Exchange 的访问，Intune 依赖于一个称为 Microsoft Intune Exchange 连接器的本地组件。 在 Intune 控制台的某些位置，此连接器也称为“Exchange ActiveSync 本地连接器”。
 
 > [!IMPORTANT]
-> 从 2007 年（7 月）版本开始，Intune 便已从 Intune 服务中删除对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些租户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)，以保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
+> 从 2007 年（7 月）版本开始，Intune 便已从 Intune 服务中删除对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些租户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](/office365/enterprise/hybrid-modern-auth-overview)，以保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
 
 本文中的信息可帮助你安装和监视 Intune Exchange 连接器。 可结合使用此连接器与[条件访问策略](conditional-access-exchange-create.md)，以允许或阻止对 Exchange 本地邮箱的访问。
 
@@ -154,7 +154,7 @@ Intune 支持每个订阅安装多个 Intune Exchange 连接器。 如果有多�
 
    对于托管 Exchange 服务器，请提供 Exchange 服务器地址。 查找托管 Exchange 服务器 URL：
 
-   1. 打开 Outlook for Office 365。
+   1. 打开 Microsoft 365 专属 Outlook。
 
    2. 选择左上角的 **?** 图标 ，然后选择“关于”。
 
@@ -174,7 +174,7 @@ Intune 支持每个订阅安装多个 Intune Exchange 连接器。 如果有多�
 
 5. 提供凭据，将通知发送到用户的 Exchange Server 邮箱。 此用户可专用于通知。 通知用户需要 Exchange 邮箱才能通过电子邮件发送通知。 可使用 Intune 中的条件访问策略配置这些通知。
 
-   确保在 Exchange CAS 上配置自动发现服务和 Exchange Web 服务。 有关详细信息，请参阅[客户端访问服务器](https://technet.microsoft.com/library/dd298114.aspx)。
+   确保在 Exchange CAS 上配置自动发现服务和 Exchange Web 服务。 有关详细信息，请参阅[客户端访问服务器](/Exchange/architecture/client-access/client-access?view=exchserver-2019)。
 
 6. 在“密码”字段中提供此帐户的密码，使 Intune 能够访问 Exchange Server。
 

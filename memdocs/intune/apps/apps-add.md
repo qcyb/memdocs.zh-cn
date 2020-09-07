@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 394ffa75b6f272024d440fad56d68727c27531da
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252803"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996446"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>将应用添加到 Microsoft Intune 
 
@@ -56,8 +56,8 @@ Intune 支持多种不同的应用类型。 为每种应用类型提供的可用
 | iOS/iPadOS 应用商店应用  | 应用商店应用  | 选择“iOS”作为“应用类型”，搜索应用，然后在 Intune 内选择该应用 。 |
 | Microsoft 应用商店应用  | 应用商店应用  | 选择“Windows”作为“应用类型”，然后输入应用的 Microsoft 应用商店 URL 。 |
 | 托管的 Google Play 应用 | 应用商店应用  | 选择“托管 Google Play”作为“应用类型”，搜索应用，再在 Intune 中选择应用。 |
-| 适用于 Windows 10 的 Office 365 应用  | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“Windows 10”作为“应用类型”，然后选择要安装的 Office 365 应用  。  |
-| 适用于 macOS 的 Office 365 应用 | 应用商店应用 (Office 365) | 在“Microsoft 365 应用版”下选择“macOS”作为“应用类型”，然后选择 Office 365 应用套件  。 |
+| 适用于 Windows 10 的 Microsoft 365 应用  | Store 应用 (Microsoft 365) | 在“Microsoft 365 应用版”下选择“Windows 10”作为“应用类型”，然后选择要安装的 Microsoft 365 应用  。  |
+| 适用于 MacOS 的 Microsoft 365 应用 | Store 应用 (Microsoft 365) | 在“Microsoft 365 应用版”下选择“macOS”作为“应用类型”，然后选择 Microsoft 365 应用套件  。 |
 | 适用于 Windows 10 的 Microsoft Edge 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“Windows 10”作为“应用类型”  。 |
 | 适用于 macOS 的 Microsoft Edge 版本 77 及更高版本 | 应用商店应用 | 在 Microsoft Edge 版本 77 及更高版本下选择“macOS”作为“应用类型”  。 |
 | Android 业务线 (LOB) 应用 | LOB 应用 | 选择“业务线应用”作为“应用类型”，选择“应用包文件”，然后输入扩展名为 .apk 的 Android 安装文件。  |
@@ -221,8 +221,8 @@ Intune 会根据以下条件自动重新安装、更新或删除所需应用：
 - [Web 应用（适用于所有平台）](web-app.md)
 - [Microsoft Store 应用](store-apps-windows.md)
 - [Windows LOB 应用](lob-apps-windows.md)
-- [适用于 Windows 10 的 Office 365 应用](apps-add-office365.md)
-- [适用于 macOS 的 Office 365 应用](apps-add-office365-macos.md)
+- [适用于 Windows 10 的 Microsoft 365 应用](apps-add-office365.md)
+- [适用于 MacOS 的 Microsoft 365 应用](apps-add-office365-macos.md)
 - [托管的 Google Play 应用](apps-add-android-for-work.md)
 - [Microsoft Edge for Windows 10](apps-windows-edge.md)
 - [Microsoft Edge for macOS](apps-edge-macos.md)

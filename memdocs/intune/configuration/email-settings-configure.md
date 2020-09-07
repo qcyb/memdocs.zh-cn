@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 99f3dcd944270acef98cc0f1f06138d75dba4453
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88145991"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996412"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>使用 Intune 向设备添加电子邮件设置
 
-Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组织中的设备。 IT 管理员创建包含特定设置的电子邮件配置文件，以连接到邮件服务器，如 Office 365 和 Gmail。 然后，最终用户在移动设备上连接、验证和同步自己的组织电子邮件帐户。 通过创建和部署电子邮件配置文件，可以确认设置跨多个设备是标准的。 而且，有助于减少不知道正确电子邮件设置的最终用户的求助致电
+Microsoft Intune 包括各种电子邮件设置，可将这些设置部署到组织中的设备。 IT 管理员创建包含特定设置的电子邮件配置文件，以连接到邮件服务器，如 Microsoft 365 和 Gmail。 然后，最终用户在移动设备上连接、验证和同步自己的组织电子邮件帐户。 通过创建和部署电子邮件配置文件，可以确认设置跨多个设备是标准的。 而且，有助于减少不知道正确电子邮件设置的最终用户的求助致电
 。
 
 可以使用电子邮件配置文件为以下设备配置内置电子邮件设置：

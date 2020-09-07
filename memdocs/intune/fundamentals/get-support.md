@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820657"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994338"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>如何获取对 Microsoft Intune 的支持
 
 Microsoft 对 Microsoft Intune 提供全球技术、售前、帐单和订阅支持。 对于付费订阅和试用订阅，均通过在线和电话两种方式提供支持。 在线技术支持通过英语和日语提供。 电话支持和联机帐单支持可使用其他语言。
 
-Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为 Intune 提交在线支持票证。 若要创建和管理支持事件，帐户必须有 Azure Active Directory (Azure AD) 角色，其中包含操作 microsoft.office365.supportTickets。 有关创建支持票证所需的 Azure AD 角色和权限的信息，请参阅 [Azure Active Directory 中的管理员角色](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal)。
+Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为 Intune 提交在线支持票证。 若要创建和管理支持事件，帐户必须有 Azure Active Directory (Azure AD) 角色，其中包含操作 microsoft.office365.supportTickets。 有关创建支持票证所需的 Azure AD 角色和权限的信息，请参阅 [Azure Active Directory 中的管理员角色](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)。
 
 >[!IMPORTANT]
 > 有关可与 Intune 协作的第三方产品（例如 Saaswedo、Cisco 或 Lookout）的技术支持，请首先与该产品的供应商联系。 在对 Intune 支持发起请求之前，请确保已正确配置了其他产品。
@@ -50,7 +50,7 @@ Intune 管理员可以使用“帮助和支持”选项，通过 Azure 门户为
 
 错误详细信息包括“会话 ID”、“扩展”详细信息等。
 
-如果未通过 M365 管理中心 (https://admin.microsoft.com ) 或 Office 365 门户 (https://portal.office.com ) 对新租户帐户进行身份验证，则会出现此问题。 若要解决此问题，请在消息中选择 M365 管理中心对应的链接，或访问 https://portal.office.com 并登录。 在任一站点上进行身份验证后，将可以访问 Intune 的”帮助和支持“。
+如果未通过 Microsoft 365 管理中心 (https://admin.microsoft.com ) 或 Office 365 门户 (https://portal.office.com ) 对新租户帐户进行身份验证，则会出现此问题。 若要解决此问题，请在消息中选择 Microsoft 365 管理中心对应的链接，或访问 https://portal.office.com 并登录。 在任一站点上进行身份验证后，将可以访问 Intune 的”帮助和支持“。
 
 **访问帮助和支持**：
 

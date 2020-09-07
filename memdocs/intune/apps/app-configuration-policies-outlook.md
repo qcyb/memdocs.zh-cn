@@ -16,32 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3db207e4c1c75706c1f54762bf74c1757d342ac1
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: ac2133455d4440e8048e7b9aba8f9f9b13d98a53
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973037"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996531"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>通过 Microsoft Intune 使用适用于 iOS 和 Android 的 Outlook 来管理消息协作访问
 
 适用于 iOS 和 Android 的 Outlook 应用旨在通过将电子邮件、日历、联系人和其他文件组合在一起，使组织中的用户能够通过移动设备执行更多操作。
 
-订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件性访问）可获得最丰富和最广泛的 Office 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略允许从移动设备连接到适用于 iOS 和 Android 的 Outlook，还需要部署 Intune 应用保护策略，确保协作体验受到保护。
+订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件访问）可获得最丰富和最广泛的 Microsoft 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略允许从移动设备连接到适用于 iOS 和 Android 的 Outlook，还需要部署 Intune 应用保护策略，确保协作体验受到保护。
 
 ## <a name="apply-conditional-access"></a>应用条件访问
-组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Outlook 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
+组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Outlook 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
 
-1. 请遵循“步骤 1：为 Office 365 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），这允许使用适用于 iOS 和 Android 的 Outlook，但阻止支持 OAuth 的 Exchange ActiveSync 客户端连接到 Exchange Online。
+1. 请遵循“步骤 1：为 Office 365 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），这允许使用适用于 iOS 和 Android 的 Outlook，但阻止支持 OAuth 的 Exchange ActiveSync 客户端连接到 Exchange Online。
 
    > [!NOTE]
    > 此策略可确保移动用户可以使用适用的应用访问所有 Office 终结点。
 
-2. 请遵循“步骤 2：为具有 ActiveSync (EAS) 的 Exchange Online 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），该策略将阻止 Exchange ActiveSync 客户端利用基本身份验证连接到 Exchange Online。
+2. 请遵循“步骤 2：为具有 ActiveSync (EAS) 的 Exchange Online 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），该策略将阻止 Exchange ActiveSync 客户端利用基本身份验证连接到 Exchange Online。
 
-   上述策略利用授权控制[需要应用保护策略](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)，确保在授予访问权限之前，将 Intune 应用保护策略应用于适用于 iOS 和 Android 的 Outlook 中的关联帐户。 如果用户未分配到 Intune 应用保护策略，未获得 Intune 许可，或者该应用未包含在 Intune 应用保护策略中，则该策略将阻止用户获取访问令牌和访问消息数据。
+   上述策略利用授权控制[需要应用保护策略](/azure/active-directory/active-directory-conditional-access-technical-reference)，确保在授予访问权限之前，将 Intune 应用保护策略应用于适用于 iOS 和 Android 的 Outlook 中的关联帐户。 如果用户未分配到 Intune 应用保护策略，未获得 Intune 许可，或者该应用未包含在 Intune 应用保护策略中，则该策略将阻止用户获取访问令牌和访问消息数据。
 
-3. 最后，请遵循[如何：使用条件访问阻止对 Azure AD 的旧身份验证](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication)，以阻止 iOS 和 Android 设备上的其他 Exchange 协议的旧身份验证；此策略应仅面向 Office 365 Exchange Online 云应用及 iOS 和 Android 设备平台。 这可确保使用 Exchange Web 服务、IMAP4 或 POP3 协议且具有基本身份验证的移动应用无法连接到 Exchange Online。
+3. 最后，请遵循[如何：使用条件访问阻止对 Azure AD 的旧身份验证](/azure/active-directory/conditional-access/block-legacy-authentication)，以阻止 iOS 和 Android 设备上的其他 Exchange 协议的旧身份验证；此策略应仅面向 Microsoft Exchange Online 云应用及 iOS 和 Android 设备平台。 这可确保使用 Exchange Web 服务、IMAP4 或 POP3 协议且具有基本身份验证的移动应用无法连接到 Exchange Online。
 
 ## <a name="create-intune-app-protection-policies"></a>创建 Intune 应用保护策略
 
@@ -55,7 +55,7 @@ APP 数据保护框架分为三个不同的配置级别，每个级别基于上�
 
 若要查看每个配置级别的具体建议以及必须受保护的核心应用，请查看[使用应用保护策略的数据保护框架](app-protection-framework.md)。
 
-无论设备是否已注册统一终结点管理 (UEM) 解决方案，都需要使用[如何创建和分配应用保护策略](app-protection-policies.md)中的步骤来为 iOS 和 Android 应用创建 Intune 应用保护策略。 这些策略必须至少满足以下条件：
+无论设备是否已在统一终结点管理 (UEM) 解决方案中注册，都需要使用[如何创建和分配应用保护策略](app-protection-policies.md)中的步骤来为 iOS 和 Android 应用创建 Intune 应用保护策略。 这些策略必须至少满足以下条件：
 
 1. 包括所有 Microsoft 365 移动应用程序（如 Edge、Outlook、OneDrive、Office 或 Teams），因为这样可以确保用户在任何 Microsoft 应用中均能够以安全的方式访问和处理工作或学校数据。
 
@@ -79,7 +79,7 @@ APP 数据保护框架分为三个不同的配置级别，每个级别基于上�
 - S/MIME 设置
 - 数据保护设置
 
-有关 Outlook for iOS 和 Outlook for Android 支持的应用配置设置的特定过程步骤和详细文档，请参阅[部署 Outlook for iOS 和 Outlook for Android 的应用配置设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
+有关 Outlook for iOS 和 Outlook for Android 支持的应用配置设置的特定过程步骤和详细文档，请参阅[部署 Outlook for iOS 和 Outlook for Android 的应用配置设置](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)。
 
 ## <a name="next-steps"></a>后续步骤
 

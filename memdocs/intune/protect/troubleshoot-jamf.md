@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 492c6dd82e0b2c016da77b8dd6f10d9e3d4b5db6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270916"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993055"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>对 Jamf Pro 与 Microsoft Intune 的集成进行故障排除
 
@@ -38,7 +38,7 @@ ms.locfileid: "84270916"
 - 请查阅以下文章中的先决条件（具体视你如何配置 Jamf Pro 与 Intune 的集成而定）：
   - [使用 Jamf 云连接器集成 Jamf Pro 与 Intune](conditional-access-jamf-cloud-connector.md)
   - [集成 Jamf Pro 与 Intune](conditional-access-integrate-jamf.md#prerequisites)
-- 所有用户都必须具有 Microsoft Intune 和 Microsoft AAD Premium P1 许可证
+- 所有用户都必须具有 Microsoft Intune 和 Microsoft Azure AD Premium P1 许可证
 - 必须具有在 Jamf Pro 控制台中拥有 Microsoft Intune 集成权限的用户帐户。
 - 必须拥有在 Azure 中具有全局管理员权限的用户帐户。
 
@@ -85,7 +85,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 ### <a name="mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app"></a>打开应用时，Mac 设备提示进行密钥链登录  
 
-配置 Intune 和 Jamf Pro 集成并部署条件访问策略后，使用 Jamf Pro 管理设备的用户在打开 Microsoft Office 365 应用程序（如 Teams、Outlook 和其他需要 Azure AD 身份验证的应用）时，会收到密码提示。 
+配置 Intune 和 Jamf Pro 集成并部署条件访问策略后，使用 Jamf Pro 管理设备的用户在打开 Microsoft 365 应用程序（如 Teams、Outlook 和其他需要 Azure AD 身份验证的应用）时，会收到密码提示。 
 
 例如，在打开 Microsoft Teams 时，会出现一个提示，其中包含类似于以下示例的文本：
 
@@ -157,7 +157,7 @@ Jamf Pro 将设备标记为“无响应”后，设备的已注册用户必须�
 
 **解决方法**  
 若要将注册源从 Intune 更改为 Jamf：
-1. [从 Intune 取消注册 macOS 设备](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 若要避免未从 Intune 中完全删除的设备造成更多麻烦，请参阅此原因列表中的[原因 6](#cause-6)。  
+1. [从 Intune 取消注册 macOS 设备](../user-help/unenroll-your-device-from-intune-macos.md)。 若要避免未从 Intune 中完全删除的设备造成更多麻烦，请参阅此原因列表中的[原因 6](#cause-6)。  
 
 2. 在设备上，使用 Jamf 自助服务打开公司门户应用，然后使用 Intune 注册设备。 此任务要求你[使用 Jamf 来部署适用于 macOS 的公司门户应用](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)，并[在 Jamf Pro 中创建了一个使用 Azure AD 注册用户设备的策略](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)。  
 

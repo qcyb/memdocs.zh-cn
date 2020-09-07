@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501178"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995137"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>将适用于 iOS 和 Android 的 Microsoft Edge 与 Microsoft Intune 结合使用来管理 Web 访问
 
@@ -34,20 +34,20 @@ iOS 12.0 及更高版本支持适用于 iOS 的 Microsoft Edge。 Android 5 及�
 > [!NOTE]
 > 适用于 iOS 和 Android 的 Microsoft Edge 不会使用用户为设备上的本机浏览器设置的设置，因为适用于 iOS 和 Android 的 Microsoft Edge 无法访问这些设置。
 
-订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件性访问）可获得最丰富和最广泛的 Office 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略仅允许从移动设备连接到适用于 iOS 和 Android 的 Microsoft Edge，还需要部署 Intune 应用保护策略确保浏览体验受到保护。
+订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件访问）可获得最丰富和最广泛的 Microsoft 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略仅允许从移动设备连接到适用于 iOS 和 Android 的 Microsoft Edge，还需要部署 Intune 应用保护策略确保浏览体验受到保护。
 
 > [!NOTE]
 > 如果需要在受保护的浏览器中打开 iOS 设备上的新 Web 剪辑（固定的 Web 应用），则将在适用于 iOS 和 Android 的 Microsoft Edge（而不是在 Intune Managed Browser 中）打开它们。 对于较旧的 iOS Web 剪辑，必须重定向这些 Web 剪辑，以确保它们在适用于 iOS 和 Android 的 Microsoft Edge 而不是 Managed Browser 中打开。
 
 ## <a name="apply-conditional-access"></a>应用条件访问
-组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Edge 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
+组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Edge 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
 
-1. 参照[场景 2：浏览器应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies)，这允许使用适用于 iOS 和 Android 的 Microsoft Edge，但阻止其他移动设备 Web 浏览器连接到 Office 365 终结点。
+1. 参照[场景 2：浏览器应用要求批准的应用具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies)，这允许使用适用于 iOS 和 Android 的 Microsoft Edge，但阻止其他移动设备 Web 浏览器连接到 Office 365 终结点。
 
    >[!NOTE]
-   > 此策略可确保移动用户可以从适用于 iOS 和 Android 的 Microsoft Edge 内访问所有 Office 365 终结点。 此策略还会阻止用户使用 InPrivate 访问 Office 365 终结点。
+   > 此策略确保移动用户可以从适用于 iOS 和 Android 的 Edge 内访问所有 Microsoft 365 终结点。 此策略还会阻止用户使用 InPrivate 访问 Microsoft 365 终结点。
 
-使用条件访问，你还可以针对通过 [Azure AD 应用程序代理](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)向外部用户公开的本地站点。
+使用条件访问，你还可以针对通过 [Azure AD 应用程序代理](/azure/active-directory/active-directory-application-proxy-get-started)向外部用户公开的本地站点。
 
 ## <a name="create-intune-app-protection-policies"></a>创建 Intune 应用保护策略
 
@@ -268,7 +268,7 @@ Microsoft Edge 支持以下配置设置：
 - 密码
 - 地址以及更多内容（自动填充表单项）
 
-同步功能经用户同意启用，用户可以为上面列出的每种数据类型开启或关闭同步。 有关详细信息，请参阅 [Microsoft Edge 同步](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync)。
+同步功能经用户同意启用，用户可以为上面列出的每种数据类型开启或关闭同步。 有关详细信息，请参阅 [Microsoft Edge 同步](/DeployEdge/microsoft-edge-enterprise-sync)。
 
 组织可以在 iOS 和 Android 上禁用 Microsoft Edge 同步。 
 
@@ -343,7 +343,7 @@ Microsoft Edge 支持以下配置设置：
 
 ### <a name="manage-proxy-configuration"></a>管理代理配置
 
-可以将适用于 iOS 和 Android 的 Microsoft Edge 和 [Azure AD 应用程序代理](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)一起使用，使用户能够在其移动设备上访问 Intranet 站点。 例如： 
+可以将适用于 iOS 和 Android 的 Microsoft Edge 和 [Azure AD 应用程序代理](/azure/active-directory/active-directory-application-proxy-get-started)一起使用，使用户能够在其移动设备上访问 Intranet 站点。 例如： 
 
 - 一个用户使用受 Intune 保护的 Outlook 移动应用。 然后，该用户单击电子邮件中一个指向 Intranet 站点的链接，适用于 iOS 和 Android 的 Microsoft Edge 识别出该站点已通过应用程序代理向用户公开。 将通过应用程序代理对用户进行自动路由，以便在进入 Intranet 站点前进行任何适用的多重身份验证和条件性访问。 该用户现在甚至可以在其移动设备上访问内部网站，而 Outlook 中的链接也如预期一样正常运行。
 - 用户在其 iOS 或 Android 设备上打开适用于 iOS 和 Android 的 Microsoft Edge。 如果适用于 iOS 和 Android 的 Microsoft Edge 受 Intune 保护，并且应用程序代理已启用，则用户可使用其习惯使用的内部 URL 转到 Intranet 站点。 适用于 iOS 和 Android 的 Microsoft Edge 识别出这个 Intranet 站点已通过应用程序代理向用户公开。 通过应用程序代理自动对用户进行路由，以便在访问 Intranet 站点前进行身份验证。 
@@ -351,7 +351,7 @@ Microsoft Edge 支持以下配置设置：
 开始之前：
 
 - 通过 Azure AD 应用程序代理设置内部应用程序。
-  - 要配置应用程序代理和发布应用程序，请参阅[设置文档](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)。
+  - 要配置应用程序代理和发布应用程序，请参阅[设置文档](/azure/active-directory/manage-apps/application-proxy)。
 - 适用于 iOS 和 Android 的 Microsoft Edge 应用用户必须分配有 [Intune 应用保护策略](app-protection-policy.md)。
 - Microsoft 应用必须具有以下应用保护策略：数据传输设置“限制与其他应用的 Web 内容传输”设置为“Microsoft Edge” 。
 
@@ -438,7 +438,7 @@ Microsoft Edge 支持以下配置设置：
 
 对于应用日志中存储的设置列表，请参阅[查看客户端应用保护日志](app-protection-policy-settings-log.md)。
 
-若要了解如何在 Android 设备上查看日志，请参阅[通过电子邮件将日志发送给 IT 管理员](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)。
+若要了解如何在 Android 设备上查看日志，请参阅[通过电子邮件将日志发送给 IT 管理员](../user-help/send-logs-to-your-it-admin-by-email-android.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

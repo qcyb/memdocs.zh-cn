@@ -1,7 +1,7 @@
 ---
-title: 使用 Microsoft Intune 将 Office 365 应用安装到 macOS 设备
+title: 使用 Microsoft Intune 将 Microsoft 365 应用安装到 macOS 设备
 titleSuffix: ''
-description: 了解如何使用 Microsoft Intune 在 macOS 设备上安装 Office 365 应用。
+description: 了解如何使用 Microsoft Intune 在 macOS 设备上安装 Microsoft 365 应用。
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2eb8ea29739e2478df68e3b9926f111f2ee8d0e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989516"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996480"
 ---
-# <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>使用 Microsoft Intune 将 Office 365 分配给 macOS 设备
+# <a name="assign-microsoft-365-to-macos-devices-with-microsoft-intune"></a>使用 Microsoft Intune 将 Microsoft 365 分配给 macOS 设备
 
-借助此应用类型，可以轻松地将 Office 365 2016 应用分配给 macOS 设备。 使用此应用类型，可安装 Word、Excel、PowerPoint、Outlook、OneNote 和 Teams。 为帮助保护和不断更新应用，这些应用随附 Microsoft AutoUpdate (MAU)。 所需的应用将显示为 Intune 控制台的应用列表中的一个应用。
+借助此应用类型，可以轻松地将 Microsoft 365 应用分配给 macOS 设备。 使用此应用类型，可安装 Word、Excel、PowerPoint、Outlook、OneNote 和 Teams。 为帮助保护和不断更新应用，这些应用随附 Microsoft AutoUpdate (MAU)。 所需的应用将显示为 Intune 控制台的应用列表中的一个应用。
 
 > [!NOTE]
 > Microsoft Office 365 专业增强版已重命名为 Microsoft 365 企业应用版  。 在我们的文档中，我们通常将它称为  Microsoft 365 应用版。
 
 ## <a name="before-you-start"></a>开始之前
 
-开始将 Office 365 应用添加到 macOS 设备前，请了解以下详细信息：
+开始将 Microsoft 365 应用添加到 macOS 设备前，请了解以下详细信息：
 
 - 部署这些应用的设备必须运行 macOS 10.10 或更高版本。
 - Intune 仅支持添加 Office 2016 for Mac 套件随附的 Office 应用。
@@ -89,5 +89,5 @@ ms.locfileid: "83989516"
 
 ## <a name="next-steps"></a>后续步骤
 
-- 要了解如何将 Office 365 应用添加到 Windows 10 设备，请参阅[使用 Microsoft Intune 将 Microsoft 365 应用版分配给 Windows 10 设备](apps-add-office365.md)。
+- 若要了解如何将 Microsoft 365 应用添加到 Windows 10 设备，请参阅[使用 Microsoft Intune 将 Microsoft 365 应用版分配给 Windows 10 设备](apps-add-office365.md)。
 - 要了解从用户组添加和排除应用分配，请参阅[添加和排除应用分配](apps-inc-exl-assignments.md)。

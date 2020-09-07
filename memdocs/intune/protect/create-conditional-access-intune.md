@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e40f9bc84e4969e963629479f22a6f988e025c4e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ed80cd89728a1ce58d37be8c16b8e61dcfbb5566
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985048"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992668"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>创建基于设备的条件访问策略
 
@@ -89,7 +89,7 @@ ms.locfileid: "83985048"
    - **设备状态**：条件访问策略将应用于所有设备状态，除非选择“是”，并专门排除“已加入设备混合 Azure AD”或“标记为兼容的设备”状态（或两者兼而有之）。
 
      > [!TIP]
-     > 如果希望同时保护“新式身份验证”  客户端和“Exchange ActiveSync”客户端  ，请创建两个单独的条件访问策略，分别针对每种客户端类型。 虽然 Exchange ActiveSync 支持新式身份验证，但 Exchange ActiveSync 支持的惟一条件是平台。 不支持其他条件，包括多重身份验证。 为有效防止 Exchange ActiveSync 对 Exchange Online 的访问，请创建指定云应用 Office 365 Exchange Online 和客户端应用 Exchange ActiveSync 的条件访问策略，同时仅将策略应用于所选的支持平台。
+     > 如果希望同时保护“新式身份验证”  客户端和“Exchange ActiveSync”客户端  ，请创建两个单独的条件访问策略，分别针对每种客户端类型。 虽然 Exchange ActiveSync 支持新式身份验证，但 Exchange ActiveSync 支持的惟一条件是平台。 不支持其他条件，包括多重身份验证。 为有效防止从 Exchange ActiveSync 访问 Exchange Online，请创建指定云应用 Microsoft 365 Exchange Online 和客户端应用 Exchange ActiveSync 的条件访问策略，同时仅将策略应用于所选的支持平台。
 
 9. 选择“完成”  。
 

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882202"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057308"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>在设备上安装和共享应用
 
@@ -53,12 +53,12 @@ ms.locfileid: "83882202"
 > [!IMPORTANT]
 > 如果必需的应用安装失败，并且组织允许你手动安装该应用，请选择“重试”  。 最长可能需要十分钟才能看到更新后的状态。 如果在此期间再次选择“重试”并出现错误，没关系  。 继续等待十分钟，以获取更新的状态。   
 
-根据公司的规模，可能公司门户中可看到多个版本的 Office 可供下载。 有关 Windows 设备的 Office 套件的特定信息，请参阅[在 Windows 设备上安装 Office 365](./install-office-windows.md)。
+根据公司的规模，可能公司门户中可看到多个版本的 Office 可供下载。 有关 Windows 设备的 Office 套件的特定信息，请参阅[在 Windows 设备上安装 Microsoft 365](./install-office-windows.md)。
 
 ## <a name="share-apps"></a>共享应用  
 共享应用并向工作或学校联系人推荐。 以下步骤介绍如何直接从公司门户共享链接。
 
-1. 在公司门户中，右键单击或按住任何应用以打开其[上下文菜单](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus)。  
+1. 在公司门户中，右键单击或按住任何应用以打开其[上下文菜单](//windows/uwp/design/controls-and-patterns/menus)。  
 
     ![适用于 Windows 10 的公司门户应用的标题页，其中显示了应用和设备列表。 “共享”上下文菜单可进行点击，显示在示例应用图标的顶部。 ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -97,4 +97,4 @@ ms.locfileid: "83882202"
 
 使用“排序方式”，按分配类型、发布者、姓氏（按字母顺序）或发布日期（按时间顺序）重新排列应用  。 使用“筛选方式”，按安装状态限制显示的应用  。  如果没有可用的应用，你将看到一条消息，提示未安装公司应用。  
 
-是否需要额外帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
+是否需要额外帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

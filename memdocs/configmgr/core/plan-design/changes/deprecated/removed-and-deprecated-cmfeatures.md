@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aca9dc5c2ff2d88155ab19656f391cf87a4e977f
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694248"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068083"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -31,6 +31,7 @@ ms.locfileid: "88694248"
 
 |功能|首次宣布弃用|支持&nbsp;删除|
 |-----------|---|--------------|
+|地理视图位于 Configuration Manager 控制台的“监视”工作区的“站点层次结构”节点中。<!--8116777-->|2020 年 8 月|TBD|
 |共享 Azure 内容的实现已更改。 使用启用了内容的云管理网关。 将来无法创建传统的云分发点。|2019 年 2 月|TBD<sup>[备注 1](#bkmk_note1)</sup>|
 |适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)。|2018 年 11 月|TBD<sup>[备注 1](#bkmk_note1)</sup>|
 

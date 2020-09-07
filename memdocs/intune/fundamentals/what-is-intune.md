@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332803"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996253"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune 是适用于设备的 MDM 和 MAM 提供程序
 
@@ -34,7 +34,7 @@ Intune 属于 Microsoft [企业移动性 + 安全性 (EMS) 套件](https://www.m
 
 通过 Intune，还可以：
 
-- 选择使用 Intune 的 100% 云，或与 Configuration Manager 和 Intune [共同托管](https://docs.microsoft.com/configmgr/comanage/overview)。
+- 选择使用 Intune 的 100% 云，或与 Configuration Manager 和 Intune [共同托管](/configmgr/comanage/overview)。
 - 设置规则并在个人拥有的设备和组织拥有的设备上配置设置以访问数据和网络。
 - 在设备（本地和移动）上部署应用并对其进行身份验证。
 - 通过控制用户访问和共享信息的方式来保护公司信息。
@@ -106,9 +106,9 @@ Intune 可用：
 
 - 作为独立的 [Azure 服务](https://go.microsoft.com/fwlink/?linkid=2090973)
 - 包括 [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) 和 [Microsoft 365 政府版](https://www.microsoft.com/microsoft-365/government)
-- 作为 [Office 365 中的移动设备管理](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)，其中包含一些有限的 Intune 功能
+- 作为 [Microsoft 365 中的移动设备管理](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)，其中包含一些有限的 Intune 功能
 
-Intune 用于许多扇区，包括[政府版](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description)、[教育版](https://www.microsoft.com/en-us/education/intune)、用于制造和零售的[展台或专用设备](../configuration/kiosk-settings.md)等。
+Intune 用于许多扇区，包括[政府版](/enterprise-mobility-security/solutions/ems-govt-service-description)、[教育版](https://www.microsoft.com/en-us/education/intune)、用于制造和零售的[展台或专用设备](../configuration/kiosk-settings.md)等。
 
 ## <a name="next-steps"></a>后续步骤
 

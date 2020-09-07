@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: a5460e9c01da8a9a227caf5a03186a37f2c427bb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820572"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194079"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>使用 Intune 添加 iOS、iPadOS 或 macOS 设备功能设置
 
@@ -153,7 +153,11 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 在 Intune 中，使用这些设置配置由组织、标识提供者、Microsoft 或 Apple 创建的 SSO 应用扩展。 SSO 应用扩展将处理对用户的身份验证。 这些设置可配置重定向类型和凭据类型 SSO 应用扩展。
 
-- 重定向类型适用于 OpenID Connect、OAuth 和 SAML2 等新式身份验证协议。 可在 Microsoft 的 Azure AD SSO 扩展（[Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)）和通用重定向扩展之间进行选择。
+- 重定向类型适用于 OpenID Connect、OAuth 和 SAML2 等新式身份验证协议。 可在 Microsoft 的 Azure AD SSO 扩展（[Microsoft 企业 SSO 插件](/azure/active-directory/develop/apple-sso-plugin)）和通用重定向扩展之间进行选择。
+
+  > [!IMPORTANT]
+  > 在 macOS 上，Microsoft Azure AD SSO 扩展仍处于开发阶段。 它会在 Intune 用户界面中列出，但无法按预期方式工作。 在 macOS 上，请勿将 Microsoft Azure AD 用作 SSO 应用扩展类型。
+
 - 凭据类型适用于质询与响应身份验证流。 可选择通用凭据扩展或者 Apple 提供的 Kerberos 专属凭据扩展。
 
 有关可以在 Intune 中配置的设置列表信息，请参阅 [iOS/iPadOS SSO 应用扩展](ios-device-features-settings.md#single-sign-on-app-extension)和 [macOS SSO 应用扩展](macos-device-features-settings.md#single-sign-on-app-extension)。
@@ -222,7 +226,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
     - **名称**：输入策略的描述性名称。 为策略命名，以便稍后可以轻松地识别它们。 例如，策略名称最好是“macOS：配置登录屏幕”。
     - **描述**：输入策略的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”。
+6. 选择“下一步”  。
 
 7. 在“配置设置”中，根据所选择的平台，可配置的设置有所不同。 选择平台，以了解详细设置：
 
@@ -236,7 +240,7 @@ Airprint 是允许设备通过无线网络打印到文件的 Apple 功能。 可
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”。
+    选择“下一步”  。
 
 11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 

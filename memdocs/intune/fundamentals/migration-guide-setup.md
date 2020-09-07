@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c39174dded9fae0055786b6132b3f964f187b1b1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358151"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992702"
 ---
 # <a name="basic-setup"></a>基本设置
 
@@ -31,19 +31,19 @@ ms.locfileid: "79358151"
 
 ### <a name="identity"></a>标识
 
-Intune 要求 Azure Active Directory (AAD) 作为标识和用户分组提供者。 了解详细信息：
+Intune 要求 Azure Active Directory (Azure AD) 作为标识和用户分组提供者。 了解详细信息：
 
-- [身份要求](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [身份要求](/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
-- [目录同步路线图](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [目录同步路线图](/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [多重身份验证 (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [多重身份验证 (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [规划用户和设备组](users-add.md)
 
 - [如何创建用户和设备组](groups-get-started.md)
 
-如果组织已在使用 Office 365，则 Intune 必须使用相同的 Azure Active Directory 环境。
+如果组织已在使用 Microsoft 365，则 Intune 必须使用相同的 Azure Active Directory 环境。
 
 ### <a name="pki-optional"></a>PKI（可选）
 
@@ -63,7 +63,7 @@ Intune 要求 Azure Active Directory (AAD) 作为标识和用户分组提供者�
 
 - 了解[如何分配 Intune 用户许可证](licenses-assign.md)。
 
-- 如果你已创建新的 Azure Active Directory 租户，可以了解[如何从本地 Active Directory (AD) 中创建新的用户或同步用户。](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- 如果你已创建新的 Azure Active Directory 租户，可以了解[如何从本地 Active Directory (AD) 中创建新的用户或同步用户。](/azure/active-directory/connect/active-directory-aadconnect)
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>任务 3：将 MDM 机构设置为 Intune
 

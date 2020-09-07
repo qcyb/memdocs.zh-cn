@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565710"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995120"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Microsoft Intune 中电子邮件配置文件的常见问题和解决方法
 
@@ -51,7 +51,7 @@ ms.locfileid: "86565710"
 
 ## <a name="device-already-has-an-email-profile-installed"></a>设备已安装电子邮件配置文件
 
-如果用户在 Intune 或 Office 365 MDM 中注册之前创建电子邮件配置文件，则 Intune 部署的电子邮件配置文件可能不会按预期方式工作：
+如果用户在 Intune 或 Microsoft 365 MDM 中注册之前创建电子邮件配置文件，则 Intune 部署的电子邮件配置文件可能不会按预期方式工作：
 
 - **iOS/iPadOS**：Intune 基于主机名和电子邮件地址检测到现有的重复电子邮件配置文件。 用户创建电子邮件配置文件会阻止部署 Intune 创建的配置文件。 这种情况是一个常见问题，因为 iOS/iPadOS 用户通常会创建一个电子邮件配置文件，然后进行注册。 公司门户应用指明用户不符合策略，并可能会提示用户删除电子邮件配置文件。
 

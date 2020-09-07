@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c2689e010c0ec75340e1a96952cf6ac162322da
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 618be398d963e0a796ad9be7e8810201fc5e12f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758272"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995086"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Android Enterprise 设备注册限制
 
@@ -58,9 +58,9 @@ ms.locfileid: "87758272"
 通过审阅[注册完全受管理的设备](android-fully-managed-enroll.md#enroll-the-fully-managed-devices)，确保组织支持 Android Enterprise 完全受管理设备注册。 
 
 ## <a name="conditional-access-policies"></a>条件性访问策略
-组织可以使用 Azure AD 条件访问策略来确保用户只能在已注册的 Android 设备上访问工作和学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有受管理的设备](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)。 
+组织可以使用 Azure AD 条件访问策略来确保用户只能在已注册的 Android 设备上访问工作和学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有受管理的设备](/azure/active-directory/conditional-access/require-managed-devices)。 
 
-遵循[方案：iOS 和 Android 设备需要设备注册](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices)中的步骤，这确保只有合规的已注册移动设备可以连接到 Office 365 终结点。
+遵循[方案：iOS 和 Android 设备需要设备注册](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices)中的步骤，这可确保只有合规的已注册移动设备才能连接到 Microsoft 365 终结点。
 
 ## <a name="next-steps"></a>后续步骤
 

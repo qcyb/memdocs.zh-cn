@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217493"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993896"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>引导式方案 - 保护 Microsoft Office 移动应用
 
@@ -52,7 +52,7 @@ Office 移动应用以及 Microsoft Edge for Mobile 都支持双重标识。 使
 - 数据重定位策略，例如“保存原始数据副本”  和“限制剪切、复制和粘贴”  。
 - 访问策略设置，要求使用简单的 PIN 进行访问，阻止在已越狱或取得 root 权限的设备上运行受管理的应用。
 
-通过确保仅支持 Intune 应用保护策略的客户端应用可以访问 Exchange Online 和其他 Office 365 服务，基于应用的条件访问和客户端应用管理增加了一个安全层。
+通过确保只有支持 Intune 应用保护策略的客户端应用才能访问 Exchange Online 和其他 Microsoft 365 服务，基于应用的条件访问和客户端应用管理增添了一层安全保障。
 
 仅允许 Microsoft Outlook 应用访问 Exchange Online 时，可阻止 iOS/iPadOS 和 Android 上的内置邮件应用。 此外，你还可以阻止未执行 Intune 应用保护策略的应用访问 SharePoint Online。
 

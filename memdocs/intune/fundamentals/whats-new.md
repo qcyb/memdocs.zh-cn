@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820266"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193777"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -94,6 +94,10 @@ ms.locfileid: "88820266"
 - Windows 10 及更高版本
 
 #### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>配置 macOS Microsoft 企业 SSO 插件<!-- 5627576  idstaged -->
+
+> [!IMPORTANT]
+> 在 macOS 上，Microsoft Azure AD SSO 扩展仍处于开发阶段。 它会在 Intune 用户界面中列出，但无法按预期方式工作。 在 macOS 上，请勿将 Microsoft Azure AD 用作 SSO 应用扩展类型。
+
 Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让 macOS 10.15 以上的用户能够获取对支持 Apple SSO 功能的 Microsoft 应用、组织应用和网站的访问权限，并使用 Azure AD 通过一次登录进行身份验证。 在 Microsoft 企业 SSO 插件版本中，可以配置包含新的 Microsoft Azure AD 应用扩展类型的 SSO 扩展（“设备” > “配置文件” > “创建配置文件” > “macOS”[针对平台] >“设备功能”[针对配置文件] >“单一登录应用扩展”）>“SSO 应用扩展类型”>“Microsoft Azure AD”）。
 
 若要实现具有 Microsoft Azure AD SSO 应用扩展类型的 SSO，用户需要在其 macOS 设备上安装公司门户应用并登录。 
@@ -112,7 +116,7 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 - Android Enterprise 工作配置文件
 
 #### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>在具有 Microsoft 企业 SSO 插件的更多 iOS/iPadOS 应用上使用 SSO 应用扩展<!-- 7369991  -->
-[适用于 Apple 设备的 Microsoft 企业 SSO 插件](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)可用于支持 SSO 应用扩展的所有应用。 在 Intune 中，此功能表示该插件适用于不使用适用于 Apple 设备的 Microsoft 身份验证库 (MSAL) 的移动 iOS/iPadOS 应用。 这些应用无需使用 MSAL，但需要使用 Azure AD 终结点进行身份验证。
+[适用于 Apple 设备的 Microsoft 企业 SSO 插件](/azure/active-directory/develop/apple-sso-plugin)可用于支持 SSO 应用扩展的所有应用。 在 Intune 中，此功能表示该插件适用于不使用适用于 Apple 设备的 Microsoft 身份验证库 (MSAL) 的移动 iOS/iPadOS 应用。 这些应用无需使用 MSAL，但需要使用 Azure AD 终结点进行身份验证。
 
 若要将 iOS/iPadOS 应用配置为使用 SSO 和插件，在 iOS/iPadOS 配置文件中添加应用捆绑包标识符（“设备” > “配置文件” > “创建配置文件” > “iOS/iPadOS”[针对平台] >“设备功能”[针对配置文件] >“单一登录应用扩展” > “Microsoft Azure AD”[针对 SSO 应用扩展类型] >“应用捆绑包 ID”）。
 
@@ -148,6 +152,20 @@ Microsoft Azure AD 团队创建了重定向单一登录 (SSO) 应用扩展，让
 
 - **策略合并** – Intune 现在将在不同的配置文件中定义的排除项列表合并到单个排除项列表中，以应用于每个设备或用户。 例如，如果针对具有三个不同策略的用户，则这三个策略中的排除项列表将合并为 *Microsoft Defender 防病毒排除项*的单一超集，然后将其应用于用户。
 
+#### <a name="import-and-export-lists-of-address-ranges-for-windows-firewall-rules---8125400----"></a>导入和导出 Windows 防火墙规则的地址范围列表<!-- 8125400  -->
+
+我们已添加在终结点安全性防火墙策略的 Microsoft Defender 防火墙规则配置文件中使用 .csv 文件导入或导出 地址范围列表的支持。 现在，以下 Windows 防火墙规则设置支持导入和导出：
+
+- **本地地址范围**
+- **远程地址范围**
+
+我们还改进了对本地和远程地址范围条目的验证，以帮助防止出现重复或无效的条目。
+
+有关这些设置的详细信息，请参阅 [Microsoft Defender 防火墙规则](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules)的设置。
+
+
+
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-17-2020"></a>2020 年 8 月 17 日当周
@@ -161,7 +179,7 @@ Microsoft Intune 管理员可以将自定义品牌图像上传到 Intune，该�
 ### <a name="app-management"></a>应用管理
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>公司门户现已开始支持 Configuration Manager 应用程序<!-- 4297660 -->
-公司门户现在支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 此支持有助于管理员整合不同的最终用户门户体验。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](/mem/configmgr/comanage/company-portal)。 
+公司门户现在支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 此支持有助于管理员整合不同的最终用户门户体验。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](../../configmgr/comanage/company-portal.md)。 
 
 ### <a name="device-security"></a>设备安全性
 
@@ -171,7 +189,7 @@ Intune 现在支持[第三方 MDM 解决方案作为设备合规性详细信息�
 
 此版本支持以下第三方 MDM 提供商，作为公共预览版：
 
-- VMWare Workspace ONE UEM（以前称为 AirWatch）
+- VMware Workspace ONE UEM（以前称为 AirWatch）
 
 *此更新在全球范围内推出。下周你应该会看到此功能。*
 
@@ -191,7 +209,7 @@ Intune 现在支持[第三方 MDM 解决方案作为设备合规性详细信息�
 ### <a name="monitor-and-troubleshoot"></a>监视和故障排除
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI 合规性报告模板 V2.0<!-- 636958 -->
-借助 Power BI 模板应用，Power BI 合作伙伴无需编码或只需少量编码即可构建 Power BI 应用，并将其部署到任何 Power BI 客户。 管理员能将 Power BI 合规性报告模板的版本从 V1.0 更新到 V2.0。 V2.0 包含改进的设计，以及模板中显示的计算和数据的更改。 有关详细信息，请参阅[使用 Power BI 连接到数据仓库](../developer/reports-proc-get-a-link-powerbi.md)和[更新模板应用](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app)。 此外，请参阅博客文章[宣布推出针对 Intune 数据仓库的新版本 PowerBI 合规性报告](https://aka.ms/new_compliance_report)。
+借助 Power BI 模板应用，Power BI 合作伙伴无需编码或只需少量编码即可构建 Power BI 应用，并将其部署到任何 Power BI 客户。 管理员能将 Power BI 合规性报告模板的版本从 V1.0 更新到 V2.0。 V2.0 包含改进的设计，以及模板中显示的计算和数据的更改。 有关详细信息，请参阅[使用 Power BI 连接到数据仓库](../developer/reports-proc-get-a-link-powerbi.md)和[更新模板应用](/power-bi/service-template-apps-install-distribute#update-a-template-app)。 此外，请参阅博客文章[宣布推出针对 Intune 数据仓库的新版本 PowerBI 合规性报告](https://aka.ms/new_compliance_report)。
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>2020 年 7 月 13 日当周（2007 服务版本）
@@ -200,10 +218,10 @@ Intune 现在支持[第三方 MDM 解决方案作为设备合规性详细信息�
 ### <a name="app-management"></a>应用管理
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange 内部部署连接器支持<!-- 7138486  -->
-自 2007 年（7 月）版本开始，Intune 便从 Intune 服务中删除了对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些客户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) 来保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
+自 2007 年（7 月）版本开始，Intune 便从 Intune 服务中删除了对 Exchange 内部部署连接器功能的支持。 现在，具有活动连接器的现有客户将能够继续使用当前功能。 没有活动连接器的新客户和现有客户将不再能够从 Intune 创建新连接器或管理 Exchange ActiveSync (EAS) 设备。 对于这些客户，Microsoft 建议使用 Exchange [新式混合身份验证 (HMA)](/office365/enterprise/hybrid-modern-auth-overview) 来保护对 Exchange 内部部署的访问。 HMA 同时启用了 Intune 应用保护策略（也称为 MAM）和条件访问（通过适用于 Exchange 内部部署的 Outlook Mobile）。
 
 #### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>无需注册即可在 iOS 和 Android 设备上启用 S/MIME for Outlook<!-- 6517155 -->
-你现在能够使用托管应用的应用配置策略在 iOS 和 Android 设备上启用 S/MIME for Outlook。 这可实现策略交付，无论设备注册状态如何都是如此。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“应用” > “应用配置策略” > “添加” > “托管应用”。 此外，还可以选择是否允许用户在 Outlook 中更改此设置。 但是，如果要将 S/MIME 证书自动部署到适用于 iOS 和 Android 的 Outlook，则必须注册设备。 有关 S/MIME 的一般信息，请参阅[在 Intune 中对电子邮件进行签名和加密的 S/MIME 概述](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign)。 有关 Outlook 配置设置的详细信息，请参阅 [Microsoft Outlook 配置设置](../apps/app-configuration-policies-outlook.md)和[为受管理应用添加应用配置策略（无需设备注册）](../apps/app-configuration-policies-managed-app.md)。 有关适用于 iOS 和 Android 的 Outlook S/MIME 的信息，请参阅 [S/MIME 方案](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios)和[配置密钥 - S/MIME 设置](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings)。 
+你现在能够使用托管应用的应用配置策略在 iOS 和 Android 设备上启用 S/MIME for Outlook。 这可实现策略交付，无论设备注册状态如何都是如此。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，依次选择“应用” > “应用配置策略” > “添加” > “托管应用”。 此外，还可以选择是否允许用户在 Outlook 中更改此设置。 但是，如果要将 S/MIME 证书自动部署到适用于 iOS 和 Android 的 Outlook，则必须注册设备。 有关 S/MIME 的一般信息，请参阅[在 Intune 中对电子邮件进行签名和加密的 S/MIME 概述](../protect/certificates-s-mime-encryption-sign.md)。 有关 Outlook 配置设置的详细信息，请参阅 [Microsoft Outlook 配置设置](../apps/app-configuration-policies-outlook.md)和[为受管理应用添加应用配置策略（无需设备注册）](../apps/app-configuration-policies-managed-app.md)。 有关适用于 iOS 和 Android 的 Outlook S/MIME 的信息，请参阅 [S/MIME 方案](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios)和[配置密钥 - S/MIME 设置](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings)。 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>设备配置
@@ -252,7 +270,7 @@ Intune 现在支持[第三方 MDM 解决方案作为设备合规性详细信息�
 - Android Enterprise 设备所有者专用设备 (COSU)
 
 #### <a name="administrative-templates-updated-for-microsoft-edge-84--7722068--"></a>为 Microsoft Edge 84 更新的管理模板<!--7722068-->
-已更新可用于 Microsoft Edge 的 ADMX 设置。 最终用户现在可以配置和部署 Microsoft Edge 84 中添加的新 ADMX 设置。 有关详细信息，请参阅 [Microsoft Edge 84 发行说明](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#policy-updates)。
+已更新可用于 Microsoft Edge 的 ADMX 设置。 最终用户现在可以配置和部署 Microsoft Edge 84 中添加的新 ADMX 设置。 有关详细信息，请参阅 [Microsoft Edge 84 发行说明](/deployedge/microsoft-edge-relnote-stable-channel#policy-updates)。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>设备注册
@@ -367,7 +385,7 @@ Intune DeviceComplianceOrg 记录先前仅包含 ComplianceState、OwnerType 和
 #### <a name="additional-data-warehouse-v10-properties---6125732----"></a>其他 Data Warehouse v1.0 属性<!-- 6125732  -->
 通过 Intune Data Warehouse v1.0，可以使用其他属性。 以下属性现在通过 [devices](../developer/reports-ref-devices.md#devices) 实体公开：
 - `ethernetMacAddress` - 此设备的唯一网络标识符。
-- `office365Version` - 设备上安装的 Office 365 版本。
+- `office365Version` - 设备上安装的 Microsoft 365 版本。
 
 以下属性现在通过 [devicePropertyHistories](../developer/reports-ref-devices.md#devicepropertyhistories) 实体公开：
 - `physicalMemoryInBytes` - 物理内存（以字节为单位）。
@@ -382,7 +400,7 @@ Intune DeviceComplianceOrg 记录先前仅包含 ComplianceState、OwnerType 和
 ### <a name="app-management"></a>应用管理
 
 #### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>更新 Android 上公司门户和 Intune 应用中的设备图标<!-- 6057023 -->
-我们已更新了 Android 设备上公司门户和 Intune 应用中的设备图标，以创建更加新式的外观，并与 Microsoft Fluent Design System 保持一致。 如需相关信息，请参阅[为 iOS/iPadOS 和 macOS 更新公司门户应用中的图标](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-)。 
+我们已更新了 Android 设备上公司门户和 Intune 应用中的设备图标，以创建更加新式的外观，并与 Microsoft Fluent Design System 保持一致。 如需相关信息，请参阅[为 iOS/iPadOS 和 macOS 更新公司门户应用中的图标](whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-)。 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>设备注册
@@ -610,7 +628,7 @@ macOS 设备远程锁定固定的可用时间已从 7 天增至 30 天。
 
 此内容是对上个月为其他 Android 版本添加的支持的补充（支持 Android 上的 Outlook 的 S/MIME 签名和加密证书）。 可以使用 SCEP 和 PKCS 导入的证书配置文件来预配这些证书。
 
-有关此支持的详细信息，请参阅 Exchange 文档中的[适用于 iOS 和 Android 的敏感度标签和保护](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android)。
+有关此支持的详细信息，请参阅 Exchange 文档中的[适用于 iOS 和 Android 的敏感度标签和保护](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android)。
 
 #### <a name="add-a-link-to-your-company-portal-support-website-to-emails-for-noncompliance---7225498------"></a>将指向公司门户支持网站的链接添加到设备不合规的用户的电子邮件中<!-- 7225498    -->
 当[配置通知消息模板](../protect/actions-for-noncompliance.md#create-a-notification-message-template)用于发送有关不合规的电子邮件通知时，可使用新的设置“公司门户网站链接”来自动包含指向公司门户网站的链接。 将此选项设置为“启用”时，具有不合规设备的用户如果收到基于此模板的电子邮件，可以使用链接打开网站，以了解有关其设备不合规的原因的详细信息。 
@@ -765,7 +783,7 @@ Intune 完全支持 Zebra OEMConfig 提供的所有功能。 通过 Android Ente
 现在可以向注册限制分配作用域标记。 为此，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “注册限制” > “创建限制”  。 创建任一一种限制，然后将看到“作用域标记”页。 有关详细信息，请参阅[创建注册限制](../enrollment/enrollment-restrictions-set.md)。
 
 #### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>HoloLens 2 设备的 Autopilot 支持<!--6305220  -->
-Windows Autopilot 现在支持 HoloLens 2 设备。 有关使用适用于 HoloLens 的 Autopilot 的详细信息，请参阅[适用于 HoloLens 2 的 Windows Autopilot](https://docs.microsoft.com/hololens/hololens2-autopilot)。
+Windows Autopilot 现在支持 HoloLens 2 设备。 有关使用适用于 HoloLens 的 Autopilot 的详细信息，请参阅[适用于 HoloLens 2 的 Windows Autopilot](/hololens/hololens2-autopilot)。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>设备管理
@@ -825,14 +843,14 @@ Intune [终结点安全](../protect/endpoint-security.md)的相关文档现已�
 
 即将推出对 Android Enterprise 完全托管设备的支持。
 
-有关此支持的详细信息，请参阅 Exchange 文档中的[适用于 iOS 和 Android 的敏感度标签和保护](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android)。
+有关此支持的详细信息，请参阅 Exchange 文档中的[适用于 iOS 和 Android 的敏感度标签和保护](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android)。
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="monitor-and-troubleshoot"></a>监视和故障排除
 
 #### <a name="device-reports-ui-update---6269408---"></a>设备报告 UI 更新<!-- 6269408 -->
-报告概述窗格现在提供“摘要”和“报告”选项卡 。在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“报告”，然后选择“报告”选项卡以查看可用的报告类型 。 有关相关信息，请参阅 [Intune 报告](../fundamentals/reports.md)。
+报告概述窗格现在提供“摘要”和“报告”选项卡 。在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“报告”，然后选择“报告”选项卡以查看可用的报告类型 。 有关相关信息，请参阅 [Intune 报告](reports.md)。
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -861,7 +879,7 @@ Microsoft 终结点管理器将 Configuration Manager 和 Intune 组合为单个
 ### <a name="app-management"></a>应用管理
 
 #### <a name="microsoft-office-365-proplus-rename---6368143---"></a>Microsoft Office 365 专业增强版重命名<!-- 6368143 -->
-Microsoft Office 365 专业增强版将重命名为 Microsoft 365 企业应用版。 要了解详细信息，请参阅 [Office 365 专业增强版的名称变更](https://docs.microsoft.com/deployoffice/name-change)。 在我们的文档中，我们通常将它称为 Microsoft 365 应用版。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，可选择“应用” > “Windows” > “添加”来查找应用套件  。 要了解如何添加应用，请参阅[向 Microsoft Intune 添加应用](../apps/apps-add.md)。
+Microsoft Office 365 专业增强版将重命名为 Microsoft 365 企业应用版。 要了解详细信息，请参阅 [Office 365 专业增强版的名称变更](/deployoffice/name-change)。 在我们的文档中，我们通常将它称为 Microsoft 365 应用版。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，可选择“应用” > “Windows” > “添加”来查找应用套件  。 要了解如何添加应用，请参阅[向 Microsoft Intune 添加应用](../apps/apps-add.md)。
 
 <!-- ########################## -->
 ## <a name="week-of-april-13-2020-2004-service-release"></a>2020 年 4 月 13 日当周（2004 服务版本）
@@ -875,8 +893,8 @@ Microsoft Office 365 专业增强版将重命名为 Microsoft 365 企业应用�
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>托管的 Google Play 应用的预发布测试<!-- 2681933  -->
 如果组织使用 [Google Play 的应用预发布测试的封闭式测试轨道](https://support.google.com/googleplay/android-developer/answer/3131213)，可以使用 Intune 管理这些轨道。 你可以有选择性地将发布到 Google Play 预生产轨道的应用分配给试点组，从而执行测试。 在 Intune 中，可以查看是否向应用发布了预生产内部版本测试轨道，并能将此轨道分配给 Azure AD 用户或设备组。 此功能适用于我们当前支持的所有 Android Enterprise 方案（工作配置文件、完全托管和专用）。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)内，可以依次选择“应用” > “Android” > “添加”，从而添加托管的 Google Play 应用。 有关详细信息，请参阅[处理托管的 Google Play 封闭式测试轨道](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks)。
 
-#### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams 现已包含在适用于 macOS 的 Office 365 套件中<!-- 5903936  -->
-除了现有的 Microsoft Office 应用（Word、Excel、PowerPoint、Outlook 和 OneNote）外，在 Microsoft Endpoint Manager 中分配有 Microsoft Office for macOS 的用户现在还会获得 Microsoft Teams。 Intune 将识别已安装其他 Office for macOS 应用的现有 Mac 设备，并在下次设备使用 Intune 签入时尝试安装 Microsoft Teams。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，可以通过选择“应用” > “macOS” > “添加”来查找适用于 macOS 的 Office 365 套件   。 有关详细信息，请参阅[使用 Microsoft Intune 将 Office 365 分配给 macOS 设备](../apps/apps-add-office365-macos.md)。
+#### <a name="microsoft-teams-is-now-included-in-microsoft-365-for-macos---5903936----"></a>Microsoft Teams 现已包含在 Microsoft 365 for macOS 中<!-- 5903936  -->
+除了现有的 Microsoft 365 应用（Word、Excel、PowerPoint、Outlook 和 OneNote）外，在 Microsoft Endpoint Manager 中分配有 Microsoft 365 for macOS 的用户现在还会获得 Microsoft Teams。 Intune 将识别已安装其他 Office for macOS 应用的现有 Mac 设备，并在下次设备使用 Intune 签入时尝试安装 Microsoft Teams。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，可以通过选择“应用” > “macOS” > “添加”来查找适用于 macOS 的 Office 365 套件   。 有关详细信息，请参阅[使用 Microsoft Intune 将 Office 365 分配给 macOS 设备](../apps/apps-add-office365-macos.md)。
 
 #### <a name="update-to-android-app-configuration-policies---6113334----"></a>更新到 Android 应用配置策略<!-- 6113334  -->
 Android 应用配置策略已更新为，允许管理员在创建应用配置文件前选择设备注册类型。 此功能将添加到基于注册类型（工作配置文件或设备所有者）的证书配置文件帐户中。  此更新包括以下内容：
@@ -1198,7 +1216,7 @@ Intune 数据仓库将 MAC 地址作为 `device` 实体中的新属性 (`Etherne
 可以使用 Intune 数据仓库提供额外的设备清单属性。 现在可以通过[设备](../developer/reports-ref-devices.md#devices) beta 收集公开以下属性：
 - `ethernetMacAddress` - 此设备的唯一网络标识符。
 - `model` - 设备型号。
-- `office365Version` - 设备上安装的 Office 365 版本。
+- `office365Version` - 设备上安装的 Microsoft 365 版本。
 - `windowsOsEdition` - 操作系统版本。
 
 现在可以通过 [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories) beta 收集公开以下属性：
@@ -1208,7 +1226,7 @@ Intune 数据仓库将 MAC 地址作为 `device` 实体中的新属性 (`Etherne
 有关详细信息，请参阅 [Microsoft Intune 数据仓库 API](../developer/reports-nav-intune-data-warehouse.md)。
 
 #### <a name="help-and-support-workflow-update-to-support-additional-services---5654170-----"></a>帮助和支持工作流更新以支持其他服务<!-- 5654170   -->
-我们已在 Microsoft 终结点管理器管理中心更新了“帮助和支持”页，现在可以从中[选择你使用的管理类型](../fundamentals/get-support.md#options-to-access-help-and-support)。 此次更改后，你可以从以下管理类型中进行选择：
+我们已在 Microsoft 终结点管理器管理中心更新了“帮助和支持”页，现在可以从中[选择你使用的管理类型](get-support.md#options-to-access-help-and-support)。 此次更改后，你可以从以下管理类型中进行选择：
 
 - Configuration Manager（包括桌面分析）
 - Intune
@@ -1226,7 +1244,7 @@ Intune 数据仓库将 MAC 地址作为 `device` 实体中的新属性 (`Etherne
 
 - **防病毒(预览)** ：
   - macOS：
-    - **防病毒** - 管理 macOS 的[防病毒策略设置](../protect/antivirus-microsoft-defender-settings-macos.md)以管理[适用于 Mac 的 Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)。
+    - **防病毒** - 管理 macOS 的[防病毒策略设置](../protect/antivirus-microsoft-defender-settings-macos.md)以管理[适用于 Mac 的 Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)。
 
   - Windows 10 及更高版本：
     - **Microsoft Defender 防病毒** - 管理云保护、防病毒排除项、修正、扫描选项等的[防病毒策略设置](../protect/antivirus-microsoft-defender-settings-windows.md)。
@@ -1234,7 +1252,7 @@ Intune 数据仓库将 MAC 地址作为 `device` 实体中的新属性 (`Etherne
       Microsoft Defender 防病毒的防病毒配置文件是一个例外，它引入了作为设备限制配置文件的一部分提供的新设置实例。 新防病毒设置如下：
 
         - 与在设备限制中找到的设置相同，但支持在配置为设备限制时不可用的第三个配置选项。
-        - 当 Endpoint Protection 的[共同管理工作负载滑块](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)设置为 Intune 时，适用于通过 Configuration Manager 共同管理的设备。
+        - 当 Endpoint Protection 的[共同管理工作负载滑块](/configmgr/comanage/how-to-switch-workloads)设置为 Intune 时，适用于通过 Configuration Manager 共同管理的设备。
 
      计划使用新的“防病毒” > “Microsoft Defender 防病毒”配置文件，而不是通过设备限制配置文件进行配置。
 
@@ -1292,9 +1310,9 @@ Intune 数据仓库将 MAC 地址作为 `device` 实体中的新属性 (`Etherne
 ### <a name="device-management"></a>设备管理
 
 #### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758--"></a>Microsoft Endpoint Manager 租户附加：设备同步和设备操作<!-- 6317104, CM3555758-->
-Microsoft 终结点管理器将 Configuration Manager 和 Intune 组合为单个控制台。 从 Configuration Manager 技术预览版 2002.2 开始，可以在管理中心将 Configuration Manager 设备上传到云服务并对它们执行操作。 有关详细信息，请参阅 [Configuration Manager 技术预览版 2002.2 中的功能](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach)。
+Microsoft 终结点管理器将 Configuration Manager 和 Intune 组合为单个控制台。 从 Configuration Manager 技术预览版 2002.2 开始，可以在管理中心将 Configuration Manager 设备上传到云服务并对它们执行操作。 有关详细信息，请参阅 [Configuration Manager 技术预览版 2002.2 中的功能](/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach)。
 
-安装此更新之前，请查看 [Configuration Manager 技术预览文章](https://docs.microsoft.com/configmgr/core/get-started/technical-preview)。 此文章将帮助你熟悉使用 Technical Preview 的常规要求和限制，如何在版本之间进行更新以及如何提供相关的反馈。
+安装此更新之前，请查看 [Configuration Manager 技术预览文章](/configmgr/core/get-started/technical-preview)。 此文章将帮助你熟悉使用 Technical Preview 的常规要求和限制，如何在版本之间进行更新以及如何提供相关的反馈。
 
 #### <a name="bulk-remote-actions--4576882--"></a>批量远程操作<!--4576882-->
 你现在可以为以下远程操作发出批量命令：重启、重命名、Autopilot 重置、擦除和删除。 若要查看新的批量操作，请转到 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431) > “设备” > “所有设备” > “批量操作”  。
@@ -1304,7 +1322,7 @@ Microsoft 终结点管理器将 Configuration Manager 和 Intune 组合为单个
 
 ### <a name="app-management"></a>应用管理  
 ####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>改进了适用于 Android 的公司门户中的登录体验    
-我们即将更新适用于 Android 的公司门户应用中多个登录屏幕的布局，让用户体验更现代化、更简洁。 若要查看改进，请参阅[应用 UI 中的新增功能](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui)。
+我们即将更新适用于 Android 的公司门户应用中多个登录屏幕的布局，让用户体验更现代化、更简洁。 若要查看改进，请参阅[应用 UI 中的新增功能](./whats-new-app-ui.md)。
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>2020 年 2 月 24 日当周
@@ -1338,7 +1356,7 @@ Microsoft 终结点管理器将 Configuration Manager 和 Intune 组合为单个
 ### <a name="app-management"></a>应用管理
 
 #### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424618---"></a>适用于 macOS 的 Microsoft Defender 高级威胁防护 (ATP) 应用<!-- 5424618 -->
-Intune 将提供一种简单的方法，将适用于 macOS 的 Microsoft Defender 高级威胁防护 (ATP) 应用部署到托管 Mac 设备。 有关详细信息，请参阅[使用 Microsoft Intune 向 macOS 设备添加 Microsoft Defender ](../apps/apps-advanced-threat-protection-macos.md)和[适用于 Mac 的 Microsoft Defender 高级威胁防护](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)。  
+Intune 将提供一种简单的方法，将适用于 macOS 的 Microsoft Defender 高级威胁防护 (ATP) 应用部署到托管 Mac 设备。 有关详细信息，请参阅[使用 Microsoft Intune 向 macOS 设备添加 Microsoft Defender ](../apps/apps-advanced-threat-protection-macos.md)和[适用于 Mac 的 Microsoft Defender 高级威胁防护](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)。  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>设备配置
@@ -1452,5 +1470,3 @@ Intune 现在支持卸载 Windows 10 设备上的 Microsoft Edge 版本 77 及�
 ## <a name="notices"></a>通知
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
-
-

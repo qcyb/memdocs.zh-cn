@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819603"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194100"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置
 
@@ -296,7 +296,7 @@ End of comment -->
 - **擦除设备前的登录失败次数**：输入设备擦除前允许的错误密码数，范围为 4-11 个。 如果为 `0`（零），可能会禁用设备擦除功能。 如果该值为空，Intune 不会更改或更新此设置。
 
   > [!NOTE]
-  > 系统不会提示公司拥有的完全托管式专用工作配置文件设备设置密码。 密码设置操作是强制性操作，需要手动设置密码。 如果设置的密码不满足要求，用于强制执行的策略将显示为失败，直到满足要求为止。
+  > 系统不会提示公司拥有的完全托管式专用工作配置文件设备设置密码。 该设置是必需的，但可能不会通知用户。 用户需要手动设置密码。 除非用户设置的密码符合你的要求，否则该策略将报告为失败。
 
 ### <a name="power-settings"></a>电源设置
 

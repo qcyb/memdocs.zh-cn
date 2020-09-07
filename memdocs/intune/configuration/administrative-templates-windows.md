@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990190"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992797"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>使用 Windows 10 模板在 Microsoft Intune 中配置组策略设置
 
@@ -33,7 +33,7 @@ ms.locfileid: "83990190"
 
 - Windows 10 及更高版本
 
-Windows 设置类似于 Active Directory (AD) 中的组策略 (GPO) 设置。 这些设置内置于 Windows 中，是使用 XML 的[支持 ADMX 的设置](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)。 Office 和 Microsoft Edge 设置为 ADMX 引入的设置，并使用 [Office 管理模板文件](https://www.microsoft.com/download/details.aspx?id=49030)和 [Microsoft Edge 管理模板文件](https://www.microsoftedgeinsider.com/enterprise)中的 ADMX 设置。 Intune 模板 100% 基于云。 它们提供简单和直接的方法来配置设置，并可查找所需设置。
+Windows 设置类似于 Active Directory (AD) 中的组策略 (GPO) 设置。 这些设置内置于 Windows 中，是使用 XML 的[支持 ADMX 的设置](/windows/client-management/mdm/understanding-admx-backed-policies)。 Office 和 Microsoft Edge 设置为 ADMX 引入的设置，并使用 [Office 管理模板文件](https://www.microsoft.com/download/details.aspx?id=49030)和 [Microsoft Edge 管理模板文件](https://www.microsoftedgeinsider.com/enterprise)中的 ADMX 设置。 Intune 模板 100% 基于云。 它们提供简单和直接的方法来配置设置，并可查找所需设置。
 
 “管理模板”内置于 Intune 中，不需要任何自定义（包括使用 OMA-URI）。 作为移动设备管理 (MDM) 解决方案的一部分，请将这些模板设置用作一站式服务，以管理 Windows 10 设备。
 
@@ -43,7 +43,7 @@ Windows 设置类似于 Active Directory (AD) 中的组策略 (GPO) 设置。 �
 
 - 其中一些设置从 Windows 10 版本 1709（RS2/内部版本 15063）开始提供。 所有 Windows 版本中均不包含某些设置。 为获得最佳体验，建议使用 Windows 10 企业版 1903（19H1/内部版本 18362）及更高版本。
 
-- Windows 设置使用 [Windows 策略 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。 CSP 适用于不同版本的 Windows，例如家庭版、专业版和企业版等。 要查看 CSP 是否适用于特定版本，请转到 [Windows 策略 CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。
+- Windows 设置使用 [Windows 策略 CSP](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。 CSP 适用于不同版本的 Windows，例如家庭版、专业版和企业版等。 要查看 CSP 是否适用于特定版本，请转到 [Windows 策略 CSP](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)。
 
 ## <a name="create-the-template"></a>创建模板
 
@@ -136,6 +136,6 @@ Windows 设置类似于 Active Directory (AD) 中的组策略 (GPO) 设置。 �
 
 模板已创建，但它尚未起到任何作用。 接下来，[分配模板（也称为配置文件）](device-profile-assign.md)并[监视其状态](device-profile-monitor.md)。
 
-[使用管理模板更新 Office 365](administrative-templates-update-office.md)。
+[使用管理模板更新 Microsoft 365](administrative-templates-update-office.md)。
 
 [教程：通过云使用 ADMX 模板和 Microsoft Intune 为 Windows 10 设备配置组策略](tutorial-walkthrough-administrative-templates.md)

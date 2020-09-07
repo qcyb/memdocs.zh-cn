@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
-ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
+ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334617"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193957"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>在 Intune 中管理适用于 Windows 10 的 BitLocker 策略
 
@@ -97,7 +97,7 @@ ms.locfileid: "87334617"
    1. **平台**：Windows 10 及更高版本
    2. **配置文件类型**：Endpoint Protection
 
-   ![选择 BitLocker 配置文件](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![选择配置文件](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. 选择“设置” > “Windows Encryption” 。
 
@@ -123,7 +123,8 @@ ms.locfileid: "87334617"
 
 设备必须满足以下条件才能以无提示的方式启用 BitLocker：
 
-- 设备必须运行 Windows 10 版本 1809 或更高版本
+- 如果最终用户以管理员身份登录到设备，则设备必须运行 Windows 10 版本 1803 或更高版本。
+- 如果最终用户以标准用户身份登录到设备，则设备必须运行 Windows 10 版本 1809 或更高版本。
 - 设备必须加入了 Azure AD  
 
 **BitLocker 策略配置**：
@@ -145,7 +146,7 @@ Intune 提供了对 BitLocker 的 Azure AD 边栏选项卡的访问权限，以�
 
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-2. 选择“设备” > “所有设备” 。
+2. 选择“设备” > “所有设备”   。
 
 3. 选择列表中的设备，然后在“监视”下，选择“恢复密钥”。
   
@@ -156,7 +157,7 @@ Intune 提供了对 BitLocker 的 Azure AD 边栏选项卡的访问权限，以�
 
    如果 Azure AD 中没有密钥，Intune 将显示“未找到此设备的 BitLocker 密钥”。
 
-使用 [BitLocker 配置服务提供程序](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) 获取 BitLocker 的信息。 Windows 10 1703 版本和更高版本，以及 Windows 10 专业版 1809 版本和更高版本支持 BitLocker CSP。
+使用 [BitLocker 配置服务提供程序](/windows/client-management/mdm/bitlocker-csp) (CSP) 获取 BitLocker 的信息。 Windows 10 1703 版本和更高版本，以及 Windows 10 专业版 1809 版本和更高版本支持 BitLocker CSP。
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker 恢复密码轮转
 

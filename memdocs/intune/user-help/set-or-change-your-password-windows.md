@@ -1,11 +1,11 @@
 ---
 title: 设置或更改设备密码 | Microsoft Docs
-description: ''
+description: 在 Windows 10 移动设备或桌面设备上创建或更改密码。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2018
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,35 +17,30 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c4922bfa179436d30d73c4314662ee0cd7aa815
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ec3fdfb5015cd1b0c0c43e94f9cf55762e4bf559
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881914"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057447"
 ---
-# <a name="make-your-device-safer-with-the-right-password"></a>使用合适的密码确保设备更安全
+# <a name="set-a-device-password-on-windows-10-device"></a>在 Windows 10 设备上设置设备密码
+在 Windows 10 移动设备或桌面设备上创建或更改密码。 
 
-用户可能每天都需要从其 Windows 设备访问公司资源，例如电子邮件和文档。 组织希望确保设备安全地访问资源。 确保设备安全访问这些资源的一种方法是要求设备使用密码。 例如，这些密码用于从锁定屏幕访问你的设备。
+在移动设备上：
 
-如果 Windows 设备与公司支持人员设置的密码策略不相符，则会出现一条消息，其中简要描述了该问题并指出使密码符合要求所需的操作。
+1. 转到“开始”菜单 >“设置”。
+2. 此时将打开系统设置。 选择“帐户” > “登录选项”。
+3. 选择“密码” > “更改”。
+4. 按照屏幕上的提示设置新密码。  
 
-> [!Note]
-> 公司支持人员可以设置多个密码要求。 例如，密码可能必须要达到一定数量的字符，并且可能必须是数字和字母的组合。 由于 IT 管理员可能会设置多个要求，因此这些说明只介绍如何设置或更改密码。 而不对每种可能组合的要求进行解释。
+在桌面设备上：  
+1. 按键盘上的 Ctrl+Alt+Del。   
+2. 选择“更改密码”。
+3. 按照屏幕上的提示设置新密码。  
 
-## <a name="to-change-your-password-on-windows-phone-81"></a>在 Windows Phone 8.1 上更改密码
+有关更多帮助： 
+ 
+* 请与 IT 支持人员联系，以获取有关密码要求、公司门户或网络访问问题的帮助。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
+* 有关 Windows 10 中其他登录选项的详细信息，请参阅 [Windows 10 登录选项和帐户保护](https://support.microsoft.com/help/4468253/windows-10-sign-in-options-and-privacy)。  
 
-1. 在“主页”  屏幕上，选择“设置”  ，然后选择“锁屏”  。
-2. 向下滚动到“密码”  部分，然后选择“更改密码”  。
-3. 在“当前密码”  框中输入当前密码。
-4. 在“新密码”  框中输入新密码，随后在“确认密码”  框中再次输入该密码。
-4. 选择“完成”  。
-
-## <a name="to-set-your-password-on-windows-phone-81"></a>在 Windows Phone 8.1 上设置密码
-
-1. 在“主页”  屏幕上，选择“设置”  ，然后选择“锁屏”  。
-2. 向下滚动到**密码**，然后滑动**密码**栏到**开启**。
-3. 在“新密码”  框中输入新密码，随后在“确认密码”  框中再次输入该密码。
-4. 选择“完成”  。
-
-仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

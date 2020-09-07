@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f8a2ff04f536370f613341170e7fae0a808ff6
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 265b92229d687c7dafb2c6de196990c29ffc0cb8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365519"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996089"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>使用 Intune 创建移动威胁防御 (MTD) 设备符合性策略
 
@@ -68,7 +68,7 @@ MTD 设备符合性策略先决条件：
 7. 完成后，在“查看 + 创建”页上，选择“创建” 。 为创建的配置文件选择策略类型时，新配置文件将显示在列表中。
 
 > [!IMPORTANT]
-> 如果为 Office 365 或其他服务创建条件访问策略，将评估设备的符合性并阻止不符合设备访问公司资源，直到解决威胁。
+> 如果为 Microsoft 365 或其他服务创建条件访问策略，系统将评估设备的合规性，并阻止不合规的设备访问公司资源，直到设备中的威胁解除为止。
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>分配 MTD 设备符合性策略
 

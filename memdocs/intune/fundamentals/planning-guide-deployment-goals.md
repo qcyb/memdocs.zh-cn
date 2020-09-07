@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079223"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992635"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>确定部署目标、宗旨和难题
 
@@ -33,9 +33,9 @@ ms.locfileid: "82079223"
 
 部署目标是计划通过在组织中部署 Intune 而获得长期成就。 下面列出了这些目标的一些示例，以及每个目标的说明和业务价值。
 
-- **与 Office 365 集成并支持使用 Office 移动应用**
+- **与 Microsoft 365 集成并支持使用 Office 移动应用**
 
-  - **描述：** 支持与 Office 365 紧密集成，且可在 Office 移动应用中实施应用保护。
+  - **描述：** 支持与 Microsoft 365 紧密集成，且可在 Office 移动应用中实施应用保护。
 
   - **业务价值：** 让用户能够使用其熟悉和喜爱的应用，从而保护和改善用户体验。
 

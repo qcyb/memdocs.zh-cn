@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 20d217246be59a612c1a022251f89559ad940894
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022324"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996429"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>有关 MAM 和应用保护的常见问题
 
@@ -67,13 +67,13 @@ Intune MAM 支持两种配置：
 
 **在 Intune 托管应用上使用应用保护策略的基本要求有哪些？**
 
-- 最终用户必须具有 Azure Active Directory (AAD) 帐户。 请参阅[添加用户并授予对 Intune 的管理权限](../fundamentals/users-add.md)，了解如何在 Azure Active Directory 中创建 Intune 用户。
+- 最终用户必须具有 Azure Active Directory (Azure AD) 帐户。 请参阅[添加用户并授予对 Intune 的管理权限](../fundamentals/users-add.md)，了解如何在 Azure Active Directory 中创建 Intune 用户。
 
 - 最终用户必须向其 Azure Active Directory 帐户分配 Microsoft Intune 许可证。 请参阅[管理 Intune 许可证](../fundamentals/licenses-assign.md)，以了解如何向最终用户分配 Intune 许可证。
 
 - 最终用户必须属于应用保护策略所针对的安全组。 同一应用保护策略必须面向正在使用的特定应用。 可在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)创建和部署应用保护策略。 当前可以在 [Microsoft 365 管理中心](https://admin.microsoft.com)创建安全组。
 
-- 最终用户必须使用其 AAD 帐户登录到应用。
+- 最终用户必须使用其 Azure AD 帐户登录到应用。
 
 **如果我想要启用具有 Intune 应用保护的应用，但未使用受支持的应用开发平台，该怎么办？**
 
@@ -86,14 +86,14 @@ Intune App SDK 可以使用 Microsoft 身份验证库进行身份验证和条件
 
 - 最终用户必须将 Outlook 移动应用安装到其设备上。
 
-- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) 邮箱和许可证。
+- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) 邮箱和许可证。
 
   >[!NOTE]
-  > Outlook 移动应用当前仅支持适用于 Microsoft Exchange Online 的 Intune 应用保护和[使用混合新式身份验证的 Exchange Server](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx)，不支持 Office 365 Dedicated 中的 Exchange。
+  > Outlook 移动应用当前仅支持适用于 Microsoft Exchange Online 的 Intune 应用保护和[使用混合新式身份验证的 Exchange Server](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)，不支持 Office 365 Dedicated 中的 Exchange。
 
 **使用 [Word、Excel 和 PowerPoint](https://products.office.com/business/office) 应用有什么其他要求？**
 
-- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 遵循这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)可在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Office 365 许可证。
+- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 可按照这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Microsoft 365 许可证。
 
 - 最终用户必须具有使用粒度另存为功能进行配置的托管位置（该功能位于“保存组织数据的副本”应用程序保护策略设置下）。 例如，如果托管位置为 OneDrive，则应在最终用户的 Word、Excel 或 PowerPoint 应用中对 [OneDrive](https://onedrive.live.com/about/) 应用进行配置。
 
@@ -106,7 +106,7 @@ Intune App SDK 可以使用 Microsoft 身份验证库进行身份验证和条件
 Intune 会将应用中的所有数据标记为“公司”或“个人”。 数据源于业务位置时会被视为“公司”数据。 对于 Office 应用，Intune 将以下数据视为业务位置：电子邮件 (Exchange) 或云存储（包含 OneDrive for Business 帐户的 OneDrive 应用）。
 
 **使用 Skype for Business 有什么其他要求？**<br></br>
-请参阅 [Skype for Business](https://products.office.com/skype-for-business/it-pros) 许可证要求。 对于 Skype for Business (SfB) 混合配置和本地配置，请分别参阅[正式发布适用于 SfB 和 Exchange 的混合新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)和[使用 AAD 实现适用于 SfB OnPrem 的新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)。
+请参阅 [Skype for Business](https://products.office.com/skype-for-business/it-pros) 许可证要求。 对于 Skype for Business (SfB) 混合配置和本地配置，请分别参阅[正式发布适用于 SfB 和 Exchange 的混合新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)和[使用 Azure AD 实现适用于 SfB OnPrem 的新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)。
 
 ## <a name="app-protection-features"></a>应用保护功能
 

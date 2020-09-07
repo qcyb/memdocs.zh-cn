@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546820"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286197"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Android Enterprise 工作配置文件安全配置
 
@@ -90,7 +90,9 @@ ms.locfileid: "87546820"
 | 工作配置文件设置 | 密码过期（天数） | 未配置 | 组织可能需要更新此设置来匹配自己的密码策略。 |
 | 工作配置文件设置 | 所需的密码类型 | 数字复杂度 ||
 | 工作配置文件设置 | 防止重用以前的密码 | 未配置 | 组织可能需要更新此设置来匹配自己的密码策略。|
+| 工作配置文件设置 | 人脸解锁 | 未配置 ||
 | 工作配置文件设置 | 指纹解锁 | 未配置 ||
+| 工作配置文件设置 | 虹膜解锁 | 未配置 ||
 | 工作配置文件设置 | Smart Lock 和其他信任代理 | 未配置 |||
 | 设备密码 | 最短密码长度 | 6 | 组织可能需要更新此设置来匹配自己的密码策略。 |
 | 设备密码 | 最长经过多少分钟的非活动状态后锁定屏幕 | 5 | 组织可能需要更新此设置来匹配自己的密码策略。 |

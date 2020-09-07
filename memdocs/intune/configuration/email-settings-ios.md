@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aec16e4c3c1eae5614fdf000740dcf8363bec1ca
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 72c4405d68d2a1c9a5294a7d05acffb106837f60
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88145974"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996395"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>在 Microsoft Intune 中为 iOS 和 iPadOS 设备添加电子邮件设置
 
@@ -64,15 +64,15 @@ ms.locfileid: "88145974"
 - **SSL**：选择“启用”后，可在发送电子邮件、接收电子邮件以及与 Exchange 服务器通信时使用安全套接字层 (SSL) 通信。
 - **OAuth**：选择“启用”后，可在发送电子邮件、接收电子邮件以及与 Exchange 通信时使用 Open Authorization (OAuth) 通信。 如果 OAuth 服务器使用证书身份验证，请选择“证书”作为“身份验证方法”，并将证书包含在配置文件中 。 否则，请选择“用户名和密码”作为“身份验证方法” 。 使用 OAuth 时，请确保：
 
-  - 确认电子邮件解决方案支持 OAuth 后，再将此配置文件提供给用户。 Office 365 Exchange online 支持 OAuth。 本地 Exchange 和其他合作伙伴或第三方解决方案可能不支持 OAuth。 可以为新式身份验证配置本地 Exchange。 有关详细信息，请参阅[本地 Skype for Business 和 Exchange 服务器的混合新式身份验证概述和先决条件](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)。
+  - 确认电子邮件解决方案支持 OAuth 后，再将此配置文件提供给用户。 Microsoft 365 Exchange Online 支持 OAuth。 本地 Exchange 和其他合作伙伴或第三方解决方案可能不支持 OAuth。 可以为新式身份验证配置本地 Exchange。 有关详细信息，请参阅[本地 Skype for Business 和 Exchange 服务器的混合新式身份验证概述和先决条件](/office365/enterprise/hybrid-modern-auth-overview)。
 
     如果电子邮件配置文件使用 Oauth，并且电子邮件服务不支持，则会显示“重新输入密码”选项。 例如，当用户在 Apple 的设备设置中选择“重新输入密码”时，没有任何反应。
 
   - 启用 OAuth 后，最终用户将拥有支持多重身份验证 (MFA) 的不同“新式身份验证”电子邮件登录体验。 
 
-  - 某些组织会禁用最终用户执行[自助应用程序访问](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access)。 在这种情况下，新式身份验证登录可能会失败，除非管理员创建“iOS 帐户”企业应用，并授予用户访问 Azure AD 中的应用的权限。
+  - 某些组织会禁用最终用户执行[自助应用程序访问](/azure/active-directory/manage-apps/manage-self-service-access)。 在这种情况下，新式身份验证登录可能会失败，除非管理员创建“iOS 帐户”企业应用，并授予用户访问 Azure AD 中的应用的权限。
 
-    默认操作是使用[应用程序访问面板](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction)的“添加应用”功能添加应用程序，而无需经过业务审批 。 有关详细信息，请参阅[将用户分配给应用程序](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications)。
+    默认操作是使用[应用程序访问面板](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction)的“添加应用”功能添加应用程序，而无需经过业务审批 。 有关详细信息，请参阅[将用户分配给应用程序](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications)。
 
   > [!NOTE]
   > 启用 OAuth 时，会发生以下情况：  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 534a7f60668091e613ff9dd9fc8a388ec59a247a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f99ddee5a30b7fb6d604e91711d12ed81b53dd91
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989411"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993930"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>添加用于组织用户和设备的组
 
@@ -54,7 +54,7 @@ Intune 使用 Azure Active Directory (Azure AD) 组来管理设备和用户。 �
         >
         > 如果你的主要角色是设备管理，我们建议使用 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 
-    - **Office 365**：通过授予成员访问共享邮箱、日历、文件、SharePoint 站点等的权限来提供协作机会。 使用此选项还可以向组织外部的用户授予对组的访问权限。 有关详细信息，请参阅[了解 Office 365 组](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)。
+    - **Microsoft 365**：通过授予成员访问共享邮箱、日历、文件、SharePoint 站点等的权限来提供协作机会。 使用此选项还可以向组织外部的用户授予对组的访问权限。 有关详细信息，请参阅[了解 Microsoft 365 组](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)。
 
 4. 对于新组，输入“组名称”  和“组说明”  。 具体明确并包含信息，使其他人知道组的用途。
 
@@ -70,8 +70,8 @@ Intune 使用 Azure Active Directory (Azure AD) 组来管理设备和用户。 �
 
     有关这些成员身份类型和创建动态表达式的详细信息，请参阅：
 
-    - [使用 Azure AD 创建基本组并添加成员](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Azure AD 中的动态组成员身份规则](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [使用 Azure AD 创建基本组并添加成员](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Azure AD 中的动态组成员身份规则](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > 在此管理中心，当你创建用户或组时，你可能看不到“Azure Active Directory”  品牌。 但这就是你正在使用的内容。
@@ -106,4 +106,4 @@ Intune 使用 Azure Active Directory (Azure AD) 组来管理设备和用户。 �
 ## <a name="see-also"></a>另请参阅
 
 - [使用 Microsoft Intune 的基于角色的访问控制 (RBAC)](role-based-access-control.md)
-- [使用 Azure AD 组管理对资源的访问](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [使用 Azure AD 组管理对资源的访问](/azure/active-directory/active-directory-manage-groups)

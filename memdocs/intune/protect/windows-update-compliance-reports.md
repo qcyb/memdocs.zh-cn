@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4ef3a4c2ba539cc507ef413a4648b42e246b11d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 297707da0afb03650eaab91b26abad9947c6a951
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990903"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286146"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Intune 的更新符合性报告
 
@@ -39,15 +39,15 @@ ms.locfileid: "83990903"
 
    在“监视”部分，从下列报表中进行选择以查看有关更新通道的更详细信息： 
 
-   - **设备状态** - 这将显示设备配置状态，有关详细信息，请参阅[更新 deviceConfigurationDeviceStatus]( https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0)。
+   - **设备状态** - 这将显示设备配置状态，有关详细信息，请参阅[更新 deviceConfigurationDeviceStatus]( /graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0)。
 
-   - **用户状态** - 这将显示用户名、状态和上次报告日期，有关详细信息，请参阅[列出 deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0)。
+   - **用户状态** - 这将显示用户名、状态和上次报告日期，有关详细信息，请参阅[列出 deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0)。
 
-   - **最终用户更新状态** - 这将显示 Windows 设备更新状态，有关详细信息，请参阅 [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta)。
+   - **最终用户更新状态** - 这将显示 Windows 设备更新状态，有关详细信息，请参阅 [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta)。
 
 ## <a name="use-update-compliance"></a>使用更新符合性
 
-可使用[更新符合性](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor)监视 Windows 10 更新的推出情况。 更新符合性通过 Azure 门户提供，满足其[先决条件](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites)的设备可免费使用。  
+可使用[更新符合性](/windows/deployment/update/update-compliance-monitor)监视 Windows 10 更新的推出情况。 更新符合性通过 Azure 门户提供，满足其[先决条件](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites)的设备可免费使用。  
 
 使用此解决方案时，可将商业 ID 部署到要报告其更新符合性且由 Intune 托管的任意 Windows 10 设备上。  
 
@@ -59,12 +59,12 @@ ms.locfileid: "83990903"
 
 - **设置名称**：Windows Analytics 商业 ID
 - **设置说明**：为 Windows Analytics 解决方案配置商业 ID
-- OMA-URI（区分大小写）：./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID  
+- **OMA-URI**（区分大小写）：./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID
 - **数据类型**：字符串
-- **值**：\<使用 OMS 工作区中 Windows 遥测选项卡上显示的 GUID>
+- **值**：\<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
 
 > [!NOTE]
-> 有关 MS DM 服务器的详细信息，请参阅 [DMClient 配置服务提供程序 (CSP)]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp)。
+> 有关 MS DM 服务器的详细信息，请参阅 [DMClient 配置服务提供程序 (CSP)]( /windows/client-management/mdm/dmclient-csp)。
 
 ## <a name="next-steps"></a>后续步骤
 

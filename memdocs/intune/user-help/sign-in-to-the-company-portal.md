@@ -1,11 +1,11 @@
 ---
 title: 如何登录公司门户应用 | Microsoft Docs
-description: 了解如何在多个平台上登录到公司门户应用。
+description: 了解从何处获取公司门户应用以及三种不同的登录方式。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/31/2019
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,81 +19,78 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 59555c8bb9a35d5b70b46836f2298bf3ed342b2d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 28400d1aff176f83fd98b8ef1a825f468cd8847f
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881820"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057430"
 ---
-# <a name="sign-in-to-company-portal"></a>登录公司门户  
+# <a name="how-to-sign-in-to-company-portal"></a>如何登录公司门户  
 
-可通过三种方式登录公司门户应用：
+可分别从 Windows 10、Android、iOS 和 macOS 设备上的以下位置访问公司门户： 
 
-* 使用工作电子邮件地址和密码登录。  
+* [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
+* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
+* [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414)  
+* [注册 Mac](https://go.microsoft.com/fwlink/?linkid=853070)：选择此链接将立即在设备上下载公司门户安装程序包。  
+
+可通过三种方式登录公司门户应用。
+
+* 使用学校或工作电子邮件地址和密码登录。  
 * 使用基于证书的身份验证登录。  
-* 从另一台设备登录。    
+* 从另一台设备登录。   
+
+本文介绍如何使用上述每种方法进行登录。 为了获得最佳体验，请使用组织推荐或要求使用的方法。 
 
 
-## <a name="sign-in-with-your-email-address-and-password"></a>使用电子邮件地址和密码登录
-以下步骤显示来自适用于 iOS 的公司门户的屏幕截图。  
+## <a name="sign-in-with-school-or-work-account"></a>使用学校或工作帐户登录    
+完成以下步骤，以使用学校或工作帐户登录到公司门户。 
 
-1. 在设备上打开应用，点击“登录”  。  
+1. 打开应用，然后点击“登录”。  
 
-   ![公司门户登录页面的示例屏幕截图。](./media/intune-ios-cp-signin-1908.png)
+2. 输入与学校或工作帐户关联的电子邮件地址，然后点击“下一步”。
+
+3. 输入密码，然后点击“登录”。
 
 
-2. 输入“工作或学校帐户”，然后单击“下一步”   。
+4. 等待应用验证凭据。 完成后，即可访问应用中的功能和组织资源。  
 
-   ![提示用户只提供电子邮件地址，而不是在同一屏幕上同时提供电子邮件和密码。](./media/cp_ios_aad_signin_after_1804_002.png)
-
-3. 输入密码，然后点击“登录”  。
-
-   ![在接受其电子邮件地址之后，提示用户输入密码。](./media/cp_ios_aad_signin_after_1804_003.png)
-
-4. 此应用会验证你的凭据。 完成后，你可以访问组织的资源并安装可用应用。  
-
-   ![在经过身份验证过程后，公司门户应用进行登录，并显示加载栏。](./media/cp_ios_aad_signin_after_1804_004.png)
-
-## <a name="sign-in-with-certificate-based-authentication"></a>使用基于证书的身份验证登录
+## <a name="sign-in-with-certificate"></a>使用证书登录  
 仅当组织允许进行基于证书的身份验证，并且你有可供使用的证书，你才会看到此登录选项。  
 
 1. 在设备上打开公司门户应用。  
 
-2. 输入**工作或学校账户**。  
+2. 输入与工作或学校帐户关联的电子邮件地址，然后点击“下一步”。   
 
-3. 点击“使用证书登录”  链接。  
+3. 点击“使用证书登录”。  
 
-4. 点击“继续”  以使用该证书。  
+4. 点击“继续”**** 以使用该证书。  
+5. 等待应用验证证书。 完成后，即可访问应用中的功能和组织资源。  
 
-## <a name="sign-in-from-another-device"></a>从另一台设备登录
+## <a name="sign-in-via-another-device"></a>通过其他设备登录    
 
-如果公司使用智能卡访问用户的电脑，则用户很可能必须从另一台设备登录来进行身份验证。  
+如果通常使用智能卡访问工作资源，请按照本部分中的步骤登录到公司门户。  
 
-1. 在设备上打开公司门户应用。 请确保它便是用于访问工作资源的设备。       
+1. 在将要用来访问工作资源的设备上打开公司门户。  
 
-1. 选择“从另一台设备登录”  。  
+2. 选择“从另一台设备登录”****。  
 
-   ![公司门户的登录页提示用户输入电子邮件地址。  显示“下一步”按钮和“从另一台设备登录”链接。 此外还有转向“无法访问帐户？”的链接。 底部的链接指向 Microsoft 隐私和 Cookie 信息。](./media/cp_ios_aad_signin_after_1804_005.png)
-
-2. 会收到用于登录公司门户的一次性唯一验证码。 复制代码。
+3. 记下出现在屏幕上的一次性登录代码（或者备好此屏幕，以便在接下来的几个步骤中查看）。 
 
    ![通过使用工作计算机的唯一密码访问 https://microsoft.com/devicelogin 页面，然后使用验证码进行登录可获得说明。](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. 在其他设备（用于进行身份验证的设备）上，打开浏览器并转到 [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin)。 输入或粘贴代码。  
+3. 切换到其他设备（用于进行身份验证的设备），并转到 [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin)。  
+
+4. 出现提示时，输入代码。  
 
    ![用户工作计算机上用户浏览器的图像，而不是公司门户应用的图像。 显示的“设备登录”页将提示用户输入他们在公司门户应用中收到的验证码。](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
-4. 选择“继续”  以允许公司门户登录你的工作设备。   
+4. 选择“继续”以允许公司门户登录你的工作设备。   
 
-   ![用户已将唯一代码输入到字段中，“设备登录”站点要求确认 Intune 公司门户是接收授权以进行登录的正确应用。](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_005.png) 
+5. 屏幕显示你已登录公司门户后，即可关闭浏览器并切换到工作设备。  
 
-5. 验证码经验证后，便可关闭窗口。  
 
-   ![确认页显示用户现在已登录其设备上的公司门户应用，可以关闭此页。](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+## <a name="next-steps"></a>后续步骤  
 
-6. 公司门户应用会使你在工作设备上登录。  
-
-   ![通过身份验证过程后，公司门户应用登录，并通过一个加载条提示进程。](./media/cp_ios_aad_signin_after_1804_007.png)
-
-仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
+遇到困难或需要帮助？ 请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  

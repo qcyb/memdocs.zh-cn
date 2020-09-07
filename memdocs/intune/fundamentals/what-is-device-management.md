@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: c7d5583addc4e76f5af0ea0b9780f20d8fa78a2c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353609"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996191"
 ---
 # <a name="device-management-overview"></a>设备管理概述
 
@@ -52,20 +52,20 @@ Intune 包含在 Microsoft Azure、Microsoft 365 中，并与 Azure Active Direc
 [常见方案](common-scenarios.md)是了解 Intune 在使用移动设备时如何回答常见问题的绝佳资源。 你将发现以下方案：  
 
 - 使用本地 Exchange 保护电子邮件
-- 安全可靠地访问 Office 365
+- 安全可靠地访问 Microsoft 365
 - 使用个人设备访问组织资源
 
 有关 Intune 的详细信息，请参阅[什么是 Intune](what-is-intune.md)。
 
 ## <a name="co-management"></a>共同管理
 
-许多组织使用本地 Configuration Manager 来管理设备，包括台式机和服务器。 可以将本地 Configuration Manager 部署到 Microsoft Intune。 进行云附加后，可以获得 Intune 和云的优势，包括[条件访问](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access)、[运行远程操作](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions)、[使用 Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot) 等。
+许多组织使用本地 Configuration Manager 来管理设备，包括台式机和服务器。 可以将本地 Configuration Manager 部署到 Microsoft Intune。 进行云附加后，可以获得 Intune 和云的优势，包括[条件访问](../../configmgr/comanage/quickstart-conditional-access.md)、[运行远程操作](../../configmgr/comanage/quickstart-remote-actions.md)、[使用 Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md) 等。
 
-[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) 是一个解决方案平台，它整合了多种服务。 其中包括用于基于云的设备管理的 [Microsoft Intune](what-is-intune.md)，以及用于云附加设备管理的 [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview)。
+[Microsoft Endpoint Manager](../../endpoint-manager-overview.md) 是一个解决方案平台，它整合了多种服务。 其中包括用于基于云的设备管理的 [Microsoft Intune](what-is-intune.md)，以及用于云附加设备管理的 [Configuration Manager + Intune](../../configmgr/comanage/overview.md)。
 
 如果你使用的是 Configuration Manager，并且已准备好将某些任务移至云中，那么你需要的就是共同管理。
 
-有关云附加 Configuration Manager 的详细信息，请参阅[什么是共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview)。
+有关云附加 Configuration Manager 的详细信息，请参阅[什么是共同管理](../../configmgr/comanage/overview.md)。
 
 ## <a name="integration-with-secure-and-protect-services"></a>与安全和保护服务集成
 
@@ -108,11 +108,11 @@ Intune 包含在 Microsoft Azure、Microsoft 365 中，并与 Azure Active Direc
 - 管理软件更新
   - [管理 Windows 10 更新](../protect/windows-update-for-business-configure.md)  
   - [管理 iOS/iPadOS 更新](../protect/software-updates-ios.md)  
-- [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
-- [管理用户](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [管理组和成员](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Azure Active Directory](/azure/active-directory)  
+- [管理用户](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [管理组和成员](/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [故障排除](help-desk-operators.md)
 
 ## <a name="next-steps"></a>后续步骤
 
-当准备好开始使用 MDM 或 MAM 解决方案时，请按不同步骤设置 Intune、登记设备并开始创建策略。 [适用于 Microsoft 365 的移动设备管理](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure)也是出色的资源。
+当准备好开始使用 MDM 或 MAM 解决方案时，请按不同步骤设置 Intune、登记设备并开始创建策略。 [适用于 Microsoft 365 的移动设备管理](/microsoft-365/enterprise/mobility-infrastructure)也是出色的资源。

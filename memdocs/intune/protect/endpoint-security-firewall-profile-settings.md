@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431600"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068127"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Intune 中终结点安全的防火墙策略设置
 
@@ -198,22 +198,22 @@ ms.locfileid: "83431600"
   - 未配置
 
 - **包系列名称**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   可通过从 PowerShell 运行 Get-AppxPackage 命令来检索包系列名称。
 
 - **文件路径**  
-  CSP：[FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP：[FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   若要指定应用的文件路径，请在客户端设备上输入应用位置。 例如：`C:\Windows\System\Notepad.exe` 或 `%WINDIR%\Notepad.exe`
 
 - **服务名称**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   当服务（而不是应用程序）发送或接收流量时，使用 Windows 服务短名称。 通过从 PowerShell 运行 `Get-Service` 命令来检索服务短名称。
 
 - **协议**  
-  CSP：[FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP：[FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   指定此端口规则的协议。
   - 传输层协议（如 TCP(6) 和 UDP(17)）允许指定端口或端口范围 。
@@ -228,7 +228,7 @@ ms.locfileid: "83431600"
   - 未配置
 
 - **授权的用户**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   指定此规则的授权本地用户列表。 如果此策略中的服务名称设置为 Windows 服务，则无法指定授权用户列表。 如果未指定授权用户，则默认值为“所有用户”。
 
@@ -237,9 +237,14 @@ ms.locfileid: "83431600"
   - **是** - 支持任何本地地址而不配置地址范围。
 
 - **本地地址范围**  
-  CSP：[FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP：[FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  将一个或多个地址添加为该规则所涵盖的本地地址的逗号分隔列表。 有效条目（令牌）包括以下选项：
+  管理此规则的本地地址范围。 你可以：
+  - 将一个或多个地址添加为该规则所涵盖的本地地址的逗号分隔列表。
+  - 导入 .csv 文件，其中包含要用作本地地址范围的地址列表。
+  - 将当前的本地地址范围列表导出为 .csv 文件。
+
+  有效条目（令牌）包括以下选项：
   - **星号** - 星号 (\*) 指示任何本地地址。 如果存在星号，则星号必须是包含的唯一标记。
   - **子网** - 使用子网掩码或网络前缀表示法指定子网。 如果未指定子网掩码或网络前缀，则子网掩码默认为 255.255.255.255。
   - **有效 IPv6 地址**
@@ -253,9 +258,14 @@ ms.locfileid: "83431600"
   - **是** - 支持任何远程地址而不配置地址范围。
 
 - **远程地址范围**  
-  CSP：[FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP：[FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  将一个或多个地址添加为该规则所涵盖的远程地址的逗号分隔列表。 有效条目（令牌）包括以下选项，不区分大小写：
+  管理此规则的远程地址范围。 你可以：
+  - 将一个或多个地址添加为该规则所涵盖的远程地址的逗号分隔列表。
+  - 导入 .csv 文件，其中包含要用作远程地址范围的地址列表。
+  - 将当前的远程地址范围列表导出为 .csv 文件。
+
+  有效条目（令牌）包括以下选项，不区分大小写：
   - **星号** - 星号(\*) 指示任何远程地址。 如果存在星号，则星号必须是包含的唯一标记。
   - **Defaultgateway**
   - **DHCP**

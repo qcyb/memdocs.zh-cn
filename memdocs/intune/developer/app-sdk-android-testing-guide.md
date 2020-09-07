@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262041"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286265"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Microsoft Intune App SDK for Android 开发人员测试指南
 
@@ -33,7 +33,7 @@ ms.locfileid: "87262041"
 1. 导航到 [Microsoft CDX 租户创建网站](https://cdx.transform.microsoft.com/my-tenants/create-tenant)并创建 Microsoft 365 企业版租户。
 2. [设置 Intune](../fundamentals/setup-steps.md) 以启用移动设备管理 (MDM)。
 3. [创建用户](../fundamentals/users-add.md)。
-4. [创建组](../fundamentals/groups-add.md)。
+4. [创建组]../fundamentals/(groups-add.md)。
 5. 根据测试[分配许可证](../fundamentals/licenses-assign.md)。
 
 
@@ -97,7 +97,7 @@ ms.locfileid: "87262041"
     - 阻止将应用中的文本复制到非托管应用（如 Message）。
 
 ### <a name="prevent-save"></a>阻止“保存”
-如果应用需要[集成的“另存为”控件](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations)，可以按如下方式控制“另存为”功能：
+如果应用需要集成的“另存为”控件，可以按如下方式控制“另存为”功能：
 
 1.  将“阻止‘另存为’”设为“是”。
 2. 确认以下情况：

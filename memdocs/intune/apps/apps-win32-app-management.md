@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2c8d007ba2fccb92fd90de4da64945155678041d
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271001"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281194"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune 独立版 - Win32 应用管理
 
@@ -240,7 +240,7 @@ ms.locfileid: "84271001"
                 ![检测规则窗格的屏幕截图 - 文件夹存在](./media/apps-win32-app-management/apps-win32-app-04.png)
         
         3. **注册表** - 基于值、字符串、整数或版本进行验证。
-            - **密钥路径** - 包含要检测的值的注册表项的完整路径。
+            - **密钥路径** - 包含要检测的值的注册表项的完整路径。 有效语法为 HKEY_LOCAL_MACHINE\Software\WinRAR 或 HKLM\Software\WinRAR。
             - **值名称** - 要检测的注册表值的名称。 如果此值为空，则将对密钥进行检测。 如果检测方法不是文件或文件夹存在，则密钥的（默认）值将用作检测值。
             - **检测方法** - 选择用于验证应用存在的检测方法类型。
             - **与 64 位客户端上的 32 位应用相关联** -选择“是”，搜索 64 位客户端上的 32 位注册表。 选择“否”（默认值），搜索 64 位客户端上的 64 位注册表。 32 位客户端将始终搜索 32 位注册表。
@@ -289,7 +289,7 @@ ms.locfileid: "84271001"
 1. 单击“添加”以显示“添加依赖项”窗格。
 3. 添加相关应用之后，单击“选择”。
 4. 通过在“自动安装”列下选择“是”或“否”，选择是否自动安装相关应用。
-5. 单击“下一步”以显示“作用域标记”页面。
+5. 单击“下一步”  以显示“作用域标记”  页面。
 
 ### <a name="understand-additional-dependency-details"></a>了解其他依赖项详细信息
 
@@ -305,7 +305,7 @@ ms.locfileid: "84271001"
 ## <a name="step-6---select-scope-tags-optional"></a>步骤 6 - 选择作用域标记（可选）
 可以使用作用域标记来确定谁可以在 Intune 中查看客户端应用信息。 若要详细了解作用域标记，请参阅[将基于角色的访问控制和作用域标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-1. 单击“选择作用域标记”可以选择为应用添加作用域标记。 
+1. 单击“选择作用域标记”  可以选择为应用添加作用域标记。 
 2. 单击“下一步”以显示“分配”页面 。
 
 ## <a name="step-7---assignments"></a>步骤 7 - 分配
@@ -326,7 +326,7 @@ ms.locfileid: "84271001"
 ## <a name="step-8---review--create"></a>步骤 8 - 查看 + 创建
 
 1. 查看为应用输入的值和设置。 验证是否已正确配置应用信息。
-2. 完成后，单击“创建”将应用添加到 Intune。
+2. 完成后，单击“创建”  将应用添加到 Intune。
 
     将显示业务线应用的“概述”边栏选项卡。
 

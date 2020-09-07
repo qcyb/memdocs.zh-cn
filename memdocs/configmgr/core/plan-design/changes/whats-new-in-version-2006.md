@@ -2,7 +2,7 @@
 title: 2006 版中的新增功能
 titleSuffix: Configuration Manager
 description: 详细了解 Configuration Manager Current Branch 版本 2006 中引入的更改和新功能。
-ms.date: 08/20/2020
+ms.date: 09/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819671"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385356"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2006 的新变化
 
@@ -340,8 +340,7 @@ Starting with this version, the following features are no longer [pre-release](.
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_2006)。
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4556203).
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 2006）的更改摘要](https://support.microsoft.com/help/4578830)。
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
@@ -363,9 +362,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>后续步骤
 
-目前，版本 2006 是针对早期更新通道发布的。 若要安装此更新，则必须选择启用。 有关详细信息，请参阅[早期更新圈](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring)。
+<!-- At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring). -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. -->
+自 2020 年 8 月 31 日起，版本 2006 公开发布，可供所有用户安装。
 
 如果你已准备好安装此版本，请参阅[安装 Configuration Manager 更新](../../servers/manage/updates.md)和[用于安装更新 2006 的清单](../../servers/manage/checklist-for-installing-update-2006.md)。
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: ef1b6c82cae82763dc327f16e35d0e3bc522c3c7
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022307"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057464"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>通过公司门户注册设备  
 注册个人或公司拥有的 Android 设备，以安全访问公司电子邮件、应用和数据。 公司门户支持 Android 设备，包括运行 Android 4.4 及更高版本的 Samsung Knox。  
@@ -32,11 +32,24 @@ ms.locfileid: "86022307"
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung Knox 是一种安全解决方案，一些 Samsung 设备用它来提供本机 Android 无法提供的额外保护。 若要检查是否是 Samsung Knox 设备，请依次转到“设置” > “关于设备” 。 如果其中没有列出“Knox 版本”，表明使用的是本机 Android 设备。
+> Samsung Knox 是一种安全解决方案，一些 Samsung 设备用它来提供本机 Android 无法提供的额外保护。 若要检查是否是 Samsung Knox 设备，请依次转到“设置” > “关于设备” 。 如果其中没有列出“Knox 版本”，表明使用的是本机 Android 设备。  
+
+## <a name="install-company-portal-app"></a>安装公司门户应用  
+[从 Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) 安装 Intune 公司门户应用。 有关在中华人民共和国提供应用的商店列表，请参阅[在中华人民共和国安装公司门户应用](install-company-portal-android-china.md)。
+
+1. 点击“主页” > “Play Store”。
+
+2. 搜索“Intune 公司门户”。 然后点击应用将其打开。 
+
+    ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
+
+4. 点击“安装”。
+
+5. 出现有关应用权限的提示时，点击“接受”。  
+
+    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
 ## <a name="enroll-device"></a>注册设备  
-请务必[从 Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) 安装 Intune 公司门户应用。 有关在中华人民共和国提供应用的商店列表，请参阅[在中华人民共和国安装公司门户应用](install-company-portal-android-china.md)。
-
 注册过程中，系统可能会要求你选择最能说明如何使用设备的类别。 公司支持人员使用你的答案来检查可以访问的应用。  
 
 1. 打开公司门户应用并使用工作或学校帐户登录。  
@@ -46,7 +59,7 @@ ms.locfileid: "86022307"
    ![公司门户的示例图像，“条款”屏幕，其中突出显示了“全部接受”按钮。](./media/accept-terms-1911.png)  
 
 
-3. 查看组织可以看到的内容和看不到的内容。 然后点击“继续”。
+3. 查看组织可以看到的内容和看不到的内容。 然后点击“继续”  。
 
 
     ![公司门户的示例图像，“我们关注你的隐私”屏幕，其中突出显示“继续”按钮。](./media/android-privacy-screen-1911.png)  
@@ -81,7 +94,7 @@ ms.locfileid: "86022307"
 
     ![公司门户的示例图像，“公司访问设置”屏幕，其中显示已完成设备托管。](./media/update-settings-1911.png)  
 
-9. 组织可能会要求你更新设备设置。 点击“解决”以调整设置。 更新设置完成后，请点击“继续”。  
+9. 组织可能会要求你更新设备设置。 点击“解决”  以调整设置。 更新设置完成后，请点击“继续”。  
 
    ![公司门户的示例图像，“更新设备设置”屏幕，其中突出显示了“解决并继续”按钮。](./media/resolve-settings-1911.png)  
 

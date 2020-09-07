@@ -2,7 +2,7 @@
 title: 版本 2006 的清单
 titleSuffix: Configuration Manager
 description: 了解在更新到 Configuration Manager 版本 2006 之前要执行的操作。
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 842264dcbbf93be623f68854b158d33c2f505928
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696457"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244987"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>用于安装 Configuration Manager 更新 2006 的清单
 
@@ -68,36 +68,38 @@ ms.locfileid: "88696457"
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+自 2020 年 8 月 31 日起，版本 2006 公开发布，可供所有用户安装。 如果以前选择了早期更新通道，请注意此 Current Branch 版本的更新。
 
-目前，版本 2006 是针对早期更新通道发布的。 若要安装此更新，则必须选择加入。 以下 PowerShell 脚本将层次结构或独立主站点添加到版本 2006 的早期更新通道：
+<!--
+At this time, version 2006 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2006:
 
-[版本 2006 选择启用脚本](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2006 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
 
-Microsoft 对脚本进行数字签名，并将其捆绑到签名的自解压可执行文件内。
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
-> 版本 2006 更新只适用于运行版本 1810 或更高版本的站点。
+> The version 2006 update is only applicable to sites running version 1810 or later.
 
-若要选择加入早期更新圈，请执行以下操作：
+To opt-in to the early update ring:
 
-1. 以管理员身份打开 Windows PowerShell 版本 5 会话
+1. Open a Windows PowerShell version 5 session **as administrator**
 
     > [!IMPORTANT]
-    > Configuration Manager Current Branch 当前不支持 PowerShell 版本 7。 如果已安装 PowerShell 版本 7，仍可使用 PowerShell 版本 5。 有关详细信息，请参阅[并行使用 PowerShell 7 和 Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51)。
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
-1. 使用以下语法来运行 EnableEarlyUpdateRing2006.ps1 脚本：
+1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    其中 `SiteServer` 表示管理中心站点或独立主站点。 例如： `EnableEarlyUpdateRing2006.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2006.ps1 cmprimary01`
 
-1. 检查更新。 有关详细信息，请参阅[获取可用更新](install-in-console-updates.md#get-available-updates)。
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-版本 2006 更新现在应该在控制台中可用。
+The version 2006 update should now be available in the console.
 
 > [!IMPORTANT]
-> 此脚本只将站点添加到版本 2006 的早期更新通道。 这并不是永久更改。
+> This script only adds your site to the early update ring for version 2006. It's not a permanent change.
+-->
 
 ## <a name="checklist"></a>清单
 

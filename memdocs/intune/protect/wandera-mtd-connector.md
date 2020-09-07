@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: 92c0911ff9250fb1b2832df4b7e269f192ee8cda
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972162"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057515"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>使用 Intune 的 Wandera 移动威胁防御连接器  
 
@@ -38,7 +38,7 @@ Wandera 移动应用使用 Microsoft Intune 无缝安装。 此应用可捕获�
 
 Intune 中的符合性策略包括基于 Wandera 风险评估的 MTD 规则。 启用此规则后，Intune 将评估设备是否符合已启用的策略。
 
-对于不符合要求的设备，可以阻止其访问 Office 365 等资源。 被阻止的设备上的用户可从 Wandera 应用接收指导来解决此问题，并重新获得访问权限。
+对于不合规的设备，可以阻止其访问 Microsoft 365 等资源。 被阻止的设备上的用户可从 Wandera 应用接收指导来解决此问题，并重新获得访问权限。
 
 Wandera 将在每台设备的最新威胁级别（安全、低、中或高）发生更改时更新 Intune。 此威胁级别由 Wandera 安全云持续重新计算，它基于设备状态、网络活动和各种威胁类别中的大量移动威胁情报源。
 

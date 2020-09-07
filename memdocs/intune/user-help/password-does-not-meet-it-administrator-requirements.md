@@ -1,11 +1,11 @@
 ---
-title: Intune 公司门户中设备的密码要求 | Microsoft Docs
-description: 本文介绍你的组织可能强制执行的常见密码要求。
+title: 已注册 Intune 的设备的密码要求 | Microsoft Docs
+description: 本文介绍如何满足组织的密码要求，以便访问其网络。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +15,38 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: b9bdada31e280c7fdc8a5d7a5a0a4a7ab7d36ae3
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047965"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057281"
 ---
-# <a name="device-password-requirements-for-enrolled-devices"></a>已注册设备的设备密码要求
+# <a name="device-password-requirements"></a>设备密码要求  
 
-你的组织可能要求你创建更安全的密码，然后才允许你访问工作或学校资源。 本文介绍 Windows 10、iOS、macOS 和 Android 设备的常见密码要求。 你的组织可能不会强制执行所有这些要求。  
+如果你的设备密码不符合组织的安全要求，你将从公司门户收到一条消息。 实施密码要求是为了保护你和组织的数据免遭未经授权的访问。 在创建更安全的密码之前，你可能无法访问组织的网络。  
 
+公司门户针对每个密码要求发送一条消息，因此你一次可能收到多条消息。 点击任意消息可查看更多详细信息（如果提供）。  
 
-如果密码不再满足要求，你将收到来自公司门户的消息。 它将说明你需要进行的更改。 如果消息中未提供任何详细信息，请使用本文作为参考来比较当前密码。  
+本文按 OS 平台列出了你可能收到的所有与密码有关的消息，并提供了有关每个要求的其他详细信息。     
+
+## <a name="change-password-passcode-pin"></a>更改密码、PIN  
+
+通常，若要访问密码设置，可以在设备上打开设置应用，然后搜索锁屏界面或安全设置。  
+
+以下文章介绍如何按 OS 平台更新设备密码。 若要获取特定设备的最新说明，请参阅设备制造商提供的帮助文档。  
+
+- [设置 Windows 10 设备密码](set-or-change-your-password-windows.md)  
+- [设置 iOS 设备密码](set-or-change-your-passcode-ios.md)  
+- [设置 Android 设备的 PIN 或密码](set-your-pin-or-password-android.md)  
+
 
 > [!IMPORTANT]
 > 如果已更改密码以满足要求，但仍收到通知，请重启设备。  
 
-如需更多帮助或了解组织的具体要求，请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
+有关组织密码要求的特定问题，请联系 IT 支持人员。  
 
 ## <a name="windows-10-password-requirements"></a>Windows 10 密码要求
 
@@ -55,7 +67,7 @@ ms.locfileid: "88047965"
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 密码是必填项。| 设置密码。 组织要求你输入密码来解锁设备。 |
 | 密码太过简单。 |  请确保密码不包含连续或重复数字，如 1234 或 1111。 |
-| 密码太短。 | 请使用更多字符更新或设置密码。 组织要求密码为特定长度。 但实际选择将有所不同，他们可以要求的最小长度为 4 个字符，最大长度为 14 个字符。 更改密码时，Apple 可能会提示你输入 6 个或更多字符；此消息是 Apple 系统建议。 如果你的组织仅要求密码为 4 或 5 个字符，则无需输入 6 位密码。|  
+| 密码太短。 | 请使用更多字符更新或设置密码。 组织要求密码为特定长度。 但实际选择将有所不同，他们可以要求的最小长度为 4 个字符，最大长度为 14 个字符。 更改密码时，Apple 可能会提示你输入 6 个或更多字符；此消息只是 Apple 系统建议。 如果你的组织仅要求密码为 4 或 5 个字符，则无需输入 6 位密码。|  
 | 密码只能包含数字。 | 请设置只包含数字的密码。|
 | 密码只能包含字母数字字符。| 设置包含数字和字母组合的密码。|
 | 密码必须包含非字母数字字符。 | 添加特殊字符，如 `&`、`!`、`$`、`%` 和 `#`。 组织要求混合使用字母、数字和非字母数字字符，以使他人更难以猜出密码。|
@@ -89,16 +101,9 @@ ms.locfileid: "88047965"
 | 密码已过期。 | 设置新密码。 组织要求你在指定的天数后更改密码。 |
 | 密码最近已使用过。 | 请选择一个以前未用过的密码。 组织要求经过一定时间后才能重复使用密码。 |
 
-## <a name="update-password-passcode-pin"></a>更新密码、PIN
-
-以下文章逐步介绍如何更改设备的密码或 PIN。 有关最新说明，请参阅设备制造商提供的帮助文档。 
-
-- [设置 Windows 10 设备密码](set-or-change-your-password-windows.md)  
-- [设置 iOS 设备密码](set-or-change-your-passcode-ios.md)  
-- [设置 Android 设备的 PIN 或密码](set-your-pin-or-password-android.md)  
-
 ## <a name="next-steps"></a>后续步骤
+如果在更新密码后仍然收到与密码有关的消息，请尝试重新启动设备。 
 
-仍需帮助？ 请与支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
+仍需帮助？ 请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。  
 
 

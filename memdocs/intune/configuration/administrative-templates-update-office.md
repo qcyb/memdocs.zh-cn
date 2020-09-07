@@ -1,6 +1,6 @@
 ---
-title: 使用 Microsoft Intune 中的管理模板更新 Office 365 - Azure | Microsoft Docs
-description: 使用 Microsoft Intune 中的管理模板将 Office 365 应用更新到最新版本，并选择 Office 检查更新的频率。 查看当应用 Intune 策略到 Office 更新时更新的设备注册表项。
+title: 使用 Microsoft Intune 中的管理模板更新 Microsoft 365 - Azure | Microsoft Docs
+description: 使用 Microsoft Intune 中的管理模板将 Microsoft 365 应用更新到最新版本，并选择 Office 检查更新的频率。 查看当应用 Intune 策略到 Office 更新时更新的设备注册表项。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,29 +16,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72b0ef53f0451314ef121f82524697ddfdc38cd3
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 2af6784db43b2513b57d850d85fa4deaa3052613
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531717"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193838"
 ---
-# <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>使用“更新频道”和“目标版本”设置，通过 Microsoft Intune 管理模板更新 Office 365
+# <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>使用“更新频道”和“目标版本”设置，通过 Microsoft Intune 管理模板更新 Microsoft 365
 
-在 Intune 中，可以使用 [Windows 10 模板配置组策略设置](administrative-templates-windows.md)。 本文介绍了如何使用 Intune 中的管理模板更新 Office 365。 它还提供有关确认是否已成功应用策略的指南。 此信息还有助于进行故障排除。
+在 Intune 中，可以使用 [Windows 10 模板配置组策略设置](administrative-templates-windows.md)。 本文介绍如何使用 Intune 中的管理模板更新 Microsoft 365。 它还提供有关确认是否已成功应用策略的指南。 此信息还有助于进行故障排除。
 
-在此应用场景中，将在 Intune 中创建一个管理模板以更新设备上的 Office 365。
+在此应用场景中，将在 Intune 中创建一个管理模板以更新设备上的 Microsoft 365。
 
 有关管理模板的详细信息，请参阅[使用 Windows 10 模板配置组策略设置](administrative-templates-windows.md)。
 
 适用于：
 
 - Windows 10 及更高版本
-- Office 365
+- Microsoft 365
 
 ## <a name="prerequisites"></a>必备条件
 
-确保为 Office 应用[启用 Microsoft 365 应用版自动更新](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus)。 你可以使用组策略或 Intune Office 2016 ADMX 模板执行此操作：
+确保为 Office 应用[启用 Microsoft 365 应用版自动更新](/deployoffice/configure-update-settings-for-office-365-proplus)。 你可以使用组策略或 Intune Office 2016 ADMX 模板执行此操作：
 
 > [!div class="mx-imgBorder"]
 > ![在 Intune 管理模板中，为 Office 设置“启用自动更新”设置](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -56,7 +56,7 @@ ms.locfileid: "84531717"
 2. 请确保向 Windows 10 设备[分配策略](device-profile-assign.md)。 若要更快地测试策略，还可以同步策略：
 
     - [在 Intune 中同步策略](../remote-actions/device-sync.md)
-    - [手动同步设备上的策略](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [手动同步设备上的策略](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>检查 Intune 注册表项
 
@@ -79,7 +79,7 @@ ms.locfileid: "84531717"
     > ![管理模板 L_Updatebranch 注册表项示例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [使用 Configuration Manager 管理 Microsoft 365 应用版](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)列出了值及其含义。 注册表值基于所选的分发频道：
+    > [使用 Configuration Manager 管理 Microsoft 365 应用版](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)列出了值及其含义。 注册表值基于所选的分发频道：
     >
     >- 每月频道                - value="Current"
     >- 每月频道(定向)     - value="Current"
@@ -97,9 +97,9 @@ ms.locfileid: "84531717"
     你会看到以下注册表项：
 
     - `UpdateChannel`：动态项，根据配置的设置进行更改。
-    - `CDNBaseUrl`：设置 Office 365 安装在设备上的时间。
+    - `CDNBaseUrl`：在设备上安装 Microsoft 365 时设置。
 
-3. 查看 `UpdateChannel` 值。 此值告诉你 Office 的更新频率。 [使用 Configuration Manager 管理 Microsoft 365 应用版](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)列出了值及其设置的内容。
+3. 查看 `UpdateChannel` 值。 此值告诉你 Office 的更新频率。 [使用 Configuration Manager 管理 Microsoft 365 应用版](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)列出了值及其设置的内容。
 
     在下面的示例中，你将看到 `UpdateChannel` 设置为 `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`，即“每月”  ：
 
@@ -134,7 +134,7 @@ ms.locfileid: "84531717"
 
     应使用策略中设置的值对其进行更新。 在我们的示例中，该值应设置为 `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`。
 
-此时，设备上的 Office 更新频道已成功更改。 可以为接收此更新的用户打开 Office 365 应用来检查状态。
+此时，设备上的 Office 更新频道已成功更改。 可以为接收此更新的用户打开 Microsoft 365 应用来检查状态。
 
 ## <a name="force-the-office-synchronization-to-update-account-information"></a>强制 Office 同步更新帐户信息  
 
@@ -142,7 +142,7 @@ ms.locfileid: "84531717"
 
 ### <a name="step-1-force-the-office-version-to-update"></a>步骤 1：强制更新 Office 版本
 
-1. 确认 Office 版本支持所选的更新频道。 [Microsoft 365 应用版的更新历史记录](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)列出了支持不同更新通道的内部版本号。
+1. 确认 Office 版本支持所选的更新频道。 [Microsoft 365 应用版的更新历史记录](/officeupdates/update-history-office365-proplus-by-date)列出了支持不同更新通道的内部版本号。
 
 2. 在 [Intune 管理模板](administrative-templates-windows.md#create-the-template)中，转到“目标版本”  设置，并输入所需的版本。
 
@@ -181,8 +181,8 @@ ms.locfileid: "84531717"
 
 ## <a name="next-steps"></a>后续步骤
 
-[更新 Office 365 客户端的频道值](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Microsoft 365 客户端的更新频道值](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[适用于Microsoft 365 应用版的 Office 云策略服务概述](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+[适用于Microsoft 365 应用版的 Office 云策略服务概述](/deployoffice/overview-office-cloud-policy-service)
 
 [使用 Windows 10 模板在 Microsoft Intune 中配置组策略设置（ADMX 模板）](administrative-templates-windows.md)

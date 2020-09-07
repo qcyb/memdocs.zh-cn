@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7e51f7dc4bf76b9dc35b3eb560bc2dcbe9c48916
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663372"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993811"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件访问疑难解答
 本文介绍了在你的用户无法访问受条件访问保护的资源时应采取的措施，以及在用户可访问受保护资源但应遭阻止时应采取的措施。
 
 使用 Intune 和条件访问，可以保护对以下服务的访问：
-- Office 365 服务，例如 Exchange Online、SharePoint Online 和 Skype for Business Online
+
+- Microsoft 365 服务，例如 Exchange Online、SharePoint Online 和 Skype for Business Online
 - Exchange 内部部署
 - 各种其他服务
 
@@ -49,7 +50,7 @@ ms.locfileid: "88663372"
 
 - 对于本地 Exchange，必须正确配置 Intune Exchange Connector。 有关详细信息，请参阅 [Microsoft Intune 中的 Exchange Connector 疑难解答](troubleshoot-exchange-connector.md)。
 
-- 对于本地 Skype，必须配置混合新式身份验证。 请参阅[混合新式身份验证概述](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)。
+- 对于本地 Skype，必须配置混合新式身份验证。 请参阅[混合新式身份验证概述](/office365/enterprise/hybrid-modern-auth-overview)。
 
 可在 Azure 门户和设备清单报告中针对各个设备查看这些条件。
 
@@ -77,11 +78,11 @@ ms.locfileid: "88663372"
 
 - 在首次尝试访问公司资源时，已注册且符合的 Android 设备仍可能受阻止并会收到隔离通知。 如果发生这种情况，请确保公司门户应用未运行，然后选择隔离电子邮件中的“立即开始”链接以触发评估。 仅在首次启用条件访问时才需要执行此操作。
 
-- 已注册的 Android 设备可能会提示用户“未找到证书”，并且不会获得访问 O365 资源的权限。 用户必须在已注册的设备上启用“启用浏览器访问”选项，如下所示：
+- 已注册的 Android 设备可能会提示用户“未找到证书”，并且不会获得访问 Microsoft 365 资源的权限。 用户必须在已注册的设备上启用“启用浏览器访问”选项，如下所示：
   1. 打开公司门户应用。
   2. 通过三个点 (…) 或硬件菜单按钮转到“设置”页面。
   3. 选择“启用浏览器访问”按钮。
-  4. 在 Chrome 浏览器中，从 Office 365 中注销并重启 Chrome。  
+  4. 在 Chrome 浏览器中退出 Microsoft 365，然后重启 Chrome。  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>设备受阻止且未收到隔离电子邮件
@@ -94,7 +95,7 @@ ms.locfileid: "88663372"
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>设备不符合，但用户未受阻止
 
-- 对于 Windows 电脑，条件访问仅阻止本机电子邮件应用，即启用新式身份验证的 Office 2013 或 Office 2016。 若要在 Windows 电脑上阻止旧版 Outlook 或所有邮件应用，必须按照[为 SharePoint Online 和 Exchange Online 设置 Azure Active Directory 条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)中的说明操作，执行 Azure AD 设备注册和 Active Directory 联合身份验证服务 (AD FS) 配置。
+- 对于 Windows 电脑，条件访问仅阻止本机电子邮件应用，即启用新式身份验证的 Office 2013 或 Office 2016。 若要在 Windows 电脑上阻止旧版 Outlook 或所有邮件应用，必须按照[为 SharePoint Online 和 Exchange Online 设置 Azure Active Directory 条件访问](/azure/active-directory/active-directory-conditional-access-no-modern-authentication)中的说明操作，执行 Azure AD 设备注册和 Active Directory 联合身份验证服务 (AD FS) 配置。
 
 - 如果在 Intune 中有选择地擦除或停用设备，设备可能在停用后几个小时内继续拥有访问权限。 这是因为 Exchange 将缓存访问权限六个小时。 在这种情况下，请考虑保护已停用设备上数据的其他方法。
 

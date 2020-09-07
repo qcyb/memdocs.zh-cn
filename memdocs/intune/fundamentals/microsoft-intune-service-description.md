@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune 服务说明
-description: Microsoft Intune 是一项基于云的服务，有助于管理 Windows、iOS/iPadOS、Mac OS X 和 Android 设备。
+description: Microsoft Intune 是一项基于云的服务，有助于管理 Windows、iOS/iPadOS、macOS 和 Android 设备。
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -15,12 +15,12 @@ ms.reviewer: cacamp
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f89fc7ffb3059204507a541e19afa2e97424dea5
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7352ebaf9b4aba07316c8fd9b1b5fc98d20588b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663219"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992685"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune 服务说明
 
@@ -55,17 +55,17 @@ Microsoft 为合格的计划中的合格服务提供了 Intune 载入权益。 �
 
 - [Microsoft Intune 新增功能](whats-new.md)。 在每月推出新的服务更新以及每周发布公司门户应用等应用时，本主题也将随之更新。
 
-- 同时会在 [Microsoft 365 管理中心](https://admin.microsoft.com/)信息中心公布重要的服务更新。 如果安装了配套 [Office 365 管理移动应用](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a)，就可以在你的移动设备上接收通知。 深入了解如何使用 [Office 365 消息中心](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates)。
+- 同时会在 [Microsoft 365 管理中心](https://admin.microsoft.com/)信息中心公布重要的服务更新。 如果安装了配套 [Microsoft 365 管理移动应用](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a)，就可以在你的移动设备上接收通知。 详细了解如何使用 [Microsoft 365 消息中心](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates)。
 
   以下为某些有帮助的提示：
 
-  - Office 365 消息中心中的消息是有针对性的。 这意味着，如果你的公司不具有适用于 EDU 产品/服务的 Intune，我们将不会向你发送有关适用于 EDU 的 Intune 消息。
+  - Microsoft 365 消息中心的消息是有针对性的。 这意味着，如果你的公司不具有适用于 EDU 产品/服务的 Intune，我们将不会向你发送有关适用于 EDU 的 Intune 消息。
 
   - 消息过期。 例如，服务已更新的通知与“新增功能”页面的链接可能会在下一个服务更新通知之前过期。 否则，你可能会积压大量不再相关的消息。
 
-  - Office 365 管理移动应用允许你搜索所有消息，并且，如果你想要与组织中的同事分享，还可转发通知。
+  - Microsoft 365 管理移动应用允许你搜索所有消息，并且，如果你想要与组织中的同事分享，还可转发通知。
 
-  - 在编辑消息中心首选项下方，我们最终将切换为 Intune  ，因此，你会看到这些发布到 Intune 订阅上的消息。 如果你看到的是 Office 365 的移动设备管理，而不是 Intune 的，那么你看到的是不同的服务。
+  - 在编辑消息中心首选项下方，我们最终将切换为 Intune  ，因此，你会看到这些发布到 Intune 订阅上的消息。 如果你看到的是 Microsoft 365 的移动设备管理，而不是 Intune 的，那么你看到的是不同的服务。
 
 - 还使用两个博客来分享 EMS 消息和 Intune 支持的最佳做法：
 
@@ -74,21 +74,21 @@ Microsoft 为合格的计划中的合格服务提供了 Intune 载入权益。 �
   - [Intune 支持博客](https://blogs.technet.microsoft.com/intunesupport/)
 
 > [!Note]
-> 可在 [Microsoft 365 管理中心](https://admin.microsoft.com)监视 Intune 服务运行状况。 在左侧窗格中选择**服务运行状况**。 你还可以使用 [Office 365 管理移动应用](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a)查看服务运行状况。
+> 可在 [Microsoft 365 管理中心](https://admin.microsoft.com)监视 Intune 服务运行状况。 在左侧窗格中选择**服务运行状况**。 你还可以使用 [Microsoft 365 管理移动应用](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a)查看服务运行状况。
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Microsoft 提供有关 Intune 服务的通知类型
 
 为了帮助你对服务更改做好计划，我们将根据更改产生的影响，至少在服务变更前的 7-90 天通知你。 这些更改可能包括任何以下类型的更改：
 
-- 对你可能想要与支持人员或最终用户分享的最终用户体验的更改。 我们通常会在 7 到 30 天之内提供这些更改的通知，并将其记录在 [Intune 应用 UI 的新增功能](whats-new-app-ui.md)中。 对于类似于拼写错误更改的内容，我们通常不会在文档中标注。 但是，在 UI 中最终用户注册体验的任何一项更改都是非常重要的，因此，我们将会向 Office 365 消息中心的客户发送消息，并链接到 Intune App UI 中的“新增功能”部分，以便客户收到具体变更的通知，并在生产中推出更改之前有时间评估和更新最终用户的指南。
+- 对你可能想要与支持人员或最终用户分享的最终用户体验的更改。 我们通常会在 7 到 30 天之内提供这些更改的通知，并将其记录在 [Intune 应用 UI 的新增功能](whats-new-app-ui.md)中。 对于类似于拼写错误更改的内容，我们通常不会在文档中标注。 但是，在 UI 中，最终用户注册体验的任何一项更改都是非常重要的，因此，我们将会向 Microsoft 365 消息中心的客户发送消息，并链接到 Intune App UI 中的“新增功能”部分，以便客户收到具体变更的通知，并在生产中推出更改之前有时间评估和更新最终用户指南。
 
-- 需要你采取操作的更改称为“计划更改”  ，通常会提前大约 30 天通知。 在 Office 365 消息中心，该“类别”会特别提及“计划更改”，而且，如果我们有在生产中推出更改的确切日期，我们还会加入“采取行动”日期  ，让你看到更改队列和解释标记。
+- 需要你采取操作的更改称为“计划更改”  ，通常会提前大约 30 天通知。 在 Microsoft 365 消息中心，该“类别”会特别提及“计划更改”，而且，如果我们有在生产中推出更改的确切日期，我们还会加入“采取行动”日期，让你看到更改队列和解释标记。
 
 - 对于大多数弃用功能，我们通常会提前 90 天发出弃用通知。 例如，如果我们不再支持特定版本的 IE，我们会计划提前 90 天发送通知。 但是，当另一家公司宣布弃用时，弃用通知将变得比较复杂。 例如，某一浏览器公司发出通知，他们将不再支持最新版本的 Silverlight，在这种情况下，我们会让客户知道我们即将停止对此浏览器的支持，但给客户通知的提前时间可能少于 90 天。
 
 - 如果要停用 Intune 服务，我们将提前 12 个月通知你。
 
-最后，对于需要采取任何事后操作让你的服务恢复正常，或根据客户反馈我们认为可能会带来巨大破坏的重大更改，在这种极少数的情况下，我们将根据 [Office 365 通信首选项](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc)的设置方式，以及你是否拥有有效的（工作邮箱优先）电子邮件地址，向服务管理员发送电子邮件。  
+最后，对于需要采取任何事后操作让你的服务恢复正常，或根据客户反馈我们认为可能会带来巨大破坏的重大更改，在这种极少数的情况下，我们将根据 [Microsoft 365 通信首选项](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc)的设置方式，以及你是否拥有有效的（工作邮箱优先）电子邮件地址，向服务管理员发送电子邮件。  
 
 
 <!--- ## Choose the management solution that's right for you

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 852d119d7b80df28436f5a8e25fe39782e1e5cc0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165424"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996378"
 ---
 # <a name="reference-for-devices-entities"></a>设备实体引用
 
@@ -65,7 +65,7 @@ deviceTypes 实体表示由其他数据仓库实体引用的设备类型。 设�
 | 10 |iPod |iPod 设备 |
 | 11 |Android |使用 Device Administrator 管理的 Android 设备 |
 | 12 |ISocConsumer |iSoc 使用者设备 |
-| 14 |MacMDM |使用内置 MDM 代理管理的 Mac OS X 设备 |
+| 14 |MacMDM |使用内置 MDM 代理管理的 OS X 设备 |
 | 15 |HoloLens |HoloLens 设备 |
 | 16 |SurfaceHub |Surface Hub 设备 |
 | 17 |AndroidForWork |使用 Android Profile Owner 管理的 Android 设备 |
@@ -170,7 +170,7 @@ enrollmentType 实体表明拥有设备的是公司、个人还是未知对象�
 | ownerTypeName |表示设备的所有者类型：  <br>公司 - 设备为企业所有。 <br>个人 - 设备为个人所有 (BYOD)。  <br>未知 - 此设备上无此信息。 |公司/个人未知 |
 
 > [!Note]  
-> 对于在为设备创建动态组时 Azure AD 中的 `ownerTypeName`，需要将筛选器值 `deviceOwnership` 设置为 `Company`。 有关详细信息，请参阅[设备规则](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。 
+> 对于在为设备创建动态组时 Azure AD 中的 `ownerTypeName`，需要将筛选器值 `deviceOwnership` 设置为 `Company`。 有关详细信息，请参阅[设备规则](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -266,7 +266,7 @@ ManagementAgentType 实体表示用于管理设备的代理。
 | windowsOsEdition           | Windows 操作系统版本。                                                                                                                             |
 | ethernetMacAddress           | 此设备的唯一网络标识符。                                                                                                                                        |
 | model                      | 设备型号。                                                                                                                                                                      |
-| office365Version           | 设备上安装的 Office 365 版本。                                                                                                                             |
+| office365Version           | 设备上安装的 Microsoft 365 版本。                                                                                                                             |
 
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
@@ -288,4 +288,3 @@ devicePropertyHistory 实体具有的属性与设备表格和过去 90 天每个
 | deviceCategoryKey          | 此设备的设备类别属性的键。 
 | physicalMemoryInBytes      | 物理内存（以字节为单位）。                                                                                                                                                          |
 | totalStorageSpaceInBytes   | 总存储容量（以字节为单位）。                                                                                                                                                                |
-

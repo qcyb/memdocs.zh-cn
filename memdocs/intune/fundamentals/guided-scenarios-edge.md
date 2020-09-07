@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fc1e75f38767de77f89dce2a85c747a7390e76d
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ee6961de9a33f54db4f3fa8bb4c5a2bfa9406fbb
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217400"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993828"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>引导式方案 - 部署 Microsoft Edge for Mobile
 
@@ -34,7 +34,7 @@ Microsoft Edge 利用内置功能帮助用户合并、整理和管理工作内�
 > 如果阻止用户注册 iOS/iPadOS 或 Android 设备，则此方案将不会启用注册，用户需要自行安装 Microsoft Edge。
 Intune 策略启用的以下 Microsoft Edge 企业功能包括：
 
-- **双重标识** - 用户可以同时添加工作帐户以及个人帐户以进行浏览。 两个标识完全独立，这类似于 Office 365 和 Outlook 中的体系结构和体验。 Intune 管理员将能够为工作帐户中受保护的浏览体验设置所需的策略。
+- **双重标识** - 用户可以同时添加工作帐户以及个人帐户以进行浏览。 两个标识完全独立，这类似于 Microsoft 365 和 Outlook 中的体系结构和体验。 Intune 管理员将能够为工作帐户中受保护的浏览体验设置所需的策略。
 - **Intune 应用保护策略集成** - 管理员现在可以将应用保护策略定向到 Microsoft Edge，包括控制剪切、复制和粘贴，防止执行屏幕捕获，并确保仅在其他托管应用中打开用户选择的链接。
 - **Azure 应用程序代理集成** - 管理员可以控制对 SaaS 应用和 Web 应用的访问，帮助确保仅在安全的 Microsoft Edge 浏览器中运行基于浏览器的应用，不论最终用户是从公司网络连接还是从 Internet 连接。
 - **托管收藏夹和主页快捷方式** - 当最终用户处于其企业环境中时，为了便于访问，管理员可以将 URL 设置为显示在收藏夹下。 管理员可以设置主页快捷方式，该快捷方式将在企业用户在 Microsoft Edge 中打开新页面或新选项卡时显示为主快捷方式。

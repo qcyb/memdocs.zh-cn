@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 6a1f3f4dc6187616d007c0ab9c97072bc3970c0a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663236"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996361"
 ---
 # <a name="create-a-design"></a>创建设计
 
@@ -134,15 +134,15 @@ Intune 设计基于收集的信息以及完成[本指南其他部分](planning-g
 
 ### <a name="identity"></a>标识
 
-我们使用标识来确定属于你的组织并注册了设备的用户。 Intune 要求 Azure Active Directory (Azure AD) 作为用户标识提供者。 如果已使用此服务，则可使用云中已存在的标识。 此外，推荐使用 Azure AD Connect 工具将本地用户标识与 Microsoft 云服务同步。 如果组织已在使用 Office 365，请 Intune 务必使用相同的 Azure AD 环境。
+我们使用标识来确定属于你的组织并注册了设备的用户。 Intune 要求 Azure Active Directory (Azure AD) 作为用户标识提供者。 如果已使用此服务，则可使用云中已存在的标识。 此外，推荐使用 Azure AD Connect 工具将本地用户标识与 Microsoft 云服务同步。 如果组织已在使用 Microsoft 365，则 Intune 必须使用相同的 Azure AD 环境。
 
 详细了解以下 Intune 标识要求：
 
-- [身份要求](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions)。
+- [身份要求](/azure/active-directory/understand-azure-identity-solutions)。
 
-- [目录同步要求](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)。
+- [目录同步要求](/azure/active-directory/connect/active-directory-aadconnect)。
 
-- [多重身份验证要求](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)。
+- [多重身份验证要求](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)。
 
 ### <a name="user-and-device-groups"></a>用户和设备组
 

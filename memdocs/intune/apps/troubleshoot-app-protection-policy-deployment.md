@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531564"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996616"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Intune 中的应用保护策略部署疑难解答
 
@@ -57,14 +57,14 @@ ms.locfileid: "84531564"
 - 用户必须属于应用保护策略所针对的安全组。 同一应用保护策略必须面向所使用的特定应用。
 - 对于 Android 设备，需要使用公司门户应用来接收应用保护策略。
 - 如果使用 [Word、Excel 或 PowerPoint](https://products.office.com/business/office) 应用，则必须满足以下附加要求：
-    - 用户必须具有链接到其 Azure Active Directory (Azure AD) 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 可按照这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Office 365 许可证。
+    - 用户必须具有链接到其 Azure Active Directory (Azure AD) 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 可按照[这些说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Microsoft 365 许可证。
     - 用户必须具有使用“另存为”这一精细功能进行配置的托管位置  。 此命令位于“保存组织数据的副本”应用程序保护策略设置下  。 例如，如果托管位置为 [OneDrive](https://onedrive.live.com/about/)，则应在用户的 Word、Excel 或 PowerPoint 应用中对 OneDrive 应用进行配置。
     - 如果托管位置为 OneDrive，则部署到用户的应用保护策略必须针对该应用。
 
   > [!NOTE]
   > Office 移动应用当前仅支持 SharePoint Online，不支持本地 SharePoint。
 
-- 如果将 Intune 应用保护策略与本地资源（Microsoft Skype for Business 和 Microsoft Exchange Server）一起使用，则必须启用[适用于 Skype for Business 和 Exchange 的混合新式验证 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)。
+- 如果将 Intune 应用保护策略与本地资源（Microsoft Skype for Business 和 Microsoft Exchange Server）一起使用，则必须启用[适用于 Skype for Business 和 Exchange 的混合新式验证 (HMA)](/office365/enterprise/hybrid-modern-auth-overview)。
 
 Intune 应用保护策略要求应用与 [Intune App SDK](../developer/app-sdk-get-started.md) 之间的用户标识保持一致。 只能通过新式验证才能保证两者一致。 在某些情况下，应用可以在本地配置中运行，无需新式验证。 但是，结果不一致或不能保证。
 
@@ -74,7 +74,7 @@ Intune 应用保护策略要求应用与 [Intune App SDK](../developer/app-sdk-g
 [正式发布适用于 SfB 和 Exchange 的混合新式验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **本地**<br>
-[使用 AAD 实现适用于 SfB OnPrem 的新式验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[使用 Azure AD 实现适用于 SfB OnPrem 的新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>检查应用保护策略状态
 
@@ -83,7 +83,7 @@ Intune 应用保护策略要求应用与 [Intune App SDK](../developer/app-sdk-g
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“应用” > “监视” > “应用保护状态”，然后选择“分配的用户”磁贴     。
 3. 在  “应用报告”页上，选择  “选择用户”以显示用户和组的列表。
-4. 搜索并从列表中选择一名受影响的用户，然后勾选“选择用户”  。 在“应用报表”窗格顶部，可以看到用户是否已获得应用保护授权且是否具有 O365 许可证。 还可以查看该用户所有设备的应用状态。
+4. 搜索并从列表中选择一名受影响的用户，然后勾选“选择用户”  。 在“应用报告”窗格顶部，可以看到用户是否已获得应用保护授权且是否具有 Microsoft 365 许可证。 还可以查看该用户所有设备的应用状态。
 5. 记下重要信息，例如目标应用、设备类型、策略、设备签入状态和上次同步时间。
 
 > [!NOTE]
@@ -95,9 +95,9 @@ Intune 应用保护策略要求应用与 [Intune App SDK](../developer/app-sdk-g
 
 在大多数情况下，用户使用其用户主体名称 (UPN) 登录到帐户。 但是，在某些环境（例如本地方案）中，用户可能使用其他形式的登录凭据。 在这些情况下，你可能会发现应用中使用的 UPN 与 Azure AD 中的 UPN 对象不一致。 发生此问题时，应用保护策略不会按预期方式进行应用。
 
-Microsoft 推荐的最佳做法是将 UPN 与主 SMTP 地址相匹配。 通过此做法，用户可以通过一致的标识登录到托管应用、Intune 应用保护和其他 Azure AD 资源。 有关详细信息，请参阅 [Azure AD UserPrincipalName 填充](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname)。
+Microsoft 推荐的最佳做法是将 UPN 与主 SMTP 地址相匹配。 通过此做法，用户可以通过一致的标识登录到托管应用、Intune 应用保护和其他 Azure AD 资源。 有关详细信息，请参阅 [Azure AD UserPrincipalName 填充](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname)。
 
-如果你的环境需要备用登录方法，请参阅[配置备用登录 ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)，特别是[备用 ID 的混合新式验证](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id)。
+如果你的环境需要备用登录方法，请参阅[配置备用登录 ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)，特别是[备用 ID 的混合新式验证](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id)。
 
 ### <a name="verify-that-the-user-is-targeted"></a>验证是否以用户为目标
 
@@ -115,7 +115,7 @@ Intune 应用保护策略必须以用户为目标。 如果某应用保护策略
 1. 登录到 [Microsoft 终结点管理器管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)。
 2. 选择“组”>“所有组”，然后搜索并选择用于应用保护策略分配的组  。
 3. 在“管理”部分下，选择“成员”   。
-4. 如果受影响的用户未列出，请查看[使用 Azure Active Directory 组管理应用和资源访问权限](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)以及你的组成员身份规则。 确保受影响的用户包含在组中。
+4. 如果受影响的用户未列出，请查看[使用 Azure Active Directory 组管理应用和资源访问权限](/azure/active-directory/fundamentals/active-directory-manage-groups)以及你的组成员身份规则。 确保受影响的用户包含在组中。
 5. 确保受影响的用户不在策略的任何排除的组中。
 
 > [!IMPORTANT]

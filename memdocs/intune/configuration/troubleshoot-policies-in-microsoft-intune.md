@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146501"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995171"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>在 Intune 中对策略和配置文件进行故障排除
 
@@ -122,15 +122,15 @@ Microsoft Intune 包含一些内置的故障排除功能。 使用这些功能�
 ## <a name="policy-troubleshooting-resources"></a>Policy 疑难解答资源
 
 - [iOS/iPadOS 或 Android 策略不适用于设备的疑难解答](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154)（打开另一个 Microsoft 站点）
-- [Windows 10 Intune 策略故障疑难解答](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)（打开博客）
+- [Windows 10 Intune 策略故障疑难解答](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures)（打开博客）
 - [适用于 Windows 10 的 CSP 自定义设置疑难解答](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune)（打开另一个 Microsoft 站点）
-- [Windows 10 组策略与 Intune MDM 策略](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/)（打开另一个 Microsoft 站点）
+- [Windows 10 组策略与 Intune MDM 策略](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins)（打开另一个 Microsoft 站点）
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>警报：将访问规则保存到 Exchange 中的操作失败
 
 **问题**：你在管理控制台中收到警报“将访问规则保存到 Exchange 中的操作失败”。
 
-如果在 Exchange 内部部署策略工作区（管理控制台）中创建了策略，但使用的是 Office 365，则 Intune 不会强制执行所配置的策略设置。 在警报中，请注意策略来源。 在 Exchange 内部部署工作区下删除旧规则。 旧规则是 Intune 内本地 Exchange 的全局 Exchange 规则，与 Office 365 不相关。 然后，为 Office 365 创建新策略。
+如果在 Exchange 内部部署策略工作区（管理控制台）中创建策略，但使用的是 Microsoft 365，则 Intune 不会强制执行所配置的策略设置。 在警报中，请注意策略来源。 在 Exchange 内部部署工作区下删除旧规则。 旧规则是 Intune 内本地 Exchange 的全局 Exchange 规则，与 Microsoft 365 不相关。 然后，为 Microsoft 365 创建新策略。
 
 [Intune 本地 Exchange 连接器疑难解答](../protect/troubleshoot-exchange-connector.md)可能是很好的资源。
 

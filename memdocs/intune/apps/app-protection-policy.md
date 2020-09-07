@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: ce01d71ecc928af48eb72da9235a7074623ff34c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996752"
 ---
 # <a name="app-protection-policies-overview"></a>应用保护策略概述
 
@@ -53,7 +53,7 @@ ms.locfileid: "87997980"
 - **未在任何移动设备管理解决方案中注册：** 此类设备通常是员工拥有的设备，且未在 Intune 或其他 MDM 解决方案中进行托管或注册。
 
 > [!IMPORTANT]
-> 可为连接到 Office 365 服务的 Office 移动应用创建移动应用管理策略。 此外，还可以通过为启用了混合现代身份验证的 iOS/iPadOS 和 Android 的 Outlook 创建 Intune 应用保护策略来保护对 Exchange 本地邮箱的访问。 使用此功能之前，请确保满足[适用于 iOS/iPadOS 和 Android 的 Outlook 要求](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx)。 连接到本地 Exchange 或 SharePoint 服务的其他应用不支持应用保护策略。
+> 可为连接到 Microsoft 365 服务的 Office 移动应用创建移动应用管理策略。 此外，还可以通过为启用了混合现代身份验证的 iOS/iPadOS 和 Android 的 Outlook 创建 Intune 应用保护策略来保护对 Exchange 本地邮箱的访问。 使用此功能之前，请确保满足[适用于 iOS/iPadOS 和 Android 的 Outlook 要求](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)。 连接到本地 Exchange 或 SharePoint 服务的其他应用不支持应用保护策略。
 
 ## <a name="benefits-of-using-app-protection-policies"></a>使用应用保护策略的优点
 
@@ -150,7 +150,7 @@ MDM 解决方案通过提供以下功能增值：
 
 Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS/iPadOS（Obj-C、Swift）、Xamarin、Xamarin.Forms 平台生成的应用的支持。 虽然某些客户已成功将 Intune SDK 与 React Native 和 NativeScript 等其他平台集成，但我们不会使用受支持平台之外的任何方式为应用开发人员提供明确的指导或插件。
 
-[Intune SDK](../developer/app-sdk.md) 将 [Azure Active Directory 身份验证库](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) 中的一些高级新式身份验证功能用于此 SDK 的第一方和第三方版本。 因此，[Microsoft 身份验证库](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) 不适用于我们的许多核心方案，例如向 Intune 应用保护服务进行身份验证和条件启动。 鉴于来自 Microsoft 标识团队的全面指导是切换到适用于所有 Microsoft Office 应用的 MSAL，因此 [Intune SDK](../developer/app-sdk.md) 最终需要支持它，但目前没有计划。
+[Intune SDK](../developer/app-sdk.md) 将 [Azure Active Directory 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) 中的一些高级新式身份验证功能用于此 SDK 的第一方和第三方版本。 因此，[Microsoft 身份验证库](/azure/active-directory/develop/reference-v2-libraries) (MSAL) 不适用于我们的许多核心方案，例如向 Intune 应用保护服务进行身份验证和条件启动。 鉴于来自 Microsoft 标识团队的全面指导是切换到适用于所有 Microsoft Office 应用的 MSAL，因此 [Intune SDK](../developer/app-sdk.md) 最终需要支持它，但目前没有计划。
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>对于使用应用保护策略的最终用户要求
 
@@ -172,15 +172,15 @@ Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS/iPadOS
 对于使用 [Outlook 移动应用](https://products.office.com/outlook)的其他要求包括：
 
 - 最终用户必须将 Outlook 移动应用安装到其设备上。
-- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) 邮箱和许可证。
+- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) 邮箱和许可证。
 
   >[!NOTE]
-  > Outlook 移动应用当前仅支持适用于 Microsoft Exchange Online 的 Intune 应用保护和[使用混合新式身份验证的 Exchange Server](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx)，不支持 Office 365 Dedicated 中的 Exchange。
+  > Outlook 移动应用当前仅支持适用于 Microsoft Exchange Online 的 Intune 应用保护和[使用混合新式身份验证的 Exchange Server](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)，不支持 Office 365 Dedicated 中的 Exchange。
 
 ### <a name="word-excel-and-powerpoint"></a>Word、Excel 和 PowerPoint
 对于使用 [Word、Excel 和 PowerPoint](https://products.office.com/business/office) 应用的其他要求包括：
 
-- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 遵循这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)可在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Office 365 许可证。
+- 最终用户必须具有链接到其 Azure Active Directory 帐户的 [Microsoft 365 商业或企业应用版](https://products.office.com/business/compare-more-office-365-for-business-plans)许可证。 订阅必须包括移动设备上的 Office 应用，可以包括 [OneDrive for Business](https://onedrive.live.com/about/business/) 云存储帐户。 可按照这些[说明](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)在 [Microsoft 365 管理中心](https://admin.microsoft.com)分配 Microsoft 365 许可证。
 
 - 最终用户必须具有使用粒度另存为功能进行配置的托管位置（该功能位于“保存组织数据的副本”应用程序保护策略设置下）。 例如，如果托管位置为 OneDrive，则应在最终用户的 Word、Excel 或 PowerPoint 应用中对 [OneDrive](https://onedrive.live.com/about/) 应用进行配置。
 
@@ -193,7 +193,7 @@ Intune SDK 开发团队主动测试和维护对使用原生 Android、iOS/iPadOS
 Office 需要一个托管位置（即 OneDrive）。 Intune 会将应用中的所有数据标记为“公司”或“个人”。 数据源于业务位置时会被视为“公司”数据。 对于 Office 应用，Intune 将以下数据视为业务位置：电子邮件 (Exchange) 或云存储（包含 OneDrive for Business 帐户的 OneDrive 应用）。
 
 ### <a name="skype-for-business"></a>Skype for Business
-对于使用 Skype for Business 有其他要求。 请参阅 [Skype for Business](https://products.office.com/skype-for-business/it-pros) 许可证要求。 对于 Skype for Business (SfB) 混合配置和本地配置，请分别参阅[正式发布适用于 SfB 和 Exchange 的混合新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)和[使用 AAD 实现适用于 SfB OnPrem 的新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)。
+对于使用 Skype for Business 有其他要求。 请参阅 [Skype for Business](https://products.office.com/skype-for-business/it-pros) 许可证要求。 对于 Skype for Business (SfB) 混合配置和本地配置，请分别参阅[正式发布适用于 SfB 和 Exchange 的混合新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)和[使用 Azure AD 实现适用于 SfB OnPrem 的新式身份验证](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)。
 
 ## <a name="app-protection-global-policy"></a>应用保护全局策略
 

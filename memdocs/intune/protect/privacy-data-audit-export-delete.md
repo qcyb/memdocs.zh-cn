@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084811"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995987"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>在 Intune 中审核、导出或删除个人数据
 
@@ -60,20 +60,20 @@ Intune 管理员可使用审核日志跟踪与个人数据有关的活动。 管
 
 ### <a name="delete-a-user-from-intune"></a>从 Intune 中删除用户
 
-要从 Intune 中删除最终用户的个人数据，管理员必须[从 Azure Active Directory (AAD) 中删除该用户](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)。 从 AAD 中删除（硬删除）用户时，Intune 将收到 AAD 的删除信号，然后自动开始从 Intune 服务中清除该用户的所有个人数据。 Intune 服务中的用户信息将在删除操作后的 30 天内删除。
+要从 Intune 中删除最终用户的个人数据，管理员必须[从 Azure Active Directory (AAD) 中删除该用户](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)。 从 AAD 中删除（硬删除）用户时，Intune 将收到 AAD 的删除信号，然后自动开始从 Intune 服务中清除该用户的所有个人数据。 Intune 服务中的用户信息将在删除操作后的 30 天内删除。
 
 ### <a name="reset-device-to-factory-settings"></a>将设备重置为出厂设置
 重置为出厂设置会将所有公司和个人数据及设置还原到原始出厂设置。 这样即可将设备提供给下一位员工。 用户文件、用户安装的应用程序和非默认设置都将删除，并且此数据将在删除操作后的 30 天内从 Intune 服务中删除。
 
 ### <a name="user-self-removal-from-intune-management"></a>用户从 Intune 管理中自行删除
-用户可从 Intune 管理中删除其 [Android、Apple 或 Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) 个人设备，无需管理员的协助。   
+用户可从 Intune 管理中删除其 [Android、Apple 或 Windows](../user-help/unenroll-your-device-from-intune-android.md) 个人设备，无需管理员的协助。   
 
 ### <a name="retire"></a>停用
 “停用”操作将删除 Intune 预配的数据，例如公司应用程序、Intune 当前管理的应用的相关数据、策略设置和通过 Intune 预配的电子邮件配置文件  。 此操作会将用户个人数据保留在设备上。
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>从 Microsoft Intune 中删除租户
 
-如果 Intune 租户客户取消其 Intune 帐户，所有租户数据都将在客户关闭 Intune 帐户后 180 天内删除。 如果 AAD 租户与其他 Microsoft 企业订阅（Azure、Office 365）关联，则仅删除 Intune 客户数据。 将保留 AAD 租户资源，供其他订阅使用。 如果 Intune 帐户是与 AAD 租户关联的唯一订阅，则将删除该租户及所有资源和客户数据。
+如果 Intune 租户客户取消其 Intune 帐户，所有租户数据都将在客户关闭 Intune 帐户后 180 天内删除。 如果 Azure AD 租户与其他 Microsoft 企业订阅（Azure、Microsoft 365）关联，则仅删除 Intune 客户数据。 将保留 Azure AD 租户资源，供其他订阅使用。 如果 Intune 帐户是与 Azure AD 租户关联的唯一订阅，则将删除该租户及所有资源和客户数据。
 
 ## <a name="next-steps"></a>后续步骤
 

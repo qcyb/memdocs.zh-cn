@@ -2,7 +2,7 @@
 title: 公司门户中的应用
 titleSuffix: Configuration Manager
 description: 为共同管理的设备使用公司门户应用提供一致的用户体验。
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 535b91b82e024431e4221824b4623b6ffc17b286
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700860"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432551"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>在共同管理的设备上使用公司门户应用
 
@@ -50,7 +50,9 @@ ms.locfileid: "88700860"
 
 ## <a name="prerequisites"></a>先决条件
 
-- Configuration Manager Current Branch 版本 2006 或更高版本
+- Configuration Manager Current Branch 版本 2006 或更高版本 <sup>（[请参阅“常见问题”](#bkmk_ver-prereq)）</sup>
+
+- 公司门户应用版本 11.0.8980.0 或更高版本
 
 - Windows 10 版本 1803 或更高版本：
 
@@ -116,6 +118,10 @@ ms.locfileid: "88700860"
 若要帮助排查 Configuration Manager 应用的安装问题，请转到公司门户中的“帮助和支持”部分。 当你使用“获取帮助”选项时，可以在发送的请求中附上 Configuration Manager 日志文件。
 
 ## <a name="frequently-asked-questions-faq"></a>常见问题 (FAQ)
+
+### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> 我使用的是 Configuration Manager 版本 2002，为什么新公司门户会显示 Configuration Manager 应用？
+
+公司门户版本 11.0.8980.0 或更高版本将为使用该应用程序的所有共同托管客户端显示 Configuration Manager 部署的应用程序。 Configuration Manager 版本 2006 是先决条件，因为它可添加此客户端设置来控制通知。 如果将公司门户安装在早期版本的共同托管设备上，或未配置此客户端设置，用户将看到来自这两个门户的通知。 这种体验可能会让用户感到困惑。
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>公司门户是否支持从 Configuration Manager 部署为软件更新的应用程序？
 

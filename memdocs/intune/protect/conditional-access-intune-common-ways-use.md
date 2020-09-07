@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462161"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992936"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>通过 Intune 使用条件访问的常见方式有哪些？
 
@@ -35,24 +35,24 @@ ms.locfileid: "86462161"
 
 ## <a name="device-based-conditional-access"></a>基于设备的条件访问
 
-可以配合使用 Intune 和 Azure Active Directory，以确保仅托管且合规的设备可以访问电子邮件和 Office 365 服务、软件即服务 (SaaS) 应用和[本地应用](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)。 此外，可在 Azure Active Directory 中设置策略，以仅允许加入域的计算机或在 Intune 中已注册的移动设备访问 Office 365 服务。
+配合使用 Intune 和 Azure Active Directory，可确保只有合规的托管设备才能访问电子邮件、Microsoft 365 服务、软件即服务 (SaaS) 应用和[本地应用](/azure/active-directory/active-directory-application-proxy-get-started)。 此外，可在 Azure Active Directory 中设置策略，以仅允许加入域的计算机或在 Intune 中注册的移动设备访问 Microsoft 365 服务。
 
 Intune 提供了设备符合性策略功能，可评估设备的符合性状态。 在用户尝试访问公司资源时，符合性状态会报告给 Azure Active Directory，用于强制执行在 Azure Active Directory 中创建的条件访问策略。
 
-通过 [Azure 门户](../fundamentals/what-is-intune.md)为 Exchange online 和其他 Office 365 产品配置基于设备的条件访问策略。
+Exchange Online 和其他 Microsoft 365 产品的基于设备的条件访问策略通过 [Azure 门户](../fundamentals/what-is-intune.md)进行配置。
 
-- 了解有关[需要具有 Azure Active Directory 中条件访问权限的受管理设备](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)的详细信息。
+- 了解有关[需要具有 Azure Active Directory 中条件访问权限的受管理设备](/azure/active-directory/conditional-access/require-managed-devices)的详细信息。
 
 - 了解有关 [Intune 设备符合性](device-compliance-get-started.md)的详细信息。
 
-- 了解有关 [Azure Active Directory 中通过条件访问使用受支持的浏览器](https://docs.microsoft.com/azure/active-directory/conditional-access/technical-reference#supported-browsers)的详细信息。
+- 了解有关 [Azure Active Directory 中通过条件访问使用受支持的浏览器](/azure/active-directory/conditional-access/technical-reference#supported-browsers)的详细信息。
 
 > [!NOTE]
 > 在 Android 设备上为 SharePoint Online 或对 Exchange Online 的基于浏览器的访问启用基于设备的访问时，用户必须在注册的设备上打开“启用浏览器访问”选项，如下所示：
 > 1. 启动“公司门户应用”  。
 > 2. 从三个点 (…) 或硬件菜单按钮转到“设置”  页。
 > 3. 按“启用浏览器访问”  按钮。 
-> 4. 在 Chrome 浏览器中，从 Office 365 中注销并重启 Chrome。
+> 4. 在 Chrome 浏览器中退出 Microsoft 365，然后重启 Chrome。
 
 ### <a name="conditional-access-based-on-network-access-control"></a>基于网络访问控制的条件性访问
 
@@ -88,11 +88,11 @@ Intune 与移动威胁防护供应商合作提供安全性解决方案，以检�
 
 - **工作区加入和 Intune 管理：** 用户可以加入自己的个人设备，以访问公司资源和服务。 你可以使用工作区将设备加入并注册到 Intune MDM 以接收设备级别的策略，这是评估条件访问标准的另一个选项。
 
-了解有关 [Azure Active Directory 中的设备管理](https://docs.microsoft.com/azure/active-directory/devices/overview)的详细信息。
+了解有关 [Azure Active Directory 中的设备管理](/azure/active-directory/devices/overview)的详细信息。
 
 ## <a name="app-based-conditional-access"></a>基于应用的条件性访问
 
-配合使用 Intune 和 Azure Active Directory，可确保仅托管的应用可访问公司电子邮件或其他 Office 365 服务。
+配合使用 Intune 和 Azure Active Directory，可确保只有托管应用才能访问公司电子邮件或其他 Microsoft 365 服务。
 
 - 了解[使用 Intune 且基于应用的条件性访问](app-based-conditional-access-intune.md)的详细信息。
 
@@ -111,7 +111,7 @@ Intune 与移动威胁防护供应商合作提供安全性解决方案，以检�
 设备不满足设置的条件时，指导最终用户完成设备注册流程，以修复导致设备不符合的问题。
 
 > [!NOTE]
-> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)。 使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](/office365/enterprise/hybrid-modern-auth-overview) (HMA)。 使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
 >
 > 如果你的环境中设置了 Exchange Connector，则仍支持 Intune 租户使用该连接器，并且有权继续访问支持其配置的 UI。 有关更多详细信息，请参阅[安装 Exchange 内部部署连接器](../protect/exchange-connector-install.md)。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
 >
@@ -162,7 +162,7 @@ Exchange Server 提供了 API 和基础结构，可将设备移至隔离区域�
 
 ## <a name="next-steps"></a>后续步骤
 
-[如何在 Azure Active Directory 中配置条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+[如何在 Azure Active Directory 中配置条件访问](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [设置基于应用的条件访问策略](app-based-conditional-access-intune-create.md)
 

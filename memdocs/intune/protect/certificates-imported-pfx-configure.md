@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048100"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992566"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用导入的 PKCS 证书
 
@@ -69,7 +69,7 @@ Intune 支持为以下平台导入 PFX 证书：
 
   你可以使用 Windows Server 托管 Microsoft Intune 的 PFX 证书连接器。  该连接器用于处理导入到 Intune 的证书的请求。
   
-  连接器需要访问托管设备的端口，这些端口应与我们[设备终结点内容](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices)中所述的设备端口一致。
+  连接器需要访问托管设备的端口，这些端口应与我们[设备终结点内容](/intune/fundamentals/intune-endpoints#access-for-managed-devices)中所述的设备端口一致。
 
   Intune 支持在 Microsoft Intune 的 PFX 证书连接器所在的服务器上安装 Microsoft Intune 证书连接器 。
 
@@ -104,7 +104,7 @@ Intune 支持为以下平台导入 PFX 证书：
 5. 安装后，Microsoft Intune 的 PFX 证书连接器将打开“注册”选项卡。 要启用到 Intune 的连接，请“登录”并输入具有 Azure 全局管理员或 Intune 管理员权限的帐户。
 
    > [!WARNING]
-   > 默认情况下，在 Windows Server 中，“IE 增强的安全配置”设置为“启用”导致登录 Office 365 出现问题。
+   > 默认情况下，在 Windows Server 中，“IE 增强的安全配置”设置为“启用”，这可能会导致登录 Microsoft 365 时出现问题。
 
 6. 关闭窗口。
 
@@ -112,9 +112,9 @@ Intune 支持为以下平台导入 PFX 证书：
 
 ## <a name="import-pfx-certificates-to-intune"></a>将 PFX 证书导入到 Intune
 
-使用 [Microsoft Graph](https://docs.microsoft.com/graph) 将用户 PFX 证书导入到 Intune。 帮助程序 [GitHub 上的 PFXImport PowerShell Project](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) 提供了用于轻松完成操作的 cmdlet。
+使用 [Microsoft Graph](/graph) 将用户 PFX 证书导入到 Intune。 帮助程序 [GitHub 上的 PFXImport PowerShell Project](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) 提供了用于轻松完成操作的 cmdlet。
 
-如果希望通过使用 Graph 使用自己的自定义解决方案，请使用 [userPFXCertificate 资源类型](https://docs.microsoft.com/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta)。
+如果希望通过使用 Graph 使用自己的自定义解决方案，请使用 [userPFXCertificate 资源类型](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta)。
 
 ### <a name="build-pfximport-powershell-project-cmdlets"></a>生成“PFXImport PowerShell Project”cmdlet
 
@@ -210,7 +210,7 @@ PowerShell 模块提供了使用 Windows 加密创建密钥的方法。 你也�
 
 8. 要验证证书是否已导入，请运行 `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
 
-9.  清理 AAD 令牌缓存而无需等待它自动过期的最佳做法，是运行 `Remove-IntuneAuthenticationToken`
+9.  清理 Azure AD 令牌缓存而无需等待它自动过期的最佳做法，是运行 `Remove-IntuneAuthenticationToken`
 
 有关其他可用命令的详细信息，请参阅 [GitHub 上 的 PFXImport PowerShell Project ](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) 中的自述文件。
 

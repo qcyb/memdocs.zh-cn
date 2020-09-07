@@ -1,7 +1,7 @@
 ---
 title: 教程 - 保护非托管设备上的 Exchange Online 电子邮件
 titleSuffix: Microsoft Intune
-description: 了解如何使用 Intune 应用保护策略和 Azure AD 条件访问来保护 Office 365 Exchange Online。
+description: 了解如何使用 Intune 应用保护策略和 Azure AD 条件访问来保护 Microsoft 365 Exchange Online。
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: 12b776af250a9d4a9bf0fb6c8ba7eec98540f883
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605212"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993947"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>教程：保护非托管设备上的 Exchange Online 电子邮件
 
@@ -120,7 +120,7 @@ ms.locfileid: "82605212"
 
 4. 在“分配”  下，选择“用户和组”  。 在“包含”  选项卡上，选择“所有用户”  ，然后选择“完成”  。
 
-5. 在“分配”  下，选择“云应用或操作”  。 因为我们要保护 Office 365 Exchange Online 电子邮件，我们将通过执行以下步骤来进行选择：
+5. 在“分配”  下，选择“云应用或操作”  。 由于我们要保护 Microsoft 365 Exchange Online 电子邮件，我们将按照以下步骤进行选择：
 
    1. 在“包含”  选项卡上，选择“选择应用”  。
    2. 选择“选择”  。
@@ -170,7 +170,7 @@ ms.locfileid: "82605212"
 
 4. 在“分配”  下，选择“用户和组”  。 在“包含”  选项卡上，选择“所有用户”  ，然后选择“完成”  。
 
-5. 在“分配”  下，选择“云应用或操作”  。 通过以下步骤选择 Office 365 Exchange Online 电子邮件：
+5. 在“分配”  下，选择“云应用或操作”  。 通过以下步骤选择 Microsoft 365 Exchange Online 电子邮件：
 
    1. 在“包含”  选项卡上，选择“选择应用”  。
    2. 选择“选择”  。
@@ -205,7 +205,7 @@ ms.locfileid: "82605212"
 
 ## <a name="try-it-out"></a>试试看
 
-使用已创建的策略后，设备将需要在 Intune 中注册并使用 Outlook 移动应用访问 Office 365 电子邮件。 若要在 iOS 设备上测试此方案，请尝试使用测试租户中用户的凭据登录到 Exchange Online。
+使用已创建的策略时，设备需要在 Intune 中注册并使用 Outlook 移动应用访问 Microsoft 365 电子邮件。 若要在 iOS 设备上测试此方案，请尝试使用测试租户中用户的凭据登录到 Exchange Online。
 
 1. 若要在 iPhone 上测试，请转到“设置”   > “密码和帐户”   > “添加帐户”   > “Exchange”  。
 

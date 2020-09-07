@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b419f313b9d4d300d286cf32605ebfe7e0e1573c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699783"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068049"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>关于 Configuration Manager 隐私的其他信息
 
@@ -89,7 +89,10 @@ Microsoft Cloud Protection Service 不会有意收集个人信息。 就算 Micr
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>站点层次结构 - 包含 Bing 地图的地理视图
 
-在 Configuration Manager 控制台中，转到“监视”  工作区，选择“站点层次结构”  节点，然后切换到“地理视图”  。 此视图允许用户使用 Microsoft 必应地图提供的地图查看 Configuration Manager 物理服务器拓扑。 为了启用此功能，会将你提供的位置信息从服务器发送到 Bing 地图 Web 服务。
+> [!IMPORTANT]
+> 自 2020 年 8 月起，已弃用此功能。 请使用“层次结构图表”选项。<!--8116777-->
+
+在 Configuration Manager 控制台中，转到“监视”**** 工作区，选择“站点层次结构”**** 节点，然后切换到“地理视图”****。 此视图允许用户使用 Microsoft 必应地图提供的地图查看 Configuration Manager 物理服务器拓扑。 为了启用此功能，会将你提供的位置信息从服务器发送到 Bing 地图 Web 服务。
 
 Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Microsoft 站点和服务。 有关详细信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)。
 

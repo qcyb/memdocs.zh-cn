@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ebc719d65024f26d1661d311bfbf9077bcdcbe3
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: b1531de9ceab57b26bc9af5faac08673b8b758b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410906"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993091"
 ---
 # <a name="manage-team-collaboration-access-by-using-teams-for-ios-and-android-with-microsoft-intune"></a>通过 Microsoft Intune 使用适用于 iOS 和 Android 的 Teams 来管理消息协作访问
 
 Microsoft Teams 是 Microsoft 365 中的团队协作中心，它集成了团队需要的人员、内容和工具，可以提高团队的参与度和效率。
 
-订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件性访问）可获得最丰富和最广泛的 Office 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略允许从移动设备连接到适用于 iOS 和 Android 的 Teams，还需要部署 Intune 应用保护策略确保协作体验受到保护。
+订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件访问）可获得最丰富和最广泛的 Microsoft 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略允许从移动设备连接到适用于 iOS 和 Android 的 Teams，还需要部署 Intune 应用保护策略确保协作体验受到保护。
 
 ## <a name="apply-conditional-access"></a>应用条件访问
-组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Teams 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
+组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Teams 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
 
-1. 请遵循“步骤 1：为 Office 365 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），这允许使用适用于 iOS 和 Android 的 Teams，但阻止支持 OAuth 的第三方移动设备客户端连接到 Office 365 终结点。
+1. 请遵循“步骤 1：为 Office 365 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），这允许使用适用于 iOS 和 Android 的 Teams，但阻止支持 OAuth 的第三方移动设备客户端连接到 Office 365 终结点。
 
    >[!NOTE]
    > 此策略可确保移动用户可以使用适用的应用访问所有 Office 终结点。

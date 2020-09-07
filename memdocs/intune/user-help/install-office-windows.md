@@ -1,6 +1,6 @@
 ---
-title: 在 Windows 10 设备上安装 Office 365| Microsoft Docs
-description: ''
+title: 在 Windows 10 设备上安装 Office | Microsoft Docs
+description: 了解如何在 Windows 10 设备上安装 Office 套件。 查看公司的其他可用支持选项。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,14 +19,14 @@ ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a49d5de1ce0dd91ff9dacb07d50970bc9ef2e90d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ea5c59c27939fbef454d372c0a18e4b51feee
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882160"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057379"
 ---
-# <a name="installing-office-365-on-your-windows-10-device"></a>在 Windows 10 设备上安装 Office 365
+# <a name="install-office-on-your-windows-10-device"></a>在 Windows 10 设备上安装 Office
 
 有多种方法可在 Windows 10 设备上安装 Office 套件。 公司门户中可能有多种 Office 版本可供下载，具体取决于公司规模。
 

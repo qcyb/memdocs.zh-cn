@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 644235178d39ff1e7c641383c4fb45dde80cf4b5
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: b5ed8b6974971e3e2e8182d32cad39a5481331b2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531870"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994117"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Microsoft Intune 的常见使用方式
 
@@ -50,21 +50,21 @@ Intune 还支持对需要安全访问本地数据的移动应用（例如业务�
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
-## <a name="protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>保护 Office 365 电子邮件和数据以供移动设备安全访问
+## <a name="protecting-your-microsoft-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>保护 Microsoft 365 电子邮件和数据以供移动设备安全访问
 
-在 Office 365 中保护公司数据（电子邮件、文档、即时消息、联系人）既方便了你，又给用户带来了更加顺畅的体验。
+在 Microsoft 365 中保护公司数据（电子邮件、文档、即时消息、联系人）既方便了你，又给用户带来了更加顺畅的体验。
 
-Intune 和 Microsoft 企业移动性 + 安全性提供了独一无二的集成式条件性访问解决方案，确保用户、应用或设备在符合公司的合规性要求（已执行[多重身份验证](../enrollment/multi-factor-authentication.md)，已向 Intune 注册，使用托管应用、受支持的 OS 版本、设备 PIN 和低用户风险配置文件等等）之前无法访问 Office 365 数据。
+Intune 和 Microsoft 企业移动性 + 安全性提供了独一无二的集成式条件访问解决方案，确保用户、应用或设备在符合公司的合规性要求（已执行[多重身份验证](../enrollment/multi-factor-authentication.md)，已向 Intune 注册，使用托管应用、受支持的 OS 版本、设备 PIN 和低用户风险配置文件等等）之前无法访问 Microsoft 365 数据。
 
-相应应用商店中的 Office 移动应用备有可通过 Intune 配置的数据包含策略。 这使你能够避免与未由 IT 管理的应用（例如本机电子邮件应用）和存储位置（例如 Dropbox）共享数据。 此功能完全内置于 Office 365 和 EMS 中。 无需部署其他基础结构便可获得此功能。
+相应应用商店中的 Office 移动应用备有可通过 Intune 配置的数据包含策略。 这使你能够避免与未由 IT 管理的应用（例如本机电子邮件应用）和存储位置（例如 Dropbox）共享数据。 此功能完全内置于 Microsoft 365 和 EMS 中。 无需部署其他基础结构便可获得此功能。
 
-在常见的 Office 365 部署做法中，如果需要使用公司应用/证书/Wi-Fi/VPN 配置来完全设置设备（公司拥有设备常见方案），则必须将设备注册到管理系统中。  
+在常见的 Microsoft 365 部署做法中，如果需要使用公司应用/证书/Wi-Fi/VPN 配置来完全设置设备（公司拥有设备常见方案），则必须将设备注册到管理系统中。  
 
 不过，如果用户只需要访问公司电子邮件和文档（通常是在个人拥有设备的情况下），可要求用户使用 Office 移动应用（已向其应用[应用保护策略](../apps/app-protection-policies.md)），并完全跳过设备注册。  
 
-无论哪种方式，Office 365 数据都将受到已定义策略的保护。
+无论哪种方式，Microsoft 365 数据都将受到已定义策略的保护。
 
-<!-- Learn more about how to plan and deploy Intune to help secure Office 365 email and data. -->
+<!-- Learn more about how to plan and deploy Intune to help secure Microsoft 365 email and data. -->
 
 ## <a name="offer-a-bring-your-own-device-program-to-all-employees"></a>为所有员工提供“自带设备办公”计划
 
@@ -72,7 +72,7 @@ Intune 和 Microsoft 企业移动性 + 安全性提供了独一无二的集成�
 
 在设备注册不可行的情况下，Intune 提供替代的 BYOD 方法，可简单地[管理包含公司数据的应用](../apps/app-protection-policies.md)。 与 Office 移动应用一样，即使是有问题的应用访问公司和个人数据，Intune 也能保护公司数据。  
 
-作为管理员，可以要求用户从 Office 移动应用访问 Office 365 并使用可保护数据的策略（如加密、利用 pin 进行保护等等）配置应用。 这些应用保护策略可防止在不受管理的应用和存储位置中丢失数据 - 无论是在这些应用的内部还是外部。 例如，这些策略会阻止用户将公司电子邮件配置文件中的文本复制到消费者电子邮件配置文件，即使这两个配置文件都是在 Outlook Mobile 中配置的。 可以为 BYOD 用户所需的其他服务和应用程序部署类似的配置。
+作为管理员，可以要求用户从 Office 移动应用访问 Microsoft 365 并使用可保护数据的策略（如加密、利用 PIN 进行保护等等）配置应用。 这些应用保护策略可防止在不受管理的应用和存储位置中丢失数据 - 无论是在这些应用的内部还是外部。 例如，这些策略会阻止用户将公司电子邮件配置文件中的文本复制到消费者电子邮件配置文件，即使这两个配置文件都是在 Outlook Mobile 中配置的。 可以为 BYOD 用户所需的其他服务和应用程序部署类似的配置。
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 
@@ -96,7 +96,7 @@ Intune 提供了[大量预配和管理解决方案](../enrollment/device-enrollm
 
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
-## <a name="enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk"></a>允许你的员工从不受管理的公用网亭安全访问 Office 365
+## <a name="enable-your-employees-to-securely-access-microsoft-365-from-an-unmanaged-public-kiosk"></a>允许员工从不受管理的公用网亭安全访问 Microsoft 365
 
 有时，你的员工需要使用你无法管理的设备、应用或浏览器，例如展销会和酒店大堂的公用计算机。
 

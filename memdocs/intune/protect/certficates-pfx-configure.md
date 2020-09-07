@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946637"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970492"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用 PKCS 证书
 
@@ -40,12 +40,12 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 - **Active Directory 域**：  
   此部分中列出的所有服务器都必须加入 Active Directory 域。
 
-  有关安装和配置 Active Directory 域服务 (AD DS) 的详细信息，请参阅 [AD DS 设计和规划](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning)。
+  有关安装和配置 Active Directory 域服务 (AD DS) 的详细信息，请参阅 [AD DS 设计和规划](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning)。
 
 - **证书颁发机构**：  
    企业证书颁发机构 (CA)。
 
-  有关安装和配置 Active Directory 证书服务 (AD CS) 的信息，请参阅 [Active Directory 证书服务分步指南](https://technet.microsoft.com/library/cc772393)。
+  有关安装和配置 Active Directory 证书服务 (AD CS) 的信息，请参阅 [Active Directory 证书服务分步指南](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10))。
 
   > [!WARNING]  
   > Intune 要求在企业证书颁发机构 (CA) 而非独立 CA 中运行 AD CS。
@@ -82,7 +82,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
   - Microsoft Intune 证书连接器 - 用于身份验证和 S/MIME 电子邮件签名方案
   - Microsoft Intune 的 PFX 证书连接器 - 用于 S/MIME 电子邮件加密方案。
 
-  连接器需要访问托管设备的端口，这些端口应与我们[设备终结点内容](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices)中所述的设备端口一致。
+  连接器需要访问托管设备的端口，这些端口应与我们[设备终结点内容](/intune/fundamentals/intune-endpoints#access-for-managed-devices)中所述的设备端口一致。
 
   Intune 支持在 Microsoft Intune 证书连接器所在的服务器上安装 PFX 证书连接器 。
   
@@ -119,6 +119,12 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
     > 默认情况下，“模板名称”与“模板显示名称”相同，不包含空格。 请记下模板名称，供以后使用。
 
 6. 在“请求处理”中，选择“允许导出私钥” 。
+    
+    > [!NOTE]
+    > 与 SCEP 相反，使用 PKCS 时，系统在安装了连接器的服务器上而不是在设备上生成证书私钥。 证书模板必须允许导出私钥，以便证书连接器能够导出 PFX 证书并将其发送到设备。 
+    >
+    > 但请注意，证书安装在设备本身之上，其私钥标记为不可导出。
+    
 7. 在“加密”处，确认将“最小密钥大小”设置为 2048。
 8. 在“使用者名称”处，选择“在请求中提供” 。
 9. 在“扩展”处，确认在“应用程序策略”下显示有加密文件系统、安全电子邮件和客户端身份验证。
@@ -160,7 +166,7 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 6. 在“高级”选项卡上，建议让“使用此计算机的系统帐户(默认)”保持选中状态。
 7. 应用 > 关闭
 8. 返回到 Intune 门户（“Intune” > “设备配置” > “认证连接器”）  。 片刻之后，将显示绿色复选标记，且“连接状态”显示“可用” 。 连接器服务器现可与 Intune 通信。
-9. 如果网络环境中有 Web 代理，则可能需要其他配置才能使连接器正常运行。 有关详细信息，请参阅 Azure Active Directory 文档中的[使用现有本地代理服务器](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers)。
+9. 如果网络环境中有 Web 代理，则可能需要其他配置才能使连接器正常运行。 有关详细信息，请参阅 Azure Active Directory 文档中的[使用现有本地代理服务器](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers)。
     - Android Enterprise（工作配置文件）
     - iOS
     - macOS
@@ -194,15 +200,15 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
 
    ![创建配置文件并上传受信任的证书](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-8. 选择“下一步”  。
+8. 选择“下一步”。
 
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-   选择“下一步”。
+   选择“下一步”  。
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 计划将此证书配置文件部署到接收 PKCS 证书配置文件的相同组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
-    选择“下一步”。
+    选择“下一步”  。
 
 11. （仅适用于 Windows 10）在“适用性规则”中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
 
@@ -252,15 +258,15 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
    |**允许所有应用访问私钥** |<ul><li>macOS  |请将其设置为“启用”，以使为关联的 Mac 设备配置的应用可以访问 PKCS 证书私钥。 <br><br> 有关此设置的详细信息，请参阅 Apple 开发人员文档中[配置文件参考](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)中的 AllowAllAppsAccess 证书有效负载部分。 |
    |**根证书**             |<ul><li>Android 设备管理员 </li><li>Android Enterprise（设备所有者、工作配置文件） |选择以前分配的根 CA 证书配置文件。 |
 
-8. 选择“下一步”  。
+8. 选择“下一步”。
 
 9. 在“作用域标记”（可选）中，分配一个标记以将配置文件筛选到特定 IT 组（如 `US-NC IT Team` 或 `JohnGlenn_ITDepartment`）。 有关范围标记的详细信息，请参阅[将 RBAC 和范围标记用于分布式 IT](../fundamentals/scope-tags.md)。
 
-   选择“下一步”。
+   选择“下一步”  。
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 计划将此证书配置文件部署到接收受信任的证书配置文件的相同组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
-    选择“下一步”。
+    选择“下一步”  。
 
 11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
@@ -292,16 +298,16 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
   - **CN={{IMEINumber}}** ：用于标识移动电话的国际移动设备标识 (IMEI)。
   - **CN={{OnPrem_Distinguished_Name}}** ：用逗号分隔的一系列相对可分辨名称，如 CN=Jane Doe、OU=UserAccounts、DC=corp、DC=contoso、DC=com。
 
-    要使用 {{OnPrem_Distinguished_Name}} 变量，请确保使用 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) 将onpremisesdistinguishedname 用户属性与 Azure AD 同步 。
+    要使用 {{OnPrem_Distinguished_Name}} 变量，请确保使用 [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) 将onpremisesdistinguishedname 用户属性与 Azure AD 同步 。
 
   - **CN={{onPremisesSamAccountName}}** ：管理员可以使用 Azure AD 连接到名为 onPremisesSamAccountName 的属性，将 Active Directory 中的 samAccountName 属性同步到 Azure AD。 Intune 可以将该变量替换为证书使用者中的证书颁发请求的一部分。 samAccountName 属性是指用户登录名，该名称用于支持早期版本的 Windows（Windows 2000 之前）中的客户端和服务器。 用户登录名的格式为：DomainName\testUser，或仅 testUser 。
 
-    要使用 {{onPremisesSamAccountName}} 变量，请确保使用 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) 将 onPremisesSamAccountName 用户属性与 Azure AD 同步 。
+    要使用 {{onPremisesSamAccountName}} 变量，请确保使用 [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) 将 onPremisesSamAccountName 用户属性与 Azure AD 同步 。
 
   通过使用这些变量的一个或多个与静态字符串的组合，可以创建一个自定义使用者名称格式，例如：  
   - CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
   
-  该示例包含使用者名称格式，其中除了不仅使用了 CN 和 E 变量，还使用了组织单元、组织、位置、省/直辖市/自治区和国家/地区值的字符串。 [CertStrToName 函数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)介绍此函数及其支持的字符串。
+  该示例包含使用者名称格式，其中除了不仅使用了 CN 和 E 变量，还使用了组织单元、组织、位置、省/直辖市/自治区和国家/地区值的字符串。 [CertStrToName 函数](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea)介绍此函数及其支持的字符串。
 
 - **“设备”证书类型**  
   “使用者名称格式”的格式选项包括以下变量： 

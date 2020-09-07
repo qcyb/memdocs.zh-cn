@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 5f72acb12f6e17b3634c0b87b8ad298a410fb83f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795578"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994219"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 中的 Windows 设备注册问题疑难解答
 
@@ -133,7 +133,7 @@ ms.locfileid: "84795578"
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>似乎未正确配置 MDM 使用条款终结点。
 
 原因：符合下列条件之一： 
- - 你对租户同时使用 Office 365 移动设备管理 (MDM) 和 Intune，并且尝试注册该设备的用户没有有效的 Intune 许可证或 Office 365 许可证。     
+ - 你对租户同时使用 Microsoft 365 和 Intune 移动设备管理 (MDM)，但尝试注册设备的用户没有有效的 Intune 许可证或 Office 365 许可证。     
 - Azure AD 中的 MDM 条款和条件为空白或不包含正确的 URL。    
 
 #### <a name="resolution"></a>解决方法
@@ -141,7 +141,7 @@ ms.locfileid: "84795578"
 若要解决此问题，请使用下列方法之一： 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>向用户分配有效的许可证
-转到 [Microsoft 365 管理中心](https://admin.microsoft.com)，然后向用户分配 Intune 或 Office 365 许可证。
+转到 [Microsoft 365 管理中心](https://admin.microsoft.com)，然后向用户分配 Intune 或 Microsoft 365 许可证。
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>更正 MDM 使用条款 URL
   1. 登录到 [Azure 门户](https://portal.azure.com/)，然后选择“Azure Active Directory”。    
@@ -216,9 +216,9 @@ ms.locfileid: "84795578"
 
    如果选择“已选定” **，请单击“已选定”** ，然后单击“添加成员”添加可以将其设备加入 Azure AD 的所有用户。 确保已添加预配包的所有 Azure AD 帐户。
  
-有关如何为 Windows 配置设计器创建预配包的详细信息，请参阅[创建适用于 Windows 10 的预配包](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package)。
+有关如何为 Windows 配置设计器创建预配包的详细信息，请参阅[创建适用于 Windows 10 的预配包](/windows/configuration/provisioning-packages/provisioning-create-package)。
 
-有关设置学校电脑应用的详细信息，请参阅[使用设置学校电脑应用](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app)。
+有关设置学校电脑应用的详细信息，请参阅[使用设置学校电脑应用](/education/windows/use-set-up-school-pcs-app)。
 
 
 ### <a name="auto-mdm-enroll-failed"></a>自动注册 MDM：Failed 
@@ -276,7 +276,7 @@ ms.locfileid: "84795578"
 原因：如果存在阻止访问标识提供者 (IdP) 的代理、防火墙或其他网络设备，则会出现此问题。
 
 #### <a name="resolution"></a>解决方法
-请确保没有阻止对 Autopilot 所需的基于 Internet 的服务的访问。 有关详细信息，请参阅 [Windows Autopilot 网络要求](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network)。
+请确保没有阻止对 Autopilot 所需的基于 Internet 的服务的访问。 有关详细信息，请参阅 [Windows Autopilot 网络要求](/windows/deployment/windows-autopilot/windows-autopilot-requirements-network)。
 
 ### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>Autopilot 设备注册失败，错误为 HRESULT = 0x80180022
 
@@ -294,7 +294,7 @@ ms.locfileid: "84795578"
 
 如果此问题仍然存在，请检查同一设备是否在两个分配的组中，并且为每个组分配了不同的 Autopilot 配置文件。 如果在两个组中，请确定应将哪个 Autopilot 配置文件应用于哪台设备，然后删除另一个配置文件的分配。
 
-若要详细了解如何使用 Autopilot 在展台模式下部署 Windows 设备，请参阅[使用 Windows Autopilot 部署展台](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/)。
+若要详细了解如何使用 Autopilot 在展台模式下部署 Windows 设备，请参阅[使用 Windows Autopilot 部署展台](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot)。
 
 
 ### <a name="securing-your-hardware-failed-0x800705b4"></a>保护硬件（失败：0x800705b4）。
@@ -317,7 +317,7 @@ Registering your device for mobile management (Previous step failed)
 #### <a name="resolution"></a>解决方法
 确保目标设备满足“原因”部分中所述的两个要求。
 
-若要详细了解如何使用 Autopilot 在展台模式下部署 Windows 设备，请参阅[使用 Windows Autopilot 部署展台](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/)。
+若要详细了解如何使用 Autopilot 在展台模式下部署 Windows 设备，请参阅[使用 Windows Autopilot 部署展台](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot)。
 
 
 ### <a name="something-went-wrong-error-code-80070774"></a>出现错误。 错误代码 80070774。
@@ -365,7 +365,7 @@ Description:
 }
 ```
 
-此问题通常是由于错误地将权限委派给创建 Windows Autopilot 设备的组织单位引起的。 有关详细信息，请参阅[增加组织单位中的计算机帐户限制](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit)。
+此问题通常是由于错误地将权限委派给创建 Windows Autopilot 设备的组织单位引起的。 有关详细信息，请参阅[增加组织单位中的计算机帐户限制](../../autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit)。
 
 1. 打开“Active Directory 用户和计算机(DSA.msc)”。
 2. 右键单击将用于创建加入混合 Azure AD 的计算机的组织单位，然后选择“委派控制”。
@@ -398,4 +398,4 @@ Description:
 - [查看 Microsoft Intune 支持团队博客](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [查看 Microsoft 企业移动性和安全性博客](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [获取对 Microsoft Intune 的支持](../fundamentals/get-support.md)
-- [查找共同管理注册错误](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)
+- [查找共同管理注册错误](/configmgr/comanage/how-to-monitor#enrollment-errors)

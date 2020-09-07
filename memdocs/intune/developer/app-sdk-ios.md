@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912414"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281177"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>用于 iOS 的 Microsoft Intune App SDK 开发人员指南
 
@@ -657,7 +657,7 @@ Intune 管理员可以通过 Intune Azure 门户和 Intune 图形 API 定位并�
 
 * 对 `IntuneMAMAppConfig` 对象调用适当的选择器。 例如，如果应用程序密钥是一个字符串，则需要使用 `stringValueForKey` 或 `allStringsForKey`。 请参阅 `IntuneMAMAppConfig.h` 了解有关返回值和错误条件的详细说明。
 
-有关图形 API 功能的详细信息，请参阅[图形 API 参考](https://developer.microsoft.com/graph/docs/concepts/overview)。
+有关图形 API 功能的详细信息，请参阅[图形 API 参考](/graph/overview)。
 
 关于如何在 iOS 中创建面向 MAM 的应用配置策略的详细信息，请参阅[如何使用适用于 iOS/iPadOS 的 Microsoft Intune 应用配置策略](../apps/app-configuration-policies-use-ios.md)。
 
@@ -753,14 +753,30 @@ SDK 跟踪本地文件所有者的标识，并相应地应用策略。 文件所
     注意，需从后台线程调用此方法。 除非已删除用户的所有数据，否则应用不会返回任何值（文件除外，应用会返回 FALSE）。
 
 ## <a name="siri-intents"></a>Siri 意向
+
 如果你的应用与 Siri 意向集成，请确保阅读 `IntuneMAMPolicy.h` 中 `areSiriIntentsAllowed` 的注释，以获取有关支持此方案的说明。 
     
 ## <a name="notifications"></a>通知
+
 如果你的应用可接收通知，请确保阅读 `IntuneMAMPolicy.h` 中 `notificationPolicy` 的注释，以获取有关支持此方案的说明。  建议应用注册 `IntuneMAMPolicyManager.h` 中描述的 `IntuneMAMPolicyDidChangeNotification`，并通过密钥链将此值传递给它们的 `UNNotificationServiceExtension`。
-## <a name="displaying-web-content-within-application"></a>在应用程序中显示 Web 内容
-如果应用程序能够在 Web 视图中显示网站，并且显示的网页能够导航到任意网站，则应用程序有责任设置当前标识，以确保不会通过 Web 视图泄漏托管数据。 这种情况的示例有“推荐功能”或“反馈”网页，这些网页直接或间接链接到搜索引擎。
-多标识应用程序应先调用 IntuneMAMPolicyManager setUIPolicyIdentity 并传入空字符串，再显示 Web 视图。 Web 视图关闭后，应用程序应调用传入当前标识的 setUIPolicyIdentity。
-单个标识应用程序应在显示 Web 视图之前调用 IntuneMAMPolicyManager setCurrentThreadIdentity，并传入空字符串。 Web 视图关闭后，应用程序应调用传入 nil 的 setCurrentThreadIdentity。
+
+## <a name="displaying-web-content-within-an-application"></a>在应用程序中显示 Web 内容
+
+如果应用程序能够在 Web 视图中显示网站，则可能需要根据具体情况来添加逻辑，以防止数据泄露。
+
+### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>仅显示非公司内容/网站的 Web 视图
+
+如果应用程序在 Web 视图中不显示任何公司数据，但用户能够浏览到任意站点（他们可能会将来自应用程序其他部分的托管数据复制并粘贴到公共论坛中），则由应用程序负责设置当前标识，以便托管数据不会通过 Web 视图泄露。 这种情况的示例有“推荐功能”或“反馈”网页，这些网页直接或间接链接到搜索引擎。 多标识应用程序应在显示 Web 视图之前调用 IntuneMAMPolicyManager setUIPolicyIdentity，并传入空字符串。 Web 视图关闭后，应用程序应调用 setUIPolicyIdentity 并传入当前标识。 单标识应用程序应在显示 Web 视图之前调用 IntuneMAMPolicyManager setCurrentThreadIdentity，并传入空字符串。 Web 视图关闭后，应用程序应调用 setCurrentThreadIdentity 并传入 nil。 这样可以确保 Intune SDK 将 Web 视图视为非托管视图，并确保它不允许将来自应用程序其他部分的托管数据粘贴到 Web 视图中（如果策略是这样配置的）。 
+
+### <a name="webviews-that-display-only-corporate-contentwebsites"></a>仅显示公司内容/网站的 Web 视图
+
+如果应用程序在 Web 视图中仅显示公司数据，并且用户无法浏览到任意站点，则无需进行任何更改。
+
+### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>可能同时显示公司和非公司内容/网站的 Web 视图
+
+对于这种情况，仅支持 WKWebView。 使用旧版 UIWebView 的应用程序应转换为 WKWebView。 如果应用程序在 WKWebView 中显示公司内容，并且用户也可以访问可能导致数据泄露的非公司内容/网站，则应用程序应实现 IntuneMAMPolicyDelegate.h 中定义的 isExternalURL: 委托方法。 应用程序应确定传递给该委托方法的 URL 是代表可以粘贴托管数据的公司网站，还是代表可能泄露公司数据的非公司网站。 
+
+如果在 isExternalURL 中返回 NO，则是向 Intune SDK 表明，正在加载的网站是可以共享托管数据的公司位置。 如果返回 YES，Intune SDK 将在 Edge 而不是 WKWebView 中打开该 URL（如果当前策略设置需要它）。 这将确保应用内部的任何托管数据都不会泄露到外部网站。
 
 ## <a name="ios-best-practices"></a>iOS 最佳做法
 

@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048032"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057396"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>设置 iOS 设备对公司资源的访问  
 
@@ -54,11 +54,11 @@ ms.locfileid: "88048032"
 ### <a name="setting-notifications"></a>设置通知  
 如果注册后组织强制使用新的安全要求（如多重身份验证），公司门户应用将对此作出通知。 可调整设置，以便可以继续通过该设备开展工作。  
 
-要了解有关注册的详细信息，请参阅[安装公司门户应用并注册设备后会发生什么情况？](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)。  
+要了解有关注册的详细信息，请参阅[安装公司门户应用并注册设备后会发生什么情况？](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)。  
 
-## <a name="prerequisties"></a>先决条件  
+## <a name="prerequisites"></a>先决条件    
 
-* 转到 App Store 下载并在设备上安装 [Intune 公司门户应用](install-and-sign-in-to-the-intune-company-portal-app-ios.md)。 
+* [从 App Store](https://go.microsoft.com/fwlink/?linkid=2141414) 安装公司门户应用。
 * 保持 Wi-Fi 连接，直到完成所有步骤。
 * 有权访问设备上的 Safari Web 浏览器。
 
@@ -188,4 +188,4 @@ ms.locfileid: "88048032"
 ## <a name="next-steps"></a>后续步骤  
 找到可在工作或学校方面对你有帮助的应用。 通过 Company Portal 了解[应用的提供方式](use-managed-apps-on-your-device-ios.md)。  
 
-仍需帮助？ 请与公司支持人员联系。 可以在[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)中查找他们的联系信息。  
+仍需帮助？ 请与公司支持人员联系。 可以在[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)中查找他们的联系信息。

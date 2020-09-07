@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699579"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432534"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>与 Power BI 报表服务器集成
 
@@ -103,9 +103,15 @@ ms.locfileid: "88699579"
 
 1. 当报表准备就绪可保存时，请前往“文件”菜单，选择“另存为”，然后选择“Power BI 报表服务器”  。
 
-1. 在“Power BI 报表服务器选择”窗口中，输入 Reporting Services 点的 URL 作为“新报表服务器地址” 。 例如，`https://rsp.contoso.com/Reports`。
+1. 在“Power BI 报表服务器选择”窗口中，输入 Reporting Services 点的 URL 作为“新报表服务器地址” 。 例如，`https://rsp.contoso.com/Reports`。 选择“确定”。
 
-在 Configuration Manager 控制台中，可以在 Power BI 报表列表中看到新报表。
+1. 在“保存报表”窗口中，双击 `ConfigMgr_<SiteCode>` 文件夹。 例如，`ConfigMgr_PS1`，其中 `PS1` 是 ConfigMgr 站点代码。 可以选择或创建（从 Report Server 中）子文件夹以将报表存储在其中。
+    > [!TIP]
+    > 报表和包含 Power BI 报表的报表文件夹必须位于 Report Server 的 `ConfigMgr_<SiteCode>` 文件夹中，否则它们将不会出现在 Configuration Manager 控制台中。
+
+1. 在“文件名”中输入报表的名称。
+
+在 Configuration Manager 控制台中，可以在 Power BI 报表列表中看到新报表。 如果看不到报表，请验证是否已将报表保存到 `ConfigMgr_<SiteCode>` 文件夹。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: ba4bef364f734f9078b7c404e06978b018f4c387
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383251"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281075"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>通过 Microsoft Intune 使用适用于 iOS 和 Android 的 Office 管理协作体验
 
@@ -32,12 +32,12 @@ ms.locfileid: "85383251"
 - 集成 Office Lens 技术来解锁相机的强大功能，例如将图像转换为可编辑的 Word 和 Excel 文档，扫描 PDF 文件，以及通过自动数字增强功能捕获白板，使内容更容易阅读。
 - 为人们在使用手机工作时经常遇到的常见任务添加新功能，例如快速笔记、签署 PDF 文件、扫描 QR 码以及在设备之间传输文件。
 
-订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件性访问）可获得最丰富和最广泛的 Office 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略允许从移动设备连接到适用于 iOS 和 Android 的 Office，还需要部署 Intune 应用保护策略确保协作体验受到保护。
+订阅企业移动性 + 安全性套件（包括 Microsoft Intune 和 Azure Active Directory Premium 功能，如条件访问）可获得最丰富和最广泛的 Microsoft 365 数据保护功能。 最基础的层面来说，你需要部署一个条件访问策略，该策略允许从移动设备连接到适用于 iOS 和 Android 的 Office，还需要部署 Intune 应用保护策略确保协作体验受到保护。
 
 ## <a name="apply-conditional-access"></a>应用条件访问
-组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Office 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
+组织可以使用 Azure AD 条件访问策略来确保用户只能使用适用于 iOS 和 Android 的 Office 访问工作或学校内容。 为此，你需要一个面向所有潜在用户的条件访问策略。 有关创建此策略的详细信息，请参阅[通过条件访问要求访问云应用时具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access)。
 
-1. 请遵循“步骤 1：为 Office 365 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），这允许使用适用于 iOS 和 Android 的 Office，但阻止支持 OAuth 的第三方移动设备客户端连接到 Office 365 终结点。
+1. 请遵循“步骤 1：为 Office 365 配置 Azure AD 条件访问策略”（[方案 1：Office 365 应用要求批准的应用具有应用保护策略](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)），这允许使用适用于 iOS 和 Android 的 Office，但阻止支持 OAuth 的第三方移动设备客户端连接到 Office 365 终结点。
 
    >[!NOTE]
    > 此策略可确保移动用户可以使用适用的应用访问所有 Office 终结点。
@@ -74,6 +74,7 @@ APP 数据保护框架分为三个不同的配置级别，每个级别基于上�
 可以通过已注册设备上的移动设备管理 (MDM) OS 通道（iOS 上为 [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) 通道，Android 上为 [Android in the Enterprise](https://developer.android.com/work/managed-configurations) 通道）来交付应用配置，也可以通过 Intune 应用保护策略 (APP) 通道来交付应用配置。 适用于 iOS 和 Android 的 Office 支持以下配置方案：
 
 - 仅允许工作或学校帐户
+- 常规应用配置
 - 数据保护设置
 
 > [!IMPORTANT]
@@ -96,6 +97,26 @@ APP 数据保护框架分为三个不同的配置级别，每个级别基于上�
 
 > [!NOTE]
 > 目前，只有适用于 Android 的 Office 支持组织允许的帐户模式。
+
+## <a name="general-app-configuration-scenarios"></a>常规应用配置方案
+
+适用于 iOS 和 Android 的 Office 使管理员能够为多个应用内设置自定义默认配置。  如果适用于 iOS 和 Android 的 Office 应用了 Intune 应用保护策略，则无论是通过任意 UEM 提供程序注册的设备还是未注册的设备，均可使用此功能。
+
+> [!NOTE]
+> 如果应用保护策略以用户为目标，则建议在“托管应用”注册模型中部署常规应用配置设置。 这样可以确保将应用配置策略同时部署到已注册的设备和未注册的设备。 
+
+Office 支持以下配置设置：
+
+- 管理便笺的创建
+
+### <a name="manage-the-creation-of-sticky-notes"></a>管理便笺的创建
+
+默认情况下，适用于 iOS 和 Android 的 Office 允许用户创建便笺。 对于具有 Exchange Online 邮箱的用户，便笺将同步到用户的邮箱中。 对于具有本地邮箱的用户，这些便笺仅存储在本地设备上。
+
+|    密钥    |    值    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.NotesCreationEnabled    |    “true”（默认值）允许为工作或学校帐户创建便笺<br>“false”禁止为工作或学校帐户创建便笺    |
+
 
 ## <a name="data-protection-app-configuration-scenarios"></a>数据保护应用配置方案
 

@@ -2,7 +2,7 @@
 title: Intune 中的数据安全性和数据共享
 titleSuffix: Microsoft Intune
 description: 了解 Intune 中如何保护和共享个人数据。
-keywords: ''
+keywords: 隐私, 数据
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079546"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286248"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune 中的数据安全性和数据共享
 
@@ -36,17 +36,9 @@ Microsoft Intune 与 Microsoft Azure 服务团队采用相同的技术和组织�
 
 有关详细信息，请参阅[服务信任门户](https://www.microsoft.com/en-us/TrustCenter/stp)。
 
-Intune 使用数据最小化技术，如
-
-- aggregation
-- 某些功能的可选数据收集
-- 降低数据的准确性或敏感性
-
-Intune 还使用 RBAC 和 JiT 等技术保护支持事件，以确保在默认情况下实施数据保护。 
-
 ### <a name="data-breach-reporting"></a>数据泄露报告
 
-发现可报告客户安全事件 (CRSI) 时，客户会收到通知。 此过程包括与 Microsoft O365 团队合作向使用 Intune 的任何 Microsoft O365 客户下达泄露通知。
+发现可报告客户安全事件 (CRSI) 时，客户会收到通知。 此过程包括与 Microsoft 365 团队合作，向使用 Intune 的任何 Microsoft 365 客户下达泄露通知。
 
 ## <a name="data-sharing"></a>数据共享
 
@@ -72,7 +64,7 @@ Intune 还使用 RBAC 和 JiT 等技术保护支持事件，以确保在默认�
 
 Microsoft Intune 不与 Configuration Manager 共享任何数据。 Configuration Manager 是由客户直接部署、管理和运行的本地产品。 Configuration Manager 收集的诊断和使用情况数据仅用于改进将来版本的安装体验、质量和安全性。
 
-有关详细信息，请参阅 [Configuration Manager 的诊断和使用情况数据](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data)。 
+有关详细信息，请参阅 [Configuration Manager 的诊断和使用情况数据](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data)。 
 
 
 ## <a name="next-steps"></a>后续步骤

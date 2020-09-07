@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820317"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993090"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 数据仓库收集
 
@@ -69,7 +69,7 @@ appType 实体列出了应用的安装源。
 | 3         | iOS 应用商店应用                   | iOS 应用商店应用。                                 |
 | 4         | iOS LOB 应用                     | iOS 业务线应用。                      |
 | 5         | 托管 iOS 应用商店应用 (MAM)     | 启用了管理的 iOS 应用商店应用。       |
-| 6         | O365 Pro Plus 套件             | 适用于 Windows 10 的 Microsoft 365 应用版。     |
+| 6         | Microsoft 365 企业应用版        | 适用于 Windows 10 的 Microsoft 365 应用版。     |
 | 7         | Web 应用                         | Web 应用。                                        |
 | 8         | Windows Phone 8.1 应用商店应用     | Windows Phone 8.1 应用商店应用。                    |
 | 9         | Windows 应用商店应用               | Windows 应用商店应用。                              |
@@ -235,7 +235,7 @@ DeviceRegistrationState 实体表示由其他数据仓库收集引用的注册�
 | DeviceCategoryKey          | 与此设备关联的类别的键。                                                                                                                                     |
 | DeviceEnrollmentType       | 与此设备关联的注册类型的键，表明注册方法。                                                                                             |
 | ComplianceStateKey         | 与此设备关联的符合性状态的键。                                                                                                                             |
-| office365Version           | 设备上安装的 Office 365 版本。                                                                                                                             |
+| office365Version           | 设备上安装的 Microsoft 365 版本。                                                                                                                             |
 | OSVersion                  | 设备的操作系统版本。                                                                                                                                                |
 | EasDeviceId                | 设备的 Exchange ActiveSync ID。                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -286,7 +286,7 @@ deviceType 实体表示由其他数据仓库实体引用的设备类型。 设�
 | 11           | Android           | 使用 Device Administrator 管理的 Android 设备   |
 | 12           | ISocConsumer      | iSoc 使用者设备                                |
 | 13           | Unix              | Unix 设备                                         |
-| 14           | MacMDM            | 使用内置 MDM 代理管理的 Mac OS X 设备 |
+| 14           | MacMDM            | 使用内置 MDM 代理管理的 OS X 设备 |
 | 15           | HoloLens          | HoloLens 设备                                       |
 | 16           | SurfaceHub        | Surface Hub 设备                                  |
 | 17           | AndroidForWork    | 使用 Android Profile Owner 管理的 Android 设备  |
@@ -595,7 +595,7 @@ ownerType 实体表明拥有设备的是公司、个人还是未知对象。
 | ownerTypeName | 表示设备的所有者类型：公司 - 设备为企业所有。  个人 - 设备为个人所有 (BYOD)。   未知 - 此设备上无此信息。 | 公司/个人未知 |
 
 > [!Note]  
-> 对于在为设备创建动态组时 Azure AD 中的 `ownerTypeName` 筛选器，需要将值 `deviceOwnership` 设置为 `Company`。 有关详细信息，请参阅[设备规则](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。 
+> 对于在为设备创建动态组时 Azure AD 中的 `ownerTypeName` 筛选器，需要将值 `deviceOwnership` 设置为 `Company`。 有关详细信息，请参阅[设备规则](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)。 
 
 ## <a name="policies"></a>策略
 “策略”实体列出了设备配置文件、应用配置文件和符合性策略。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。

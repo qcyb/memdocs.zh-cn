@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819654"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194192"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 中的 macOS 设备功能设置
 
@@ -267,7 +267,12 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
 - **SSO 应用扩展类型**：选择 SSO 应用扩展的类型。 选项包括：
 
   - **未配置**：不使用应用扩展。 若要禁用应用扩展，请将 SSO 应用扩展类型切换为“未配置”。
-  - **Microsoft Azure AD**：使用 Microsoft 企业 SSO 插件，它是一个重定向类型的 SSO 应用扩展。 此插件为所有支持 [Apple 企业单一登录](https://developer.apple.com/documentation/authenticationservices)功能的 macOS 应用程序提供 Active Directory 帐户的 SSO。 使用此 SSO 应用扩展类型可在使用 Azure AD 进行身份验证的 Microsoft 应用、组织应用和网站上启用 SSO。
+  - **Microsoft Azure AD**： 
+
+    > [!IMPORTANT]
+    > Microsoft Azure AD SSO 扩展仍处于开发阶段。 它会在 Intune 用户界面中列出，但无法按预期方式工作。 请勿将 Microsoft Azure AD 用作 SSO 应用扩展类型。
+
+    使用 Microsoft 企业 SSO 插件，它是一个重定向类型的 SSO 应用扩展。 此插件为所有支持 [Apple 企业单一登录](https://developer.apple.com/documentation/authenticationservices)功能的 macOS 应用程序提供 Active Directory 帐户的 SSO。 使用此 SSO 应用扩展类型可在使用 Azure AD 进行身份验证的 Microsoft 应用、组织应用和网站上启用 SSO。
 
     SSO 插件充当高级身份验证代理，可改进安全性和用户体验。
 
@@ -324,7 +329,7 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
 - **自动发现**（仅用于“Kerberos”）：将此项设置为“阻止”时，Kerberos 扩展不会自动使用 LDAP 和 DNS 来确定其 Active Directory 站点名称。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能会允许扩展自动查找 Active Directory 站点名称。
 - **密码更改**（仅用于“Kerberos”）：“阻止”设置会阻止用户更改登录到你输入的域时所用的密码。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能允许更改密码。  
 - **密码同步**（仅用于“Kerberos”）：选择“启用”可将用户的本地密码同步到 Azure AD。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能禁用与 Azure AD 的密码同步。 使用此设置作为 SSO 的备选设置或备份。 如果用户使用 Apple 移动帐户登录，则此设置不起作用。
-- **Windows Server Active Directory 密码复杂性**（仅用于“Kerberos”）：选择“需要”，则强制用户密码满足 Active Directory 的密码复杂性要求。 有关详细信息，请参阅[密码必须满足复杂性要求](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements)。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不要求用户满足 Active Directory 的密码要求。
+- **Windows Server Active Directory 密码复杂性**（仅用于“Kerberos”）：选择“需要”，则强制用户密码满足 Active Directory 的密码复杂性要求。 有关详细信息，请参阅[密码必须满足复杂性要求](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements)。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不要求用户满足 Active Directory 的密码要求。
 - **最短密码长度**（仅用于“Kerberos”）：输入可组成用户密码的最少字符数。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会强制用户使用最短密码长度。
 - **密码重用限制**（仅用于“Kerberos”）：输入可以在域上重复使用以前的密码之前要使用的新密码数 (1 - 24)。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能不会强制实施密码重用限制。
 - **最短密码期限**（仅用于“Kerberos”）：输入在用户可以更改密码之前，在域中使用该密码的天数。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 不会强制输入在更改密码之前使用密码的最短期限。
@@ -344,7 +349,7 @@ Intune 包含一些内置设置，用于自定义 macOS 设备上的功能。 �
 
   如果设置为 **“是”** ，则将从设备中擦除所有现有的用户帐户。 若要避免数据丢失或阻止恢复出厂设置，请确保了解此设置会如何更改设备。
 
-  有关共享设备模式的详细信息，请参阅[共享设备模式概述](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)。
+  有关共享设备模式的详细信息，请参阅[共享设备模式概述](/azure/active-directory/develop/msal-shared-devices)。
 
 - **应用捆绑包 ID**（Microsoft Azure AD、Kerberos）：添加应用程序包标识符，这些标识符应在设备上使用单一登录。 这些应用有权访问 Kerberos 票证授予票证和身份验证票证。 应用还会针对用户有权访问的服务对用户进行身份验证。
 - **域领域映射**（仅用于“Kerberos”）：添加应映射到领域的域 DNS 后缀。 当主机的 DNS 名称与领域名称不匹配时，使用此设置。 很可能不需要创建此自定义域到领域的映射。

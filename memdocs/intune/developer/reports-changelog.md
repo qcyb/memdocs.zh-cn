@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d3c42683e1c9a9d67f6fadd51878ebf2da3e0cac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820028"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996599"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune 数据仓库 API 的更改日志
 
@@ -41,7 +41,7 @@ _发布日期：2020 年 7 月_
 |    收集                          |    更改     |    说明信息                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    已添加    |    此设备的唯一网络标识符。                                                                                                                                                                                                                                                                     |
-|    office365Version    |    已添加    |    设备上安装的 Office 365 版本。                                                                                                                                                                                                                                                                     |
+|    office365Version    |    已添加    |    设备上安装的 Microsoft 365 版本。                                                                                                                                                                                                                                                                     |
 
 下表列出了 Intune 数据仓库中添加到 [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) 实体的属性。
 
@@ -80,7 +80,7 @@ _发布日期：2020 年 7 月_
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    已添加    |    此设备的唯一网络标识符。                                                                                                                                                                                                                                                                     |
 |    model    |    已添加    |    设备型号。                                                                                                                                                                                                                                                                     |
-|    office365Version    |    已添加    |    设备上安装的 Office 365 版本。                                                                                                                                                                                                                                                                     |
+|    office365Version    |    已添加    |    设备上安装的 Microsoft 365 版本。                                                                                                                                                                                                                                                                     |
 
 下表列出了 Intune 数据仓库中添加到“devicePropertyHistory”实体的属性。
 

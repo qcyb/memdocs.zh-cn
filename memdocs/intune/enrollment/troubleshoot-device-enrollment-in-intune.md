@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865816"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993516"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune 设备注册疑难解答
 
@@ -47,8 +47,8 @@ ms.locfileid: "87865816"
 
 托管的设备用户可收集注册和诊断日志以供你查看。 以下提供了有关收集日志的用户说明：
 
-- [将 Android 注册错误发送给 IT 管理员](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [将 iOS/iPadOS 错误发送给 IT 管理员](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [将 Android 注册错误发送给 IT 管理员](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [将 iOS/iPadOS 错误发送给 IT 管理员](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>常规注册问题
@@ -121,12 +121,12 @@ ms.locfileid: "87865816"
 **问题：** 将第二个已验证域添加到 ADFS 时，可能会遇到此问题。 具有第二个域的用户主体名称 (UPN) 后缀的用户可能无法登录门户或注册设备。
 
 
-<strong>解决方法：</strong>在下列情况下，Microsoft Office 365 客户必须为每个后缀单独部署 AD FS 2.0 联合身份验证服务实例：
+<strong>解决方法：</strong>在下列情况下，Microsoft 365 客户必须为每个后缀单独部署 AD FS 2.0 联合身份验证服务实例：
 - 通过 AD FS 2.0 使用单一登录 (SSO) 且
 - 在其组织内为用户的 UPN 后缀提供多个顶级域名（例如，@contoso.com 或 @fabrikam.com）。
 
 
-[AD FS 2.0 汇总](https://support.microsoft.com/kb/2607496)与 SupportMultipleDomain 切换结合使用可启用 AD FS 服务器，以在无需其他 AD FS 2.0 服务器的情况下支持此方案。 有关详细信息，请参阅[此博客](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/)。
+[AD FS 2.0 汇总](https://support.microsoft.com/kb/2607496)与 SupportMultipleDomain 切换结合使用可启用 AD FS 服务器，以在无需其他 AD FS 2.0 服务器的情况下支持此方案。 有关详细信息，请参阅[此博客](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365)。
 
 
 ## <a name="android-issues"></a>Android 的问题
@@ -216,7 +216,7 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 
 输入公司凭据并重定向到联合登录后，用户可能仍会看到缺少证书的错误。 在这种情况下，该错误可能意味着 Active Directory 联合身份验证服务 (AD FS) 服务器中缺少中间证书
 
-此证书错误之所以出现是因为，Android 设备要求必须在 [SSL 服务器 Hello](https://technet.microsoft.com/library/cc783349.aspx) 内添加中间证书。 目前，在 SSL 客户端 Hello 的 SSL 服务器 Hello 响应中，默认 AD FS 服务器或 WAP（即 AD FS 代理服务器安装）仅发送 AD FS 服务 SSL 证书。
+此证书错误之所以出现是因为，Android 设备要求必须在 [SSL 服务器 Hello](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)) 内添加中间证书。 目前，在 SSL 客户端 Hello 的 SSL 服务器 Hello 响应中，默认 AD FS 服务器或 WAP（即 AD FS 代理服务器安装）仅发送 AD FS 服务 SSL 证书。
 
 若要解决此问题，请按以下步骤将证书导入 AD FS 服务器或代理上的计算机个人证书：
 
@@ -295,9 +295,9 @@ Samsung Smart Manager 软件（预装在某些 Samsung 设备上）会停用 Int
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-有关详细信息，请参阅 [Get-AdfsEndpoint 文档](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
+有关详细信息，请参阅 [Get-AdfsEndpoint 文档](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)。
 
-有关详细信息，请参阅[保护 Active Directory 联合身份验证服务安全的最佳做法](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs)。 有关确定身份联合提供程序中是否启用了 WS-Trust 1.3 用户名/混合的帮助，请执行以下操作：
+有关详细信息，请参阅[保护 Active Directory 联合身份验证服务安全的最佳做法](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS)。 有关确定身份联合提供程序中是否启用了 WS-Trust 1.3 用户名/混合的帮助，请执行以下操作：
 - 联系 Microsoft 支持部门（如果使用 ADFS）
 - 联系第三方标识供应商。
 

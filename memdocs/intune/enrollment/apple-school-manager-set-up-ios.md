@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e919ac336532e8b641908b02c0e282ae9e1711e7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 431dc3fec49609c4f163c9d7f471b60565611bc3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094000"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992831"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>通过 Apple School Manager 设置 iOS/iPadOS 设备注册
 
@@ -38,7 +38,7 @@ Apple School Manager 注册不能与 [Apple 的自动设备注册](device-enroll
 **必备条件**
 - [Apple 移动设备管理 (MDM) 推送证书](apple-mdm-push-certificate-get.md)
 - [MDM 机构](../fundamentals/mdm-authority-set.md)
-- 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
+- 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10))。 [了解详细信息](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)。
 - 从 [Apple School Management](http://school.apple.com) 计划购买的设备
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>获取 Apple 令牌并分配设备
@@ -83,12 +83,12 @@ Apple School Manager 注册不能与 [Apple 的自动设备注册](device-enroll
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS/iPadOS 注册” > “注册计划令牌”   。
 2. 选择令牌，选择“配置文件”，然后选择“创建配置文件” 。
 
-3. 在“创建配置文件”下，输入配置文件的“名称”和“描述”以便于管理  。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 详细了解 [Azure Active Directory 动态组](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices)。
+3. 在“创建配置文件”下，输入配置文件的“名称”和“描述”以便于管理  。 用户看不到这些详细信息。 可以使用此“名称”字段在 Azure Active Directory 中创建动态组。 使用配置文件名称定义 enrollmentProfileName 参数，以向设备分配此注册配置文件。 详细了解 [Azure Active Directory 动态组](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices)。
 
     ![配置文件名称和描述。](./media/apple-school-manager-set-up-ios/image05.png)
 
 4. 对于“用户关联”，选择具有此配置文件的设备是否必须通过已分配的用户进行注册。
-    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 使用此选项时，用户还可使用公司门户对其设备进行身份验证。 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](https://technet.microsoft.com/library/adfs2-help-endpoints)。 [了解详细信息](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。   Apple School Manager 的“Shared iPad”模式要求用户不通过用户关联进行注册。
+    - 通过用户关联进行注册 - 为属于用户且想要使用公司门户获取服务（如安装应用）的设备选择此选项。 使用此选项时，用户还可使用公司门户对其设备进行身份验证。 如果使用的是 ADFS，用户关联需要 [WS-Trust 1.3 用户名/混合终结点](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10))。 [了解详细信息](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)。   Apple School Manager 的“Shared iPad”模式要求用户不通过用户关联进行注册。
 
     - 不通过用户关联进行注册 - 为不属于单个用户的设备（例如共享设备）选择此选项。 对无需访问本地用户数据即可执行任务的设备使用此选项。 公司门户等应用将无法运行。
 
@@ -156,7 +156,7 @@ Apple School Manager 注册不能与 [Apple 的自动设备注册](device-enroll
 
 1. 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)中，选择“设备” > “iOS/iPadOS” > “iOS/iPadOS 注册” > “注册计划令牌”   。
 2. 选择 Apple School Manager 令牌，然后选择“学校数据同步”。
-3. 在“学校数据同步”下，选择“允许”。  此设置将允许 Intune 与 Office 365 中的 SDS 连接。
+3. 在“学校数据同步”下，选择“允许”。  此设置将允许 Intune 与 Microsoft 365 中的 SDS 连接。
 4. 若要允许 Apple School Manager 与 Azure AD 连接，请选择“设置 Microsoft 学校数据同步”。详细了解[如何设置学校数据同步](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1)。
 5. 单击“保存” > “确定” 。
 

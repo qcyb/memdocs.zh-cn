@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7dc7fb7b01add52b75fcc4a4a42f57951decf484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663338"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993123"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>配置 Intune 的 Exchange 本地访问权限
 
@@ -34,7 +34,7 @@ ms.locfileid: "88663338"
 > [!IMPORTANT]
 > 本文中的信息适用于支持使用 Exchange Connector 的客户。
 >
-> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA)。  如果你的环境中设置了 Exchange Connector，则仍支持 Intune 租户使用该连接器，并且有权继续访问支持其配置的 UI。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
+> 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](/office365/enterprise/hybrid-modern-auth-overview) (HMA)。  如果你的环境中设置了 Exchange Connector，则仍支持 Intune 租户使用该连接器，并且有权继续访问支持其配置的 UI。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
 >
 > 使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
 
@@ -59,7 +59,7 @@ ms.locfileid: "88663338"
   - **已注册**到 Intune 或是已加入域的 PC。
   - **已在 Azure Active Directory 中注册**。 此外，还必须向 Azure Active Directory 注册客户端 Exchange ActiveSync ID。
 
-- Azure AD 设备注册服务 (DRS) 会对 Intune 和 Office 365 客户自动激活。 已经部署了 ADFS 设备注册服务的用户不会在他们本地的 Active Directory 上看到已注册的设备。 **这不适用于 Windows 电脑和 Windows Phone 设备**。
+- Azure AD 设备注册服务 (DRS) 会对 Intune 和 Microsoft 365 客户自动激活。 已经部署了 ADFS 设备注册服务的用户不会在他们本地的 Active Directory 上看到已注册的设备。 **这不适用于 Windows 电脑和 Windows Phone 设备**。
 
 - **符合**部署到该设备的设备符合性策略。
 
@@ -86,16 +86,16 @@ ms.locfileid: "88663338"
 
   4. 在“平台”中选择“Android Enterprise”，在“配置文件类型”中选择“电子邮件”   。
 
-  5. 配置[电子邮件配置文件设置](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise)。
+  5. 配置[电子邮件配置文件设置](/intune/configuration/email-settings-android-enterprise#android-enterprise)。
 
   6. 完成后，选择“确定” > “创建”以保存所做的更改。
 
-  7. 创建电子邮件配置文件后，[将其分配给组](https://docs.microsoft.com/intune/device-profile-assign)。
+  7. 创建电子邮件配置文件后，[将其分配给组](/intune/device-profile-assign)。
 
-  8. 设置[基于设备的条件访问](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access)。
+  8. 设置[基于设备的条件访问](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access)。
 
 > [!NOTE]
-> Microsoft Outlook for Android 和 Microsoft Outlook for iOS/iPadOS 不通过 Exchange 本地连接器支持。 如果想要将 Azure Active Directory 条件访问策略和 Intune 应用保护策略与本地邮箱的 Outlook for iOS/iPadOS 和 Outlook for Android 配合使用，请参阅[将混合新式身份验证与 Outlook for iOS/iPadOS 和 Outlook for Android 配合使用](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth)。
+> Microsoft Outlook for Android 和 Microsoft Outlook for iOS/iPadOS 不通过 Exchange 本地连接器支持。 如果想要将 Azure Active Directory 条件访问策略和 Intune 应用保护策略与本地邮箱的 Outlook for iOS/iPadOS 和 Outlook for Android 配合使用，请参阅[将混合新式身份验证与 Outlook for iOS/iPadOS 和 Outlook for Android 配合使用](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth)。
 
 ### <a name="support-for-pcs"></a>对 PC 的支持
 

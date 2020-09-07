@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 0b479f770053051e580a68aa810a60c35d745ac5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663253"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996344"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>实现 Microsoft Intune 计划
 
@@ -37,7 +37,7 @@ ms.locfileid: "88663253"
 
 - 企业移动性 + 安全性 (EMS)/Intune 订阅
 
-- Office 365 订阅（用于 Office 应用和应用保护策略托管应用）
+- Microsoft 365 订阅（用于 Office 应用和应用保护策略托管应用）
 
 - Apple APNs 证书（用于启用 iOS/iPadOS 设备平台管理）
 
@@ -60,11 +60,11 @@ ms.locfileid: "88663253"
 
 - 了解有关[如何购买 Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing) 的详细信息。
 
-### <a name="task-2-add-office-365-subscription"></a>任务 2：添加 Office 365 订阅
+### <a name="task-2-add-microsoft-365-subscription"></a>任务 2：添加 Microsoft 365 订阅
 
-此步骤是可选的。 若要使用 Exchange Online 并通过应用保护策略管理 Office 移动应用，则需要 Office 365 订阅。 如果组织没有 Office 365 订阅，请联系 Microsoft 或 Microsoft 帐户团队，表明想要购买 Office 365 的意愿。
+此步骤是可选的。 若要使用 Exchange Online 并通过应用保护策略管理 Office 移动应用，则需要 Microsoft 365 订阅。 如果组织没有 Microsoft 365 订阅，请联系 Microsoft 或 Microsoft 帐户团队，表明想要购买 Microsoft 365 的意愿。
 
-- 了解有关[如何购买 Office 365](https://products.office.com/business/compare-office-365-for-business-plans) 的详细信息。
+- 了解有关[如何购买 Microsoft 365](https://products.office.com/business/compare-office-365-for-business-plans) 的详细信息。
 
 ### <a name="task-3-add-users-groups-in-azure-ad"></a>任务 3：在 Azure AD 中添加用户组
 
@@ -74,9 +74,9 @@ ms.locfileid: "88663253"
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>任务 4：分配 Intune 和 Office 365 用户许可证
+### <a name="task-4-assign-intune-and-microsoft-365-user-licenses"></a>任务 4：分配 Intune 和 Microsoft 365 用户许可证
 
-EMS/Intune 和 Office 365 推出的所有目标用户均需具备分配给他们的许可证。 可在 Microsoft 365 管理中心分配 EMS/Intune 和 Office 365 许可证。
+EMS/Intune 和 Microsoft 365 推出的所有目标用户都需要分配有许可证。 可在 Microsoft 365 管理中心分配 EMS/Intune 和 Microsoft 365 许可证。
 
 - 了解有关[如何分配 Intune 许可证](licenses-assign.md)的详细信息。
 
@@ -130,7 +130,7 @@ Intune 支持对 Exchange Online、Exchange 內部部署、SharePoint Online、S
 
 ### <a name="task-13-enroll-devices"></a>任务 13：注册设备
 
-Intune 支持 iOS/iPadOS、Mac OS、Android 和 Windows 桌面版设备平台。 根据 Intune 部署用例和要求，适当地注册移动设备平台。
+Intune 支持 iOS/iPadOS、macOS、Android 和 Windows 桌面设备平台。 根据 Intune 部署用例和要求，适当地注册移动设备平台。
 
 - 了解有关[如何注册设备](../enrollment/device-enrollment.md)的详细信息。
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: c81216ae7350beafcf1e090b278d5975d6fea086
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865466"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993285"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 中的 iOS/iPadOS 设备注册问题疑难解答
 
@@ -87,7 +87,7 @@ ms.locfileid: "87865466"
 原因：尝试注册该设备的用户没有 Microsoft Intune 许可证。
 
 #### <a name="resolution"></a>解决方法
-1. 转到 [Office 365 管理中心](https://admin.microsoft.com)，然后选择“用户”>“活动用户”。
+1. 转到 [Microsoft 365 管理中心](https://admin.microsoft.com)，然后选择“用户”>“活动用户”。
 2. 选择想要为其分配 Intune 用户许可证的用户帐户，然后选择“产品许可证”>“编辑”。
 3. 将需要分配给该用户的许可证切换到“打开”位置，然后选择“保存”。
 4. 重新注册设备。
@@ -181,7 +181,7 @@ ms.locfileid: "87865466"
 > 请务必续订 APNs 证书。 请勿替换 APNs 证书。 如果替换证书，则必须在 Intune 中重新注册所有 iOS/iPadOS 设备。 
 
 - 若要在 Intune 独立版中续订 APNs 证书，请参阅[续订 Apple MDM Push Certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate)。
-- 若要在 Office 365 中续订 APNs 证书，请参阅[为 iOS/iPadOS 设备创建 APNs 证书](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7)。
+- 若要在 Microsoft 365 中续订 APNs 证书，请参阅[为 iOS/iPadOS 设备创建 APNs 证书](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7)。
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR 连接无效
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 34f1aeb9ec265b7a6e09135bc931574732f5816d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137392"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994202"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune 由世纪互联在中国运营  
 
@@ -48,20 +48,20 @@ Microsoft 不亲自参与该服务的运营。 由世纪互联运营、提供和
   - Google Play 保护机制功能（如 SafetyNet 设备证明）。
   - 从 Google Play 商店管理应用。
   - Android Enterprise 功能。 有关详细信息，请参阅此 [Google 文档](https://support.google.com/work/android/answer/6270910?hl=en)。
-- Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。 
+- Android 版 Intune 公司门户应用使用 Google 移动服务与 Microsoft Intune 服务进行通信。 由于 Google Play 服务在中国不可用，因此某些任务最长可能需要 8 小时才能完成。 有关详细信息，请参阅此[文章](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)。 
 - 为了遵守本地法规和提供改进的功能，Intune 客户端体验（公司门户应用）在中国可能有所不同。
 - 隔离不可用。
 - 移动应用管理 (MAM) 的可用性取决于这些应用在中华人民共和国的可用性。
 
 ## <a name="you-control-customer-data"></a>由你控制客户数据
 
-在由世纪互联运营的 Microsoft Azure、Intune、Office 365 和 Power BI 中，你可以完全控制你的数据：
+在由世纪互联运营的 Microsoft Azure、Intune、Microsoft 365 和 Power BI 中，你可以完全控制你的数据：
 - 你知道客户数据的位置。
 - 你可以控制对客户数据的访问。
 - 如果离开服务，你可以控制客户数据。
 - 你可以选择控制客户数据的安全性。
 
-在由世纪互联运营的 Microsoft Azure、Intune、Office 365 和 Power BI 中，你是数据的所有者：
+在由世纪互联运营的 Microsoft Azure、Intune、Microsoft 365 和 Power BI 中，你是数据的所有者：
 - 世纪互联不会将客户数据用于广告宣传。
 - 你可以控制谁有权访问客户数据。
 - 我们使用逻辑隔离来隔离每个客户的数据。
@@ -72,8 +72,8 @@ Microsoft 不亲自参与该服务的运营。 由世纪互联运营、提供和
 
 由世纪互联运营的 Intune 的租户管理员角色可以通过以下方式请求数据主体的数据：
 
-- 使用 Azure Active Directory 管理中心，租户管理员可以从 Azure Active Directory 和相关服务中永久删除数据主体。 有关详细信息，请参阅 [Azure 数据主体请求 - 删除](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- 由世纪互联运营的 Microsoft 服务的系统生成的日志可以由租户管理员使用“数据日志导出”将其导出。 有关详细信息，请参阅 [Azure 数据主体请求 - 导出](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export)。
+- 使用 Azure Active Directory 管理中心，租户管理员可以从 Azure Active Directory 和相关服务中永久删除数据主体。 有关详细信息，请参阅 [Azure 数据主体请求 - 删除](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- 由世纪互联运营的 Microsoft 服务的系统生成的日志可以由租户管理员使用“数据日志导出”将其导出。 有关详细信息，请参阅 [Azure 数据主体请求 - 导出](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export)。
 
 ## <a name="next-steps"></a>后续步骤
 

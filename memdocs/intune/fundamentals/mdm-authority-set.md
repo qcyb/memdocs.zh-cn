@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 676e7a4db54558eaea87ad2fa8efbe8af546f035
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614722"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996565"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>设置移动设备管理机构
 
@@ -34,11 +34,11 @@ ms.locfileid: "88614722"
 
 - **Intune 独立版** - 仅限云的管理，可使用 Azure 门户进行配置。 包括 Intune 提供的所有功能。 [在 Intune 控制台中设置 MDM 机构](#set-mdm-authority-to-intune)。
 
-- **Intune 共同管理** - 集成了 Intune 云解决方案和适用于 Windows 10 设备的 Configuration Manager。 可使用 Configuration Manager 控制台配置 Intune。 [配置设备自动注册到 Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
+- **Intune 共同管理** - 集成了 Intune 云解决方案和适用于 Windows 10 设备的 Configuration Manager。 可使用 Configuration Manager 控制台配置 Intune。 [配置设备自动注册到 Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
 
-- Office 365 的基本移动性和安全性 - 如果已激活此配置，则会看到 MDM 授权设置为“Office 365”。 如果要开始使用 Intune，则需要购买 Intune 许可证。
+- **Microsoft 365 的基本移动性和安全性** - 如果已激活此配置，则会看到 MDM 机构设置为“Office 365”。 如果要开始使用 Intune，则需要购买 Intune 许可证。
 
-- **Office 365 的基本移动性和安全性[共存](#coexistence)** - 如果你已在使用 Office 365 的基本移动性和安全性，则可将 Intune 添加到租户上，然后将管理机构设置为 Intune 或 Office 365 的基本移动性和安全性，以便各个用户可决定使用哪项服务管理其注册了 MDM 的设备。 将基于分配给每个用户的许可证定义用户的管理机构：如果用户只有 Microsoft 365 基本或标准许可证，则其设备将由 Office 365 的基本移动性和安全性进行管理。 如果用户有授权使用 Intune 的许可证，则其设备将由 Intune 管理。 如果向之前由 Office 365 的基本移动性和安全性管理的用户添加授权使用 Intune 的许可证，则其设备将切换到 Intune 管理。 在将用户切换到 Intune 之前，请务必分配 Intune 配置给用户，以替换 Office 365 的基本移动性和安全性，否则其设备将丢失 Office 365 的基本移动性和安全性配置，并且不会从 Intune 接收任何替换信息。
+- **Microsoft 365 的基本移动性和安全性[共存](#coexistence)** - 如果你已在使用 Microsoft 365 的基本移动性和安全性，则可将 Intune 添加到租户上，然后将管理机构设置为 Intune 或 Microsoft 365 的基本移动性和安全性，以便各个用户可决定使用哪项服务管理其注册了 MDM 的设备。 将基于分配给每个用户的许可证定义用户的管理机构：如果用户只有 Microsoft 365 基本或标准许可证，则其设备将由 Microsoft 365 的基本移动性和安全性进行管理。 如果用户有授权使用 Intune 的许可证，则其设备将由 Intune 管理。 如果向之前由 Microsoft 365 的基本移动性和安全性管理的用户添加授权使用 Intune 的许可证，则其设备将切换到 Intune 管理。 在将用户切换到 Intune 之前，请务必分配 Intune 配置给用户，以替换 Microsoft 365 的基本移动性和安全性，否则其设备将丢失 Microsoft 365 的基本移动性和安全性配置，并且不会从 Intune 接收任何替换信息。
 
 ## <a name="set-mdm-authority-to-intune"></a>将 MDM 机构设置为 Intune
 
@@ -109,7 +109,7 @@ ms.locfileid: "88614722"
 
 ## <a name="remove-mdm-authority"></a>删除 MDM 机构
 
-可将 MDM 机构更改回“未知”。 服务使用 MDM 机构确定已注册设备的目标报告门户（Microsoft Intune 或 Office 365 的基本移动性和安全性）。
+可将 MDM 机构更改回“未知”。 服务使用 MDM 机构确定已注册设备的目标报告门户（Microsoft Intune 或 Microsoft 365 的基本移动性和安全性）。
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>更改 MDM 机构的预期结果
 

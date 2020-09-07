@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 76d1141a1c4dd442f6fb94a06b5d20adc8c7fa77
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080124"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996327"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>确定用例场景要求
 
@@ -64,7 +64,7 @@ ms.locfileid: "82080124"
   - 电子邮件（Windows 10 移动版）
 
 - **应用**
-  - 具有应用保护策略的 Office 365
+  - 具有应用保护策略的 Microsoft 365
   - 具有应用保护策略的业务线 (LOB)
 
 ## <a name="next-steps"></a>后续步骤

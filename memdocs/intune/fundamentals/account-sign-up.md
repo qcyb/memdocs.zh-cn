@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31cc746edce40300b5678439550ce3108270750d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ae034699d3a07311ca6a51557cbbc673916569bf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988863"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994270"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>注册或登录到 Microsoft Intune
 
 本主题指导系统管理员如何注册 Intune 帐户。
 
-注册 Intune 之前，请确定是否已有 Microsoft Online Services 帐户、企业协议或等效的批量许可协议。 Microsoft 批量许可协议或其他 Microsoft 云服务订阅（如 Office 365）通常包含工作或学校帐户。
+注册 Intune 之前，请确定是否已有 Microsoft Online Services 帐户、企业协议或等效的批量许可协议。 Microsoft 批量许可协议或其他 Microsoft 云服务订阅（如 Microsoft 365）通常包含工作或学校帐户。
 
 如果已有工作或学校帐户，请使用该帐户进行“登录”，并将 Intune 添加到订阅中  。 否则，也可通过“注册”创建新帐户，以便为组织使用 Intune  。
 
@@ -70,12 +70,12 @@ Intune for Education： https://intuneeducation.portal.azure.com
 
 Intune 经典门户： https://manage.microsoft.com Intune 经典门户仅用于管理向 Intune PC 软件客户端注册的设备
 
-### <a name="urls-for-intune-services-provided-by-office-365"></a>Office 365 提供的 Intune 服务的 URL
+### <a name="urls-for-intune-services-provided-by-microsoft-365"></a>Microsoft 365 提供的 Intune 服务的 URL
 
 Microsoft 365 商业版： https://portal.microsoft.com/adminportal
 
-Office 365 移动设备管理： https://admin.microsoft.com/adminportal/home#/MifoDevices
+Microsoft 365 移动设备管理： https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>另请参阅
 
-[无法登录 Office 365、Azure 或 Intune](https://support.microsoft.com/help/2412085)
+[无法登录 Microsoft 365、Azure 或 Intune](https://support.microsoft.com/help/2412085)

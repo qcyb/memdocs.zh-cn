@@ -214,6 +214,8 @@
       items:
         - name: 使用证书进行身份验证
           href: certificates-configure.md
+        - name: 证书连接器
+          href: certificate-connectors.md
         - name: SCEP
           items:
             - name: SCEP 基础结构

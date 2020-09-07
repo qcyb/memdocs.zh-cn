@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f493b6c6f9ee100c15a3958ec435261da271f7c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 8bc0bdaec4d8eb194619176a4130737752d36c06
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262806"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194175"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>在 Microsoft Intune 中通过 OEMConfig 使用和管理 Android 企业版设备
 
@@ -151,7 +151,7 @@ OEMConfig 策略是一种特殊类型的设备配置策略，类似于[应用配
 
 ## <a name="supported-oemconfig-apps"></a>支持的 OEMConfig 应用
 
-与标准应用相比，OEMConfig 应用扩展了 Google 授予的托管配置特权，以支持更复杂的架构和功能。 OEM 必须向 Google 注册其 OEMConfig 应用。 如果未注册，这些功能可能无法按预期运行。 Intune 当前支持以下 OEMConfig 应用：
+与标准应用相比，OEMConfig 应用扩展了 Google 授予的托管配置特权，以支持更复杂的架构和功能。 OEM 必须[向 Google 注册其 OEMConfig 应用](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform)。 如果未注册，这些功能可能无法按预期运行。 Intune 当前支持以下 OEMConfig 应用：
 
 -----------------
 
@@ -183,12 +183,12 @@ OEMConfig 策略是一种特殊类型的设备配置策略，类似于[应用配
 
 -----------------
 
-如果存在适用于你的设备的 OEMConfig 应用程序，但它未显示在上表中，或未显示在 Intune 控制台中，请发送电子邮件到 `IntuneOEMConfig@microsoft.com`。
+如果你代表 OEM，并且设备上有 OEMConfig 应用程序，但该应用程序未出现在上表中，请向 `IntuneOEMConfig@microsoft.com` 发送电子邮件以获取载入帮助。 OEM 还必须[向 Google 注册其 OEMConfig 应用](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform)。
 
 > [!NOTE]
-> OEMConfig 应用必须先由 Intune 进行载入，然后才能使用 OEMConfig 配置文件进行配置。 应用受支持后，你无需就在租户中对其进行设置与 Microsoft 联系。 只须按照此页面上的指令进行操作即可。
+> OEMConfig 应用必须先由 Google 和 Intune 载入，然后才能使用 OEMConfig 配置文件进行配置。 应用受支持后，你无需就在租户中对其进行设置与 Microsoft 联系。 只须按照此页面上的指令进行操作即可。
 >
-> 如果 OEMConfig 应用程序的行为不正确，请与 OEMConfig 应用程序的开发人员联系。 Intune 不对个别 OEMConfig 应用的技术问题负责。
+> 如果 OEMConfig 应用中设置的行为不正确，请与 OEMConfig 应用的开发人员联系。 Intune 不对个别 OEMConfig 应用的技术问题负责。
 
 ## <a name="next-steps"></a>后续步骤
 

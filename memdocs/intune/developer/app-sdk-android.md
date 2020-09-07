@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -15,14 +15,14 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic, has-adal-ref
+ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: 62ab2050052294291a93a646a245e493e2e1f574
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501161"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286281"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
 
@@ -71,18 +71,15 @@ Intune App SDK 包括下列文件：
 
 Intune App SDK 是没有外部依赖项的标准 Android 库。 Microsoft.Intune.MAM.SDK.aar 既包含启用应用保护策略所需的接口，同时也包含与 Microsoft Intune 公司门户应用进行互操作所必需的代码。
 
-Microsoft.Intune.MAM.SDK.aar 必须指定为 Android 库引用。 要执行此操作，请在 Android Studio 中打开应用项目，然后转到“文件”>“新建”>“新模块”，选择“导入 .JAR/.AAR 包”。 选择我们的 Android 存档包 Microsoft.Intune.MAM.SDK.aar 为 .AAR 创建模块。 右键单击包含应用代码的一个或多个模块，然后转到“模块设置” > “依赖项选项卡” > “+ 图标” > “模块依赖项”，选择刚创建的 MAM SDK AAR 模块，然后选择“确定”    。 这将确保生成项目时一起编译模块和 MAM SDK。
+Microsoft.Intune.MAM.SDK.aar 必须指定为 Android 库引用。 要执行此操作，请在 Android Studio 中打开应用项目，然后转到“文件”>“新建”>“新模块”，选择“导入 .JAR/.AAR 包”。 然后，选择我们的 Android 存档包 Microsoft.Intune.MAM.SDK.aar 为 .AAR 文件类型创建模块。 右键单击包含应用代码的一个或多个模块，然后转到“模块设置” > “依赖项选项卡” > “+ 图标” > “模块依赖项”，选择刚创建的 MAM SDK AAR 模块，然后选择“确定”。 这将确保生成项目时一起编译模块和 MAM SDK。
 
 此外，Microsoft.Intune.MAM.SDK.Support.XXX.jar 库还包含相应 `android.support.XXX` 库的 Intune 变体。 它们并没有内置在 Microsoft.Intune.MAM.SDK.aar 中，以防应用不需要依赖支持库。
 
 #### <a name="proguard"></a>ProGuard
 
-如果 [ProGuard](https://www.guardsquare.com/en/products/proguard)（或任何其他收缩/混淆机制）用作一个生成步骤，SDK 则具有必须包含的其他配置规则。 当生成中包含 .AAR 时，我们的规则会自动集成到 proguard 步骤中，并保留必要的类文件。
+如果 [ProGuard](http://proguard.sourceforge.net/)（或任何其他收缩/混淆机制）用作一个生成步骤，SDK 则具有必须包含的其他配置规则。 当生成中包含 .AAR 时，我们的规则会自动集成到 proguard 步骤中，并保留必要的类文件。
 
-[Microsoft 身份验证库 (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) 可能有其自己的 ProGuard 限制。 如果应用集成 MSAL，则必须遵循 MSAL 文档中的这些限制。
-
-> [!NOTE]
-> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
+Azure Active Directory 身份验证库 (ADAL) 可能有其自己的 ProGuard 限制。 如果应用集成 ADAL，则必须遵循 ADAL 文档中的这些限制。
 
 ### <a name="policy-enforcement"></a>策略强制
 Intune App SDK 是一个 Android 库，使应用能够支持和参与 Intune 策略的强制执行。 
@@ -95,7 +92,7 @@ Intune App SDK 是一个 Android 库，使应用能够支持和参与 Intune 策
 ### <a name="build-tooling"></a>生成工具
 此 SDK 提供了可以自动执行 MAM 等效项替换的生成工具（用于 Gradle 生成的一个插件和用于非 Gradle 生成的一个命令行工具）。 这些工具将转换由 Java 编译生成的类文件，并且不会修改原始源代码。
 
-工具仅执行[直接替换](#class-and-method-replacements)。 它们不执行任何更复杂的 SDK 集成，例如[另存为策略](#enable-features-that-require-app-participation)、[多个标识](#multi-identity-optional)、[App-WE 注册](#app-protection-policy-without-device-enrollment)或 [AndroidManifest 修改](#manifest-replacements)，因此在应用完全启用 Intune 之前必须完成这些集成。 请仔细查看本文档的其余部分以了解与应用相关的集成点。
+工具仅执行[直接替换](#class-and-method-replacements)。 它们不执行任何更复杂的 SDK 集成，例如[另存为策略](#enable-features-that-require-app-participation)、[多个标识](#multi-identity-optional)、[App-WE 注册](#app-protection-policy-without-device-enrollment)、[AndroidManifest 修改](#manifest-replacements)或 [ADAL 配置](#configure-azure-active-directory-authentication-library-adal)，因此在应用完全启用 Intune 之前必须完成这些集成。 请仔细查看本文档的其余部分以了解与应用相关的集成点。
 
 > [!NOTE]
 > 可以针对已通过手动替换执行了部分或完整的 MAM SDK 源集成的项目运行工具。 你的项目必须仍将 MAM SDK 列为依赖项。
@@ -230,7 +227,7 @@ SDK 放置的 `BuildTool` 文件夹中提供了命令行生成工具。 它执�
 
 #### <a name="using-the-command-line-tool"></a>使用命令行工具
 
-可以通过使用位于 `BuildTool\bin` 目录中所提供的帮助程序脚本来调用命令行工具。
+可以使用 `BuildTool\bin` 目录中所提供的帮助程序脚本来调用命令行工具。
 
 此工具需要以下参数。
 
@@ -424,10 +421,7 @@ Intune App SDK 需要具有三个 [Android 系统权限](https://developer.andro
 
 Azure Active Directory 身份验证库 ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) 需要这些权限以执行代理身份验证。 如果未对应用授予这些权限或权限被用户废除，则将禁用需要代理（公司门户应用）的身份验证流。
 
-> [!NOTE]
-> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
-
-## <a name="logging"></a>日志记录
+## <a name="logging"></a>Logging
 
 应尽早初始化日志记录，以从记录的数据中获取最大价值。 `Application.onMAMCreate()` 通常是初始化日志记录的最佳位置。
 
@@ -468,7 +462,7 @@ public interface MAMLogHandlerWrapper {
 如果设备上未安装公司门户，系统将提示对话框，通知用户此信息当前不可用。 使用 MAM 策略管理应用时，将显示详细的 MAM 策略设置。
 
 ## <a name="mam-strict-mode"></a>MAM 严格模式
-MAM 严格模式提供一种机制，用于检测 MAM API 或 MAM 受限的平台 API 中应用使用的一些“异常”。 它在 Android 的 StrictMode 后进行松散模式化，并运行一组会在失败时引发错误的检查。 不应在生产版本中启用此功能，但强烈建议在应用内部开发、调试和/或测试版本中使用它。
+MAM 严格模式提供一种机制，用于检测 MAM API 或 MAM 受限的平台 API 中应用使用的一些“异常”。 它在 Android 的 StrictMode 后进行松散模式化，并运行一组会在失败时引发错误的检查。 不应在生产版本中启用此功能，但强烈建议在应用的内部开发、调试和/或试用版本中使用它。
 
 若要启用，请早先在应用程序初始化中调用
 
@@ -892,9 +886,6 @@ MAM 调用应用的 `MANAGEMENT_REMOVED` 接收器时，以下情况为 true：
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>配置 Azure Active Directory Authentication Library (ADAL)
 
-> [!NOTE]
-> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
-
 首先，请阅读 [GitHub 上的 ADAL 存储库](https://github.com/AzureAD/azure-activedirectory-library-for-android)中的 ADAL 集成指南。
 
 SDK 依赖于 [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) 实现其[身份验证](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)和条件启动方案，这要求应用通过 [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) 进行配置。 配置值通过 AndroidManifest 元数据传递给 SDK。
@@ -952,8 +943,8 @@ SDK 依赖于 [ADAL](https://azure.microsoft.com/documentation/articles/active-d
 如有必要，可指定颁发机构。
 
 必须使用 Azure AD 注册应用，并授予应用访问应用保护策略服务的权限：
-* 有关使用 Azure AD 注册应用程序的信息，请参阅[此处](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)。
-* 确保执行向应用保护策略 (APP) 服务提供 Android 应用权限的步骤。 使用“向 Intune 应用保护服务提供应用访问权限（可选）”下的 [Intune SDK 入门指南](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration)中的说明。 
+* 请参阅[快速入门：在 Microsoft 标识平台中注册应用程序](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)，以获取有关在 Azure AD 中注册应用程序的信息。
+* 确保执行向应用保护策略 (APP) 服务提供 Android 应用权限的步骤。 使用“向 Intune 应用保护服务提供应用访问权限（可选）”下的 [Intune SDK 入门指南](../developer/app-sdk-get-started.md#next-steps-after-integration)中的说明。 
 
 另请参阅以下[条件访问](#conditional-access)的要求。
 
@@ -969,18 +960,18 @@ SDK 依赖于 [ADAL](https://azure.microsoft.com/documentation/articles/active-d
 
 
 ### <a name="conditional-access"></a>条件性访问
-条件访问 (CA) 是 Azure Active Directory [功能](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer)，可用于控制对 AAD 资源的访问。 [Intune 管理员可定义仅允许从由 Intune 托管的设备或应用中访问资源的 CA 规则](https://docs.microsoft.com/intune/conditional-access)。 为确保应用能在适当的时候访问资源，必须按照以下步骤操作。 如果应用未获取任何 AAD 访问令牌，或仅访问不受 CA 保护的资源，则可跳过这些步骤。
+条件访问 (CA) 是 Azure Active Directory [功能](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer)，可用于控制对 AAD 资源的访问。 [Intune 管理员可定义仅允许从由 Intune 托管的设备或应用中访问资源的 CA 规则](../protect/conditional-access.md)。 为确保应用能在适当的时候访问资源，必须按照以下步骤操作。 如果应用未获取任何 AAD 访问令牌，或仅访问不受 CA 保护的资源，则可跳过这些步骤。
 
 1. 按照 [ADAL 集成指南](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library)进行操作。 
    有关代理的使用情况，请特别参阅步骤 11。
 2. [使用 Azure Active Directory 注册应用程序](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)。 
    可在上面的 ADAL 集成指南中找到重定向 URI。
 3. 根据上述第 2 项中的[常用 ADAL 配置](#common-adal-configurations)设置清单元数据参数。
-4. 通过从 [Azure 门户](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2)启用[基于设备的 CA](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) 测试所有内容已正确配置并确认以下内容
+4. 通过从 [Azure 门户](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2)启用[基于设备的 CA](../protect/conditional-access-intune-common-ways-use.md) 测试所有内容已正确配置并确认以下内容
     - 登录到应用会提示安装和注册 Intune 公司门户
     - 注册后，成功登录到应用。
 5. 在你的应用发布 Intune APP SDK 集成后，请立即联系 msintuneappsdk@microsoft.com，将它添加到核准应用列表中，以实现[基于应用的条件访问](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
-6. 将应用添加到已批准列表后，通过[配置基于应用的 CA](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) 进行验证，并确保成功登录到应用。
+6. 将应用添加到已批准列表后，通过[配置基于应用的 CA](../protect/app-based-conditional-access-intune-create.md) 进行验证，并确保成功登录到应用。
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>无需设备注册的应用保护策略
 
@@ -997,9 +988,6 @@ SDK 依赖于 [ADAL](https://azure.microsoft.com/documentation/articles/active-d
 此外，应用还可以查询 App SDK 以了解已注册用户的状态，从而确定是否应阻止用户访问企业内容。 可以注册多个帐户进行管理，但目前，一次只能在 APP-WE 服务中主动注册一个帐户。 这意味着每次应用上只有一个帐户可以接收应用保护策略。
 
 应用需要提供一个回调，以代表 SDK 从 Azure Active Directory Authentication Library (ADAL) 获取适当的访问令牌。 假定应用已使用 ADAL 进行用户身份验证，并获取它自己的访问令牌。
-
-> [!NOTE]
-> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 当应用彻底删除一个帐户时，它应取消注册该帐户，以表明该应用不应再将策略应用于此用户。 如果用户已在 MAM 服务中注册，将注销用户并擦除应用。
 
@@ -1076,9 +1064,6 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. 应用必须实现 `MAMServiceAuthenticationCallback` 接口以允许 SDK 为给定用户和资源 ID 请求 ADAL 令牌。 必须通过调用其 `registerAuthenticationCallback()` 方法将回调实例提供给 `MAMEnrollmentManager`。 应用生命周期中可能在较早便需要令牌，以用于注册重试或应用保护策略刷新签入，因此注册回调的理想位置是在应用 `MAMApplication` 子类的 `onMAMCreate()` 方法中。
 
-  > [!NOTE]
-  > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
-
 2. `acquireToken()` 方法应获取给定用户的请求资源 ID 的访问令牌。 如果无法获取请求的令牌，则会返回 null。
 
     > [!NOTE]
@@ -1111,12 +1096,9 @@ Result getRegisteredAccountStatus(String upn);
 
 1. 若要注册帐户进行管理，应用应调用 `registerAccountForMAM()`。 用户帐户通过 UPN 及其 AAD 用户 ID 进行标识。 此外，还需要租户 ID 以将注册数据与用户的 AAD 租户相关联。 还可提供用户权限以允许针对特定主权云进行注册，有关详细信息，请参阅[主权云注册](#sovereign-cloud-registration)。  SDK 可能会尝试在 MAM 服务中为给定用户注册应用，如果注册失败，它将定期重试注册，直到取消注册该帐户。 重试周期通常为 12-24 小时。 SDK 通过通知异步提供注册尝试的状态。
 
-2. 由于必须进行 AAD 身份验证，因此注册用户帐户的最佳时机是在用户登录应用并成功使用 ADAL 进行身份验证之后。用户的 AAD ID 和租户 ID 作为 [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) 对象的一部分从 ADAL 身份验证调用返回。
+2. 由于 AAD 身份验证是必需的，因此注册用户帐户的最佳时机是在用户登录应用并成功使用 ADAL 进行身份验证之后。 用户的 AAD ID 和租户 ID 作为 [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) 对象的一部分从 ADAL 身份验证调用返回。
     * 租户 ID 来自 `AuthenticationResult.getTenantID()` 方法。
     * 在来自 `AuthenticationResult.getUserInfo()` 的 `UserInfo` 类型子对象中找到了用户的相关信息，而 AAD 用户 ID 正是通过调用 `UserInfo.getUserId()` 从该对象中检索而得 。
-
-  > [!NOTE]
-  > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 3. 若要从 Intune 管理中取消注册帐户，应用应调用 `unregisterAccountForMAM()`。 如果该帐户已成功注册并托管，SDK 将取消注册该帐户并擦除其数据。 将会停止定期注册重试。 SDK 经通知异步提供取消注册请求的状态。
 
@@ -1158,9 +1140,6 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 * 当应用调用 `registerAccountForMAM()` 时，不久后它可能会通过另一个线程在其 `MAMServiceAuthenticationCallback` 接口上收到回调。 理想情况下，应用会在注册帐户之前从 ADAL 获取自己的令牌，以更快获取所请求的令牌。 如果应用从回叫返回有效令牌，注册将继续进行，并且该应用将会通过通知获取最终结果。
 
-> [!NOTE]
-> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
-
 * 如果应用未返回有效的 AAD 令牌，则注册尝试的最终结果将是 `AUTHORIZATION_NEEDED`。 如果应用通过通知收到此结果，则强烈建议通过获取先前从 `acquireToken()` 请求的用户和资源的令牌并调用 `updateToken()` 方法再次启动注册过程来加快注册过程。
 
 * 还将调用应用的已注册 `MAMServiceAuthenticationCallback` 来获取令牌，以定期进行应用保护策略刷新签入。如果应用在请求时不能提供令牌，它将不会收到通知，但它应尝试获取令牌并在下次方便的时候调用 `updateToken()`，以加快签入过程。 如果未提供令牌，则仍将在尝试下一次签入时调用回调。
@@ -1184,7 +1163,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 | `AUTHORIZATION_NEEDED` | 此结果表示应用的已注册 `MAMServiceAuthenticationCallback` 实例未提供令牌或提供的令牌无效。  如有可能，应用应获取有效的令牌并调用 `updateToken()`。 |
 | `NOT_LICENSED` | 用户未获得 Intune 许可，或尝试联系 Intune MAM 服务失败。  应用应继续处于不受托管的（普通）状态下，用户不会被阻止。  将定期重试注册，以防用户将来获得许可。 |
 | `ENROLLMENT_SUCCEEDED` | 注册尝试成功，或者用户已注册。  在成功注册的情况下，将在此通知之前发送策略刷新通知。  应允许对企业数据进行访问。 |
-| `ENROLLMENT_FAILED` | 注册尝试失败。  设备日志中提供了进一步的详细信息。  在此状态下，不应允许应用访问企业数据，因为先前已确定用户已获得 Intune 许可。 所有应用都应确保公司数据访问未经授权，直到应用获得“enrollment_succeeded”。|
+| `ENROLLMENT_FAILED` | 注册尝试失败。  设备日志中提供了进一步的详细信息。  在此状态下，不应允许应用访问企业数据，因为先前已确定用户已获得 Intune 许可。|
 | `WRONG_USER` | 每个设备只能有一个用户能够在 MAM 服务中注册应用。 此结果表明，已为其交付此结果的用户（第二个用户）以 MAM 策略作为目标，但是其他用户已注册。 由于无法为第二位用户强制执行 MAM 策略，应用不得允许访问此用户的数据（可以从应用中删除该用户），除非/直到稍后该用户的注册成功为止。 在提供此 `WRONG_USER` 结果的同时，MAM 将提示你选择删除现有帐户。 如果人类用户的回答是肯定的，那么确实有可能在不久之后注册第二个用户。 只要第二个用户保持注册状态，MAM 就会定期重试注册。 |
 | `UNENROLLMENT_SUCCEEDED` | 取消注册已成功。|
 | `UNENROLLMENT_FAILED` | 取消注册请求失败。  设备日志中提供了进一步的详细信息。 通常情况下，只要应用传递了有效的（既不为 null 也不为空）UPN，就不会发生这种情况。 应用无法直接、可靠地进行修正。 如果在注销有效 UPN 时收到此值，请将其作为 bug 报告给 Intune MAM 团队。|
@@ -1225,9 +1204,6 @@ ADAL 库有一个新的错误代码，它用于通知应用无法获取令牌是
 
 > [!NOTE]
 > 要使用这个新的错误代码以及对带策略保证的 APP CA 的其他支持，需具备 ADAL 库 1.15.0 版（或更高版本）。
-
-> [!NOTE]
-> 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
 
@@ -1302,7 +1278,7 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 | PENDING | 符合性修正尝试失败，因为超过时间限制时尚未从服务收到状态响应。 应用应稍后再次尝试其令牌获取。 |
 | COMPANY_PORTAL_REQUIRED | 必须在设备上安装公司门户，才能成功修正符合性。  如果设备上已安装公司门户，则需要重启应用。  在这种情况下，系统将显示一个对话框，要求用户重启应用。 |
 
-如果符合性状态是 `MAMCAComplianceStatus.COMPLIANT`，则应用应重启其原始令牌获取操作（适用于自己的资源）。 如果符合性修正尝试失败，`getComplianceErrorTitle()` 和 `getComplianceErrorMessage()` 方法将返回应用可在最终用户选中时显示的本地化的字符串。  大多数错误情况都无法由应用修正，因此通常最好是使帐户创建或登录失败，并允许用户稍后再试。  如果故障仍然存在，则可借助 MAM 日志来确定原因。  最终用户可以使用[此处](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "通过电子邮件将日志发送给公司支持人员")提供的说明提交日志。
+如果符合性状态是 `MAMCAComplianceStatus.COMPLIANT`，则应用应重启其原始令牌获取操作（适用于自己的资源）。 如果符合性修正尝试失败，`getComplianceErrorTitle()` 和 `getComplianceErrorMessage()` 方法将返回应用可在最终用户选中时显示的本地化的字符串。  大多数错误情况都无法由应用修正，因此通常最好是使帐户创建或登录失败，并允许用户稍后再试。  如果故障仍然存在，则可借助 MAM 日志来确定原因。  最终用户可以提交日志。 有关详细信息，请参阅[上传日志和通过电子邮件发送日志](../user-help/send-logs-to-your-it-admin-by-email-android.md)。
 
 由于 `MAMComplianceNotification` 扩展了 `MAMUserNotification`，因此还会提供尝试进行修正的用户的标识。
 
@@ -1415,7 +1391,7 @@ Intune 可让用户使用 Android 中所有可用的[自动备份功能](https:/
 |FileBackupHelper | MAMFileBackupHelper
 |SharedPreferencesBackupHelper| MAMSharedPreferencesBackupHelper|
 
-遵循以下准则将会成功完成多身份备份和还原。
+遵循以下准则可成功完成多标识备份和还原。
 
 ### <a name="backupagent"></a>BackupAgent
 
@@ -1458,7 +1434,7 @@ BackupAgent 使你可以更明确要备份哪些数据。 因为主要由开发�
 > [!NOTE]
 > 目前，每台设备仅支持一个 Intune 托管标识。
 
-标识被定义为字符串。 标识**不区分大小写**，而且向 SDK 请求标识可能会返回在设置标识时最初使用的相同大小写情况。
+标识被定义为字符串。 标识不区分大小写，而且向 SDK 请求标识可能不会返回在设置标识时最初使用的相同大小写。
 
 应用必须在其打算更改现用身份时通知 SDK。 在某些情况下，SDK 也会在需要标识更改时通知应用。 然而，在大多数情况下，MAM 不知道 UI 中正在显示的数据或在给定的时间内在线程上使用的数据，并且要依赖应用设置正确的标识以避免数据泄漏。 在随后各部分中，将会调用需要应用操作的一些特定方案。
 
@@ -1913,7 +1889,7 @@ contentIdentity)`。
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>为 Android 应用程序启用面向 MAM 的配置（可选）
-可在 Intune 控制台中为 [MAM-WE](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) 和 [Android Enterprise](https://docs.microsoft.com/intune/app-configuration-policies-use-android) 配置应用程序专属的键值对。
+可在 Intune 控制台中为 [MAM-WE](../apps/app-configuration-policies-managed-app.md) 和 [Android Enterprise](../apps/app-configuration-policies-use-android.md) 配置应用程序专属的键值对。
 这些键值对根本不会被 Intune 解释，而是被传递给应用。 想要接收这种配置的应用程序可以使用 `MAMAppConfigManager` 和 `MAMAppConfig` 类进行这些操作。 如果多个策略针对同一个应用，则可能会有多个冲突的值可用于同一个键。
 
 > [!NOTE] 
@@ -2023,7 +1999,7 @@ Long barValue = appConfig.getIntegerForKey("bar", MAMAppConfig.NumberQueryType.M
 * **REFRESH_APP_CONFIG**：此通知在 `MAMUserNotification` 中发送，并通知应用新的应用配置数据可用。
 
 ### <a name="further-reading"></a>深入阅读
-关于如何在 Android 中创建面向 MAM 的应用配置策略的详细信息，请参阅[如何使用适用于 Android 的 Microsoft Intune 应用配置策略](https://docs.microsoft.com/intune/app-configuration-policies-managed-app)。
+关于如何在 Android 中创建面向 MAM 的应用配置策略的详细信息，请参阅[如何使用适用于 Android 的 Microsoft Intune 应用配置策略](../apps/app-configuration-policies-managed-app.md)。
 
 也可以使用图形 API 配置应用配置。 有关信息，请参阅[针对 MAM 目标配置的图形 API 文档](https://docs.microsoft.com/graph/api/resources/intune-mam-targetedmanagedappconfiguration)。
 
@@ -2091,9 +2067,6 @@ MAMThemeManager.setAppTheme(R.style.AppTheme);
 可通过下列步骤启用默认注册：
 
 1. 如果应用集成了 ADAL 或者你需要启用 SSO，则请按照[通用 ADAL 配置](#common-adal-configurations) #2 [配置 ADAL](#configure-azure-active-directory-authentication-library-adal)。 如果不需要，则可跳过此步骤。
-
-  > [!NOTE]
-  > 将弃用 Azure Active Directory (Azure AD) 身份验证库 (ADAL) 和 Azure AD Graph API。 有关详细信息，请参阅[更新应用程序以使用 Microsoft 身份验证库 (MSAL) 和 Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)。
    
 2. 通过将以下值放入 `<application>` 标志下的清单来启用默认注册：
 
@@ -2165,11 +2138,11 @@ Intune SDK 会维护 Android API 提供的协定，但可能会由于策略实�
 Intune App SDK for Android 不会控制应用中的数据集合。 公司门户应用程序会默认记录系统生成的数据。 会将此数据发送到 Microsoft Intune。 根据 Microsoft 策略，我们不会收集任何个人数据。
 
 > [!NOTE]
-> 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android)。 
+> 如果最终用户选择不发送此数据，则必须在“公司门户”应用的“设置”下关闭遥测。 有关详细信息，请参阅[关闭 Microsoft 使用情况数据收集](../user-help/turn-off-microsoft-usage-data-collection-android.md)。 
 
 ## <a name="recommended-android-best-practices"></a>建议使用的 Android 最佳做法
 
-* 所有库项目都应尽可能共享同一个 android:package。 这不会偶尔在运行时失败；它仅仅是生成时间问题。 Intune App SDK 的较新版本将删除某些冗余。
+* 所有库项目都应尽可能共享同一个 `android:package`。 这不会偶尔在运行时失败；它仅仅是生成时间问题。 Intune App SDK 的较新版本将删除某些冗余。
 
 * 使用最新的 Android SDK 生成工具。
 

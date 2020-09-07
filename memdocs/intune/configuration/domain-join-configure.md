@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 211722a02183d3b86525468f907d4093331d9de6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8285b15a3fd7d473641ce9480fe1e6522b54e814
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988425"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281092"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Microsoft Intune 中适用于已加入混合 Azure AD 的设备的配置域加入设置
 
-许多环境使用本地 Active Directory (AD)。 当已加入 AD 域的设备同时加入到 Azure AD 时，它们被称为已加入混合 Azure AD 的设备。 使用 Windows Autopilot，可以在 Intune 中[注册已加入混合 Azure AD 的设备](../enrollment/windows-autopilot-hybrid.md)。 若要注册，还需要“域加入”配置文件。
+许多环境使用本地 Active Directory (AD)。 当已加入 AD 域的设备同时加入到 Azure AD 时，它们被称为已加入混合 Azure AD 的设备。 使用 Windows Autopilot，可以在 Intune 中[注册已加入混合 Azure AD 的设备](../../autopilot/windows-autopilot-hybrid.md)。 若要注册，还需要“域加入”配置文件。
 
 “域加入”配置文件包括本地 Active Directory 域信息。 当设备正在预配（且通常处于脱机状态）时，此配置文件会部署 AD 域详细信息，以便设备知道要加入哪个本地域。 如果不创建域加入配置文件，这些设备可能无法部署。
 
@@ -56,9 +56,9 @@ ms.locfileid: "83988425"
 
     - **计算机名称前缀**：输入设备名称的前缀。 计算机名称长度为 15 个字符。 前缀后的剩余 15 个字符是随机生成的。
     - **域名**：输入设备要加入的完全限定的域名 (FQDN)。 例如，输入 `americas.corp.contoso.com.`
-    - **组织单位**（可选）：输入要在其中创建计算机帐户的组织单位 (OU) 的完整路径（[可分辨名称](https://docs.microsoft.com/windows/win32/ad/object-names-and-identities#distinguished-name)）。 例如，输入 `"CN=Users,DC=Contoso,DC=com"`。 如果未输入值，则使用已知的计算机对象容器。
+    - **组织单位**（可选）：输入要在其中创建计算机帐户的组织单位 (OU) 的完整路径（[可分辨名称](/windows/win32/ad/object-names-and-identities#distinguished-name)）。 例如，输入 `"CN=Users,DC=Contoso,DC=com"`。 如果未输入值，则使用已知的计算机对象容器。
 
-      有关此设置的详细信息和建议，请参阅[部署已加入混合 Azure AD 的设备](../enrollment/windows-autopilot-hybrid.md)。
+      有关此设置的详细信息和建议，请参阅[部署已加入混合 Azure AD 的设备](../../autopilot/windows-autopilot-hybrid.md)。
 
 8. 选择“下一步”。
 
@@ -66,16 +66,18 @@ ms.locfileid: "83988425"
 
     选择“下一步”。
 
-10. 在“分配”中，选择要接收配置文件的用户或用户组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
+10. 在“分配”中，选择将接收配置文件的设备组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](device-profile-assign.md)。
 
-    选择“下一步”。
+    如果需要将设备加入不同的域或 OU，请创建不同的设备组。
+
+    选择“下一步”  。
 
 11. 在“查看并创建”中查看设置。 选择“创建”时，将保存所做的更改并分配配置文件。 该策略也会显示在配置文件列表中。
 
-现在，可以[使用 Intune 和 Windows Autopilot 部署已加入混合 Azure AD 的设备](../enrollment/windows-autopilot-hybrid.md)。
+现在，可以[使用 Intune 和 Windows Autopilot 部署已加入混合 Azure AD 的设备](../../autopilot/windows-autopilot-hybrid.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
 [分配](device-profile-assign.md)配置文件之后，[监视其状态](device-profile-monitor.md)。
 
-[使用 Intune 和 Windows Autopilot 部署已加入混合 Azure AD 的设备](../enrollment/windows-autopilot-hybrid.md)。
+[使用 Intune 和 Windows Autopilot 部署已加入混合 Azure AD 的设备](../../autopilot/windows-autopilot-hybrid.md)。

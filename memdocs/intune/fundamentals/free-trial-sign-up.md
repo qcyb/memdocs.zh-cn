@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 778937ed360a2271c342c55bdd03e33ddb5bdb25
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: f6ce7aeb5d7a64d98ec27fe3882c256120358d3c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217564"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994151"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>快速入门：免费试用 Microsoft Intune
 
@@ -121,7 +121,7 @@ Intune 通过 Microsoft 终结点管理器管理中心管理的基于云的安�
    ![Microsoft 365 管理中心的屏幕截图 - 验证域名](./media/free-trial-sign-up/domain-custom-verify.png)
 
    > [!NOTE]
-   > 有关 TXT 记录验证的详细信息，请参阅[在 Office 365 的任何 DNS 托管提供商处创建 DNS 记录](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166)。
+   > 有关 TXT 记录验证的详细信息，请参阅[在 Microsoft 365 的任何 DNS 托管提供商处创建 DNS 记录](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166)。
 
 ## <a name="admin-experiences"></a>管理员体验
 

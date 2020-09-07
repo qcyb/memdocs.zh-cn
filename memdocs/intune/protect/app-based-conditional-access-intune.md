@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e1619f3dde57b002ce8884e4af7d4a02e3d71b9f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080141"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992753"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>基于应用的 Intune 条件访问
 
 [Intune 应用保护策略](../apps/app-protection-policy.md)可帮助保护在 Intune 中已注册设备上的公司数据。 另外，应用保护策略还可用在没有注册 Intune 进行管理的员工自有设备上。 在这种情况下，即使你的公司不管理该设备，仍需要确保公司数据和资源受保护。
 
-通过确保仅支持 Intune 应用保护策略的客户端应用可以访问 Exchange Online 和其他 Office 365 服务，基于应用的条件访问和客户端应用管理增加了一个安全层。
+通过确保只有支持 Intune 应用保护策略的客户端应用才能访问 Exchange Online 和其他 Microsoft 365 服务，基于应用的条件访问和客户端应用管理增添了一层安全保障。
 
 > [!NOTE]
 > 受管理应用是一种自身执行应用保护策略的应用，可由 Intune 管理。
@@ -47,9 +47,9 @@ ms.locfileid: "82080141"
 
 ## <a name="supported-apps"></a>受支持的应用
 
-可以在 [Azure Active Directory 条件访问技术参考文档](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)中找到支持基于应用的条件访问的应用列表。
+可以在 [Azure Active Directory 条件访问技术参考文档](/azure/active-directory/active-directory-conditional-access-technical-reference)中找到支持基于应用的条件访问的应用列表。
 
-基于应用的条件访问[还支持业务线 (LOB) 应用](app-modern-authentication-block.md)，但这些应用需要使用 [Office 365 现代身份验证](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)。 
+基于应用的条件访问[还支持业务线 (LOB) 应用](app-modern-authentication-block.md)，但这些应用需要使用 [Microsoft 365 新式身份验证](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)。 
 
 ## <a name="how-app-based-conditional-access-works"></a>基于应用的条件访问的工作方式
 
