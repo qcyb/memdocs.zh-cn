@@ -46,4 +46,4 @@
 
 6. 选择“保存”  。
 
-默认情况下，不会为该服务启用双重身份验证。 但是，在注册设备时，建议启用双因素身份验证。 要启用双因素身份验证，请在 Azure AD 中配置一个双因素身份验证提供程序，并为用户帐户配置多重身份验证。 请参阅[Azure 多重身份验证服务器入门](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)。
+默认情况下，不会为该服务启用双重身份验证。 但是，在注册设备时，建议启用双因素身份验证。 要启用双因素身份验证，请在 Azure AD 中配置一个双因素身份验证提供程序，并为用户帐户配置多重身份验证。 请参阅[Azure 多重身份验证服务器入门](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)。
