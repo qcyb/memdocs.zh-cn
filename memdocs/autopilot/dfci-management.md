@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: 使用 Windows Autopilot Deployment 和 Intune，你可以在通过使用设备固件配置接口 () DFCI 来注册 UEFI (BIOS) 设置。
 keywords: Autopilot，DFCI，UEFI，Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,20 +15,20 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df49fb939b709c15f2b01b3577f7fc7ced60140d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 95979a3c53752bb77c31710e20de54dbc2781262
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908342"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606613"
 ---
-# <a name="dfci-management"></a>DFCI 管理
+# <a name="device-firmware-configuration-interface-dfci-management"></a>设备固件配置界面 (DFCI) 管理
 
 **适用于**
 
--   Windows 10
+- Windows 10
 
-使用 Windows Autopilot Deployment 和 Intune，你可以在 (UEFI) 设置注册后，使用设备固件配置界面 (DFCI) 来管理统一可扩展固件接口。  DFCI [使 Windows 可以将管理命令](/windows/client-management/mdm/uefi-csp) 从 Intune 传递到 UEFI，并将其传递到 Autopilot 部署的设备。 这允许您限制最终用户对 BIOS 设置的控制。 例如，你可以锁定启动选项，以防止用户启动其他 OS （例如不具有相同安全功能的 OS）。
+使用 Windows Autopilot Deployment 和 Intune，你可以在 (UEFI) 设置注册后，使用设备固件配置界面 (DFCI) 来管理统一可扩展固件接口。 DFCI [使 Windows 可以将管理命令](/windows/client-management/mdm/uefi-csp) 从 Intune 传递到 Autopilot 部署的设备。 此功能允许您限制最终用户对 BIOS 设置的控制。 例如，你可以锁定启动选项，以防止用户启动其他 OS （例如不具有相同安全功能的 OS）。
 
 如果用户重新安装了以前的 Windows 版本，请安装单独的操作系统或格式化硬盘驱动器，它们不能替代 DFCI 管理。 此功能还可防止恶意软件与 OS 进程进行通信，包括提升的操作系统进程。 DFCI 的信任链使用公钥加密，而不依赖于本地 UEFI 密码安全。 此安全层阻止本地用户从设备的 UEFI 菜单访问托管设置。
 
@@ -35,9 +36,18 @@ ms.locfileid: "88908342"
 
 ## <a name="dfci-management-lifecycle"></a>DFCI 管理生命周期
 
-可以将 DFCI 管理生命周期视为 UEFI 集成、设备注册、配置文件创建、注册、管理、停用和恢复。 请参阅下图。
+DFCI 管理生命周期包括以下过程：
+- UEFI 集成
+- 设备注册
+- 创建配置文件
+- 注册
+- 管理
+- 停用
+- 恢复
 
-   ![生命周期](images/dfci.png)
+请参阅下图。
+
+ ![生命周期](images/dfci.png)
 
 ## <a name="requirements"></a>要求
 

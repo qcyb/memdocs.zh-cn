@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: 概述注册状态页功能，配置
 keywords: Autopilot 即插即用，Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,24 +15,29 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: dd60c47e0e22aa24cf1d4d4df3324f3b1bfed21c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a7d368aef0b10fbe78e2c4ca141a39aa4ed6d803
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908251"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606602"
 ---
 # <a name="windows-autopilot-enrollment-status-page"></a>Windows Autopilot 注册状态页
 
 **适用于**
 
--   Windows 10 版本 1803 及更高版本 
+-  Windows 10 版本 1803 及更高版本 
 
-"注册状态" 页 (ESP) 显示在 MDM 管理的用户首次登录设备时完成设备配置过程的状态。  ESP 将帮助用户了解设备预配的进度，并确保设备在用户首次访问桌面之前已经满足组织所需的状态。
+用户第一次登录设备时，"注册状态" 页 (ESP) 显示设备的配置进度。 ESP 还可以确保设备在用户首次访问桌面之前处于预期状态。
 
-ESP 将跟踪应用程序的安装、安全策略、证书和网络连接。  使用 Intune，管理员可以将 ESP 配置文件部署到已获许可的 Intune 用户，并配置 ESP 配置文件中的特定设置;其中的几个设置是：强制安装指定的应用程序，允许用户收集疑难解答日志，指定用户在设备安装失败的情况下可以执行的操作。  有关详细信息，请参阅如何 [在 Intune 中设置注册状态页](/intune/windows-enrollment-status)。   
+ESP 跟踪应用程序、安全策略、证书和网络连接的安装。 管理员可以将 ESP 配置文件部署到许可的 Intune 用户，并在 ESP 配置文件中配置特定设置。 其中一些设置为：
+- 强制安装指定的应用程序。
+- 允许用户收集疑难解答日志。
+- 指定用户在设备安装失败时可以执行的操作。
+
+有关详细信息，请参阅如何 [在 Intune 中设置注册状态页](/intune/windows-enrollment-status)。  
  
- ![注册状态页](images/enrollment-status-page.png)
+![注册状态页](images/enrollment-status-page.png)
  
 
 ## <a name="more-information"></a>详细信息

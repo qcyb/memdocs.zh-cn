@@ -1,7 +1,7 @@
 ---
 title: 导入 PFX 证书配置文件
 titleSuffix: Configuration Manager
-description: 了解如何使用 Configuration Manager 中的 PFX 文件生成支持加密数据交换的用户特定的证书。
+description: 了解如何在 Configuration Manager 中导入 PFX 文件以生成支持加密数据交换的用户特定的证书。
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ef8c1656c12ead992d5305cdf86b1ab8fcfcb836
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700491"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608424"
 ---
 # <a name="import-pfx-certificate-profiles"></a>导入 PFX 证书配置文件
 
@@ -70,9 +70,9 @@ ms.locfileid: "88700491"
 
 若要导入 PFX 证书，请使用以下 Configuration Manager PowerShell cmdlet 来预配 Create PFX 脚本：
 
-- [CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [导入-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx)
+- [导入-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx)
+- [CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx)
 
 ### <a name="example-script"></a>示例脚本
 
@@ -96,7 +96,7 @@ $pfxfile = "c:\p1.pfx"
 Import-CMClientCertificatePfx -UserName "$env:USERDOMAIN\$user" -Password (ConvertTo-SecureString -String $password -AsPlainText -Force) -CertificateProfilePfx (Get-CMCertificateProfilePfx -Fast -Name $PfxProfileDisplayName) -Path $pfxfile
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [创建新的证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)
 
