@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906746"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564272"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>使用“擦除”或“停用”操作删除设备，或手动取消注册设备
 
@@ -174,7 +174,7 @@ ms.locfileid: "88906746"
 
 由于通信问题或设备丢失，可能需要从 Azure AD 删除设备。 可以使用“删除”操作从 Azure 门户中删除已知无法访问且不太可能再与 Azure 通信的设备记录  。 “删除”操作不会从管理中删除设备  。
 
-1. 使用管理员凭据登录 [Azure 门户中的 Azure Active Directory](https://aka.ms/accessaad)。 还可以登录到 [Microsoft 365 管理中心](https://admin.microsoft.com)。 从菜单中，选择“管理中心” > “Azure AD”   。
+1. 使用管理员凭据登录 [Azure 门户中的 Azure Active Directory](https://azure.microsoft.com/services/active-directory/)。 还可以登录到 [Microsoft 365 管理中心](https://admin.microsoft.com)。 从菜单中，选择“管理中心” > “Azure AD”   。
 2. 创建 Azure 订阅（如果没有）。 如果有付费帐户，应该不需要提供信用卡或付款（选择“注册免费的 Azure Active Directory”订阅链接）  。
 3. 选择“Azure Active Directory”，然后选择组织  。
 4. 选择“用户”  选项卡。
