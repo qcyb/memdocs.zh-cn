@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0639f5a92d4377212834f5c7089f534628e787d1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057308"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390851"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>在设备上安装和共享应用
 
@@ -58,7 +58,7 @@ ms.locfileid: "89057308"
 ## <a name="share-apps"></a>共享应用  
 共享应用并向工作或学校联系人推荐。 以下步骤介绍如何直接从公司门户共享链接。
 
-1. 在公司门户中，右键单击或按住任何应用以打开其[上下文菜单](//windows/uwp/design/controls-and-patterns/menus)。  
+1. 在公司门户中，右键单击或按住任何应用以打开其[上下文菜单](/windows/uwp/design/controls-and-patterns/menus)。  
 
     ![适用于 Windows 10 的公司门户应用的标题页，其中显示了应用和设备列表。 “共享”上下文菜单可进行点击，显示在示例应用图标的顶部。 ](./media/1808_ShareContext_CP_Windows.png)  
 

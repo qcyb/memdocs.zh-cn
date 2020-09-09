@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996242"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423928"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune 中前几个月的新增功能
 
@@ -447,7 +447,7 @@ Intune 现在提供引导式方案，可帮助你完成 Intune 中的特定任�
 有关详细信息，请参阅 [Intune 引导式方案概述](guided-scenarios-overview.md)。
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>其他应用程序配置变量可用<!-- 4969237   -->
-创建应用配置策略时，可以将 `AAD Device ID` 配置变量作为配置设置的一部分。 在 Intune 中，选择“客户端应用” > “应用配置策略” > “添加”。 输入配置策略详细信息并选择“配置设置”以查看“配置设置”边栏选项卡 。 有关详细信息，请参阅[托管 Android Enterprise 设备的应用配置策略 - 使用配置设计器](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer)。
+创建应用配置策略时，可以将 `AAD_Device_ID` 配置变量作为配置设置的一部分。 在 Intune 中，选择“客户端应用” > “应用配置策略” > “添加”。 输入配置策略详细信息并选择“配置设置”以查看“配置设置”边栏选项卡 。 有关详细信息，请参阅[托管 Android Enterprise 设备的应用配置策略 - 使用配置设计器](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer)。
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>创建称为策略集的管理对象组<!-- 3762880  -->
 策略集允许创建对现有管理实体的一系列引用，这些实体需要作为单个概念单元进行标识、定位和监视。 策略集不会替换现有的概念或对象。 你可以继续在 Intune 中分配各个对象，也可以将各个对象作为策略集的一部分进行引用。 因此，对各对象的任何更改都将反映在策略集中。  在 Intune 中，选择“策略集” > “创建”来创建新的策略集 。
@@ -479,7 +479,7 @@ Intune 现在提供引导式方案，可帮助你完成 Intune 中的特定任�
 #### <a name="engaged-restart-settings-are-removed-from-windows-update-rings----4464404--------"></a>预定重启设置已从 Windows 更新通道中删除<!--  4464404      -->
 如前所述，Intune 的 Windows 10 更新通道现在[支持设置截止时间](../protect/windows-update-settings.md)，而不再支持预定重启。 在 Intune 中配置或管理更新通道时，预定重启的设置将不再可用。  
 
-此更改与最新的 [Windows 服务更改](//windows/whats-new/whats-new-windows-10-version-1903#servicing)一致。在运行 Windows 10 1903 或更高版本的设备上，截止时间将取代“预定重启”的配置 。
+此更改与最新的 [Windows 服务更改](/windows/whats-new/whats-new-windows-10-version-1903#servicing)一致。在运行 Windows 10 1903 或更高版本的设备上，截止时间将取代“预定重启”的配置 。
 
 #### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices---4760025-----"></a>防止在 Android Enterprise 工作配置文件设备上安装来自未知源的应用<!-- 4760025   -->
 在 Android Enterprise 工作配置文件设备上，用户永远无法安装来自未知来源的应用。 此次更新添加了一个新设置 -“防止应用在个人配置文件中安装来自未知来源的应用”。 默认情况下，此设置可以防止用户将来自未知来源的应用程序旁加载到设备上的个人配置文件中。
@@ -1349,7 +1349,7 @@ Intune 将自动向 Intune 管理控制台添加四个常见的与 Android Enter
 ### <a name="device-configuration"></a>设备配置
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>更新了 Microsoft Intune 的 PFX 证书连接器<!-- 1533038 -->
-我们已发布[用于 Microsoft Intune 的 PFX 证书连接器](../protect/certficates-pfx-configure.md#whats-new-for-connectors)的更新，该更新解决了以下问题：因现有 PFX 证书持续重新处理而导致连接器停止处理新请求。
+我们已发布[用于 Microsoft Intune 的 PFX 证书连接器](../protect/certificate-connectors.md#whats-new-for-connectors)的更新，该更新解决了以下问题：因现有 PFX 证书持续重新处理而导致连接器停止处理新请求。
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>适用于 Defender ATP 的 Intune 安全任务（公共预览版）<!-- 3208597 -->
 在公共预览版中，可以使用 Intune 管理 [Microsoft Defender 高级威胁防护 (ATP) 的安全任务](../protect/atp-manage-vulnerabilities.md)。 这与 ATP 集成，并增加了基于风险的方法来发现终结点漏洞和配置错误，并对其设置优先级和进行修正，同时缩短了从发现到缓解的时间。
@@ -1404,7 +1404,7 @@ F5 发布了针对 BIG-IP 13 的更新，在 Intune 中实现了针对 iOS 上�
 适用于：iOS
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>更新了 Microsoft Intune 的 PFX 证书连接器<!-- doc-vso 1521237  -->  
-我们发布了针对 [Microsoft Intune 的 PFX 证书连接器](../protect/certficates-pfx-configure.md#whats-new-for-connectors)的更新，将轮询间隔从 5 分钟降到了 30 秒。
+我们发布了针对 [Microsoft Intune 的 PFX 证书连接器](../protect/certificate-connectors.md#whats-new-for-connectors)的更新，将轮询间隔从 5 分钟降到了 30 秒。
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1491,7 +1491,7 @@ Android 设备上的 Intune 应用保护策略 (APP) 现在使用符合 FIPS 140
 ### <a name="device-configuration"></a>设备配置
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>更新了证书连接器<!-- ICM 113304612 -->
-我们已经发布了针对 [Microsoft Intune 的 Intune 证书连接器和 PFX 证书连接器](../protect/certficates-pfx-configure.md#whats-new-for-connectors)的更新。 新版本修复了几个已知问题。
+我们已经发布了针对 [Microsoft Intune 的 Intune 证书连接器和 PFX 证书连接器](../protect/certificate-connectors.md#whats-new-for-connectors)的更新。 新版本修复了几个已知问题。
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>在 macOS 设备上设置登录设置和控制重启选项<!-- 1210083  -->
 在 macOS 设备上，可以创建设备配置文件（依次选择“设备配置” > “配置文件” > “创建配置文件” > 针对平台选择“macOS”> 针对配置文件类型选择“设备功能”）    。 此更新包括新的登录窗口设置，例如显示自定义横幅、选择用户登录方式、显示或隐藏电源设置等。

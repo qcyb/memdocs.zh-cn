@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ea17b57fc0881e189d0d57b823caece3610b4528
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907644"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390834"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>从适用于 Windows 的公司门户应用重命名设备
 重命名设备，以便更为轻松地从其他设备识别此设备。 适用于 Windows 的公司门户应用允许重命名以下类型的连接设备：  
@@ -47,7 +47,7 @@ ms.locfileid: "88907644"
      ![适用于 Windows 的公司门户应用的“设备详细信息”页示例屏幕截图，其中显示了“重命名”弹出字段。](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>从设备上下文菜单重命名设备  
-完成以下步骤，通过[上下文菜单](//windows/uwp/design/controls-and-patterns/menus)操作删除设备。  
+完成以下步骤，通过[上下文菜单](/windows/uwp/design/controls-and-patterns/menus)操作删除设备。  
 
 1. 在公司门户应用的“主页”上，转到“我的设备”  
 
