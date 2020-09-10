@@ -8,9 +8,15 @@
       href: client-details.md
     - name: 安装应用程序（预览）
       href: applications.md
+    - name: 设备时间线（预览）
+      href: timeline.md
+    - name: 资源浏览器（预览）
+      href: resource-explorer.md
 - name: 用于租户附加设备的 CMPivot（预览）
   items:
-    - name: CMPivot 概述
+    - name: 启动 CMPivot（预览）
+      href: cmpivot-start.md
+    - name: CMPivot 使用情况概述
       href: cmpivot-overview-attached.md
     - name: CMPivot 示例脚本
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: 应用程序安装（预览）
       href: troubleshoot-applications.md
+    - name: 时间线（预览）
+      href: troubleshoot-timeline.md
+    - name: 资源浏览器（预览）
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot（预览）
+      href: troubleshoot-cmpivot.md
