@@ -3,6 +3,7 @@ title: 用于白手套部署的 Windows Autopilot
 description: 用于白手套部署的 Windows Autopilot
 keywords: mdm，安装程序，windows，windows 10，oobe，管理，部署，autopilot，ztd，零接触，合作伙伴，msfb，intune，预配
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: low
 ms.sitesec: library
@@ -11,14 +12,15 @@ audience: itproF
 manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614688"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643445"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>用于白手套部署的 Windows Autopilot
 
@@ -26,13 +28,13 @@ ms.locfileid: "88614688"
 
 Windows Autopilot 通过使用预安装的 OEM 映像和驱动程序，帮助组织轻松地设置新设备。 这样，最终用户就可以使用一个简单的过程，使其设备获得业务就绪。
 
- ![OEM](images/wg01.png)
+ ![OEM 过程](images/wg01.png)
 
 Windows Autopilot 还可以提供一个 <I>白色的手套</I> 服务，帮助合作伙伴或 IT 人员预先预配完全配置和业务就绪的 WINDOWS 10 电脑。 从最终用户的角度来看，Windows Autopilot 用户驱动的体验是不变的，但使其设备进入完全预配状态的速度更快。
 
 通过 **Windows Autopilot for 白手套部署**，将拆分预配过程。 耗费时间的部分由 IT、合作伙伴或 Oem 完成。 最终用户只需完成一些必要的设置和策略，然后就可以开始使用其设备。
 
- ![OEM](images/wg02.png)
+ ![合作伙伴的 OEM 流程](images/wg02.png)
 
 白色手套部署使用 Windows 10 1903 版及更高版本中 Microsoft Intune。 此类部署建立在现有 Windows Autopilot [用户驱动的方案](user-driven.md) 之上，并支持 Azure Active Directory 联接和混合 Azure Active Directory 联接设备的用户驱动模式方案。
 
@@ -86,7 +88,7 @@ Windows Autopilot for 白色手套部署支持两种不同的方案：
 - 启动设备 (运行 Windows 10 专业版、企业版或教育版 Sku) 版本1903或更高版本。
 - 在第一个 OOBE 屏幕 (可能是语言选择或区域设置选择屏幕) ，请不要单击 " **下一步**"。 而是按 Windows 键5次以查看其他选项对话框。 在该屏幕中，选择 " **Windows Autopilot 预配** " 选项，然后单击 " **继续**"。
 
- ![choice](images/choice.png)
+ ![Windows Autopilot 预配选项](images/choice.png)
 
 - 在 **Windows Autopilot 配置** 屏幕上，将显示有关设备的信息：
  - 分配给设备的 Autopilot 配置文件。
@@ -96,13 +98,13 @@ Windows Autopilot for 白色手套部署支持两种不同的方案：
  - **注意**：可以使用伴随应用扫描 QR 码。 应用还会将设备配置为指定其所属的用户。 通过使用图形 API 与 Intune 集成的 [伴随应用的开源示例](https://github.com/Microsoft/WindowsAutopilotCompanion) 已由 Autopilot 团队发布到 GitHub。
 - 验证显示的信息。 如果需要进行任何更改，请进行更改，然后单击 " **刷新** " 以重新下载更新后的 Autopilot 配置文件详细信息。
 
- ![登录](images/landing.png)
+ ![Windows Autopilot 配置屏幕](images/landing.png)
 
 - 单击 " **预配** " 开始预配过程。
 
 如果预配过程成功完成：
 - 此时会出现一个绿色状态屏幕，其中包含有关设备的信息，其中包括前面介绍的相同细节。 例如，Autopilot 配置文件、组织名称、分配的用户和 QR 码。 还提供预配步骤的运行时间。
- ![手套-结果](images/white-glove-result.png)
+ ![绿色配置屏幕](images/white-glove-result.png)
 - 单击 "重新 **封装** " 关闭设备。 此时，可以将设备寄送到最终用户。
 
 >[!NOTE]
