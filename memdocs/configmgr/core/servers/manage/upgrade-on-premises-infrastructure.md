@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0c2894bcdf80901171cceba96e7829793f899383
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699477"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606790"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>升级支持 Configuration Manager 的本地基础结构
 
@@ -242,15 +242,15 @@ Configuration Manager 支持将 SQL Server 就地升级到以下版本：
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-有关 SQL CE 兼容级别及其设置方法的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)。
+有关 SQL CE 兼容级别及其设置方法的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。
 
 有关升级 SQL Server 的详细信息，请参阅以下 SQL Server 文章：  
 
 - [升级到 SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [升级到 SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [升级到 SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
-- [升级到 SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [升级到 SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>在站点数据库服务器上升级 SQL Server  
 

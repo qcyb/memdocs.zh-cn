@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993329"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607693"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2002 中的新增功能
 
@@ -426,7 +426,7 @@ OneTrace 现在支持可自定义的日志组，与支持中心的功能类似�
 - [CMPivot 独立应用](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [适用于共同托管设备的客户端应用](../../../comanage/workloads.md#client-apps)（以前称为适用于共同托管设备的移动应用）<!-- 1357892/3600959 -->
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 2002 发行说明](/powershell/sccm/2002-release-notes?view=sccm-ps)。
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 2002 发行说明](/powershell/sccm/2002-release-notes)。
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_2002)。
 

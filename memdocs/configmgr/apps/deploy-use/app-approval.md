@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 659dd91c4b6bbeba6e2e93d3318683a4006aa5ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695335"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606595"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>在 Configuration Manager 中批准应用程序
 
@@ -49,7 +49,7 @@ ms.locfileid: "88695335"
 
 从版本 1906 开始，如果在控制台中批准了应用请求，然后拒绝该请求，则现在可以再次批准该请求。 批准后，应用将重新安装在客户端上。  <!-- 4224910 -->
 
-使用 [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet 自动执行批准过程。 从版本 1902 开始，此 cmdlet 包含 InstallActionBehavior 参数  。 使用此参数指定立即安装应用程序还是在非工作时间安装应用程序。<!-- SCCMDocs-pr issue #3418 -->
+使用 [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest) PowerShell cmdlet 自动执行批准过程。 从版本 1902 开始，此 cmdlet 包含 InstallActionBehavior 参数  。 使用此参数指定立即安装应用程序还是在非工作时间安装应用程序。<!-- SCCMDocs-pr issue #3418 -->
 
 自版本 1906 起，可以看到哪些部署需要审批。 在“应用程序”  节点中，选择应用程序。 在详细信息窗格中，切换到“部署”选项卡  。有一个新列会默认显示，即“是否需要审批”  。
 

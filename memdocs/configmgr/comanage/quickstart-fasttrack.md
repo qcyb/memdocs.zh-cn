@@ -10,12 +10,12 @@ ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a01b6a3dde9921af2f5486475b0defb0c869cccd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2513941ede51ec8af3dfd1776c31ac428d7260c6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691265"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606806"
 ---
 # <a name="get-help-from-fasttrack-for-co-management"></a>从 FastTrack 获取帮助以进行共同管理
 
@@ -25,7 +25,7 @@ FastTrack 组织是由 Microsoft 工程师组成的一个大型团队，专门�
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-若要从 FastTrack 请求帮助，请先转到[适用于 Microsoft 365 的 FastTrack](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security)。 选择“登录”  ，然后输入组织 ID。 通过身份验证后，转到仪表板，并按照提示找到“请求协助”  窗体。
+若要从 FastTrack 请求帮助，请先转到[适用于 Microsoft 365 的 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/security)。 选择“登录”  ，然后输入组织 ID。 通过身份验证后，转到仪表板，并按照提示找到“请求协助”  窗体。
 
 提交内容经过审核后会路由到相应的 FastTrack 团队。 他们将确认你的资格并满足你的特定需求。 
 
@@ -34,7 +34,7 @@ FastTrack 组织是由 Microsoft 工程师组成的一个大型团队，专门�
 
 ### <a name="make-a-fasttrack-request"></a>提出 FastTrack 请求：
 
-1. 使用组织 ID 和密码登录到[适用于 Microsoft 365 的 FastTrack](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security)。  
+1. 使用组织 ID 和密码登录到[适用于 Microsoft 365 的 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/security)。  
 
 2. 在“欢迎使用 FastTrack”部分下，选择“请求 FastTrack 协助”  。  
 

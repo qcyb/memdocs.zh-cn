@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 70ef4ba22be8668053929639f951769f1aa2fe7d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699426"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608330"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager 的支持中心
 
@@ -52,7 +52,7 @@ ms.locfileid: "88699426"
 
 ### <a name="powershell-cmdlets"></a>PowerShell cmdlet
 
-支持中心还包括 [PowerShell cmdlet](/powershell/sccm/overview?view=sccm-ps)。 使用这些 cmdlet 可以创建与另一个 Configuration Manager 客户端的远程连接、配置数据收集选项以及启动数据收集。
+支持中心还包括 [PowerShell cmdlet](/powershell/sccm/overview)。 使用这些 cmdlet 可以创建与另一个 Configuration Manager 客户端的远程连接、配置数据收集选项以及启动数据收集。
 
 
 ## <a name="prerequisites"></a>必备条件

@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819926"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606938"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -118,7 +118,7 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 
 在创建多个策略时，可以配置它们的相对优先级。 如果将多个策略部署到一个客户端，系统会根据优先级值来确定其设置。
 
-从版本 2006 开始，可以使用 Windows PowerShell cmdlet 来执行此任务。 有关详细信息，请参阅 [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps)。
+从版本 2006 开始，可以使用 Windows PowerShell cmdlet 来执行此任务。 有关详细信息，请参阅 [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting)。
 
 ## <a name="deploy-a-policy"></a>部署策略
 
@@ -137,7 +137,7 @@ Configuration Manager 中的 BitLocker 管理包含以下组件：
 > [!IMPORTANT]
 > 如果远程桌面协议连接处于活动状态，则 MBAM 客户端不会启动 BitLocker 驱动器加密操作。 在 BitLocker 驱动器加密开始之前，必须关闭所有远程控制台连接，并且用户必须登录到物理控制台会话。
 
-从版本 2006 开始，可以使用 Windows PowerShell cmdlet 来执行此任务。 有关详细信息，请参阅 [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps)。
+从版本 2006 开始，可以使用 Windows PowerShell cmdlet 来执行此任务。 有关详细信息，请参阅 [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment)。
 
 ## <a name="monitor"></a>监视
 

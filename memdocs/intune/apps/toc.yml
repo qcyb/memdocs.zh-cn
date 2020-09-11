@@ -202,6 +202,8 @@
               href: data-transfer-between-apps-manage-ios.md
         - name: 查看应用保护日志
           href: app-protection-policy-settings-log.md
+    - name: Office 应用策略
+      href: app-office-policies.md
     - name: 故障排除
       items:
         - name: 帮助用户排查问题

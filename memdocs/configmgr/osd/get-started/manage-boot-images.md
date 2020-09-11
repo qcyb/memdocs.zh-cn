@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697630"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606299"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>使用 Configuration Manager 管理启动映像
 
@@ -206,7 +206,7 @@ Configuration Manager 提供两个默认启动映像：一种用于支持 x86 �
 - **在 WinPE 中设置默认键盘布局**： <!--4910348-->从版本 1910 开始，为启动映像部署默认键盘布局。 如果选择 zh-cn 以外的其他语言，Configuration Manager 仍会在可用输入区域设置中包含 zh-cn。 在设备上，初始键盘布局为选定的区域设置，但用户可以将设备切换为 zh-cn（如果需要）。
 
 > [!Tip]
-> 使用 [CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 从脚本配置这些设置。
+> 使用 [CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) PowerShell cmdlet 从脚本配置这些设置。
 
 #### <a name="optional-components"></a>可选组件
 

@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 90e4c0dfd2b55ec5acf943cd591ba45c719a68ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699137"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607507"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>将 SQL Server 群集用于站点数据库
 
@@ -63,7 +63,7 @@ Configuration Manager 安装过程中，会在 Microsoft Windows Server 群集�
 - 若要支持 Kerberos 身份验证，请启用 TCP/IP  网络通信协议，使每个 SQL Server 群集节点进行网络连接。 不需要命名管道  协议，但可以将其用于排除 Kerberos 身份验证问题。 在“SQL Server 网络配置”  的“SQL Server 配置管理器”  中配置网络协议设置。  
 
 - 在将 SQL Server 群集用于站点数据库时，需要满足特定证书要求。 有关详细信息，请参阅下列文章：
-  - [在 SQL 故障转移群集配置中安装证书](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [在 SQL 故障转移群集配置中安装证书](/sql/database-engine/configure-windows/manage-certificates#provision-failover-cluster-cert)
   - [Configuration Manager 的 PKI 证书要求](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager 安装过程中，会在 Microsoft Windows Server 群集�
 
 下面是在准备站点数据库时要完成的主要任务：
 
-- 创建虚拟 SQL Server 群集以在现有 Windows Server 群集环境上承载站点数据库。 有关安装和设置 SQL Server 群集的具体步骤，请参阅特定于 SQL Server 版本的文档。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017)。  
+- 创建虚拟 SQL Server 群集以在现有 Windows Server 群集环境上承载站点数据库。 有关安装和设置 SQL Server 群集的具体步骤，请参阅特定于 SQL Server 版本的文档。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup)。  
 
 - 在 SQL Server 群集的每台计算机上，在不希望 Configuration Manager 在其上安装站点组件的各驱动器的根文件夹中放置一个文件。 命名文件 `NO_SMS_ON_DRIVE.SMS`。 默认情况下，Configuration Manager 将在各物理节点上安装某些组件以支持备份等操作。  
 

@@ -10,12 +10,12 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 744abfcd36b2f162fffdc5e7f3e8c9258a617496
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 357b13b06bcfaabf6c22f68a3c21e498630cebf2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699970"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608204"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>查找每应用 VPN 的包系列名称 (PFN)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88699970"
 
 ## <a name="find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer"></a>为安装在 Windows 10 计算机上的应用查找 PFN
 
-如果要使用的应用已安装在 Windows 10 计算机中，可使用 [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) PowerShell cmdlet 获取 PFN。
+如果要使用的应用已安装在 Windows 10 计算机中，可使用 [Get-AppxPackage](/powershell/module/appx/get-appxpackage) PowerShell cmdlet 获取 PFN。
 
 Get-appxpackage 的语法是：
 

@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a14448c03596853be943440c0fab775ee1d19081
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 71e7f9c23b55beecc98bffb5da73465f0681a4a4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820419"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606395"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>使用 Configuration Manager 创建分阶段部署
 
@@ -53,8 +53,8 @@ ms.locfileid: "88820419"
 
 从版本 2002 开始，使用以下 Windows PowerShell cmdlet 手动配置软件更新和任务序列分阶段部署的各个阶段：
 
-- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
-- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase)
 
 ### <a name="criteria-for-success-of-the-first-phase"></a>第一阶段成功的标准
 
@@ -118,9 +118,9 @@ ms.locfileid: "88820419"
 
 从版本 2002 开始，可以使用以下 Windows PowerShell cmdlet 来执行此任务：
 
-- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
-- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment)
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>使用手动配置的阶段创建分阶段部署
 <!--1358148-->
@@ -170,8 +170,8 @@ ms.locfileid: "88820419"
 
 从版本 2002 开始，可以使用以下 Windows PowerShell cmdlet 来执行此任务：
 
-- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment)
 
 创建分阶段部署后，打开其属性进行更改：  
 

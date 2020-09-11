@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8fa21a226dff8e9e4a729908a218ab81cb5b4a73
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819620"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606765"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 Windows 应用程序
 

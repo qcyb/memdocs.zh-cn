@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995443"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607893"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager Technical Preview 1705 中的功能
 
@@ -121,12 +121,12 @@ ms.locfileid: "88995443"
 
 - 此版本不支持故障转移后使用异步提交副本作为站点数据库。
   > [!CAUTION]  
-  > 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。  
+  > 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。  
 
 - 可以在可用性组中使用与所用 SQL Server 版本支持的数量和类型相同的副本。   （先前支持限制为两个同步提交副本。）
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>配置异步提交副本
-若要将异步副本添加到[与 Configuration Manager 配合使用的可用性组](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)，则不需要运行配置同步副本所需的配置脚本。 （这是因为不支持将该异步副本用作站点数据库。）有关详细信息，请参阅[将次要副本添加到可用性组](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)。
+若要将异步副本添加到[与 Configuration Manager 配合使用的可用性组](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)，则不需要运行配置同步副本所需的配置脚本。 （这是因为不支持将该异步副本用作站点数据库。）有关详细信息，请参阅[将次要副本添加到可用性组](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>使用异步副本恢复站点
 使用异步副本恢复站点数据库之前，必须停止活动主站点，防止到站点数据库的其他写入。 停止站点后，可以使用异步副本替代[手动恢复的数据库](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)。

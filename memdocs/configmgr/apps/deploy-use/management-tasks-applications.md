@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 15c1be9ed388356e17f8591123114dccf7bcd612
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cf96add17fa9ff5d4bf0aeb7970f4db046f7b463
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695199"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606529"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Configuration Manager 应用程序的管理任务
 
@@ -40,7 +40,7 @@ ms.locfileid: "88695199"
 |**更新统计信息**|更新在“监视”  工作区的“部署”  节点中显示的、有关此应用程序的部署的信息。<br /><br /> 请参阅[从 Configuration Manager 控制台监视应用程序](../../apps/deploy-use/monitor-applications-from-the-console.md)。|  
 |**恢复**|恢复以前使用“停用”  管理任务停用的应用程序。|  
 |<bpt id="p1">**</bpt>Retire<ept id="p1">**</ept>|在停用某应用程序时，它不能再用于部署，但不会删除此应用程序及其部署。 也不会删除在客户端计算机上安装的此应用程序的现有副本。 将在 60 天后从 Configuration Manager 中删除对应用程序的任何修订。 但是，不会删除此应用程序的任何已安装的副本。<br /><br /> 若要删除应用程序，必须先停用应用程序，删除所有部署，删除其他部署对该应用程序的引用，然后删除该应用程序的所有修订版本。<br /><br /> 请参阅[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**导出**|打开“导出应用程序向导”  ，它可让你将所选的应用程序导出为 .zip 文件，然后可以将其存档或安装到另一个站点上。 如果选择导出应用程序内容，则会创建一个包含此内容的文件夹。<br /><br /> 还可以导出应用程序依赖关系、取代关系和条件以及应用程序及其依赖关系的内容。<br /><br /> Windows PowerShell cmdlet **Export-CMApplication** 执行相同的功能。 有关详细信息，请参阅 [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps)。|  
+|**导出**|打开“导出应用程序向导”  ，它可让你将所选的应用程序导出为 .zip 文件，然后可以将其存档或安装到另一个站点上。 如果选择导出应用程序内容，则会创建一个包含此内容的文件夹。<br /><br /> 还可以导出应用程序依赖关系、取代关系和条件以及应用程序及其依赖关系的内容。<br /><br /> Windows PowerShell cmdlet **Export-CMApplication** 执行相同的功能。 有关详细信息，请参阅 [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication)。|  
 |**删除**|删除当前所选的应用程序。<br /><br /> 在下列情况下无法删除某应用程序：其他应用程序依赖它，它具有活动的部署，或者它具有依赖的任务序列。|  
 |**模拟部署**|打开“模拟应用程序部署向导”  ，在其中你无需安装或卸载应用程序就能测试将应用程序部署到计算机的结果。<br /><br /> 请参阅[模拟应用程序部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
 |**部署**|打开“部署软件向导”  ，在其中你可以将所选的应用程序部署到层次结构中的一组计算机。<br /><br /> 请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  

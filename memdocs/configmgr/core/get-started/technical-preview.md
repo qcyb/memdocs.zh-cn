@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432568"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564204"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -167,8 +167,6 @@ With each CB release, review and remove from this list for anything that's now a
 | 功能        | 技术预览版 |
 |----------------|---------------------------|
 | 通过 CMG 改进可用应用 <!--7033501--> | [技术预览版 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| 租户附加：管理中心内的设备时间线 <!--7141381--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| 租户附加：管理中心的 CMPivot <!--6024392--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | 租户附加：从管理中心运行脚本 <!--6234688--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | 云管理网关 cmdlet 的改进 <!--6978300--> | [技术预览版 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | 向 Microsoft 报告安装和升级失败 <!--5622909--> | [技术预览版 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

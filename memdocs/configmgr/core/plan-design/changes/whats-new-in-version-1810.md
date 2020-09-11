@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a92d5a627d6cbe4e64ffa221ae00458f4227c844
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699834"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607747"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -427,7 +427,7 @@ SMS 提供程序显示为角色，其中包含允许通过云管理网关进行�
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1810）的更改摘要](https://support.microsoft.com/help/4482169)。
 
-若要详细了解对用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1810 版发行说明](/powershell/sccm/1810-release-notes?view=sccm-ps)。
+若要详细了解对用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1810 版发行说明](/powershell/sccm/1810-release-notes)。
 
 从 2019 年 3 月 25 日开始，以下更新汇总 (4488598) 在控制台中可用：[Configuration Manager Current Branch 版本 1810 更新汇总 2](https://support.microsoft.com/help/4488598)。 它将替换先前的更新汇总 KB 4486457。
 

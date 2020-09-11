@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5bdf2adbf4ba5f02869ba5058da84ee7738e0ce2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698950"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608076"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先决条件检查列表
 
@@ -741,7 +741,7 @@ Configuration Manager 不需要 Active Directory 架构扩展来安装站点服�
 
 从版本 1810 开始，将检查站点数据库是否有 SQL 更改跟踪数据积压工作 (backlog)。<!--SCCMDocs-pr issue 3023-->  
 
-可通过在站点数据库中运行诊断存储过程来手动验证此检查。 首先，为站点数据库创建[诊断连接](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)。 最简单的方法是使用 SQL Server Management Studio 的数据库引擎查询编辑器，并连接到 `admin:<instance name>`。
+可通过在站点数据库中运行诊断存储过程来手动验证此检查。 首先，为站点数据库创建[诊断连接](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators)。 最简单的方法是使用 SQL Server Management Studio 的数据库引擎查询编辑器，并连接到 `admin:<instance name>`。
 
 在专用管理员连接查询窗口中，运行以下命令：
 

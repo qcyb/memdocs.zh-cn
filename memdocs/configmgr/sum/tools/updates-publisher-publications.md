@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700035"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608383"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 
@@ -83,19 +83,16 @@ ms.locfileid: "81700035"
 
 还可以视需要导出（添加）从属软件更新。
 
-## <a name="rename-a-publication"></a>重命名发布项
-若要重命名发布项，请从“发布项工作区”  中选择发布项，然后在功能区的“发布项”  选项卡上，选择“编辑”  。
-
-## <a name="delete-a-publication"></a>删除发布项
-若要删除发布项，请从“发布项工作区”  中选择发布项，然后在功能区的“发布项”  选项卡上，选择“删除”  。
+## <a name="delete-a-publication"></a>删除发布
+若要删除发布项，请从“发布项工作区”**** 中选择发布项，然后在功能区的“发布项”**** 选项卡上，选择“删除”****。
 
 从 Updates Publisher 中删除的发布项中的更新在 Updates Publisher 存储库中仍有。
 
 ## <a name="expire-or-reactivate-updates-and-bundles"></a>终止或重新激活更新和捆绑包
-可以使用“更新工作区”  选择并终止或重新激活更新和捆绑包。 可以根据需要多次终止和重新激活更新和捆绑包。
+可以使用“更新工作区”**** 选择并终止或重新激活更新和捆绑包。 可以根据需要多次终止和重新激活更新和捆绑包。
 
--   **若要终止更新或捆绑包**，请在“更新工作区”中选择一个或多个未终止的更新或捆绑包，然后在“开始”  选项卡中选择“终止”  。将更新或捆绑包的终止状态发布到 Configuration Manager 中之前，都可以重新激活。
+-   **若要终止更新或捆绑包**，请在“更新工作区”中选择一个或多个未终止的更新或捆绑包，然后在“开始”选项卡中选择“终止”。将更新或捆绑包的终止状态发布到 Configuration Manager 中之前，都可以重新激活。
 
     必须先终止自定义更新或捆绑包，并将其终止状态发布到 Configuration Manager 中，然后才能将其从 Configuration Manager 中删除。 当更新或捆绑包的终止状态发布到 Configuration Manager 中后，便无法再部署或重新激活更新或捆绑包。
 
--   **若要重新激活更新或捆绑包**，请在“更新工作区”中选择一个或多个已终止的更新或捆绑包，然后在“开始”  选项卡中选择“重新激活”  。 如果之前已将已终止更新的终止状态发布到 Configuration Manager 中，则无法重新激活。
+-   **若要重新激活更新或捆绑包**，请在“更新工作区”中选择一个或多个已终止的更新或捆绑包，然后在“开始”**** 选项卡中选择“重新激活”****。 如果之前已将已终止更新的终止状态发布到 Configuration Manager 中，则无法重新激活。

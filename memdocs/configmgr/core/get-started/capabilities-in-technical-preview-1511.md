@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: fb2fb87a483328d06b3e0757fb6eb5a25e734b1d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193632"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607909"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager Technical Preview 1511 中的功能
 
@@ -110,7 +110,7 @@ Configuration Manager 现在能够使用 Configuration Manager 软件更新管�
  使用以下步骤来首先创建和配置可用性组，然后安装一个使用该可用性组的新 Configuration Manager 站点。  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>创建一个 SQL Server AlwaysOn 可用性组  
-创建 [SQL Server 可用性组](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15)的过程记录在 SQL Server 文档库中。  创建可用性组时，确保满足使用 Configuration Manager 的以下要求：  
+创建 [SQL Server 可用性组](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server)的过程记录在 SQL Server 文档库中。  创建可用性组时，确保满足使用 Configuration Manager 的以下要求：  
 
 -   最多包含三个成员：  
 

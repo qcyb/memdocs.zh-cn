@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 86ee63564654d41b965cfc411eede273eeca4ef4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993465"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607721"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1910 中的新增功能
 
@@ -346,7 +346,7 @@ Configuration Manager 控制台中提供了“客户端诊断”的新设备操�
 
 ## <a name="other-updates"></a>其他更新
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1910 发行说明](/powershell/sccm/1910-release-notes?view=sccm-ps)。
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1910 发行说明](/powershell/sccm/1910-release-notes)。
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_1910)。
 

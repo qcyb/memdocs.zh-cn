@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d28d3ed697097b177ef9e2849fbcd6003505594c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995103"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607808"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1906 中的新增功能
 
@@ -622,7 +622,7 @@ Windows 10 1903 版以及更高版本都已经作为其自身产品添加到 Mic
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1906）的更改摘要](https://support.microsoft.com/help/4514258)。
 
-有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1906 发行说明](/powershell/sccm/1906-release-notes?view=sccm-ps)。
+有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1906 发行说明](/powershell/sccm/1906-release-notes)。
 
 以下更新汇总 (4517869) 于 2019 年 10 月 1 日起在控制台中提供：[Configuration Manager 当前分支版本 1906 的更新汇总](https://support.microsoft.com/help/4517869)。
 

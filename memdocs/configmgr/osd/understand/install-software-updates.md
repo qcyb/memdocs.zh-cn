@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 855351fc7fe28b40f23e1e01767fd62a782bc1e0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697494"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606994"
 ---
 # <a name="install-software-updates"></a>安装软件更新
 
@@ -107,7 +107,7 @@ dism /Unmount-Image /MountDir:C:\Mountdir /Commit
 - 仅支持基于 CBS 的更新。 它无法应用 Microsoft 365 Apps 更新
 
 > [!Tip]  
-> 可以使用 PowerShell 自动选择软件更新。 使用 [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet 获取更新列表。 然后，使用 [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet 创建离线维护计划。 以下示例介绍了一种自动执行此操作的方法：
+> 可以使用 PowerShell 自动选择软件更新。 使用 [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate) cmdlet 获取更新列表。 然后，使用 [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule) cmdlet 创建离线维护计划。 以下示例介绍了一种自动执行此操作的方法：
 >
 > ```PowerShell
 > # Get the OS image

@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240348"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468305"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>使用 Configuration Manager 导入配置数据
 
@@ -28,8 +28,6 @@ ms.locfileid: "86240348"
 - 从 System Center 2012 Configuration Manager 及更高版本导出的配置数据。  
 
 - 在外部创建且符合 SML 架构的配置数据。  
-
-  有关可帮助你管理 System Center 2012 Configuration Manager 站点服务器角色的符合性的示例配置包，请参阅 [System Center 2012 Configuration Manager 配置包](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)。  
 
 当导入配置基线时，配置基线中引用的部分或全部配置项目也可能包含在 CAB 文件中。 在导入过程中，Configuration Manager 会验证配置基线中引用的所有配置项目是否也包括在 Cabinet 文件中或在 Configuration Manager 站点中已存在。 如果尝试导入的配置基线引用了 Configuration Manager 无法找到的配置数据，导入过程会失败。  
 
@@ -47,10 +45,10 @@ ms.locfileid: "86240348"
 
 ### <a name="import-configuration-data"></a>导入配置数据  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”   > “配置项目”  或“配置基线” 
-2.  在“主页”  选项卡上的“创建”  组中，单击“导入配置数据”  。  
-3.  在“导入配置数据向导”  的“选择文件”  页上，单击“添加”  ，然后在“打开”  对话框中，选择要导入的 .cab 文件。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “配置项目”或“配置基线”
+2.  在“主页”**** 选项卡上的“创建”**** 组中，单击“导入配置数据”****。  
+3.  在“导入配置数据向导” **** 的“选择文件” **** 页上，单击“添加” ****，然后在“打开” **** 对话框中，选择要导入的 .cab 文件。  
 4.  如果希望可以在 Configuration Manager 控制台中编辑导入的配置数据，请选中“**创建已导入配置基线和配置项目的新副本”** 复选框。  
-5.  在“摘要”  页上，查看将执行的操作，然后完成向导。  
+5.  在“摘要”**** 页上，查看将执行的操作，然后完成向导。  
 
-导入的配置数据会显示在“资产和符合性”  工作区的“符合性设置”  节点中。  
+导入的配置数据会显示在“资产和符合性”**** 工作区的“符合性设置”**** 节点中。  

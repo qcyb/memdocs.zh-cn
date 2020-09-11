@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 8ff3e0ee8f002a21e283b8a56f55d0daa2490253
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068015"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606356"
 ---
 # <a name="create-stand-alone-media"></a>创建独立媒体
 
@@ -151,7 +151,7 @@ Configuration Manager 中的独立媒体包含在无网络连接的计算机上�
         >
         > 在独立媒体上，只会加密任务序列步骤及其变量。 不会加密媒体的其余内容。 请勿在任务序列脚本中包含任何敏感信息。 请使用任务序列变量来存储和提供所有敏感信息。  
 
-    - **选择此独立媒体的有效日期范围**：在媒体上设置可选的开始日期和到期日期。 默认情况下，此设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于到期时间，则独立介质不会启动。 也可通过使用 [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet 启用这些选项。  
+    - **选择此独立媒体的有效日期范围**：在媒体上设置可选的开始日期和到期日期。 默认情况下，此设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于到期时间，则独立介质不会启动。 也可通过使用 [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia) PowerShell cmdlet 启用这些选项。  
 
 6. 在“独立 CD/DVD”  页上，选择用于部署 OS 的任务序列。 还可以仅选择那些与启动映像关联的任务序列。 验证任务序列引用的内容的列表。  
 

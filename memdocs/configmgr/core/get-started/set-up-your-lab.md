@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c8159928e5fe3e8524c3282cfd1eb543dc9537da
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7623663e340d964593854883fa588484e239b4d0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696491"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607868"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>设置 Configuration Manager 实验室
 
@@ -45,7 +45,7 @@ ms.locfileid: "88696491"
 
     -   **SQL_Latin1_General_CP1_CI_AS** 作为“SQL 排序规则”  类。  
 
-    -   **Windows 身份验证**， [而不是 SQL 身份验证](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)， is required.  
+    -   **Windows 身份验证**， [而不是 SQL 身份验证](/sql/relational-databases/security/choose-an-authentication-mode)， is required.  
 
     -   需要专用的 **SQL Server 实例**。  
 

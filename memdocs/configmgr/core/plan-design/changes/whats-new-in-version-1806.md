@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: eae605c067094665f2f6866e75fa8f9a94a5df52
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995001"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607732"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -584,7 +584,7 @@ WSUS 清理向导现在根据对软件更新点组件属性定义的取代规则
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
 
-若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](/powershell/sccm/1806_release_notes?view=sccm-ps)。
+若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](/powershell/sccm/1806_release_notes)。
 
 以下更新汇总 (4462978) 于 2018 年 10 月 24 日起在控制台中提供：[Configuration Manager Current Branch（版本 1806）更新汇总](https://support.microsoft.com/help/4462978)。
 

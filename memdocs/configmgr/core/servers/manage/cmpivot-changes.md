@@ -10,12 +10,12 @@ ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 20b23cec74ae3d201bc81fe1834e87e7eb8fcc13
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 32800284c415de6a36e856abf473bc6d8d729e6f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129504"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608250"
 ---
 # <a name="changes-to-cmpivot"></a>对 CMPivot 的更改
 
@@ -359,7 +359,7 @@ CMPivot 中已存在呈现运算符。 已添加对多序列和“with”语句�
       1. 选择“仅使用 Kerberos”。
       1. 使用端口和实例添加每个主站点的 SQL Server 服务。
       1. 请确保这些更改与公司安全策略保持一致！
-1. 请确保 [SPN 发布](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs)使用 CAS SQL 侦听器名称和每个主 SQL 侦听器名称。
+1. 请确保 [SPN 发布](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs)使用 CAS SQL 侦听器名称和每个主 SQL 侦听器名称。
 1. 重启主 SQL Server。
 1. 重启 CAS 站点服务器和 CAS SQL Server。
 
