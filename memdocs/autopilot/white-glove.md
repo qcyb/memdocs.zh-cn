@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 61bddf4ffcb844a997e19ad4d954b2e2a8ec6b45
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643445"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081706"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>用于白手套部署的 Windows Autopilot
 
@@ -38,14 +38,14 @@ Windows Autopilot 还可以提供一个 <I>白色的手套</I> 服务，帮助�
 
 白色手套部署使用 Windows 10 1903 版及更高版本中 Microsoft Intune。 此类部署建立在现有 Windows Autopilot [用户驱动的方案](user-driven.md) 之上，并支持 Azure Active Directory 联接和混合 Azure Active Directory 联接设备的用户驱动模式方案。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 除了 [Windows Autopilot 要求](software-requirements.md)外，windows Autopilot for 白手套部署还要求：
 
 - Windows 10 版本1903或更高版本。
 - Intune 订阅。
 - 支持 TPM 2.0 和设备证明的物理设备。 不支持虚拟机。 白色手套预配过程使用 Windows Autopilot 自助部署功能，因此需要 TPM 2.0。
-- 具有以太网连接的物理设备。 由于需要选择语言、区域设置和键盘来建立 Wi-fi 连接，因此不支持 wi-fi 连接。 在预配过程中强制实施此要求可能会阻止用户在收到设备时选择自己的语言、区域设置和键盘。
+- 需要具有以太网连接的物理设备才能执行预 provisiong profile。 由于需要选择语言、区域设置和键盘来建立 Wi-fi 连接，因此不支持 wi-fi 连接。 在预配过程中强制实施此要求可能会阻止用户在收到设备时选择自己的语言、区域设置和键盘。 有关详细信息，请参阅 [将无线网络连接与 Windows Autopilot 白手套配合使用](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/)。
 
 >[!IMPORTANT]
 >因为 OEM 或供应商执行了白色的手套过程，所以这 <u>不需要访问最终用户的本地域基础结构</u>。 这不同于典型的混合 Azure AD 联接方案，因为重新启动设备会被延迟。 设备在连接到域控制器的时间之前是 resealed 的，并且在最终用户对设备进行取消装箱时，联系到域网络。

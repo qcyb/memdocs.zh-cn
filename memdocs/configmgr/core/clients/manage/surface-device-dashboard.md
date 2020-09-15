@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: cbea7d7e126b120145533b7cf19822b54b3cb701
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613934"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607972"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager 中的 Surface 设备仪表板
 
@@ -52,7 +52,7 @@ Surface 设备仪表板针对你的环境显示三个图表。
 
 - **前五个固件版本**：显示包含环境中前五个固件型号的图表。 
   - 将鼠标悬停在某个图表部分上方将显示所选固件版本的 Surface 设备的数量。 自 Configuration Manager 版本 1806 起，单击某个图表部分即可显示相关设备的列表。 <!--1358654-->
-     ![Surface 型号设备列表](media/Surface-Firmware-Hover.PNG)
+     ![Surface 固件工具提示](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>更多信息

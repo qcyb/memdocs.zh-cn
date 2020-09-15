@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0ca0509893ecadc4c54d06ca98c18531959fb941
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129417"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608418"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>用于 Configuration Manager 中的软件更新的图标
 
@@ -27,7 +27,7 @@ ms.locfileid: "88129417"
  同步后的软件更新由以下其中一个图标表示。  
 
 ### <a name="normal-icon"></a>“正常”图标  
- ![图标](../media/Normal.jpg "“正常”图标")带有绿色箭头的图标表示正常的软件更新。  
+ ![“正常”图标](../media/Normal.jpg) 带有绿色箭头的图标表示正常的软件更新。  
 
  **描述：**  
 
@@ -38,7 +38,7 @@ ms.locfileid: "88129417"
  没有操作问题。  
 
 ### <a name="expired-icon"></a>“被取代”图标  
- ![图标](../media/Expired.jpg "“被取代”图标") 带有黑色 X 的图标表示过期的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“已过期”  列来识别过期的软件更新。  
+ ![“已过期”图标](../media/Expired.jpg) 带有黑色 X 的图标表示过期的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“已过期”  列来识别过期的软件更新。  
 
  **描述：**  
 
@@ -49,7 +49,7 @@ ms.locfileid: "88129417"
  没有操作问题。
 
 ### <a name="superseded-icon"></a>“被取代”图标  
- ![图标](../media/Superseded.jpg "“被取代”图标") 带有黄色星号的图标表示被取代的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“被取代”  列来识别被取代的软件更新。  
+ ![“被取代”图标](../media/Superseded.jpg) 带有黄色星号的图标表示被取代的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“被取代”  列来识别被取代的软件更新。  
 
  **描述：**  
 
@@ -68,7 +68,7 @@ ms.locfileid: "88129417"
   如果可能，将用于取代的软件更新而不是被取代的更新部署到客户端计算机上。 你可以在软件更新属性中的“取代信息”  选项卡上显示用于取代软件更新的软件更新列表。  
 
 ### <a name="invalid-icon"></a>“无效”图标  
- ![图标](../media/Invalid.jpg "“无效”图标")带有红色 X 的图标表示无效的软件更新。  
+ ![“无效”图标](../media/Invalid.jpg) 带有红色 X 的图标表示无效的软件更新。  
 
  **描述：**  
 
@@ -83,7 +83,7 @@ ms.locfileid: "88129417"
   当软件更新缺少内容时，客户端将无法安装软件更新，直到内容在分发点上可用。 你可以通过使用“重新分发”  操作，将内容重新分发到分发点。 当在父站点创建的部署中缺少软件更新的内容时，必须将软件更新复制或重新分发到子站点上。 有关内容重新分发的详细信息，请参阅[管理已分发的内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
 
 ### <a name="metadata-only-icon"></a>“仅元数据”图标
- ![图标](../media/MetadataOnly.png "“仅元数据”图标")带有蓝色箭头的图标表示仅元数据软件更新。
+ ![“仅元数据”图标](../media/MetadataOnly.png) 带有蓝色箭头的图标表示仅元数据软件更新。
 
  **描述：**  
 
@@ -97,28 +97,28 @@ ms.locfileid: "88129417"
  软件更新组由以下其中一个图标表示。  
 
 ### <a name="normal-icon"></a>“正常”图标  
- ![图标](../media/Normal.jpg "“正常”图标")带有绿色箭头的图标表示仅包含正常的软件更新的软件更新组。  
+ ![软件更新组 -“正常”图标](../media/Normal.jpg) 带有绿色箭头的图标表示仅包含正常的软件更新的软件更新组。  
 
  **操作问题：**  
 
  没有操作问题。  
 
 ### <a name="expired-icon"></a>“被取代”图标  
- ![图标](../media/Expired.jpg "“被取代”图标")带有黑色 X 的图标表示包含一个或多个过期的软件更新的软件更新组。  
+ ![软件更新组 -“已过期”图标](../media/Expired.jpg) 带有黑色 X 的图标表示包含一个或多个过期的软件更新的软件更新组。  
 
  **操作问题：**  
 
  如果可能，删除或替换软件更新组中过期的软件更新。  
 
 ### <a name="superseded-icon"></a>“被取代”图标  
- ![图标](../media/Superseded.jpg "“被取代”图标")带有黄色星号的图标表示包含一个或多个被取代的软件更新的软件更新组。  
+ ![软件更新组 -“被取代”图标](../media/Superseded.jpg) 带有黄色星号的图标表示包含一个或多个被取代的软件更新的软件更新组。  
 
  **操作问题：**  
 
  如果可能，将软件更新组中被取代的软件更新替换为用于取代的软件更新。  
 
 ### <a name="invalid-icon"></a>“无效”图标  
- ![图标](../media/Invalid.jpg "“无效”图标")带有红色 X 的图标表示包含一个或多个无效的软件更新的软件更新组。  
+ ![软件更新组 -“无效”图标](../media/Invalid.jpg) 带有红色 X 的图标表示包含一个或多个无效的软件更新的软件更新组。  
 
  **操作问题：**  
 

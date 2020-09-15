@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: dc8fa6f2d4fe5171bd8a4ffe977eec7f6eed2093
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193777"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564087"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune 新增功能
 
@@ -53,6 +53,44 @@ ms.locfileid: "89193777"
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-september-7-2020"></a>2020 年 9 月 7 日当周
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>设备管理
+
+#### <a name="tenant-attach-device-timeline-in-the-admin-center"></a>租户附加：管理中心内的设备时间线
+<!--7220536, CM7141381-->
+如果 Configuration Manager 通过租户附加将设备同步到 Microsoft Endpoint Manager，那么你将能够看到一个事件时间线。 此时间线显示设备上过去的活动，有助于排查问题。 有关详细信息，请参阅[租户附加：管理中心内的设备时间线](../../configmgr/tenant-attach/timeline.md)。
+
+#### <a name="tenant-attach-resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> 租户附加：管理中心内的资源浏览器
+<!--IN7220536, CM6479284 -->
+在 Microsoft Endpoint Management 管理中心，可以使用资源浏览器查看上传的 Configuration Manager 设备的硬件清单。 有关详细信息，请参阅[租户附加：管理中心内的资源浏览器](../../configmgr/tenant-attach/resource-explorer.md)。
+
+#### <a name="tenant-attach-cmpivot-from-the-admin-center"></a>租户附加：管理中心的 CMPivot
+<!--IN7220536, CM6024392-->
+将 CMPivot 的功能带入 Microsoft Endpoint Manager 管理中心。 允许其他人员（如支持人员）针对单个 ConfigMgr 托管设备从云启动实时查询，并将结果返回到管理中心。 它带来了 CMPivot 的所有传统优势，使 IT 管理员和其他指定的角色能够快速评估其环境中设备的状态并采取措施。
+
+有关管理中心的 CMPivot 的详细信息，请参阅 [CMPivot 先决条件](../../configmgr/tenant-attach/cmpivot-start.md)、[CMPivot 概述](../../configmgr/tenant-attach/cmpivot-overview-attached.md)和 [CMPivot 示例脚本](../../configmgr/tenant-attach/cmpivot-samples-attached.md)。
+
+## <a name="week-of-august-31-2020"></a>2020 年 8 月 31 日当周
+
+### <a name="device-configuration"></a>设备配置
+
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>新版 PFX 证书连接器，以及对 PKCS 证书配置文件支持的更改 <!--  4839686  -->
+
+我们发布了新版 PFX 证书连接器，即版本 6.2008.60.607。 这一新版连接器具有以下特点：
+
+- 支持除 Windows 8.1 以外的所有支持平台上的 PKCS 证书配置文件
+ 
+  我们合并了 PFX 证书连接器中的所有 PKCS 支持。  这意味着，如果不在你的环境中使用 SCEP，也不将 NDES 用于其他目的，则可以删除 Microsoft 证书连接器并从环境中卸载 NDES。 
+ 
+- 由于 Microsoft 证书连接器尚未删除功能，因此你可以继续使用这些功能来支持 PKCS 证书配置文件。
+- 支持 Outlook S/MIME 的证书吊销
+- 需要 .NET Framework 4.7.2
+
+有关证书连接器的详细信息（包括两个证书连接器的连接器版本列表），请参阅[证书连接器](../protect/certificate-connectors.md)
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-24-2020-2008-service-release"></a>2020 年 8 月 24 日当周（2008 服务版本）
@@ -179,7 +217,7 @@ Microsoft Intune 管理员可以将自定义品牌图像上传到 Intune，该�
 ### <a name="app-management"></a>应用管理
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>公司门户现已开始支持 Configuration Manager 应用程序<!-- 4297660 -->
-公司门户现在支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 此支持有助于管理员整合不同的最终用户门户体验。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](../../configmgr/comanage/company-portal.md)。 
+公司门户现在支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 这一新版公司门户将为所有共同管理的客户显示部署了 Configuration Manager 的应用。 此支持有助于管理员整合不同的最终用户门户体验。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](../../configmgr/comanage/company-portal.md)。 
 
 ### <a name="device-security"></a>设备安全性
 
@@ -639,6 +677,9 @@ macOS 设备远程锁定固定的可用时间已从 7 天增至 30 天。
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>管理员不再需要 Intune 许可证即可访问 Microsoft Endpoint Manager 管理控制台<!--1335430 -->
 现在，你可以设置一个租户范围的切换，从而删除管理员访问 MEM 管理控制台和查询图形 API 的 Intune 许可要求。 删除许可证要求后，就不能再将其恢复。 
 
+
+> [!Note]
+> Teamviewer 连接器流等操作仍需要 Intune 许可证才能完成。
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

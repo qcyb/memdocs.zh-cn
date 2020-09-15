@@ -4,17 +4,18 @@ ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
+description: 有关 MMS 2019 Docathon 的信息和规则
 ms.assetid: 8fe2ecfc-f5c1-4fa6-8703-245339400723
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 91430688fd2af93e5d5b5ce7eb0cbc6358388ea4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695573"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607830"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -28,7 +29,7 @@ ms.locfileid: "88695573"
 - 实际指南和提示
 - 内容审核，新鲜度
 
-## <a name="set-up"></a>开始参与
+## <a name="set-up"></a>设置
 
 如果你尚未参与，请事先执行以下步骤。
 
@@ -79,16 +80,16 @@ ms.locfileid: "88695573"
 
 开始考虑并计划此活动的目标。 你想要完成什么任务？
 
-- 查看范围内存储库中的现有问题。 诸如 good-first-issue  或 help-wanted  等标签是不错的开始方式。 如果你想解决某一个问题，可以使用 #MMS2019Docathon  对其进行注释并标记 @author，让他们将问题分配给你。 换句话说，[申请](https://www.merriam-webster.com/words-at-play/word-origin-dibs)解决该问题。 根据需要多次重复此过程。  
+- 查看范围内存储库中的现有问题。 诸如 good-first-issue**** 或 help-wanted**** 等标签是不错的开始方式。 如果你想解决某一个问题，可以使用 #MMS2019Docathon**** 对其进行注释并标记 @author，让他们将问题分配给你。 换句话说，[申请](https://www.merriam-webster.com/words-at-play/word-origin-dibs)解决该问题。 根据需要多次重复此过程。  
     例如，在 SCCMDocs 中，Aaron 是文章作者：`@aczechowski I'm claiming this issue for #MMS2019Docathon`
 
-- 你知道某篇文章存在问题，但目前还没有记录任何反馈。 也就是说，文章底部的“反馈”  部分中没有任何内容。 提出新问题，然后使用上述相同说明进行声明。  
+- 你知道某篇文章存在问题，但目前还没有记录任何反馈。 也就是说，文章底部的“反馈”**** 部分中没有任何内容。 提出新问题，然后使用上述相同说明进行声明。  
 
     - 例如，添加代码示例、实际示例或常见提示。  
 
     - 除非提前与 Aaron/Erik 沟通，否则请不要更改语法或风格。  
 
-    - 你收藏的文章的更新日期在 90 天之前（2019 年 2 月 6 日之前）。 你可以查看它，然后编辑内容会体现到 ms.date  元数据属性。 该贡献意味着：“我审阅了这篇文章，它在技术上仍然是准确的，所以刷新一下日期。” 提出问题以进行声明。  
+    - 你收藏的文章的更新日期在 90 天之前（2019 年 2 月 6 日之前）。 你可以查看它，然后编辑内容会体现到 ms.date**** 元数据属性。 该贡献意味着：“我审阅了这篇文章，它在技术上仍然是准确的，所以刷新一下日期。” 提出问题以进行声明。  
 
     - 首先查看文章反馈，确保不存在已声明但未解决的问题。 在技术方面，此操作不是必需的。 如果你不这样做，而其他人先提交，我们只会采纳第一次贡献的内容。  
 
@@ -99,7 +100,7 @@ ms.locfileid: "88695573"
 比赛持续一周，具体日期为 5 月 6 日至 9 日。 已注册 MMS 2019 的任何与会者都可以参加。 在 2019 年 5 月 9 日（星期四）下午 3:00（中央标准时间）前提交条目。 奖品将于 5 月 9 日（星期四）的 [ConfigMgr 产品团队问答环节](https://sched.co/N6ge)之后颁发。 必须在 MMS 2019 现场才有机会获奖，但不需要参加上述会议环节。 如果领取奖品时你不在现场，请在 Aaron 于周五上午离开之前与他取得联系。
 
 > [!Important]  
-> 必须在所有贡献内容中加上 #MMS2019Docathon  井号标签才能获得加分。
+> 必须在所有贡献内容中加上 #MMS2019Docathon**** 井号标签才能获得加分。
 
 ### <a name="award-categories"></a>奖项类别
 
@@ -134,11 +135,11 @@ ms.locfileid: "88695573"
 
 - [Microsoft 风格](https://aka.ms/MicrosoftStyle)
 
-    - [快速启动](/contribute/style-quick-start)
+    - [快速入门](/contribute/style-quick-start)
 
     - [有关 Microsoft 风格和语态的十大提示](/style-guide/top-10-tips-style-voice)
 
-- [贡献者指南](/contribute)
+- [参与者指南](/contribute)
 
 - [如何使用 Markdown 撰写文档](/contribute/markdown-reference)
 
@@ -248,10 +249,10 @@ Microsoft 云 + AI 开发人员关系内容及了解 MMS 2019 Docathon 活动官
 
 12. 获胜者名单
 
-    获胜者名单将于 2019 年 5 月 9 日后的 30 天内发布到 https://aka.ms/mms2019docathon 。
+    获胜者名单将于 2019 年 5 月 9 日后的 30 天内发布到 https://aka.ms/mms2019docathon。
 
 13. 隐私
 
-    Microsoft 承诺保护你的隐私。 Microsoft 使用你在此窗体上提供的信息来通知你有关我们的产品、升级和增强功能的重要信息，并向你发送 Microsoft 其他产品和服务的相关信息。 未经你的许可，Microsoft 不会与第三方共享你提供的信息，但在完成你所请求的服务或交易必须提供的情况下，或者法律要求的情况下除外。 Microsoft 承诺保护你的个人信息的安全。 我们采用多种安全技术与手段，帮助保护你的个人信息免遭未经授权的访问、使用或披露。 未经你的许可，你的个人信息绝不会在公司外部共享，在上述予以说明的情况下除外。
+    Microsoft 承诺保护你的隐私。 Microsoft 使用你在此窗体上提供的信息来通知你有关我们的产品、升级和增强功能的重要信息，并向你发送 Microsoft 其他产品和服务的相关信息。 未经你的许可，Microsoft 不会与第三方共享你提供的信息，但在完成你所请求的服务或交易必须提供的情况下，或者法律要求的情况下除外。 Microsoft 承诺保护你的个人信息的安全。 我们采用各种安全技术和过程来帮助保护你的个人信息免受未经授权的访问、使用或泄漏。 未经你的许可，你的个人信息绝不会在公司外部共享，在上述予以说明的情况下除外。
 
     如果你认为 Microsoft 未遵守此声明，请通过以下方式联系 Microsoft：发送电子邮件至 privrc@microsoft.com，或将信函寄至 Microsoft 隐私响应中心，地址：Microsoft Corporation, One Microsoft Way, Redmond, WA 98052。

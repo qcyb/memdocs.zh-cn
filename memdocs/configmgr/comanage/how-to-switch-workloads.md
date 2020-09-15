@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776950"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606813"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>如何将 Configuration Manager 工作负载切换到 Intune
 
@@ -43,7 +43,7 @@ ms.locfileid: "84776950"
 
 4. 转到“暂存”选项卡，并根据需要更改任何工作负载的“试点集合”   。
   
-   ![共同管理属性页上的“工作负载”选项卡屏幕截图](media/3555750-co-management-staging-tab.png)
+   ![共同管理属性页上的“暂存”选项卡屏幕截图](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - 切换任何工作负载之前，请确保在 Intune 中正确配置并部署相应的工作负载。 请确保工作负荷始终由设备的某个管理工具进行托管。
@@ -60,7 +60,7 @@ ms.locfileid: "84776950"
 
 3. 切换到“工作负载”  选项卡。默认情况下，所有工作负载都被设为“Configuration Manager”  设置。 若要切换工作负载，请将该工作负载的滑块控制移动到所需的设置。  
 
-    ![共同管理属性页上的“工作负载”选项卡屏幕截图](media/properties-workloads.png)
+    ![版本 1902 的共同管理属性页上的“工作负载”选项卡屏幕截图](media/properties-workloads.png)
 
     - **Configuration Manager**：Configuration Manager 持续管理此工作负载。  
 

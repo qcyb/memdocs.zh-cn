@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0c6655f9d7aaa708e5dd0b2818c9cfc1ba4c9cdc
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906882"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390783"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>使用 Intune 的移动威胁防御集成
 
@@ -80,13 +80,15 @@ Intune 使用移动威胁防御连接器在 Intune 和所选的 MTD 供应商之
 ## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>使用 Intune 应用保护策略的未注册设备的示例方案
 
 移动威胁防御解决方案判定设备受到感染时：<br>
-![显示 Mobile Threat Defense 受感染设备的图像](./media/mobile-threat-defense/MTD-image-3.png)
+![显示移动威胁防御受感染设备的图像](./media/mobile-threat-defense/MTD-image-3.png)
 
 修正设备时授予访问权限：<br>
 ![显示授予 Mobile Threat Defense 访问权限的图像](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> 可以将多个移动防御供应商用于单个 Intune 租户。 但是，当两个或多个供应商配置为用于同一平台时，运行该平台的所有设备都必须安装每个 MTD 应用并扫描威胁。 从任何已配置的应用提交扫描失败都会导致设备被标记为不符合。 
+> 建议每个平台每个租户使用一家移动威胁防御供应商。 
+> 
+> 为实现设备合规性，可以将多个移动防御供应商用于单个 Intune 租户。 但是，当两个或多个供应商配置为用于同一平台时，运行该平台的所有设备都必须安装每个 MTD 应用并扫描威胁。 从任何已配置的应用提交扫描失败都会导致设备被标记为不符合。 
 
 ## <a name="mobile-threat-defense-partners"></a>移动威胁防御合作伙伴
 

@@ -2,7 +2,7 @@
 title: 使用 CMPivot 获得实时数据
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用 CMPivot 实时查询客户端。
-ms.date: 08/11/2020
+ms.date: 09/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fa96d09302b9b4cd908880e97e1735fff5f43743
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700576"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643578"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -188,7 +188,8 @@ CMPivot 窗口包含以下元素：
 
    - 结果窗格中的总行数。 例如 `1 objects`  
 
-
+> [!TIP]
+> 若要在客户端上重新运行当前的 CMPivot 查询，请按住 Ctrl，同时单击“运行”。
 
 ## <a name="example-scenarios"></a>方案示例
 

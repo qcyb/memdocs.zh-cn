@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251966"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423809"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用证书进行身份验证
 
@@ -44,11 +44,13 @@ ms.locfileid: "88251966"
 
 使用 Microsoft 证书颁发机构 (CA) 时：
 
-- 若要使用 SCEP 证书配置文件，你必须[设置网络设备注册服务 (NDES) 服务器](certificates-scep-configure.md#set-up-ndes)以便与 Intune 配合使用。
-- 若要使用下列证书配置文件类型，必须[安装 Microsoft Intune 证书连接器](certificates-scep-configure.md#install-the-intune-certificate-connector)：
-  - SCEP 证书配置文件
-  - PKCS 证书配置文件
+- 使用 SCEP 证书配置文件：
+  - [设置网络设备注册服务 (NDES) 服务器](certificates-scep-configure.md#set-up-ndes)以便与 Intune 配合使用。
+  - [安装 Microsoft 证书连接器](certificates-scep-configure.md#install-the-microsoft-intune-connector)：
 
+- 若要使用 PKCS 证书配置文件，请执行以下操作：
+  - [安装适用于 Microsoft Intune 的 PFX 证书连接器](certificates-imported-pfx-configure。
+  
 - 使用 PKCS 导入的证书：
   - [安装 Microsoft Intune 的 PFX 证书连接器](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune)。
   - 从证书颁发机构导出证书，然后将其导入 Microsoft Intune。 请参阅 [PFXImport PowerShell 项目](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)。
@@ -80,9 +82,9 @@ ms.locfileid: "88251966"
 | 平台              | 受信任的证书配置文件 | PKCS 证书配置文件 | SCEP 证书配置文件 | PKCS 导入的证书配置文件  |
 |--|--|--|--|---|
 | Android 设备管理员 | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png)|  ![支持](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - 完全托管（设备所有者）   | ![支持](./media/certificates-configure/green-check.png) |   | ![支持](./media/certificates-configure/green-check.png) |  ![支持](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - 完全托管（设备所有者）   | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png) |  ![支持](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> - 专用（设备所有者）   | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png)|
-| Android Enterprise <br> - 公司拥有的工作配置文件   | ![支持](./media/certificates-configure/green-check.png)  |  | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - 公司拥有的工作配置文件   | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png)  | ![支持](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> - 工作配置文件    | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) | ![支持](./media/certificates-configure/green-check.png) |
 | macOS                 | ![支持](./media/certificates-configure/green-check.png) |  ![支持](./media/certificates-configure/green-check.png) |![支持](./media/certificates-configure/green-check.png)|![支持](./media/certificates-configure/green-check.png)|
@@ -131,7 +133,7 @@ SCEP 证书配置文件直接引用受信任的证书配置文件。 PKCS 证书
    - **名称**：输入配置文件的描述性名称。 为配置文件命名，以便稍后可以轻松地识别它们。 例如，配置文件名称最好是“整个公司的受信任证书配置文件”。
    - **描述**：输入配置文件的说明。 此设置是可选的，但建议进行。
 
-6. 选择“下一步”。
+6. 选择“下一步”  。
 
 7. 在“配置设置”中，指定之前导出的受信任根 CA 证书的 .cer 文件。 
 
@@ -151,7 +153,7 @@ SCEP 证书配置文件直接引用受信任的证书配置文件。 PKCS 证书
 
 10. 在“分配”中，选择将接收配置文件的用户或组。 有关分配配置文件的详细信息，请参阅[分配用户和设备配置文件](../configuration/device-profile-assign.md)。
 
-    选择“下一步”。
+    选择“下一步”  。
 
 11. （仅适用于 Windows 10）在“适用性规则”中，指定适用性规则以优化此配置文件的分配。 可以根据操作系统版本或设备版本来选择是否分配配置文件。
 
@@ -172,3 +174,5 @@ SCEP 证书配置文件直接引用受信任的证书配置文件。 PKCS 证书
 - [配置基础结构以支持在 Intune 中使用 SCEP 证书](certificates-scep-configure.md)  
 - [使用 Intune 配置和管理 PKCS 证书](certficates-pfx-configure.md)  
 - [创建 PKCS 导入的证书配置文件](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+了解[证书连接器](certificate-connectors.md)

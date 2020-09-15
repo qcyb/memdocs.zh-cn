@@ -81,9 +81,17 @@
             - name: macOS LOB 应用
               href: lob-apps-macos.md
             - name: Win32 应用管理
-              href: apps-win32-app-management.md
-            - name: Win32 应用 S 模式设备
-              href: apps-win32-s-mode.md
+              items:
+                - name: Win32 应用管理概述
+                  href: apps-win32-app-management.md
+                - name: 准备 Win32 应用
+                  href: apps-win32-prepare.md
+                - name: 添加 Win32 应用
+                  href: apps-win32-add.md
+                - name: Win32 应用疑难解答
+                  href: apps-win32-troubleshoot.md
+                - name: Win32 应用 S 模式设备
+                  href: apps-win32-s-mode.md
         - name: 添加特定应用
           items:
             - name: 公司门户应用 - Autopilot

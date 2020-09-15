@@ -17,16 +17,16 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: bf0b6d1f074de85793f025f9578892a126bbce3d
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385329"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076074"
 ---
 # <a name="windows-autopilot-requirements"></a>Windows Autopilot 要求
 
-**适用于： Windows 10**
+**适用于：Windows 10**
 
 Windows Autopilot 依赖于 Windows 10、Azure Active Directory 和 Microsoft Intune 等 MDM 服务中的特定功能。  为了使用 Windows Autopilot 并利用这些功能，必须满足某些要求。
 
@@ -41,7 +41,7 @@ Windows Autopilot 依赖于 Windows 10、Azure Active Directory 和 Microsoft In
   - Windows 10 专业工作站版
   - Windows 10 企业版
   - Windows 10 教育版
-  - Windows 10 企业版 2019 LTSC
+  - Windows 10 企业版 2019 LTSC (不支持自部署模式) 
 
 >[!NOTE]
 >部署 Windows Autopilot 的过程可能是指特定的产品和版本。 此内容中包含这些产品并不表示扩展支持超出其支持生命周期的版本。 Windows Autopilot 不支持超出其支持生命周期的产品。 有关详细信息，请参阅 [Microsoft 生命周期策略](https://go.microsoft.com/fwlink/p/?LinkId=208270)。

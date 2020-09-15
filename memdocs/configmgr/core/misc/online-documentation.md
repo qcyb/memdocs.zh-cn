@@ -9,12 +9,13 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+description: Configuration Manager 帮助文档的其他链接
+ms.openlocfilehash: 00ac9ad91739a4144e3b8a4e44d6e5d31e8abada
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819688"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607821"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Configuration Manager 的联机文档
 
@@ -32,7 +33,7 @@ ms.locfileid: "88819688"
 
 - [为 Configuration Manager 做准备](../plan-design/get-ready.md)  
 
-- [开始使用 Configuration Manager ](../servers/deploy/start-using.md)  
+- [使用 Configuration Manager 开始](../servers/deploy/start-using.md)  
 
 - [使用 Configuration Manager 管理企业操作系统](../../osd/understand/introduction-to-operating-system-deployment.md)  
 
@@ -42,7 +43,7 @@ ms.locfileid: "88819688"
 
 - [确保设备与 Configuration Manager 相符合](../../compliance/understand/ensure-device-compliance.md)  
 
-- [使用 Configuration Manager 保护数据和站点基础结构](../../protect/understand/protect-data-and-site-infrastructure.md)  
+- [使用 Configuration Manager 保护数据和网站基础设施](../../protect/understand/protect-data-and-site-infrastructure.md)  
 
 - [监视和维护 Configuration Manager](../servers/manage/maintenance-tasks.md)  
 
@@ -56,7 +57,7 @@ ms.locfileid: "88819688"
 
 有关详细信息，请参阅[查找使用 Configuration Manager 的帮助](../understand/find-help.md)。
 
-### <a name="accessibility"></a>辅助功能
+### <a name="accessibility"></a>可访问性
 
 有关详细信息，请参阅 [Configuration Manager 控制台的辅助功能](../understand/accessibility-features.md)。
 
@@ -64,7 +65,7 @@ ms.locfileid: "88819688"
 
 有关详细信息，请参阅 [Configuration Manager 的技术预览版](../get-started/technical-preview.md)  
 
-## <a name="system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager
+## <a name="system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager
 
 ### <a name="online-documentation"></a>联机文档
 
@@ -100,7 +101,7 @@ ms.locfileid: "88819688"
 
 - [System Center 2012 Configuration Manager 的技术出版物](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
-### <a name="accessibility"></a>辅助功能
+### <a name="accessibility"></a>可访问性
 
 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅 [Configuration Manager 的辅助功能](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))。
 

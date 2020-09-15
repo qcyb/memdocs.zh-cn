@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303430"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423877"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 iOS 和 iPadOS 设备设置
 
@@ -70,8 +70,9 @@ ms.locfileid: "86303430"
   若要使用此设置，请将“屏幕捕获”设置设为“阻止” 。
 
   此功能适用于：  
-  - iOS 9.3 及更高版本
-  - iPadOS 13.0 及更高版本
+  - iOS 9.3 - iOS 12.x：需要受监管的设备
+  - iOS 13.0 及更高版本：不需要受监督的设备
+  - iPadOS 13.0 及更高版本：必须使用设备注册或自动设备注册 (ADE) 来注册设备
 
 - **通过 Classroom 应用以静默方式观察屏幕**：设置为“允许”可使教师使用 Classroom 应用以无提示方式查看学生 iOS/iPadOS 屏幕，学生不会察觉。 使用 Classroom 应用在类中注册的学生设备自动向该课程的教师授予权限。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，OS 可能会阻止此功能。
 

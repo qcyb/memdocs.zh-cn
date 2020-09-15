@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bf50039a7c2fe8490c89f3e3b0adca275bb69e20
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696882"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607984"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 
@@ -125,7 +125,7 @@ ms.locfileid: "88696882"
 
 1. 在 Configuration Manager 控制台中，转到“软件库”工作区。 展开“软件更新”，然后选择“第三方软件更新目录”节点 。  
 2. 选择要订阅的目录，然后单击功能区中的“订阅目录”。 
-    ![第三方更新添加自定义目录](media/third-party-updates-subscribe.png)
+    ![第三方更新订阅目录](media/third-party-updates-subscribe.png)
 3. 查看并批准目录证书。  
    > [!NOTE]
    > 

@@ -2,7 +2,7 @@
 title: 2006 版中的新增功能
 titleSuffix: Configuration Manager
 description: 详细了解 Configuration Manager Current Branch 版本 2006 中引入的更改和新功能。
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385356"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607656"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 2006 的新变化
 
@@ -32,12 +32,26 @@ ms.locfileid: "89385356"
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Endpoint Manager 租户附加
 
+### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> 管理中心内的设备时间线
+<!--7220536, CM7141381-->
+如果 Configuration Manager 通过租户附加将设备同步到 Microsoft Endpoint Manager，那么你将能够看到一个事件时间线。 此时间线显示设备上过去的活动，有助于排查问题。 有关详细信息，请参阅[管理中心中的设备时间线](../../../tenant-attach/timeline.md)。
+
+### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> 管理中心内的资源浏览器
+<!--6479284-->
+在 Microsoft Endpoint Management 管理中心，可以使用资源浏览器查看上传的 Configuration Manager 设备的硬件清单。 有关详细信息，请参阅[租户附加：管理中心内的资源浏览器](../../../tenant-attach/resource-explorer.md)。
+
+### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> 管理中心的 CMPivot
+<!--6024392-->
+将 CMPivot 的功能带入 Microsoft Endpoint Manager 管理中心。 允许其他人员（如支持人员）针对单个 ConfigMgr 托管设备从云启动实时查询，并将结果返回到管理中心。 它带来了 CMPivot 的所有传统优势，使 IT 管理员和其他指定的角色能够快速评估其环境中设备的状态并采取措施。
+
+有关管理中心的 CMPivot 的详细信息，请参阅 [CMPivot 先决条件](../../../tenant-attach/cmpivot-start.md)、[CMPivot 概述](../../../tenant-attach/cmpivot-overview-attached.md)和 [CMPivot 示例脚本](../../../tenant-attach/cmpivot-samples-attached.md)。
+
 ### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> 租户附加：Microsoft Endpoint Manager 管理中心的 Microsoft Defender 防病毒
 <!--4812909-->
 现可在 Microsoft Endpoint Manager 控制台中创建 Microsoft Defender 防病毒策略，并将它们部署到 Configuration Manager 集合。 有关详细说明和可用的设置，请参阅以下文章：
 - [租户附加：从管理中心将 Configuration Manager 客户端加入 Microsoft Defender ATP（预览）](../../../tenant-attach/atp-onboard.md)
 - [租户附加：从管理中心部署终结点安全性防病毒策略（预览）](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Microsoft Intune 中租户附加设备的 Microsoft Defender 防病毒策略的设置](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)。 
+- [Microsoft Intune 中租户附加设备的 Microsoft Defender 防病毒策略的设置](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)。
 
 ### <a name="install-applications-from-the-admin-center"></a>从管理中心安装应用程序
 <!--7518897, 6024389-->
@@ -131,9 +145,9 @@ Intranet 客户端现在可以在分配到边界组后访问 CMG 软件更新点
 
 | 版本 2006 及更高版本 | 版本 2002 及更低版本 |
 |---------|---------|
-| 必需 | 基本 |
+| 必需 | 基本版 |
 | 可选(受限) | 增强(受限) |
-| 不适用 | 增强版 |
+| 空值 | 增强版 |
 | 可选 | 完全 |
 
 如果你之前在“增强”级别配置过任何设备，那么当你升级到版本 2006 时，这些设备将恢复为“可选(受限)”。 然后，它们将向 Microsoft 发送更少的数据。 此更改应该不会影响桌面分析中显示的内容。
@@ -336,7 +350,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-若要详细了解 Configuration Manager 的 Windows PowerShell cmdlet 更改，请参阅 [PowerShell 版本 2006 发行说明](/powershell/sccm/2006-release-notes?view=sccm-ps)。
+若要详细了解 Configuration Manager 的 Windows PowerShell cmdlet 更改，请参阅 [PowerShell 版本 2006 发行说明](/powershell/sccm/2006-release-notes)。
 
 有关对管理服务 REST API 的更改的详细信息，请参阅[管理服务发行说明](../../../develop/adminservice/release-notes.md#bkmk_2006)。
 

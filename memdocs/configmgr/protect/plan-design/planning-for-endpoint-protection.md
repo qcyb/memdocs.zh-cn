@@ -9,12 +9,13 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+description: 规划反恶意软件策略和 Windows 防火墙安全性
+ms.openlocfilehash: 2e3904b7b7232e92fd4a246d2e0519ef32fb67f6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590501"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606837"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>规划 Endpoint Protection 在配置管理器
 
@@ -55,7 +56,7 @@ Windows 10 计算机无需任何其他客户端即可进行 Endpoint Protection 
 
 ## <a name="managing-malware-with-endpoint-protection"></a>使用 Endpoint Protection 管理恶意软件  
 
-Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint Protection 客户端配置设置的反恶意软件策略。 然后可以将这些反恶意软件策略部署到客户端计算机，并在“监视”  工作区中的“Endpoint Protection 状态”  节点或通过使用 Configuration Manager 报表来监视这些服务器。  
+Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint Protection 客户端配置设置的反恶意软件策略。 然后可以将这些反恶意软件策略部署到客户端计算机，并在“监视”**** 工作区中的“Endpoint Protection 状态”**** 节点或通过使用 Configuration Manager 报表来监视这些服务器。  
 
  其他信息：  
 
@@ -96,7 +97,7 @@ Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint 
 
  不能从 Configuration Manager 控制台对这些产品进行管理。 然而，安装文件将提供 System Center Operations Manager 管理包，这让你可以通过使用 Operations Manager 来管理客户端。  
 
- 有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档，该文档位于“文档”  文件夹。
+ 有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档，该文档位于“文档” **** 文件夹。
 
 ## <a name="best-practices-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager 中的 Endpoint Protection 最佳方案  
  使用以下 System Center 2012 Configuration Manager 中的 Endpoint Protection 的最佳方案。  

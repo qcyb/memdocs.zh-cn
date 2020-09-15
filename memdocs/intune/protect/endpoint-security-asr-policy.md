@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913488"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432517"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Intune 中终结点安全的攻击面减少策略
 
@@ -58,6 +58,9 @@ ms.locfileid: "88913488"
 - **应用程序控制** - 应用程序控制设置可以通过限制用户可运行的应用程序以及在系统内核中运行的代码来帮助缓解安全威胁。 管理可阻止未签名脚本和 MSI 的设置，并限制 Windows PowerShell 在受约束的语言模式下运行。
 
   要了解详细信息，请参阅 Microsoft Defender ATP 文档中的[应用程序控制](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)。
+  
+    > [!NOTE]
+    > 如果使用此设置，则 AppLocker CSP 行为目前会提示最终用户在部署策略后重启其计算机。
 
 - **攻击面减少规则** - 配置攻击表面减少规则的相关设置，专门针对恶意软件和恶意应用通常用来感染计算机的行为，包括：
   - 在 Office 应用或 Web 邮件中使用的试图下载或运行文件的可执行文件和脚本

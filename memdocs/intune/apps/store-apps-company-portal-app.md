@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910258"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390766"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>使用 Microsoft Intune 添加 Windows 10 公司门户应用
 
@@ -33,6 +33,9 @@ ms.locfileid: "88910258"
 
  > [!IMPORTANT]
  > 如果你下载了公司门户应用，则根据本文中介绍的选项，你需在每次发布应用更新时都手动分配更新。 若要部署适用于 Windows 10 Autopilot 预配设备的公司门户应用，请参阅[添加 Windows 10 公司门户应用 Autopilot 设备](store-apps-company-portal-autopilot.md)。
+
+> [!NOTE]
+> 公司门户支持 Configuration Manager 应用程序。 借助此功能，最终用户可以在公司门户中同时看到 Configuration Manager 和 Intune 为共同受管理客户部署的应用程序。 这一新版公司门户将为所有共同管理的客户显示部署了 Configuration Manager 的应用。 此支持有助于管理员整合不同的最终用户门户体验。 有关详细信息，请参阅[在共同受管理设备上使用公司门户应用](/mem/configmgr/comanage/company-portal)。
 
 ## <a name="configure-settings-to-show-offline-apps"></a>配置设置以显示脱机应用
 1. 使用管理员帐户登录到[适用于企业的 Microsoft Store](https://www.microsoft.com/business-store)。
@@ -95,7 +98,7 @@ ms.locfileid: "88910258"
 3. 若要签名 Windows 10 公司门户应用，请使用脚本标头中详细说明的输入参数运行脚本，如下表所示。  
     不需要将依赖项传入该脚本。 只有将应用上传到 Intune 管理控制台时才需要依赖项。
 
-| 参数 |  Description  |
+| 参数 |  说明  |
 |---|---|
 | InputWin10AppxBundle  |  源 appxbundle 文件的路径。 |
 | OutputWin10AppxBundle | 已签名的 appxbundle 文件 Win81Appx 的输出路径。 

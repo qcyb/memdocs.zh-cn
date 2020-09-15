@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127235"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608010"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager 中的设备重新启动通知
 
@@ -51,7 +51,7 @@ Windows toast 通知会通知用户设备需要重启。 Toast 通知中的信�
 
 软件中心显示此最终倒计时通知，用户无法关闭或推迟此通知。
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="软件中心最终倒计时通知":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="软件中心最终重新启动倒计时":::
 
 从版本 1906 开始，在等待重启时间小于 24 小时之前，用户在重启通知中将无法看到进度条。
 
@@ -237,11 +237,11 @@ _从版本 1906 开始_
 
 - 使用软件中心对话框窗口时的临时通知，而不是 Toast 通知：
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="带有暂停按钮的等待重新启动软件中心通知":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="版本 1902 中带有推迟按钮的等待重新启动软件中心通知":::
 
 如果用户在收到临时通知后未重新启动，则会为其显示他们无法关闭的最终倒计时通知。 最终通知的显示时间取决于客户端设置：**显示用户无法关闭的对话框，该对话框显示注销用户或重新启动计算机之前的倒计时间隔(分钟)** 。 例如，如果设置为 60，则会在强制重新启动的前一小时向用户显示最终通知：
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="软件中心最终倒计时通知":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="版本 1902 中的软件中心最终倒计时通知":::
 
 以下设置的持续时间必须比应用于计算机的最短[维护时段](../manage/collections/use-maintenance-windows.md)更短：
 

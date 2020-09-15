@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286231"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564238"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 开发过程中的功能
 
@@ -218,15 +218,6 @@ PowerShell 脚本将支持 Intune 中已注册到 Azure AD 的设备。 有关 P
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics 将包括设备详细信息日志<!--6014987  -->
 Intune 设备详细信息日志将在“报告” > “Log Analytics”中提供 。 可以关联设备详细信息以生成自定义查询和 Azure 工作簿。
 
-### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381---"></a>租户附加：管理中心内的设备时间线<!--7220536, CM7141381 -->
-如果 Configuration Manager 通过租户附加将设备同步到 Microsoft Endpoint Manager，那么你将能够看到一个事件时间线。 此时间线显示设备上过去的活动，有助于排查问题。 有关详细信息，请参阅 [Configuration Manager 技术预览版 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline)。  
-
-### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389---"></a>租户附加：从管理中心安装应用程序<!-- 7220536, CM6024389 -->
-你将可以通过 Microsoft Endpoint Management 管理中心为租户附加的设备实时启动应用程序安装。 有关详细信息，请参阅 [Configuration Manager 技术预览版 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps)。
-
-### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392---"></a>租户附加：管理中心的 CMPivot<!--7220536, CM6024392 -->
-你将能够将 [CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) 的功能带入 Microsoft Endpoint Manager 管理中心。 允许其他人员（如支持人员）针对单个 ConfigMgr 托管设备从云启动实时查询，并将结果返回到管理中心。 它带来了 CMPivot 的所有传统优势，使 IT 管理员和其他指定的角色能够快速评估其环境中设备的状态并采取措施。 有关详细信息，请参阅 [Configuration Manager 技术预览版 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot)。 
-
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>租户附加：从管理中心运行脚本<!--7220536, CM6234688 -->
 你将能够将 Configuration Manager 本地[运行脚本](../../configmgr/apps/deploy-use/create-deploy-scripts.md)这一强大功能引入到 Microsoft Endpoint Manager 管理中心。 允许其他角色（如支持人员）针对单个 Configuration Manager 托管设备从云中运行 PowerShell 脚本。 它提供了 PowerShell 脚本的所有传统优势，这些优势已由 Configuration Manager 管理员定义并批准进入这个新环境。 有关详细信息，请参阅 [Configuration Manager 技术预览版 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts)。 
 
@@ -275,11 +266,11 @@ Intune 设备详细信息日志将在“报告” > “Log Analytics”中提供
 适用于：
 - Windows 10 及更高版本
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>新的 Windows 10 功能更新报告<!-- 6473121   -->
-“功能更新失败”报告将为“Windows 10 功能更新”策略所面向的、已尝试更新的设备提供失败详细信息。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，你将选择“设备” > “监视” > “功能更新失败”来查看此报告。
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>新的 Windows 10 功能更新报告<!-- 6473128  -->
 “Windows 功能更新”报告将为“Windows 10 功能更新”策略面向的设备提供总体合规性视图。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，你将选择“报告” > “Windows 更新(预览版)” > “功能更新失败”来查看此报告的摘要。 若要查看特定策略的报告，请选择“报告”选项卡，然后打开“Windows 功能更新报告”。 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>新的 Windows 10 功能失败更新报告<!-- 6473121   -->
+“功能更新失败”报告将为“Windows 10 功能更新”策略所面向的、已尝试更新的设备提供失败详细信息。 在 [Microsoft Endpoint Manager 管理中心](https://go.microsoft.com/fwlink/?linkid=2109431)，你将选择“设备” > “监视” > “功能更新失败”来查看此报告。
 
 <!-- ***********************************************-->
 <!--

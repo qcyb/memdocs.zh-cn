@@ -1,11 +1,11 @@
 ---
 title: 配置基础结构以支持在 Microsoft Intune 中使用 SCEP 证书配置文件 - Azure | Microsoft Docs
-description: 要在 Microsoft Intune 中使用 SCEP，请配置本地 AD 域、创建证书颁发机构、设置 NDES 服务器，并安装 Intune 证书连接器。
+description: 要在 Microsoft Intune 中使用 SCEP，请配置本地 AD 域、创建证书颁发机构、设置 NDES 服务器，并安装 Microsoft 证书连接器。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 9e681129d5cc17e2e828a8f7a03e305f9b938b47
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915987"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479342"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>配置基础结构以支持在 Intune 中使用 SCEP
 
-Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和公司资源的连接](certificates-configure.md)。 SCEP 使用证书颁发机构 (CA) 证书来保护证书签名请求 (CSR) 的消息交换。 当基础结构支持 SCEP 时，可以使用 Intune SCEP 证书配置文件（Intune 中的一种设备配置文件）将证书部署到设备。 使用 Active Directory 证书服务证书颁发机构时，需要 Microsoft Intune 证书连接器才可在 Intune 中使用 SCEP 证书配置文件。 使用[第三方证书颁发机构](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)时，不需要该连接器。 
+Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和公司资源的连接](certificates-configure.md)。 SCEP 使用证书颁发机构 (CA) 证书来保护证书签名请求 (CSR) 的消息交换。 当基础结构支持 SCEP 时，可以使用 Intune SCEP 证书配置文件（Intune 中的一种设备配置文件）将证书部署到设备。 使用 Active Directory 证书服务证书颁发机构时，需要 Microsoft Intune 连接器才可在 Intune 中使用 SCEP 证书配置文件。 使用[第三方证书颁发机构](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)时，不需要该连接器。 
 
 本文中的信息可帮助配置基础结构，以便在使用 Active Directory 证书服务时支持 SCEP。 在配置基出结构后，可以在 Intune 中[创建和部署 SCEP 证书配置文件](certificates-profile-scep.md)。
 
@@ -46,25 +46,25 @@ Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和�
 
   - 托管 NDES 的服务器必须已加入域，并与企业 CA 位于相同的林中。
   - 不可使用在托管企业 CA 的服务器上安装的 NDES。
-  - 可将 Microsoft Intune 证书连接器安装在托管 NDES 的同一服务器上。
+  - 可将 Microsoft Intune 连接器安装在托管 NDES 的同一服务器上。
 
   要详细了解 NDES，请参阅 Windows Server 文档[网络设备注册服务指南](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))以及 [Using a Policy Module with the Network Device Enrollment Service（将策略模块与网络设备注册服务配合使用）](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11))。
 
-- Microsoft Intune 证书连接器 - 需要 Microsoft Intune 证书连接器才可在 Intune 中使用 SCEP 证书配置文件。 本文介绍了如何[安装此连接器](#install-the-intune-certificate-connector)。
+- **Microsoft Intune 连接器** - 需要 Microsoft Intune 连接器才可在 Intune 中使用 SCEP 证书配置文件。 本文介绍了如何[安装此连接器](#install-the-microsoft-intune-connector)。
 
   该连接器支持美国联邦信息处理标准 (FIPS) 模式。 FIPS 不是必需的，但启用它后，就可颁发和吊销证书。
   - 连接器的网络要求与[受管理设备](../fundamentals/intune-endpoints.md#access-for-managed-devices)相同。
   - 该连接器必须与 NDES 服务器角色在同一服务器上运行，且该服务器运行 Windows Server 2012 R2 或更高版本。
   - 该连接器需要 .NET 4.5 Framework，而 Windows Server 2012 R2 中自动包含 .NET 4.5 Framework。
-  - 必须在托管 NDES 和 Microsoft Intune 证书连接器的服务器上[禁用](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) Internet Explorer 增强型安全配置。
+  - 必须在托管 NDES 和 Microsoft Intune 连接器的服务器上[禁用](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) Internet Explorer 增强型安全配置。
 
-以下本地基础结构是可选的：
+#### <a name="support-for-ndes-on-the-internet"></a>支持 Internet 上的 NDES
 
-要允许 Internet 上的设备获取证书，需要将 NDES URL 发布到企业网络外部。 可以使用 Azure AD 应用程序代理、Web 应用程序代理服务器或其他反向代理。
+要允许 Internet 上的设备获取证书，必须将 NDES URL 发布到企业网络外部。 若要实现这一点，可以使用 Azure AD 应用程序代理或 Web ApplicationProxy 服务器 。 也可以使用所选的其他反向代理。
 
-- Azure AD 应用程序代理（可选）- 可以使用 Azure AD 应用程序代理（而不是专用的 Web 应用程序代理 (WAP) 服务器）向 Internet 发布 NDES URL。 这允许面向 Intranet 和面向 Internet 的设备获取证书。 有关详细信息，请参阅[如何提供对本地应用程序的安全远程访问](/azure/active-directory/manage-apps/application-proxy)。
+- **Azure AD 应用程序代理** - 可以使用 Azure AD 应用程序代理（而不是专用的 Web 应用程序代理 (WAP) 服务器）向 Internet 发布 NDES URL。 这允许面向 Intranet 和面向 Internet 的设备获取证书。 更多信息，请参阅[与网络设备注册服务 (NDES) 服务器上的 Azure AD 应用程序代理集成](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes)。
 
-- Web 应用程序代理服务器（可选）- 使用运行 Windows Server 2012 R2 或更高版本的服务器作为 Web 应用程序代理 (WAP) 服务器来将 NDES URL 发布到 Internet。  这允许面向 Intranet 和面向 Internet 的设备获取证书。
+- **Web 应用程序代理服务器** - 使用运行 Windows Server 2012 R2 或更高版本的服务器作为 Web 应用程序代理 (WAP) 服务器来将 NDES URL 发布到 Internet。  这允许面向 Intranet 和面向 Internet 的设备获取证书。
 
   承载 WAP 的服务器[必须安装此更新](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2)以支持网络设备注册服务所使用的长 URL。 该更新包括在 [2014 年 12 月的更新汇总中](https://support.microsoft.com/kb/3013769)，或单独更新自 [KB3011135](https://support.microsoft.com/kb/3011135)。
 
@@ -101,7 +101,7 @@ Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和�
 |对象    |详细信息    |
 |----------|-----------|
 |**SCEP 证书模板**         |将在发证 CA 上配置的模板，用于完成设备 SCEP 请求。 |
-|**客户端身份验证证书** |从发证 CA 或公共 CA 请求。<br /> 此证书安装在托管 NDES 服务的计算机上，供 Intune 证书连接器使用。<br /> 如果证书已在用于颁发证书的 CA 模板上设置客户端和服务器身份验证密钥用法（增强型密钥使用） ， 则可将相同的证书用于服务器和客户端身份验证。 |
+|**客户端身份验证证书** |从发证 CA 或公共 CA 请求。<br /> 此证书安装在托管 NDES 服务的计算机上，供 Microsoft Intune 连接器使用。<br /> 如果证书已在用于颁发证书的 CA 模板上设置客户端和服务器身份验证密钥用法（增强型密钥使用） ， 则可将相同的证书用于服务器和客户端身份验证。 |
 |**服务器身份验证证书** |发证 CA 或公共 CA 请求 Web 服务器证书。<br /> 在托管 NDES 的计算机上的 IIS 中安装并绑定此 SSL 证书。<br />如果证书已在用于颁发证书的 CA 模板上设置客户端和服务器身份验证密钥用法（增强型密钥使用） ， 则可将相同的证书用于服务器和客户端身份验证。 |
 |**受信任的根 CA 证书**       |要使用 SCEP 证书配置文件，设备必须信任受信任的根证书颁发机构 (CA)。 在 Intune 中使用受信任的证书配置文件为用户和设备预配受信任的根 CA 证书。 <br/><br/> - 在每个操作系统平台上使用一个受信任的根 CA 证书，并将该证书与创建的每个受信任的根证书配置文件关联。 <br /><br /> - 可以在需要时使用其它受信任的根 CA 证书。 例如，可以使用其他证书来信任为 Wi-Fi 访问点的服务器身份验证证书签名的 CA。 为发证 CA 创建其他受信任的根 CA 证书。  对于在 Intune 中创建的 SCEP 证书配置文件，请确保在其中为发证 CA 指定受信任的根 CA 配置文件。<br/><br/> 有关受信任证书配置文件的信息，请参阅“在 Intune 中使用证书进行身份验证”中的[导出受信任的 CA 证书](certificates-configure.md#export-the-trusted-root-ca-certificate)和[创建受信任的证书配置文件](certificates-configure.md#create-trusted-certificate-profiles)。 |
 
@@ -177,7 +177,7 @@ Intune 支持使用简单证书注册协议 (SCEP) 来[验证体验与应用和�
 
 ### <a name="create-the-client-certificate-template"></a>创建客户端证书模板
 
-Intune 证书连接器要求某个证书的“客户端身份验证”增强型密钥用法和使用者名称与安装连接器的计算机的 FQDN 相同。 需要添加具有以下属性的模板：
+Microsoft Intune 连接器要求某个证书的“客户端身份验证”增强型密钥用法和使用者名称与安装连接器的计算机的 FQDN 相同。 需要添加具有以下属性的模板：
 
 - “扩展” > “应用程序策略”必须包含“客户端身份验证”  
 - “使用者名称” > “在请求中提供” 。
@@ -192,13 +192,13 @@ Intune 证书连接器要求某个证书的“客户端身份验证”增强型�
 - “使用者名称” > “在请求中提供” 。
 
 > [!NOTE]
-> 如果证书同时满足客户端和服务器证书模板的要求，则可以对 IIS 和 Intune 证书连接器使用单个证书。
+> 如果证书同时满足客户端和服务器证书模板的要求，则可以对 IIS 和 Microsoft Intune 连接器使用单个证书。
 
 ### <a name="grant-permissions-for-certificate-revocation"></a>授予吊销证书的权限
 
 为了使 Intune 能够吊销不再需要的证书，必须授予证书颁发机构权限。
 
-在 Intune 证书连接器上，可以使用 NDES 服务器系统帐户或特定帐户（如 NDES 服务帐户） 。
+在 Microsoft Intune 连接器上，可以使用 NDES 服务器系统帐户或特定帐户（如 NDES 服务帐户） 。
 
 1. 在“证书颁发机构”控制台中，右键单击 CA 名称，然后单击“属性”。
 
@@ -336,7 +336,7 @@ NDES 服务器中有两个配置所需的证书。
 
 - **客户端身份验证证书** 
 
-   此证书在 Intune 证书连接器安装过程中使用。
+   此证书在 Microsoft Intune 连接器安装过程中使用。
 
    请求并安装来自你的内部 CA 或公用证书颁发机构的 **“客户端身份验证”** 证书。
    
@@ -372,10 +372,9 @@ NDES 服务器中有两个配置所需的证书。
    
       1. 为“SSL 证书”指定服务器身份验证证书。
 
+## <a name="install-the-microsoft-intune-connector"></a>安装 Microsoft Intune 连接器
 
-## <a name="install-the-intune-certificate-connector"></a>安装 Intune 证书连接器
-
-Microsoft Intune 证书连接器安装在运行 NDES 服务的服务器上。 不支持在证书颁发机构 (CA) 所在的同一服务器上使用 NDES 或 Intune 证书连接器。
+Microsoft Intune 连接器安装在运行 NDES 服务的服务器上。 不支持在证书颁发机构 (CA) 所在的同一服务器上使用 NDES 或 Microsoft Intune 连接器。
 
 ### <a name="to-install-the-certificate-connector"></a>安装证书连接器
 
@@ -389,7 +388,7 @@ Microsoft Intune 证书连接器安装在运行 NDES 服务的服务器上。 �
 
 4. 下载完成后，请转到托管网络设备注册服务 (NDES) 角色的服务器。 然后：
 
-   1. 确认已安装 .NET 4.5 Framework，因为它是 Intune 证书连接器的必需项。 Windows Server 2012 R2 和更高版本中自动包含 .NET 4.5 Framework。
+   1. 确认已安装 .NET 4.5 Framework，因为它是 Microsoft Intune 连接器的必需项。 Windows Server 2012 R2 和更高版本中自动包含 .NET 4.5 Framework。
 
    2. 使用对服务器具有管理权限的帐户运行安装程序 (**NDESConnectorSetup.exe**)。 安装程序还会安装 NDES 和 IIS 证书注册点 (CRP) Web 服务的策略模块。 CRP Web 服务 CertificateRegistrationSvc 作为 IIS 中的应用程序运行。
 
@@ -397,10 +396,10 @@ Microsoft Intune 证书连接器安装在运行 NDES 服务的服务器上。 �
 
 5. 提示输入证书连接器的客户端证书时，选取“选择”，然后选择在前文[在托管 NDES 的服务器上安装和绑定证书](#install-and-bind-certificates-on-the-server-that-hosts-ndes)过程的步骤 3 中，在 NDES 服务器上安装的“客户端身份验证”证书。
 
-   选择客户端身份验证证书后，会返回到“Microsoft Intune 证书连接器的客户端证书”处。 尽管不会显示所选证书，但可以选择“下一步”查看该证书的属性。 然后依次选择“下一步”和“安装” 。
+   选择客户端身份验证证书后，会返回到“Microsoft Intune 连接器的客户端证书”处****。 尽管不会显示所选证书，但可以选择“下一步”查看该证书的属性。 然后依次选择“下一步”和“安装” 。
 
 > [!NOTE]
-> 在启动 Intune 证书连接器之前，必须对 GCC High 租户进行以下更改。
+> 在启动 Microsoft Intune 连接器之前，必须对 GCC High 租户进行以下更改。
 > 
 > 编辑下面列出的两个配置文件，这将更新 GCC High 环境的服务终结点。 请注意，这些更新会将 URI 的后缀 .com 更改为 .us 后缀。 总共有 3 个 URI 更新，NDESConnectorUI.exe.config 配置文件中有 2 个更新，NDESConnector.exe.config 文件中有 1 个更新。
 > 
@@ -437,7 +436,7 @@ Microsoft Intune 证书连接器安装在运行 NDES 服务的服务器上。 �
 
    2. 必须为所用帐户分配有效的 Intune 许可证。
 
-   3. 登录后，Intune 证书连接器从 Intune 下载证书。 此证书用于连接器和 Intune 之间的身份验证。 如果所用帐户没有 Intune 许可证，则连接器 (NDESConnectorUI.exe) 无法从 Intune 获取证书。  
+   3. 登录后，Microsoft Intune 连接器从 Intune 下载证书。 此证书用于连接器和 Intune 之间的身份验证。 如果所用帐户没有 Intune 许可证，则连接器 (NDESConnectorUI.exe) 无法从 Intune 获取证书。  
 
       如果组织使用代理服务器并且 NDES 服务器需要代理才能访问 Internet，请选择“使用代理服务器”。 然后输入用于连接的代理服务器名称、端口和帐户凭据。
 
@@ -450,9 +449,9 @@ Microsoft Intune 证书连接器安装在运行 NDES 服务的服务器上。 �
 要验证服务是否正在运行，请打开浏览器并输入以下 URL。 应返回 403 错误：`https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
 > [!NOTE]
-> Intune 证书连接器支持 TLS 1.2。 如果托管连接器的服务器支持 TLS 1.2，则使用 TLS 1.2。 如果服务器不支持 TLS 1.2，则使用 TLS 1.1。 目前，TLS 1.1 用于设备和服务器之间的身份验证。
+> Microsoft Intune 连接器支持 TLS 1.2。 如果托管连接器的服务器支持 TLS 1.2，则使用 TLS 1.2。 如果服务器不支持 TLS 1.2，则使用 TLS 1.1。 目前，TLS 1.1 用于设备和服务器之间的身份验证。
 
 ## <a name="next-steps"></a>后续步骤
 
 [创建 SCEP 证书配置文件](certificates-profile-scep.md)  
-[Troubleshoot issues for the Intune certificate connector（排查 Intune 证书连接器问题）](troubleshoot-certificate-connector-events.md)
+[排查 Microsoft Intune 连接器问题](troubleshoot-certificate-connector-events.md)

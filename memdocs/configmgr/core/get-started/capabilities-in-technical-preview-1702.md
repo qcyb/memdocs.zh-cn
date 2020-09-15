@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e9fa71060b8125b7d0872a40d197f1c423217bad
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693006"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607943"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Configuration Manager Technical Preview 1702 中的功能
 
@@ -186,11 +186,11 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
    假设在属性中配置以下自定义通知。
 
-   ![任务序列的的自定义通知](./media/user-notification.png)
+   ![任务序列属性的的自定义通知](./media/user-notification.png)
 
    当最终用户从软件中心打开安装时，将显示以下通知消息。
 
-   ![任务序列的的自定义通知](./media/user-notification-enduser.png)
+   ![任务序列的的自定义通知 - 软件中心](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>配置软件中心属性
 使用以下过程配置软件中心中显示的任务序列的详细信息。 这些详细信息仅供参考。  

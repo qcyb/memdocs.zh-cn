@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf1150a32db213c2c8b697625076a601377c1e6
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915562"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423758"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>在 Intune 中对电子邮件进行签名和加密的 S/MIME 概述
 
@@ -45,7 +45,11 @@ ms.locfileid: "88915562"
 
 Intune 中的签名证书使用 PKCS 证书。 [配置和使用 PKCS 证书](certficates-pfx-configure.md)介绍了如何在 Intune 环境中部署和使用 PKCS 证书。 这些步骤包括：
 
-- 下载并安装 Microsoft Intune 证书连接器以支持 PKCS 证书请求。 连接器的网络要求与[受管理设备](../fundamentals/intune-endpoints.md#access-for-managed-devices)相同。
+- 下载并安装 PFX 证书连接器以支持 PKCS 证书请求。 连接器的网络要求与[受管理设备](../fundamentals/intune-endpoints.md#access-for-managed-devices)相同。
+  > [!IMPORTANT]
+  > 从 PFX 证书连接器 6.2008.60.607 版本（于 2020 年 8 月发布）开始，此连接器支持针对 PKCS #12 证书请求的证书部署，并处理对导入到 Intune 中的 PFX 文件的请求，从而为特定用户实现 S/MIME 电子邮件加密。 使用 PKCS 证书配置文件时，不再需要使用 Microsoft Intune 连接器。
+  > 
+  > 有关详细信息，请参阅[证书连接器](certificate-connectors.md)
 - 为设备创建受信任的根证书配置文件。 此步骤包括为证书颁发机构使用受信任的根证书和中间证书，然后将配置文件部署到设备。
 - 使用创建的证书模板创建 PKCS 证书配置文件。 此配置文件向设备颁发签名证书，并将 PKCS 证书配置文件部署到设备。
 

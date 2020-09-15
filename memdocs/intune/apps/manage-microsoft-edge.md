@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/05/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 9391be828452cbda25dd6c4f4ed75cffa2ef687c
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995137"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423741"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>将适用于 iOS 和 Android 的 Microsoft Edge 与 Microsoft Intune 结合使用来管理 Web 访问
 
@@ -310,7 +310,7 @@ Microsoft Edge 支持以下配置设置：
 
 - 在将 URL 输入列表时，确保对所有 URL 添加“http://”或“https://”作为前缀。
 - 可以根据以下允许模式列表中的规则使用通配符 (\*)。
-- 通配符只能匹配主机名中的整体部分（由句点分隔）或路径的整体部分（由正斜杠分隔）。 例如，不支持 `http://*contoso.com`。
+- 通配符只能匹配主机名中的一部分（例如 `news-contoso.com`）或整体部分（例如 `host.contoso.com`）或者由正斜杠分隔的路径的整体部分 (`www.contoso.com/images`)。
 - 可以在地址中指定端口号。 如果未指定端口号，则使用以下值：
   - 对于 http，使用端口 80
   - 对于 https，使用端口 443
@@ -321,11 +321,11 @@ Microsoft Edge 支持以下配置设置：
     |    `http://www.contoso.com`    |    匹配单个页面    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    匹配单个页面    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*`   |    匹配以 `www.contoso.com` 开头的所有 URL    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    匹配 `contoso.com` 下的所有子域    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    匹配以 `contoso.com/` 结尾的所有子域    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    匹配 `contoso.com` 下的所有子域    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`<br>`news-contoso.com`
+    |    `http://*contoso.com/*`    |    匹配以 `contoso.com/` 结尾的所有子域    |    `news-contoso.com`<br>`news-contoso.com.com/daily`    |    `news-contoso.host.com`<br>`news.contoso.com`    |
     `http://www.contoso.com/images`    |    匹配单个文件夹    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
-    |    `http://www.contoso.com:80`    |    匹配单个页面（使用端口号）    |    `http://www.contoso.com:80`    |         |
-    |    `https://www.contoso.com`    |    匹配单个安全页面    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
+    |    `http://www.contoso.com:80`    |    匹配单个页面（使用端口号）    |    `www.contoso.com:80`    |         |
+    |    `https://www.contoso.com`    |    匹配单个安全页面    |    `www.contoso.com`    |    `www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    匹配单个文件夹和所有子文件夹    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - 以下是一些不能指定的输入的示例：
@@ -337,7 +337,6 @@ Microsoft Edge 支持以下配置设置：
   - IP 地址
   - `https://*`
   - `http://*`
-  - `https://*contoso.com`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 

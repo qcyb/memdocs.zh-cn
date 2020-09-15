@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: a61bf84a872458f37826c3de07ede05b1b658f0c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b0c25174873e00cf23dacd2c77208775f1fb1ced
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127286"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644269"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 
@@ -61,6 +61,6 @@ ms.locfileid: "88127286"
 
 1. 在“暂存”**** 页上，为设置为“试点 Intune”**** 的每个工作负载指定试点集合。
 
-   ![指定 Intune 自动注册集合 ](../media/3555750-co-management-onboarding-staging.png)
+   ![在“共同管理配置”向导的“暂存”页，指定试点集合](../media/3555750-co-management-onboarding-staging.png)
 
 1. 要启用共同管理，请完成向导。

@@ -7,14 +7,20 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820048"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564086"
 ---
 本文中的通知提供了重要信息，可以帮助你为未来的 Intune 更改和功能做好准备。
+
+### <a name="updated-end-user-experience-for-android-device-administrator-wi-fi-profiles---7662680----"></a>更新了 Android 设备管理员 Wi-Fi 配置文件的最终用户体验<!-- 7662680  -->
+由于 Google 政策更改，因此从公司门户应用的 10 月发布开始，新 Wi-Fi 配置文件的最终用户体验就大不相同。 用户将需要接受额外的权限，并在部署 Wi-Fi 配置时明确表示接受。 Wi-Fi 配置不会显示在已知的 Wi-Fi 网络列表中，但在有效范围内时会自动连接。 现有 Wi-Fi 配置文件的行为没有发生变化。 Endpoint Manager 管理中心中的管理员体验也没有发生变化。
+
+适用于：
+- Android 设备管理员、Android 10 及更高版本
 
 ### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune 终止对 Windows Phone 8.1 和 Windows 10 移动版的支持<!-- 3544938, 3544909 -->
 Microsoft 对 Windows Phone 8.1 的主要支持于 2017 年 7 月结束，外延支持于 2019 年 6 月结束。 自 2017 年 10 月以来，针对 Windows Phone 8.1 的公司门户应用一直处于支持模式。 此外，Microsoft Intune 已于 2020 年 2 月 20 日结束对 Windows Phone 8.1 的支持。 
@@ -46,7 +52,7 @@ Android 设备管理员管理在 Android 2.2 中作为一种管理 Android 设�
 减少对设备管理员的支持会对某些设备产生影响，这些设备通常满足以下所有三个条件：
 - 已注册到设备管理员管理。
 - 运行 Android 10 或更高版本。
-- 不是 Samsung 设备。
+- 除 Samsung 以外的所有 Android 制造商。
 
 如果设备属于以下任何一种情况，则不会受到影响：
 - 未注册到设备管理员管理。
@@ -76,15 +82,6 @@ Android 设备管理员管理在 Android 2.2 中作为一种管理 Android 设�
 
 ![Android 合规性策略页的屏幕截图](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### <a name="additional-impacts-based-on-android-os-version"></a>基于 Android OS 版本的其他影响
-
-**Android 10**：对于运行 Android 10 及更高版本的所有设备管理员管理的设备（包括 Samsung），Google 限制了设备管理员管理代理（如公司门户）访问设备标识符信息的能力。 在设备更新到 Android 10 或更高版本后，此限制将影响以下 Intune 功能：
-- VPN 的网络访问控制将不再有效
-- 使用 IMEI 或序列号将设备识别为公司拥有的设备将不会自动将设备标记为公司拥有的设备
-- 在 Intune 中，IMEI 和序列号将不再对 IT 管理员可见
-
-**Android 11**：我们目前正在最新的开发者 beta 版本上测试 Android 11 支持，以评估它是否会对设备管理员管理的设备造成影响。
-
 #### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>受影响设备上受影响设置的用户体验
 
 受影响的配置设置：
@@ -95,6 +92,9 @@ Android 设备管理员管理在 Android 2.2 中作为一种管理 Android 设�
 - 对于已经注册并应用了设置的设备，受影响的合规性设置仍将在“更新设备设置”页面上显示为不合规的原因，设备将不合规，并且仍将在“设置”应用中强制执行密码要求。
 - 对于新注册的设备、新分配的设置和更新的设置，受影响的合规性设置仍将在“更新设备设置”页面上显示为不符合的原因，并且设备将不合规，但在设置应用程序中不会强制执行更严格的密码要求。
 
+Wi-Fi 配置文件的其他用户体验更改
+- 用户将需要接受额外的权限，并在部署 Wi-Fi 配置时明确表示接受。 Wi-Fi 配置不会显示在已知的 Wi-Fi 网络列表中，但在有效范围内时会自动连接。 现有 Wi-Fi 配置文件的行为没有发生变化。 Endpoint Manager 管理中心中的管理员体验也没有发生变化。  
+
 #### <a name="cause-of-impact"></a>影响的原因 
 设备将在 2020 年 10 月开始受到影响。 届时，我们将发布一个公司门户应用更新，该更新会将公司门户 API 的目标从级别 28 增加级别 29（[根据 Google 要求](https://www.blog.google/products/android-enterprise/da-migration/)）。 
 
@@ -102,10 +102,28 @@ Android 设备管理员管理在 Android 2.2 中作为一种管理 Android 设�
 - 更新到 Android 10 或更高版本。
 - 将公司门户应用更新为面向 API 级别 29 的版本。
 
+#### <a name="additional-impacts-based-on-android-os-version"></a>基于 Android OS 版本的其他影响 
+**Android 10**： 对于运行 Android 10 及更高版本的所有设备管理员管理的设备（包括 Samsung），Google 限制了设备管理员管理代理（如公司门户）访问设备标识符信息的能力。 在设备更新到 Android 10 或更高版本后，此限制将影响以下 Intune 功能： 
+- VPN 的网络访问控制将不再有效 
+- 使用 IMEI 或序列号将设备识别为公司拥有的设备将不会自动将设备标记为公司拥有的设备 
+- 在 Intune 中，IMEI 和序列号将不再对 IT 管理员可见 
+
+**Android 11**：我们将继续测试最新版的 Android 11 beta，以评估对设备管理员管理的设备的影响。 以下是已知内容： 
+- 对于运行 Android 11 及更高版本的设备管理员设备（Samsung 除外），Google 已禁止管理代理（如公司门户）强制阻止使用相机，而公司门户应用要到十月才会更新。 设备更新到 Android 11 之前，将继续应用阻止相机策略。  
+- 在 Android 11 中，再也无法将受信任的根证书部署到以设备管理员身份注册的设备上（Samsung 设备除外）。 用户必须在设备上手动安装受信任的根证书。 在设备上手动安装受信任的根证书之后，便可使用 SCEP 将证书预配给设备。 在这种情况下，仍需创建受信任证书策略并将其部署到设备，同时将该策略链接到 SCEP 证书配置文件。 
+    - 如果设备上有受信任的根证书，则 SCEP 证书配置文件将安装成功。  
+    - 如果找不到受信任的证书，则 SCEP 证书配置文件将失败。 
+
+
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
 为避免在即将到来的 2020 年 10 月出现功能降低的情况，建议采取如下操作：
 - **新建注册**：将新设备载入 [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理（如果可用）和/或[应用保护策略](../apps/app-protection-policies.md)。 避免将新设备载入设备管理员管理中。 
 - **先前注册的设备**：如果设备管理员管理的设备正在运行 Android 10 或更高版本，或者可以更新到 Android 10 或更高版本（特别是在不是 Samsung 设备的情况下），请将其从设备管理员管理移到 [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理和/或[应用保护策略](../apps/app-protection-policies.md)。 可以利用简化的流[将 Android 设备从设备管理员移到工作配置文件管理](../enrollment/android-move-device-admin-work-profile.md)。
+- **配置密码复杂性**：对于运行 Android 10 及更高版本的受影响设备，使用称为“密码复杂性”的后续设置可以继续实施密码限制和合规性。 密码复杂性是衡量密码强度的一种方法，而强度取决于密码类型、长度和质量。
+
+#### <a name="what-if-i-have-non-samsung-devices-that-cannot-move-to-android-enterprise"></a>如果非 Samsung 设备无法移至 Android Enterprise，该怎么办？ 
+某些设备无法从设备管理员移至 Android Enterprise 管理。 例如，[Google 尚未在某些市场中提供 Android Enterprise](https://support.google.com/work/android/answer/6270910?hl=en)。 你仍可以使用 Intune 与设备管理员一起管理非 Samsung 设备，但将应用本文所述的功能更改。 有关在 Android Enterprise 不可用时管理设备的指南，请参阅[如何在没有 Google Mobile Services 的环境中使用 Intune](../apps/manage-without-gms.md)。 
+
 
 #### <a name="additional-information"></a>其他信息
 - [将 Android 设备从设备管理员移到工作配置文件管理](../enrollment/android-move-device-admin-work-profile.md)
