@@ -4,6 +4,7 @@ description: 了解如何处理 Windows Autopilot 部署过程中出现的问题
 keywords: mdm, 设置, windows, windows 10, oobe, 管理, 部署, autopilot, ztd, 零接触, 合作伙伴, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -14,16 +15,16 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907905"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574576"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Windows Autopilot 故障排除
 
-**适用于： Windows 10**
+**适用于：Windows 10**
 
 Windows Autopilot 旨在简化 Windows 设备生命周期的所有部分，但有时会出现问题。 查看以下信息，以帮助进行故障排除。
 
@@ -42,9 +43,9 @@ Windows Autopilot 旨在简化 Windows 设备生命周期的所有部分，但�
 
 - 配置：有 Azure Active Directory 和 Microsoft Intune (，或者) 按照 [Windows Autopilot 配置要求](configuration-requirements.md)中的规定配置了等效的 MDM 服务？
 - 网络连接：设备是否可以访问 [Windows Autopilot 网络要求](networking-requirements.md)中所述的服务？
-- Autopilot 现成 (OOBE) 行为：是否只显示了预期的现成体验屏幕？ Azure AD 凭据页是否已根据预期的特定于组织的详细信息进行了自定义？
-- Azure AD 联接问题：设备是否能够加入 Azure Active Directory？
-- MDM 注册问题：设备是否能够) 注册 Microsoft Intune (或等效的 MDM 服务？
+- Autopilot (OOBE) 行为的全新体验：是否显示 [预期的 OOBE](#troubleshooting-autopilot-oobe-issues) 屏幕？ Azure AD 凭据页是否已根据预期的特定于组织的详细信息进行了自定义？
+- Azure AD 联接问题：设备是否能够 [加入 Azure Active Directory](#troubleshooting-azure-ad-join-issues)？
+- MDM 注册问题：设备是否能够) [注册 Microsoft Intune](#troubleshooting-intune-enrollment-issues) (或等效的 MDM 服务？
 
 ## <a name="troubleshooting-autopilot-device-import"></a>Autopilot 设备导入疑难解答
 
@@ -115,7 +116,7 @@ Windows 10 版本1803及更高版本添加了事件日志条目。 可以使用 
 
 从 Autopilot 部署服务收到的 Autopilot 配置文件设置存储在设备的注册表中。 此信息可在 **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**上找到。 可用的注册表项包括：
 
-| 值 | 说明 |
+| “值” | 说明 |
 |-------|-------------|
 | AadTenantId | 用户登录到的 Azure AD 租户的 GUID。 如果此条目与用于注册设备的租户不匹配，则用户会收到错误。 |
 | CloudAssignedTenantDomain | 已注册设备的 Azure AD 租户，例如 "contosomn.onmicrosoft.com"。 如果设备未注册到 Autopilot，此值将为空。 |
