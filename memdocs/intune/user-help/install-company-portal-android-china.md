@@ -19,19 +19,18 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2880ef5ba044f616f3b14e54c5e42b89eb58912a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: ce421c40d3a4b1e8a92df139bb18fce22f6231eb
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047998"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606083"
 ---
 # <a name="install-company-portal-app-in-peoples-republic-of-china"></a>在中华人民共和国安装公司门户应用
 
 安装 Intune 公司门户应用，以从 Android 设备访问学校或工作资源。 此应用在中华人民共和国提供，可以从下面的应用商店安装： 
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947)（不是所有地方都可用）
-* [小米](https://go.microsoft.com/fwlink/?linkid=836947) 
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 * [华为](https://go.microsoft.com/fwlink/?linkid=836948)

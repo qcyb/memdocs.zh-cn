@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 6e8fa8db5e7a960677eeafaf03ca43662da9b8d3
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996253"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012640"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune 是适用于设备的 MDM 和 MAM 提供程序
 
@@ -63,9 +63,11 @@ Intune 属于 Microsoft [企业移动性 + 安全性 (EMS) 套件](https://www.m
 - [使用 Microsoft Intune 保护设备](../protect/device-protect.md)
 
 ### <a name="try-the-interactive-guide"></a>尝试交互式指南
-[使用 Microsoft Endpoint Manager 管理设备](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager)交互式指南将引导你浏览 Microsoft Endpoint Manager 管理中心，并展示如何管理和保护移动和桌面应用程序。</br></br>
+[使用 Microsoft Endpoint Manager 管理设备](https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager)交互式指南将引导你浏览 Microsoft Endpoint Manager 管理中心，并展示如何管理和保护移动和桌面应用程序。</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy" importance="low"/></iframe>
+</div>
 
 ## <a name="manage-apps"></a>管理应用
 
