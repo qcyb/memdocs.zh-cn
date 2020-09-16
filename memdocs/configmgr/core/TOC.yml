@@ -268,14 +268,14 @@
       items:
         - name: Technical Preview 概述
           href: get-started/technical-preview.md
+        - name: 2009 版中的功能
+          href: get-started/2020/technical-preview-2009.md
         - name: 2008 版中的功能
           href: get-started/2020/technical-preview-2008.md
         - name: 2007 中的功能
           href: get-started/2020/technical-preview-2007.md
         - name: 2006 中的功能
           href: get-started/2020/technical-preview-2006.md
-        - name: 2005 功能
-          href: get-started/2020/technical-preview-2005.md
     - name: 在层次结构之间迁移数据
       items:
         - name: 迁移概述
