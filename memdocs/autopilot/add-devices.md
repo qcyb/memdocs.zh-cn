@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 776cc47865853ae9b52218c0b2257840aea09219
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89280929"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689328"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>将设备添加到 Windows Autopilot
 
@@ -44,6 +44,8 @@ ms.locfileid: "89280929"
 
 与 Oem 一样，必须授予 CSP 伙伴为组织注册设备的权限。 你可以使用 [客户同意页](registration-auth.md#csp-authorization)上所述的过程。 CSP 合作伙伴请求与组织之间的关系。 该组织的全局管理员批准该请求。 批准后，CSP 合作伙伴将使用 [合作伙伴中心](https://partner.microsoft.com/pcv/dashboard/overview)直接添加设备，无论是直接通过网站还是通过可用的 api，可以自动执行相同的任务。
 
+对于 Surface 设备，Microsoft 支持部门可帮助进行设备注册。  有关详细信息，请参阅 [Windows Autopilot 的表面注册支持](https://docs.microsoft.com/surface/surface-autopilot-registration-support)。
+
 在 CSP 伙伴和组织之间建立关系时，Windows Autopilot 不需要委派的管理员权限。 作为全局管理员审批过程的一部分，他们可以选择取消选中 "包括委派的管理权限" 复选框。
 
 > [!Note]
@@ -52,10 +54,11 @@ ms.locfileid: "89280929"
 ## <a name="automatic-registration-of-existing-devices"></a>自动注册现有设备
 
 如果存在以下情况，可以自动注册现有设备：
-- 运行受支持版本的 Windows 10 半年频道
+- 运行受支持版本的 Windows 10 半年频道。
 - 已在 Intune 服务（如 Intune）中注册。
 
 对于同时满足这两个要求的设备，MDM 服务可以要求设备提供硬件哈希。 完成后，它可以自动向 Windows Autopilot 注册设备。
+
 有关如何使用 Microsoft Intune 执行此操作的说明，请参阅 [创建 Autopilot 部署配置文件](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) 文档，其中介绍了 "将所有目标设备转换为 Autopilot" 设置。 
 
 可以使用 Intune **将所有目标设备转换为 Autopilot** 设置，自动将此类设备转换为 Windows。 有关详细信息，请参阅[创建 Autopilot 部署配置文件](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile)。 
@@ -75,7 +78,7 @@ ms.locfileid: "89280929"
 
 硬件哈希包含有关设备的详细信息：
 - 制造商
-- model
+- 模型
 - 设备序列号
 - 硬盘驱动器序列号
 - 有关 ID 生成时间的详细信息
