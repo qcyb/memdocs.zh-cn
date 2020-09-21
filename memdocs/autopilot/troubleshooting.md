@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: ac359871b9f565b66d6d179048ae8c64ebf5392d
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574576"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779513"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Windows Autopilot 故障排除
 
@@ -93,7 +93,7 @@ Windows Autopilot 旨在简化 Windows 设备生命周期的所有部分，但�
 
 ### <a name="windows-10-version-1803-and-above"></a>Windows 10 版本1803及更高版本
 
-Windows 10 版本1803及更高版本添加了事件日志条目。 可以使用 og 项来查看与 Autopilot 配置文件设置和 OOBE 流相关的详细信息。 可以使用事件查看器查看这些条目。 查看 **应用程序和服务日志中的信息– > Microsoft – > Windows – > 预配-诊断-提供** 程序-在1903之前的版本 > Autopilot。 对于版本1903及更高版本，请参阅 **应用程序和服务日志– > Microsoft – > Windows – > ModernDeployment – > Autopilot**。 根据方案和配置文件的配置，可能会记录以下事件：
+Windows 10 版本1803及更高版本添加了事件日志条目。 你可以使用日志条目来查看与 Autopilot 配置文件设置和 OOBE 流相关的详细信息。 可以使用事件查看器查看这些条目。 查看 **应用程序和服务日志中的信息– > Microsoft – > Windows – > 预配-诊断-提供** 程序-在1903之前的版本 > Autopilot。 对于版本1903及更高版本，请参阅 **应用程序和服务日志– > Microsoft – > Windows – > ModernDeployment – > Autopilot**。 根据方案和配置文件的配置，可能会记录以下事件：
 
 | 事件 ID | 类型 | 说明 |
 |----------|------|-------------| 
@@ -116,7 +116,7 @@ Windows 10 版本1803及更高版本添加了事件日志条目。 可以使用 
 
 从 Autopilot 部署服务收到的 Autopilot 配置文件设置存储在设备的注册表中。 此信息可在 **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**上找到。 可用的注册表项包括：
 
-| “值” | 说明 |
+| Value | 说明 |
 |-------|-------------|
 | AadTenantId | 用户登录到的 Azure AD 租户的 GUID。 如果此条目与用于注册设备的租户不匹配，则用户会收到错误。 |
 | CloudAssignedTenantDomain | 已注册设备的 Azure AD 租户，例如 "contosomn.onmicrosoft.com"。 如果设备未注册到 Autopilot，此值将为空。 |

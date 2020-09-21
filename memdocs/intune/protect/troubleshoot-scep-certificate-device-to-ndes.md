@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991073"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076169"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>对 Microsoft Intune 中用于 SCEP 证书配置文件的设备到 NDES 服务器的通信进行故障排除
 
@@ -191,6 +191,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
   ```
 
   如果安装失败，请删除 Microsoft Intune 连接器，然后重新安装它。
+  如果安装成功，但仍收到常规 NDES 消息，请运行 iisreset 命令以重新启动 IIS。
 
 #### <a name="http-error-503"></a>HTTP 错误 503
 
@@ -280,7 +281,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
      - 最大 URL 长度(字节) = 65534****
      - 最大查询字符串(字节) = 65534****
 
-  3. 选择“确定”，保存此配置并关闭 IIS 管理器****。
+  3. 选择“确定”，保存此配置并关闭 IIS 管理器。
 
   4. 定位以下注册表项以确认其具有指示的值，以验证此配置：
 
@@ -288,7 +289,7 @@ debug    18:30:55.487908 -0500    profiled    Performing synchronous URL request
 
      以下值设置为 DWORD 值：
      - 名称：MaxFieldLength****，十进制值为 65534****
-     - 名称：MaxRequestBytes****，十进制值为 65534****
+     - 名称：MaxRequestBytes，十进制值为 65534
 
   5. 重启 NDES 服务器。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423809"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076213"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>在 Microsoft Intune 中使用证书进行身份验证
 
@@ -46,10 +46,10 @@ ms.locfileid: "89423809"
 
 - 使用 SCEP 证书配置文件：
   - [设置网络设备注册服务 (NDES) 服务器](certificates-scep-configure.md#set-up-ndes)以便与 Intune 配合使用。
-  - [安装 Microsoft 证书连接器](certificates-scep-configure.md#install-the-microsoft-intune-connector)：
+  - [安装 Microsoft 证书连接器](certificates-scep-configure.md#install-the-microsoft-intune-connector)。
 
 - 若要使用 PKCS 证书配置文件，请执行以下操作：
-  - [安装适用于 Microsoft Intune 的 PFX 证书连接器](certificates-imported-pfx-configure。
+  - [安装 Microsoft Intune 的 PFX 证书连接器](certficates-pfx-configure.md)。
   
 - 使用 PKCS 导入的证书：
   - [安装 Microsoft Intune 的 PFX 证书连接器](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune)。

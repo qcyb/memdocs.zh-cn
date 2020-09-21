@@ -1,11 +1,11 @@
 ---
-title: Windows 10 设备注册疑难解答 | Microsoft Docs
-description: ''
+title: Windows 10 设备访问学校或工作资源的疑难解答 | Microsoft Intune
+description: 解决已注册的 Windows 10 设备的访问或帐户连接问题。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,52 +15,61 @@ ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: priyar
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881758"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643424"
 ---
-# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Windows 10 设备注册疑难解答
-如果已注册设备，但仍无法访问工作或学校电子邮件和文件，请尝试执行以下故障排除步骤。  
+# <a name="troubleshoot-windows-10-device-access"></a>Windows 10 设备访问的疑难解答
+本文介绍如何解决已注册的 Windows 10 设备的访问问题。 
 
-1. 查看接下来的两个屏幕，并找到与你在设备上看到的相似屏幕。 按照与你在设备上看到的屏幕相匹配的步骤操作。
+## <a name="check-wi-fi-connection"></a>检查 Wi-Fi 连接  
 
-    如果你看到此屏幕，请按照[看到“访问工作单位或学校”时要执行的故障排除步骤](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)中的步骤操作。
+需要连接到 Wi-Fi 才能访问工作或学校资源。 验证是否已连接到 Wi-Fi，然后再次尝试访问资源。  
 
-    ![settings-accounts-access-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+## <a name="add-work-or-school-account-in-settings-app"></a>在“设置”应用中添加工作或学校帐户  
+以下步骤与你注册设备时使用的步骤相同。 不过，如果你的帐户没有显示在“设置”应用中，你可能需要再次运行这些步骤。  
 
-    如果你看到此屏幕，请按照[看到“你的帐户”时要执行的故障排除步骤](#troubleshooting-steps-to-follow-if-you-see-your-account)中的步骤操作。
+1. 打开“设置”应用  。 
+2. 选择“帐户”  。
+3. 下一步取决于你使用的 Windows 10 版本。 
+    * 版本 1607 及更高版本：选择 **“访问工作或学校”** 。
+    * 版本 1511 及更低版本：选择“工作单位访问”。  
+4. 查看是否有你的帐户。 如果未列出，请选择“连接”加号按钮进行添加。 
+5. 使用工作单位或学校凭据登录。 
+6. 按照屏幕上的提示完成连接。  
+7. 完成后，你的帐户将被添加为一个连接。 你将可以访问组织提供的任何资源。   
 
-    ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
+## <a name="contact-it-support-for-access-requirements"></a>与 IT 支持部门联系以了解访问要求  
+如果“设置”应用中列出了你的工作或学校帐户，说明你的设备和帐户已经连接。 与 IT 支持部门联系，以获取有关访问问题的更多帮助。 他们可能已设置一些限制或要求，使你无法访问某些资源。  
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>看到“访问工作单位或学校”时执行的故障排除步骤
+## <a name="error-messages"></a>Error messages  
 
-1. 如果执行了上述步骤，但仍无法访问你的工作或学校电子邮件和文件，请返回至“访问工作或学校帐户”  。
+### <a name="we-couldnt-auto-discover-a-management-endpoint-matching-the-username-entered-please-check-your-username-and-try-again-if-you-know-the-url-to-your-management-endpoint-please-enter-it"></a>无法自动发现与所输入用户名匹配的管理终结点。 请检查用户名并重试。 如果你知道指向管理终结点的 URL，请输入它。
 
-2. 执行以下操作之一：
+**原因**：无法验证你的帐户和提供的 URL（也称为管理终结点）。  
 
-   - 如果你看到类似下图的连接，点击该连接，并确认你看到“管理”、“信息”和“断开连接”选项。 如果你看到以上选项，表示你现在已注册且已连接。
+#### <a name="resolution"></a>解决方法
+1. 重新输入你的用户名和密码。 
+2. 如果这样仍不起作用，请与 IT 支持人员联系以获取正确的 URL（示例： www.yourcompany.onmicrosoft.com）。 
+3. 出现提示时，输入所提供的 URL。 
 
-     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>看起来未连接。 请确保已连接到网络。
 
-   - 如果未看到以上所示的连接信息，或者看到了此类信息但其中缺少部分选项，则点击“连接”  。 然后使用工作或学校凭据登录以连接。  
+**原因**：你的设备未连接到 Wi-Fi，需要连接才能添加工作或学校帐户。     
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>看到“你的帐户”时执行的故障排除步骤
+#### <a name="resolution"></a>解决方法
+1. 在设备工具栏或设置中，选择“网络状态”地球图标。
+2. 选择“Wi-Fi 网络”>“连接”。  
+3. 尝试重新连接你的帐户。  
 
-如果执行了上述步骤，但仍无法访问你的工作或学校电子邮件、文件和其他数据，请返回到“**帐户**”并点击“**工作访问**”。
 
-- 如果能看到列出的工作或学校帐户，表示已连接。  
+## <a name="next-steps"></a>后续步骤  
 
-- 如果看不到工作或学校帐户，请点击“连接”  ，然后使用工作或学校凭据登录。
-
-## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>看到“设置工作或学校帐户”时执行的故障排除步骤
-
-如果看到消息“我们无法自动发现与所输入用户名匹配的管理终结点。请检查用户名并重试。如果知道管理终结点的 URL，请输入。”，则应尝试重新输入用户名和密码。 如果仍无效，则应咨询公司支持人员，获取需在“管理终结点”文本框中提供的网站。 网站可能类似于 www.yourcompany.onmicrosoft.com。
-
-仍需帮助？ 请与公司支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。
+仍需帮助？ 请与 IT 支持人员联系。 有关联系信息，请查看[公司门户网站](https://go.microsoft.com/fwlink/?linkid=2010980)。

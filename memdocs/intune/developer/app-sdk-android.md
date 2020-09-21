@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ab2050052294291a93a646a245e493e2e1f574
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: e5b29043956a86934f7b1be18606d0b78f25dc50
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286281"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608456"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>用于 Android 的 Microsoft Intune App SDK 开发人员指南
 
@@ -885,6 +885,10 @@ MAM 调用应用的 `MANAGEMENT_REMOVED` 接收器时，以下情况为 true：
 应用的接收器返回后，将无法再访问加密密钥。
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>配置 Azure Active Directory Authentication Library (ADAL)
+
+> [!NOTE]
+> 自 2020 年 6 月 30 日起，我们将不再向 Active Directory 身份验证库 (ADAL) 增加新功能。 我们将继续提供技术支持和安全更新，但不再提供功能更新。 应用程序将需要升级到 Microsoft 身份验证库(MSAL) 和 Microsoft Graph。 有关更多信息，请参阅[适用于 Android 的 ADAL 到 MSAL 的迁移指南](https://docs.microsoft.com/azure/active-directory/develop/migrate-android-adal-msal)文档
+
 
 首先，请阅读 [GitHub 上的 ADAL 存储库](https://github.com/AzureAD/azure-activedirectory-library-for-android)中的 ADAL 集成指南。
 

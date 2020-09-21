@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906814"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076135"
 ---
 # <a name="see-device-details-in-intune"></a>在 Intune 中查看设备详细信息
 
@@ -105,7 +105,7 @@ ms.locfileid: "88906814"
 |已加密|如果为“是”，则设备上存储的数据已加密。|Windows、iOS/iPadOS、Android|
 
 > [!Note]  
-> Android Enterprise 专用设备或完全托管设备上未列出电话号码清单。
+> 在 Android Enterprise 专用设备、完全托管设备或公司拥有的工作配置文件设备上未列出电话号码清单。
 
 ## <a name="next-steps"></a>后续步骤
 了解使用 Intune [管理设备](device-management.md)还可以执行哪些操作。

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67de7db6587c1f80d849808c139bf1ae94f4bbd5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327049"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643636"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>快速入门：注册 Windows 10 设备
 
@@ -87,7 +87,7 @@ ms.locfileid: "80327049"
 
    ![新添加的帐户的屏幕截图](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    如果执行了之前的步骤，但仍无法访问你的工作或学校电子邮件帐户和文件，请按照[看到“使用工作或学校帐户”时要执行的故障排除步骤](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)中的步骤操作。
+    如果执行了之前的步骤，但仍无法访问你的工作或学校电子邮件帐户和文件，请按照 [Windows 10 设备访问疑难解答](../user-help/troubleshoot-your-windows-10-device-windows.md)中的步骤操作。  
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>确认 Intune 中的设备注册
 

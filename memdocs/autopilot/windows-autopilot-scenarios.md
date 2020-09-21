@@ -14,26 +14,29 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b8b91e25d01a64cfeee601c898c355111b960b7c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1755399ad67cd073c71f2a26ef4305bec5a53f51
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907868"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814869"
 ---
 # <a name="windows-autopilot-scenarios-and-capabilities"></a>Windows Autopilot 方案和功能
 
-**适用于： Windows 10**
+**适用于：Windows 10**
 
 ## <a name="scenarios"></a>方案
 
-Windows Autopilot 支持不断增长的方案列表，旨在支持常见的组织需求。 这些需求取决于组织的类型，并将其进度转移到 Windows 10 并 [过渡到新式管理](/windows/client-management/manage-windows-10-in-your-organization-modern-management)。
+Windows Autopilot 支持组织经常需要的各种方案。 这些需求因以下因素而异：
+- 组织类型。
+- 转到 Windows 10 的进度。
+- 它们 [转换到新式管理](/windows/client-management/manage-windows-10-in-your-organization-modern-management)的程度。
 
 本指南中介绍了以下 Windows Autopilot 方案：
 
-| 场景 | 详细信息 |
+| 方案 | 详细信息 |
 | --- | --- |
-| 部署将由组织的成员设置并为该人员配置的设备 | [Windows Autopilot 用户驱动模式](user-driven.md) |
+| 部署和配置设备，以便最终用户能够自行设置设备 | [Windows Autopilot 用户驱动模式](user-driven.md) |
 | 部署将自动配置为以共享方式使用、作为展台或数字告示设备进行配置的设备。| [Windows Autopilot 自部署模式](self-deploying.md) |
 | 重新部署处于企业就绪状态的设备。| [Windows Autopilot 重置](windows-autopilot-reset.md) |
 | 使用最新的应用程序、策略和设置预先设置设备。| [白色手套](white-glove.md) |
@@ -49,19 +52,23 @@ Windows Autopilot 支持不断增长的方案列表，旨在支持常见的组�
 
 ### <a name="windows-autopilot-is-self-updating-during-oobe"></a>Windows Autopilot 在 OOBE 期间自行更新
 
-从 Windows 10 开始，版本1903、Autopilot 功能和关键更新将在设备连接到网络后，在 OOBE 期间自动开始下载，并在 [关键驱动程序和 Windows 零天修补程序 (ZDP) 更新](/windows-hardware/customize/desktop/windows-updates-during-oobe) 已完成。 用户或 IT 管理员无法选择退出这些 Autopilot 更新，因为 Windows Autopilot 部署需要它们才能正常运行。  Windows 将提醒用户设备正在检查、下载和安装更新。
+对于 Windows 10，版本1903及更高版本的设备，在以下两种情况下，在 OOBE 期间自动下载 Autopilot 功能和关键更新：
+- 设备已连接到网络。
+- [关键驱动程序和 Windows 零天补丁 (ZDP) 更新](/windows-hardware/customize/desktop/windows-updates-during-oobe)已完成。
 
-有关详细信息，请参阅 [Windows Autopilot 更新](autopilot-update.md) 。
+不能选择退出这些 Autopilot 更新，因为 Windows Autopilot 部署需要它们。 Windows 会向用户发出警报，指出设备正在检查、下载和安装更新。
+
+有关详细信息，请参阅 [Windows Autopilot 更新](autopilot-update.md)。
 
 ### <a name="cortana-voiceover-and-speech-recognition-during-oobe"></a>OOBE 期间 Cortana voiceover 和语音识别
 
-在 Windows 10 中，默认情况下，对所有 Windows 10 专业版、教育版和企业版 Sku 禁用了版本1903及更高版本的 Cortana voiceover 和语音识别。
+在 Windows 10 版本1903及更高版本中，默认情况下，在 OOBE 期间禁用 Cortana voiceover 和语音识别。 此默认值适用于所有 Windows 10 专业版、教育版和企业版 Sku。
 
 还可以通过创建以下注册表项，在 OOBE 期间启用 Cortana voiceover 和语音识别。 默认情况下，此项不存在：
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-键值为 DWORD，  **0** = 禁用， **1** = 已启用。
+键值为 DWORD， **0** = 禁用， **1** = 已启用。
 
 | 值 | 说明 |
 | --- | --- |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051574"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076118"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>设置注册状态页
  
@@ -122,8 +122,8 @@ Intune 使用此列表中包含的应用来筛选应被视为要阻止的列表�
 注册状态页跟踪以下设备设置项目：
 
 - 安全策略
-  - 适用于所有注册的一个配置服务提供程序 (CSP)。
-  - 此处不跟踪 Intune 配置的实际 CSP。
+  - 目前跟踪 Microsoft Edge、分配的访问权限和展台浏览器策略。
+  - 不会跟踪其他策略。
 - 应用程序
   - 每台计算机业务线 (LoB) MSI 应用。
   - LoB 应用商店应用（安装上下文为设备）。
@@ -138,8 +138,8 @@ Intune 使用此列表中包含的应用来筛选应被视为要阻止的列表�
 对于帐户设置，注册状态页将跟踪以下各项（如果已将它们分配给当前登录的用户）：
 
 - 安全策略
-  - 适用于所有注册的一个 CSP。
-  - 此处不跟踪 Intune 配置的实际 CSP。
+  - 目前跟踪 Microsoft Edge、分配的访问权限和展台浏览器策略。
+  - 不会跟踪其他策略。
 - 应用程序
   - 为所有设备、所有用户或注册设备的用户所属的用户组分配的每个用户 LoB MSI 应用。
   - 为所有用户或注册设备的用户所属的用户组分配的每台计算机 LoB MSI 应用。
@@ -152,53 +152,6 @@ Intune 使用此列表中包含的应用来筛选应被视为要阻止的列表�
   - 为所有用户或注册设备的用户所属的用户组分配的 VPN 或 Wi-Fi 配置文件。
 - 证书
   - 为所有用户或注册设备的用户所属的用户组分配的证书配置文件。
-
-### <a name="troubleshooting"></a>疑难解答
-
-以下是与“注册状态页”相关的疑难解答常见问题。
-
-- 为什么不使用注册状态页安装和跟踪我的应用程序？
-  - 为了保证使用注册状态页安装和跟踪应用程序，请确保：
-      - 使用“所需”分配，将应用分配到包含设备（对于面向设备的应用）或用户（对于面向用户的应用）的 Azure AD 组。  （在 ESP 的设备阶段，跟踪面向设备的应用，而在 ESP 的用户阶段跟踪面向用户的应用。）
-      - 你可以指定“在安装完所有应用和配置文件之前，应避免使用设备”，也可以将应用加入“在完整完这些所需应用之前，应避免使用设备”列表中 。
-      - 这些应用安装在设备上下文中，无用户上下文适用性规则。
-
-- 为什么注册状态页显示非 Autopilot 部署，例如当用户首次从 Configuration Manager 共同管理注册设备登录时？  
-  - 注册状态页会列出所有注册方法的安装状态，包括
-      - Autopilot
-      - Configuration Manager 共同管理
-      - 新用户首次登录到已应用注册状态页策略的设备时
-      - 当“仅向通过全新安装体验(OOBE)预配的设备显示页面”设置启用并且设置了策略时，只有第一个登录设备的用户才会收到注册状态页
-
-- 在设备上配置注册状态页时，如何禁用它？
-  - 注册时，将在设备上设置注册状态页策略。 必须先禁用用户和设备注册状态页部分，才可禁用注册状态页。 可使用以下配置创建自定义 OMA-URI 设置，来禁用这些部分。
-
-      禁用用户注册状态页：
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      禁用设备注册状态页：
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- 如何收集日志文件？
-  - 有两种收集注册状态页日志文件的方法：
-      - 在 ESP 策略中允许用户收集日志。 注册状态页发生超时时，最终用户可以选择“收集日志”的选项。 插入 U 盘，即可将日志文件复制到 U 盘中
-      - 输入 Shift-F10 按键顺序打开命令提示符，然后输入以下命令行，生成日志文件： 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
 
 ### <a name="known-issues"></a>已知问题
 
@@ -219,4 +172,6 @@ Intune 使用此列表中包含的应用来筛选应被视为要阻止的列表�
 
 ## <a name="next-steps"></a>后续步骤
 
-设置 Windows 注册页后，了解如何管理 Windows 设备。 有关详细信息，请参阅[什么是 Microsoft Intune 设备管理？](../remote-actions/device-management.md)
+设置 Windows 注册页后，了解如何[管理 Windows 设备](../remote-actions/device-management.md)。
+
+[Windows 注册状态疑难解答页](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

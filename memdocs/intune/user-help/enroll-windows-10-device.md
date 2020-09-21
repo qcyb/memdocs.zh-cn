@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 46f8d7d46e376d2fb8f1cab1b3d0b3bc583bdeed
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179581"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643488"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>使用 Intune 公司门户注册 Windows 10 设备
 
@@ -65,10 +65,6 @@ ms.locfileid: "88179581"
 8. 要再次检查连接，请返回到“设置” > “帐户” > “使用工作或学校帐户”    。  现在应列出你的帐户。  
 
 
-    ![验证已正确设置了连接](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-仍无法访问工作或学校电子邮件、文件或其他数据？ 了解如何[解决帐户问题](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)。  
-
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>注册使用 Windows 10 1511 版及更早版本的设备  
 以下步骤介绍如何注册在 Windows 10 1511 版及更早版本上运行的设备。  
 
@@ -91,7 +87,10 @@ ms.locfileid: "88179581"
 
     ![登录](./media/W10-enroll-4-sign-in.png)  
 
-仍无法访问工作或学校电子邮件、文件或其他数据？ 了解如何在注册过程[解决与帐户相关的问题](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account)。  
+
+## <a name="troubleshooting"></a>疑难解答 
+有关错误消息和其他连接补救措施的非详尽列表，请参阅 [Windows 10 设备访问疑难解答](troubleshoot-your-windows-10-device-windows.md)。  
+
 
 ## <a name="it-administrator-support"></a>IT 管理员支持   
 

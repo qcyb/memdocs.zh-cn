@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25ec8099c628c4a39266a9352b3b4b9810698592
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 032e6468ce326637e264b232cdd4e4d954ea70d8
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996582"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081801"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Microsoft Intune 的美国政府终结点
 
-此页列出了 Intune 部署中代理设置所需的美国政府终结点。
+本页列出了 Intune 部署中的代理设置所需的美国政府、美国政府社区 (GCC) High 和美国国防部 (DoD) 终结点。
 
 若要管理防火墙和代理服务器后面的设备，必须启用 Intune 的通信。
 

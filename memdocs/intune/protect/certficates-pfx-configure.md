@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423708"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643615"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>在 Intune 中配置和使用 PKCS 证书
 
@@ -140,9 +140,13 @@ Microsoft Intune 包括内置的设置来使用 PKCS 证书对组织资源进行
    > [!WARNING]
    > 默认情况下，在 Windows Server 中，“IE 增强的安全配置”设置为“启用”导致登录 Office 365 出现问题。
 
-6. 关闭窗口。
+6. 选择“CA 帐户”选项卡，然后输入在证书颁发机构上拥有“颁发和管理证书”权限的帐户的凭据。 这些凭据将用于对证书颁发机构执行证书吊销。 
 
-7. 在 Microsoft Endpoint Manager 管理中心，返回到“租户管理” > “连接器和令牌” > “证书连接器”  。 片刻之后，将显示绿色勾号且连接状态更新。 连接器服务器现可与 Intune 通信。
+    单击“应用”以应用更改。
+
+7. 关闭窗口。
+
+8. 在 Microsoft Endpoint Manager 管理中心，返回到“租户管理” > “连接器和令牌” > “证书连接器”  。 片刻之后，将显示绿色勾号且连接状态更新。 连接器服务器现可与 Intune 通信。
 
 ## <a name="create-a-trusted-certificate-profile"></a>创建受信任的证书配置文件
 

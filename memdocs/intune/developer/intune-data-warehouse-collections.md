@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: e0a9ecebd86404d4218142d1a3acb591974b027d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993090"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608087"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune 数据仓库收集
 
@@ -34,30 +34,30 @@ appRevision 实体列出了应用的所有版本。
 
 |          属性          |                                      说明                                      |                示例               |
 |----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
-| AppKey                     | 应用的唯一标识符。                                                         | 123                                  |
-| ApplicationId              | 应用的唯一标识符 - 类似于 AppKey，但该标识符是自然键。        | b66bc706-ffff-7437-0340-032819502773 |
-| 修订                   | 上传二进制文件时管理员提到的版本。                   | 2                                    |
-| 标题                      | 应用标题。                                                                     | Excel                                |
-| 发布者                  | 应用发布者。                                                                 | Microsoft                            |
-| UploadState                | 应用的上传状态。                                                              | 1                                    |
-| AppTypeKey                 | 对下一部分中所述的 AppType 的引用。                            | 1                                    |
-| VppProgramTypeKey          | 对下述 VppProgramType 的引用。                                        | 30876                                |
-| CreationTime               | 创建此修订版本的时间。                                            | 2016/11/23 0:00                      |
-| ModifiedTime               | 上次更改与此修订版本相关的任何内容的时间。                            | 2016/11/23 0:00                      |
+| appKey                     | 应用的唯一标识符。                                                         | 123                                  |
+| applicationId              | 应用的唯一标识符 - 类似于 AppKey，但该标识符是自然键。        | b66bc706-ffff-7437-0340-032819502773 |
+| revision                   | 上传二进制文件时管理员提到的版本。                   | 2                                    |
+| title                      | 应用标题。                                                                     | Excel                                |
+| publisher                  | 应用发布者。                                                                 | Microsoft                            |
+| uploadState                | 应用的上传状态。                                                              | 1                                    |
+| appTypeKey                 | 对下一部分中所述的 AppType 的引用。                            | 1                                    |
+| vppProgramTypeKey          | 对下述 VppProgramType 的引用。                                        | 30876                                |
+| creationTime               | 创建此修订版本的时间。                                            | 2016/11/23 0:00                      |
+| modifiedTime               | 上次更改与此修订版本相关的任何内容的时间。                            | 2016/11/23 0:00                      |
 | 大小                       | 二进制文件的大小（以字节为单位）。                                                          | 120,392,000                          |
-| StartDateInclusiveUTC      | 在数据仓库中创建此应用修订版本时的 UTC 日期和时间。      | 2016/11/23 0:00                      |
-| EndDateExclusiveUTC        | 此应用修订版本停用时的 UTC 日期和时间。                        | 2016/11/23 0:00                      |
-| IsCurrent                  | 表明此应用修订版本目前是否在数据仓库中。         | True/False                           |
-| RowLastModifiedDateTimeUTC | 上次在数据仓库中修改此应用版本时的 UTC 日期和时间。 | 2016/11/23 0:00                      |
+| startDateInclusiveUTC      | 在数据仓库中创建此应用修订版本时的 UTC 日期和时间。      | 2016/11/23 0:00                      |
+| endDateExclusiveUTC        | 此应用修订版本停用时的 UTC 日期和时间。                        | 2016/11/23 0:00                      |
+| isCurrent                  | 表明此应用修订版本目前是否在数据仓库中。         | True/False                           |
+| rowLastModifiedDateTimeUTC | 上次在数据仓库中修改此应用版本时的 UTC 日期和时间。 | 2016/11/23 0:00                      |
 
 ## <a name="apptypes"></a>appTypes
 appType 实体列出了应用的安装源。
 
 |   属性  |        说明        |
 |-------------|---------------------------|
-| AppTypeID   | 类型的 ID           |
-| AppTypeKey  | 密钥的代理键 |
-| AppTypeName | 应用类型                  |
+| appTypeID   | 类型的 ID           |
+| appTypeKey  | 密钥的代理键 |
+| appTypeName | 应用类型                  |
 
 ### <a name="example"></a>示例
 
@@ -82,28 +82,28 @@ appType 实体列出了应用的安装源。
 
 |    属性   |                                                                                      说明                                                                                     |  示例 |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey       | 为符合性策略创建了摘要时的日期键。                                                                                                                   | 20161204 |
-| Unknown       | 由于其他原因脱机或无法与 Intune 或 Azure AD 通信的设备数量。                                                                           | 5        |
-| 不适用 | 对于管理员指定的设备符合性策略不适用的设备数。                                                                                     | 201      |
-| 合规     | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 4083     |
-| InGracePeriod | 不符合要求但处于管理员定义的宽限期内的设备数。                                                                                  | 57       |
-| 不符合  | 为后列情况的设备数：未能应用由管理员指定的一个或多个设备符合性策略，或其用户未遵守管理员指定的策略。 | 43       |
-|    错误      |    无法与 Intune 或 Azure AD 通信，以及返回了错误信息的设备数量。                                                                          |    3     |
+| dateKey       | 为符合性策略创建了摘要时的日期键。                                                                                                                   | 20161204 |
+| 未知       | 由于其他原因脱机或无法与 Intune 或 Azure AD 通信的设备数量。                                                                           | 5        |
+| notApplicable | 对于管理员指定的设备符合性策略不适用的设备数。                                                                                     | 201      |
+| 符合     | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 4083     |
+| inGracePeriod | 不符合要求但处于管理员定义的宽限期内的设备数。                                                                                  | 57       |
+| nonCompliant  | 为后列情况的设备数：未能应用由管理员指定的一个或多个设备符合性策略，或其用户未遵守管理员指定的策略。 | 43       |
+|    error      |    无法与 Intune 或 Azure AD 通信，以及返回了错误信息的设备数量。                                                                          |    3     |
 
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 下表按策略以及策略类型总结了分配给设备的符合性策略的分配状态。 它针对每个已分配的符合性策略，列出每种符合性状态的设备的计数。
 
 |      属性     |                                                                                      说明                                                                                     |  示例 |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey           | 为符合性策略创建了摘要时的日期键。                                                                                                                   | 20161219 |
-| PolicyKey         | 创建了摘要的符合性策略的键。                                                                                                                   | 10178    |
-| PolicyPlatformKey | 创建了相应摘要的符合性策略的键。                                                                                            | 5        |
-| Unknown           | 由于其他原因脱机或无法与 Intune 或 Azure AD 通信的设备数量。                                                                           | 13       |
-| 不适用     | 对于管理员指定的设备符合性策略不适用的设备数。                                                                                     | 3        |
-| 合规         | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 45       |
-| InGracePeriod     | 不符合要求但处于管理员定义的宽限期内的设备数。                                                                                  | 3        |
-| 不符合      | 为后列情况的设备数：未能应用由管理员指定的一个或多个设备符合性策略，或其用户未遵守管理员指定的策略。 | 7        |
-| 错误             | 无法与 Intune 或 Azure AD 通信，以及返回了错误信息的设备数量。                                                                             | 3        |
+| dateKey           | 为符合性策略创建了摘要时的日期键。                                                                                                                   | 20161219 |
+| policyKey         | 创建了摘要的符合性策略的键。                                                                                                                   | 10178    |
+| policyPlatformKey | 创建了相应摘要的符合性策略的键。                                                                                            | 5        |
+| 未知           | 由于其他原因脱机或无法与 Intune 或 Azure AD 通信的设备数量。                                                                           | 13       |
+| notApplicable     | 对于管理员指定的设备符合性策略不适用的设备数。                                                                                     | 3        |
+| 符合         | 已成功应用管理员指定的一个或多个设备符合性策略的设备数。                                                                        | 45       |
+| inGracePeriod     | 不符合要求但处于管理员定义的宽限期内的设备数。                                                                                  | 3        |
+| nonCompliant      | 为后列情况的设备数：未能应用由管理员指定的一个或多个设备符合性策略，或其用户未遵守管理员指定的策略。 | 7        |
+| error             | 无法与 Intune 或 Azure AD 通信，以及返回了错误信息的设备数量。                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
 |      属性      |                       说明                      |
@@ -129,24 +129,24 @@ appType 实体列出了应用的安装源。
 
 |     属性    |                       说明                      |    示例    |
 |-----------------|--------------------------------------------------------|---------------|
-| DateKey         | 数据仓库中此日期的唯一标识符。 | 20160703      |
-| FullDate        | 此日期以完整日期/时间格式表示。        | 2016/7/3 0:00 |
-| DayOfWeek       | 星期几                                            | 1             |
-| DayOfMonth      | 几月几日                                           | 3             |
-| DayOfYear       | 当年的哪天                                            | 185           |
-| WeekOfYear      | 当年的哪周                                           | 28            |
-| MonthOfYear     | 当年的哪月                                      | 7             |
-| CalendarQuarter | 日历季度                                       | 3             |
-| CalendarYear    | 日历年                                          | 2016          |
-| DateKey         | 数据仓库中此日期的唯一标识符。 | 20160703      |
-| FullDate        | 此日期以完整日期/时间格式表示。        | 2016/7/3 0:00 |
-| DayOfWeek       | 星期几                                            | 1             |
-| DayOfMonth      | 几月几日                                           | 3             |
-| DayOfYear       | 当年的哪天                                            | 185           |
-| WeekOfYear      | 当年的哪周                                           | 28            |
-| MonthOfYear     | 当年的哪月                                      | 7             |
-| CalendarQuarter | 日历季度                                       | 3             |
-| CalendarYear    | 日历年                                          | 2016          |
+| dateKey         | 数据仓库中此日期的唯一标识符。 | 20160703      |
+| fullDate        | 此日期以完整日期/时间格式表示。        | 2016/7/3 0:00 |
+| dayOfWeek       | 星期几                                            | 1             |
+| dayOfMonth      | 几月几日                                           | 3             |
+| dayOfYear       | 当年的哪天                                            | 185           |
+| weekOfYear      | 当年的哪周                                           | 28            |
+| monthOfYear     | 当年的哪月                                      | 7             |
+| calendarQuarter | 日历季度                                       | 3             |
+| calendarYear    | 日历年                                          | 2016          |
+| dateKey         | 数据仓库中此日期的唯一标识符。 | 20160703      |
+| fullDate        | 此日期以完整日期/时间格式表示。        | 2016/7/3 0:00 |
+| dayOfWeek       | 星期几                                            | 1             |
+| dayOfMonth      | 几月几日                                           | 3             |
+| dayOfYear       | 当年的哪天                                            | 185           |
+| weekOfYear      | 当年的哪周                                           | 28            |
+| monthOfYear     | 当年的哪月                                      | 7             |
+| calendarQuarter | 日历季度                                       | 3             |
+| calendarYear    | 日历年                                          | 2016          |
 
 ## <a name="devicecategories"></a>deviceCategories
 
@@ -161,38 +161,38 @@ DeviceConfigurationProfileDeviceActivity 实体列出每天处于成功、挂起
 
 |  属性 |                                          说明                                          |  示例 |
 |-----------|-----------------------------------------------------------------------------------------------|----------|
-| DateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703 |
-| Pending   | 处于挂起状态的唯一设备数。                                                    | 123      |
+| dateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703 |
+| 挂起   | 处于挂起状态的唯一设备数。                                                    | 123      |
 | 成功 | 处于成功状态的唯一设备数。                                                    | 12       |
-| 错误     | 处于错误状态的唯一设备数。                                                      | 10       |
-| Failed    | 处于失败状态的唯一设备数。                                                     | 2        |
+| error     | 处于错误状态的唯一设备数。                                                      | 10       |
+| “失败”    | 处于失败状态的唯一设备数。                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 DeviceConfigurationProfileUserActivity 实体列出每天处于成功、挂起、失败或错误状态的用户数。 该数字反映了分配给该实体的设备配置文件。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 DeviceConfigurationProfileUserActivity 实体列出了过去 30 天内给定某天中处于各状态的用户数。 
 
 | 属性  | 说明  | 示例  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
-| DateKey  | 日期键，表明在数据仓库中记录设备配置文件签入的时间。  | 20160703  |
-| Pending  | 处于挂起状态的唯一用户数。  | 123  |
+| dateKey  | 日期键，表明在数据仓库中记录设备配置文件签入的时间。  | 20160703  |
+| 挂起  | 处于挂起状态的唯一用户数。  | 123  |
 | 成功  | 处于成功状态的唯一用户数。  | 12  |
-| 错误  | 处于错误状态的唯一用户数。  | 10  |
-| Failed  | 处于失败状态的唯一用户数。  | 2  |
+| error  | 处于错误状态的唯一用户数。  | 10  |
+| “失败”  | 处于失败状态的唯一用户数。  | 2  |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          属性          |                                                                                      说明                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DateKey                    | 引用日期表格，该表格表明当日日期。                                                                                                                                          |
-| DeviceKey                  | 数据仓库中设备的唯一标识符 - 代理键。 这是对包含 Intune 设备 ID 的设备表格的引用。                               |
-| DeviceName                 | 允许对设备命名的平台上设备的名称。 在其他平台上，Intune 从其他属性创建名称。 此属性不可同时用于所有设备。 |
-| DeviceRegistrationStateKey | 此设备的设备注册状态属性的键。                                                                                                                    |
-| OwnerTypeKey               | 此设备的所有者类型属性的键：企业、个人或未知。                                                                                                  |
-| ManagementStateKey         | 与此设备关联的管理状态键，表明远程操作的最新状态或设备是否越狱/获取了 root 权限。                                                |
-| AzureADRegistered          | 是否在 Azure Active Directory 中注册了该设备。                                                                                                                             |
-| ComplianceStateKey         | ComplianceState 的键。                                                                                                                                                            |
-| OSVersion                  | 操作系统版本。                                                                                                                                                                          |
-| JailBroken                 | 设备是否越狱或取得 root 权限。                                                                                                                                         |
-| DeviceCategoryKey          | 此设备的设备类别属性的键。                                                                                                                                    |
+| dateKey                    | 引用日期表格，该表格表明当日日期。                                                                                                                                          |
+| deviceKey                  | 数据仓库中设备的唯一标识符 - 代理键。 这是对包含 Intune 设备 ID 的设备表格的引用。                               |
+| deviceName                 | 允许对设备命名的平台上设备的名称。 在其他平台上，Intune 从其他属性创建名称。 此属性不可同时用于所有设备。 |
+| deviceRegistrationStateKey | 此设备的设备注册状态属性的键。                                                                                                                    |
+| ownerTypeKey               | 此设备的所有者类型属性的键：企业、个人或未知。                                                                                                  |
+| managementStateKey         | 与此设备关联的管理状态键，表明远程操作的最新状态或设备是否越狱/获取了 root 权限。                                                |
+| azureADRegistered          | 是否在 Azure Active Directory 中注册了该设备。                                                                                                                             |
+| complianceStateKey         | ComplianceState 的键。                                                                                                                                                            |
+| oSVersion                  | 操作系统版本。                                                                                                                                                                          |
+| jailBroken                 | 设备是否越狱或取得 root 权限。                                                                                                                                         |
+| deviceCategoryKey          | 此设备的设备类别属性的键。                                                                                                                                    |
 | physicalMemoryInBytes      | 物理内存（以字节为单位）。                                                                                                                                    |
 | totalStorageSpaceInBytes      | 总存储容量（以字节为单位）。                                                                                                                                    |
 
@@ -205,56 +205,56 @@ DeviceRegistrationState 实体表示由其他数据仓库收集引用的注册�
 | deviceRegistrationStateID   | 注册状态的唯一标识符                                            |
 | deviceRegistrationStateKey  | 数据仓库中注册状态的唯一标识符 - 代理键 |
 | deviceRegistrationStateName | 注册状态                                                                  |
-|    NotRegistered                     |    未注册                                                                                                                                                                  |
-|    已注册                        |       已注册                                                                                                                                                                   |
-|    已吊销                           |       此状态表示 IT 管理员已阻止客户端，可取消阻止该客户端。 擦除或停用设备后，设备也可能处于“吊销”状态。        |
-|    KeyConflict                       |    键冲突                                                                                                                                                                    |
-|    ApprovalPending                   |    批准挂起                                                                                                                                                                |
-|    CertificateReset                  |    重置证书                                                                                                                                                               |
-|    NotRegisteredPendingEnrollment    |    未注册的挂起登记                                                                                                                                               |
-|    Unknown                           |    未知状态                                                                                                                                                                   |
+|    notRegistered                     |    未注册                                                                                                                                                                  |
+|    注册                        |       已注册                                                                                                                                                                   |
+|    revoked                           |       此状态表示 IT 管理员已阻止客户端，可取消阻止该客户端。 擦除或停用设备后，设备也可能处于“吊销”状态。        |
+|    keyConflict                       |    键冲突                                                                                                                                                                    |
+|    approvalPending                   |    批准挂起                                                                                                                                                                |
+|    certificateReset                  |    重置证书                                                                                                                                                               |
+|    notRegisteredPendingEnrollment    |    未注册的挂起登记                                                                                                                                               |
+|    未知                           |    未知状态                                                                                                                                                                   |
 
 ## <a name="devices"></a>设备
 设备实体列出受管理的所有已注册设备及相应属性。
 
 |          属性          |                                                                                       说明                                                                                      |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DeviceKey                  | 数据仓库中设备的唯一标识符 - 代理键。                                                                                                               |
-| DeviceId                   | 设备的唯一标识符。                                                                                                                                                     |
-| DeviceName                 | 允许对设备命名的平台上设备的名称。 在其他平台上，Intune 从其他属性创建名称。 此属性不可同时用于所有设备。 |
-| DeviceTypeKey              | 此设备的设备类型属性的键。                                                                                                                                    |
-| DeviceRegistrationState    | 此设备的客户端注册状态属性的键。                                                                                                                      |
-| OwnerTypeKey               | 此设备的所有者类型属性的键：企业、个人或未知。                                                                                                    |
-| EnrolledDateTime           | 设备注册的日期和时间。                                                                                                                                         |
+| deviceKey                  | 数据仓库中设备的唯一标识符 - 代理键。                                                                                                               |
+| deviceId                   | 设备的唯一标识符。                                                                                                                                                     |
+| deviceName                 | 允许对设备命名的平台上设备的名称。 在其他平台上，Intune 从其他属性创建名称。 此属性不可同时用于所有设备。 |
+| deviceTypeKey              | 此设备的设备类型属性的键。                                                                                                                                    |
+| deviceRegistrationState    | 此设备的客户端注册状态属性的键。                                                                                                                      |
+| ownerTypeKey               | 此设备的所有者类型属性的键：企业、个人或未知。                                                                                                    |
+| enrolledDateTime           | 设备注册的日期和时间。                                                                                                                                         |
 | ethernetMacAddress           | 此设备的唯一网络标识符。                                                                                                                                         |
-| LastSyncDateTime           | 使用 Intune 签入的上一已知设备。                                                                                                                                              |
-| ManagementAgentKey         | 与此设备关联的管理代理键。                                                                                                                             |
-| ManagementStateKey         | 与此设备关联的管理状态键，表明远程操作的最新状态或设备是否越狱/获取了 root 权限。                                                |
-| AzureADDeviceId            | 此设备 Azure deviceID。                                                                                                                                                  |
-| AzureADRegistered          | 是否在 Azure Active Directory 中注册了该设备。                                                                                                                             |
-| DeviceCategoryKey          | 与此设备关联的类别的键。                                                                                                                                     |
-| DeviceEnrollmentType       | 与此设备关联的注册类型的键，表明注册方法。                                                                                             |
-| ComplianceStateKey         | 与此设备关联的符合性状态的键。                                                                                                                             |
+| lastSyncDateTime           | 使用 Intune 签入的上一已知设备。                                                                                                                                              |
+| managementAgentKey         | 与此设备关联的管理代理键。                                                                                                                             |
+| managementStateKey         | 与此设备关联的管理状态键，表明远程操作的最新状态或设备是否越狱/获取了 root 权限。                                                |
+| azureADDeviceId            | 此设备 Azure deviceID。                                                                                                                                                  |
+| azureADRegistered          | 是否在 Azure Active Directory 中注册了该设备。                                                                                                                             |
+| deviceCategoryKey          | 与此设备关联的类别的键。                                                                                                                                     |
+| deviceEnrollmentType       | 与此设备关联的注册类型的键，表明注册方法。                                                                                             |
+| complianceStateKey         | 与此设备关联的符合性状态的键。                                                                                                                             |
 | office365Version           | 设备上安装的 Microsoft 365 版本。                                                                                                                             |
-| OSVersion                  | 设备的操作系统版本。                                                                                                                                                |
-| EasDeviceId                | 设备的 Exchange ActiveSync ID。                                                                                                                                                  |
-| SerialNumber               | SerialNumber                                                                                                                                                                           |
-| UserId                     | 与设备关联的用户的唯一标识符。                                                                                                                           |
-| RowLastModifiedDateTimeUTC | 上次在数据仓库中修改此设备时的 UTC 日期和时间。                                                                                                       |
+| oSVersion                  | 设备的操作系统版本。                                                                                                                                                |
+| easDeviceId                | 设备的 Exchange ActiveSync ID。                                                                                                                                                  |
+| serialNumber               | SerialNumber                                                                                                                                                                           |
+| userId                     | 与设备关联的用户的唯一标识符。                                                                                                                           |
+| rowLastModifiedDateTimeUTC | 上次在数据仓库中修改此设备时的 UTC 日期和时间。                                                                                                       |
 | 制造商               | 设备制造商                                                                                                                                                             |
-| 型号                      | 设备型号                                                                                                                                                                    |
-| OperatingSystem            | 设备的操作系统。 Windows、iOS/iPadOS 等。                                                                                                                                   |
-| IsDeleted                  | 显示设备是否被删除的二进制文件。                                                                                                                                 |
-| AndroidSecurityPatchLevel  | Android 安全修补程序级别                                                                                                                                                           |
-| MEID                       | MEID                                                                                                                                                                                   |
+| model                      | 设备型号                                                                                                                                                                    |
+| operatingSystem            | 设备的操作系统。 Windows、iOS/iPadOS 等。                                                                                                                                   |
+| isDeleted                  | 显示设备是否被删除的二进制文件。                                                                                                                                 |
+| androidSecurityPatchLevel  | Android 安全修补程序级别                                                                                                                                                           |
+| mEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | 设备受监督的状态                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | 可用存储（以字节为单位）。                                                                                                                                                                 |
-| EncryptionState            | 设备的加密状态。                                                                                                                                                      |
-| SubscriberCarrier          | 设备的订阅者运营商                                                                                                                                                       |
-| PhoneNumber                | 设备的电话号码                                                                                                                                                             |
-| IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | 设备的移动电话技术。                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC。                                                                                                                                                                              |
+| freeStorageSpaceInBytes    | 可用存储（以字节为单位）。                                                                                                                                                                 |
+| encryptionState            | 设备的加密状态。                                                                                                                                                      |
+| subscriberCarrier          | 设备的订阅者运营商                                                                                                                                                       |
+| phoneNumber                | 设备的电话号码                                                                                                                                                             |
+| iMEI                       | IMEI                                                                                                                                                                                   |
+| cellularTechnology         | 设备的移动电话技术。                                                                                                                                                    |
+| wiFiMacAddress             | Wi-Fi MAC。                                                                                                                                                                              |
 | windowsOsEdition             | Windows 操作系统版本。                                                                                                                                                                              |
 
 
@@ -263,9 +263,9 @@ deviceType 实体表示由其他数据仓库实体引用的设备类型。 设�
 
 |    属性    |                                  说明                                 |
 |----------------|------------------------------------------------------------------------------|
-| DeviceTypeID   | 设备类型的唯一标识符                                       |
-| DeviceTypeKey  | 数据仓库中设备类型的唯一标识符 - 代理键 |
-| DeviceTypeName | 设备类型                                                                |
+| deviceTypeID   | 设备类型的唯一标识符                                       |
+| deviceTypeKey  | 数据仓库中设备类型的唯一标识符 - 代理键 |
+| deviceTypeName | 设备类型                                                                |
 
 ### <a name="example"></a>示例
 
@@ -412,27 +412,27 @@ intuneManagementExtension 列出每日在每台 Windows 10 设备上的 intuneMa
 
 |       属性      |                          说明                          | 示例 |
 |---------------------|---------------------------------------------------------------|---------|
-| DateKey             | 日期的唯一标识符。                                | 123     |
-| TenantKey           | 租户的唯一标识符。                              | 456     |
-| DeviceKey           | 设备的唯一标识符。                              | 789     |
-| ExtensionVersionKey | IntuneManagementExtension 版本的唯一标识符。 | 1       |
-| ExtensionStateKey   | 运行状况状态的唯一标识符。                            | 2       |
+| dateKey             | 日期的唯一标识符。                                | 123     |
+| tenantKey           | 租户的唯一标识符。                              | 456     |
+| deviceKey           | 设备的唯一标识符。                              | 789     |
+| extensionVersionKey | IntuneManagementExtension 版本的唯一标识符。 | 1       |
+| extensionStateKey   | 运行状况状态的唯一标识符。                            | 2       |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 IntuneManagementExtensionHealthState 列出 IntuneManagementExtension 的所有可能运行状况状态。
 
 |      属性     |                   说明                  | 示例 |
 |-------------------|------------------------------------------------|---------|
-| ExtensionStateKey | 运行状况状态的唯一标识符。           | 2       |
-| ExtensionState    | IntuneManagementExtension 的运行状况状态。 | Healthy |
+| extensionStateKey | 运行状况状态的唯一标识符。           | 2       |
+| extensionState    | IntuneManagementExtension 的运行状况状态。 | Healthy |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 IntuneManagementExtensionVersion 实体列出 IntuneManagementExtension 使用的所有版本。
 
 |       属性      |                          说明                          | 示例 |
 |---------------------|---------------------------------------------------------------|---------|
-| ExtensionVersionKey | IntuneManagementExtension 版本的唯一标识符。 | 1       |
-| ExtensionVersion    | 4 位版本号。                                   | 1.0.2.0 |
+| extensionVersionKey | IntuneManagementExtension 版本的唯一标识符。 | 1       |
+| extensionVersion    | 4 位版本号。                                   | 1.0.2.0 |
 
 ## <a name="mamapplications"></a>MamApplications
 
@@ -443,10 +443,10 @@ MamApplication 实体列出了未在企业中注册便通过移动应用程序�
 | mamApplicationKey |MAM 应用程序的唯一标识符。 | 432 |
 | mamApplicationName |MAM 应用程序的名称。 |MAM 应用程序示例名称 |
 | mamApplicationId |MAM 应用程序的应用程序 ID。 | 123 |
-| IsDeleted |表明是否已更新此 MAM 应用记录。 <br>True - MAM 应用拥有新纪录，其中含有此表中的更新的字段。 <br>False - 此 MAM 应用的最新记录。 |True/False |
-| StartDateInclusiveUTC |在数据仓库中创建此 MAM 应用时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
-| DeletedDateUTC |IsDeleted 更改为 True 时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
-| RowLastModifiedDateTimeUTC |上次在数据仓库中修改此 MAM 应用时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
+| isDeleted |表明是否已更新此 MAM 应用记录。 <br>True - MAM 应用拥有新纪录，其中含有此表中的更新的字段。 <br>False - 此 MAM 应用的最新记录。 |True/False |
+| startDateInclusiveUTC |在数据仓库中创建此 MAM 应用时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
+| deletedDateUTC |IsDeleted 更改为 True 时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
+| rowLastModifiedDateTimeUTC |上次在数据仓库中修改此 MAM 应用时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
 
 
 ## <a name="mamapplicationinstances"></a>MamApplicationInstances
@@ -456,22 +456,22 @@ MamApplicationInstance 实体将托管移动应用程序管理 (MAM) 应用列�
 
 |          属性          |                                                                                                  说明                                                                                                  |               示例                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-|   ApplicationInstanceKey   |                                                               数据仓库中 MAM 应用实例的唯一标识符 - 代理键。                                                                |                 123                  |
-|           UserId           |                                                                              已安装此 MAM 应用的用户的用户 ID。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
-|   ApplicationInstanceId    |                                              MAM 应用实例的唯一标识符 - 类似于 ApplicationInstanceKey，但该标识符是自然键。                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceKey   |                                                               数据仓库中 MAM 应用实例的唯一标识符 - 代理键。                                                                |                 123                  |
+|           userId           |                                                                              已安装此 MAM 应用的用户的用户 ID。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceId    |                                              MAM 应用实例的唯一标识符 - 类似于 ApplicationInstanceKey，但该标识符是自然键。                                              | b66bc706-ffff-7437-0340-032819502773 |
 | mamApplicationId | 创建此 MAM 应用程序实例的 MAM 应用程序的应用程序 ID。   | 2016/11/23 - 中午 12:00:00   |
-|     ApplicationVersion     |                                                                                     此 MAM 应用的应用程序版本。                                                                                      |                  2                   |
-|        CreatedDate         |                                                                 创建此 MAM 应用实例记录的日期。 该值可以为 null。                                                                 |        2016/11/23 - 中午 12:00:00        |
+|     applicationVersion     |                                                                                     此 MAM 应用的应用程序版本。                                                                                      |                  2                   |
+|        createdDate         |                                                                 创建此 MAM 应用实例记录的日期。 该值可以为 null。                                                                 |        2016/11/23 - 中午 12:00:00        |
 |          平台          |                                                                          安装此 MAM 应用的设备平台。                                                                           |                  2                   |
-|      PlatformVersion       |                                                                      安装此 MAM 应用的设备的平台版本。                                                                       |                 2.2                  |
-|         SdkVersion         |                                                                            包装此 MAM 应用时所使用的 MAM SDK 版本。                                                                            |                 3.2                  |
+|      platformVersion       |                                                                      安装此 MAM 应用的设备的平台版本。                                                                       |                 2.2                  |
+|         sdkVersion         |                                                                            包装此 MAM 应用时所使用的 MAM SDK 版本。                                                                            |                 3.2                  |
 | mamDeviceId | 与 MAM 应用程序实例关联的设备的设备 ID。   | 2016/11/23 - 中午 12:00:00   |
 | mamDeviceType | 与 MAM 应用程序实例关联的设备的设备类型。   | 2016/11/23 - 中午 12:00:00   |
 | mamDeviceName | 与 MAM 应用程序实例关联的设备的设备名。   | 2016/11/23 - 中午 12:00:00   |
-|         IsDeleted          | 表明是否已更新此 MAM 应用实例记录。 <br>True - 此 MAM 应用实例拥有新纪录，其中含有此表中的更新的字段。 <br>False - 此 MAM 应用实例的最新记录。 |              True/False              |
-|   StartDateInclusiveUtc    |                                                              在数据仓库中创建此 MAM 应用实例时的 UTC 日期和时间。                                                               |        2016/11/23 - 中午 12:00:00        |
-|       DeletedDateUtc       |                                                                             IsDeleted 更改为 True 时的 UTC 日期和时间。                                                                              |        2016/11/23 - 中午 12:00:00        |
-| RowLastModifiedDateTimeUtc |                                                           上次在数据仓库中修改此 MAM 应用实例时的 UTC 日期和时间。                                                            |        2016/11/23 - 中午 12:00:00        |
+|         isDeleted          | 表明是否已更新此 MAM 应用实例记录。 <br>True - 此 MAM 应用实例拥有新纪录，其中含有此表中的更新的字段。 <br>False - 此 MAM 应用实例的最新记录。 |              True/False              |
+|   startDateInclusiveUtc    |                                                              在数据仓库中创建此 MAM 应用实例时的 UTC 日期和时间。                                                               |        2016/11/23 - 中午 12:00:00        |
+|       deletedDateUtc       |                                                                             IsDeleted 更改为 True 时的 UTC 日期和时间。                                                                              |        2016/11/23 - 中午 12:00:00        |
+| rowLastModifiedDateTimeUtc |                                                           上次在数据仓库中修改此 MAM 应用实例时的 UTC 日期和时间。                                                            |        2016/11/23 - 中午 12:00:00        |
 
 ## <a name="mamcheckins"></a>MamCheckins
 
@@ -482,13 +482,13 @@ MamCheckin 实体表示使用 Intune 服务签入移动应用程序管理 (MAM) 
 
 | 属性 | 说明 | 示例 |
 |---------|------------|--------|
-| DateKey |日期键，表明在数据仓库中记录 MAM 应用签入的时间。 | 20160703 |
-| ApplicationInstanceKey |与此 MAM 应用签入关联的应用实例的键。 | 123 |
-| UserKey |与此 MAM 应用签入关联的用户的键。 | 4323 |
+| dateKey |日期键，表明在数据仓库中记录 MAM 应用签入的时间。 | 20160703 |
+| applicationInstanceKey |与此 MAM 应用签入关联的应用实例的键。 | 123 |
+| userKey |与此 MAM 应用签入关联的用户的键。 | 4323 |
 | mamApplicationKey |与 MAM 应用程序签入相关联的应用程序的应用程序密钥。 | 432 |
-| DeviceHealthKey |与此 MAM 应用签入关联的 DeviceHealth 的键。 | 321 |
-| PlatformKey |表示与此 MAM 应用签入关联的设备的平台。 |123 |
-| LastCheckInDate |上次签入此 MAM 应用的日期和时间。 该值可以为 null。 |2016/11/23 - 中午 12:00:00 |
+| deviceHealthKey |与此 MAM 应用签入关联的 DeviceHealth 的键。 | 321 |
+| platformKey |表示与此 MAM 应用签入关联的设备的平台。 |123 |
+| lastCheckInDate |上次签入此 MAM 应用的日期和时间。 该值可以为 null。 |2016/11/23 - 中午 12:00:00 |
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 
@@ -496,10 +496,10 @@ MamDeviceHealth 实体表示部署有移动应用管理 (MAM) 策略的设备（
 
 | 属性 | 说明 | 示例 |
 |---------|------------|--------|
-| DeviceHealthKey |数据仓库中设备及其相关运行状况的唯一标识符 - 代理键。 |123 |
-| DeviceHealth |设备及其相关运行状况的的唯一标识符 - 类似于 DeviceHealthKey，但该标识符是自然键。 |b66bc706-ffff-7777-0340-032819502773 |
-| DeviceHealthName |表示设备的状态。 <br>不可用 - 此设备上没有信息。 <br>正常 - 设备未越狱。 <br>不正常 - 设备已越狱。 |不可用 正常 不正常 |
-| RowLastModifiedDateTimeUtc |上次在数据仓库中修改此特定 MAM 设备运行状况时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
+| deviceHealthKey |数据仓库中设备及其相关运行状况的唯一标识符 - 代理键。 |123 |
+| deviceHealth |设备及其相关运行状况的的唯一标识符 - 类似于 DeviceHealthKey，但该标识符是自然键。 |b66bc706-ffff-7777-0340-032819502773 |
+| deviceHealthName |表示设备的状态。 <br>不可用 - 此设备上没有信息。 <br>正常 - 设备未越狱。 <br>不正常 - 设备已越狱。 |不可用 正常 不正常 |
+| rowLastModifiedDateTimeUtc |上次在数据仓库中修改此特定 MAM 设备运行状况时的 UTC 日期和时间。 |2016/11/23 - 中午 12:00:00 |
 
 ## <a name="mamplatforms"></a>MamPlatforms
 
@@ -508,19 +508,19 @@ MamPlatform 实体列出了安装有移动应用程序管理 (MAM) 应用的平�
 
 |          属性          |                                    说明                                    |                         示例                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
-|        PlatformKey         |     数据仓库中平台的唯一标识符 - 代理键。      |                           123                           |
+|        platformKey         |     数据仓库中平台的唯一标识符 - 代理键。      |                           123                           |
 |          平台          | 平台的唯一标识符 - 类似于 PlatformKey，但该标识符是自然键。 |                           123                           |
-|        PlatformName        |                                   平台名称                                   | 不可用 <br>无 <br>Windows <br>IOS <br>Android。 |
-| RowLastModifiedDateTimeUtc | 上次在数据仓库中修改此平台时的 UTC 日期和时间。  |                 2016/11/23 - 中午 12:00:00                  |
+|        platformName        |                                   平台名称                                   | 不可用 <br>无 <br>Windows <br>IOS <br>Android。 |
+| rowLastModifiedDateTimeUtc | 上次在数据仓库中修改此平台时的 UTC 日期和时间。  |                 2016/11/23 - 中午 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 managementAgentType 实体表示用于管理设备的代理。
 
 |         属性        |                                       说明                                       |
 |-------------------------|-----------------------------------------------------------------------------------------|
-| ManagementAgentTypeID   | 管理代理类型的唯一标识符。                                         |
-| ManagementAgentTypeKey  | 数据仓库中管理代理类型的唯一标识符 - 代理键。 |
-| ManagementAgentTypeName | 表明用于管理设备的代理类型。                              |
+| managementAgentTypeID   | 管理代理类型的唯一标识符。                                         |
+| managementAgentTypeKey  | 数据仓库中管理代理类型的唯一标识符 - 代理键。 |
+| managementAgentTypeName | 表明用于管理设备的代理类型。                              |
 
 ### <a name="example"></a>示例
 
@@ -569,21 +569,21 @@ MobileAppInstallState 实体表示已分配到包含设备和/或用户的组的
 
 |       属性      |                        说明                       |
 |---------------------|----------------------------------------------------------|
-| AppInstallStateKey  | 帐户的应用安装状态的唯一 ID。 |
-| AppInstallState     | 应用安装状态的枚举值。                     |
-| AppInstallStateName | 应用安装状态的名称。                           |
+| appInstallStateKey  | 帐户的应用安装状态的唯一 ID。 |
+| appInstallState     | 应用安装状态的枚举值。                     |
+| appInstallStateName | 应用安装状态的名称。                           |
 
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 表示通过 Microsoft Intune 使用移动应用程序管理的给定目标设备类型的移动应用安装状态。
 
 |      属性      |                                                          说明                                                          |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| DateKey            | 记录应用安装状态的当天日期的键。                                                                     |
-| AppKey             | 用于标识 AppRevision 实例的移动应用键。                                                          |
-| DeviceTypeKey      | 与移动应用程序关联的设备类型的键。                                                              |
-| AppInstallStateKey | 用于标识 MobileAppInstallState 实例的应用安装状态键。                                         |
-| 错误代码          | 应用安装程序、移动平台或与应用安装相关的服务返回的错误代码。 |
-| 计数              | 总计数。                                                                                                                  |
+| dateKey            | 记录应用安装状态的当天日期的键。                                                                     |
+| appKey             | 用于标识 AppRevision 实例的移动应用键。                                                          |
+| deviceTypeKey      | 与移动应用程序关联的设备类型的键。                                                              |
+| appInstallStateKey | 用于标识 MobileAppInstallState 实例的应用安装状态键。                                         |
+| errorCode          | 应用安装程序、移动平台或与应用安装相关的服务返回的错误代码。 |
+| count              | 总计数。                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 ownerType 实体表明拥有设备的是公司、个人还是未知对象。
@@ -602,67 +602,67 @@ ownerType 实体表明拥有设备的是公司、个人还是未知对象。
 
 |          属性          |                                                                       说明                                                                      |                示例               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| PolicyKey                  | 表示数据仓库中策略的唯一键。                                                                                              | 123                                  |
-| PolicyId                   | 数据仓库中策略的唯一标识符。                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName                 | 策略名称。                                                                                                                                    | “Windows 10 基线”                |
-| PolicyVersion              | 策略版本。 编辑或更改策略即会创建一个更新的策略版本。                                                             | 1, 2, 3                              |
-| IsDeleted                  | 表明是否已更新策略记录。  True - 策略拥有新纪录，其中含有更新的字段。  False - 策略的最新记录。 | True/False                           |
-| StartDateInclusiveUTC      | 在数据仓库中创建策略时的 UTC 日期和时间。                                                                              | 2016/11/23 0:00                      |
-| DeletedDateUTC             | IsDeleted 更改为 True 时的 UTC 日期和时间。                                                                                                   | 2016/11/23 0:00                      |
-| RowLastModifiedDateTimeUTC | 上次在数据仓库中修改策略时的 UTC 日期和时间。                                                                        | 2016/11/23 0:00                      |
+| policyKey                  | 表示数据仓库中策略的唯一键。                                                                                              | 123                                  |
+| policyId                   | 数据仓库中策略的唯一标识符。                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
+| policyName                 | 策略名称。                                                                                                                                    | “Windows 10 基线”                |
+| policyVersion              | 策略版本。 编辑或更改策略即会创建一个更新的策略版本。                                                             | 1, 2, 3                              |
+| isDeleted                  | 表明是否已更新策略记录。  True - 策略拥有新纪录，其中含有更新的字段。  False - 策略的最新记录。 | True/False                           |
+| startDateInclusiveUTC      | 在数据仓库中创建策略时的 UTC 日期和时间。                                                                              | 2016/11/23 0:00                      |
+| deletedDateUTC             | IsDeleted 更改为 True 时的 UTC 日期和时间。                                                                                                   | 2016/11/23 0:00                      |
+| rowLastModifiedDateTimeUTC | 上次在数据仓库中修改策略时的 UTC 日期和时间。                                                                        | 2016/11/23 0:00                      |
 
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 下表列出了每天处于成功、挂起、失败或错误状态的设备数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某设备的所有策略，该设备均为成功状态，则当天的成功计数增加一。 如果向设备分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则实体会增加成功计数，同时让设备处于错误状态。 policyDeviceActivity 实体列出了过去 30 天中给定某天中处于各状态的设备数。
 
 |  属性 |                                           说明                                           |        示例        |
 |-----------|-------------------------------------------------------------------------------------------------|-----------------------|
-| DateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703              |
-| Pending   | 处于挂起状态的唯一设备数。                                                    | 123                   |
+| dateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703              |
+| 挂起   | 处于挂起状态的唯一设备数。                                                    | 123                   |
 | 成功 | 处于成功状态的唯一设备数。                                                    | 12                    |
-| PolicyKey | 策略键，可将其与策略相联接以获取 policyName。                                  | Windows 10 基线 |
-| 错误     | 处于错误状态的唯一设备数。                                                      | 10                    |
-| Failed    | 处于失败状态的唯一设备数。                                                     | 2                     |
+| policyKey | 策略键，可将其与策略相联接以获取 policyName。                                  | Windows 10 基线 |
+| error     | 处于错误状态的唯一设备数。                                                      | 10                    |
+| “失败”    | 处于失败状态的唯一设备数。                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        属性        |                      说明                      |     示例    |
 |------------------------|-------------------------------------------------------|----------------|
-| PolicyPlatformTypeKey  | 策略平台类型的唯一键。        | 20170519       |
-| PolicyPlatformTypeId   | 策略平台类型的唯一标识符。 | 1              |
-| PolicyPlatformTypeName | 策略平台类型的名称。              | AndroidForWork |
+| policyPlatformTypeKey  | 策略平台类型的唯一键。        | 20170519       |
+| policyPlatformTypeId   | 策略平台类型的唯一标识符。 | 1              |
+| policyPlatformTypeName | 策略平台类型的名称。              | AndroidForWork |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 PolicyTypeActivity 列出了处于成功、挂起、失败或错误状态的总设备数。 它列出了每天与设备配置文件、应用配置文件或符合性策略相关的这些状态。
 
 |    属性   |                                          说明                                          |           示例           |
 |---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| DateKey       | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703                    |
-| PolicyKey     | 策略键，可将其与策略相联接以获取 policyName。                                | Windows 10 基线         |
-| PolicyTypeKey | 策略键类型，可将其与策略类型相联接以获取策略类型名称。             | Windows10 符合性策略 |
-| Pending       | 处于挂起状态的唯一设备数。                                                    | 123                         |
+| dateKey       | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703                    |
+| policyKey     | 策略键，可将其与策略相联接以获取 policyName。                                | Windows 10 基线         |
+| policyTypeKey | 策略键类型，可将其与策略类型相联接以获取策略类型名称。             | Windows10 符合性策略 |
+| 挂起       | 处于挂起状态的唯一设备数。                                                    | 123                         |
 | 成功     | 处于成功状态的唯一设备数。                                                    | 12                          |
-| 错误         | 处于错误状态的唯一设备数。                                                      | 10                          |
-| Failed        | 处于失败状态的唯一设备数。                                                     | 2                           |
+| error         | 处于错误状态的唯一设备数。                                                      | 10                          |
+| “失败”        | 处于失败状态的唯一设备数。                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
 PolicyType 实体列出了设备配置文件、应用配置文件和符合性策略的类型。 可使用移动设备管理 (MDM) 将策略分配给企业中的一个组。
 
 |    属性    |                       说明                      |            示例            |
 |----------------|--------------------------------------------------------|-------------------------------|
-| PolicyTypeId   | 源系统中的策略的唯一标识符。  | 123                           |
-| PolicyTypeKey  | 数据仓库中策略的唯一标识符。 | 1                             |
-| PolicyTypeName | 策略类型名称。                               | Windows 10 符合性策略。 |
+| policyTypeId   | 源系统中的策略的唯一标识符。  | 123                           |
+| policyTypeKey  | 数据仓库中策略的唯一标识符。 | 1                             |
+| policyTypeName | 策略类型名称。                               | Windows 10 符合性策略。 |
 
 ## <a name="policyuseractivities"></a>policyUserActivities
 下表列出了每天处于成功、挂起、失败或错误状态的用户数。 此数字反映每个策略类型配置文件的数据。 例如，如果对于分配给某用户的所有策略，该用户均为成功状态，则当天的成功计数增加一。 如果向用户分配了两个配置文件，一个处于成功状态，另一个处于错误状态，则将用户计为错误状态。 PolicyUserActivity 实体列出了过去 30 天中给定某天中处于各状态的用户数。
 
 |  属性 |                                          说明                                          |       示例       |
 |-----------|-----------------------------------------------------------------------------------------------|---------------------|
-| DateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703            |
-| Pending   | 处于挂起状态的唯一设备数。                                                    | 123                 |
+| dateKey   | 日期键，表明在数据仓库中记录设备配置文件签入的时间。 | 20160703            |
+| 挂起   | 处于挂起状态的唯一设备数。                                                    | 123                 |
 | 成功 | 处于成功状态的唯一设备数。                                                    | 12                  |
-| PolicyKey | 策略键，可将其与策略相联接以获取 policyName。                                | Windows 10 基线 |
-| 错误     | 处于错误状态的唯一设备数。                                                      | 10                  |
+| policyKey | 策略键，可将其与策略相联接以获取 policyName。                                | Windows 10 基线 |
+| error     | 处于错误状态的唯一设备数。                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
 termsAndConditions 实体表示给定条款和条件(T&C) 策略的元数据和内容。 当用户第一次尝试注册 Intune 并随后对管理员要求重新接受的位置进行编辑时，将向其显示 T&C 策略的内容。 它们使管理员能够就用户必须同意的规定进行通信，以使设备注册到 Intune。
@@ -686,11 +686,11 @@ UserDeviceAssociation 实体包含组织中的用户设备关联。
 
 |        名称        |                                             说明                                            |     示例     |
 |--------------------|----------------------------------------------------------------------------------------------------|-----------------|
-| UserKey            | 数据仓库中用户的唯一标识符。   （代理键）。                            | 123             |
-| DeviceKey          | 数据仓库中设备的唯一标识符。                                             | 123             |
-| CreatedDateTimeUTC | 创建用户设备关联时的日期和时间。 使用 UTC 格式。                     | 2016/11/23 0:00 |
-| IsDeleted          | 指示用户已取消设备注册，并且该关联不再活跃。 | True/False      |
-| EndedDateTimeUTC   | IsDeleted 更改为 True 时的 UTC 日期和时间。                                               | 2017/6/23 0:00  |
+| userKey            | 数据仓库中用户的唯一标识符。   （代理键）。                            | 123             |
+| deviceKey          | 数据仓库中设备的唯一标识符。                                             | 123             |
+| createdDateTimeUTC | 创建用户设备关联时的日期和时间。 使用 UTC 格式。                     | 2016/11/23 0:00 |
+| isDeleted          | 指示用户已取消设备注册，并且该关联不再活跃。 | True/False      |
+| endedDateTimeUTC   | IsDeleted 更改为 True 时的 UTC 日期和时间。                                               | 2017/6/23 0:00  |
 
 ## <a name="users"></a>用户
 用户实体列出了企业中分配有许可证的所有 Azure Active Directory (Azure AD) 用户。
@@ -699,14 +699,14 @@ UserDeviceAssociation 实体包含组织中的用户设备关联。
 
 |          属性          |                                                                                                           说明                                                                                                          |                示例               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| UserKey                    | 数据仓库中用户的唯一标识符 - 代理键。                                                                                                                                                         | 123                                  |
-| UserId                     | 用户的唯一标识符 - 类似于 UserKey，但该标识符是自然键。                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | 用户的电子邮件地址。                                                                                                                                                                                                     | John@constoso.com                    |
+| userKey                    | 数据仓库中用户的唯一标识符 - 代理键。                                                                                                                                                         | 123                                  |
+| userId                     | 用户的唯一标识符 - 类似于 UserKey，但该标识符是自然键。                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | 用户的电子邮件地址。                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | 用户的用户主体名称。                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | 用户的显示名称。                                                                                                                                                                                                      | John                                 |
-| IntuneLicensed             | 指定此用户是否获得 Intune 许可。                                                                                                                                                                              | True/False                           |
-| IsDeleted                  | 指示是否所有用户的许可证都已过期，以及是否因此将用户从 Intune 中删除。 对于单个记录，此标志不会更改。 相反，将为新用户状态创建新记录。 | True/False                           |
-| RowLastModifiedDateTimeUTC | 上次在数据仓库中修改记录时的 UTC 日期和时间                                                                                                                                                 | 2016/11/23 0:00                      |
+| displayName                | 用户的显示名称。                                                                                                                                                                                                      | John                                 |
+| intuneLicensed             | 指定此用户是否获得 Intune 许可。                                                                                                                                                                              | True/False                           |
+| isDeleted                  | 指示是否所有用户的许可证都已过期，以及是否因此将用户从 Intune 中删除。 对于单个记录，此标志不会更改。 相反，将为新用户状态创建新记录。 | True/False                           |
+| rowLastModifiedDateTimeUTC | 上次在数据仓库中修改记录时的 UTC 日期和时间                                                                                                                                                 | 2016/11/23 0:00                      |
 
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 userTermsAndConditionsAcceptance 实体表示给定用户给定的条款和条件 (T&C) 策略的接受状态。 用户必须接受最新版本的条款才能继续访问公司门户。
@@ -724,9 +724,9 @@ vppProgramType 实体列出了应用的可能 VPP 计划类型。
 
 |      属性      |          说明         |
 |--------------------|------------------------------|
-| VppProgramTypeID   | 类型 ID。           |
-| VppProgramTypeKey  | 密钥的代理键。 |
-| VppProgramTypeName | VPP 计划类型。          |
+| vppProgramTypeID   | 类型 ID。           |
+| vppProgramTypeKey  | 密钥的代理键。 |
+| vppProgramTypeName | VPP 计划类型。          |
 
 ### <a name="example"></a>示例
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194100"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606960"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 Android Enterprise 设备设置
 
@@ -35,13 +35,13 @@ ms.locfileid: "89194100"
 
 这些设置适用于使用 Intune 控制整个设备的 Android Enterprise 注册类型，如 Android Enterprise 公司拥有的完全托管式专用工作配置文件设备。
 
-并非所有注册类型都支持某些设置。 若要查看哪些设置受哪些注册类型支持，请参阅用户界面。 每个设置下都有一个标头，指示哪些注册类型可以使用该设置。
+并非所有注册类型都支持某些设置。 若要查看哪些设置受哪些注册类型支持，请参阅用户界面。 每个设置上方都有一个标题，指示哪些注册类型可以使用该设置。
 
-![设置标头。](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="在 Microsoft Intune 和 Endpoint Manager 中查看 Android Enterprise 用户和帐户设置标题，以及他们适用的注册类型。":::
 
 某些设置仅在公司拥有的工作配置文件设备的工作配置文件级别适用。 这些设置仍为完全托管式专用设备的应用设备范围。 这些设置在用户界面中用“（工作配置文件级）”描述符进行标记。
 
-![设置标头。](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="在 Microsoft Intune 和 Endpoint Manager 中查看在工作配置文件级别应用的 Android Enterprise 应用程序设置。":::
 
 
 ### <a name="general"></a>常规
@@ -239,7 +239,7 @@ ms.locfileid: "89194100"
 - **完全托管**：在完全托管的设备上配置微软桌面应用。
 
   - **将微软桌面设置为默认桌面**：选择“启用”可将微软桌面设置为主屏幕上的默认桌面。 如果将微软桌面设置为默认桌面，则用户不能使用其他桌面。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，不会强制将微软桌面作为默认桌面。
-  - **配置自定义壁纸**：选择“启用”后，你可以将自己的图像应用为主屏幕壁纸，并选择是否允许用户更改该图像。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，设备将保留其当前壁纸。
+  - **配置自定义壁纸**：在微软桌面应用中，选择“启用”后，你可以将自己的图像应用为主屏幕壁纸，并选择是否允许用户更改该图像。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，设备将保留其当前壁纸。
     - **输入壁纸图像的 URL**：输入壁纸图像的 URL。 此图像在设备主屏幕上显示。 例如，输入 `http://www.contoso.com/image.jpg`。 
     - **允许用户修改壁纸**：选择“启用”后，用户可以更改壁纸图像。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，用户无法更改壁纸。
   - **启用启动器源**：选择“启用”后将启动启动器源，其中显示日历、文档和最近活动。 设置为“未配置”（默认）时，Intune 不会更改或更新此设置。 默认情况下，不显示此源。

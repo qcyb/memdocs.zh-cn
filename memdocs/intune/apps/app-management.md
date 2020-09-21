@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 68336d252cb3d3d3d49cc0c7a32e49e94ba5cdd7
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252299"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012657"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>什么是 Microsoft Intune 应用管理？
 
@@ -103,6 +103,7 @@ Intune 提供各种功能，用于在设备上获取所需的应用，以便在�
     - **** iOS 应用预配配置文件：
 iOS 应用包含一个预配配置文件和一个证书签名的代码。 证书过期后，应用无法再运行。 Intune 提供了一些工具，用于将新的预配配置文件策略主动分配到安装了即将到期应用的设备。 有关详细信息，请参阅 [iOS 应用预配配置文件](app-provisioning-profile-ios.md)。
     - S 模式补充策略  ：选择此选项可授权其他应用程序在托管 S 模式设备上运行。 有关详细信息，请参阅 [S 模式补充策略](apps-win32-s-mode.md)。
+    - Office 应用策略：选择此选项可为连接到 Microsoft 365 服务的 Office 移动应用创建移动应用管理策略。 此外，还可以通过为启用了混合现代身份验证的 iOS/iPadOS 和 Android 的 Outlook 创建 Intune 应用保护策略来保护对 Exchange 本地邮箱的访问。 必须满足使用 Office 应用策略的要求。 有关要求的详细信息，请参阅[使用 Office 云策略服务的要求](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service)。 连接到本地 Exchange 或 SharePoint 服务的其他应用不支持应用保护策略。 要了解相关信息，请参阅[适用于 Microsoft 365 企业应用版的 Office 云策略服务概述](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)。
     - 策略集  ：选择此选项可创建你创建的应用、策略和其他管理对象的可分配集合。 有关详细信息，请参阅[策略集](../fundamentals/policy-sets.md)。
 - 其他  ：   
     - **应用选择性擦除**：选择此选项将从选定用户的设备中仅删除公司数据。 有关详细信息，请参阅[应用选择性擦除](apps-selective-wipe.md)。
@@ -111,10 +112,10 @@ iOS 应用包含一个预配配置文件和一个证书签名的代码。 证书
 - **帮助和支持**：排查问题、请求获取支持或查看 Intune 状态。 有关详细信息，请参阅[排除问题](../fundamentals/help-desk-operators.md)。
 
 ### <a name="try-the-interactive-guide"></a>尝试交互式指南
-[使用 Microsoft Endpoint Manager 管理并保护移动和桌面应用程序](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)交互式指南将引导您浏览 Microsoft Endpoint Manager 管理中心，并展示如何管理在 Intune 中注册的设备、使用策略强制实现合规性以及保护组织的数据。</br></br>
+[使用 Microsoft Endpoint Manager 管理并保护移动和桌面应用程序](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)交互式指南将引导您浏览 Microsoft Endpoint Manager 管理中心，并展示如何管理在 Intune 中注册的设备、使用策略强制实现合规性以及保护组织的数据。</br></br>
 
 <div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
 ## <a name="additional-information"></a>其他信息

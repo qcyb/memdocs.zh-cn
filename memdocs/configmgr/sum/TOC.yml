@@ -28,6 +28,8 @@
       href: get-started/configure-classifications-and-products.md
     - name: 管理软件更新的设置
       href: get-started/manage-settings-for-software-updates.md
+    - name: 配置软件更新点以使用 SSL
+      href: get-started/software-update-point-ssl.md
     - name: 在断开连接的环境中同步软件更新
       items:
         - name: 从断开连接的软件更新点中同步软件更新

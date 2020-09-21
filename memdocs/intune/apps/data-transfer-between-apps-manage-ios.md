@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 5a2a82d63b4b13f16ced558ae515c3100a8a21ad
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410838"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039408"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>如何在 Microsoft Intune 中管理 iOS 应用之间的数据传输
 
@@ -61,7 +61,9 @@ ms.locfileid: "86410838"
 
      > [!NOTE]
      > 将 IntuneMAMUPN 应用配置设置部署到发送数据的目标托管应用，而非接收应用。 
-
+     
+     > [!NOTE]
+     > 目前，如果在同一设备上有 MDM 注册帐户，则不支持在应用上使用其他用户进行注册。 
 
 4. 使用 Intune 或第三方 MDM 提供程序将“打开方式管理”策略部署到已注册设备。
 

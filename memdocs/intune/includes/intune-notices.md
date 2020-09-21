@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: e63bb965b8fed4c0266e359493bbfa67100862cb
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564086"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90045183"
 ---
 本文中的通知提供了重要信息，可以帮助你为未来的 Intune 更改和功能做好准备。
 
@@ -108,7 +108,7 @@ Wi-Fi 配置文件的其他用户体验更改
 - 使用 IMEI 或序列号将设备识别为公司拥有的设备将不会自动将设备标记为公司拥有的设备 
 - 在 Intune 中，IMEI 和序列号将不再对 IT 管理员可见 
 
-**Android 11**：我们将继续测试最新版的 Android 11 beta，以评估对设备管理员管理的设备的影响。 以下是已知内容： 
+**Android 11**：在更新到 Android 11 时，这些更改将影响设备管理员管理的设备： 
 - 对于运行 Android 11 及更高版本的设备管理员设备（Samsung 除外），Google 已禁止管理代理（如公司门户）强制阻止使用相机，而公司门户应用要到十月才会更新。 设备更新到 Android 11 之前，将继续应用阻止相机策略。  
 - 在 Android 11 中，再也无法将受信任的根证书部署到以设备管理员身份注册的设备上（Samsung 设备除外）。 用户必须在设备上手动安装受信任的根证书。 在设备上手动安装受信任的根证书之后，便可使用 SCEP 将证书预配给设备。 在这种情况下，仍需创建受信任证书策略并将其部署到设备，同时将该策略链接到 SCEP 证书配置文件。 
     - 如果设备上有受信任的根证书，则 SCEP 证书配置文件将安装成功。  

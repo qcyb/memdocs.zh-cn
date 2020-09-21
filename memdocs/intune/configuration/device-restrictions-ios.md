@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423877"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574807"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>便于使用 Intune 允许或限制功能的 iOS 和 iPadOS 设备设置
 
@@ -173,9 +173,9 @@ ms.locfileid: "89423877"
   > [!NOTE]
   > 对于用户注册的设备，用户可以设置大于 6 位数字的 PIN。 但设备上使用的数字不能超过 6 位。 例如，管理员将最小长度设置为 `8`。 在用户注册的设备上，要求用户只设置一个 6 位的 PIN。 Intune 在用户注册的设备上不强制使用大于 6 位的 PIN。
 
-- **擦除设备前的登录失败次数**：输入在擦除设备前的登录失败次数（介于 4 到 11 之间）。
+- **擦除设备前的登录失败次数**：输入在擦除设备前的登录失败次数（介于 2 到 11 之间）。 建议不要将此值设置为 `2` 或 `3`。 输入错误的密码是很常见的。 在两次或三次错误的密码尝试后擦除设备的情况经常发生。 建议将此值至少设置为 `4`。 
   
-  iOS/iPadOS 具有内置的安全性，这可能会影响此设置。 例如，iOS/iPadOS 可能会根据登录失败的次数来延迟触发策略。 还可能会考虑一次重复输入相同的密码。 如需深入了解关于密码的信息，请参阅 Apple 的 [iOS/iPadOS 安全指南](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf)（打开 Apple 的网站）。
+  iOS/iPadOS 具有内置的安全性，这可能会影响此设置。 例如，iOS/iPadOS 可能会根据登录失败的次数来延迟触发策略。 还可能会考虑一次重复输入相同的密码。 如需深入了解关于密码的信息，请参阅 Apple 的 [iOS/iPadOS 安全指南](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf)（打开 Apple 的网站）。 
   
 - **屏幕锁定后要求输入密码前的最大分钟数**<sup>1</sup>：输入在用户必须重新输入密码前设备保持空闲状态的时间。 如果输入的时间大于设备上当前设置的时间，则设备将忽略输入的时间。
 

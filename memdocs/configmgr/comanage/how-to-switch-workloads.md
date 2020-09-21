@@ -7,15 +7,15 @@ ms.technology: configmgr-comanage
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/06/2019
+ms.date: 09/15/2020
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 52a08549087338d0609aafc26f2cc1b3b697d6ba
+ms.sourcegitcommit: e533cdf8722156a66b1cc46f710def96587345d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606813"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90568572"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>如何将 Configuration Manager 工作负载切换到 Intune
 
@@ -47,7 +47,7 @@ ms.locfileid: "89606813"
 
 > [!Important]  
 > - 切换任何工作负载之前，请确保在 Intune 中正确配置并部署相应的工作负载。 请确保工作负荷始终由设备的某个管理工具进行托管。
-> - 自 Configuration Manager 1806 版起，在切换共同管理工作负载时，共同管理的设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步  。 有关详细信息，请参阅[使用客户端通知启动客户端策略检索](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)。 <!--1357377-->
+> - 自 Configuration Manager 1806 版起，在切换共同管理工作负载时，共同管理的设备自动从 Microsoft Intune 同步 MDM 策略。 <!--7087526-->
 
 ## <a name="switch-workloads-in-version-1902-and-earlier"></a>在版本 1902 和更早版本中切换工作负载
 
@@ -74,7 +74,7 @@ ms.locfileid: "89606813"
 
 > [!Important]  
 > - 切换任何工作负载之前，请确保在 Intune 中正确配置并部署相应的工作负载。 请确保工作负荷始终由设备的某个管理工具进行托管。 
-> - 自 Configuration Manager 1806 版起，在切换共同管理工作负载时，共同管理的设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步  。 有关详细信息，请参阅[使用客户端通知启动客户端策略检索](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)。 <!--1357377-->
+> - 自 Configuration Manager 1806 版起，在切换共同管理工作负载时，共同管理的设备自动从 Microsoft Intune 同步 MDM 策略。 <!--7087526-->
 
 ## <a name="next-steps"></a>后续步骤
 

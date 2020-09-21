@@ -17,14 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6dcd41377234bbb1b40e513f16c3393d763b17f
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: a5f479dcad0c293c547edec24f0f835a4fc987e1
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088184"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574824"
 ---
 # <a name="unlicensed-admins"></a>未经许可的管理员
+
+> [!Important]
+> 此选项仅取消了管理员访问 Microsoft Endpoint Manager 的许可证要求。 使用其他功能或服务（如 Azure Active Directory Premium）可能仍需要管理员的许可证。
 
 可以向没有 Intune 许可证的管理员授予 Intune/Microsoft Endpoint Manager 管理中心访问权限。
 

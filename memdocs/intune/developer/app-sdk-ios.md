@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281177"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039391"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>用于 iOS 的 Microsoft Intune App SDK 开发人员指南
 
@@ -70,6 +70,7 @@ ms.locfileid: "89281177"
 
 -  IntuneMAMAppConfig.h
 -  IntuneMAMAppConfigManager.h
+-  IntuneMAMComplianceManager.h
 -  IntuneMAMDataProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMDefs.h
@@ -77,12 +78,15 @@ ms.locfileid: "89281177"
 -  IntuneMAMEnrollmentDelegate.h
 -  IntuneMAMEnrollmentManager.h
 -  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFile.h
 -  IntuneMAMFileProtectionInfo.h
 -  IntuneMAMFileProtectionManager.h
 -  IntuneMAMLogger.h
 -  IntuneMAMPolicy.h
 -  IntuneMAMPolicyDelegate.h
 -  IntuneMAMPolicyManager.h
+-  IntuneMAMSettings.h
+-  IntuneMAMUIHelper.h
 -  IntuneMAMVersionInfo.h
 
 开发人员只需导入 IntuneMAM.h 即可获取上述所有标头的内容
@@ -214,19 +218,19 @@ MSAL 通常要求应用注册 Azure Active Directory (AAD)，并创建唯一的�
 
 3. 同时，在键名为 `ADALRedirectUri` 的 IntuneMAMSettings 字典下指定要用于 MSAL 调用的重定向 URI****。 也可以改为指定 `ADALRedirectScheme`（如果应用的重定向 URI 采用格式 `scheme://bundle_id` 的话）。
 
-此外，应用还可以在运行时替代这些 Azure AD 设置。 为此，只需在 `IntuneMAMPolicyManager` 实例上设置 `aadAuthorityUriOverride`、`aadClientIdOverride` 和 `aadRedirectUriOverride` 属性。
+此外，应用还可以在运行时替代这些 Azure AD 设置。 为此，只需在 `IntuneMAMSettings` 类上设置 `aadAuthorityUriOverride`、`aadClientIdOverride` 和 `aadRedirectUriOverride` 属性。
 
 4. 确保执行向应用保护策略 (APP) 服务提供 iOS 应用权限的步骤。 使用[向 Intune 应用保护服务提供应用访问权限(可选)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)下的 [Intune SDK 入门指南](app-sdk-get-started.md#next-steps-after-integration)中的说明。  
 
 > [!NOTE]
-> 对于不需要在运行时确定的所有静态设置，建议使用 Info.plist 方法。 分配给 `IntuneMAMPolicyManager` 属性的值优先于 Info.plist 中指定的任何相应值；即使在重启应用后，值也会暂留。 在用户遭取消注册或值被清除或更改前，SDK 会继续将它们用于策略签入。
+> 对于不需要在运行时确定的所有静态设置，建议使用 Info.plist 方法。 在运行时分配给 `IntuneMAMSettings` 类属性的值优先于 Info.plist 中指定的任何相应值；即使在重启应用后，值也会暂留。 在用户遭取消注册或值被清除或更改前，SDK 会继续将它们用于策略签入。
 
 ### <a name="if-your-app-does-not-use-msal"></a>应用不使用 MSAL 的情况
 
 如前文所述，Intune App SDK 使用 [Microsoft 身份验证库](https://github.com/AzureAD/microsoft-authentication-library-for-objc)进行身份验证和条件启动。 它还依赖 MSAL 向 MAM 服务注册用户标识，用于不含设备注册方案的管理。 如果应用不使用 MSAL 作为自己的身份验证机制，你可能需要配置自定义 AAD 设置****：
 
 * 开发人员需要在 AAD 中创建应用注册，并且自定义重定向 URI 应采用[此处](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)指定的格式。 
-* 开发人员应设置前面提到的 `ADALClientID` 和 `ADALRedirectUri` 设置，或 `IntuneMAMPolicyManager` 实例上的等效 `aadClientIdOverride` 和 `aadRedirectUriOverride` 属性。 
+* 开发人员应设置前面提到的 `ADALClientID` 和 `ADALRedirectUri` 设置，或 `IntuneMAMSettings` 类上的等效 `aadClientIdOverride` 和 `aadRedirectUriOverride` 属性。 
 * 开发人员还应确保他们按照上一部分中的步骤 4，为其应用注册提供访问 Intune 应用保护服务的权限。
 
 ### <a name="special-considerations-when-using-msal"></a>使用 MSAL 时的特殊注意事项 
@@ -766,7 +770,7 @@ SDK 跟踪本地文件所有者的标识，并相应地应用策略。 文件所
 
 ### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>仅显示非公司内容/网站的 Web 视图
 
-如果应用程序在 Web 视图中不显示任何公司数据，但用户能够浏览到任意站点（他们可能会将来自应用程序其他部分的托管数据复制并粘贴到公共论坛中），则由应用程序负责设置当前标识，以便托管数据不会通过 Web 视图泄露。 这种情况的示例有“推荐功能”或“反馈”网页，这些网页直接或间接链接到搜索引擎。 多标识应用程序应在显示 Web 视图之前调用 IntuneMAMPolicyManager setUIPolicyIdentity，并传入空字符串。 Web 视图关闭后，应用程序应调用 setUIPolicyIdentity 并传入当前标识。 单标识应用程序应在显示 Web 视图之前调用 IntuneMAMPolicyManager setCurrentThreadIdentity，并传入空字符串。 Web 视图关闭后，应用程序应调用 setCurrentThreadIdentity 并传入 nil。 这样可以确保 Intune SDK 将 Web 视图视为非托管视图，并确保它不允许将来自应用程序其他部分的托管数据粘贴到 Web 视图中（如果策略是这样配置的）。 
+如果应用程序在 Web 视图中不显示任何公司数据，但用户能够浏览到任意站点（他们可能会将来自应用程序其他部分的托管数据复制并粘贴到公共论坛中），则由应用程序负责设置当前标识，以便托管数据不会通过 Web 视图泄露。 这种情况的示例有“推荐功能”或“反馈”网页，这些网页直接或间接链接到搜索引擎。 多标识应用程序应在显示 Web 视图之前调用 `IntuneMAMPolicyManager` 实例上的 `setUIPolicyIdentity`，并传入空字符串。 Web 视图关闭后，应用程序应调用 `setUIPolicyIdentity` 并传入当前标识。 单标识应用程序应在显示 Web 视图之前调用 `IntuneMAMPolicyManager` 实例上的 `setCurrentThreadIdentity`，并传入空字符串。 Web 视图关闭后，应用程序应调用 `setCurrentThreadIdentity` 并传入 nil。 这样可以确保 Intune SDK 将 Web 视图视为非托管视图，并确保它不允许将来自应用程序其他部分的托管数据粘贴到 Web 视图中（如果策略是这样配置的）。 
 
 ### <a name="webviews-that-display-only-corporate-contentwebsites"></a>仅显示公司内容/网站的 Web 视图
 
@@ -774,9 +778,9 @@ SDK 跟踪本地文件所有者的标识，并相应地应用策略。 文件所
 
 ### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>可能同时显示公司和非公司内容/网站的 Web 视图
 
-对于这种情况，仅支持 WKWebView。 使用旧版 UIWebView 的应用程序应转换为 WKWebView。 如果应用程序在 WKWebView 中显示公司内容，并且用户也可以访问可能导致数据泄露的非公司内容/网站，则应用程序应实现 IntuneMAMPolicyDelegate.h 中定义的 isExternalURL: 委托方法。 应用程序应确定传递给该委托方法的 URL 是代表可以粘贴托管数据的公司网站，还是代表可能泄露公司数据的非公司网站。 
+对于这种情况，仅支持 WKWebView。 使用旧版 UIWebView 的应用程序应转换为 WKWebView。 如果应用程序在 WKWebView 中显示公司内容，并且用户也可以访问可能导致数据泄露的非公司内容/网站，则应用程序应实现 `IntuneMAMPolicyDelegate.h` 中定义的 `isExternalURL:` 委托方法。 应用程序应确定传递给该委托方法的 URL 是代表可以粘贴托管数据的公司网站，还是代表可能泄露公司数据的非公司网站。 
 
-如果在 isExternalURL 中返回 NO，则是向 Intune SDK 表明，正在加载的网站是可以共享托管数据的公司位置。 如果返回 YES，Intune SDK 将在 Edge 而不是 WKWebView 中打开该 URL（如果当前策略设置需要它）。 这将确保应用内部的任何托管数据都不会泄露到外部网站。
+如果在 `isExternalURL` 中返回 NO，则是向 Intune SDK 表明，正在加载的网站是可以共享托管数据的公司位置。 如果返回 YES，Intune SDK 将在 Edge 而不是 WKWebView 中打开该 URL（如果当前策略设置需要它）。 这将确保应用内部的任何托管数据都不会泄露到外部网站。
 
 ## <a name="ios-best-practices"></a>iOS 最佳做法
 
@@ -827,7 +831,7 @@ SDK 将在后台定期执行以下操作：
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>是否提供演示如何集成 SDK 的示例应用？
 
-可以！ 我们最近刚刚改进了开源示例应用[适用于 iOS 的 Wagr](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App)。 现在，Wagr 已使用 Intune App SDK 启用应用保护策略。
+可以！ 请参阅 [Chatr 示例应用](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App)。
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>如何对应用进行故障排除？
 

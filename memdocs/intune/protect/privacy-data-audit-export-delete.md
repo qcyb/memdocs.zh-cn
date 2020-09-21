@@ -2,11 +2,11 @@
 title: 审核、导出或删除个人数据
 titleSuffix: Microsoft Intune
 description: 了解如何审核、导出或删除个人数据。
-keywords: ''
+keywords: GDPR, 个人数据, 隐私
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995987"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012623"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>在 Intune 中审核、导出或删除个人数据
 
@@ -60,10 +60,10 @@ Intune 管理员可使用审核日志跟踪与个人数据有关的活动。 管
 
 ### <a name="delete-a-user-from-intune"></a>从 Intune 中删除用户
 
-要从 Intune 中删除最终用户的个人数据，管理员必须[从 Azure Active Directory (AAD) 中删除该用户](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)。 从 AAD 中删除（硬删除）用户时，Intune 将收到 AAD 的删除信号，然后自动开始从 Intune 服务中清除该用户的所有个人数据。 Intune 服务中的用户信息将在删除操作后的 30 天内删除。
+要从 Intune 中删除最终用户的个人数据，管理员必须[从 Azure Active Directory (Azure AD) 中删除该用户](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)。 从 Azure AD 中删除（硬删除）用户时，Intune 将收到 Azure AD 的删除信号，然后自动开始从 Intune 服务中清除该用户的所有个人数据。 Intune 服务中的用户信息将在删除操作后的 30 天内删除。
 
 ### <a name="reset-device-to-factory-settings"></a>将设备重置为出厂设置
-重置为出厂设置会将所有公司和个人数据及设置还原到原始出厂设置。 这样即可将设备提供给下一位员工。 用户文件、用户安装的应用程序和非默认设置都将删除，并且此数据将在删除操作后的 30 天内从 Intune 服务中删除。
+重置为出厂设置会将所有公司和个人数据及设置还原到原始出厂设置。 这样即可将设备提供给下一位员工。 用户文件、用户安装的应用程序和非默认设置都将被删除，并且此数据将在删除操作后的 30 天内从 Intune 服务中被删除。
 
 ### <a name="user-self-removal-from-intune-management"></a>用户从 Intune 管理中自行删除
 用户可从 Intune 管理中删除其 [Android、Apple 或 Windows](../user-help/unenroll-your-device-from-intune-android.md) 个人设备，无需管理员的协助。   
@@ -77,4 +77,4 @@ Intune 管理员可使用审核日志跟踪与个人数据有关的活动。 管
 
 ## <a name="next-steps"></a>后续步骤
 
-了解如何在 Intune 中[审核、导出或删除](privacy-data-audit-export-delete.md)个人数据。
+了解如何在 Intune 中[查看和更正个人数据](privacy-data-view-correct.md)。

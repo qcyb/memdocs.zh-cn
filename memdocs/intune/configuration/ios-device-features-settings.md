@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6989dc3559a1de950f5d2ec8280894f1f1983b61
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908997"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574858"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>用于使用 Intune 中常见 iOS/iPadOS 功能的 iOS 和 iPadOS 设备设置
 
@@ -343,7 +343,7 @@ Intune 包括一些内置设置，可便于 iOS/iPadOS 用户在自己的设备�
   - URL 必须以 `http://` 或 `https://` 开头。
 
 - **其他配置**（Microsoft Azure AD、“重定向”和“凭据”）：输入要传递到 SSO 应用扩展的其他扩展特定数据：
-  - **密钥**：输入要添加的项的名称，如 `user name`。
+  - **密钥**：输入要添加的项的名称，如 `user name`。 `AppAllowList` 区分大小写。 请确保准确输入“AppAllowList”。 
   - **类型**：输入数据的类型。 选项包括：
 
     - 字符串
