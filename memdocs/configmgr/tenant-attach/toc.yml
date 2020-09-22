@@ -12,6 +12,8 @@
       href: timeline.md
     - name: 资源浏览器（预览）
       href: resource-explorer.md
+    - name: 运行脚本（预览）
+      href: scripts.md
 - name: 用于租户附加设备的 CMPivot（预览）
   items:
     - name: 启动 CMPivot（预览）
@@ -28,6 +30,10 @@
       href: deploy-antivirus-policy.md
     - name: Microsoft Defender 防病毒策略设置
       href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: 参考
+  items:
+    - name: 租户附加数据收集
+      href: data-collection.md
 - name: 故障排除
   items:
     - name: 租户附加和设备操作
@@ -40,5 +46,7 @@
       href: troubleshoot-timeline.md
     - name: 资源浏览器（预览）
       href: troubleshoot-resource-explorer.md
+    - name: 运行脚本（预览）
+      href: troubleshoot-scripts.md
     - name: CMPivot（预览）
       href: troubleshoot-cmpivot.md

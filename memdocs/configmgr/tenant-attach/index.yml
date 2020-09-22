@@ -11,24 +11,48 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
-  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+  ms.openlocfilehash: b3d6c2510cb26fb520c3b765a0931991aaed6e14
+  ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 08/28/2020
-  ms.locfileid: "89067981"
+  ms.lasthandoff: 09/18/2020
+  ms.locfileid: "90802816"
 landingContent:
 - title: 关于租户附加
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: 启用租户附加
       url: device-sync-actions.md
-    - text: 查看 ConfigMgr 客户端详细信息（预览）
-      url: client-details.md
   - linkListType: reference
     links:
     - text: 租户附加和设备操作疑难解答
       url: troubleshoot.md
     - text: ConfigMgr 客户端详细信息疑难解答（预览）
       url: troubleshoot-client-details.md
+- title: 获取有关已上载设备的信息
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 查看 ConfigMgr 客户端详细信息（预览）
+      url: client-details.md
+    - text: 设备时间线（预览）
+      url: timeline.md
+    - text: 资源浏览器（预览）
+      url: resource-explorer.md
+- title: 主要任务
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 运行脚本
+      url: scripts.md
+    - text: 安装应用程序
+      url: applications.md
+    - text: 启动 CMPivot
+      url: cmpivot-start.md
+  - linkListType: concept
+    links:
+    - text: CMPivot 使用情况概述
+      url: cmpivot-overview-attached.md
+    - text: CMPivot 示例脚本
+      url: cmpivot-samples-attached.md

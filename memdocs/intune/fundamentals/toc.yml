@@ -217,6 +217,8 @@
       items:
         - name: Intune 报表
           href: reports.md
+        - name: 使用 Graph 导出报表
+          href: reports-export-graph-apis.md
         - name: Intune 活动的审核日志
           href: monitor-audit-logs.md
         - name: 使用 Azure Monitor 查看日志
