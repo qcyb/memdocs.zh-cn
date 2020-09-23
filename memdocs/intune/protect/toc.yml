@@ -23,6 +23,8 @@
     - name: 隐私和个人数据
       href: privacy-personal-data.md
       items:
+        - name: 客户端应用中的可选诊断数据
+          href: client-apps-optional-data.md
         - name: 数据收集
           href: privacy-data-collect.md
         - name: 数据存储和处理
