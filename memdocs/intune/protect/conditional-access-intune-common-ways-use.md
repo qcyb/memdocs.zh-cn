@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 6d062af4859dcca6c762bf401e1007a9fc9af126
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992936"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002658"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>通过 Intune 使用条件访问的常见方式有哪些？
 
@@ -113,7 +113,7 @@ Intune 与移动威胁防护供应商合作提供安全性解决方案，以检�
 > [!NOTE]
 > 从 2020 年 7 月开始，已弃用对 Exchange Connector 的支持，并已替换为 Exchange [新式混合身份验证](/office365/enterprise/hybrid-modern-auth-overview) (HMA)。 使用 HMA 不需要 Intune 设置和使用 Exchange Connector。 进行此更改后，用于配置和管理 Intune Exchange Connector 的 UI 也将从 Microsoft Endpoint Manager 管理中心删除，除非你已在订阅中使用 Exchange Connector。
 >
-> 如果你的环境中设置了 Exchange Connector，则仍支持 Intune 租户使用该连接器，并且有权继续访问支持其配置的 UI。 有关更多详细信息，请参阅[安装 Exchange 内部部署连接器](../protect/exchange-connector-install.md)。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
+> 如果你的环境中设置了 Exchange Connector，则仍支持你的 Intune 租户使用该连接器，并且你有权继续访问支持其配置的 UI。 有关更多详细信息，请参阅[安装 Exchange 内部部署连接器](../protect/exchange-connector-install.md)。 你可以继续使用该连接器，或者配置 HMA 后卸载你的连接器。
 >
 > 混合新式身份验证提供的功能之前 Intune Exchange Connector 也曾提供：设备标识到其 Exchange 记录的映射。  现在，此映射发生在你在 Intune 中进行的配置之外，或者要求 Intune 连接器桥接 Intune 和 Exchange。 使用 HMA，不再要求使用“Intune”特定配置（连接器）。
 

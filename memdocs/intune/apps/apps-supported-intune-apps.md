@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a831208d2d2311744cbc2aaf727aea2d0f6f98a1
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d95a4457bdcf9aee24ec87ad93a2151ce0084d6b
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996769"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008288"
 ---
 # <a name="microsoft-intune-protected-apps"></a>受 Microsoft Intune 保护的应用  
 
@@ -95,7 +95,7 @@ ms.locfileid: "88996769"
 | **适用于 Intune 的 iBabs**<p><img alt="Partner app - iBabs for Intune icon" src="./media/apps-supported-intune-apps/icon-p-ibabs.png" width="100">| ISEC7 Mobile Exchange Delegate 允许授权代表通过 iPhone 和 iPad 同意同事的预约、管理联系人并代表其他用户回复电子邮件。 | [App Store 链接 (iOS)](https://itunes.apple.com/us/app/ibabs-for-intune/id1130847428?mt=8) |
 | **ISEC7 MED for Intune**<p><img alt="Partner app - ISEC7 MED for Intune icon" src="./media/apps-supported-intune-apps/icon-p-isec7-med.png" width="100">| 让会议更简单、更具实质性且更环保。 | [App Store 链接 (iOS)](https://apps.apple.com/app/isec7-med-for-intune/id1491037389?ls=1) |
 | **Lexmark Mobile Print Intune**<p><img alt="Partner app - Lexmark Mobile Print Intune icon" src="./media/apps-supported-intune-apps/icon-p-lexmark-mobile-print.png" width="100">| 移动计算无处不在，它只是一种始终可用的无障碍连接状态，能够启发、引导和帮助你完成更多工作。 <br><br>虽然商业用户希望桌面和移动打印一样方便，但由于移动设备的独特特性，IT 经理们知道要提供无缝输出非常复杂。 由于要克服跨多个操作系统的连接性、安全性和网络挑战，因此为用户提供其所期望的灵活打印可能很困难。 <br><br>Lexmark 提供的体验和创新功能可帮助你轻松无忧地满足用户的打印需求，省去 IT 的麻烦。 我们通过一整套工具和选项来应对挑战，帮助你实现更透明、更简单、更安全的移动打印体验。  | [App Store 链接 (iOS)](https://itunes.apple.com/us/app/lexmark-mobile-print-intune/id1368424840?ls=1&mt=8) |
-| **Meetio Enterprise**<p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio.png" width="100">| 使用 Meetio 聊天室管理解决方案的适用于组织的 Meetio 移动应用。 借助 Meetio Enterprise，可以随时随地安排会议和会议室，简化你的日常工作。 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.getmeetio.personal)、<br>[App Store 链接 (iOS)](https://apps.apple.com/se/app/meetio-enterprise/id1340190306) |
+| **Meetio Enterprise**<p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio.png" width="100">| 使用 Meetio 聊天室管理解决方案的适用于组织的 Meetio 移动应用。 借助 Meetio Enterprise，可以随时随地安排会议和会议室，简化你的日常工作。 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.getmeetio.personal)、<br>[App Store 链接 (iOS)](https://apps.apple.com/us/app/meetio/id1340190306) |
 | **适用于 Intune 的 Nine Work**<p><img alt="Partner app - Nine Work for Intune icon" src="./media/apps-supported-intune-apps/icon-p-nine-work.png" width="100"> | Nine 是一款基于 Direct Push 技术的成熟的 Android 电子邮件应用程序，可使用 Microsoft Exchange ActiveSync 与 Microsoft Exchange Server 进行同步，它也是为希望与同事、朋友和家人随时随地进行有效沟通的企业家或普通人而设计。 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.ninefolders.hd3.work.intune)、<br>[App Store 链接 (iOS)](https://apps.apple.com/us/app/nine-mail-email-calendar/id1079689905) |  
 | **Now<sup>&#174;</sup> Mobile - Intune**<p><img alt="Partner app - Now Mobile for Intune icon" src="./media/apps-supported-intune-apps/icon-p-now-mobile.png" width="100"> | 现在，员工可以跨 IT、人事、设施、财务、法务和其他部门找到答案并完成工作，所有这些都可以通过由 Now Platform<sup>&#174;</sup> 提供支持的新式移动应用完成。<p>Now Platform<sup>&#174;</sup> 通过跨部门、系统和人员的数字工作流提供员工体验和工作效率。<p>你可以在此应用中完成如下工作：<ul><li>IT：申请便携式计算机或重置密码</li><li>设施：查找并预订会议室</li><li>财务：申请公司信用卡</li><li>法务：让新的供应商签署保密协议 (NDA)</li><li>人事：查找下一个公司假期并查看假期政策</li></ul><p>Now<sup>&#174;</sup> Mobile 由 Now Platform<sup>&#174;</sup> 提供支持 - 最终让工作变得像生活一样美好 | [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.servicenow.requestor.mam.intune)、<br>[App Store 链接 (iOS)](https://apps.apple.com/us/app/now-mobile-intune/id1494183300) | 
 | **PrinterOn for Microsoft**<p><img alt="Partner app - PrinterOn for Microsoft icon" src="./media/apps-supported-intune-apps/icon-p-printeron.png" width="100"> | 使用 PrinterOn 的无线移动打印解决方案，用户可以通过安全网络随时随地进行远程打印。| [Google Play 链接 (Android)](https://play.google.com/store/apps/details?id=com.printeron.droid.phone)、<br>[App Store 链接 (iOS)](https://itunes.apple.com/us/app/printeron-for-microsoft/id1258715414?mt=8) | 

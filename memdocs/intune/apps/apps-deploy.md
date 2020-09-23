@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 57e9195a71c268a9d7465be767b51f0f335dfb8d
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443817"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008169"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>使用 Microsoft Intune 将应用分配到组
 
@@ -64,7 +64,7 @@ ms.locfileid: "87443817"
    - **适用于已注册的设备**：将应用分配给可从公司门户应用或网站安装应用的用户组。
    - **注册与否都可用：** 可将此应用分配到未将其设备注册到 Intune 的用户组。 必须为用户分配 Intune 许可证，请参阅 [Intune 许可证](../fundamentals/licenses.md)。
    - **必需**：应用安装在所选组中的设备上。 在应用安装开始之前，某些平台可能会显示需最终用户确认的其他提示。
-   - **卸载**：如果 Intune 之前已使用相同部署通过“可用于已注册设备”或“必需”分配将应用程序安装到设备上，则会从所选组中的设备卸载该应用。 部署后无法删除 Web 链接。
+   - **卸载**：如果 Intune 之前已使用相同部署通过“可用于已注册设备”或“必需”分配将应用程序安装到设备上，则会从所选组中的设备卸载该应用。 
 
      > [!NOTE]
      > **仅适用于 iOS/iPadOS 应用**：

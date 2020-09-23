@@ -15,9 +15,8 @@
 
   有关管理运行 Windows 10 2019 LTSC 的设备的详细信息，请参阅 [Windows 10 企业版 2019 LTSC 中的新增功能](/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
-- Windows 10 移动版
+
 - Windows 10 IoT 企业版（x86、x64）
-- Windows 10 IoT 移动企业版
 - Windows Holographic for Business
 
   如需深入了解如何管理运行 Windows Holographic for Business 的设备，请参阅 [Window Holographic for Business 支持](../fundamentals/windows-holographic-for-business.md)。
