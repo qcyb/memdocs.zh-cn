@@ -10,16 +10,16 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698480"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039340"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
-适用范围：  Configuration Manager (Current Branch)
+适用范围：Configuration Manager (Current Branch)
 
 使用以下信息来标识 Configuration Manager 中使用的 Windows 组、帐户和 SQL 对象及其使用方式和任何要求。  
 
@@ -336,7 +336,7 @@ Configuration Manager 使用此组在层次结构中的站点之间实现基于�
 > 4. 然后从 Configuration Manager 和 Active Directory 域服务中删除旧帐户  
 
 > [!IMPORTANT]  
-> 请勿向此帐户授予本地登录的权限。  
+> 使用域或本地组策略将 Windows 用户权限分配到“拒绝本地登录”。 作为管理员组的成员，此帐户将有权在本地登录，这不是必需的。 为了提高安全性，请明确拒绝此帐户的权限。 拒绝权限将取代允许权限。<!--MEMDocs#744-->
 
 有关详细信息，请参阅[客户端请求安装](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)。
 
@@ -407,7 +407,7 @@ Configuration Manager 客户端首先尝试使用其计算机帐户下载内容�
 
 #### <a name="configure-the-network-access-account"></a>配置网络访问帐户  
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。 然后选择站点。  
+1.  在 Configuration Manager 控制台中，转到“管理”  工作区，展开“站点配置”  ，然后选择“站点”  节点。 然后选择站点。  
 
 2.  在功能区的“设置”组中，选择“配置站点组件”，再选择“软件分发”  。  
 

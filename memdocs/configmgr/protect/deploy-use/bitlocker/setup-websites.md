@@ -2,7 +2,7 @@
 title: 设置 BitLocker 门户
 titleSuffix: Configuration Manager
 description: 安装用于自助服务门户以及管理和监视网站的 BitLocker 管理组件。
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574586"
 ---
 # <a name="set-up-bitlocker-portals"></a>设置 BitLocker 门户
 
@@ -106,6 +106,8 @@ ms.locfileid: "88697256"
 - `-IISWebSite`：脚本将在其中安装 MBAM Web 应用程序的网站。 默认情况下，它使用 IIS 默认网站。 使用此参数前，请创建自定义网站。
 
 - `-InstallDirectory`：脚本将在其中安装 Web 应用程序文件的路径。 默认情况下，此路径为 `C:\inetpub`。 使用此参数前，请创建自定义目录。
+
+- `-DomainName` 适用于 2002 和更高版本：通过技术人员或自助服务 Web 门户角色指定服务器的 NetBIOS 域名。 仅当 NetBIOS 域名与 DNS 域名不匹配时才需要。 此配置也称为不相互连接的域命名空间。 例如，DNS 域名为 `contoso.com` 的 `-DomainName fabrikham`。<!-- MEMDocs #759 -->
 
 - `-Uninstall`：在以前安装了 BitLocker 管理支持/自助服务 Web 门户站点的 Web 服务器上卸载这些站点。
 

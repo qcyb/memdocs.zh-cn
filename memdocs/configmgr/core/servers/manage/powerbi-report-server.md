@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 62d4e18fbd0c1d9346e25021a1b015f8146b747f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432534"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689423"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>与 Power BI 报表服务器集成
 
@@ -70,6 +70,9 @@ ms.locfileid: "89432534"
     1. 使用以前的报表服务器数据库。
 
     1. 使用报表服务器 Configuration Manager，还原“加密密钥” 。
+
+    > [!TIP]
+    > 在 Configuration Manager 中添加 Reporting Services 点角色之前，使用 SQL Server Reporting Services Configuration Manager 来测试和验证配置。 有关详细信息，请参阅[验证 SQL Server Reporting Services 安装](configuring-reporting.md#verify-sql-server-reporting-services-installation)。<!-- MEMDocs #713 -->
 
 1. 在 Configuration Manager 中添加 Reporting Services 点角色。
 

@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 09/08/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: a27cd1e7a28b52ccc224f965b678d7d578be75eb
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564204"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081733"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -116,19 +116,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 以下是最新 Configuration Manager 技术预览版中提供的功能：
 
-### <a name="technical-preview-version-2008"></a>技术预览版 2008
+### <a name="technical-preview-version-2009"></a>技术预览版 2009
 
-- [集合查询预览](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [分析功能更新的 SetupDiag 错误](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [监视方案运行状况](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [集合评估查看器](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [在控制台中查看任务序列大小](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [“删除收集的旧诊断文件”任务](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [将对象导入到当前文件夹中](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [使用虚拟机规模集的云管理网关](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [对远程控制的改进](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [使用启动媒体通过 CMG 部署 OS](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [查看集合关系](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [使用对等唤醒在部署截止时间唤醒计算机](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [对控制台内的通知的改进](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [针对不再接收更新的设备的通知](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [针对非管理员帐户改进了 Windows Server 重启体验](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [对 OS 部署的改进](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。
@@ -145,6 +147,16 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > 当新的分支版本可用时，会在最新的“新增功能”一文中列出该版本中可用的功能。 有关详细信息，请参阅[增量版本中的新增功能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)。
+
+### <a name="technical-preview-version-2008"></a>技术预览版 2008
+
+- [集合查询预览](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [分析功能更新的 SetupDiag 错误](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [监视方案运行状况](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [集合评估查看器](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [在控制台中查看任务序列大小](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [“删除收集的旧诊断文件”任务](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [将对象导入到当前文件夹中](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### <a name="technical-preview-version-2007"></a>技术预览版 2007
 

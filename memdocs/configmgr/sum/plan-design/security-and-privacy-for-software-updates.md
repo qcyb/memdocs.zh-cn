@@ -3,19 +3,19 @@ title: 软件更新的安全和隐私
 titleSuffix: Configuration Manager
 description: 请遵循以下软件更新安全的最佳做法，了解 Configuration Manager 如何处理隐私信息。
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 5c7a1ac5e88aa669ae1d5e6bb9333e1f54fb5980
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0838f43abf7ff972ac3f6ca2cdf44dcafda323ca
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708725"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718716"
 ---
 # <a name="security-and-privacy-for-software-updates-in-configuration-manager"></a>Configuration Manager 中软件更新的安全和隐私
 
@@ -42,7 +42,9 @@ ms.locfileid: "81708725"
 
 -   在 WSUS 上启用 SSL，然后按照保护 Windows Server Update Services (WSUS) 的最佳方案进行。  
 
-     找到并遵循用于 Configuration Manager 的 WSUS 版本的安全最佳做法。  
+     找到并遵循用于 Configuration Manager 的 WSUS 版本的安全最佳做法。 
+
+     有关启用 SSL 的详细信息，请参阅[将软件更新点配置为结合使用 TLS/SSL 与 PKI 证书教程](../get-started/software-update-point-ssl.md)。 
 
     > [!IMPORTANT]  
     >  如果配置软件更新点以便为 WSUS 服务器启用 SSL 通信，则必须在 WSUS 服务器上配置 SSL 的虚拟根。  
@@ -57,7 +59,7 @@ ms.locfileid: "81708725"
 
      在软件更新点上安装 WSUS 时，可以选择使用现有的 IIS 默认网站或创建自定义的 WSUS 网站。 为 WSUS 创建自定义网站，以便 IIS 在专用的虚拟网站中承载 WSUS 服务，而不是共享由其他 Configuration Manager 站点系统或其他应用程序使用的同一个网站。  
 
-     有关详细信息，请参阅[配置 WSUS 以使用自定义网站](plan-for-software-updates.md#BKMK_CustomWebSite)。  
+     有关详细信息，请参阅 [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite)。  
 
 ##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a>软件更新的隐私信息  
  软件更新会扫描客户端计算机，以确定所需的软件更新，然后将该信息发送回站点数据库。 在软件更新过程中， Configuration Manager 可能会在客户端和服务器之间传输信息，这些信息标识计算机和登录帐户。  

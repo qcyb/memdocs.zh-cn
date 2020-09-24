@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: d44116ee022f2f01fb8b84244fb903fa6d440345
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432551"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076152"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>在共同管理的设备上使用公司门户应用
 
@@ -121,7 +121,12 @@ ms.locfileid: "89432551"
 
 ### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> 我使用的是 Configuration Manager 版本 2002，为什么新公司门户会显示 Configuration Manager 应用？
 
-公司门户版本 11.0.8980.0 或更高版本将为使用该应用程序的所有共同托管客户端显示 Configuration Manager 部署的应用程序。 Configuration Manager 版本 2006 是先决条件，因为它可添加此客户端设置来控制通知。 如果将公司门户安装在早期版本的共同托管设备上，或未配置此客户端设置，用户将看到来自这两个门户的通知。 这种体验可能会让用户感到困惑。
+公司门户版本 11.0.8980.0 或更高版本将为使用该应用程序的所有共同托管客户端显示 Configuration Manager 部署的应用程序。 Configuration Manager 版本 2006 是先决条件，因为它可添加此客户端设置来控制通知。 如果将公司门户安装在早期版本的共同托管设备上，或未配置此客户端设置，则会导致出现可能让用户困惑的行为。 来自 Configuration Manager 的通知会启动软件中心，而来自 Intune 的通知会启动公司门户。
+
+Microsoft 建议：
+
+- 在运行 Configuration Manager 版本 2006 或更高版本的共同托管客户端上使用公司门户版本 11.0.8980.0 或更高版本。
+- 将客户端设置“选择用户门户”配置为“公司门户”
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>公司门户是否支持从 Configuration Manager 部署为软件更新的应用程序？
 

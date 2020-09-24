@@ -5,17 +5,17 @@ description: 在 Configuration Manager 生产环境中使用软件更新之前�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: c38f3b509ba6104647dd60c8284fde52b5b4995e
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696712"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718818"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
@@ -260,10 +260,10 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 在主站点服务器上添加软件更新点角色时，无法使用配置为副本的 WSUS 服务器。 将 WSUS 服务器配置为副本后，Configuration Manager 无法配置 WSUS 服务器，且 WSUS 同步失败。 在主站点中安装的第一个软件更新点为默认的软件更新点。 站点中的其他软件更新点被配置为默认软件更新点的副本。  
 
 ####  <a name="decide-whether-to-configure-wsus-to-use-ssl"></a><a name="BKMK_WSUSandSSL"></a> 决定是否将 WSUS 配置为使用 SSL  
-使用 SSL 协议帮助保护软件更新点。 WSUS 使用 SSL 向 WSUS 服务器验证客户端计算机和下游 WSUS 服务器的身份。 WSUS 还使用 SSL 来加密软件更新元数据。 选择使用 SSL 保护 WSUS 时，请在安装软件更新点之前准备 WSUS 服务器。 有关详细信息，请参阅在 WSUS 文档中的[在 WSUS 服务器上配置 SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 一文。 
 
-在安装和配置软件更新点时，请选择“为 WSUS 服务器启用 SSL 通信”选项  。 否则，Configuration Manager 会将 WSUS 配置为不使用 SSL。 在软件更新点上启用 SSL 时，还要在子站点上配置任意软件更新点来使用 SSL。  
+强烈建议使用 SSL 协议帮助保护软件更新点。 WSUS 使用 SSL 向 WSUS 服务器验证客户端计算机和下游 WSUS 服务器的身份。 WSUS 还使用 SSL 来加密软件更新元数据。 选择使用 SSL 保护 WSUS 时，请在安装软件更新点之前准备 WSUS 服务器。
 
+在安装和配置软件更新点时，请选择“为 WSUS 服务器启用 SSL 通信”选项  。 否则，Configuration Manager 会将 WSUS 配置为不使用 SSL。 在软件更新点上启用 SSL 时，还要在子站点上配置任意软件更新点来使用 SSL。 有关详细信息，请参阅[将软件更新点配置为结合使用 TLS/SSL 与 PKI 证书教程](../get-started/software-update-point-ssl.md)。
 
 ###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> 配置防火墙  
 

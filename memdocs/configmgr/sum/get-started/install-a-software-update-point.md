@@ -5,17 +5,17 @@ description: 主站点需要管理中心站点上的软件更新点，以便评�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696925"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718835"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>安装和配置软件更新点  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81696925"
 ### <a name="configure-ssl-communications-to-wsus"></a>配置与 WSUS 的 SSL 通信  
  你可以在向导的“常规”  页上或软件更新点属性的“常规”  选项卡上配置 SSL 通信。  
 
- 有关如何使用 SSL 的详细信息，请参阅 [决定是否将 WSUS 配置为使用 SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)。  
+ 有关如何使用 SSL 的详细信息，请参阅[决定是否将 WSUS 配置为使用 SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) 和[将软件更新点配置为结合使用 TLS/SSL 与 PKI 证书](../get-started/software-update-point-ssl.md)。  
 
 ### <a name="wsus-server-connection-account"></a>WSUS 服务器连接帐户  
  你可以配置要在站点服务器连接到软件更新点上运行的 WSUS 时使用的帐户。 如果不配置此帐户，Configuration Manager 将使用计算机帐户将站点服务器连接到 WSUS。 在向导的“代理和帐户设置”  页上或“软件更新点属性”中的“代理和帐户设置”  选项卡上配置 WSUS 服务器连接帐户。  可以在向导的不同位置中配置帐户，具体情况视使用的 Configuration Manager 版本而定。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699800"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083890"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>集成适用于企业的 Windows 更新
 
@@ -90,9 +90,9 @@ ms.locfileid: "88699800"
     - **分支就绪级别**：设置设备将接收 Windows 更新的分支。 选择半年频道（已设定目标）、半年频道或 Windows 预览体验成员内部版本。
 
         > [!NOTE]
-        > 将“半年频道（已设定目标）”的策略部署到 Windows 10 版本 1903 或更高版本   。 将“半年频道”的策略部署到 Windows 10 版本 1809 或更低版本   。
+        > 将“半年频道”的策略部署到 Windows 10 版本 1903 或更高版本。 将“半年频道(定向)”的策略部署到 Windows 10 版本 1809 或更低版本。
         >
-        > 如果将“半年频道”的策略部署到 Windows 10 版本 1903 或更高版本，部署将会失败，并出现错误 0x8004100c   。<!-- 5593139 -->
+        > 如果将“半年频道(定向)”的策略部署到 Windows 10 版本 1903 或更高版本，部署将会失败，并出现错误 0x8004100c。<!-- 5593139 -->
 
     - **延迟期(天)** ：指定功能更新将被延迟的天数。 最多可以自更新发布之日起，在 365 天内延迟接收这些功能更新。
     - **暂停功能更新启动**：选择是否要在自暂停更新之日起最多 35 天内暂停设备接收功能更新。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停功能更新。

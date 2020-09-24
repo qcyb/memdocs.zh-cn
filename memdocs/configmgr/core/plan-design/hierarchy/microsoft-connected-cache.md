@@ -2,7 +2,7 @@
 title: Microsoft 互连缓存
 titleSuffix: Configuration Manager
 description: 将 Configuration Manager 分发点用作传递优化的本地缓存服务器
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a42e0937748ecd31b16698904f724260b9b60512
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699324"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039289"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 中的 Microsoft Connected Cache
 
@@ -23,7 +23,7 @@ ms.locfileid: "88699324"
 
 <!--3555764-->
 
-从版本 1906 开始，你可以在分发点上安装 Microsoft Connected Cache 服务器。 通过将此内容缓存在本地，你的客户端可以从传递优化功能中受益，但你可帮助保护 WAN 链接。
+从版本 1906 开始，你可以在分发点上安装 Microsoft Connected Cache 服务器。 通过将此内容缓存在本地，你的客户端可以从可帮助保护 WAN 链接的传递优化功能中受益。
 
 > [!NOTE]
 > 从版本 1910 开始，此功能现在称为“Microsoft Connected Cache”。 它旧称为“传递优化网络内缓存”。

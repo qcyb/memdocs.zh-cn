@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607555"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689406"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -390,6 +390,9 @@ SQL Server Always On 可用性组中的 Configuration Manager 不支持以下数
 如果可用性组至少有一个节点仍正常工作，则使用“跳过数据库恢复(当站点数据库未受影响时使用此选项)”站点恢复选项。
 
 从版本 1906 开始，站点恢复可以在 SQL Always On 组中重新创建数据库。 此过程适用于手动和自动种子设定。<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> 运行安装/恢复向导时，“新可用性组数据库”页仅适用于手动种子设定配置。 对于自动种子设定，没有共享数据库备份，因此不会显示向导页面。<!-- SCCMDocs #2242 -->
 
 在版本 1902 或更早版本中，在可用性组的所有节点都已丢失时，必须重新创建可用性组才能恢复站点。 Configuration Manager 无法重新生成或还原可用性节点。 重新创建组、还原备份，并重新配置 SQL。 然后使用站点恢复选项“跳过数据库恢复(在站点数据库未受到影响的情况下使用此选项)”。
 

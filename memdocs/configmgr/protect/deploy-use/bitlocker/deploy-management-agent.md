@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606938"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574672"
 ---
 # <a name="deploy-bitlocker-management"></a>部署 BitLocker 管理
 
@@ -214,7 +214,8 @@ Configuration Manager 不会重新加密已使用 BitLocker 驱动器加密保�
 
 BitLocker 的 Configuration Manager 客户端处理程序可感知共同管理。 如果设备已进行共同管理，并且你将 [Endpoint Protection 工作负载](../../../comanage/workloads.md#endpoint-protection)切换到了 Intune，则 Configuration Manager 客户端会忽略它的 BitLocker 策略。 该设备会从 Intune 获取 Windows 加密策略。
 
-切换加密管理机构并且所需的加密算法也发生更改时，你将需要计划[重新加密](#re-encryption)。
+> [!NOTE]
+> 在保持所需的加密算法的同时切换加密管理机构不需要在客户端上执行任何其他操作。 但是，如果切换加密管理机构并且所需的加密算法也发生更改时，你将需要计划[重新加密](#re-encryption)。
 
 要详细了解如何使用 Intune 管理 BitLocker，请参阅以下文章：
 

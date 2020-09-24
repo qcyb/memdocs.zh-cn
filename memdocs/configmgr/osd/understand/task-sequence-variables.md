@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697341"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689457"
 ---
 # <a name="task-sequence-variables"></a>任务序列变量
 
@@ -579,6 +579,12 @@ MAC 地址，用于匹配物理网络适配器的设置。
 (input)
 
 驱动程序目录类别唯一 ID 的以逗号分隔的列表。 “自动应用驱动程序”步骤只考虑至少一个指定类别中的驱动程序。 此值是可选的，默认情况下不设置。 可以通过枚举站点上的 SMS_CategoryInstance 对象列表来获取可用的类别 ID。
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+适用于[启用 BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) 步骤。
+
+为 BitLocker 加密指定 PIN。 此变量仅在 BitLocker 模式为“TPM 和 PIN”时有效。
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -1645,7 +1651,9 @@ Windows PE 对等缓存用于初始广播的自定义网络端口。 客户端�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-指定任务序列完成后运行的命令。 例如，指定 `shutdown.exe /r /t 30 /f` 以在任务序列完成后 30 秒重启计算机。
+指定任务序列完成后运行的命令。 在退出任务序列之前，TSManager 进程将生成指定的 post 操作。 它不会等待或记录任何状态，只在调用该命令后退出。<!-- MEMDocs #719 -->
+
+例如，指定 `shutdown.exe /r /t 30 /f` 以在任务序列完成后 30 秒重启计算机。
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

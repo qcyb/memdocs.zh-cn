@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606967"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574790"
 ---
 # <a name="task-sequence-steps"></a>任务序列步骤
 
@@ -1096,8 +1096,9 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 在此步骤中使用以下任务序列变量：  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>“启用 BitLocker”的 cmdlet
 
@@ -1592,12 +1593,20 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 此步骤现在将完全删除 Configuration Manager 客户端，而不是仅删除密钥信息。 任务序列每次部署捕获的 OS 映像时，都将安装新的 Configuration Manager 客户端。  
 
-> [!Note]  
-> 任务序列引擎仅在执行“生成并捕获引用操作系统映像”任务序列期间才会删除客户端。 其他捕获方法执行期间，如捕获媒体或自定义任务序列等，任务序列不会删除客户端。  
+> [!TIP]
+> 默认情况下，任务序列引擎仅在执行“生成并捕获引用操作系统映像”任务序列期间才会删除客户端。 其他捕获方法执行期间，如捕获媒体或自定义任务序列等，任务序列不会删除客户端。 可以覆盖 OS 部署任务序列的此行为。 将任务序列变量 SMSTSUninstallCCMClient 设置为 TRUE，然后执行“准备 ConfigMgr 客户端以便捕获”步骤。 此变量和行为仅适用于 OS 部署任务序列。 它在下次重新启动设备后删除客户端。
 
 此任务序列步骤仅可在完整的 OS 中运行。 不可在 Windows PE 中运行。  
 
 选择任务序列编辑器中的“添加”，选择“映像”，然后选择“准备 ConfigMgr 客户端以便捕获”以添加此步骤。
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>“准备 ConfigMgr 客户端以便捕获”的变量
+
+在此步骤中使用以下任务序列变量：  
+
+- SMSTSUninstallCCMClient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>“准备 ConfigMgr 客户端以便捕获”的 cmdlet
 

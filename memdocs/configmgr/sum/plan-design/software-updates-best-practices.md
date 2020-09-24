@@ -5,17 +5,17 @@ description: 使用这些 Configuration Manager 中软件更新的最佳做法�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2809a6852cc3739cfe48418580ba464c3abe956a
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696632"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718682"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Configuration Manager 中软件更新的最佳做法
 
@@ -53,7 +53,8 @@ ms.locfileid: "88696632"
 
 安装 WSUS 时，请选择“在本地存储更新”设置  。 此设置会让 WSUS 下载与软件更新关联的许可条款。 它会在同步过程中下载这些条款，并将它们存储在 WSUS 服务器的本地硬盘上。 如果未选择此设置，客户端计算机可能无法扫描具备许可条款的软件更新的符合性。 默认情况下，软件更新点的 WSUS 同步管理器组件每隔 60 分钟会验证一次是否启用了此设置  。  
 
-
+### <a name="configure-your-software-update-points-to-use-tlsssl"></a><a name="bkmk_ssl"></a> 将软件更新点配置为使用 TLS/SSL
+将 Windows Server Update Services (WSUS) 服务器及其对应的软件更新点配置为使用 TLS/SSL 可能会降低潜在攻击者远程入侵客户端的能力并提升特权。 为了确保最佳安全协议就位，我们强烈建议你使用 TLS/SSL 协议来帮助保护软件更新基础结构。 有关详细信息，请参阅[将软件更新点配置为结合使用 TLS/SSL 与 PKI 证书教程](../get-started/software-update-point-ssl.md)。
 
 ## <a name="operational-best-practices"></a><a name="bkmk_operation"></a> 操作最佳做法  
 

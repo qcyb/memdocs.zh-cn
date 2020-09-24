@@ -2,7 +2,7 @@
 title: 规划 BitLocker 管理
 titleSuffix: Configuration Manager
 description: 规划如何使用 Configuration Manager 管理 BitLocker 驱动器加密
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 193189e0e949aefdff15630476a306c1dc4ef2c7
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699953"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574525"
 ---
 # <a name="plan-for-bitlocker-management"></a>规划 BitLocker 管理
 
@@ -23,12 +23,12 @@ ms.locfileid: "88699953"
 
 <!-- 3601034 -->
 
-从版本 1910 开始，请使用 Configuration Manager 管理已加入 Active Directory 的本地 Windows 客户端的 BitLocker 驱动器加密 (BDE)。 不支持加入 Azure Active Directory 的客户端或工作组客户端。 它提供了可代替 Microsoft BitLocker Administration and Monitoring (MBAM) 的完整 BitLocker 生命周期管理。
+从版本 1910 开始，请使用 Configuration Manager 管理已加入 Active Directory 的本地 Windows 客户端的 BitLocker 驱动器加密 (BDE)。 它提供了可代替 Microsoft BitLocker Administration and Monitoring (MBAM) 的完整 BitLocker 生命周期管理。
 
 > [!NOTE]
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](../../core/servers/manage/install-in-console-updates.md#bkmk_options)。  
 
-更多详细信息，请参阅 [BitLocker 概述](/windows/security/information-protection/bitlocker/bitlocker-overview)。
+有关 BitLocker 的更多常规信息，请参阅 [BitLocker 概述](/windows/security/information-protection/bitlocker/bitlocker-overview)。
 
 > [!TIP]
 > 若要使用 Microsoft Endpoint Manager 云服务管理共同管理的 Windows 10 设备上的加密，请将 [Endpoint Protection 工作负载](../../comanage/workloads.md#endpoint-protection)切换为 Intune。 有关使用 Intune 的详细信息，请参阅 [Windows 加密](/intune/protect/endpoint-protection-windows-10#windows-encryption)。
@@ -71,6 +71,8 @@ Configuration Manager 为 BitLocker 驱动器加密提供以下管理功能：
 允许用户自行使用一次性密钥解锁 BitLocker 加密设备。 使用此密钥后，它会为设备生成新的密钥。
 
 ## <a name="prerequisites"></a>必备条件
+
+- 不支持已加入 Azure Active Directory 的工作组客户端或不受信任域中的客户端。 当前需要将客户端加入本地 Active Directory。 此配置用于使用恢复服务对托管密钥进行身份验证。
 
 - 若要创建 BitLocker 管理策略，需要 Configuration Manager 中的“完全权限管理员”角色。
 

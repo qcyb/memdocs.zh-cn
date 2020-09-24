@@ -2,7 +2,7 @@
 title: 监视客户端
 titleSuffix: Configuration Manager
 description: 了解有关如何在 Configuration Manager 中监视客户端的详细指南
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8094db944a1430311f0c3bb8c94bc7043b12c5ae
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525907"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574604"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>如何在 Configuration Manager 中监视客户端
 
@@ -76,11 +76,11 @@ Configuration Manager 提供以下类型的信息作为客户端状态：
 <!--3599209-->
 可部署软件更新和其他应用，以帮助保护环境，但这些部署只能到达正常运行的客户端。 运行不正常的 Configuration Manager 客户端会对总体符合性产生不利影响。 根据分母来确定客户端运行状况可能有难度：在管理范围内总共应该有多少设备？ 例如，如果发现 Active Directory 中的所有系统，即便部分记录用于已停用的计算机，但此过程仍会使分母增大。
 
-从 1902 版开始，可在环境中查看具有 Configuration Manager 客户端运行状况信息的仪表板。 查看客户端运行状况、方案运行状况和常见错误。 按多个属性筛选视图，以查看按 OS 和客户端版本列出的所有潜在问题。
+Configuration Manager 在环境中提供具有客户端运行状况信息的仪表板。 查看客户端运行状况、方案运行状况和常见错误。 按多个属性筛选视图，以查看按 OS 和客户端版本列出的所有潜在问题。
 
 在 Configuration Manager 控制台中，转到“监视”工作区。 展开“客户端状态”，然后选择“客户端运行状况仪表板”节点 。
 
-![客户端运行状况仪表板屏幕截图](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="客户端运行状况仪表板屏幕截图" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > 没有对 ccmeval 的更改。  
@@ -91,18 +91,18 @@ Configuration Manager 提供以下类型的信息作为客户端状态：
 
 在仪表板的顶部，有一组筛选器，用于调整仪表板中显示的数据。
 
-- **集合**：默认情况下，仪表板显示“所有系统”集合中的设备。 从列表中选择设备集合，以将视图限定为特定集合中的设备子集。  
+- 以下集合中客户端的运行状况：默认情况下，仪表板显示“所有系统”集合中的设备。 选择设备集合，以将视图限定为特定集合中的设备子集。  
 
-- **联机或脱机**：默认情况下，仪表板仅显示联机客户端。 此状态来自每五分钟更新一次客户端状态的客户端通知通道。 有关详细信息，请参阅[关于客户端状态](monitor-clients.md#bkmk_about)。  
+- 在最近几天内处于活动状态的客户端：默认情况下，仪表板显示过去三天处于活动状态的客户端。  
 
-- **活动 \# 天数**：默认情况下，仪表板显示过去三天处于活动状态的客户端。  
+- 包括脱机客户端的客户端运行状况：默认情况下，仪表板仅显示联机客户端。 此状态来自每五分钟更新一次客户端状态的客户端通知通道。 有关详细信息，请参阅[关于客户端状态](monitor-clients.md#bkmk_about)。  
 
-- **仅限故障**：将视图限定为仅报告客户端运行状况为故障的设备。  
+- 仅显示不正常客户端的详细信息：将视图限定为仅报告客户端运行状况为故障的设备。  
 
     > [!Tip]  
     > 将此筛选器与客户端版本和 OS 版本磁贴配合使用。 有关详细信息，请参阅[版本磁贴](#version-tiles)。
 
-### <a name="client-health-percentage"></a>客户端运行状况百分比
+### <a name="overall-client-health"></a>总体客户端运行状况
 
 此磁贴显示层次结构中总体的客户端运行状况。
 
