@@ -115,6 +115,14 @@
               href: encrypt-devices-filevault.md
             - name: 监视磁盘加密
               href: encryption-monitor.md
+    - name: Microsoft Tunnel
+      items:
+        - name: Microsoft Tunnel 概述
+          href: microsoft-tunnel-overview.md
+        - name: 配置 Microsoft Tunnel
+          href: microsoft-tunnel-configure.md
+        - name: 监视 Microsoft Tunnel
+          href: microsoft-tunnel-monitor.md
     - name: 标识保护
       items:
         - name: Windows Hello
@@ -338,6 +346,8 @@
           href: security-baseline-settings-defender-atp.md
         - name: Microsoft Edge 基线设置
           href: security-baseline-settings-edge.md
+    - name: Microsoft Tunnel 命令行工具
+      href: microsoft-tunnel-reference.md
     - name: Windows 更新设置
       href: windows-update-settings.md
     - name: 错误代码和描述

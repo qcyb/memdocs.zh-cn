@@ -22,6 +22,7 @@
 ##### [注册 Intercede](enroll-android-device-intercede.md)
 ##### [注册 DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [移动到新的设备管理设置](move-to-new-device-management-setup.md)
+### [使用适用于 Android 的 Microsoft Tunnel](use-microsoft-tunnel-android.md)
 ### [在设备上使用托管应用](use-managed-apps-on-your-device-android.md)
 ### [加密设备](encrypt-your-device-android.md)
 ### [设置 PIN 或密码](set-your-pin-or-password-android.md)
@@ -71,7 +72,7 @@
 ##### [注册 Entrust Datacard](enroll-ios-device-entrust-datacard.md)
 ##### [注册 Intercede](enroll-ios-device-intercede.md)
 ##### [注册 DISA Purebred](enroll-ios-device-disa-purebred.md)
-
+### [使用适用于 iOS 的 Microsoft Tunnel](use-microsoft-tunnel-iOS.md)
 
 ### [在设备上使用托管应用](use-managed-apps-on-your-device-ios.md)
 ### [设置或更改密码](set-or-change-your-passcode-ios.md)
